@@ -1,0 +1,22 @@
+{
+  "title": "HTML Audio",
+  "language": "html",
+  "topic": "audio",
+  "order": 34,
+  "nextTopic": "youtube",
+  "prevTopic": "video",
+  "content": "### HTML Audio\n\nThe `<audio>` element embeds sound content.\n\n---\n\n### Basic Audio\n\n```html\n<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  <source src=\"song.ogg\" type=\"audio/ogg\">\n  Your browser does not support audio.\n</audio>\n```\n\n---\n\n### Audio Attributes\n\n| Attribute | Description |\n|-----------|-------------|\n| `controls` | Show play/pause/volume controls |\n| `autoplay` | Start playing automatically |\n| `muted` | Mute by default |\n| `loop` | Repeat the audio |\n| `preload` | How much to preload (`auto`, `metadata`, `none`) |\n\n---\n\n### Supported Formats\n\n| Format | Type | Browser Support |\n|--------|------|----------------|\n| **MP3** | `audio/mpeg` | All browsers |\n| **WAV** | `audio/wav` | All browsers |\n| **OGG** | `audio/ogg` | Chrome, Firefox, Edge |\n\n---\n\n### Autoplay Restrictions\n\nMost browsers **block autoplay** unless the audio is muted:\n\n```html\n<audio controls autoplay muted>\n  <source src=\"background.mp3\" type=\"audio/mpeg\">\n</audio>\n```\n\n---\n\n### Multiple Sources\n\n```html\n<audio controls>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n  <source src=\"music.ogg\" type=\"audio/ogg\">\n  <source src=\"music.wav\" type=\"audio/wav\">\n  Your browser does not support the audio element.\n</audio>\n```\n\n---\n\n### Background Music\n\n```html\n<audio autoplay loop muted>\n  <source src=\"bgm.mp3\" type=\"audio/mpeg\">\n</audio>\n```\n\n> **Pro Tip:** Always provide at least MP3 format (most compatible). Include fallback text between `<audio>` tags. Be careful with autoplay -- it can annoy users.",
+  "codeExample": "<h3>Audio Player</h3>\n<audio controls>\n  <source src=\"https://www.w3schools.com/html/horse.mp3\"\n          type=\"audio/mpeg\">\n  <source src=\"https://www.w3schools.com/html/horse.ogg\"\n          type=\"audio/ogg\">\n  Your browser does not support audio.\n</audio>\n\n<h3>Ambient Sound (Autoplay Muted)</h3>\n<audio autoplay loop muted>\n  <source src=\"https://www.w3schools.com/html/horse.mp3\"\n          type=\"audio/mpeg\">\n</audio>",
+  "quiz": [
+    {
+      "question": "Which attribute shows play/pause controls?",
+      "options": [
+        "play",
+        "controls",
+        "show",
+        "player"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

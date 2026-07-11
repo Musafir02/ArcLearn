@@ -1,0 +1,22 @@
+{
+  "title": "Logical Operators",
+  "language": "javascript",
+  "topic": "logical",
+  "order": 17,
+  "nextTopic": "ternary",
+  "prevTopic": "comparison",
+  "content": "### Logical Operators\n\n**Logical operators** combine boolean values to make complex decisions.\n\n---\n\n### The Operators\n\n| Operator | Name | Description | Example |\n|----------|------|-------------|---------|\n| `&&` | AND | `true` if **both** are true | `true && false` = `false` |\n| `||` | OR | `true` if **either** is true | `true || false` = `true` |\n| `!` | NOT | **Inverts** the boolean | `!true` = `false` |\n\n---\n\n### Truth Table\n\n| A | B | A && B | A `||` B | !A |\n|---|---|--------|---------|----|\n| `true` | `true` | `true` | `true` | `false` |\n| `true` | `false` | `false` | `true` | `false` |\n| `false` | `true` | `false` | `true` | `true` |\n| `false` | `false` | `false` | `false` | `true` |\n\n---\n\n### Short-Circuit Evaluation\n\n- `&&` stops evaluating if the **first** value is falsy\n- `||` stops evaluating if the **first** value is truthy\n\n```js\nfalse && console.log(\"never runs\");  // Short-circuits\ntrue || console.log(\"never runs\");   // Short-circuits\n```\n\n---\n\n> **Practical Use:** `||` is often used to provide **default values**: `const name = input || \"default\"`.",
+  "codeExample": "let age = 25;\nlet hasLicense = true;\n\nconsole.log(age >= 18 && hasLicense); // true\nconsole.log(age < 18 || !hasLicense); // false\nconsole.log(!hasLicense);             // false",
+  "quiz": [
+    {
+      "question": "What does `true && false` evaluate to?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HTML Symbols",
+  "language": "html",
+  "topic": "symbols",
+  "order": 41,
+  "nextTopic": "emoji",
+  "prevTopic": "entities",
+  "content": "### HTML Symbols\n\nMany mathematical, technical, and currency symbols are available as HTML entities.\n\n---\n\n### Mathematical Symbols\n\n| Symbol | Entity | Number |\n|--------|--------|--------|\n| `∀` | `&forall;` | `&#8704;` |\n| `∂` | `&part;` | `&#8706;` |\n| `∃` | `&exist;` | `&#8707;` |\n| `∅` | `&empty;` | `&#8709;` |\n| `∇` | `&nabla;` | `&#8711;` |\n| `∈` | `&isin;` | `&#8712;` |\n| `∉` | `&notin;` | `&#8713;` |\n| `∏` | `&prod;` | `&#8719;` |\n| `∑` | `&sum;` | `&#8721;` |\n| `±` | `&plusmn;` | `&#177;` |\n| `×` | `&times;` | `&#215;` |\n| `÷` | `&divide;` | `&#247;` |\n| `√` | `&radic;` | `&#8730;` |\n| `∞` | `&infin;` | `&#8734;` |\n| `∠` | `&ang;` | `&#8736;` |\n| `∫` | `&int;` | `&#8747;` |\n\n---\n### Greek Letters\n\n| Symbol | Entity |\n|--------|--------|\n| `α` | `&alpha;` |\n| `β` | `&beta;` |\n| `γ` | `&gamma;` |\n| `δ` | `&delta;` |\n| `π` | `&pi;` |\n| `θ` | `&theta;` |\n| `λ` | `&lambda;` |\n| `μ` | `&mu;` |\n\n---\n### Arrow Symbols\n\n| Symbol | Entity |\n|--------|--------|\n| `←` | `&larr;` |\n| `↑` | `&uarr;` |\n| `→` | `&rarr;` |\n| `↓` | `&darr;` |\n| `↔` | `&harr;` |\n| `⇐` | `&lArr;` |\n| `⇒` | `&rArr;` |\n| `⇔` | `&hArr;` |\n\n---\n### Currency Symbols\n\n| Symbol | Entity |\n|--------|--------|\n| `¢` | `&cent;` |\n| `£` | `&pound;` |\n| `¥` | `&yen;` |\n| `€` | `&euro;` |\n| `₤` | `&lstr;` |\n| `₨` | `&rsqb;` |\n\n> **Note:** Symbols work in all modern browsers. Use the entity name for readability (`&alpha;`) or the number (`&#945;`).",
+  "codeExample": "<h3>Math Symbols</h3>\n<p>&plusmn; &times; &divide; &equals; &ne; &lt; &gt;</p>\n<p>&sum; &prod; &int; &radic; &infin; &part;</p>\n\n<h3>Greek Letters</h3>\n<p>&alpha; &beta; &gamma; &delta; &pi; &omega;</p>\n\n<h3>Arrows</h3>\n<p>&larr; &uarr; &rarr; &darr; &harr; &rArr;</p>\n\n<h3>Currency</h3>\n<p>&euro; &pound; &yen; &cent;</p>",
+  "quiz": [
+    {
+      "question": "Which entity gives the infinity symbol?",
+      "options": [
+        "&inf;",
+        "&infin;",
+        "&infty;",
+        "&infinity;"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

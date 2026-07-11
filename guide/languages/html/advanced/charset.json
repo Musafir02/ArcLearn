@@ -1,0 +1,22 @@
+{
+  "title": "HTML Charset",
+  "language": "html",
+  "topic": "charset",
+  "order": 43,
+  "nextTopic": "url_encode",
+  "prevTopic": "emoji",
+  "content": "### HTML Character Sets\n\nA **charset** (character set) defines how characters are encoded into bytes.\n\n---\n\n### The `<meta charset>` Tag\n\n```html\n<meta charset=\"UTF-8\">\n```\n\nThis should be the **first** element in `<head>`.\n\n---\n\n### Common Character Sets\n\n| Charset | Description | Characters |\n|---------|-------------|------------|\n| **ASCII** | Basic English | 128 chars |\n| **ANSI** (Windows-1252) | Western languages | 256 chars |\n| **ISO-8859-1** | Western European | 256 chars |\n| **UTF-8** | All languages (recommended) | 1M+ chars |\n| **UTF-16** | Unicode with 2+ bytes | 1M+ chars |\n\n---\n\n### Why UTF-8?\n\n| Feature | Benefit |\n|---------|---------|\n| **Universal** | Supports all languages |\n| **Emoji** | Every emoji is supported |\n| **Backward compatible** | Works with ASCII |\n| **Web standard** | Used by 98%+ of websites |\n\n---\n\n### Charset Differences\n\n```html\n<!-- UTF-8 supports these: -->\n<p>日本語 中文 العربية</p>\n<p>Emojis: 😀 🎉 ❤️</p>\n<p>Symbols: ∑ ∫ ∞</p>\n\n<!-- Without UTF-8, these might show as garbage -->\n```\n\n---\n\n### Specifying Charset in HTTP\n\nThe server can also set charset via HTTP header:\n\n```\nContent-Type: text/html; charset=UTF-8\n```\n\n---\n\n> **Best Practice:** Always use `UTF-8` for new websites. Include `<meta charset=\"UTF-8\">` as the first element in `<head>`. Never use ASCII or ANSI for modern web development.",
+  "codeExample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Charset Demo</title>\n</head>\n<body>\n  <h1>UTF-8 Characters</h1>\n  <p>English: Hello World</p>\n  <p>Arabic: مرحبا بالعالم</p>\n  <p>Japanese: こんにちは</p>\n  <p>Chinese: 你好世界</p>\n  <p>Russian: Привет мир</p>\n  <p>Emojis: 😂 ❤️ 👍 🎉</p>\n</body>\n</html>",
+  "quiz": [
+    {
+      "question": "Which charset is recommended for modern HTML documents?",
+      "options": [
+        "ASCII",
+        "ISO-8859-1",
+        "UTF-8",
+        "Windows-1252"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

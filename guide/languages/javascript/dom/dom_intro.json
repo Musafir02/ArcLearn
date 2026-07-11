@@ -1,0 +1,22 @@
+{
+  "title": "DOM Introduction",
+  "language": "javascript",
+  "topic": "dom_intro",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### What is the DOM?\n\nThe **DOM (Document Object Model)** is a programming interface for HTML documents. It represents the page as a **tree of objects** that can be modified.\n\n---\n\n### The DOM Tree\n\nWhen the browser loads an HTML page, it creates a tree structure:\n\n```\nDocument\n └── html\n      ├── head\n      │    ├── title\n      │    └── meta\n      └── body\n           ├── h1\n           ├── p\n           └── div\n                ├── span\n                └── img\n```\n\n---\n\n### What Can You Do with the DOM?\n\n- **Change** HTML elements and attributes\n- **Add/remove** elements dynamically\n- **Respond** to user events (clicks, typing, etc.)\n- **Update** CSS styles\n- **Animate** elements on the page\n\n---\n\n### The `document` Object\n\nThe `document` object is the **entry point** to the DOM. It represents the entire HTML page.\n\n```js\nconsole.log(document.title);     // Page title\nconsole.log(document.URL);       // Page URL\nconsole.log(document.body);      // Body element\n```\n\n---\n\n> **Key Insight:** The DOM is not JavaScript -- it is a browser API. JavaScript is just the language used to interact with it. Other languages (like Python) can also manipulate the DOM.",
+  "codeExample": "console.log(document.title);\nconsole.log(document.URL);\ndocument.title = \"New Title\";\nconsole.log(document.body.children.length);",
+  "quiz": [
+    {
+      "question": "What does DOM stand for?",
+      "options": [
+        "Document Object Model",
+        "Document Oriented Model",
+        "Data Object Management",
+        "Document Order Model"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "The This Keyword",
+  "language": "javascript",
+  "topic": "this_keyword",
+  "order": 49,
+  "nextTopic": "strict",
+  "prevTopic": "throw",
+  "content": "### The `this` Keyword\n\n`this` refers to the **object** that is executing the current function. Its value depends on **how** the function is called.\n\n---\n\n### `this` in Different Contexts\n\n| Context | `this` refers to |\n|---------|-----------------|\n| **Global (non-strict)** | `window` (browser) / `global` (Node) |\n| **Global (strict mode)** | `undefined` |\n| **Object method** | The object that owns the method |\n| **Regular function** | `window` (non-strict) / `undefined` (strict) |\n| **Arrow function** | Parent scope (lexical `this`) |\n| **Event handler** | The element that fired the event |\n| **Constructor** | The newly created object |\n\n---\n\n### Method vs Function\n\n```js\nconst person = {\n  name: \"John\",\n  greet: function() {\n    console.log(this.name); // \"John\" -- this refers to person\n  }\n};\n\nfunction regularFunc() {\n  console.log(this); // window (in non-strict mode)\n}\n```\n\n---\n\n### Arrow Functions and `this`\n\nArrow functions **do not** have their own `this`:\n\n```js\nconst person = {\n  name: \"John\",\n  greet: () => {\n    console.log(this.name); // undefined -- arrow inherits from global\n  }\n};\n```\n\n---\n\n### Explicit Binding\n\n```js\nfunction greet() {\n  console.log(`Hello, ${this.name}`);\n}\n\nconst user = { name: \"John\" };\ngreet.call(user);  // \"Hello, John\"\ngreet.apply(user); // \"Hello, John\"\nconst bound = greet.bind(user);\nbound();           // \"Hello, John\"\n```\n\n> **The Golden Rule:** `this` is determined by **how** a function is called, not **where** it is defined (except arrow functions which inherit from the parent scope).",
+  "codeExample": "const person = {\n  name: \"Ibrahim\",\n  greet() {\n    console.log(`Hi, I'm ${this.name}`);\n  }\n};\n\nperson.greet();\n\nconst greet = person.greet;\ngreet(); // this is undefined (or window in non-strict)",
+  "quiz": [
+    {
+      "question": "What does `this` refer to inside a regular function in strict mode?",
+      "options": [
+        "window",
+        "undefined",
+        "The function itself",
+        "The parent object"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

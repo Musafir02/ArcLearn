@@ -1,0 +1,22 @@
+{
+  "title": "Arrow Functions",
+  "language": "javascript",
+  "topic": "arrow",
+  "order": 27,
+  "nextTopic": "functions_scope",
+  "prevTopic": "parameters",
+  "content": "### Arrow Functions (ES6)\n\n**Arrow functions** provide a shorter syntax for writing functions.\n\n---\n\n### Syntax Comparison\n\n#### Traditional Function\n\n```js\nfunction add(a, b) {\n  return a + b;\n}\n```\n\n#### Arrow Function\n\n```js\nconst add = (a, b) => {\n  return a + b;\n};\n```\n\n#### Even Shorter (Implicit Return)\n\n```js\nconst add = (a, b) => a + b;\n```\n\n---\n\n### Different Forms\n\n| Form | Syntax | Use Case |\n|------|--------|----------|\n| No params | `() => 42` | Constant return |\n| One param | `x => x * 2` | Simple transform |\n| Multiple | `(a, b) => a + b` | Multiple inputs |\n| Multi-line | `(a, b) => { ... }` | Complex logic |\n\n---\n\n### Arrow Functions in Callbacks\n\nArrow functions shine in **callbacks**:\n\n```js\n// Traditional\nlet doubled = numbers.map(function(n) { return n * 2; });\n\n// Arrow\nlet doubled = numbers.map(n => n * 2);\n```\n\n---\n\n> **Important:** Arrow functions do **not** have their own `this`. They inherit `this` from the surrounding scope. This makes them ideal for callbacks but unsuitable as object methods.",
+  "codeExample": "const greet = name => `Hello, ${name}!`;\nconst add = (a, b) => a + b;\nconst isEven = n => n % 2 === 0;\n\nconsole.log(greet(\"Ibrahim\"));\nconsole.log(add(5, 3));\nconsole.log(isEven(4));",
+  "quiz": [
+    {
+      "question": "Which syntax is correct for an arrow function with one parameter?",
+      "options": [
+        "x => x * 2",
+        "(x) => { return x * 2 }",
+        "Both are valid",
+        "Neither"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

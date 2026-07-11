@@ -1,0 +1,22 @@
+{
+  "title": "If/Else Statements",
+  "language": "javascript",
+  "topic": "if_else",
+  "order": 34,
+  "nextTopic": "switch",
+  "prevTopic": "conditions",
+  "content": "### If/Else Statements\n\nThe `if` statement executes code **only if** a condition is true.\n\n---\n\n### Basic `if`\n\n```js\nif (condition) {\n  // Code runs if condition is true\n}\n```\n\n### `if/else`\n\n```js\nif (condition) {\n  // Runs if true\n} else {\n  // Runs if false\n}\n```\n\n### `if/else if/else`\n\n```js\nif (condition1) {\n  // Runs if condition1 is true\n} else if (condition2) {\n  // Runs if condition1 is false AND condition2 is true\n} else {\n  // Runs if both are false\n}\n```\n\n---\n\n### Example\n\n```js\nlet score = 85;\n\nif (score >= 90) {\n  console.log(\"Grade: A\");\n} else if (score >= 80) {\n  console.log(\"Grade: B\");\n} else if (score >= 70) {\n  console.log(\"Grade: C\");\n} else {\n  console.log(\"Grade: F\");\n}\n```\n\n---\n\n### Nested If Statements\n\nYou can put `if` statements **inside** other `if` statements:\n\n```js\nif (age >= 18) {\n  if (hasLicense) {\n    console.log(\"You can drive\");\n  }\n}\n```\n\n> **Readability Tip:** For simple conditions, use the ternary operator `? :`. For complex logic, use `if/else`.",
+  "codeExample": "let hour = 14;\n\nif (hour < 12) {\n  console.log(\"Good morning\");\n} else if (hour < 18) {\n  console.log(\"Good afternoon\");\n} else {\n  console.log(\"Good evening\");\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used for an else-if condition in JavaScript?",
+      "options": [
+        "elseif",
+        "else if",
+        "elif",
+        "elsewhen"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

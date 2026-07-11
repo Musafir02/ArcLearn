@@ -1,0 +1,22 @@
+{
+  "title": "Background Images",
+  "language": "html",
+  "topic": "image_background",
+  "order": 15,
+  "nextTopic": "picture",
+  "prevTopic": "image_map",
+  "content": "### HTML Background Images\n\nYou can set background images on any HTML element.\n\n---\n\n### Background on an Element\n\n```html\n<div style=\"background-image: url('photo.jpg');\">\n  Content with background image\n</div>\n```\n\n---\n\n### Background on the Whole Page\n\n```html\n<body style=\"background-image: url('background.jpg');\">\n  <h1>Page with background</h1>\n</body>\n```\n\n---\n\n### Background Repeat\n\nBy default, background images repeat:\n\n```html\n<!-- No repeat -->\n<div style=\"background-image: url('photo.jpg');\n            background-repeat: no-repeat;\">\n</div>\n\n<!-- Repeat horizontally -->\n<div style=\"background-repeat: repeat-x;\"></div>\n\n<!-- Repeat vertically -->\n<div style=\"background-repeat: repeat-y;\"></div>\n```\n\n---\n\n### Background Cover and Contain\n\n```html\n<!-- Cover the entire element (may crop) -->\n<div style=\"background-size: cover;\"></div>\n\n<!-- Fit the entire image (may leave space) -->\n<div style=\"background-size: contain;\"></div>\n```\n\n---\n\n### Background Position\n\n```html\n<div style=\"background-position: center center;\"></div>\n<div style=\"background-position: top right;\"></div>\n<div style=\"background-position: 50% 50%;\"></div>\n```\n\n---\n\n### Shorthand Property\n\n```html\n<div style=\"background: url('photo.jpg') no-repeat center/cover;\">\n</div>\n```\n\n> **Pro Tip:** Use a solid background color as fallback in case the image does not load: `background: gray url('photo.jpg');`",
+  "codeExample": "<div style=\"\n  background-image: url('https://via.placeholder.com/600x200');\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  padding: 40px;\n  color: white;\n  text-align: center;\n\">\n  <h2>Background Image Example</h2>\n  <p>This div has a background image.</p>\n</div>",
+  "quiz": [
+    {
+      "question": "Which CSS property sets the background image?",
+      "options": [
+        "background",
+        "background-image",
+        "bg-image",
+        "image"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

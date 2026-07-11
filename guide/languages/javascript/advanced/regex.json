@@ -1,0 +1,22 @@
+{
+  "title": "Regular Expressions",
+  "language": "javascript",
+  "topic": "regex",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### Regular Expressions\n\nA **regular expression (RegEx)** is a pattern used to **match** character combinations in strings.\n\n---\n\n### Creating a RegEx\n\n```js\n// Literal syntax (preferred)\nconst pattern = /hello/;\n\n// Constructor\nconst pattern = new RegExp(\"hello\");\n```\n\n---\n\n### RegEx Methods\n\n#### `test()` -- Returns Boolean\n\n```js\nconst pattern = /world/;\nconsole.log(pattern.test(\"Hello world!\")); // true\nconsole.log(pattern.test(\"Hi there!\"));    // false\n```\n\n#### `exec()` -- Returns Match Details\n\n```js\nconst result = /\\d+/.exec(\"Age: 25\");\nconsole.log(result[0]); // \"25\"\nconsole.log(result.index); // 5\n```\n\n---\n\n### String Methods with RegEx\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `str.match(pattern)` | Returns matches | `\"a1b2\".match(/\\d/g)` |\n| `str.search(pattern)` | Returns index of first match | `\"abc\".search(/b/)` |\n| `str.replace(pattern, new)` | Replace matches | `\"a-b-c\".replace(/-/g, \":\")` |\n| `str.split(pattern)` | Split by pattern | `\"a,b,c\".split(/,/)` |\n\n---\n\n### Common Patterns\n\n| Pattern | Matches | Example |\n|---------|---------|---------|\n| `\\d` | Any digit | `\"5\"` |\n| `\\w` | Any word char (a-z, A-Z, 0-9, _) | `\"a\"` |\n| `\\s` | Any whitespace | space, tab, newline |\n| `.` | Any character (except newline) | `\"x\"` |\n| `^` | Start of string | `/^Hello/` |\n| `$` | End of string | `/world$/` |\n| `*` | 0 or more | `/a*/` |\n| `+` | 1 or more | `/a+/` |\n| `?` | 0 or 1 (optional) | `/colou?r/` |\n| `{n}` | Exactly n | `/\\d{3}/` |\n| `[abc]` | Any of a, b, or c | `/[aeiou]/` |\n| `[a-z]` | Range a to z | `/[a-z]/` |\n\n---\n\n### Flags\n\n| Flag | Meaning |\n|------|---------|\n| `g` | Global (find all matches) |\n| `i` | Case-insensitive |\n| `m` | Multi-line (^ and $ match line boundaries) |\n\n```js\n/hello/gi;  // Global, case-insensitive\n```\n\n---\n\n> **Use Cases:** Email validation, password strength, search/replace, data extraction, URL parsing.",
+  "codeExample": "const email = \"user@example.com\";\nconst emailPattern = /^[\\w.-]+@[\\w.-]+\\.\\w{2,}$/;\nconsole.log(emailPattern.test(email));\n\nconst text = \"Call 555-1234 or 555-5678\";\nconsole.log(text.match(/\\d{3}-\\d{4}/g));\nconsole.log(text.replace(/\\d{3}-\\d{4}/g, \"[REDACTED]\"));",
+  "quiz": [
+    {
+      "question": "Which flag makes a RegEx search global (find all matches)?",
+      "options": [
+        "i",
+        "g",
+        "m",
+        "a"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

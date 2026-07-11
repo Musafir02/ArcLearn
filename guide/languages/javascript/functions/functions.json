@@ -1,0 +1,22 @@
+{
+  "title": "Functions",
+  "language": "javascript",
+  "topic": "functions",
+  "order": 25,
+  "nextTopic": "parameters",
+  "prevTopic": "arrays_iteration",
+  "content": "### What are Functions?\n\nA **function** is a reusable block of code that performs a specific task.\n\n---\n\n### Function Declaration\n\n```js\nfunction greet() {\n  console.log(\"Hello!\");\n}\n\n// Call the function\ngreet(); // \"Hello!\"\n```\n\n---\n\n### Function Components\n\n| Part | Description | Example |\n|------|-------------|---------|\n| `function` keyword | Declares a function | `function` |\n| **Name** | Used to call it | `greet` |\n| **Parameters** | Input values (optional) | `(name)` |\n| **Body** | Code to execute | `{ ... }` |\n| **Return value** | Output (optional) | `return x` |\n\n---\n\n### Return Values\n\nFunctions can **return** a value:\n\n```js\nfunction add(a, b) {\n  return a + b;\n}\n\nlet result = add(3, 5); // result = 8\n```\n\n> Without `return`, a function returns `undefined`.\n\n---\n\n### Why Use Functions?\n\n- **Reusability** -- write once, use many times\n- **Organization** -- break code into logical pieces\n- **Readability** -- descriptive names explain intent\n- **Testing** -- test each function independently\n\n> **DRY Principle:** Don't Repeat Yourself. Functions help you avoid code duplication.",
+  "codeExample": "function greet(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet(\"Ibrahim\"));\nconsole.log(greet(\"World\"));",
+  "quiz": [
+    {
+      "question": "How do you define a function in JavaScript?",
+      "options": [
+        "function myFunc() {}",
+        "def myFunc() {}",
+        "func myFunc() {}",
+        "define myFunc() {}"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

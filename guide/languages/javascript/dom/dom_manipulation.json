@@ -1,0 +1,22 @@
+{
+  "title": "DOM Manipulation",
+  "language": "javascript",
+  "topic": "dom_manipulation",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### DOM Manipulation\n\nOnce you have selected an element, you can **change** it.\n\n---\n\n### Changing Content\n\n```js\nconst el = document.querySelector(\"#myDiv\");\n\nel.textContent = \"New text\";           // Sets text only (faster, secure)\nel.innerHTML = \"<b>Bold text</b>\";     // Sets HTML (parses tags)\nel.innerText = \"Visible text\";         // Respects CSS visibility\n```\n\n> **Security:** Use `textContent` (not `innerHTML`) for user-provided content to prevent XSS attacks.\n\n---\n\n### Changing Attributes\n\n```js\nconst img = document.querySelector(\"img\");\n\nimg.src = \"new-image.jpg\";\nimg.alt = \"New description\";\nimg.setAttribute(\"title\", \"Tooltip text\");\nconsole.log(img.getAttribute(\"src\"));\nimg.removeAttribute(\"disabled\");\n```\n\n---\n\n### Changing Styles\n\n```js\nconst el = document.querySelector(\".box\");\n\nel.style.color = \"red\";\nel.style.backgroundColor = \"black\";    // camelCase, not background-color\nel.style.fontSize = \"20px\";\nel.style.display = \"none\";             // Hide element\n```\n\n---\n\n### Working with Classes\n\n```js\nconst el = document.querySelector(\".box\");\n\nel.classList.add(\"active\");            // Add class\nel.classList.remove(\"hidden\");         // Remove class\nel.classList.toggle(\"visible\");        // Toggle on/off\nel.classList.contains(\"active\");       // Check if has class\n```\n\n---\n\n### Creating and Removing Elements\n\n```js\nconst newDiv = document.createElement(\"div\");\nnewDiv.textContent = \"Hello\";\ndocument.body.appendChild(newDiv);      // Add to end of body\n\nconst parent = document.querySelector(\".container\");\nparent.insertBefore(newDiv, parent.firstChild); // Add at beginning\nparent.removeChild(oldElement);                  // Remove child\nel.remove();                                     // Remove self (modern)\n```\n\n---\n\n> **Performance Tip:** Batch DOM changes together. Each DOM manipulation can trigger a reflow/render. Use `document.createDocumentFragment()` for many insertions.",
+  "codeExample": "const div = document.createElement(\"div\");\ndiv.textContent = \"Hello DOM!\";\ndiv.classList.add(\"highlighted\");\ndiv.style.padding = \"20px\";\ndiv.style.background = \"#f0f0f0\";\n\ndocument.body.appendChild(div);\n\nsetTimeout(() => div.remove(), 3000);",
+  "quiz": [
+    {
+      "question": "Which property should you use to safely set text content?",
+      "options": [
+        "innerHTML",
+        "textContent",
+        "innerText",
+        "outerHTML"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

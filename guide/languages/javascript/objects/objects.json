@@ -1,0 +1,22 @@
+{
+  "title": "Objects",
+  "language": "javascript",
+  "topic": "objects",
+  "order": 29,
+  "nextTopic": "properties",
+  "prevTopic": "functions_scope",
+  "content": "### What are Objects?\n\n**Objects** are collections of **key-value pairs** (properties). They store structured data.\n\n---\n\n### Creating Objects\n\n```js\n// Object literal (preferred)\nlet person = {\n  name: \"John\",\n  age: 30,\n  isStudent: false\n};\n\n// Using new Object()\nlet car = new Object();\ncar.brand = \"Toyota\";\n```\n\n---\n\n### Object Properties\n\n| Part | Description | Example |\n|------|-------------|---------|\n| **Key** | The property name | `\"name\"` |\n| **Value** | Any data type | `\"John\"` |\n| **Entry** | A key-value pair | `name: \"John\"` |\n\nValues can be strings, numbers, booleans, arrays, other objects, or even functions.\n\n---\n\n### Accessing Properties\n\n```js\nlet person = { name: \"John\", age: 30 };\n\n// Dot notation\nconsole.log(person.name); // \"John\"\n\n// Bracket notation\nconsole.log(person[\"name\"]); // \"John\"\n```\n\nUse **bracket notation** when the key is dynamic or contains special characters:\n\n```js\nlet key = \"name\";\nconsole.log(person[key]); // \"John\"\n```\n\n---\n\n> **Objects vs Primitives:** Objects are **reference types** -- variables store a reference, not the actual value. Primitives (string, number, boolean) are **value types**.",
+  "codeExample": "let person = {\n  name: \"Ibrahim\",\n  age: 25,\n  city: \"Mumbai\"\n};\n\nconsole.log(person.name);\nconsole.log(person[\"age\"]);",
+  "quiz": [
+    {
+      "question": "Which notation is used to access an object property?",
+      "options": [
+        "Arrow notation",
+        "Dot notation",
+        "Hash notation",
+        "Pipe notation"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

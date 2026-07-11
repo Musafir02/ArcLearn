@@ -1,0 +1,22 @@
+{
+  "title": "DOM Events",
+  "language": "javascript",
+  "topic": "dom_events",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### DOM Events\n\n**Events** are actions that happen in the browser -- clicks, key presses, mouse movements, form submissions, etc. JavaScript can **listen** for these events and **respond**.\n\n---\n\n### Adding Event Listeners\n\n```js\nconst button = document.querySelector(\"button\");\n\nbutton.addEventListener(\"click\", function() {\n  console.log(\"Button was clicked!\");\n});\n```\n\n---\n\n### Common Event Types\n\n| Event | Triggered When |\n|-------|---------------|\n| `click` | Element is clicked |\n| `dblclick` | Element is double-clicked |\n| `mouseover` | Mouse enters the element |\n| `mouseout` | Mouse leaves the element |\n| `keydown` | A key is pressed |\n| `keyup` | A key is released |\n| `submit` | A form is submitted |\n| `load` | Page or image finishes loading |\n| `scroll` | Page is scrolled |\n| `change` | Input value changes (after blur) |\n| `input` | Input value changes (immediate) |\n| `focus` | Element gains focus |\n| `blur` | Element loses focus |\n\n---\n\n### The Event Object\n\nThe event handler receives an **event object** with details:\n\n```js\nbutton.addEventListener(\"click\", (event) => {\n  console.log(event.type);       // \"click\"\n  console.log(event.target);     // The element that was clicked\n  console.log(event.clientX);    // Mouse X position\n  console.log(event.clientY);    // Mouse Y position\n});\n```\n\n---\n\n### Removing Event Listeners\n\n```js\nfunction handleClick() {\n  console.log(\"Clicked\");\n}\n\nbutton.addEventListener(\"click\", handleClick);\nbutton.removeEventListener(\"click\", handleClick); // Remove it\n```\n\n---\n\n### Event Propagation\n\nEvents flow through the DOM in **three phases**:\n\n1. **Capturing** -- from `document` down to the target\n2. **At target** -- reaches the element\n3. **Bubbling** -- from target back up to `document`\n\n```js\nparent.addEventListener(\"click\", () => {}, true);  // Capturing phase (third arg = true)\nchild.addEventListener(\"click\", () => {});          // Bubbling phase (default)\n```\n\n> **Stop Propagation:** Use `event.stopPropagation()` to prevent an event from bubbling up to parent elements.",
+  "codeExample": "document.querySelector(\"button\").addEventListener(\"click\", (e) => {\n  console.log(\"Clicked!\");\n  console.log(\"Target:\", e.target.tagName);\n  console.log(\"X:\", e.clientX, \"Y:\", e.clientY);\n});",
+  "quiz": [
+    {
+      "question": "Which method is used to respond to an event?",
+      "options": [
+        "addEvent()",
+        "attachEvent()",
+        "addEventListener()",
+        "onEvent()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

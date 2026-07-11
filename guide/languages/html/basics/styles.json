@@ -1,0 +1,22 @@
+{
+  "title": "HTML Styles",
+  "language": "html",
+  "topic": "styles",
+  "order": 7,
+  "nextTopic": "formatting",
+  "prevTopic": "paragraphs",
+  "content": "### HTML Styles\n\nThe `style` attribute is used to add **inline CSS** to HTML elements.\n\n---\n\n### Syntax\n\n```html\n<tagname style=\"property: value;\">\n```\n\n---\n\n### Common CSS Properties\n\n| Property | Description | Example |\n|----------|-------------|---------|\n| `color` | Text color | `color: red;` |\n| `background-color` | Background color | `background-color: yellow;` |\n| `font-size` | Text size | `font-size: 20px;` |\n| `font-family` | Font type | `font-family: Arial;` |\n| `text-align` | Text alignment | `text-align: center;` |\n| `border` | Element border | `border: 1px solid black;` |\n| `padding` | Inner spacing | `padding: 10px;` |\n| `margin` | Outer spacing | `margin: 10px;` |\n\n---\n\n### Examples\n\n```html\n<p style=\"color: blue;\">Blue text</p>\n\n<p style=\"background-color: yellow;\">\n  Yellow background\n</p>\n\n<p style=\"font-size: 24px;\">Big text</p>\n\n<p style=\"text-align: center;\">Centered text</p>\n\n<p style=\"font-family: Arial, sans-serif;\">Arial text</p>\n```\n\n---\n\n### Multiple Styles\n\nSeparate with semicolons:\n\n```html\n<p style=\"color: white; background-color: black;\n          font-size: 18px; text-align: center;\">\n  Styled paragraph\n</p>\n```\n\n---\n\n### Background Color on Body\n\n```html\n<body style=\"background-color: lightgray;\">\n  <h1>Page with background</h1>\n</body>\n```\n\n> **Best Practice:** Use inline styles for quick testing. For real projects, use external CSS files (the `<link>` tag). This keeps content and style separate.",
+  "codeExample": "<h1 style=\"color: blue; text-align: center;\">\n  Centered Blue Heading\n</h1>\n\n<p style=\"background-color: lightyellow;\n          padding: 10px;\n          border: 1px solid orange;\">\n  This paragraph has background, padding, and border.\n</p>\n\n<p style=\"font-size: 20px;\">Bigger text</p>",
+  "quiz": [
+    {
+      "question": "Which attribute is used for inline CSS?",
+      "options": [
+        "css",
+        "class",
+        "style",
+        "design"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

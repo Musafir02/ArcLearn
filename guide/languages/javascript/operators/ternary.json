@@ -1,0 +1,22 @@
+{
+  "title": "Ternary Operator",
+  "language": "javascript",
+  "topic": "ternary",
+  "order": 18,
+  "nextTopic": "strings_methods",
+  "prevTopic": "logical",
+  "content": "### The Ternary Operator\n\nThe **ternary operator** is a shorthand for `if/else`. It takes **three** operands.\n\n---\n\n### Syntax\n\n```js\ncondition ? valueIfTrue : valueIfFalse\n```\n\n- Evaluates `condition`\n- If **true**, returns `valueIfTrue`\n- If **false**, returns `valueIfFalse`\n\n---\n\n### Examples\n\n#### Basic Usage\n\n```js\nlet age = 18;\nlet status = age >= 18 ? \"Adult\" : \"Minor\";\nconsole.log(status); // \"Adult\"\n```\n\n#### With Functions\n\n```js\nfunction getFee(isMember) {\n  return isMember ? \"$2.00\" : \"$10.00\";\n}\n```\n\n---\n\n### Ternary vs If/Else\n\n| Aspect | Ternary | If/Else |\n|--------|---------|--------|\n| **Lines** | 1 line | 5+ lines |\n| **Best for** | Simple assignments | Complex logic |\n| **Readability** | Good for short conditions | Better for complex blocks |\n\n---\n\n> **Rule of Thumb:** Use ternary for **simple** conditions. For complex logic with multiple branches, use `if/else` for better readability.",
+  "codeExample": "let num = 6;\nlet result = num > 5 ? \"Big\" : \"Small\";\nconsole.log(result);\n\nlet greeting = (hour < 12) ? \"Good morning\" : \"Good afternoon\";",
+  "quiz": [
+    {
+      "question": "What does `5 > 3 ? 'yes' : 'no'` return?",
+      "options": [
+        "yes",
+        "no",
+        "true",
+        "false"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

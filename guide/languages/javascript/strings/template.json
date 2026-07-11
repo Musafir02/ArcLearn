@@ -1,0 +1,22 @@
+{
+  "title": "Template Literals",
+  "language": "javascript",
+  "topic": "template",
+  "order": 20,
+  "nextTopic": "escape",
+  "prevTopic": "strings_methods",
+  "content": "### Template Literals (ES6)\n\n**Template literals** use backticks (`` ` ``) instead of quotes. They make working with strings **much easier**.\n\n---\n\n### Why Use Them?\n\n#### 1. String Interpolation\n\nEmbed variables directly with `${}`:\n\n```js\nlet name = \"John\";\nlet age = 30;\nlet message = `My name is ${name} and I am ${age} years old.`;\n```\n\nWith old-style concatenation:\n\n```js\nlet message = \"My name is \" + name + \" and I am \" + age + \" years old.\";\n```\n\n#### 2. Multi-line Strings\n\n```js\nlet poem = `Roses are red,\nViolets are blue,\nJavaScript is fun,\nAnd so are you.`;\n```\n\nNo more `\\n` or `+` for line breaks!\n\n#### 3. Expression Evaluation\n\n```js\nlet price = 10;\nlet tax = 0.08;\nconsole.log(`Total: $${price * (1 + tax)}`);\n```\n\n---\n\n> **Template literals** are now the **standard** way to build strings in modern JavaScript.",
+  "codeExample": "let name = \"Ibrahim\";\nlet score = 42;\nconsole.log(`Player ${name} scored ${score} points!`);\nconsole.log(`Score doubled: ${score * 2}`);",
+  "quiz": [
+    {
+      "question": "Which characters surround a template literal?",
+      "options": [
+        "Double quotes",
+        "Single quotes",
+        "Backticks",
+        "Parentheses"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

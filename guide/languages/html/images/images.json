@@ -1,0 +1,22 @@
+{
+  "title": "HTML Images",
+  "language": "html",
+  "topic": "images",
+  "order": 13,
+  "nextTopic": "image_map",
+  "prevTopic": "link_bookmarks",
+  "content": "### HTML Images\n\nImages are defined with the `<img>` tag (void element).\n\n---\n\n### Basic Image\n\n```html\n<img src=\"photo.jpg\" alt=\"Description\">\n```\n\n---\n\n### Required Attributes\n\n| Attribute | Purpose |\n|-----------|---------|\n| `src` | Path to the image file |\n| `alt` | Alternative text (for accessibility) |\n\n---\n\n### Image Size\n\n```html\n<img src=\"photo.jpg\" alt=\"Photo\" width=\"300\" height=\"200\">\n\n<!-- Or with style (recommended) -->\n<img src=\"photo.jpg\" alt=\"Photo\" style=\"width: 300px; height: auto;\">\n```\n\nUse `width` and `height` or CSS. Setting `height: auto` maintains aspect ratio.\n\n---\n\n### Image Formats\n\n| Format | Best For |\n|--------|----------|\n| **JPEG (.jpg)** | Photos, complex images |\n| **PNG (.png)** | Graphics, transparency |\n| **GIF (.gif)** | Animations |\n| **SVG (.svg)** | Icons, logos (scales infinitely) |\n| **WebP (.webp)** | Modern, smaller file size |\n\n---\n\n### Image from Another Folder\n\n```html\n<img src=\"/images/photo.jpg\" alt=\"\">\n<img src=\"../images/photo.jpg\" alt=\"\">\n```\n\n---\n\n### Image from Another Website\n\n```html\n<img src=\"https://example.com/photo.jpg\" alt=\"\">\n```\n\n---\n\n### Animated Images\n\n```html\n<img src=\"animation.gif\" alt=\"Animated graphic\">\n```\n\n---\n\n> **Pro Tip:** Always include the `alt` attribute. It helps screen readers and displays when the image fails to load. Search engines also use it.",
+  "codeExample": "<img src=\"https://via.placeholder.com/300x200\"\n     alt=\"Placeholder image\"\n     style=\"width: 300px; height: auto;\">\n\n<img src=\"photo.jpg\"\n     alt=\"A beautiful landscape\"\n     width=\"400\" height=\"300\">\n\n<img src=\"icon.svg\"\n     alt=\"SVG Icon\"\n     style=\"width: 50px;\">",
+  "quiz": [
+    {
+      "question": "Which attribute provides alternative text for an image?",
+      "options": [
+        "title",
+        "alt",
+        "text",
+        "desc"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Arrays",
+  "language": "javascript",
+  "topic": "arrays",
+  "order": 22,
+  "nextTopic": "arrays_methods",
+  "prevTopic": "escape",
+  "content": "### What are Arrays?\n\nAn **array** is a special variable that can hold **multiple values** at once, stored in a single list.\n\n---\n\n### Creating Arrays\n\n```js\n// Using brackets (preferred)\nlet fruits = [\"Apple\", \"Banana\", \"Cherry\"];\n\n// Using the Array constructor\nlet numbers = new Array(1, 2, 3);\n\n// Empty array\nlet empty = [];\n```\n\n---\n\n### Array Properties\n\n| Property | Description | Example |\n|----------|-------------|---------|\n| `length` | Number of elements | `fruits.length` |\n| `constructor` | The Array function | `[].constructor` |\n\n---\n\n### Accessing Elements\n\nArray elements are **indexed** starting from `0`:\n\n```js\nlet fruits = [\"Apple\", \"Banana\", \"Cherry\"];\nfruits[0]; // \"Apple\"\nfruits[1]; // \"Banana\"\nfruits[2]; // \"Cherry\"\nfruits[fruits.length - 1]; // \"Cherry\" (last element)\n```\n\n---\n\n### Arrays are Objects\n\n```js\ntypeof [1, 2, 3]; // \"object\" (not \"array\"!)\nArray.isArray([1, 2, 3]); // true (use this to check)\n```\n\n> **Key Facts:** Arrays are **ordered**, **mutable**, and can hold **mixed types** -- `[\"text\", 42, true, null]`.",
+  "codeExample": "let colors = [\"red\", \"green\", \"blue\"];\nconsole.log(colors[0]);\nconsole.log(colors.length);\nconsole.log(Array.isArray(colors));",
+  "quiz": [
+    {
+      "question": "How do you access the first element of an array?",
+      "options": [
+        "arr[1]",
+        "arr[0]",
+        "arr.first()",
+        "arr[begin]"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

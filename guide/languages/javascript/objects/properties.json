@@ -1,0 +1,22 @@
+{
+  "title": "Object Properties",
+  "language": "javascript",
+  "topic": "properties",
+  "order": 30,
+  "nextTopic": "methods",
+  "prevTopic": "objects",
+  "content": "### Working with Properties\n\nObjects are **mutable** -- you can add, change, and delete properties freely.\n\n---\n\n### Adding Properties\n\n```js\nlet user = { name: \"John\" };\nuser.age = 30;          // Added\nuser[\"city\"] = \"NYC\";  // Added\n```\n\n### Changing Properties\n\n```js\nuser.age = 31; // Changed\n```\n\n### Deleting Properties\n\n```js\ndelete user.city; // Removes the city property\n```\n\n---\n\n### Checking if a Property Exists\n\n```js\nlet user = { name: \"John\", age: 30 };\n\nconsole.log(\"name\" in user);  // true\nconsole.log(user.hasOwnProperty(\"name\")); // true\nconsole.log(user.phone !== undefined); // false (property doesn't exist)\n```\n\n---\n\n### Listing Properties\n\n```js\nlet user = { name: \"John\", age: 30, city: \"NYC\" };\n\nconsole.log(Object.keys(user));   // [\"name\", \"age\", \"city\"]\nconsole.log(Object.values(user)); // [\"John\", 30, \"NYC\"]\nconsole.log(Object.entries(user)); // [[\"name\",\"John\"], [\"age\",30], [\"city\",\"NYC\"]]\n```\n\n---\n\n### Computed Property Names\n\nYou can use **expressions** as property keys:\n\n```js\nlet key = \"dynamicKey\";\nlet obj = {\n  [key]: \"Dynamic Value\"\n};\nconsole.log(obj.dynamicKey); // \"Dynamic Value\"\n```\n\n> **Property keys** are always strings (or Symbols). If you use a non-string, it gets converted to a string.",
+  "codeExample": "let car = { brand: \"Toyota\" };\ncar.model = \"Camry\";\ncar.year = 2024;\nconsole.log(car);\ndelete car.year;\nconsole.log(car);\nconsole.log(Object.keys(car));",
+  "quiz": [
+    {
+      "question": "How do you remove a property from an object?",
+      "options": [
+        "remove obj.prop",
+        "delete obj.prop",
+        "obj.prop = null",
+        "obj.remove(prop)"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

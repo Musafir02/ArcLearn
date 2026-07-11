@@ -1,0 +1,22 @@
+{
+  "title": "Modules (ES6)",
+  "language": "javascript",
+  "topic": "modules",
+  "order": 43,
+  "nextTopic": "classes",
+  "prevTopic": "spread_rest",
+  "content": "### JavaScript Modules\n\n**Modules** let you split your code into separate files and import/export pieces between them.\n\n---\n\n### Exporting\n\n#### Named Exports\n\n```js\n// file: math.js\nexport const PI = 3.14159;\nexport function add(a, b) { return a + b; }\nexport class Calculator { ... }\n```\n\n#### Default Export\n\nEach module can have **one** default export:\n\n```js\n// file: math.js\nexport default function multiply(a, b) {\n  return a * b;\n}\n```\n\n---\n\n### Importing\n\n```js\n// Import named exports\nimport { PI, add } from './math.js';\n\n// Import default export\nimport multiply from './math.js';\n\n// Import all as namespace\nimport * as MathUtils from './math.js';\n```\n\n---\n\n### Named vs Default\n\n| Type | Export | Import |\n|------|--------|--------|\n| **Named** | `export const x = 1` | `import { x } from ...` |\n| **Default** | `export default x` | `import x from ...` |\n| **Mixed** | Both in one file | `import x, { y } from ...` |\n\n---\n\n### Benefits of Modules\n\n- **Encapsulation** -- variables stay private unless exported\n- **Reusability** -- share code across files\n- **Maintainability** -- smaller, focused files\n- **No global scope pollution** -- everything is scoped to the module\n\n---\n\n> **Important:** Modules need `type=\"module\"` in the HTML `<script>` tag or use a bundler like Vite, Webpack, or Parcel.",
+  "codeExample": "// lib.js\nexport const greet = (name) => `Hello ${name}`;\nexport const PI = 3.14;\n\n// main.js\nimport { greet, PI } from './lib.js';\nconsole.log(greet(\"Ibrahim\"));\nconsole.log(PI);",
+  "quiz": [
+    {
+      "question": "Which keyword is used to make code available from a module?",
+      "options": [
+        "import",
+        "export",
+        "module",
+        "share"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

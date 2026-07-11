@@ -1,0 +1,22 @@
+{
+  "title": "Escape Characters",
+  "language": "javascript",
+  "topic": "escape",
+  "order": 21,
+  "nextTopic": "arrays",
+  "prevTopic": "template",
+  "content": "### Escape Characters\n\n**Escape characters** let you insert special characters into strings.\n\n---\n\n### Common Escape Sequences\n\n| Code | Result | Description |\n|------|--------|-------------|\n| `\\'` | `'` | Single quote |\n| `\\\"` | `\"` | Double quote |\n| `\\\\` | `\\` | Backslash |\n| `\\n` | (new line) | Line break |\n| `\\r` | (carriage return) | Carriage return |\n| `\\t` | (tab) | Tab space |\n| `\\b` | (backspace) | Backspace |\n| `\\f` | (form feed) | Form feed |\n\n---\n\n### Why Escape?\n\nWithout escaping, quotes inside strings break the code:\n\n```js\n// This breaks:\nlet text = \"She said \"Hello\" to me.\";\n\n// This works:\nlet text = \"She said \\\"Hello\\\" to me.\";\n```\n\n### Alternative: Use Different Quotes\n\n```js\nlet text = \"She said 'Hello' to me.\";\nlet text2 = 'She said \"Hello\" to me.';\n```\n\n---\n\n### With Template Literals\n\nTemplate literals reduce the need for escaping:\n\n```js\nlet text = `She said \"Hello\" to me.`; // No escaping needed\n```\n\n> **Best Practice:** Use template literals to minimize escaping and make code more readable.",
+  "codeExample": "console.log(\"She said \\\"Hello\\\" to me.\");\nconsole.log('It\\'s a beautiful day.');\nconsole.log(\"Line 1\\nLine 2\");\nconsole.log(\"Path: C:\\\\Users\\\\Name\");",
+  "quiz": [
+    {
+      "question": "Which escape sequence represents a new line?",
+      "options": [
+        "\\t",
+        "\\n",
+        "\\r",
+        "\\b"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

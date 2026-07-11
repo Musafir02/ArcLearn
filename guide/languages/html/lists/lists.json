@@ -1,0 +1,22 @@
+{
+  "title": "HTML Lists",
+  "language": "html",
+  "topic": "lists",
+  "order": 23,
+  "nextTopic": "list_unordered",
+  "prevTopic": "table_colgroup",
+  "content": "### HTML Lists\n\nHTML supports **three** types of lists.\n\n---\n\n### List Types\n\n| Type | Tag | Purpose |\n|------|-----|---------|\n| **Unordered** | `<ul>` | Bullet points |\n| **Ordered** | `<ol>` | Numbered items |\n| **Description** | `<dl>` | Terms and definitions |\n\n---\n\n### Unordered List\n\n```html\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ul>\n```\n\n### Ordered List\n\n```html\n<ol>\n  <li>First step</li>\n  <li>Second step</li>\n  <li>Third step</li>\n</ol>\n```\n\n### Description List\n\n```html\n<dl>\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language</dd>\n  <dt>CSS</dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>\n```\n\n---\n\n### Nested Lists\n\nLists can be placed inside other list items:\n\n```html\n<ul>\n  <li>Fruits\n    <ul>\n      <li>Apple</li>\n      <li>Banana</li>\n    </ul>\n  </li>\n  <li>Vegetables\n    <ul>\n      <li>Carrot</li>\n    </ul>\n  </li>\n</ul>\n```\n\n---\n\n> **Best Practice:** Use `<ul>` when order does not matter, `<ol>` when order matters (steps, rankings), and `<dl>` for glossaries or key-value pairs.",
+  "codeExample": "<h3>Shopping List (Unordered)</h3>\n<ul>\n  <li>Milk</li>\n  <li>Bread</li>\n  <li>Eggs</li>\n</ul>\n\n<h3>Recipe Steps (Ordered)</h3>\n<ol>\n  <li>Preheat oven</li>\n  <li>Mix ingredients</li>\n  <li>Bake for 30 min</li>\n</ol>\n\n<h3>Glossary (Description)</h3>\n<dl>\n  <dt>HTML</dt>\n  <dd>Markup language for web pages</dd>\n</dl>",
+  "quiz": [
+    {
+      "question": "Which tag creates an unordered list?",
+      "options": [
+        "<ol>",
+        "<ul>",
+        "<dl>",
+        "<list>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

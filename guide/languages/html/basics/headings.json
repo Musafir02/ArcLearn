@@ -1,0 +1,22 @@
+{
+  "title": "HTML Headings",
+  "language": "html",
+  "topic": "headings",
+  "order": 5,
+  "nextTopic": "paragraphs",
+  "prevTopic": "attributes",
+  "content": "### HTML Headings\n\nHeadings are titles and subtitles for your content. There are **six levels**: `<h1>` to `<h6>`.\n\n---\n\n### Heading Tags\n\n```html\n<h1>Heading 1 (most important)</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6 (least important)</h6>\n```\n\n---\n\n### Importance vs Size\n\n| Tag | Importance | Default Size |\n|-----|-----------|-------------|\n| `<h1>` | Highest | 2em (largest) |\n| `<h2>` | High | 1.5em |\n| `<h3>` | Medium | 1.17em |\n| `<h4>` | Normal | 1em |\n| `<h5>` | Low | 0.83em |\n| `<h6>` | Lowest | 0.67em (smallest) |\n\n---\n\n### SEO and Accessibility\n\n- Search engines use headings to understand page structure\n- Screen readers use headings for navigation\n- Use **one** `<h1>` per page (the main title)\n- Do **not** skip heading levels (h1, then h2, not h4)\n\n```html\n<!-- Good structure -->\n<h1>My Blog</h1>\n  <h2>Today's Post</h2>\n    <h3>Introduction</h3>\n    <h3>Main Content</h3>\n  <h2>Comments</h2>\n```\n\n---\n\n### Styling Headings\n\nHeadings can be styled with CSS:\n\n```html\n<h1 style=\"font-size: 60px; text-align: center;\">\n  Big Centered Heading\n</h1>\n```\n\n> **Best Practice:** Do not use headings just for bold or large text. Use them for actual headings. Use CSS (`font-size`, `font-weight`) for visual styling.",
+  "codeExample": "<h1>Main Title (h1)</h1>\n<h2>Section Title (h2)</h2>\n<h3>Subsection Title (h3)</h3>\n<h4>Minor Title (h4)</h4>\n<h5>Small Title (h5)</h5>\n<h6>Tiny Title (h6)</h6>",
+  "quiz": [
+    {
+      "question": "Which is the most important heading tag?",
+      "options": [
+        "<h6>",
+        "<h1>",
+        "<head>",
+        "<heading>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

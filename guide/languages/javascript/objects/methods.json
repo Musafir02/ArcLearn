@@ -1,0 +1,22 @@
+{
+  "title": "Object Methods",
+  "language": "javascript",
+  "topic": "methods",
+  "order": 31,
+  "nextTopic": "constructors",
+  "prevTopic": "properties",
+  "content": "### Object Methods\n\nWhen a function is stored as an object property, it is called a **method**.\n\n---\n\n### Adding Methods\n\n```js\nlet person = {\n  name: \"John\",\n  greet: function() {\n    console.log(\"Hello!\");\n  }\n};\n\nperson.greet(); // \"Hello!\"\n```\n\n### Shorthand Syntax (ES6)\n\n```js\nlet person = {\n  name: \"John\",\n  greet() {        // No need for : function\n    console.log(\"Hello!\");\n  }\n};\n```\n\n---\n\n### Using `this` in Methods\n\nThe `this` keyword refers to the **object** that owns the method:\n\n```js\nlet person = {\n  name: \"John\",\n  greet() {\n    console.log(`Hello, I am ${this.name}`);\n  }\n};\n\nperson.greet(); // \"Hello, I am John\"\n```\n\n---\n\n### Built-in Object Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `Object.keys(obj)` | Returns array of keys | `Object.keys(person)` |\n| `Object.values(obj)` | Returns array of values | `Object.values(person)` |\n| `Object.entries(obj)` | Returns array of [key, value] | `Object.entries(person)` |\n| `Object.assign(target, src)` | Copies properties | `Object.assign({}, obj)` |\n| `Object.freeze(obj)` | Makes object immutable | `Object.freeze(obj)` |\n\n---\n\n> **Arrow Functions as Methods:** Avoid using arrow functions as methods -- they do not have their own `this`.",
+  "codeExample": "let person = {\n  name: \"Ibrahim\",\n  greet() {\n    return `Hi, I'm ${this.name}`;\n  }\n};\n\nconsole.log(person.greet());",
+  "quiz": [
+    {
+      "question": "What does `this` refer to inside an object method?",
+      "options": [
+        "The global object",
+        "The function itself",
+        "The object that owns the method",
+        "undefined"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

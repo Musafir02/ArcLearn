@@ -1,0 +1,22 @@
+{
+  "title": "Description Lists",
+  "language": "html",
+  "topic": "list_description",
+  "order": 26,
+  "nextTopic": "forms",
+  "prevTopic": "list_ordered",
+  "content": "### Description Lists (`<dl>`)\n\nA **description list** is a list of terms with their descriptions.\n\n---\n\n### Syntax\n\n```html\n<dl>\n  <dt>Term</dt>\n  <dd>Description of the term</dd>\n</dl>\n```\n\n---\n\n### Tags\n\n| Tag | Meaning |\n|-----|---------|\n| `<dl>` | Description List (container) |\n| `<dt>` | Definition Term |\n| `<dd>` | Definition Description (indented) |\n\n---\n\n### Multiple Terms and Descriptions\n\n```html\n<dl>\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language</dd>\n  <dd>Used to structure web pages</dd>\n  \n  <dt>CSS</dt>\n  <dt>Cascading Style Sheets</dt>\n  <dd>Used to style web pages</dd>\n</dl>\n```\n\n---\n\n### Styling Description Lists\n\n```html\n<style>\n  dt {\n    font-weight: bold;\n    margin-top: 10px;\n  }\n  dd {\n    margin-left: 20px;\n    color: #555;\n  }\n</style>\n```\n\n---\n\n### Common Uses\n\n| Use Case | Example |\n|----------|---------|\n| **Glossary** | Terms and definitions |\n| **Metadata** | Key-value pairs |\n| **FAQ** | Questions and answers |\n| **Product specs** | Feature descriptions |\n\n---\n\n> **Best Practice:** Use `<dl>` for any list of term-description pairs. It is more semantic than using `<ul>` or `<p>` for this purpose.",
+  "codeExample": "<dl style=\"font-family: Arial;\">\n  <dt style=\"font-weight: bold; margin-top: 10px;\">HTML</dt>\n  <dd style=\"margin-left: 20px; color: #666;\">\n    The standard markup language for creating web pages.\n  </dd>\n\n  <dt style=\"font-weight: bold; margin-top: 10px;\">CSS</dt>\n  <dd style=\"margin-left: 20px; color: #666;\">\n    The language used to style HTML documents.\n  </dd>\n\n  <dt style=\"font-weight: bold; margin-top: 10px;\">JavaScript</dt>\n  <dd style=\"margin-left: 20px; color: #666;\">\n    The programming language for web interactivity.\n  </dd>\n</dl>",
+  "quiz": [
+    {
+      "question": "Which tag contains the definition term?",
+      "options": [
+        "<dd>",
+        "<dt>",
+        "<dl>",
+        "<term>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

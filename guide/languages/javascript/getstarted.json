@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started",
+  "language": "javascript",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### How to Add JavaScript?\n\nThere are **3 ways** to add JavaScript to your HTML page:\n\n---\n\n#### 1. Internal Script\n\nPut your code inside a `<script>` tag in the HTML file.\n\n#### 2. External Script\n\nSave code in a `.js` file and link it -- **best practice** for big projects.\n\n#### 3. Inline (avoid this)\n\nAdd code directly to HTML elements using event attributes.\n\n---\n\n### Tools You Need\n\n| Tool | Purpose |\n|------|---------|\n| **Browser** | Chrome, Firefox, Edge -- any modern one |\n| **Text Editor** | VS Code, Notepad++, Sublime |\n| **DevTools** | Press `F12` to test code instantly |\n\n---\n\n### Quick Test\n\nOpen your browser's **console** (`F12` > Console) and type:\n\n```js\nconsole.log('JavaScript is awesome!');\n```\n\nPress **Enter** -- you just wrote your first JS code!",
+  "codeExample": "<script>\n  console.log('Hello from JavaScript!');\n</script>",
+  "quiz": [
+    {
+      "question": "Which tag is used to embed JavaScript in HTML?",
+      "options": [
+        "<js>",
+        "<script>",
+        "<javascript>",
+        "<code>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

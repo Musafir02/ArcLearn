@@ -1,0 +1,22 @@
+{
+  "title": "YouTube Videos in HTML",
+  "language": "html",
+  "topic": "youtube",
+  "order": 35,
+  "nextTopic": "iframe",
+  "prevTopic": "audio",
+  "content": "### Embedding YouTube Videos\n\n---\n\n### Using an `<iframe>`\n\nThe easiest way to embed a YouTube video:\n\n```html\n<iframe width=\"560\" height=\"315\"\n  src=\"https://www.youtube.com/embed/VIDEO_ID\"\n  title=\"YouTube video player\"\n  frameborder=\"0\"\n  allow=\"accelerometer; autoplay; clipboard-write;\n         encrypted-media; gyroscope; picture-in-picture\"\n  allowfullscreen>\n</iframe>\n```\n\n---\n\n### Getting the Video ID\n\nFrom a YouTube URL:\n\n```\nURL: https://www.youtube.com/watch?v=dQw4w9WgXcQ\nID:  dQw4w9WgXcQ\n```\n\nJust take the part after `v=` and put it in the embed URL.\n\n---\n\n### YouTube Parameters\n\nAdd parameters to the embed URL:\n\n| Parameter | Value | Effect |\n|-----------|-------|--------|\n| `autoplay=1` | 1 or 0 | Auto-play video |\n| `mute=1` | 1 or 0 | Mute (required with autoplay) |\n| `loop=1` | 1 or 0 | Loop the video |\n| `controls=0` | 1 or 0 | Hide controls |\n| `rel=0` | 1 or 0 | Limit related videos |\n| `start=30` | Seconds | Start at 30 seconds |\n\n```html\n<!-- Autoplay, muted, loop, no related videos -->\n<iframe src=\"https://www.youtube.com/embed/VIDEO_ID?\n  autoplay=1&mute=1&loop=1&rel=0\" ...>\n</iframe>\n```\n\n---\n\n### Responsive YouTube Embed\n\n```html\n<style>\n  .video-container {\n    position: relative;\n    padding-bottom: 56.25%;  /* 16:9 aspect ratio */\n    height: 0;\n    overflow: hidden;\n  }\n  .video-container iframe {\n    position: absolute;\n    top: 0; left: 0;\n    width: 100%;\n    height: 100%;\n  }\n</style>\n\n<div class=\"video-container\">\n  <iframe src=\"https://www.youtube.com/embed/VIDEO_ID\" ...>\n  </iframe>\n</div>\n```\n\n---\n\n> **Pro Tip:** Always use `allowfullscreen`, `title` (accessibility), and `https://` in the embed URL. The `rel=0` parameter helps keep users on your site by limiting related YouTube videos.",
+  "codeExample": "<iframe width=\"560\" height=\"315\"\n  src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\"\n  title=\"YouTube video\"\n  frameborder=\"0\"\n  allow=\"accelerometer; autoplay; clipboard-write;\n         encrypted-media; gyroscope; picture-in-picture\"\n  allowfullscreen>\n</iframe>",
+  "quiz": [
+    {
+      "question": "What element is used to embed YouTube videos?",
+      "options": [
+        "<video>",
+        "<embed>",
+        "<iframe>",
+        "<youtube>"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

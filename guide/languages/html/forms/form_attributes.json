@@ -1,0 +1,22 @@
+{
+  "title": "Form Attributes",
+  "language": "html",
+  "topic": "form_attributes",
+  "order": 28,
+  "nextTopic": "form_elements",
+  "prevTopic": "forms",
+  "content": "### HTML Form Attributes\n\nThe `<form>` element has important attributes that control behavior.\n\n---\n\n### The `action` Attribute\n\nDefines where to send the form data:\n\n```html\n<form action=\"/submit-form.php\">\n<form action=\"https://api.example.com/submit\">\n<form action=\"\">  <!-- Submit to current page -->\n```\n\n---\n\n### The `method` Attribute\n\n| Method | Description |\n|--------|-------------|\n| `get` | Appends data to URL (visible, for searches) |\n| `post` | Sends data in body (hidden, for sensitive data) |\n\n```html\n<form method=\"get\">  <!-- URL: ?name=John&age=25 -->\n<form method=\"post\"> <!-- Data in request body -->\n```\n\n---\n\n### The `target` Attribute\n\n| Value | Where to Open |\n|-------|---------------|\n| `_self` | Same tab (default) |\n| `_blank` | New tab |\n\n```html\n<form action=\"/submit\" target=\"_blank\">\n```\n\n---\n\n### The `enctype` Attribute\n\nOnly needed when a form has file uploads:\n\n| Value | Use |\n|-------|-----|\n| `application/x-www-form-urlencoded` | Default |\n| `multipart/form-data` | When uploading files |\n| `text/plain` | Plain text (rare) |\n\n```html\n<form action=\"/upload\" method=\"post\"\n      enctype=\"multipart/form-data\">\n  <input type=\"file\" name=\"document\">\n</form>\n```\n\n---\n\n### The `autocomplete` Attribute\n\n```html\n<form autocomplete=\"on\">  <!-- Browser fills fields -->\n<form autocomplete=\"off\">  <!-- No auto-fill -->\n```\n\n---\n\n### The `novalidate` Attribute\n\nTurns off browser validation:\n\n```html\n<form novalidate>\n  <input type=\"email\" required>\n  <!-- Will submit even with invalid email -->\n</form>\n```\n\n> **Best Practice:** Use `post` for forms that change data (registration, login), `get` for search forms where the results can be bookmarked.",
+  "codeExample": "<form action=\"/search\" method=\"get\" target=\"_blank\">\n  <label for=\"q\">Search:</label>\n  <input type=\"search\" id=\"q\" name=\"q\">\n  <input type=\"submit\" value=\"Search\">\n</form>\n\n<form action=\"/register\" method=\"post\" autocomplete=\"on\">\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  <input type=\"submit\" value=\"Register\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which method should be used for form data that should NOT appear in the URL?",
+      "options": [
+        "get",
+        "post",
+        "put",
+        "send"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HTML Input Types",
+  "language": "html",
+  "topic": "form_input_types",
+  "order": 30,
+  "nextTopic": "form_input_attributes",
+  "prevTopic": "form_elements",
+  "content": "### HTML Input Types\n\nThe `type` attribute of `<input>` defines what kind of data to collect.\n\n---\n\n### Text Input Types\n\n| Type | Description |\n|------|-------------|\n| `text` | Default -- single line text |\n| `password` | Masked input |\n| `email` | Email address (validates @) |\n| `tel` | Phone number |\n| `url` | Web address (validates URL) |\n| `search` | Search field |\n\n```html\n<input type=\"text\" placeholder=\"Name\">\n<input type=\"password\" placeholder=\"Password\">\n<input type=\"email\" placeholder=\"Email\">\n```\n\n---\n\n### Number Input Types\n\n| Type | Description |\n|------|-------------|\n| `number` | Numbers only (with spinner) |\n| `range` | Slider control |\n\n```html\n<input type=\"number\" min=\"1\" max=\"10\" step=\"0.5\">\n<input type=\"range\" min=\"0\" max=\"100\" value=\"50\">\n```\n\n---\n\n### Date/Time Input Types\n\n| Type | Description |\n|------|-------------|\n| `date` | Date picker (YYYY-MM-DD) |\n| `time` | Time picker |\n| `datetime-local` | Date + time (no timezone) |\n| `month` | Month and year |\n| `week` | Week and year |\n\n```html\n<input type=\"date\">\n<input type=\"time\">\n<input type=\"datetime-local\">\n```\n\n---\n\n### Selection Input Types\n\n| Type | Description |\n|------|-------------|\n| `checkbox` | Multiple choices |\n| `radio` | Single choice |\n| `file` | File upload |\n| `color` | Color picker |\n\n```html\n<input type=\"checkbox\" name=\"hobby\" value=\"coding\">\n<input type=\"radio\" name=\"gender\" value=\"male\">\n<input type=\"file\">\n<input type=\"color\">\n```\n\n---\n\n### Button Input Types\n\n| Type | Description |\n|------|-------------|\n| `submit` | Submit form |\n| `reset` | Reset all fields |\n| `button` | Generic button |\n| `image` | Image as submit button |\n\n```html\n<input type=\"submit\" value=\"Send\">\n<input type=\"reset\" value=\"Clear\">\n<input type=\"button\" value=\"Click\">\n<input type=\"image\" src=\"submit.png\" alt=\"Submit\">\n```\n\n> **Modern Browsers:** Most input types come with built-in validation and mobile-friendly keyboards.",
+  "codeExample": "<form>\n  <label>Name: <input type=\"text\"></label><br>\n  <label>Email: <input type=\"email\"></label><br>\n  <label>Age: <input type=\"number\" min=\"1\" max=\"120\"></label><br>\n  <label>Password: <input type=\"password\"></label><br>\n\n  <label>Color: <input type=\"color\"></label><br>\n  <label>Date: <input type=\"date\"></label><br>\n\n  <label><input type=\"checkbox\"> Subscribe</label><br>\n\n  <label><input type=\"radio\" name=\"r\"> Option 1</label>\n  <label><input type=\"radio\" name=\"r\"> Option 2</label><br>\n\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which input type shows a color picker?",
+      "options": [
+        "picker",
+        "color",
+        "palette",
+        "rgb"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

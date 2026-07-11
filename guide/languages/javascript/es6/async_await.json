@@ -1,0 +1,22 @@
+{
+  "title": "Async/Await (ES8)",
+  "language": "javascript",
+  "topic": "async_await",
+  "order": 46,
+  "nextTopic": "try_catch",
+  "prevTopic": "promises",
+  "content": "### Async/Await\n\n`async/await` makes **asynchronous** code look and behave like **synchronous** code.\n\n---\n\n### The `async` Keyword\n\nMarks a function as asynchronous. It **always returns a Promise**:\n\n```js\nasync function greet() {\n  return \"Hello!\";\n}\n\ngreet().then(console.log); // \"Hello!\"\n```\n\n---\n\n### The `await` Keyword\n\n`await` pauses execution until a Promise is resolved:\n\n```js\nasync function getData() {\n  const response = await fetch(\"https://api.example.com/data\");\n  const data = await response.json();\n  return data;\n}\n```\n\n- `await` can **only** be used inside `async` functions\n- The function **pauses** at `await` and **resumes** when the promise resolves\n\n---\n\n### Error Handling\n\nUse `try/catch` with async/await:\n\n```js\nasync function getData() {\n  try {\n    const response = await fetch(\"https://api.example.com/data\");\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.error(\"Error:\", error);\n  }\n}\n```\n\n---\n\n### Promise vs Async/Await\n\n| Approach | Code Style |\n|----------|------------|\n| **Promises** | `fetch(url).then(fn).catch(fn)` |\n| **Async/Await** | `const data = await fetch(url)` |\n\nAsync/await is **cleaner and easier to read**, especially with multiple async operations.\n\n---\n\n> **Async/await** is built on Promises. Understanding Promises first helps you understand async/await better.",
+  "codeExample": "function wait(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\n\nasync function run() {\n  console.log(\"Start\");\n  await wait(1000);\n  console.log(\"After 1 second\");\n  await wait(500);\n  console.log(\"After 1.5 seconds\");\n}\n\nrun();",
+  "quiz": [
+    {
+      "question": "What keyword is used to pause execution until a Promise resolves?",
+      "options": [
+        "pause",
+        "wait",
+        "await",
+        "delay"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

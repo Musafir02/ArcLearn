@@ -1,0 +1,22 @@
+{
+  "title": "While Loop",
+  "language": "javascript",
+  "topic": "while_loop",
+  "order": 37,
+  "nextTopic": "break_continue",
+  "prevTopic": "for_loop",
+  "content": "### While Loops\n\nA **while loop** repeats code **as long as** a condition is true.\n\n---\n\n### While Loop\n\n```js\nlet i = 1;\nwhile (i <= 5) {\n  console.log(i);\n  i++;\n}\n```\n\nThe condition is checked **before** each iteration. If the condition starts as false, the loop never runs.\n\n---\n\n### Do/While Loop\n\nThe **do/while** loop runs **at least once** because the condition is checked after:\n\n```js\nlet i = 1;\ndo {\n  console.log(i);\n  i++;\n} while (i <= 5);\n```\n\n---\n\n### While vs For\n\n| Aspect | For Loop | While Loop |\n|--------|----------|------------|\n| **Best for** | Known number of iterations | Unknown number of iterations |\n| **Example** | Loop through array | Read until data ends |\n| **Risk** | Off-by-one | Infinite loop |\n\n---\n\n### Infinite Loops (Danger!)\n\nMake sure the condition eventually becomes `false`:\n\n```js\n// DANGER: This never ends!\nlet i = 1;\nwhile (i > 0) {\n  console.log(i);\n  i++; // i keeps growing, never becomes <= 0\n}\n```\n\n> **Always** update your loop variable inside the loop to avoid infinite loops which crash your program.",
+  "codeExample": "let count = 1;\nwhile (count <= 3) {\n  console.log(`Count: ${count}`);\n  count++;\n}\n\nlet input = 0;\ndo {\n  console.log(`Number: ${input}`);\n  input++;\n} while (input < 3);",
+  "quiz": [
+    {
+      "question": "How many times does a do/while loop always run at minimum?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Depends on condition"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

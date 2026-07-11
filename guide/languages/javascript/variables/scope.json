@@ -1,0 +1,22 @@
+{
+  "title": "Variable Scope",
+  "language": "javascript",
+  "topic": "scope",
+  "order": 12,
+  "nextTopic": "operators",
+  "prevTopic": "variables",
+  "content": "### What is Scope?\n\n**Scope** determines where a variable is **accessible** in your code.\n\n---\n\n### Types of Scope\n\n#### 1. Global Scope\n\nVariables declared **outside** any function or block are **global** -- accessible everywhere.\n\n```js\nlet globalVar = \"I am global\";\n```\n\n#### 2. Function Scope (`var`)\n\n`var` variables are scoped to the **function** they are defined in.\n\n```js\nfunction test() {\n  var x = 10;\n}\nconsole.log(x); // ReferenceError\n```\n\n#### 3. Block Scope (`let`, `const`)\n\n`let` and `const` are scoped to the **block** `{}` they are defined in.\n\n```js\nif (true) {\n  let y = 20;\n  const z = 30;\n}\nconsole.log(y); // ReferenceError\n```\n\n---\n\n### Scope Chain\n\nInner scopes can access variables from **outer** scopes, but not vice versa:\n\n```js\nlet a = \"global\";\nfunction outer() {\n  let b = \"outer\";\n  function inner() {\n    let c = \"inner\";\n    console.log(a, b, c); // All accessible\n  }\n}\n```\n\n---\n\n> **Key Rule:** `let` and `const` are **block-scoped**. `var` is **function-scoped**. Always prefer `let` and `const`.",
+  "codeExample": "let globalVar = \"global\";\n\nfunction test() {\n  let localVar = \"local\";\n  console.log(globalVar); // accessible\n  console.log(localVar);  // accessible\n}\n\ntest();\nconsole.log(localVar); // Error: not defined",
+  "quiz": [
+    {
+      "question": "What is the scope of a variable declared with `let` inside a block `{}`?",
+      "options": [
+        "Global scope",
+        "Function scope",
+        "Block scope",
+        "Script scope"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HTML Tables",
+  "language": "html",
+  "topic": "tables",
+  "order": 17,
+  "nextTopic": "table_borders",
+  "prevTopic": "picture",
+  "content": "### HTML Tables\n\nTables let you arrange data in rows and columns.\n\n---\n\n### Basic Table Structure\n\n```html\n<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n  </tr>\n</table>\n```\n\n---\n\n### Table Tags\n\n| Tag | Purpose |\n|-----|---------|\n| `<table>` | Defines the table |\n| `<tr>` | Table row |\n| `<th>` | Table header cell (bold, centered) |\n| `<td>` | Table data cell |\n| `<caption>` | Table caption/title |\n| `<thead>` | Groups header content |\n| `<tbody>` | Groups body content |\n| `<tfoot>` | Groups footer content |\n| `<colgroup>` | Groups columns for styling |\n| `<col>` | Column properties |\n\n---\n\n### Table with Caption\n\n```html\n<table>\n  <caption>Employee List</caption>\n  <tr>\n    <th>Name</th>\n    <th>Department</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Engineering</td>\n  </tr>\n</table>\n```\n\n---\n\n### Colspan and Rowspan\n\n```html\n<table>\n  <tr>\n    <th colspan=\"2\">Full Name</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Smith</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">Team A</td>\n    <td>Bob</td>\n  </tr>\n  <tr>\n    <td>Charlie</td>\n  </tr>\n</table>\n```\n\n- `colspan` -- merges columns horizontally\n- `rowspan` -- merges rows vertically\n\n> **Best Practice:** Use tables for **tabular data** (spreadsheet-like info), not for page layout. Use CSS Grid/Flexbox for layout.",
+  "codeExample": "<table>\n  <caption>Employee Directory</caption>\n  <tr>\n    <th>Name</th>\n    <th>Role</th>\n    <th>Salary</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Engineer</td>\n    <td>$80k</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>Designer</td>\n    <td>$75k</td>\n  </tr>\n</table>",
+  "quiz": [
+    {
+      "question": "Which tag defines a table header cell?",
+      "options": [
+        "<td>",
+        "<th>",
+        "<tr>",
+        "<header>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

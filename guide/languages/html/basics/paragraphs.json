@@ -1,0 +1,22 @@
+{
+  "title": "HTML Paragraphs",
+  "language": "html",
+  "topic": "paragraphs",
+  "order": 6,
+  "nextTopic": "styles",
+  "prevTopic": "headings",
+  "content": "### HTML Paragraphs\n\nThe `<p>` tag defines a paragraph.\n\n---\n\n### Basic Paragraph\n\n```html\n<p>This is a paragraph of text.</p>\n<p>This is another paragraph.</p>\n```\n\nBrowsers automatically add space (margin) before and after paragraphs.\n\n---\n\n### Line Breaks\n\nUse `<br>` (void element) to break a line within a paragraph:\n\n```html\n<p>This is line 1<br>This is line 2</p>\n```\n\n---\n\n### Preformatted Text\n\nThe `<pre>` tag preserves spaces and line breaks:\n\n```html\n<pre>\n  Line 1\n    Indented line 2\n  Line 3\n</pre>\n```\n\n---\n\n### Display Rules\n\n| HTML Code | How It Displays |\n|-----------|----------------|\n| Multiple spaces | Collapsed into one |\n| New lines in code | Ignored (need `<br>`) |\n| Extra empty lines | Ignored |\n\n```html\n<p>This    has   many   spaces</p>\n<!-- Displays as: This has many spaces -->\n```\n\n---\n\n### Horizontal Rules\n\nThe `<hr>` tag creates a thematic break (horizontal line):\n\n```html\n<h1>Section 1</h1>\n<p>Some content</p>\n<hr>\n<h1>Section 2</h1>\n<p>More content</p>\n```\n\n> **Best Practice:** Use `<p>` for text paragraphs. Use `<br>` for line breaks within a paragraph. Use `<pre>` for code or formatted text.",
+  "codeExample": "<p>This is a paragraph.</p>\n<p>This is another paragraph with a<br>line break.</p>\n\n<pre>\n  This text\n    preserves\n  spaces and line breaks\n</pre>\n\n<hr>\n\n<p>After the horizontal rule.</p>",
+  "quiz": [
+    {
+      "question": "Which tag creates a line break?",
+      "options": [
+        "<break>",
+        "<lb>",
+        "<br>",
+        "<newline>"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

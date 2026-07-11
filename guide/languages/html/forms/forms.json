@@ -1,0 +1,22 @@
+{
+  "title": "HTML Forms",
+  "language": "html",
+  "topic": "forms",
+  "order": 27,
+  "nextTopic": "form_attributes",
+  "prevTopic": "list_description",
+  "content": "### HTML Forms\n\nForms are used to collect **user input** and send it to a server.\n\n---\n\n### Basic Form\n\n```html\n<form action=\"/submit\" method=\"post\">\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\">\n  <br>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n```\n\n---\n\n### The `<form>` Element\n\n| Attribute | Purpose |\n|-----------|---------|\n| `action` | URL where data is sent |\n| `method` | HTTP method (`get` or `post`) |\n| `target` | Where to show response |\n| `enctype` | Encoding type for file uploads |\n\n---\n\n### Common Input Elements\n\n| Element | Description |\n|---------|-------------|\n| `<input>` | Various input types |\n| `<textarea>` | Multi-line text |\n| `<select>` | Dropdown list |\n| `<button>` | Clickable button |\n| `<label>` | Label for an input |\n| `<fieldset>` | Groups related inputs |\n| `<legend>` | Caption for fieldset |\n\n---\n\n### The `<label>` Element\n\nLabels improve accessibility -- clicking the label focuses the input:\n\n```html\n<label for=\"email\">Email:</label>\n<input type=\"email\" id=\"email\" name=\"email\">\n\n<!-- Or wrap the input -->\n<label>\n  <input type=\"checkbox\" name=\"agree\"> I agree\n</label>\n```\n\n---\n\n### Submit Button\n\n```html\n<input type=\"submit\" value=\"Send\">\n\n<!-- Or using button element -->\n<button type=\"submit\">Send</button>\n```\n\n---\n\n> **Key Point:** Every input that should be submitted needs a `name` attribute. The `name` is the key, and the input value is the value when the form is submitted.",
+  "codeExample": "<form action=\"/submit\" method=\"post\">\n  <label for=\"username\">Username:</label><br>\n  <input type=\"text\" id=\"username\" name=\"username\"\n         placeholder=\"Enter username\"><br><br>\n\n  <label for=\"password\">Password:</label><br>\n  <input type=\"password\" id=\"password\" name=\"password\"><br><br>\n\n  <input type=\"submit\" value=\"Login\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which attribute of <input> is sent as the data key?",
+      "options": [
+        "id",
+        "name",
+        "class",
+        "value"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Call, Apply, and Bind",
+  "language": "javascript",
+  "topic": "call_apply_bind",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### Call, Apply, and Bind\n\nThese three methods let you **control what `this` refers to** when calling a function.\n\n---\n\n### `call()` -- Call with Explicit `this`\n\n```js\nconst person = { name: \"John\" };\n\nfunction greet(greeting) {\n  console.log(`${greeting}, I'm ${this.name}`);\n}\n\ngreet.call(person, \"Hello\"); // \"Hello, I'm John\"\n```\n\n- First argument: what `this` should be\n- Remaining arguments: passed to the function normally\n\n---\n\n### `apply()` -- Same as Call, But with Array\n\n```js\ngreet.apply(person, [\"Hi\"]); // \"Hi, I'm John\"\n\n// Useful for spreading arrays:\nconst numbers = [3, 1, 4, 1, 5];\nconst max = Math.max.apply(null, numbers); // 5 (old way)\nconst maxES6 = Math.max(...numbers);       // 5 (modern way)\n```\n\n- First argument: what `this` should be\n- Second argument: **array** of arguments\n\n---\n\n### `bind()` -- Create a New Function with Fixed `this`\n\n`bind()` returns a **new function** with `this` permanently set:\n\n```js\nconst person = { name: \"John\" };\n\nfunction greet() {\n  console.log(`Hi, I'm ${this.name}`);\n}\n\nconst boundGreet = greet.bind(person);\nboundGreet(); // \"Hi, I'm John\"\n\n// Also works with event handlers\nbutton.addEventListener(\"click\", greet.bind(person));\n```\n\n---\n\n### Comparison\n\n| Method | When to Use |\n|--------|-------------|\n| `call()` | Call function once, pass args individually |\n| `apply()` | Call function once, pass args as array |\n| `bind()` | Create a new function with `this` permanently fixed |\n\n---\n\n> **Modern Alternative:** Arrow functions (`() => {}`) capture `this` from the surrounding scope, often making `bind()` unnecessary in modern code.",
+  "codeExample": "const user = { name: \"Ibrahim\" };\n\nfunction introduce(role, years) {\n  console.log(`${this.name} works as ${role} for ${years} years`);\n}\n\nintroduce.call(user, \"developer\", 3);\nintroduce.apply(user, [\"designer\", 2]);\n\nconst bound = introduce.bind(user, \"manager\");\nbound(5);",
+  "quiz": [
+    {
+      "question": "Which method creates a new function with a fixed `this` value?",
+      "options": [
+        "call()",
+        "apply()",
+        "bind()",
+        "fix()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

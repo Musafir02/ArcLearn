@@ -1,0 +1,22 @@
+{
+  "title": "JavaScript Syntax",
+  "language": "javascript",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### JavaScript Syntax Rules\n\nJavaScript syntax is the **set of rules** for writing valid JS code.\n\n---\n\n### Key Rules\n\n| Rule | Example |\n|------|---------|\n| **Case-sensitive** | `name` is not same as `Name` |\n| **Statements end with `;`** | `let x = 5;` |\n| **Curly braces `{}`** for blocks | `if (x > 0) { ... }` |\n| **Parentheses `()`** for function calls | `console.log()` |\n| **Square brackets `[]`** for arrays | `[1, 2, 3]` |\n\n---\n\n### Values and Variables\n\n- **Literals** -- fixed values: `42`, `\"Hello\"`, `true`\n- **Variables** -- named containers: `let name = \"John\";`\n\n---\n\n### Identifiers\n\nNames must start with:\n- A **letter** (`a-z`, `A-Z`)\n- An **underscore** (`_`)\n- A **dollar sign** (`$`)\n\n> Cannot start with a **number**.",
+  "codeExample": "// This is a statement\nlet message = \"Hello!\";\nconsole.log(message);",
+  "quiz": [
+    {
+      "question": "Which is a valid JavaScript variable name?",
+      "options": [
+        "2name",
+        "my-name",
+        "_myVar",
+        "my var"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

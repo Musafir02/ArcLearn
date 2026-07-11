@@ -1,0 +1,22 @@
+{
+  "title": "Data Types",
+  "language": "javascript",
+  "topic": "datatypes",
+  "order": 6,
+  "nextTopic": "numbers",
+  "prevTopic": "comments",
+  "content": "### What are Data Types?\n\nData types define the **kind of value** a variable can hold. JavaScript is **dynamically typed** -- the type is determined at runtime.\n\n---\n\n### Primitive Types\n\n| Type | Example | Description |\n|------|---------|-------------|\n| **Number** | `42`, `3.14` | Integers and floats |\n| **String** | `\"Hello\"` | Text enclosed in quotes |\n| **Boolean** | `true`, `false` | Logical true/false |\n| **Undefined** | `let x;` | Variable declared but not assigned |\n| **Null** | `let x = null;` | Intentional absence of value |\n| **Symbol** | `Symbol()` | Unique identifier |\n| **BigInt** | `9007199254740991n` | Large integers |\n\n---\n\n### The `typeof` Operator\n\nUse `typeof` to check the type of any value:\n\n```js\ntypeof 42;        // \"number\"\ntypeof \"hello\";  // \"string\"\ntypeof true;      // \"boolean\"\ntypeof undefined; // \"undefined\"\ntypeof null;      // \"object\" (this is a known JS quirk!)\n```\n\n> **Note:** `typeof null` returns `\"object\"` -- this is a **historical bug** in JavaScript that is kept for backward compatibility.",
+  "codeExample": "const age = 25;\nconst name = \"Ibrahim\";\nconst isStudent = true;\nconsole.log(typeof age);\nconsole.log(typeof name);\nconsole.log(typeof isStudent);",
+  "quiz": [
+    {
+      "question": "What does the `typeof` operator return for a number in JavaScript?",
+      "options": [
+        "string",
+        "number",
+        "object",
+        "undefined"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

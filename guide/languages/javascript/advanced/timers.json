@@ -1,0 +1,22 @@
+{
+  "title": "Timers",
+  "language": "javascript",
+  "topic": "timers",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### JavaScript Timers\n\n**Timers** let you schedule code to run **after a delay** or at **regular intervals**.\n\n---\n\n### `setTimeout()` -- Run Once After Delay\n\n```js\nconst timerId = setTimeout(() => {\n  console.log(\"This runs after 2 seconds\");\n}, 2000);\n\n// Cancel the timeout\nclearTimeout(timerId);\n```\n\n---\n\n### `setInterval()` -- Run Repeatedly\n\n```js\nconst intervalId = setInterval(() => {\n  console.log(\"This runs every 1 second\");\n}, 1000);\n\n// Stop the interval\nclearInterval(intervalId);\n```\n\n---\n\n### Practical Examples\n\n#### Countdown Timer\n\n```js\nlet count = 5;\nconst timer = setInterval(() => {\n  console.log(count);\n  count--;\n  if (count < 0) {\n    clearInterval(timer);\n    console.log(\"Done!\");\n  }\n}, 1000);\n```\n\n#### Debounce (delay execution until user stops typing)\n\n```js\nlet timeout;\ninput.addEventListener(\"input\", () => {\n  clearTimeout(timeout);\n  timeout = setTimeout(() => {\n    console.log(\"User stopped typing\");\n  }, 300);\n});\n```\n\n---\n\n### `requestAnimationFrame()` -- Smooth Animations\n\nA better alternative for **animations** -- it syncs with the monitor's refresh rate (typically 60fps):\n\n```js\nfunction animate() {\n  // Update animation\n  element.style.transform = `translateX(${x}px)`;\n  x++;\n  requestAnimationFrame(animate);\n}\n\nrequestAnimationFrame(animate);\n```\n\n| Feature | `setInterval` | `requestAnimationFrame` |\n|---------|---------------|------------------------|\n| **Purpose** | General repeated tasks | Smooth animations |\n| **Pauses when tab hidden** | No | Yes (saves battery) |\n| **FPS** | Fixed (unreliable) | Matches screen refresh |\n\n---\n\n> **Key Point:** Timer delays are **minimum** delays. The actual delay may be longer if the main thread is busy with other tasks.\n\n  **Time Precision:** All timer delays are in **milliseconds** (1000 ms = 1 second).",
+  "codeExample": "console.log(\"Start\");\n\nsetTimeout(() => console.log(\"After 1s\"), 1000);\n\nlet count = 0;\nconst interval = setInterval(() => {\n  count++;\n  console.log(`Tick ${count}`);\n  if (count >= 3) clearInterval(interval);\n}, 500);\n\nconsole.log(\"End\");",
+  "quiz": [
+    {
+      "question": "Which method runs a function repeatedly at a given interval?",
+      "options": [
+        "setTimeout()",
+        "setInterval()",
+        "requestAnimationFrame()",
+        "repeat()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

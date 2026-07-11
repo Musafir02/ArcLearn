@@ -1,0 +1,22 @@
+{
+  "title": "Math Object",
+  "language": "javascript",
+  "topic": "math",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### The Math Object\n\nThe **Math** object provides **mathematical constants and functions**. It is a built-in object, not a constructor -- you use it directly.\n\n---\n\n### Math Constants\n\n| Constant | Value |\n|----------|-------|\n| `Math.PI` | `3.141592653589793` |\n| `Math.E` | `2.718281828459045` (Euler's number) |\n| `Math.SQRT2` | `1.4142135623730951` (square root of 2) |\n| `Math.LN2` | `0.6931471805599453` (natural log of 2) |\n| `Math.LN10` | `2.302585092994046` (natural log of 10) |\n\n```js\nconsole.log(Math.PI); // 3.141592653589793\n```\n\n---\n\n### Rounding Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `Math.round(x)` | Rounds to nearest integer | `Math.round(4.7)` = `5` |\n| `Math.ceil(x)` | Rounds **up** | `Math.ceil(4.2)` = `5` |\n| `Math.floor(x)` | Rounds **down** | `Math.floor(4.9)` = `4` |\n| `Math.trunc(x)` | Removes decimal (ES6) | `Math.trunc(4.9)` = `4` |\n\n---\n\n### Other Common Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `Math.random()` | Random number 0 to < 1 | `Math.random()` = `0.847...` |\n| `Math.max(a, b, ...)` | Highest value | `Math.max(1, 5, 3)` = `5` |\n| `Math.min(a, b, ...)` | Lowest value | `Math.min(1, 5, 3)` = `1` |\n| `Math.pow(x, y)` | x to the power of y | `Math.pow(2, 3)` = `8` |\n| `Math.sqrt(x)` | Square root | `Math.sqrt(16)` = `4` |\n| `Math.abs(x)` | Absolute value | `Math.abs(-5)` = `5` |\n| `Math.sin(x)` | Sine (radians) | `Math.sin(Math.PI / 2)` = `1` |\n| `Math.log(x)` | Natural log | `Math.log(Math.E)` = `1` |\n\n---\n\n### Random Numbers in a Range\n\n```js\n// Random integer between min and max (inclusive)\nfunction getRandomInt(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\n\nconsole.log(getRandomInt(1, 10)); // Random 1-10\n```\n\n> **Note:** `Math.random()` returns a number between 0 (inclusive) and 1 (exclusive). It is **not** cryptographically secure.",
+  "codeExample": "console.log(Math.PI);\nconsole.log(Math.round(4.7));\nconsole.log(Math.floor(Math.random() * 10) + 1);\nconsole.log(Math.max(10, 5, 20, 8));\nconsole.log(Math.sqrt(25));",
+  "quiz": [
+    {
+      "question": "Which method returns a random number between 0 and 1?",
+      "options": [
+        "Math.random()",
+        "Math.rand()",
+        "Math.floor()",
+        "Math.round()"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

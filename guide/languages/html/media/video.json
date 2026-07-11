@@ -1,0 +1,22 @@
+{
+  "title": "HTML Video",
+  "language": "html",
+  "topic": "video",
+  "order": 33,
+  "nextTopic": "audio",
+  "prevTopic": "form_input_form_attributes",
+  "content": "### HTML Video\n\nThe `<video>` element embeds video content in a page.\n\n---\n\n### Basic Video\n\n```html\n<video width=\"640\" height=\"360\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.webm\" type=\"video/webm\">\n  Your browser does not support video.\n</video>\n```\n\n---\n\n### Video Attributes\n\n| Attribute | Description |\n|-----------|-------------|\n| `controls` | Show play/pause/volume controls |\n| `autoplay` | Start playing automatically |\n| `muted` | Mute audio (required for autoplay in most browsers) |\n| `loop` | Repeat the video |\n| `poster` | Thumbnail image before play |\n| `width`/`height` | Video dimensions |\n| `preload` | How much to preload (`auto`, `metadata`, `none`) |\n\n---\n\n### Autoplay with Mute\n\nMost browsers require `muted` for autoplay:\n\n```html\n<video controls autoplay muted>\n  <source src=\"intro.mp4\" type=\"video/mp4\">\n</video>\n```\n\n---\n\n### Multiple Sources\n\nProvide multiple formats for browser compatibility:\n\n```html\n<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.webm\" type=\"video/webm\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n  <p>Browser does not support video.</p>\n</video>\n```\n\n---\n\n### Supported Formats\n\n| Format | Browser Support |\n|--------|----------------|\n| **MP4** (H.264) | All browsers |\n| **WebM** | Chrome, Firefox, Edge |\n| **OGG** | Firefox, Chrome |\n\n---\n\n### Poster Image\n\n```html\n<video controls poster=\"thumbnail.jpg\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>\n```\n\n> **Pro Tip:** Always include `controls` so users can play/pause. Always include fallback text between `<video>` tags. Provide at least MP4 format for maximum compatibility.",
+  "codeExample": "<video width=\"400\" controls>\n  <source src=\"https://www.w3schools.com/html/mov_bbb.mp4\"\n          type=\"video/mp4\">\n  <source src=\"https://www.w3schools.com/html/mov_bbb.ogg\"\n          type=\"video/ogg\">\n  Your browser does not support HTML video.\n</video>\n\n<video width=\"400\" controls autoplay muted loop>\n  <source src=\"https://www.w3schools.com/html/mov_bbb.mp4\"\n          type=\"video/mp4\">\n</video>",
+  "quiz": [
+    {
+      "question": "Which attribute is often required for autoplay in modern browsers?",
+      "options": [
+        "loop",
+        "muted",
+        "controls",
+        "poster"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

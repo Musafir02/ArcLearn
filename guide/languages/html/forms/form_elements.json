@@ -1,0 +1,22 @@
+{
+  "title": "Form Elements",
+  "language": "html",
+  "topic": "form_elements",
+  "order": 29,
+  "nextTopic": "form_input_types",
+  "prevTopic": "form_attributes",
+  "content": "### HTML Form Elements\n\n---\n\n### The `<input>` Element\n\nThe most important form element. The `type` attribute determines its behavior.\n\n```html\n<input type=\"text\" name=\"username\">\n```\n\n---\n\n### The `<textarea>` Element\n\nMulti-line text input:\n\n```html\n<textarea name=\"message\" rows=\"5\" cols=\"30\">\nDefault text here\n</textarea>\n```\n\n`rows` and `cols` control size. Use CSS `width`/`height` for better control.\n\n---\n\n### The `<select>` Element (Dropdown)\n\n```html\n<select name=\"country\">\n  <option value=\"\">-- Select --</option>\n  <option value=\"us\">United States</option>\n  <option value=\"uk\">United Kingdom</option>\n  <option value=\"ca\">Canada</option>\n</select>\n```\n\n### Grouped Options\n\n```html\n<select name=\"car\">\n  <optgroup label=\"American\">\n    <option value=\"ford\">Ford</option>\n    <option value=\"chevy\">Chevrolet</option>\n  </optgroup>\n  <optgroup label=\"German\">\n    <option value=\"bmw\">BMW</option>\n    <option value=\"audi\">Audi</option>\n  </optgroup>\n</select>\n```\n\n---\n\n### The `<button>` Element\n\n```html\n<button type=\"submit\">Submit</button>\n<button type=\"reset\">Reset</button>\n<button type=\"button\" onclick=\"alert('Clicked!')\">\n  Click Me\n</button>\n```\n\n---\n\n### The `<fieldset>` and `<legend>` Elements\n\nGroup related form fields:\n\n```html\n<fieldset>\n  <legend>Personal Information</legend>\n  Name: <input type=\"text\" name=\"name\"><br>\n  Email: <input type=\"email\" name=\"email\">\n</fieldset>\n```\n\n---\n\n### The `<output>` Element\n\nRepresents the result of a calculation:\n\n```html\n<form oninput=\"result.value=parseInt(a.value)+parseInt(b.value)\">\n  <input type=\"range\" name=\"a\" value=\"50\"> +\n  <input type=\"number\" name=\"b\" value=\"50\"> =\n  <output name=\"result\">100</output>\n</form>\n```\n\n> **Best Practice:** Always use `<label>` with form elements for accessibility. Use `for` attribute to associate labels with inputs.",
+  "codeExample": "<form>\n  <fieldset>\n    <legend>Contact Form</legend>\n\n    <label for=\"name\">Name:</label><br>\n    <input type=\"text\" id=\"name\" name=\"name\"><br>\n\n    <label for=\"message\">Message:</label><br>\n    <textarea id=\"message\" name=\"message\" rows=\"4\" cols=\"40\"></textarea><br>\n\n    <label for=\"topic\">Topic:</label><br>\n    <select id=\"topic\" name=\"topic\">\n      <option value=\"general\">General</option>\n      <option value=\"support\">Support</option>\n    </select><br><br>\n\n    <button type=\"submit\">Send</button>\n  </fieldset>\n</form>",
+  "quiz": [
+    {
+      "question": "Which element creates a multi-line text input?",
+      "options": [
+        "<input type=\"text\">",
+        "<textarea>",
+        "<multiline>",
+        "<textbox>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

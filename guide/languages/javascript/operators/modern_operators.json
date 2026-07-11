@@ -1,0 +1,22 @@
+{
+  "title": "Modern Operators",
+  "language": "javascript",
+  "topic": "modern_operators",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### Modern JavaScript Operators\n\nES2020+ introduced powerful operators for **safer, cleaner code**.\n\n---\n\n### Optional Chaining (`?.`)\n\nAccess nested properties **without checking each level**:\n\n```js\nconst user = { profile: { name: \"John\" } };\n\n// Old way (error-prone)\nconst name = user && user.profile && user.profile.name;\n\n// With optional chaining\nconst name = user?.profile?.name; // \"John\"\nconst city = user?.address?.city; // undefined (no error!)\n```\n\nAlso works with **method calls** and **dynamic access**:\n\n```js\nconst result = obj.method?.();      // Only calls if method exists\nconst value = arr?.[0];             // Works with arrays\n```\n\n---\n\n### Nullish Coalescing (`??`)\n\nReturns the **right-side** value only if the left side is `null` or `undefined`:\n\n```js\nconst name = input ?? \"default\";\n```\n\n| Left Value | Result |\n|------------|--------|\n| `\"John\"` | `\"John\"` |\n| `null` | `\"default\"` |\n| `undefined` | `\"default\"` |\n| `0` | `0` (not replaced!) |\n| `\"\"` | `\"\"` (not replaced!) |\n\n> **Key Difference:** `??` only replaces `null`/`undefined`. The `||` operator replaces **all falsy** values (including `0`, `\"\"`, `false`).\n\n---\n\n### Logical Assignment Operators\n\n| Operator | Equivalent To | Example |\n|----------|--------------|---------|\n| `&&=` | `x = x && y` | `x &&= 5` |\n| `||=` | `x = x || y` | `x ||= 5` |\n| `??=` | `x = x ?? y` | `x ??= 5` |\n\n```js\nlet a = true;\na &&= false;    // a = false (only assigns if a is truthy)\n\nlet b = null;\nb ??= \"default\"; // b = \"default\" (only assigns if b is null/undefined)\n\nlet c = 0;\nc ||= 10;       // c = 10 (|| replaces all falsy)\nc ??= 10;       // c = 0 (?? does NOT replace 0)\n```\n\n---\n\n> **These operators** make code more concise and prevent common bugs with nested property access and default values.",
+  "codeExample": "const user = { name: \"Ibrahim\", address: null };\n\nconsole.log(user?.name);        // \"Ibrahim\"\nconsole.log(user?.address?.city); // undefined\n\nconst count = null;\nconsole.log(count ?? 0);        // 0\nconsole.log(count || 0);        // 0\n\nlet x = 0;\nx ??= 10;\nconsole.log(x);                 // 0 (not replaced)",
+  "quiz": [
+    {
+      "question": "What does `null ?? 'default'` return?",
+      "options": [
+        "null",
+        "default",
+        "undefined",
+        "Error"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

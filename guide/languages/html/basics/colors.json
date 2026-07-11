@@ -1,0 +1,22 @@
+{
+  "title": "HTML Colors",
+  "language": "html",
+  "topic": "colors",
+  "order": 10,
+  "nextTopic": "links",
+  "prevTopic": "comments",
+  "content": "### HTML Colors\n\nColors in HTML can be specified using **names**, **RGB**, **HEX**, **HSL**, or **RGBA** values.\n\n---\n\n### Color Formats\n\n| Format | Example | Description |\n|--------|---------|-------------|\n| **Color Name** | `red` | 140 named colors |\n| **HEX** | `#FF0000` | Hexadecimal (most common) |\n| **RGB** | `rgb(255, 0, 0)` | Red, Green, Blue (0-255) |\n| **RGBA** | `rgba(255, 0, 0, 0.5)` | RGB with Alpha (transparency) |\n| **HSL** | `hsl(0, 100%, 50%)` | Hue, Saturation, Lightness |\n\n---\n\n### Background Color\n\n```html\n<h1 style=\"background-color: dodgerblue;\">\n  Blue Background\n</h1>\n<p style=\"background-color: #FFA500;\">\n  Orange background (HEX)\n</p>\n```\n\n---\n\n### Text Color\n\n```html\n<p style=\"color: tomato;\">Tomato colored text</p>\n<p style=\"color: rgb(60, 179, 113);\">Green text (RGB)</p>\n```\n\n---\n\n### Border Color\n\n```html\n<p style=\"border: 2px solid violet;\">\n  Violet border\n</p>\n```\n\n---\n\n### Transparency with RGBA\n\n```html\n<p style=\"background-color: rgba(255, 99, 71, 0.3);\">\n  Semi-transparent tomato background\n</p>\n```\n\n---\n\n### Standard Named Colors\n\n| Color Name | HEX Value |\n|-----------|-----------|\n| Red | `#FF0000` |\n| Blue | `#0000FF` |\n| Green | `#008000` |\n| Yellow | `#FFFF00` |\n| Black | `#000000` |\n| White | `#FFFFFF` |\n| Gray | `#808080` |\n| Orange | `#FFA500` |\n| Purple | `#800080` |\n\n> **Pro Tip:** Use a color picker tool or VS Code's built-in color picker to find the perfect color. `#` followed by 6 hex digits is the most common format.",
+  "codeExample": "<p style=\"background-color: dodgerblue; color: white;\">\n  Blue background, white text\n</p>\n<p style=\"color: rgb(255, 99, 71);\">Tomato text (RGB)</p>\n<p style=\"border: 2px solid #FFA500;\">Orange border (HEX)</p>\n<p style=\"background-color: rgba(60, 179, 113, 0.3);\">\n  Semi-transparent green\n</p>",
+  "quiz": [
+    {
+      "question": "Which format represents colors in HTML with #RRGGBB?",
+      "options": [
+        "RGB",
+        "HEX",
+        "HSL",
+        "Color name"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

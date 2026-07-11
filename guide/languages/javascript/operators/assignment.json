@@ -1,0 +1,22 @@
+{
+  "title": "Assignment Operators",
+  "language": "javascript",
+  "topic": "assignment",
+  "order": 15,
+  "nextTopic": "comparison",
+  "prevTopic": "arithmetic",
+  "content": "### Assignment Operators\n\n**Assignment operators** assign values to variables. The basic `=` operator is the most common.\n\n---\n\n### Common Assignment Operators\n\n| Operator | Example | Same As |\n|----------|---------|---------|\n| `=` | `x = 5` | `x = 5` |\n| `+=` | `x += 3` | `x = x + 3` |\n| `-=` | `x -= 3` | `x = x - 3` |\n| `*=` | `x *= 3` | `x = x * 3` |\n| `/=` | `x /= 3` | `x = x / 3` |\n| `%=` | `x %= 3` | `x = x % 3` |\n| `**=` | `x **= 3` | `x = x ** 3` |\n| `<<=` | `x <<= 3` | `x = x << 3` |\n| `>>=` | `x >>= 3` | `x = x >> 3` |\n| `&=` | `x &= 3` | `x = x & 3` |\n| `|=` | `x \\|= 3` | `x = x \\| 3` |\n\n---\n\n### Practical Example\n\n```js\nlet score = 0;\nscore += 10; // score is now 10\nscore -= 3;  // score is now 7\nscore *= 2;  // score is now 14\n```\n\n---\n\n> **Common Use:** `x += 1` is a shorter way to write `x = x + 1`. It is widely used in loops and counters.",
+  "codeExample": "let x = 10;\nx += 5;\nconsole.log(x);\nx -= 3;\nconsole.log(x);\nx *= 2;\nconsole.log(x);",
+  "quiz": [
+    {
+      "question": "What does x += 5 do?",
+      "options": [
+        "Sets x to 5",
+        "Adds 5 to x",
+        "Checks if x equals 5",
+        "Multiplies x by 5"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

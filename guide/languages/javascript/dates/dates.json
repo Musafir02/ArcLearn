@@ -1,0 +1,22 @@
+{
+  "title": "Dates",
+  "language": "javascript",
+  "topic": "dates",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### The Date Object\n\nThe **Date** object lets you work with dates and times in JavaScript.\n\n---\n\n### Creating Dates\n\n```js\nnew Date()                    // Current date/time\nnew Date(milliseconds)        // Since Jan 1, 1970 (epoch)\nnew Date(\"2024-01-15\")       // From a date string\nnew Date(2024, 0, 15)        // Year, Month (0-11), Day\nnew Date(2024, 0, 15, 10, 30, 0) // With time\n```\n\n> **Important:** Months are **0-indexed** (0 = January, 11 = December).\n\n---\n\n### Getting Date Components\n\n| Method | Returns | Example |\n|--------|---------|---------|\n| `getFullYear()` | 4-digit year | `2024` |\n| `getMonth()` | Month (0-11) | `0` (January) |\n| `getDate()` | Day of month (1-31) | `15` |\n| `getDay()` | Day of week (0-6) | `1` (Monday) |\n| `getHours()` | Hours (0-23) | `10` |\n| `getMinutes()` | Minutes (0-59) | `30` |\n| `getSeconds()` | Seconds (0-59) | `0` |\n| `getTime()` | Milliseconds since epoch | `1705312200000` |\n\n---\n\n### Setting Date Components\n\n```js\nconst d = new Date();\nd.setFullYear(2025);\nd.setMonth(11);     // December\nd.setDate(25);\nd.setHours(12);\n```\n\n---\n\n### Formatting Dates\n\n```js\nconst d = new Date();\n\nconsole.log(d.toString());       // \"Mon Jan 15 2024 10:30:00...\"\nconsole.log(d.toDateString());   // \"Mon Jan 15 2024\"\nconsole.log(d.toTimeString());   // \"10:30:00 GMT+0530...\"\nconsole.log(d.toISOString());    // \"2024-01-15T05:00:00.000Z\"\nconsole.log(d.toLocaleDateString()); // Locale format (e.g., \"1/15/2024\")\nconsole.log(d.toLocaleTimeString()); // Locale time format\n```\n\n---\n\n### Date Calculations\n\n```js\nconst today = new Date();\nconst tomorrow = new Date(today);\ntomorrow.setDate(today.getDate() + 1);\n\n// Difference in milliseconds\nconst diff = tomorrow - today;  // 86400000 ms = 1 day\n\n// Convert to days\nconst diffDays = diff / (1000 * 60 * 60 * 24); // 1\n```\n\n> **Gotcha:** Dates are stored as milliseconds. Arithmetic works, but be careful with time zones and daylight saving.",
+  "codeExample": "const now = new Date();\nconsole.log(now.toString());\n\nconst birthday = new Date(2024, 8, 15); // Sep 15, 2024\nconsole.log(birthday.toDateString());\n\nconst diff = birthday - now;\nconsole.log(`Days until birthday: ${Math.ceil(diff / (1000*60*60*24))}`);",
+  "quiz": [
+    {
+      "question": "What month does getMonth() return for January?",
+      "options": [
+        "1",
+        "0",
+        "January",
+        "undefined"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

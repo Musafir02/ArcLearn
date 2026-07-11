@@ -1,0 +1,22 @@
+{
+  "title": "String Methods",
+  "language": "javascript",
+  "topic": "strings_methods",
+  "order": 19,
+  "nextTopic": "template",
+  "prevTopic": "ternary",
+  "content": "### String Methods\n\nJavaScript provides many **built-in methods** to manipulate strings.\n\n---\n\n### Common Methods\n\n| Method | Description | Example | Result |\n|--------|-------------|---------|--------|\n| `length` | Returns character count | `\"Hello\".length` | `5` |\n| `toUpperCase()` | Converts to uppercase | `\"hello\".toUpperCase()` | `\"HELLO\"` |\n| `toLowerCase()` | Converts to lowercase | `\"HELLO\".toLowerCase()` | `\"hello\"` |\n| `trim()` | Removes whitespace from both ends | `\"  hi  \".trim()` | `\"hi\"` |\n| `slice(start, end)` | Extracts a part | `\"Hello\".slice(0, 3)` | `\"Hel\"` |\n| `substring(start, end)` | Similar to slice | `\"Hello\".substring(1, 4)` | `\"ell\"` |\n| `replace(old, new)` | Replaces first match | `\"a-b-c\".replace(\"-\", \":\")` | `\"a:b-c\"` |\n| `split(separator)` | Splits into array | `\"a,b,c\".split(\",\")` | `[\"a\",\"b\",\"c\"]` |\n| `includes(str)` | Checks if contains | `\"Hello\".includes(\"ell\")` | `true` |\n| `indexOf(str)` | Returns position | `\"Hello\".indexOf(\"e\")` | `1` |\n\n---\n\n### Method Chaining\n\nMethods can be **chained** together:\n\n```js\nlet text = \"  Hello World!  \";\nlet result = text.trim().toUpperCase().slice(0, 5);\nconsole.log(result); // \"HELLO\"\n```\n\n---\n\n> **Strings are immutable:** Methods return a **new** string, they do not change the original.",
+  "codeExample": "let text = \"  Hello, World!  \";\nconsole.log(text.trim());\nconsole.log(text.toUpperCase());\nconsole.log(text.toLowerCase());\nconsole.log(text.slice(2, 7));\nconsole.log(text.includes(\"World\"));",
+  "quiz": [
+    {
+      "question": "Which method converts a string to uppercase in JavaScript?",
+      "options": [
+        "upper()",
+        "uppercase()",
+        "toUpperCase()",
+        "capitalize()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

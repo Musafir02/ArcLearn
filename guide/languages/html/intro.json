@@ -1,0 +1,22 @@
+{
+  "title": "HTML Introduction",
+  "language": "html",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is HTML?\n\n**HTML** stands for **HyperText Markup Language**. It is the standard language for creating web pages.\n\n---\n\n### What Does HTML Do?\n\n- **Structure** web pages with headings, paragraphs, and sections\n- **Embed** images, videos, and links\n- **Create** forms for user input\n- **Define** the content layout of a website\n\n---\n\n### Key Points\n\n| Aspect | Description |\n|--------|-------------|\n| **Not a programming language** | It is a **markup** language |\n| **Uses tags** | Content is wrapped in `<tagname>` |\n| **Browsers render it** | Chrome, Firefox, Safari, Edge |\n| **Works with CSS & JS** | CSS for style, JS for behavior |\n\n---\n\n### A Simple HTML Document\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>My First Heading</h1>\n  <p>My first paragraph.</p>\n</body>\n</html>\n```\n\n---\n\n### HTML Page Structure\n\n- `<!DOCTYPE html>` -- tells the browser it is HTML5\n- `<html>` -- the root element\n- `<head>` -- contains meta information (title, links)\n- `<body>` -- contains visible content\n\n---\n\n> **Fun Fact:** HTML was created by **Tim Berners-Lee** in **1991**. The current version is HTML5 (2014).",
+  "codeExample": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My First Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>This is my first HTML page.</p>\n</body>\n</html>",
+  "quiz": [
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "HyperText Markup Language",
+        "High Tech Modern Language",
+        "Home Tool Markup Language",
+        "HyperTransfer Markup Language"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

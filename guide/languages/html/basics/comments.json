@@ -1,0 +1,22 @@
+{
+  "title": "HTML Comments",
+  "language": "html",
+  "topic": "comments",
+  "order": 9,
+  "nextTopic": "colors",
+  "prevTopic": "formatting",
+  "content": "### HTML Comments\n\nComments are **not displayed** in the browser. They help document your code.\n\n---\n\n### Comment Syntax\n\n```html\n<!-- This is a comment -->\n```\n\nEverything between `<!--` and `-->` is ignored by the browser.\n\n---\n\n### Single Line Comments\n\n```html\n<!-- This is a single-line comment -->\n<p>This content is visible.</p>\n```\n\n---\n\n### Multi-Line Comments\n\n```html\n<!--\n  This is a multi-line comment.\n  It can span multiple lines.\n  Useful for detailed explanations.\n-->\n```\n\n---\n\n### Hiding Content Temporarily\n\nComments can **hide code** without deleting it:\n\n```html\n<p>Visible paragraph</p>\n<!--\n  <p>This paragraph is hidden</p>\n  <p>So is this one</p>\n-->\n```\n\n---\n\n### HTML Conditional Comments\n\nOlder versions of IE supported conditional comments:\n\n```html\n<!--[if IE]>\n  <p>You are using Internet Explorer</p>\n<![endif]-->\n```\n\n> **Note:** Conditional comments are obsolete. Do not use them in modern websites.\n\n---\n\n### Comment Best Practices\n\n| Do | Do Not |\n|----|--------|\n| Explain **complex** logic | State the obvious |\n| Mark **TODO** items | Comment out large blocks permanently |\n| Note **browser quirks** | Leave outdated comments |\n| Describe **intent** | Comment every line |\n\n> **Key Point:** Comments are not hidden from view -- anyone can see them in **View Page Source**. Do not put sensitive info in comments!",
+  "codeExample": "<!-- This is a comment -->\n<p>This paragraph is visible.</p>\n\n<!--\n  <p>This paragraph is hidden with a comment.</p>\n-->\n\n<!-- TODO: Add navigation menu here -->\n<p>More visible content.</p>",
+  "quiz": [
+    {
+      "question": "What is the correct HTML comment syntax?",
+      "options": [
+        "// comment",
+        "/* comment */",
+        "<!-- comment -->",
+        "# comment"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Variables",
+  "language": "javascript",
+  "topic": "variables",
+  "order": 11,
+  "nextTopic": "scope",
+  "prevTopic": "type_conversion",
+  "content": "### What are Variables?\n\nVariables are **named containers** for storing data values in memory.\n\n---\n\n### Declaring Variables\n\nJavaScript has **3 keywords** for declaring variables:\n\n| Keyword | Scope | Can Reassign? | Hoisted? |\n|---------|-------|---------------|----------|\n| `var` | Function | Yes | Yes (`undefined`) |\n| `let` | Block | Yes | Yes (TDZ) |\n| `const` | Block | No | Yes (TDZ) |\n\n---\n\n### `let` -- Modern Standard\n\n```js\nlet name = \"John\";\nname = \"Jane\"; // OK -- can reassign\n```\n\n### `const` -- For Constants\n\n```js\nconst pi = 3.14;\npi = 3; // Error! Cannot reassign a constant\n```\n\n> `const` does **not** mean immutable -- object properties can still change.\n\n### `var` -- Legacy (Avoid)\n\n```js\nvar x = 10; // Function-scoped, can cause bugs\n```\n\n---\n\n> **Modern Best Practice:** Use `const` by default. Use `let` only when you need to reassign. Never use `var` in new code.",
+  "codeExample": "const name = \"Ibrahim\";\nlet score = 0;\nscore = score + 10;\nconsole.log(score);",
+  "quiz": [
+    {
+      "question": "Which keyword should you use by default for a value that never gets reassigned?",
+      "options": [
+        "var",
+        "let",
+        "const",
+        "static"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Maps and Sets (ES6)",
+  "language": "javascript",
+  "topic": "maps_sets",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### Maps and Sets\n\nES6 introduced **Map** and **Set** -- new collection types beyond objects and arrays.\n\n---\n\n### Map -- Key-Value Pairs\n\nA **Map** holds key-value pairs where keys can be **any type** (not just strings).\n\n```js\nconst map = new Map();\n\nmap.set(\"name\", \"John\");\nmap.set(42, \"The answer\");\nmap.set(true, \"boolean key\");\n\nconsole.log(map.get(\"name\"));  // \"John\"\nconsole.log(map.has(42));       // true\nconsole.log(map.size);          // 3\nmap.delete(\"name\");\nmap.clear();                    // Remove all\n```\n\n#### Map vs Object\n\n| Feature | Object | Map |\n|---------|--------|-----|\n| **Key type** | String/Symbol only | Any type |\n| **Order** | Not guaranteed (old) | Insertion order |\n| **Size** | Manual count | `.size` property |\n| **Iteration** | `for...in`, `Object.keys()` | `forEach()`, `for...of` |\n| **Performance** | Good | Better for frequent add/remove |\n\n---\n\n### Set -- Unique Values\n\nA **Set** stores **unique** values of any type. Duplicates are automatically removed.\n\n```js\nconst set = new Set();\n\nset.add(1);\nset.add(2);\nset.add(2); // Ignored (duplicate)\nset.add(3);\n\nconsole.log(set.size);  // 3\nconsole.log(set.has(2)); // true\nset.delete(1);\n```\n\n#### Practical: Remove Duplicates from Array\n\n```js\nconst numbers = [1, 2, 2, 3, 3, 3, 4];\nconst unique = [...new Set(numbers)];\nconsole.log(unique); // [1, 2, 3, 4]\n```\n\n---\n\n### WeakMap and WeakSet\n\n**WeakMap** and **WeakSet** are special versions where keys/values are **weakly referenced**:\n\n- Keys can be **garbage collected** if no other references exist\n- No `.size`, no `.forEach()`, no `.clear()`\n- Used for **memory-sensitive** caches and metadata\n\n```js\nconst weakMap = new WeakMap();\nlet obj = { data: \"secret\" };\nweakMap.set(obj, \"metadata\");\nobj = null; // Entry in weakMap can now be garbage collected\n```\n\n> **When to use what:** Use `Map` for general key-value storage with non-string keys. Use `Set` when you need uniqueness. Use `WeakMap`/`WeakSet` for memory-sensitive caching.",
+  "codeExample": "const set = new Set([1, 2, 2, 3, 3, 4]);\nconsole.log([...set]);\n\nconst map = new Map();\nmap.set(\"name\", \"Ibrahim\");\nmap.set(\"age\", 25);\n\nmap.forEach((value, key) => {\n  console.log(`${key}: ${value}`);\n});",
+  "quiz": [
+    {
+      "question": "What happens if you add a duplicate value to a Set?",
+      "options": [
+        "Error is thrown",
+        "It is ignored",
+        "It overwrites the previous",
+        "The set becomes unordered"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Array Iteration",
+  "language": "javascript",
+  "topic": "arrays_iteration",
+  "order": 24,
+  "nextTopic": "functions",
+  "prevTopic": "arrays_methods",
+  "content": "### Array Iteration Methods\n\nArray iteration methods let you **loop through** arrays in a clean, functional way.\n\n---\n\n### Key Iteration Methods\n\n#### `forEach()` -- Execute For Each Element\n\n```js\n[\"A\", \"B\", \"C\"].forEach((item, index) => {\n  console.log(`${index}: ${item}`);\n});\n```\n\n#### `map()` -- Create a New Transformed Array\n\n```js\nlet numbers = [1, 2, 3];\nlet doubled = numbers.map(n => n * 2); // [2, 4, 6]\n```\n\n#### `filter()` -- Keep Only Matching Elements\n\n```js\nlet numbers = [1, 2, 3, 4, 5];\nlet evens = numbers.filter(n => n % 2 === 0); // [2, 4]\n```\n\n#### `reduce()` -- Accumulate to a Single Value\n\n```js\nlet numbers = [1, 2, 3, 4];\nlet sum = numbers.reduce((acc, n) => acc + n, 0); // 10\n```\n\n#### `find()` -- Find the First Match\n\n```js\nlet numbers = [5, 12, 8, 130, 44];\nlet found = numbers.find(n => n > 10); // 12\n```\n\n#### `some()` / `every()` -- Test Elements\n\n```js\n[1, 2, 3].some(n => n > 2);  // true (at least one)\n[1, 2, 3].every(n => n > 0); // true (all)\n```\n\n---\n\n> **Chaining:** These methods can be chained: `arr.filter(f1).map(f2).reduce(f3)`",
+  "codeExample": "let nums = [1, 2, 3, 4, 5];\nlet doubled = nums.map(n => n * 2);\nlet evens = nums.filter(n => n % 2 === 0);\nlet sum = nums.reduce((a, b) => a + b, 0);\nconsole.log(doubled, evens, sum);",
+  "quiz": [
+    {
+      "question": "Which method creates a new array by transforming each element?",
+      "options": [
+        "filter()",
+        "forEach()",
+        "map()",
+        "reduce()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

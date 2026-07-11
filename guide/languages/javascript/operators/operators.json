@@ -1,0 +1,22 @@
+{
+  "title": "Operators",
+  "language": "javascript",
+  "topic": "operators",
+  "order": 13,
+  "nextTopic": "arithmetic",
+  "prevTopic": "scope",
+  "content": "### What are Operators?\n\n**Operators** perform operations on variables and values. JavaScript has several categories of operators.\n\n---\n\n### Operator Categories\n\n| Category | Purpose |\n|----------|---------|\n| **Arithmetic** | Math calculations |\n| **Assignment** | Assign values to variables |\n| **Comparison** | Compare two values |\n| **Logical** | Combine boolean conditions |\n| **Ternary** | Short if/else expression |\n| **Type** | Check or convert types |\n\n---\n\n### The `+` Operator\n\nThe `+` operator does **double duty**:\n\n- **Addition** when used with numbers: `5 + 3` = `8`\n- **Concatenation** when used with strings: `\"Hello\" + \" \" + \"World\"` = `\"Hello World\"`\n\n---\n\n> **Watch out:** Mixing types with `+` can give unexpected results: `\"5\" + 3` = `\"53\"` not `8`.",
+  "codeExample": "console.log(10 + 5);\nconsole.log(10 - 5);\nconsole.log(10 * 5);\nconsole.log(10 / 5);",
+  "quiz": [
+    {
+      "question": "Which operator is used for addition in JavaScript?",
+      "options": [
+        "#",
+        "&",
+        "+",
+        "*"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

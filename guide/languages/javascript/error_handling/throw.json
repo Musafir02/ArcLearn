@@ -1,0 +1,22 @@
+{
+  "title": "Throw Statement",
+  "language": "javascript",
+  "topic": "throw",
+  "order": 48,
+  "nextTopic": "this_keyword",
+  "prevTopic": "try_catch",
+  "content": "### The Throw Statement\n\nThe `throw` statement lets you **create your own errors**.\n\n---\n\n### Throwing Errors\n\n```js\nthrow \"An error occurred\";       // Throws a string\nthrow 404;                        // Throws a number\nthrow new Error(\"Something broke!\"); // Throws an Error object\n```\n\n> **Best Practice:** Always throw `Error` objects, not strings or numbers. They provide better debugging information.\n\n---\n\n### Custom Error Validation\n\n```js\nfunction divide(a, b) {\n  if (b === 0) {\n    throw new Error(\"Cannot divide by zero!\");\n  }\n  if (typeof a !== \"number\" || typeof b !== \"number\") {\n    throw new TypeError(\"Both arguments must be numbers\");\n  }\n  return a / b;\n}\n```\n\n---\n\n### Catching Custom Errors\n\n```js\ntry {\n  let result = divide(10, 0);\n  console.log(result);\n} catch (error) {\n  if (error instanceof TypeError) {\n    console.log(\"Type error:\", error.message);\n  } else {\n    console.log(\"General error:\", error.message);\n  }\n}\n```\n\n---\n\n### Custom Error Classes\n\n```js\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = \"ValidationError\";\n  }\n}\n\nthrow new ValidationError(\"Invalid input!\");\n```\n\n---\n\n> **Use Case:** Throw errors to enforce rules in your code -- validate inputs, check permissions, verify data integrity.",
+  "codeExample": "function checkAge(age) {\n  if (age < 0) {\n    throw new Error(\"Age cannot be negative\");\n  }\n  if (age < 18) {\n    throw new Error(\"Must be 18 or older\");\n  }\n  return \"Access granted\";\n}\n\ntry {\n  console.log(checkAge(-5));\n} catch (err) {\n  console.log(err.message);\n}",
+  "quiz": [
+    {
+      "question": "Which statement is used to create a custom error?",
+      "options": [
+        "error",
+        "throw",
+        "new Error",
+        "Both throw and new Error"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Classes (ES6)",
+  "language": "javascript",
+  "topic": "classes",
+  "order": 44,
+  "nextTopic": "promises",
+  "prevTopic": "modules",
+  "content": "### ES6 Classes\n\n**Classes** are a cleaner syntax for creating objects and handling inheritance.\n\n---\n\n### Class Syntax\n\n```js\nclass Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n\n  greet() {\n    return `Hello, I'm ${this.name}`;\n  }\n}\n\nlet john = new Person(\"John\", 30);\nconsole.log(john.greet()); // \"Hello, I'm John\"\n```\n\n---\n\n### Class Components\n\n| Part | Description |\n|------|-------------|\n| `class` keyword | Declares a class |\n| `constructor()` | Runs when object is created |\n| **Methods** | Functions inside the class |\n| `extends` | Inherits from another class |\n| `super()` | Calls parent constructor |\n\n---\n\n### Inheritance with `extends`\n\n```js\nclass Animal {\n  constructor(name) {\n    this.name = name;\n  }\n  speak() {\n    console.log(`${this.name} makes a sound`);\n  }\n}\n\nclass Dog extends Animal {\n  speak() {\n    console.log(`${this.name} barks`);\n  }\n}\n\nlet dog = new Dog(\"Rex\");\ndog.speak(); // \"Rex barks\"\n```\n\n---\n\n### Static Methods\n\nCalled on the **class itself**, not instances:\n\n```js\nclass MathUtils {\n  static add(a, b) {\n    return a + b;\n  }\n}\n\nconsole.log(MathUtils.add(5, 3)); // 8\n```\n\n---\n\n> **Note:** JavaScript classes are **syntactic sugar** over prototype-based inheritance. They work the same under the hood.",
+  "codeExample": "class Student {\n  constructor(name, grade) {\n    this.name = name;\n    this.grade = grade;\n  }\n  \n  introduce() {\n    return `${this.name} is in grade ${this.grade}`;\n  }\n}\n\nlet student = new Student(\"Ali\", 10);\nconsole.log(student.introduce());",
+  "quiz": [
+    {
+      "question": "Which method is called automatically when a new class instance is created?",
+      "options": [
+        "init()",
+        "constructor()",
+        "create()",
+        "new()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

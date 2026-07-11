@@ -1,0 +1,22 @@
+{
+  "title": "Link Bookmarks",
+  "language": "html",
+  "topic": "link_bookmarks",
+  "order": 12,
+  "nextTopic": "images",
+  "prevTopic": "links",
+  "content": "### HTML Link Bookmarks\n\n**Bookmarks** let users jump to specific parts of a page.\n\n---\n\n### How It Works\n\n1. Create a **bookmark** with the `id` attribute\n2. Link to the bookmark with `#id`\n\n---\n\n### Create a Bookmark\n\n```html\n<h2 id=\"section1\">Section 1</h2>\n<!-- Content... -->\n\n<h2 id=\"section2\">Section 2</h2>\n```\n\n---\n\n### Link to Bookmark (Same Page)\n\n```html\n<a href=\"#section1\">Jump to Section 1</a>\n<a href=\"#section2\">Jump to Section 2</a>\n<a href=\"#top\">Back to Top</a>\n```\n\n---\n\n### Link to Bookmark (Another Page)\n\n```html\n<a href=\"page.html#section1\">\n  Go to Section 1 on another page\n</a>\n```\n\n---\n\n### Jump to Top of Page\n\n```html\n<a href=\"#\">Back to Top</a>\n<!-- Or use id on body -->\n<body id=\"top\">\n  ...\n  <a href=\"#top\">Top</a>\n</body>\n```\n\n---\n\n### Smooth Scrolling\n\n```css\n/* Add to CSS for smooth animation */\nhtml {\n  scroll-behavior: smooth;\n}\n```\n\n---\n\n> **Use Case:** Bookmarks are great for long pages like FAQs, documentation, or table of contents. They improve navigation without page reload.",
+  "codeExample": "<h2 id=\"top\">Page Title</h2>\n\n<p><a href=\"#section1\">Section 1</a></p>\n<p><a href=\"#section2\">Section 2</a></p>\n\n<h3 id=\"section1\">Section 1</h3>\n<p>Content here...</p>\n\n<h3 id=\"section2\">Section 2</h3>\n<p>More content...</p>\n\n<a href=\"#top\">Back to Top</a>",
+  "quiz": [
+    {
+      "question": "What attribute is used to create a bookmark?",
+      "options": [
+        "name",
+        "id",
+        "bookmark",
+        "anchor"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

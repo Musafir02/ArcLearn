@@ -1,0 +1,22 @@
+{
+  "title": "Table Headers",
+  "language": "html",
+  "topic": "table_headers",
+  "order": 20,
+  "nextTopic": "table_padding",
+  "prevTopic": "table_sizes",
+  "content": "### HTML Table Headers\n\n---\n\n### Vertical Headers\n\nBy default, `<th>` creates **horizontal** headers. Use `scope=\"row\"` for vertical:\n\n```html\n<table>\n  <tr>\n    <th>Name</th>\n    <td>Alice</td>\n    <td>Bob</td>\n  </tr>\n  <tr>\n    <th>Age</th>\n    <td>25</td>\n    <td>30</td>\n  </tr>\n</table>\n```\n\n---\n\n### The `scope` Attribute\n\n| Value | Meaning |\n|-------|---------|\n| `col` | Header for a column (default) |\n| `row` | Header for a row |\n| `colgroup` | Header for a group of columns |\n| `rowgroup` | Header for a group of rows |\n\n```html\n<th scope=\"col\">Name</th>   <!-- Column header -->\n<th scope=\"row\">Total</th>  <!-- Row header -->\n```\n\n---\n\n### Multiple Header Rows\n\n```html\n<table>\n  <tr>\n    <th colspan=\"2\">Personal Info</th>\n    <th>Contact</th>\n  </tr>\n  <tr>\n    <th>First</th>\n    <th>Last</th>\n    <th>Email</th>\n  </tr>\n</table>\n```\n\n---\n\n### Header Alignment\n\n```html\n<style>\n  th {\n    text-align: left;  /* Default is center */\n  }\n</style>\n```\n\n---\n\n### Styling Headers\n\n```html\n<style>\n  th {\n    background-color: #333;\n    color: white;\n    padding: 10px;\n  }\n</style>\n```\n\n> **Accessibility:** Use the `scope` attribute to help screen readers understand table structure. It improves navigation for visually impaired users.",
+  "codeExample": "<table style=\"border-collapse: collapse; width: 100%;\">\n  <tr>\n    <th scope=\"col\" style=\"background: #4CAF50; color: white; padding: 8px;\">Item</th>\n    <th scope=\"col\" style=\"background: #4CAF50; color: white; padding: 8px;\">Price</th>\n    <th scope=\"col\" style=\"background: #4CAF50; color: white; padding: 8px;\">Qty</th>\n  </tr>\n  <tr>\n    <th scope=\"row\">Apple</th>\n    <td>$1</td>\n    <td>5</td>\n  </tr>\n  <tr>\n    <th scope=\"row\">Banana</th>\n    <td>$0.50</td>\n    <td>3</td>\n  </tr>\n</table>",
+  "quiz": [
+    {
+      "question": "Which attribute helps screen readers understand table headers?",
+      "options": [
+        "role",
+        "scope",
+        "header",
+        "aria"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

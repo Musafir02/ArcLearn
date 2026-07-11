@@ -1,0 +1,22 @@
+{
+  "title": "Introduction",
+  "language": "javascript",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is JavaScript?\n\n**JavaScript** is the **#1 programming language** of the web. It powers over **98% of websites** and runs in every modern browser.\n\n---\n\n### What Can It Do?\n\n- **Build interactive web pages** -- animations, forms, games\n- **Calculate and manipulate data** -- right in the browser\n- **Validate user input** -- before sending to server\n- **Update HTML and CSS** -- live, without reloading\n- **Server-side apps** -- using **Node.js**\n\n---\n\n### Why Learn JavaScript?\n\n| Reason | Detail |\n|--------|--------|\n| **Universal** | Works in every browser, on every device |\n| **Beginner Friendly** | Easy syntax, instant results |\n| **Huge Community** | Millions of developers, countless libraries |\n| **Versatile** | Frontend, backend, mobile, desktop |\n\n---\n\n> **Fun Fact:** JavaScript was created in just **10 days** by Brendan Eich in 1995.",
+  "codeExample": "console.log('Hello, World!');",
+  "quiz": [
+    {
+      "question": "What is JavaScript primarily used for?",
+      "options": [
+        "Styling web pages",
+        "Structuring HTML content",
+        "Making web pages interactive",
+        "Managing databases"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

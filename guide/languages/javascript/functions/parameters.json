@@ -1,0 +1,22 @@
+{
+  "title": "Function Parameters",
+  "language": "javascript",
+  "topic": "parameters",
+  "order": 26,
+  "nextTopic": "arrow",
+  "prevTopic": "functions",
+  "content": "### Function Parameters\n\n**Parameters** are the input values a function receives when called.\n\n---\n\n### Basic Parameters\n\n```js\nfunction greet(name) {\n  return `Hello, ${name}`;\n}\n\ngreet(\"Alice\"); // \"Hello, Alice\"\n```\n\n### Multiple Parameters\n\n```js\nfunction add(x, y) {\n  return x + y;\n}\n\nadd(3, 7); // 10\n```\n\n---\n\n### Default Parameters (ES6)\n\nIf an argument is missing, the parameter becomes `undefined`. You can set **default values**:\n\n```js\nfunction greet(name = \"Guest\") {\n  return `Hello, ${name}`;\n}\n\ngreet();       // \"Hello, Guest\"\ngreet(\"John\"); // \"Hello, John\"\n```\n\n---\n\n### The Arguments Object\n\nInside a function, `arguments` holds all passed values:\n\n```js\nfunction sumAll() {\n  let total = 0;\n  for (let i = 0; i < arguments.length; i++) {\n    total += arguments[i];\n  }\n  return total;\n}\n\nsumAll(1, 2, 3, 4); // 10\n```\n\n---\n\n### Rest Parameters (`...args`)\n\nA modern alternative to `arguments`:\n\n```js\nfunction sumAll(...numbers) {\n  return numbers.reduce((a, b) => a + b);\n}\n\nsumAll(1, 2, 3); // 6\n```\n\n> **Parameters vs Arguments:** Parameters are the **variables** in the function definition. Arguments are the **values** passed when calling.",
+  "codeExample": "function multiply(a, b = 1) {\n  return a * b;\n}\n\nconsole.log(multiply(5, 2)); // 10\nconsole.log(multiply(5));    // 5 (uses default)",
+  "quiz": [
+    {
+      "question": "What happens if you call a function without providing all its parameters?",
+      "options": [
+        "Error is thrown",
+        "Missing parameters become undefined",
+        "They default to 0",
+        "The function doesn't run"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Type Conversion",
+  "language": "javascript",
+  "topic": "type_conversion",
+  "order": 10,
+  "nextTopic": "variables",
+  "prevTopic": "booleans",
+  "content": "### Type Conversion vs Type Coercion\n\n- **Explicit conversion** -- you manually convert using functions\n- **Implicit coercion** -- JavaScript automatically converts types\n\n---\n\n### Explicit Conversion\n\n#### To String\n\n```js\nString(123);     // \"123\"\n(123).toString(); // \"123\"\n```\n\n#### To Number\n\n```js\nNumber(\"42\");    // 42\nparseInt(\"42\");  // 42\nparseFloat(\"3.14\"); // 3.14\n```\n\n#### To Boolean\n\n```js\nBoolean(1);      // true\nBoolean(0);      // false\nBoolean(\"hello\"); // true\nBoolean(\"\");     // false\n```\n\n---\n\n### Implicit Coercion\n\nJavaScript automatically converts types in certain contexts:\n\n```js\n\"5\" - 2;   // 3 (string \"5\" becomes number 5)\n\"5\" + 2;   // \"52\" (number 2 becomes string \"2\")\n!\"hello\"; // false (\"hello\" is truthy, negated becomes false)\n```\n\n---\n\n> **Best Practice:** Always use **explicit conversion** for clarity. Relying on implicit coercion can lead to bugs.",
+  "codeExample": "console.log(Number(\"42\"));\nconsole.log(String(100));\nconsole.log(Boolean(1));\nconsole.log(\"5\" - 2);\nconsole.log(\"5\" + 2);",
+  "quiz": [
+    {
+      "question": "What is the result of '5' + 2 in JavaScript?",
+      "options": [
+        "7",
+        "\"52\"",
+        "52",
+        "Error"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

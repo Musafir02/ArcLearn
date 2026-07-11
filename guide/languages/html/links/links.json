@@ -1,0 +1,22 @@
+{
+  "title": "HTML Links",
+  "language": "html",
+  "topic": "links",
+  "order": 11,
+  "nextTopic": "link_bookmarks",
+  "prevTopic": "colors",
+  "content": "### HTML Links\n\nLinks are defined with the `<a>` tag (anchor).\n\n---\n\n### Basic Link\n\n```html\n<a href=\"https://www.google.com\">Visit Google</a>\n```\n\nThe `href` attribute specifies the destination URL.\n\n---\n\n### Open in New Tab\n\nUse `target=\"_blank\"`:\n\n```html\n<a href=\"https://www.google.com\" target=\"_blank\">\n  Open Google in new tab\n</a>\n```\n\n---\n\n### Target Values\n\n| Value | Description |\n|-------|-------------|\n| `_self` | Same tab (default) |\n| `_blank` | New tab/window |\n| `_parent` | Parent frame |\n| `_top` | Full body of window |\n\n---\n\n### Link States\n\nLinks have these default states (can be styled with CSS):\n\n- `a:link` -- normal, unvisited link (blue, underlined)\n- `a:visited` -- visited link (purple, underlined)\n- `a:hover` -- mouse over link\n- `a:active` -- being clicked (red)\n\n---\n\n### Image as Link\n\n```html\n<a href=\"https://example.com\">\n  <img src=\"button.jpg\" alt=\"Click me\">\n</a>\n```\n\n---\n\n### Email and Phone Links\n\n```html\n<a href=\"mailto:someone@example.com\">Send Email</a>\n<a href=\"tel:+1234567890\">Call Us</a>\n```\n\n---\n\n### Title Attribute (Tooltip)\n\n```html\n<a href=\"#\" title=\"Go to home page\">Home</a>\n```\n\n> **Best Practice:** Always use meaningful link text. Avoid \"Click here\" -- use descriptive text that tells users where the link goes.",
+  "codeExample": "<a href=\"https://www.google.com\">Visit Google</a>\n<br>\n<a href=\"https://www.wikipedia.org\" target=\"_blank\">\n  Open Wikipedia (new tab)\n</a>\n<br>\n<a href=\"mailto:hello@example.com\">Send Email</a>\n<br>\n<a href=\"tel:+1234567890\">Call: 123-456-7890</a>\n<br>\n<a href=\"#\">\n  <img src=\"home-icon.png\" alt=\"Home\" style=\"width: 32px;\">\n</a>",
+  "quiz": [
+    {
+      "question": "Which attribute specifies the link destination?",
+      "options": [
+        "src",
+        "link",
+        "href",
+        "url"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

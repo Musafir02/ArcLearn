@@ -1,0 +1,22 @@
+{
+  "title": "Break and Continue",
+  "language": "javascript",
+  "topic": "break_continue",
+  "order": 38,
+  "nextTopic": "let_const",
+  "prevTopic": "while_loop",
+  "content": "### Controlling Loop Execution\n\n`break` and `continue` give you **control** over loop execution.\n\n---\n\n### Break -- Exit the Loop\n\n`break` **terminates** the loop immediately:\n\n```js\nfor (let i = 1; i <= 10; i++) {\n  if (i === 5) {\n    break; // Loop stops when i is 5\n  }\n  console.log(i); // Prints: 1, 2, 3, 4\n}\n```\n\n### Continue -- Skip an Iteration\n\n`continue` **skips** the rest of the current iteration and moves to the next:\n\n```js\nfor (let i = 1; i <= 5; i++) {\n  if (i === 3) {\n    continue; // Skip 3\n  }\n  console.log(i); // Prints: 1, 2, 4, 5\n}\n```\n\n---\n\n### Practical Examples\n\n**Break -- Search and Stop**\n```js\nlet numbers = [3, 7, 2, 9, 1, 6];\nfor (let n of numbers) {\n  if (n === 9) {\n    console.log(\"Found 9!\");\n    break; // No need to continue searching\n  }\n}\n```\n\n**Continue -- Skip Unwanted Values**\n```js\nfor (let i = 0; i < 10; i++) {\n  if (i % 2 === 0) {\n    continue; // Skip even numbers\n  }\n  console.log(i); // Only odd numbers: 1, 3, 5, 7, 9\n}\n```\n\n---\n\n> **When to use what:** Use `break` to **stop** a loop when found. Use `continue` to **skip** certain values.",
+  "codeExample": "for (let i = 1; i <= 10; i++) {\n  if (i === 4) {\n    console.log(\"Skipping 4\");\n    continue;\n  }\n  if (i === 8) {\n    console.log(\"Stopping at 8\");\n    break;\n  }\n  console.log(i);\n}",
+  "quiz": [
+    {
+      "question": "What does `break` do inside a loop?",
+      "options": [
+        "Skips the current iteration",
+        "Exits the loop entirely",
+        "Restarts the loop",
+        "Pauses the loop"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

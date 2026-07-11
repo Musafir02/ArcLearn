@@ -1,0 +1,22 @@
+{
+  "title": "Conditions",
+  "language": "javascript",
+  "topic": "conditions",
+  "order": 33,
+  "nextTopic": "if_else",
+  "prevTopic": "constructors",
+  "content": "### Conditional Statements\n\n**Conditional statements** let your code make decisions based on conditions.\n\n---\n\n### Types of Conditions\n\n| Statement | Purpose |\n|-----------|---------|\n| `if` | Execute if condition is true |\n| `else if` | Check another condition |\n| `else` | Execute if all above are false |\n| `switch` | Check multiple specific values |\n| Ternary `? :` | Shorthand if/else (expression) |\n\n---\n\n### Comparison and Logical Operators\n\nConditions use comparison and logical operators:\n\n| Operator | Meaning |\n|----------|---------|\n| `===` | Strict equal |\n| `!==` | Strict not equal |\n| `>` / `<` | Greater / Less than |\n| `>=` / `<=` | Greater / Less or equal |\n| `&&` | AND (both must be true) |\n| `||` | OR (one must be true) |\n| `!` | NOT (inverts) |\n\n---\n\n### Truthy and Falsy\n\nValues that evaluate to `false` in a condition:\n\n```js\nfalse, 0, \"\" (empty string), null, undefined, NaN\n```\n\n**Everything else** is truthy and evaluates to `true`.\n\n---\n\n> **Key Rule:** Always use `===` (strict equality) instead of `==` to avoid unexpected type coercion.",
+  "codeExample": "let age = 18;\n\nif (age >= 18) {\n  console.log(\"You are an adult\");\n} else {\n  console.log(\"You are a minor\");\n}",
+  "quiz": [
+    {
+      "question": "Which values are considered falsy in JavaScript?",
+      "options": [
+        "0, \"\", null, undefined, NaN, false",
+        "0 and false only",
+        "null and undefined only",
+        "All of the above"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

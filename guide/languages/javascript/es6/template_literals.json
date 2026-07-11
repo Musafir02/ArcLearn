@@ -1,0 +1,22 @@
+{
+  "title": "Template Literals (ES6)",
+  "language": "javascript",
+  "topic": "template_literals",
+  "order": 40,
+  "nextTopic": "destructuring",
+  "prevTopic": "let_const",
+  "content": "### Template Literals\n\n**Template literals** use backticks (`` ` ``) instead of quotes for more powerful strings.\n\n---\n\n### Features\n\n#### 1. String Interpolation\n\nEmbed any expression with `${}`:\n\n```js\nlet name = \"John\";\nlet age = 30;\nconsole.log(`My name is ${name} and I am ${age}.`);\n```\n\n#### 2. Multi-line Strings\n\n```js\nlet text = `This is line one\nThis is line two\nThis is line three`;\n```\n\n#### 3. Expression Evaluation\n\n```js\nlet a = 5, b = 10;\nconsole.log(`Sum: ${a + b}`);       // \"Sum: 15\"\nconsole.log(`Random: ${Math.random()}`); // \"Random: 0.847...\"\n```\n\n---\n\n### Tagged Templates\n\nA more advanced feature -- calling a function with the template:\n\n```js\nfunction highlight(strings, ...values) {\n  return strings.reduce((result, str, i) => {\n    return `${result}${str}<strong>${values[i] || \"\"}</strong>`;\n  }, \"\");\n}\n\nlet name = \"John\";\nlet result = highlight`Hello ${name}!`;\n```\n\n---\n\n> **Template literals** have replaced string concatenation in modern JavaScript. They are cleaner, more readable, and less error-prone.",
+  "codeExample": "let item = \"coffee\";\nlet price = 3.50;\nlet quantity = 2;\n\nconsole.log(`You ordered ${quantity} ${item}(s).`);\nconsole.log(`Total: $${price * quantity}`);",
+  "quiz": [
+    {
+      "question": "What character wraps a template literal?",
+      "options": [
+        "Double quotes (\")",
+        "Single quotes (')",
+        "Backticks (`)",
+        "Parentheses ()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

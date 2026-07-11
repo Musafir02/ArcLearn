@@ -1,0 +1,22 @@
+{
+  "title": "Image Map",
+  "language": "html",
+  "topic": "image_map",
+  "order": 14,
+  "nextTopic": "image_background",
+  "prevTopic": "images",
+  "content": "### HTML Image Maps\n\nAn **image map** lets you create clickable areas on an image.\n\n---\n\n### How It Works\n\n1. Use `<img>` with `usemap=\"#name\"`\n2. Define the map with `<map>`\n3. Add clickable areas with `<area>`\n\n---\n\n### Example\n\n```html\n<img src=\"worldmap.jpg\" alt=\"World Map\" usemap=\"#worldmap\">\n\n<map name=\"worldmap\">\n  <area shape=\"rect\" coords=\"0,0,100,200\"\n        href=\"asia.html\" alt=\"Asia\">\n  <area shape=\"circle\" coords=\"300,100,50\"\n        href=\"europe.html\" alt=\"Europe\">\n  <area shape=\"poly\" coords=\"200,300,250,350,150,400\"\n        href=\"africa.html\" alt=\"Africa\">\n</map>\n```\n\n---\n\n### Shape Types\n\n| Shape | coords Format | Description |\n|-------|--------------|-------------|\n| `rect` | `left,top,right,bottom` | Rectangle |\n| `circle` | `center_x,center_y,radius` | Circle |\n| `poly` | `x1,y1,x2,y2,...,xn,yn` | Polygon |\n| `default` | (none) | Entire image |\n\n---\n\n### Area Attributes\n\n| Attribute | Purpose |\n|-----------|---------|\n| `shape` | Shape of clickable area |\n| `coords` | Coordinates of area |\n| `href` | Link destination |\n| `alt` | Alternative text |\n| `target` | Where to open link |\n\n---\n\n> **Use Case:** Image maps are useful for interactive diagrams, floor plans, geographical maps, and infographics.",
+  "codeExample": "<img src=\"https://via.placeholder.com/400x300\"\n     alt=\"Sample\" usemap=\"#sample\">\n\n<map name=\"sample\">\n  <area shape=\"rect\" coords=\"0,0,200,300\"\n        href=\"#left\" alt=\"Left Half\">\n  <area shape=\"rect\" coords=\"200,0,400,300\"\n        href=\"#right\" alt=\"Right Half\">\n</map>\n\n<p>Click left or right side of the image.</p>",
+  "quiz": [
+    {
+      "question": "Which attribute links an image to a map?",
+      "options": [
+        "map",
+        "usemap",
+        "imagemap",
+        "areamap"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

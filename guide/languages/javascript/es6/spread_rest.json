@@ -1,0 +1,22 @@
+{
+  "title": "Spread and Rest (ES6)",
+  "language": "javascript",
+  "topic": "spread_rest",
+  "order": 42,
+  "nextTopic": "modules",
+  "prevTopic": "destructuring",
+  "content": "### Spread (`...`) and Rest (`...`)\n\nThe `...` syntax has **two modes**: spread (expand) and rest (collect).\n\n---\n\n### Spread Operator -- Expand\n\nSpread **expands** an iterable into individual elements.\n\n#### Spread Arrays\n\n```js\nlet arr1 = [1, 2, 3];\nlet arr2 = [4, 5, 6];\nlet combined = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]\n```\n\n#### Copy Arrays\n\n```js\nlet original = [1, 2, 3];\nlet copy = [...original]; // Creates a new array (shallow copy)\n```\n\n#### Spread Objects\n\n```js\nlet obj1 = { a: 1, b: 2 };\nlet obj2 = { ...obj1, c: 3 }; // { a: 1, b: 2, c: 3 }\n```\n\n#### Spread in Function Calls\n\n```js\nlet numbers = [3, 5, 1];\nconsole.log(Math.max(...numbers)); // 5\n```\n\n---\n\n### Rest Parameters -- Collect\n\nRest **collects** remaining elements into an array.\n\n```js\nfunction sum(...numbers) {\n  return numbers.reduce((total, n) => total + n, 0);\n}\n\nconsole.log(sum(1, 2, 3, 4)); // 10\n```\n\n#### Rest in Destructuring\n\n```js\nlet [first, ...rest] = [1, 2, 3, 4, 5];\nconsole.log(first); // 1\nconsole.log(rest);  // [2, 3, 4, 5]\n```\n\n---\n\n> **Visual Trick:** Think of `...` as \"gathering\" (rest) when in a parameter/declaration, and \"spreading\" when in an argument/value.",
+  "codeExample": "let arr1 = [1, 2];\nlet arr2 = [3, 4];\nlet combined = [...arr1, ...arr2];\nconsole.log(combined);\n\nlet obj = { x: 1, y: 2 };\nlet merged = { ...obj, z: 3 };\nconsole.log(merged);",
+  "quiz": [
+    {
+      "question": "What does the spread operator (...) do?",
+      "options": [
+        "Collects elements into an array",
+        "Expands an array into individual elements",
+        "Multiplies array values",
+        "Removes duplicates"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Web Storage API",
+  "language": "javascript",
+  "topic": "storage",
+  "order": 66,
+  "prevTopic": "fetch_api",
+  "nextTopic": "",
+  "content": "### Web Storage API\n\nThe **Web Storage API** lets you store data in the browser -- like cookies but simpler and with more space.\n\n---\n\n### localStorage vs sessionStorage\n\n| Feature | localStorage | sessionStorage |\n|---------|-------------|----------------|\n| **Lifetime** | Until manually deleted | Until tab closes |\n| **Scope** | All tabs/windows | Same tab only |\n| **Max Size** | ~5-10MB | ~5-10MB |\n| **Sent to server** | No | No |\n\n---\n\n### localStorage Basics\n\n```javascript\n// Save\nlocalStorage.setItem(\"username\", \"Alice\");\n\n// Read\nconst user = localStorage.getItem(\"username\");\nconsole.log(user);  // \"Alice\"\n\n// Remove\nlocalStorage.removeItem(\"username\");\n\n// Clear all\nlocalStorage.clear();\n```\n\n---\n\n### Storing Objects\n\nlocalStorage only stores **strings**. Use JSON for objects:\n\n```javascript\nconst user = { name: \"Alice\", age: 25 };\n\n// Save\nlocalStorage.setItem(\"user\", JSON.stringify(user));\n\n// Read\nconst saved = JSON.parse(localStorage.getItem(\"user\"));\nconsole.log(saved.name);  // \"Alice\"\n```\n\n---\n\n### Check if Storage Exists\n\n```javascript\nif (typeof Storage !== \"undefined\") {\n  console.log(\"Web Storage supported!\");\n} else {\n  console.log(\"Web Storage not supported\");\n}\n```\n\n---\n\n### Session Storage\n\nWorks exactly like localStorage but clears on tab close:\n\n```javascript\nsessionStorage.setItem(\"temp\", \"data\");\nconst data = sessionStorage.getItem(\"temp\");\nsessionStorage.removeItem(\"temp\");\n```\n\n---\n\n### Storage Event\n\nListen for storage changes:\n\n```javascript\nwindow.addEventListener(\"storage\", (event) => {\n  console.log(`Key ${event.key} changed from ${event.oldValue} to ${event.newValue}`);\n});\n```\n\n> **Note:** The `storage` event fires only in **other** tabs/windows, not the tab that made the change.",
+  "codeExample": "// Store user preferences\nlocalStorage.setItem(\"theme\", \"dark\");\nlocalStorage.setItem(\"fontSize\", \"16\");\n\n// Retrieve\nconst theme = localStorage.getItem(\"theme\");\nconsole.log(\"Theme:\", theme);\n\n// Store object\nconst settings = { theme: \"dark\", fontSize: 16 };\nlocalStorage.setItem(\"settings\", JSON.stringify(settings));\n\n// Retrieve object\nconst saved = JSON.parse(localStorage.getItem(\"settings\"));\nconsole.log(\"Saved settings:\", saved);\n\n// Remove specific item\n// localStorage.removeItem(\"theme\");\n\n// Clear all\n// localStorage.clear();",
+  "quiz": [
+    {
+      "question": "How long does localStorage data persist?",
+      "options": [
+        "Until the tab closes",
+        "Until manually deleted",
+        "For 24 hours",
+        "Until the page reloads"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "XHTML",
+  "language": "html",
+  "topic": "xhtml",
+  "order": 45,
+  "nextTopic": "",
+  "prevTopic": "url_encode",
+  "content": "### What is XHTML?\n\n**XHTML** (EXtensible HyperText Markup Language) is a **stricter** version of HTML based on XML.\n\n---\n\n### HTML vs XHTML\n\n| Aspect | HTML5 | XHTML |\n|--------|-------|-------|\n| **Case** | Case-insensitive | **Lowercase only** |\n| **Closing tags** | Optional for some | **Required** for all |\n| **Quotes** | Optional on attributes | **Required** on attributes |\n| **Self-closing** | `<br>` | `<br />` (space + slash) |\n| **Errors** | Browser tries to fix | **Page does not render** |\n\n---\n\n### HTML Code (Relaxed)\n\n```html\n<p>This is a paragraph\n<p>This is another\n<br>\n<img src=\"photo.jpg\">\n<input type=\"text\" disabled>\n```\n\n### XHTML Code (Strict)\n\n```xhtml\n<p>This is a paragraph</p>\n<p>This is another</p>\n<br />\n<img src=\"photo.jpg\" alt=\"photo\" />\n<input type=\"text\" disabled=\"disabled\" />\n```\n\n---\n\n### XHTML Rules\n\n1. All tags must be **lowercase**\n2. All tags must be **closed** (`<p></p>` or `<br />`)\n3. All attributes must be **lowercase**\n4. All attributes must have **quoted values**\n5. **Minimize** boolean attributes (`disabled=\"disabled\"`)\n6. All images must have `alt` text\n7. The root element must be `<html>` with XML namespace\n\n---\n\n### XHTML Document Structure\n\n```xhtml\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <title>XHTML Page</title>\n</head>\n<body>\n  <p>Hello, XHTML!</p>\n</body>\n</html>\n```\n\n---\n\n### Is XHTML Still Used?\n\n- Modern web uses **HTML5** (not XHTML)\n- XHTML was popular in the 2000s\n- Some frameworks (like JSX) use XML-style syntax\n- Not required today, but understanding it helps with strict coding habits\n\n> **Note:** XHTML is **not required** for modern web development. HTML5 is the current standard. But following XHTML strictness makes your code cleaner.",
+  "codeExample": "<!-- Compare these approaches -->\n\n<!-- HTML5 (relaxed) -->\n<p>Hello World\n<br>\n<img src=\"pic.jpg\" alt=\"\">\n\n<!-- XHTML (strict) -->\n<p>Hello World</p>\n<br />\n<img src=\"pic.jpg\" alt=\"\" />\n\n<!-- Modern best practice: HTML5 with XHTML-like discipline -->\n<p>Hello World</p>\n<br>\n<img src=\"pic.jpg\" alt=\"\">",
+  "quiz": [
+    {
+      "question": "Which is required in XHTML for void elements like br?",
+      "options": [
+        "<br>",
+        "<br />",
+        "<br/>",
+        "Both <br /> and <br/> are valid"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

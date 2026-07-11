@@ -1,0 +1,22 @@
+{
+  "title": "Numbers",
+  "language": "javascript",
+  "topic": "numbers",
+  "order": 7,
+  "nextTopic": "strings",
+  "prevTopic": "datatypes",
+  "content": "### Numbers in JavaScript\n\nJavaScript has **one number type** -- `Number`. It handles both **integers** and **floating point** numbers.\n\n---\n\n### Number Basics\n\n| Type | Example | Description |\n|------|---------|-------------|\n| **Integer** | `42` | Whole number |\n| **Float** | `3.14` | Decimal number |\n| **Scientific** | `1.5e4` | `1.5 * 10000 = 15000` |\n| **Negative** | `-10` | Negative values |\n\n---\n\n### Special Numeric Values\n\n- **Infinity** -- result of dividing by zero: `1 / 0`\n- **-Infinity** -- negative infinity: `-1 / 0`\n- **NaN** -- \"Not a Number\": `\"hello\" * 5`\n\n```js\nconsole.log(1 / 0);       // Infinity\nconsole.log(\"hello\" * 5); // NaN\n```\n\n---\n\n### Number Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `toString()` | Converts to string | `(123).toString()` |\n| `toFixed(n)` | Rounds to n decimals | `3.14159.toFixed(2)` |\n| `parseInt()` | Parses a string to integer | `parseInt(\"42\")` |\n| `parseFloat()` | Parses a string to float | `parseFloat(\"3.14\")` |\n\n> **Caution:** Floating point arithmetic can be imprecise: `0.1 + 0.2` is not exactly `0.3`.",
+  "codeExample": "let x = 42;\nlet y = 3.14;\nlet z = 1e3; // 1000\nconsole.log(x, y, z);\nconsole.log(typeof x);",
+  "quiz": [
+    {
+      "question": "What is the result of 'hello' * 5 in JavaScript?",
+      "options": [
+        "hellohellohellohellohello",
+        "NaN",
+        "undefined",
+        "0"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

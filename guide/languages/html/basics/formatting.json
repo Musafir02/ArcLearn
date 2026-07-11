@@ -1,0 +1,22 @@
+{
+  "title": "HTML Formatting",
+  "language": "html",
+  "topic": "formatting",
+  "order": 8,
+  "nextTopic": "comments",
+  "prevTopic": "styles",
+  "content": "### HTML Text Formatting\n\nHTML provides tags for **formatting** text with special meaning.\n\n---\n\n### Formatting Tags\n\n| Tag | Description | Example |\n|-----|-------------|---------|\n| `<b>` | Bold text | `<b>Bold</b>` |\n| `<strong>` | Important text (bold) | `<strong>Important</strong>` |\n| `<i>` | Italic text | `<i>Italic</i>` |\n| `<em>` | Emphasized text (italic) | `<em>Emphasized</em>` |\n| `<mark>` | Highlighted text | `<mark>Marked</mark>` |\n| `<small>` | Smaller text | `<small>Small</small>` |\n| `<del>` | Deleted text (strikethrough) | `<del>Deleted</del>` |\n| `<ins>` | Inserted text (underline) | `<ins>Inserted</ins>` |\n| `<sub>` | Subscript | `H<sub>2</sub>O` |\n| `<sup>` | Superscript | `10<sup>2</sup>` |\n\n---\n\n### Bold vs Strong\n\nBoth make text **bold**, but:\n\n- `<b>` -- just visual bold\n- `<strong>` -- adds **semantic importance** (screen readers emphasize)\n\n```html\n<b>This is bold</b>\n<strong>This is important</strong>\n```\n\n### Italic vs Emphasized\n\nBoth make text *italic*, but:\n\n- `<i>` -- just visual italic (e.g., technical terms, foreign words)\n- `<em>` -- adds **semantic emphasis**\n\n---\n\n### Example\n\n```html\n<p>This is <b>bold</b> and this is <strong>strong</strong>.</p>\n<p>This is <i>italic</i> and this is <em>emphasized</em>.</p>\n<p>This is <mark>highlighted</mark> text.</p>\n<p>H<sub>2</sub>O is water. 10<sup>2</sup> = 100.</p>\n```\n\n> **Best Practice:** Use `<strong>` and `<em>` instead of `<b>` and `<i>` when you want to convey meaning, not just style. Screen readers will announce them differently.",
+  "codeExample": "<p><b>Bold text</b></p>\n<p><strong>Important text</strong></p>\n<p><i>Italic text</i></p>\n<p><em>Emphasized text</em></p>\n<p><mark>Highlighted text</mark></p>\n<p><small>Smaller text</small></p>\n<p>This is <del>deleted</del> and <ins>inserted</ins>.</p>\n<p>H<sub>2</sub>O (water) and 10<sup>2</sup> = 100</p>",
+  "quiz": [
+    {
+      "question": "Which tag adds semantic importance (bold with meaning)?",
+      "options": [
+        "<b>",
+        "<strong>",
+        "<bold>",
+        "<imp>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

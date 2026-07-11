@@ -1,0 +1,22 @@
+{
+  "title": "HTML Attributes",
+  "language": "html",
+  "topic": "attributes",
+  "order": 4,
+  "nextTopic": "headings",
+  "prevTopic": "elements",
+  "content": "### HTML Attributes\n\n**Attributes** provide additional information about HTML elements.\n\n---\n\n### Attribute Syntax\n\n```html\n<tagname attribute=\"value\">Content</tagname>\n```\n\nAttributes are always placed in the **start tag**.\n\n---\n\n### Common Attributes\n\n| Attribute | Used With | Description |\n|-----------|-----------|-------------|\n| `href` | `<a>` | Link URL |\n| `src` | `<img>`, `<script>` | File source |\n| `alt` | `<img>` | Alternative text |\n| `width`/`height` | `<img>`, `<canvas>` | Dimensions |\n| `style` | Any element | Inline CSS |\n| `class` | Any element | CSS class name |\n| `id` | Any element | Unique identifier |\n| `lang` | `<html>` | Language of page |\n| `title` | Any element | Tooltip text |\n\n---\n\n### Examples\n\n```html\n<a href=\"https://google.com\">Visit Google</a>\n\n<img src=\"photo.jpg\" alt=\"A beautiful photo\">\n\n<p style=\"color: red;\">Red text</p>\n\n<div class=\"container\" id=\"main\">Content</div>\n```\n\n---\n\n### Boolean Attributes\n\nSome attributes do not need a value -- they are true when present:\n\n```html\n<input type=\"text\" disabled>\n<input type=\"checkbox\" checked>\n<button disabled>Click</button>\n```\n\n---\n\n### Quotes\n\nAttribute values should be in **double quotes**:\n\n```html\n<a href=\"https://example.com\">Link</a>  <!-- Correct -->\n<a href=https://example.com>Link</a>     <!-- Wrong -->\n```\n\n> **Best Practice:** Always use double quotes around attribute values. Use lowercase attribute names.",
+  "codeExample": "<a href=\"https://www.google.com\">Visit Google</a>\n<br>\n<img src=\"photo.jpg\" alt=\"A photo\" width=\"200\">\n<br>\n<p style=\"font-size: 20px; color: blue;\">Styled paragraph</p>\n<br>\n<input type=\"text\" placeholder=\"Enter name\" disabled>",
+  "quiz": [
+    {
+      "question": "Where do attributes go in HTML?",
+      "options": [
+        "In the end tag",
+        "In the start tag",
+        "Before the element",
+        "After the element"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

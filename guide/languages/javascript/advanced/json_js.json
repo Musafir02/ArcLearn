@@ -1,0 +1,22 @@
+{
+  "title": "JSON in JavaScript",
+  "language": "javascript",
+  "topic": "json_js",
+  "order": 53,
+  "nextTopic": "",
+  "prevTopic": "hoisting",
+  "content": "### JSON (JavaScript Object Notation)\n\n**JSON** is a lightweight data format for storing and exchanging data. It is widely used in web APIs.\n\n---\n\n### JSON Syntax\n\n```json\n{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"isStudent\": false,\n  \"hobbies\": [\"reading\", \"coding\"],\n  \"address\": {\n    \"city\": \"NYC\",\n    \"zip\": \"10001\"\n  }\n}\n```\n\n> **Key difference:** JSON keys and string values must use **double quotes**. JavaScript object keys don't need quotes.\n\n---\n\n### JSON Methods\n\n#### `JSON.parse()` -- String to Object\n\nConvert a JSON **string** into a JavaScript **object**:\n\n```js\nconst jsonString = '{\"name\":\"John\",\"age\":30}';\nconst obj = JSON.parse(jsonString);\nconsole.log(obj.name); // \"John\"\n```\n\n#### `JSON.stringify()` -- Object to String\n\nConvert a JavaScript **object** into a JSON **string**:\n\n```js\nconst obj = { name: \"John\", age: 30 };\nconst jsonString = JSON.stringify(obj);\nconsole.log(jsonString); // '{\"name\":\"John\",\"age\":30}'\n```\n\n---\n\n### Working with JSON from APIs\n\n```js\nfetch(\"https://api.example.com/users\")\n  .then(response => response.json()) // Parse JSON response\n  .then(users => {\n    console.log(users[0].name);\n  })\n  .catch(error => console.error(error));\n```\n\n---\n\n### JSON.stringify() Options\n\n```js\nconst obj = { name: \"John\", age: 30, city: \"NYC\" };\n\n// Pretty print with indentation\nconsole.log(JSON.stringify(obj, null, 2));\n\n// Filter specific keys\nconsole.log(JSON.stringify(obj, [\"name\", \"age\"]));\n```\n\n---\n\n> **JSON** is language-independent. Most programming languages can parse and generate JSON, making it the universal format for data exchange.",
+  "codeExample": "const user = {\n  name: \"Ibrahim\",\n  age: 25,\n  skills: [\"JavaScript\", \"Python\"]\n};\n\nconst json = JSON.stringify(user);\nconsole.log(json);\n\nconst parsed = JSON.parse(json);\nconsole.log(parsed.name);",
+  "quiz": [
+    {
+      "question": "Which method converts a JSON string to a JavaScript object?",
+      "options": [
+        "JSON.stringify()",
+        "JSON.parse()",
+        "JSON.convert()",
+        "JSON.toObject()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "title": "JavaScript Tutorial",
+  "outline": [
+    {
+      "type": "flat",
+      "topic": "intro"
+    },
+    {
+      "type": "flat",
+      "topic": "getstarted"
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Basics",
+      "folder": "basics",
+      "topics": [
+        "syntax",
+        "output",
+        "comments",
+        "datatypes",
+        "numbers",
+        "strings",
+        "booleans",
+        "type_conversion"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Variables",
+      "folder": "variables",
+      "topics": [
+        "variables",
+        "scope"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Operators",
+      "folder": "operators",
+      "topics": [
+        "operators",
+        "arithmetic",
+        "assignment",
+        "comparison",
+        "logical",
+        "ternary",
+        "modern_operators"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Strings",
+      "folder": "strings",
+      "topics": [
+        "strings_methods",
+        "template",
+        "escape"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Math",
+      "folder": "math",
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Arrays",
+      "folder": "arrays",
+      "topics": [
+        "arrays",
+        "arrays_methods",
+        "arrays_iteration"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Dates",
+      "folder": "dates",
+      "topics": [
+        "dates"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Functions",
+      "folder": "functions",
+      "topics": [
+        "functions",
+        "parameters",
+        "arrow",
+        "functions_scope",
+        "call_apply_bind"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Objects",
+      "folder": "objects",
+      "topics": [
+        "objects",
+        "properties",
+        "methods",
+        "constructors"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Conditions",
+      "folder": "conditions",
+      "topics": [
+        "conditions",
+        "if_else",
+        "switch"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Loops",
+      "folder": "loops",
+      "topics": [
+        "for_loop",
+        "while_loop",
+        "break_continue"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript ES6",
+      "folder": "es6",
+      "topics": [
+        "let_const",
+        "template_literals",
+        "destructuring",
+        "spread_rest",
+        "modules",
+        "classes",
+        "promises",
+        "async_await",
+        "maps_sets"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript DOM",
+      "folder": "dom",
+      "topics": [
+        "dom_intro",
+        "dom_selectors",
+        "dom_manipulation",
+        "dom_events"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Error Handling",
+      "folder": "error_handling",
+      "topics": [
+        "try_catch",
+        "throw"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "JavaScript Advanced",
+      "folder": "advanced",
+      "topics": [
+        "this_keyword",
+        "strict",
+        "closures",
+        "hoisting",
+        "json_js",
+        "bom",
+        "regex",
+        "timers",
+        "fetch_api",
+        "storage"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Strings",
+  "language": "javascript",
+  "topic": "strings",
+  "order": 8,
+  "nextTopic": "booleans",
+  "prevTopic": "numbers",
+  "content": "### Strings in JavaScript\n\nA **string** is a sequence of characters used to represent text. Strings are **immutable** -- once created, they cannot be changed.\n\n---\n\n### Creating Strings\n\n```js\nlet single = 'Hello';      // Single quotes\nlet double = \"World\";      // Double quotes\nlet backtick = `Hello`;    // Template literals (ES6)\n```\n\nAll three work, but **be consistent** in your code.\n\n---\n\n### String Properties\n\n| Property | Description | Example |\n|----------|-------------|---------|\n| `length` | Returns the number of characters | `\"Hello\".length` is `5` |\n\n---\n\n### Escape Characters\n\n| Code | Result |\n|------|--------|\n| `\\'` | Single quote |\n| `\\\"` | Double quote |\n| `\\\\` | Backslash |\n| `\\n` | New line |\n| `\\t` | Tab |\n\n---\n\n> **String Immutability:** Once created, string characters cannot be changed individually. You must create a **new string** with the changes.",
+  "codeExample": "let greeting = \"Hello, World!\";\nconsole.log(greeting.length);\nconsole.log(greeting[0]);\nconsole.log(greeting.toUpperCase());",
+  "quiz": [
+    {
+      "question": "What is the value of typeof 'Hello'?",
+      "options": [
+        "string",
+        "text",
+        "char",
+        "word"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

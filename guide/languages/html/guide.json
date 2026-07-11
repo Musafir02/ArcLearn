@@ -1,0 +1,119 @@
+{
+  "title": "HTML Tutorial",
+  "outline": [
+    {
+      "type": "flat",
+      "topic": "intro"
+    },
+    {
+      "type": "flat",
+      "topic": "getstarted"
+    },
+    {
+      "type": "group",
+      "title": "HTML Basics",
+      "folder": "basics",
+      "topics": [
+        "elements",
+        "attributes",
+        "headings",
+        "paragraphs",
+        "styles",
+        "formatting",
+        "comments",
+        "colors"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Links",
+      "folder": "links",
+      "topics": [
+        "links",
+        "link_bookmarks"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Images",
+      "folder": "images",
+      "topics": [
+        "images",
+        "image_map",
+        "image_background",
+        "picture"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Tables",
+      "folder": "tables",
+      "topics": [
+        "tables",
+        "table_borders",
+        "table_sizes",
+        "table_headers",
+        "table_padding",
+        "table_colgroup"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Lists",
+      "folder": "lists",
+      "topics": [
+        "lists",
+        "list_unordered",
+        "list_ordered",
+        "list_description"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Forms",
+      "folder": "forms",
+      "topics": [
+        "forms",
+        "form_attributes",
+        "form_elements",
+        "form_input_types",
+        "form_input_attributes",
+        "form_input_form_attributes"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Media",
+      "folder": "media",
+      "topics": [
+        "video",
+        "audio",
+        "youtube"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Structure",
+      "folder": "structure",
+      "topics": [
+        "iframe",
+        "head",
+        "layout",
+        "semantics"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "HTML Advanced",
+      "folder": "advanced",
+      "topics": [
+        "entities",
+        "symbols",
+        "emoji",
+        "charset",
+        "url_encode",
+        "xhtml"
+      ]
+    }
+  ]
+}

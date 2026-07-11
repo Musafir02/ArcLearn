@@ -1,0 +1,22 @@
+{
+  "title": "Booleans",
+  "language": "javascript",
+  "topic": "booleans",
+  "order": 9,
+  "nextTopic": "type_conversion",
+  "prevTopic": "strings",
+  "content": "### What are Booleans?\n\nA **boolean** represents one of two values: **true** or **false**. They are the foundation of decision-making in code.\n\n---\n\n### Boolean Comparisons\n\nComparisons always produce a boolean:\n\n| Operator | Meaning | Example | Result |\n|----------|---------|---------|--------|\n| `==` | Equal (loose) | `5 == \"5\"` | `true` |\n| `===` | Equal (strict) | `5 === \"5\"` | `false` |\n| `!=` | Not equal | `5 != 3` | `true` |\n| `>` | Greater than | `5 > 3` | `true` |\n| `<` | Less than | `5 < 3` | `false` |\n\n---\n\n### Truthy and Falsy Values\n\nIn JavaScript, **every** value is either truthy or falsy:\n\n**Falsy values** (evaluate to `false`):\n- `false`, `0`, `\"\"` (empty string), `null`, `undefined`, `NaN`\n\n**All other values** are truthy.\n\n```js\nif (\"hello\") { console.log(\"truthy\"); }  // Runs\nif (0) { console.log(\"falsy\"); }          // Does NOT run\n```\n\n---\n\n> **Important:** Always prefer `===` (strict equality) over `==` (loose equality) to avoid unexpected type coercion.",
+  "codeExample": "console.log(10 > 9);  // true\nconsole.log(10 === 9); // false\nconsole.log(Boolean(0)); // false\nconsole.log(Boolean(\"hello\")); // true",
+  "quiz": [
+    {
+      "question": "What does the expression 10 > 9 evaluate to?",
+      "options": [
+        "True",
+        "False",
+        "undefined",
+        "NaN"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

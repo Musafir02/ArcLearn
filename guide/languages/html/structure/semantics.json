@@ -1,0 +1,22 @@
+{
+  "title": "HTML Semantics",
+  "language": "html",
+  "topic": "semantics",
+  "order": 39,
+  "nextTopic": "entities",
+  "prevTopic": "layout",
+  "content": "### HTML Semantic Elements\n\n**Semantic elements** clearly describe their meaning to both the browser and developer.\n\n---\n\n### Non-Semantic vs Semantic\n\n| Non-Semantic | Semantic |\n|-------------|----------|\n| `<div>` -- just a block | `<section>` -- a section |\n| `<span>` -- just inline | `<nav>` -- navigation |\n| `<div class=\"header\">` | `<header>` -- page header |\n\n---\n\n### Semantic Elements List\n\n| Element | Meaning |\n|---------|---------|\n| `<article>` | Self-contained content (blog post, news) |\n| `<aside>` | Sidebar (related but not main) |\n| `<details>` | Expandable details widget |\n| `<figcaption>` | Figure caption |\n| `<figure>` | Image/illustration with caption |\n| `<footer>` | Page or section footer |\n| `<header>` | Page or section header |\n| `<main>` | Main content (only one per page) |\n| `<mark>` | Highlighted text |\n| `<nav>` | Navigation links |\n| `<section>` | Thematic grouping of content |\n| `<summary>` | Visible heading for `<details>` |\n| `<time>` | Date/time |\n\n---\n\n### `<details>` and `<summary>`\n\n```html\n<details>\n  <summary>Click to expand</summary>\n  <p>Hidden content revealed!</p>\n</details>\n```\n\n---\n\n### `<figure>` and `<figcaption>`\n\n```html\n<figure>\n  <img src=\"chart.jpg\" alt=\"Sales chart\">\n  <figcaption>Fig 1. Quarterly sales data</figcaption>\n</figure>\n```\n\n---\n\n### `<mark>` Element\n\n```html\n<p>This is <mark>highlighted</mark> text.</p>\n```\n\n---\n\n### `<time>` Element\n\n```html\n<time datetime=\"2024-12-25\">Christmas Day</time>\n```\n\n---\n\n### Why Use Semantics?\n\n| Benefit | Reason |\n|---------|--------|\n| **SEO** | Search engines understand content structure |\n| **Accessibility** | Screen readers navigate better |\n| **Maintainability** | Code is easier to read |\n| **Consistency** | Built-in browser styles |\n\n> **Best Practice:** Use semantic elements instead of `<div>` whenever possible. Think of semantics as giving **meaning** to your HTML structure.",
+  "codeExample": "<article>\n  <header>\n    <h2>Blog Post Title</h2>\n    <p>Published: <time datetime=\"2024-01-15\">Jan 15</time></p>\n  </header>\n\n  <section>\n    <h3>Introduction</h3>\n    <p>This is a blog post about <mark>HTML semantics</mark>.</p>\n  </section>\n\n  <figure>\n    <img src=\"diagram.png\" alt=\"Diagram showing structure\">\n    <figcaption>HTML document structure</figcaption>\n  </figure>\n\n  <details>\n    <summary>Read more</summary>\n    <p>Additional hidden content here.</p>\n  </details>\n</article>",
+  "quiz": [
+    {
+      "question": "Why should you use semantic elements?",
+      "options": [
+        "They look better",
+        "They improve SEO and accessibility",
+        "They load faster",
+        "They use less code"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

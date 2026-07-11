@@ -1,0 +1,22 @@
+{
+  "title": "HTML Layout",
+  "language": "html",
+  "topic": "layout",
+  "order": 38,
+  "nextTopic": "semantics",
+  "prevTopic": "head",
+  "content": "### HTML Layout Elements\n\nModern HTML5 provides semantic elements for page layout.\n\n---\n\n### Layout Elements\n\n| Element | Purpose |\n|---------|---------|\n| `<header>` | Page header (logo, nav) |\n| `<nav>` | Navigation menu |\n| `<main>` | Main content area |\n| `<section>` | Thematic section |\n| `<article>` | Self-contained content |\n| `<aside>` | Sidebar content |\n| `<footer>` | Page footer |\n| `<figure>` | Image/illustration with caption |\n| `<figcaption>` | Caption for `<figure>` |\n| `<details>` | Expandable details |\n| `<summary>` | Summary for `<details>` |\n\n---\n\n### Standard Page Layout\n\n```html\n<body>\n  <header>\n    <h1>My Website</h1>\n    <nav>\n      <a href=\"#\">Home</a>\n      <a href=\"#\">About</a>\n    </nav>\n  </header>\n\n  <main>\n    <article>\n      <h2>Blog Post</h2>\n      <p>Content here...</p>\n    </article>\n\n    <aside>\n      <h3>Sidebar</h3>\n      <p>Related links...</p>\n    </aside>\n  </main>\n\n  <footer>\n    <p>&copy; 2024 My Website</p>\n  </footer>\n</body>\n```\n\n---\n\n### CSS Grid Layout Example\n\n```html\n<style>\n  .layout {\n    display: grid;\n    grid-template-areas:\n      \"header header\"\n      \"nav    main\"\n      \"footer footer\";\n    grid-template-columns: 200px 1fr;\n    gap: 10px;\n  }\n  header { grid-area: header; }\n  nav { grid-area: nav; }\n  main { grid-area: main; }\n  footer { grid-area: footer; }\n</style>\n```\n\n---\n\n> **Best Practice:** Use semantic layout elements instead of `<div>` for everything. It improves SEO, accessibility, and code readability.",
+  "codeExample": "<style>\n  body { font-family: Arial; margin: 0; }\n  header { background: #333; color: white; padding: 20px; }\n  nav { background: #555; padding: 10px; }\n  nav a { color: white; margin-right: 15px; }\n  main { display: flex; min-height: 300px; }\n  article { flex: 3; padding: 20px; }\n  aside { flex: 1; background: #f0f0f0; padding: 20px; }\n  footer { background: #333; color: white; padding: 10px; text-align: center; }\n</style>\n\n<header>\n  <h1>My Website</h1>\n</header>\n\n<nav>\n  <a href=\"#\">Home</a>\n  <a href=\"#\">About</a>\n  <a href=\"#\">Contact</a>\n</nav>\n\n<main>\n  <article>\n    <h2>Main Content</h2>\n    <p>This is the main article content.</p>\n  </article>\n  <aside>\n    <h3>Sidebar</h3>\n    <p>Related information.</p>\n  </aside>\n</main>\n\n<footer>\n  <p>&copy; 2024 My Website</p>\n</footer>",
+  "quiz": [
+    {
+      "question": "Which element represents the main content area?",
+      "options": [
+        "<header>",
+        "<main>",
+        "<section>",
+        "<article>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

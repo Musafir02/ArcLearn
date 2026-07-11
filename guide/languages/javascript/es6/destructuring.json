@@ -1,0 +1,22 @@
+{
+  "title": "Destructuring (ES6)",
+  "language": "javascript",
+  "topic": "destructuring",
+  "order": 41,
+  "nextTopic": "spread_rest",
+  "prevTopic": "template_literals",
+  "content": "### Destructuring\n\n**Destructuring** unpacks values from arrays or objects into distinct variables.\n\n---\n\n### Array Destructuring\n\n```js\nlet [a, b, c] = [1, 2, 3];\nconsole.log(a); // 1\nconsole.log(b); // 2\nconsole.log(c); // 3\n```\n\n#### Skipping Elements\n\n```js\nlet [first, , third] = [\"A\", \"B\", \"C\"];\nconsole.log(first); // \"A\"\nconsole.log(third); // \"C\"\n```\n\n#### Rest Pattern\n\n```js\nlet [first, ...rest] = [1, 2, 3, 4, 5];\nconsole.log(first); // 1\nconsole.log(rest);  // [2, 3, 4, 5]\n```\n\n---\n\n### Object Destructuring\n\n```js\nlet person = { name: \"John\", age: 30, city: \"NYC\" };\nlet { name, age } = person;\nconsole.log(name); // \"John\"\nconsole.log(age);  // 30\n```\n\n#### Renaming Variables\n\n```js\nlet { name: userName, age: userAge } = person;\nconsole.log(userName); // \"John\"\n```\n\n#### Default Values\n\n```js\nlet { name, country = \"Unknown\" } = person;\nconsole.log(country); // \"Unknown\" (if not in person)\n```\n\n---\n\n### Practical Use: Function Parameters\n\n```js\nfunction greet({ name, age }) {\n  console.log(`${name} is ${age} years old`);\n}\n\ngreet({ name: \"John\", age: 30 });\n```\n\n> **Destructuring** is especially useful for working with API responses and configuration objects.",
+  "codeExample": "let colors = [\"red\", \"green\", \"blue\"];\nlet [first, second] = colors;\nconsole.log(first, second);\n\nlet user = { id: 1, username: \"john\" };\nlet { username, id } = user;\nconsole.log(username, id);",
+  "quiz": [
+    {
+      "question": "What does `let [a, b] = [1, 2, 3]` assign to a and b?",
+      "options": [
+        "a=1, b=2",
+        "a=1, b=undefined",
+        "a=1, b=3",
+        "a=[1,2], b=3"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

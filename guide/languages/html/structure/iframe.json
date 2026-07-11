@@ -1,0 +1,22 @@
+{
+  "title": "HTML Iframes",
+  "language": "html",
+  "topic": "iframe",
+  "order": 36,
+  "nextTopic": "head",
+  "prevTopic": "youtube",
+  "content": "### HTML Iframes\n\nAn **iframe** (inline frame) embeds another HTML page inside the current page.\n\n---\n\n### Basic Iframe\n\n```html\n<iframe src=\"https://example.com\" title=\"Description\">\n</iframe>\n```\n\n---\n\n### Iframe Attributes\n\n| Attribute | Description |\n|-----------|-------------|\n| `src` | URL of the page to embed |\n| `title` | Accessible name (required!) |\n| `width` | Width in pixels |\n| `height` | Height in pixels |\n| `frameborder` | Border (0 or 1, deprecated) |\n| `allow` | Feature permissions |\n| `loading` | Lazy loading (`lazy`, `eager`) |\n| `sandbox` | Security restrictions |\n| `name` | Target name for links |\n\n---\n\n### Iframe Size\n\n```html\n<iframe src=\"page.html\" width=\"600\" height=\"400\"></iframe>\n\n<!-- Or with CSS -->\n<iframe src=\"page.html\" style=\"width: 100%; height: 400px;\">\n</iframe>\n```\n\n---\n\n### Iframe as Link Target\n\n```html\n<iframe src=\"page.html\" name=\"myframe\"></iframe>\n\n<p><a href=\"https://example.com\" target=\"myframe\">\n  Load example.com in iframe\n</a></p>\n```\n\n---\n\n### The `sandbox` Attribute\n\nAdds security restrictions:\n\n```html\n<!-- Maximum restrictions -->\n<iframe src=\"third-party.html\" sandbox></iframe>\n\n<!-- Allow specific features -->\n<iframe src=\"page.html\" sandbox=\"allow-scripts allow-forms\">\n</iframe>\n```\n\n| Value | Allows |\n|-------|--------|\n| (empty) | All restrictions |\n| `allow-scripts` | JavaScript |\n| `allow-forms` | Form submission |\n| `allow-popups` | Pop-up windows |\n| `allow-same-origin` | Same-origin access |\n\n---\n\n> **Security Note:** Iframes can be a security risk. Use `sandbox` when embedding third-party content. Always provide `title` for accessibility.",
+  "codeExample": "<h3>Embedded Wikipedia Page</h3>\n<iframe src=\"https://www.wikipedia.org\"\n        width=\"100%\" height=\"400\"\n        title=\"Wikipedia homepage\">\n</iframe>\n\n<h3>Sandboxed Iframe (No Scripts)</h3>\n<iframe src=\"https://example.com\"\n        width=\"100%\" height=\"200\"\n        title=\"Example\"\n        sandbox>\n</iframe>\n\n<h3>Lazy Loaded Iframe</h3>\n<iframe src=\"https://example.com\"\n        width=\"100%\" height=\"200\"\n        title=\"Lazy\"\n        loading=\"lazy\">\n</iframe>",
+  "quiz": [
+    {
+      "question": "What does iframe stand for?",
+      "options": [
+        "Inline frame",
+        "Internal frame",
+        "Image frame",
+        "Interactive frame"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

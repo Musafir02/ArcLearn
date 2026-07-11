@@ -1,0 +1,22 @@
+{
+  "title": "JavaScript Comments",
+  "language": "javascript",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "datatypes",
+  "prevTopic": "output",
+  "content": "### Why Use Comments?\n\nComments help you and others **understand** your code. They are **ignored** by JavaScript and are only for humans.\n\n---\n\n### Comment Types\n\n#### 1. Single-Line Comment\n\nUse `//` for one line of explanation.\n\n```js\n// This is a single-line comment\nlet x = 5; // This also works at the end of a line\n```\n\n#### 2. Multi-Line Comment\n\nUse `/* ... */` for longer explanations.\n\n```js\n/*\n  This is a multi-line comment.\n  You can write several lines here.\n  Useful for describing complex logic.\n*/\n```\n\n---\n\n### When to Comment\n\n| Use Case | Example |\n|----------|---------|\n| **Explain complex logic** | Why this algorithm works |\n| **Document functions** | What params and return values are |\n| **Temporarily disable code** | Add `//` before a line to skip it |\n| **Todo reminders** | `// TODO: optimize this loop` |\n\n---\n\n> **Good practice:** Explain the **why**, not the **what**. Code itself shows what happens.",
+  "codeExample": "// This is a comment\nlet x = 10; // Inline comment\n/* Multi-line\n   comment */\nconsole.log(x);",
+  "quiz": [
+    {
+      "question": "Which symbol is used for single-line comments in JavaScript?",
+      "options": [
+        "#",
+        "//",
+        "/*",
+        "<!--"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

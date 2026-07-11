@@ -1,0 +1,22 @@
+{
+  "title": "HTML Head Element",
+  "language": "html",
+  "topic": "head",
+  "order": 37,
+  "nextTopic": "layout",
+  "prevTopic": "iframe",
+  "content": "### The HTML `<head>` Element\n\nThe `<head>` section contains **metadata** -- information about the page.\n\n---\n\n### What Goes in `<head>`?\n\n| Element | Purpose |\n|---------|---------|\n| `<title>` | Page title (shows in browser tab) |\n| `<meta>` | Metadata (charset, description, viewport) |\n| `<link>` | External resources (CSS, favicon) |\n| `<style>` | Internal CSS |\n| `<script>` | JavaScript (can also go in body) |\n| `<base>` | Base URL for relative links |\n\n---\n\n### The `<title>` Element\n\n```html\n<head>\n  <title>My Website - Home</title>\n</head>\n```\n\nThe title is used for:\n- Browser tab name\n- Search engine result title\n- Bookmark name\n\n---\n\n### The `<meta>` Element\n\n```html\n<!-- Character encoding -->\n<meta charset=\"UTF-8\">\n\n<!-- Viewport for responsive design -->\n<meta name=\"viewport\"\n      content=\"width=device-width, initial-scale=1.0\">\n\n<!-- Page description (for search results) -->\n<meta name=\"description\"\n      content=\"Learn HTML with this free tutorial\">\n\n<!-- Keywords (not used by Google, but still valid) -->\n<meta name=\"keywords\"\n      content=\"HTML, tutorial, web development\">\n\n<!-- Author -->\n<meta name=\"author\" content=\"John Doe\">\n\n<!-- Refresh/redirect after 30 seconds -->\n<meta http-equiv=\"refresh\" content=\"30;url=https://example.com\">\n```\n\n---\n\n### Open Graph (Social Media)\n\n```html\n<meta property=\"og:title\" content=\"My Page\">\n<meta property=\"og:description\" content=\"Awesome content\">\n<meta property=\"og:image\" content=\"image.jpg\">\n<meta property=\"og:url\" content=\"https://example.com\">\n```\n\n---\n\n### Standard Head Setup\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Page Title</title>\n  <meta name=\"description\" content=\"Page description\">\n  <link rel=\"icon\" href=\"favicon.ico\">\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n```\n\n> **Best Practice:** Always include both `charset` and `viewport` meta tags. They are essential for modern web development.",
+  "codeExample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My Awesome Page</title>\n  <meta name=\"description\" content=\"A tutorial about HTML\">\n  <meta name=\"author\" content=\"Developer\">\n  <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n</head>\n<body>\n  <h1>Hello, World!</h1>\n</body>\n</html>",
+  "quiz": [
+    {
+      "question": "Which meta tag is essential for responsive design?",
+      "options": [
+        "<meta charset>",
+        "<meta viewport>",
+        "<meta description>",
+        "<meta author>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

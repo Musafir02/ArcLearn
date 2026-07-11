@@ -1,0 +1,22 @@
+{
+  "title": "HTML Entities",
+  "language": "html",
+  "topic": "entities",
+  "order": 40,
+  "nextTopic": "symbols",
+  "prevTopic": "semantics",
+  "content": "### HTML Entities\n\n**Entities** are special codes for displaying reserved or invisible characters.\n\n---\n\n### Why Entities?\n\nSome characters have special meaning in HTML:\n\n- `<` and `>` are used for tags\n- `&` starts an entity\n- `\"` is used for attributes\n\nTo display them, use entities.\n\n---\n\n### Common Entities\n\n| Character | Entity Name | Entity Number |\n|-----------|-------------|---------------|\n| `<` | `&lt;` | `&#60;` |\n| `>` | `&gt;` | `&#62;` |\n| `&` | `&amp;` | `&#38;` |\n| `\"` | `&quot;` | `&#34;` |\n| `'` | `&apos;` (not in HTML4) | `&#39;` |\n| ` ` (non-breaking space) | `&nbsp;` | `&#160;` |\n| `©` | `&copy;` | `&#169;` |\n| `®` | `&reg;` | `&#174;` |\n| `™` | `&trade;` | `&#8482;` |\n| `€` | `&euro;` | `&#8364;` |\n| `£` | `&pound;` | `&#163;` |\n| `¥` | `&yen;` | `&#165;` |\n\n---\n\n### Using Entities\n\n```html\n<p>10 &lt; 20 is true</p>\n<p>Use &amp; for ampersands</p>\n<p>&copy; 2024 My Company</p>\n<p>Save &amp; Exit</p>\n<p>Non-breaking&nbsp;space</p>\n```\n\n---\n\n### Non-Breaking Space (`&nbsp;`)\n\nPrevents line breaks between words:\n\n```html\n<p>10&nbsp;km/h</p>  <!-- Will NOT break between 10 and km/h -->\n```\n\n---\n\n### Combining Diacritical Marks\n\n```html\n<p>A&#768; = A with grave (A + &#768;)</p>\n<p>o&#776; = o with umlaut (o + &#776;)</p>\n```\n\n---\n\n> **Best Practice:** Always use `&lt;` and `&gt;` when displaying code examples in HTML. Use `&amp;` for ampersands in URLs and text.",
+  "codeExample": "<p>Use &lt; and &gt; for tags in text.</p>\n<p>Ampersand: &amp;</p>\n<p>Copyright: &copy; 2024</p>\n<p>Trademark: &trade;</p>\n<p>Euro: &euro; 100</p>\n<p>Non-breaking space: Hello&nbsp;World</p>\n<p>Math: 10 &lt; 20 &amp;&amp; 20 &gt; 10</p>",
+  "quiz": [
+    {
+      "question": "Which entity represents the < character?",
+      "options": [
+        "&gt;",
+        "&lt;",
+        "&amp;",
+        "&quot;"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

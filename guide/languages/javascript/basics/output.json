@@ -1,0 +1,22 @@
+{
+  "title": "JavaScript Output",
+  "language": "javascript",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Ways to Display Output\n\nJavaScript provides **4 main ways** to show output:\n\n---\n\n#### 1. `console.log()` -- For Developers\n\nPrints to the browser's **console** (`F12`). Best for **debugging**.\n\n#### 2. `document.write()` -- For Testing\n\nWrites **directly to the HTML page**. Overwrites the page if called after load.\n\n#### 3. `alert()` -- Popup Box\n\nShows a **modal dialog box**. Use sparingly -- it blocks the page!\n\n#### 4. `innerHTML` -- For Dynamic Pages\n\nInserts content into a specific **HTML element** on the page.\n\n---\n\n### Output Comparison\n\n| Method | Best For | Visibility |\n|--------|----------|------------|\n| `console.log()` | Debugging | Console only |\n| `alert()` | Urgent messages | Popup |\n| `document.write()` | Quick tests | Page content |\n| `innerHTML` | Live updates | Specific element |\n\n---\n\n> **Pro Tip:** Use `console.log()` most of the time. It is clean and does not disrupt the user experience.",
+  "codeExample": "console.log('See this in the console');\nalert('This pops up!');\ndocument.write('This writes to the page');",
+  "quiz": [
+    {
+      "question": "Which method is best for debugging JavaScript code?",
+      "options": [
+        "alert()",
+        "document.write()",
+        "console.log()",
+        "innerHTML"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Let and Const (ES6)",
+  "language": "javascript",
+  "topic": "let_const",
+  "order": 39,
+  "nextTopic": "template_literals",
+  "prevTopic": "break_continue",
+  "content": "### Let and Const\n\nES6 introduced `let` and `const` as **block-scoped** alternatives to `var`.\n\n---\n\n### `let` -- Mutable, Block-Scoped\n\n```js\nlet x = 10;\nx = 20; // OK: can reassign\n\nif (true) {\n  let y = 30;\n}\nconsole.log(y); // Error: y is not defined (block-scoped)\n```\n\n### `const` -- Immutable Binding\n\n```js\nconst PI = 3.14;\nPI = 3; // Error: cannot reassign a constant\n\nconst person = { name: \"John\" };\nperson.name = \"Jane\"; // OK: object properties CAN change\n```\n\n> `const` means **the binding is constant**, not the value. Object properties and array elements can still change.\n\n---\n\n### `var` vs `let` vs `const`\n\n| Feature | `var` | `let` | `const` |\n|---------|-------|-------|--------|\n| **Scope** | Function | Block | Block |\n| **Reassign** | Yes | Yes | No |\n| **Redeclare** | Yes | No | No |\n| **Hoisted** | Yes (`undefined`) | Yes (TDZ) | Yes (TDZ) |\n| **Use** | Avoid | When reassigning | Default choice |\n\n---\n\n### Temporal Dead Zone (TDZ)\n\n`let` and `const` are hoisted but cannot be accessed before declaration:\n\n```js\nconsole.log(x); // ReferenceError: Cannot access before initialization\nlet x = 5;\n```\n\nThis zone between hoisting and declaration is the **Temporal Dead Zone**.\n\n---\n\n> **Modern Standard:** Use `const` by default. Use `let` only when you need to reassign. Never use `var` in new code.",
+  "codeExample": "const name = \"Ibrahim\";\nlet age = 25;\n\nage = 26; // OK\n// name = \"Ali\"; // Error!\n\nconsole.log(`${name} is ${age} years old`);",
+  "quiz": [
+    {
+      "question": "Which keyword creates a variable that cannot be reassigned?",
+      "options": [
+        "var",
+        "let",
+        "const",
+        "static"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

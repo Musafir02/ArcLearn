@@ -1,0 +1,22 @@
+{
+  "title": "For Loop",
+  "language": "javascript",
+  "topic": "for_loop",
+  "order": 36,
+  "nextTopic": "while_loop",
+  "prevTopic": "switch",
+  "content": "### The For Loop\n\nA **for loop** repeats code a specific number of times.\n\n---\n\n### Syntax\n\n```js\nfor (initialization; condition; increment) {\n  // Code to repeat\n}\n```\n\n| Part | Description | Example |\n|------|-------------|---------|\n| **Initialization** | Runs once at start | `let i = 0` |\n| **Condition** | Checked before each iteration | `i < 5` |\n| **Increment** | Runs after each iteration | `i++` |\n\n---\n\n### Example: Count to 5\n\n```js\nfor (let i = 1; i <= 5; i++) {\n  console.log(i);\n}\n// Output: 1, 2, 3, 4, 5\n```\n\n### Loop Through an Array\n\n```js\nlet fruits = [\"Apple\", \"Banana\", \"Cherry\"];\n\nfor (let i = 0; i < fruits.length; i++) {\n  console.log(fruits[i]);\n}\n```\n\n---\n\n### Variations\n\n#### Decrementing Loop\n```js\nfor (let i = 5; i >= 0; i--) { ... }\n```\n\n#### Skipping Steps\n```js\nfor (let i = 0; i < 10; i += 2) { ... } // Even numbers only\n```\n\n#### Nested Loops\n```js\nfor (let i = 0; i < 3; i++) {\n  for (let j = 0; j < 3; j++) {\n    console.log(i, j);\n  }\n}\n```\n\n---\n\n> **Common Pitfall:** Off-by-one errors. Remember: arrays are 0-indexed, so loop from `0` to `length - 1`.",
+  "codeExample": "for (let i = 1; i <= 5; i++) {\n  console.log(`Count: ${i}`);\n}\n\nlet colors = [\"red\", \"green\", \"blue\"];\nfor (let i = 0; i < colors.length; i++) {\n  console.log(colors[i]);\n}",
+  "quiz": [
+    {
+      "question": "What is the order of parts in a for loop?",
+      "options": [
+        "condition; increment; initialization",
+        "initialization; condition; increment",
+        "increment; condition; initialization",
+        "initialization; increment; condition"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

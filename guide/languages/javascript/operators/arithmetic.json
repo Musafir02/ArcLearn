@@ -1,0 +1,22 @@
+{
+  "title": "Arithmetic Operators",
+  "language": "javascript",
+  "topic": "arithmetic",
+  "order": 14,
+  "nextTopic": "assignment",
+  "prevTopic": "operators",
+  "content": "### Arithmetic Operators\n\nUsed for **mathematical calculations** between numeric values.\n\n---\n\n### The Operators\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `+` | Addition | `5 + 3` | `8` |\n| `-` | Subtraction | `5 - 3` | `2` |\n| `*` | Multiplication | `5 * 3` | `15` |\n| `**` | Exponentiation | `5 ** 2` | `25` |\n| `/` | Division | `5 / 2` | `2.5` |\n| `%` | Modulus (remainder) | `5 % 2` | `1` |\n| `++` | Increment | `let x = 5; x++` | `x = 6` |\n| `--` | Decrement | `let x = 5; x--` | `x = 4` |\n\n---\n\n### Increment Examples\n\n```js\nlet a = 5;\nlet b = a++; // b = 5 (post-increment: returns old value first)\n\nlet c = 5;\nlet d = ++c; // d = 6 (pre-increment: increments first, then returns)\n```\n\n---\n\n> **Note:** The `**` operator was introduced in ES7 (2016). For older browsers, use `Math.pow()` instead.",
+  "codeExample": "let x = 15;\nlet y = 4;\nconsole.log(x + y);\nconsole.log(x - y);\nconsole.log(x * y);\nconsole.log(x / y);\nconsole.log(x % y);\nconsole.log(x ** y);",
+  "quiz": [
+    {
+      "question": "What does the % operator do in JavaScript?",
+      "options": [
+        "Percentage",
+        "Modulus (remainder)",
+        "Division",
+        "Multiplication"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

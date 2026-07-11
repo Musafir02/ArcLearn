@@ -1,0 +1,22 @@
+{
+  "title": "HTML Emoji",
+  "language": "html",
+  "topic": "emoji",
+  "order": 42,
+  "nextTopic": "charset",
+  "prevTopic": "symbols",
+  "content": "### HTML Emoji\n\n**Emojis** are characters from the Unicode character set. They display as small images.\n\n---\n\n### Emoji in HTML\n\nSimply copy-paste or use the Unicode number:\n\n```html\n<p>I love coding! 😊</p>\n<p>I love coding! &#128522;</p>\n```\n\n---\n\n### Using UTF-8\n\nEmojis work when your page uses UTF-8 encoding:\n\n```html\n<meta charset=\"UTF-8\">\n```\n\n---\n\n### Emoji by Unicode Number\n\n```html\n<p>&#128512; - Grinning Face</p>\n<p>&#128513; - Grinning Face with Smiling Eyes</p>\n<p>&#128514; - Face with Tears of Joy</p>\n<p>&#128516; - Smiling Face with Open Mouth</p>\n```\n\n---\n\n### Common Emojis\n\n| Emoji | Code | Meaning |\n|-------|------|---------|\n| 😀 | `&#128512;` | Grinning |\n| 😂 | `&#128514;` | Tears of Joy |\n| ❤️ | `&#10084;` | Heart |\n| 👍 | `&#128077;` | Thumbs Up |\n| ✅ | `&#9989;` | Check Mark |\n| ❌ | `&#10060;` | Cross Mark |\n| ⭐ | `&#11088;` | Star |\n| 🔥 | `&#128293;` | Fire |\n| 👋 | `&#128075;` | Wave |\n| 🎉 | `&#127881;` | Party Popper |\n\n---\n\n### Emoji Sizes\n\nEmojis inherit the font size:\n\n```html\n<p style=\"font-size: 50px;\">🔥 👍 🎉</p>\n```\n\n---\n\n> **Note:** Emoji display varies across platforms. Apple, Google, Microsoft, and Samsung each have their own designs. Most modern browsers support emojis.",
+  "codeExample": "<meta charset=\"UTF-8\">\n\n<p>Emojis by copy-paste: 😂 ❤️ 👍</p>\n\n<p>Emojis by code: &#128512; &#128514; &#10084;</p>\n\n<p style=\"font-size: 32px;\">\n  &#127881; Party Time! &#127881;\n</p>\n\n<p style=\"font-size: 24px;\">\n  &#128077; Like &#128078; Dislike\n</p>",
+  "quiz": [
+    {
+      "question": "What character encoding is needed for emojis to work?",
+      "options": [
+        "ASCII",
+        "UTF-8",
+        "ISO-8859-1",
+        "Windows-1252"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

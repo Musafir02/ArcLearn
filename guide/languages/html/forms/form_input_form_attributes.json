@@ -1,0 +1,22 @@
+{
+  "title": "Form Input Form Attributes",
+  "language": "html",
+  "topic": "form_input_form_attributes",
+  "order": 32,
+  "nextTopic": "video",
+  "prevTopic": "form_input_attributes",
+  "content": "### Input Form Attributes\n\nThese attributes on `<input>` override the `<form>` element's settings.\n\n---\n\n### Override Action, Method, Target\n\n```html\n<form action=\"/default\" id=\"myform\">\n</form>\n\n<!-- Input outside the form -->\n<input type=\"submit\" form=\"myform\"\n       formaction=\"/different-endpoint\"\n       formmethod=\"post\"\n       formtarget=\"_blank\">\n```\n\n---\n\n### Form Attributes for Input Fields\n\n| Attribute | Purpose |\n|-----------|---------|\n| `form` | Associates input with a form (by id) |\n| `formaction` | Overrides form's `action` |\n| `formmethod` | Overrides form's `method` |\n| `formtarget` | Overrides form's `target` |\n| `formenctype` | Overrides form's `enctype` |\n| `formnovalidate` | Overrides form's validation |\n\n---\n\n### Input Outside Form\n\nAn input can be **outside** the `<form>` tag as long as it has a `form` attribute:\n\n```html\n<form id=\"signup\" action=\"/register\">\n  <input type=\"text\" name=\"username\">\n</form>\n\n<!-- Outside, but still part of the form -->\n<input type=\"email\" name=\"email\" form=\"signup\">\n\n<button type=\"submit\" form=\"signup\">Submit</button>\n```\n\n---\n\n### Multiple Submit Buttons\n\n```html\n<form action=\"/submit\">\n  <input type=\"text\" name=\"query\">\n  \n  <button type=\"submit\">Save</button>\n  <button type=\"submit\" formaction=\"/draft\">\n    Save as Draft\n  </button>\n</form>\n```\n\n---\n\n> **Use Case:** The `form` attribute is useful when you need inputs outside the form for layout purposes. `formaction` is great for multiple submit buttons that send data to different endpoints.",
+  "codeExample": "<form id=\"main-form\" action=\"/save\" method=\"post\">\n  <label for=\"title\">Title:</label>\n  <input type=\"text\" id=\"title\" name=\"title\">\n</form>\n\n<!-- Input outside form but linked via form attribute -->\n<label for=\"note\">Note:</label>\n<input type=\"text\" id=\"note\" name=\"note\" form=\"main-form\"><br><br>\n\n<!-- Multiple submit buttons -->\n<button type=\"submit\" form=\"main-form\">Save</button>\n<button type=\"submit\" form=\"main-form\"\n        formaction=\"/save-draft\">Save as Draft</button>",
+  "quiz": [
+    {
+      "question": "Which attribute links an input to a form it is outside of?",
+      "options": [
+        "formid",
+        "form",
+        "belongs-to",
+        "for"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

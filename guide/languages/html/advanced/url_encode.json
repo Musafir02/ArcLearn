@@ -1,0 +1,22 @@
+{
+  "title": "URL Encoding",
+  "language": "html",
+  "topic": "url_encode",
+  "order": 44,
+  "nextTopic": "xhtml",
+  "prevTopic": "charset",
+  "content": "### URL Encoding\n\n**URL encoding** converts characters into a format that can be safely transmitted over the web.\n\n---\n\n### Why URL Encoding?\n\nURLs can only contain certain characters. Spaces, special chars, and non-ASCII chars must be **encoded**.\n\n- Spaces become `%20`\n- Special characters become `%XX` (hex code)\n- Non-ASCII chars become multi-byte codes\n\n---\n\n### How URL Encoding Works\n\nEach character is converted to a **%** followed by two hex digits:\n\n| Character | ASCII | URL Encoded |\n|-----------|-------|-------------|\n| Space | 32 | `%20` |\n| `!` | 33 | `%21` |\n| `#` | 35 | `%23` |\n| `$` | 36 | `%24` |\n| `&` | 38 | `%26` |\n| `+` | 43 | `%2B` |\n| `,` | 44 | `%2C` |\n| `/` | 47 | `%2F` |\n| `:` | 58 | `%3A` |\n| `;` | 59 | `%3B` |\n| `=` | 61 | `%3D` |\n| `?` | 63 | `%3F` |\n| `@` | 64 | `%40` |\n| `%` | 37 | `%25` |\n\n---\n\n### Reserved Characters\n\nThese characters have special meanings in URLs and must be encoded in data:\n\n```\n: / ? # [ ] @ ! $ & ' ( ) * + , ; =\n```\n\n---\n\n### Safe Characters\n\nThese do NOT need encoding:\n\n- Letters: A-Z, a-z\n- Digits: 0-9\n- Special: `- _ . ~`\n\n---\n\n### URL Encoding in Forms\n\nGET forms automatically encode:\n\n```html\n<form action=\"/search\" method=\"get\">\n  <input type=\"text\" name=\"q\" value=\"hello world\">\n</form>\n<!-- Submits as: /search?q=hello+world -->\n```\n\n---\n\n> **Pro Tip:** Use JavaScript's `encodeURIComponent()` to encode URL parameters. The browser does this automatically for form submissions.",
+  "codeExample": "<p>Space: hello%20world</p>\n<p>Ampersand: %26</p>\n<p>Hash: %23</p>\n<p>Slash: %2F</p>\n<p>Question mark: %3F</p>\n<p>Email: user%40example.com</p>\n<p>UTF-8: %E4%BD%A0%E5%A5%BD (你好)</p>",
+  "quiz": [
+    {
+      "question": "How is a space encoded in a URL?",
+      "options": [
+        "_",
+        "+",
+        "%20",
+        "Both + and %20"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Closures",
+  "language": "javascript",
+  "topic": "closures",
+  "order": 51,
+  "nextTopic": "hoisting",
+  "prevTopic": "strict",
+  "content": "### Closures\n\nA **closure** is a function that **remembers** the variables from its outer scope even after the outer function has finished.\n\n---\n\n### Basic Closure\n\n```js\nfunction outer(x) {\n  return function inner(y) {\n    return x + y; // inner remembers x from outer\n  };\n}\n\nconst addFive = outer(5);\nconsole.log(addFive(3)); // 8\nconsole.log(addFive(10)); // 15\n```\n\nThe `inner` function **closes over** (remembers) the `x` variable.\n\n---\n\n### Practical Examples\n\n#### 1. Private Variables\n\n```js\nfunction createCounter() {\n  let count = 0; // Private variable\n  return {\n    increment: () => ++count,\n    decrement: () => --count,\n    getCount: () => count\n  };\n}\n\nconst counter = createCounter();\ncounter.increment(); // 1\ncounter.increment(); // 2\ncounter.decrement(); // 1\n// count is NOT accessible directly\n```\n\n#### 2. Function Factories\n\n```js\nfunction multiplyBy(factor) {\n  return (number) => number * factor;\n}\n\nconst double = multiplyBy(2);\nconst triple = multiplyBy(3);\n\nconsole.log(double(5)); // 10\nconsole.log(triple(5)); // 15\n```\n\n---\n\n### Why Closures Matter\n\n- **Data privacy** -- create private variables (like `count` above)\n- **Partial application** -- fix some arguments of a function\n- **Callbacks** -- preserve state in async operations\n\n> **Closures** are a fundamental JavaScript concept. Every function in JavaScript is a closure -- it remembers the scope where it was created.",
+  "codeExample": "function createGreeting(greeting) {\n  return function(name) {\n    console.log(`${greeting}, ${name}!`);\n  };\n}\n\nconst sayHello = createGreeting(\"Hello\");\nconst sayHi = createGreeting(\"Hi\");\n\nsayHello(\"Ibrahim\");\nsayHi(\"Ibrahim\");",
+  "quiz": [
+    {
+      "question": "What is a closure in JavaScript?",
+      "options": [
+        "A function that runs immediately",
+        "A function that remembers its outer scope",
+        "A function without a name",
+        "A function that returns a promise"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

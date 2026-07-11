@@ -1,0 +1,22 @@
+{
+  "title": "Array Methods",
+  "language": "javascript",
+  "topic": "arrays_methods",
+  "order": 23,
+  "nextTopic": "arrays_iteration",
+  "prevTopic": "arrays",
+  "content": "### Array Methods\n\nJavaScript arrays have **powerful built-in methods** for manipulation.\n\n---\n\n### Add/Remove Elements\n\n| Method | Description | Example | Result |\n|--------|-------------|---------|--------|\n| `push(item)` | Add to **end** | `arr.push(4)` | Returns new length |\n| `pop()` | Remove from **end** | `arr.pop()` | Returns removed item |\n| `unshift(item)` | Add to **start** | `arr.unshift(0)` | Returns new length |\n| `shift()` | Remove from **start** | `arr.shift()` | Returns removed item |\n| `splice(i, n)` | Remove/replace at index | `arr.splice(1, 1)` | Returns removed items |\n\n---\n\n### Transform Arrays\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `concat(arr)` | Join two arrays | `[1,2].concat([3,4])` |\n| `slice(i, j)` | Extract a portion | `[1,2,3].slice(0, 2)` |\n| `join(sep)` | Join elements into string | `[\"a\",\"b\"].join(\"-\")` |\n| `reverse()` | Reverse the order | `[1,2,3].reverse()` |\n| `sort()` | Sort alphabetically | `[3,1,2].sort()` |\n| `indexOf(item)` | Find position | `[1,2,3].indexOf(2)` |\n| `includes(item)` | Check if contains | `[1,2,3].includes(2)` |\n\n---\n\n### Spread Operator (`...`)\n\nA modern way to combine arrays:\n\n```js\nlet arr1 = [1, 2];\nlet arr2 = [3, 4];\nlet combined = [...arr1, ...arr2]; // [1, 2, 3, 4]\n```\n\n> **Mutating vs Non-mutating:** `push`, `pop`, `sort`, `reverse`, `splice` **change** the original array. `concat`, `slice`, `join`, `includes`, `indexOf` do **not**.",
+  "codeExample": "let fruits = [\"Apple\", \"Banana\"];\nfruits.push(\"Cherry\");\nconsole.log(fruits);\nfruits.pop();\nconsole.log(fruits);\nconsole.log(fruits.includes(\"Apple\"));",
+  "quiz": [
+    {
+      "question": "Which method adds an item to the end of an array?",
+      "options": [
+        "add()",
+        "append()",
+        "push()",
+        "insert()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

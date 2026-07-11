@@ -1,0 +1,22 @@
+{
+  "title": "Table Padding and Spacing",
+  "language": "html",
+  "topic": "table_padding",
+  "order": 21,
+  "nextTopic": "table_colgroup",
+  "prevTopic": "table_headers",
+  "content": "### Table Padding and Spacing\n\n---\n\n### Cell Padding\n\nPadding is the space **inside** a cell, between the border and the content:\n\n```html\n<style>\n  th, td {\n    padding: 15px;\n  }\n</style>\n\n<!-- Different padding on each side -->\n<style>\n  th, td {\n    padding-top: 10px;\n    padding-bottom: 20px;\n    padding-left: 30px;\n    padding-right: 5px;\n  }\n</style>\n```\n\n---\n\n### Cell Spacing (border-spacing)\n\nSpacing is the space **between** cells (only works with `border-collapse: separate`):\n\n```html\n<style>\n  table {\n    border-collapse: separate;\n    border-spacing: 10px;\n  }\n</style>\n```\n\n---\n\n### Padding vs Spacing\n\n| Property | Where |\n|----------|-------|\n| `padding` | Inside cells |\n| `border-spacing` | Between cells (separate mode only) |\n| `margin` | Outside cells (does not work on `<td>`) |\n\n---\n\n### Padding Shorthand\n\n```html\n<style>\n  td {\n    padding: 10px;            /* All sides */\n    padding: 10px 20px;       /* Top/bottom 10, left/right 20 */\n    padding: 10px 15px 20px;  /* Top 10, sides 15, bottom 20 */\n    padding: 10px 5px 15px 20px; /* Top, right, bottom, left */\n  }\n</style>\n```\n\n---\n\n### Content Alignment\n\n```html\n<style>\n  td {\n    text-align: center;    /* Horizontal: left, center, right */\n    vertical-align: middle; /* Vertical: top, middle, bottom */\n  }\n</style>\n```\n\n> **Best Practice:** Consistent padding (10-15px) improves table readability. Use alternating row colors (`:nth-child(even)`) for better readability.",
+  "codeExample": "<style>\n  .padded-table th, .padded-table td {\n    padding: 12px 20px;\n    text-align: left;\n  }\n  .padded-table {\n    border-collapse: separate;\n    border-spacing: 5px;\n  }\n  .padded-table th {\n    background: #333;\n    color: white;\n  }\n  .padded-table td {\n    background: #f5f5f5;\n  }\n</style>\n\n<table class=\"padded-table\">\n  <tr>\n    <th>Name</th>\n    <th>City</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Boston</td>\n  </tr>\n</table>",
+  "quiz": [
+    {
+      "question": "Which property adds space inside table cells?",
+      "options": [
+        "margin",
+        "padding",
+        "border-spacing",
+        "gap"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

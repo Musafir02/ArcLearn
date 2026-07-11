@@ -1,0 +1,22 @@
+{
+  "title": "Promises (ES6)",
+  "language": "javascript",
+  "topic": "promises",
+  "order": 45,
+  "nextTopic": "async_await",
+  "prevTopic": "classes",
+  "content": "### Promises\n\nA **Promise** represents a value that may be available **now, later, or never**. It is used for asynchronous operations.\n\n---\n\n### Promise States\n\n| State | Meaning |\n|-------|---------|\n| **Pending** | Initial state, waiting for result |\n| **Fulfilled** | Operation completed successfully |\n| **Rejected** | Operation failed |\n| **Settled** | Either fulfilled or rejected |\n\n---\n\n### Creating a Promise\n\n```js\nconst myPromise = new Promise((resolve, reject) => {\n  let success = true;\n\n  if (success) {\n    resolve(\"Operation successful!\");\n  } else {\n    reject(\"Operation failed!\");\n  }\n});\n```\n\n---\n\n### Using a Promise\n\n```js\nmyPromise\n  .then(result => console.log(result))   // On success\n  .catch(error => console.error(error))  // On failure\n  .finally(() => console.log(\"Done\"));   // Always runs\n```\n\n---\n\n### Real Example: Fetch API\n\n```js\nfetch(\"https://api.example.com/data\")\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(\"Error:\", error));\n```\n\n---\n\n### Promise.all()\n\nWait for **multiple** promises:\n\n```js\nPromise.all([\n  fetch(url1),\n  fetch(url2),\n  fetch(url3)\n]).then(responses => {\n  // All done!\n});\n```\n\n> **Promises** solve \"callback hell\" by providing a cleaner chain structure for async code.",
+  "codeExample": "const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));\n\nwait(1000).then(() => console.log(\"1 second later...\"));\nconsole.log(\"This runs immediately\");",
+  "quiz": [
+    {
+      "question": "What method is called when a Promise is fulfilled?",
+      "options": [
+        "then()",
+        "catch()",
+        "finally()",
+        "done()"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Hoisting",
+  "language": "javascript",
+  "topic": "hoisting",
+  "order": 52,
+  "nextTopic": "json_js",
+  "prevTopic": "closures",
+  "content": "### Hoisting\n\n**Hoisting** is JavaScript's default behavior of moving **declarations** to the top of their scope.\n\n---\n\n### How Hoisting Works\n\nBehind the scenes, JavaScript **reorganizes** your code before executing it:\n\n#### `var` Variables\n\n```js\nconsole.log(x); // undefined (not an error!)\nvar x = 5;\n```\n\nJavaScript sees this as:\n\n```js\nvar x;\nconsole.log(x); // undefined\nx = 5;\n```\n\nOnly the **declaration** is hoisted, not the **assignment**.\n\n---\n\n### `let` and `const` (Temporal Dead Zone)\n\n```js\nconsole.log(y); // ReferenceError!\nlet y = 10;\n```\n\n`let` and `const` are hoisted but **not initialized**. Accessing them before declaration causes a `ReferenceError`. This period is called the **Temporal Dead Zone (TDZ)**.\n\n---\n\n### Function Hoisting\n\nFunction **declarations** are fully hoisted:\n\n```js\ngreet(); // \"Hello!\" -- works!\n\nfunction greet() {\n  console.log(\"Hello!\");\n}\n```\n\nBut function **expressions** are NOT:\n\n```js\ngreet(); // TypeError: greet is not a function\n\nvar greet = function() {\n  console.log(\"Hello!\");\n};\n```\n\n---\n\n### Hoisting Summary\n\n| Declaration | Hoisted? | Initialized? | Accessible before? |\n|-------------|----------|-------------|-------------------|\n| `var x = 5` | Yes | `undefined` | Yes (value is `undefined`) |\n| `let x = 5` | Yes | No (TDZ) | No (`ReferenceError`) |\n| `const x = 5` | Yes | No (TDZ) | No (`ReferenceError`) |\n| `function f() {}` | Yes | Yes (full function) | Yes |\n| `var f = () => {}` | Yes (var part) | `undefined` | Yes (but not a function) |\n\n> **Best Practice:** Always declare variables at the **top** of their scope. Use `let` and `const` to avoid confusing hoisting behavior.",
+  "codeExample": "console.log(a); // undefined (var is hoisted)\nvar a = 5;\n\n// console.log(b); // ReferenceError (let in TDZ)\nlet b = 10;\n\nsayHi(); // Works!\nfunction sayHi() {\n  console.log(\"Hi!\");\n}",
+  "quiz": [
+    {
+      "question": "What value does a `var` variable have before its declaration line?",
+      "options": [
+        "null",
+        "undefined",
+        "ReferenceError",
+        "0"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

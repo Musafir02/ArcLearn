@@ -1,0 +1,22 @@
+{
+  "title": "Switch Statement",
+  "language": "javascript",
+  "topic": "switch",
+  "order": 35,
+  "nextTopic": "for_loop",
+  "prevTopic": "if_else",
+  "content": "### The Switch Statement\n\nThe `switch` statement tests a value against **multiple specific cases**. It is cleaner than many `if/else` chains.\n\n---\n\n### Syntax\n\n```js\nswitch (expression) {\n  case value1:\n    // Code for value1\n    break;\n  case value2:\n    // Code for value2\n    break;\n  default:\n    // Code if no case matches\n}\n```\n\n---\n\n### Example: Weekday Names\n\n```js\nlet day = 3;\nlet dayName;\n\nswitch (day) {\n  case 1: dayName = \"Monday\"; break;\n  case 2: dayName = \"Tuesday\"; break;\n  case 3: dayName = \"Wednesday\"; break;\n  case 4: dayName = \"Thursday\"; break;\n  case 5: dayName = \"Friday\"; break;\n  case 6: dayName = \"Saturday\"; break;\n  case 7: dayName = \"Sunday\"; break;\n  default: dayName = \"Invalid day\";\n}\n\nconsole.log(dayName); // \"Wednesday\"\n```\n\n---\n\n### The `break` Keyword\n\n- `break` stops execution and exits the switch\n- Without `break`, execution **falls through** to the next case\n\n```js\nlet x = 1;\nswitch (x) {\n  case 1:\n  case 2:\n    console.log(\"1 or 2\");\n    break;\n  // case 1 without break would fall through to case 2!\n}\n```\n\n---\n\n### Switch vs If/Else\n\n| Aspect | Switch | If/Else |\n|--------|--------|--------|\n| **Best for** | Single value, many cases | Ranges, complex conditions |\n| **Readability** | Cleaner for many values | Better for complex logic |\n| **Comparison** | Strict equality (`===`) | Any comparison |\n\n---\n\n> **Remember:** Switch uses **strict equality** (`===`). `\"1\"` does not match `1`.",
+  "codeExample": "let fruit = \"apple\";\n\nswitch (fruit) {\n  case \"banana\":\n    console.log(\"Yellow\");\n    break;\n  case \"apple\":\n    console.log(\"Red or green\");\n    break;\n  default:\n    console.log(\"Unknown fruit\");\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used to exit a switch case?",
+      "options": [
+        "stop",
+        "exit",
+        "break",
+        "end"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

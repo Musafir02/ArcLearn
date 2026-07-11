@@ -1,0 +1,22 @@
+{
+  "title": "Table Sizes",
+  "language": "html",
+  "topic": "table_sizes",
+  "order": 19,
+  "nextTopic": "table_headers",
+  "prevTopic": "table_borders",
+  "content": "### HTML Table Sizes\n\n---\n\n### Table Width\n\n```html\n<table style=\"width: 100%;\">\n  <!-- Full width table -->\n</table>\n\n<table style=\"width: 500px;\">\n  <!-- Fixed width -->\n</table>\n```\n\n---\n\n### Column Width\n\n```html\n<table style=\"width: 100%;\">\n  <tr>\n    <th style=\"width: 30%;\">Name</th>\n    <th style=\"width: 40%;\">Email</th>\n    <th style=\"width: 30%;\">Phone</th>\n  </tr>\n</table>\n```\n\nSet width on header cells to control entire columns.\n\n---\n\n### Row Height\n\n```html\n<table>\n  <tr style=\"height: 50px;\">\n    <td>Tall row</td>\n  </tr>\n  <tr style=\"height: 30px;\">\n    <td>Short row</td>\n  </tr>\n</table>\n```\n\n---\n\n### Min/Max Width\n\n```html\n<table style=\"min-width: 400px; max-width: 800px;\">\n  <!-- Resizes between 400px and 800px -->\n</table>\n```\n\n---\n\n### Percentage vs Fixed\n\n| Unit | Behavior |\n|------|----------|\n| `%` | Relative to parent container |\n| `px` | Fixed size, does not change |\n| `em` | Relative to font size |\n| `auto` | Shrinks to fit content |\n\n---\n\n### Content-Based Width\n\nIf no width is set, columns resize automatically based on content:\n\n```html\n<table>\n  <tr>\n    <td>Short</td>\n    <td>This cell has very long content that stretches</td>\n  </tr>\n</table>\n```\n\n> **Best Practice:** Set `width: 100%` on tables for responsive layouts. Use percentage values for columns to adapt to different screen sizes.",
+  "codeExample": "<table style=\"width: 100%; border-collapse: collapse;\">\n  <tr>\n    <th style=\"width: 25%; background: #f0f0f0;\">Name</th>\n    <th style=\"width: 50%; background: #f0f0f0;\">Email</th>\n    <th style=\"width: 25%; background: #f0f0f0;\">Status</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>alice@example.com</td>\n    <td>Active</td>\n  </tr>\n</table>",
+  "quiz": [
+    {
+      "question": "What is the best unit for responsive table width?",
+      "options": [
+        "px",
+        "%",
+        "cm",
+        "pt"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "DOM Selectors",
+  "language": "javascript",
+  "topic": "dom_selectors",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### DOM Selectors\n\n**Selectors** let you find and access HTML elements in the DOM.\n\n---\n\n### Classic Methods\n\n| Method | Returns | Example |\n|--------|---------|---------|\n| `getElementById(id)` | Single element | `document.getElementById(\"header\")` |\n| `getElementsByClassName(cls)` | HTMLCollection | `document.getElementsByClassName(\"card\")` |\n| `getElementsByTagName(tag)` | HTMLCollection | `document.getElementsByTagName(\"div\")` |\n\n---\n\n### Modern Selectors (Preferred)\n\n#### `querySelector()`\n\nReturns the **first** matching element. Uses CSS selectors:\n\n```js\ndocument.querySelector(\"#header\");       // By ID\ndocument.querySelector(\".card\");         // By class\ndocument.querySelector(\"div p\");         // Nested\ndocument.querySelector(\"[data-type]\");  // By attribute\n```\n\n#### `querySelectorAll()`\n\nReturns **all** matching elements as a NodeList:\n\n```js\nconst cards = document.querySelectorAll(\".card\");\nconsole.log(cards.length);       // Number of matches\ncards.forEach(card => { ... });  // Can use forEach!\n```\n\n---\n\n### Live vs Static Collections\n\n| Collection | Live? | forEach? |\n|-----------|-------|----------|\n| `getElementsByClassName` | Yes (updates when DOM changes) | No |\n| `getElementsByTagName` | Yes (updates when DOM changes) | No |\n| `querySelectorAll` | No (static snapshot) | Yes |\n\n---\n\n> **Best Practice:** Use `querySelector()` and `querySelectorAll()` for most cases. They are more flexible and return NodeLists with `forEach()` support.",
+  "codeExample": "// HTML: <div id=\"app\" class=\"container\"><p>Hello</p></div>\n\nconst app = document.querySelector(\"#app\");\nconst container = document.querySelector(\".container\");\nconst paragraphs = document.querySelectorAll(\"p\");\n\nconsole.log(app);\nconsole.log(paragraphs.length);",
+  "quiz": [
+    {
+      "question": "Which selector method returns all matching elements?",
+      "options": [
+        "querySelector()",
+        "querySelectorAll()",
+        "getElementById()",
+        "getElement()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

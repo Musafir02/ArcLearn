@@ -1,0 +1,22 @@
+{
+  "title": "BOM (Browser Object Model)",
+  "language": "javascript",
+  "topic": "bom",
+  "order": 0,
+  "nextTopic": "",
+  "prevTopic": "",
+  "content": "### The Browser Object Model (BOM)\n\nThe **BOM** represents the browser window and provides objects to interact with the browser.\n\n---\n\n### The `window` Object\n\nThe **global object** in browser JavaScript. All global variables and functions are properties of `window`.\n\n```js\nconsole.log(window.innerWidth);    // Viewport width\nconsole.log(window.innerHeight);   // Viewport height\nconsole.log(window.scrollX);       // Horizontal scroll position\nconsole.log(window.scrollY);       // Vertical scroll position\n\nwindow.open(\"https://example.com\");  // Open new tab\nwindow.close();                       // Close window\nwindow.scrollTo(0, 0);               // Scroll to top\n```\n\n---\n\n### The `location` Object\n\nInformation about the **current URL** and methods to navigate:\n\n```js\nconsole.log(location.href);       // Full URL\nconsole.log(location.protocol);   // \"https:\"\nconsole.log(location.hostname);   // \"example.com\"\nconsole.log(location.pathname);   // \"/page\"\nconsole.log(location.search);     // \"?id=5\"\nconsole.log(location.hash);       // \"#section\"\n\nlocation.href = \"https://google.com\";  // Navigate to URL\nlocation.reload();                      // Reload page\n```\n\n---\n\n### The `navigator` Object\n\nInformation about the **browser** itself:\n\n```js\nconsole.log(navigator.userAgent);     // Browser info string\nconsole.log(navigator.platform);      // OS platform\nconsole.log(navigator.language);      // Browser language\nconsole.log(navigator.onLine);        // Is user online?\nconsole.log(navigator.geolocation);   // Geolocation API\n```\n\n---\n\n### The `screen` Object\n\nInformation about the **user's screen**:\n\n```js\nconsole.log(screen.width);       // Screen width\nconsole.log(screen.height);      // Screen height\nconsole.log(screen.availWidth);  // Available width\nconsole.log(screen.colorDepth);  // Color depth (bits)\n```\n\n---\n\n### Dialog Boxes\n\n```js\nalert(\"Hello!\");                        // Simple alert\nconst name = prompt(\"Enter name:\");      // Input prompt\nconst confirm = confirm(\"Are you sure?\"); // Yes/No dialog\n```\n\n> **Tip:** Dialog boxes block the page. Use them sparingly for better user experience.",
+  "codeExample": "console.log(`Screen: ${screen.width}x${screen.height}`);\nconsole.log(`Viewport: ${window.innerWidth}x${window.innerHeight}`);\nconsole.log(`Browser: ${navigator.userAgent}`);\nconsole.log(`URL: ${location.href}`);",
+  "quiz": [
+    {
+      "question": "Which object represents the browser window?",
+      "options": [
+        "document",
+        "window",
+        "screen",
+        "browser"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "HTML Picture Element",
+  "language": "html",
+  "topic": "picture",
+  "order": 16,
+  "nextTopic": "tables",
+  "prevTopic": "image_background",
+  "content": "### The `<picture>` Element\n\nThe `<picture>` element provides **responsive images** -- different images for different screen sizes.\n\n---\n\n### Basic Syntax\n\n```html\n<picture>\n  <source media=\"(min-width: 1024px)\" srcset=\"large.jpg\">\n  <source media=\"(min-width: 768px)\" srcset=\"medium.jpg\">\n  <img src=\"small.jpg\" alt=\"Responsive image\">\n</picture>\n```\n\n---\n\n### How It Works\n\n1. Browser checks each `<source>` in order\n2. Uses the **first matching** source\n3. Falls back to `<img>` if none match\n4. The `<img>` tag is **required** (for fallback and `alt` text)\n\n---\n\n### Attributes\n\n| Attribute | `<source>` | `<img>` |\n|-----------|-----------|---------|\n| `srcset` | Image URL(s) for the source | -- |\n| `media` | Media query condition | -- |\n| `sizes` | Image display sizes | -- |\n| `src` | -- | Fallback image |\n| `alt` | -- | Alternative text |\n\n---\n\n### Image Formats (Browser Support)\n\n```html\n<picture>\n  <source srcset=\"photo.avif\" type=\"image/avif\">\n  <source srcset=\"photo.webp\" type=\"image/webp\">\n  <img src=\"photo.jpg\" alt=\"Photo\">\n</picture>\n```\n\nBrowsers use the first format they support.\n\n---\n\n### Why Use `<picture>`?\n\n- **Art direction** -- different crops for mobile vs desktop\n- **Format selection** -- serve WebP/AVIF to modern browsers\n- **Performance** -- serve smaller images on small screens\n\n> **Best Practice:** Always include a fallback `<img>` tag. It is required for the `<picture>` element to work, and provides accessibility via `alt` text.",
+  "codeExample": "<picture>\n  <source media=\"(min-width: 1024px)\"\n          srcset=\"https://via.placeholder.com/800x400\">\n  <source media=\"(min-width: 600px)\"\n          srcset=\"https://via.placeholder.com/500x300\">\n  <img src=\"https://via.placeholder.com/300x200\"\n       alt=\"Responsive placeholder\"\n       style=\"width: 100%;\">\n</picture>",
+  "quiz": [
+    {
+      "question": "Which tag in <picture> is required as fallback?",
+      "options": [
+        "<source>",
+        "<img>",
+        "<fallback>",
+        "<default>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

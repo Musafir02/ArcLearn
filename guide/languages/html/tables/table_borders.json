@@ -1,0 +1,22 @@
+{
+  "title": "Table Borders",
+  "language": "html",
+  "topic": "table_borders",
+  "order": 18,
+  "nextTopic": "table_sizes",
+  "prevTopic": "tables",
+  "content": "### HTML Table Borders\n\n---\n\n### Default Table\n\nBy default, HTML tables have **no borders**. You add them with CSS.\n\n---\n\n### Adding Borders\n\n```html\n<style>\n  table, th, td {\n    border: 1px solid black;\n  }\n</style>\n```\n\n---\n\n### Collapsed Borders\n\nTo avoid double borders, use `border-collapse`:\n\n```html\n<style>\n  table {\n    border-collapse: collapse;\n  }\n  th, td {\n    border: 1px solid black;\n  }\n</style>\n```\n\n---\n\n### Style Comparison\n\n| Property | Result |\n|----------|--------|\n| Default (no border) | No lines |\n| `border: 1px solid black` | Double borders |\n| `border-collapse: collapse` | Single borders |\n| `border-collapse: separate` | Double borders (default) |\n\n---\n\n### Rounding Table Borders\n\n```html\n<style>\n  table {\n    border-collapse: collapse;\n    border-radius: 10px;\n    overflow: hidden;\n  }\n</style>\n```\n\n---\n\n### Dotted / Dashed Borders\n\n```html\n<style>\n  th, td {\n    border: 2px dashed #333;\n  }\n</style>\n```\n\nOther styles: `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, `outset`.\n\n---\n\n> **Best Practice:** Always use `border-collapse: collapse` for cleaner table appearance. Use CSS, not the deprecated `border` attribute on `<table>`.",
+  "codeExample": "<style>\n  .simple-table, .simple-table th, .simple-table td {\n    border: 1px solid black;\n    border-collapse: collapse;\n    padding: 8px;\n  }\n</style>\n\n<table class=\"simple-table\">\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n  </tr>\n</table>",
+  "quiz": [
+    {
+      "question": "Which CSS property removes double borders in tables?",
+      "options": [
+        "border-double",
+        "border-collapse",
+        "border-merge",
+        "border-single"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

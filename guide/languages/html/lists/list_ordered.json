@@ -1,0 +1,22 @@
+{
+  "title": "Ordered Lists",
+  "language": "html",
+  "topic": "list_ordered",
+  "order": 25,
+  "nextTopic": "list_description",
+  "prevTopic": "list_unordered",
+  "content": "### Ordered Lists (`<ol>`)\n\nOrdered lists display items with **numbers** or **letters**.\n\n---\n\n### Basic Ordered List\n\n```html\n<ol>\n  <li>First item</li>\n  <li>Second item</li>\n  <li>Third item</li>\n</ol>\n```\n\n---\n\n### The `type` Attribute\n\n| Type | Style | Example |\n|------|-------|---------|\n| `1` | Numbers (default) | 1, 2, 3 |\n| `A` | Uppercase letters | A, B, C |\n| `a` | Lowercase letters | a, b, c |\n| `I` | Uppercase Roman | I, II, III |\n| `i` | Lowercase Roman | i, ii, iii |\n\n```html\n<ol type=\"A\">\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ol>\n```\n\n---\n\n### Start Attribute\n\n```html\n<ol start=\"5\">\n  <li>Item 5</li>\n  <li>Item 6</li>\n</ol>\n\n<ol type=\"A\" start=\"3\">\n  <li>C (third letter)</li>\n  <li>D</li>\n</ol>\n```\n\n---\n\n### Reversed Attribute\n\n```html\n<ol reversed>\n  <li>Item 3</li>\n  <li>Item 2</li>\n  <li>Item 1</li>\n</ol>\n```\n\n---\n\n### CSS Styling\n\n```html\n<ol style=\"list-style-type: upper-roman;\">\n  <li>Roman numerals via CSS</li>\n</ol>\n```\n\n---\n\n> **Best Practice:** Use `<ol>` when the sequence matters -- recipes, instructions, rankings, top 10 lists. Use the `type` attribute for different numbering styles.",
+  "codeExample": "<h3>Default (numbers)</h3>\n<ol>\n  <li>Step one</li>\n  <li>Step two</li>\n</ol>\n\n<h3>Uppercase letters</h3>\n<ol type=\"A\">\n  <li>Option A</li>\n  <li>Option B</li>\n</ol>\n\n<h3>Start from 5</h3>\n<ol start=\"5\">\n  <li>Item five</li>\n  <li>Item six</li>\n</ol>\n\n<h3>Reversed</h3>\n<ol reversed>\n  <li>Last item</li>\n  <li>Middle item</li>\n  <li>First item</li>\n</ol>",
+  "quiz": [
+    {
+      "question": "Which attribute sets the starting number for an ordered list?",
+      "options": [
+        "begin",
+        "start",
+        "first",
+        "from"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

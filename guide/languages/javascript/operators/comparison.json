@@ -1,0 +1,22 @@
+{
+  "title": "Comparison Operators",
+  "language": "javascript",
+  "topic": "comparison",
+  "order": 16,
+  "nextTopic": "logical",
+  "prevTopic": "assignment",
+  "content": "### Comparison Operators\n\n**Comparison operators** compare two values and return a **boolean** (`true` or `false`).\n\n---\n\n### The Operators\n\n| Operator | Meaning | Example | Result |\n|----------|---------|---------|--------|\n| `===` | Strict equal | `5 === \"5\"` | `false` |\n| `!==` | Strict not equal | `5 !== \"5\"` | `true` |\n| `==` | Loose equal | `5 == \"5\"` | `true` |\n| `!=` | Loose not equal | `5 != \"5\"` | `false` |\n| `>` | Greater than | `5 > 3` | `true` |\n| `<` | Less than | `5 < 3` | `false` |\n| `>=` | Greater or equal | `5 >= 5` | `true` |\n| `<=` | Less or equal | `5 <= 4` | `false` |\n\n---\n\n### Strict vs Loose Equality\n\n**Always prefer `===` over `==`**\n\n```js\n5 === \"5\"; // false (different types)\n5 == \"5\";  // true (type coercion: string \"5\" becomes number 5)\n\nfalse === 0; // false\nfalse == 0;  // true (coercion!)\n```\n\nLoose equality (`==`) does **type coercion** which can lead to unexpected results.\n\n---\n\n### Chaining Comparisons\n\n```js\nlet age = 25;\nconsole.log(age >= 18 && age <= 65); // true\n```",
+  "codeExample": "let x = 5;\nlet y = \"5\";\nconsole.log(x == y);  // true (loose)\nconsole.log(x === y); // false (strict)\nconsole.log(x !== y); // true\nconsole.log(x > 3);   // true",
+  "quiz": [
+    {
+      "question": "What does `5 === '5'` return in JavaScript?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

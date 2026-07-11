@@ -1,0 +1,22 @@
+{
+  "title": "Try/Catch",
+  "language": "javascript",
+  "topic": "try_catch",
+  "order": 47,
+  "nextTopic": "throw",
+  "prevTopic": "async_await",
+  "content": "### Error Handling with Try/Catch\n\nThe `try/catch` statement lets you **handle errors** gracefully without crashing your program.\n\n---\n\n### Basic Syntax\n\n```js\ntry {\n  // Code that might throw an error\n  let result = riskyOperation();\n  console.log(result);\n} catch (error) {\n  // Code that runs if an error occurs\n  console.error(\"Something went wrong:\", error.message);\n}\n```\n\n---\n\n### The `finally` Block\n\n`finally` runs **regardless** of whether an error occurred or not:\n\n```js\ntry {\n  console.log(\"Trying...\");\n  throw new Error(\"Oops!\");\n} catch (error) {\n  console.log(\"Caught:\", error.message);\n} finally {\n  console.log(\"This always runs!\");\n}\n```\n\n---\n\n### The Error Object\n\nWhen an error occurs, JavaScript provides an **Error object** with properties:\n\n| Property | Description |\n|----------|-------------|\n| `name` | Type of error (e.g., `ReferenceError`) |\n| `message` | Human-readable description |\n| `stack` | Call stack trace (useful for debugging) |\n\n---\n\n### Error Types\n\n- `Error` -- Generic error\n- `ReferenceError` -- Accessing undefined variable\n- `TypeError` -- Wrong type used\n- `SyntaxError` -- Invalid syntax (cannot be caught in try/catch)\n- `RangeError` -- Value out of range\n\n---\n\n> **Best Practice:** Always handle errors in asynchronous code (API calls, file operations, etc.). Unhandled errors can crash your application.",
+  "codeExample": "try {\n  let result = 10 / 0;\n  console.log(result);\n  console.log(undefinedVariable); // This causes an error\n} catch (err) {\n  console.log(\"Error caught:\", err.message);\n} finally {\n  console.log(\"Cleanup code runs here\");\n}",
+  "quiz": [
+    {
+      "question": "Which block runs regardless of whether an error occurred?",
+      "options": [
+        "try",
+        "catch",
+        "finally",
+        "error"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

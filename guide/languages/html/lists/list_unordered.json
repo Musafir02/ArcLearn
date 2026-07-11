@@ -1,0 +1,22 @@
+{
+  "title": "Unordered Lists",
+  "language": "html",
+  "topic": "list_unordered",
+  "order": 24,
+  "nextTopic": "list_ordered",
+  "prevTopic": "lists",
+  "content": "### Unordered Lists (`<ul>`)\n\nUnordered lists display items with **bullets**.\n\n---\n\n### Basic Unordered List\n\n```html\n<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>\n```\n\n---\n\n### List Style Types\n\nUse CSS `list-style-type` to change the bullet style:\n\n| Value | Result |\n|-------|--------|\n| `disc` | Filled circle (default) |\n| `circle` | Hollow circle |\n| `square` | Filled square |\n| `none` | No marker |\n\n```html\n<ul style=\"list-style-type: square;\">\n  <li>Square bullets</li>\n</ul>\n\n<ul style=\"list-style-type: none;\">\n  <li>No bullets</li>\n</ul>\n```\n\n---\n\n### Removing Bullets\n\n```html\n<ul style=\"list-style-type: none; padding: 0;\">\n  <li>Clean list without markers</li>\n</ul>\n```\n\n---\n\n### Custom Icons as Bullets\n\n```html\n<ul style=\"list-style-image: url('icon.png');\">\n  <li>Custom bullet icon</li>\n</ul>\n```\n\n---\n\n### Horizontal Navigation Menu\n\n```html\n<ul style=\"list-style: none; display: flex; gap: 20px;\">\n  <li><a href=\"#\">Home</a></li>\n  <li><a href=\"#\">About</a></li>\n  <li><a href=\"#\">Contact</a></li>\n</ul>\n```\n\n> **Pro Tip:** Unordered lists are commonly used for navigation menus (with `list-style: none` and flexbox).",
+  "codeExample": "<ul style=\"list-style-type: disc;\">\n  <li>Default disc bullets</li>\n  <li>Item two</li>\n</ul>\n\n<ul style=\"list-style-type: square;\">\n  <li>Square bullets</li>\n  <li>Item two</li>\n</ul>\n\n<ul style=\"list-style-type: circle;\">\n  <li>Circle bullets</li>\n  <li>Item two</li>\n</ul>\n\n<ul style=\"list-style-type: none; padding: 0;\">\n  <li>No bullets</li>\n</ul>",
+  "quiz": [
+    {
+      "question": "Which CSS property changes the bullet style?",
+      "options": [
+        "list-style",
+        "list-style-type",
+        "bullet-type",
+        "marker-style"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

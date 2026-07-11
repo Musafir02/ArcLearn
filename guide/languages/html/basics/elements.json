@@ -1,0 +1,22 @@
+{
+  "title": "HTML Elements",
+  "language": "html",
+  "topic": "elements",
+  "order": 3,
+  "nextTopic": "attributes",
+  "prevTopic": "getstarted",
+  "content": "### HTML Elements\n\nAn **HTML element** is everything from the start tag to the end tag.\n\n---\n\n### Element Syntax\n\n```html\n<tagname>Content goes here...</tagname>\n```\n\n**Example:**\n\n```html\n<p>This is a paragraph.</p>\n```\n\n---\n\n### Nested Elements\n\nElements can be placed inside other elements:\n\n```html\n<html>\n  <body>\n    <p>This is <b>bold</b> text.</p>\n  </body>\n</html>\n```\n\n---\n\n### Block vs Inline Elements\n\n| Type | Behavior | Examples |\n|------|----------|---------|\n| **Block** | Starts on new line, takes full width | `<div>`, `<p>`, `<h1>` |\n| **Inline** | Stays on same line | `<span>`, `<a>`, `<b>` |\n\n---\n\n### Void Elements\n\nSome elements do not have a closing tag:\n\n```html\n<br>  <!-- Line break -->\n<hr>  <!-- Horizontal rule -->\n<img src=\"photo.jpg\">  <!-- Image -->\n<input type=\"text\">  <!-- Input -->\n```\n\n---\n\n### Case Insensitivity\n\nHTML tags are **not** case-sensitive:\n\n```html\n<P>This works</P>  <!-- Valid -->\n<p>But lowercase is standard</p>\n```\n\n> **Best Practice:** Always use **lowercase** tags. Use closing tags even for optional ones (like `</p>`).",
+  "codeExample": "<h1>This is a heading</h1>\n<p>This is a paragraph.</p>\n<a href=\"#\">This is a link</a>\n<br>\n<img src=\"photo.jpg\" alt=\"Photo\">\n<hr>\n<div>This is a block element</div>\n<span>This is inline</span>",
+  "quiz": [
+    {
+      "question": "What is an HTML element?",
+      "options": [
+        "Only the start tag",
+        "Everything from start tag to end tag",
+        "Only the content between tags",
+        "The end tag only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

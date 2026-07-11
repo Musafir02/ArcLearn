@@ -1,0 +1,22 @@
+{
+  "title": "Strict Mode",
+  "language": "javascript",
+  "topic": "strict",
+  "order": 50,
+  "nextTopic": "closures",
+  "prevTopic": "this_keyword",
+  "content": "### Strict Mode\n\n**Strict mode** catches common coding mistakes and prevents unsafe actions.\n\n---\n\n### Enabling Strict Mode\n\n```js\n// For the entire script\n\"use strict\";\n\n// Or inside a function\nfunction myFunc() {\n  \"use strict\";\n  // Strict mode only in this function\n}\n```\n\n---\n\n### What Strict Mode Does\n\n| Without Strict | With Strict |\n|---------------|-------------|\n| `x = 10` creates a global variable | `x = 10` throws `ReferenceError` |\n| `delete x` might silently fail | `delete x` throws `SyntaxError` |\n| Duplicate params allowed | Duplicate params throw `SyntaxError` |\n| `this` in functions = `window` | `this` in functions = `undefined` |\n| `with` statement allowed | `with` statement throws `SyntaxError` |\n\n---\n\n### Examples\n\n```js\n\"use strict\";\n\n// Mistake 1: Accidental global\n// x = 5; // ReferenceError: x is not defined\n\n// Mistake 2: Deleting variables\n// let y = 10;\n// delete y; // SyntaxError\n\n// Mistake 3: Duplicate params\n// function sum(a, a) { } // SyntaxError\n```\n\n---\n\n### Why Use Strict Mode?\n\n- **Safer code** -- catches common errors\n- **Better performance** -- engines can optimize more\n- **Future-proof** -- some features only work in strict mode\n- **Eliminates `this` coercion** -- `this` is `undefined` instead of `window`\n\n> **Modern JavaScript:** ES6 modules and classes are **always** in strict mode automatically.",
+  "codeExample": "\"use strict\";\n\nlet name = \"Ibrahim\";\nconsole.log(name);\n\n// This would cause an error in strict mode:\n// age = 25; // ReferenceError\n\nfunction test() {\n  \"use strict\";\n  // x = 10; // Error: must declare with let/const/var\n}",
+  "quiz": [
+    {
+      "question": "How do you enable strict mode in JavaScript?",
+      "options": [
+        "\"strict mode\"",
+        "\"use strict\"",
+        "strict()",
+        "enableStrict()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

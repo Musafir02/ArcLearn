@@ -1,0 +1,22 @@
+{
+  "title": "Function Scope",
+  "language": "javascript",
+  "topic": "functions_scope",
+  "order": 28,
+  "nextTopic": "objects",
+  "prevTopic": "arrow",
+  "content": "### Function Scope\n\nEach function creates its own **scope** -- a environment where variables are accessible.\n\n---\n\n### Local vs Global\n\n```js\nlet globalVar = \"I am global\";\n\nfunction myFunc() {\n  let localVar = \"I am local\";\n  console.log(globalVar); // Accessible\n  console.log(localVar);  // Accessible\n}\n\nmyFunc();\nconsole.log(localVar); // Error! Not accessible\n```\n\n---\n\n### Nested Functions (Closure Basics)\n\nFunctions defined inside other functions have access to the **outer** function's variables:\n\n```js\nfunction outer(x) {\n  function inner(y) {\n    return x + y; // inner can access x from outer\n  }\n  return inner;\n}\n\nconst addFive = outer(5);\nconsole.log(addFive(3)); // 8\n```\n\n---\n\n### Immediately Invoked Function Expression (IIFE)\n\nA function that runs **immediately** after being defined:\n\n```js\n(function() {\n  let secret = \"This is private\";\n  console.log(secret);\n})();\n// secret is not accessible here\n```\n\n---\n\n### Scope Best Practices\n\n- Use `let` and `const` for **block scoping**\n- Avoid **global variables** -- they can cause conflicts\n- Keep functions **small** and focused\n- Use **parameters** to pass data rather than relying on outer scope",
+  "codeExample": "function outer() {\n  let message = \"Hello from outer\";\n  \n  function inner() {\n    console.log(message);\n  }\n  \n  inner();\n}\n\nouter();",
+  "quiz": [
+    {
+      "question": "Can a nested (inner) function access variables from its outer function?",
+      "options": [
+        "No, never",
+        "Yes, always",
+        "Yes, this is called closure",
+        "Only if declared with var"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

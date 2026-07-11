@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started",
+  "language": "html",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "elements",
+  "prevTopic": "intro",
+  "content": "### Getting Started with HTML\n\n---\n\n### What You Need\n\n| Tool | Purpose |\n|------|---------|\n| **Text Editor** | VS Code, Notepad++, Sublime |\n| **Web Browser** | Chrome, Firefox, Edge |\n\nNo special software needed -- just a text editor and a browser!\n\n---\n\n### Create Your First HTML File\n\n1. Open a text editor\n2. Type the following:\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n  <h1>My First Heading</h1>\n  <p>My first paragraph.</p>\n</body>\n</html>\n```\n\n3. Save as `index.html`\n4. Double-click the file to open in a browser\n\n---\n\n### HTML Editors\n\n| Editor | Platform |\n|--------|----------|\n| **VS Code** | Free, powerful, popular |\n| **Sublime Text** | Fast, lightweight |\n| **Notepad++** | Windows only |\n| **Online editors** | CodePen, JSFiddle, Replit |\n\n---\n\n### View Page Source\n\nRight-click on any web page and select **View Page Source** to see its HTML code. This is a great way to learn!\n\n---\n\n### Developer Tools\n\nPress `F12` (or `Ctrl+Shift+I`) to open **Developer Tools**. You can inspect and edit HTML/CSS in real time.\n\n> **Pro Tip:** VS Code with the **Live Server** extension automatically refreshes your page when you save changes.",
+  "codeExample": "<!DOCTYPE html>\n<html>\n<body>\n  <h1>My First Heading</h1>\n  <p>My first paragraph.</p>\n</body>\n</html>",
+  "quiz": [
+    {
+      "question": "What extension do HTML files use?",
+      "options": [
+        ".htm",
+        ".html",
+        "Both .htm and .html",
+        ".htx"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

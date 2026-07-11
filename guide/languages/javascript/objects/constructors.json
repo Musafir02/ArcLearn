@@ -1,0 +1,22 @@
+{
+  "title": "Object Constructors",
+  "language": "javascript",
+  "topic": "constructors",
+  "order": 32,
+  "nextTopic": "conditions",
+  "prevTopic": "methods",
+  "content": "### Object Constructors\n\nA **constructor** is a blueprint for creating multiple objects of the same type.\n\n---\n\n### Constructor Function\n\n```js\nfunction Person(name, age) {\n  this.name = name;\n  this.age = age;\n  this.greet = function() {\n    return `Hello, I'm ${this.name}`;\n  };\n}\n\nlet person1 = new Person(\"John\", 30);\nlet person2 = new Person(\"Jane\", 25);\n```\n\n---\n\n### The `new` Keyword\n\nWhen you call `new Person()`:\n\n1. A **new empty object** is created\n2. `this` points to the new object\n3. Properties are **added** to `this`\n4. The object is **returned** automatically\n\n---\n\n### Adding to Prototype\n\nMethods added to the **prototype** are shared by all instances (memory efficient):\n\n```js\nPerson.prototype.sayHello = function() {\n  return `Hi, I'm ${this.name}`;\n};\n\nconsole.log(person1.sayHello()); // \"Hi, I'm John\"\n```\n\n---\n\n### Built-in Constructors\n\nJavaScript has built-in constructors:\n\n```js\nlet arr = new Array(1, 2, 3);\nlet obj = new Object();\nlet str = new String(\"Hello\");\n```\n\n> **Best Practice:** Use **literal syntax** (`{}`, `[]`, `\"\"`) instead of constructors for primitives. Constructors are mainly for creating **custom object types**.",
+  "codeExample": "function Car(brand, model) {\n  this.brand = brand;\n  this.model = model;\n}\n\nlet myCar = new Car(\"Toyota\", \"Camry\");\nconsole.log(myCar.brand);\nconsole.log(myCar.model);",
+  "quiz": [
+    {
+      "question": "Which keyword is used to create an object from a constructor?",
+      "options": [
+        "create",
+        "new",
+        "make",
+        "construct"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

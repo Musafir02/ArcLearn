@@ -1,0 +1,22 @@
+{
+  "title": "Table Colgroup",
+  "language": "html",
+  "topic": "table_colgroup",
+  "order": 22,
+  "nextTopic": "lists",
+  "prevTopic": "table_padding",
+  "content": "### The `<colgroup>` Element\n\nThe `<colgroup>` element lets you style entire columns at once.\n\n---\n\n### Basic Syntax\n\n```html\n<table>\n  <colgroup>\n    <col span=\"2\" style=\"background-color: lightgray;\">\n    <col style=\"background-color: lightblue;\">\n  </colgroup>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n    <th>City</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n    <td>Boston</td>\n  </tr>\n</table>\n```\n\n---\n\n### The `span` Attribute\n\nSpecifies how many columns the `<col>` element applies to:\n\n```html\n<colgroup>\n  <col span=\"2\" style=\"background: #f0f0f0;\">  <!-- Columns 1-2 -->\n  <col span=\"1\" style=\"background: #e0e0e0;\">  <!-- Column 3 -->\n</colgroup>\n```\n\n---\n\n### What You Can Style on `<col>`\n\n| Property | Supported |\n|----------|-----------|\n| `background` | Yes |\n| `width` | Yes |\n| `border` | Yes |\n| `visibility` | Yes |\n| Text properties | No |\n\n> To style text in a column, apply the style to `<td>` or `<th>` directly.\n\n---\n\n### Column Visibility\n\n```html\n<colgroup>\n  <col>\n  <col style=\"visibility: collapse;\">  <!-- Hide column 2 -->\n</colgroup>\n```\n\n---\n\n### Multiple Colgroups\n\n```html\n<table>\n  <colgroup>\n    <col span=\"2\">\n  </colgroup>\n  <colgroup>\n    <col span=\"3\">\n  </colgroup>\n</table>\n```\n\n> **Use Case:** `<colgroup>` is great for quickly styling alternating column colors or setting consistent column widths without repeating styles on every `<td>`.",
+  "codeExample": "<table style=\"border-collapse: collapse; width: 100%;\">\n  <colgroup>\n    <col span=\"2\" style=\"background-color: #f0f0f0; width: 30%;\">\n    <col style=\"background-color: #e8f4e8; width: 40%;\">\n  </colgroup>\n  <tr>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Email</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Smith</td>\n    <td>alice@example.com</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>Jones</td>\n    <td>bob@example.com</td>\n  </tr>\n</table>",
+  "quiz": [
+    {
+      "question": "What does <colgroup> allow you to do?",
+      "options": [
+        "Group rows together",
+        "Style entire columns at once",
+        "Create nested tables",
+        "Merge cells vertically"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
