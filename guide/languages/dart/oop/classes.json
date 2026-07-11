@@ -1,0 +1,22 @@
+{
+  "title": "Classes in Dart",
+  "language": "dart",
+  "topic": "classes",
+  "order": 21,
+  "nextTopic": "constructors",
+  "prevTopic": "recursion",
+  "content": "### Class Basics\n\nA class is a blueprint for creating objects. It defines properties (fields) and methods (functions).\n\n```dart\nclass Person {\n  String name;\n  int age;\n\n  Person(this.name, this.age);\n\n  void sayHello() {\n    print('Hello, my name is $name');\n  }\n\n  bool isAdult() => age >= 18;\n}\n\nvoid main() {\n  var person = Person('Alice', 25);\n  person.sayHello();\n  print('Adult: ${person.isAdult()}');\n}\n```\n\n### Class Members\n\n| Member | Description | Example |\n|--------|-------------|---------|\n| Fields | Variables that hold object state | `String name;` |\n| Methods | Functions that define behavior | `void speak() {}` |\n| Getters | Read-only computed properties | `int get ageInMonths => age * 12;` |\n| Setters | Write access with validation | `set age(int value) { ... }` |\n| Constructors | Initialize objects | `Person(this.name);` |\n\n### Getters and Setters\n\n```dart\nclass Rectangle {\n  double width, height;\n\n  Rectangle(this.width, this.height);\n\n  // Getter\n  double get area => width * height;\n\n  // Setter\n  set area(double value) {\n    // Maintain aspect ratio when setting area\n    double ratio = width / height;\n    width = (value * ratio).sqrt();\n    height = (value / ratio).sqrt();\n  }\n}\n```\n\n### Instance Methods\n\n```dart\nclass Calculator {\n  int value = 0;\n\n  void add(int n) => value += n;\n  void subtract(int n) => value -= n;\n  void multiply(int n) => value *= n;\n  void divide(int n) => value ~/= n;\n  void clear() => value = 0;\n}\n```\n\n> **Key Point:** Use `this` to refer to the current instance when parameter names conflict with field names. Otherwise, `this` is optional in Dart.",
+  "codeExample": "class Book {\n  String title;\n  String author;\n  int year;\n\n  Book(this.title, this.author, this.year);\n\n  String get description => '$title by $author ($year)';\n\n  bool isOlderThan(int years) {\n    return DateTime.now().year - year > years;\n  }\n}\n\nvoid main() {\n  var book = Book('Dart in Action', 'John Doe', 2022);\n  print(book.description);\n  print('Older than 3 years: ${book.isOlderThan(3)}');\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used to define a class in Dart?",
+      "options": ["struct", "class", "object", "type"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which syntax defines a read-only computed property?",
+      "options": ["get propertyName", "read propertyName", "computed propertyName", "val propertyName"],
+      "correctIndex": 0
+    }
+  ]
+}

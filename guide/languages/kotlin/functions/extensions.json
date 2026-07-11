@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Extension Functions",
+  "language": "kotlin",
+  "topic": "extensions",
+  "order": 22,
+  "nextTopic": "infix",
+  "prevTopic": "higher_order",
+  "content": "### Extension Functions in Kotlin\n\nExtension functions allow you to add new functionality to existing classes without inheriting from them.\n\n---\n\n### Basic Extension Function Syntax\n\n```kotlin\nfun ReceiverType.extensionName(): ReturnType {\n    // body using 'this' to access the receiver\n}\n```\n\n---\n\n### Example: String Extensions\n\n```kotlin\nfun String.addExclamation(): String = this + \"!\"\n\nfun String.isEmail(): Boolean {\n    return this.contains(\"@\") && this.contains(\".\")\n}\n\nfun main() {\n    println(\"Hello\".addExclamation())  // Hello!\n    println(\"test@test.com\".isEmail())  // true\n}\n```\n\n---\n\n### Example: Int Extensions\n\n```kotlin\nfun Int.isEven(): Boolean = this % 2 == 0\nfun Int.isPrime(): Boolean {\n    if (this < 2) return false\n    for (i in 2..this / 2) {\n        if (this % i == 0) return false\n    }\n    return true\n}\n\nfun main() {\n    println(4.isEven())   // true\n    println(7.isPrime())  // true\n}\n```\n\n---\n\n### Extension Properties\n\nYou can also add properties to existing classes (but no backing fields).\n\n```kotlin\nval String.isNumeric: Boolean\n    get() = this.all { it.isDigit() }\n\nval <T> List<T>.secondOrNull: T?\n    get() = if (size >= 2) this[1] else null\n\nfun main() {\n    println(\"12345\".isNumeric)  // true\n    println(listOf(1, 2, 3).secondOrNull)  // 2\n}\n```\n\n---\n\n### Extensions with Nullable Receivers\n\n```kotlin\nfun String?.isNullOrBlank(): Boolean {\n    return this == null || this.isBlank()\n}\n\nprintln(null.isNullOrBlank())  // true\nprintln(\"  \".isNullOrBlank())  // true\n```\n\n---\n\n### Generic Extensions\n\n```kotlin\nfun <T> List<T>.customPrint(): String {\n    return this.joinToString(\" | \")\n}\n\nprintln(listOf(1, 2, 3).customPrint())  // 1 | 2 | 3\n```\n\n---\n\n### Companion Object Extensions\n\n```kotlin\nclass MyClass {\n    companion object {}\n}\n\nfun MyClass.Companion.greet() = \"Hello from companion!\"\n\nprintln(MyClass.greet())  // Hello from companion!\n```\n\n> **Key Point:** Extension functions are resolved statically based on the declared type, not the runtime type. They do not actually modify the original class.",
+  "codeExample": "fun String.reverseWords(): String {\n    return this.split(\" \").reversed().joinToString(\" \")\n}\n\nfun Int.secondsToMillis(): Long = this * 1000L\n\nfun main() {\n    val phrase = \"Kotlin is awesome\"\n    println(phrase.reverseWords())  // awesome is Kotlin\n    \n    val seconds = 5\n    println(\"${seconds.secondsToMillis()} ms\")  // 5000 ms\n    \n    val str: String? = null\n    println(str.isNullOrBlank())  // true\n}",
+  "quiz": [
+    {
+      "question": "What does 'this' refer to inside an extension function?",
+      "options": ["The class itself", "The receiver object", "The function caller", "The return value"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are extension functions resolved statically or dynamically?",
+      "options": ["Statically (compile-time)", "Dynamically (runtime)", "Both", "Neither"],
+      "correctIndex": 0
+    }
+  ]
+}

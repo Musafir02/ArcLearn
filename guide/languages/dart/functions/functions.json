@@ -1,0 +1,22 @@
+{
+  "title": "Functions in Dart",
+  "language": "dart",
+  "topic": "functions",
+  "order": 15,
+  "nextTopic": "function_params",
+  "prevTopic": "constants_final",
+  "content": "### Function Basics\n\nFunctions are reusable blocks of code that perform a specific task. Every Dart program has at least the `main()` function.\n\n```dart\n// Function that returns a value\nint add(int a, int b) {\n  return a + b;\n}\n\n// Function that returns nothing\nvoid greet(String name) {\n  print('Hello, $name!');\n}\n```\n\n### Function Syntax\n\n```dart\nreturnType functionName(parameters) {\n  // function body\n  return value;\n}\n```\n\n### Calling Functions\n\n```dart\nvoid main() {\n  int result = add(5, 3);\n  print(result); // 8\n\n  greet('Alice'); // Hello, Alice!\n}\n\nint add(int a, int b) => a + b;\n\nvoid greet(String name) {\n  print('Hello, $name!');\n}\n```\n\n### Arrow Functions\n\nFor single-expression functions, use the arrow syntax `=>`:\n\n```dart\nint square(int x) => x * x;\nbool isEven(int x) => x % 2 == 0;\nvoid printMessage(String msg) => print(msg);\n```\n\n### Required Parameters\n\n```dart\nvoid displayInfo(String name, int age) {\n  print('$name is $age years old');\n}\n```\n\n### Return Types\n\n| Return Type | Description |\n|-------------|-------------|\n| `void` | Returns nothing |\n| `int`, `String`, etc. | Returns specific type |\n| `dynamic` | Returns any type (avoid) |\n| `Future<T>` | Returns async value |\n\n> **Key Point:** Dart functions are objects (instances of `Function`). They can be assigned to variables, passed as arguments, and returned from other functions.",
+  "codeExample": "int add(int a, int b) => a + b;\nint multiply(int a, int b) => a * b;\n\nvoid printResult(int Function(int, int) operation, int x, int y) {\n  print('Result: ${operation(x, y)}');\n}\n\nvoid main() {\n  printResult(add, 5, 3);\n  printResult(multiply, 5, 3);\n  printResult((a, b) => a - b, 10, 4);\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used for a function that returns nothing?",
+      "options": ["null", "void", "empty", "none"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the arrow syntax for a single-expression function?",
+      "options": ["->", "=>", "|>", "->>"],
+      "correctIndex": 1
+    }
+  ]
+}

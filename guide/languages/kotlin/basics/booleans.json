@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Booleans",
+  "language": "kotlin",
+  "topic": "booleans",
+  "order": 11,
+  "nextTopic": "input",
+  "prevTopic": "strings",
+  "content": "### Booleans in Kotlin\n\nThe `Boolean` type represents logical values with two possible states: `true` and `false`.\n\n---\n\n### Boolean Declaration\n\n```kotlin\nval isActive: Boolean = true\nval isComplete = false  // Type inferred as Boolean\n```\n\n---\n\n### Boolean Operations\n\n| Operator | Description | Example | Result |\n|----------|-------------|---------|--------|\n| `&&` | Logical AND | `true && false` | `false` |\n| `||` | Logical OR | `true || false` | `true` |\n| `!` | Logical NOT | `!true` | `false` |\n| `xor()` | Logical XOR | `true.xor(false)` | `true` |\n\n---\n\n### Boolean Comparison Functions\n\n```kotlin\nval a = true\nval b = false\n\nprintln(a && b)    // false\nprintln(a || b)    // true\nprintln(!a)        // false\nprintln(a.xor(b))  // true\n```\n\n---\n\n### Short-Circuit Evaluation\n\nKotlin uses short-circuit evaluation for `&&` and `||`.\n\n```kotlin\nfun expensiveOp(): Boolean {\n    println(\"Executing\")\n    return true\n}\n\nval result = false && expensiveOp()  // expensiveOp() NOT called\nval result2 = true || expensiveOp()  // expensiveOp() NOT called\n```\n\n---\n\n### Booleans in Conditions\n\n```kotlin\nval age = 20\nval isAdult = age >= 18\n\nif (isAdult) {\n    println(\"Adult\")\n} else {\n    println(\"Minor\")\n}\n\n// Boolean expression as if condition\nif (age in 18..65) {\n    println(\"Working age\")\n}\n```\n\n---\n\n### Converting to Boolean\n\n| Function | Description |\n|----------|-------------|\n| `toString()` | Converts to \"true\" or \"false\" |\n| `toInt()` | Not directly available (use `if (b) 1 else 0`) |\n\n```kotlin\nval flag = true\nprintln(flag.toString())  // \"true\"\n```\n\n> **Key Point:** Boolean conditions in `if`, `while`, and `when` must explicitly evaluate to `Boolean` -- no truthy/falsy values like in JavaScript.",
+  "codeExample": "fun main() {\n    val isSunny = true\n    val isWarm = false\n    \n    val goOutside = isSunny && isWarm\n    println(\"Go outside: $goOutside\")\n    \n    val stayInside = !isSunny || !isWarm\n    println(\"Stay inside: $stayInside\")\n    \n    val temperature = 25\n    val isPleasant = temperature in 20..30 && isSunny\n    println(\"Pleasant day: $isPleasant\")\n}",
+  "quiz": [
+    {
+      "question": "What is the result of true && false?",
+      "options": ["true", "false", "null", "0"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is short-circuit evaluation?",
+      "options": ["All expressions are evaluated", "Second operand is evaluated only if needed", "Results are cached", "Operations run in parallel"],
+      "correctIndex": 1
+    }
+  ]
+}

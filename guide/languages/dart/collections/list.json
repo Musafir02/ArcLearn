@@ -1,0 +1,22 @@
+{
+  "title": "Lists in Dart",
+  "language": "dart",
+  "topic": "list",
+  "order": 31,
+  "nextTopic": "set",
+  "prevTopic": "static",
+  "content": "### List Basics\n\nA List is an ordered collection of items. Dart lists are zero-indexed and can contain any type.\n\n```dart\nvoid main() {\n  // Creating lists\n  List<int> numbers = [1, 2, 3, 4, 5];\n  var fruits = ['apple', 'banana', 'orange'];\n  var empty = <int>[];\n\n  // Accessing elements\n  print(fruits[0]); // apple\n  print(fruits[1]); // banana\n  print(fruits.length); // 3\n\n  // Modifying lists\n  fruits[1] = 'grape';\n  fruits.add('mango');\n  fruits.remove('apple');\n  print(fruits);\n}\n```\n\n### List Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `add(element)` | Adds element to end | `list.add(4)` |\n| `addAll(iterable)` | Adds all elements | `list.addAll([4,5])` |\n| `insert(index, element)` | Inserts at index | `list.insert(0, 'x')` |\n| `remove(element)` | Removes first occurrence | `list.remove('a')` |\n| `removeAt(index)` | Removes at index | `list.removeAt(0)` |\n| `clear()` | Removes all elements | `list.clear()` |\n| `indexOf(element)` | Finds first index | `list.indexOf('a')` |\n| `contains(element)` | Checks if exists | `list.contains('a')` |\n| `sort()` | Sorts the list | `list.sort()` |\n| `reversed` | Returns reversed iterable | `list.reversed` |\n| `sublist(start, [end])` | Returns sublist | `list.sublist(1,3)` |\n| `shuffle()` | Randomizes order | `list.shuffle()` |\n\n### List Types\n\n```dart\nvoid main() {\n  // Fixed-length list\n  var fixed = List<int>.filled(3, 0); // [0, 0, 0]\n  // fixed.add(1); // ERROR: Cannot add to fixed list\n  fixed[0] = 5; // OK\n\n  // Growable list (default)\n  var growable = <int>[1, 2, 3];\n  growable.add(4); // OK\n\n  // Empty typed list\n  var names = <String>[];\n\n  // List from another collection\n  var set = {1, 2, 3};\n  var listFromSet = set.toList();\n}\n```\n\n### List Properties\n\n```dart\nvoid main() {\n  var list = [10, 20, 30, 40, 50];\n\n  print(list.length);   // 5\n  print(list.isEmpty);  // false\n  print(list.isNotEmpty); // true\n  print(list.first);    // 10\n  print(list.last);     // 50\n  print(list.single);   // ERROR: more than one element\n}\n```\n\n> **Key Point:** Dart lists grow automatically. Use `List<T>.filled()` for fixed-length lists. Use `sublist()` or `getRange()` for safe partial access.",
+  "codeExample": "void main() {\n  var numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5];\n\n  numbers.sort();\n  print('Sorted: $numbers');\n\n  numbers.add(7);\n  numbers.removeAt(0);\n  print('Modified: $numbers');\n\n  var sliced = numbers.sublist(2, 5);\n  print('Sliced: $sliced');\n\n  var doubled = numbers.map((n) => n * 2).toList();\n  print('Doubled: $doubled');\n\n  var sum = numbers.reduce((a, b) => a + b);\n  print('Sum: $sum');\n}",
+  "quiz": [
+    {
+      "question": "What is the index of the first element in a Dart list?",
+      "options": ["-1", "0", "1", "depends on length"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method removes an element at a specific index?",
+      "options": ["remove(element)", "removeAt(index)", "delete(index)", "pop(index)"],
+      "correctIndex": 1
+    }
+  ]
+}

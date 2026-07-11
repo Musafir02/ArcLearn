@@ -1,0 +1,22 @@
+{
+  "title": "Row and Column Widgets in Flutter",
+  "language": "dart",
+  "topic": "row_column",
+  "order": 56,
+  "nextTopic": "stack",
+  "prevTopic": "container",
+  "content": "### Row and Column\n\n`Row` and `Column` are flex widgets that lay out children in horizontal and vertical arrays respectively.\n\n```dart\n// Row: horizontal layout\nRow(\n  mainAxisAlignment: MainAxisAlignment.spaceEvenly,\n  crossAxisAlignment: CrossAxisAlignment.center,\n  children: [\n    Icon(Icons.star),\n    Icon(Icons.favorite),\n    Icon(Icons.home),\n  ],\n)\n\n// Column: vertical layout\nColumn(\n  mainAxisAlignment: MainAxisAlignment.center,\n  crossAxisAlignment: CrossAxisAlignment.start,\n  children: [\n    const Text('Title'),\n    const Text('Subtitle'),\n    ElevatedButton(onPressed: () {}, child: const Text('Action')),\n  ],\n)\n```\n\n### MainAxisAlignment\n\n| Value | Row | Column |\n|-------|-----|--------|\n| `start` | Left | Top |\n| `center` | Center | Center |\n| `end` | Right | Bottom |\n| `spaceBetween` | Space between children | Same |\n| `spaceAround` | Equal space around | Same |\n| `spaceEvenly` | Equal space all | Same |\n\n### CrossAxisAlignment\n\n| Value | Row | Column |\n|-------|-----|--------|\n| `start` | Top | Left |\n| `center` | Center | Center |\n| `end` | Bottom | Right |\n| `stretch` | Stretch height | Stretch width |\n| `baseline` | Text baseline | Text baseline |\n\n### Expanded and Flexible\n\n```dart\nRow(\n  children: [\n    Expanded(\n      flex: 2,\n      child: Container(color: Colors.red),\n    ),\n    Expanded(\n      flex: 1,\n      child: Container(color: Colors.blue),\n    ),\n    Container(\n      width: 100,\n      color: Colors.green,\n    ),\n  ],\n)\n```\n\n### Spacer\n\n```dart\nRow(\n  children: [\n    const Text('Left'),\n    const Spacer(), // Pushes to right\n    const Text('Right'),\n  ],\n)\n\nColumn(\n  children: [\n    const Text('Top'),\n    const Spacer(), // Pushes to bottom\n    const Text('Bottom'),\n  ],\n)\n```\n\n> **Key Point:** Use `Expanded` to fill available space proportionally. Use `Spacer` to add flexible empty space. Use `mainAxisSize: MainAxisSize.min` to shrink-wrap content.",
+  "codeExample": "import 'package:flutter/material.dart';\n\nclass RowColumnDemo extends StatelessWidget {\n  const RowColumnDemo({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: const Text('Row & Column')),\n      body: Column(\n        children: [\n          // Row example\n          Container(\n            padding: const EdgeInsets.all(16),\n            color: Colors.grey[200],\n            child: const Row(\n              mainAxisAlignment: MainAxisAlignment.spaceEvenly,\n              children: [\n                Icon(Icons.star, color: Colors.amber, size: 32),\n                Icon(Icons.favorite, color: Colors.red, size: 32),\n                Icon(Icons.thumb_up, color: Colors.blue, size: 32),\n              ],\n            ),\n          ),\n          const SizedBox(height: 20),\n          // Column with expanded children\n          Expanded(\n            child: Row(\n              children: [\n                Expanded(\n                  child: Container(\n                    color: Colors.red[200],\n                    alignment: Alignment.center,\n                    child: const Text('Left'),\n                  ),\n                ),\n                Expanded(\n                  child: Container(\n                    color: Colors.blue[200],\n                    alignment: Alignment.center,\n                    child: const Text('Right'),\n                  ),\n                ),\n              ],\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which property distributes space along the main axis?",
+      "options": ["crossAxisAlignment", "mainAxisAlignment", "alignment", "distribution"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which widget fills available space proportionally?",
+      "options": ["Spacer", "Expanded", "Fill", "Stretch"],
+      "correctIndex": 1
+    }
+  ]
+}

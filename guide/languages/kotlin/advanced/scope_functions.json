@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Scope Functions",
+  "language": "kotlin",
+  "topic": "scope_functions",
+  "order": 51,
+  "nextTopic": "dsl_basics",
+  "prevTopic": "reflection",
+  "content": "### Scope Functions in Kotlin\n\nScope functions (`let`, `run`, `with`, `apply`, `also`) execute a block of code within the context of an object. They provide a concise way to work with objects.\n\n---\n\n### Quick Reference\n\n| Function | Context Object | Return Value | Use Case |\n|----------|---------------|--------------|----------|\n| `let` | `it` | Lambda result | Nullable transformations |\n| `run` | `this` | Lambda result | Computations with context |\n| `with` | `this` | Lambda result | Group function calls |\n| `apply` | `this` | Context object | Object configuration |\n| `also` | `it` | Context object | Side effects |\n\n---\n\n### let\n\n```kotlin\nval name: String? = \"Alice\"\n\nname?.let {\n    println(\"Name is not null: $it\")\n    it.length  // Return value\n}\n\n// Transformation\nval length = name?.let { it.length } ?: 0\n```\n\n---\n\n### run\n\n```kotlin\nval result = \"Hello, Kotlin!\".run {\n    println(\"Processing: $this\")\n    length  // Returns length\n}\nprintln(result)  // 14\n\n// Nullable run\nval text: String? = \"Kotlin\"\ntext?.run {\n    println(\"Length: $length\")\n}\n```\n\n---\n\n### with\n\n```kotlin\nval numbers = mutableListOf(1, 2, 3)\n\nval sum = with(numbers) {\n    add(4)\n    add(5)\n    sum()  // Returns sum\n}\nprintln(\"Sum: $sum, List: $numbers\")\n// Sum: 15, List: [1, 2, 3, 4, 5]\n```\n\n---\n\n### apply\n\n```kotlin\nval person = Person().apply {\n    name = \"Alice\"\n    age = 30\n    city = \"New York\"\n}\n\n// Equivalent to:\n// val person = Person()\n// person.name = \"Alice\"\n// person.age = 30\n// person.city = \"New York\"\n```\n\n---\n\n### also\n\n```kotlin\nval numbers = mutableListOf(1, 2, 3).also {\n    println(\"Before modification: $it\")\n}.apply {\n    add(4)\n}.also {\n    println(\"After modification: $it\")\n}\n```\n\n---\n\n### Choosing the Right Function\n\n| Situation | Function |\n|-----------|----------|\n| Operate on nullable object | `?.let { }` |\n| Configure object properties | `.apply { }` |\n| Perform additional actions | `.also { }` |\n| Compute a value from object | `.run { }` or `with() { }` |\n\n> **Key Point:** Scope functions make code more concise. `apply` returns the context object (for configuration), `let` returns the lambda result (for transformations).",
+  "codeExample": "class User {\n    var name: String = \"\"\n    var email: String = \"\"\n    var age: Int = 0\n    \n    override fun toString() = \"User(name='$name', email='$email', age=$age)\"\n}\n\nfun main() {\n    // apply: configure\n    val user = User().apply {\n        name = \"Alice\"\n        email = \"alice@test.com\"\n        age = 30\n    }\n    \n    // let: transform\n    val greeting = user.name?.let { \"Hello, $it!\" } ?: \"Hello!\"\n    println(greeting)\n    \n    // also: side effect\n    val logged = user.also {\n        println(\"Created user: $it\")\n    }\n    \n    // run: compute\n    val info = user.run {\n        \"$name ($age) - $email\"\n    }\n    println(info)\n}",
+  "quiz": [
+    {
+      "question": "Which scope function returns the context object itself?",
+      "options": ["let and also", "apply and also", "run and with", "let and run"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In 'let', how is the context object referred to?",
+      "options": ["this", "it", "self", "obj"],
+      "correctIndex": 1
+    }
+  ]
+}

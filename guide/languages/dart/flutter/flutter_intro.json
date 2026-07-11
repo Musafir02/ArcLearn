@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to Flutter",
+  "language": "dart",
+  "topic": "flutter_intro",
+  "order": 50,
+  "nextTopic": "widgets",
+  "prevTopic": "json_serialization",
+  "content": "### What is Flutter?\n\nFlutter is Google's open-source UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.\n\n| Feature | Description |\n|---------|-------------|\n| Language | Dart |\n| Rendering | Custom engine (Skia/Impeller) |\n| Platforms | Android, iOS, Web, Windows, macOS, Linux |\n| Architecture | Widget-based declarative UI |\n| Performance | 60/120 FPS native performance |\n\n### Creating a Flutter Project\n\n```bash\nflutter create my_app\ncd my_app\nflutter run\n```\n\n### Project Structure\n\n```\nmy_app/\n  lib/\n    main.dart      # Entry point\n  test/            # Tests\n  android/         # Android platform\n  ios/             # iOS platform\n  web/             # Web platform\n  pubspec.yaml     # Dependencies\n```\n\n### Minimal Flutter App\n\n```dart\nimport 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(const MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  const MyApp({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      title: 'Flutter Demo',\n      theme: ThemeData(\n        colorSchemeSeed: Colors.blue,\n      ),\n      home: const MyHomePage(),\n    );\n  }\n}\n\nclass MyHomePage extends StatelessWidget {\n  const MyHomePage({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: const Text('Welcome')),\n      body: const Center(\n        child: Text('Hello, Flutter!'),\n      ),\n    );\n  }\n}\n```\n\n### Key Concepts\n\n| Concept | Description |\n|---------|-------------|\n| Widgets | Everything is a widget |\n| Build method | Describes UI configuration |\n| State | Data that can change over time |\n| RenderObject | Low-level rendering |\n| Element | Widget instance in tree |\n\n> **Key Point:** Flutter's `runApp()` takes a Widget and makes it the root of the widget tree. MaterialApp provides Material Design conventions. Flutter 3.x+ supports all major platforms.",
+  "codeExample": "import 'package:flutter/material.dart';\n\nvoid main() {\n  runApp(const MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  const MyApp({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: const Text('Flutter Intro')),\n        body: const Center(\n          child: Text('Welcome to Flutter!'),\n        ),\n      ),\n    );\n  }\n}",
+  "quiz": [
+    {
+      "question": "What does runApp() do in Flutter?",
+      "options": ["Runs tests", "Attaches root widget to screen", "Starts the debugger", "Builds the APK"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which package contains Material Design widgets?",
+      "options": ["dart:material", "package:flutter/material.dart", "package:material_design", "dart:ui"],
+      "correctIndex": 1
+    }
+  ]
+}

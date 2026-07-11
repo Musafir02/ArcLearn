@@ -1,0 +1,22 @@
+{
+  "title": "Lambda Functions in Dart",
+  "language": "dart",
+  "topic": "lambda",
+  "order": 18,
+  "nextTopic": "closures",
+  "prevTopic": "optional_params",
+  "content": "### Anonymous Functions (Lambdas)\n\nLambda functions (also called anonymous functions) are functions without a name. They are useful for short, one-time operations.\n\n```dart\nvoid main() {\n  // Lambda assigned to variable\n  var add = (int a, int b) => a + b;\n  print(add(3, 4)); // 7\n\n  // Lambda with block body\n  var multiply = (int a, int b) {\n    return a * b;\n  };\n  print(multiply(3, 4)); // 12\n}\n```\n\n### Lambda with Collections\n\nLambdas are commonly used with collection methods.\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n\n  // Using lambda with forEach\n  numbers.forEach((n) => print(n * 2));\n\n  // Using lambda with map\n  var doubled = numbers.map((n) => n * 2).toList();\n  print(doubled); // [2, 4, 6, 8, 10]\n\n  // Using lambda with where (filter)\n  var evens = numbers.where((n) => n % 2 == 0).toList();\n  print(evens); // [2, 4]\n\n  // Using lambda with reduce\n  var sum = numbers.reduce((a, b) => a + b);\n  print(sum); // 15\n}\n```\n\n### Lambda Syntax Variations\n\n| Syntax | Description | Example |\n|--------|-------------|---------|\n| `(p) => expr` | Single expression | `(x) => x * 2` |\n| `(p) { ... }` | Block body with return | `(x) { return x * 2; }` |\n| `(p1, p2) => expr` | Multiple params | `(a, b) => a + b` |\n| `() => expr` | No params | `() => 42` |\n| `(_) => expr` | Ignored param | `(_) => true` |\n\n### Lambda as Function Argument\n\n```dart\nvoid main() {\n  List<String> names = ['Charlie', 'Alice', 'Bob'];\n\n  // Sort with lambda\n  names.sort((a, b) => a.compareTo(b));\n  print(names); // [Alice, Bob, Charlie]\n\n  // Custom sort by length\n  names.sort((a, b) => a.length.compareTo(b.length));\n  print(names); // [Bob, Alice, Charlie]\n}\n```\n\n> **Key Point:** Lambda functions use `=>` for single expressions and `{}` for multiple statements. They are first-class citizens - you can assign them to variables and pass them as arguments.",
+  "codeExample": "void main() {\n  var numbers = [1, 2, 3, 4, 5, 6];\n\n  var evens = numbers.where((n) => n.isEven).toList();\n  var squared = numbers.map((n) => n * n).toList();\n  var sum = numbers.fold(0, (acc, n) => acc + n);\n\n  print('Original: $numbers');\n  print('Evens: $evens');\n  print('Squared: $squared');\n  print('Sum: $sum');\n\n  // Custom comparator\n  var words = ['apple', 'kiwi', 'banana', 'pear'];\n  words.sort((a, b) => a.length.compareTo(b.length));\n  print('Sorted by length: $words');\n}",
+  "quiz": [
+    {
+      "question": "What is another name for anonymous functions in Dart?",
+      "options": ["Closures", "Lambdas", "Methods", "Constructors"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which collection method transforms each element?",
+      "options": ["where", "forEach", "map", "reduce"],
+      "correctIndex": 2
+    }
+  ]
+}

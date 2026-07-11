@@ -1,0 +1,22 @@
+{
+  "title": "Numbers in Dart",
+  "language": "dart",
+  "topic": "numbers",
+  "order": 12,
+  "nextTopic": "input",
+  "prevTopic": "booleans",
+  "content": "### Numeric Types\n\nDart provides two numeric types: `int` and `double`. They both extend the `num` type.\n\n| Type | Size | Description |\n|------|------|-------------|\n| `int` | Platform-dependent | Integer values up to 2^63 on 64-bit |\n| `double` | 64-bit | Double-precision floating point (IEEE 754) |\n| `num` | - | Supertype of int and double |\n\n### Integer Operations\n\n```dart\nvoid main() {\n  int a = 10;\n  int b = 3;\n\n  print(a + b);   // 13\n  print(a - b);   // 7\n  print(a * b);   // 30\n  print(a ~/ b);  // 3 (integer division)\n  print(a % b);   // 1 (modulus)\n  print(-a);      // -10 (unary minus)\n}\n```\n\n### Double Operations\n\n```dart\nvoid main() {\n  double x = 10.5;\n  double y = 3.2;\n\n  print(x + y);  // 13.7\n  print(x - y);  // 7.3\n  print(x * y);  // 33.6\n  print(x / y);  // 3.28125\n}\n```\n\n### Useful Properties and Methods\n\n```dart\nvoid main() {\n  int value = -42;\n  double pi = 3.14159;\n\n  print(value.abs());      // 42\n  print(value.isNegative); // true\n  print(value.isEven);     // true\n  print(value.isOdd);      // false\n\n  print(pi.round());       // 3\n  print(pi.floor());       // 3\n  print(pi.ceil());        // 4\n  print(pi.toStringAsFixed(2)); // '3.14'\n}\n```\n\n### Numeric Constants\n\n```dart\nvoid main() {\n  print(double.infinity);  // Infinity\n  print(double.nan);       // NaN\n  print(double.maxFinite); // 1.7976931348623157e+308\n}\n```\n\n### Converting Between int and double\n\n```dart\nvoid main() {\n  int a = 10;\n  double aDouble = a.toDouble(); // 10.0\n\n  double b = 3.7;\n  int bInt = b.toInt();          // 3 (truncates)\n  int bRound = b.round();        // 4\n}\n```\n\n> **Key Point:** Integer division uses `~/` and returns an `int`. Regular division `/` always returns a `double`.",
+  "codeExample": "void main() {\n  int apples = 25;\n  int people = 7;\n\n  int perPerson = apples ~/ people;\n  int remaining = apples % people;\n\n  print('$apples apples shared among $people people');\n  print('Each gets $perPerson apples');\n  print('$remaining apples remaining');\n\n  double price = 19.99;\n  double tax = price * 0.08;\n  double total = price + tax;\n\n  print('Price: \\$${price.toStringAsFixed(2)}');\n  print('Tax: \\$${tax.toStringAsFixed(2)}');\n  print('Total: \\$${total.toStringAsFixed(2)}');\n}",
+  "quiz": [
+    {
+      "question": "What does the ~/ operator do in Dart?",
+      "options": ["Regular division", "Integer division", "Modulus", "Exponentiation"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does 3.7.toInt() return?",
+      "options": ["3", "4", "3.0", "4.0"],
+      "correctIndex": 0
+    }
+  ]
+}

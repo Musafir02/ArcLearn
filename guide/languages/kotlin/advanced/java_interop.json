@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Java Interop",
+  "language": "kotlin",
+  "topic": "java_interop",
+  "order": 53,
+  "nextTopic": "kotlin_scripting",
+  "prevTopic": "dsl_basics",
+  "content": "### Java Interoperability\n\nKotlin is designed for seamless Java interop. Kotlin can call Java code and vice versa with minimal friction.\n\n---\n\n### Calling Java from Kotlin\n\n```kotlin\nimport java.util.*\n\nfun main() {\n    val list = ArrayList<String>()  // Java class\n    list.add(\"Hello\")\n    list.add(\"World\")\n    \n    val file = File(\"data.txt\")    // Java class\n    file.readLines()\n    \n    val date = Date()               // Java class\n    println(date)\n}\n```\n\n---\n\n### Platform Types\n\nTypes from Java become \"platform types\" (denoted with `!`). They can be treated as nullable or non-nullable.\n\n```kotlin\n// Java: public String getName()\n// In Kotlin:\nval name: String? = javaObj.name  // Nullable\nval name2: String = javaObj.name  // Non-nullable (may throw if null)\n```\n\n---\n\n### Java Interop Annotations\n\n| Annotation | Purpose |\n|------------|---------|\n| `@JvmStatic` | Exposes companion object method as static |\n| `@JvmField` | Exposes property as field (no getter/setter) |\n| `@JvmOverloads` | Generates overloads for default parameters |\n| `@JvmName` | Changes generated method name |\n| `@Throws` | Declares checked exceptions |\n\n---\n\n### @JvmName Example\n\n```kotlin\n// Kotlin\n@JvmName(\"getStringList\")\nfun getList(): List<String> = listOf(\"a\", \"b\")\n\n// From Java: getStringList() instead of getList()\n```\n\n---\n\n### @Throws for Checked Exceptions\n\n```kotlin\n@Throws(IOException::class)\nfun readFile(path: String): String {\n    return File(path).readText()\n}\n\n// From Java: must handle IOException\n```\n\n---\n\n### Calling Kotlin from Java\n\n```kotlin\n// Kotlin\nclass Calculator {\n    companion object {\n        @JvmStatic\n        fun add(a: Int, b: Int) = a + b\n    }\n}\n\n// Java\nint result = Calculator.add(5, 3);  // Static call\n```\n\n---\n\n### Nullability in Java Interop\n\n```kotlin\n// Kotlin\nfun greet(name: String) = \"Hello, $name\"\n\n// Java: Parameter type is @NotNull String\n// Passing null may cause exception\n```\n\nUse `@Nullable` and `@NotNull` annotations in Java for better interop.\n\n> **Key Point:** Kotlin compiles to JVM bytecode and can call any Java code. Use interop annotations to control how Kotlin code is exposed to Java callers.",
+  "codeExample": "import java.io.File\n\n// Kotlin calling Java\nfun main() {\n    val file = File(\"example.txt\")\n    file.writeText(\"Hello from Kotlin!\")\n    val content = file.readText()\n    println(content)\n    \n    // Java collections\n    val list = java.util.ArrayList<String>()\n    list.add(\"Kotlin\")\n    list.add(\"Java\")\n    println(list)\n}\n\n// Annotated for Java callers\n@JvmOverloads\nfun format(name: String, prefix: String = \"Hello\") = \"$prefix, $name!\"",
+  "quiz": [
+    {
+      "question": "What annotation exposes a companion object method as a Java static method?",
+      "options": ["@JvmField", "@JvmStatic", "@JvmOverloads", "@Static"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What are 'platform types' in Kotlin?",
+      "options": ["Types from Kotlin standard library", "Types from Java with unknown nullability", "Primitive types", "Generic types"],
+      "correctIndex": 1
+    }
+  ]
+}

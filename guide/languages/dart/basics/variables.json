@@ -1,0 +1,22 @@
+{
+  "title": "Variables in Dart",
+  "language": "dart",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Declaring Variables\n\nDart provides several ways to declare variables. The type can be explicitly declared or inferred.\n\n```dart\nvoid main() {\n  // Explicit type declaration\n  String name = 'Alice';\n  int age = 30;\n\n  // Type inference with var\n  var city = 'New York'; // Inferred as String\n  var year = 2024;       // Inferred as int\n\n  // Dynamic type (use sparingly)\n  dynamic flexible = 'Hello';\n  flexible = 42; // OK, but not type-safe\n}\n```\n\n### Variable Declarations\n\n| Keyword | Type Safety | Can Reassign | Can Change Type |\n|---------|-------------|-------------|----------------|\n| `var` | Inferred | Yes | No |\n| `final` | Inferred | No | No |\n| `const` | Inferred | No | No (compile-time) |\n| `dynamic` | Dynamic | Yes | Yes |\n\n### Type Inference\n\nDart's type inference allows you to use `var` and the compiler determines the type.\n\n```dart\nvoid main() {\n  var message = 'Hello'; // String\n  var count = 10;        // int\n  var price = 9.99;      // double\n  var isReady = true;    // bool\n}\n```\n\n### Late Variables\n\nThe `late` keyword defers initialization.\n\n```dart\nvoid main() {\n  late String description;\n  description = 'Assigned later'; // OK\n  print(description);\n}\n```\n\n> **Key Point:** Prefer `var` with type inference for local variables. Use `final` for variables that are assigned once. Avoid `dynamic` unless necessary for interoperability.",
+  "codeExample": "void main() {\n  var name = 'Dart';\n  final version = 3.0;\n  const releasedYear = 2011;\n\n  print('$name version $version was released in $releasedYear.');\n}",
+  "quiz": [
+    {
+      "question": "Which keyword creates a compile-time constant variable?",
+      "options": ["var", "final", "const", "static"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the type of `var x = 42;` in Dart?",
+      "options": ["var", "int", "num", "dynamic"],
+      "correctIndex": 1
+    }
+  ]
+}

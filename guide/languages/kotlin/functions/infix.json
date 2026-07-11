@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Infix Functions",
+  "language": "kotlin",
+  "topic": "infix",
+  "order": 23,
+  "nextTopic": "classes",
+  "prevTopic": "extensions",
+  "content": "### Infix Functions in Kotlin\n\nInfix functions allow functions to be called without the dot and parentheses, creating a more natural syntax for certain operations.\n\n---\n\n### Requirements\n\nTo declare an infix function:\n1. Must be a member function or an extension function\n2. Must have exactly one parameter\n3. The parameter must not have default values\n4. Must be marked with the `infix` keyword\n\n---\n\n### Basic Infix Function\n\n```kotlin\ninfix fun Int.times(str: String): String {\n    return str.repeat(this)\n}\n\nfun main() {\n    println(3 times \"Hello \")  // Hello Hello Hello\n}\n```\n\n---\n\n### Infix Extension Functions\n\n```kotlin\ninfix fun String.concat(other: String): String {\n    return this + other\n}\n\nfun main() {\n    println(\"Hello\" concat \" World\")  // Hello World\n}\n```\n\n---\n\n### Standard Library Infix Functions\n\nKotlin's standard library uses infix functions extensively.\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `to` | Creates a Pair | `\"key\" to \"value\"` |\n| `and` | Bitwise AND | `flags and 0x0F` |\n| `or` | Bitwise OR | `flags or 0xF0` |\n| `shl` | Shift left | `1 shl 4` |\n| `downTo` | Descending range | `5 downTo 1` |\n| `step` | Range step | `1..10 step 2` |\n\n```kotlin\nval map = mapOf(\n    \"name\" to \"Alice\",\n    \"age\" to 30\n)\n```\n\n---\n\n### Custom Infix Function Example\n\n```kotlin\ndata class Point(val x: Int, val y: Int) {\n    infix fun moveBy(offset: Point): Point {\n        return Point(x + offset.x, y + offset.y)\n    }\n}\n\nfun main() {\n    val p1 = Point(3, 4)\n    val p2 = p1 moveBy Point(1, 2)  // Point(4, 6)\n    println(p2)\n}\n```\n\n---\n\n### Chaining Infix Calls\n\n```kotlin\ninfix fun Int.plus(num: Int) = this + num\n\nfun main() {\n    val result = 1 plus 2 plus 3  // Equivalent to 1.plus(2).plus(3)\n    println(result)  // 6\n}\n```\n\n> **Key Point:** Infix functions improve readability for operations that feel natural in mathematical or DSL syntax. Use them sparingly and only when they make code clearer.",
+  "codeExample": "infix fun Int.powerOf(exp: Int): Int {\n    var result = 1\n    for (i in 1..exp) result *= this\n    return result\n}\n\nfun main() {\n    // Using infix notation\n    println(2 powerOf 3)   // 8\n    println(5 powerOf 2)   // 25\n    \n    // Standard library infix\n    val pair = \"language\" to \"Kotlin\"\n    println(pair)  // (language, Kotlin)\n    \n    val range = 1..10 step 2\n    println(range.toList())  // [1, 3, 5, 7, 9]\n}",
+  "quiz": [
+    {
+      "question": "How many parameters can an infix function have?",
+      "options": ["None", "Exactly one", "Two or more", "Variable arguments"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which standard library function is declared as infix?",
+      "options": ["map", "filter", "to", "forEach"],
+      "correctIndex": 2
+    }
+  ]
+}

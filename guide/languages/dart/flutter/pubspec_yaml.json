@@ -1,0 +1,22 @@
+{
+  "title": "pubspec.yaml in Flutter",
+  "language": "dart",
+  "topic": "pubspec_yaml",
+  "order": 67,
+  "nextTopic": "",
+  "prevTopic": "state_management_setstate",
+  "content": "### pubspec.yaml Overview\n\nThe `pubspec.yaml` file is the project configuration file for Dart and Flutter projects. It defines metadata, dependencies, assets, and more.\n\n```yaml\nname: my_app\ndescription: A new Flutter project.\npublish_to: 'none'\nversion: 1.0.0+1\n\nenvironment:\n  sdk: '>=3.0.0 <4.0.0'\n\ndependencies:\n  flutter:\n    sdk: flutter\n  cupertino_icons: ^1.0.6\n\ndev_dependencies:\n  flutter_test:\n    sdk: flutter\n  flutter_lints: ^3.0.0\n\nflutter:\n  uses-material-design: true\n```\n\n### Key Sections\n\n| Section | Description |\n|----------|-------------|\n| `name` | Package name (lowercase, underscores) |\n| `description` | Short description |\n| `version` | Semver version + build number |\n| `environment` | SDK version constraints |\n| `dependencies` | Production dependencies |\n| `dev_dependencies` | Development-only dependencies |\n| `flutter` | Flutter-specific configuration |\n\n### Adding Dependencies\n\n```yaml\ndependencies:\n  # From pub.dev (caret versioning)\n  http: ^1.1.0\n\n  # From git\n  flutter_bloc:\n    git:\n      url: https://github.com/felangel/bloc.git\n      path: packages/flutter_bloc\n\n  # Local path\n  my_package:\n    path: ../my_package\n\n  # Specific version\n  provider: 6.0.5\n```\n\n### Version Constraints\n\n| Syntax | Meaning |\n|--------|---------|\n| `^1.2.3` | Compatible with 1.2.3 (>=1.2.3 <2.0.0) |\n| `>=1.2.3 <2.0.0` | Range |\n| `1.2.3` | Exact version |\n| `any` | Any version (avoid) |\n\n### Assets Configuration\n\n```yaml\nflutter:\n  assets:\n    - assets/\n    - assets/images/\n    - assets/fonts/\n    - assets/data/config.json\n\n  fonts:\n    - family: RobotoMono\n      fonts:\n        - asset: fonts/RobotoMono-Regular.ttf\n        - asset: fonts/RobotoMono-Bold.ttf\n          weight: 700\n        - asset: fonts/RobotoMono-Italic.ttf\n          style: italic\n```\n\n### Platform-Specific Configuration\n\n```yaml\nflutter:\n  # Material or Cupertino icons\n  uses-material-design: true\n\n  # Web renderer\n  web:\n    renderer: canvaskit\n\n  # Generate localization\n  generate: true\n```\n\n### Commands\n\n| Command | Description |\n|---------|-------------|\n| `flutter pub get` | Install dependencies |\n| `flutter pub add package_name` | Add and install |\n| `flutter pub remove package_name` | Remove |\n| `flutter pub upgrade` | Upgrade dependencies |\n| `flutter pub outdated` | Check for outdated |\n\n> **Key Point:** Use `^` for version constraints to allow compatible updates. Run `flutter pub get` after editing pubspec.yaml. Assets must be explicitly declared to be included in the build.",
+  "codeExample": "name: shopping_app\ndescription: A shopping application built with Flutter.\npublish_to: 'none'\nversion: 1.2.0+3\n\nenvironment:\n  sdk: '>=3.0.0 <4.0.0'\n\ndependencies:\n  flutter:\n    sdk: flutter\n\n  # State management\n  provider: ^6.1.0\n\n  # Networking\n  http: ^1.1.0\n  cached_network_image: ^3.3.0\n\n  # Navigation\n  go_router: ^12.0.0\n\n  # Storage\n  shared_preferences: ^2.2.0\n\n  # UI\n  cupertino_icons: ^1.0.6\n  shimmer: ^3.0.0\n\ndev_dependencies:\n  flutter_test:\n    sdk: flutter\n  flutter_lints: ^3.0.0\n\nflutter:\n  uses-material-design: true\n\n  assets:\n    - assets/images/\n    - assets/icons/\n\n  fonts:\n    - family: Poppins\n      fonts:\n        - asset: fonts/Poppins-Regular.ttf\n        - asset: fonts/Poppins-Bold.ttf\n          weight: 700",
+  "quiz": [
+    {
+      "question": "What command installs dependencies from pubspec.yaml?",
+      "options": ["flutter install", "flutter pub get", "flutter deps", "flutter setup"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the caret (^) in version constraint ^1.2.3 mean?",
+      "options": ["Exactly 1.2.3", ">=1.2.3 <2.0.0", ">=1.2.3 <1.3.0", "Any version 1.x"],
+      "correctIndex": 1
+    }
+  ]
+}

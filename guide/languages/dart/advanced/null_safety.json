@@ -1,0 +1,22 @@
+{
+  "title": "Null Safety in Dart",
+  "language": "dart",
+  "topic": "null_safety",
+  "order": 37,
+  "nextTopic": "generics",
+  "prevTopic": "collection_if_for",
+  "content": "### Sound Null Safety\n\nDart 3.0 enforces sound null safety. Variables cannot contain `null` unless explicitly declared as nullable.\n\n```dart\nvoid main() {\n  String nonNullable = 'Hello'; // Cannot be null\n  String? nullable = null;      // Can be null\n\n  // nonNullable = null; // COMPILE ERROR\n  nullable = 'World'; // OK\n}\n```\n\n### Nullable Types\n\nAdd `?` after a type to make it nullable.\n\n| Type | Can be null? |\n|------|-------------|\n| `String` | No |\n| `String?` | Yes |\n| `int` | No |\n| `int?` | Yes |\n| `List<String>` | No |\n| `List<String>?` | Yes |\n\n### Null Assertion (!)\n\nUse `!` to assert that a nullable value is non-null. Throws at runtime if null.\n\n```dart\nvoid main() {\n  String? name = 'Alice';\n  String nonNull = name!; // Assert not null\n  print(nonNull);\n}\n```\n\n### Null-aware Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| `?.` | Safe access | `name?.length` |\n| `??` | Default value | `name ?? 'Guest'` |\n| `??=` | Assign if null | `name ??= 'Guest'` |\n| `!` | Null assertion | `name!` |\n\n### Late Variables\n\n`late` defers initialization. Throw if accessed before assignment.\n\n```dart\nclass Database {\n  late final String connection;\n\n  void init() {\n    connection = 'Connected';\n  }\n\n  void query() {\n    print(connection); // OK if init() was called\n  }\n}\n```\n\n### Type Promotion\n\n```dart\nvoid main() {\n  String? name = 'Alice';\n\n  if (name != null) {\n    // name is promoted to non-nullable String\n    print(name.length); // No need for !\n  }\n\n  // Or use early return\n  void printLength(String? text) {\n    if (text == null) return;\n    print(text.length); // Promoted to non-nullable\n  }\n}\n```\n\n> **Key Point:** Null safety is sound in Dart - if the type says non-nullable, you will never get null at runtime. Use `?.` for safe access and `??` for defaults.",
+  "codeExample": "class User {\n  String name;\n  String? email;\n  int? age;\n\n  User(this.name, {this.email, this.age});\n\n  String get displayName {\n    if (email != null && age != null) {\n      return '$name ($email, ${age} years)';\n    }\n    return name;\n  }\n\n  String get emailOrDefault => email ?? 'No email provided';\n}\n\nvoid main() {\n  var user = User('Alice', email: 'alice@example.com', age: 30);\n  print(user.displayName);\n  print(user.emailOrDefault);\n\n  var guest = User('Bob');\n  print(guest.emailOrDefault);\n}",
+  "quiz": [
+    {
+      "question": "What does the ? symbol after a type indicate?",
+      "options": ["The type is required", "The type can be null", "The type is optional", "The type is dynamic"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when you assert null with ! on an actual null?",
+      "options": ["Returns null", "Runtime error", "Returns default", "Compile error"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Named Arguments",
+  "language": "kotlin",
+  "topic": "named_args",
+  "order": 19,
+  "nextTopic": "lambda",
+  "prevTopic": "default_args",
+  "content": "### Named Arguments in Kotlin\n\nNamed arguments allow you to specify which parameter an argument belongs to by name, improving code readability and flexibility.\n\n---\n\n### Basic Named Arguments\n\n```kotlin\nfun createUser(username: String, email: String, age: Int) {\n    println(\"$username ($age) - $email\")\n}\n\n// Using named arguments\ncreateUser(\n    username = \"alice\",\n    email = \"alice@example.com\",\n    age = 30\n)\n```\n\n---\n\n### Mixing Positional and Named Arguments\n\nPositional arguments must come before named arguments.\n\n```kotlin\nfun describe(name: String, age: Int, city: String) {\n    println(\"$name, $age, $city\")\n}\n\ndescribe(\"Alice\", city = \"New York\", age = 30)  // OK\ndescribe(name = \"Alice\", 30, \"New York\")  // Error: positional after named\n```\n\n---\n\n### Skipping Parameters\n\nNamed arguments allow skipping optional parameters with defaults.\n\n```kotlin\nfun configure(\n    host: String,\n    port: Int = 8080,\n    ssl: Boolean = false,\n    timeout: Int = 5000\n) {\n    // ...\n}\n\n// Skip port, provide host and ssl\nconfigure(host = \"localhost\", ssl = true)\n```\n\n---\n\n### Improving Readability\n\nNamed arguments make boolean parameters self-documenting.\n\n```kotlin\n// Without named arguments -- unclear\nupdateUser(\"alice\", true, false, true)\n\n// With named arguments -- clear\nupdateUser(\n    username = \"alice\",\n    isActive = true,\n    isAdmin = false,\n    sendEmail = true\n)\n```\n\n---\n\n### Named Arguments with Vararg\n\n```kotlin\nfun printNumbers(vararg numbers: Int, prefix: String) {\n    println(\"$prefix: ${numbers.joinToString(\", \")}\")\n}\n\nprintNumbers(1, 2, 3, prefix = \"Values\")\n```\n\n> **Key Point:** Use named arguments to make function calls self-documenting, especially for boolean parameters and functions with many parameters.",
+  "codeExample": "fun formatDate(\n    day: Int,\n    month: Int,\n    year: Int,\n    separator: String = \"-\"\n): String {\n    return \"$day$separator$month$separator$year\"\n}\n\nfun main() {\n    val date1 = formatDate(15, 7, 2026)\n    println(date1)  // 15-7-2026\n    \n    val date2 = formatDate(\n        year = 2026,\n        month = 7,\n        day = 15,\n        separator = \"/\"\n    )\n    println(date2)  // 15/7/2026\n}",
+  "quiz": [
+    {
+      "question": "Can positional arguments come after named arguments?",
+      "options": ["Yes", "No", "Only with default values", "Only for boolean parameters"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a benefit of named arguments?",
+      "options": ["Faster execution", "Improved code readability", "Reduced memory usage", "Type safety"],
+      "correctIndex": 1
+    }
+  ]
+}

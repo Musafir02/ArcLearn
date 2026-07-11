@@ -1,0 +1,22 @@
+{
+  "title": "Isolates in Dart",
+  "language": "dart",
+  "topic": "isolates",
+  "order": 43,
+  "nextTopic": "error_handling",
+  "prevTopic": "stream_controller",
+  "content": "### What are Isolates?\n\nIsolates are independent workers that run in parallel. Each isolate has its own memory heap and event loop. They communicate via message passing.\n\n```dart\nimport 'dart:isolate';\n\nvoid main() async {\n  // ReceivePort to receive messages from the isolate\n  var receivePort = ReceivePort();\n\n  // Spawn an isolate\n  await Isolate.spawn(worker, receivePort.sendPort);\n\n  // Receive message\n  var message = await receivePort.first;\n  print('Received: $message');\n}\n\nvoid worker(SendPort sendPort) {\n  sendPort.send('Hello from isolate!');\n}\n```\n\n### Sending Data Back and Forth\n\n```dart\nimport 'dart:isolate';\n\nvoid main() async {\n  var receivePort = ReceivePort();\n  await Isolate.spawn(computeHeavy, receivePort.sendPort);\n\n  var sendPort = await receivePort.first as SendPort;\n  var resultPort = ReceivePort();\n\n  sendPort.send({'value': 42, 'sendPort': resultPort.sendPort});\n  var result = await resultPort.first;\n  print('Result: $result');\n}\n\nvoid computeHeavy(SendPort sendPort) {\n  var receivePort = ReceivePort();\n  sendPort.send(receivePort.sendPort);\n\n  receivePort.listen((message) {\n    var data = message as Map;\n    var input = data['value'] as int;\n    var replyPort = data['sendPort'] as SendPort;\n\n    // Heavy computation\n    var result = input * input;\n    replyPort.send(result);\n  });\n}\n```\n\n### Compute (Flutter)\n\n```dart\nimport 'dart:async';\n\n// Simulates Flutter's compute function\nFuture<R> compute<R, P>(FutureOr<R> Function(P) fn, P param) async {\n  // In Flutter, this runs the function in a separate isolate\n  return fn(param);\n}\n\nint heavyCalculation(int value) {\n  var sum = 0;\n  for (var i = 0; i < value; i++) {\n    sum += i;\n  }\n  return sum;\n}\n\nvoid main() async {\n  var result = await compute(heavyCalculation, 1000000);\n  print('Result: $result');\n}\n```\n\n| Aspect | Main Isolate | Worker Isolate |\n|--------|-------------|----------------|\n| Memory | Own heap | Own heap |\n| Blocking | Blocks UI | Non-blocking |\n| Communication | SendPort/ReceivePort | SendPort/ReceivePort |\n| Use case | UI/light work | Heavy computation |\n\n### Limitations\n\n```dart\n// What CANNOT be sent between isolates:\n// - Mutable objects with native resources\n// - Functions (closures)\n// - Objects with native fields\n\n// What CAN be sent:\n// - Primitive types (int, double, bool, String, null)\n// - Lists, Maps, Sets of sendable types\n// - SendPort/ReceivePort\n// - TypedData (ByteData, etc.)\n```\n\n> **Key Point:** Isolates provide true parallelism in Dart. Use them for CPU-intensive work to avoid blocking the UI thread. In Flutter, the `compute()` function simplifies isolate usage.",
+  "codeExample": "import 'dart:isolate';\n\nint fibonacci(int n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nvoid fibonacciWorker(SendPort sendPort) {\n  var receivePort = ReceivePort();\n  sendPort.send(receivePort.sendPort);\n\n  receivePort.listen((message) {\n    var n = message as int;\n    var result = fibonacci(n);\n    sendPort.send(result);\n  });\n}\n\nvoid main() async {\n  var receivePort = ReceivePort();\n  await Isolate.spawn(fibonacciWorker, receivePort.sendPort);\n\n  var workerPort = await receivePort.first as SendPort;\n  var resultPort = ReceivePort();\n\n  workerPort.send(40);\n  var result = await resultPort.first;\n  print('Fibonacci(40) = $result');\n}",
+  "quiz": [
+    {
+      "question": "How do isolates communicate with each other?",
+      "options": ["Shared memory", "Message passing", "Global variables", "File system"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does each isolate have its own memory heap?",
+      "options": ["Yes", "No, shared", "Only on web", "Only on mobile"],
+      "correctIndex": 0
+    }
+  ]
+}

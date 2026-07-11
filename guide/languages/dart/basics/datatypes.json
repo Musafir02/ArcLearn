@@ -1,0 +1,22 @@
+{
+  "title": "Data Types in Dart",
+  "language": "dart",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "type_conversion",
+  "prevTopic": "variables",
+  "content": "### Dart Data Types\n\nDart is a statically typed language with a rich set of built-in data types.\n\n| Type | Description | Example |\n|------|-------------|---------|\n| `int` | Integer numbers | `42`, `-10` |\n| `double` | Floating-point numbers | `3.14`, `-0.5` |\n| `num` | Numeric type (int or double) | `42`, `3.14` |\n| `String` | Sequence of characters | `'Hello'` |\n| `bool` | Boolean values | `true`, `false` |\n| `List` | Ordered collection | `[1, 2, 3]` |\n| `Set` | Unique unordered collection | `{1, 2, 3}` |\n| `Map` | Key-value pairs | `{'key': 'value'}` |\n| `Runes` | Unicode code points | `\\u{1f600}` |\n| `Symbol` | Opaque identifier | `#mySymbol` |\n| `Null` | Null value | `null` |\n\n### Numbers\n\n```dart\nvoid main() {\n  int age = 25;\n  double pi = 3.14159;\n  num anyNumber = 42; // Can be int or double\n\n  // Integer literals can be assigned to double\n  double value = 10; // 10.0\n\n  print('Age: $age, Pi: $pi, Value: $value');\n}\n```\n\n### Strings\n\n```dart\nvoid main() {\n  String single = 'Single quotes';\n  String double = \"Double quotes\";\n  String multi = '''\n    Multi-line\n    string\n  ''';\n  String raw = r'Raw string \\n no escape';\n}\n```\n\n### Booleans\n\n```dart\nvoid main() {\n  bool isActive = true;\n  bool isComplete = false;\n}\n```\n\n> **Key Point:** Dart uses `bool` for booleans with values `true` and `false`. Unlike JavaScript, Dart does not treat non-boolean values as truthy or falsy in conditional contexts.",
+  "codeExample": "void main() {\n  String name = 'Dart';\n  int year = 2011;\n  double version = 3.0;\n  bool isStable = true;\n  List<String> features = ['Sound null safety', 'Pattern matching'];\n\n  print('$name $version ($year)');\n  print('Stable: $isStable');\n  print('Features: $features');\n}",
+  "quiz": [
+    {
+      "question": "Which type can hold both integer and double values?",
+      "options": ["int", "double", "num", "number"],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do you declare a raw string in Dart?",
+      "options": ["r'string'", "raw'string'", "'\\\\string'", "R'string'"],
+      "correctIndex": 0
+    }
+  ]
+}

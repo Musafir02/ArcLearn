@@ -1,0 +1,22 @@
+{
+  "title": "ListView in Flutter",
+  "language": "dart",
+  "topic": "listview",
+  "order": 58,
+  "nextTopic": "gridview",
+  "prevTopic": "stack",
+  "content": "### ListView Basics\n\n`ListView` is a scrollable list of widgets arranged linearly. It is one of the most commonly used widgets in Flutter.\n\n```dart\nListView(\n  children: const [\n    ListTile(title: Text('Item 1')),\n    ListTile(title: Text('Item 2')),\n    ListTile(title: Text('Item 3')),\n  ],\n)\n```\n\n### ListView Constructors\n\n| Constructor | Use Case |\n|-------------|----------|\n| `ListView()` | Small, fixed number of children |\n| `ListView.builder()` | Large or infinite lists (lazy) |\n| `ListView.separated()` | Lists with separators |\n| `ListView.custom()` | Custom children delegate |\n\n### ListView.builder\n\nFor large lists, use `ListView.builder()` which builds items lazily as they scroll into view.\n\n```dart\nListView.builder(\n  itemCount: items.length,\n  itemBuilder: (context, index) {\n    return ListTile(\n      leading: const Icon(Icons.star),\n      title: Text('Item ${items[index]}'),\n      onTap: () => print('Tapped $index'),\n    );\n  },\n)\n```\n\n### ListTile Widget\n\n`ListTile` is a specialized widget for list items with a consistent layout.\n\n```dart\nListTile(\n  leading: CircleAvatar(\n    backgroundImage: NetworkImage(user.avatarUrl),\n  ),\n  title: Text(user.name),\n  subtitle: Text(user.email),\n  trailing: const Icon(Icons.chevron_right),\n  onTap: () => navigateToProfile(user),\n)\n```\n\n### ListView.separated\n\n```dart\nListView.separated(\n  itemCount: 10,\n  separatorBuilder: (context, index) => const Divider(),\n  itemBuilder: (context, index) => ListTile(\n    title: Text('Item $index'),\n  ),\n)\n```\n\n### Scroll Controllers\n\n```dart\nclass _MyListState extends State<MyList> {\n  final _scrollController = ScrollController();\n\n  @override\n  void initState() {\n    super.initState();\n    _scrollController.addListener(() {\n      print('Scrolled to: ${_scrollController.offset}');\n    });\n  }\n\n  @override\n  void dispose() {\n    _scrollController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return ListView.builder(\n      controller: _scrollController,\n      itemCount: 100,\n      itemBuilder: (context, index) => ListTile(title: Text('Item $index')),\n    );\n  }\n}\n```\n\n> **Key Point:** Use `ListView.builder()` for large datasets - it builds items lazily. Use `ListView.separated()` when you need dividers between items. Dispose of `ScrollController` in `dispose()`.",
+  "codeExample": "import 'package:flutter/material.dart';\n\nclass ContactList extends StatelessWidget {\n  const ContactList({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    final contacts = [\n      {'name': 'Alice', 'phone': '123-456-7890'},\n      {'name': 'Bob', 'phone': '234-567-8901'},\n      {'name': 'Charlie', 'phone': '345-678-9012'},\n      {'name': 'Diana', 'phone': '456-789-0123'},\n    ];\n\n    return ListView.separated(\n      itemCount: contacts.length,\n      separatorBuilder: (_, __) => const Divider(),\n      itemBuilder: (context, index) {\n        return ListTile(\n          leading: CircleAvatar(\n            child: Text(contacts[index]['name']![0]),\n          ),\n          title: Text(contacts[index]['name']!),\n          subtitle: Text(contacts[index]['phone']!),\n          trailing: const Icon(Icons.phone),\n          onTap: () => print('Call ${contacts[index]['name']}'),\n        );\n      },\n    );\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which ListView constructor is best for a list with 10,000 items?",
+      "options": ["ListView()", "ListView.builder()", "ListView.separated()", "ListView.custom()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which widget provides a standard list item layout with leading, title, and trailing?",
+      "options": ["ListTile", "Tile", "Card", "Item"],
+      "correctIndex": 0
+    }
+  ]
+}

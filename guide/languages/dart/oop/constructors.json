@@ -1,0 +1,22 @@
+{
+  "title": "Constructors in Dart",
+  "language": "dart",
+  "topic": "constructors",
+  "order": 22,
+  "nextTopic": "named_constructors",
+  "prevTopic": "classes",
+  "content": "### Default Constructor\n\nEvery class has a default constructor (no arguments) if no constructor is defined.\n\n```dart\nclass Point {\n  int x = 0;\n  int y = 0;\n}\n\nvoid main() {\n  var p = Point(); // Uses default constructor\n  print('${p.x}, ${p.y}');\n}\n```\n\n### Parameterized Constructor\n\n```dart\nclass Point {\n  int x;\n  int y;\n\n  // Standard constructor\n  Point(int x, int y) {\n    this.x = x;\n    this.y = y;\n  }\n}\n\nvoid main() {\n  var p = Point(3, 4);\n}\n```\n\n### Constructor with Initializing Formal Parameters\n\nDart provides a shorthand syntax for assigning parameters to fields:\n\n```dart\nclass Point {\n  int x;\n  int y;\n\n  // Initializing formal parameters\n  Point(this.x, this.y);\n}\n```\n\n### Constructor with Named Parameters\n\n```dart\nclass Person {\n  String name;\n  int age;\n  String? email;\n\n  Person({\n    required this.name,\n    required this.age,\n    this.email,\n  });\n}\n\nvoid main() {\n  var p = Person(name: 'Alice', age: 30, email: 'alice@example.com');\n}\n```\n\n### Initializer List\n\n```dart\nclass Point {\n  int x;\n  int y;\n\n  Point.fromCoordinates(Map<String, int> coords)\n      : x = coords['x'] ?? 0,\n        y = coords['y'] ?? 0;\n}\n```\n\n### Const Constructor\n\n```dart\nclass ImmutablePoint {\n  final int x;\n  final int y;\n\n  const ImmutablePoint(this.x, this.y);\n}\n\nvoid main() {\n  const p = ImmutablePoint(0, 0);\n}\n```\n\n### Factory Constructor\n\n```dart\nclass Logger {\n  static final Map<String, Logger> _cache = {};\n  final String name;\n\n  factory Logger(String name) {\n    return _cache.putIfAbsent(name, () => Logger._internal(name));\n  }\n\n  Logger._internal(this.name);\n}\n```\n\n> **Key Point:** Use initializing formal parameters (`this.x`) for simple field assignment. Use initializer lists for validation or more complex initialization logic.",
+  "codeExample": "class Rectangle {\n  double width;\n  double height;\n\n  // Primary constructor\n  Rectangle(this.width, this.height);\n\n  // Initializer list constructor\n  Rectangle.square(double side)\n      : width = side,\n        height = side;\n\n  // Named parameter constructor\n  Rectangle.fromDimensions({required this.width, required this.height});\n\n  double get area => width * height;\n}\n\nvoid main() {\n  var r1 = Rectangle(10, 5);\n  var r2 = Rectangle.square(7);\n  var r3 = Rectangle.fromDimensions(width: 8, height: 3);\n\n  print('Rectangle areas: ${r1.area}, ${r2.area}, ${r3.area}');\n}",
+  "quiz": [
+    {
+      "question": "What is the shorthand syntax for constructor parameter assignment?",
+      "options": ["this.x = x", "x = this.x", "this.x", "x(this)"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which constructor type allows caching or singleton patterns?",
+      "options": ["Const constructor", "Factory constructor", "Named constructor", "Default constructor"],
+      "correctIndex": 1
+    }
+  ]
+}

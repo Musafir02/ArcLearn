@@ -1,0 +1,22 @@
+{
+  "title": "Scaffold in Flutter",
+  "language": "dart",
+  "topic": "scaffold",
+  "order": 54,
+  "nextTopic": "container",
+  "prevTopic": "stateful_widget",
+  "content": "### Scaffold Widget\n\n`Scaffold` implements the basic Material Design visual layout structure. It provides a framework for AppBar, Drawer, BottomNavigationBar, FloatingActionButton, and more.\n\n```dart\nScaffold(\n  appBar: AppBar(\n    title: const Text('My App'),\n    actions: [\n      IconButton(\n        icon: const Icon(Icons.settings),\n        onPressed: () {},\n      ),\n    ],\n  ),\n  body: const Center(\n    child: Text('Content goes here'),\n  ),\n  floatingActionButton: FloatingActionButton(\n    onPressed: () {},\n    child: const Icon(Icons.add),\n  ),\n)\n```\n\n### Scaffold Properties\n\n| Property | Type | Description |\n|----------|------|-------------|\n| `appBar` | `PreferredSizeWidget?` | Top app bar |\n| `body` | `Widget?` | Main content area |\n| `floatingActionButton` | `Widget?` | FAB button |\n| `drawer` | `Widget?` | Side drawer |\n| `bottomNavigationBar` | `Widget?` | Bottom nav bar |\n| `bottomSheet` | `Widget?` | Persistent bottom sheet |\n| `backgroundColor` | `Color?` | Background color |\n\n### AppBar\n\n```dart\nAppBar(\n  title: const Text('Title'),\n  leading: const Icon(Icons.menu),\n  actions: [\n    IconButton(icon: const Icon(Icons.search), onPressed: () {}),\n    IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),\n  ],\n  backgroundColor: Colors.blue,\n  elevation: 2,\n)\n```\n\n### Drawer and BottomNavigationBar\n\n```dart\nScaffold(\n  drawer: Drawer(\n    child: ListView(\n      children: [\n        const DrawerHeader(\n          child: Text('Menu'),\n        ),\n        ListTile(\n          leading: const Icon(Icons.home),\n          title: const Text('Home'),\n          onTap: () {},\n        ),\n      ],\n    ),\n  ),\n  bottomNavigationBar: BottomNavigationBar(\n    items: const [\n      BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),\n      BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),\n      BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),\n    ],\n  ),\n)\n```\n\n> **Key Point:** Scaffold provides the default Material Design layout. It automatically handles keyboard insets, safe areas, and back button navigation.",
+  "codeExample": "import 'package:flutter/material.dart';\n\nclass HomeScreen extends StatelessWidget {\n  const HomeScreen({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(\n        title: const Text('Home'),\n        centerTitle: true,\n      ),\n      body: const Center(\n        child: Text('Welcome to Flutter!'),\n      ),\n      floatingActionButton: FloatingActionButton(\n        onPressed: () {\n          ScaffoldMessenger.of(context).showSnackBar(\n            const SnackBar(content: Text('Button pressed')),\n          );\n        },\n        child: const Icon(Icons.add),\n      ),\n      drawer: Drawer(\n        child: ListView(\n          children: const [\n            DrawerHeader(child: Text('App Menu')),\n            ListTile(leading: Icon(Icons.home), title: Text('Home')),\n            ListTile(leading: Icon(Icons.settings), title: Text('Settings')),\n          ],\n        ),\n      ),\n    );\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which widget provides Material Design layout structure?",
+      "options": ["Container", "Scaffold", "Column", "MaterialApp"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What property of Scaffold shows a bottom navigation bar?",
+      "options": ["bottomSheet", "bottomNavigationBar", "persistentFooterButtons", "drawer"],
+      "correctIndex": 1
+    }
+  ]
+}

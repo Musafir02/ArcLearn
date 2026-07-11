@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Channels",
+  "language": "kotlin",
+  "topic": "channels",
+  "order": 46,
+  "nextTopic": "generics",
+  "prevTopic": "flow",
+  "content": "### Channels in Kotlin\n\nChannels provide a way to transfer a stream of values between coroutines. They are like hot streams -- different from Flow which is cold.\n\n---\n\n### Channel Basics\n\n```kotlin\nimport kotlinx.coroutines.channels.*\nimport kotlinx.coroutines.*\n\nfun main() = runBlocking {\n    val channel = Channel<Int>()\n    \n    launch {\n        for (i in 1..5) {\n            channel.send(i)\n            delay(500)\n        }\n        channel.close()\n    }\n    \n    for (value in channel) {\n        println(\"Received: $value\")\n    }\n}\n```\n\n---\n\n### Channel Types\n\n| Type | Capacity | Behavior |\n|------|----------|----------|\n| `Channel()` / `RendezvousChannel` | 0 | Sender waits until receiver is ready |\n| `Channel(Channel.UNLIMITED)` | Unlimited | Never suspends on send |\n| `Channel(Channel.CONFLATED)` | 1 | Keeps only the latest value |\n| `Channel(capacity)` | N | Buffered channel |\n\n---\n\n### Buffered Channels\n\n```kotlin\nval channel = Channel<Int>(capacity = 10)\n\nlaunch {\n    repeat(20) {\n        channel.send(it)\n        println(\"Sent $it\")\n    }\n    channel.close()\n}\n\nlaunch {\n    for (item in channel) {\n        delay(100)\n        println(\"Got $item\")\n    }\n}\n```\n\n---\n\n### Closing Channels\n\n```kotlin\nval channel = Channel<Int>()\n\nlaunch {\n    channel.send(1)\n    channel.send(2)\n    channel.close()  // No more elements\n}\n\n// Safe iteration\nfor (value in channel) {\n    println(value)\n}\n```\n\n---\n\n### Fan-Out\n\nMultiple coroutines can receive from the same channel.\n\n```kotlin\nfun main() = runBlocking {\n    val channel = Channel<Int>()\n    \n    repeat(3) { id ->\n        launch {\n            for (value in channel) {\n                println(\"Consumer $id: $value\")\n                delay(100)\n            }\n        }\n    }\n    \n    repeat(10) { channel.send(it) }\n    channel.close()\n}\n```\n\n---\n\n### Fan-In\n\nMultiple coroutines can send to the same channel.\n\n```kotlin\nfun main() = runBlocking {\n    val channel = Channel<String>()\n    \n    launch {\n        listOf(\"A\", \"B\", \"C\").forEach { channel.send(it) }\n    }\n    launch {\n        listOf(\"X\", \"Y\", \"Z\").forEach { channel.send(it) }\n    }\n    \n    repeat(6) {\n        println(channel.receive())\n    }\n}\n```\n\n> **Key Point:** Channels are hot streams -- they exist independently of consumers. Use `flow` for cold async streams and `channel` for hot producer-consumer patterns.",
+  "codeExample": "import kotlinx.coroutines.*\nimport kotlinx.coroutines.channels.*\n\nfun main() = runBlocking {\n    val channel = Channel<Int>(Channel.CONFLATED)\n    \n    launch {\n        repeat(10) {\n            channel.send(it)\n            println(\"Sent $it\")\n        }\n        channel.close()\n    }\n    \n    launch {\n        for (value in channel) {\n            println(\"Received: $value\")\n            delay(200)\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is a Rendezvous channel?",
+      "options": ["Unlimited capacity", "Capacity of 0 (sender waits for receiver)", "Capacity of 1", "Combined channel"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is a Channel a hot or cold stream?",
+      "options": ["Hot", "Cold", "Both", "Neither"],
+      "correctIndex": 0
+    }
+  ]
+}

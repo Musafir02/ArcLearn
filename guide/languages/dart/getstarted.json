@@ -1,0 +1,17 @@
+{
+  "title": "Getting Started with Dart",
+  "language": "dart",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installing Dart\n\nYou can install Dart SDK from the official website or use a package manager.\n\n| OS | Command |\n|----|---------|\n| Windows | `choco install dart-sdk` or download from dart.dev |\n| macOS | `brew install dart` |\n| Linux | `sudo apt install dart` |\n\n### Your First Dart Program\n\nCreate a file named `hello.dart` and add the following code:\n\n```dart\nvoid main() {\n  print('Hello, Dart!');\n}\n```\n\n### Running Dart Code\n\nRun your program with the Dart VM:\n\n```bash\ndart run hello.dart\n```\n\n### DartPad\n\nDartPad (dartpad.dev) is an online editor that lets you write and run Dart code without installing anything. It is perfect for quick experiments and learning.\n\n### Project Structure\n\nA typical Dart project contains:\n\n| File/Folder | Purpose |\n|-------------|---------|\n| `lib/` | Main source code |\n| `test/` | Unit tests |\n| `bin/` | Command-line entry points |\n| `pubspec.yaml` | Project configuration and dependencies |\n\n> **Key Point:** Use `dart create my_project` to scaffold a new Dart project with the recommended structure.",
+  "codeExample": "void main() {\n  print('Hello, Dart!');\n  var name = 'Dart';\n  print('Welcome to $name programming');\n}",
+  "quiz": [
+    {
+      "question": "What command runs a Dart file?",
+      "options": ["dart run hello.dart", "dart compile hello.dart", "dart execute hello.dart", "dart start hello.dart"],
+      "correctIndex": 0
+    }
+  ]
+}

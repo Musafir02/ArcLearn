@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Type Casting",
+  "language": "kotlin",
+  "topic": "typecasting",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Type Casting in Kotlin\n\nKotlin provides several mechanisms for converting and casting between types.\n\n---\n\n### Explicit Type Conversion\n\nKotlin does not support implicit widening conversions. Smaller types are not automatically converted to larger types.\n\n```kotlin\nval a: Int = 100\n// val b: Long = a  // Error: Type mismatch\nval b: Long = a.toLong()  // OK\n```\n\n---\n\n### Conversion Functions\n\n| Function | Description |\n|----------|-------------|\n| `toByte()` | Converts to Byte |\n| `toShort()` | Converts to Short |\n| `toInt()` | Converts to Int |\n| `toLong()` | Converts to Long |\n| `toFloat()` | Converts to Float |\n| `toDouble()` | Converts to Double |\n| `toChar()` | Converts to Char |\n| `toString()` | Converts to String |\n\n```kotlin\nval intVal = 42\nval doubleVal = intVal.toDouble()  // 42.0\nval stringVal = intVal.toString()  // \"42\"\n```\n\n---\n\n### Smart Casts\n\nKotlin automatically casts types after a type check.\n\n```kotlin\nfun printLength(obj: Any) {\n    if (obj is String) {\n        println(obj.length)  // Smart-cast to String\n    }\n}\n```\n\n---\n\n### Unsafe Cast Operator: as\n\n```kotlin\nval obj: Any = \"Hello\"\nval str: String = obj as String  // May throw ClassCastException\n```\n\n---\n\n### Safe Cast Operator: as?\n\n```kotlin\nval obj: Any = 123\nval str: String? = obj as? String  // Returns null if cast fails\nprintln(str)  // null\n```\n\n---\n\n### Type Checking with is and !is\n\n```kotlin\nval value: Any = \"Kotlin\"\nif (value is String) {\n    println(\"It is a string\")\n}\nif (value !is Int) {\n    println(\"Not an integer\")\n}\n```\n\n> **Key Point:** Prefer `as?` over `as` to avoid ClassCastException. Use smart casts whenever possible.",
+  "codeExample": "fun main() {\n    val num: Int = 42\n    val d = num.toDouble()\n    val s = num.toString()\n    println(\"Double: $d, String: $s\")\n    \n    val obj: Any = \"Kotlin\"\n    val str: String? = obj as? String\n    println(\"Safe cast: $str\")\n    \n    if (obj is String) {\n        println(\"Length: ${obj.length}\")  // Smart cast\n    }\n}",
+  "quiz": [
+    {
+      "question": "What happens when a safe cast fails?",
+      "options": ["Throws exception", "Returns null", "Returns default value", "Crashes the program"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which operator performs an unsafe cast?",
+      "options": ["as?", "as", "is", "cast"],
+      "correctIndex": 1
+    }
+  ]
+}

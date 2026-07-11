@@ -1,0 +1,22 @@
+{
+  "title": "JSON Serialization in Dart",
+  "language": "dart",
+  "topic": "json_serialization",
+  "order": 49,
+  "nextTopic": "flutter_intro",
+  "prevTopic": "metadata_annotations",
+  "content": "### JSON in Dart\n\nJSON serialization converts Dart objects to JSON strings and vice versa using `dart:convert`.\n\n```dart\nimport 'dart:convert';\n\nvoid main() {\n  // JSON encoding\n  var data = {'name': 'Alice', 'age': 30};\n  String jsonString = jsonEncode(data);\n  print(jsonString); // {\"name\":\"Alice\",\"age\":30}\n\n  // JSON decoding\n  Map<String, dynamic> decoded = jsonDecode(jsonString);\n  print(decoded['name']); // Alice\n}\n```\n\n### Manual Serialization\n\n```dart\nimport 'dart:convert';\n\nclass User {\n  final String name;\n  final int age;\n  final String? email;\n\n  User({required this.name, required this.age, this.email});\n\n  // To JSON\n  Map<String, dynamic> toJson() => {\n    'name': name,\n    'age': age,\n    'email': email,\n  };\n\n  // From JSON\n  factory User.fromJson(Map<String, dynamic> json) {\n    return User(\n      name: json['name'] as String,\n      age: json['age'] as int,\n      email: json['email'] as String?,\n    );\n  }\n}\n\nvoid main() {\n  var user = User(name: 'Alice', age: 30, email: 'alice@example.com');\n  var jsonString = jsonEncode(user.toJson());\n\n  var decoded = User.fromJson(jsonDecode(jsonString));\n  print('${decoded.name} is ${decoded.age}');\n}\n```\n\n### Nested Objects\n\n```dart\nclass Address {\n  final String street;\n  final String city;\n\n  Address(this.street, this.city);\n\n  Map<String, dynamic> toJson() => {'street': street, 'city': city};\n  factory Address.fromJson(Map<String, dynamic> json) =>\n      Address(json['street'], json['city']);\n}\n\nclass Person {\n  final String name;\n  final Address address;\n\n  Person(this.name, this.address);\n\n  Map<String, dynamic> toJson() => {\n    'name': name,\n    'address': address.toJson(),\n  };\n\n  factory Person.fromJson(Map<String, dynamic> json) => Person(\n    json['name'],\n    Address.fromJson(json['address']),\n  );\n}\n```\n\n### Lists of Objects\n\n```dart\nclass Team {\n  final String name;\n  final List<User> members;\n\n  Team(this.name, this.members);\n\n  Map<String, dynamic> toJson() => {\n    'name': name,\n    'members': members.map((m) => m.toJson()).toList(),\n  };\n\n  factory Team.fromJson(Map<String, dynamic> json) => Team(\n    json['name'],\n    (json['members'] as List).map((m) => User.fromJson(m)).toList(),\n  );\n}\n```\n\n> **Key Point:** Always implement `toJson()` and `fromJson()` for serializable classes. Use `jsonEncode()` and `jsonDecode()` from `dart:convert`. In Flutter, consider using `json_serializable` package for automatic code generation.",
+  "codeExample": "import 'dart:convert';\n\nclass Product {\n  final int id;\n  final String name;\n  final double price;\n  final List<String> tags;\n  final bool inStock;\n\n  Product({\n    required this.id,\n    required this.name,\n    required this.price,\n    this.tags = const [],\n    this.inStock = true,\n  });\n\n  Map<String, dynamic> toJson() => {\n    'id': id,\n    'name': name,\n    'price': price,\n    'tags': tags,\n    'inStock': inStock,\n  };\n\n  factory Product.fromJson(Map<String, dynamic> json) => Product(\n    id: json['id'] as int,\n    name: json['name'] as String,\n    price: (json['price'] as num).toDouble(),\n    tags: (json['tags'] as List?)?.cast<String>() ?? [],\n    inStock: json['inStock'] as bool? ?? true,\n  );\n}\n\nvoid main() {\n  var jsonString = '{\"id\":1,\"name\":\"Widget\",\"price\":9.99,\"tags\":[\"new\",\"sale\"],\"inStock\":true}';\n  var product = Product.fromJson(jsonDecode(jsonString));\n  print(product.name);\n  print(jsonEncode(product.toJson()));\n}",
+  "quiz": [
+    {
+      "question": "Which library provides jsonEncode and jsonDecode?",
+      "options": ["dart:json", "dart:convert", "dart:core", "dart:io"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the return type of jsonDecode()?",
+      "options": ["String", "Map<String, dynamic>", "dynamic", "List<dynamic>"],
+      "correctIndex": 2
+    }
+  ]
+}

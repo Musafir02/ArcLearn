@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to Kotlin",
+  "language": "kotlin",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is Kotlin?\n\nKotlin is a modern, statically-typed programming language that runs on the Java Virtual Machine (JVM). It was developed by JetBrains and first released in 2016. Kotlin is designed to be concise, safe, interoperable with Java, and feature-rich.\n\n---\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Concise | Reduces boilerplate code significantly compared to Java |\n| Safe | Null safety built into the type system |\n| Interoperable | 100% compatible with Java |\n| Functional | Supports both object-oriented and functional programming |\n| Coroutines | Built-in support for asynchronous programming |\n\n---\n\n### Why Learn Kotlin?\n\nKotlin is the preferred language for Android development, widely used for server-side applications, and increasingly popular in multiplatform projects. Google announced first-class support for Kotlin on Android in 2017.\n\n> **Key Point:** Kotlin compiles to bytecode and can run anywhere Java runs.\n\n---\n\n### Kotlin Use Cases\n\n- Android app development\n- Server-side development (Ktor, Spring Boot)\n- Multiplatform mobile apps (KMP)\n- Data science and machine learning\n- Web development (Kotlin/JS)",
+  "codeExample": "fun main() {\n    println(\"Hello, Kotlin!\")\n}",
+  "quiz": [
+    {
+      "question": "Who developed the Kotlin programming language?",
+      "options": ["Google", "JetBrains", "Oracle", "Microsoft"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What platform does Kotlin primarily run on?",
+      "options": ["CLR", "JVM", "V8", "LLVM"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Optional Parameters in Dart",
+  "language": "dart",
+  "topic": "optional_params",
+  "order": 17,
+  "nextTopic": "lambda",
+  "prevTopic": "function_params",
+  "content": "### Optional Positional Parameters\n\nOptional positional parameters are enclosed in square brackets `[]`. They must be nullable or have a default value.\n\n```dart\nvoid main() {\n  greet('Alice');\n  greet('Bob', 'Dr.');\n  greet('Charlie', 'Prof.', 'PhD');\n}\n\nvoid greet(String name, [String? title, String? suffix]) {\n  String full = '';\n  if (title != null) full += '$title ';\n  full += name;\n  if (suffix != null) full += ', $suffix';\n  print(full);\n}\n```\n\n### Default Values for Optional Positional\n\n```dart\nvoid main() {\n  calculate(10);        // Uses defaults\n  calculate(10, 0.08);  // Custom tax rate\n}\n\nvoid calculate(double amount, [double taxRate = 0.05, bool includeService = false]) {\n  double tax = amount * taxRate;\n  double service = includeService ? amount * 0.1 : 0;\n  double total = amount + tax + service;\n  print('Total: \\$${total.toStringAsFixed(2)}');\n}\n```\n\n### Optional Named Parameters\n\nNamed parameters are always optional unless marked with `required`.\n\n```dart\nvoid main() {\n  findPerson('Alice', age: 30);\n  findPerson('Bob', city: 'New York', age: 25);\n}\n\nvoid findPerson(String name, {int? age, String? city}) {\n  print('Searching for $name');\n  if (age != null) print('Age: $age');\n  if (city != null) print('City: $city');\n}\n```\n\n### Combining Parameter Types\n\n```dart\nvoid main() {\n  register('Alice', 'Smith',\n    age: 30,\n    email: 'alice@example.com',\n  );\n}\n\nvoid register(\n  String firstName,\n  String lastName, [\n  String? middleName,\n]) {\n  // Required first, optional positional, then named\n}\n```\n\n| Parameter Type | Syntax | Example |\n|---------------|--------|---------|\n| Required positional | `Type name` | `String name` |\n| Optional positional | `[Type? name]` | `[int? age]` |\n| Optional named | `{Type? name}` | `{String? city}` |\n| Required named | `{required Type name}` | `{required String email}` |\n\n> **Key Point:** Optional positional parameters must come before named parameters. Required positional parameters must come before optional ones.",
+  "codeExample": "double calculateTotal(\n  double price, [\n  double taxRate = 0.05,\n  double discount = 0.0,\n]) {\n  double tax = price * taxRate;\n  double discounted = price * discount;\n  return price + tax - discounted;\n}\n\nvoid main() {\n  print(calculateTotal(100.0));\n  print(calculateTotal(100.0, 0.08, 0.1));\n  print(calculateTotal(100.0, 0.1));\n}",
+  "quiz": [
+    {
+      "question": "What brackets are used for optional positional parameters?",
+      "options": ["()", "{}", "[]", "<>"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can optional positional parameters be required?",
+      "options": ["Yes", "No", "Only with default", "Only if nullable"],
+      "correctIndex": 1
+    }
+  ]
+}

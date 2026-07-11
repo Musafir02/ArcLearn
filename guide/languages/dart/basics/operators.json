@@ -1,0 +1,22 @@
+{
+  "title": "Operators in Dart",
+  "language": "dart",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "strings",
+  "prevTopic": "type_conversion",
+  "content": "### Arithmetic Operators\n\n```dart\nvoid main() {\n  int a = 10;\n  int b = 3;\n\n  print(a + b);  // 13 (Addition)\n  print(a - b);  // 7  (Subtraction)\n  print(a * b);  // 30 (Multiplication)\n  print(a / b);  // 3.333... (Division, returns double)\n  print(a ~/ b); // 3  (Integer division)\n  print(a % b);  // 1  (Modulus)\n}\n```\n\n### Comparison Operators\n\n| Operator | Meaning |\n|----------|---------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `>` | Greater than |\n| `<` | Less than |\n| `>=` | Greater than or equal to |\n| `<=` | Less than or equal to |\n\n### Logical Operators\n\n```dart\nvoid main() {\n  bool t = true;\n  bool f = false;\n\n  print(t && f); // false (AND)\n  print(t || f); // true  (OR)\n  print(!t);     // false (NOT)\n}\n```\n\n### Assignment Operators\n\n```dart\nvoid main() {\n  int x = 5;\n  x += 3;  // x = 8\n  x -= 2;  // x = 6\n  x *= 2;  // x = 12\n  x ~/= 3; // x = 4 (integer division assignment)\n}\n```\n\n### Null-aware Operators\n\n```dart\nvoid main() {\n  String? nullableString;\n\n  // ??= assigns only if null\n  nullableString ??= 'default';\n  print(nullableString); // 'default'\n\n  // ?? provides default value\n  String result = nullableString ?? 'fallback';\n\n  // ?. safe access\n  String? name;\n  int? length = name?.length; // null, no error\n}\n```\n\n### Cascade Notation\n\n```dart\nvoid main() {\n  var list = <int>[]\n    ..add(1)\n    ..add(2)\n    ..add(3);\n  print(list); // [1, 2, 3]\n}\n```\n\n> **Key Point:** Use `~//` for integer division and `??` for providing default values to null expressions.",
+  "codeExample": "void main() {\n  int a = 15;\n  int b = 4;\n\n  print('Sum: ${a + b}');\n  print('Difference: ${a - b}');\n  print('Product: ${a * b}');\n  print('Quotient: ${a / b}');\n  print('Integer division: ${a ~/ b}');\n  print('Remainder: ${a % b}');\n  print('Is a even? ${a % 2 == 0}');\n}",
+  "quiz": [
+    {
+      "question": "Which operator performs integer division in Dart?",
+      "options": ["/", "~/", "%", "//"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the ?? operator do?",
+      "options": ["Null check", "Default value for null", "Null assertion", "Null assignment"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Input in Dart",
+  "language": "dart",
+  "topic": "input",
+  "order": 13,
+  "nextTopic": "constants_final",
+  "prevTopic": "numbers",
+  "content": "### Reading Console Input\n\nUse `stdin.readLineSync()` from the `dart:io` library to read user input from the console.\n\n```dart\nimport 'dart:io';\n\nvoid main() {\n  stdout.write('Enter your name: ');\n  String? name = stdin.readLineSync();\n\n  print('Hello, $name!');\n}\n```\n\n### Reading Numbers\n\nInput is always read as a string. Convert it to the appropriate numeric type.\n\n```dart\nimport 'dart:io';\n\nvoid main() {\n  stdout.write('Enter your age: ');\n  String? input = stdin.readLineSync();\n\n  if (input != null && input.isNotEmpty) {\n    int age = int.parse(input);\n    print('You are $age years old');\n  }\n}\n```\n\n### Safe Input Parsing\n\n```dart\nimport 'dart:io';\n\nvoid main() {\n  stdout.write('Enter a number: ');\n  String? input = stdin.readLineSync();\n\n  if (input != null) {\n    int? number = int.tryParse(input);\n    if (number != null) {\n      print('You entered: $number');\n    } else {\n      print('Invalid number');\n    }\n  }\n}\n```\n\n### Input with Prompts\n\n```dart\nimport 'dart:io';\n\nString prompt(String message) {\n  stdout.write(message);\n  String? input = stdin.readLineSync();\n  return input ?? '';\n}\n\nvoid main() {\n  String name = prompt('Enter name: ');\n  String ageStr = prompt('Enter age: ');\n  int age = int.tryParse(ageStr) ?? 0;\n\n  print('$name is $age years old');\n}\n```\n\n> **Key Point:** `stdin.readLineSync()` returns `String?` (nullable). Always handle the null case. Use `int.tryParse()` for safer number conversion instead of `int.parse()`.",
+  "codeExample": "import 'dart:io';\n\nvoid main() {\n  stdout.write('Enter your name: ');\n  String? name = stdin.readLineSync();\n\n  stdout.write('Enter your age: ');\n  String? ageInput = stdin.readLineSync();\n\n  if (name != null && name.isNotEmpty && ageInput != null) {\n    int? age = int.tryParse(ageInput);\n    if (age != null) {\n      print('Hello $name, you are $age years old.');\n    } else {\n      print('Invalid age entered');\n    }\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which method reads a line from console input?",
+      "options": ["stdin.read()", "stdin.readLineSync()", "console.readLine()", "input.readLine()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the return type of stdin.readLineSync()?",
+      "options": ["String", "String?", "String!", "String*"],
+      "correctIndex": 1
+    }
+  ]
+}

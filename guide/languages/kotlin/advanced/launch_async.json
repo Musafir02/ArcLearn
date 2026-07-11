@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Launch vs Async",
+  "language": "kotlin",
+  "topic": "launch_async",
+  "order": 44,
+  "nextTopic": "flow",
+  "prevTopic": "coroutine_basics",
+  "content": "### Launch vs Async\n\n`launch` and `async` are the two primary coroutine builders for creating concurrent code. They serve different purposes.\n\n---\n\n### launch - Fire and Forget\n\n`launch` returns a `Job` and does not return a result value. It is used for tasks that do not produce a direct result.\n\n```kotlin\nfun main() = runBlocking {\n    val job: Job = launch {\n        delay(1000)\n        println(\"Background task\")\n    }\n    job.join()\n}\n```\n\n---\n\n### async - Deferred Result\n\n`async` returns a `Deferred<T>` which produces a result via `await()`.\n\n```kotlin\nfun main() = runBlocking {\n    val deferred: Deferred<Int> = async {\n        delay(1000)\n        42  // Return value\n    }\n    \n    val result = deferred.await()  // Waits and gets the result\n    println(\"Result: $result\")\n}\n```\n\n---\n\n### Comparison\n\n| Feature | launch | async |\n|---------|--------|-------|\n| Return type | `Job` | `Deferred<T>` |\n| Result | No result | Returns value via `await()` |\n| Exception | Propagated immediately | Captured, thrown on `await()` |\n| Use case | Fire-and-forget | Parallel computation |\n\n---\n\n### Parallel Execution with async\n\n```kotlin\nfun main() = runBlocking {\n    val time = measureTimeMillis {\n        val one = async { doWork(\"A\", 1000) }\n        val two = async { doWork(\"B\", 1500) }\n        \n        println(\"Results: ${one.await()}, ${two.await()}\")\n    }\n    println(\"Total time: ${time}ms\")  // ~1500ms (parallel)\n}\n\nsuspend fun doWork(name: String, ms: Long): String {\n    delay(ms)\n    return \"$name done\"\n}\n```\n\n---\n\n### Structured Concurrency with async\n\n```kotlin\nfun main() = runBlocking {\n    val result = coroutineScope {\n        val a = async { compute(10) }\n        val b = async { compute(20) }\n        a.await() + b.await()\n    }\n    println(\"Sum: $result\")\n}\n\nsuspend fun compute(value: Int): Int {\n    delay(500)\n    return value * 2\n}\n```\n\n---\n\n### Error Handling\n\n```kotlin\nfun main() = runBlocking {\n    val deferred = async {\n        throw RuntimeException(\"Error!\")\n    }\n    \n    try {\n        deferred.await()\n    } catch (e: Exception) {\n        println(\"Caught: ${e.message}\")\n    }\n}\n```\n\n> **Key Point:** Use `launch` for fire-and-forget tasks. Use `async` when you need to return a value. Start all parallel `async` tasks before calling `await()` for true parallelism.",
+  "codeExample": "import kotlinx.coroutines.*\nimport kotlin.system.measureTimeMillis\n\nsuspend fun fetchFromApi(id: Int): String {\n    delay(1000)\n    return \"Data $id\"\n}\n\nfun main() = runBlocking {\n    val time = measureTimeMillis {\n        val results = listOf(\n            async { fetchFromApi(1) },\n            async { fetchFromApi(2) },\n            async { fetchFromApi(3) }\n        ).map { it.await() }\n        \n        println(results)\n    }\n    println(\"Time: ${time}ms\")  // ~1000ms not 3000ms\n}",
+  "quiz": [
+    {
+      "question": "What does async return?",
+      "options": ["Job", "Deferred<T>", "Unit", "T"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you retrieve the result from async?",
+      "options": ["get()", "result()", "await()", "join()"],
+      "correctIndex": 2
+    }
+  ]
+}

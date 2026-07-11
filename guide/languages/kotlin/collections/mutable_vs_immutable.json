@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Mutable vs Immutable Collections",
+  "language": "kotlin",
+  "topic": "mutable_vs_immutable",
+  "order": 39,
+  "nextTopic": "iterators",
+  "prevTopic": "map",
+  "content": "### Mutable vs Immutable Collections\n\nKotlin makes a clear distinction between read-only (immutable) and mutable collections. This is a key design decision for safety and predictability.\n\n---\n\n### Collection Interfaces\n\n```\nIterable\n  |-- Collection (read-only)\n  |     |-- List\n  |     |-- Set\n  |     |-- Map (separate hierarchy)\n  |\n  |-- MutableIterable\n        |-- MutableCollection (read-write)\n              |-- MutableList\n              |-- MutableSet\n              |-- MutableMap (separate hierarchy)\n```\n\n---\n\n### Read-Only vs Mutable\n\n| Feature | Read-Only (List, Set, Map) | Mutable (MutableList, etc.) |\n|---------|---------------------------|-----------------------------|\n| Add/Remove | Not supported | Supported |\n| Thread safety | Safer (cannot be modified) | Not thread-safe by default |\n| Underlying | May be mutable or immutable | Always mutable |\n\n---\n\n### Creating Collections\n\n```kotlin\n// Immutable references\nval immutableList = listOf(1, 2, 3)\nval immutableSet = setOf(1, 2, 3)\nval immutableMap = mapOf(\"a\" to 1)\n\n// Mutable\nval mutableList = mutableListOf(1, 2, 3)\nval mutableSet = mutableSetOf(1, 2, 3)\nval mutableMap = mutableMapOf(\"a\" to 1)\n```\n\n---\n\n### Converting Between Types\n\n```kotlin\nval mutable = mutableListOf(1, 2, 3)\nval readOnly: List<Int> = mutable  // Upcast (view)\n\nval copy = mutable.toList()  // Deep copy (truly immutable)\nval backToMutable = copy.toMutableList()\n```\n\n---\n\n### Read-Only is Not Necessarily Immutable\n\nA read-only reference does not guarantee the underlying collection is immutable.\n\n```kotlin\nval mutable = mutableListOf(1, 2, 3)\nval readOnly: List<Int> = mutable  // Read-only view\n\nmutable.add(4)  // Modifies underlying list\nprintln(readOnly)  // [1, 2, 3, 4]  // readOnly \"changed\"\n```\n\n---\n\n### Best Practices\n\n| Situation | Recommendation |\n|-----------|---------------|\n| Function parameter | Prefer read-only (`List`, `Set`, `Map`) |\n| Local variable | Use `listOf()` unless modification needed |\n| Class property | Use read-only, expose mutable internally |\n| Return type | Return read-only interface to hide mutability |\n\n```kotlin\nclass Repository {\n    private val _items = mutableListOf<String>()\n    val items: List<String> get() = _items.toList()  // Defensive copy\n}\n```\n\n> **Key Point:** Favor read-only interfaces in public APIs. Use `toList()`, `toSet()`, `toMap()` for defensive copies. Returns read-only views preserve the ability to change the API later.",
+  "codeExample": "fun main() {\n    // Immutable\n    val readOnly = listOf(\"A\", \"B\", \"C\")\n    // readOnly.add(\"D\")  // Error - not available\n    \n    // Mutable\n    val mutable = mutableListOf(\"X\", \"Y\", \"Z\")\n    mutable.add(\"W\")\n    println(\"Mutable: $mutable\")\n    \n    // Read-only view of mutable\n    val view: List<String> = mutable\n    mutable.add(\"V\")\n    println(\"View reflects change: $view\")  // [X, Y, Z, W, V]\n    \n    // Defensive copy\n    val safeCopy = mutable.toList()\n    mutable.add(\"U\")\n    println(\"Copy unchanged: $safeCopy\")\n}",
+  "quiz": [
+    {
+      "question": "Is a read-only collection reference guaranteed to be immutable?",
+      "options": ["Yes", "No, the underlying collection may be mutable", "Only for List", "Only for Set"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you create a defensive copy of a list?",
+      "options": ["list.copy()", "list.toList()", "list.clone()", "list.duplicate()"],
+      "correctIndex": 1
+    }
+  ]
+}

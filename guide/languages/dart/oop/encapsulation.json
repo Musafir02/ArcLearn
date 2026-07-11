@@ -1,0 +1,22 @@
+{
+  "title": "Encapsulation in Dart",
+  "language": "dart",
+  "topic": "encapsulation",
+  "order": 29,
+  "nextTopic": "static",
+  "prevTopic": "mixins",
+  "content": "### Encapsulation\n\nEncapsulation hides internal implementation details and controls access to an object's data. Dart achieves this through privacy and access control.\n\n### Private Members\n\nIn Dart, privacy is library-level, not class-level. Members prefixed with `_` are private to the library (file).\n\n```dart\nclass BankAccount {\n  String _accountNumber; // Private field\n  double _balance;       // Private field\n\n  BankAccount(this._accountNumber, this._balance);\n\n  // Public methods to access private data\n  double getBalance() => _balance;\n\n  void deposit(double amount) {\n    if (amount > 0) {\n      _balance += amount;\n    }\n  }\n\n  bool withdraw(double amount) {\n    if (amount > 0 && amount <= _balance) {\n      _balance -= amount;\n      return true;\n    }\n    return false;\n  }\n}\n```\n\n### Getters and Setters for Control\n\n```dart\nclass Temperature {\n  double _celsius;\n\n  Temperature(this._celsius);\n\n  // Getter\n  double get celsius => _celsius;\n\n  // Setter with validation\n  set celsius(double value) {\n    if (value < -273.15) {\n      throw ArgumentError('Temperature cannot be below absolute zero');\n    }\n    _celsius = value;\n  }\n\n  // Computed getter\n  double get fahrenheit => _celsius * 9 / 5 + 32;\n}\n```\n\n### Public and Private in Practice\n\n```dart\n// person.dart\nclass Person {\n  String _name;    // Private to this file\n  int _age;        // Private to this file\n  final String id; // Public\n\n  Person(this._name, this._age, this.id);\n\n  String get name => _name;\n  int get age => _age;\n\n  set name(String value) {\n    if (value.isNotEmpty) _name = value;\n  }\n}\n```\n\n### Benefits of Encapsulation\n\n| Benefit | Description |\n|---------|-------------|\n| Data hiding | Internal state is protected |\n| Validation | Control what values can be set |\n| Flexibility | Change internals without affecting users |\n| Maintainability | Clear API boundary |\n\n### Library Visibility\n\n```dart\n// library.dart\nlibrary my_library;\n\n// Public: accessible everywhere\nint publicVar = 10;\n\n// Private: accessible only within this library\nint _privateVar = 20;\n```\n\n> **Key Point:** Dart's `_` prefix makes members library-private, not class-private. The privacy applies at the file level. Use getters and setters to control access to private fields.",
+  "codeExample": "class User {\n  String _username;\n  String _email;\n  bool _isActive;\n\n  User(this._username, this._email, this._isActive);\n\n  String get username => _username;\n  String get email => _email;\n  bool get isActive => _isActive;\n\n  set email(String value) {\n    if (value.contains('@')) {\n      _email = value;\n    } else {\n      throw ArgumentError('Invalid email');\n    }\n  }\n\n  void deactivate() {\n    _isActive = false;\n  }\n\n  void activate() {\n    _isActive = true;\n  }\n}\n\nvoid main() {\n  var user = User('alice', 'alice@example.com', true);\n  print(user.username);\n  user.deactivate();\n  print('Active: ${user.isActive}');\n}",
+  "quiz": [
+    {
+      "question": "What prefix makes a member private in Dart?",
+      "options": ["_", "private", "#", "-"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What level does Dart privacy operate at?",
+      "options": ["Class-level", "Library-level", "Global-level", "Package-level"],
+      "correctIndex": 1
+    }
+  ]
+}

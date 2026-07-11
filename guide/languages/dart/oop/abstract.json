@@ -1,0 +1,22 @@
+{
+  "title": "Abstract Classes in Dart",
+  "language": "dart",
+  "topic": "abstract",
+  "order": 26,
+  "nextTopic": "interfaces",
+  "prevTopic": "overriding",
+  "content": "### Abstract Classes\n\nAbstract classes cannot be instantiated directly. They define a common interface and may have abstract methods (without implementation).\n\n```dart\nabstract class Animal {\n  void makeSound(); // Abstract method (no body)\n\n  void eat() {\n    print('Animal is eating'); // Concrete method\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof!');\n  }\n}\n\nvoid main() {\n  var dog = Dog();\n  dog.makeSound(); // Woof!\n  dog.eat();       // Animal is eating\n\n  // var animal = Animal(); // ERROR: Cannot instantiate abstract class\n}\n```\n\n### Abstract Methods\n\nAbstract methods are declared without a body. They must be implemented by non-abstract subclasses.\n\n```dart\nabstract class Shape {\n  double area();      // Abstract\n  double perimeter(); // Abstract\n\n  String describe() => 'Shape with area: ${area()}'; // Concrete\n}\n\nclass Circle extends Shape {\n  double radius;\n\n  Circle(this.radius);\n\n  @override\n  double area() => 3.14159 * radius * radius;\n\n  @override\n  double perimeter() => 2 * 3.14159 * radius;\n}\n```\n\n### Abstract Classes with Fields\n\n```dart\nabstract class Database {\n  String host;\n\n  Database(this.host);\n\n  void connect();\n  void disconnect();\n  Future<List<Map<String, dynamic>>> query(String sql);\n}\n\nclass PostgresDatabase extends Database {\n  PostgresDatabase(String host) : super(host);\n\n  @override\n  void connect() => print('Connected to Postgres at $host');\n\n  @override\n  void disconnect() => print('Disconnected');\n\n  @override\n  Future<List<Map<String, dynamic>>> query(String sql) async {\n    print('Executing: $sql');\n    return [];\n  }\n}\n```\n\n### Abstract vs Concrete\n\n| Feature | Abstract Class | Concrete Class |\n|---------|---------------|----------------|\n| Instantiation | Cannot instantiate | Can instantiate |\n| Abstract methods | Can have them | Cannot have them |\n| Constructors | Can have constructors | Can have constructors |\n| Fields | Can have fields | Can have fields |\n\n> **Key Point:** Use abstract classes to define contracts with shared implementation. Abstract methods force subclasses to provide specific behavior while allowing shared concrete methods.",
+  "codeExample": "abstract class PaymentProcessor {\n  void authorize(double amount);\n  void capture(double amount);\n  void refund(double amount);\n\n  void processPayment(double amount) {\n    authorize(amount);\n    capture(amount);\n    print('Payment of \\$${amount} processed');\n  }\n}\n\nclass StripeProcessor extends PaymentProcessor {\n  @override\n  void authorize(double amount) => print('Stripe: Authorized \\$$amount');\n\n  @override\n  void capture(double amount) => print('Stripe: Captured \\$$amount');\n\n  @override\n  void refund(double amount) => print('Stripe: Refunded \\$$amount');\n}\n\nvoid main() {\n  var processor = StripeProcessor();\n  processor.processPayment(100.0);\n  processor.refund(25.0);\n}",
+  "quiz": [
+    {
+      "question": "Can you create an instance of an abstract class?",
+      "options": ["Yes", "No", "Only if it has no abstract methods", "Only with factory constructor"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you declare an abstract method?",
+      "options": ["method();", "abstract method();", "method() => throw;", "method() { }"],
+      "correctIndex": 0
+    }
+  ]
+}

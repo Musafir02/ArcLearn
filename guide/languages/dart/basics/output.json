@@ -1,0 +1,22 @@
+{
+  "title": "Output in Dart",
+  "language": "dart",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Printing to Console\n\nThe `print()` function outputs text to the console. It automatically adds a newline at the end.\n\n```dart\nvoid main() {\n  print('Hello, World!');\n  print('Welcome to Dart');\n}\n```\n\n### String Interpolation\n\nDart supports string interpolation using `$variable` or `${expression}`.\n\n```dart\nvoid main() {\n  String name = 'Dart';\n  int version = 3;\n  print('Language: $name');\n  print('Version: ${version}.x');\n  print('Sum: ${2 + 3}');\n}\n```\n\n### stdout and stderr\n\nFor more control over output, use the `dart:io` library:\n\n```dart\nimport 'dart:io';\n\nvoid main() {\n  stdout.write('Enter your name: ');\n  stdout.writeln('Hello');\n  stderr.writeln('This is an error message');\n}\n```\n\n| Method | Description |\n|--------|-------------|\n| `print()` | Prints with newline |\n| `stdout.write()` | Prints without newline |\n| `stdout.writeln()` | Prints with newline using stdout |\n| `stderr.writeln()` | Prints to standard error |\n\n> **Key Point:** Use string interpolation `${expression}` for complex expressions, and `$variable` for simple variable references.",
+  "codeExample": "void main() {\n  String language = 'Dart';\n  int year = 2011;\n  print('$language was created in $year.');\n  print('${language.toUpperCase()} is awesome!');\n}",
+  "quiz": [
+    {
+      "question": "Which function prints text to the console in Dart?",
+      "options": ["echo()", "print()", "write()", "log()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you embed a variable value in a string?",
+      "options": ["#variable", "%variable%", "$variable", "{variable}"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin When Expression",
+  "language": "kotlin",
+  "topic": "when_expression",
+  "order": 14,
+  "nextTopic": "ranges",
+  "prevTopic": "null_safety",
+  "content": "### When Expression in Kotlin\n\nThe `when` expression is Kotlin's replacement for the traditional `switch` statement. It is more powerful and flexible.\n\n---\n\n### Basic When Usage\n\n```kotlin\nval day = 3\nval dayName = when (day) {\n    1 -> \"Monday\"\n    2 -> \"Tuesday\"\n    3 -> \"Wednesday\"\n    4 -> \"Thursday\"\n    5 -> \"Friday\"\n    6 -> \"Saturday\"\n    7 -> \"Sunday\"\n    else -> \"Invalid day\"\n}\nprintln(dayName)  // Wednesday\n```\n\n---\n\n### When with Multiple Conditions\n\n```kotlin\nval grade = 'B'\nwhen (grade) {\n    'A', 'B' -> println(\"Good job!\")\n    'C', 'D' -> println(\"Needs improvement\")\n    'F' -> println(\"Failed\")\n    else -> println(\"Invalid grade\")\n}\n```\n\n---\n\n### When with Ranges\n\n```kotlin\nval score = 85\nval result = when (score) {\n    in 90..100 -> \"Excellent\"\n    in 80..89 -> \"Good\"\n    in 70..79 -> \"Average\"\n    in 0..69 -> \"Needs improvement\"\n    else -> \"Invalid score\"\n}\nprintln(result)  // Good\n```\n\n---\n\n### When without Argument (Boolean Conditions)\n\n```kotlin\nval x = 10\nval y = 20\nwhen {\n    x > y -> println(\"x is greater\")\n    x < y -> println(\"x is smaller\")\n    else -> println(\"x equals y\")\n}\n```\n\n---\n\n### When with Type Checks\n\n```kotlin\nfun describe(obj: Any): String = when (obj) {\n    is Int -> \"Integer: $obj\"\n    is String -> \"String of length ${obj.length}\"\n    is Boolean -> \"Boolean: $obj\"\n    is IntArray -> \"IntArray of size ${obj.size}\"\n    else -> \"Unknown type\"\n}\n```\n\n---\n\n### When as Expression vs Statement\n\nWhen used as an expression, the `else` branch is required unless the compiler can prove all cases are covered.\n\n```kotlin\nval value: Any = \"Hello\"\nval description = when (value) {\n    is Int -> \"Number\"\n    is String -> \"Text\"\n    else -> \"Other\"  // Required for exhaustive match\n}\n```\n\n> **Key Point:** `when` is an expression that returns a value. Enum and sealed class branches do not need an `else` if all possibilities are covered.",
+  "codeExample": "fun main() {\n    val number = 7\n    \n    val type = when {\n        number % 2 == 0 -> \"even\"\n        number % 2 == 1 -> \"odd\"\n        else -> \"unknown\"\n    }\n    println(\"$number is $type\")\n    \n    val category = when (number) {\n        in 1..10 -> \"small\"\n        in 11..100 -> \"medium\"\n        else -> \"large\"\n    }\n    println(\"Category: $category\")\n    \n    fun describe(obj: Any) = when (obj) {\n        is Int -> \"Int: $obj\"\n        is String -> \"String: $obj\"\n        else -> \"Other\"\n    }\n    println(describe(42))\n    println(describe(\"Kotlin\"))\n}",
+  "quiz": [
+    {
+      "question": "What does Kotlin use instead of switch?",
+      "options": ["case", "switch", "when", "match"],
+      "correctIndex": 2
+    },
+    {
+      "question": "When is the else branch required in a when expression?",
+      "options": ["Always", "When not all cases are covered", "Never", "Only with String types"],
+      "correctIndex": 1
+    }
+  ]
+}

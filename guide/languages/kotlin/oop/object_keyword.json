@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Object Keyword",
+  "language": "kotlin",
+  "topic": "object_keyword",
+  "order": 33,
+  "nextTopic": "companion_object",
+  "prevTopic": "sealed_classes",
+  "content": "### Object Keyword in Kotlin\n\nThe `object` keyword is used to declare a singleton class or an anonymous class instance.\n\n---\n\n### Object Declaration (Singleton)\n\nObject declarations create a singleton -- a class with exactly one instance.\n\n```kotlin\nobject AppConfig {\n    val appName = \"MyApp\"\n    val version = \"1.0\"\n    \n    fun printConfig() {\n        println(\"$appName v$version\")\n    }\n}\n\nfun main() {\n    println(AppConfig.appName)  // MyApp\n    AppConfig.printConfig()     // MyApp v1.0\n}\n```\n\n---\n\n### Object Expressions (Anonymous Classes)\n\nObject expressions create anonymous instances of classes or interfaces.\n\n```kotlin\ninterface ClickListener {\n    fun onClick()\n}\n\nval listener = object : ClickListener {\n    override fun onClick() {\n        println(\"Clicked!\")\n    }\n}\n\nfun main() {\n    listener.onClick()  // Clicked!\n}\n```\n\n---\n\n### Anonymous Objects Extending Classes\n\n```kotlin\nopen class Vehicle(val name: String) {\n    open fun start() = println(\"$name started\")\n}\n\nfun main() {\n    val car = object : Vehicle(\"Tesla\") {\n        override fun start() {\n            println(\"$name silently started\")\n        }\n    }\n    car.start()  // Tesla silently started\n}\n```\n\n---\n\n### Object as Return Type\n\n```kotlin\nfun createComparator(): Comparator<String> {\n    return object : Comparator<String> {\n        override fun compare(a: String, b: String): Int {\n            return a.length - b.length\n        }\n    }\n}\n```\n\n---\n\n### Using Object with Type Inference\n\n```kotlin\nval adHoc = object {\n    var x: Int = 0\n    var y: Int = 0\n}\n\n// Only accessible within the local scope\nfun main() {\n    adHoc.x = 10\n    adHoc.y = 20\n    println(\"${adHoc.x}, ${adHoc.y}\")\n}\n```\n\n---\n\n### Object vs Companion Object\n\n| Object Declaration | Companion Object |\n|-------------------|------------------|\n| Top-level or nested | Inside a class |\n| Singleton instance | Associated with the class |\n| No relation to a class | Can be accessed via class name |\n\n> **Key Point:** Object declarations are thread-safe singletons created lazily when first accessed. Object expressions create anonymous instances on the fly.",
+  "codeExample": "object Counter {\n    private var count = 0\n    \n    fun increment() = count++\n    fun current() = count\n    fun reset() { count = 0 }\n}\n\nfun main() {\n    println(Counter.current())  // 0\n    Counter.increment()\n    Counter.increment()\n    println(Counter.current())  // 2\n    \n    // Object expression\n    val runnable = object : Runnable {\n        override fun run() {\n            println(\"Running in anonymous object\")\n        }\n    }\n    runnable.run()\n}",
+  "quiz": [
+    {
+      "question": "What does an object declaration create?",
+      "options": ["A new instance each time", "A singleton instance", "An abstract class", "An interface"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When is the singleton instance of an object declaration created?",
+      "options": ["At application start", "Lazily on first access", "At compile time", "When explicitly instantiated"],
+      "correctIndex": 1
+    }
+  ]
+}
