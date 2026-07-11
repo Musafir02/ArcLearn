@@ -1,0 +1,32 @@
+{
+  "title": "SQL Constraints",
+  "language": "sql",
+  "topic": "constraints",
+  "order": 53,
+  "nextTopic": "primary_key",
+  "prevTopic": "functions_udf",
+  "content": "### SQL Constraints\n\nConstraints enforce rules on the data in tables. They ensure data integrity and accuracy at the database level.\n\n---\n\n### Types of Constraints\n\n| Constraint | Description |\n|------------|-------------|\n| NOT NULL | Ensures column cannot have NULL values |\n| UNIQUE | Ensures all values in a column are different |\n| PRIMARY KEY | Uniquely identifies each row (NOT NULL + UNIQUE) |\n| FOREIGN KEY | Ensures referential integrity between tables |\n| CHECK | Ensures values meet a specific condition |\n| DEFAULT | Sets a default value for a column |\n\n### Constraint Syntax\n\n```sql\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    email VARCHAR(255) UNIQUE,\n    department_id INT,\n    salary DECIMAL(10,2) CHECK (salary > 0),\n    status VARCHAR(20) DEFAULT 'active',\n    FOREIGN KEY (department_id) REFERENCES departments(id)\n);\n```\n\n### Adding Constraints to Existing Tables\n\n```sql\nALTER TABLE employees\nADD CONSTRAINT chk_salary CHECK (salary >= 0);\n\nALTER TABLE employees\nADD CONSTRAINT fk_dept\nFOREIGN KEY (department_id) REFERENCES departments(id);\n```\n\n### Dropping Constraints\n\n```sql\nALTER TABLE employees DROP CONSTRAINT chk_salary;\nALTER TABLE employees DROP CONSTRAINT fk_dept;\n```\n\n### Constraint Naming\n\nAlways give meaningful names to constraints for easier management:\n\n```sql\nCREATE TABLE products (\n    id INT,\n    price DECIMAL(10,2),\n    CONSTRAINT pk_products PRIMARY KEY (id),\n    CONSTRAINT chk_price_positive CHECK (price > 0)\n);\n```\n\n> **Key Point:** Constraints are the database's first line of defense against invalid data. Enforce rules at the database level, not just in application code.",
+  "codeExample": "CREATE TABLE users (\n    user_id INT PRIMARY KEY,\n    username VARCHAR(50) UNIQUE NOT NULL,\n    email VARCHAR(255) NOT NULL,\n    age INT CHECK (age >= 18),\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);",
+  "quiz": [
+    {
+      "question": "Which constraint ensures all values in a column are unique?",
+      "options": [
+        "PRIMARY KEY",
+        "UNIQUE",
+        "FOREIGN KEY",
+        "CHECK"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which constraint prevents NULL values?",
+      "options": [
+        "NOT NULL",
+        "UNIQUE",
+        "DEFAULT",
+        "CHECK"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

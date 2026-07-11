@@ -1,0 +1,32 @@
+{
+  "title": "SQL Syntax",
+  "language": "sql",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "select",
+  "prevTopic": "getstarted",
+  "content": "### SQL Syntax\n\nSQL syntax defines the rules for writing valid SQL statements. Every SQL statement follows a specific structure depending on what you want to accomplish.\n\n---\n\n### Statement Structure\n\nSQL statements typically begin with a keyword (SELECT, INSERT, UPDATE, DELETE) followed by clauses that modify the operation.\n\n| Clause | Purpose | Example |\n|--------|---------|---------|\n| SELECT | Specify columns | SELECT name, age |\n| FROM | Specify the table | FROM employees |\n| WHERE | Filter rows | WHERE age > 25 |\n| ORDER BY | Sort results | ORDER BY name ASC |\n\n### Case Sensitivity\n\nSQL keywords are case-insensitive (SELECT = select), but by convention they are written in UPPERCASE for readability. String comparisons may be case-insensitive depending on the database collation settings.\n\n### Statements vs Clauses\n\nA SQL **statement** is a complete command ending with a semicolon. A **clause** is a component within a statement.\n\n```sql\nSELECT name, salary    -- SELECT clause\nFROM employees         -- FROM clause\nWHERE salary > 50000   -- WHERE clause\nORDER BY salary DESC;  -- ORDER BY clause\n```\n\n> **Key Point:** Every SQL statement ends with a semicolon (;). Some databases may allow omitting it, but always include it for portability.",
+  "codeExample": "SELECT first_name, last_name\nFROM customers\nWHERE city = 'New York'\nORDER BY last_name;",
+  "quiz": [
+    {
+      "question": "What character ends a SQL statement?",
+      "options": [
+        "Period (.)",
+        "Semicolon (;)",
+        "Colon (:)",
+        "Comma (;)"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which clause is used to filter rows in a SQL query?",
+      "options": [
+        "SELECT",
+        "FROM",
+        "WHERE",
+        "ORDER BY"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

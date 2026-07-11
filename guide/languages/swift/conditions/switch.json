@@ -1,0 +1,22 @@
+{
+  "title": "Swift Switch",
+  "language": "swift",
+  "topic": "switch",
+  "order": 21,
+  "nextTopic": "ternary",
+  "prevTopic": "if_else",
+  "content": "### Swift Switch\n\nThe `switch` statement in Swift is powerful and flexible. Unlike C-based languages, Swift's `switch` does not implicitly fall through, and cases must be exhaustive.\n\n**Basic Switch:**\n\n```swift\nlet grade = \"A\"\n\nswitch grade {\ncase \"A\":\n    print(\"Excellent!\")\ncase \"B\":\n    print(\"Good\")\ncase \"C\":\n    print(\"Average\")\ncase \"D\", \"F\":\n    print(\"Needs improvement\")\ndefault:\n    print(\"Invalid grade\")\n}\n```\n\n**Switch Features:**\n\n| Feature | Example |\n|---------|---------|\n| No implicit fallthrough | Each case is separate |\n| Range matching | `case 0..<10:` |\n| Tuple matching | `case (0, 0):` |\n| Value binding | `case let (x, y):` |\n| Where clauses | `case let x where x > 10:` |\n| Compound cases | `case \"A\", \"B\":` |\n\n```swift\n// Range matching\nlet score = 85\nswitch score {\ncase 0..<60: print(\"Fail\")\ncase 60..<80: print(\"Pass\")\ncase 80..<100: print(\"Merit\")\ncase 100: print(\"Perfect!\")\ndefault: print(\"Invalid\")\n}\n\n// Tuple matching with where\nlet point = (1, 1)\nswitch point {\ncase (0, 0): print(\"Origin\")\ncase (let x, 0): print(\"On x-axis at \\(x)\")\ncase (0, let y): print(\"On y-axis at \\(y)\")\ncase let (x, y) where x == y: print(\"On diagonal at \\(x), \\(y)\")\ncase let (x, y): print(\"At (\\(x), \\(y))\")\n}\n```\n\n> **Key Point:** Every `switch` statement must be exhaustive. If you cannot cover all cases, add a `default` case.\n\nUse `fallthrough` explicitly if you need C-style fallthrough behavior.",
+  "codeExample": "import Foundation\n\nlet statusCode = 404\n\nswitch statusCode {\ncase 200...299:\n    print(\"Success\")\ncase 300...399:\n    print(\"Redirection\")\ncase 400...499:\n    print(\"Client error\")\ncase 500...599:\n    print(\"Server error\")\ndefault:\n    print(\"Unknown status code\")\n}\n\n// Compound cases\nlet character: Character = \"e\"\nswitch character.lowercased() {\ncase \"a\", \"e\", \"i\", \"o\", \"u\":\n    print(\"\\(character) is a vowel\")\ncase \"b\", \"c\", \"d\", \"f\", \"g\", \"h\", \"j\", \"k\", \"l\", \"m\", \"n\", \"p\", \"q\", \"r\", \"s\", \"t\", \"v\", \"w\", \"x\", \"y\", \"z\":\n    print(\"\\(character) is a consonant\")\ndefault:\n    print(\"\\(character) is not a letter\")\n}",
+  "quiz": [
+    {
+      "question": "Does Swift switch implicitly fall through to the next case?",
+      "options": ["Yes, like C", "No, never", "Only if there is no body", "Only for integers"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Must Swift switch statements be exhaustive?",
+      "options": ["Yes", "No", "Only for enums", "Only if using default"],
+      "correctIndex": 0
+    }
+  ]
+}

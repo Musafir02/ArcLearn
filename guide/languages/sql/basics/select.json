@@ -1,0 +1,32 @@
+{
+  "title": "SELECT Statement",
+  "language": "sql",
+  "topic": "select",
+  "order": 4,
+  "nextTopic": "distinct",
+  "prevTopic": "syntax",
+  "content": "### SELECT Statement\n\nThe SELECT statement is the most commonly used SQL command. It retrieves data from one or more tables.\n\n---\n\n### Basic SELECT Syntax\n\n```sql\n-- Select all columns\nSELECT * FROM employees;\n\n-- Select specific columns\nSELECT name, salary FROM employees;\n\n-- Select with expressions\nSELECT name, salary * 1.1 AS increased_salary FROM employees;\n```\n\n### SELECT * vs Specific Columns\n\nUsing `SELECT *` returns all columns from the table. It is convenient for quick exploration but should be avoided in production code because it may return unnecessary data and break when the table schema changes.\n\n| Approach | When to Use |\n|----------|------------|\n| SELECT * | Quick exploration, ad-hoc queries |\n| Specific columns | Production code, application queries |\n\n### Column Aliases\n\nUse the AS keyword to give a column a temporary name:\n\n```sql\nSELECT name AS employee_name, salary AS annual_salary\nFROM employees;\n```\n\n> **Key Point:** SELECT does not modify the data in the database. It only retrieves it.",
+  "codeExample": "SELECT first_name, last_name, email\nFROM employees\nWHERE active = 1;",
+  "quiz": [
+    {
+      "question": "What does SELECT * FROM employees do?",
+      "options": [
+        "Deletes all employees",
+        "Returns all columns and all rows from the employees table",
+        "Returns only the first employee",
+        "Creates a new employees table"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword is used to give a column a temporary name in the result set?",
+      "options": [
+        "AS",
+        "LIKE",
+        "IN",
+        "IS"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

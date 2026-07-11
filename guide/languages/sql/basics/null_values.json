@@ -1,0 +1,32 @@
+{
+  "title": "NULL Values",
+  "language": "sql",
+  "topic": "null_values",
+  "order": 10,
+  "nextTopic": "aliases",
+  "prevTopic": "not",
+  "content": "### NULL Values\n\nNULL represents a missing or unknown value. It is different from zero, an empty string, or a space. NULL means no data was provided.\n\n---\n\n### Checking for NULL\n\nYou cannot use = or != with NULL. Instead, use IS NULL or IS NOT NULL:\n\n```sql\n-- Find rows with a NULL value\nSELECT * FROM employees WHERE salary IS NULL;\n\n-- Find rows with a non-NULL value\nSELECT * FROM employees WHERE salary IS NOT NULL;\n```\n\n### NULL in Expressions\n\nAny arithmetic operation involving NULL yields NULL:\n\n```sql\nSELECT 10 + NULL;  -- Result: NULL\nSELECT 'Hello' || NULL;  -- Result: NULL (in most databases)\n```\n\n### NULL in WHERE Conditions\n\nRows with NULL values are excluded from inequality comparisons:\n\n```sql\n-- This does NOT return rows where salary IS NULL\nSELECT * FROM employees WHERE salary > 50000;\n\n-- NULL is neither greater than, less than, nor equal to 50000\n```\n\n### NULL in Sorting\n\nWith ORDER BY, NULL values sort together. Default behavior varies by database:\n\n| Database | ASC NULL Order | DESC NULL Order |\n|----------|---------------|----------------|\n| MySQL | NULLs first | NULLs last |\n| PostgreSQL | NULLs last | NULLs first |\n| SQL Server | NULLs first | NULLs first |\n\n> **Key Point:** NULL is not a value — it is the absence of a value. Always use IS NULL or IS NOT NULL to check for NULL.",
+  "codeExample": "SELECT name, COALESCE(salary, 0) AS salary_or_zero\nFROM employees;",
+  "quiz": [
+    {
+      "question": "How do you check for NULL values in SQL?",
+      "options": [
+        "WHERE column = NULL",
+        "WHERE column IS NULL",
+        "WHERE column == NULL",
+        "WHERE column <> NULL"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the result of 100 + NULL?",
+      "options": [
+        "100",
+        "NULL",
+        "0",
+        "An error"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

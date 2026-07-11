@@ -1,0 +1,32 @@
+{
+  "title": "Database Design",
+  "language": "sql",
+  "topic": "database_design",
+  "order": 65,
+  "nextTopic": "normalization",
+  "prevTopic": "delete",
+  "content": "### Database Design\n\nDatabase design is the process of structuring data to efficiently store, retrieve, and manage information while minimizing redundancy.\n\n---\n\n### Design Process\n\n1. **Requirements Analysis** — Understand what data needs to be stored and how it will be used\n2. **Conceptual Design** — Create an Entity-Relationship (ER) model\n3. **Logical Design** — Map the ER model to tables, columns, and relationships\n4. **Physical Design** — Choose data types, indexes, storage parameters\n5. **Normalization** — Apply normalization rules to reduce redundancy\n\n### Key Principles\n\n| Principle | Description |\n|-----------|-------------|\n| Atomicity | Each column holds indivisible values |\n| Consistency | Data is accurate and follows rules |\n| No redundancy | Avoid storing the same data in multiple places |\n| Integrity | Relationships between tables are maintained |\n| Scalability | Design supports future growth |\n\n### Entity-Relationship (ER) Basics\n\n- **Entity**: A real-world object (e.g., Customer, Product)\n- **Attribute**: A property of an entity (e.g., name, price)\n- **Relationship**: How entities relate (e.g., Customer places Order)\n- **Cardinality**: How many instances relate (1:1, 1:M, M:M)\n\n### Common Design Mistakes\n\n- Storing calculated data (can be derived from other columns)\n- Using comma-separated lists in a single column (violates atomicity)\n- Not using foreign keys (loses referential integrity)\n- Poor naming conventions (inconsistent, unclear names)\n- Ignoring future growth (not planning for scale)\n\n> **Key Point:** Good database design starts with understanding the data and its relationships. Invest time in design upfront to avoid costly migrations later.",
+  "codeExample": "-- A well-designed schema for an e-commerce system\nCREATE TABLE customers (\n    customer_id INT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    email VARCHAR(255) UNIQUE NOT NULL\n);\n\nCREATE TABLE orders (\n    order_id INT PRIMARY KEY,\n    customer_id INT NOT NULL,\n    order_date DATE NOT NULL,\n    total DECIMAL(12,2),\n    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)\n);\n\nCREATE TABLE order_items (\n    order_id INT,\n    product_id INT,\n    quantity INT NOT NULL,\n    PRIMARY KEY (order_id, product_id),\n    FOREIGN KEY (order_id) REFERENCES orders(order_id)\n);",
+  "quiz": [
+    {
+      "question": "What is the first step in database design?",
+      "options": [
+        "Creating indexes",
+        "Normalization",
+        "Requirements analysis",
+        "Writing SQL queries"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why should you avoid storing comma-separated lists in a single column?",
+      "options": [
+        "It takes more storage",
+        "It violates atomicity and makes queries difficult",
+        "It is not allowed by SQL",
+        "It is slower to write"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "INSERT Statement",
+  "language": "sql",
+  "topic": "insert",
+  "order": 62,
+  "nextTopic": "update",
+  "prevTopic": "drop_truncate",
+  "content": "### INSERT Statement\n\nINSERT adds new rows of data to a table. It is one of the four fundamental DML operations (INSERT, SELECT, UPDATE, DELETE).\n\n---\n\n### Basic INSERT Syntax\n\n```sql\nINSERT INTO employees (id, name, department, salary)\nVALUES (1, 'Alice', 'Engineering', 75000);\n```\n\n### INSERT Multiple Rows\n\n```sql\nINSERT INTO employees (name, department, salary)\nVALUES\n    ('Bob', 'Sales', 65000),\n    ('Charlie', 'Marketing', 70000),\n    ('Diana', 'Engineering', 80000);\n```\n\n### INSERT with Default Values\n\n```sql\nINSERT INTO employees (id, name)\nVALUES (5, 'Eve');\n-- Other columns use their DEFAULT values or NULL\n```\n\n### INSERT INTO SELECT\n\n```sql\n-- Copy data from one table to another\nINSERT INTO archived_employees (id, name, salary)\nSELECT id, name, salary\nFROM employees\nWHERE hire_date < '2020-01-01';\n```\n\n### INSERT IGNORE / ON DUPLICATE KEY\n\n```sql\n-- MySQL: Skip if duplicate key\nINSERT IGNORE INTO users (email, name)\nVALUES ('alice@example.com', 'Alice');\n\n-- MySQL: Update if duplicate key\nINSERT INTO users (id, name)\nVALUES (1, 'Alice Updated')\nON DUPLICATE KEY UPDATE name = VALUES(name);\n\n-- PostgreSQL: Upsert\nINSERT INTO users (id, name)\nVALUES (1, 'Alice')\nON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name;\n```\n\n> **Key Point:** Always list the columns explicitly in INSERT statements for clarity and to prevent errors when table schemas change.",
+  "codeExample": "INSERT INTO products (name, sku, price, category)\nVALUES\n    ('Wireless Mouse', 'WM-001', 29.99, 'Electronics'),\n    ('USB-C Hub', 'USB-001', 49.99, 'Electronics');",
+  "quiz": [
+    {
+      "question": "Can INSERT add multiple rows in a single statement?",
+      "options": [
+        "No, one row at a time",
+        "Yes, by providing multiple value tuples",
+        "Only in MySQL",
+        "Only with INSERT INTO SELECT"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does INSERT INTO SELECT do?",
+      "options": [
+        "Inserts a new table",
+        "Inserts rows from a query result into an existing table",
+        "Creates a new table from a query",
+        "Inserts a new column"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

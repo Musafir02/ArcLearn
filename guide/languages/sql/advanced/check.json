@@ -1,0 +1,32 @@
+{
+  "title": "CHECK Constraint",
+  "language": "sql",
+  "topic": "check",
+  "order": 57,
+  "nextTopic": "default",
+  "prevTopic": "unique",
+  "content": "### CHECK Constraint\n\nThe CHECK constraint restricts the values that can be placed in a column. It enforces domain integrity by validating data against a boolean expression.\n\n---\n\n### CHECK Syntax\n\n```sql\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100),\n    salary DECIMAL(10,2),\n    age INT,\n    CONSTRAINT chk_salary_positive CHECK (salary > 0),\n    CONSTRAINT chk_age_range CHECK (age >= 18 AND age <= 100)\n);\n\n-- Inline definition\nCREATE TABLE products (\n    id INT PRIMARY KEY,\n    price DECIMAL(10,2) CHECK (price > 0),\n    quantity INT CHECK (quantity >= 0)\n);\n```\n\n### CHECK Examples\n\n```sql\nCREATE TABLE accounts (\n    id INT PRIMARY KEY,\n    account_type VARCHAR(20) CHECK (account_type IN ('Checking', 'Savings', 'Credit')),\n    balance DECIMAL(12,2) CHECK (balance >= -1000),\n    status VARCHAR(10) CHECK (status IN ('active', 'closed', 'frozen'))\n);\n```\n\n### Adding CHECK to Existing Table\n\n```sql\nALTER TABLE employees\nADD CONSTRAINT chk_salary CHECK (salary > 0 AND salary <= 1000000);\n```\n\n### Dropping CHECK\n\n```sql\nALTER TABLE employees DROP CONSTRAINT chk_salary;\n```\n\n### Multi-Column CHECK\n\n```sql\nCREATE TABLE orders (\n    id INT PRIMARY KEY,\n    order_date DATE,\n    shipped_date DATE,\n    CONSTRAINT chk_dates CHECK (shipped_date >= order_date)\n);\n```\n\n### CHECK Validation Timing\n\n| Database | CHECK enforced |\n|----------|---------------|\n| MySQL | Enforces after MySQL 8.0.16, ignored before |\n| PostgreSQL | Always enforced |\n| SQL Server | Always enforced |\n| SQLite | Enforced (not deferred by default) |\n\n> **Key Point:** CHECK constraints are the most flexible constraint type, capable of validating complex business rules involving multiple columns and expressions.",
+  "codeExample": "CREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100),\n    salary DECIMAL(10,2) CHECK (salary >= 0),\n    hire_date DATE CHECK (hire_date <= CURRENT_DATE)\n);",
+  "quiz": [
+    {
+      "question": "What does a CHECK constraint do?",
+      "options": [
+        "Ensures unique values",
+        "Validates values against a boolean expression",
+        "Links tables together",
+        "Sets a default value"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a CHECK constraint reference multiple columns?",
+      "options": [
+        "No, only one column",
+        "Yes, it can reference multiple columns",
+        "Only in PostgreSQL",
+        "Only with a function"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

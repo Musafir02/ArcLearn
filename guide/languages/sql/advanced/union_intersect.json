@@ -1,0 +1,32 @@
+{
+  "title": "UNION and INTERSECT",
+  "language": "sql",
+  "topic": "union_intersect",
+  "order": 36,
+  "nextTopic": "subqueries",
+  "prevTopic": "having",
+  "content": "### UNION and INTERSECT\n\nSet operators combine results from multiple SELECT queries into a single result set.\n\n---\n\n### UNION\n\nUNION combines results from two or more SELECT statements, removing duplicate rows:\n\n```sql\nSELECT name, email FROM customers\nUNION\nSELECT name, email FROM employees;\n```\n\n### UNION ALL\n\nUNION ALL combines results without removing duplicates. It is faster than UNION:\n\n```sql\nSELECT city FROM shipping_addresses\nUNION ALL\nSELECT city FROM billing_addresses;\n-- May include duplicate cities\n```\n\n| Operator | Duplicates | Performance |\n|----------|-----------|-------------|\n| UNION | Removed | Slower (needs sorting) |\n| UNION ALL | Kept | Faster |\n\n### INTERSECT\n\nINTERSECT returns only rows that appear in ALL result sets:\n\n```sql\n-- Names that appear in both tables\nSELECT name FROM employees\nINTERSECT\nSELECT name FROM customers;\n```\n\n### EXCEPT / MINUS\n\nEXCEPT returns rows from the first query that do NOT appear in the second:\n\n```sql\n-- Customers who have never placed an order\nSELECT id FROM customers\nEXCEPT\nSELECT customer_id FROM orders;\n```\n\n### Rules for Set Operations\n\n| Rule | Description |\n|------|-------------|\n| Same number of columns | All SELECT statements must have the same column count |\n| Compatible data types | Corresponding columns must have compatible data types |\n| ORDER BY at end | Only one ORDER BY at the very end of the combined query |\n| Column names | Result uses column names from the first SELECT |\n\n```sql\nSELECT name, salary FROM employees\nWHERE department = 'Engineering'\nUNION\nSELECT name, salary FROM contractors\nWHERE department = 'Engineering'\nORDER BY name;\n```\n\n> **Key Point:** Each SELECT in a set operation must have the same number of columns with compatible data types. ORDER BY applies to the entire combined result.",
+  "codeExample": "SELECT product_name AS item, 'Product' AS type FROM products\nUNION ALL\nSELECT service_name, 'Service' FROM services\nORDER BY item;",
+  "quiz": [
+    {
+      "question": "What is the difference between UNION and UNION ALL?",
+      "options": [
+        "UNION is faster",
+        "UNION removes duplicates, UNION ALL keeps them",
+        "UNION ALL removes duplicates, UNION keeps them",
+        "UNION works with more data types"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many ORDER BY clauses can a UNION query have?",
+      "options": [
+        "One per SELECT",
+        "One at the end of the combined query",
+        "None",
+        "Unlimited"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

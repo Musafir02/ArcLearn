@@ -1,0 +1,32 @@
+{
+  "title": "SQL vs NoSQL Comparison",
+  "language": "sql",
+  "topic": "no_sql_comparison",
+  "order": 71,
+  "nextTopic": "",
+  "prevTopic": "sql_injection_prevention",
+  "content": "### SQL vs NoSQL Comparison\n\nNoSQL databases emerged to handle data models and scalability requirements that traditional SQL databases handle less efficiently.\n\n---\n\n### SQL (Relational) Databases\n\n| Feature | SQL Databases |\n|---------|---------------|\n| Data model | Tables with rows and columns |\n| Schema | Fixed, predefined schema |\n| Relationships | Foreign keys, joins |\n| ACID | Full ACID compliance |\n| Scalability | Vertical (scale up) |\n| Examples | PostgreSQL, MySQL, SQL Server, Oracle |\n\n### NoSQL Database Types\n\n| Type | Description | Examples |\n|------|-------------|----------|\n| Document | JSON-like documents | MongoDB, CouchDB |\n| Key-Value | Simple key-value pairs | Redis, DynamoDB |\n| Column-Family | Wide-column stores | Cassandra, HBase |\n| Graph | Nodes and edges | Neo4j, ArangoDB |\n\n### When to Use SQL\n\n| Scenario | Reason |\n|----------|--------|\n| Structured data with clear relationships | SQL excels at joins and normalization |\n| Transactions (e.g., banking) | ACID compliance ensures data integrity |\n| Complex queries and reporting | SQL is powerful for ad-hoc analysis |\n| Data integrity is critical | Constraints enforce rules at database level |\n\n### When to Use NoSQL\n\n| Scenario | Reason |\n|----------|--------|\n| Rapid prototyping | Schema-less, flexible data model |\n| Large-scale data (Big Data) | Horizontal scaling is easier |\n| Real-time applications | Low latency reads/writes |\n| Unstructured or semi-structured data | Flexible document model |\n| High-velocity data (logs, metrics) | Write-optimized design |\n\n### NewSQL\n\nNewSQL databases aim to combine SQL's ACID guarantees with NoSQL's scalability:\n\n| Database | Description |\n|----------|-------------|\n| CockroachDB | Distributed SQL with horizontal scaling |\n| Google Spanner | Globally distributed relational database |\n| YugabyteDB | High-performance distributed SQL |\n\n> **Key Point:** SQL and NoSQL are complementary technologies. Choose SQL for structured data with relationships and integrity requirements. Choose NoSQL for flexible schemas and horizontal scaling needs.",
+  "codeExample": "-- SQL: structured, relationship-based\nCREATE TABLE orders (\n    id INT PRIMARY KEY,\n    customer_id INT REFERENCES customers(id),\n    total DECIMAL(10,2)\n);\n\n-- NoSQL (MongoDB): flexible document\n-- {\n--   _id: ObjectId(),\n--   customer: { name: \"Alice\", email: \"alice@example.com\" },\n--   items: [{ product: \"Mouse\", price: 29.99 }],\n--   total: 29.99\n-- }",
+  "quiz": [
+    {
+      "question": "Which type of database typically provides full ACID compliance?",
+      "options": [
+        "NoSQL document databases",
+        "SQL relational databases",
+        "Key-value stores",
+        "Graph databases"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When is NoSQL typically preferred over SQL?",
+      "options": [
+        "For complex joins and reporting",
+        "For flexible schemas and horizontal scaling",
+        "For strict data integrity requirements",
+        "For transactional systems"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

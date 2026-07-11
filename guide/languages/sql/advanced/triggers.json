@@ -1,0 +1,32 @@
+{
+  "title": "Triggers",
+  "language": "sql",
+  "topic": "triggers",
+  "order": 50,
+  "nextTopic": "stored_procedures",
+  "prevTopic": "commit_rollback",
+  "content": "### SQL Triggers\n\nA trigger is a stored program that automatically executes (fires) when a specific event occurs on a table, such as INSERT, UPDATE, or DELETE.\n\n---\n\n### Trigger Syntax\n\n```sql\nCREATE TRIGGER trigger_name\n{BEFORE | AFTER} {INSERT | UPDATE | DELETE}\nON table_name\n[FOR EACH ROW]\nBEGIN\n    -- Trigger logic\nEND;\n```\n\n### Trigger Example\n\n```sql\nCREATE TRIGGER before_employee_insert\nBEFORE INSERT ON employees\nFOR EACH ROW\nBEGIN\n    SET NEW.created_at = NOW();\nEND;\n```\n\n### Trigger Types\n\n| Type | Timing |\n|------|--------|\n| BEFORE INSERT | Runs before a new row is inserted |\n| AFTER INSERT | Runs after a new row is inserted |\n| BEFORE UPDATE | Runs before an existing row is updated |\n| AFTER UPDATE | Runs after an existing row is updated |\n| BEFORE DELETE | Runs before a row is deleted |\n| AFTER DELETE | Runs after a row is deleted |\n\n### Audit Log Trigger\n\n```sql\nCREATE TRIGGER audit_salary_changes\nAFTER UPDATE ON employees\nFOR EACH ROW\nBEGIN\n    IF OLD.salary <> NEW.salary THEN\n        INSERT INTO salary_audit (employee_id, old_salary, new_salary, changed_at)\n        VALUES (OLD.id, OLD.salary, NEW.salary, NOW());\n    END IF;\nEND;\n```\n\n### OLD and NEW References\n\n| Keyword | INSERT | UPDATE | DELETE |\n|---------|--------|--------|--------|\n| OLD | N/A | Values before update | Values before delete |\n| NEW | Values being inserted | Values after update | N/A |\n\n### Dropping a Trigger\n\n```sql\nDROP TRIGGER IF EXISTS trigger_name;\n```\n\n> **Key Point:** Triggers run automatically and can be hard to debug. Use them sparingly and document them well. Excessive triggers can impact performance.",
+  "codeExample": "CREATE TRIGGER update_last_modified\nBEFORE UPDATE ON products\nFOR EACH ROW\nSET NEW.last_modified = NOW();",
+  "quiz": [
+    {
+      "question": "What event can cause a trigger to fire?",
+      "options": [
+        "SELECT",
+        "INSERT, UPDATE, DELETE",
+        "CREATE TABLE",
+        "All of the above"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In an UPDATE trigger, what does OLD refer to?",
+      "options": [
+        "The old table structure",
+        "The row values before the update",
+        "The previous trigger",
+        "The old database"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

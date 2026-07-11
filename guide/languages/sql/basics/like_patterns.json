@@ -1,0 +1,32 @@
+{
+  "title": "LIKE Operator & Patterns",
+  "language": "sql",
+  "topic": "like_patterns",
+  "order": 16,
+  "nextTopic": "wildcards",
+  "prevTopic": "in",
+  "content": "### LIKE Operator\n\nThe LIKE operator is used for pattern matching in WHERE clauses. It works with text data to find rows that match a specified pattern.\n\n---\n\n### Basic LIKE Syntax\n\n```sql\n-- Find names starting with 'J'\nSELECT name FROM employees WHERE name LIKE 'J%';\n\n-- Find names ending with 'son'\nSELECT name FROM employees WHERE name LIKE '%son';\n\n-- Find names containing 'ark'\nSELECT name FROM employees WHERE name LIKE '%ark%';\n```\n\n### Pattern Characters\n\n| Wildcard | Description |\n|----------|-------------|\n| % | Matches any sequence of zero or more characters |\n| _ | Matches exactly one character |\n\n### Pattern Examples\n\n| Pattern | Matches |\n|---------|---------|\n| 'A%' | Starts with 'A' |\n| '%a' | Ends with 'a' |\n| '%an%' | Contains 'an' |\n| '_at' | Exactly 3 chars, ends with 'at' |\n| 'J_hn' | 4 chars, starts with 'J', ends with 'hn' |\n| '[ABC]%' | Starts with A, B, or C (SQL Server) |\n\n### NOT LIKE\n\n```sql\n-- Find names that do NOT start with 'A'\nSELECT name FROM employees WHERE name NOT LIKE 'A%';\n```\n\n### Escaping Wildcards\n\nTo search for actual % or _ characters, use an escape character:\n\n```sql\n-- Find products with '100%' in the name\nSELECT * FROM products\nWHERE name LIKE '%100%%' ESCAPE '%';\n```\n\n> **Key Point:** LIKE is case-insensitive in MySQL and SQL Server by default, but case-sensitive in PostgreSQL (unless using ILIKE).",
+  "codeExample": "SELECT name, email\nFROM employees\nWHERE email LIKE '%@company.com';",
+  "quiz": [
+    {
+      "question": "What does the '%' wildcard match in a LIKE pattern?",
+      "options": [
+        "Exactly one character",
+        "Zero or more characters",
+        "Exactly one digit",
+        "A single letter"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which pattern finds names containing 'son'?",
+      "options": [
+        "'son%'",
+        "'%son'",
+        "'%son%'",
+        "'_son_'"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

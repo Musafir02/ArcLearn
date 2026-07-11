@@ -1,0 +1,32 @@
+{
+  "title": "User-Defined Functions (UDF)",
+  "language": "sql",
+  "topic": "functions_udf",
+  "order": 52,
+  "nextTopic": "constraints",
+  "prevTopic": "stored_procedures",
+  "content": "### User-Defined Functions (UDF)\n\nUDFs are custom functions created by users to encapsulate reusable logic. Unlike stored procedures, functions return a single value and can be used within SQL expressions.\n\n---\n\n### UDF Syntax\n\n```sql\n-- Scalar function (returns single value)\nCREATE FUNCTION function_name(param1 INT)\nRETURNS INT\nDETERMINISTIC\nBEGIN\n    DECLARE result INT;\n    SET result = param1 * 2;\n    RETURN result;\nEND;\n```\n\n### Scalar Function Example\n\n```sql\nCREATE FUNCTION CalculateBonus(salary DECIMAL, years INT)\nRETURNS DECIMAL(10,2)\nDETERMINISTIC\nBEGIN\n    DECLARE bonus DECIMAL(10,2);\n    SET bonus = salary * 0.05 * years;\n    RETURN bonus;\nEND;\n\n-- Usage:\nSELECT name, salary, CalculateBonus(salary, 5) AS bonus\nFROM employees;\n```\n\n### Table-Valued Function\n\n```sql\n-- SQL Server inline table-valued function\nCREATE FUNCTION GetEmployeesByDept(@dept_id INT)\nRETURNS TABLE\nAS\nRETURN (\n    SELECT id, name, salary\n    FROM employees\n    WHERE dept_id = @dept_id\n);\n\n-- Usage:\nSELECT * FROM GetEmployeesByDept(3);\n```\n\n### UDF vs Stored Procedure\n\n| Aspect | UDF | Stored Procedure |\n|--------|-----|------------------|\n| Return value | Always returns a value | May or may not return |\n| Use in queries | Can be used in SELECT WHERE | Cannot be used in queries |\n| Transaction support | No | Yes |\n| Output parameters | Not supported | Supported |\n\n> **Key Point:** UDFs are best for calculations and data transformations used within queries. They cannot modify database state (no INSERT/UPDATE/DELETE in most databases).",
+  "codeExample": "CREATE FUNCTION FullName(first VARCHAR(50), last VARCHAR(50))\nRETURNS VARCHAR(101)\nDETERMINISTIC\nBEGIN\n    RETURN CONCAT(first, ' ', last);\nEND;",
+  "quiz": [
+    {
+      "question": "Can a scalar UDF be used in a SELECT statement?",
+      "options": [
+        "No, only in WHERE",
+        "Yes, it can be used in SELECT",
+        "Only table-valued functions can",
+        "Only in ORDER BY"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a key difference between UDFs and stored procedures?",
+      "options": [
+        "UDFs can modify tables, procedures cannot",
+        "UDFs return a value and can be used in queries",
+        "Procedures are faster",
+        "There is no difference"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

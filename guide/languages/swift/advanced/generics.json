@@ -1,0 +1,22 @@
+{
+  "title": "Swift Generics",
+  "language": "swift",
+  "topic": "generics",
+  "order": 67,
+  "nextTopic": "generic_constraints",
+  "prevTopic": "protocol_extensions",
+  "content": "### Swift Generics\n\nGenerics allow you to write flexible, reusable functions and types that can work with any type. They are one of Swift's most powerful features for writing type-safe, non-repetitive code.\n\n**Generic Functions:**\n\n```swift\nfunc swapValues<T>(_ a: inout T, _ b: inout T) {\n    let temp = a\n    a = b\n    b = temp\n}\n\nvar x = 10, y = 20\nswapValues(&x, &y)\nprint(\"x: \\(x), y: \\(y)\")  // x: 20, y: 10\n\nvar firstName = \"Alice\", lastName = \"Bob\"\nswapValues(&firstName, &lastName)\nprint(firstName, lastName)  // Bob Alice\n```\n\n**Generic Types:**\n\n```swift\nstruct Stack<Element> {\n    private var items: [Element] = []\n    \n    mutating func push(_ item: Element) {\n        items.append(item)\n    }\n    \n    mutating func pop() -> Element? {\n        items.popLast()\n    }\n    \n    var peek: Element? { items.last }\n    var isEmpty: Bool { items.isEmpty }\n}\n\nvar intStack = Stack<Int>()\nintStack.push(1)\nintStack.push(2)\nprint(intStack.pop() ?? 0)  // 2\n\nvar stringStack = Stack<String>()\nstringStack.push(\"Hello\")\nstringStack.push(\"World\")\nprint(stringStack.pop() ?? \"\")  // World\n```\n\n**Generic Type Parameters:**\n\n| Convention | Meaning |\n|------------|---------|\n| `T` | Type (most common) |\n| `U`, `V` | Second, third types |\n| `T1`, `T2` | Multiple types |\n| `Key`, `Value` | Descriptive names |\n| `Element` | Collection element |\n\n```swift\n// Multiple type parameters\nstruct Pair<Key, Value> {\n    let key: Key\n    let value: Value\n}\n\nlet pair = Pair(key: \"name\", value: \"Alice\")\n```\n\n**Generic Extensions:**\n\n```swift\nextension Stack {\n    var top: Element? { items.last }\n    \n    mutating func pushAll(_ newItems: [Element]) {\n        for item in newItems {\n            push(item)\n        }\n    }\n}\n\nextension Stack where Element: Equatable {\n    func contains(_ item: Element) -> Bool {\n        items.contains(item)\n    }\n}\n```\n\n> **Key Point:** Generic code prevents duplication while maintaining type safety. The compiler creates specialized versions of generic code for each type used.\n\nUse type parameters (like `T`) as placeholders. When the function or type is used, the actual type is substituted automatically.",
+  "codeExample": "import Foundation\n\n// Generic function\nfunc findIndex<T: Equatable>(of valueToFind: T, in array: [T]) -> Int? {\n    for (index, value) in array.enumerated() {\n        if value == valueToFind {\n            return index\n        }\n    }\n    return nil\n}\n\nlet numbers = [10, 20, 30, 40, 50]\nif let index = findIndex(of: 30, in: numbers) {\n    print(\"Found at index \\(index)\")\n}\n\nlet names = [\"Alice\", \"Bob\", \"Charlie\"]\nif let index = findIndex(of: \"Bob\", in: names) {\n    print(\"Found at index \\(index)\")\n}\n\n// Generic type\nstruct Queue<Element> {\n    private var items: [Element] = []\n    \n    mutating func enqueue(_ item: Element) {\n        items.append(item)\n    }\n    \n    mutating func dequeue() -> Element? {\n        guard !items.isEmpty else { return nil }\n        return items.removeFirst()\n    }\n    \n    var count: Int { items.count }\n}\n\nvar queue = Queue<String>()\nqueue.enqueue(\"First\")\nqueue.enqueue(\"Second\")\nprint(queue.dequeue() ?? \"\")  // First\nprint(queue.dequeue() ?? \"\")  // Second",
+  "quiz": [
+    {
+      "question": "What syntax declares a type parameter in a generic function?",
+      "options": ["<T>", "[T]", "{T}", "(T)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can generics work with both value and reference types?",
+      "options": ["Yes", "No, only value types", "No, only reference types", "Only classes"],
+      "correctIndex": 0
+    }
+  ]
+}

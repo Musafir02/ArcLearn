@@ -1,0 +1,32 @@
+{
+  "title": "Natural Join",
+  "language": "sql",
+  "topic": "natural_join",
+  "order": 33,
+  "nextTopic": "groupby",
+  "prevTopic": "self_join",
+  "content": "### Natural Join\n\nNATURAL JOIN automatically joins tables based on columns with the same name and compatible data types in both tables.\n\n---\n\n### NATURAL JOIN Syntax\n\n```sql\nSELECT columns\nFROM table1\nNATURAL JOIN table2;\n```\n\n### NATURAL JOIN Example\n\nIf both tables have a column named `dept_id`:\n\n```sql\n-- Automatically joins on dept_id\nSELECT e.name, d.dept_name\nFROM employees e\nNATURAL JOIN departments d;\n\n-- Equivalent to (if the only common column is dept_id):\nSELECT e.name, d.dept_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.dept_id;\n```\n\n### NATURAL JOIN vs INNER JOIN\n\nBoth use INNER JOIN logic, but NATURAL JOIN automatically detects the join columns:\n\n| Aspect | NATURAL JOIN | Explicit JOIN |\n|--------|-------------|---------------|\n| Join condition | Automatic | Manual ON clause |\n| Column matching | Same name columns | Any specified condition |\n| Control | Less control | Full control |\n| Readability | Concise | Explicit |\n| Maintenance risk | Schema changes may break silently | Clear what is joined |\n\n### Risks of NATURAL JOIN\n\n```sql\n-- If both tables have 'name' and 'id' columns:\nSELECT *\nFROM employees\nNATURAL JOIN departments;\n-- Joins on ALL common columns: (id, name, dept_id) maybe unintended\n```\n\n### USING Clause (Alternative)\n\nThe USING clause provides more control while being concise:\n\n```sql\n-- Only join on dept_id, even if other columns match\nSELECT e.name, d.dept_name\nFROM employees e\nJOIN departments d USING (dept_id);\n```\n\n> **Key Point:** NATURAL JOIN is rarely used in production because it can produce unexpected results when table schemas change. Explicit JOIN with ON is preferred for clarity and maintainability.",
+  "codeExample": "-- This automatically joins on common column names\nSELECT *\nFROM orders\nNATURAL JOIN customers;",
+  "quiz": [
+    {
+      "question": "How does NATURAL JOIN determine the join condition?",
+      "options": [
+        "By matching primary and foreign keys",
+        "By joining on columns with the same name",
+        "By the first column in each table",
+        "It requires an ON clause"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is NATURAL JOIN often avoided in production?",
+      "options": [
+        "It is slow",
+        "It can cause unexpected results when schemas change",
+        "It is not standard SQL",
+        "It requires special permissions"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

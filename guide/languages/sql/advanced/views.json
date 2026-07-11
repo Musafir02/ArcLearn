@@ -1,0 +1,32 @@
+{
+  "title": "Views",
+  "language": "sql",
+  "topic": "views",
+  "order": 41,
+  "nextTopic": "indexes",
+  "prevTopic": "case_when",
+  "content": "### SQL Views\n\nA view is a virtual table based on the result of a SELECT query. It does not store data itself but provides a stored, reusable query definition.\n\n---\n\n### Creating a View\n\n```sql\nCREATE VIEW active_employees AS\nSELECT id, name, department, salary\nFROM employees\nWHERE active = 1;\n```\n\n### Using a View\n\nViews are queried like regular tables:\n\n```sql\nSELECT * FROM active_employees;\n\nSELECT department, COUNT(*)\nFROM active_employees\nGROUP BY department;\n```\n\n### Benefits of Views\n\n| Benefit | Description |\n|---------|-------------|\n| Security | Expose only specific columns, hide sensitive data |\n| Simplicity | Encapsulate complex queries behind a simple name |\n| Consistency | Provide a stable interface even if underlying tables change |\n| Reusability | Write complex joins once, query them everywhere |\n\n### Updatable Views\n\nSome views can be used for INSERT, UPDATE, DELETE operations:\n\n```sql\nCREATE VIEW engineering_employees AS\nSELECT id, name, salary\nFROM employees\nWHERE department = 'Engineering';\n\n-- Update through the view\nUPDATE engineering_employees\nSET salary = salary * 1.1\nWHERE id = 101;\n```\n\n### Dropping a View\n\n```sql\nDROP VIEW IF EXISTS active_employees;\n```\n\n### Materialized Views\n\nMaterialized views physically store the query result and can be refreshed:\n\n```sql\n-- PostgreSQL\nCREATE MATERIALIZED VIEW monthly_summary AS\nSELECT DATE_TRUNC('month', order_date) AS month,\n       SUM(total) AS revenue\nFROM orders\nGROUP BY month;\n\nREFRESH MATERIALIZED VIEW monthly_summary;\n```\n\n> **Key Point:** Regular views are virtual and execute the underlying query each time they are accessed. Materialized views store the result and must be refreshed.",
+  "codeExample": "CREATE VIEW department_summary AS\nSELECT d.dept_name,\n       COUNT(e.id) AS employee_count,\n       AVG(e.salary) AS avg_salary\nFROM departments d\nLEFT JOIN employees e ON d.id = e.dept_id\nGROUP BY d.dept_name;",
+  "quiz": [
+    {
+      "question": "Does a regular view store data physically?",
+      "options": [
+        "Yes, like a table",
+        "No, it is a virtual table based on a query",
+        "Only if it has indexes",
+        "Sometimes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the main difference between a view and a materialized view?",
+      "options": [
+        "Views are faster",
+        "Materialized views store results physically",
+        "Views cannot use joins",
+        "There is no difference"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

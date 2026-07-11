@@ -1,0 +1,32 @@
+{
+  "title": "String Functions",
+  "language": "sql",
+  "topic": "string_functions",
+  "order": 22,
+  "nextTopic": "coalesce",
+  "prevTopic": "numeric_functions",
+  "content": "### String Functions\n\nString functions manipulate text data. They are used for cleaning, formatting, and extracting information from strings.\n\n---\n\n### Case Conversion\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| UPPER(str) | Converts to uppercase | UPPER('sql') => 'SQL' |\n| LOWER(str) | Converts to lowercase | LOWER('SQL') => 'sql' |\n| INITCAP(str) | Capitalizes first letter of each word | INITCAP('hello world') => 'Hello World' |\n\n### String Inspection\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| LENGTH(str) | Returns character count | LENGTH('hello') => 5 |\n| CHAR_LENGTH(str) | Returns character count (multi-byte safe) | CHAR_LENGTH('cafe') => 4 |\n| POSITION(substr IN str) | Finds position of substring | POSITION('world' IN 'hello world') => 7 |\n\n### String Manipulation\n\n| Function | Description |\n|----------|-------------|\n| CONCAT(a, b, c) | Joins strings together |\n| SUBSTRING(str, start, length) | Extracts a portion of a string |\n| REPLACE(str, from, to) | Replaces occurrences of a substring |\n| TRIM(str) | Removes leading and trailing spaces |\n| LTRIM(str) | Removes leading spaces |\n| RTRIM(str) | Removes trailing spaces |\n| LPAD(str, len, pad) | Left-pads string to specified length |\n| RPAD(str, len, pad) | Right-pads string to specified length |\n\n```sql\nSELECT CONCAT(first_name, ' ', last_name) AS full_name,\n       SUBSTRING(email, 1, POSITION('@' IN email) - 1) AS username,\n       REPLACE(phone, '-', '') AS clean_phone\nFROM employees;\n```\n\n> **Key Point:** String positions in SQL typically start at 1, not 0. Some databases use || as the concatenation operator instead of CONCAT().",
+  "codeExample": "SELECT name,\n       UPPER(SUBSTRING(name, 1, 1)) || LOWER(SUBSTRING(name, 2)) AS proper_name\nFROM employees;",
+  "quiz": [
+    {
+      "question": "What does LENGTH('Hello ') return?",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "7"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which function combines multiple strings together?",
+      "options": [
+        "MERGE",
+        "CONCAT",
+        "COMBINE",
+        "JOIN"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

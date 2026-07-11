@@ -1,0 +1,32 @@
+{
+  "title": "SQL Comments",
+  "language": "sql",
+  "topic": "comments",
+  "order": 12,
+  "nextTopic": "operators",
+  "prevTopic": "aliases",
+  "content": "### SQL Comments\n\nComments explain SQL code and are ignored by the database engine. They are essential for documenting complex queries.\n\n---\n\n### Single-Line Comments\n\nUse two hyphens (--) for single-line comments:\n\n```sql\n-- This is a single-line comment\nSELECT * FROM employees;\n\nSELECT name -- This is an inline comment\nFROM employees;\n```\n\n### Multi-Line Comments\n\nUse /* to start and */ to end a multi-line comment:\n\n```sql\n/*\n * This is a multi-line comment\n * It can span multiple lines\n * Useful for explaining complex logic\n */\nSELECT name, salary\nFROM employees\nWHERE salary > (\n    SELECT AVG(salary)  /* Nested comment */\n    FROM employees\n);\n```\n\n### Best Practices\n\n| Practice | Example |\n|----------|---------|\n| Explain WHY, not WHAT | -- Calculate bonus for top performers |\n| Document complex logic | Explain multi-step calculations |\n| Comment performance concerns | -- This query scans the entire table |\n| Avoid obvious comments | -- Select all (redundant) |\n\n### Comment Differences by Database\n\nMySQL also supports # for single-line comments. Most databases support both -- and /* */.\n\n```sql\n# This is a MySQL-specific comment\nSELECT * FROM employees;\n```\n\n> **Key Point:** Use -- for quick notes and /* */ for blocking out sections of code during debugging.",
+  "codeExample": "-- Calculate total revenue for Q1 2024\nSELECT SUM(price * quantity) AS total_revenue\nFROM orders\nWHERE order_date BETWEEN '2024-01-01' AND '2024-03-31'\n  AND status = 'completed';",
+  "quiz": [
+    {
+      "question": "Which symbol starts a single-line comment in SQL?",
+      "options": [
+        "//",
+        "--",
+        "##",
+        "/*"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the best practice for SQL comments?",
+      "options": [
+        "Comment every line",
+        "Explain WHY, not WHAT",
+        "Never use comments",
+        "Only use multi-line comments"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

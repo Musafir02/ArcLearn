@@ -1,0 +1,22 @@
+{
+  "title": "Swift Strings",
+  "language": "swift",
+  "topic": "strings",
+  "order": 12,
+  "nextTopic": "numbers",
+  "prevTopic": "booleans",
+  "content": "### Swift Strings\n\nStrings in Swift are represented by the `String` type, which is a collection of `Character` values. Strings are value types and support Unicode, interpolation, and rich manipulation methods.\n\n**Creating Strings:**\n\n```swift\nlet emptyString = \"\"\nlet anotherEmpty = String()\nlet greeting = \"Hello, World!\"\nlet multiline = \"\"\"\nLine 1\nLine 2\nLine 3\n\"\"\"\n```\n\n**String Properties and Methods:**\n\n| Property/Method | Description | Example |\n|----------------|-------------|---------|\n| `.count` | Number of characters | `\"Hello\".count` = 5 |\n| `.isEmpty` | Check if empty | `\"\".isEmpty` = true |\n| `.uppercased()` | Uppercase version | `\"hi\".uppercased()` = \"HI\" |\n| `.lowercased()` | Lowercase version | `\"HI\".lowercased()` = \"hi\" |\n| `.hasPrefix()` | Check prefix | `\"Hello\".hasPrefix(\"He\")` |\n| `.hasSuffix()` | Check suffix | `\"Hello\".hasSuffix(\"lo\")` |\n\n**String Interpolation:**\n\n```swift\nlet name = \"Alice\"\nlet age = 30\nlet message = \"\\(name) is \\(age) years old\"\n```\n\n> **Key Point:** Swift strings are Unicode-compliant and support international characters, emoji, and special scripts.\n\nStrings can be compared with `==`, concatenated with `+`, and accessed via indices using `String.Index`.",
+  "codeExample": "import Foundation\n\n// String operations\nlet str = \"Hello, Swift!\"\n\n// Properties\nprint(\"Length: \\(str.count)\")\nprint(\"Empty: \\(str.isEmpty)\")\nprint(\"Uppercase: \\(str.uppercased())\")\nprint(\"Has prefix Hello: \\(str.hasPrefix(\"Hello\"))\")\n\n// Concatenation and interpolation\nlet firstName = \"John\"\nlet lastName = \"Doe\"\nlet fullName = firstName + \" \" + lastName\nlet introduction = \"My name is \\(fullName)\"\n\n// Multiline string\nlet poem = \"\"\"\nRoses are red,\nViolets are blue,\nSwift is awesome,\nAnd so are you.\n\"\"\"\nprint(poem)",
+  "quiz": [
+    {
+      "question": "What is the result of '\"Hello\".count'?",
+      "options": ["4", "5", "6", "7"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you check if a string starts with a specific prefix?",
+      "options": [".starts(with:)", ".hasPrefix()", ".prefix()", ".beginsWith()"],
+      "correctIndex": 1
+    }
+  ]
+}

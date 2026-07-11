@@ -1,0 +1,104 @@
+{
+  "title": "SQL Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group",
+      "title": "SQL Basics",
+      "folder": "basics",
+      "topics": [
+        "syntax",
+        "select",
+        "distinct",
+        "where",
+        "orderby",
+        "and_or",
+        "not",
+        "null_values",
+        "aliases",
+        "comments",
+        "operators",
+        "between",
+        "in",
+        "like_patterns",
+        "wildcards"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "SQL Functions",
+      "folder": "functions",
+      "topics": [
+        "aggregate",
+        "scalar",
+        "date_functions",
+        "numeric_functions",
+        "string_functions",
+        "coalesce",
+        "nullif",
+        "cast_convert"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "SQL Joins",
+      "folder": "joins",
+      "topics": [
+        "joins_intro",
+        "inner_join",
+        "left_join",
+        "right_join",
+        "full_outer_join",
+        "cross_join",
+        "self_join",
+        "natural_join"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Advanced SQL",
+      "folder": "advanced",
+      "topics": [
+        "groupby",
+        "having",
+        "union_intersect",
+        "subqueries",
+        "correlated_subqueries",
+        "exists",
+        "case_when",
+        "views",
+        "indexes",
+        "cte",
+        "recursive_cte",
+        "window_functions",
+        "row_number_rank",
+        "lag_lead",
+        "transactions",
+        "commit_rollback",
+        "triggers",
+        "stored_procedures",
+        "functions_udf",
+        "constraints",
+        "primary_key",
+        "foreign_key",
+        "unique",
+        "check",
+        "default",
+        "create_table",
+        "alter_table",
+        "drop_truncate",
+        "insert",
+        "update",
+        "delete",
+        "database_design",
+        "normalization",
+        "er_diagrams",
+        "query_performance",
+        "execution_plan",
+        "sql_injection_prevention",
+        "no_sql_comparison"
+      ]
+    }
+  ]
+}

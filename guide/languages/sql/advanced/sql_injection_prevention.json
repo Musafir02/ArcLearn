@@ -1,0 +1,32 @@
+{
+  "title": "SQL Injection Prevention",
+  "language": "sql",
+  "topic": "sql_injection_prevention",
+  "order": 70,
+  "nextTopic": "no_sql_comparison",
+  "prevTopic": "execution_plan",
+  "content": "### SQL Injection Prevention\n\nSQL injection is a security vulnerability where attackers inject malicious SQL code through user input fields. It is one of the most critical web application security risks.\n\n---\n\n### How SQL Injection Works\n\n```sql\n-- Vulnerable query (building SQL from user input)\n-- User enters: ' OR 1=1; --\nquery = \"SELECT * FROM users WHERE username = '\" + userInput + \"'\";\n\n-- Resulting query:\nSELECT * FROM users WHERE username = '' OR 1=1; --'\n-- Returns ALL users because 1=1 is always true\n```\n\n### Prevention Techniques\n\n| Technique | Description |\n|-----------|-------------|\n| Parameterized Queries | Use placeholders instead of string concatenation |\n| Stored Procedures | Encapsulate SQL with parameters |\n| Input Validation | Validate and sanitize user input |\n| Least Privilege | Restrict database user permissions |\n| Escape Input | Escape special characters (last resort) |\n\n### Parameterized Query Examples\n\n```python\n# Python with psycopg2 (PostgreSQL)\ncursor.execute(\n    \"SELECT * FROM users WHERE username = %s\",\n    (user_input,)\n)\n\n# Python with MySQL Connector\ncursor.execute(\n    \"SELECT * FROM users WHERE username = %s\",\n    (user_input,)\n)\n```\n\n```csharp\n// C# with ADO.NET\nusing (var cmd = new SqlCommand(\n    \"SELECT * FROM users WHERE username = @username\", conn))\n{\n    cmd.Parameters.AddWithValue(\"@username\", userInput);\n}\n```\n\n### Dangerous Practices to Avoid\n\n```sql\n-- NEVER do this:\n-- 1. String concatenation of user input\n-- 2. Using dynamic SQL without parameterization\n-- 3. Displaying SQL errors to users\n-- 4. Using admin-level database accounts in applications\n-- 5. Storing passwords in plain text\n```\n\n> **Key Point:** Always use parameterized queries or prepared statements. Never trust user input. Apply the principle of least privilege to database accounts used by applications.",
+  "codeExample": "-- Safe approach: parameterized query\n-- Never concatenate user input directly into SQL strings\nSELECT * FROM employees WHERE email = ?;",
+  "quiz": [
+    {
+      "question": "What is the best defense against SQL injection?",
+      "options": [
+        "Input validation only",
+        "Parameterized queries (prepared statements)",
+        "Escaping all input",
+        "Using stored procedures only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What can an attacker do with a successful SQL injection?",
+      "options": [
+        "View, modify, or delete database data",
+        "Only view data",
+        "Only crash the database",
+        "Nothing, databases are immune"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

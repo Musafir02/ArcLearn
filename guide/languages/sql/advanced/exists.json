@@ -1,0 +1,32 @@
+{
+  "title": "EXISTS Operator",
+  "language": "sql",
+  "topic": "exists",
+  "order": 39,
+  "nextTopic": "case_when",
+  "prevTopic": "correlated_subqueries",
+  "content": "### EXISTS Operator\n\nEXISTS checks whether a subquery returns any rows. It returns TRUE if the subquery has at least one row, FALSE otherwise.\n\n---\n\n### EXISTS Syntax\n\n```sql\nSELECT columns\nFROM table\nWHERE EXISTS (subquery);\n```\n\n### Basic Example\n\n```sql\n-- Find customers who have placed at least one order\nSELECT c.name, c.email\nFROM customers c\nWHERE EXISTS (\n    SELECT 1\n    FROM orders o\n    WHERE o.customer_id = c.id\n);\n```\n\n### NOT EXISTS\n\n```sql\n-- Find customers who have NOT placed any orders\nSELECT c.name, c.email\nFROM customers c\nWHERE NOT EXISTS (\n    SELECT 1\n    FROM orders o\n    WHERE o.customer_id = c.id\n);\n```\n\n### EXISTS vs IN\n\n| Aspect | EXISTS | IN |\n|--------|--------|----|\n| Performance | Better for large subquery results | Better for small, static lists |\n| NULL handling | Not affected by NULLs | NOT IN fails if list contains NULL |\n| Subquery dependency | Often correlated | Usually non-correlated |\n| Return value | Boolean (TRUE/FALSE) | Value comparison |\n\n### SELECT 1 Convention\n\nBy convention, SELECT 1 is used inside EXISTS subqueries because the actual columns don't matter:\n\n```sql\n-- These are equivalent:\nWHERE EXISTS (SELECT 1 FROM orders WHERE customer_id = c.id)\nWHERE EXISTS (SELECT * FROM orders WHERE customer_id = c.id)\nWHERE EXISTS (SELECT 'anything' FROM orders WHERE customer_id = c.id)\n```\n\n> **Key Point:** EXISTS is often faster than IN for large subquery results because it stops scanning as soon as it finds a match. It also handles NULL values correctly.",
+  "codeExample": "SELECT p.product_name\nFROM products p\nWHERE EXISTS (\n    SELECT 1\n    FROM order_items oi\n    WHERE oi.product_id = p.id\n      AND oi.quantity > 10\n);",
+  "quiz": [
+    {
+      "question": "What does EXISTS return?",
+      "options": [
+        "The matching rows",
+        "TRUE if subquery has any rows, FALSE otherwise",
+        "The count of matching rows",
+        "NULL if no match"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is SELECT 1 commonly used inside EXISTS?",
+      "options": [
+        "It is faster than SELECT *",
+        "The actual columns do not matter for EXISTS",
+        "It avoids null values",
+        "It is required by SQL standard"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

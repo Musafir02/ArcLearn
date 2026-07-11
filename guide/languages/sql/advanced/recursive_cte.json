@@ -1,0 +1,32 @@
+{
+  "title": "Recursive CTE",
+  "language": "sql",
+  "topic": "recursive_cte",
+  "order": 44,
+  "nextTopic": "window_functions",
+  "prevTopic": "cte",
+  "content": "### Recursive CTE\n\nA recursive CTE is a CTE that references itself. It is used for querying hierarchical or tree-structured data like organizational charts, bill of materials, or category trees.\n\n---\n\n### Recursive CTE Syntax\n\n```sql\nWITH RECURSIVE cte_name AS (\n    -- Anchor member (base case)\n    SELECT ...\n    FROM ...\n    WHERE ...\n    UNION ALL\n    -- Recursive member (references the CTE)\n    SELECT ...\n    FROM cte_name\n    JOIN ...\n)\nSELECT * FROM cte_name;\n```\n\n### Organization Chart Example\n\n```sql\nWITH RECURSIVE org_chain AS (\n    -- Anchor: find the CEO (no manager)\n    SELECT id, name, manager_id, 1 AS level\n    FROM employees\n    WHERE manager_id IS NULL\n\n    UNION ALL\n\n    -- Recursive: find direct reports\n    SELECT e.id, e.name, e.manager_id, oc.level + 1\n    FROM employees e\n    JOIN org_chain oc ON e.manager_id = oc.id\n)\nSELECT * FROM org_chain ORDER BY level, name;\n```\n\n### Number Generation\n\n```sql\n-- Generate sequence of numbers (useful for calendar tables)\nWITH RECURSIVE numbers(n) AS (\n    SELECT 1\n    UNION ALL\n    SELECT n + 1 FROM numbers WHERE n < 10\n)\nSELECT * FROM numbers;\n```\n\n### Parts Explosion (Bill of Materials)\n\n```sql\nWITH RECURSIVE parts_tree AS (\n    SELECT id, name, parent_id, 1 AS level\n    FROM parts\n    WHERE parent_id IS NULL\n    UNION ALL\n    SELECT p.id, p.name, p.parent_id, pt.level + 1\n    FROM parts p\n    JOIN parts_tree pt ON p.parent_id = pt.id\n)\nSELECT * FROM parts_tree;\n```\n\n> **Key Point:** A recursive CTE has two parts: an anchor (non-recursive starting point) and a recursive member that joins back to the CTE. The recursion stops when no new rows are produced.",
+  "codeExample": "WITH RECURSIVE employee_hierarchy AS (\n    SELECT id, name, manager_id, 1 AS depth\n    FROM employees WHERE manager_id IS NULL\n    UNION ALL\n    SELECT e.id, e.name, e.manager_id, eh.depth + 1\n    FROM employees e\n    JOIN employee_hierarchy eh ON e.manager_id = eh.id\n)\nSELECT * FROM employee_hierarchy ORDER BY depth, name;",
+  "quiz": [
+    {
+      "question": "What are the two parts of a recursive CTE?",
+      "options": [
+        "Start and end",
+        "Anchor and recursive member",
+        "Base and termination",
+        "First and second"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When does a recursive CTE stop?",
+      "options": [
+        "After 100 iterations",
+        "When no new rows are produced",
+        "It runs forever",
+        "After the first iteration"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

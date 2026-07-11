@@ -1,0 +1,22 @@
+{
+  "title": "Swift Numbers",
+  "language": "swift",
+  "topic": "numbers",
+  "order": 13,
+  "nextTopic": "input",
+  "prevTopic": "strings",
+  "content": "### Swift Numbers\n\nSwift provides several numeric types for representing integers and floating-point numbers. Numbers can be expressed in different bases and support formatting for readability.\n\n**Numeric Literals:**\n\n| Base | Prefix | Example |\n|------|--------|---------|\n| Decimal | None | `17` |\n| Binary | `0b` | `0b10001` = 17 |\n| Octal | `0o` | `0o21` = 17 |\n| Hexadecimal | `0x` | `0x11` = 17 |\n\n**Readability with Underscores:**\n\n```swift\nlet million = 1_000_000\nlet creditCard = 1234_5678_9012_3456\nlet hexColor = 0xFF_00_FF\n```\n\n**Number Type Conversion:**\n\n```swift\nlet intValue = 42\nlet doubleValue = Double(intValue)  // 42.0\nlet floatValue = Float(intValue)    // 42.0\nlet stringValue = String(intValue)  // \"42\"\n\n// Converting strings to numbers (optional)\nif let number = Int(\"123\") {\n    print(\"Converted: \\(number)\")\n}\n```\n\n**Numeric Comparisons:**\n\n| Type | Memory | Precision |\n|------|--------|-----------|\n| `Int` | 8 bytes (64-bit) | Exact integers |\n| `Double` | 8 bytes | ~15 decimal digits |\n| `Float` | 4 bytes | ~6 decimal digits |\n\n> **Key Point:** Underscores in numbers do not affect the value; they only improve readability.\n\n```swift\nlet price = 19.99\nlet formatted = String(format: \"%.2f\", price)\nprint(\"$\\(formatted)\")\n```",
+  "codeExample": "import Foundation\n\n// Different number formats\nlet decimal = 42\nlet binary = 0b101010  // 42 in binary\nlet hex = 0x2A         // 42 in hex\nlet octal = 0o52       // 42 in octal\n\nprint(\"Decimal: \\(decimal), Binary: \\(binary), Hex: \\(hex), Octal: \\(octal)\")\n\n// Underscores for readability\nlet population = 8_000_000_000\nlet bankBalance = 1_234_567.89\n\nprint(\"World population: \\(population)\")\nprint(\"Balance: \\(bankBalance)\")\n\n// Scientific notation\nlet avogadro = 6.022e23\nprint(\"Avogadro's number: \\(avogadro)\")",
+  "quiz": [
+    {
+      "question": "What is the value of 0b1010 in decimal?",
+      "options": ["8", "10", "12", "16"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Do underscores in numeric literals affect the value?",
+      "options": ["Yes, they divide by 1000", "Yes, they act as decimal points", "No, they are ignored", "Yes, they specify the base"],
+      "correctIndex": 2
+    }
+  ]
+}

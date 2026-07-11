@@ -1,0 +1,22 @@
+{
+  "title": "Swift Function Parameters",
+  "language": "swift",
+  "topic": "function_params",
+  "order": 36,
+  "nextTopic": "return_values",
+  "prevTopic": "functions",
+  "content": "### Swift Function Parameters\n\nSwift functions support various parameter features including default values, external argument labels, variadic parameters, and in-out parameters.\n\n**Parameter Basics:**\n\n```swift\n// Multiple parameters\nfunc divide(dividend: Double, divisor: Double) -> Double {\n    return dividend / divisor\n}\n\n// Default parameter values\nfunc log(message: String, level: String = \"INFO\") {\n    print(\"[\\(level)] \\(message)\")\n}\n\nlog(message: \"System started\")           // [INFO] System started\nlog(message: \"Error!\", level: \"ERROR\")   // [ERROR] Error!\n```\n\n**Parameter Features:**\n\n| Feature | Syntax | Description |\n|---------|--------|-------------|\n| Default value | `param: Type = value` | Optional parameter with default |\n| Variadic | `param: Type...` | Zero or more values |\n| In-Out | `param: inout Type` | Modify parameter in place |\n| Omitting label | `_ param: Type` | No external label needed |\n\n**Parameter Passing:**\n\n- Parameters are constants by default (cannot modify inside function)\n- Use `inout` to allow modification\n- Use `var` parameter name for shadowing (discouraged)\n\n```swift\n// Parameters as constants\nfunc increment(_ value: Int) -> Int {\n    // value += 1  // Error: cannot modify\n    return value + 1\n}\n\n// Scope and shadowing\nfunc printValue(_ value: String) {\n    let value = \"Prefix: \" + value  // Shadowing (discouraged)\n    print(value)\n}\n```\n\n> **Key Point:** Function parameters are `let` constants by default. You cannot modify them inside the function body.\n\nDefault parameters must be placed after required parameters in the function signature.",
+  "codeExample": "import Foundation\n\n// Multiple parameters with types\nfunc createRectangle(width: Double, height: Double, cornerRadius: Double = 0) -> String {\n    var description = \"Rectangle \\(width)x\\(height)\"\n    if cornerRadius > 0 {\n        description += \" with rounded corners (r=\\(cornerRadius))\"\n    }\n    return description\n}\n\n// Calling with different parameter combinations\nprint(createRectangle(width: 100, height: 50))\nprint(createRectangle(width: 100, height: 50, cornerRadius: 10))\n\n// Mixed parameter types\nfunc describePerson(name: String, age: Int, height: Double) -> String {\n    return \"\\(name) is \\(age) years old and \\(height)cm tall\"\n}\n\nprint(describePerson(name: \"Alice\", age: 30, height: 165.5))\n\n// Using underscores to omit labels\nfunc multiply(_ a: Int, _ b: Int) -> Int {\n    return a * b\n}\nprint(multiply(6, 7))  // 42",
+  "quiz": [
+    {
+      "question": "Can you modify a function parameter inside the function body?",
+      "options": ["Yes, always", "No, they are constants", "Only if declared as var", "Only for class types"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What syntax allows a parameter to be modified?",
+      "options": ["var", "inout", "mutating", "ref"],
+      "correctIndex": 1
+    }
+  ]
+}

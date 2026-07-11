@@ -1,0 +1,32 @@
+{
+  "title": "Subqueries",
+  "language": "sql",
+  "topic": "subqueries",
+  "order": 37,
+  "nextTopic": "correlated_subqueries",
+  "prevTopic": "union_intersect",
+  "content": "### Subqueries\n\nA subquery is a query nested inside another query. Subqueries can be used in SELECT, FROM, WHERE, and other clauses.\n\n---\n\n### Subquery in WHERE\n\n```sql\n-- Find employees earning more than the average salary\nSELECT name, salary\nFROM employees\nWHERE salary > (\n    SELECT AVG(salary) FROM employees\n);\n```\n\n### Subquery in SELECT\n\n```sql\n-- Show each employee with the company average salary\nSELECT name,\n       salary,\n       (SELECT AVG(salary) FROM employees) AS company_avg\nFROM employees;\n```\n\n### Subquery in FROM (Derived Table)\n\n```sql\n-- Calculate percentage of total for each department\nSELECT department,\n       department_total,\n       ROUND(department_total * 100.0 / total.total, 2) AS percentage\nFROM (\n    SELECT department, SUM(salary) AS department_total\n    FROM employees\n    GROUP BY department\n) dept_summary\nCROSS JOIN (\n    SELECT SUM(salary) AS total FROM employees\n) total\nORDER BY percentage DESC;\n```\n\n### Types of Subqueries\n\n| Type | Returns | Used In |\n|------|---------|---------|\n| Scalar | Single value | SELECT, WHERE (=, <, >) |\n| Row | Single row | WHERE with row comparisons |\n| Column | Single column of values | WHERE IN, ANY, ALL |\n| Table | Multiple rows/columns | FROM (derived tables) |\n\n### Subquery Operators\n\n| Operator | Description |\n|----------|-------------|\n| IN | Checks if value is in subquery result |\n| ANY / SOME | Compares value to any value in subquery |\n| ALL | Compares value to all values in subquery |\n| EXISTS | Checks if subquery returns any rows |\n\n> **Key Point:** Subqueries in WHERE can often be rewritten as JOINs, which may perform better. Scalar subqueries in SELECT execute once per row and can be slow on large datasets.",
+  "codeExample": "SELECT name, salary\nFROM employees\nWHERE department_id IN (\n    SELECT id FROM departments WHERE location = 'New York'\n);",
+  "quiz": [
+    {
+      "question": "Where can a subquery be placed?",
+      "options": [
+        "Only in WHERE",
+        "Only in FROM",
+        "In SELECT, FROM, WHERE, and other clauses",
+        "Only in HAVING"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What type of subquery returns a single value?",
+      "options": [
+        "Column subquery",
+        "Scalar subquery",
+        "Table subquery",
+        "Row subquery"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

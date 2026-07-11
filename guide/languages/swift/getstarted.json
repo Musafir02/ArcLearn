@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started with Swift",
+  "language": "swift",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Getting Started with Swift\n\nTo start writing Swift code, you need Xcode on macOS or use Swift on Linux/Windows via the Swift toolchain. The Swift compiler (`swiftc`) compiles `.swift` files into executables.\n\n**Installation Options:**\n\n| Platform | Method |\n|----------|--------|\n| macOS | Install Xcode from the App Store |\n| Linux | Download Swift toolchain from swift.org |\n| Windows | Use Swift for Windows installer |\n\n**Your First Swift Program:**\n\nCreate a file named `main.swift` and add the following code:\n\n```swift\nimport Foundation\n\nprint(\"Hello, World!\")\n```\n\n**Running the Program:**\n\n- In Xcode: Create a new Command Line Tool project, then run with Cmd+R\n- Using terminal: `swiftc main.swift -o myprogram && ./myprogram`\n- Using Swift REPL: Type `swift` in terminal for interactive mode\n\n> **Key Point:** Swift files use the `.swift` extension. The `main.swift` file is the entry point for command-line programs.\n\nSwift also supports Swift Playgrounds on iPad and macOS for interactive learning without setting up a full project.",
+  "codeExample": "import Foundation\n\n// Simple calculator\nlet a = 15\nlet b = 7\n\nprint(\"Sum: \\(a + b)\")\nprint(\"Difference: \\(a - b)\")\nprint(\"Product: \\(a * b)\")\nprint(\"Quotient: \\(Double(a) / Double(b))\")",
+  "quiz": [
+    {
+      "question": "What Swift file extension is used?",
+      "options": [".swift", ".sw", ".sft", ".apple"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which terminal command compiles a Swift file?",
+      "options": ["swift run", "swift build", "swiftc", "swift compile"],
+      "correctIndex": 2
+    }
+  ]
+}

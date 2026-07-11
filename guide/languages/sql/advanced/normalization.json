@@ -1,0 +1,32 @@
+{
+  "title": "Normalization",
+  "language": "sql",
+  "topic": "normalization",
+  "order": 66,
+  "nextTopic": "er_diagrams",
+  "prevTopic": "database_design",
+  "content": "### Database Normalization\n\nNormalization is the process of organizing data to reduce redundancy and improve data integrity. It involves dividing large tables into smaller, related tables.\n\n---\n\n### Normal Forms\n\n| Normal Form | Rule |\n|-------------|------|\n| 1NF (First Normal Form) | Each column contains atomic values; no repeating groups |\n| 2NF (Second Normal Form) | Meets 1NF + every non-key column depends on the whole primary key |\n| 3NF (Third Normal Form) | Meets 2NF + no transitive dependencies |\n| BCNF | Stronger version of 3NF |\n| 4NF | No multi-valued dependencies |\n| 5NF | No join dependencies |\n\n### First Normal Form (1NF)\n\n```sql\n-- VIOLATES 1NF (multiple values in one column)\nCREATE TABLE employee_projects (\n    employee_id INT,\n    projects VARCHAR(200)  -- 'Project A, Project B, Project C'\n);\n\n-- MEETS 1NF (atomic values)\nCREATE TABLE employee_projects (\n    employee_id INT,\n    project_name VARCHAR(100)\n);\n```\n\n### Second Normal Form (2NF)\n\n```sql\n-- VIOLATES 2NF (project_name depends only on project_id, not on employee_id)\nCREATE TABLE assignments (\n    employee_id INT,\n    project_id INT,\n    project_name VARCHAR(100),  -- Partial dependency\n    hours INT,\n    PRIMARY KEY (employee_id, project_id)\n);\n\n-- MEETS 2NF (split into two tables)\nCREATE TABLE projects (\n    project_id INT PRIMARY KEY,\n    project_name VARCHAR(100)\n);\nCREATE TABLE assignments (\n    employee_id INT,\n    project_id INT,\n    hours INT,\n    PRIMARY KEY (employee_id, project_id)\n);\n```\n\n### Third Normal Form (3NF)\n\n```sql\n-- VIOLATES 3NF (department_location depends on department, not on employee_id)\nCREATE TABLE employees (\n    employee_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    department VARCHAR(100),\n    department_location VARCHAR(100)  -- Transitive dependency\n);\n\n-- MEETS 3NF\nCREATE TABLE departments (\n    department VARCHAR(100) PRIMARY KEY,\n    location VARCHAR(100)\n);\nCREATE TABLE employees (\n    employee_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    department VARCHAR(100),\n    FOREIGN KEY (department) REFERENCES departments(department)\n);\n```\n\n> **Key Point:** Normalize to at least 3NF for most applications. Higher normal forms (4NF, 5NF) are rarely needed in practice. Denormalization can improve read performance at the cost of data integrity.",
+  "codeExample": "-- Apply 3NF to separate customer info from orders\nCREATE TABLE customers (\n    customer_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    address VARCHAR(200)\n);\n\nCREATE TABLE orders (\n    order_id INT PRIMARY KEY,\n    customer_id INT REFERENCES customers(customer_id),\n    order_date DATE\n);",
+  "quiz": [
+    {
+      "question": "What does 1NF require?",
+      "options": [
+        "No duplicate rows",
+        "Atomic column values and no repeating groups",
+        "A primary key",
+        "Foreign key constraints"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a transitive dependency?",
+      "options": [
+        "A column depends on another non-key column",
+        "A column depends on part of the primary key",
+        "A column has multiple values",
+        "A table has no primary key"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

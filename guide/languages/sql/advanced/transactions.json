@@ -1,0 +1,32 @@
+{
+  "title": "Transactions",
+  "language": "sql",
+  "topic": "transactions",
+  "order": 48,
+  "nextTopic": "commit_rollback",
+  "prevTopic": "lag_lead",
+  "content": "### SQL Transactions\n\nA transaction is a sequence of SQL operations treated as a single logical unit of work. Transactions ensure data integrity through ACID properties.\n\n---\n\n### ACID Properties\n\n| Property | Description |\n|----------|-------------|\n| Atomicity | All operations succeed or all are rolled back |\n| Consistency | Transaction brings database from one valid state to another |\n| Isolation | Concurrent transactions do not interfere with each other |\n| Durability | Committed transactions persist even after system failure |\n\n### Transaction Control Statements\n\n| Statement | Purpose |\n|-----------|---------|\n| BEGIN TRANSACTION | Starts a new transaction |\n| COMMIT | Saves all changes made in the transaction |\n| ROLLBACK | Undoes all changes made in the transaction |\n| SAVEPOINT | Sets a savepoint within the current transaction |\n\n### Basic Transaction Example\n\n```sql\nBEGIN TRANSACTION;\n\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\n\n-- If both succeeded:\nCOMMIT;\n\n-- If something went wrong:\n-- ROLLBACK;\n```\n\n### SAVEPOINT Example\n\n```sql\nBEGIN TRANSACTION;\n\nINSERT INTO orders (customer_id, total) VALUES (1, 250);\nSAVEPOINT order_created;\n\nINSERT INTO order_items (order_id, product_id, quantity) VALUES (1, 5, 2);\n\n-- If order_items fails, roll back to savepoint but keep the order\nROLLBACK TO SAVEPOINT order_created;\n```\n\n### Transaction Isolation Levels\n\n| Level | Dirty Read | Non-repeatable Read | Phantom Read |\n|-------|-----------|-------------------|-------------|\n| READ UNCOMMITTED | Possible | Possible | Possible |\n| READ COMMITTED | Prevented | Possible | Possible |\n| REPEATABLE READ | Prevented | Prevented | Possible |\n| SERIALIZABLE | Prevented | Prevented | Prevented |\n\n> **Key Point:** Transactions ensure that related operations succeed or fail together. Always commit or rollback to release locks and resources.",
+  "codeExample": "BEGIN TRANSACTION;\n\nUPDATE inventory SET quantity = quantity - 1 WHERE product_id = 10;\nINSERT INTO order_items (order_id, product_id, quantity) VALUES (101, 10, 1);\n\nCOMMIT;",
+  "quiz": [
+    {
+      "question": "What does ACID stand for?",
+      "options": [
+        "Atomicity, Consistency, Isolation, Durability",
+        "Access, Control, Integrity, Data",
+        "Atomicity, Control, Isolation, Data",
+        "Accuracy, Consistency, Isolation, Durability"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which statement saves all changes in a transaction?",
+      "options": [
+        "SAVE",
+        "COMMIT",
+        "FLUSH",
+        "WRITE"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

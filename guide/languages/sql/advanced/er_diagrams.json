@@ -1,0 +1,32 @@
+{
+  "title": "Entity-Relationship Diagrams (ERD)",
+  "language": "sql",
+  "topic": "er_diagrams",
+  "order": 67,
+  "nextTopic": "query_performance",
+  "prevTopic": "normalization",
+  "content": "### Entity-Relationship Diagrams (ERD)\n\nAn ERD is a visual representation of entities (tables), their attributes (columns), and the relationships between them.\n\n---\n\n### Components of an ERD\n\n| Component | Symbol | Description |\n|-----------|--------|-------------|\n| Entity | Rectangle | A table or object (e.g., Customer) |\n| Attribute | Ellipse | A column property (e.g., name) |\n| Primary Key | Underlined attribute | Uniquely identifies each row |\n| Foreign Key | Dashed underline | References another entity's PK |\n| Relationship | Diamond | How entities relate |\n\n### Relationship Cardinality\n\n| Notation | Meaning |\n|----------|---------|\n| | | (one) | Exactly one |\n| |< (many) | Zero or many |\n| || (exactly one) | Exactly one (mandatory) |\n| |o (optional) | Zero or one |\n\nCrow's foot notation:\n\n```\nCustomer 1 -----< N Order\n  (one customer has many orders)\n\nEmployee N >----- 1 Department\n  (many employees belong to one department)\n```\n\n### Types of Relationships\n\n| Relationship | Example |\n|-------------|---------|\n| One-to-One (1:1) | Employee <-> EmployeeDetails |\n| One-to-Many (1:M) | Department -> Employees |\n| Many-to-Many (M:M) | Students <-> Courses (via Enrollment) |\n\n### Converting ERD to Tables\n\n```sql\n-- 1:M relationship: Department (1) -> Employees (M)\nCREATE TABLE departments (\n    dept_id INT PRIMARY KEY,\n    name VARCHAR(100)\n);\n\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    dept_id INT REFERENCES departments(dept_id)\n);\n\n-- M:M relationship: Students M:M Courses via Enrollments\nCREATE TABLE enrollments (\n    student_id INT REFERENCES students(id),\n    course_id INT REFERENCES courses(id),\n    grade VARCHAR(2),\n    PRIMARY KEY (student_id, course_id)\n);\n```\n\n> **Key Point:** ERDs are a planning tool used before implementing the database schema. They help visualize relationships and identify design issues early.",
+  "codeExample": "-- M:M relationship requires a junction table\nCREATE TABLE students (\n    student_id INT PRIMARY KEY,\n    name VARCHAR(100)\n);\n\nCREATE TABLE courses (\n    course_id INT PRIMARY KEY,\n    title VARCHAR(200)\n);\n\nCREATE TABLE enrollments (\n    student_id INT REFERENCES students(student_id),\n    course_id INT REFERENCES courses(course_id),\n    enrolled_date DATE,\n    PRIMARY KEY (student_id, course_id)\n);",
+  "quiz": [
+    {
+      "question": "What does a rectangle represent in an ERD?",
+      "options": [
+        "A relationship",
+        "An entity (table)",
+        "An attribute (column)",
+        "A primary key"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is a Many-to-Many relationship implemented in SQL?",
+      "options": [
+        "With a single foreign key",
+        "With a junction/associative table",
+        "With a comma-separated column",
+        "With multiple primary keys"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "LAG and LEAD Functions",
+  "language": "sql",
+  "topic": "lag_lead",
+  "order": 47,
+  "nextTopic": "transactions",
+  "prevTopic": "row_number_rank",
+  "content": "### LAG and LEAD Functions\n\nLAG and LEAD access data from previous or next rows within the same result set without using self-joins.\n\n---\n\n### LAG Syntax\n\n```sql\nLAG(column, offset, default) OVER (ORDER BY column)\n\n-- offset: how many rows back (default 1)\n-- default: value when offset goes beyond the partition (default NULL)\n```\n\n### Basic LAG Example\n\n```sql\nSELECT name,\n       hire_date,\n       LAG(name) OVER (ORDER BY hire_date) AS prev_hire_name,\n       LAG(hire_date) OVER (ORDER BY hire_date) AS prev_hire_date\nFROM employees;\n```\n\n### LEAD Syntax and Example\n\n```sql\n-- Compare current salary to next hire's salary\nSELECT name,\n       hire_date,\n       salary,\n       LEAD(salary) OVER (ORDER BY hire_date) AS next_salary,\n       LEAD(salary) OVER (ORDER BY hire_date) - salary AS salary_diff\nFROM employees;\n```\n\n### Practical: Calculate Day-over-Day Change\n\n```sql\nSELECT order_date,\n       SUM(amount) AS daily_total,\n       LAG(SUM(amount)) OVER (ORDER BY order_date) AS prev_day_total,\n       SUM(amount) - LAG(SUM(amount)) OVER (ORDER BY order_date) AS change\nFROM orders\nGROUP BY order_date\nORDER BY order_date;\n```\n\n### Practical: Compare Within Groups\n\n```sql\nSELECT department,\n       name,\n       salary,\n       LAG(salary, 1, 0) OVER (\n           PARTITION BY department\n           ORDER BY salary\n       ) AS prev_dept_salary\nFROM employees;\n```\n\n> **Key Point:** LAG and LEAD replace complex self-joins when you need to compare a row with its neighbors. They evaluate within each PARTITION BY group.",
+  "codeExample": "SELECT name,\n       salary,\n       LAG(salary) OVER (ORDER BY salary) AS lower_salary,\n       salary - LAG(salary) OVER (ORDER BY salary) AS gap\nFROM employees\nORDER BY salary;",
+  "quiz": [
+    {
+      "question": "What does LAG(column, 2) return?",
+      "options": [
+        "The value 2 rows ahead",
+        "The value 2 rows behind",
+        "The value of column times 2",
+        "The second highest value"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the default offset for LAG and LEAD?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "NULL"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

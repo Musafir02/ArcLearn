@@ -1,0 +1,32 @@
+{
+  "title": "HAVING Clause",
+  "language": "sql",
+  "topic": "having",
+  "order": 35,
+  "nextTopic": "union_intersect",
+  "prevTopic": "groupby",
+  "content": "### HAVING Clause\n\nHAVING filters groups created by GROUP BY based on aggregate conditions. It is like WHERE but for groups rather than individual rows.\n\n---\n\n### HAVING Syntax\n\n```sql\nSELECT column1, aggregate_function(column2)\nFROM table\nGROUP BY column1\nHAVING condition;\n```\n\n### HAVING vs WHERE\n\n| Clause | Filters | Can use aggregates | Applied |\n|--------|---------|-------------------|---------|\n| WHERE | Individual rows | No | Before GROUP BY |\n| HAVING | Grouped results | Yes | After GROUP BY |\n\n### Basic Example\n\n```sql\n-- Find departments with more than 5 employees\nSELECT department, COUNT(*) AS emp_count\nFROM employees\nGROUP BY department\nHAVING COUNT(*) > 5;\n```\n\n### HAVING with Multiple Conditions\n\n```sql\n-- Departments with more than 5 employees AND avg salary > 60000\nSELECT department,\n       COUNT(*) AS emp_count,\n       AVG(salary) AS avg_salary\nFROM employees\nGROUP BY department\nHAVING COUNT(*) > 5\n   AND AVG(salary) > 60000;\n```\n\n### Combining WHERE and HAVING\n\n```sql\n-- WHERE filters rows, then GROUP BY groups, then HAVING filters groups\nSELECT department, AVG(salary) AS avg_salary\nFROM employees\nWHERE active = 1  -- Filter active employees first\nGROUP BY department\nHAVING AVG(salary) > 50000;  -- Then filter departments\n```\n\n### ORDER BY with HAVING\n\n```sql\nSELECT department, COUNT(*) AS emp_count\nFROM employees\nGROUP BY department\nHAVING COUNT(*) >= 3\nORDER BY emp_count DESC;\n```\n\n> **Key Point:** Use WHERE to filter individual rows, HAVING to filter groups. You can use both in the same query.",
+  "codeExample": "SELECT category,\n       COUNT(*) AS product_count,\n       AVG(price) AS avg_price\nFROM products\nWHERE active = 1\nGROUP BY category\nHAVING COUNT(*) >= 5\nORDER BY avg_price DESC;",
+  "quiz": [
+    {
+      "question": "When does HAVING filter groups relative to GROUP BY?",
+      "options": [
+        "Before GROUP BY",
+        "After GROUP BY",
+        "Instead of GROUP BY",
+        "At the same time"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can HAVING use aggregate functions?",
+      "options": [
+        "No, only WHERE can",
+        "Yes, that is its purpose",
+        "Only COUNT",
+        "Only simple comparisons"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "DEFAULT Constraint",
+  "language": "sql",
+  "topic": "default",
+  "order": 58,
+  "nextTopic": "create_table",
+  "prevTopic": "check",
+  "content": "### DEFAULT Constraint\n\nThe DEFAULT constraint provides a default value for a column when no value is specified in an INSERT statement.\n\n---\n\n### DEFAULT Syntax\n\n```sql\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100),\n    hire_date DATE DEFAULT CURRENT_DATE,\n    salary DECIMAL(10,2) DEFAULT 0.00,\n    active BOOLEAN DEFAULT TRUE,\n    department VARCHAR(50) DEFAULT 'General'\n);\n```\n\n### Common Default Values\n\n| Data Type | Common Default |\n|-----------|---------------|\n| Integer | 0 |\n| Decimal | 0.00 |\n| String | '' (empty string) or 'N/A' |\n| Date | CURRENT_DATE or CURRENT_TIMESTAMP |\n| Boolean | FALSE or TRUE |\n| UUID | GEN_RANDOM_UUID() or NEWID() |\n\n### Adding DEFAULT to Existing Table\n\n```sql\nALTER TABLE employees\nALTER COLUMN status SET DEFAULT 'active';\n-- SQL Server\nALTER TABLE employees ADD CONSTRAINT df_status DEFAULT 'active' FOR status;\n-- MySQL\nALTER TABLE employees ALTER status SET DEFAULT 'active';\n```\n\n### Dropping DEFAULT\n\n```sql\nALTER TABLE employees ALTER COLUMN DROP DEFAULT;\n-- MySQL\nALTER TABLE employees ALTER status DROP DEFAULT;\n-- SQL Server\nALTER TABLE employees DROP CONSTRAINT df_status;\n```\n\n### DEFAULT and INSERT\n\n```sql\nINSERT INTO employees (id, name) VALUES (1, 'Alice');\n-- hire_date defaults to CURRENT_DATE\n-- salary defaults to 0.00\n-- active defaults to TRUE\n\n-- Explicit override of default\nINSERT INTO employees (id, name, salary) VALUES (2, 'Bob', 50000);\n```\n\n> **Key Point:** DEFAULT values save time by automatically populating columns when no value is provided. They do not affect queries — you can still specify explicit values.",
+  "codeExample": "CREATE TABLE audit_log (\n    id INT PRIMARY KEY,\n    action VARCHAR(500),\n    created_by VARCHAR(100) DEFAULT CURRENT_USER,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);",
+  "quiz": [
+    {
+      "question": "When does a DEFAULT value apply?",
+      "options": [
+        "Always, even when a value is provided",
+        "Only when no value is specified for that column in INSERT",
+        "Only for UPDATE statements",
+        "Only for NULL values"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a common default for a timestamp column?",
+      "options": [
+        "0",
+        "CURRENT_TIMESTAMP",
+        "NULL",
+        "'' (empty string)"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

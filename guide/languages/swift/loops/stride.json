@@ -1,0 +1,22 @@
+{
+  "title": "Swift Stride",
+  "language": "swift",
+  "topic": "stride",
+  "order": 27,
+  "nextTopic": "arrays",
+  "prevTopic": "break_continue",
+  "content": "### Swift Stride\n\nThe `stride()` function creates sequences of values with a specified increment. It is useful when you need to iterate with a step value other than 1.\n\n**Stride Functions:**\n\n| Function | Direction | Includes To Value |\n|----------|-----------|-------------------|\n| `stride(from:to:by:)` | Up or down | Excludes end value |\n| `stride(from:through:by:)` | Up or down | Includes end value |\n\n**Syntax:**\n\n```swift\n// stride(from:to:by:) - excludes end value\nfor i in stride(from: 0, to: 10, by: 2) {\n    print(i)  // 0, 2, 4, 6, 8\n}\n\n// stride(from:through:by:) - includes end value\nfor i in stride(from: 0, through: 10, by: 2) {\n    print(i)  // 0, 2, 4, 6, 8, 10\n}\n```\n\n**Reverse Stride:**\n\n```swift\n// Counting down\nfor i in stride(from: 10, to: 0, by: -1) {\n    print(i)  // 10, 9, 8, 7, 6, 5, 4, 3, 2, 1\n}\n\nfor i in stride(from: 10, through: 1, by: -1) {\n    print(i)  // 10, 9, ..., 1\n}\n```\n\n> **Key Point:** The `by` parameter can be any `Strideable` type with fractional steps like `Double`.\n\n```swift\n// Floating point stride\nfor value in stride(from: 0.0, through: 1.0, by: 0.25) {\n    print(value)  // 0.0, 0.25, 0.5, 0.75, 1.0\n}\n\n// Creating an array from stride\nlet values = Array(stride(from: 0, to: 100, by: 10))\nprint(values)  // [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]\n```\n\nStride is especially useful for graph plotting, grid layouts, and any stepped iteration.",
+  "codeExample": "import Foundation\n\n// Upward stride (exclusive)\nprint(\"Even numbers up to 10:\")\nfor i in stride(from: 2, to: 10, by: 2) {\n    print(i, terminator: \" \")\n}\nprint()\n\n// Upward stride (inclusive)\nprint(\"\\nMultiples of 5 up to 25:\")\nfor i in stride(from: 5, through: 25, by: 5) {\n    print(i, terminator: \" \")\n}\nprint()\n\n// Downward stride\nprint(\"\\nCountdown from 5:\")\nfor i in stride(from: 5, through: 1, by: -1) {\n    print(i, terminator: \" \")\n}\nprint(\"\\nBlast off!\")\n\n// Float stride\nprint(\"\\nTemperature readings:\")\nfor temp in stride(from: 0.0, through: 100.0, by: 12.5) {\n    print(\"\\(temp)°C\", terminator: \" | \")\n}\nprint()",
+  "quiz": [
+    {
+      "question": "What is the difference between 'to:' and 'through:' in stride?",
+      "options": ["No difference", "'to:' excludes, 'through:' includes end", "'to:' includes, 'through:' excludes end", "'to:' is ascending, 'through:' is descending"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does 'stride(from: 0, to: 10, by: 3)' produce?",
+      "options": ["0, 3, 6, 9", "0, 3, 6, 9, 10", "0, 3, 6", "0, 3, 6, 10"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "DROP and TRUNCATE",
+  "language": "sql",
+  "topic": "drop_truncate",
+  "order": 61,
+  "nextTopic": "insert",
+  "prevTopic": "alter_table",
+  "content": "### DROP and TRUNCATE Statements\n\nDROP removes entire database objects (tables, views, indexes). TRUNCATE removes all rows from a table while keeping the table structure.\n\n---\n\n### DROP TABLE\n\nRemoves the table and its data permanently:\n\n```sql\nDROP TABLE employees;\n\n-- Prevent error if table doesn't exist\nDROP TABLE IF EXISTS employees;\n```\n\n### DROP Other Objects\n\n```sql\nDROP VIEW IF EXISTS active_employees;\nDROP INDEX IF EXISTS idx_name;\nDROP DATABASE IF EXISTS test_db;\nDROP PROCEDURE IF EXISTS get_employees;\n```\n\n### TRUNCATE TABLE\n\nRemoves all rows from a table (cannot be rolled back in most databases):\n\n```sql\nTRUNCATE TABLE temp_data;\n```\n\n### DELETE vs TRUNCATE vs DROP\n\n| Operation | Removes | Structure | Can Rollback | Speed | Reset Identity |\n|-----------|---------|-----------|-------------|-------|----------------|\n| DELETE | Selected rows | Kept | Yes (in transaction) | Slow | No |\n| TRUNCATE | All rows | Kept | No (usually) | Fast | Yes |\n| DROP | All rows + structure | Removed | No | Fastest | N/A |\n\n### TRUNCATE Limitations\n\n```sql\n-- Cannot truncate if foreign key references exist\nTRUNCATE TABLE departments;  -- Error if employees reference it\n\n-- Must disable constraints first or use DELETE\nDELETE FROM departments;  -- Works but slower\n```\n\n### DROP DATABASE\n\n```sql\nDROP DATABASE IF EXISTS old_database;\n```\n\n### DROP COLUMN (via ALTER TABLE)\n\n```sql\nALTER TABLE employees DROP COLUMN temporary_column;\n```\n\n> **Key Point:** DROP removes the entire table, TRUNCATE empties it, DELETE removes specific rows. TRUNCATE is faster than DELETE but offers less control and rollback capability.",
+  "codeExample": "-- Remove temporary data\nTRUNCATE TABLE staging_data;\n\n-- Remove entire table\nDROP TABLE IF EXISTS archive_2020;",
+  "quiz": [
+    {
+      "question": "What is the key difference between DELETE and TRUNCATE?",
+      "answers": [],
+      "options": [
+        "DELETE is faster than TRUNCATE",
+        "TRUNCATE removes all rows and is faster, DELETE can filter rows",
+        "DELETE removes the table structure",
+        "TRUNCATE can be used with WHERE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does DROP TABLE keep the table structure?",
+      "options": [
+        "Yes",
+        "No, it removes everything",
+        "Only if IF EXISTS is used",
+        "The structure is moved to temp"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

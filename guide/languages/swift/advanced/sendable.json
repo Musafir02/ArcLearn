@@ -1,0 +1,22 @@
+{
+  "title": "Swift Sendable",
+  "language": "swift",
+  "topic": "sendable",
+  "order": 76,
+  "nextTopic": "main_async",
+  "prevTopic": "actor",
+  "content": "### Swift Sendable\n\n`Sendable` is a protocol that indicates a type's values can be safely passed across concurrent domains (e.g., between tasks or actors). The compiler checks `Sendable` conformance to prevent data races.\n\n**Sendable Protocol:**\n\n```swift\n// Types that are safe to pass between concurrency domains\nprotocol Sendable { }\n```\n\n**Types That Are Automatically Sendable:**\n\n| Type | Reason |\n|------|--------|\n| Value types (structs with Sendable properties) | Value semantics |\n| Enums (with Sendable associated values) | Value semantics |\n| Actors | Actor isolation |\n| Immutable classes | No mutable state |\n| `@unchecked Sendable` | Manual opt-out of checking |\n| Basic types (Int, String, Bool, etc.) | Trivially safe |\n\n```swift\n// Struct with value types - automatically Sendable\nstruct UserData {\n    let name: String\n    let age: Int\n}\n\n// Enum - automatically Sendable\nenum Result {\n    case success(Data)\n    case failure(Error)\n}\n\n// Class - not automatically Sendable\nclass MutableData {\n    var value: Int = 0  // Warning: not Sendable\n}\n```\n\n**Making a Type Sendable:**\n\n```swift\n// Struct: ensure all properties are Sendable\nstruct Configuration: Sendable {\n    let serverURL: String\n    let timeout: Int\n}\n\n// Final class with immutable properties\nfinal class ImmutableData: @unchecked Sendable {\n    let value: String\n    init(value: String) { self.value = value }\n}\n\n// Class with locking\nfinal class ThreadSafeData: @unchecked Sendable {\n    private var _value = 0\n    private let queue = DispatchQueue(label: \"sync\")\n    \n    var value: Int {\n        queue.sync { _value }\n    }\n    \n    func setValue(_ new: Int) {\n        queue.sync { _value = new }\n    }\n}\n```\n\n**Sendable Warnings:**\n\n```swift\nactor DataProcessor {\n    func process(_ data: MutableData) {  // Warning: parameter not Sendable\n        // ...\n    }\n}\n\n// Fix: use Sendable type\nactor SafeProcessor {\n    func process(_ data: Configuration) {  // OK: Configuration is Sendable\n        // ...\n    }\n}\n```\n\n> **Key Point:** The compiler enforces `Sendable` checks when passing values between concurrency domains. Value types are automatically Sendable when all their properties are Sendable.\n\nUse `@unchecked Sendable` only when you have manually verified thread safety (e.g., using locks, serial queues, or immutable state). This opts out of compiler checking.",
+  "codeExample": "import Foundation\n\n// Auto-Sendable struct\nstruct Message: Sendable {\n    let id: Int\n    let content: String\n    let timestamp: Date\n}\n\n// Explicitly Sendable\nstruct Point: Sendable {\n    var x: Int\n    var y: Int\n}\n\n// Non-Sendable reference type\nclass Counter {\n    var count = 0\n}\n\nactor MessageHandler {\n    private var messages: [Message] = []\n    \n    func addMessage(_ message: Message) {  // OK: Message is Sendable\n        messages.append(message)\n    }\n    \n    // func addCounter(_ counter: Counter) { }  // Warning\n    \n    func getMessages() -> [Message] {\n        messages\n    }\n}\n\nlet handler = MessageHandler()\n\nTask {\n    let msg = Message(id: 1, content: \"Hello\", timestamp: Date())\n    await handler.addMessage(msg)\n    \n    let msgs = await handler.getMessages()\n    print(\"Messages: \\(msgs.count)\")\n}\n\n// @Sendable closure\nfunc performAsyncTask(_ operation: @Sendable @escaping () -> Void) {\n    Task {\n        operation()\n    }\n}\n\nperformAsyncTask {\n    print(\"This runs safely in a task\")\n}\n\nThread.sleep(forTimeInterval: 1)",
+  "quiz": [
+    {
+      "question": "Are structs with all Sendable properties automatically Sendable?",
+      "options": ["Yes", "No, must conform explicitly", "Only if immutable", "Only in Swift 5.7+"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does '@unchecked Sendable' mean?",
+      "options": ["Compiler checks are skipped", "Type is checked at runtime", "Only for classes", "Type is not Sendable"],
+      "correctIndex": 0
+    }
+  ]
+}

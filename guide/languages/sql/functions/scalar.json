@@ -1,0 +1,32 @@
+{
+  "title": "Scalar Functions",
+  "language": "sql",
+  "topic": "scalar",
+  "order": 19,
+  "nextTopic": "date_functions",
+  "prevTopic": "aggregate",
+  "content": "### Scalar Functions\n\nScalar functions operate on individual values and return a single value per row. They can be used in SELECT, WHERE, and other clauses.\n\n---\n\n### String Scalar Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| UPPER() | Converts to uppercase | UPPER('hello') => 'HELLO' |\n| LOWER() | Converts to lowercase | LOWER('HELLO') => 'hello' |\n| LENGTH() | Returns string length | LENGTH('hello') => 5 |\n| TRIM() | Removes leading/trailing spaces | TRIM(' hello ') => 'hello' |\n| SUBSTRING() | Extracts part of a string | SUBSTRING('hello', 1, 2) => 'he' |\n| REPLACE() | Replaces occurrences | REPLACE('abc', 'b', 'x') => 'axc' |\n\n### Numeric Scalar Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| ROUND() | Rounds to specified decimals | ROUND(3.14159, 2) => 3.14 |\n| ABS() | Absolute value | ABS(-5) => 5 |\n| CEIL() | Rounds up to nearest integer | CEIL(3.1) => 4 |\n| FLOOR() | Rounds down to nearest integer | FLOOR(3.9) => 3 |\n| MOD() | Remainder of division | MOD(10, 3) => 1 |\n\n### Date Scalar Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| NOW() | Current date and time | NOW() |\n| CURDATE() | Current date | CURDATE() |\n| YEAR() | Extracts the year | YEAR('2024-01-15') => 2024 |\n| MONTH() | Extracts the month | MONTH('2024-01-15') => 1 |\n| DAY() | Extracts the day | DAY('2024-01-15') => 15 |\n\n> **Key Point:** Scalar functions return one result per row, unlike aggregate functions which return one result per group.",
+  "codeExample": "SELECT name,\n       UPPER(name) AS upper_name,\n       LENGTH(name) AS name_length,\n       ROUND(salary * 1.1, 0) AS increased_salary\nFROM employees;",
+  "quiz": [
+    {
+      "question": "What does TRIM() do?",
+      "options": [
+        "Removes all vowels",
+        "Removes leading and trailing spaces",
+        "Truncates the string",
+        "Capitalizes the first letter"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Scalar functions return:",
+      "options": [
+        "One result per group of rows",
+        "One result per row",
+        "One result for the entire query",
+        "No results"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

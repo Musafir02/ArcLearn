@@ -1,0 +1,22 @@
+{
+  "title": "Swift Output",
+  "language": "swift",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Swift Output\n\nThe `print()` function is used to output text to the console. Swift uses string interpolation with `\\()` syntax to embed values inside strings.\n\n**Using `print()`:**\n\n```swift\nprint(\"Hello, World!\")\n\n// String interpolation\nlet name = \"Alice\"\nlet age = 30\nprint(\"\\(name) is \\(age) years old\")\n\n// Multiple items\nprint(\"One\", \"Two\", \"Three\", separator: \", \", terminator: \"\")\nprint(\"No newline at end\")\n```\n\n**Parameters of `print()`:**\n\n| Parameter | Default | Description |\n|-----------|---------|-------------|\n| items | required | One or more values to print |\n| separator | `\" \"` | String placed between items |\n| terminator | `\"\\n\"` | String appended at the end |\n\n> **Key Point:** String interpolation `\\()` works with any expression, including method calls and calculations.\n\n```swift\nprint(\"Sum of 5 and 3 is \\(5 + 3)\")\nprint(\"Uppercase: \\(\"hello\".uppercased())\")\n```",
+  "codeExample": "import Foundation\n\nlet product = \"iPhone\"\nlet price = 999.99\nlet quantity = 2\n\n// Print with interpolation\nprint(\"Product: \\(product)\")\nprint(\"Unit Price: $\\(price)\")\nprint(\"Total: $\\(price * Double(quantity))\")\n\n// Custom separators and terminators\nprint(\"Loading\", \".\", \".\", \".\", separator: \"\", terminator: \"\\n\")\nprint(\"Done!\")",
+  "quiz": [
+    {
+      "question": "What syntax is used for string interpolation in Swift?",
+      "options": ["${}", "\\()", "#{}", "()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the default terminator for print()?",
+      "options": ["Space", "Newline", "Tab", "Empty string"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Correlated Subqueries",
+  "language": "sql",
+  "topic": "correlated_subqueries",
+  "order": 38,
+  "nextTopic": "exists",
+  "prevTopic": "subqueries",
+  "content": "### Correlated Subqueries\n\nA correlated subquery references columns from the outer query. It is evaluated once for each row processed by the outer query.\n\n---\n\n### How Correlated Subqueries Work\n\nUnlike regular subqueries which run once, correlated subqueries run repeatedly:\n\n```sql\n-- For each employee, find their department's average salary\nSELECT e.name, e.salary,\n       (SELECT AVG(salary)\n        FROM employees\n        WHERE department = e.department) AS dept_avg\nFROM employees e;\n\n-- The subquery runs once per employee row\n```\n\n### Correlated Subquery in WHERE\n\n```sql\n-- Find employees earning more than their department average\nSELECT e.name, e.salary, e.department\nFROM employees e\nWHERE e.salary > (\n    SELECT AVG(salary)\n    FROM employees\n    WHERE department = e.department\n);\n```\n\n### Correlated vs Non-Correlated\n\n| Aspect | Non-Correlated | Correlated |\n|--------|---------------|------------|\n| Evaluation | Once | Once per outer row |\n| Performance | Fast | Slower on large tables |\n| Dependency | Independent | References outer query |\n| Complexity | Simple | More complex |\n\n### EXISTS with Correlated Subquery\n\n```sql\n-- Find customers who have placed at least one order\nSELECT c.name\nFROM customers c\nWHERE EXISTS (\n    SELECT 1\n    FROM orders o\n    WHERE o.customer_id = c.id\n);\n```\n\n> **Key Point:** Correlated subqueries can be slow because they run once per row of the outer query. Consider using JOIN or window functions as performance alternatives.",
+  "codeExample": "SELECT p.product_name, p.price\nFROM products p\nWHERE p.price > (\n    SELECT AVG(price)\n    FROM products\n    WHERE category = p.category\n);",
+  "quiz": [
+    {
+      "question": "How many times does a correlated subquery execute?",
+      "options": [
+        "Once",
+        "Once per row of the outer query",
+        "Once per table",
+        "It never executes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What makes a subquery correlated?",
+      "options": [
+        "It uses aggregate functions",
+        "It references columns from the outer query",
+        "It has a GROUP BY clause",
+        "It returns multiple rows"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

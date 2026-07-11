@@ -1,0 +1,22 @@
+{
+  "title": "Swift Conditions Overview",
+  "language": "swift",
+  "topic": "conditions",
+  "order": 19,
+  "nextTopic": "if_else",
+  "prevTopic": "guard",
+  "content": "### Swift Conditions Overview\n\nConditional statements allow your code to execute different paths based on certain conditions. Swift provides `if`, `if-else`, `switch`, and the ternary conditional operator for branching logic.\n\n**Types of Conditions:**\n\n| Statement | Best For |\n|-----------|----------|\n| `if` | Simple boolean checks |\n| `if-else if-else` | Multiple related conditions |\n| `switch` | Multiple discrete values |\n| Ternary `?:` | Quick inline decisions |\n\n```swift\nlet temperature = 25\n\n// If statement\nif temperature > 30 {\n    print(\"It's hot!\")\n} else if temperature > 20 {\n    print(\"It's warm\")\n} else {\n    print(\"It's cool\")\n}\n\n// Switch statement\nswitch temperature {\ncase ...10:\n    print(\"Cold\")\ncase 11...20:\n    print(\"Cool\")\ncase 21...30:\n    print(\"Warm\")\ndefault:\n    print(\"Hot\")\n}\n```\n\n**Condition Syntax:**\n\n- Parentheses around conditions are optional: `if x > 0` not `if (x > 0)`\n- Curly braces are always required, even for single-line bodies\n- Conditions can include optional binding and boolean expressions\n\n> **Key Point:** Swift requires curly braces `{}` for all control flow statements. There is no implicit single-statement body.\n\nConditions in Swift can use tuple patterns, value binding, and `where` clauses for complex matching.",
+  "codeExample": "import Foundation\n\nlet score = 85\nlet hasBonus = true\n\n// Multiple conditions\nif score >= 90 {\n    print(\"Grade: A\")\n} else if score >= 80 {\n    print(\"Grade: B\")\n} else if score >= 70 {\n    print(\"Grade: C\")\n} else {\n    print(\"Grade: F\")\n}\n\n// Combined conditions\nif score > 80 && hasBonus {\n    print(\"Excellent work with bonus!\")\n}\n\n// Using where with if\nlet optionalValue: Int? = 10\nif let value = optionalValue, value > 5 {\n    print(\"Value \\(value) is greater than 5\")\n}",
+  "quiz": [
+    {
+      "question": "Are parentheses required around conditions in Swift if statements?",
+      "options": ["Yes, always", "No, optional", "Only for complex conditions", "Only in functions"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can you omit curly braces for single-line if statements?",
+      "options": ["Yes", "No, always required", "Only in SwiftUI", "Only with return statements"],
+      "correctIndex": 1
+    }
+  ]
+}

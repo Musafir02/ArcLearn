@@ -1,0 +1,32 @@
+{
+  "title": "UNIQUE Constraint",
+  "language": "sql",
+  "topic": "unique",
+  "order": 56,
+  "nextTopic": "check",
+  "prevTopic": "foreign_key",
+  "content": "### UNIQUE Constraint\n\nThe UNIQUE constraint ensures that all values in a column or a group of columns are distinct (no duplicates allowed).\n\n---\n\n### UNIQUE vs PRIMARY KEY\n\n| Aspect | UNIQUE | PRIMARY KEY |\n|--------|--------|-------------|\n| NULL values | Allows one NULL (in most databases) | Does not allow NULL |\n| Count per table | Multiple UNIQUE constraints | Only ONE primary key |\n| Clustered index | Creates non-clustered index by default | Creates clustered index by default |\n\n### Creating a UNIQUE Constraint\n\n```sql\n-- Single column\nCREATE TABLE users (\n    id INT PRIMARY KEY,\n    email VARCHAR(255) UNIQUE\n);\n\n-- Named constraint\nCREATE TABLE users (\n    id INT PRIMARY KEY,\n    email VARCHAR(255),\n    CONSTRAINT uq_users_email UNIQUE (email)\n);\n\n-- Composite unique (combination must be unique)\nCREATE TABLE user_roles (\n    user_id INT,\n    role_id INT,\n    CONSTRAINT uq_user_role UNIQUE (user_id, role_id)\n);\n```\n\n### Adding UNIQUE to Existing Table\n\n```sql\nALTER TABLE users\nADD CONSTRAINT uq_users_email UNIQUE (email);\n```\n\n### Dropping UNIQUE\n\n```sql\nALTER TABLE users DROP CONSTRAINT uq_users_email;\n```\n\n### UNIQUE with NULL\n\nIn most databases (MySQL, PostgreSQL, SQL Server), a UNIQUE constraint allows multiple NULL values because NULL is not considered equal to any other value, including another NULL. Some databases (like MS Access) treat NULLs as duplicates.\n\n```sql\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    badge_number VARCHAR(20) UNIQUE  -- Can have multiple NULLs\n);\n```\n\n> **Key Point:** Use UNIQUE to enforce business rules requiring distinct values, such as email addresses, usernames, or badge numbers. Unlike PRIMARY KEY, UNIQUE allows NULL values.",
+  "codeExample": "CREATE TABLE products (\n    id INT PRIMARY KEY,\n    sku VARCHAR(50) UNIQUE NOT NULL,\n    name VARCHAR(200)\n);",
+  "quiz": [
+    {
+      "question": "How many UNIQUE constraints can a table have?",
+      "options": [
+        "Only one",
+        "Multiple",
+        "None",
+        "Up to two"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does a UNIQUE constraint allow NULL values in most databases?",
+      "options": [
+        "No, never",
+        "Yes, allows one or more NULLs",
+        "Only if the column is nullable",
+        "NULLs are always treated as duplicates"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "COALESCE Function",
+  "language": "sql",
+  "topic": "coalesce",
+  "order": 23,
+  "nextTopic": "nullif",
+  "prevTopic": "string_functions",
+  "content": "### COALESCE Function\n\nCOALESCE returns the first non-NULL value from a list of expressions. It is the standard SQL way to handle NULL values.\n\n---\n\n### Basic COALESCE Syntax\n\n```sql\nSELECT COALESCE(salary, 0) AS salary_or_zero\nFROM employees;\n\n-- Returns the salary value if not NULL, otherwise 0\n```\n\n### COALESCE with Multiple Arguments\n\n```sql\n-- Returns the first non-NULL value in order\nSELECT COALESCE(preferred_name, first_name, 'Unknown') AS display_name\nFROM employees;\n```\n\n### COALESCE vs ISNULL vs NVL\n\n| Function | Database | Notes |\n|----------|----------|-------|\n| COALESCE(value, default) | SQL Standard | Accepts 2+ arguments |\n| ISNULL(value, default) | SQL Server | Accepts exactly 2 arguments |\n| NVL(value, default) | Oracle | Accepts exactly 2 arguments |\n| IFNULL(value, default) | MySQL | Accepts exactly 2 arguments |\n\n### Practical Examples\n\n```sql\n-- Calculate total compensation with fallback\nSELECT name,\n       COALESCE(salary, 0) + COALESCE(bonus, 0) AS total_pay\nFROM employees;\n\n-- Handle NULL in string concatenation\nSELECT CONCAT(first_name, ' ', COALESCE(middle_name, ''), ' ', last_name) AS full_name\nFROM employees;\n\n-- Use in WHERE clause\nSELECT * FROM employees\nWHERE COALESCE(termination_date, '9999-12-31') > CURRENT_DATE;\n```\n\n> **Key Point:** COALESCE evaluates arguments left to right and stops at the first non-NULL value. All arguments must be of compatible data types.",
+  "codeExample": "SELECT product_name,\n       COALESCE(discounted_price, list_price, 0) AS effective_price\nFROM products;",
+  "quiz": [
+    {
+      "question": "What does COALESCE(NULL, 'Hello', NULL) return?",
+      "options": [
+        "NULL",
+        "'Hello'",
+        "Error",
+        "Empty string"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many arguments can COALESCE accept?",
+      "options": [
+        "Exactly 2",
+        "At most 2",
+        "2 or more",
+        "Exactly 1"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

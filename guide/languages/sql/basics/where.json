@@ -1,0 +1,32 @@
+{
+  "title": "WHERE Clause",
+  "language": "sql",
+  "topic": "where",
+  "order": 6,
+  "nextTopic": "orderby",
+  "prevTopic": "distinct",
+  "content": "### WHERE Clause\n\nThe WHERE clause filters rows based on specified conditions. Only rows that satisfy the condition are included in the result.\n\n---\n\n### Basic WHERE Syntax\n\n```sql\nSELECT name, salary\nFROM employees\nWHERE salary > 60000;\n```\n\n### Comparison Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| = | Equal to | WHERE name = 'John' |\n| <> or != | Not equal to | WHERE status <> 'inactive' |\n| > | Greater than | WHERE salary > 50000 |\n| < | Less than | WHERE age < 30 |\n| >= | Greater than or equal | WHERE price >= 100 |\n| <= | Less than or equal | WHERE quantity <= 10 |\n\n### Text vs Numeric Values\n\nText values must be enclosed in single quotes. Numeric values are written without quotes.\n\n```sql\n-- String comparison\nSELECT * FROM products WHERE category = 'Electronics';\n\n-- Numeric comparison\nSELECT * FROM products WHERE price > 500;\n\n-- Date comparison\nSELECT * FROM orders WHERE order_date >= '2024-01-01';\n```\n\n> **Key Point:** String comparisons in WHERE are case-insensitive in some databases (MySQL) but case-sensitive in others (PostgreSQL with default settings).",
+  "codeExample": "SELECT first_name, last_name, department\nFROM employees\nWHERE department = 'Engineering';",
+  "quiz": [
+    {
+      "question": "Which SQL clause is used to filter rows based on a condition?",
+      "options": [
+        "SELECT",
+        "FROM",
+        "WHERE",
+        "HAVING"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How should text values be enclosed in a WHERE clause?",
+      "options": [
+        "In double quotes",
+        "In single quotes",
+        "In parentheses",
+        "Without any quotes"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

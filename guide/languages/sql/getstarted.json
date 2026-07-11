@@ -1,0 +1,32 @@
+{
+  "title": "Getting Started with SQL",
+  "language": "sql",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Getting Started with SQL\n\nTo start writing SQL queries, you need access to a relational database system. Popular options include:\n\n- **MySQL / MariaDB** — open-source, widely used for web applications\n- **PostgreSQL** — advanced open-source database with strong feature set\n- **SQL Server** — Microsoft's enterprise database solution\n- **SQLite** — lightweight, file-based database ideal for learning\n- **Oracle Database** — enterprise-grade database system\n\n### Your First Query\n\nOnce connected to a database, you can run SQL statements using a command-line tool, GUI client, or programming language driver.\n\n---\n\n### Sample Database\n\nThroughout this guide, we will use a sample database with users, orders, and products tables:\n\n| Table | Columns |\n|-------|---------|\n| employees | id, name, department, salary, hire_date |\n| orders | id, customer_id, product_id, quantity, order_date |\n| products | id, name, price, category |\n\n> **Key Point:** Start by installing a free database like SQLite or PostgreSQL and practice writing queries as you follow along.\n\n### Setup Commands\n\nCreate a sample table and insert some data to practice with:",
+  "codeExample": "-- Create a simple table\nCREATE TABLE employees (\n    id INTEGER PRIMARY KEY,\n    name TEXT NOT NULL,\n    department TEXT,\n    salary DECIMAL(10,2),\n    hire_date DATE\n);\n\n-- Insert sample data\nINSERT INTO employees (id, name, department, salary, hire_date)\nVALUES (1, 'Alice Smith', 'Engineering', 75000, '2023-01-15');",
+  "quiz": [
+    {
+      "question": "Which of the following is a lightweight, file-based database ideal for learning?",
+      "options": [
+        "Oracle",
+        "SQL Server",
+        "SQLite",
+        "MongoDB"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the purpose of a CREATE TABLE statement?",
+      "options": [
+        "To delete a table",
+        "To define the structure of a new table",
+        "To insert data into a table",
+        "To query data from a table"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

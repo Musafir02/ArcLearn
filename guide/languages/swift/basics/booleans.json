@@ -1,0 +1,22 @@
+{
+  "title": "Swift Booleans",
+  "language": "swift",
+  "topic": "booleans",
+  "order": 11,
+  "nextTopic": "strings",
+  "prevTopic": "operators",
+  "content": "### Swift Booleans\n\nSwift's `Bool` type represents logical truth values: `true` and `false`. Booleans are used in conditional statements and logical operations.\n\n**Logical Operators:**\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `!` | NOT | `!true` | `false` |\n| `&&` | AND | `true && false` | `false` |\n| `||` | OR | `true || false` | `true` |\n\n**Comparison Results:**\n\n```swift\nlet isEqual = (5 == 5)      // true\nlet isGreater = (5 > 10)    // false\nlet isNotEqual = (5 != 3)   // true\n\n// Logical combinations\nlet hasAccess = isLoggedIn && isVerified\nlet canProceed = hasPermission || isAdmin\n```\n\n**Truth Table:**\n\n| A | B | A && B | A || B | !A |\n|---|---|--------|---------|-----|\n| true | true | true | true | false |\n| true | false | false | true | false |\n| false | true | false | true | true |\n| false | false | false | false | true |\n\n> **Key Point:** Swift uses short-circuit evaluation for `&&` and `||`. If the left operand determines the result, the right operand is not evaluated.\n\n```swift\n// Short-circuit: second condition never evaluated if first is false\nif isLoggedIn && checkCredentials() {\n    print(\"Access granted\")\n}\n```",
+  "codeExample": "import Foundation\n\nlet temperature = 72\nlet isSunny = true\nlet isWeekend = false\n\n// Logical combinations\nlet goodForBeach = temperature > 70 && isSunny\nlet goodForPark = temperature > 60 && (isSunny || !isWeekend)\n\nprint(\"Good for beach: \\(goodForBeach)\")\nprint(\"Good for park: \\(goodForPark)\")\n\n// Toggle boolean\nvar isActive = true\nisActive.toggle()\nprint(\"Active: \\(isActive)\")  // false\n\n// Ternary with boolean\nlet status = isActive ? \"Active\" : \"Inactive\"\nprint(\"Status: \\(status)\")",
+  "quiz": [
+    {
+      "question": "What is the result of 'true && false || true'?",
+      "options": ["true", "false", "Compile error", "nil"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Does Swift use short-circuit evaluation?",
+      "options": ["Yes", "No", "Only for AND", "Only for OR"],
+      "correctIndex": 0
+    }
+  ]
+}

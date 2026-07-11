@@ -1,0 +1,32 @@
+{
+  "title": "Query Performance",
+  "language": "sql",
+  "topic": "query_performance",
+  "order": 68,
+  "nextTopic": "execution_plan",
+  "prevTopic": "er_diagrams",
+  "content": "### Query Performance\n\nQuery performance optimization involves writing efficient SQL queries and designing the database for fast data retrieval.\n\n---\n\n### Key Performance Factors\n\n| Factor | Impact |\n|--------|--------|\n| Indexes | Speed up WHERE, JOIN, ORDER BY |\n| Query structure | Well-written queries use indexes effectively |\n| Data volume | Larger datasets need better indexing |\n| Hardware | CPU, memory, disk speed matter |\n| Database config | Buffer pool, cache sizes affect performance |\n\n### Performance Tips\n\n```sql\n-- 1. Avoid SELECT * in production\nSELECT name, salary FROM employees;\n\n-- 2. Use EXISTS instead of IN for large subquery results\n-- Slow:\nSELECT * FROM customers WHERE id IN (SELECT customer_id FROM orders);\n-- Fast:\nSELECT * FROM customers c WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id);\n\n-- 3. Filter early with WHERE before joins\nSELECT e.name, d.dept_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE e.active = 1  -- Filter before join\n  AND d.active = 1;\n```\n\n### Common Performance Anti-Patterns\n\n| Anti-Pattern | Solution |\n|-------------|----------|\n| SELECT * in production | Name specific columns |\n| Functions in WHERE on indexed columns | Use computed columns or rewrite |\n| Leading wildcard in LIKE | Avoid '%...' patterns |\n| No pagination on large results | Use LIMIT/OFFSET or keyset pagination |\n| Implicit type conversions | Match types explicitly |\n| Missing indexes on foreign keys | Index all FK columns |\n\n```sql\n-- Anti-pattern: function on indexed column\n-- Slow:\nSELECT * FROM employees WHERE YEAR(hire_date) = 2024;\n-- Fast:\nSELECT * FROM employees WHERE hire_date >= '2024-01-01' AND hire_date < '2025-01-01';\n```\n\n> **Key Point:** The most impactful performance improvement is adding appropriate indexes on columns used in WHERE, JOIN, and ORDER BY clauses. Always analyze query execution plans.",
+  "codeExample": "-- Use covered indexes and avoid functions on indexed columns\n-- Create index:\nCREATE INDEX idx_orders_customer_date ON orders(customer_id, order_date);\n\n-- Query that uses the index efficiently:\nSELECT order_id, total\nFROM orders\nWHERE customer_id = 42\n  AND order_date >= '2024-01-01';",
+  "quiz": [
+    {
+      "question": "What is the most impactful performance improvement for queries?",
+      "options": [
+        "Using SELECT *",
+        "Adding appropriate indexes",
+        "Using subqueries",
+        "Increasing hardware"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is WHERE YEAR(hire_date) = 2024 slow on an indexed date column?",
+      "options": [
+        "YEAR is not a valid function",
+        "The function prevents index usage",
+        "It returns too many rows",
+        "It is not slow"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Swift Methods",
+  "language": "swift",
+  "topic": "methods",
+  "order": 50,
+  "nextTopic": "inheritance",
+  "prevTopic": "property_observers",
+  "content": "### Swift Methods\n\nMethods are functions that are associated with a particular type. Swift supports instance methods (called on instances) and type methods (called on the type itself).\n\n**Instance Methods:**\n\n```swift\nstruct Counter {\n    var count = 0\n    \n    // Instance method\n    func description() -> String {\n        return \"Count: \\(count)\"\n    }\n    \n    // Mutating method (can modify properties in struct)\n    mutating func increment() {\n        count += 1\n    }\n    \n    mutating func reset() {\n        count = 0\n    }\n}\n\nvar counter = Counter()\ncounter.increment()\ncounter.increment()\nprint(counter.description())  // Count: 2\n```\n\n**Mutating Methods:**\n\n| Scenario | `mutating` needed? |\n|----------|-------------------|\n| Struct method modifies property | Yes |\n| Class method modifies property | No (classes are reference types) |\n| Enum method modifies self | Yes |\n\n```swift\nstruct Point {\n    var x = 0.0, y = 0.0\n    \n    mutating func moveBy(x deltaX: Double, y deltaY: Double) {\n        x += deltaX\n        y += deltaY\n    }\n}\n\nvar point = Point()\npoint.moveBy(x: 5.0, y: 3.0)\n```\n\n**The `self` Property:**\n\n```swift\nstruct Person {\n    var name: String\n    \n    func introduce() {\n        print(\"Hi, I'm \\(self.name)\")\n    }\n    \n    // Use self to disambiguate parameter names\n    mutating func setName(_ name: String) {\n        self.name = name\n    }\n}\n```\n\n**Type Methods (Static):**\n\n```swift\nstruct MathUtils {\n    static func factorial(_ n: Int) -> Int {\n        guard n > 1 else { return 1 }\n        return n * factorial(n - 1)\n    }\n}\n\nprint(MathUtils.factorial(5))  // 120\n```\n\n> **Key Point:** Use `mutating` keyword for struct and enum methods that modify properties. Classes do not need `mutating`.\n\nMethods have implicit access to `self`, which refers to the instance itself. Use `self` to disambiguate between parameter names and property names.",
+  "codeExample": "import Foundation\n\nstruct ToggleSwitch {\n    var isOn = false\n    \n    // Mutating method\n    mutating func toggle() {\n        isOn.toggle()\n        print(\"Switch is now \\(isOn ? \"ON\" : \"OFF\")\")\n    }\n    \n    // Non-mutating method\n    func status() -> String {\n        return isOn ? \"Enabled\" : \"Disabled\"\n    }\n}\n\nvar light = ToggleSwitch()\nprint(light.status())\nlight.toggle()\nprint(light.status())\n\n// Type method\nstruct Conversion {\n    static func celsiusToFahrenheit(_ celsius: Double) -> Double {\n        celsius * 9 / 5 + 32\n    }\n    \n    static func fahrenheitToCelsius(_ fahrenheit: Double) -> Double {\n        (fahrenheit - 32) * 5 / 9\n    }\n}\n\nprint(\"100°C = \\(Conversion.celsiusToFahrenheit(100))°F\")\nprint(\"212°F = \\(String(format: \"%.1f\", Conversion.fahrenheitToCelsius(212)))°C\")",
+  "quiz": [
+    {
+      "question": "What keyword is needed for struct methods that modify properties?",
+      "options": ["modifying", "mutating", "changing", "inout"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword declares a type method?",
+      "options": ["class", "static", "type", "global"],
+      "correctIndex": 1
+    }
+  ]
+}

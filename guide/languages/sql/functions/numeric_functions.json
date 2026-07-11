@@ -1,0 +1,32 @@
+{
+  "title": "Numeric Functions",
+  "language": "sql",
+  "topic": "numeric_functions",
+  "order": 21,
+  "nextTopic": "string_functions",
+  "prevTopic": "date_functions",
+  "content": "### Numeric Functions\n\nSQL provides a range of functions for mathematical operations and numeric calculations.\n\n---\n\n### Rounding Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| ROUND(value, decimals) | Rounds to specified decimal places | ROUND(3.14159, 2) => 3.14 |\n| CEIL(value) | Rounds up to nearest integer | CEIL(3.2) => 4 |\n| FLOOR(value) | Rounds down to nearest integer | FLOOR(3.8) => 3 |\n| TRUNCATE(value, decimals) | Truncates without rounding | TRUNCATE(3.14159, 2) => 3.14 |\n\n### Mathematical Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| ABS(value) | Absolute value | ABS(-15) => 15 |\n| MOD(a, b) | Remainder of a / b | MOD(10, 3) => 1 |\n| POWER(a, b) | a raised to power b | POWER(2, 3) => 8 |\n| SQRT(value) | Square root | SQRT(25) => 5 |\n| EXP(value) | e raised to power value | EXP(1) => 2.71828 |\n| LN(value) | Natural logarithm | LN(2.71828) => 1 |\n| LOG(base, value) | Logarithm with base | LOG(10, 100) => 2 |\n\n### Trigonometric Functions\n\n```sql\nSELECT SIN(0), COS(0), TAN(0), PI();\n-- Result: 0, 1, 0, 3.14159\n```\n\n### Sign and Rounding\n\n```sql\nSELECT SIGN(-50),  -- -1\n       SIGN(0),    -- 0\n       SIGN(50);   -- 1\n\nSELECT RAND();  -- Random number between 0 and 1\n```\n\n> **Key Point:** The ROUND function rounds to the nearest value, while TRUNCATE simply discards extra decimal places without rounding.",
+  "codeExample": "SELECT product_name,\n       price,\n       ROUND(price * 0.08, 2) AS tax_amount,\n       ROUND(price * 1.08, 2) AS total_with_tax,\n       CEIL(price) AS ceiling_price,\n       FLOOR(price) AS floor_price\nFROM products;",
+  "quiz": [
+    {
+      "question": "What does CEIL(4.1) return?",
+      "options": [
+        "4",
+        "4.1",
+        "5",
+        "4.5"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the difference between ROUND and TRUNCATE?",
+      "options": [
+        "They are identical",
+        "ROUND rounds, TRUNCATE discards without rounding",
+        "TRUNCATE rounds, ROUND discards",
+        "ROUND works only for integers"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

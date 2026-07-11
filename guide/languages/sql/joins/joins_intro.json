@@ -1,0 +1,32 @@
+{
+  "title": "Introduction to Joins",
+  "language": "sql",
+  "topic": "joins_intro",
+  "order": 26,
+  "nextTopic": "inner_join",
+  "prevTopic": "cast_convert",
+  "content": "### Introduction to SQL Joins\n\nJoins combine rows from two or more tables based on a related column between them. They are fundamental to working with relational databases.\n\n---\n\n### Why Use Joins?\n\nRelational databases store data in separate tables to avoid redundancy. Joins allow you to reconstruct complete data by linking related tables.\n\n### Sample Tables\n\n```sql\n-- employees table\nid | name       | dept_id\n1  | Alice      | 1\n2  | Bob        | 2\n3  | Charlie    | 1\n\n-- departments table\nid | dept_name\n1  | Engineering\n2  | Sales\n```\n\n### Types of Joins\n\n| Join Type | Description |\n|-----------|-------------|\n| INNER JOIN | Returns matching rows from both tables |\n| LEFT JOIN | Returns all rows from left table, matching from right |\n| RIGHT JOIN | Returns all rows from right table, matching from left |\n| FULL OUTER JOIN | Returns all rows when there is a match in either table |\n| CROSS JOIN | Returns Cartesian product of both tables |\n| SELF JOIN | Joins a table with itself |\n| NATURAL JOIN | Joins using columns with the same name |\n\n### ON vs USING\n\n```sql\n-- ON: specify any condition\nSELECT * FROM employees e\nJOIN departments d ON e.dept_id = d.id;\n\n-- USING: join when columns have the same name\nSELECT * FROM employees\nJOIN departments USING (dept_id);\n```\n\n> **Key Point:** Joins are typically performed on foreign key relationships. The ON clause specifies how tables are related.",
+  "codeExample": "SELECT e.name AS employee_name,\n       d.dept_name AS department\nFROM employees e\nJOIN departments d ON e.dept_id = d.id;",
+  "quiz": [
+    {
+      "question": "Why are joins necessary in relational databases?",
+      "options": [
+        "To improve query performance",
+        "To combine data from related tables that are stored separately",
+        "To create new tables",
+        "To delete duplicate data"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which clause specifies how tables are related in a join?",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "ON",
+        "USING always"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "UPDATE Statement",
+  "language": "sql",
+  "topic": "update",
+  "order": 63,
+  "nextTopic": "delete",
+  "prevTopic": "insert",
+  "content": "### UPDATE Statement\n\nThe UPDATE statement modifies existing records in a table. Use WHERE to specify which rows to update; omitting WHERE updates ALL rows.\n\n---\n\n### UPDATE Syntax\n\n```sql\nUPDATE table_name\nSET column1 = value1,\n    column2 = value2\nWHERE condition;\n```\n\n### Basic UPDATE Example\n\n```sql\nUPDATE employees\nSET salary = 80000\nWHERE id = 101;\n```\n\n### UPDATE Multiple Columns\n\n```sql\nUPDATE employees\nSET\n    salary = salary * 1.1,\n    last_review_date = CURRENT_DATE\nWHERE department = 'Engineering';\n```\n\n### UPDATE Using a Subquery\n\n```sql\nUPDATE products\nSET price = price * 1.05\nWHERE category_id = (\n    SELECT id FROM categories WHERE name = 'Electronics'\n);\n```\n\n### UPDATE with JOIN\n\n```sql\n-- MySQL / PostgreSQL\nUPDATE employees e\nJOIN departments d ON e.dept_id = d.id\nSET e.bonus = 5000\nWHERE d.name = 'Sales' AND e.salary < 60000;\n\n-- SQL Server\nUPDATE e\nSET e.bonus = 5000\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE d.name = 'Sales' AND e.salary < 60000;\n```\n\n### UPDATE All Rows\n\n```sql\n-- Updates every row in the table (use with caution!)\nUPDATE employees SET active = 1;\n```\n\n> **Key Point:** Always include a WHERE clause in UPDATE unless you intend to modify every row. It is good practice to SELECT first to preview which rows will be affected.",
+  "codeExample": "UPDATE employees\nSET salary = salary * 1.15,\n    updated_at = CURRENT_TIMESTAMP\nWHERE performance_rating = 'Exceptional'\n  AND salary < 100000;",
+  "quiz": [
+    {
+      "question": "What happens if you omit the WHERE clause in an UPDATE?",
+      "options": [
+        "No rows are updated",
+        "All rows in the table are updated",
+        "An error occurs",
+        "Only the first row is updated"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can UPDATE reference the current column value in its assignment?",
+      "options": [
+        "No, only literal values",
+        "Yes, e.g., SET salary = salary * 1.1",
+        "Only with subqueries",
+        "Only in MySQL"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

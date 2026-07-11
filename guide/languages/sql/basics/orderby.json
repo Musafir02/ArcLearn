@@ -1,0 +1,32 @@
+{
+  "title": "ORDER BY Clause",
+  "language": "sql",
+  "topic": "orderby",
+  "order": 7,
+  "nextTopic": "and_or",
+  "prevTopic": "where",
+  "content": "### ORDER BY Clause\n\nThe ORDER BY clause sorts the result set in ascending or descending order based on one or more columns.\n\n---\n\n### Basic ORDER BY Syntax\n\n```sql\n-- Sort by a single column in ascending order (default)\nSELECT name, salary FROM employees ORDER BY salary;\n\n-- Sort in descending order\nSELECT name, salary FROM employees ORDER BY salary DESC;\n\n-- Explicit ascending order\nSELECT name, salary FROM employees ORDER BY salary ASC;\n```\n\n### Sorting by Multiple Columns\n\nList multiple columns separated by commas. The sort priority follows the column order:\n\n```sql\n-- Sort by department (ascending), then by salary (descending)\nSELECT name, department, salary\nFROM employees\nORDER BY department ASC, salary DESC;\n```\n\n### Sorting by Column Position\n\nYou can reference columns by their position in the SELECT list:\n\n```sql\nSELECT name, salary, hire_date\nFROM employees\nORDER BY 2 DESC;  -- Sort by the second column (salary)\n```\n\n### Sorting and NULL Values\n\nBy default, NULL values sort first in ascending order (depending on the database). Use NULLS FIRST or NULLS LAST for explicit control.\n\n```sql\nSELECT name, salary\nFROM employees\nORDER BY salary DESC NULLS LAST;\n```\n\n> **Key Point:** ORDER BY is always the last clause in a SELECT statement (before any LIMIT/OFFSET).",
+  "codeExample": "SELECT product_name, price, category\nFROM products\nORDER BY category, price DESC;",
+  "quiz": [
+    {
+      "question": "What is the default sort order in ORDER BY?",
+      "options": [
+        "Descending",
+        "Ascending",
+        "Random",
+        "No order"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can you sort by multiple columns in ORDER BY?",
+      "options": [
+        "No, only one column is allowed",
+        "Yes, separate columns with commas",
+        "Only with a subquery",
+        "Only if columns have the same data type"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

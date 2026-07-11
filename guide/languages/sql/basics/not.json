@@ -1,0 +1,32 @@
+{
+  "title": "NOT Operator",
+  "language": "sql",
+  "topic": "not",
+  "order": 9,
+  "nextTopic": "null_values",
+  "prevTopic": "and_or",
+  "content": "### NOT Operator\n\nThe NOT operator negates a condition. It returns true when the condition is false and false when the condition is true.\n\n---\n\n### Basic NOT Syntax\n\n```sql\n-- Find employees NOT in Engineering\nSELECT * FROM employees\nWHERE NOT department = 'Engineering';\n\n-- Equivalent to:\nSELECT * FROM employees\nWHERE department <> 'Engineering';\n```\n\n### NOT with IN\n\n```sql\n-- Find products NOT in specific categories\nSELECT * FROM products\nWHERE category NOT IN ('Electronics', 'Clothing');\n```\n\n### NOT with BETWEEN\n\n```sql\n-- Find products outside a price range\nSELECT * FROM products\nWHERE price NOT BETWEEN 100 AND 500;\n```\n\n### NOT with LIKE\n\n```sql\n-- Find names that do NOT start with 'A'\nSELECT * FROM employees\nWHERE name NOT LIKE 'A%';\n```\n\n### NOT with EXISTS\n\n```sql\n-- Find customers who have NOT placed any orders\nSELECT * FROM customers c\nWHERE NOT EXISTS (\n    SELECT 1 FROM orders o WHERE o.customer_id = c.id\n);\n```\n\n### NOT with NULL\n\nNote: NOT NULL is distinct from the NOT operator. NOT NULL is a constraint, while IS NOT NULL checks for non-null values.\n\n```sql\n-- Find employees with a non-null salary\nSELECT * FROM employees WHERE salary IS NOT NULL;\n```\n\n> **Key Point:** NOT can be combined with IN, BETWEEN, LIKE, EXISTS, and other operators. It is a logical negation, not a comparison operator.",
+  "codeExample": "SELECT name, department\nFROM employees\nWHERE NOT department = 'Intern'\nORDER BY name;",
+  "quiz": [
+    {
+      "question": "What does NOT BETWEEN 10 AND 20 do?",
+      "options": [
+        "Selects values between 10 and 20",
+        "Selects values less than 10 or greater than 20",
+        "Selects only values equal to 10 or 20",
+        "Throws an error"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is NOT NULL the same as the NOT operator?",
+      "options": [
+        "Yes, they are identical",
+        "No, NOT NULL is a constraint, IS NOT NULL checks non-null values",
+        "Only in MySQL",
+        "NOT NULL is an operator"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

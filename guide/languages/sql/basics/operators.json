@@ -1,0 +1,32 @@
+{
+  "title": "SQL Operators",
+  "language": "sql",
+  "topic": "operators",
+  "order": 13,
+  "nextTopic": "between",
+  "prevTopic": "comments",
+  "content": "### SQL Operators\n\nOperators perform arithmetic, comparison, and logical operations in SQL. They are used in WHERE clauses, SELECT expressions, and more.\n\n---\n\n### Arithmetic Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| + | Addition | salary + bonus |\n| - | Subtraction | price - discount |\n| * | Multiplication | quantity * price |\n| / | Division | total / count |\n| % | Modulo (remainder) | id % 2 |\n\n```sql\nSELECT name,\n       salary,\n       salary * 0.1 AS bonus,\n       salary + (salary * 0.1) AS total_compensation\nFROM employees;\n```\n\n### Comparison Operators\n\n| Operator | Meaning |\n|----------|---------|\n| = | Equal to |\n| <> or != | Not equal to |\n| > | Greater than |\n| < | Less than |\n| >= | Greater than or equal |\n| <= | Less than or equal |\n\n### Logical Operators\n\n| Operator | Description |\n|----------|-------------|\n| AND | All conditions must be true |\n| OR | At least one condition must be true |\n| NOT | Negates a condition |\n| IN | Matches any value in a list |\n| BETWEEN | Matches values in a range |\n| LIKE | Pattern matching |\n| IS NULL | Checks for NULL values |\n| EXISTS | Checks if subquery returns rows |\n\n### Operator Precedence\n\nFrom highest to lowest:\n1. Parentheses ()\n2. Multiplication *, Division /, Modulo %\n3. Addition +, Subtraction -\n4. Comparison operators (=, <>, >, <, >=, <=)\n5. NOT\n6. AND\n7. OR\n\n> **Key Point:** Use parentheses to make operator precedence explicit and your queries more readable.",
+  "codeExample": "SELECT name,\n       salary,\n       CASE\n           WHEN salary >= 100000 THEN 'High'\n           WHEN salary >= 50000 THEN 'Medium'\n           ELSE 'Low'\n       END AS salary_level\nFROM employees\nWHERE active = 1;",
+  "quiz": [
+    {
+      "question": "Which operator has the highest precedence?",
+      "options": [
+        "OR",
+        "AND",
+        "Parentheses ()",
+        "NOT"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the % operator do?",
+      "options": [
+        "Percentage calculation",
+        "Modulo (remainder) division",
+        "Concatenation",
+        "Wildcard matching"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

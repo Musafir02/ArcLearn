@@ -1,0 +1,32 @@
+{
+  "title": "Self Join",
+  "language": "sql",
+  "topic": "self_join",
+  "order": 32,
+  "nextTopic": "natural_join",
+  "prevTopic": "cross_join",
+  "content": "### Self Join\n\nA self join is a regular join where a table is joined with itself. It is used to compare rows within the same table or find hierarchical relationships.\n\n---\n\n### Self Join Syntax\n\n```sql\nSELECT a.columns, b.columns\nFROM table a\nJOIN table b ON a.column = b.column;\n```\n\nTable aliases are required in a self join because you reference the same table twice.\n\n### Employee-Manager Example\n\n```sql\n-- Find each employee and their manager's name\nSELECT e.name AS employee,\n       m.name AS manager\nFROM employees e\nLEFT JOIN employees m ON e.manager_id = m.id;\n```\n\n### Finding Pairs\n\n```sql\n-- Find employees who work in the same department\nSELECT a.name AS employee1,\n       b.name AS employee2,\n       a.department\nFROM employees a\nJOIN employees b ON a.department = b.department\n    AND a.id < b.id  -- Avoid duplicates and self-pairs\nORDER BY a.department;\n```\n\n### Comparing Values Within a Table\n\n```sql\n-- Find products with prices close to each other\nSELECT a.name AS product_a,\n       b.name AS product_b,\n       a.price AS price_a,\n       b.price AS price_b\nFROM products a\nJOIN products b ON ABS(a.price - b.price) < 10\n    AND a.id < b.id\nORDER BY a.price;\n```\n\n### Hierarchical Data\n\nSelf joins are essential for hierarchical data stored in a single table:\n\n| id | name | parent_id |\n|----|------|-----------|\n| 1 | CEO | NULL |\n| 2 | VP Engineering | 1 |\n| 3 | VP Marketing | 1 |\n| 4 | Engineering Manager | 2 |\n\n```sql\nSELECT child.name AS employee,\n       parent.name AS reports_to\nFROM employees child\nLEFT JOIN employees parent ON child.parent_id = parent.id;\n```\n\n> **Key Point:** Self joins require table aliases to distinguish between the two instances of the same table.",
+  "codeExample": "SELECT e1.name AS employee,\n       e2.name AS colleague,\n       e1.department\nFROM employees e1\nJOIN employees e2 ON e1.department = e2.department\n    AND e1.id < e2.id;",
+  "quiz": [
+    {
+      "question": "What is required when performing a self join?",
+      "options": [
+        "A WHERE clause",
+        "Table aliases",
+        "A PRIMARY KEY",
+        "A subquery"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Self joins are commonly used for:",
+      "options": [
+        "Joining unrelated tables",
+        "Finding hierarchical relationships within a single table",
+        "Improving query performance",
+        "Creating new tables"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

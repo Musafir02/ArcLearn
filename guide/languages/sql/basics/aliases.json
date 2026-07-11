@@ -1,0 +1,32 @@
+{
+  "title": "Aliases",
+  "language": "sql",
+  "topic": "aliases",
+  "order": 11,
+  "nextTopic": "comments",
+  "prevTopic": "null_values",
+  "content": "### SQL Aliases\n\nAliases give a table or column a temporary name within a query. They make queries more readable and are essential for self-joins and subqueries.\n\n---\n\n### Column Aliases\n\nUse the AS keyword to rename a column in the result set:\n\n```sql\nSELECT name AS employee_name,\n       salary * 12 AS annual_salary\nFROM employees;\n```\n\nThe AS keyword is optional:\n\n```sql\nSELECT name employee_name FROM employees;\n```\n\n### Table Aliases\n\nTable aliases shorten table names, especially useful with joins:\n\n```sql\nSELECT e.name, d.department_name\nFROM employees AS e\nJOIN departments AS d ON e.dept_id = d.id;\n```\n\n### Aliases with Spaces\n\nIf an alias contains spaces or special characters, enclose it in double quotes or square brackets:\n\n```sql\nSELECT name AS \"Employee Name\"\nFROM employees;\n\n-- SQL Server\nSELECT name AS [Employee Name]\nFROM employees;\n```\n\n### When Aliases are Required\n\n- Self-joins (joining a table to itself)\n- Subqueries in FROM clause (derived tables)\n- When two tables have columns with the same name\n\n| Use Case | Example |\n|----------|---------|\n| Self-join | FROM employees e1 JOIN employees e2 |\n| Derived table | FROM (SELECT ...) AS sub |\n| Ambiguous columns | SELECT e.name, d.name FROM employees e JOIN departments d |\n\n> **Key Point:** Aliases are scoped to the current query only. They do not change the actual table or column names in the database.",
+  "codeExample": "SELECT p.name AS product_name,\n       p.price AS unit_price,\n       o.quantity\nFROM products AS p\nJOIN orders AS o ON p.id = o.product_id;",
+  "quiz": [
+    {
+      "question": "Which keyword is used to create an alias in SQL?",
+      "options": [
+        "ALIAS",
+        "AS",
+        "RENAME",
+        "SET"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Table aliases are required for:",
+      "options": [
+        "Simple SELECT queries",
+        "Self-joins and subqueries in FROM",
+        "INSERT statements",
+        "UPDATE statements"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "PRIMARY KEY",
+  "language": "sql",
+  "topic": "primary_key",
+  "order": 54,
+  "nextTopic": "foreign_key",
+  "prevTopic": "constraints",
+  "content": "### PRIMARY KEY Constraint\n\nA primary key uniquely identifies each row in a table. It is a combination of NOT NULL and UNIQUE constraints.\n\n---\n\n### Primary Key Rules\n\n- A table can have only ONE primary key\n- Primary key values must be UNIQUE\n- Primary key values cannot be NULL\n- Primary key can be a single column or a combination of columns (composite key)\n\n### Creating a Primary Key\n\n```sql\n-- Single column primary key\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100)\n);\n\n-- Composite primary key\nCREATE TABLE order_items (\n    order_id INT,\n    product_id INT,\n    quantity INT,\n    PRIMARY KEY (order_id, product_id)\n);\n```\n\n### Adding Primary Key to Existing Table\n\n```sql\nALTER TABLE employees\nADD PRIMARY KEY (id);\n\nALTER TABLE employees\nADD CONSTRAINT pk_employees PRIMARY KEY (id);\n```\n\n### Dropping Primary Key\n\n```sql\nALTER TABLE employees DROP PRIMARY KEY;\n\nALTER TABLE employees DROP CONSTRAINT pk_employees;\n```\n\n### Auto-Increment Primary Keys\n\n```sql\n-- MySQL\nCREATE TABLE employees (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100)\n);\n\n-- PostgreSQL (SERIAL)\nCREATE TABLE employees (\n    id SERIAL PRIMARY KEY,\n    name VARCHAR(100)\n);\n\n-- SQL Server (IDENTITY)\nCREATE TABLE employees (\n    id INT IDENTITY(1,1) PRIMARY KEY,\n    name VARCHAR(100)\n);\n```\n\n> **Key Point:** Choose primary keys carefully. Surrogate keys (auto-increment integers) are common, but natural keys (like SSN) can also be used as long as they are unique and non-nullable.",
+  "codeExample": "CREATE TABLE products (\n    product_id INT PRIMARY KEY,\n    product_name VARCHAR(200) NOT NULL,\n    price DECIMAL(10,2) NOT NULL\n);",
+  "quiz": [
+    {
+      "question": "How many primary keys can a table have?",
+      "options": [
+        "Zero or more",
+        "Exactly one",
+        "Up to two",
+        "Unlimited"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What constraints does a PRIMARY KEY implicitly include?",
+      "options": [
+        "NOT NULL and UNIQUE",
+        "FOREIGN KEY and CHECK",
+        "DEFAULT and UNIQUE",
+        "NOT NULL and DEFAULT"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

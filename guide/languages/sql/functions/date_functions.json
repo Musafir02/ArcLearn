@@ -1,0 +1,32 @@
+{
+  "title": "Date Functions",
+  "language": "sql",
+  "topic": "date_functions",
+  "order": 20,
+  "nextTopic": "numeric_functions",
+  "prevTopic": "scalar",
+  "content": "### Date Functions\n\nSQL provides built-in functions for manipulating and extracting parts of dates and times.\n\n---\n\n### Current Date and Time\n\n| Function | Returns | Database |\n|----------|---------|----------|\n| NOW() | Current datetime | MySQL, PostgreSQL |\n| CURRENT_DATE | Current date | All major databases |\n| CURRENT_TIMESTAMP | Current timestamp | SQL Standard |\n| GETDATE() | Current datetime | SQL Server |\n| SYSDATE | Current datetime | Oracle |\n\n### Extracting Date Parts\n\n```sql\n-- MySQL\nSELECT YEAR(hire_date), MONTH(hire_date), DAY(hire_date)\nFROM employees;\n\n-- PostgreSQL\nSELECT EXTRACT(YEAR FROM hire_date) AS hire_year\nFROM employees;\n\n-- SQL Server\nSELECT DATEPART(YEAR, hire_date) AS hire_year\nFROM employees;\n```\n\n### Date Arithmetic\n\n```sql\n-- Add / subtract days (MySQL)\nSELECT order_date,\n       DATE_ADD(order_date, INTERVAL 7 DAY) AS delivery_date\nFROM orders;\n\n-- Date difference (MySQL)\nSELECT DATEDIFF('2024-12-31', '2024-01-01') AS days_diff;\n\n-- PostgreSQL\nSELECT order_date + INTERVAL '7 days' AS delivery_date\nFROM orders;\n```\n\n### Formatting Dates\n\n```sql\n-- MySQL\nSELECT DATE_FORMAT(hire_date, '%Y-%m-%d') AS formatted_date\nFROM employees;\n\n-- PostgreSQL\nSELECT TO_CHAR(hire_date, 'YYYY-MM-DD') AS formatted_date\nFROM employees;\n\n-- SQL Server\nSELECT FORMAT(hire_date, 'yyyy-MM-dd') AS formatted_date\nFROM employees;\n```\n\n> **Key Point:** Date function syntax varies significantly between databases. Always check your database documentation.",
+  "codeExample": "SELECT name,\n       hire_date,\n       DATEDIFF(YEAR, hire_date, GETDATE()) AS years_employed\nFROM employees\nWHERE hire_date < DATEADD(YEAR, -5, GETDATE());",
+  "quiz": [
+    {
+      "question": "Which SQL standard function returns the current timestamp?",
+      "options": [
+        "NOW()",
+        "CURRENT_TIMESTAMP",
+        "GETDATE()",
+        "SYSDATE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Date function syntax is:",
+      "options": [
+        "Identical across all databases",
+        "Different between databases",
+        "Only available in MySQL",
+        "Deprecated in SQL"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

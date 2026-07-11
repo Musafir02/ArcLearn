@@ -1,0 +1,32 @@
+{
+  "title": "Aggregate Functions",
+  "language": "sql",
+  "topic": "aggregate",
+  "order": 18,
+  "nextTopic": "scalar",
+  "prevTopic": "wildcards",
+  "content": "### Aggregate Functions\n\nAggregate functions perform calculations on a set of rows and return a single value. They are commonly used with GROUP BY.\n\n---\n\n### Common Aggregate Functions\n\n| Function | Description |\n|----------|-------------|\n| COUNT() | Returns the number of rows |\n| SUM() | Returns the sum of values |\n| AVG() | Returns the average value |\n| MAX() | Returns the maximum value |\n| MIN() | Returns the minimum value |\n\n### COUNT Examples\n\n```sql\n-- Count all rows\nSELECT COUNT(*) FROM employees;\n\n-- Count non-null values in a column\nSELECT COUNT(salary) FROM employees;\n\n-- Count distinct values\nSELECT COUNT(DISTINCT department) FROM employees;\n```\n\n### SUM and AVG Examples\n\n```sql\nSELECT SUM(salary) AS total_payroll,\n       AVG(salary) AS average_salary,\n       ROUND(AVG(salary), 2) AS rounded_avg\nFROM employees;\n```\n\n### MAX and MIN Examples\n\n```sql\nSELECT MAX(salary) AS highest_salary,\n       MIN(salary) AS lowest_salary,\n       MAX(hire_date) AS most_recent_hire,\n       MIN(hire_date) AS earliest_hire\nFROM employees;\n```\n\n### NULL Handling\n\n| Function | NULL Behavior |\n|----------|---------------|\n| COUNT(*) | Counts all rows regardless of NULLs |\n| COUNT(col) | Ignores NULL values |\n| SUM(col) | Ignores NULL values |\n| AVG(col) | Ignores NULL values |\n| MAX/MIN(col) | Ignores NULL values |\n\n> **Key Point:** Aggregate functions except COUNT(*) ignore NULL values. COUNT(*) counts all rows, while COUNT(column) counts only non-null values.",
+  "codeExample": "SELECT department,\n       COUNT(*) AS employee_count,\n       AVG(salary) AS avg_salary,\n       MAX(salary) AS max_salary\nFROM employees\nGROUP BY department\nORDER BY avg_salary DESC;",
+  "quiz": [
+    {
+      "question": "Which aggregate function returns the number of rows?",
+      "options": [
+        "SUM()",
+        "COUNT()",
+        "MAX()",
+        "TOTAL()"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does AVG() handle NULL values?",
+      "options": [
+        "Treats them as 0",
+        "Ignores them",
+        "Returns NULL",
+        "Throws an error"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Introduction to SQL",
+  "language": "sql",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is SQL?\n\nSQL (Structured Query Language) is a standard programming language used to manage and manipulate relational databases. It allows you to create, read, update, and delete data stored in database tables.\n\n### Why Learn SQL?\n\nSQL is essential for anyone working with data. It is used across industries by data analysts, software engineers, database administrators, and data scientists. SQL skills enable you to:\n\n- Query and retrieve specific data from large datasets\n- Combine data from multiple tables\n- Perform complex aggregations and calculations\n- Manage database structure and relationships\n\n### What You Will Learn\n\nThis guide covers everything from basic SELECT statements to advanced topics like window functions, CTEs, and query performance optimization. Each topic includes code examples and a quiz to test your understanding.\n\n---\n\n### SQL in 2026\n\nSQL continues to be the dominant language for data manipulation. Modern enhancements include:\n\n- Improved JSON support with JSON_TABLE and JSON_VALUE\n- Enhanced window function capabilities\n- Better recursive query optimization\n- Increased adoption of NewSQL databases that combine SQL with NoSQL scalability\n\n> **Key Point:** SQL is a declarative language — you specify WHAT you want, not HOW to get it.",
+  "codeExample": "-- A simple SQL query to select all columns from a table\nSELECT * FROM employees;",
+  "quiz": [
+    {
+      "question": "What does SQL stand for?",
+      "options": [
+        "Structured Query Language",
+        "Simple Query Language",
+        "Standard Query Language",
+        "Structured Question Language"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "SQL is primarily used for:",
+      "options": [
+        "Creating web pages",
+        "Managing and manipulating relational databases",
+        "Designing user interfaces",
+        "Writing operating systems"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

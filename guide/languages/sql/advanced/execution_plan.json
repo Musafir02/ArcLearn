@@ -1,0 +1,32 @@
+{
+  "title": "Execution Plans",
+  "language": "sql",
+  "topic": "execution_plan",
+  "order": 69,
+  "nextTopic": "sql_injection_prevention",
+  "prevTopic": "query_performance",
+  "content": "### Execution Plans\n\nAn execution plan (or query plan) shows how the database executes a SQL query step by step. It reveals which indexes are used, how tables are joined, and where performance bottlenecks exist.\n\n---\n\n### Viewing Execution Plans\n\n```sql\n-- PostgreSQL (EXPLAIN ANALYZE runs the query)\nEXPLAIN ANALYZE\nSELECT * FROM employees WHERE department = 'Engineering';\n\n-- MySQL\nEXPLAIN SELECT * FROM employees WHERE department = 'Engineering';\n\n-- SQL Server (include actual execution plan)\nSET STATISTICS TIME ON;\nSET STATISTICS IO ON;\nSELECT * FROM employees WHERE department = 'Engineering';\n```\n\n### Understanding Plan Output\n\n| Term | Meaning |\n|------|---------|\n| Seq Scan | Full table scan (slow, no index used) |\n| Index Scan | Looking up rows using an index |\n| Index Only Scan | All needed data is in the index itself |\n| Nested Loop | Joins tables row by row |\n| Hash Join | Builds hash table for one side of join |\n| Merge Join | Sorts then merges both sides |\n| Sort | Sorting operation (expensive) |\n| Cost | Estimated relative expense |\n\n### What to Look For\n\n```sql\n-- Scan type: Seq Scan on large table = missing index\n-- Join type: Nested Loop on large datasets may be slow\n-- Sort: Indicates ORDER BY or DISTINCT without index\n-- Estimated vs Actual rows: Large discrepancy = outdated statistics\n```\n\n### Example Plan Analysis\n\n```\nEXPLAIN SELECT e.name, d.dept_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE e.salary > 100000;\n\n-- Good plan:\n-- Index Scan on salary index -> Nested Loop -> Index Scan on departments PK\n\n-- Bad plan:\n-- Seq Scan on employees (full scan!) -> Hash Join -> Seq Scan on departments\n```\n\n### Common Fixes from Execution Plans\n\n| Problem | Fix |\n|---------|-----|\n| Seq Scan on large table | Add index on the filtered column |\n| Sort without index | Add index on ORDER BY column |\n| Nested Loop on huge datasets | Consider Hash or Merge join hints |\n| Large row estimates vs actual | Run ANALYZE to update statistics |\n\n> **Key Point:** Always examine the execution plan when optimizing slow queries. It tells you exactly what the database is doing, not what you think it is doing.",
+  "codeExample": "-- Before optimization: check the plan\nEXPLAIN ANALYZE\nSELECT order_id, total\nFROM orders\nWHERE customer_id = 42\nORDER BY order_date DESC\nLIMIT 10;",
+  "quiz": [
+    {
+      "question": "What does a Sequential Scan (Seq Scan) indicate?",
+      "options": [
+        "The query is using an index",
+        "The database is scanning every row (potentially slow)",
+        "The query is parallelized",
+        "An index was just created"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tool shows how a database executes a query step by step?",
+      "options": [
+        "Profiler",
+        "Execution Plan",
+        "Query Analyzer",
+        "All of the above"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

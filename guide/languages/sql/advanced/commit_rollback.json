@@ -1,0 +1,32 @@
+{
+  "title": "COMMIT and ROLLBACK",
+  "language": "sql",
+  "topic": "commit_rollback",
+  "order": 49,
+  "nextTopic": "triggers",
+  "prevTopic": "transactions",
+  "content": "### COMMIT and ROLLBACK\n\nCOMMIT and ROLLBACK are transaction control statements that finalize or undo changes made during a transaction.\n\n---\n\n### COMMIT\n\nCOMMIT makes all changes in the current transaction permanent and visible to other users:\n\n```sql\nBEGIN TRANSACTION;\nDELETE FROM temp_data;\nINSERT INTO audit_log (action) VALUES ('Data purge completed');\nCOMMIT;\n```\n\n### ROLLBACK\n\nROLLBACK undoes all changes made since the BEGIN TRANSACTION (or since a savepoint):\n\n```sql\nBEGIN TRANSACTION;\nDELETE FROM employees WHERE id = 100;\n-- Oops, wrong employee!\nROLLBACK;  -- Employee is restored\n```\n\n### Auto-Commit Mode\n\nBy default, most database clients operate in auto-commit mode where each statement is its own transaction:\n\n```sql\n-- Each statement is auto-committed\nINSERT INTO log VALUES ('Event 1');  -- Auto-committed\nINSERT INTO log VALUES ('Event 2');  -- Auto-committed\n```\n\n### SAVEPOINT and Partial Rollback\n\nSavepoints allow partial rollback within a transaction:\n\n```sql\nBEGIN TRANSACTION;\n\nUPDATE products SET price = price * 1.1 WHERE category = 'Electronics';\nSAVEPOINT electronics_updated;\n\nUPDATE products SET price = price * 1.2 WHERE category = 'Clothing';\n\n-- Roll back only the clothing update\nROLLBACK TO SAVEPOINT electronics_updated;\n\nCOMMIT;  -- Only Electronics prices are changed\n```\n\n### Error Handling\n\n```sql\nBEGIN TRY\n    BEGIN TRANSACTION;\n        UPDATE accounts SET balance = balance - 100 WHERE id = 1;\n        UPDATE accounts SET balance = balance + 100 WHERE id = 2;\n    COMMIT;\nEND TRY\nBEGIN CATCH\n    ROLLBACK;\n    SELECT ERROR_MESSAGE() AS error;\nEND CATCH;\n```\n\n> **Key Point:** Always close your transactions with COMMIT or ROLLBACK to release database resources. Unclosed transactions can cause blocking and deadlocks.",
+  "codeExample": "BEGIN TRANSACTION;\n\nUPDATE products SET stock = stock - 5 WHERE id = 42;\n\nIF @@ROWCOUNT = 0\n    ROLLBACK;\nELSE\n    COMMIT;",
+  "quiz": [
+    {
+      "question": "What does ROLLBACK do to the current transaction?",
+      "options": [
+        "Saves all changes",
+        "Undoes all changes",
+        "Pauses the transaction",
+        "Creates a savepoint"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens if you do not COMMIT or ROLLBACK?",
+      "options": [
+        "The transaction auto-commits after 30 seconds",
+        "Resources stay locked until the connection closes",
+        "The database crashes",
+        "Changes are automatically saved"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

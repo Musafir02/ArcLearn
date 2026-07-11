@@ -1,0 +1,32 @@
+{
+  "title": "RIGHT JOIN",
+  "language": "sql",
+  "topic": "right_join",
+  "order": 29,
+  "nextTopic": "full_outer_join",
+  "prevTopic": "left_join",
+  "content": "### RIGHT JOIN (RIGHT OUTER JOIN)\n\nRIGHT JOIN returns ALL rows from the right table, and matching rows from the left table. If there is no match, NULL values are returned for left table columns.\n\n---\n\n### RIGHT JOIN Syntax\n\n```sql\nSELECT columns\nFROM table1\nRIGHT JOIN table2 ON table1.column = table2.column;\n```\n\n### RIGHT JOIN Example\n\n```sql\n-- All departments, with employees if they exist\nSELECT e.name, d.dept_name\nFROM employees e\nRIGHT JOIN departments d ON e.dept_id = d.id;\n\n-- Departments with no employees will show NULL for employee name\n```\n\n### Finding Unmatched Rows\n\n```sql\n-- Find departments with no employees\nSELECT d.dept_name\nFROM employees e\nRIGHT JOIN departments d ON e.dept_id = d.id\nWHERE e.id IS NULL;\n```\n\n### RIGHT JOIN vs LEFT JOIN\n\nRIGHT JOIN is less common than LEFT JOIN because the same result can usually be achieved by swapping the table order in a LEFT JOIN:\n\n```sql\n-- These are equivalent:\nSELECT * FROM employees RIGHT JOIN departments ON ...\nSELECT * FROM departments LEFT JOIN employees ON ...\n```\n\n### When to Use RIGHT JOIN\n\n| Scenario | Recommendation |\n|----------|---------------|\n| All right table rows needed | RIGHT JOIN or swap to LEFT JOIN |\n| Complex multi-table queries | RIGHT JOIN may be more natural |\n| Consistency with existing code | Follow existing patterns |\n\n> **Key Point:** RIGHT JOIN is the mirror of LEFT JOIN. Most SQL developers prefer LEFT JOIN by swapping table order, but RIGHT JOIN is valid and sometimes more natural.",
+  "codeExample": "SELECT p.name AS project_name,\n       e.name AS assigned_employee\nFROM employees e\nRIGHT JOIN projects p ON e.id = p.lead_id\nORDER BY p.name;",
+  "quiz": [
+    {
+      "question": "RIGHT JOIN returns all rows from which table?",
+      "options": [
+        "The left table",
+        "The right table",
+        "Both tables",
+        "Only matching rows"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can you typically avoid using RIGHT JOIN?",
+      "options": [
+        "By using INNER JOIN instead",
+        "By swapping table order and using LEFT JOIN",
+        "By using a subquery",
+        "RIGHT JOIN cannot be avoided"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

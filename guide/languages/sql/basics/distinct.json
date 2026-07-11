@@ -1,0 +1,32 @@
+{
+  "title": "SELECT DISTINCT",
+  "language": "sql",
+  "topic": "distinct",
+  "order": 5,
+  "nextTopic": "where",
+  "prevTopic": "select",
+  "content": "### SELECT DISTINCT\n\nThe DISTINCT keyword eliminates duplicate rows from the result set. It is used immediately after SELECT.\n\n---\n\n### Basic DISTINCT Syntax\n\n```sql\n-- Get all unique departments\nSELECT DISTINCT department FROM employees;\n\n-- Get unique combinations of department and location\nSELECT DISTINCT department, location FROM employees;\n```\n\n### DISTINCT vs ALL\n\nBy default, SELECT returns all rows including duplicates. DISTINCT filters out duplicates.\n\n| Clause | Behavior |\n|--------|----------|\n| SELECT ALL department | Returns all department values (default) |\n| SELECT DISTINCT department | Returns each department value only once |\n\n### DISTINCT with Multiple Columns\n\nWhen multiple columns are specified, DISTINCT considers the combination of values across those columns:\n\n```sql\n-- Returns unique department/city pairs\nSELECT DISTINCT department, city FROM employees;\n```\n\n> **Key Point:** DISTINCT applies to all selected columns, not just the first one. NULL values are considered equal for DISTINCT purposes.",
+  "codeExample": "SELECT DISTINCT job_title\nFROM employees\nORDER BY job_title;",
+  "quiz": [
+    {
+      "question": "What is the purpose of the DISTINCT keyword?",
+      "options": [
+        "To sort the results",
+        "To remove duplicate rows from the result set",
+        "To filter rows by a condition",
+        "To count the number of rows"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "SELECT DISTINCT department, location considers uniqueness based on:",
+      "options": [
+        "Only the department column",
+        "Only the location column",
+        "The combination of department and location",
+        "Neither, it will return an error"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

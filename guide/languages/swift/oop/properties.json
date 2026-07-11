@@ -1,0 +1,22 @@
+{
+  "title": "Swift Properties",
+  "language": "swift",
+  "topic": "properties",
+  "order": 47,
+  "nextTopic": "computed_properties",
+  "prevTopic": "structs_vs_classes",
+  "content": "### Swift Properties\n\nProperties associate values with a particular class, struct, or enum. Stored properties store constant or variable values, while computed properties calculate values.\n\n**Stored Properties:**\n\n```swift\nstruct Person {\n    let name: String     // Constant stored property\n    var age: Int         // Variable stored property\n    var address: String  // Variable stored property\n}\n\nvar person = Person(name: \"Alice\", age: 30, address: \"123 Main St\")\nperson.age = 31  // Can modify var properties\n// person.name = \"Bob\"  // Error: name is constant\n```\n\n**Lazy Stored Properties:**\n\nA lazy property's initial value is not computed until first access.\n\n```swift\nclass DataManager {\n    lazy var dataLoader: DataLoader = {\n        return DataLoader()\n    }()\n}\n\n// Only created when accessed for the first time\nlet manager = DataManager()\nmanager.dataLoader.loadData()  // DataLoader created now\n```\n\n**Property Characteristics:**\n\n| Type | Description |\n|------|-------------|\n| Stored | Stores a value directly |\n| Lazy stored | Computed on first access |\n| Computed | Computed value (no storage) |\n| Type | Belongs to the type itself (static) |\n| Observers | `willSet` and `didSet` handlers |\n\n```swift\n// Lazy property requirements\n// - Must be declared as `var` (not `let`)\n// - Can only be used on type members\n// - Thread safety not guaranteed\n\nstruct Database {\n    lazy var connection = establishConnection()\n    \n    func establishConnection() -> String {\n        return \"Connected to database\"\n    }\n}\n```\n\n> **Key Point:** Lazy properties are useful for expensive operations that may not be needed immediately. They are initialized only once, on first access.\n\nProperties can have property wrappers like `@Published`, `@State`, and `@Binding` in SwiftUI.",
+  "codeExample": "import Foundation\n\nstruct Rectangle {\n    var width: Double\n    var height: Double\n    \n    // Lazy property - expensive calculation\n    lazy var diagonal: Double = {\n        print(\"Calculating diagonal...\")\n        return sqrt(width * width + height * height)\n    }()\n}\n\nvar rect = Rectangle(width: 3.0, height: 4.0)\nprint(\"Rectangle created\")\n// Diagonal not calculated yet\nprint(\"Diagonal: \\(rect.diagonal)\")  // Calculated here\nprint(\"Diagonal: \\(rect.diagonal)\")  // Reuses cached value\n\n// Multiple properties\nstruct User {\n    let id: Int\n    var username: String\n    var email: String\n    var isActive = true\n}\n\nlet user = User(id: 1, username: \"john\", email: \"john@example.com\")\nprint(\"User: \\(user.username), Active: \\(user.isActive)\")",
+  "quiz": [
+    {
+      "question": "When is a lazy property initialized?",
+      "options": ["When the object is created", "On first access", "When the program starts", "Never automatically"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can lazy properties be declared with 'let'?",
+      "options": ["Yes", "No, must be var", "Only for classes", "Only for structs"],
+      "correctIndex": 1
+    }
+  ]
+}

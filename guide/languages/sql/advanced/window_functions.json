@@ -1,0 +1,32 @@
+{
+  "title": "Window Functions",
+  "language": "sql",
+  "topic": "window_functions",
+  "order": 45,
+  "nextTopic": "row_number_rank",
+  "prevTopic": "recursive_cte",
+  "content": "### Window Functions\n\nWindow functions perform calculations across a set of rows related to the current row, without collapsing rows like GROUP BY does.\n\n---\n\n### Window Function Syntax\n\n```sql\nSELECT columns,\n       function() OVER (\n           PARTITION BY column\n           ORDER BY column\n           frame_clause\n       ) AS alias\nFROM table;\n```\n\n### Basic Window Function\n\n```sql\nSELECT name,\n       department,\n       salary,\n       AVG(salary) OVER (PARTITION BY department) AS dept_avg,\n       salary - AVG(salary) OVER (PARTITION BY department) AS diff_from_avg\nFROM employees;\n```\n\n### OVER Clause Components\n\n| Component | Purpose |\n|-----------|---------|\n| PARTITION BY | Divides rows into groups (like GROUP BY but without collapsing) |\n| ORDER BY | Orders rows within each partition |\n| ROWS/RANGE | Defines the window frame (which rows to include) |\n\n### ORDER BY in Window Functions\n\n```sql\n-- Running total of salaries ordered by hire date\nSELECT name,\n       hire_date,\n       salary,\n       SUM(salary) OVER (ORDER BY hire_date) AS running_total\nFROM employees;\n```\n\n### Window Frame Specification\n\n```sql\n-- Moving average of last 3 orders\nSELECT order_date,\n       amount,\n       AVG(amount) OVER (\n           ORDER BY order_date\n           ROWS BETWEEN 2 PRECEDING AND CURRENT ROW\n       ) AS moving_avg\nFROM orders;\n```\n\n### Common Window Functions\n\n| Function | Description |\n|----------|-------------|\n| ROW_NUMBER() | Sequential number for each row |\n| RANK() | Rank with gaps |\n| DENSE_RANK() | Rank without gaps |\n| NTILE(n) | Divides rows into n buckets |\n| LAG() | Access previous row value |\n| LEAD() | Access next row value |\n| FIRST_VALUE() | First value in window |\n| LAST_VALUE() | Last value in window |\n\n> **Key Point:** Window functions retain individual row identity while also computing aggregated values across related rows. They are evaluated after WHERE, GROUP BY, and HAVING.",
+  "codeExample": "SELECT name,\n       department,\n       salary,\n       RANK() OVER (\n           PARTITION BY department\n           ORDER BY salary DESC\n       ) AS salary_rank\nFROM employees;",
+  "quiz": [
+    {
+      "question": "Do window functions collapse rows like GROUP BY?",
+      "options": [
+        "Yes, they collapse rows",
+        "No, each row retains its identity",
+        "Only with PARTITION BY",
+        "Only aggregate window functions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does PARTITION BY do in a window function?",
+      "options": [
+        "Divides the table into groups without collapsing rows",
+        "Groups and collapses rows",
+        "Orders the result set",
+        "Filters rows"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "ALTER TABLE",
+  "language": "sql",
+  "topic": "alter_table",
+  "order": 60,
+  "nextTopic": "drop_truncate",
+  "prevTopic": "create_table",
+  "content": "### ALTER TABLE Statement\n\nALTER TABLE modifies the structure of an existing table. You can add, drop, or modify columns and constraints.\n\n---\n\n### ADD Column\n\n```sql\nALTER TABLE employees\nADD COLUMN phone VARCHAR(20);\n\n-- MySQL\nALTER TABLE employees ADD phone VARCHAR(20);\n\n-- Add with default value\nALTER TABLE employees\nADD COLUMN department VARCHAR(100) DEFAULT 'General';\n```\n\n### DROP Column\n\n```sql\nALTER TABLE employees\nDROP COLUMN phone;\n\n-- PostgreSQL\nALTER TABLE employees DROP COLUMN IF EXISTS phone;\n```\n\n### MODIFY Column\n\n```sql\n-- MySQL\nALTER TABLE employees\nMODIFY COLUMN salary DECIMAL(12,2) NOT NULL;\n\n-- PostgreSQL\nALTER TABLE employees\nALTER COLUMN salary TYPE DECIMAL(12,2);\n\n-- SQL Server\nALTER TABLE employees\nALTER COLUMN salary DECIMAL(12,2) NOT NULL;\n```\n\n### RENAME Column\n\n```sql\n-- PostgreSQL\nALTER TABLE employees RENAME COLUMN phone TO mobile;\n\n-- MySQL\nALTER TABLE employees RENAME COLUMN phone TO mobile;\n\n-- SQL Server\nEXEC sp_rename 'employees.phone', 'mobile', 'COLUMN';\n```\n\n### RENAME Table\n\n```sql\nALTER TABLE employees RENAME TO staff;\n-- Or:\nRENAME TABLE employees TO staff;\n```\n\n### Add/Drop Constraints\n\n```sql\nALTER TABLE employees\nADD CONSTRAINT pk_emp PRIMARY KEY (id);\n\nALTER TABLE employees\nADD CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES departments(id);\n\nALTER TABLE employees DROP CONSTRAINT pk_emp;\n```\n\n> **Key Point:** ALTER TABLE operations can be expensive on large tables. Some operations (like dropping a column) may require a full table rebuild in certain databases.",
+  "codeExample": "ALTER TABLE employees\nADD COLUMN middle_name VARCHAR(50),\nADD COLUMN date_of_birth DATE,\nMODIFY COLUMN salary DECIMAL(12,2) NOT NULL;",
+  "quiz": [
+    {
+      "question": "Which statement modifies the structure of an existing table?",
+      "options": [
+        "MODIFY TABLE",
+        "ALTER TABLE",
+        "UPDATE TABLE",
+        "CHANGE TABLE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can ALTER TABLE rename a column?",
+      "options": [
+        "No, columns cannot be renamed",
+        "Yes, using RENAME COLUMN",
+        "Only in PostgreSQL",
+        "Only by dropping and re-adding"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

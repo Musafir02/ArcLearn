@@ -1,0 +1,32 @@
+{
+  "title": "SQL Wildcards",
+  "language": "sql",
+  "topic": "wildcards",
+  "order": 17,
+  "nextTopic": "aggregate",
+  "prevTopic": "like_patterns",
+  "content": "### SQL Wildcards\n\nWildcard characters are used with LIKE to perform flexible pattern matching. Different databases support different wildcard sets.\n\n---\n\n### Standard Wildcards\n\n| Wildcard | Description | Example |\n|----------|-------------|---------|\n| % | Matches any sequence of characters | WHERE name LIKE 'J%' |\n| _ | Matches a single character | WHERE code LIKE 'A_' |\n\n### SQL Server Specific Wildcards\n\nSQL Server supports additional wildcards for character ranges and sets:\n\n```sql\n-- Any single character in the range A-F\nWHERE name LIKE '[A-F]%';\n\n-- Any single character NOT in the range A-F\nWHERE name LIKE '[^A-F]%';\n\n-- Any single character in the set\nWHERE name LIKE '[ABC]%';\n```\n\n### Wildcard Combinations\n\n| Pattern | Meaning |\n|---------|---------|\n| '%ing' | Ends with 'ing' |\n| 'A%Z' | Starts with 'A', ends with 'Z' |\n| '____' | Exactly 4 characters |\n| '__ab%' | Third and fourth chars are 'ab' |\n| '%[0-9]' | Ends with a digit (SQL Server) |\n\n### Performance Implications\n\n| Pattern Start | Index Usage |\n|--------------|------------|\n| 'ABC%' | Can use index (prefix match) |\n| '%ABC%' | Cannot use index efficiently |\n| '%ABC' | Cannot use index |\n| 'A_%' | Limited index usage |\n\n> **Key Point:** Leading wildcards (% at the start of a pattern) prevent index usage, making queries slower on large tables.",
+  "codeExample": "-- Find employees whose name starts with 'M' and is at least 3 chars long\nSELECT name FROM employees\nWHERE name LIKE 'M_%'\nORDER BY name;",
+  "quiz": [
+    {
+      "question": "Which wildcard matches exactly one character?",
+      "options": [
+        "%",
+        "_",
+        "*",
+        "?"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does '%ABC%' perform poorly on large tables?",
+      "options": [
+        "It returns too many rows",
+        "It cannot use indexes efficiently",
+        "It requires sorting",
+        "It uses too much memory"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

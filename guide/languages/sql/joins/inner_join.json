@@ -1,0 +1,32 @@
+{
+  "title": "INNER JOIN",
+  "language": "sql",
+  "topic": "inner_join",
+  "order": 27,
+  "nextTopic": "left_join",
+  "prevTopic": "joins_intro",
+  "content": "### INNER JOIN\n\nINNER JOIN returns only the rows where there is a match in both tables. Rows without a match in either table are excluded.\n\n---\n\n### INNER JOIN Syntax\n\n```sql\nSELECT columns\nFROM table1\nINNER JOIN table2 ON table1.column = table2.column;\n```\n\nThe INNER keyword is optional — JOIN is the same as INNER JOIN by default.\n\n### INNER JOIN Example\n\n```sql\n-- Get all employees with their department names\nSELECT e.name, e.salary, d.dept_name\nFROM employees e\nINNER JOIN departments d ON e.dept_id = d.id;\n\n-- Only employees with a valid department are returned\n```\n\n### INNER JOIN with Multiple Tables\n\n```sql\nSELECT e.name, d.dept_name, p.project_name\nFROM employees e\nINNER JOIN departments d ON e.dept_id = d.id\nINNER JOIN project_assignments pa ON e.id = pa.employee_id\nINNER JOIN projects p ON pa.project_id = p.id;\n```\n\n### INNER JOIN with Additional Conditions\n\n```sql\nSELECT e.name, d.dept_name\nFROM employees e\nINNER JOIN departments d ON e.dept_id = d.id\n    AND d.active = 1\nWHERE e.salary > 50000;\n```\n\n### Venn Diagram Representation\n\nINNER JOIN returns only the overlapping (matching) portion of both tables. Consider it the intersection of the two datasets.\n\n| Employee with dept_id | Department with id | Included in result? |\n|----------------------|-------------------|--------------------|\n| 1 | 1 | Yes - match found |\n| 2 | 2 | Yes - match found |\n| 3 (dept_id = NULL) | - | No - no match |\n| - | 3 (no employees) | No - no match |\n\n> **Key Point:** INNER JOIN is the most common join type. Use it when you only need rows that have corresponding data in both tables.",
+  "codeExample": "SELECT o.id AS order_id,\n       c.name AS customer_name,\n       o.order_date,\n       o.total\nFROM orders o\nINNER JOIN customers c ON o.customer_id = c.id\nORDER BY o.order_date;",
+  "quiz": [
+    {
+      "question": "What does INNER JOIN return?",
+      "options": [
+        "All rows from the left table",
+        "Only rows with matches in both tables",
+        "All rows from both tables",
+        "Only rows with no matches"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is the INNER keyword required in SQL?",
+      "options": [
+        "Yes, always",
+        "No, JOIN defaults to INNER JOIN",
+        "Only in some databases",
+        "Only for self-joins"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

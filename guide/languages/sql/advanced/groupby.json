@@ -1,0 +1,32 @@
+{
+  "title": "GROUP BY Clause",
+  "language": "sql",
+  "topic": "groupby",
+  "order": 34,
+  "nextTopic": "having",
+  "prevTopic": "natural_join",
+  "content": "### GROUP BY Clause\n\nGROUP BY groups rows that have the same values in specified columns into summary rows. It is used with aggregate functions to produce summary reports.\n\n---\n\n### GROUP BY Syntax\n\n```sql\nSELECT column1, aggregate_function(column2)\nFROM table\nGROUP BY column1;\n```\n\n### Basic Example\n\n```sql\n-- Count employees in each department\nSELECT department, COUNT(*) AS employee_count\nFROM employees\nGROUP BY department;\n```\n\n### GROUP BY with Multiple Columns\n\n```sql\n-- Count employees by department and location\nSELECT department, location, COUNT(*) AS count\nFROM employees\nGROUP BY department, location\nORDER BY department, location;\n```\n\n### GROUP BY with Multiple Aggregates\n\n```sql\nSELECT department,\n       COUNT(*) AS employee_count,\n       AVG(salary) AS avg_salary,\n       SUM(salary) AS total_salary,\n       MAX(salary) AS max_salary\nFROM employees\nGROUP BY department;\n```\n\n### Rules for GROUP BY\n\n| Rule | Explanation |\n|------|-------------|\n| SELECT columns | Every column in SELECT must be in GROUP BY or be an aggregate |\n| WHERE vs HAVING | WHERE filters rows BEFORE grouping, HAVING filters AFTER |\n| ORDER BY | Can use aggregates or GROUP BY columns |\n\n```sql\n-- WRONG: name is not in GROUP BY and not aggregated\nSELECT department, name, COUNT(*)\nFROM employees\nGROUP BY department;\n\n-- CORRECT: name is grouped or aggregated\nSELECT department, COUNT(*) AS emp_count\nFROM employees\nGROUP BY department;\n```\n\n> **Key Point:** All non-aggregate columns in SELECT must appear in the GROUP BY clause. Most databases enforce this strictly.",
+  "codeExample": "SELECT department,\n       COUNT(*) AS total_employees,\n       ROUND(AVG(salary), 2) AS average_salary\nFROM employees\nGROUP BY department\nORDER BY average_salary DESC;",
+  "quiz": [
+    {
+      "question": "What must be true for non-aggregate columns in a GROUP BY query?",
+      "options": [
+        "They must be in the WHERE clause",
+        "They must appear in the GROUP BY clause",
+        "They must be indexed",
+        "They must be unique"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does WHERE filter rows before or after GROUP BY?",
+      "options": [
+        "Before",
+        "After",
+        "Both",
+        "It depends on the database"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

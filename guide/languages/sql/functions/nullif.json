@@ -1,0 +1,32 @@
+{
+  "title": "NULLIF Function",
+  "language": "sql",
+  "topic": "nullif",
+  "order": 24,
+  "nextTopic": "cast_convert",
+  "prevTopic": "coalesce",
+  "content": "### NULLIF Function\n\nNULLIF compares two expressions and returns NULL if they are equal, otherwise returns the first expression.\n\n---\n\n### Basic NULLIF Syntax\n\n```sql\nSELECT NULLIF(salary, 0) AS salary_or_null\nFROM employees;\n\n-- Returns NULL if salary is 0, otherwise returns salary\n```\n\n### Common Use Cases\n\n```sql\n-- Prevent division by zero\nSELECT name,\n       total_sales / NULLIF(num_orders, 0) AS avg_order_value\nFROM sales_summary;\n\n-- Treat empty strings as NULL\nSELECT NULLIF(TRIM(notes), '') AS clean_notes\nFROM orders;\n```\n\n### NULLIF with Aggregation\n\n```sql\n-- Exclude zeros from average calculation\nSELECT AVG(NULLIF(salary, 0)) AS avg_nonzero_salary\nFROM employees;\n\n-- Count only non-empty categories\nSELECT COUNT(NULLIF(category, '')) AS non_empty_categories\nFROM products;\n```\n\n### NULLIF vs COALESCE\n\n| Function | Purpose |\n|----------|---------|\n| NULLIF(a, b) | Returns NULL if a equals b |\n| COALESCE(a, b) | Returns first non-NULL value |\n\n```sql\n-- These are complementary:\n-- COALESCE fills in defaults, NULLIF replaces specific values with NULL\n```\n\n> **Key Point:** NULLIF is the inverse of COALESCE in a sense — it creates NULL values where a specific condition is met, while COALESCE replaces NULL values with a default.",
+  "codeExample": "SELECT department,\n       SUM(salary) / NULLIF(COUNT(*), 0) AS avg_salary_per_employee\nFROM employees\nGROUP BY department;",
+  "quiz": [
+    {
+      "question": "What does NULLIF(5, 5) return?",
+      "options": [
+        "5",
+        "0",
+        "NULL",
+        "1"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does NULLIF(5, 10) return?",
+      "options": [
+        "NULL",
+        "5",
+        "10",
+        "0"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

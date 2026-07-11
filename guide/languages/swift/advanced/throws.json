@@ -1,0 +1,22 @@
+{
+  "title": "Swift Throws and Rethrows",
+  "language": "swift",
+  "topic": "throws",
+  "order": 73,
+  "nextTopic": "async_await",
+  "prevTopic": "try_catch",
+  "content": "### Swift Throws and Rethrows\n\nFunctions marked with `throws` can propagate errors to their caller. The `rethrows` keyword is used for functions that take throwing closures as parameters.\n\n**Throwing Functions:**\n\n```swift\n// Function that can throw\nfunc parseJSON(_ data: Data) throws -> [String: Any] {\n    guard !data.isEmpty else {\n        throw ParseError.emptyData\n    }\n    // Parsing logic\n    return [\"key\": \"value\"]\n}\n\n// Calling a throwing function must be in do-catch or throwing context\nfunc process(data: Data) throws {\n    let json = try parseJSON(data)\n    print(json)\n}\n```\n\n**Throwing Initializers:**\n\n```swift\nstruct User {\n    let id: Int\n    let name: String\n    \n    init?(json: [String: Any]) throws {\n        guard let id = json[\"id\"] as? Int else {\n            throw ParseError.missingField(\"id\")\n        }\n        guard let name = json[\"name\"] as? String else {\n            throw ParseError.missingField(\"name\")\n        }\n        self.id = id\n        self.name = name\n    }\n}\n```\n\n**Rethrows Keyword:**\n\n```swift\n// 'rethrows' means: this function throws only if its closure parameter throws\nfunc map<T, U>(_ array: [T], transform: (T) throws -> U) rethrows -> [U] {\n    var result: [U] = []\n    for element in array {\n        result.append(try transform(element))\n    }\n    return result\n}\n\n// Non-throwing closure - no try needed\nlet doubled = map([1, 2, 3]) { $0 * 2 }\n\n// Throwing closure - must use try\nlet parsed = try map([\"1\", \"2\"]) { try Int($0)! }\n```\n\n**Thrown Error Propagation:**\n\n```\nFunction A (throws) -- call --> Function B (throws)\n    |                                |\n    v                                v\n  do-catch                        may throw\n```\n\n**Throwing Computed Properties and Subscripts:**\n\n```swift\nstruct DataStore {\n    private var data: [String: Any] = [:]\n    \n    // Throwing subscript\n    subscript(key: String) -> Any {\n        get throws {\n            guard let value = data[key] else {\n                throw StoreError.keyNotFound(key)\n            }\n            return value\n        }\n    }\n}\n```\n\n> **Key Point:** Use `rethrows` for higher-order functions that accept throwing closures as parameters. This preserves flexibility for callers who may or may not use throwing closures.\n\nA `rethrows` function can only throw if the function parameter it receives can throw. If the closure doesn't throw, no error handling is needed.",
+  "codeExample": "import Foundation\n\nenum DataError: Error {\n    case invalidFormat\n    case missingField(String)\n    case networkFailure\n}\n\nfunc fetchUserData(from url: String) throws -> [String: Any] {\n    guard url.hasPrefix(\"https://\") else {\n        throw DataError.invalidFormat\n    }\n    guard url.contains(\"api\") else {\n        throw DataError.networkFailure\n    }\n    return [\"name\": \"Alice\", \"age\": 30]\n}\n\n// Rethrows example\nfunc processItems<T, R>(_ items: [T], processor: (T) throws -> R) rethrows -> [R] {\n    var results: [R] = []\n    for item in items {\n        results.append(try processor(item))\n    }\n    return results\n}\n\n// Non-throwing closure - no try needed\nlet numbers = [1, 2, 3]\nlet doubled = processItems(numbers) { $0 * 2 }\nprint(\"Doubled: \\(doubled)\")\n\n// Throwing closure - must use do-catch or throwing context\nlet strings = [\"1\", \"2\", \"abc\"]\ndo {\n    let parsed = try processItems(strings) { try Int($0) ?? { throw DataError.invalidFormat }() }\n    print(\"Parsed: \\(parsed)\")\n} catch {\n    print(\"Error: \\(error)\")\n}",
+  "quiz": [
+    {
+      "question": "What keyword allows a function to propagate errors only if its closure parameter throws?",
+      "options": ["throws", "rethrows", "throwable", "errorthrows"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a throwing function be called from a non-throwing context?",
+      "options": ["No, must be in do-catch or throwing context", "Yes, always", "Only with try?", "Only if rethrows"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "CROSS JOIN",
+  "language": "sql",
+  "topic": "cross_join",
+  "order": 31,
+  "nextTopic": "self_join",
+  "prevTopic": "full_outer_join",
+  "content": "### CROSS JOIN\n\nCROSS JOIN returns the Cartesian product of two tables — every row from the first table is combined with every row from the second table.\n\n---\n\n### CROSS JOIN Syntax\n\n```sql\nSELECT columns\nFROM table1\nCROSS JOIN table2;\n\n-- Also valid (implicit cross join):\nSELECT columns FROM table1, table2;\n```\n\n### CROSS JOIN Example\n\n```sql\n-- If employees has 5 rows and departments has 3 rows:\n-- CROSS JOIN returns 5 x 3 = 15 rows\nSELECT e.name, d.dept_name\nFROM employees e\nCROSS JOIN departments d;\n```\n\n### Result Size\n\nIf table A has M rows and table B has N rows, the result has M x N rows. This can grow very large quickly.\n\n### Practical Uses\n\n```sql\n-- Generate all possible combinations\nSELECT s.size, c.color\nFROM sizes s\nCROSS JOIN colors c;\n\n-- Create a date range\nSELECT d.date, t.time_slot\nFROM (\n    SELECT '2024-01-01'::DATE + generate_series(0, 6) AS date\n) d\nCROSS JOIN (\n    SELECT '09:00' AS time_slot\n    UNION SELECT '10:00'\n    UNION SELECT '11:00'\n) t;\n```\n\n### CROSS JOIN with Conditions\n\n```sql\n-- Generate report with all department/employee combinations\nSELECT d.dept_name, e.name\nFROM departments d\nCROSS JOIN employees e\nWHERE d.id = e.dept_id;\n-- This simulates an INNER JOIN (but use INNER JOIN instead)\n```\n\n> **Key Point:** CROSS JOIN without a WHERE clause produces every possible row combination. Be careful as this can generate enormous result sets on large tables.",
+  "codeExample": "-- Generate all product/size combinations\nSELECT p.product_name, s.size_name\nFROM products p\nCROSS JOIN sizes s\nORDER BY p.product_name, s.size_name;",
+  "quiz": [
+    {
+      "question": "If table A has 10 rows and table B has 20 rows, how many rows does CROSS JOIN return?",
+      "options": [
+        "10",
+        "20",
+        "30",
+        "200"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the Cartesian product?",
+      "options": [
+        "Only matching rows",
+        "Every row from A combined with every row from B",
+        "All rows from A and unmatched from B",
+        "A mathematical formula"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

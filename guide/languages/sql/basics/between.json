@@ -1,0 +1,32 @@
+{
+  "title": "BETWEEN Operator",
+  "language": "sql",
+  "topic": "between",
+  "order": 14,
+  "nextTopic": "in",
+  "prevTopic": "operators",
+  "content": "### BETWEEN Operator\n\nThe BETWEEN operator selects values within a given inclusive range. It works with numbers, text, and dates.\n\n---\n\n### Basic BETWEEN Syntax\n\n```sql\n-- Find employees with salaries between 50000 and 80000\nSELECT name, salary\nFROM employees\nWHERE salary BETWEEN 50000 AND 80000;\n\n-- Equivalent to:\nSELECT name, salary\nFROM employees\nWHERE salary >= 50000 AND salary <= 80000;\n```\n\n### BETWEEN with Dates\n\n```sql\n-- Find orders placed in January 2024\nSELECT *\nFROM orders\nWHERE order_date BETWEEN '2024-01-01' AND '2024-01-31';\n```\n\n### BETWEEN with Text\n\n```sql\n-- Find names alphabetically between 'A' and 'M'\nSELECT name FROM employees\nWHERE name BETWEEN 'A' AND 'M';\n```\n\n### NOT BETWEEN\n\n```sql\n-- Find products outside a price range\nSELECT name, price\nFROM products\nWHERE price NOT BETWEEN 10 AND 100;\n```\n\n### Important Notes\n\n| Aspect | Detail |\n|--------|--------|\n| Inclusive | BETWEEN includes both boundary values |\n| Performance | Can use indexes effectively for range queries |\n| Date precision | `BETWEEN '2024-01-01' AND '2024-01-31'` includes Jan 31 at midnight |\n\nFor date ranges that include the full end date, use an exclusive upper bound:\n\n```sql\n-- Include all of January 2024\nWHERE order_date >= '2024-01-01' AND order_date < '2024-02-01';\n```\n\n> **Key Point:** BETWEEN is inclusive. For dates, be careful with time components — '2024-01-31' at midnight excludes times later that day.",
+  "codeExample": "SELECT product_name, price\nFROM products\nWHERE price BETWEEN 20 AND 200\nORDER BY price;",
+  "quiz": [
+    {
+      "question": "Is BETWEEN inclusive or exclusive of the boundary values?",
+      "options": [
+        "Exclusive",
+        "Inclusive",
+        "Inclusive for numbers, exclusive for dates",
+        "Depends on the database"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does price NOT BETWEEN 10 AND 20 return?",
+      "options": [
+        "Prices between 10 and 20",
+        "Prices less than 10 or greater than 20",
+        "Prices equal to 10 or 20 only",
+        "An error"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

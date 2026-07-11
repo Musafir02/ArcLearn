@@ -1,0 +1,32 @@
+{
+  "title": "FOREIGN KEY",
+  "language": "sql",
+  "topic": "foreign_key",
+  "order": 55,
+  "nextTopic": "unique",
+  "prevTopic": "primary_key",
+  "content": "### FOREIGN KEY Constraint\n\nA foreign key links tables by referencing the primary key of another table. It maintains referential integrity across related tables.\n\n---\n\n### Foreign Key Rules\n\n- A foreign key column in the child table references a primary key (or unique) column in the parent table\n- The foreign key value must exist in the parent table or be NULL\n- Multiple tables can reference the same parent table\n\n### Creating a Foreign Key\n\n```sql\n-- Inline definition\nCREATE TABLE orders (\n    id INT PRIMARY KEY,\n    customer_id INT REFERENCES customers(id),\n    order_date DATE\n);\n\n-- Constraint definition (more explicit)\nCREATE TABLE orders (\n    id INT PRIMARY KEY,\n    customer_id INT,\n    order_date DATE,\n    CONSTRAINT fk_orders_customer\n        FOREIGN KEY (customer_id)\n        REFERENCES customers(id)\n);\n```\n\n### Referential Actions (ON DELETE / ON UPDATE)\n\n| Action | Description |\n|--------|-------------|\n| CASCADE | Propagate changes to child rows |\n| SET NULL | Set foreign key to NULL when parent is deleted |\n| SET DEFAULT | Set foreign key to default value |\n| RESTRICT | Prevent deletion if child rows exist |\n| NO ACTION | Similar to RESTRICT (checked at end of transaction) |\n\n```sql\nCREATE TABLE orders (\n    id INT PRIMARY KEY,\n    customer_id INT,\n    FOREIGN KEY (customer_id)\n        REFERENCES customers(id)\n        ON DELETE CASCADE\n        ON UPDATE CASCADE\n);\n```\n\n### Adding/Dropping Foreign Keys\n\n```sql\nALTER TABLE orders\nADD CONSTRAINT fk_orders_customer\nFOREIGN KEY (customer_id) REFERENCES customers(id);\n\nALTER TABLE orders DROP CONSTRAINT fk_orders_customer;\n```\n\n> **Key Point:** Foreign keys enforce relationships between tables. Choose the appropriate referential action (CASCADE, SET NULL, RESTRICT) based on your business requirements.",
+  "codeExample": "CREATE TABLE order_items (\n    order_id INT,\n    product_id INT,\n    quantity INT NOT NULL,\n    PRIMARY KEY (order_id, product_id),\n    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,\n    FOREIGN KEY (product_id) REFERENCES products(id)\n);",
+  "quiz": [
+    {
+      "question": "What does a FOREIGN KEY constraint enforce?",
+      "options": [
+        "Unique values in a column",
+        "Referential integrity between tables",
+        "Non-null values",
+        "A specific condition on values"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does ON DELETE CASCADE do?",
+      "options": [
+        "Prevents deletion of parent rows",
+        "Sets foreign key to NULL when parent is deleted",
+        "Deletes child rows when parent is deleted",
+        "Sets foreign key to default value"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

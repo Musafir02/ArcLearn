@@ -1,0 +1,32 @@
+{
+  "title": "LEFT JOIN",
+  "language": "sql",
+  "topic": "left_join",
+  "order": 28,
+  "nextTopic": "right_join",
+  "prevTopic": "inner_join",
+  "content": "### LEFT JOIN (LEFT OUTER JOIN)\n\nLEFT JOIN returns ALL rows from the left table, and matching rows from the right table. If there is no match, NULL values are returned for right table columns.\n\n---\n\n### LEFT JOIN Syntax\n\n```sql\nSELECT columns\nFROM table1\nLEFT JOIN table2 ON table1.column = table2.column;\n```\n\n### LEFT JOIN Example\n\n```sql\n-- All employees, with department name if they have one\nSELECT e.name, d.dept_name\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id;\n\n-- Employees without a department will show NULL for dept_name\n```\n\n### Finding Unmatched Rows\n\n```sql\n-- Find employees without a department\nSELECT e.name\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nWHERE d.id IS NULL;\n```\n\n### LEFT JOIN with Multiple Tables\n\n```sql\nSELECT e.name, d.dept_name, p.project_name\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nLEFT JOIN project_assignments pa ON e.id = pa.employee_id\nLEFT JOIN projects p ON pa.project_id = p.id;\n```\n\n### Comparing LEFT JOIN and INNER JOIN\n\n| Employee | INNER JOIN | LEFT JOIN |\n|----------|-----------|-----------|\n| Has department | Included | Included |\n| No department | Excluded | Included (NULL for dept) |\n\n> **Key Point:** LEFT JOIN is useful when you need all rows from the primary table, regardless of whether related data exists in the secondary table.",
+  "codeExample": "SELECT c.name AS customer_name,\n       COUNT(o.id) AS order_count\nFROM customers c\nLEFT JOIN orders o ON c.id = o.customer_id\nGROUP BY c.name\nORDER BY order_count DESC;",
+  "quiz": [
+    {
+      "question": "How many rows does LEFT JOIN return from the left table?",
+      "options": [
+        "Only matching rows",
+        "All rows",
+        "Only the first row",
+        "Depends on the data"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What appears in right-table columns when there is no match in a LEFT JOIN?",
+      "options": [
+        "Empty string",
+        "0",
+        "NULL",
+        "The left table value"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

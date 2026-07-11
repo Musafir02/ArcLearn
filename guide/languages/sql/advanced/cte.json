@@ -1,0 +1,32 @@
+{
+  "title": "Common Table Expressions (CTE)",
+  "language": "sql",
+  "topic": "cte",
+  "order": 43,
+  "nextTopic": "recursive_cte",
+  "prevTopic": "indexes",
+  "content": "### Common Table Expressions (CTE)\n\nA CTE is a temporary, named result set defined within a query using the WITH clause. It improves query organization and readability.\n\n---\n\n### CTE Syntax\n\n```sql\nWITH cte_name AS (\n    SELECT ...\n    FROM ...\n    WHERE ...\n)\nSELECT * FROM cte_name;\n```\n\n### Basic CTE Example\n\n```sql\nWITH high_earners AS (\n    SELECT name, salary, department\n    FROM employees\n    WHERE salary > 80000\n)\nSELECT department, COUNT(*) AS count\nFROM high_earners\nGROUP BY department;\n```\n\n### Multiple CTEs\n\n```sql\nWITH\ndept_stats AS (\n    SELECT department,\n           AVG(salary) AS avg_salary,\n           COUNT(*) AS emp_count\n    FROM employees\n    GROUP BY department\n),\nhigh_depts AS (\n    SELECT department\n    FROM dept_stats\n    WHERE avg_salary > 70000\n)\nSELECT e.name, e.salary, e.department\nFROM employees e\nWHERE e.department IN (SELECT department FROM high_depts);\n```\n\n### CTE vs Subquery\n\n| Aspect | CTE | Subquery |\n|--------|-----|----------|\n| Readability | Named, can be referenced multiple times | Inline, harder to read when complex |\n| Reusability | Can be referenced multiple times in the same query | Must be repeated |\n| Recursion | Supported (recursive CTE) | Not supported |\n| Scope | Only within the current query | Only within the current clause |\n\n### CTE in INSERT/UPDATE/DELETE\n\n```sql\nWITH updated_employees AS (\n    UPDATE employees\n    SET salary = salary * 1.1\n    WHERE department = 'Engineering'\n    RETURNING *\n)\nSELECT * FROM updated_employees;\n```\n\n> **Key Point:** CTEs make complex queries more readable by breaking them into named, logical steps. They are especially useful when the same subquery is referenced multiple times.",
+  "codeExample": "WITH dept_average AS (\n    SELECT department, AVG(salary) AS avg_sal\n    FROM employees\n    GROUP BY department\n)\nSELECT e.name, e.salary, d.avg_sal\nFROM employees e\nJOIN dept_average d ON e.department = d.department\nWHERE e.salary > d.avg_sal;",
+  "quiz": [
+    {
+      "question": "Which keyword defines a CTE?",
+      "options": [
+        "WITH",
+        "CTE",
+        "TEMP",
+        "DEFINE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is an advantage of CTE over subqueries?",
+      "options": [
+        "CTEs are always faster",
+        "CTEs can be referenced multiple times in the same query",
+        "CTEs do not require SELECT",
+        "CTEs persist after the query"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

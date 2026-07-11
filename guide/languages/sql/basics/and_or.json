@@ -1,0 +1,32 @@
+{
+  "title": "AND, OR, NOT Operators",
+  "language": "sql",
+  "topic": "and_or",
+  "order": 8,
+  "nextTopic": "not",
+  "prevTopic": "orderby",
+  "content": "### AND, OR, NOT Operators\n\nLogical operators combine multiple conditions in WHERE clauses to create more precise filters.\n\n---\n\n### AND Operator\n\nAND returns rows when ALL conditions are true:\n\n```sql\nSELECT * FROM employees\nWHERE department = 'Engineering'\n  AND salary > 70000;\n```\n\n### OR Operator\n\nOR returns rows when AT LEAST ONE condition is true:\n\n```sql\nSELECT * FROM employees\nWHERE department = 'Engineering'\n   OR department = 'Marketing';\n```\n\n### Combining AND and OR\n\nUse parentheses to control the order of evaluation. Without parentheses, AND has higher precedence than OR.\n\n```sql\n-- Correct: finds engineers with salary > 70000 OR anyone in Marketing\nSELECT * FROM employees\nWHERE (department = 'Engineering' AND salary > 70000)\n   OR department = 'Marketing';\n\n-- Without parentheses, AND binds first:\n-- Finds engineers with salary > 70000 combined with Marketing employees\nSELECT * FROM employees\nWHERE department = 'Engineering'\n   AND salary > 70000\n   OR department = 'Marketing';\n```\n\n| Operator | Precedence |\n|----------|-----------|\n| NOT | Highest |\n| AND | Middle |\n| OR | Lowest |\n\n> **Key Point:** Always use parentheses when mixing AND and OR to make your intent clear.",
+  "codeExample": "SELECT name, department, salary\nFROM employees\nWHERE (department = 'Engineering' OR department = 'Sales')\n  AND salary >= 60000;",
+  "quiz": [
+    {
+      "question": "Which operator has higher precedence, AND or OR?",
+      "options": [
+        "AND",
+        "OR",
+        "They have equal precedence",
+        "Neither, it depends on the database"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you control the order of evaluation when mixing AND and OR?",
+      "options": [
+        "By ordering conditions carefully",
+        "By using parentheses",
+        "By using square brackets",
+        "It cannot be controlled"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Swift Protocol Inheritance",
+  "language": "swift",
+  "topic": "protocol_inheritance",
+  "order": 63,
+  "nextTopic": "protocol_delegation",
+  "prevTopic": "protocols",
+  "content": "### Swift Protocol Inheritance\n\nProtocols can inherit from other protocols, allowing you to build hierarchies of requirements. A protocol can inherit from multiple other protocols.\n\n**Protocol Inheritance Syntax:**\n\n```swift\nprotocol InheritingProtocol: BaseProtocol1, BaseProtocol2 {\n    // Additional requirements\n}\n```\n\n**Basic Inheritance:**\n\n```swift\nprotocol Named {\n    var name: String { get }\n}\n\nprotocol Aged {\n    var age: Int { get }\n}\n\n// Protocol inheriting from multiple protocols\nprotocol Person: Named, Aged {\n    var email: String { get }\n    func introduce() -> String\n}\n\nstruct Employee: Person {\n    let name: String\n    let age: Int\n    let email: String\n    \n    func introduce() -> String {\n        return \"Hi, I'm \\(name), \\(age) years old. Email: \\(email)\"\n    }\n}\n```\n\n**Protocol Hierarchy Example:**\n\n```swift\nprotocol Animal {\n    var species: String { get }\n    func makeSound() -> String\n}\n\nprotocol Mammal: Animal {\n    var hasFur: Bool { get }\n}\n\nprotocol Pet: Mammal {\n    var name: String { get }\n    func play() -> String\n}\n\nstruct Dog: Pet {\n    let species = \"Canine\"\n    let hasFur = true\n    let name: String\n    \n    func makeSound() -> String { \"Woof!\" }\n    func play() -> String { \"\\(name) plays fetch\" }\n}\n```\n\n**Class-Specific Protocols:**\n\n| Keyword | Conforming Types |\n|---------|-----------------|\n| `protocol` | Classes, structs, enums |\n| `protocol: AnyObject` | Classes only (reference types) |\n\n```swift\nprotocol NetworkDelegate: AnyObject {\n    func didReceiveData(_ data: Data)\n    func didFailWithError(_ error: Error)\n}\n\n// Only classes can conform\nclass ViewController: NetworkDelegate {\n    func didReceiveData(_ data: Data) { }\n    func didFailWithError(_ error: Error) { }\n}\n\n// struct ViewModel: NetworkDelegate { }  // Error!\n```\n\n**Protocol Composition:**\n\n```swift\nfunc processItem(_ item: Named & Aged) {\n    print(\"\\(item.name) is \\(item.age) years old\")\n}\n\n// The parameter must conform to BOTH Named and Aged\n```\n\n> **Key Point:** Protocol inheritance allows you to compose requirements incrementally. A type that conforms to an inheriting protocol must satisfy all requirements from the entire hierarchy.\n\nUse `AnyObject` constraint when you need weak references or reference semantics for protocol conformance.",
+  "codeExample": "import Foundation\n\nprotocol Drawable {\n    func draw() -> String\n}\n\nprotocol Fillable {\n    var fillColor: String { get set }\n    func fill() -> String\n}\n\nprotocol ColoredShape: Drawable, Fillable {\n    var borderColor: String { get set }\n    func border() -> String\n}\n\nstruct Circle: ColoredShape {\n    var fillColor: String = \"red\"\n    var borderColor: String = \"black\"\n    \n    func draw() -> String {\n        \"Drawing circle\"\n    }\n    \n    func fill() -> String {\n        \"Filling with \\(fillColor)\"\n    }\n    \n    func border() -> String {\n        \"Adding \\(borderColor) border\"\n    }\n}\n\nlet circle = Circle()\nprint(circle.draw())\nprint(circle.fill())\nprint(circle.border())\n\n// Protocol composition\nprotocol Printable {\n    func print() -> String\n}\n\nstruct Report: Printable & Named {\n    let name: String\n    let content: String\n    \n    func print() -> String {\n        \"Report: \\(name)\\n\\(content)\"\n    }\n}\n\nlet report = Report(name: \"Q1 Results\", content: \"Revenue up 20%\")\nprint(report.print())",
+  "quiz": [
+    {
+      "question": "Can a protocol inherit from multiple protocols?",
+      "options": ["Yes", "No, single inheritance", "Only from one but conform to others", "Only if they share a base"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What constraint restricts a protocol to class types only?",
+      "options": ["class", "AnyObject", "ReferenceType", "ClassType"],
+      "correctIndex": 1
+    }
+  ]
+}

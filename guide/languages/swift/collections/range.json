@@ -1,0 +1,22 @@
+{
+  "title": "Swift Range",
+  "language": "swift",
+  "topic": "range",
+  "order": 34,
+  "nextTopic": "functions",
+  "prevTopic": "dictionary_methods",
+  "content": "### Swift Range\n\nRanges represent a sequence of values between two endpoints. They are commonly used in loops, array slicing, and switch cases.\n\n**Range Operators:**\n\n| Operator | Type | Description | Example |\n|----------|------|-------------|---------|\n| `a...b` | ClosedRange | Includes both a and b | `1...5` = 1,2,3,4,5 |\n| `a..<b` | Range | Includes a but not b | `1..<5` = 1,2,3,4 |\n| `a...` | PartialRangeFrom | From a to infinity | `3...` |\n| `...a` | PartialRangeThrough | Through a (inclusive) | `...5` |\n| `..<a` | PartialRangeUpTo | Up to a (exclusive) | `..<5` |\n\n**Using Ranges:**\n\n```swift\n// Iteration\nfor i in 1...5 {\n    print(i)\n}\n\n// Array slicing\nlet numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nlet firstThree = numbers[0..<3]   // [0, 1, 2]\nlet fromFive = numbers[5...]      // [5, 6, 7, 8, 9]\nlet upToThree = numbers[...3]     // [0, 1, 2, 3]\n\n// Switch matching\nlet score = 85\nswitch score {\ncase 0..<60: print(\"F\")\ncase 60..<70: print(\"D\")\ncase 70..<80: print(\"C\")\ncase 80..<90: print(\"B\")\ncase 90...100: print(\"A\")\ndefault: print(\"Invalid\")\n}\n```\n\n**Range Types:**\n\n| Type | Conforms To | Mutability |\n|------|-------------|------------|\n| `Range<T>` | Sequence | Immutable |\n| `ClosedRange<T>` | Sequence | Immutable |\n| `PartialRangeFrom<T>` | Sequence | Immutable |\n\n> **Key Point:** Ranges can be created with any `Comparable` type, not just integers. Use `...` and `..<` with `Double`, `Character`, or custom types.\n\n```swift\n// Ranges with Doubles\nlet temperatures = stride(from: 0.0, through: 100.0, by: 10.0)\n\n// Checking containment\nlet validRange = 0...100\nvalidRange.contains(50)   // true\nvalidRange.contains(150)  // false\n\n// String ranges\nlet letters = \"a\"...\"z\"\nletters.contains(\"m\")  // true\n```",
+  "codeExample": "import Foundation\n\nlet numbers = Array(0...9)\n\n// Array slicing with ranges\nprint(\"Full array: \\(numbers)\")\nprint(\"First 3: \\(numbers[0..<3])\")\nprint(\"From index 7: \\(numbers[7...])\")\nprint(\"Up to index 4: \\(numbers[...4])\")\n\n// Range as condition\nlet age = 25\nswitch age {\ncase 0..<13:\n    print(\"Child\")\ncase 13..<20:\n    print(\"Teen\")\ncase 20..<65:\n    print(\"Adult\")\ncase 65...:\n    print(\"Senior\")\ndefault:\n    break\n}\n\n// Creating and checking ranges\nlet gradeRange = 70...100\nlet score = 88\nif gradeRange.contains(score) {\n    print(\"\\(score) is a passing score\")\n} else {\n    print(\"\\(score) needs improvement\")\n}",
+  "quiz": [
+    {
+      "question": "What does '...' (three dots) represent in Swift ranges?",
+      "options": ["Exclusive upper bound", "Inclusive upper bound", "Half-open range", "Partial range"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type does '0..<10' create?",
+      "options": ["ClosedRange", "Range", "PartialRangeUpTo", "Array"],
+      "correctIndex": 1
+    }
+  ]
+}

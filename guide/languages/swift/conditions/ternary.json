@@ -1,0 +1,22 @@
+{
+  "title": "Swift Ternary Operator",
+  "language": "swift",
+  "topic": "ternary",
+  "order": 22,
+  "nextTopic": "for_in",
+  "prevTopic": "switch",
+  "content": "### Swift Ternary Operator\n\nThe ternary conditional operator `? :` provides a concise way to evaluate one of two expressions based on a boolean condition. It is the only Swift operator that takes three operands.\n\n**Ternary Syntax:**\n\n```swift\ncondition ? valueIfTrue : valueIfFalse\n\nlet age = 20\nlet status = age >= 18 ? \"Adult\" : \"Minor\"\n// status = \"Adult\"\n```\n\n**Usage Examples:**\n\n| Expression | Result |\n|------------|--------|\n| `true ? \"Yes\" : \"No\"` | `\"Yes\"` |\n| `false ? \"Yes\" : \"No\"` | `\"No\"` |\n| `10 > 5 ? \"greater\" : \"less\"` | `\"greater\"` |\n| `nil ?? \"default\"` | Equivalent to optional ternary |\n\n```swift\nlet score = 75\nlet grade = score >= 80 ? \"Pass\" : \"Fail\"\n\n// Nested ternary (use sparingly)\nlet result = score >= 90 ? \"A\" : score >= 80 ? \"B\" : \"C\"\n\n// With function calls\nlet greeting = isMorning ? sayGoodMorning() : sayHello()\n```\n\n**When to Use:**\n\n| Use Ternary | Use If-Else |\n|-------------|-------------|\n| Simple inline assignment | Complex logic with side effects |\n| Short conditions | Multiple branches |\n| Returning a value | Statements without return |\n\n> **Key Point:** Avoid nesting ternary operators for readability. Use `if` or `switch` for complex conditions.\n\n```swift\n// Good: simple ternary\nlet max = a > b ? a : b\n\n// Bad: nested ternary (hard to read)\nlet result = a > b ? a > c ? a : c : b > c ? b : c\n```",
+  "codeExample": "import Foundation\n\nlet temperature = 30\nlet weather = temperature > 25 ? \"Hot\" : \"Cool\"\nprint(\"Weather: \\(weather)\")\n\nlet isLoggedIn = true\nlet buttonText = isLoggedIn ? \"Log Out\" : \"Log In\"\nprint(\"Button: \\(buttonText)\")\n\n// Ternary for default values\nlet username: String? = nil\nlet displayName = username != nil ? username! : \"Guest\"\nprint(\"User: \\(displayName)\")\n\n// Ternary in string interpolation\nlet hour = 14\nprint(\"Good \\(hour < 12 ? \"morning\" : \"afternoon\")!\")\n\n// Assignment with ternary\nlet a = 10, b = 20\nlet larger = a > b ? a : b\nprint(\"Larger: \\(larger)\")",
+  "quiz": [
+    {
+      "question": "How many operands does the ternary operator take?",
+      "options": ["1", "2", "3", "4"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the result of '5 < 3 ? \"yes\" : \"no\"'?",
+      "options": ["\"yes\"", "\"no\"", "true", "false"],
+      "correctIndex": 1
+    }
+  ]
+}

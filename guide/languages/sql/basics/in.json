@@ -1,0 +1,32 @@
+{
+  "title": "IN Operator",
+  "language": "sql",
+  "topic": "in",
+  "order": 15,
+  "nextTopic": "like_patterns",
+  "prevTopic": "between",
+  "content": "### IN Operator\n\nThe IN operator checks if a value matches any value in a list. It is a concise alternative to multiple OR conditions.\n\n---\n\n### Basic IN Syntax\n\n```sql\n-- Find employees in specific departments\nSELECT name, department\nFROM employees\nWHERE department IN ('Engineering', 'Sales', 'Marketing');\n\n-- Equivalent to:\nSELECT name, department\nFROM employees\nWHERE department = 'Engineering'\n   OR department = 'Sales'\n   OR department = 'Marketing';\n```\n\n### IN with Numbers\n\n```sql\n-- Find products with specific IDs\nSELECT name, price\nFROM products\nWHERE id IN (101, 205, 308, 412);\n```\n\n### NOT IN\n\n```sql\n-- Find employees NOT in these departments\nSELECT name, department\nFROM employees\nWHERE department NOT IN ('Intern', 'Contractor');\n```\n\n### IN with Subquery\n\nIN can accept a subquery that returns a list of values:\n\n```sql\n-- Find customers who placed orders\nSELECT name, email\nFROM customers\nWHERE id IN (\n    SELECT DISTINCT customer_id\n    FROM orders\n);\n```\n\n### Performance Considerations\n\n| List Size | Performance |\n|-----------|------------|\n| Small (less than 10) | Good, equivalent to OR |\n| Large (100+) | Consider JOIN or EXISTS |\n| With subquery | May be slower than EXISTS in some databases |\n\n> **Key Point:** IN handles NULL values differently than NOT IN. If the list contains NULL, NOT IN may return unexpected results (empty set).",
+  "codeExample": "SELECT product_name, category\nFROM products\nWHERE category IN ('Electronics', 'Books', 'Home')\nORDER BY category, product_name;",
+  "quiz": [
+    {
+      "question": "What is the advantage of IN over multiple OR conditions?",
+      "options": [
+        "Faster execution always",
+        "More concise and readable",
+        "Works with NULL values better",
+        "No advantages"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can IN accept a subquery?",
+      "options": [
+        "No, only literal values",
+        "Yes, a subquery that returns a single column",
+        "Only in MySQL",
+        "Only with EXISTS"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Swift Functions",
+  "language": "swift",
+  "topic": "functions",
+  "order": 35,
+  "nextTopic": "function_params",
+  "prevTopic": "range",
+  "content": "### Swift Functions\n\nFunctions are self-contained blocks of code that perform specific tasks. Swift functions have a flexible syntax with parameter labels, default values, and multiple return types.\n\n**Basic Function Syntax:**\n\n```swift\nfunc functionName(parameterName: Type) -> ReturnType {\n    // Function body\n    return value\n}\n\nfunc greet() {\n    print(\"Hello!\")\n}\n\nfunc add(a: Int, b: Int) -> Int {\n    return a + b\n}\n\nlet sum = add(a: 5, b: 3)  // 8\n```\n\n**Function Components:**\n\n| Component | Description | Required |\n|-----------|-------------|----------|\n| `func` keyword | Declares a function | Yes |\n| Function name | Identifies the function | Yes |\n| Parameters | Input values | No |\n| Return type `-> Type` | Output type | No (Void assumed) |\n| Function body | Code to execute | Yes |\n| `return` | Returns a value | If return type specified |\n\n```swift\n// Multiple return values using tuples\nfunc minMax(_ array: [Int]) -> (min: Int, max: Int)? {\n    guard let min = array.min(), let max = array.max() else {\n        return nil\n    }\n    return (min, max)\n}\n\nif let result = minMax([3, 1, 7, 2, 9]) {\n    print(\"Min: \\(result.min), Max: \\(result.max)\")\n}\n```\n\n> **Key Point:** Functions with no return type actually return `Void`, which is a type alias for an empty tuple `()`.\n\nFunctions are first-class types in Swift: you can assign them to variables, pass them as arguments, and return them from other functions.",
+  "codeExample": "import Foundation\n\n// Simple function\nfunc sayHello() {\n    print(\"Hello, World!\")\n}\n\n// Function with parameters and return\nfunc calculateArea(length: Double, width: Double) -> Double {\n    return length * width\n}\n\n// Function with default value\nfunc power(base: Int, exponent: Int = 2) -> Int {\n    var result = 1\n    for _ in 0..<exponent {\n        result *= base\n    }\n    return result\n}\n\nsayHello()\nlet area = calculateArea(length: 5.0, width: 3.0)\nprint(\"Area: \\(area)\")\nprint(\"5 squared: \\(power(base: 5))\")\nprint(\"2 to 10: \\(power(base: 2, exponent: 10))\")",
+  "quiz": [
+    {
+      "question": "What keyword declares a function in Swift?",
+      "options": ["function", "func", "def", "fn"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does a function with no return type actually return?",
+      "options": ["nil", "0", "Void (empty tuple)", "Nothing"],
+      "correctIndex": 2
+    }
+  ]
+}

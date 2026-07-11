@@ -1,0 +1,32 @@
+{
+  "title": "CREATE TABLE",
+  "language": "sql",
+  "topic": "create_table",
+  "order": 59,
+  "nextTopic": "alter_table",
+  "prevTopic": "default",
+  "content": "### CREATE TABLE Statement\n\nCREATE TABLE defines the structure of a new table in the database, including columns, data types, and constraints.\n\n---\n\n### Basic CREATE TABLE Syntax\n\n```sql\nCREATE TABLE table_name (\n    column1 datatype constraint,\n    column2 datatype constraint,\n    ...\n    table_constraints\n);\n```\n\n### Example\n\n```sql\nCREATE TABLE employees (\n    id INT PRIMARY KEY AUTO_INCREMENT,\n    first_name VARCHAR(50) NOT NULL,\n    last_name VARCHAR(50) NOT NULL,\n    email VARCHAR(255) UNIQUE NOT NULL,\n    department_id INT,\n    salary DECIMAL(10,2) CHECK (salary >= 0),\n    hire_date DATE DEFAULT CURRENT_DATE,\n    active BOOLEAN DEFAULT TRUE,\n    CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES departments(id)\n);\n```\n\n### Common Data Types\n\n| Category | Types |\n|----------|-------|\n| Numeric | INT, BIGINT, DECIMAL(p,s), FLOAT, SMALLINT, TINYINT |\n| String | VARCHAR(n), CHAR(n), TEXT, NVARCHAR(n) |\n| Date/Time | DATE, TIME, TIMESTAMP, DATETIME, INTERVAL |\n| Boolean | BOOLEAN, BIT |\n| Binary | BLOB, BINARY, VARBINARY |\n| Other | UUID, JSON, ARRAY, XML |\n\n### IF NOT EXISTS\n\n```sql\nCREATE TABLE IF NOT EXISTS employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(100)\n);\n```\n\n### CREATE TABLE AS (CTAS)\n\n```sql\n-- Create a new table from a query result\nCREATE TABLE high_earners AS\nSELECT * FROM employees WHERE salary > 100000;\n\n-- Specifying columns explicitly\nCREATE TABLE dept_summary (\n    department VARCHAR(100),\n    emp_count INT\n) AS\nSELECT department, COUNT(*)\nFROM employees\nGROUP BY department;\n```\n\n> **Key Point:** Carefully choose data types and constraints when creating tables. It is much easier to design properly upfront than to migrate data later.",
+  "codeExample": "CREATE TABLE IF NOT EXISTS products (\n    id INT PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(200) NOT NULL,\n    sku VARCHAR(50) UNIQUE NOT NULL,\n    price DECIMAL(10,2) NOT NULL CHECK (price > 0),\n    category VARCHAR(100),\n    stock INT DEFAULT 0,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);",
+  "quiz": [
+    {
+      "question": "Which clause prevents an error if the table already exists?",
+      "options": [
+        "IF NOT EXISTS",
+        "OR REPLACE",
+        "SKIP IF EXISTS",
+        "IGNORE DUPLICATE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does CREATE TABLE AS do?",
+      "options": [
+        "Creates an empty table",
+        "Creates a table and populates it with query results",
+        "Alters an existing table",
+        "Drops and recreates a table"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

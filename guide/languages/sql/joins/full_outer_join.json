@@ -1,0 +1,32 @@
+{
+  "title": "FULL OUTER JOIN",
+  "language": "sql",
+  "topic": "full_outer_join",
+  "order": 30,
+  "nextTopic": "cross_join",
+  "prevTopic": "right_join",
+  "content": "### FULL OUTER JOIN\n\nFULL OUTER JOIN returns ALL rows from both tables. When a match exists, rows are combined. When there is no match, NULL values fill the missing side.\n\n---\n\n### FULL OUTER JOIN Syntax\n\n```sql\nSELECT columns\nFROM table1\nFULL OUTER JOIN table2 ON table1.column = table2.column;\n```\n\nThe OUTER keyword is optional — FULL JOIN is the same as FULL OUTER JOIN.\n\n### FULL OUTER JOIN Example\n\n```sql\n-- All employees and all departments, matched where possible\nSELECT e.name, d.dept_name\nFROM employees e\nFULL OUTER JOIN departments d ON e.dept_id = d.id;\n\n-- Employees without a department: name shown, dept_name is NULL\n-- Departments without employees: dept_name shown, name is NULL\n```\n\n### Finding Unmatched on Both Sides\n\n```sql\n-- Rows that don't have a match on either side\nSELECT e.name, d.dept_name\nFROM employees e\nFULL OUTER JOIN departments d ON e.dept_id = d.id\nWHERE e.id IS NULL OR d.id IS NULL;\n```\n\n### Database Support\n\n| Database | FULL OUTER JOIN |\n|----------|----------------|\n| PostgreSQL | Supported |\n| SQL Server | Supported |\n| Oracle | Supported |\n| MySQL | Not supported (use UNION of LEFT and RIGHT JOIN) |\n| SQLite | Not supported |\n\n### Simulating FULL OUTER JOIN in MySQL\n\n```sql\nSELECT e.name, d.dept_name\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id\nUNION\nSELECT e.name, d.dept_name\nFROM employees e\nRIGHT JOIN departments d ON e.dept_id = d.id;\n```\n\n> **Key Point:** FULL OUTER JOIN is less common than INNER or LEFT JOIN. It is most useful when you need to see all records from both tables and identify gaps on either side.",
+  "codeExample": "SELECT e.name AS employee_name,\n       d.dept_name AS department\nFROM employees e\nFULL OUTER JOIN departments d ON e.dept_id = d.id\nORDER BY e.name;",
+  "quiz": [
+    {
+      "question": "FULL OUTER JOIN returns:",
+      "options": [
+        "Only matching rows",
+        "All rows from the left table only",
+        "All rows from both tables",
+        "All rows from the right table only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which major database does NOT support FULL OUTER JOIN?",
+      "options": [
+        "PostgreSQL",
+        "SQL Server",
+        "MySQL",
+        "Oracle"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

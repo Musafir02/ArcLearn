@@ -1,0 +1,32 @@
+{
+  "title": "Indexes",
+  "language": "sql",
+  "topic": "indexes",
+  "order": 42,
+  "nextTopic": "cte",
+  "prevTopic": "views",
+  "content": "### SQL Indexes\n\nAn index is a database structure that improves the speed of data retrieval operations on a table at the cost of additional storage and slower writes.\n\n---\n\n### Creating an Index\n\n```sql\n-- Simple index on one column\nCREATE INDEX idx_employee_name ON employees(name);\n\n-- Unique index (prevents duplicate values)\nCREATE UNIQUE INDEX idx_unique_email ON employees(email);\n\n-- Composite index on multiple columns\nCREATE INDEX idx_dept_salary ON employees(department, salary);\n```\n\n### How Indexes Work\n\nSimilar to a book index, a database index maintains a sorted list of values with pointers to the actual rows. This allows the database to find rows without scanning the entire table.\n\n### When to Use Indexes\n\n| Good for Indexes | Bad for Indexes |\n|-----------------|----------------|\n| Columns used in WHERE | Columns rarely queried |\n| JOIN columns (foreign keys) | Small tables (less than 1000 rows) |\n| Columns with high cardinality | Columns with few distinct values (e.g., gender) |\n| ORDER BY and GROUP BY columns | Columns frequently updated |\n\n### Index Types\n\n| Type | Description |\n|------|-------------|\n| B-Tree | Default, balanced tree for general use |\n| Hash | Fast equality lookups, no range queries |\n| Bitmap | Good for low-cardinality columns |\n| Full-Text | Text search optimization |\n| Spatial | Geographic data optimization |\n\n### Dropping an Index\n\n```sql\nDROP INDEX IF EXISTS idx_employee_name;\n\n-- MySQL\nDROP INDEX idx_employee_name ON employees;\n```\n\n> **Key Point:** Indexes speed up SELECT but slow down INSERT, UPDATE, and DELETE. Use them judiciously on frequently queried columns.",
+  "codeExample": "CREATE INDEX idx_orders_customer_date\nON orders(customer_id, order_date);",
+  "quiz": [
+    {
+      "question": "What is the main benefit of an index?",
+      "options": [
+        "Faster data retrieval (SELECT)",
+        "Faster data modification (INSERT/UPDATE/DELETE)",
+        "Reduced storage space",
+        "Automatic data validation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a downside of having too many indexes?",
+      "options": [
+        "Queries return wrong results",
+        "INSERT, UPDATE, DELETE become slower",
+        "Indexes cannot be dropped",
+        "Tables become read-only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "CASE WHEN Expression",
+  "language": "sql",
+  "topic": "case_when",
+  "order": 40,
+  "nextTopic": "views",
+  "prevTopic": "exists",
+  "content": "### CASE WHEN Expression\n\nCASE WHEN is SQL's way of implementing conditional logic (if-then-else) within queries. It returns a value based on specified conditions.\n\n---\n\n### Simple CASE Syntax\n\n```sql\nSELECT name,\n       CASE department\n           WHEN 'Engineering' THEN 'Tech'\n           WHEN 'Sales' THEN 'Revenue'\n           ELSE 'Other'\n       END AS category\nFROM employees;\n```\n\n### Searched CASE Syntax\n\n```sql\nSELECT name, salary,\n       CASE\n           WHEN salary >= 100000 THEN 'High'\n           WHEN salary >= 50000 THEN 'Medium'\n           WHEN salary IS NULL THEN 'Unknown'\n           ELSE 'Low'\n       END AS salary_level\nFROM employees;\n```\n\n### CASE in WHERE Clause\n\n```sql\nSELECT name, salary\nFROM employees\nWHERE\n    CASE WHEN department = 'Engineering' THEN 1\n         WHEN department = 'Sales' THEN 1\n         ELSE 0\n    END = 1;\n```\n\n### CASE in ORDER BY\n\n```sql\nSELECT name, department, salary\nFROM employees\nORDER BY\n    CASE\n        WHEN department = 'Engineering' THEN 1\n        WHEN department = 'Sales' THEN 2\n        ELSE 3\n    END;\n```\n\n### CASE with Aggregation\n\n```sql\nSELECT department,\n       COUNT(*) AS total,\n       SUM(CASE WHEN salary > 75000 THEN 1 ELSE 0 END) AS high_earners,\n       AVG(CASE WHEN active = 1 THEN salary END) AS avg_active_salary\nFROM employees\nGROUP BY department;\n```\n\n> **Key Point:** CASE evaluates conditions in order and returns the first match. If no condition is true and there is no ELSE, it returns NULL.",
+  "codeExample": "SELECT name,\n       salary,\n       CASE\n           WHEN salary < 50000 THEN 'Junior'\n           WHEN salary < 80000 THEN 'Mid'\n           ELSE 'Senior'\n       END AS level\nFROM employees\nORDER BY salary;",
+  "quiz": [
+    {
+      "question": "What does CASE return if no condition matches and there is no ELSE?",
+      "options": [
+        "0",
+        "An error",
+        "NULL",
+        "The last value"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can CASE be used in ORDER BY?",
+      "options": [
+        "No, only in SELECT",
+        "Yes",
+        "Only in WHERE",
+        "Only in simple form"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Stored Procedures",
+  "language": "sql",
+  "topic": "stored_procedures",
+  "order": 51,
+  "nextTopic": "functions_udf",
+  "prevTopic": "triggers",
+  "content": "### Stored Procedures\n\nA stored procedure is a prepared SQL code block that can be saved and reused. Procedures can accept parameters and return results.\n\n---\n\n### Stored Procedure Syntax\n\n```sql\n-- MySQL\nCREATE PROCEDURE procedure_name (IN param1 INT)\nBEGIN\n    SELECT * FROM employees WHERE department_id = param1;\nEND;\n\n-- PostgreSQL\nCREATE PROCEDURE procedure_name(param1 INT)\nLANGUAGE SQL\nAS $$\n    SELECT * FROM employees WHERE department_id = param1;\n$$;\n```\n\n### Calling a Stored Procedure\n\n```sql\nCALL GetEmployeesByDepartment(5);\n\nEXEC GetEmployeesByDepartment @dept_id = 5;\n```\n\n### Benefits of Stored Procedures\n\n| Benefit | Description |\n|---------|-------------|\n| Performance | Pre-compiled, cached execution plans |\n| Security | Users can execute without table-level permissions |\n| Reusability | Write once, call many times |\n| Network traffic | Reduced data transfer vs sending large queries |\n| Consistency | Business logic enforced at the database level |\n\n### Stored Procedure with Parameters\n\n```sql\n-- MySQL\nCREATE PROCEDURE GetEmployeeCount(IN dept_name VARCHAR(50), OUT count INT)\nBEGIN\n    SELECT COUNT(*) INTO count\n    FROM employees\n    WHERE department = dept_name;\nEND;\n\nCALL GetEmployeeCount('Engineering', @count);\nSELECT @count;\n```\n\n### Dropping a Procedure\n\n```sql\nDROP PROCEDURE IF EXISTS procedure_name;\n```\n\n> **Key Point:** Stored procedures centralize business logic in the database. They vary significantly in syntax between database systems.",
+  "codeExample": "CREATE PROCEDURE GiveRaise(IN emp_id INT, IN raise_amount DECIMAL(10,2))\nBEGIN\n    UPDATE employees\n    SET salary = salary + raise_amount\n    WHERE id = emp_id;\nEND;",
+  "quiz": [
+    {
+      "question": "What is a stored procedure?",
+      "options": [
+        "A virtual table",
+        "A saved SQL code block that can be reused",
+        "A type of index",
+        "A database constraint"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which command executes a stored procedure in MySQL?",
+      "options": [
+        "RUN",
+        "CALL",
+        "EXECUTE",
+        "START"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

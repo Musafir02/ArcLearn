@@ -1,0 +1,32 @@
+{
+  "title": "DELETE Statement",
+  "language": "sql",
+  "topic": "delete",
+  "order": 64,
+  "nextTopic": "database_design",
+  "prevTopic": "update",
+  "content": "### DELETE Statement\n\nThe DELETE statement removes rows from a table. Use WHERE to specify which rows to delete; omitting WHERE deletes ALL rows.\n\n---\n\n### DELETE Syntax\n\n```sql\nDELETE FROM table_name\nWHERE condition;\n```\n\n### Basic DELETE Example\n\n```sql\nDELETE FROM employees\nWHERE id = 101;\n\n-- Delete multiple rows\nDELETE FROM employees\nWHERE department = 'Intern' AND hire_date < '2023-01-01';\n```\n\n### DELETE All Rows\n\n```sql\n-- Removes all rows (but slower than TRUNCATE)\nDELETE FROM employees;\n```\n\n### DELETE with Subquery\n\n```sql\nDELETE FROM products\nWHERE category_id IN (\n    SELECT id FROM categories WHERE active = 0\n);\n```\n\n### DELETE with JOIN\n\n```sql\n-- MySQL / PostgreSQL\nDELETE e\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE d.name = 'Archived';\n\n-- SQL Server\nDELETE e\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE d.name = 'Archived';\n```\n\n### DELETE vs TRUNCATE vs DROP\n\n| Operation | Speed | Can use WHERE | Rollback | Resets Identity |\n|-----------|-------|---------------|----------|----------------|\n| DELETE | Slowest | Yes | Yes (in transaction) | No |\n| TRUNCATE | Fast | No | No (usually) | Yes |\n| DROP | Fastest | N/A | No | N/A |\n\n### Best Practice: SELECT Before DELETE\n\n```sql\n-- Preview rows before deleting\nSELECT * FROM employees WHERE department = 'Archived';\n\n-- Then delete\nDELETE FROM employees WHERE department = 'Archived';\n```\n\n> **Key Point:** Always use a WHERE clause unless you intend to remove all rows. Use SELECT with the same WHERE first to review what will be deleted.",
+  "codeExample": "DELETE FROM order_items\nWHERE order_id IN (\n    SELECT id FROM orders\n    WHERE status = 'cancelled'\n      AND order_date < '2024-01-01'\n);",
+  "quiz": [
+    {
+      "question": "What happens if you run DELETE FROM employees without a WHERE clause?",
+      "options": [
+        "Deletes all rows in the employees table",
+        "Returns an error",
+        "Deletes the first row only",
+        "Deletes the table itself"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can DELETE be rolled back if used within a transaction?",
+      "options": [
+        "No, DELETE is permanent",
+        "Yes, if inside a transaction it can be rolled back",
+        "Only in PostgreSQL",
+        "Only for single row deletes"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

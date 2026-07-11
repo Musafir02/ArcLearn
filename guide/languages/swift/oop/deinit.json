@@ -1,0 +1,22 @@
+{
+  "title": "Swift Deinitializers",
+  "language": "swift",
+  "topic": "deinit",
+  "order": 56,
+  "nextTopic": "access_control",
+  "prevTopic": "convenience_init",
+  "content": "### Swift Deinitializers\n\nDeinitializers are called immediately before a class instance is deallocated. They are only available for class types (structs and enums don't have deinitializers).\n\n**Deinitializer Syntax:**\n\n```swift\ndeinit {\n    // Cleanup code\n}\n```\n\n**Key Characteristics:**\n\n| Feature | Description |\n|---------|-------------|\n| Only classes | Structs and enums cannot have deinit |\n| No parameters | Cannot accept arguments |\n| No parentheses | Written as `deinit` without `()` |\n| Automatic | Called automatically by ARC |\n| One per class | Cannot have multiple deinitializers |\n| Superclass | Superclass deinit called automatically |\n\n```swift\nclass FileHandler {\n    let filename: String\n    \n    init(filename: String) {\n        self.filename = filename\n        print(\"Opening file: \\(filename)\")\n    }\n    \n    func read() -> String {\n        return \"Reading from \\(filename)\"\n    }\n    \n    deinit {\n        print(\"Closing file: \\(filename)\")\n        // Close file handles, free resources\n    }\n}\n\n// When the instance is no longer needed, deinit is called\nvar handler: FileHandler? = FileHandler(filename: \"data.txt\")\nprint(handler!.read())\nhandler = nil  // deinit called here\n```\n\n**Common Deinitializer Uses:**\n\n| Use Case | Example |\n|----------|---------|\n| Close files | `fileHandle.closeFile()` |\n| Free resources | `free(pointer)` |\n| Remove observers | `NotificationCenter.default.removeObserver(self)` |\n| Stop timers | `timer.invalidate()` |\n| Log cleanup | `print(\"\\(type) deallocated\")` |\n\n```swift\nclass GameSession {\n    let sessionId: String\n    var score = 0\n    \n    init(sessionId: String) {\n        self.sessionId = sessionId\n        print(\"Session \\(sessionId) started\")\n    }\n    \n    deinit {\n        print(\"Session \\(sessionId) ended with score \\(score)\")\n        // Save game state, release resources\n    }\n}\n```\n\n> **Key Point:** Deinitializers are part of Swift's Automatic Reference Counting (ARC) memory management. You never call a deinitializer directly.\n\nSuperclass deinitializers are automatically inherited and called after the subclass deinitializer finishes. You do not need to call `super.deinit` explicitly.",
+  "codeExample": "import Foundation\n\nclass NetworkConnection {\n    let url: String\n    \n    init(url: String) {\n        self.url = url\n        print(\"Connected to \\(url)\")\n    }\n    \n    func send(data: String) {\n        print(\"Sending: \\(data) to \\(url)\")\n    }\n    \n    deinit {\n        print(\"Disconnected from \\(url)\")\n    }\n}\n\nclass APIClient {\n    let baseURL: String\n    var connection: NetworkConnection?\n    \n    init(baseURL: String) {\n        self.baseURL = baseURL\n        print(\"APIClient initialized for \\(baseURL)\")\n    }\n    \n    func connect() {\n        connection = NetworkConnection(url: baseURL)\n    }\n    \n    deinit {\n        print(\"APIClient deinitialized\")\n        // connection will be deallocated automatically\n    }\n}\n\nvar client: APIClient? = APIClient(baseURL: \"https://api.example.com\")\nclient?.connect()\nprint(\"Before deallocation...\")\nclient = nil\nprint(\"After deallocation\")",
+  "quiz": [
+    {
+      "question": "Which types can have deinitializers?",
+      "options": ["Classes only", "Structs only", "Both classes and structs", "Enums only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Do you call a deinitializer directly?",
+      "options": ["Yes, when done with object", "No, ARC calls it automatically", "Only for file handles", "Only in manual memory management"],
+      "correctIndex": 1
+    }
+  ]
+}
