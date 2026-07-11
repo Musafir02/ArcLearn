@@ -1,0 +1,17 @@
+{
+  "title": "C Variables",
+  "language": "c",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Variables in C\n\nA variable is a named memory location that stores a value. Every variable must be declared with a data type before use.\n\n### Variable Declaration\n\n```\ntype variableName;\ntype variableName = value;\n```\n\n### Variable Naming Rules\n\n| Rule | Example |\n|------|---------|\n| Must start with letter or underscore | `myVar`, `_temp` |\n| Can contain letters, digits, underscores | `myVar1`, `count_2` |\n| Case-sensitive | `age` and `Age` are different |\n| Cannot use keywords | `int`, `return` not allowed |\n| No spaces allowed | `my var` is invalid |\n\n---\n\n### Variable Initialization\n\nVariables can be initialized at declaration or assigned later. Uninitialized local variables contain garbage values.\n\n---\n\n> **Key Point:** Always initialize variables before using them to avoid undefined behavior from garbage values.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int age = 25;\n  float price = 19.99;\n  char letter = 'Z';\n  int count;\n  count = 10;\n  printf(\"%d %.2f %c %d\\n\", age, price, letter, count);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which of these is a valid variable name in C?",
+      "options": ["2times", "my-var", "_count", "int"],
+      "correctIndex": 2
+    }
+  ]
+}

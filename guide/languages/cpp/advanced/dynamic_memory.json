@@ -1,0 +1,17 @@
+{
+  "title": "C++ Dynamic Memory",
+  "language": "cpp",
+  "topic": "dynamic_memory",
+  "order": 50,
+  "nextTopic": "new_delete",
+  "prevTopic": "references",
+  "content": "### Dynamic Memory\n\nDynamic memory is allocated at runtime from the heap. It persists beyond the scope in which it was allocated until explicitly deallocated.\n\n---\n\n### Stack vs Heap\n\n| Aspect | Stack | Heap |\n|--------|-------|------|\n| Allocation | Automatic | Manual (`new`/`delete`) |\n| Size | Limited (typically 1-8 MB) | Large (system memory) |\n| Speed | Fast | Slower |\n| Lifetime | Scope-based | Until deallocated |\n| Management | Compiler-managed | Programmer-managed |\n\n---\n\n### Allocating on the Heap\n\n```cpp\nint* p = new int;        // Allocate single int\n*p = 42;\n\ndelete p;                // Deallocate\n\nint* arr = new int[10];  // Allocate array of 10 ints\narr[0] = 1;\n\ndelete[] arr;            // Deallocate array\n```\n\n---\n\n### Common Issues\n\n| Issue | Description | Solution |\n|-------|-------------|----------|\n| Memory leak | Never deallocated | Use smart pointers |\n| Dangling pointer | Use after delete | Set to nullptr after delete |\n| Double delete | Delete twice | Use RAII |\n| Buffer overflow | Writing beyond allocation | Use containers |\n\n---\n\n### RAII (Resource Acquisition Is Initialization)\n\nTie resource lifetime to object lifetime:\n\n```cpp\nclass Buffer {\n  int* data;\npublic:\n  Buffer(size_t size) : data(new int[size]) {}\n  ~Buffer() { delete[] data; }\n};\n```\n\n---\n\n> **Key Point:** Every `new` must be matched with a `delete`, and every `new[]` with `delete[]`. Prefer smart pointers and STL containers to manual memory management.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int* ptr = new int(42);\n  cout << \"Value: \" << *ptr << endl;\n  delete ptr;\n\n  int* arr = new int[5]{1, 2, 3, 4, 5};\n  for (int i = 0; i < 5; i++) {\n    cout << arr[i] << \" \";\n  }\n  delete[] arr;\n\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What happens if you forget to delete dynamically allocated memory?",
+      "options": ["Compile error", "Memory leak", "Segmentation fault", "Automatic cleanup"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Ternary Operator",
+  "language": "c",
+  "topic": "ternary",
+  "order": 16,
+  "nextTopic": "while",
+  "prevTopic": "switch",
+  "content": "### Ternary Operator in C\n\nThe ternary operator (`? :`) is a shorthand for simple if-else statements. It takes three operands.\n\n### Syntax\n\n```c\ncondition ? expression_if_true : expression_if_false\n```\n\n### How It Works\n\n| Part | Description |\n|------|-------------|\n| `condition` | Evaluated first |\n| `expression_if_true` | Evaluated if condition is non-zero (true) |\n| `expression_if_false` | Evaluated if condition is zero (false) |\n| Result | The value of whichever expression is evaluated |\n\n### Usage Guidelines\n\n| Do | Don't |\n|----|-------|\n| Simple assignments | Nested ternary (hard to read) |\n| Short conditional values | Complex logic |\n| Initialize variables | Side effects in expressions |\n\n---\n\n> **Key Point:** The ternary operator is an expression, not a statement. It returns a value and can be used inside larger expressions.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int age = 20;\n  char *status = (age >= 18) ? \"Adult\" : \"Minor\";\n  printf(\"Status: %s\\n\", status);\n  int x = 10, y = 20;\n  int max = (x > y) ? x : y;\n  printf(\"Max: %d\\n\", max);\n  printf(\"%s\\n\", (x % 2 == 0) ? \"Even\" : \"Odd\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does the ternary operator ? : return?",
+      "options": ["A boolean", "A value from one of two expressions", "Nothing", "A pointer"],
+      "correctIndex": 1
+    }
+  ]
+}

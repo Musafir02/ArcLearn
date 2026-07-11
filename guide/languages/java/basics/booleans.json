@@ -1,0 +1,22 @@
+{
+  "title": "Java Booleans",
+  "language": "java",
+  "topic": "booleans",
+  "order": 12,
+  "nextTopic": "input",
+  "prevTopic": "numbers",
+  "content": "### Booleans in Java\n\nA boolean type represents a value that is either `true` or `false`.\n\n---\n\n### Boolean Declaration\n\n```java\nboolean isJavaFun = true;\nboolean isFishTasty = false;\n```\n\n---\n\n### Boolean Expressions\n\nBoolean values are often returned by comparison operators:\n\n| Expression | Result |\n|------------|--------|\n| `10 > 5` | `true` |\n| `10 == 5` | `false` |\n| `10 <= 5` | `false` |\n| `10 != 5` | `true` |\n\n---\n\n### Boolean with Conditional Statements\n\n```java\nif (isJavaFun) {\n    System.out.println(\"Java is fun!\");\n}\n\nint age = 18;\nboolean canVote = age >= 18;\nif (canVote) {\n    System.out.println(\"You can vote\");\n}\n```\n\n---\n\n### Logical Operators with Booleans\n\n| Expression | Result |\n|------------|--------|\n| `true && true` | `true` |\n| `true && false` | `false` |\n| `true || false` | `true` |\n| `false || false` | `false` |\n| `!true` | `false` |\n| `!false` | `true` |\n\n> **Key Point:** Booleans are not numeric in Java. You cannot use `0` or `1` as boolean values. Use boolean expressions directly in conditions without comparing to `true` or `false`.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        int age = 20;\n        boolean isAdult = age >= 18;\n        boolean hasLicense = true;\n        \n        if (isAdult && hasLicense) {\n            System.out.println(\"You can drive\");\n        }\n        \n        int score = 85;\n        boolean passed = score >= 60;\n        boolean honors = score >= 90;\n        \n        System.out.println(\"Passed: \" + passed);\n        System.out.println(\"Honors: \" + (passed && honors));\n        System.out.println(\"Not passed: \" + !passed);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What values can a boolean have?",
+      "options": ["true or false", "0 or 1", "yes or no", "on or off"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the result of !true?",
+      "options": ["false", "true", "0", "null"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Recursion",
+  "language": "cpp",
+  "topic": "recursion",
+  "order": 33,
+  "nextTopic": "lambda",
+  "prevTopic": "function_overloading",
+  "content": "### Recursion\n\nRecursion is a technique where a function calls itself to solve smaller instances of the same problem.\n\n---\n\n### Structure of Recursive Functions\n\nEvery recursive function must have:\n1. **Base case** - stops the recursion\n2. **Recursive case** - calls itself with modified parameters\n\n---\n\n### Example: Factorial\n\n```cpp\nint factorial(int n) {\n  if (n <= 1) return 1;        // Base case\n  return n * factorial(n - 1);  // Recursive case\n}\n```\n\n---\n\n### Example: Fibonacci\n\n```cpp\nint fibonacci(int n) {\n  if (n <= 1) return n;                    // Base cases\n  return fibonacci(n - 1) + fibonacci(n - 2);  // Recursive\n}\n```\n\n---\n\n### Tail Recursion\n\nA recursive call is the last operation in the function:\n\n```cpp\nint tailSum(int n, int acc = 0) {\n  if (n == 0) return acc;\n  return tailSum(n - 1, acc + n);  // Tail call\n}\n```\n\n---\n\n### Recursion vs Iteration\n\n| Aspect | Recursion | Iteration |\n|--------|-----------|-----------|\n| Code | Often shorter | More verbose |\n| Memory | Call stack overhead | Constant memory |\n| Performance | Slower (function calls) | Faster |\n| Best for | Tree/graph traversal, divide-and-conquer | Linear problems |\n\n---\n\n> **Key Point:** Ensure every recursive function has a base case that will be reached. Without one, the function will cause a stack overflow.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint factorial(int n) {\n  if (n == 0 || n == 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}\n\nint main() {\n  int num = 5;\n  cout << \"Factorial of \" << num << \" is \" << factorial(num) << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the base case in a recursive function?",
+      "options": ["The first call", "The condition that stops recursion", "The recursive call itself", "The return statement"],
+      "correctIndex": 1
+    }
+  ]
+}

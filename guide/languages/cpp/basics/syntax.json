@@ -1,0 +1,17 @@
+{
+  "title": "C++ Syntax",
+  "language": "cpp",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### C++ Syntax Structure\n\nC++ syntax defines the rules for writing valid C++ programs. Every C++ program follows a specific structure.\n\n---\n\n### Basic Program Structure\n\n```cpp\n#include <iostream>   // Preprocessor directive\nusing namespace std;  // Using directive (optional)\n\nint main() {          // Main function\n  cout << \"Hello\";    // Statement\n  return 0;           // Return statement\n}                     // Closing brace\n```\n\n---\n\n### Syntax Rules\n\n| Rule | Example | Explanation |\n|------|---------|-------------|\n| Semicolons | `int x = 5;` | Every statement ends with `;` |\n| Curly Braces | `if (x > 0) { }` | Define code blocks |\n| Case Sensitivity | `myVar` vs `myvar` | Different variables |\n| Comments | `// comment` | Ignored by compiler |\n| Identifiers | `int count = 10;` | Names for variables, functions |\n\n---\n\n> **Key Point:** C++ is case-sensitive. `Main()` is different from `main()`. Always use lowercase for the main function.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int number = 42;\n  cout << \"The answer is \" << number << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What symbol terminates a statement in C++?",
+      "options": ["Colon (:)", "Period (.)", "Semicolon (;)", "Comma (,)"],
+      "correctIndex": 2
+    }
+  ]
+}

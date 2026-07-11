@@ -1,0 +1,17 @@
+{
+  "title": "C Function Parameters",
+  "language": "c",
+  "topic": "function_params",
+  "order": 34,
+  "nextTopic": "function_prototypes",
+  "prevTopic": "functions",
+  "content": "### Function Parameters in C\n\nParameters are variables that receive values passed to a function.\n\n### Passing Methods\n\n**Call by Value** - A copy of the argument is passed. The original is not modified.\n\n**Call by Reference (via pointers)** - The address is passed. The original can be modified.\n\n### Parameter Types\n\n| Aspect | Call by Value | Call by Reference |\n|--------|--------------|------------------|\n| Syntax | `int x` | `int *x` |\n| Original modified? | No | Yes |\n| Use | Simple values, when no modification needed | Modification, large data |\n| Example | `int square(int n)` | `void swap(int *a, int *b)` |\n\n### Array Parameters\n\nWhen you pass an array to a function, it decays to a pointer:\n\n```c\nvoid process(int arr[], int size);\n// Equivalent to:\nvoid process(int *arr, int size);\n```\n\n### Default Arguments?\n\nC does not support default arguments. You must pass all arguments explicitly in C89.\n\n---\n\n> **Key Point:** C uses call by value. To simulate call by reference, pass pointers. Arrays always decay to pointers when passed.",
+  "codeExample": "#include <stdio.h>\n\nvoid doubleValue(int x) {\n  x = x * 2;\n  printf(\"Inside function: %d\\n\", x);\n}\n\nvoid doubleRef(int *x) {\n  *x = *x * 2;\n}\n\nint main() {\n  int num = 5;\n  doubleValue(num);\n  printf(\"After call by value: %d\\n\", num);\n  doubleRef(&num);\n  printf(\"After call by reference: %d\\n\", num);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Does C support default parameter values?",
+      "options": ["Yes, always", "Yes, in C99+", "No", "Only for void functions"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ File Handling",
+  "language": "cpp",
+  "topic": "file_handling",
+  "order": 54,
+  "nextTopic": "file_read",
+  "prevTopic": "try_catch",
+  "content": "### File Handling\n\nFile handling in C++ is performed through the `<fstream>` library, which provides classes for reading from and writing to files.\n\n---\n\n### File Stream Classes\n\n| Class | Description | Header |\n|-------|-------------|--------|\n| `ofstream` | Output file stream (write) | `<fstream>` |\n| `ifstream` | Input file stream (read) | `<fstream>` |\n| `fstream` | File stream (read/write) | `<fstream>` |\n\n---\n\n### Opening a File\n\n```cpp\n#include <fstream>\n\nofstream outFile(\"output.txt\");       // Open for writing (destroys content)\nifstream inFile(\"input.txt\");         // Open for reading\nfstream file(\"data.txt\", ios::app);   // Open in append mode\n```\n\n---\n\n### File Modes\n\n| Mode | Description |\n|------|-------------|\n| `ios::in` | Open for reading |\n| `ios::out` | Open for writing |\n| `ios::app` | Append to end of file |\n| `ios::ate` | Seek to end on open |\n| `ios::binary` | Open in binary mode |\n| `ios::trunc` | Truncate file if exists |\n\n---\n\n### Checking File Status\n\n```cpp\nifstream file(\"data.txt\");\n\nif (file.is_open()) {\n  cout << \"File opened successfully\";\n}\n\nif (file.good()) {\n  cout << \"No errors\";\n}\n\nif (!file) {\n  cout << \"Error opening file\";\n}\n```\n\n---\n\n### Closing a File\n\n```cpp\nfile.close();  // Also called automatically when object goes out of scope\n```\n\n---\n\n> **Key Point:** The file stream destructor automatically closes the file. However, explicitly calling `close()` is good practice, especially when you need to reopen the same stream object.",
+  "codeExample": "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main() {\n  ofstream file(\"example.txt\");\n\n  if (file.is_open()) {\n    file << \"Hello, File!\" << endl;\n    file << \"This is line 2.\" << endl;\n    file.close();\n    cout << \"File written successfully\" << endl;\n  } else {\n    cout << \"Unable to open file\" << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header provides file stream classes?",
+      "options": ["<file>", "<fstream>", "<iostream>", "<stream>"],
+      "correctIndex": 1
+    }
+  ]
+}

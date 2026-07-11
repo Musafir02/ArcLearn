@@ -1,0 +1,22 @@
+{
+  "title": "Java Optional Class",
+  "language": "java",
+  "topic": "optional",
+  "order": 48,
+  "nextTopic": "date_time",
+  "prevTopic": "streams",
+  "content": "### Optional Class\n\n`Optional<T>` (Java 8+) is a container that may or may not contain a value. It helps avoid NullPointerException.\n\n---\n\n### Creating Optional\n\n```java\nOptional<String> empty = Optional.empty();\nOptional<String> value = Optional.of(\"Hello\");     // throws NPE if null\nOptional<String> nullable = Optional.ofNullable(s); // accepts null\n```\n\n---\n\n### Checking Value\n\n| Method | Description |\n|--------|-------------|\n| `isPresent()` | Returns true if value exists |\n| `isEmpty()` (Java 11+) | Returns true if no value |\n| `ifPresent(consumer)` | Execute if value exists |\n\n---\n\n### Getting Value\n\n| Method | Returns |\n|--------|---------|\n| `get()` | Value or NoSuchElementException |\n| `orElse(default)` | Value or default |\n| `orElseGet(supplier)` | Value or supplier result |\n| `orElseThrow(exceptionSupplier)` | Value or custom exception |\n| `orElseThrow()` (Java 10+) | Value or NoSuchElementException |\n\n---\n\n### Transforming Optional\n\n```java\nOptional<String> opt = Optional.of(\"hello\");\n\n// Map\nOptional<Integer> len = opt.map(String::length);\n\n// Filter\nOptional<String> longStr = opt.filter(s -> s.length() > 3);\n\n// FlatMap\nOptional<String> result = opt.flatMap(s -> Optional.of(s.toUpperCase()));\n```\n\n---\n\n### Best Practices\n\n| Do | Don't |\n|----|-------|\n| Use `orElse()` for defaults | Use `get()` without checking |\n| Use `ifPresent()` for side effects | Use `Optional` for fields |\n| Use `Optional` as return type | Use `Optional` in serializable classes |\n| Use `Optional` in collections | Pass `Optional` as parameter |\n\n> **Key Point:** Optional is primarily designed for return types to indicate that a value may be absent. It is not intended for use as a field type, method parameter, or in collections.",
+  "codeExample": "import java.util.Optional;\n\npublic class Main {\n    public static Optional<String> findName(int id) {\n        if (id == 1) {\n            return Optional.of(\"Alice\");\n        } else if (id == 2) {\n            return Optional.of(\"Bob\");\n        }\n        return Optional.empty();\n    }\n    \n    public static void main(String[] args) {\n        // id = 1 exists\n        Optional<String> result1 = findName(1);\n        System.out.println(\"Found: \" + result1.orElse(\"Unknown\"));\n        result1.ifPresent(name -> System.out.println(\"Hello, \" + name));\n        \n        // id = 3 doesn't exist\n        Optional<String> result2 = findName(3);\n        System.out.println(\"Found: \" + result2.orElse(\"Default User\"));\n        System.out.println(\"OrElseGet: \" + result2.orElseGet(() -> \"Generated\"));\n        \n        // with map and filter\n        Optional<String> transformed = result1\n            .map(String::toUpperCase)\n            .filter(s -> s.startsWith(\"A\"));\n        System.out.println(\"Transformed: \" + transformed.orElse(\"none\"));\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does Optional.empty() return?",
+      "options": ["An empty Optional", "null", "Empty string", "Optional with null value"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method returns a default value if Optional is empty?",
+      "options": ["orElse()", "get()", "orElseThrow()", "or()"],
+      "correctIndex": 0
+    }
+  ]
+}

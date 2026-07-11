@@ -1,0 +1,17 @@
+{
+  "title": "C Conditions",
+  "language": "c",
+  "topic": "conditions",
+  "order": 13,
+  "nextTopic": "if_else",
+  "prevTopic": "input",
+  "content": "### Conditional Statements in C\n\nConditional statements allow your program to make decisions based on conditions.\n\n### Condition Types\n\n| Condition | Description |\n|-----------|-------------|\n| `if` | Execute code if condition is true |\n| `if-else` | Execute one block if true, another if false |\n| `if-else if-else` | Multiple conditions to check |\n| `switch` | Select one of many code blocks |\n| Ternary | Short conditional expression (`? :`) |\n\n### Truth Values\n\nIn C, any non-zero value is true, and zero is false. Conditions typically use relational or logical operators.\n\n---\n\n### Comparison with Other Languages\n\n| Concept | C | Python | Java |\n|---------|---|--------|------|\n| True value | non-zero | `True` | `true` |\n| False value | `0` | `False` | `false` |\n| Boolean AND | `&&` | `and` | `&&` |\n| Boolean OR | `||` | `or` | `||` |\n| Boolean NOT | `!` | `not` | `!` |\n\n---\n\n> **Key Point:** In C, `0` is false and any non-zero value (including negative numbers) is true.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int x = 10;\n  if (x > 0) {\n    printf(\"Positive\\n\");\n  }\n  if (x) {\n    printf(\"x is non-zero (true)\\n\");\n  }\n  if (!0) {\n    printf(\"!0 is true\\n\");\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which integer value represents false in C?",
+      "options": ["-1", "1", "0", "NULL"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Function Pointers",
+  "language": "c",
+  "topic": "function_pointers",
+  "order": 56,
+  "nextTopic": "linked_list",
+  "prevTopic": "bitwise_operators",
+  "content": "### Function Pointers in C\n\nA function pointer stores the address of a function, allowing functions to be passed as arguments or stored in arrays.\n\n### Declaration\n\n```c\nreturn_type (*pointer_name)(parameter_types);\n```\n\n```c\nint (*operation)(int, int);\n```\n\n### Assignment and Call\n\n```c\nint add(int a, int b) { return a + b; }\noperation = &add;\nint result = operation(10, 20);  // or (*operation)(10, 20)\n```\n\n### Use Cases\n\n| Use Case | Example |\n|----------|---------|\n| Callbacks | Pass function to qsort() |\n| Strategy pattern | Select algorithm at runtime |\n| State machines | Function pointer tables |\n| Event handlers | Register event callbacks |\n\n### Array of Function Pointers\n\n```c\nint (*operations[])(int, int) = {add, subtract, multiply};\noperations[choice](a, b);\n```\n\n### Typedef for Function Pointers\n\n```c\ntypedef int (*MathOp)(int, int);\nMathOp op = add;\n```\n\n---\n\n> **Key Point:** Function pointers enable dynamic dispatch and callback mechanisms in C. They are essential for implementing event-driven and plugin architectures.",
+  "codeExample": "#include <stdio.h>\n\nint add(int a, int b) { return a + b; }\nint subtract(int a, int b) { return a - b; }\nint multiply(int a, int b) { return a * b; }\n\nint compute(int (*op)(int, int), int x, int y) {\n  return op(x, y);\n}\n\nint main() {\n  int (*funcPtr)(int, int);\n  funcPtr = add;\n  printf(\"Add: %d\\n\", funcPtr(10, 5));\n  printf(\"Using compute: %d\\n\", compute(multiply, 6, 7));\n  int (*ops[])(int, int) = {add, subtract, multiply};\n  for (int i = 0; i < 3; i++) {\n    printf(\"%d \", ops[i](10, 3));\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is a common use of function pointers?",
+      "options": ["Dynamic memory allocation", "Callback functions", "Variable declarations", "Loop control"],
+      "correctIndex": 1
+    }
+  ]
+}

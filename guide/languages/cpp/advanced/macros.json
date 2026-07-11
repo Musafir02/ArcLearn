@@ -1,0 +1,17 @@
+{
+  "title": "C++ Macros",
+  "language": "cpp",
+  "topic": "macros",
+  "order": 66,
+  "nextTopic": "smart_pointers",
+  "prevTopic": "preprocessor",
+  "content": "### Macros\n\nMacros are preprocessor directives that define text substitutions. They are processed before compilation.\n\n---\n\n### Object-Like Macros\n\n```cpp\n#define PI 3.14159\n#define MAX_SIZE 100\n#define APP_NAME \"MyApplication\"\n\nint buffer[MAX_SIZE];\ndouble circumference = 2 * PI * radius;\n```\n\n---\n\n### Function-Like Macros\n\n```cpp\n#define SQUARE(x) ((x) * (x))\n#define MIN(a, b) ((a) < (b) ? (a) : (b))\n#define MAX(a, b) ((a) > (b) ? (a) : (b))\n\nint result = SQUARE(5);           // 25\nint smallest = MIN(10, 20);       // 10\n```\n\n---\n\n### Common Pitfalls\n\n```cpp\n#define BAD_SQUARE(x) x * x\n\nint y = BAD_SQUARE(2 + 3);  // Expands to 2 + 3 * 2 + 3 = 11, not 25!\n\n// Always wrap parameters and whole expression in parentheses\n#define GOOD_SQUARE(x) ((x) * (x))\n```\n\n---\n\n### Multi-Line Macros\n\n```cpp\n#define LOG(msg) do { \\\n  cout << __FILE__ << \":\" << __LINE__; \\\n  cout << \" \" << msg << endl; \\\n} while(0)\n```\n\n---\n\n### Variadic Macros (C++11)\n\n```cpp\n#define PRINTF(format, ...) \\\n  printf(format, __VA_ARGS__)\n\nPRINTF(\"%s %d\", \"Value:\", 42);\n```\n\n---\n\n### When to Use Macros\n\n| Use Case | Alternative |\n|----------|-------------|\n| Constants | `constexpr` or `const` |\n| Small functions | Inline functions or templates |\n| Type-generic code | Templates |\n| Include guards | `#pragma once` |\n| Conditional compilation | Keep macros |\n\n---\n\n> **Key Point:** Prefer `constexpr`, inline functions, and templates over macros in modern C++. Macros lack type safety, scope, and are error-prone. Only use macros when no alternative exists (e.g., include guards, conditional compilation).",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\n#define MAX(a, b) ((a) > (b) ? (a) : (b))\n#define LOG(msg) cout << \"[\" << __FUNCTION__ << \"] \" << msg << endl\n\nint main() {\n  int x = 10, y = 20;\n  cout << \"Max: \" << MAX(x, y) << endl;\n  LOG(\"Program started\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Why should function-like macros be avoided in modern C++?",
+      "options": ["They are slow", "They lack type safety", "They are deprecated", "They cause linker errors"],
+      "correctIndex": 1
+    }
+  ]
+}

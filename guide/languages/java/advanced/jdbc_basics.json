@@ -1,0 +1,22 @@
+{
+  "title": "Java JDBC Basics",
+  "language": "java",
+  "topic": "jdbc_basics",
+  "order": 54,
+  "nextTopic": "memory_management",
+  "prevTopic": "reflection",
+  "content": "### JDBC (Java Database Connectivity)\n\nJDBC is an API for connecting and executing queries with databases.\n\n---\n\n### JDBC Architecture\n\n```\nJava Application\n    |\nJDBC API (java.sql.*)\n    |\nJDBC Driver Manager\n    |\nJDBC Driver (MySQL, PostgreSQL, Oracle, etc.)\n    |\nDatabase\n```\n\n---\n\n### Basic Steps\n\n1. Load the driver\n2. Establish connection\n3. Create statement\n4. Execute query\n5. Process results\n6. Close resources\n\n---\n\n### Establishing Connection\n\n```java\nString url = \"jdbc:mysql://localhost:3306/mydb\";\nString user = \"root\";\nString password = \"password\";\n\nConnection conn = DriverManager.getConnection(url, user, password);\n```\n\n---\n\n### Statement Types\n\n| Type | Description |\n|------|-------------|\n| `Statement` | Simple SQL queries |\n| `PreparedStatement` | Parameterized queries (prevents SQL injection) |\n| `CallableStatement` | Stored procedure calls |\n\n---\n\n### PreparedStatement Example\n\n```java\nString sql = \"SELECT * FROM users WHERE age > ? AND city = ?\";\nPreparedStatement pstmt = conn.prepareStatement(sql);\npstmt.setInt(1, 18);\npstmt.setString(2, \"New York\");\nResultSet rs = pstmt.executeQuery();\n```\n\n---\n\n### Processing ResultSet\n\n```java\nwhile (rs.next()) {\n    int id = rs.getInt(\"id\");\n    String name = rs.getString(\"name\");\n    System.out.println(id + \": \" + name);\n}\n```\n\n> **Key Point:** Always close resources in reverse order (ResultSet, Statement, Connection). Use PreparedStatement to prevent SQL injection. Connection is resource-intensive - use connection pools in production.",
+  "codeExample": "import java.sql.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        String url = \"jdbc:mysql://localhost:3306/testdb\";\n        String user = \"root\";\n        String password = \"password\";\n        \n        String createSQL = \"CREATE TABLE IF NOT EXISTS employees (\" +\n            \"id INT PRIMARY KEY AUTO_INCREMENT, \" +\n            \"name VARCHAR(100), \" +\n            \"salary DOUBLE)\";\n        \n        String insertSQL = \"INSERT INTO employees (name, salary) VALUES (?, ?)\";\n        String selectSQL = \"SELECT * FROM employees\";\n        \n        try (Connection conn = DriverManager.getConnection(url, user, password);\n             Statement stmt = conn.createStatement()) {\n            \n            stmt.execute(createSQL);\n            System.out.println(\"Table created\");\n            \n            // Insert using PreparedStatement\n            try (PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {\n                pstmt.setString(1, \"Alice\");\n                pstmt.setDouble(2, 75000);\n                pstmt.executeUpdate();\n                \n                pstmt.setString(1, \"Bob\");\n                pstmt.setDouble(2, 65000);\n                pstmt.executeUpdate();\n            }\n            \n            // Query\n            try (ResultSet rs = stmt.executeQuery(selectSQL)) {\n                while (rs.next()) {\n                    System.out.println(rs.getInt(\"id\") + \": \" +\n                        rs.getString(\"name\") + \" - $\" +\n                        rs.getDouble(\"salary\"));\n                }\n            }\n            \n        } catch (SQLException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which statement type prevents SQL injection?",
+      "options": ["PreparedStatement", "Statement", "CallableStatement", "SQLStatement"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the correct order to close JDBC resources?",
+      "options": ["ResultSet, Statement, Connection", "Connection, Statement, ResultSet", "Statement, ResultSet, Connection", "Any order is fine"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Recursion",
+  "language": "c",
+  "topic": "recursion",
+  "order": 36,
+  "nextTopic": "math_functions",
+  "prevTopic": "function_prototypes",
+  "content": "### Recursion in C\n\nRecursion occurs when a function calls itself to solve a smaller instance of the same problem.\n\n### Key Components\n\n| Component | Description | Example |\n|-----------|-------------|---------|\n| Base case | Stopping condition | `if (n <= 1) return 1;` |\n| Recursive case | Function calls itself | `return n * factorial(n - 1);` |\n\n### How It Works\n\nEach recursive call creates a new stack frame with its own local variables. When the base case is reached, the functions return in reverse order.\n\n### Advantages and Disadvantages\n\n| Pros | Cons |\n|------|------|\n| Elegant solutions | Stack overflow risk |\n| Natural for tree/graph traversal | Higher memory usage |\n| Divide-and-conquer | Usually slower than iteration |\n| Easy to reason about mathematically | Debugging can be tricky |\n\n### Tail Recursion\n\nA recursive call is tail-recursive if it is the last operation in the function. Some compilers optimize tail recursion into iteration.\n\n---\n\n> **Key Point:** Every recursive function must have a base case to prevent infinite recursion and stack overflow. Recursion depth is limited by stack size.",
+  "codeExample": "#include <stdio.h>\n\nint factorial(int n) {\n  if (n <= 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}\n\nint fibonacci(int n) {\n  if (n <= 1) {\n    return n;\n  }\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nint main() {\n  printf(\"Factorial of 5: %d\\n\", factorial(5));\n  printf(\"Fibonacci of 7: %d\\n\", fibonacci(7));\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the base case in a recursive function?",
+      "options": ["The first call", "The stopping condition", "The recursive call", "The return value"],
+      "correctIndex": 1
+    }
+  ]
+}

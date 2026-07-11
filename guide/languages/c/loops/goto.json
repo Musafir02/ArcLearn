@@ -1,0 +1,17 @@
+{
+  "title": "C Goto Statement",
+  "language": "c",
+  "topic": "goto",
+  "order": 21,
+  "nextTopic": "arrays",
+  "prevTopic": "break_continue",
+  "content": "### Goto Statement in C\n\nThe `goto` statement transfers control to a labeled statement elsewhere in the same function.\n\n### Syntax\n\n```c\ngoto label;\n// ...\nlabel:\n  // code\n```\n\n### Label Rules\n\n| Rule | Description |\n|------|-------------|\n| Label name | Follows identifier naming rules |\n| Placement | Before the statement it marks |\n| Scope | Same function only (not cross-function) |\n| Colon | Required after label name |\n\n### When Goto Is Acceptable\n\n- Breaking out of deeply nested loops (multiple levels)\n- Error cleanup in functions (single exit point)\n- State machine implementations\n\n### Why Avoid Goto\n\n- Creates spaghetti code (unstructured, hard to follow)\n- Makes debugging and maintenance difficult\n- Can skip variable initialization\n- Structured alternatives exist (break, continue, functions)\n\n---\n\n> **Key Point:** In C, `goto` is occasionally useful for breaking out of nested loops or centralized error handling, but it should be used sparingly.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int i, j;\n  for (i = 0; i < 5; i++) {\n    for (j = 0; j < 5; j++) {\n      if (i == 2 && j == 2) {\n        goto found;\n      }\n    }\n  }\n  printf(\"Not found\\n\");\n  return 0;\nfound:\n  printf(\"Found at [%d][%d]\\n\", i, j);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is a common valid use case for goto in C?",
+      "options": ["Looping", "Breaking out of nested loops", "Function calls", "Variable declarations"],
+      "correctIndex": 1
+    }
+  ]
+}

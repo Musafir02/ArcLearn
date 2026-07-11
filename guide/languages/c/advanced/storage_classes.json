@@ -1,0 +1,17 @@
+{
+  "title": "C Storage Classes",
+  "language": "c",
+  "topic": "storage_classes",
+  "order": 54,
+  "nextTopic": "bitwise_operators",
+  "prevTopic": "variable_scope",
+  "content": "### Storage Classes in C\n\nStorage classes define the scope, lifetime, and initial value of variables.\n\n### The Four Storage Classes\n\n| Class | Keyword | Scope | Lifetime | Initial Value | Storage |\n|-------|---------|-------|----------|---------------|---------|\n| Automatic | `auto` | Local | Function | Garbage | Stack |\n| Register | `register` | Local | Function | Garbage | CPU register (suggestion) |\n| Static | `static` | Local or file | Program duration | Zero | Data segment |\n| External | `extern` | Global | Program duration | Zero | Data segment |\n\n### Auto\n\n`auto` is the default for local variables. Rarely used explicitly.\n\n### Register\n\nSuggests the compiler to store the variable in a CPU register for faster access.\n\n### Static\n\n- **Static local**: Value persists between function calls\n- **Static global**: Limited to the file where declared (internal linkage)\n\n### Extern\n\nDeclares a variable defined in another file. Used for sharing globals across files.\n\n---\n\n> **Key Point:** Use `static` to preserve variable values between function calls or to limit scope to the current file. Use `extern` to access global variables from other files.",
+  "codeExample": "#include <stdio.h>\n\nvoid counter() {\n  static int count = 0;\n  count++;\n  printf(\"Count: %d\\n\", count);\n}\n\nint main() {\n  counter();\n  counter();\n  counter();\n  auto int x = 10;\n  printf(\"Auto: %d\\n\", x);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the default initial value of a static variable?",
+      "options": ["Garbage", "Zero", "One", "NULL"],
+      "correctIndex": 1
+    }
+  ]
+}

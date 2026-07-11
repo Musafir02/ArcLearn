@@ -1,0 +1,17 @@
+{
+  "title": "C++ Break and Continue",
+  "language": "cpp",
+  "topic": "break_continue",
+  "order": 23,
+  "nextTopic": "goto",
+  "prevTopic": "do_while",
+  "content": "### Break and Continue\n\n`break` and `continue` are jump statements that alter the normal flow of loops.\n\n---\n\n### Break Statement\n\nExits the loop entirely:\n\n```cpp\nfor (int i = 0; i < 10; i++) {\n  if (i == 5) {\n    break;  // Loop stops when i is 5\n  }\n  cout << i << \" \";\n}\n// Output: 0 1 2 3 4\n```\n\n---\n\n### Continue Statement\n\nSkips the rest of the current iteration and moves to the next:\n\n```cpp\nfor (int i = 0; i < 10; i++) {\n  if (i % 2 == 0) {\n    continue;  // Skip even numbers\n  }\n  cout << i << \" \";\n}\n// Output: 1 3 5 7 9\n```\n\n---\n\n### Break in Nested Loops\n\n`break` only exits the innermost loop:\n\n```cpp\nfor (int i = 0; i < 3; i++) {\n  for (int j = 0; j < 3; j++) {\n    if (j == 1) break;  // Only breaks inner loop\n    cout << i << j << \" \";\n  }\n}\n// Output: 00 10 20\n```\n\n---\n\n### Comparison\n\n| Statement | Effect on Loop | Resume Location |\n|-----------|---------------|----------------|\n| `break` | Exits loop | After the loop |\n| `continue` | Skips remainder | Next iteration |\n| `return` | Exits function | Caller |\n\n---\n\n> **Key Point:** Use `break` to exit a loop early when a condition is met. Use `continue` to skip processing certain values without breaking the loop.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  for (int i = 1; i <= 10; i++) {\n    if (i == 4) {\n      continue;  // Skip 4\n    }\n    if (i == 8) {\n      break;     // Stop at 8\n    }\n    cout << i << \" \";\n  }\n  // Output: 1 2 3 5 6 7\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does `continue` do in a loop?",
+      "options": ["Exits the loop", "Skips to the next iteration", "Restarts the loop", "Pauses execution"],
+      "correctIndex": 1
+    }
+  ]
+}

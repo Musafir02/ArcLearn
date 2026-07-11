@@ -1,0 +1,17 @@
+{
+  "title": "C++ Conditions Overview",
+  "language": "cpp",
+  "topic": "conditions",
+  "order": 16,
+  "nextTopic": "if_else",
+  "prevTopic": "type_conversion",
+  "content": "### Conditions in C++\n\nConditional statements allow your program to make decisions and execute different code paths based on boolean expressions.\n\n---\n\n### Types of Conditional Statements\n\n| Statement | Keyword | Use Case |\n|-----------|---------|----------|\n| If Statement | `if` | Single condition |\n| If-Else | `if-else` | Binary decision |\n| Else If | `else if` | Multiple conditions |\n| Switch | `switch` | Multiple discrete values |\n| Ternary | `?:` | Inline condition |\n\n---\n\n### Boolean Expressions\n\nConditions evaluate to `true` or `false`:\n\n```cpp\nint age = 18;\nif (age >= 18) {\n  cout << \"Adult\";\n}\n```\n\n---\n\n### Comparison and Logical Operators\n\n| Category | Operators |\n|----------|-----------|\n| Comparison | `==`, `!=`, `<`, `>`, `<=`, `>=` |\n| Logical | `&&` (AND), `||` (OR), `!` (NOT) |\n\n---\n\n> **Key Point:** Any non-zero value is treated as `true` in a condition. Zero, `nullptr`, and empty pointers evaluate to `false`.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int score = 85;\n\n  if (score >= 90) {\n    cout << \"Grade A\";\n  } else if (score >= 80) {\n    cout << \"Grade B\";\n  } else {\n    cout << \"Grade C\";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which values evaluate to false in a C++ condition?",
+      "options": ["1 and -1", "0 and nullptr", "true and false", "Empty string and 0"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Java File I/O Streams",
+  "language": "java",
+  "topic": "file_io",
+  "order": 40,
+  "nextTopic": "file_read",
+  "prevTopic": "file_handling",
+  "content": "### Java I/O Streams\n\nStreams represent a sequence of data. Java uses streams for input/output operations.\n\n---\n\n### Stream Hierarchy\n\n```\nInputStream (byte-oriented)\n  |-- FileInputStream\n  |-- BufferedInputStream\n  |-- ObjectInputStream\n\nOutputStream (byte-oriented)\n  |-- FileOutputStream\n  |-- BufferedOutputStream\n  |-- ObjectOutputStream\n\nReader (character-oriented)\n  |-- FileReader\n  |-- BufferedReader\n  |-- InputStreamReader\n\nWriter (character-oriented)\n  |-- FileWriter\n  |-- BufferedWriter\n  |-- OutputStreamWriter\n```\n\n---\n\n### Byte Streams vs Character Streams\n\n| Aspect | Byte Stream | Character Stream |\n|--------|-------------|------------------|\n| Classes | InputStream/OutputStream | Reader/Writer |\n| Data | Binary files | Text files |\n| Encoding | Raw bytes | Uses charset |\n\n---\n\n### Standard Streams\n\n| Stream | Object |\n|--------|--------|\n| System.in | InputStream (keyboard) |\n| System.out | PrintStream (console output) |\n| System.err | PrintStream (error output) |\n\n---\n\n### Buffered Streams\n\nBuffered streams improve performance by reducing disk I/O:\n\n```java\nBufferedInputStream bis = new BufferedInputStream(new FileInputStream(\"file.dat\"));\nBufferedReader br = new BufferedReader(new FileReader(\"file.txt\"));\n```\n\n> **Key Point:** Always close streams to release resources. Use try-with-resources for automatic closing. Byte streams for binary data, character streams for text data.",
+  "codeExample": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // Writing bytes\n        try (FileOutputStream fos = new FileOutputStream(\"data.dat\")) {\n            byte[] data = {65, 66, 67, 68};  // A, B, C, D\n            fos.write(data);\n            System.out.println(\"Bytes written\");\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n        \n        // Reading bytes\n        try (FileInputStream fis = new FileInputStream(\"data.dat\")) {\n            int byteData;\n            while ((byteData = fis.read()) != -1) {\n                System.out.print((char) byteData + \" \");\n            }\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n        \n        // Using buffered streams\n        try (BufferedWriter bw = new BufferedWriter(new FileWriter(\"text.txt\"))) {\n            bw.write(\"Hello Buffered World\");\n            bw.newLine();\n            bw.write(\"Second line\");\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which classes should be used for text files?",
+      "options": ["Reader/Writer", "InputStream/OutputStream", "Stream/Writer", "Byte/Char"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the benefit of buffered streams?",
+      "options": ["Better performance", "Smaller files", "Automatic encoding", "Thread safety"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Write to Files",
+  "language": "c",
+  "topic": "file_write",
+  "order": 46,
+  "nextTopic": "preprocessor",
+  "prevTopic": "file_read",
+  "content": "### Writing to Files in C\n\nWriting to files can be done character-by-character, as strings, or formatted.\n\n### File Modes for Writing\n\n| Mode | Description |\n|------|-------------|\n| `\"w\"` | Open for writing (creates/truncates) |\n| `\"a\"` | Open for appending (creates if not exists) |\n| `\"wb\"` | Open binary file for writing |\n| `\"w+\"` | Open for reading and writing (creates/truncates) |\n| `\"a+\"` | Open for reading and appending |\n\n### Writing Functions\n\n| Function | Writes | Use Case |\n|----------|--------|----------|\n| `fputc(c, fp)` | Single character | Char-by-char output |\n| `fputs(str, fp)` | String | Writing strings |\n| `fprintf(fp, fmt, ...)` | Formatted data | Writing with formatting |\n| `fwrite(buf, size, count, fp)` | Binary data | Binary file output |\n\n### Important Notes\n\n- `\"w\"` mode overwrites the file if it exists\n- `\"a\"` mode appends to the end of file\n- Always flush or close files to ensure data is written\n- Use `fflush(fp)` to force write buffered data\n\n---\n\n> **Key Point:** Modes matter: `\"w\"` truncates existing files, `\"a\"` appends. Use `\"a\"` when you want to add to an existing file without overwriting it.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  FILE *fp;\n  fp = fopen(\"output.txt\", \"w\");\n  if (fp == NULL) {\n    printf(\"Error\\n\");\n    return 1;\n  }\n  fprintf(fp, \"Name: %s\\n\", \"Alice\");\n  fprintf(fp, \"Age: %d\\n\", 25);\n  fputs(\"End of record\\n\", fp);\n  fclose(fp);\n  fp = fopen(\"output.txt\", \"a\");\n  fprintf(fp, \"Appended line\\n\");\n  fclose(fp);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does mode \"w\" do if the file already exists?",
+      "options": ["Appends to file", "Truncates and overwrites", "Returns error", "Asks for confirmation"],
+      "correctIndex": 1
+    }
+  ]
+}

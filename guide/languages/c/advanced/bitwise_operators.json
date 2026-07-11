@@ -1,0 +1,17 @@
+{
+  "title": "C Bitwise Operators",
+  "language": "c",
+  "topic": "bitwise_operators",
+  "order": 55,
+  "nextTopic": "function_pointers",
+  "prevTopic": "storage_classes",
+  "content": "### Bitwise Operators in C\n\nBitwise operators perform operations on individual bits of integer operands.\n\n### The Operators\n\n| Operator | Name | Description | Example |\n|----------|------|-------------|---------|\n| `&` | AND | Bits are 1 if both are 1 | `5 & 3` = 1 |\n| `|` | OR | Bits are 1 if either is 1 | `5 | 3` = 7 |\n| `^` | XOR | Bits are 1 if exactly one is 1 | `5 ^ 3` = 6 |\n| `~` | NOT (complement) | Flip all bits | `~5` = -6 |\n| `<<` | Left shift | Shift bits left (multiply by 2^n) | `5 << 1` = 10 |\n| `>>` | Right shift | Shift bits right (divide by 2^n) | `5 >> 1` = 2 |\n\n### Truth Table\n\n| A | B | A & B | A | B | A ^ B |\n|---|---|-------|-------|-------|\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 1 | 1 |\n| 1 | 1 | 1 | 1 | 0 |\n\n### Common Use Cases\n\n| Use Case | Pattern |\n|----------|---------|\n| Check if bit is set | `x & (1 << n)` |\n| Set a bit | `x |= (1 << n)` |\n| Clear a bit | `x &= ~(1 << n)` |\n| Toggle a bit | `x ^= (1 << n)` |\n| Multiply by 2^n | `x << n` |\n| Divide by 2^n | `x >> n` |\n| Mask lower n bits | `x & ((1 << n) - 1)` |\n\n---\n\n> **Key Point:** Bitwise operators work only on integer types. Right shift of signed negative numbers is implementation-defined (usually arithmetic shift).",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  unsigned int a = 5;  // 0101\n  unsigned int b = 3;  // 0011\n  printf(\"a & b = %u\\n\", a & b);\n  printf(\"a | b = %u\\n\", a | b);\n  printf(\"a ^ b = %u\\n\", a ^ b);\n  printf(\"~a = %u\\n\", ~a);\n  printf(\"a << 1 = %u\\n\", a << 1);\n  printf(\"a >> 1 = %u\\n\", a >> 1);\n  unsigned int flags = 0;\n  flags |= (1 << 2);\n  printf(\"Bit 2 set: %u\\n\", flags);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does the left shift operator (<<) do?",
+      "options": ["Divides by 2^n", "Multiplies by 2^n", "Flips all bits", "Swaps bits"],
+      "correctIndex": 1
+    }
+  ]
+}

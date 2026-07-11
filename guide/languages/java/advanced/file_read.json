@@ -1,0 +1,22 @@
+{
+  "title": "Java Reading Files",
+  "language": "java",
+  "topic": "file_read",
+  "order": 41,
+  "nextTopic": "file_write",
+  "prevTopic": "file_io",
+  "content": "### Reading Files in Java\n\nJava provides multiple ways to read files.\n\n---\n\n### Using BufferedReader\n\n```java\nBufferedReader br = new BufferedReader(new FileReader(\"file.txt\"));\nString line;\nwhile ((line = br.readLine()) != null) {\n    System.out.println(line);\n}\nbr.close();\n```\n\n---\n\n### Using Scanner\n\n```java\nScanner sc = new Scanner(new File(\"file.txt\"));\nwhile (sc.hasNextLine()) {\n    System.out.println(sc.nextLine());\n}\nsc.close();\n```\n\n---\n\n### Using Files (Java NIO)\n\n```java\n// Read all lines at once\nList<String> lines = Files.readAllLines(Paths.get(\"file.txt\"));\n\n// Read entire file as string\nString content = Files.readString(Paths.get(\"file.txt\"));\n\n// Read as stream\nFiles.lines(Paths.get(\"file.txt\")).forEach(System.out::println);\n```\n\n---\n\n### Reading Binary Files\n\n```java\n// Using FileInputStream\nFileInputStream fis = new FileInputStream(\"file.dat\");\nint b;\nwhile ((b = fis.read()) != -1) {\n    // process byte\n}\n\n// Using Files.readAllBytes\nbyte[] allBytes = Files.readAllBytes(Paths.get(\"file.dat\"));\n```\n\n---\n\n### Reading Methods Comparison\n\n| Method | Best For | Memory |\n|--------|----------|--------|\n| BufferedReader | Large text files | Line by line |\n| Scanner | Parsing tokens | Flexible |\n| Files.readAllLines | Small files | Entire file |\n| Files.readString | Small text files | Entire file |\n\n> **Key Point:** For large files, use BufferedReader or Files.lines() to avoid memory issues. Use try-with-resources for automatic resource management.",
+  "codeExample": "import java.io.*;\nimport java.nio.file.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        // Create a sample file\n        Files.writeString(Paths.get(\"sample.txt\"), \n            \"Line 1: Hello\\nLine 2: World\\nLine 3: Java\");\n        \n        // Method 1: BufferedReader\n        System.out.println(\"=== BufferedReader ===\");\n        try (BufferedReader br = Files.newBufferedReader(Paths.get(\"sample.txt\"))) {\n            String line;\n            while ((line = br.readLine()) != null) {\n                System.out.println(line);\n            }\n        }\n        \n        // Method 2: Files.readAllLines\n        System.out.println(\"\\n=== Files.readAllLines ===\");\n        List<String> lines = Files.readAllLines(Paths.get(\"sample.txt\"));\n        for (String line : lines) {\n            System.out.println(line);\n        }\n        \n        // Method 3: Files.readString (Java 11+)\n        System.out.println(\"\\n=== Files.readString ===\");\n        String content = Files.readString(Paths.get(\"sample.txt\"));\n        System.out.println(content);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which method reads a file line-by-line?",
+      "options": ["BufferedReader.readLine()", "Files.readAllLines()", "Files.readString()", "Scanner.read()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which approach is best for reading very large files?",
+      "options": ["BufferedReader (streaming)", "Files.readAllLines()", "Files.readString()", "Scanner"],
+      "correctIndex": 0
+    }
+  ]
+}

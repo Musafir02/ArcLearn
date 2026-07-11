@@ -1,0 +1,17 @@
+{
+  "title": "C Header Files",
+  "language": "c",
+  "topic": "header_files",
+  "order": 49,
+  "nextTopic": "command_line_args",
+  "prevTopic": "macros",
+  "content": "### Header Files in C\n\nHeader files (`.h` extension) contain declarations shared across multiple `.c` files.\n\n### What Goes in Headers\n\n- Function prototypes\n- Macro definitions (`#define`)\n- Type definitions (`typedef`, `struct`, `union`, `enum`)\n- Global variable declarations (`extern`)\n- Constants\n\n### What Does NOT Go in Headers\n\n- Function definitions (except inline)\n- Variable definitions\n\n### Standard Header Files\n\n| Header | Purpose |\n|--------|---------|\n| `<stdio.h>` | Input/output functions |\n| `<stdlib.h>` | Memory allocation, conversions |\n| `<string.h>` | String manipulation |\n| `<math.h>` | Mathematical functions |\n| `<ctype.h>` | Character handling |\n| `<time.h>` | Date and time |\n| `<stdbool.h>` | Boolean type |\n| `<stdint.h>` | Fixed-width integer types |\n| `<errno.h>` | Error codes |\n| `<assert.h>` | Debug assertions |\n| `<signal.h>` | Signal handling |\n| `<setjmp.h>` | Non-local jumps |\n\n### Include Guards\n\nPrevent multiple inclusions of the same header:\n\n```c\n#ifndef MY_HEADER_H\n#define MY_HEADER_H\n// declarations\n#endif\n```\n\nOr use `#pragma once` (non-standard but widely supported).\n\n---\n\n> **Key Point:** Use include guards to prevent multiple inclusions. Header files should declare but not define (with some exceptions like inline functions).",
+  "codeExample": "#include <stdio.h>\n#include \"myheader.h\"\n\nint main() {\n  printf(\"Using header files\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the purpose of include guards?",
+      "options": ["Speed up compilation", "Prevent multiple inclusion", "Add comments", "Define macros"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Data Types",
+  "language": "c",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "constants",
+  "prevTopic": "variables",
+  "content": "### Data Types in C\n\nC provides several built-in data types for storing different kinds of values.\n\n### Basic Data Types\n\n| Type | Size (bytes) | Format Specifier | Range |\n|------|-------------|-----------------|-------|\n| `char` | 1 | `%c` | -128 to 127 |\n| `unsigned char` | 1 | `%c` | 0 to 255 |\n| `short` | 2 | `%hd` | -32,768 to 32,767 |\n| `unsigned short` | 2 | `%hu` | 0 to 65,535 |\n| `int` | 4 | `%d` | -2^31 to 2^31-1 |\n| `unsigned int` | 4 | `%u` | 0 to 2^32-1 |\n| `long` | 4 or 8 | `%ld` | platform dependent |\n| `float` | 4 | `%f` | ~7 decimal digits |\n| `double` | 8 | `%lf` | ~15 decimal digits |\n| `long double` | 10 or 16 | `%Lf` | ~19 decimal digits |\n\n### The `void` Type\n\n`void` represents the absence of a type. It is used for:\n- Functions that return nothing\n- Functions that take no arguments\n- Generic pointers (`void*`)\n\n---\n\n> **Key Point:** Type sizes can vary by platform. Use `sizeof()` to determine actual size on your system.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int a = 42;\n  float b = 3.14f;\n  double c = 2.71828;\n  char d = 'X';\n  printf(\"int: %d\\n\", a);\n  printf(\"float: %f\\n\", b);\n  printf(\"double: %lf\\n\", c);\n  printf(\"char: %c\\n\", d);\n  printf(\"size of int: %zu bytes\\n\", sizeof(a));\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How many bytes does an int typically occupy on most modern systems?",
+      "options": ["2", "4", "8", "1"],
+      "correctIndex": 1
+    }
+  ]
+}

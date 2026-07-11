@@ -1,0 +1,22 @@
+{
+  "title": "Java Enums",
+  "language": "java",
+  "topic": "enums",
+  "order": 51,
+  "nextTopic": "annotations",
+  "prevTopic": "regex",
+  "content": "### Enums in Java\n\nAn enum (enumeration) is a special class that represents a fixed set of constants.\n\n---\n\n### Declaring an Enum\n\n```java\nenum Day {\n    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY\n}\n```\n\n---\n\n### Using Enums\n\n```java\nDay today = Day.MONDAY;\n\nswitch (today) {\n    case MONDAY:\n        System.out.println(\"Start of work week\");\n        break;\n    case FRIDAY:\n        System.out.println(\"TGIF!\");\n        break;\n}\n```\n\n---\n\n### Enum with Fields and Methods\n\n```java\nenum Planet {\n    MERCURY(3.303e23, 2.4397e6),\n    EARTH(5.976e24, 6.37814e6),\n    JUPITER(1.9e27, 7.1492e7);\n    \n    private final double mass;\n    private final double radius;\n    \n    Planet(double mass, double radius) {\n        this.mass = mass;\n        this.radius = radius;\n    }\n    \n    public double getMass() { return mass; }\n}\n```\n\n---\n\n### Enum Methods\n\n| Method | Description |\n|--------|-------------|\n| `values()` | Returns all enum constants |\n| `valueOf(String)` | Returns enum constant by name |\n| `ordinal()` | Returns position (0-based) |\n| `name()` | Returns constant name as string |\n\n---\n\n### Enum with Abstract Methods\n\n```java\nenum Operation {\n    ADD { int apply(int a, int b) { return a + b; } },\n    SUBTRACT { int apply(int a, int b) { return a - b; } };\n    abstract int apply(int a, int b);\n}\n```\n\n> **Key Point:** Enums are implicitly `final` and extend `java.lang.Enum`. They can have constructors, fields, and methods. Enum constructors are always private.",
+  "codeExample": "enum Status {\n    PENDING(\"Waiting for approval\"),\n    APPROVED(\"Application approved\"),\n    REJECTED(\"Application rejected\");\n    \n    private final String description;\n    \n    Status(String description) {\n        this.description = description;\n    }\n    \n    public String getDescription() {\n        return description;\n    }\n    \n    public boolean isFinal() {\n        return this == APPROVED || this == REJECTED;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Status current = Status.PENDING;\n        \n        System.out.println(\"Current: \" + current);\n        System.out.println(\"Description: \" + current.getDescription());\n        System.out.println(\"Is final: \" + current.isFinal());\n        \n        // Iterate all values\n        for (Status s : Status.values()) {\n            System.out.println(s.ordinal() + \": \" + s.name() + \n                \" - \" + s.getDescription());\n        }\n        \n        // Switch with enum\n        switch (current) {\n            case PENDING:\n                System.out.println(\"Please wait...\");\n                break;\n            case APPROVED:\n                System.out.println(\"Approved!\");\n                break;\n            case REJECTED:\n                System.out.println(\"Rejected\");\n                break;\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can enums have constructors?",
+      "options": ["Yes (private only)", "No", "Yes (public)", "Only default constructor"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method returns all enum constants?",
+      "options": ["values()", "all()", "list()", "constants()"],
+      "correctIndex": 0
+    }
+  ]
+}

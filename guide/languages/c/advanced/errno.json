@@ -1,0 +1,17 @@
+{
+  "title": "C errno",
+  "language": "c",
+  "topic": "errno",
+  "order": 52,
+  "nextTopic": "variable_scope",
+  "prevTopic": "error_handling",
+  "content": "### errno in C\n\n`errno` is a global variable (or macro) defined in `<errno.h>` that stores error codes from system calls and library functions.\n\n### How errno Works\n\n- Set to 0 at program startup\n- Library functions set `errno` to a non-zero value on error\n- Should be reset to 0 before calling a function if you want to check\n- Not thread-safe by default (use `<errno.h>` local variant)\n\n### Common errno Values\n\n| Macro | Value | Meaning |\n|-------|-------|---------|\n| `EPERM` | 1 | Operation not permitted |\n| `ENOENT` | 2 | No such file/directory |\n| `ESRCH` | 3 | No such process |\n| `EINTR` | 4 | Interrupted function |\n| `EIO` | 5 | I/O error |\n| `ENXIO` | 6 | No such device/address |\n| `E2BIG` | 7 | Argument list too long |\n| `ENOMEM` | 12 | Out of memory |\n| `EACCES` | 13 | Permission denied |\n| `EEXIST` | 17 | File exists |\n| `EINVAL` | 22 | Invalid argument |\n| `ERANGE` | 34 | Result too large |\n\n### Useful Functions\n\n| Function | Description |\n|----------|-------------|\n| `perror(str)` | Prints `str: error_message` to stderr |\n| `strerror(errno)` | Returns error description string |\n\n---\n\n> **Key Point:** Always check `errno` immediately after a function fails. A successful function call may also set errno (without clearing it), so check it only when an error is indicated.",
+  "codeExample": "#include <stdio.h>\n#include <errno.h>\n#include <string.h>\n#include <math.h>\n\nint main() {\n  errno = 0;\n  double result = sqrt(-1.0);\n  if (errno != 0) {\n    printf(\"Error: %s\\n\", strerror(errno));\n  }\n  FILE *fp = fopen(\"/nonexistent/file.txt\", \"r\");\n  if (fp == NULL) {\n    perror(\"fopen\");\n    printf(\"Error code: %d\\n\", errno);\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which function prints a human-readable error based on errno?",
+      "options": ["perror()", "strerror()", "error_msg()", "print_error()"],
+      "correctIndex": 0
+    }
+  ]
+}

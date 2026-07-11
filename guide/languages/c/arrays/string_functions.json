@@ -1,0 +1,17 @@
+{
+  "title": "C String Functions",
+  "language": "c",
+  "topic": "string_functions",
+  "order": 26,
+  "nextTopic": "pointers",
+  "prevTopic": "strings",
+  "content": "### String Functions in C\n\nThe `<string.h>` header provides functions for string manipulation.\n\n### Common String Functions\n\n| Function | Description | Syntax |\n|----------|-------------|--------|\n| `strlen()` | Get string length | `size_t strlen(const char *s)` |\n| `strcpy()` | Copy string | `char *strcpy(char *dest, const char *src)` |\n| `strcat()` | Concatenate strings | `char *strcat(char *dest, const char *src)` |\n| `strcmp()` | Compare strings | `int strcmp(const char *s1, const char *s2)` |\n| `strncpy()` | Copy with limit | `char *strncpy(char *dest, const char *src, size_t n)` |\n| `strncat()` | Concatenate with limit | `char *strncat(char *dest, const char *src, size_t n)` |\n| `strncmp()` | Compare with limit | `int strncmp(const char *s1, const char *s2, size_t n)` |\n| `strchr()` | Find character in string | `char *strchr(const char *s, int c)` |\n| `strstr()` | Find substring | `char *strstr(const char *haystack, const char *needle)` |\n\n### strcmp Return Values\n\n| Return Value | Meaning |\n|-------------|---------|\n| `< 0` | s1 comes before s2 |\n| `0` | s1 equals s2 |\n| `> 0` | s1 comes after s2 |\n\n### Safe Functions\n\nUse `strncpy()` and `strncat()` instead of `strcpy()` and `strcat()` to prevent buffer overflows.\n\n---\n\n> **Key Point:** Always use bounded functions (`strncpy`, `strncat`) over unbounded ones to prevent buffer overflow vulnerabilities.",
+  "codeExample": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n  char s1[50] = \"Hello\";\n  char s2[] = \" World\";\n  printf(\"Length: %zu\\n\", strlen(s1));\n  strcat(s1, s2);\n  printf(\"Concat: %s\\n\", s1);\n  printf(\"Compare: %d\\n\", strcmp(\"abc\", \"abc\"));\n  printf(\"Compare: %d\\n\", strcmp(\"abc\", \"abd\"));\n  char *found = strchr(s1, 'W');\n  if (found) printf(\"Found: %s\\n\", found);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header file contains string functions in C?",
+      "options": ["<stdio.h>", "<stdlib.h>", "<string.h>", "<strings.h>"],
+      "correctIndex": 2
+    }
+  ]
+}

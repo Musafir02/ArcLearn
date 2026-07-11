@@ -1,0 +1,17 @@
+{
+  "title": "C++ Functions",
+  "language": "cpp",
+  "topic": "functions",
+  "order": 30,
+  "nextTopic": "function_params",
+  "prevTopic": "iterators",
+  "content": "### Functions in C++\n\nA function is a reusable block of code that performs a specific task. Functions help organize code, reduce repetition, and improve readability.\n\n---\n\n### Function Syntax\n\n```cpp\nreturnType functionName(parameters) {\n  // Function body\n  return value;  // Optional if returnType is void\n}\n```\n\n---\n\n### Example\n\n```cpp\nint add(int a, int b) {\n  return a + b;\n}\n\nvoid greet(string name) {\n  cout << \"Hello, \" << name;\n}\n```\n\n---\n\n### Declaration vs Definition\n\n```cpp\n// Declaration (prototype) - tells compiler about function\nint multiply(int x, int y);\n\n// Definition - provides the actual code\nint multiply(int x, int y) {\n  return x * y;\n}\n```\n\n---\n\n### Passing Styles\n\n| Style | Syntax | Effect |\n|-------|--------|--------|\n| By value | `void func(int x)` | Copy of value |\n| By reference | `void func(int& x)` | Modify original |\n| By const ref | `void func(const int& x)` | Read-only, efficient |\n| By pointer | `void func(int* x)` | Pass address |\n\n---\n\n### Return Types\n\n```cpp\nvoid log(string msg);      // No return value\nint getValue();             // Returns int\nstring* createPtr();        // Returns pointer\nvector<int> getData();      // Returns container\n```\n\n---\n\n> **Key Point:** Functions must be declared before they are called. Place function declarations before `main()` or in header files, with definitions after `main()` or in separate `.cpp` files.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint square(int num) {\n  return num * num;\n}\n\nint main() {\n  int x = 5;\n  int result = square(x);\n  cout << x << \" squared is \" << result << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is a function declaration also called?",
+      "options": ["Definition", "Prototype", "Signature", "Implementation"],
+      "correctIndex": 1
+    }
+  ]
+}

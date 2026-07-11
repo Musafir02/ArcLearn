@@ -1,0 +1,22 @@
+{
+  "title": "Java Classes",
+  "language": "java",
+  "topic": "classes",
+  "order": 14,
+  "nextTopic": "objects",
+  "prevTopic": "input",
+  "content": "### Classes in Java\n\nA class is a blueprint for creating objects. It defines fields (attributes) and methods (behaviors).\n\n---\n\n### Declaring a Class\n\n```java\npublic class ClassName {\n    // fields (attributes)\n    // constructors\n    // methods\n}\n```\n\n---\n\n### Class Components\n\n| Component | Description |\n|-----------|-------------|\n| Fields | Variables that hold data |\n| Constructors | Initialize new objects |\n| Methods | Define behaviors |\n| Nested classes | Classes within classes |\n| Blocks | Initialization blocks |\n\n---\n\n### Access Modifiers\n\n| Modifier | Access Level |\n|----------|-------------|\n| `public` | Accessible from anywhere |\n| `private` | Accessible only within the class |\n| `protected` | Accessible within package and subclasses |\n| default | Accessible within the same package |\n\n---\n\n### Example Class Structure\n\n```java\npublic class Car {\n    // Fields\n    private String brand;\n    private int year;\n    \n    // Constructor\n    public Car(String brand, int year) {\n        this.brand = brand;\n        this.year = year;\n    }\n    \n    // Method\n    public void start() {\n        System.out.println(brand + \" is starting\");\n    }\n}\n```\n\n> **Key Point:** By convention, class names start with an uppercase letter. A single Java file can have only one public class, and the filename must match that class name.",
+  "codeExample": "public class Person {\n    String name;\n    int age;\n    \n    public void introduce() {\n        System.out.println(\"Hi, I am \" + name + \" and I am \" + age + \" years old\");\n    }\n    \n    public static void main(String[] args) {\n        Person p = new Person();\n        p.name = \"Alice\";\n        p.age = 25;\n        p.introduce();\n    }\n}",
+  "quiz": [
+    {
+      "question": "What naming convention is used for Java classes?",
+      "options": ["PascalCase", "camelCase", "snake_case", "ALL_CAPS"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many public classes can a Java file contain?",
+      "options": ["One", "Zero", "Unlimited", "Two"],
+      "correctIndex": 0
+    }
+  ]
+}

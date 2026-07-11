@@ -1,0 +1,17 @@
+{
+  "title": "C++ Multi-Dimensional Arrays",
+  "language": "cpp",
+  "topic": "multi_dim_arrays",
+  "order": 27,
+  "nextTopic": "vectors",
+  "prevTopic": "array_size",
+  "content": "### Multi-Dimensional Arrays\n\nMulti-dimensional arrays store data in a grid-like structure with rows and columns.\n\n---\n\n### 2D Array Declaration\n\n```cpp\nint matrix[3][4];  // 3 rows, 4 columns\n\nint grid[2][3] = {\n  {1, 2, 3},\n  {4, 5, 6}\n};\n```\n\n---\n\n### Accessing Elements\n\n```cpp\nint arr[2][3] = {{1, 2, 3}, {4, 5, 6}};\n\ncout << arr[0][0];  // First row, first column: 1\ncout << arr[1][2];  // Second row, third column: 6\n\narr[0][1] = 99;     // Modify element\n```\n\n---\n\n### Iterating 2D Arrays\n\n```cpp\nint rows = 2, cols = 3;\nfor (int i = 0; i < rows; i++) {\n  for (int j = 0; j < cols; j++) {\n    cout << grid[i][j] << \" \";\n  }\n  cout << endl;\n}\n```\n\n---\n\n### 3D Arrays\n\n```cpp\nint cube[2][3][4];  // 2 layers, 3 rows, 4 columns\n```\n\n---\n\n### Memory Layout\n\n2D arrays are stored in row-major order (all elements of row 0 come first):\n\n```\n[0][0] [0][1] [0][2] [1][0] [1][1] [1][2]\n```\n\n---\n\n> **Key Point:** Multi-dimensional arrays in C++ are arrays of arrays. They are stored contiguously in row-major order in memory.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int matrix[2][3] = {\n    {1, 2, 3},\n    {4, 5, 6}\n  };\n\n  for (int i = 0; i < 2; i++) {\n    for (int j = 0; j < 3; j++) {\n      cout << matrix[i][j] << \" \";\n    }\n    cout << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How is a 2D array stored in memory?",
+      "options": ["Column-major order", "Row-major order", "Random order", "Spiral order"],
+      "correctIndex": 1
+    }
+  ]
+}

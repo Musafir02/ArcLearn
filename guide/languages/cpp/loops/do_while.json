@@ -1,0 +1,17 @@
+{
+  "title": "C++ Do-While Loop",
+  "language": "cpp",
+  "topic": "do_while",
+  "order": 22,
+  "nextTopic": "break_continue",
+  "prevTopic": "for",
+  "content": "### Do-While Loop\n\nThe `do-while` loop is similar to `while`, but it guarantees the code block executes at least once before the condition is tested.\n\n---\n\n### Basic Syntax\n\n```cpp\ndo {\n  // Code to repeat\n} while (condition);\n```\n\n---\n\n### Example\n\n```cpp\nint i = 0;\ndo {\n  cout << i << \" \";\n  i++;\n} while (i < 5);\n// Output: 0 1 2 3 4\n```\n\n---\n\n### Guaranteed First Execution\n\n```cpp\nint password;\ndo {\n  cout << \"Enter password: \";\n  cin >> password;\n} while (password != 1234);\n```\n\n---\n\n### While vs Do-While\n\n| Aspect | `while` | `do-while` |\n|--------|---------|------------|\n| Condition check | Before first iteration | After first iteration |\n| Minimum executions | 0 | 1 |\n| Common use | Counter loops | Menu input, validation |\n| Syntax | `while (cond) { }` | `do { } while (cond);` |\n\n---\n\n### Edge Case Example\n\n```cpp\nint x = 10;\nwhile (x < 5) {        // Never executes\n  cout << \"while: \" << x;\n}\n\ndo {\n  cout << \"do-while: \" << x;  // Executes once\n} while (x < 5);\n```\n\n---\n\n> **Key Point:** Use `do-while` when the loop body must execute at least once regardless of the condition (e.g., menu prompts, input validation).",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int number;\n\n  do {\n    cout << \"Enter a positive number: \";\n    cin >> number;\n  } while (number <= 0);\n\n  cout << \"You entered: \" << number << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How many times does a do-while loop body execute if the condition is initially false?",
+      "options": ["0", "1", "Infinite", "Compile error"],
+      "correctIndex": 1
+    }
+  ]
+}

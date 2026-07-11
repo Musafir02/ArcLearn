@@ -1,0 +1,17 @@
+{
+  "title": "C malloc, calloc, realloc",
+  "language": "c",
+  "topic": "malloc_calloc_realloc",
+  "order": 32,
+  "nextTopic": "functions",
+  "prevTopic": "dynamic_memory",
+  "content": "### malloc, calloc, realloc in C\n\nThese functions from `<stdlib.h>` manage heap memory allocation.\n\n### malloc()\n\nAllocates a block of uninitialized memory.\n\n```c\nvoid *malloc(size_t size);\nint *p = (int*)malloc(10 * sizeof(int));\n```\n\n### calloc()\n\nAllocates memory for an array and initializes all bytes to zero.\n\n```c\nvoid *calloc(size_t num, size_t size);\nint *p = (int*)calloc(10, sizeof(int));\n```\n\n### realloc()\n\nResizes a previously allocated memory block.\n\n```c\nvoid *realloc(void *ptr, size_t new_size);\n```\n\n---\n\n### Comparison\n\n| Feature | malloc | calloc | realloc |\n|---------|--------|--------|--------|\n| Initialization | None (garbage) | Zero-initialized | Preserves existing data |\n| Parameters | `size` | `num`, `size` | `ptr`, `new_size` |\n| Use case | Single block | Arrays | Resizing |\n| Performance | Faster | Slower (zeroing) | May copy data |\n\n### Important Notes\n\n- `realloc(NULL, size)` is equivalent to `malloc(size)`\n- `realloc(ptr, 0)` is implementation-defined (avoid)\n- Cast result to appropriate pointer type in C++ (not required in C)\n\n---\n\n> **Key Point:** `realloc()` may return a new pointer. Always use the return value, and do not cast in C (implicit conversion from `void*` is automatic).",
+  "codeExample": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  int *arr = (int*)calloc(5, sizeof(int));\n  for (int i = 0; i < 5; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n  arr = (int*)realloc(arr, 8 * sizeof(int));\n  for (int i = 5; i < 8; i++) {\n    arr[i] = i * 10;\n  }\n  for (int i = 0; i < 8; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n  free(arr);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which function zero-initializes allocated memory?",
+      "options": ["malloc", "calloc", "realloc", "free"],
+      "correctIndex": 1
+    }
+  ]
+}

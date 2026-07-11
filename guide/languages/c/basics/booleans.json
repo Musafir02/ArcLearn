@@ -1,0 +1,17 @@
+{
+  "title": "C Booleans",
+  "language": "c",
+  "topic": "booleans",
+  "order": 10,
+  "nextTopic": "type_conversion",
+  "prevTopic": "operators",
+  "content": "### Booleans in C\n\nC originally did not have a dedicated boolean type. Truth values are represented using integers: `0` means false, any non-zero value means true.\n\n### Using `<stdbool.h>`\n\nC99 introduced the `_Bool` type and the `<stdbool.h>` header which provides `bool`, `true`, and `false` macros.\n\n| Value | Meaning |\n|-------|---------|\n| `0` | false |\n| `1` (or any non-zero) | true |\n| `true` (from stdbool.h) | expands to `1` |\n| `false` (from stdbool.h) | expands to `0` |\n\n### Boolean Expressions\n\nRelational and logical operators always yield `0` (false) or `1` (true).\n\n---\n\n> **Key Point:** Include `<stdbool.h>` to use the `bool` type. Without it, use `int` with `0` for false and non-zero for true.",
+  "codeExample": "#include <stdio.h>\n#include <stdbool.h>\n\nint main() {\n  bool isHappy = true;\n  bool isTired = false;\n  int x = 10;\n  printf(\"Happy: %d\\n\", isHappy);\n  printf(\"Tired: %d\\n\", isTired);\n  printf(\"x > 5: %d\\n\", x > 5);\n  printf(\"x == 10: %d\\n\", x == 10);\n  printf(\"!isTired: %d\\n\", !isTired);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header file provides the bool type in C?",
+      "options": ["<stdio.h>", "<stdlib.h>", "<stdbool.h>", "<stdint.h>"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Arrays of Structures",
+  "language": "c",
+  "topic": "struct_arrays",
+  "order": 39,
+  "nextTopic": "struct_functions",
+  "prevTopic": "struct",
+  "content": "### Arrays of Structures in C\n\nYou can create arrays of structures to store multiple records of the same type.\n\n### Declaration\n\n```c\nstruct Student students[100];\n```\n\n### Initialization\n\n```c\nstruct Student students[3] = {\n  {\"Alice\", 20, 3.8},\n  {\"Bob\", 22, 3.5},\n  {\"Charlie\", 19, 3.9}\n};\n```\n\n### Accessing Elements\n\n```c\nstudents[0].name   // first student's name\nstudents[1].age    // second student's age\n```\n\n### Common Operations\n\n| Operation | Code |\n|-----------|------|\n| Loop through | `for (int i = 0; i < n; i++)` |\n| Find max | Compare member values |\n| Sort | Sort by member using sorting algorithm |\n| Search | Linear/binary search on a member |\n\n### Passing to Functions\n\nPass the array with its size:\n\n```c\nvoid printStudents(struct Student arr[], int size);\n```\n\n---\n\n> **Key Point:** Arrays of structures are useful for databases, student records, inventory lists, and any collection of related data records.",
+  "codeExample": "#include <stdio.h>\n\nstruct Student {\n  char name[50];\n  int age;\n  float gpa;\n};\n\nint main() {\n  struct Student students[3] = {\n    {\"Alice\", 20, 3.8},\n    {\"Bob\", 22, 3.5},\n    {\"Charlie\", 19, 3.9}\n  };\n  for (int i = 0; i < 3; i++) {\n    printf(\"%s is %d years old, GPA: %.1f\\n\",\n           students[i].name,\n           students[i].age,\n           students[i].gpa);\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How do you access the name of the first student in an array of structs?",
+      "options": ["students[0]->name", "students.name[0]", "students[0].name", "students->name[0]"],
+      "correctIndex": 2
+    }
+  ]
+}

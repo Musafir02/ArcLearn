@@ -1,0 +1,17 @@
+{
+  "title": "C++ Data Types",
+  "language": "cpp",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "constants",
+  "prevTopic": "variables",
+  "content": "### Data Types in C++\n\nC++ offers a rich set of built-in data types and allows user-defined types.\n\n---\n\n### Basic Data Types\n\n| Type | Size | Range | Description |\n|------|------|-------|-------------|\n| `bool` | 1 byte | true/false | Boolean value |\n| `char` | 1 byte | -128 to 127 or 0 to 255 | Single character |\n| `int` | 4 bytes | -2,147,483,648 to 2,147,483,647 | Integer |\n| `float` | 4 bytes | ~7 decimal digits | Floating point |\n| `double` | 8 bytes | ~15 decimal digits | Double precision |\n| `void` | 0 bytes | No value | Absence of type |\n\n---\n\n### Modifiers\n\n```cpp\nshort int a;        // 2 bytes\nlong int b;         // 4 or 8 bytes\nlong long int c;    // 8 bytes\nunsigned int d;     // Non-negative only\nsigned int e;       // Explicitly signed\n```\n\n---\n\n### Type Sizes (C++11 <cstdint>)\n\n```cpp\n#include <cstdint>\n\nint8_t   i8;   // Exactly 8 bits\nint16_t  i16;  // Exactly 16 bits\nint32_t  i32;  // Exactly 32 bits\nint64_t  i64;  // Exactly 64 bits\nuint32_t ui32; // Unsigned 32 bits\n```\n\n---\n\n### Checking Type Size\n\n```cpp\ncout << sizeof(int) << endl;       // 4\ncout << sizeof(long long) << endl; // 8\n```\n\n---\n\n> **Key Point:** Type sizes can vary by platform. Use `<cstdint>` for fixed-width types when portability is important.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int myInt = 10;\n  float myFloat = 3.14f;\n  double myDouble = 3.14159;\n  char myChar = 'A';\n  bool myBool = true;\n\n  cout << myInt << \" \" << myFloat << \" \" << myDouble << \" \";\n  cout << myChar << \" \" << myBool << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the typical size of an int in C++?",
+      "options": ["2 bytes", "4 bytes", "8 bytes", "Depends on compiler"],
+      "correctIndex": 1
+    }
+  ]
+}

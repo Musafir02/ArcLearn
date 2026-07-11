@@ -1,0 +1,17 @@
+{
+  "title": "C Error Handling",
+  "language": "c",
+  "topic": "error_handling",
+  "order": 51,
+  "nextTopic": "errno",
+  "prevTopic": "command_line_args",
+  "content": "### Error Handling in C\n\nC does not have built-in exception handling. Errors are handled through return values, the `errno` global variable, and the `assert()` macro.\n\n### Common Error Handling Techniques\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| Return codes | Function returns error status | `if (fopen() == NULL)` |\n| errno | Global error number variable | `errno`, `perror()` |\n| assert() | Runtime assertion checks | `assert(ptr != NULL)` |\n| exit() | Terminate on fatal errors | `exit(EXIT_FAILURE)` |\n\n### Return Code Pattern\n\n```c\nint divide(int a, int b, int *result) {\n  if (b == 0) return -1;  // error\n  *result = a / b;\n  return 0;  // success\n}\n```\n\n### The assert() Macro\n\nFrom `<assert.h>`, `assert()` checks a condition and aborts if false:\n\n```c\nassert(x > 0);  // halts if x <= 0\n```\n\nDisable assertions with `#define NDEBUG` before including `<assert.h>`.\n\n### Signal Handling\n\n`<signal.h>` allows handling of runtime signals like SIGSEGV (segmentation fault).\n\n---\n\n> **Key Point:** Always check return values from library functions. Use `assert()` for debugging and `errno` with `perror()` for user-facing error messages.",
+  "codeExample": "#include <stdio.h>\n#include <errno.h>\n#include <string.h>\n\nint safeDivide(int a, int b, int *result) {\n  if (b == 0) {\n    return -1;\n  }\n  *result = a / b;\n  return 0;\n}\n\nint main() {\n  int result;\n  if (safeDivide(10, 0, &result) != 0) {\n    printf(\"Error: Division by zero\\n\");\n  } else {\n    printf(\"Result: %d\\n\", result);\n  }\n  FILE *fp = fopen(\"nonexistent.txt\", \"r\");\n  if (fp == NULL) {\n    printf(\"Error: %s\\n\", strerror(errno));\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header provides the assert() macro?",
+      "options": ["<stdlib.h>", "<assert.h>", "<error.h>", "<debug.h>"],
+      "correctIndex": 1
+    }
+  ]
+}

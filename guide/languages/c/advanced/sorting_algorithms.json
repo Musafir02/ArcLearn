@@ -1,0 +1,17 @@
+{
+  "title": "C Sorting Algorithms",
+  "language": "c",
+  "topic": "sorting_algorithms",
+  "order": 58,
+  "nextTopic": "",
+  "prevTopic": "linked_list",
+  "content": "### Sorting Algorithms in C\n\nSorting arranges elements in a specific order (ascending or descending).\n\n### Bubble Sort\n\nSimple but slow. Repeatedly swaps adjacent elements if in wrong order.\n\n- Time: O(n^2)\n- Space: O(1)\n\n### Selection Sort\n\nFinds minimum element and places it at the beginning.\n\n- Time: O(n^2)\n- Space: O(1)\n\n### Insertion Sort\n\nBuilds sorted array one element at a time.\n\n- Time: O(n^2), O(n) for nearly sorted\n- Space: O(1)\n\n### Quick Sort\n\nDivide-and-conquer. Picks a pivot and partitions around it.\n\n- Time: O(n log n) average, O(n^2) worst\n- Space: O(log n)\n\n### Merge Sort\n\nDivide-and-conquer. Divides into halves, sorts, and merges.\n\n- Time: O(n log n)\n- Space: O(n)\n\n---\n\n### Algorithm Comparison\n\n| Algorithm | Best Case | Average | Worst Case | Space | Stable |\n|-----------|-----------|---------|------------|-------|--------|\n| Bubble | O(n) | O(n^2) | O(n^2) | O(1) | Yes |\n| Selection | O(n^2) | O(n^2) | O(n^2) | O(1) | No |\n| Insertion | O(n) | O(n^2) | O(n^2) | O(1) | Yes |\n| Quick | O(n log n) | O(n log n) | O(n^2) | O(log n) | No |\n| Merge | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |\n\n### Built-in qsort()\n\n```c\n#include <stdlib.h>\nvoid qsort(void *base, size_t num, size_t size,\n           int (*cmp)(const void *, const void *));\n```\n\n---\n\n> **Key Point:** Use `qsort()` from `<stdlib.h>` for general sorting. For specific needs, choose the algorithm based on data size, stability requirements, and memory constraints.",
+  "codeExample": "#include <stdio.h>\n#include <stdlib.h>\n\nint compare(const void *a, const void *b) {\n  return (*(int*)a - *(int*)b);\n}\n\nvoid bubbleSort(int arr[], int n) {\n  for (int i = 0; i < n-1; i++) {\n    for (int j = 0; j < n-i-1; j++) {\n      if (arr[j] > arr[j+1]) {\n        int temp = arr[j];\n        arr[j] = arr[j+1];\n        arr[j+1] = temp;\n      }\n    }\n  }\n}\n\nint main() {\n  int arr[] = {64, 34, 25, 12, 22, 11, 90};\n  int n = sizeof(arr)/sizeof(arr[0]);\n  int arr2[] = {64, 34, 25, 12, 22, 11, 90};\n  bubbleSort(arr, n);\n  printf(\"Bubble: \");\n  for (int i = 0; i < n; i++) printf(\"%d \", arr[i]);\n  printf(\"\\n\");\n  qsort(arr2, n, sizeof(int), compare);\n  printf(\"qsort: \");\n  for (int i = 0; i < n; i++) printf(\"%d \", arr2[i]);\n  printf(\"\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the average time complexity of Quick Sort?",
+      "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+      "correctIndex": 1
+    }
+  ]
+}

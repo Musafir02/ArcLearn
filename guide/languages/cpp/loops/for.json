@@ -1,0 +1,17 @@
+{
+  "title": "C++ For Loop",
+  "language": "cpp",
+  "topic": "for",
+  "order": 21,
+  "nextTopic": "do_while",
+  "prevTopic": "while",
+  "content": "### For Loop\n\nThe `for` loop is ideal when the number of iterations is known beforehand. It consolidates initialization, condition, and increment in one line.\n\n---\n\n### Basic Syntax\n\n```cpp\nfor (initialization; condition; increment) {\n  // Code to repeat\n}\n```\n\n---\n\n### Example\n\n```cpp\nfor (int i = 0; i < 5; i++) {\n  cout << i << \" \";\n}\n// Output: 0 1 2 3 4\n```\n\n---\n\n### Parts of For Loop\n\n| Part | Purpose | Example |\n|------|---------|---------|\n| Initialization | Sets starting value | `int i = 0` |\n| Condition | Checked before each iteration | `i < 10` |\n| Increment | Runs after each iteration | `i++` |\n\n---\n\n### Variations\n\n**Multiple variables:**\n```cpp\nfor (int i = 0, j = 10; i < j; i++, j--) {\n  cout << i << \"-\" << j << \" \";\n}\n```\n\n**Omitting parts:**\n```cpp\nint i = 0;\nfor (; i < 5; ) {  // All parts optional\n  cout << i++;\n}\n```\n\n**Range-based for (C++11):**\n```cpp\nint arr[] = {1, 2, 3, 4, 5};\nfor (int x : arr) {\n  cout << x << \" \";\n}\n```\n\n---\n\n> **Key Point:** Use range-based `for` loops when iterating over containers. They are safer and more readable than index-based loops.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  for (int i = 1; i <= 10; i++) {\n    cout << i << \" \";\n  }\n  cout << endl;\n\n  // Range-based\n  int nums[] = {10, 20, 30};\n  for (int n : nums) {\n    cout << n << \" \";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which part of the for loop is optional?",
+      "options": ["Only initialization", "Only condition", "All three parts", "None are optional"],
+      "correctIndex": 2
+    }
+  ]
+}

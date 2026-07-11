@@ -1,0 +1,17 @@
+{
+  "title": "C For Loop",
+  "language": "c",
+  "topic": "for",
+  "order": 18,
+  "nextTopic": "do_while",
+  "prevTopic": "while",
+  "content": "### For Loop in C\n\nThe `for` loop is ideal when the number of iterations is known in advance.\n\n### Syntax\n\n```c\nfor (initialization; condition; update) {\n  // code to repeat\n}\n```\n\n### Execution Flow\n\n| Step | Action |\n|------|--------|\n| 1 | Initialization executes (once) |\n| 2 | Condition is evaluated |\n| 3 | If true, loop body executes |\n| 4 | Update executes |\n| 5 | Go back to step 2 |\n\n### Variations\n\n| Variation | Example |\n|-----------|---------|\n| Multiple variables | `for (int i = 0, j = 10; i < j; i++, j--)` |\n| Empty initialization | `for (; i < 10; i++)` |\n| Empty condition (infinite) | `for (;;)` |\n| Decrementing | `for (i = 10; i > 0; i--)` |\n| Stepping by 2 | `for (i = 0; i < 10; i += 2)` |\n\n### Scope in C99/C11\n\nIn C99 and later, you can declare the loop variable inside the `for` statement. Its scope is limited to the loop.\n\n---\n\n> **Key Point:** The `for` loop is best for counted iterations. All three parts (initialization, condition, update) are optional but the semicolons are required.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  // Count 1 to 5\n  for (int i = 1; i <= 5; i++) {\n    printf(\"%d \", i);\n  }\n  printf(\"\\n\");\n  // Nested for loop - multiplication table\n  for (int row = 1; row <= 3; row++) {\n    for (int col = 1; col <= 3; col++) {\n      printf(\"%d \", row * col);\n    }\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How many times does the initialization part of a for loop execute?",
+      "options": ["Zero", "Once", "Each iteration", "Depends on the condition"],
+      "correctIndex": 1
+    }
+  ]
+}

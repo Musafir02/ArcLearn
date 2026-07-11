@@ -1,0 +1,17 @@
+{
+  "title": "C++ If/Else Statements",
+  "language": "cpp",
+  "topic": "if_else",
+  "order": 17,
+  "nextTopic": "switch",
+  "prevTopic": "conditions",
+  "content": "### If/Else Statements\n\nThe `if` statement executes a block of code if a condition is true. The `else` block executes when the condition is false.\n\n---\n\n### Basic If\n\n```cpp\nif (condition) {\n  // Code runs if condition is true\n}\n```\n\n---\n\n### If-Else\n\n```cpp\nint number = 10;\n\nif (number % 2 == 0) {\n  cout << \"Even\";\n} else {\n  cout << \"Odd\";\n}\n```\n\n---\n\n### Else If Chain\n\n```cpp\nint score = 75;\n\nif (score >= 90) {\n  cout << \"A\";\n} else if (score >= 80) {\n  cout << \"B\";\n} else if (score >= 70) {\n  cout << \"C\";\n} else {\n  cout << \"F\";\n}\n```\n\n---\n\n### Nested If\n\n```cpp\nif (x > 0) {\n  if (x > 100) {\n    cout << \"Large positive\";\n  } else {\n    cout << \"Small positive\";\n  }\n}\n```\n\n---\n\n### Common Pitfalls\n\n| Mistake | Wrong | Correct |\n|---------|-------|---------|\n| Assignment instead of comparison | `if (x = 5)` | `if (x == 5)` |\n| Missing braces | `if (x > 0) cout << x; return x;` | `if (x > 0) { cout << x; return x; }` |\n| Semicolon after if | `if (x > 5); { ... }` | `if (x > 5) { ... }` |\n\n---\n\n> **Key Point:** The `else` clause binds to the nearest `if`. Use braces `{}` to avoid dangling-else ambiguity.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int temperature = 30;\n\n  if (temperature > 35) {\n    cout << \"Hot day\";\n  } else if (temperature > 20) {\n    cout << \"Warm day\";\n  } else {\n    cout << \"Cool day\";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the output of: int x = 5; if(x = 3) { cout << x; }",
+      "options": ["5", "3", "true", "Compile error"],
+      "correctIndex": 1
+    }
+  ]
+}

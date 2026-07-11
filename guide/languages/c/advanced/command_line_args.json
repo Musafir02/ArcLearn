@@ -1,0 +1,17 @@
+{
+  "title": "C Command Line Arguments",
+  "language": "c",
+  "topic": "command_line_args",
+  "order": 50,
+  "nextTopic": "error_handling",
+  "prevTopic": "header_files",
+  "content": "### Command Line Arguments in C\n\nCommand line arguments are parameters passed to a program when it is executed from the command line.\n\n### The `main()` Parameters\n\n```c\nint main(int argc, char *argv[])\n// or\nint main(int argc, char **argv)\n```\n\n### Parameters Explained\n\n| Parameter | Description |\n|-----------|-------------|\n| `argc` | Argument count (number of arguments) |\n| `argv` | Argument vector (array of strings) |\n| `argv[0]` | Program name |\n| `argv[1]` | First argument |\n| `argv[argc-1]` | Last argument |\n| `argv[argc]` | Always NULL |\n\n### Example Usage\n\nRun: `./program hello 42`\n\n| Index | Value |\n|-------|-------|\n| `argv[0]` | `\"./program\"` |\n| `argv[1]` | `\"hello\"` |\n| `argv[2]` | `\"42\"` |\n| `argc` | `3` |\n\n### Converting Arguments\n\nArguments are passed as strings. Use conversion functions:\n\n```c\nint num = atoi(argv[1]);        // string to int\ndouble val = atof(argv[1]);     // string to double\nlong num = strtol(argv[1], NULL, 10);  // safer conversion\n```\n\n---\n\n> **Key Point:** `argc` is always at least 1 (the program name). Convert string arguments to numbers using `atoi()` or `strtol()` as needed.",
+  "codeExample": "#include <stdio.h>\n#include <stdlib.h>\n\nint main(int argc, char *argv[]) {\n  printf(\"argc: %d\\n\", argc);\n  for (int i = 0; i < argc; i++) {\n    printf(\"argv[%d]: %s\\n\", i, argv[i]);\n  }\n  if (argc >= 3) {\n    int a = atoi(argv[1]);\n    int b = atoi(argv[2]);\n    printf(\"Sum: %d\\n\", a + b);\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does argv[0] contain?",
+      "options": ["First argument after program name", "Program name", "Number of arguments", "NULL"],
+      "correctIndex": 1
+    }
+  ]
+}

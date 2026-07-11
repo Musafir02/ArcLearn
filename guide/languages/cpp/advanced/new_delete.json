@@ -1,0 +1,17 @@
+{
+  "title": "C++ new and delete Operators",
+  "language": "cpp",
+  "topic": "new_delete",
+  "order": 51,
+  "nextTopic": "exception_handling",
+  "prevTopic": "dynamic_memory",
+  "content": "### new and delete Operators\n\nThe `new` operator allocates memory on the heap and calls the constructor. The `delete` operator calls the destructor and deallocates memory.\n\n---\n\n### Using new\n\n```cpp\nint* p = new int;            // Default-initialized (uninitialized)\nint* p2 = new int(42);       // Value-initialized to 42\nint* p3 = new int();         // Value-initialized to 0\n\nstring* s = new string(\"Hello\");  // Object with constructor args\n```\n\n---\n\n### Using delete\n\n```cpp\ndelete p;    // Single object\ndelete[] arr;  // Array\n```\n\n---\n\n### new[] for Arrays\n\n```cpp\nint* arr = new int[10];       // 10 uninitialized ints\nint* arr2 = new int[5]{1, 2, 3, 4, 5};  // Initialized\n\ndelete[] arr;   // Must use delete[] for arrays\ndelete[] arr2;\n```\n\n---\n\n### Placement new\n\n```cpp\n#include <new>\n\nchar buffer[sizeof(int)];\nint* p = new (buffer) int(42);  // Construct in existing memory\n// No delete needed - just call destructor if needed\n```\n\n---\n\n### new Failure (Nothrow)\n\n```cpp\nint* p = new (nothrow) int[1000000000];\nif (p == nullptr) {\n  cout << \"Allocation failed\";\n}\n```\n\n---\n\n### Overriding new/delete\n\n```cpp\nvoid* operator new(size_t size) {\n  cout << \"Custom alloc: \" << size << \" bytes\";\n  return malloc(size);\n}\n\nvoid operator delete(void* ptr) {\n  cout << \"Custom dealloc\";\n  free(ptr);\n}\n```\n\n---\n\n> **Key Point:** Always match `new` with `delete` and `new[]` with `delete[]`. Mixing them causes undefined behavior. In modern C++, prefer `std::make_unique` and `std::make_shared` over raw `new`.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Point {\npublic:\n  int x, y;\n  Point(int x, int y) : x(x), y(y) {\n    cout << \"Point created\" << endl;\n  }\n  ~Point() {\n    cout << \"Point destroyed\" << endl;\n  }\n};\n\nint main() {\n  Point* p = new Point(3, 4);\n  cout << \"(\" << p->x << \", \" << p->y << \")\" << endl;\n  delete p;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which delete operator is used for arrays allocated with new[]?",
+      "options": ["delete", "delete[]", "free()", "dealloc()"],
+      "correctIndex": 1
+    }
+  ]
+}

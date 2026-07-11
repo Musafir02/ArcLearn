@@ -1,0 +1,17 @@
+{
+  "title": "C Dynamic Memory",
+  "language": "c",
+  "topic": "dynamic_memory",
+  "order": 31,
+  "nextTopic": "malloc_calloc_realloc",
+  "prevTopic": "pointers_functions",
+  "content": "### Dynamic Memory in C\n\nDynamic memory allocation allows you to allocate memory at runtime from the heap.\n\n### Heap vs Stack\n\n| Feature | Stack | Heap |\n|---------|-------|------|\n| Allocation | Automatic | Manual (`malloc`, `calloc`, `realloc`) |\n| Deallocation | Automatic (scope exit) | Manual (`free()`) |\n| Size limit | Small (KB-MB) | Large (available RAM) |\n| Speed | Fast | Slower |\n| Lifetime | Function scope | Until freed |\n| Fragmentation | None | Possible |\n\n### Key Functions (from `<stdlib.h>`)\n\n| Function | Description |\n|----------|-------------|\n| `malloc()` | Allocates uninitialized memory |\n| `calloc()` | Allocates zero-initialized memory |\n| `realloc()` | Resizes previously allocated memory |\n| `free()` | Releases allocated memory |\n\n### Common Mistakes\n\n- Forgetting to `free()` (memory leak)\n- Using memory after `free()` (dangling pointer)\n- Double `free()` (undefined behavior)\n- Not checking `NULL` return from allocation\n\n---\n\n> **Key Point:** Every `malloc()`/`calloc()`/`realloc()` must be matched with a `free()`. Always check the return value for NULL.",
+  "codeExample": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  int *ptr;\n  ptr = (int*)malloc(5 * sizeof(int));\n  if (ptr == NULL) {\n    printf(\"Memory allocation failed\\n\");\n    return 1;\n  }\n  for (int i = 0; i < 5; i++) {\n    ptr[i] = (i + 1) * 10;\n  }\n  for (int i = 0; i < 5; i++) {\n    printf(\"%d \", ptr[i]);\n  }\n  printf(\"\\n\");\n  free(ptr);\n  ptr = NULL;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What happens if you forget to free dynamically allocated memory?",
+      "options": ["Program crashes immediately", "Memory leak", "Automatic cleanup", "Compiler warning"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Variables",
+  "language": "cpp",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Variables in C++\n\nVariables are containers for storing data values. Every variable must have a declared type before use.\n\n---\n\n### Declaring Variables\n\n```cpp\nint age;             // Declaration\nint age = 25;        // Declaration + initialization\nint x, y, z;         // Multiple declarations\nauto value = 42;     // Type deduction (C++11)\n```\n\n---\n\n### Variable Naming Rules\n\n| Rule | Valid Examples | Invalid Examples |\n|------|---------------|-----------------|\n| Letters, digits, underscore | `myVar`, `_count`, `value2` | `2value` (starts with digit) |\n| Case-sensitive | `Age` vs `age` | `my-var` (hyphen not allowed) |\n| Not keywords | `myInt` | `int` (reserved keyword) |\n\n---\n\n### Initialization Styles\n\n```cpp\nint a = 5;       // Copy initialization\nint b(5);        // Direct initialization\nint c{5};        // Brace initialization (C++11) - preferred\nint d = {5};     // Copy brace initialization\n```\n\n---\n\n### Scope and Lifetime\n\n| Scope | Keyword | Lifetime |\n|-------|---------|----------|\n| Local | None | Block scope |\n| Global | None | Program lifetime |\n| Static | `static` | Program lifetime, file scope |\n| External | `extern` | Across files |\n\n---\n\n> **Key Point:** Always initialize variables before using them. Uninitialized variables contain garbage values and lead to undefined behavior.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint globalVar = 100; // Global variable\n\nint main() {\n  int localVar = 50;   // Local variable\n  static int count = 0; // Static variable\n  count++;\n  cout << localVar << \" \" << globalVar << \" \" << count;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which of the following is a valid variable name in C++?",
+      "options": ["2value", "my-var", "_count", "int"],
+      "correctIndex": 2
+    }
+  ]
+}

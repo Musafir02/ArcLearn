@@ -1,0 +1,22 @@
+{
+  "title": "Java Syntax",
+  "language": "java",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### Basic Syntax Rules\n\nEvery Java program has a structure that follows specific syntax rules.\n\n---\n\n### Structure of a Java Program\n\n```\npackage declaration (optional)\nimport statements (optional)\nclass declaration {\n    fields\n    methods\n}\n```\n\n---\n\n### Key Syntax Rules\n\n| Rule | Example |\n|------|---------|\n| Case-sensitive | `myVar` and `MyVar` are different |\n| Class name starts with uppercase | `public class MyClass` |\n| Method names start with lowercase | `public void myMethod()` |\n| Filename matches class name | `MyClass.java` |\n| Statements end with semicolon | `int x = 5;` |\n| Code blocks in curly braces | `{ }` |\n\n---\n\n### Identifiers\n\nNames for classes, methods, and variables:\n- Can contain letters, digits, underscore, dollar sign\n- Must not start with a digit\n- Cannot be reserved keywords\n\n> **Key Point:** Java is case-sensitive. `Public` is different from `public`. Always use lowercase for keywords like `public`, `class`, `static`, `void`.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        int number = 10;  // variable declaration\n        System.out.println(number);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What character ends a Java statement?",
+      "options": ["Semicolon (;)", "Colon (:)", "Period (.)", "Comma (,)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of these is a valid Java identifier?",
+      "options": ["myVariable", "2ndPlace", "my-var", "class"],
+      "correctIndex": 0
+    }
+  ]
+}

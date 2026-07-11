@@ -1,0 +1,17 @@
+{
+  "title": "C Type Conversion",
+  "language": "c",
+  "topic": "type_conversion",
+  "order": 11,
+  "nextTopic": "input",
+  "prevTopic": "booleans",
+  "content": "### Type Conversion in C\n\nType conversion is converting one data type to another. C supports both implicit and explicit conversion.\n\n### Implicit Conversion (Automatic)\n\nC automatically converts smaller types to larger types when needed (type promotion).\n\n```\nConversion Hierarchy: char -> short -> int -> unsigned int -> long -> float -> double\n```\n\n### Explicit Conversion (Casting)\n\nYou can force a conversion using the cast operator:\n\n```c\n(type_name) expression\n```\n\n### Common Conversions\n\n| Conversion | Example | Result |\n|------------|---------|--------|\n| int to float | `(float) 5` | `5.0` |\n| float to int | `(int) 3.9` | `3` (truncates) |\n| double to float | `(float) 3.14159` | loses precision |\n| char to int | `(int) 'A'` | `65` (ASCII) |\n\n---\n\n> **Key Point:** Implicit conversion follows the hierarchy. Explicit casting is needed when converting from larger to smaller types or when you need specific truncation behavior.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int a = 5, b = 2;\n  float result;\n  // implicit: int division gives 2, then converted to 2.0\n  result = a / b;\n  printf(\"Without cast: %f\\n\", result);\n  // explicit: convert a to float before division\n  result = (float) a / b;\n  printf(\"With cast: %f\\n\", result);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is (int) 7.9 in C?",
+      "options": ["7", "8", "7.9", "8.0"],
+      "correctIndex": 0
+    }
+  ]
+}

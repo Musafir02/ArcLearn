@@ -1,0 +1,17 @@
+{
+  "title": "C++ Array Size",
+  "language": "cpp",
+  "topic": "array_size",
+  "order": 26,
+  "nextTopic": "multi_dim_arrays",
+  "prevTopic": "arrays",
+  "content": "### Determining Array Size\n\nFinding the size of an array is essential for safe iteration and memory management.\n\n---\n\n### Using sizeof\n\n```cpp\nint arr[] = {10, 20, 30, 40, 50};\n\nint totalBytes = sizeof(arr);       // 20 (5 ints * 4 bytes each)\nint elementBytes = sizeof(arr[0]);  // 4\nint length = sizeof(arr) / sizeof(arr[0]); // 5\n```\n\n---\n\n### Modern C++ Methods\n\n**`std::size()` (C++17):**\n```cpp\n#include <iterator>\n\nint arr[] = {1, 2, 3, 4, 5};\nsize_t len = std::size(arr);  // 5\n```\n\n---\n\n### Array Decay Problem\n\nWhen passed to a function, arrays decay to pointers:\n\n```cpp\nvoid printSize(int arr[]) {\n  cout << sizeof(arr) / sizeof(arr[0]); // WRONG: pointer size!\n}\n\nint main() {\n  int data[10];\n  cout << sizeof(data) / sizeof(data[0]); // OK: 10\n  printSize(data); // Wrong result (pointer size)\n}\n```\n\n---\n\n### Solutions\n\n| Method | Description |\n|--------|-------------|\n| `std::array` | Fixed-size container (C++11) |\n| `std::vector` | Dynamic array |\n| Template deduction | `template<size_t N> void func(int (&arr)[N])` |\n\n---\n\n> **Key Point:** `sizeof(arr)/sizeof(arr[0])` only works in the scope where the array was declared. After decay to a pointer, this method fails. Use `std::size()` or `std::array` instead.",
+  "codeExample": "#include <iostream>\n#include <iterator>\nusing namespace std;\n\nint main() {\n  int numbers[] = {1, 2, 3, 4, 5, 6};\n\n  cout << \"Total elements: \" << sizeof(numbers) / sizeof(numbers[0]) << endl;\n  cout << \"Using std::size: \" << std::size(numbers) << endl;\n\n  for (size_t i = 0; i < std::size(numbers); i++) {\n    cout << numbers[i] << \" \";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What happens when an array is passed to a function?",
+      "options": ["The entire array is copied", "It decays to a pointer", "It becomes a vector", "Compile error"],
+      "correctIndex": 1
+    }
+  ]
+}

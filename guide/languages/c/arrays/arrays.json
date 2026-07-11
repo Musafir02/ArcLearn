@@ -1,0 +1,17 @@
+{
+  "title": "C Arrays",
+  "language": "c",
+  "topic": "arrays",
+  "order": 22,
+  "nextTopic": "array_size",
+  "prevTopic": "goto",
+  "content": "### Arrays in C\n\nAn array is a collection of elements of the same data type stored in contiguous memory locations.\n\n### Declaration\n\n```c\ntype arrayName[size];\n```\n\n### Initialization\n\n```c\nint numbers[5] = {10, 20, 30, 40, 50};\nint values[] = {1, 2, 3};  // size inferred as 3\nint zeros[10] = {0};       // all elements initialized to 0\n```\n\n### Accessing Elements\n\nArray indices start at 0. The last element index is `size - 1`.\n\n| Element | Index |\n|---------|-------|\n| First | `arr[0]` |\n| Second | `arr[1]` |\n| Last | `arr[size-1]` |\n\n### Important Notes\n\n- Arrays are zero-indexed\n- No bounds checking (accessing out of bounds is undefined behavior)\n- Array name acts as a pointer to the first element\n- Arrays cannot be assigned to each other directly\n\n---\n\n> **Key Point:** C does not check array bounds. Accessing `arr[size]` or beyond will compile but may crash or corrupt data.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int scores[5] = {85, 92, 78, 90, 88};\n  for (int i = 0; i < 5; i++) {\n    printf(\"Score %d: %d\\n\", i + 1, scores[i]);\n  }\n  int sum = 0;\n  for (int i = 0; i < 5; i++) {\n    sum += scores[i];\n  }\n  printf(\"Average: %.1f\\n\", sum / 5.0);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the index of the first element in a C array?",
+      "options": ["-1", "0", "1", "It depends on the declaration"],
+      "correctIndex": 1
+    }
+  ]
+}

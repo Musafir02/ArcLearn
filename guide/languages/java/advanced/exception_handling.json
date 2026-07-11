@@ -1,0 +1,22 @@
+{
+  "title": "Java Exception Handling",
+  "language": "java",
+  "topic": "exception_handling",
+  "order": 35,
+  "nextTopic": "try_catch",
+  "prevTopic": "generics",
+  "content": "### Exception Handling in Java\n\nAn exception is an event that disrupts the normal flow of program execution.\n\n---\n\n### Exception Hierarchy\n\n```\nThrowable\n  |-- Error (OutOfMemoryError, StackOverflowError)\n  |-- Exception\n       |-- IOException, SQLException (checked)\n       |-- RuntimeException\n            |-- NullPointerException, ArithmeticException (unchecked)\n```\n\n---\n\n### Types of Exceptions\n\n| Type | Description | Must Handle? |\n|------|-------------|-------------|\n| Checked | Verified at compile-time | Yes |\n| Unchecked (Runtime) | Occurs at runtime | No |\n| Error | Serious JVM issues | No |\n\n---\n\n### Common Exceptions\n\n| Exception | Cause |\n|-----------|-------|\n| `NullPointerException` | Calling method on null |\n| `ArrayIndexOutOfBoundsException` | Invalid array index |\n| `ArithmeticException` | Division by zero |\n| `IllegalArgumentException` | Invalid argument |\n| `NumberFormatException` | Invalid string to number |\n| `IOException` | Input/output failure |\n| `FileNotFoundException` | File not found |\n\n---\n\n### Checked vs Unchecked\n\n```java\n// Checked - must handle\nFileReader file = new FileReader(\"test.txt\");  // FileNotFoundException\n\n// Unchecked - may not handle\nint result = 10 / 0;  // ArithmeticException\n```\n\n> **Key Point:** Checked exceptions must be caught or declared in the method signature with `throws`. Runtime exceptions are programming bugs that should be fixed, not caught.",
+  "codeExample": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // Unchecked exception example\n        try {\n            int[] arr = {1, 2, 3};\n            System.out.println(arr[5]);  // ArrayIndexOutOfBoundsException\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"Index out of bounds: \" + e.getMessage());\n        }\n        \n        // Common runtime exceptions\n        String str = null;\n        try {\n            System.out.println(str.length());  // NullPointerException\n        } catch (NullPointerException e) {\n            System.out.println(\"Null pointer caught\");\n        }\n        \n        System.out.println(\"Program continues...\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which is the root class of all exceptions?",
+      "options": ["Throwable", "Exception", "Error", "RuntimeException"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Do checked exceptions require handling at compile time?",
+      "options": ["Yes", "No", "Only for IO exceptions", "Only in Java 8+"],
+      "correctIndex": 0
+    }
+  ]
+}

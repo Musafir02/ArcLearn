@@ -1,0 +1,17 @@
+{
+  "title": "C++ Numbers",
+  "language": "cpp",
+  "topic": "numbers",
+  "order": 12,
+  "nextTopic": "input",
+  "prevTopic": "strings",
+  "content": "### Numbers in C++\n\nC++ provides several numeric types for integers and floating-point numbers.\n\n---\n\n### Integer Types\n\n| Type | Size | Range |\n|------|------|-------|\n| `short` | 2 bytes | -32,768 to 32,767 |\n| `int` | 4 bytes | -2.1B to 2.1B |\n| `long` | 4 or 8 bytes | Platform dependent |\n| `long long` | 8 bytes | -9.2E18 to 9.2E18 |\n| `unsigned int` | 4 bytes | 0 to 4.3B |\n\n---\n\n### Floating-Point Types\n\n| Type | Size | Precision | Example |\n|------|------|-----------|---------|\n| `float` | 4 bytes | ~7 digits | `3.14f` |\n| `double` | 8 bytes | ~15 digits | `3.14159` |\n| `long double` | 8-16 bytes | ~18+ digits | `3.141592653L` |\n\n---\n\n### Numeric Operations\n\n```cpp\n#include <cmath>\n\npow(2, 3);    // 8.0\nsqrt(16);     // 4.0\nabs(-5);      // 5\nround(3.7);   // 4.0\nceil(3.1);    // 4.0\nfloor(3.9);   // 3.0\n```\n\n---\n\n### Number Conversion\n\n```cpp\nint a = 10;\ndouble b = a;           // Implicit: 10.0\nint c = (int)3.9;       // C-style cast: 3\nint d = static_cast<int>(3.9);  // C++ cast: 3\n```\n\n---\n\n> **Key Point:** Integer division truncates toward zero. Use `double` for fractional results: `double x = 5.0 / 2;` gives 2.5.",
+  "codeExample": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n  int a = 10, b = 3;\n  double x = 5.5, y = 2.0;\n\n  cout << \"Integer division: \" << (a / b) << endl;\n  cout << \"Double division: \" << (x / y) << endl;\n  cout << \"Power: \" << pow(2, 5) << endl;\n  cout << \"Square root: \" << sqrt(25) << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is 5 / 2 in C++ when both operands are integers?",
+      "options": ["2.5", "2", "2.0", "3"],
+      "correctIndex": 1
+    }
+  ]
+}

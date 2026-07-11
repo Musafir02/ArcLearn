@@ -1,0 +1,17 @@
+{
+  "title": "C++ Multithreading",
+  "language": "cpp",
+  "topic": "multithreading",
+  "order": 69,
+  "nextTopic": "",
+  "prevTopic": "move_semantics",
+  "content": "### Multithreading\n\nC++11 introduced a standardized multithreading library (`<thread>`) for concurrent programming.\n\n---\n\n### Creating Threads\n\n```cpp\n#include <thread>\n\nvoid worker() {\n  cout << \"Working in thread\";\n}\n\nint main() {\n  thread t(worker);  // Start thread\n  t.join();          // Wait for thread to finish\n}\n```\n\n---\n\n### Thread with Arguments\n\n```cpp\nvoid printSum(int a, int b) {\n  cout << \"Sum: \" << (a + b);\n}\n\nthread t(printSum, 5, 3);\nt.join();\n```\n\n---\n\n### Mutex and Lock\n\n```cpp\n#include <mutex>\n\nmutex mtx;\nint sharedCounter = 0;\n\nvoid increment() {\n  lock_guard<mutex> lock(mtx);  // RAII lock\n  sharedCounter++;\n}\n```\n\n---\n\n### Synchronization Primitives\n\n| Primitive | Description | Header |\n|-----------|-------------|--------|\n| `mutex` | Basic mutual exclusion | `<mutex>` |\n| `recursive_mutex` | Reentrant mutex | `<mutex>` |\n| `timed_mutex` | Mutex with timeout | `<mutex>` |\n| `lock_guard` | RAII mutex wrapper | `<mutex>` |\n| `unique_lock` | Flexible RAII lock | `<mutex>` |\n| `condition_variable` | Thread waiting | `<condition_variable>` |\n| `atomic` | Lock-free operations | `<atomic>` |\n\n---\n\n### Atomic Operations\n\n```cpp\n#include <atomic>\n\natomic<int> counter(0);\n\nvoid increment() {\n  counter.fetch_add(1);  // Thread-safe increment\n}\n```\n\n---\n\n### std::async (Higher-Level)\n\n```cpp\n#include <future>\n\nint compute(int x) {\n  return x * x;\n}\n\nauto future = async(launch::async, compute, 5);\nint result = future.get();  // 25\n```\n\n---\n\n> **Key Point:** Always join or detach threads. Use `lock_guard` or `unique_lock` for exception-safe mutex locking. Prefer `std::async` for simple parallel tasks over manual thread management.",
+  "codeExample": "#include <iostream>\n#include <thread>\n#include <mutex>\n#include <vector>\nusing namespace std;\n\nmutex mtx;\n\nvoid printWork(int id) {\n  lock_guard<mutex> lock(mtx);\n  cout << \"Thread \" << id << \" working\" << endl;\n}\n\nint main() {\n  vector<thread> threads;\n\n  for (int i = 0; i < 5; i++) {\n    threads.emplace_back(printWork, i);\n  }\n\n  for (auto& t : threads) {\n    t.join();\n  }\n\n  cout << \"All threads completed\" << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which function waits for a thread to finish?",
+      "options": ["wait()", "join()", "detach()", "sync()"],
+      "correctIndex": 1
+    }
+  ]
+}

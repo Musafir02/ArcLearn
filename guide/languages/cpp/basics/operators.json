@@ -1,0 +1,17 @@
+{
+  "title": "C++ Operators",
+  "language": "cpp",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "booleans",
+  "prevTopic": "constants",
+  "content": "### Operators in C++\n\nOperators are symbols that perform operations on operands.\n\n---\n\n### Arithmetic Operators\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `+` | Addition | `5 + 2` | 7 |\n| `-` | Subtraction | `5 - 2` | 3 |\n| `*` | Multiplication | `5 * 2` | 10 |\n| `/` | Division | `5 / 2` | 2 (integer) |\n| `%` | Modulus | `5 % 2` | 1 |\n| `++` | Increment | `++x` or `x++` | x + 1 |\n| `--` | Decrement | `--x` or `x--` | x - 1 |\n\n---\n\n### Assignment Operators\n\n```cpp\nint x = 10;\nx += 5;  // x = 15\nx -= 3;  // x = 12\nx *= 2;  // x = 24\nx /= 4;  // x = 6\nx %= 5;  // x = 1\n```\n\n---\n\n### Comparison Operators\n\n| Operator | Name | Example |\n|----------|------|---------|\n| `==` | Equal to | `5 == 5` is true |\n| `!=` | Not equal | `5 != 3` is true |\n| `>` | Greater than | `5 > 3` is true |\n| `<` | Less than | `5 < 3` is false |\n| `>=` | Greater or equal | `5 >= 5` is true |\n| `<=` | Less or equal | `5 <= 3` is false |\n\n---\n\n### Logical Operators\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `&&` | AND | `true && false` | false |\n| `||` | OR | `true || false` | true |\n| `!` | NOT | `!true` | false |\n\n---\n\n### Bitwise Operators\n\n```cpp\nint a = 5 & 3;   // AND: 1\nint b = 5 | 3;   // OR: 7\nint c = 5 ^ 3;   // XOR: 6\nint d = ~5;      // NOT: -6\nint e = 5 << 1;  // Left shift: 10\nint f = 5 >> 1;  // Right shift: 2\n```\n\n---\n\n> **Key Point:** Operator precedence matters. Use parentheses `()` to make expression evaluation explicit and avoid bugs.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int a = 10, b = 3;\n  cout << \"Sum: \" << (a + b) << endl;\n  cout << \"Product: \" << (a * b) << endl;\n  cout << \"Division: \" << (a / b) << endl;\n  cout << \"Modulus: \" << (a % b) << endl;\n  cout << \"Increment: \" << ++a << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does the % operator do in C++?",
+      "options": ["Percentage", "Modulus (remainder)", "Division", "Bitwise AND"],
+      "correctIndex": 1
+    }
+  ]
+}

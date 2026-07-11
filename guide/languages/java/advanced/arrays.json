@@ -1,0 +1,22 @@
+{
+  "title": "Java Arrays",
+  "language": "java",
+  "topic": "arrays",
+  "order": 28,
+  "nextTopic": "arraylist",
+  "prevTopic": "interfaces",
+  "content": "### Arrays in Java\n\nAn array is a container object that holds a fixed number of values of a single type.\n\n---\n\n### Declaring Arrays\n\n```java\nint[] numbers = new int[5];         // array of 5 integers\nint[] numbers = {1, 2, 3, 4, 5};    // array literal\nint[][] matrix = new int[3][3];      // 2D array\n```\n\n---\n\n### Array Properties\n\n| Property | Description |\n|----------|-------------|\n| Fixed size | Cannot change after creation |\n| Zero-indexed | First element at index 0 |\n| Homogeneous | All elements same type |\n| length field | `array.length` gives size |\n\n---\n\n### Accessing Elements\n\n```java\nint[] arr = {10, 20, 30, 40, 50};\narr[0] = 100;              // assign value\nint x = arr[2];            // read value\nint len = arr.length;      // array length\n```\n\n---\n\n### Iterating Arrays\n\n```java\n// for loop\nfor (int i = 0; i < arr.length; i++) {\n    System.out.println(arr[i]);\n}\n\n// enhanced for-each\nfor (int num : arr) {\n    System.out.println(num);\n}\n```\n\n---\n\n### Multidimensional Arrays\n\n```java\nint[][] grid = {\n    {1, 2, 3},\n    {4, 5, 6},\n    {7, 8, 9}\n};\nint val = grid[1][2];  // 6\n```\n\n> **Key Point:** Arrays have a fixed length. Use `Arrays.toString()` for printing and `Arrays.sort()` for sorting. The `java.util.Arrays` class provides many utility methods.",
+  "codeExample": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        int[] numbers = {5, 2, 8, 1, 9};\n        \n        System.out.println(\"Length: \" + numbers.length);\n        System.out.println(\"First: \" + numbers[0]);\n        \n        Arrays.sort(numbers);\n        System.out.println(\"Sorted: \" + Arrays.toString(numbers));\n        \n        // 2D array\n        int[][] matrix = {{1, 2}, {3, 4}};\n        System.out.println(\"Matrix[1][1]: \" + matrix[1][1]);\n        \n        // For-each loop\n        for (int num : numbers) {\n            System.out.print(num + \" \");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the index of the first element in an array?",
+      "options": ["0", "1", "-1", "Depends on declaration"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can an array's size be changed after creation?",
+      "options": ["No", "Yes", "Only by copying", "Only for 2D arrays"],
+      "correctIndex": 0
+    }
+  ]
+}

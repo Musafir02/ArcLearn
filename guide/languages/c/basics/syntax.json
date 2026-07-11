@@ -1,0 +1,17 @@
+{
+  "title": "C Syntax",
+  "language": "c",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### C Syntax Rules\n\nC syntax defines the structure and rules for writing C programs. Every C program follows a specific structure.\n\n### Basic Structure\n\n```\npreprocessor directives\n\nint main() {\n  statements;\n  return 0;\n}\n```\n\n### Important Syntax Rules\n\n| Rule | Description |\n|------|-------------|\n| Semicolons | Every statement ends with a semicolon `;` |\n| Curly braces | Code blocks are enclosed in `{ }` |\n| Case sensitivity | C is case-sensitive (`main` != `Main`) |\n| Whitespace | Spaces, tabs, and newlines are ignored (except in strings) |\n| Comments | `//` for single-line, `/* */` for multi-line |\n\n---\n\n### Keywords\n\nC has 32 reserved keywords (C89) that cannot be used as identifiers:\n\n`auto`, `break`, `case`, `char`, `const`, `continue`, `default`, `do`, `double`, `else`, `enum`, `extern`, `float`, `for`, `goto`, `if`, `int`, `long`, `register`, `return`, `short`, `signed`, `sizeof`, `static`, `struct`, `switch`, `typedef`, `union`, `unsigned`, `void`, `volatile`, `while`\n\n---\n\n> **Key Point:** Always terminate statements with `;` and use `{ }` to define function bodies and control structures.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int x = 10;\n  printf(\"Value: %d\\n\", x);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How are statements terminated in C?",
+      "options": ["With a period", "With a semicolon", "With a colon", "With a comma"],
+      "correctIndex": 1
+    }
+  ]
+}

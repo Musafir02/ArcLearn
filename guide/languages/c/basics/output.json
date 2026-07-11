@@ -1,0 +1,17 @@
+{
+  "title": "C Output",
+  "language": "c",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Output in C\n\nThe `printf()` function from `<stdio.h>` is used to print output to the console.\n\n### Format Specifiers\n\n| Specifier | Data Type |\n|-----------|-----------|\n| `%d` or `%i` | `int` |\n| `%f` | `float` / `double` |\n| `%c` | `char` |\n| `%s` | string (char array) |\n| `%u` | unsigned int |\n| `%ld` | long int |\n| `%lf` | double |\n| `%x` | hexadecimal |\n| `%p` | pointer address |\n\n### Escape Sequences\n\n| Sequence | Meaning |\n|----------|---------|\n| `\\n` | Newline |\n| `\\t` | Horizontal tab |\n| `\\\\` | Backslash |\n| `\\\"` | Double quote |\n| `\\'` | Single quote |\n| `\\r` | Carriage return |\n\n---\n\n> **Key Point:** Use the correct format specifier matching the variable type to avoid undefined behavior.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int age = 25;\n  float pi = 3.14;\n  char grade = 'A';\n  printf(\"Age: %d\\n\", age);\n  printf(\"Pi: %.2f\\n\", pi);\n  printf(\"Grade: %c\\n\", grade);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which format specifier is used for integers in printf?",
+      "options": ["%f", "%c", "%d", "%s"],
+      "correctIndex": 2
+    }
+  ]
+}

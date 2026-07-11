@@ -1,0 +1,17 @@
+{
+  "title": "C While Loop",
+  "language": "c",
+  "topic": "while",
+  "order": 17,
+  "nextTopic": "for",
+  "prevTopic": "ternary",
+  "content": "### While Loop in C\n\nThe `while` loop repeats a block of code as long as a condition is true.\n\n### Syntax\n\n```c\nwhile (condition) {\n  // code to repeat\n}\n```\n\n### How It Works\n\n1. The condition is evaluated\n2. If true, the loop body executes\n3. The condition is checked again\n4. If false, execution continues after the loop\n\n### Infinite Loop\n\n```c\nwhile (1) {\n  // runs forever (unless break is used)\n}\n```\n\n### Common Patterns\n\n| Pattern | Example |\n|---------|---------|\n| Counter loop | `while (i < 10)` |\n| Sentinel loop | `while (ch != 'q')` |\n| Flag-controlled | `while (!done)` |\n| Event-controlled | `while (feof(file))` |\n\n---\n\n> **Key Point:** Ensure the condition eventually becomes false. If the condition is initially false, the loop body never executes.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int i = 1;\n  while (i <= 5) {\n    printf(\"%d \", i);\n    i++;\n  }\n  printf(\"\\n\");\n  int num = 123, sum = 0;\n  while (num > 0) {\n    sum += num % 10;\n    num /= 10;\n  }\n  printf(\"Sum of digits: %d\\n\", sum);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "When does a while loop stop executing?",
+      "options": ["When the body runs once", "When the condition becomes false", "When break is used", "Both B and C"],
+      "correctIndex": 3
+    }
+  ]
+}

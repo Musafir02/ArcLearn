@@ -1,0 +1,22 @@
+{
+  "title": "Java Method Overloading",
+  "language": "java",
+  "topic": "method_overloading",
+  "order": 20,
+  "nextTopic": "inheritance",
+  "prevTopic": "methods",
+  "content": "### Method Overloading\n\nMethod overloading means having multiple methods with the same name but different parameters in the same class.\n\n---\n\n### Rules for Method Overloading\n\nMethods must differ in at least one of:\n- Number of parameters\n- Data type of parameters\n- Order of parameters\n\nReturn type alone is NOT sufficient for overloading.\n\n---\n\n### Examples of Overloads\n\n| Method Signature | Description |\n|-----------------|-------------|\n| `add(int, int)` | Two integers |\n| `add(int, int, int)` | Three integers (different count) |\n| `add(double, double)` | Two doubles (different type) |\n| `add(int, double)` | Different types (different order) |\n\n---\n\n### Type Promotion in Overloading\n\n```java\nvoid display(int a) { ... }\nvoid display(double a) { ... }\n\ndisplay(5);     // calls display(int)\ndisplay(5.5);   // calls display(double)\ndisplay('A');   // char is promoted to int\n```\n\n---\n\n### Overloading and Varargs\n\n```java\nvoid show(String s) { ... }\nvoid show(String... s) { ... }\n\nshow(\"hi\");     // calls String version (preferred)\nshow(\"a\", \"b\"); // calls varargs version\n```\n\n> **Key Point:** Overloading improves code readability by using the same method name for similar operations. The compiler determines which overload to call at compile time (compile-time polymorphism).",
+  "codeExample": "public class Main {\n    static int add(int a, int b) {\n        return a + b;\n    }\n    \n    static int add(int a, int b, int c) {\n        return a + b + c;\n    }\n    \n    static double add(double a, double b) {\n        return a + b;\n    }\n    \n    static String add(String a, String b) {\n        return a + b;\n    }\n    \n    public static void main(String[] args) {\n        System.out.println(\"int + int: \" + add(5, 3));\n        System.out.println(\"int + int + int: \" + add(5, 3, 2));\n        System.out.println(\"double + double: \" + add(5.5, 3.2));\n        System.out.println(\"String + String: \" + add(\"Hello\", \" World\"));\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can method overloading be done by changing only the return type?",
+      "options": ["No", "Yes", "Only in Java 8+", "Only for primitives"],
+      "correctIndex": 0
+    },
+    {
+      "question": "When is overloaded method resolution determined?",
+      "options": ["Compile time", "Runtime", "Load time", "Execution time"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ File Read",
+  "language": "cpp",
+  "topic": "file_read",
+  "order": 55,
+  "nextTopic": "file_write",
+  "prevTopic": "file_handling",
+  "content": "### Reading Files\n\nThe `ifstream` class is used for reading data from files.\n\n---\n\n### Reading Line by Line\n\n```cpp\n#include <fstream>\n#include <string>\n\nifstream file(\"data.txt\");\nstring line;\n\nwhile (getline(file, line)) {\n  cout << line << endl;\n}\n```\n\n---\n\n### Reading Word by Word\n\n```cpp\nifstream file(\"words.txt\");\nstring word;\n\nwhile (file >> word) {\n  cout << word << \" \";\n}\n```\n\n---\n\n### Reading Character by Character\n\n```cpp\nifstream file(\"text.txt\");\nchar ch;\n\nwhile (file.get(ch)) {\n  cout << ch;\n}\n```\n\n---\n\n### Reading Entire File into String\n\n```cpp\n#include <sstream>\n\nifstream file(\"data.txt\");\nstringstream buffer;\nbuffer << file.rdbuf();\nstring content = buffer.str();\n```\n\n---\n\n### Checking End of File\n\n```cpp\nwhile (!file.eof()) {\n  string line;\n  getline(file, line);\n  cout << line;  // Note: eof() only set after failed read\n}\n```\n\n---\n\n> **Key Point:** Use `getline(file, line)` for line-by-line reading. The `>>` operator reads tokens separated by whitespace. Always check if the file opened successfully before reading.",
+  "codeExample": "#include <iostream>\n#include <fstream>\n#include <string>\nusing namespace std;\n\nint main() {\n  ifstream file(\"example.txt\");\n\n  if (file.is_open()) {\n    string line;\n    while (getline(file, line)) {\n      cout << line << endl;\n    }\n    file.close();\n  } else {\n    cout << \"Unable to open file\" << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which function reads a line from a file?",
+      "options": ["readline()", "getline()", "fgets()", "read()"],
+      "correctIndex": 1
+    }
+  ]
+}

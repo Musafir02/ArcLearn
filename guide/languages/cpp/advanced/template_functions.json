@@ -1,0 +1,17 @@
+{
+  "title": "C++ Template Functions",
+  "language": "cpp",
+  "topic": "template_functions",
+  "order": 58,
+  "nextTopic": "template_classes",
+  "prevTopic": "templates",
+  "content": "### Template Functions\n\nFunction templates allow writing a single function definition that works with different data types.\n\n---\n\n### Basic Function Template\n\n```cpp\ntemplate <typename T>\nT add(T a, T b) {\n  return a + b;\n}\n\nint main() {\n  cout << add(5, 3);        // T deduced as int\n  cout << add(2.5, 1.5);    // T deduced as double\n}\n```\n\n---\n\n### Multiple Template Parameters\n\n```cpp\ntemplate <typename T, typename U>\nauto multiply(T a, U b) -> decltype(a * b) {  // Trailing return type\n  return a * b;\n}\n\n// C++14: auto deduction\n// C++11: decltype(auto) or trailing return type\n```\n\n---\n\n### Explicit Template Arguments\n\n```cpp\ntemplate <typename T>\nT castTo(double value) {\n  return static_cast<T>(value);\n}\n\nint x = castTo<int>(3.14);        // Explicit: T = int\ndouble y = castTo<double>(3.14);  // Explicit: T = double\n```\n\n---\n\n### Abbreviated Function Templates (C++20)\n\n```cpp\nauto add(auto a, auto b) {  // Equivalent to template\n  return a + b;\n}\n```\n\n---\n\n### Function Template Overloading\n\n```cpp\ntemplate <typename T>\nvoid print(T value) {\n  cout << value << endl;\n}\n\ntemplate <typename T>\nvoid print(T value, int precision) {\n  cout.precision(precision);\n  cout << fixed << value << endl;\n}\n\nvoid print(const char* value) {\n  cout << \"String: \" << value << endl;\n}\n```\n\n---\n\n> **Key Point:** The compiler deduces template arguments from function arguments. Use explicit arguments when deduction is ambiguous or when you need a specific instantiation.",
+  "codeExample": "#include <iostream>\n#include <string>\nusing namespace std;\n\ntemplate <typename T>\nvoid swapValues(T& a, T& b) {\n  T temp = a;\n  a = b;\n  b = temp;\n}\n\nint main() {\n  int x = 10, y = 20;\n  swapValues(x, y);\n  cout << \"x=\" << x << \" y=\" << y << endl;\n\n  string s1 = \"hello\", s2 = \"world\";\n  swapValues(s1, s2);\n  cout << \"s1=\" << s1 << \" s2=\" << s2 << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How are template arguments typically deduced?",
+      "options": ["From the return type", "From the function arguments", "Must be explicit always", "From the variable name"],
+      "correctIndex": 1
+    }
+  ]
+}

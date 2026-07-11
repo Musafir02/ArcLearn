@@ -1,0 +1,22 @@
+{
+  "title": "Java Serialization",
+  "language": "java",
+  "topic": "serialization",
+  "order": 43,
+  "nextTopic": "threads",
+  "prevTopic": "file_write",
+  "content": "### Serialization in Java\n\nSerialization converts an object into a byte stream for storage or transmission. Deserialization reconstructs the object.\n\n---\n\n### The Serializable Interface\n\nA class must implement `Serializable` (a marker interface with no methods):\n\n```java\nimport java.io.Serializable;\n\npublic class Person implements Serializable {\n    private String name;\n    private int age;\n    // constructors, getters, setters\n}\n```\n\n---\n\n### Serializing Objects\n\n```java\n// Write object to file\nObjectOutputStream oos = new ObjectOutputStream(\n    new FileOutputStream(\"person.ser\"));\noos.writeObject(person);\noos.close();\n\n// Read object from file\nObjectInputStream ois = new ObjectInputStream(\n    new FileInputStream(\"person.ser\"));\nPerson p = (Person) ois.readObject();\nois.close();\n```\n\n---\n\n### The serialVersionUID\n\n```java\nprivate static final long serialVersionUID = 1L;\n```\n\nUsed to verify that the sender and receiver have compatible classes.\n\n---\n\n### Transient Keyword\n\nFields marked `transient` are not serialized:\n\n```java\nclass User implements Serializable {\n    private String username;\n    private transient String password;  // not serialized\n    private transient Logger log;       // not serializable objects\n}\n```\n\n---\n\n### Custom Serialization\n\n```java\nprivate void writeObject(ObjectOutputStream oos) throws IOException {\n    oos.defaultWriteObject();\n    oos.writeObject(password);  // custom encryption\n}\n\nprivate void readObject(ObjectInputStream ois) \n        throws IOException, ClassNotFoundException {\n    ois.defaultReadObject();\n    this.password = (String) ois.readObject();  // custom decryption\n}\n```\n\n> **Key Point:** Only non-static, non-transient fields are serialized. The class must have access to the no-arg constructor of its first non-serializable superclass during deserialization.",
+  "codeExample": "import java.io.*;\n\nclass Employee implements Serializable {\n    private static final long serialVersionUID = 1L;\n    String name;\n    int id;\n    transient String tempInfo = \"This won't be saved\";\n    \n    Employee(String name, int id) {\n        this.name = name;\n        this.id = id;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Employee emp = new Employee(\"Alice\", 1001);\n        \n        // Serialize\n        try (ObjectOutputStream oos = \n                new ObjectOutputStream(new FileOutputStream(\"employee.ser\"))) {\n            oos.writeObject(emp);\n            System.out.println(\"Serialized: \" + emp.name + \", \" + emp.id);\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n        \n        // Deserialize\n        try (ObjectInputStream ois = \n                new ObjectInputStream(new FileInputStream(\"employee.ser\"))) {\n            Employee deserialized = (Employee) ois.readObject();\n            System.out.println(\"Deserialized: \" + deserialized.name + \", \" + deserialized.id);\n            System.out.println(\"Transient field: \" + deserialized.tempInfo);  // null\n        } catch (IOException | ClassNotFoundException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which interface must a class implement to be serializable?",
+      "options": ["Serializable", "Externalizable", "Clonable", "Comparable"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happens to transient fields during serialization?",
+      "options": ["They are not serialized", "They are encrypted", "They are compressed", "They are skipped with error"],
+      "correctIndex": 0
+    }
+  ]
+}

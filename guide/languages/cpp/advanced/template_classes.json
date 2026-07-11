@@ -1,0 +1,17 @@
+{
+  "title": "C++ Template Classes",
+  "language": "cpp",
+  "topic": "template_classes",
+  "order": 59,
+  "nextTopic": "stl",
+  "prevTopic": "template_functions",
+  "content": "### Template Classes\n\nClass templates allow defining a generic class that works with any data type.\n\n---\n\n### Basic Class Template\n\n```cpp\ntemplate <typename T>\nclass Box {\nprivate:\n  T content;\n\npublic:\n  void set(const T& value) { content = value; }\n  T get() const { return content; }\n};\n```\n\n---\n\n### Using Template Classes\n\n```cpp\nBox<int> intBox;\nintBox.set(42);\n\nBox<string> stringBox;\nstringBox.set(\"Hello\");\n\nBox<Box<int>> nestedBox;  // Nested template\n```\n\n---\n\n### Multiple Template Parameters\n\n```cpp\ntemplate <typename Key, typename Value>\nclass Pair {\npublic:\n  Key first;\n  Value second;\n\n  Pair(Key k, Value v) : first(k), second(v) {}\n};\n\nPair<string, int> person(\"Alice\", 30);\n```\n\n---\n\n### Template Template Parameters\n\n```cpp\ntemplate <typename T, template <typename> class Container>\nclass Wrapper {\n  Container<T> data;\n};\n```\n\n---\n\n### Class Template Specialization\n\n```cpp\n// Primary template\ntemplate <typename T>\nclass Storage { /* ... */ };\n\n// Full specialization for bool\ntemplate <>\nclass Storage<bool> {\n  // Optimized implementation for bool\n};\n\n// Partial specialization for pointers\ntemplate <typename T>\nclass Storage<T*> {\n  // Implementation for any pointer type\n};\n```\n\n---\n\n> **Key Point:** Class templates must have all template arguments specified when instantiating (unlike function templates where deduction occurs). Member functions defined outside the class need the template parameter again.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nclass Calculator {\npublic:\n  T add(T a, T b) { return a + b; }\n  T multiply(T a, T b) { return a * b; }\n};\n\nint main() {\n  Calculator<int> intCalc;\n  cout << \"Int: \" << intCalc.add(5, 3) << endl;\n\n  Calculator<double> doubleCalc;\n  cout << \"Double: \" << doubleCalc.add(2.5, 1.5) << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How are class template arguments specified?",
+      "options": ["They are deduced automatically", "Must be explicitly provided in angle brackets", "From the constructor arguments", "From the return type"],
+      "correctIndex": 1
+    }
+  ]
+}

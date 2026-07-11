@@ -1,0 +1,22 @@
+{
+  "title": "Java Method Overriding",
+  "language": "java",
+  "topic": "method_overriding",
+  "order": 22,
+  "nextTopic": "super",
+  "prevTopic": "inheritance",
+  "content": "### Method Overriding\n\nMethod overriding occurs when a subclass provides a specific implementation of a method already defined in its parent class.\n\n---\n\n### Rules for Overriding\n\n| Rule | Description |\n|------|-------------|\n| Same signature | Same name, parameters, and return type |\n| Covariant return | Subtype of original return type allowed |\n| Access level | Cannot be more restrictive |\n| Checked exceptions | Cannot throw broader checked exceptions |\n| Final methods | Cannot be overridden |\n| Static methods | Not overridden (method hiding) |\n| Private methods | Not overridden |\n\n---\n\n### The @Override Annotation\n\n```java\nclass Animal {\n    void makeSound() {\n        System.out.println(\"Some sound\");\n    }\n}\n\nclass Cat extends Animal {\n    @Override\n    void makeSound() {\n        System.out.println(\"Meow\");\n    }\n}\n```\n\nThe `@Override` annotation tells the compiler you intend to override. It will flag an error if the method doesn't correctly override.\n\n---\n\n### Covariant Return Type\n\n```java\nclass Parent {\n    Parent getInstance() { return this; }\n}\n\nclass Child extends Parent {\n    @Override\n    Child getInstance() { return this; }  // Child (subtype) is allowed\n}\n```\n\n> **Key Point:** Overriding is different from overloading. Overriding is at runtime (dynamic polymorphism), while overloading is at compile time. Always use `@Override` annotation to catch errors early.",
+  "codeExample": "class Vehicle {\n    void start() {\n        System.out.println(\"Vehicle starting\");\n    }\n}\n\nclass Car extends Vehicle {\n    @Override\n    void start() {\n        System.out.println(\"Car engine starting with key\");\n    }\n}\n\nclass Bike extends Vehicle {\n    @Override\n    void start() {\n        System.out.println(\"Bike kick-starting\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Vehicle v1 = new Car();\n        Vehicle v2 = new Bike();\n        v1.start();  // Car version\n        v2.start();  // Bike version\n    }\n}",
+  "quiz": [
+    {
+      "question": "When is method overriding resolved?",
+      "options": ["Runtime", "Compile time", "Load time", "Link time"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can static methods be overridden?",
+      "options": ["No (method hiding)", "Yes", "Only with @Override", "Only in subclasses"],
+      "correctIndex": 0
+    }
+  ]
+}

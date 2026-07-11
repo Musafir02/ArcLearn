@@ -1,0 +1,22 @@
+{
+  "title": "Java Lambda Expressions",
+  "language": "java",
+  "topic": "lambda",
+  "order": 46,
+  "nextTopic": "streams",
+  "prevTopic": "thread_sync",
+  "content": "### Lambda Expressions\n\nLambda expressions provide a concise way to implement functional interfaces (interfaces with a single abstract method).\n\n---\n\n### Lambda Syntax\n\n```java\n(parameter1, parameter2) -> { body }\n(parameter) -> expression\n() -> expression\n```\n\n---\n\n### Examples\n\n| Lambda | Meaning |\n|--------|---------|\n| `() -> 42` | No args, returns 42 |\n| `(x) -> x * 2` | One arg, returns doubled |\n| `(a, b) -> a + b` | Two args, returns sum |\n| `s -> s.length()` | One arg, returns length |\n| `(x, y) -> { return x + y; }` | Block body with return |\n\n---\n\n### Functional Interfaces\n\n| Interface | Method | Usage |\n|-----------|--------|-------|\n| `Predicate<T>` | `boolean test(T)` | Filtering |\n| `Function<T,R>` | `R apply(T)` | Transformation |\n| `Consumer<T>` | `void accept(T)` | Side effects |\n| `Supplier<T>` | `T get()` | Lazy generation |\n| `UnaryOperator<T>` | `T apply(T)` | Same type transform |\n| `BinaryOperator<T>` | `T apply(T,T)` | Same type combine |\n\n---\n\n### Method References\n\n| Type | Syntax | Example |\n|------|--------|---------|\n| Static method | `Class::staticMethod` | `Math::max` |\n| Instance method | `object::instanceMethod` | `list::add` |\n| Constructor | `Class::new` | `ArrayList::new` |\n\n> **Key Point:** Lambdas can only be used with functional interfaces. The target type is inferred from context. Use method references for cleaner code when the lambda just calls an existing method.",
+  "codeExample": "import java.util.*;\nimport java.util.function.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // Lambda with custom functional interface\n        Calculator add = (a, b) -> a + b;\n        Calculator multiply = (a, b) -> a * b;\n        \n        System.out.println(\"Add: \" + operate(5, 3, add));\n        System.out.println(\"Multiply: \" + operate(5, 3, multiply));\n        \n        // Using built-in functional interfaces\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\n        \n        // Consumer\n        names.forEach(name -> System.out.println(\"Hello, \" + name));\n        \n        // Predicate\n        names.removeIf(name -> name.startsWith(\"A\"));\n        System.out.println(\"After filter: \" + names);\n        \n        // Supplier\n        Supplier<Double> randomSupplier = () -> Math.random();\n        System.out.println(\"Random: \" + randomSupplier.get());\n    }\n    \n    static int operate(int a, int b, Calculator calc) {\n        return calc.calculate(a, b);\n    }\n}\n\n@FunctionalInterface\ninterface Calculator {\n    int calculate(int a, int b);\n}",
+  "quiz": [
+    {
+      "question": "What is a functional interface?",
+      "options": ["Interface with one abstract method", "Interface with no methods", "Interface with default methods", "Any interface"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which annotation marks a functional interface?",
+      "options": ["@FunctionalInterface", "@Override", "@Interface", "@Functional"],
+      "correctIndex": 0
+    }
+  ]
+}

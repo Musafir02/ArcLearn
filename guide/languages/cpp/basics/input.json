@@ -1,0 +1,17 @@
+{
+  "title": "C++ Input (cin)",
+  "language": "cpp",
+  "topic": "input",
+  "order": 13,
+  "nextTopic": "type_casting",
+  "prevTopic": "numbers",
+  "content": "### Console Input with cin\n\nThe `cin` object, combined with the extraction operator `>>`, reads input from the keyboard.\n\n---\n\n### Basic Input\n\n```cpp\nint age;\ncout << \"Enter your age: \";\ncin >> age;\n```\n\n---\n\n### Multiple Inputs\n\n```cpp\nint x, y;\ncin >> x >> y;  // Reads two space-separated integers\n```\n\n---\n\n### Input with Strings\n\n```cpp\nstring name;\ncin >> name;                // Reads one word (stops at space)\n\ngetline(cin, name);         // Reads entire line\n```\n\n---\n\n### Input Validation\n\n| Check | Code | Description |\n|-------|------|-------------|\n| Success | `if (cin >> x)` | Returns true if input succeeded |\n| Failure | `cin.fail()` | True if last input failed |\n| Clear | `cin.clear()` | Reset error state |\n| Ignore | `cin.ignore(100, '\\\\n')` | Discard up to 100 chars or until newline |\n\n---\n\n### Mixed Input Gotcha\n\n```cpp\nint age;\nstring name;\n\ncin >> age;                    // Leaves newline in buffer\ncin.ignore();                  // Must ignore newline\ngetline(cin, name);            // Now works correctly\n```\n\n---\n\n> **Key Point:** When mixing `cin >>` and `getline()`, use `cin.ignore()` to consume the newline left by the extraction operator.",
+  "codeExample": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  string name;\n  int age;\n\n  cout << \"Enter name: \";\n  getline(cin, name);\n\n  cout << \"Enter age: \";\n  cin >> age;\n\n  cout << \"Hello \" << name << \", you are \" << age << \" years old.\" << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which operator is used with cin to read input?",
+      "options": ["<<", ">>", "->", "&&"],
+      "correctIndex": 1
+    }
+  ]
+}

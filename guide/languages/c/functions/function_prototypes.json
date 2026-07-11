@@ -1,0 +1,17 @@
+{
+  "title": "C Function Prototypes",
+  "language": "c",
+  "topic": "function_prototypes",
+  "order": 35,
+  "nextTopic": "recursion",
+  "prevTopic": "function_params",
+  "content": "### Function Prototypes in C\n\nA function prototype (or forward declaration) tells the compiler about a function before its definition.\n\n### Syntax\n\n```c\nreturn_type function_name(parameter_types);\n```\n\n### Example\n\n```c\nint add(int a, int b);  // prototype\n\nint main() {\n  int result = add(5, 3);  // works because prototype exists\n}\n\nint add(int a, int b) {    // definition\n  return a + b;\n}\n```\n\n### Why Use Prototypes?\n\n| Benefit | Description |\n|---------|-------------|\n| Compiler checks | Verifies correct function calls |\n| Implicit declarations avoided | Prevents old-style K&R behavior |\n| Organization | Functions can be in any order |\n| Header files | Prototypes go in .h files |\n| Type checking | Compiler checks argument types |\n\n### What Happens Without a Prototype?\n\nIn C89/C90, calling a function without a prototype causes an implicit declaration. The compiler assumes the function returns `int` and accepts any arguments. This is dangerous and leads to bugs.\n\n---\n\n> **Key Point:** Always declare function prototypes before `main()` or put them in header files. Modern C compilers warn about implicit declarations.",
+  "codeExample": "#include <stdio.h>\n\nint add(int a, int b);\nint multiply(int a, int b);\n\nint main() {\n  printf(\"%d\\n\", add(5, 3));\n  printf(\"%d\\n\", multiply(4, 7));\n  return 0;\n}\n\nint add(int a, int b) {\n  return a + b;\n}\n\nint multiply(int a, int b) {\n  return a * b;\n}",
+  "quiz": [
+    {
+      "question": "What is another name for a function prototype?",
+      "options": ["Function body", "Forward declaration", "Function call", "Return type"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Functions",
+  "language": "c",
+  "topic": "functions",
+  "order": 33,
+  "nextTopic": "function_params",
+  "prevTopic": "malloc_calloc_realloc",
+  "content": "### Functions in C\n\nA function is a reusable block of code that performs a specific task.\n\n### Function Definition\n\n```c\nreturn_type function_name(parameters) {\n  // body\n  return value;\n}\n```\n\n### Parts of a Function\n\n| Part | Description | Example |\n|------|-------------|---------|\n| Return type | Type of value returned | `int`, `void`, `float` |\n| Function name | Identifier for the function | `calculateSum` |\n| Parameters | Input values (optional) | `int a, int b` |\n| Body | Code to execute | `{ return a + b; }` |\n| Return statement | Value to send back | `return result;` |\n\n### Void Functions\n\nFunctions that do not return a value use the `void` return type:\n\n```c\nvoid printMessage() {\n  printf(\"Hello\\n\");\n}\n```\n\n### Return Statement\n\n- Exits the function immediately\n- Returns the specified value (if non-void)\n- A function can have multiple return statements\n\n---\n\n> **Key Point:** A function must be declared or defined before it is called. Use function prototypes for forward declaration.",
+  "codeExample": "#include <stdio.h>\n\nint add(int a, int b) {\n  return a + b;\n}\n\nvoid printResult(int result) {\n  printf(\"Result: %d\\n\", result);\n}\n\nint main() {\n  int sum = add(10, 20);\n  printResult(sum);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What return type should a function that returns nothing have?",
+      "options": ["null", "void", "empty", "none"],
+      "correctIndex": 1
+    }
+  ]
+}

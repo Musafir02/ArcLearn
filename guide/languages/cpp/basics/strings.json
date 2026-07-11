@@ -1,0 +1,17 @@
+{
+  "title": "C++ Strings",
+  "language": "cpp",
+  "topic": "strings",
+  "order": 11,
+  "nextTopic": "numbers",
+  "prevTopic": "booleans",
+  "content": "### Strings in C++\n\nC++ supports two types of strings: C-style strings (character arrays) and the `std::string` class from the Standard Library.\n\n---\n\n### std::string (Recommended)\n\n```cpp\n#include <string>\n\nstring name = \"John\";\nstring greeting = \"Hello, \" + name; // Concatenation\n```\n\n---\n\n### Common String Operations\n\n| Operation | Code | Result |\n|-----------|------|--------|\n| Length | `str.length()` or `str.size()` | Number of characters |\n| Access | `str[0]` | First character |\n| Append | `str.append(\"!\")` or `str += \"!\"` | Modified string |\n| Insert | `str.insert(3, \"abc\")` | Insert at position |\n| Erase | `str.erase(3, 2)` | Remove 2 chars from pos 3 |\n| Find | `str.find(\"abc\")` | Position or `string::npos` |\n| Substring | `str.substr(0, 3)` | First 3 characters |\n| Compare | `str1 == str2` | true if equal |\n\n---\n\n### Input with Strings\n\n```cpp\nstring name;\ncin >> name;        // Reads one word\n\ngetline(cin, name); // Reads entire line including spaces\n```\n\n---\n\n### C-Style Strings\n\n```cpp\nchar greeting[] = \"Hello\";\nchar name[20] = \"John\";\n\n#include <cstring>\nstrcpy(dest, src);   // Copy\nstrlen(str);         // Length (excluding null)\nstrcmp(a, b);        // Compare\n```\n\n---\n\n> **Key Point:** Always prefer `std::string` over C-style strings. It is safer, more convenient, and automatically manages memory.",
+  "codeExample": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n  string firstName = \"John\";\n  string lastName = \"Doe\";\n  string fullName = firstName + \" \" + lastName;\n\n  cout << \"Full name: \" << fullName << endl;\n  cout << \"Length: \" << fullName.length() << endl;\n  cout << \"First char: \" << fullName[0] << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header is needed for std::string?",
+      "options": ["<cstring>", "<string>", "<str>", "<text>"],
+      "correctIndex": 1
+    }
+  ]
+}

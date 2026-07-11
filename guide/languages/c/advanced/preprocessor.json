@@ -1,0 +1,17 @@
+{
+  "title": "C Preprocessor",
+  "language": "c",
+  "topic": "preprocessor",
+  "order": 47,
+  "nextTopic": "macros",
+  "prevTopic": "file_write",
+  "content": "### C Preprocessor\n\nThe preprocessor is a text-processing tool that runs before the compiler. All preprocessor directives start with `#`.\n\n### Common Directives\n\n| Directive | Purpose | Example |\n|-----------|---------|---------|\n| `#include` | Insert file contents | `#include <stdio.h>` |\n| `#define` | Define macro | `#define MAX 100` |\n| `#undef` | Remove macro | `#undef MAX` |\n| `#ifdef` | If macro defined | `#ifdef DEBUG` |\n| `#ifndef` | If macro not defined | `#ifndef HEADER_H` |\n| `#if` | Conditional compilation | `#if VERSION > 2` |\n| `#else` | Alternative for #if | `#else` |\n| `#elif` | Else-if for preprocessor | `#elif VERSION == 2` |\n| `#endif` | End conditional block | `#endif` |\n| `#pragma` | Compiler-specific instructions | `#pragma once` |\n| `#error` | Generate compilation error | `#error \"Not supported\"` |\n| `#line` | Change line number | `#line 100 \"file.c\"` |\n\n### Include Syntax\n\n| Syntax | Search Path |\n|--------|-------------|\n| `#include <file>` | System header directories |\n| `#include \"file\"` | Current directory first, then system |\n\n---\n\n> **Key Point:** Preprocessor directives are processed before compilation. They perform text substitution, file inclusion, and conditional compilation.",
+  "codeExample": "#include <stdio.h>\n#define PI 3.14159\n\nint main() {\n  printf(\"PI = %f\\n\", PI);\n  printf(\"File: %s\\n\", __FILE__);\n  printf(\"Line: %d\\n\", __LINE__);\n  printf(\"Date: %s\\n\", __DATE__);\n  printf(\"Time: %s\\n\", __TIME__);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What character starts all preprocessor directives?",
+      "options": ["/", "#", "@", "&"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Comments",
+  "language": "cpp",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Comments in C++\n\nComments are non-executable lines used to explain code, provide documentation, or temporarily disable code.\n\n---\n\n### Single-Line Comments\n\nUse `//` to comment out everything to the end of the line:\n\n```cpp\n// This is a single-line comment\nint x = 5; // This is an inline comment\n```\n\n---\n\n### Multi-Line Comments\n\nUse `/* */` for blocks spanning multiple lines:\n\n```cpp\n/*\n  This is a multi-line comment.\n  It can span several lines.\n  Useful for detailed explanations.\n*/\nint y = 10;\n```\n\n---\n\n### Documentation Comments\n\nC++ supports documentation comments using `///` or `/** */`:\n\n```cpp\n/// Calculates the sum of two integers.\n/// @param a First number\n/// @param b Second number\n/// @return Sum of a and b\nint add(int a, int b) {\n  return a + b;\n}\n```\n\n---\n\n| Comment Type | Syntax | Use Case |\n|-------------|--------|----------|\n| Single-line | `// text` | Quick explanations |\n| Multi-line | `/* text */` | Block descriptions |\n| Documentation | `///` or `/** */` | API documentation |\n\n---\n\n> **Key Point:** Comments are ignored by the compiler. They exist solely for human readers. Well-commented code is easier to maintain and debug.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  // This prints a message\n  cout << \"Hello\"; /* inline comment */\n  /*\n    Multi-line\n    comment\n  */\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which symbol starts a single-line comment in C++?",
+      "options": ["#", "//", "/*", "--"],
+      "correctIndex": 1
+    }
+  ]
+}

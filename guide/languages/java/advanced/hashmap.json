@@ -1,0 +1,22 @@
+{
+  "title": "Java HashMap",
+  "language": "java",
+  "topic": "hashmap",
+  "order": 31,
+  "nextTopic": "hashset",
+  "prevTopic": "linkedlist",
+  "content": "### HashMap in Java\n\nHashMap stores key-value pairs. It uses hashing to provide O(1) average time for get and put operations.\n\n---\n\n### Creating a HashMap\n\n```java\nimport java.util.HashMap;\n\nHashMap<String, Integer> ages = new HashMap<>();\nHashMap<String, String> capitals = new HashMap<>(100);  // initial capacity\nHashMap<String, String> copy = new HashMap<>(otherMap);\n```\n\n---\n\n### Common Methods\n\n| Method | Description |\n|--------|-------------|\n| `put(key, value)` | Insert or update |\n| `get(key)` | Get value by key (null if absent) |\n| `getOrDefault(key, default)` | Get value or default |\n| `remove(key)` | Remove entry by key |\n| `containsKey(key)` | Check if key exists |\n| `containsValue(value)` | Check if value exists |\n| `keySet()` | Set of all keys |\n| `values()` | Collection of values |\n| `entrySet()` | Set of key-value entries |\n| `size()` | Number of entries |\n| `clear()` | Remove all entries |\n\n---\n\n### Iterating a HashMap\n\n```java\nfor (String key : map.keySet()) {\n    System.out.println(key + \" -> \" + map.get(key));\n}\n\nfor (Map.Entry<String, Integer> entry : map.entrySet()) {\n    System.out.println(entry.getKey() + \" = \" + entry.getValue());\n}\n```\n\n---\n\n### HashMap Characteristics\n\n- Permits one null key and multiple null values\n- Not synchronized (use ConcurrentHashMap for thread safety)\n- No guaranteed iteration order\n- Initial capacity 16, load factor 0.75\n\n> **Key Point:** HashMap uses `hashCode()` and `equals()` to locate and identify keys. Always override both methods properly for custom key objects.",
+  "codeExample": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> scores = new HashMap<>();\n        \n        scores.put(\"Alice\", 95);\n        scores.put(\"Bob\", 87);\n        scores.put(\"Charlie\", 92);\n        \n        System.out.println(\"Bob's score: \" + scores.get(\"Bob\"));\n        System.out.println(\"Contains Alice? \" + scores.containsKey(\"Alice\"));\n        \n        scores.put(\"Alice\", 98);  // update\n        System.out.println(\"Alice's updated score: \" + scores.get(\"Alice\"));\n        \n        for (Map.Entry<String, Integer> entry : scores.entrySet()) {\n            System.out.println(entry.getKey() + \": \" + entry.getValue());\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the average time complexity of HashMap get/put?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many null keys can a HashMap have?",
+      "options": ["One", "Zero", "Unlimited", "Depends on capacity"],
+      "correctIndex": 0
+    }
+  ]
+}

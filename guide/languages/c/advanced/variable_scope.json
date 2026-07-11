@@ -1,0 +1,17 @@
+{
+  "title": "C Variable Scope",
+  "language": "c",
+  "topic": "variable_scope",
+  "order": 53,
+  "nextTopic": "storage_classes",
+  "prevTopic": "errno",
+  "content": "### Variable Scope in C\n\nScope determines where a variable is accessible in a program.\n\n### Types of Scope\n\n| Scope | Keyword | Visibility | Lifetime |\n|-------|---------|------------|----------|\n| Block (local) | (none) | Inside `{ }` block | Until block ends |\n| File (global) | (none) | Entire file (after declaration) | Program execution |\n| Function | (none) | Inside function only | Function execution |\n| Function parameter | (none) | Inside function | Function execution |\n\n### Local Variables\n\nDeclared inside a function or block. Accessible only within that block.\n\n```c\nvoid func() {\n  int x = 10;  // local to func\n  if (x > 0) {\n    int y = 20;  // local to if block\n  }\n  // y is not accessible here\n}\n```\n\n### Global Variables\n\nDeclared outside all functions. Accessible from any function in the file.\n\n```c\nint globalVar = 100;  // global\n\nvoid func1() { globalVar = 200; }\nvoid func2() { printf(\"%d\", globalVar); }\n```\n\n### Name Hiding\n\nA local variable with the same name as a global variable hides the global in that scope.\n\n---\n\n> **Key Point:** Prefer local variables over globals. Globals should be used sparingly due to potential naming conflicts and difficulty in debugging.",
+  "codeExample": "#include <stdio.h>\n\nint global = 100;\n\nvoid display() {\n  int local = 50;\n  printf(\"Global: %d, Local: %d\\n\", global, local);\n}\n\nint main() {\n  int local = 10;\n  printf(\"Local in main: %d\\n\", local);\n  printf(\"Global: %d\\n\", global);\n  {\n    int blockVar = 999;\n    printf(\"Block variable: %d\\n\", blockVar);\n  }\n  display();\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Where is a local variable declared inside a block accessible?",
+      "options": ["Throughout the file", "Only inside that block", "Throughout the function", "Throughout the program"],
+      "correctIndex": 1
+    }
+  ]
+}

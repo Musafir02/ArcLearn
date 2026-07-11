@@ -1,0 +1,22 @@
+{
+  "title": "Java Polymorphism",
+  "language": "java",
+  "topic": "polymorphism",
+  "order": 24,
+  "nextTopic": "encapsulation",
+  "prevTopic": "super",
+  "content": "### Polymorphism in Java\n\nPolymorphism means \"many forms\". It allows one interface to be used for a general class of actions.\n\n---\n\n### Types of Polymorphism\n\n| Type | Description | Resolution |\n|------|-------------|------------|\n| Compile-time (Static) | Method overloading | At compile time |\n| Runtime (Dynamic) | Method overriding | At runtime |\n\n---\n\n### Runtime Polymorphism\n\nAchieved through method overriding and upcasting:\n\n```java\nAnimal myAnimal = new Dog();  // upcasting\nmyAnimal.sound();  // calls Dog's sound() at runtime\n```\n\nThe JVM determines which method to call based on the actual object type, not the reference type.\n\n---\n\n### Upcasting and Downcasting\n\n| Cast | Description |\n|------|-------------|\n| Upcasting | Child reference to parent type (automatic) |\n| Downcasting | Parent reference to child type (explicit) |\n\n```java\nAnimal a = new Dog();   // upcasting (automatic)\nDog d = (Dog) a;        // downcasting (explicit)\n```\n\n---\n\n### instanceof Operator\n\nCheck the actual type of an object:\n\n```java\nif (animal instanceof Dog) {\n    Dog dog = (Dog) animal;\n    dog.bark();\n}\n```\n\n> **Key Point:** Polymorphism enables writing flexible and reusable code. You can write code that works on the parent type and it will automatically work with any subclass. Use `instanceof` before downcasting to avoid ClassCastException.",
+  "codeExample": "class Animal {\n    void sound() {\n        System.out.println(\"Animal makes sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Dog barks\");\n    }\n    void fetch() {\n        System.out.println(\"Dog fetches\");\n    }\n}\n\nclass Cat extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Cat meows\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Animal a1 = new Dog();\n        Animal a2 = new Cat();\n        \n        a1.sound();  // Dog barks\n        a2.sound();  // Cat meows\n        \n        if (a1 instanceof Dog) {\n            Dog d = (Dog) a1;\n            d.fetch();\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which type of polymorphism is achieved through method overriding?",
+      "options": ["Runtime", "Compile-time", "Static", "Load-time"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can a parent reference call child-specific methods?",
+      "options": ["No (without downcasting)", "Yes", "Only for public methods", "Only for static methods"],
+      "correctIndex": 0
+    }
+  ]
+}

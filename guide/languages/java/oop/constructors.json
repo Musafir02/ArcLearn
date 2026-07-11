@@ -1,0 +1,22 @@
+{
+  "title": "Java Constructors",
+  "language": "java",
+  "topic": "constructors",
+  "order": 16,
+  "nextTopic": "this_keyword",
+  "prevTopic": "objects",
+  "content": "### Constructors in Java\n\nA constructor is a special method that initializes objects when they are created.\n\n---\n\n### Constructor Rules\n\n- Same name as the class\n- No return type (not even void)\n- Called automatically when `new` is used\n- Can be overloaded\n\n---\n\n### Types of Constructors\n\n| Type | Description |\n|------|-------------|\n| Default constructor | No parameters, provided if no constructor defined |\n| Parameterized constructor | Accepts arguments for initialization |\n| Copy constructor | Creates object from another object |\n\n---\n\n### Constructor Overloading\n\n```java\npublic class Car {\n    String brand;\n    int year;\n    \n    // No-arg constructor\n    public Car() {\n        brand = \"Unknown\";\n        year = 0;\n    }\n    \n    // Parameterized constructor\n    public Car(String brand, int year) {\n        this.brand = brand;\n        this.year = year;\n    }\n}\n```\n\n---\n\n### Constructor Chaining\n\nOne constructor can call another using `this()`:\n\n```java\npublic Car() {\n    this(\"Default\", 2024);  // calls parameterized constructor\n}\n```\n\n> **Key Point:** If you define any constructor, the default no-arg constructor is NOT automatically provided. Use `this()` to chain constructors; it must be the first statement in the constructor.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        Car car1 = new Car();\n        Car car2 = new Car(\"Toyota\", 2022);\n        Car car3 = new Car(\"Honda\");\n        \n        car1.display();\n        car2.display();\n        car3.display();\n    }\n}\n\nclass Car {\n    String brand;\n    int year;\n    \n    Car() {\n        this(\"Unknown\", 0);\n    }\n    \n    Car(String brand) {\n        this(brand, 2024);\n    }\n    \n    Car(String brand, int year) {\n        this.brand = brand;\n        this.year = year;\n    }\n    \n    void display() {\n        System.out.println(brand + \" - \" + year);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the return type of a constructor?",
+      "options": ["None (not even void)", "void", "int", "Object"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If no constructor is defined, what happens?",
+      "options": ["Default constructor is provided", "Compilation error", "Runtime error", "Program crashes"],
+      "correctIndex": 0
+    }
+  ]
+}

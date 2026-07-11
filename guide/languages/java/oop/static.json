@@ -1,0 +1,22 @@
+{
+  "title": "Java static Keyword",
+  "language": "java",
+  "topic": "static",
+  "order": 18,
+  "nextTopic": "methods",
+  "prevTopic": "this_keyword",
+  "content": "### The `static` Keyword\n\nThe `static` keyword means the member belongs to the class itself, not to instances.\n\n---\n\n### Static Fields\n\nShared across all instances of a class:\n\n```java\npublic class Counter {\n    static int count = 0;  // shared by all instances\n    Counter() {\n        count++;\n    }\n}\n```\n\n---\n\n### Static Methods\n\nMethods that can be called without creating an object:\n\n```java\nMath.max(10, 20);  // static method call\nInteger.parseInt(\"123\");  // static method call\n```\n\nRules for static methods:\n- Can only access static fields/methods directly\n- Cannot use `this` keyword\n- Called using class name: `ClassName.method()`\n\n---\n\n### Static Block\n\nExecuted once when the class is first loaded:\n\n```java\nclass Database {\n    static {\n        System.out.println(\"Loading database driver...\");\n    }\n}\n```\n\n---\n\n### Static vs Instance\n\n| Feature | Static | Instance |\n|---------|--------|----------|\n| Memory | One copy (class area) | Per object (heap) |\n| Access | `ClassName.member` | `object.member` |\n| `this` usage | Not allowed | Allowed |\n| Override | No (hidden, not overridden) | Yes |\n\n> **Key Point:** Static members are loaded when the class is first loaded into memory. The `main` method is static because it must be callable without creating any object first.",
+  "codeExample": "public class Main {\n    static int counter = 0;\n    int instanceId;\n    \n    Main() {\n        counter++;\n        this.instanceId = counter;\n    }\n    \n    static void displayCount() {\n        System.out.println(\"Total instances: \" + counter);\n    }\n    \n    public static void main(String[] args) {\n        Main obj1 = new Main();\n        Main obj2 = new Main();\n        Main obj3 = new Main();\n        \n        displayCount();\n        System.out.println(\"obj2 id: \" + obj2.instanceId);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Do static methods belong to the class or instance?",
+      "options": ["Class", "Instance", "Both", "Neither"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can a static method access instance fields directly?",
+      "options": ["No", "Yes", "Only if final", "Only in Java 11+"],
+      "correctIndex": 0
+    }
+  ]
+}

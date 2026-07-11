@@ -1,0 +1,17 @@
+{
+  "title": "Getting Started with C++",
+  "language": "cpp",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installing a C++ Compiler\n\nTo write and run C++ programs, you need a compiler. Here are the most common options:\n\n| Compiler | Platform | Command |\n|----------|----------|---------|\n| GCC (g++) | Linux, macOS, Windows (MinGW) | `g++ program.cpp -o program` |\n| Clang | macOS, Linux | `clang++ program.cpp -o program` |\n| MSVC | Windows (Visual Studio) | `cl program.cpp` |\n\n---\n\n### Recommended IDEs\n\n- **Visual Studio** (Windows) - Full-featured IDE with MSVC\n- **VS Code** (Cross-platform) - Lightweight with C++ extensions\n- **CLion** (Cross-platform) - JetBrains IDE for C/C++\n- **Code::Blocks** (Cross-platform) - Free and open-source\n\n---\n\n### Your First C++ Program\n\nCreate a file called `hello.cpp` with the following code:\n\n```cpp\n#include <iostream>\n\nint main() {\n  std::cout << \"Hello, World!\" << std::endl;\n  return 0;\n}\n```\n\nTo compile and run:\n```bash\ng++ hello.cpp -o hello\n./hello\n```\n\n---\n\n> **Key Point:** The `main()` function is the entry point of every C++ program. Execution always begins here.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  cout << \"Hello, World!\" << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which function is the entry point of a C++ program?",
+      "options": ["start()", "main()", "begin()", "init()"],
+      "correctIndex": 1
+    }
+  ]
+}

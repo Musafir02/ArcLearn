@@ -1,0 +1,17 @@
+{
+  "title": "C Pointer Arithmetic",
+  "language": "c",
+  "topic": "pointer_arithmetic",
+  "order": 28,
+  "nextTopic": "pointers_arrays",
+  "prevTopic": "pointers",
+  "content": "### Pointer Arithmetic in C\n\nPointer arithmetic allows you to perform arithmetic operations on pointers, which is useful for traversing arrays.\n\n### Supported Operations\n\n| Operation | Effect |\n|-----------|--------|\n| `ptr + n` | Move pointer forward by n elements |\n| `ptr - n` | Move pointer backward by n elements |\n| `ptr++`  | Move to next element |\n| `ptr--`  | Move to previous element |\n| `ptr1 - ptr2` | Number of elements between two pointers |\n\n### How It Works\n\nWhen you add 1 to a pointer, it moves forward by the size of the pointed-to type:\n\n```c\nint arr[] = {10, 20, 30};\nint *p = arr;         // points to arr[0]\np++;                   // now points to arr[1] (address + 4 bytes)\n```\n\n### Pointer Increment by Type\n\n| Type | sizeof | ptr++ advances by |\n|------|--------|-------------------|\n| `char*` | 1 byte | 1 byte |\n| `int*` | 4 bytes | 4 bytes |\n| `double*` | 8 bytes | 8 bytes |\n\n---\n\n> **Key Point:** Pointer arithmetic scales by the size of the pointed-to type. `ptr + n` adds `n * sizeof(*ptr)` bytes to the address.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int arr[] = {10, 20, 30, 40, 50};\n  int *ptr = arr;\n  printf(\"%d \", *ptr);\n  ptr++;\n  printf(\"%d \", *ptr);\n  ptr += 2;\n  printf(\"%d\\n\", *ptr);\n  ptr--;\n  printf(\"%d\\n\", *ptr);\n  int *end = &arr[4];\n  printf(\"Elements between: %td\\n\", end - arr);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "If an int* pointer is incremented by 1, how many bytes does it advance?",
+      "options": ["1 byte", "2 bytes", "4 bytes", "8 bytes"],
+      "correctIndex": 2
+    }
+  ]
+}

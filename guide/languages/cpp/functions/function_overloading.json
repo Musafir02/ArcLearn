@@ -1,0 +1,17 @@
+{
+  "title": "C++ Function Overloading",
+  "language": "cpp",
+  "topic": "function_overloading",
+  "order": 32,
+  "nextTopic": "recursion",
+  "prevTopic": "function_params",
+  "content": "### Function Overloading\n\nFunction overloading allows multiple functions with the same name but different parameters to coexist. The compiler selects the correct function based on the arguments.\n\n---\n\n### Rules for Overloading\n\nFunctions must differ in at least one of:\n- Number of parameters\n- Types of parameters\n- Order of parameters\n\nReturn type alone cannot distinguish overloads.\n\n---\n\n### Examples\n\n```cpp\nint add(int a, int b) {\n  return a + b;\n}\n\ndouble add(double a, double b) {\n  return a + b;\n}\n\nint add(int a, int b, int c) {\n  return a + b + c;\n}\n```\n\n---\n\n### Resolution Process\n\n1. Exact match\n2. Promotion (char to int, float to double)\n3. Standard conversion (int to double)\n4. User-defined conversion\n\n---\n\n### Ambiguous Overloads\n\n```cpp\nvoid func(int a);\nvoid func(double a);\n\nfunc(5);     // Calls func(int)\nfunc(5.0);   // Calls func(double)\nfunc(5.5f);  // Ambiguous if no float overload\n```\n\n---\n\n### What Cannot Be Overloaded\n\n| Difference | Valid? | Reason |\n|------------|--------|--------|\n| Return type only | No | Cannot distinguish at call site |\n| Default arguments | No | Signature same without defaults |\n| `const` on value param | No | Top-level const ignored in signature |\n| `const` on reference param | Yes | Different parameter type |\n\n---\n\n> **Key Point:** Overloading improves code readability by using the same function name for similar operations on different types. The compiler resolves the correct version at compile time.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint max(int a, int b) {\n  return (a > b) ? a : b;\n}\n\ndouble max(double a, double b) {\n  return (a > b) ? a : b;\n}\n\nint main() {\n  cout << max(5, 10) << endl;     // Calls int version\n  cout << max(3.5, 2.1) << endl;  // Calls double version\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Can two functions differ only by return type be overloaded?",
+      "options": ["Yes", "No", "Only if parameters differ too", "Only with virtual keyword"],
+      "correctIndex": 1
+    }
+  ]
+}

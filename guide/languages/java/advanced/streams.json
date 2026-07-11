@@ -1,0 +1,22 @@
+{
+  "title": "Java Streams API",
+  "language": "java",
+  "topic": "streams",
+  "order": 47,
+  "nextTopic": "optional",
+  "prevTopic": "lambda",
+  "content": "### Streams API\n\nThe Stream API (Java 8+) provides a functional approach to process sequences of elements.\n\n---\n\n### Creating Streams\n\n```java\nlist.stream()                           // from collection\nArrays.stream(array)                     // from array\nStream.of(1, 2, 3)                      // from values\nFiles.lines(Paths.get(\"file.txt\"))      // from file\nStream.iterate(0, n -> n + 1)           // infinite stream\n```\n\n---\n\n### Intermediate Operations\n\n| Operation | Description |\n|-----------|-------------|\n| `filter(predicate)` | Keep elements matching predicate |\n| `map(function)` | Transform each element |\n| `flatMap(function)` | Flatten nested streams |\n| `sorted()` | Sort elements |\n| `distinct()` | Remove duplicates |\n| `limit(n)` | Take first n elements |\n| `skip(n)` | Skip first n elements |\n| `peek(consumer)` | Debug each element |\n\n---\n\n### Terminal Operations\n\n| Operation | Description |\n|-----------|-------------|\n| `forEach(consumer)` | Process each element |\n| `collect(collector)` | Collect to collection |\n| `toList()` | Collect to list |\n| `count()` | Count elements |\n| `anyMatch(predicate)` | Any match? |\n| `allMatch(predicate)` | All match? |\n| `noneMatch(predicate)` | None match? |\n| `findFirst()` | First element |\n| `reduce(binaryOp)` | Reduce to single value |\n| `min(comparator)` | Minimum element |\n| `max(comparator)` | Maximum element |\n\n---\n\n### Stream Pipeline\n\n```java\nlist.stream()\n    .filter(s -> s.length() > 3)\n    .map(String::toUpperCase)\n    .sorted()\n    .collect(Collectors.toList());\n```\n\n> **Key Point:** Streams are lazy — intermediate operations are not executed until a terminal operation is called. Streams cannot be reused after a terminal operation. Use parallel streams for performance on large datasets.",
+  "codeExample": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n        \n        // Filter even, square, collect\n        List<Integer> evenSquares = numbers.stream()\n            .filter(n -> n % 2 == 0)\n            .map(n -> n * n)\n            .collect(Collectors.toList());\n        System.out.println(\"Even squares: \" + evenSquares);\n        \n        // Reduce - sum of all numbers\n        int sum = numbers.stream()\n            .reduce(0, Integer::sum);\n        System.out.println(\"Sum: \" + sum);\n        \n        // Grouping\n        List<String> words = Arrays.asList(\"apple\", \"banana\", \"apricot\", \"berry\");\n        Map<Character, List<String>> grouped = words.stream()\n            .collect(Collectors.groupingBy(s -> s.charAt(0)));\n        System.out.println(\"Grouped: \" + grouped);\n        \n        // Parallel stream\n        long count = numbers.parallelStream()\n            .filter(n -> n > 5)\n            .count();\n        System.out.println(\"Numbers > 5: \" + count);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Are streams reusable after a terminal operation?",
+      "options": ["No", "Yes", "Only with parallel streams", "Only for primitive streams"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What triggers execution of intermediate operations?",
+      "options": ["Terminal operation", "Intermediate operation", "Stream creation", "JIT compilation"],
+      "correctIndex": 0
+    }
+  ]
+}

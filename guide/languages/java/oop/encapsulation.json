@@ -1,0 +1,22 @@
+{
+  "title": "Java Encapsulation",
+  "language": "java",
+  "topic": "encapsulation",
+  "order": 25,
+  "nextTopic": "abstraction",
+  "prevTopic": "polymorphism",
+  "content": "### Encapsulation in Java\n\nEncapsulation is the mechanism of wrapping data (fields) and code (methods) together as a single unit, and restricting direct access to internal data.\n\n---\n\n### Achieving Encapsulation\n\n1. Declare fields as `private`\n2. Provide `public` getter and setter methods\n3. Validate data in setter methods\n\n---\n\n### Example\n\n```java\npublic class Person {\n    private String name;\n    private int age;\n    \n    public String getName() {\n        return name;\n    }\n    \n    public void setName(String name) {\n        this.name = name;\n    }\n    \n    public int getAge() {\n        return age;\n    }\n    \n    public void setAge(int age) {\n        if (age > 0 && age < 150) {\n            this.age = age;\n        }\n    }\n}\n```\n\n---\n\n### Benefits of Encapsulation\n\n| Benefit | Description |\n|---------|-------------|\n| Data Hiding | Internal state is protected |\n| Validation | Control what values are assigned |\n| Flexibility | Change internal implementation without affecting callers |\n| Maintainability | Easier to modify and test |\n\n---\n\n### Read-Only / Write-Only Classes\n\n- Read-only: Provide only getters\n- Write-only: Provide only setters\n\n> **Key Point:** Encapsulation is the foundation of Java's security model. Always use private fields with public getters/setters. Never expose internal data structures directly.",
+  "codeExample": "class BankAccount {\n    private String accountNumber;\n    private double balance;\n    \n    public BankAccount(String accountNumber) {\n        this.accountNumber = accountNumber;\n        this.balance = 0.0;\n    }\n    \n    public String getAccountNumber() {\n        return accountNumber;\n    }\n    \n    public double getBalance() {\n        return balance;\n    }\n    \n    public void deposit(double amount) {\n        if (amount > 0) {\n            balance += amount;\n        }\n    }\n    \n    public boolean withdraw(double amount) {\n        if (amount > 0 && amount <= balance) {\n            balance -= amount;\n            return true;\n        }\n        return false;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        BankAccount acc = new BankAccount(\"ACC123\");\n        acc.deposit(1000);\n        acc.withdraw(200);\n        System.out.println(\"Balance: \" + acc.getBalance());\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which access modifier is used for encapsulated fields?",
+      "options": ["private", "public", "protected", "default"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the main benefit of encapsulation?",
+      "options": ["Data hiding", "Code reuse", "Performance", "Multiple inheritance"],
+      "correctIndex": 0
+    }
+  ]
+}

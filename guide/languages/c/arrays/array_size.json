@@ -1,0 +1,17 @@
+{
+  "title": "C Array Size",
+  "language": "c",
+  "topic": "array_size",
+  "order": 23,
+  "nextTopic": "multi_dim_arrays",
+  "prevTopic": "arrays",
+  "content": "### Array Size in C\n\nC does not store array length at runtime. You must track the size separately or calculate it at compile time.\n\n### Getting Array Size\n\nUse `sizeof()` to get the total bytes of an array, then divide by the size of one element:\n\n```c\nint arr[] = {10, 20, 30, 40, 50};\nint length = sizeof(arr) / sizeof(arr[0]);\n```\n\n### Important Limitation\n\nWhen an array is passed to a function, it decays to a pointer. `sizeof` inside the function returns the pointer size (4 or 8), not the array size.\n\n| Context | `sizeof(arr)` Result |\n|---------|---------------------|\n| In same scope as declaration | Total array bytes |\n| Inside function parameter | Pointer size (4 or 8) |\n\n### Best Practice\n\nAlways pass the array size as a separate parameter to functions that operate on arrays.\n\n---\n\n> **Key Point:** You cannot use `sizeof()` to get array size inside a function because the array parameter decays to a pointer. Pass the size explicitly.",
+  "codeExample": "#include <stdio.h>\n\nvoid printArray(int arr[], int size) {\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n}\n\nint main() {\n  int numbers[] = {10, 20, 30, 40, 50};\n  int size = sizeof(numbers) / sizeof(numbers[0]);\n  printf(\"Array size: %d\\n\", size);\n  printArray(numbers, size);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does sizeof(arr) return inside a function where arr is a parameter?",
+      "options": ["Total array bytes", "Pointer size", "Number of elements", "Compilation error"],
+      "correctIndex": 1
+    }
+  ]
+}

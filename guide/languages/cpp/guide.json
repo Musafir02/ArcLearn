@@ -1,0 +1,35 @@
+{
+  "title": "C++ Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "C++ Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "datatypes", "constants", "operators", "booleans", "strings", "numbers", "input", "type_casting", "type_conversion"]
+    },
+    {
+      "type": "group", "title": "Conditions", "folder": "conditions",
+      "topics": ["conditions", "if_else", "switch", "ternary"]
+    },
+    {
+      "type": "group", "title": "Loops", "folder": "loops",
+      "topics": ["while", "for", "do_while", "break_continue", "goto"]
+    },
+    {
+      "type": "group", "title": "Arrays", "folder": "arrays",
+      "topics": ["arrays", "array_size", "multi_dim_arrays", "vectors", "iterators"]
+    },
+    {
+      "type": "group", "title": "Functions", "folder": "functions",
+      "topics": ["functions", "function_params", "function_overloading", "recursion", "lambda", "default_params", "pass_by_reference"]
+    },
+    {
+      "type": "group", "title": "Object-Oriented Programming", "folder": "oop",
+      "topics": ["classes_objects", "class_methods", "constructors", "destructor", "inheritance", "polymorphism", "virtual_functions", "abstraction", "encapsulation", "friend_function", "static_members"]
+    },
+    {
+      "type": "group", "title": "Advanced C++", "folder": "advanced",
+      "topics": ["pointers", "references", "dynamic_memory", "new_delete", "exception_handling", "try_catch", "file_handling", "file_read", "file_write", "templates", "template_functions", "template_classes", "stl", "stl_vector", "stl_map", "stl_algorithm", "namespaces", "preprocessor", "macros", "smart_pointers", "move_semantics", "multithreading"]
+    }
+  ]
+}

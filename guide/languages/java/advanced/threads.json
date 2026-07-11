@@ -1,0 +1,22 @@
+{
+  "title": "Java Threads",
+  "language": "java",
+  "topic": "threads",
+  "order": 44,
+  "nextTopic": "thread_sync",
+  "prevTopic": "serialization",
+  "content": "### Threads in Java\n\nA thread is a lightweight subprocess that enables concurrent execution.\n\n---\n\n### Creating Threads\n\n**Method 1: Extending Thread class**\n\n```java\nclass MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread running\");\n    }\n}\nMyThread t = new MyThread();\nt.start();\n```\n\n**Method 2: Implementing Runnable**\n\n```java\nclass MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Runnable running\");\n    }\n}\nThread t = new Thread(new MyRunnable());\nt.start();\n```\n\n---\n\n### Thread Lifecycle\n\n| State | Description |\n|-------|-------------|\n| NEW | Created but not started |\n| RUNNABLE | Ready to run or running |\n| BLOCKED | Waiting for monitor lock |\n| WAITING | Waiting indefinitely for another thread |\n| TIMED_WAITING | Waiting for a specified time |\n| TERMINATED | Execution finished |\n\n---\n\n### Thread Methods\n\n| Method | Description |\n|--------|-------------|\n| `start()` | Begin thread execution |\n| `sleep(ms)` | Pause for milliseconds |\n| `join()` | Wait for thread to finish |\n| `interrupt()` | Interrupt thread |\n| `setPriority()` | Set priority (1-10) |\n| `yield()` | Hint scheduler to yield |\n| `isAlive()` | Check if running |\n\n---\n\n### Thread Priorities\n\n```java\nThread t = new Thread(() -> {});\nt.setPriority(Thread.MAX_PRIORITY);  // 10\nt.setPriority(Thread.NORM_PRIORITY); // 5\nt.setPriority(Thread.MIN_PRIORITY);  // 1\n```\n\n> **Key Point:** Prefer implementing `Runnable` over extending `Thread` because Java supports single inheritance. The `run()` method contains the code to execute, while `start()` creates a new thread and calls `run()`.",
+  "codeExample": "class CounterThread implements Runnable {\n    private String name;\n    \n    CounterThread(String name) {\n        this.name = name;\n    }\n    \n    @Override\n    public void run() {\n        for (int i = 1; i <= 5; i++) {\n            System.out.println(name + \": \" + i);\n            try {\n                Thread.sleep(100);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        }\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        Thread t1 = new Thread(new CounterThread(\"Thread A\"));\n        Thread t2 = new Thread(new CounterThread(\"Thread B\"));\n        Thread t3 = new Thread(new CounterThread(\"Thread C\"));\n        \n        t1.start();\n        t2.start();\n        t3.start();\n        \n        // Wait for threads to finish\n        t1.join();\n        t2.join();\n        t3.join();\n        \n        System.out.println(\"All threads finished\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which method starts a thread's execution?",
+      "options": ["start()", "run()", "execute()", "begin()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which approach is preferred for creating threads?",
+      "options": ["Implementing Runnable", "Extending Thread", "Both are equal", "Neither"],
+      "correctIndex": 0
+    }
+  ]
+}

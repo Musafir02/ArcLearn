@@ -1,0 +1,17 @@
+{
+  "title": "C Structures and Functions",
+  "language": "c",
+  "topic": "struct_functions",
+  "order": 40,
+  "nextTopic": "typedef",
+  "prevTopic": "struct_arrays",
+  "content": "### Structures and Functions in C\n\nStructures can be passed to functions by value or by pointer.\n\n### Passing by Value\n\nA copy of the entire structure is made. Modifications inside the function do not affect the original.\n\n```c\nvoid printStudent(struct Student s);\n```\n\n### Passing by Pointer\n\nOnly the address is passed. Modifications affect the original.\n\n```c\nvoid updateAge(struct Student *s, int newAge);\n```\n\n### Returning Structures\n\nFunctions can return structures:\n\n```c\nstruct Student createStudent(char name[], int age, float gpa);\n```\n\n---\n\n### Comparison\n\n| Aspect | By Value | By Pointer |\n|--------|----------|------------|\n| Speed | Slow for large structs | Fast |\n| Original modified? | No | Yes |\n| Syntax | `s.member` | `s->member` or `(*s).member` |\n| Use | Small structs, read-only | Large structs, modification needed |\n\n### Arrow Operator (`->`)\n\nFor pointer-to-struct, use `->` instead of `.`:\n\n```c\nstruct Student *ptr = &s1;\nptr->age = 21;  // equivalent to (*ptr).age = 21\n```\n\n---\n\n> **Key Point:** Pass large structures by pointer to avoid copying overhead. Use `const` to prevent modification when passing by pointer for read-only access.",
+  "codeExample": "#include <stdio.h>\n#include <string.h>\n\nstruct Student {\n  char name[50];\n  int age;\n};\n\nvoid printStudent(struct Student s) {\n  printf(\"%s, %d\\n\", s.name, s.age);\n}\n\nvoid celebrateBirthday(struct Student *s) {\n  s->age++;\n}\n\nint main() {\n  struct Student s = {\"Alice\", 20};\n  printStudent(s);\n  celebrateBirthday(&s);\n  printf(\"After birthday: \");\n  printStudent(s);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What operator is used to access a struct member via a pointer?",
+      "options": [".", "->", "::", "=>"],
+      "correctIndex": 1
+    }
+  ]
+}

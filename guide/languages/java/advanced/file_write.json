@@ -1,0 +1,22 @@
+{
+  "title": "Java Writing Files",
+  "language": "java",
+  "topic": "file_write",
+  "order": 42,
+  "nextTopic": "serialization",
+  "prevTopic": "file_read",
+  "content": "### Writing Files in Java\n\nJava provides several ways to write data to files.\n\n---\n\n### Using FileWriter\n\n```java\nFileWriter fw = new FileWriter(\"output.txt\");    // overwrite\nFileWriter fw = new FileWriter(\"output.txt\", true);  // append\nfw.write(\"Hello World\");\nfw.close();\n```\n\n---\n\n### Using BufferedWriter\n\n```java\nBufferedWriter bw = new BufferedWriter(new FileWriter(\"file.txt\"));\nbw.write(\"Line 1\");\nbw.newLine();\nbw.write(\"Line 2\");\nbw.close();\n```\n\n---\n\n### Using Files (Java NIO)\n\n```java\n// Write string\nFiles.writeString(Paths.get(\"file.txt\"), \"content\", \n    StandardOpenOption.CREATE, StandardOpenOption.APPEND);\n\n// Write lines\nList<String> lines = Arrays.asList(\"Line 1\", \"Line 2\");\nFiles.write(Paths.get(\"file.txt\"), lines);\n\n// Write bytes\nFiles.write(Paths.get(\"file.dat\"), byteArray);\n```\n\n---\n\n### Using PrintWriter\n\n```java\nPrintWriter pw = new PrintWriter(new FileWriter(\"file.txt\"));\npw.println(\"Formatted text\");\npw.printf(\"Number: %d\", 42);\npw.close();\n```\n\n---\n\n### FileOutputStream (Binary)\n\n```java\nFileOutputStream fos = new FileOutputStream(\"data.dat\");\nfos.write(new byte[]{0x48, 0x65, 0x6C});  // Hel\nfos.close();\n```\n\n> **Key Point:** FileWriter with `true` second argument appends to file. Without it, the file is overwritten. Always close writers or use try-with-resources.",
+  "codeExample": "import java.io.*;\nimport java.nio.file.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        // Method 1: BufferedWriter\n        try (BufferedWriter bw = new BufferedWriter(new FileWriter(\"output1.txt\"))) {\n            bw.write(\"Hello from BufferedWriter\");\n            bw.newLine();\n            bw.write(\"Second line\");\n        }\n        \n        // Method 2: Files.writeString (Java 11+)\n        Files.writeString(Paths.get(\"output2.txt\"), \n            \"Hello from Files.writeString\");\n        \n        // Method 3: Files.write with lines\n        List<String> lines = Arrays.asList(\"Line A\", \"Line B\", \"Line C\");\n        Files.write(Paths.get(\"output3.txt\"), lines);\n        \n        // Method 4: Appending\n        try (FileWriter fw = new FileWriter(\"output1.txt\", true)) {\n            fw.write(\"\\nAppended line\");\n        }\n        \n        System.out.println(\"Files written successfully\");\n        \n        // Verify\n        System.out.println(Files.readString(Paths.get(\"output1.txt\")));\n    }\n}",
+  "quiz": [
+    {
+      "question": "How do you append to a file using FileWriter?",
+      "options": ["Pass true as second argument", "Call .append()", "Use append mode constant", "Cannot append"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which class provides printf style formatting for file output?",
+      "options": ["PrintWriter", "FileWriter", "BufferedWriter", "OutputStream"],
+      "correctIndex": 0
+    }
+  ]
+}

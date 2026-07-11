@@ -1,0 +1,17 @@
+{
+  "title": "C++ Constructors",
+  "language": "cpp",
+  "topic": "constructors",
+  "order": 39,
+  "nextTopic": "destructor",
+  "prevTopic": "class_methods",
+  "content": "### Constructors\n\nA constructor is a special member function that is automatically called when an object is created. It has the same name as the class and no return type.\n\n---\n\n### Default Constructor\n\n```cpp\nclass Car {\npublic:\n  Car() {  // Default constructor\n    brand = \"Unknown\";\n    year = 0;\n  }\nprivate:\n  string brand;\n  int year;\n};\n```\n\n---\n\n### Parameterized Constructor\n\n```cpp\nclass Car {\npublic:\n  Car(string b, int y) {  // Parameterized constructor\n    brand = b;\n    year = y;\n  }\nprivate:\n  string brand;\n  int year;\n};\n\nCar myCar(\"Toyota\", 2022);\n```\n\n---\n\n### Constructor Initialization List\n\n```cpp\nclass Car {\npublic:\n  Car(string b, int y) : brand(b), year(y) {\n    // Body is optional\n  }\nprivate:\n  string brand;\n  int year;\n};\n```\n\n---\n\n### Copy Constructor\n\n```cpp\nclass Car {\npublic:\n  Car(const Car& other) : brand(other.brand), year(other.year) {\n    cout << \"Copy constructor called\";\n  }\n};\n\nCar car2(car1);  // Copy constructor\n```\n\n---\n\n### Move Constructor (C++11)\n\n```cpp\nclass Car {\npublic:\n  Car(Car&& other) noexcept\n    : brand(std::move(other.brand)), year(other.year) {\n    other.year = 0;\n  }\n};\n```\n\n---\n\n### Constructor Overloading\n\n```cpp\nclass Car {\npublic:\n  Car() : Car(\"Unknown\", 0) {}         // Delegating to below\n  Car(string b, int y) : brand(b), year(y) {}\n};\n```\n\n---\n\n> **Key Point:** Always use initialization lists instead of assignment in constructors. They are more efficient and necessary for initializing const and reference members.",
+  "codeExample": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Book {\npublic:\n  string title;\n  string author;\n  int pages;\n\n  Book(string t, string a, int p) : title(t), author(a), pages(p) {\n    cout << \"Book created: \" << title << endl;\n  }\n};\n\nint main() {\n  Book myBook(\"1984\", \"George Orwell\", 328);\n  cout << myBook.title << \" by \" << myBook.author << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the return type of a constructor?",
+      "options": ["void", "The class type", "No return type", "int"],
+      "correctIndex": 2
+    }
+  ]
+}

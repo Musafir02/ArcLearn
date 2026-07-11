@@ -1,0 +1,17 @@
+{
+  "title": "C++ Classes and Objects",
+  "language": "cpp",
+  "topic": "classes_objects",
+  "order": 37,
+  "nextTopic": "class_methods",
+  "prevTopic": "pass_by_reference",
+  "content": "### Classes and Objects\n\nA class is a user-defined blueprint for creating objects. It encapsulates data (attributes) and functions (methods) that operate on that data.\n\n---\n\n### Class Definition\n\n```cpp\nclass Rectangle {\npublic:\n  double width;\n  double height;\n\n  double area() {\n    return width * height;\n  }\n};\n```\n\n---\n\n### Creating Objects\n\n```cpp\nRectangle rect;          // Stack allocation\nrect.width = 5.0;\nrect.height = 3.0;\ncout << rect.area();     // 15.0\n\nRectangle* ptr = new Rectangle();  // Heap allocation\nptr->width = 10.0;\ndelete ptr;\n```\n\n---\n\n### Access Specifiers\n\n| Specifier | Accessibility |\n|-----------|---------------|\n| `public` | Accessible from anywhere |\n| `private` | Only accessible within the class |\n| `protected` | Accessible within class and derived classes |\n\n---\n\n### Full Example\n\n```cpp\nclass BankAccount {\nprivate:\n  double balance;\n\npublic:\n  void deposit(double amount) {\n    if (amount > 0) balance += amount;\n  }\n\n  double getBalance() {\n    return balance;\n  }\n};\n```\n\n---\n\n> **Key Point:** By default, all members of a class are `private`. Use access specifiers to control visibility. Data hiding (encapsulation) is a core OOP principle.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Car {\npublic:\n  string brand;\n  string model;\n  int year;\n\n  void displayInfo() {\n    cout << brand << \" \" << model << \" (\" << year << \")\" << endl;\n  }\n};\n\nint main() {\n  Car car1;\n  car1.brand = \"Toyota\";\n  car1.model = \"Camry\";\n  car1.year = 2022;\n  car1.displayInfo();\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which access specifier makes members accessible outside the class?",
+      "options": ["private", "public", "protected", "internal"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Polymorphism",
+  "language": "cpp",
+  "topic": "polymorphism",
+  "order": 42,
+  "nextTopic": "virtual_functions",
+  "prevTopic": "inheritance",
+  "content": "### Polymorphism\n\nPolymorphism means \"many forms.\" It allows objects of different types to respond to the same function call in their own way.\n\n---\n\n### Compile-Time Polymorphism\n\nResolved during compilation:\n- Function overloading\n- Operator overloading\n- Templates\n\n```cpp\nint add(int a, int b) { return a + b; }\ndouble add(double a, double b) { return a + b; }  // Overloading\n```\n\n---\n\n### Runtime Polymorphism\n\nResolved during execution using virtual functions and inheritance:\n\n```cpp\nclass Animal {\npublic:\n  virtual void sound() {\n    cout << \"Animal sound\";\n  }\n};\n\nclass Dog : public Animal {\npublic:\n  void sound() override {\n    cout << \"Bark\";\n  }\n};\n```\n\n---\n\n### Virtual Function Mechanism\n\n```cpp\nAnimal* ptr = new Dog();\nptr->sound();  // Output: Bark (not \"Animal sound\")\n```\n\n---\n\n### Static vs Dynamic Binding\n\n| Aspect | Static Binding | Dynamic Binding |\n|--------|---------------|----------------|\n| Time | Compile time | Runtime |\n| Function call | `obj.func()` | `ptr->func()` via vtable |\n| Performance | Faster | Slight overhead |\n| Flexibility | Less flexible | More flexible |\n\n---\n\n> **Key Point:** Polymorphism enables writing generic code that works with objects of different types through a common interface. Virtual functions are the key mechanism for dynamic polymorphism in C++.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Animal {\npublic:\n  virtual void sound() {\n    cout << \"Some sound\" << endl;\n  }\n};\n\nclass Cat : public Animal {\npublic:\n  void sound() override {\n    cout << \"Meow\" << endl;\n  }\n};\n\nint main() {\n  Animal* a1 = new Animal();\n  Animal* a2 = new Cat();\n  a1->sound();  // Some sound\n  a2->sound();  // Meow\n  delete a1; delete a2;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which keyword enables runtime polymorphism?",
+      "options": ["virtual", "override", "abstract", "sealed"],
+      "correctIndex": 0
+    }
+  ]
+}

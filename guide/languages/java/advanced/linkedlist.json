@@ -1,0 +1,22 @@
+{
+  "title": "Java LinkedList",
+  "language": "java",
+  "topic": "linkedlist",
+  "order": 30,
+  "nextTopic": "hashmap",
+  "prevTopic": "arraylist",
+  "content": "### LinkedList in Java\n\nLinkedList is a doubly-linked list implementation of the List and Deque interfaces.\n\n---\n\n### Creating a LinkedList\n\n```java\nimport java.util.LinkedList;\n\nLinkedList<String> list = new LinkedList<>();\nLinkedList<Integer> numbers = new LinkedList<>(anotherCollection);\n```\n\n---\n\n### LinkedList Specific Methods\n\n| Method | Description |\n|--------|-------------|\n| `addFirst(element)` | Insert at beginning |\n| `addLast(element)` | Insert at end |\n| `getFirst()` | Get first element |\n| `getLast()` | Get last element |\n| `removeFirst()` | Remove and return first |\n| `removeLast()` | Remove and return last |\n| `offer(element)` | Add as last element |\n| `poll()` | Retrieve and remove head |\n| `peek()` | Retrieve head without removing |\n\n---\n\n### ArrayList vs LinkedList\n\n| Aspect | ArrayList | LinkedList |\n|--------|-----------|------------|\n| Internal | Dynamic array | Doubly-linked list |\n| get(index) | O(1) | O(n) |\n| add/remove at end | O(1) amortized | O(1) |\n| add/remove at middle | O(n) | O(1) after traversal |\n| Memory | Less overhead | More (node objects) |\n\n---\n\n### When to Use\n\n- **ArrayList**: More get/set operations, access by index\n- **LinkedList**: More add/remove at beginning or middle, queue/stack operations\n\n> **Key Point:** LinkedList implements both List and Deque, so it can be used as a list, queue, or stack. It is efficient for insertions/deletions but slow for random access.",
+  "codeExample": "import java.util.LinkedList;\n\npublic class Main {\n    public static void main(String[] args) {\n        LinkedList<String> queue = new LinkedList<>();\n        \n        queue.addLast(\"First\");\n        queue.addLast(\"Second\");\n        queue.addLast(\"Third\");\n        queue.addFirst(\"Priority\");  // insert at front\n        \n        System.out.println(\"Queue: \" + queue);\n        System.out.println(\"Peek: \" + queue.peek());\n        System.out.println(\"Poll: \" + queue.poll());\n        System.out.println(\"After poll: \" + queue);\n        System.out.println(\"First: \" + queue.getFirst());\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the time complexity of get(index) in LinkedList?",
+      "options": ["O(n)", "O(1)", "O(log n)", "O(n^2)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which interfaces does LinkedList implement?",
+      "options": ["List and Deque", "List only", "Deque only", "Map and List"],
+      "correctIndex": 0
+    }
+  ]
+}

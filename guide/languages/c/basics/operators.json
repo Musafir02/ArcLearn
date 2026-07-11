@@ -1,0 +1,17 @@
+{
+  "title": "C Operators",
+  "language": "c",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "booleans",
+  "prevTopic": "constants",
+  "content": "### Operators in C\n\nOperators are symbols that perform operations on operands.\n\n### Arithmetic Operators\n\n| Operator | Name | Example |\n|----------|------|---------|\n| `+` | Addition | `a + b` |\n| `-` | Subtraction | `a - b` |\n| `*` | Multiplication | `a * b` |\n| `/` | Division | `a / b` |\n| `%` | Modulus (remainder) | `a % b` |\n| `++` | Increment | `a++` |\n| `--` | Decrement | `a--` |\n\n### Relational Operators\n\n| Operator | Meaning |\n|----------|---------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `>` | Greater than |\n| `<` | Less than |\n| `>=` | Greater than or equal |\n| `<=` | Less than or equal |\n\n### Logical Operators\n\n| Operator | Meaning | Example |\n|----------|---------|---------|\n| `&&` | AND (both true) | `a && b` |\n| `||` | OR (at least one true) | `a || b` |\n| `!` | NOT (negation) | `!a` |\n\n### Assignment Operators\n\n| Operator | Example | Equivalent to |\n|----------|---------|--------------|\n| `=` | `x = 5` | `x = 5` |\n| `+=` | `x += 3` | `x = x + 3` |\n| `-=` | `x -= 2` | `x = x - 2` |\n| `*=` | `x *= 4` | `x = x * 4` |\n| `/=` | `x /= 2` | `x = x / 2` |\n| `%=` | `x %= 3` | `x = x % 3` |\n\n---\n\n> **Key Point:** Integer division truncates toward zero. Use `%` for remainder when dividing integers.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int a = 10, b = 3;\n  printf(\"Sum: %d\\n\", a + b);\n  printf(\"Product: %d\\n\", a * b);\n  printf(\"Division: %d\\n\", a / b);\n  printf(\"Remainder: %d\\n\", a % b);\n  printf(\"Increment: %d\\n\", ++a);\n  printf(\"a > b: %d\\n\", a > b);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does the modulus operator `%` return?",
+      "options": ["Quotient", "Remainder", "Product", "Sum"],
+      "correctIndex": 1
+    }
+  ]
+}

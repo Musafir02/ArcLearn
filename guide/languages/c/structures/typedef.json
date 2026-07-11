@@ -1,0 +1,17 @@
+{
+  "title": "C Typedef",
+  "language": "c",
+  "topic": "typedef",
+  "order": 41,
+  "nextTopic": "union",
+  "prevTopic": "struct_functions",
+  "content": "### Typedef in C\n\nThe `typedef` keyword creates an alias (nickname) for an existing data type.\n\n### Syntax\n\n```c\ntypedef existing_type new_name;\n```\n\n### Examples\n\n```c\ntypedef unsigned long ulong;\ntypedef struct Student Student;\ntypedef struct {\n  int x;\n  int y;\n} Point;\n```\n\n### Benefits of Typedef\n\n| Benefit | Description |\n|---------|-------------|\n| Readability | `Student s1` vs `struct Student s1` |\n| Portability | Abstract platform-specific types |\n| Maintainability | Change underlying type in one place |\n| Complex types | Simplify function pointer declarations |\n\n### Common Typedef Patterns\n\n```c\n// Standard integer types\ntypedef unsigned char byte;\n\n// Function pointer\ntypedef int (*Operation)(int, int);\n\n// Structure without struct keyword\ntypedef struct {\n  int id;\n  char name[50];\n} Employee;\n```\n\n---\n\n> **Key Point:** Typedef does not create a new type, only an alias. Use it to improve code readability and portability.",
+  "codeExample": "#include <stdio.h>\ntypedef struct {\n  int x;\n  int y;\n} Point;\n\ntypedef unsigned long long ULL;\n\nint main() {\n  Point p1 = {10, 20};\n  ULL large = 1000000;\n  printf(\"Point: (%d, %d)\\n\", p1.x, p1.y);\n  printf(\"Large: %llu\\n\", large);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does typedef do?",
+      "options": ["Creates a new data type", "Creates an alias for a type", "Defines a macro", "Declares a variable"],
+      "correctIndex": 1
+    }
+  ]
+}

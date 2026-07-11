@@ -1,0 +1,17 @@
+{
+  "title": "C Do-While Loop",
+  "language": "c",
+  "topic": "do_while",
+  "order": 19,
+  "nextTopic": "break_continue",
+  "prevTopic": "for",
+  "content": "### Do-While Loop in C\n\nThe `do-while` loop is similar to `while`, but it guarantees the loop body executes at least once.\n\n### Syntax\n\n```c\ndo {\n  // code to repeat\n} while (condition);\n```\n\n### While vs Do-While\n\n| Feature | `while` | `do-while` |\n|---------|---------|------------|\n| Condition check | At start | At end |\n| Minimum executions | 0 | 1 |\n| When to use | May not need to run | Must run at least once |\n| Typical use | Counting loops | Menu validation |\n\n### Common Use Cases\n\n- Menu-driven programs\n- Input validation (ask at least once)\n- Game loops that process at least one frame\n- State machines\n\n---\n\n> **Key Point:** Use `do-while` when the loop body must execute at least once regardless of the condition. Always end with `while (condition);` including the semicolon.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int num;\n  do {\n    printf(\"Enter a positive number: \");\n    scanf(\"%d\", &num);\n  } while (num <= 0);\n  printf(\"You entered: %d\\n\", num);\n  int i = 1;\n  do {\n    printf(\"%d \", i);\n    i++;\n  } while (i <= 5);\n  printf(\"\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How many times does a do-while loop body always execute?",
+      "options": ["Zero", "At least once", "At least twice", "Depends on condition"],
+      "correctIndex": 1
+    }
+  ]
+}

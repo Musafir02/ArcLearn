@@ -1,0 +1,17 @@
+{
+  "title": "C++ References",
+  "language": "cpp",
+  "topic": "references",
+  "order": 49,
+  "nextTopic": "dynamic_memory",
+  "prevTopic": "pointers",
+  "content": "### References\n\nA reference is an alias for another variable. Once initialized, a reference cannot be made to refer to a different variable.\n\n---\n\n### Syntax\n\n```cpp\nint original = 42;\nint& ref = original;  // ref is a reference to original\n\nref = 100;            // Modifies original\ncout << original;     // 100\n```\n\n---\n\n### Reference vs Pointer\n\n| Aspect | Reference | Pointer |\n|--------|-----------|---------|\n| Initialization | Must be initialized | Can be uninitialized |\n| Reassignment | Cannot be reseated | Can point to different objects |\n| Null state | Cannot be null | Can be nullptr |\n| Dereference | Automatic | Requires `*` |\n| Arithmetic | No pointer arithmetic | Supported |\n| Use case | Pass/return by reference | Dynamic memory, optional params |\n\n---\n\n### References as Parameters\n\n```cpp\nvoid swap(int& a, int& b) {\n  int temp = a;\n  a = b;\n  b = temp;\n}\n\nint x = 5, y = 10;\nswap(x, y);  // x=10, y=5\n```\n\n---\n\n### Reference as Return Value\n\n```cpp\nint& getElement(vector<int>& vec, int index) {\n  return vec[index];  // Return reference to allow assignment\n}\n\nvector<int> data = {1, 2, 3};\ngetElement(data, 1) = 99;  // data[1] becomes 99\n```\n\n---\n\n### Const Reference\n\n```cpp\nvoid print(const vector<int>& data) {\n  for (int x : data) {\n    cout << x << \" \";\n  }\n}\n\nprint(data);  // Read-only, no copy\n```\n\n---\n\n### Rvalue Reference (C++11)\n\n```cpp\nvoid process(int&& x) {  // Rvalue reference (&&)\n  cout << \"Moving: \" << x;\n}\n\nprocess(42);  // Binds to rvalue\n```\n\n---\n\n> **Key Point:** References are safer than pointers because they must be initialized and cannot be null. Use references for function parameters and return values when possible.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int score = 85;\n  int& ref = score;\n\n  cout << \"Score: \" << score << endl;\n  cout << \"Ref: \" << ref << endl;\n\n  ref = 95;  // Changes score through reference\n  cout << \"After change: \" << score << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Can a reference be reassigned to refer to a different variable?",
+      "options": ["Yes", "No", "Only with const", "Only for rvalue references"],
+      "correctIndex": 1
+    }
+  ]
+}

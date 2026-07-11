@@ -1,0 +1,17 @@
+{
+  "title": "C++ Class Methods",
+  "language": "cpp",
+  "topic": "class_methods",
+  "order": 38,
+  "nextTopic": "constructors",
+  "prevTopic": "classes_objects",
+  "content": "### Class Methods\n\nMethods are functions defined inside a class. They can access and modify the object's data members.\n\n---\n\n### Defining Methods Inside Class\n\n```cpp\nclass Circle {\npublic:\n  double radius;\n\n  double area() {           // Inline method\n    return 3.14159 * radius * radius;\n  }\n};\n```\n\n---\n\n### Defining Methods Outside Class\n\n```cpp\nclass Circle {\npublic:\n  double radius;\n  double area();       // Declaration only\n};\n\n// Definition outside class\ndouble Circle::area() {\n  return 3.14159 * radius * radius;\n}\n```\n\n---\n\n### Const Methods\n\nMethods that do not modify the object:\n\n```cpp\nclass Point {\nprivate:\n  int x, y;\npublic:\n  int getX() const { return x; }  // Cannot modify members\n  int getY() const { return y; }\n};\n```\n\n---\n\n### Static Methods\n\nBelong to the class, not instances:\n\n```cpp\nclass MathUtils {\npublic:\n  static int add(int a, int b) {\n    return a + b;\n  }\n};\n\nint result = MathUtils::add(5, 3);  // Called on class, not object\n```\n\n---\n\n### Method Chaining\n\nReturn `*this` to enable chaining:\n\n```cpp\nclass Logger {\npublic:\n  Logger& log(string msg) {\n    cout << msg;\n    return *this;\n  }\n};\n\nLogger l;\nl.log(\"Hello\").log(\" \").log(\"World\");\n```\n\n---\n\n> **Key Point:** Use `const` after a method declaration to indicate it does not modify the object. This is essential for using objects with const references.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Rectangle {\nprivate:\n  double width, height;\n\npublic:\n  void setDimensions(double w, double h) {\n    width = w;\n    height = h;\n  }\n\n  double area() const {\n    return width * height;\n  }\n};\n\nint main() {\n  Rectangle rect;\n  rect.setDimensions(4.0, 5.0);\n  cout << \"Area: \" << rect.area() << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What keyword prevents a method from modifying object members?",
+      "options": ["static", "const", "final", "readonly"],
+      "correctIndex": 1
+    }
+  ]
+}

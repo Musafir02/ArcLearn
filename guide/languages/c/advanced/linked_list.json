@@ -1,0 +1,17 @@
+{
+  "title": "C Linked Lists",
+  "language": "c",
+  "topic": "linked_list",
+  "order": 57,
+  "nextTopic": "sorting_algorithms",
+  "prevTopic": "function_pointers",
+  "content": "### Linked Lists in C\n\nA linked list is a dynamic data structure where elements (nodes) are connected via pointers.\n\n### Node Structure\n\n```c\nstruct Node {\n  int data;\n  struct Node *next;\n};\n```\n\n### Types of Linked Lists\n\n| Type | Description |\n|------|-------------|\n| Singly linked | Each node points to next node; last points to NULL |\n| Doubly linked | Each node has prev and next pointers |\n| Circular | Last node points back to first |\n\n### Basic Operations\n\n| Operation | Description | Complexity |\n|-----------|-------------|------------|\n| Insert at beginning | Create node, link to head | O(1) |\n| Insert at end | Traverse to end, link new node | O(n) |\n| Delete a node | Unlink and free node | O(n) |\n| Search | Traverse until found | O(n) |\n| Traverse | Visit all nodes | O(n) |\n\n### Advantages vs Arrays\n\n| Feature | Linked List | Array |\n|---------|-------------|-------|\n| Insert/delete at start | O(1) | O(n) |\n| Random access | O(n) (must traverse) | O(1) (by index) |\n| Memory | Dynamic, per-node allocation | Fixed block |\n| Cache locality | Poor | Excellent |\n\n---\n\n> **Key Point:** Linked lists excel at frequent insertions/deletions. Arrays are better for frequent random access. Always free deleted nodes to prevent memory leaks.",
+  "codeExample": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n  int data;\n  struct Node *next;\n};\n\nvoid printList(struct Node *head) {\n  while (head != NULL) {\n    printf(\"%d -> \", head->data);\n    head = head->next;\n  }\n  printf(\"NULL\\n\");\n}\n\nvoid push(struct Node **head, int data) {\n  struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));\n  newNode->data = data;\n  newNode->next = *head;\n  *head = newNode;\n}\n\nint main() {\n  struct Node *head = NULL;\n  push(&head, 10);\n  push(&head, 20);\n  push(&head, 30);\n  printList(head);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the time complexity of inserting at the beginning of a linked list?",
+      "options": ["O(n)", "O(log n)", "O(1)", "O(n^2)"],
+      "correctIndex": 2
+    }
+  ]
+}

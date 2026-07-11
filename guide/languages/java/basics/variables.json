@@ -1,0 +1,22 @@
+{
+  "title": "Java Variables",
+  "language": "java",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Variables in Java\n\nA variable is a container that holds a value as the program executes.\n\n---\n\n### Variable Declaration\n\n```java\ntype variableName = value;\n```\n\n- Type: The data type of the variable\n- Name: Identifier following naming conventions\n- Value: Optional initial value\n\n---\n\n### Types of Variables\n\n| Type | Location | Default Value |\n|------|----------|---------------|\n| Local | Inside a method | No default (must initialize) |\n| Instance | Inside class, outside methods | null/0/false |\n| Static | Declared with `static` keyword | null/0/false |\n\n---\n\n### Naming Conventions\n\n- Use camelCase: `myVariableName`\n- Start with lowercase letter\n- Meaningful and descriptive names\n- Constants use UPPER_SNAKE_CASE: `MAX_VALUE`\n\n---\n\n### Variable Scope\n\n```java\npublic class MyClass {\n    int instanceVar;  // accessible everywhere in class\n    static int staticVar;  // shared across all instances\n    \n    public void myMethod() {\n        int localVar = 10;  // only inside this method\n    }\n}\n```\n\n> **Key Point:** Local variables must be initialized before use. Instance and static variables get default values automatically.",
+  "codeExample": "public class Main {\n    static int staticVar = 30;\n    int instanceVar = 20;\n    \n    public static void main(String[] args) {\n        int localVar = 10;\n        System.out.println(\"Local: \" + localVar);\n        System.out.println(\"Static: \" + staticVar);\n        \n        Main obj = new Main();\n        System.out.println(\"Instance: \" + obj.instanceVar);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which type of variable must be initialized before use?",
+      "options": ["Local", "Instance", "Static", "Global"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the naming convention for variables in Java?",
+      "options": ["camelCase", "PascalCase", "snake_case", "kebab-case"],
+      "correctIndex": 0
+    }
+  ]
+}

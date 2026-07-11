@@ -1,0 +1,22 @@
+{
+  "title": "Java HashSet",
+  "language": "java",
+  "topic": "hashset",
+  "order": 32,
+  "nextTopic": "wrapper_classes",
+  "prevTopic": "hashmap",
+  "content": "### HashSet in Java\n\nHashSet is a collection that stores unique elements. It is backed by a HashMap internally.\n\n---\n\n### Creating a HashSet\n\n```java\nimport java.util.HashSet;\n\nHashSet<String> names = new HashSet<>();\nHashSet<Integer> numbers = new HashSet<>(100);  // initial capacity\nHashSet<String> copy = new HashSet<>(otherSet);\n```\n\n---\n\n### Common Methods\n\n| Method | Description |\n|--------|-------------|\n| `add(element)` | Add element (false if exists) |\n| `remove(element)` | Remove element |\n| `contains(element)` | Check if element exists |\n| `size()` | Number of elements |\n| `isEmpty()` | Check if empty |\n| `clear()` | Remove all elements |\n\n---\n\n### Iterating\n\n```java\nfor (String s : set) {\n    System.out.println(s);\n}\n```\n\n---\n\n### HashSet Characteristics\n\n| Feature | Description |\n|---------|-------------|\n| No duplicates | Adding duplicate returns false |\n| Unordered | No guaranteed iteration order |\n| Null allowed | One null element |\n| Not synchronized | Use Collections.synchronizedSet |\n| Fast operations | O(1) average for add, remove, contains |\n\n---\n\n### Set Operations\n\n```java\nHashSet<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3));\nHashSet<Integer> set2 = new HashSet<>(Arrays.asList(2, 3, 4));\n\nset1.addAll(set2);      // Union\nset1.retainAll(set2);   // Intersection\nset1.removeAll(set2);   // Difference\n```\n\n> **Key Point:** HashSet relies on `hashCode()` and `equals()` to detect duplicates. Elements must properly override these methods for correct behavior.",
+  "codeExample": "import java.util.HashSet;\n\npublic class Main {\n    public static void main(String[] args) {\n        HashSet<String> set = new HashSet<>();\n        \n        set.add(\"Apple\");\n        set.add(\"Banana\");\n        set.add(\"Apple\");  // duplicate, not added\n        set.add(\"Cherry\");\n        \n        System.out.println(\"Set: \" + set);\n        System.out.println(\"Size: \" + set.size());\n        System.out.println(\"Contains Banana? \" + set.contains(\"Banana\"));\n        \n        set.remove(\"Banana\");\n        System.out.println(\"After remove: \" + set);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What happens when you add a duplicate element to HashSet?",
+      "options": ["It returns false", "It throws exception", "It overwrites", "It creates another copy"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What data structure backs a HashSet?",
+      "options": ["HashMap", "ArrayList", "LinkedList", "TreeMap"],
+      "correctIndex": 0
+    }
+  ]
+}

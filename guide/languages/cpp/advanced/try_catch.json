@@ -1,0 +1,17 @@
+{
+  "title": "C++ Try-Catch Blocks",
+  "language": "cpp",
+  "topic": "try_catch",
+  "order": 53,
+  "nextTopic": "file_handling",
+  "prevTopic": "exception_handling",
+  "content": "### Try-Catch Blocks\n\nTry-catch blocks allow you to handle exceptions gracefully without crashing the program.\n\n---\n\n### Basic Syntax\n\n```cpp\ntry {\n  // Code that might throw\n} catch (ExceptionType1& e) {\n  // Handle ExceptionType1\n} catch (ExceptionType2& e) {\n  // Handle ExceptionType2\n} catch (...) {\n  // Catch-all handler\n}\n```\n\n---\n\n### Multiple Catch Blocks\n\n```cpp\ntry {\n  // Some code\n} catch (const std::out_of_range& e) {\n  cout << \"Out of range: \" << e.what();\n} catch (const std::runtime_error& e) {\n  cout << \"Runtime error: \" << e.what();\n} catch (const std::exception& e) {\n  cout << \"General exception: \" << e.what();\n}\n```\n\n---\n\n### Catch-All Handler\n\n```cpp\ntry {\n  // Risky code\n} catch (...) {\n  cout << \"An unknown exception occurred\";\n  throw;  // Re-throw after logging\n}\n```\n\n---\n\n### Exception Specification (Deprecated)\n\n```cpp\n// Old style (deprecated in C++11, removed in C++17)\nvoid func() throw(int, string);\n\n// Modern C++\nvoid func() noexcept;         // Never throws\nvoid func() noexcept(false);  // May throw\n```\n\n---\n\n### Function Try Block\n\n```cpp\nint riskyFunc() try {\n  // Function body\n  return 42;\n} catch (const std::exception& e) {\n  cout << \"Error in riskyFunc: \" << e.what();\n  throw;  // Re-throw\n}\n```\n\n---\n\n> **Key Point:** Order catch blocks from most specific to most general. The base class `std::exception` should be caught last. Always catch by const reference to avoid slicing.",
+  "codeExample": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n  try {\n    int age;\n    cout << \"Enter age: \";\n    cin >> age;\n\n    if (age < 0) {\n      throw invalid_argument(\"Age cannot be negative\");\n    }\n    if (age > 150) {\n      throw out_of_range(\"Age exceeds reasonable limit\");\n    }\n\n    cout << \"Age is valid: \" << age << endl;\n  } catch (const invalid_argument& e) {\n    cout << \"Invalid: \" << e.what() << endl;\n  } catch (const out_of_range& e) {\n    cout << \"Out of range: \" << e.what() << endl;\n  } catch (const exception& e) {\n    cout << \"Error: \" << e.what() << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does `catch (...)` do?",
+      "options": ["Catches only int exceptions", "Catches all exceptions", "Catches no exceptions", "Compile error"],
+      "correctIndex": 1
+    }
+  ]
+}

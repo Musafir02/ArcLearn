@@ -1,0 +1,22 @@
+{
+  "title": "Java ArrayList",
+  "language": "java",
+  "topic": "arraylist",
+  "order": 29,
+  "nextTopic": "linkedlist",
+  "prevTopic": "arrays",
+  "content": "### ArrayList in Java\n\nArrayList is a resizable array implementation of the List interface. It can dynamically grow and shrink.\n\n---\n\n### Creating an ArrayList\n\n```java\nimport java.util.ArrayList;\n\nArrayList<String> names = new ArrayList<>();           // empty list\nArrayList<Integer> numbers = new ArrayList<>(20);       // initial capacity\nArrayList<String> copy = new ArrayList<>(otherList);    // from another collection\n```\n\n---\n\n### Common Methods\n\n| Method | Description |\n|--------|-------------|\n| `add(element)` | Add element to end |\n| `add(index, element)` | Insert at specific index |\n| `get(index)` | Get element at index |\n| `set(index, element)` | Replace element |\n| `remove(index)` | Remove by index |\n| `remove(element)` | Remove by value |\n| `size()` | Get number of elements |\n| `contains(element)` | Check if element exists |\n| `indexOf(element)` | Find index of element |\n| `clear()` | Remove all elements |\n| `isEmpty()` | Check if empty |\n\n---\n\n### Iterating\n\n```java\n// For loop\nfor (int i = 0; i < list.size(); i++) {\n    System.out.println(list.get(i));\n}\n\n// For-each\nfor (String s : list) {\n    System.out.println(s);\n}\n```\n\n> **Key Point:** ArrayList maintains insertion order and allows duplicates. It grows by 50% when full. Use generic type parameter to specify element type. ArrayList is not synchronized (use Vector or Collections.synchronizedList for thread safety).",
+  "codeExample": "import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<String> fruits = new ArrayList<>();\n        \n        fruits.add(\"Apple\");\n        fruits.add(\"Banana\");\n        fruits.add(\"Cherry\");\n        fruits.add(1, \"Blueberry\");  // insert at index 1\n        \n        System.out.println(\"Fruits: \" + fruits);\n        System.out.println(\"Size: \" + fruits.size());\n        System.out.println(\"First: \" + fruits.get(0));\n        \n        fruits.remove(\"Banana\");\n        System.out.println(\"After remove: \" + fruits);\n        System.out.println(\"Contains Apple? \" + fruits.contains(\"Apple\"));\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can ArrayList hold primitive types directly?",
+      "options": ["No (use wrapper classes)", "Yes", "Only int", "Only boolean"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happens when ArrayList reaches its capacity?",
+      "options": ["It grows automatically", "It throws exception", "It discards elements", "It shrinks"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Exception Handling",
+  "language": "cpp",
+  "topic": "exception_handling",
+  "order": 52,
+  "nextTopic": "try_catch",
+  "prevTopic": "new_delete",
+  "content": "### Exception Handling\n\nExceptions provide a way to transfer control from one part of a program to another when an error occurs. They separate error-handling code from normal code.\n\n---\n\n### Basic Concepts\n\n| Concept | Description |\n|---------|-------------|\n| `throw` | Signals an exception |\n| `try` | Block that may throw |\n| `catch` | Handles the exception |\n| Stack unwinding | Destructors called as scope exits |\n\n---\n\n### Throwing Exceptions\n\n```cpp\nint divide(int a, int b) {\n  if (b == 0) {\n    throw \"Division by zero\";\n  }\n  return a / b;\n}\n```\n\n---\n\n### Standard Exception Classes\n\n```cpp\n#include <stdexcept>\n\nthrow std::runtime_error(\"Something went wrong\");\nthrow std::logic_error(\"Invalid logic\");\nthrow std::out_of_range(\"Index out of bounds\");\n```\n\n---\n\n### noexcept Specifier\n\n```cpp\nvoid safeFunc() noexcept {  // Guarantees no exception\n  // Code that should never throw\n}\n\nvoid maybeThrows() noexcept(false);  // May throw (default)\n```\n\n---\n\n### Exception Safety Levels\n\n| Level | Description |\n|-------|-------------|\n| No-throw | Never throws |\n| Strong | Operation succeeds or rolls back |\n| Basic | No resource leaks, invariant preserved |\n| Minimal | May have resource leaks |\n\n---\n\n> **Key Point:** Catch exceptions by const reference to avoid slicing. Never throw exceptions from destructors. Use RAII to ensure resources are properly cleaned up during stack unwinding.",
+  "codeExample": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint divide(int a, int b) {\n  if (b == 0) {\n    throw runtime_error(\"Division by zero\");\n  }\n  return a / b;\n}\n\nint main() {\n  try {\n    int result = divide(10, 0);\n    cout << \"Result: \" << result << endl;\n  } catch (const runtime_error& e) {\n    cout << \"Error: \" << e.what() << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used to signal an exception?",
+      "options": ["raise", "throw", "error", "signal"],
+      "correctIndex": 1
+    }
+  ]
+}

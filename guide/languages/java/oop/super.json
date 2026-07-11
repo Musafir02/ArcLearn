@@ -1,0 +1,22 @@
+{
+  "title": "Java super Keyword",
+  "language": "java",
+  "topic": "super",
+  "order": 23,
+  "nextTopic": "polymorphism",
+  "prevTopic": "method_overriding",
+  "content": "### The `super` Keyword\n\nThe `super` keyword refers to the immediate parent class object. It is used to access parent class members.\n\n---\n\n### Uses of `super`\n\n| Usage | Example |\n|-------|---------|\n| Access parent fields | `super.fieldName` |\n| Call parent methods | `super.methodName()` |\n| Call parent constructor | `super(parameters)` |\n\n---\n\n### Calling Parent Constructor\n\n```java\nclass Animal {\n    String name;\n    \n    Animal(String name) {\n        this.name = name;\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);  // must be first statement\n    }\n}\n```\n\n---\n\n### Accessing Parent Methods\n\n```java\nclass Animal {\n    void sound() {\n        System.out.println(\"Animal makes sound\");\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        super.sound();  // call parent version\n        System.out.println(\"Dog barks\");\n    }\n}\n```\n\n---\n\n### Accessing Parent Fields\n\n```java\nclass Parent {\n    int value = 10;\n}\n\nclass Child extends Parent {\n    int value = 20;\n    \n    void display() {\n        System.out.println(value);      // 20 (child)\n        System.out.println(super.value); // 10 (parent)\n    }\n}\n```\n\n> **Key Point:** `super()` must be the first statement in the constructor if used. If you don't call `super()`, the compiler inserts a no-arg `super()` call automatically. The parent constructor must exist for this to work.",
+  "codeExample": "class Parent {\n    String message = \"Parent class\";\n    \n    Parent() {\n        System.out.println(\"Parent constructor\");\n    }\n    \n    void display() {\n        System.out.println(\"Display from Parent\");\n    }\n}\n\nclass Child extends Parent {\n    String message = \"Child class\";\n    \n    Child() {\n        super();  // calls parent constructor\n        System.out.println(\"Child constructor\");\n    }\n    \n    @Override\n    void display() {\n        super.display();  // call parent method\n        System.out.println(\"Display from Child\");\n        System.out.println(\"Parent message: \" + super.message);\n        System.out.println(\"Child message: \" + this.message);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Child c = new Child();\n        c.display();\n    }\n}",
+  "quiz": [
+    {
+      "question": "What must be the first statement in a constructor using super()?",
+      "options": ["super()", "this()", "Variable declaration", "Any statement"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does super refer to?",
+      "options": ["Parent class object", "Current class object", "Child class object", "Object class"],
+      "correctIndex": 0
+    }
+  ]
+}

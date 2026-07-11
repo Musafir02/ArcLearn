@@ -1,0 +1,17 @@
+{
+  "title": "C Switch Statement",
+  "language": "c",
+  "topic": "switch",
+  "order": 15,
+  "nextTopic": "ternary",
+  "prevTopic": "if_else",
+  "content": "### Switch Statement in C\n\nThe `switch` statement selects one of many code blocks to execute based on the value of an expression.\n\n### Syntax\n\n```c\nswitch (expression) {\n  case value1:\n    // code\n    break;\n  case value2:\n    // code\n    break;\n  default:\n    // code if no case matches\n}\n```\n\n### Rules\n\n| Rule | Description |\n|------|-------------|\n| Expression must be integer | `int`, `char`, or `enum` (not float or string) |\n| Case values must be unique | No duplicate case labels |\n| Case values must be constants | Not variables or expressions |\n| `break` exits the switch | Without it, execution falls through to next case |\n| `default` is optional | Handles unmatched values, can appear anywhere |\n\n### Fall-Through\n\nIf you omit `break`, execution continues into the next case. This is sometimes used intentionally for multiple cases sharing the same code.\n\n---\n\n> **Key Point:** Always include `break` after each case unless you intentionally want fall-through behavior. Always include a `default` case for error handling.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int day = 3;\n  switch (day) {\n    case 1:\n      printf(\"Monday\\n\");\n      break;\n    case 2:\n      printf(\"Tuesday\\n\");\n      break;\n    case 3:\n      printf(\"Wednesday\\n\");\n      break;\n    default:\n      printf(\"Other day\\n\");\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used to exit a switch case?",
+      "options": ["exit", "return", "break", "continue"],
+      "correctIndex": 2
+    }
+  ]
+}

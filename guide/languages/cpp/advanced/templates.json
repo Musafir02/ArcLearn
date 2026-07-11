@@ -1,0 +1,17 @@
+{
+  "title": "C++ Templates",
+  "language": "cpp",
+  "topic": "templates",
+  "order": 57,
+  "nextTopic": "template_functions",
+  "prevTopic": "file_write",
+  "content": "### Templates\n\nTemplates enable generic programming by allowing functions and classes to work with any data type without code duplication.\n\n---\n\n### Template Syntax\n\n```cpp\ntemplate <typename T>\n// Function or class definition using T\n```\n\n`typename` and `class` are interchangeable in template parameter declarations.\n\n---\n\n### Type and Non-Type Parameters\n\n```cpp\ntemplate <typename T, int Size>  // Type + non-type parameter\nclass Array {\n  T data[Size];\n};\n\nArray<int, 10> arr;\n```\n\n---\n\n### Template Instantiation\n\nWhen you use a template, the compiler generates a specific version for each type:\n\n```cpp\ntemplate <typename T>\nT max(T a, T b) { return (a > b) ? a : b; }\n\n// Compiler generates:\n// int max(int, int)\n// double max(double, double)\n// string max(string, string)\n```\n\n---\n\n### Template Specialization\n\nProvide a custom implementation for a specific type:\n\n```cpp\ntemplate <>\nconst char* max<const char*>(const char* a, const char* b) {\n  return (strcmp(a, b) > 0) ? a : b;\n}\n```\n\n---\n\n### Variadic Templates (C++11)\n\n```cpp\ntemplate <typename... Args>\nvoid printAll(Args... args) {\n  (cout << ... << args) << endl;  // Fold expression (C++17)\n}\n\nprintAll(1, 2.5, \"hello\", 'c');  // 12.5helloc\n```\n\n---\n\n### Concepts (C++20)\n\n```cpp\ntemplate <typename T>\nconcept Numeric = std::is_arithmetic_v<T>;\n\ntemplate <Numeric T>\nT add(T a, T b) { return a + b; }\n```\n\n---\n\n> **Key Point:** Templates are evaluated at compile time. Each unique type used with a template creates a separate instantiation. This enables zero-cost abstractions.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT maximum(T a, T b) {\n  return (a > b) ? a : b;\n}\n\nint main() {\n  cout << maximum(10, 20) << endl;        // int\n  cout << maximum(3.14, 2.71) << endl;    // double\n  cout << maximum(\"apple\", \"orange\") << endl;  // string\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What keyword introduces a template parameter?",
+      "options": ["template", "generic", "typename", "Both A and C"],
+      "correctIndex": 3
+    }
+  ]
+}

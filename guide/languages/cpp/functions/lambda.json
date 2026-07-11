@@ -1,0 +1,17 @@
+{
+  "title": "C++ Lambda Expressions",
+  "language": "cpp",
+  "topic": "lambda",
+  "order": 34,
+  "nextTopic": "default_params",
+  "prevTopic": "recursion",
+  "content": "### Lambda Expressions\n\nLambdas are anonymous function objects that can be defined inline. Introduced in C++11 with improvements in C++14, C++17, and C++20.\n\n---\n\n### Syntax\n\n```cpp\n[capture](parameters) -> return_type {\n  // Function body\n};\n```\n\n---\n\n### Basic Examples\n\n```cpp\nauto square = [](int x) { return x * x; };\ncout << square(5);  // 25\n\nauto add = [](int a, int b) -> int {\n  return a + b;\n};\n```\n\n---\n\n### Capture Clause\n\n| Capture | Description |\n|---------|-------------|\n| `[]` | Nothing captured |\n| `[x]` | Capture x by value |\n| `[&x]` | Capture x by reference |\n| `[=]` | All variables by value |\n| `[&]` | All variables by reference |\n| `[=, &x]` | All by value, x by reference |\n| `[this]` | Capture this pointer |\n\n---\n\n### Capture Example\n\n```cpp\nint factor = 10;\nauto multiply = [factor](int x) { return x * factor; };\ncout << multiply(5);  // 50\n\nint sum = 0;\nauto addToSum = [&sum](int x) { sum += x; };\naddToSum(5);\naddToSum(10);\ncout << sum;  // 15\n```\n\n---\n\n### Generic Lambdas (C++14)\n\n```cpp\nauto print = [](const auto& value) {\n  cout << value << endl;\n};\n\nprint(42);       // int\nprint(\"hello\");  // const char*\n```\n\n---\n\n> **Key Point:** Lambdas are widely used with STL algorithms like `std::sort`, `std::for_each`, and `std::find_if`. They improve code readability by keeping logic close to where it is used.",
+  "codeExample": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n  vector<int> nums = {5, 2, 8, 1, 9};\n\n  sort(nums.begin(), nums.end(), [](int a, int b) {\n    return a > b;  // Sort descending\n  });\n\n  for (int n : nums) {\n    cout << n << \" \";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does `[=]` capture in a lambda?",
+      "options": ["Nothing", "All variables by value", "All variables by reference", "Only the first variable"],
+      "correctIndex": 1
+    }
+  ]
+}

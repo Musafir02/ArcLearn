@@ -1,0 +1,22 @@
+{
+  "title": "Java Output",
+  "language": "java",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Printing to Console\n\nJava provides several ways to display output to the console using the `System` class.\n\n---\n\n### Output Methods\n\n| Method | Behavior |\n|--------|----------|\n| `System.out.println()` | Prints text and moves to next line |\n| `System.out.print()` | Prints text without moving to next line |\n| `System.out.printf()` | Prints formatted text |\n\n---\n\n### Escape Sequences\n\n| Sequence | Result |\n|----------|--------|\n| `\\n` | New line |\n| `\\t` | Tab |\n| `\\\\` | Backslash |\n| `\\\"` | Double quote |\n\n---\n\n### Formatting with printf\n\n```java\nSystem.out.printf(\"Hello %s, you are %d years old\", \"John\", 25);\n```\n\n| Specifier | Type |\n|-----------|------|\n| %d | Integer |\n| %f | Floating point |\n| %s | String |\n| %c | Character |\n| %b | Boolean |\n\n> **Key Point:** `println` adds a newline at the end, while `print` does not. Use `printf` for precise formatting control.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n        System.out.print(\"This is \");\n        System.out.print(\"all on one line\");\n        System.out.printf(\"\\nFormatted: %s has %d apples\", \"Alice\", 5);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which method prints text without moving to a new line?",
+      "options": ["System.out.print()", "System.out.println()", "System.out.printf()", "System.out.write()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which escape sequence adds a new line?",
+      "options": ["\\n", "\\t", "\\r", "\\b"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Java Numbers",
+  "language": "java",
+  "topic": "numbers",
+  "order": 11,
+  "nextTopic": "booleans",
+  "prevTopic": "strings",
+  "content": "### Numbers in Java\n\nJava provides numeric types for both integers and floating-point numbers.\n\n---\n\n### Integer Types\n\n| Type | Size | Range |\n|------|------|-------|\n| `byte` | 8 bits | -128 to 127 |\n| `short` | 16 bits | -32,768 to 32,767 |\n| `int` | 32 bits | -2^31 to 2^31-1 |\n| `long` | 64 bits | -2^63 to 2^63-1 |\n\n---\n\n### Floating-Point Types\n\n| Type | Size | Precision |\n|------|------|-----------|\n| `float` | 32 bits | 6-7 decimal digits |\n| `double` | 64 bits | 15-16 decimal digits |\n\n---\n\n### Number Operations\n\n| Operation | Example | Result |\n|-----------|---------|--------|\n| Integer division | `10 / 3` | `3` |\n| Float division | `10.0 / 3` | `3.333...` |\n| Modulus | `10 % 3` | `1` |\n| Increment | `int x = 5; x++;` | `x = 6` |\n\n---\n\n### Math Class\n\n```java\nMath.max(10, 20);     // 20\nMath.min(10, 20);     // 10\nMath.sqrt(25);        // 5.0\nMath.abs(-5);         // 5\nMath.random();        // 0.0 to 1.0\nMath.round(3.7);      // 4\nMath.pow(2, 3);       // 8.0\n```\n\n> **Key Point:** Integer division truncates the decimal. Use suffix `L` for long literals and `f` for float literals. The `Math` class provides many useful mathematical functions.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        int a = 10, b = 3;\n        System.out.println(\"Int division: \" + (a / b));\n        System.out.println(\"Double division: \" + ((double)a / b));\n        System.out.println(\"Modulus: \" + (a % b));\n        \n        System.out.println(\"Max: \" + Math.max(a, b));\n        System.out.println(\"Min: \" + Math.min(a, b));\n        System.out.println(\"Sqrt: \" + Math.sqrt(25));\n        System.out.println(\"Random: \" + Math.random());\n        \n        long big = 10000000000L;\n        float pi = 3.14159f;\n        System.out.println(\"Long: \" + big);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What suffix is used for long literals?",
+      "options": ["L", "lng", "long", "lg"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the result of 10 / 3 with integers?",
+      "options": ["3", "3.333", "3.0", "3.33"],
+      "correctIndex": 0
+    }
+  ]
+}

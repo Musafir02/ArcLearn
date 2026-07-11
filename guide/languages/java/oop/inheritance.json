@@ -1,0 +1,22 @@
+{
+  "title": "Java Inheritance",
+  "language": "java",
+  "topic": "inheritance",
+  "order": 21,
+  "nextTopic": "method_overriding",
+  "prevTopic": "method_overloading",
+  "content": "### Inheritance in Java\n\nInheritance allows a class to inherit fields and methods from another class. It establishes an \"is-a\" relationship.\n\n---\n\n### Inheritance Syntax\n\n```java\nclass ChildClass extends ParentClass {\n    // inherits all public and protected members\n}\n```\n\n---\n\n### Types of Inheritance\n\n| Type | Description |\n|------|-------------|\n| Single | One child extends one parent |\n| Multilevel | A extends B extends C |\n| Hierarchical | Multiple children extend one parent |\n\nJava does NOT support multiple inheritance of classes (to avoid the diamond problem).\n\n---\n\n### The `extends` Keyword\n\n```java\nclass Animal {\n    void eat() {\n        System.out.println(\"Animal eats\");\n    }\n}\n\nclass Dog extends Animal {\n    void bark() {\n        System.out.println(\"Dog barks\");\n    }\n}\n// Dog inherits eat() from Animal\n```\n\n---\n\n### What is Inherited?\n\n| Inherited | Not Inherited |\n|-----------|---------------|\n| public fields/methods | private fields/methods |\n| protected fields/methods | Constructors |\n| default (same package) | Static methods (hidden, not inherited) |\n\n> **Key Point:** Java uses `extends` for class inheritance. A class can extend only one parent class. The `Object` class is the root of all Java classes — every class implicitly extends `Object`.",
+  "codeExample": "class Animal {\n    String name;\n    \n    Animal(String name) {\n        this.name = name;\n    }\n    \n    void eat() {\n        System.out.println(name + \" is eating\");\n    }\n}\n\nclass Dog extends Animal {\n    Dog(String name) {\n        super(name);\n    }\n    \n    void bark() {\n        System.out.println(name + \" is barking\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Dog dog = new Dog(\"Buddy\");\n        dog.eat();   // inherited from Animal\n        dog.bark();  // defined in Dog\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used for inheritance in Java?",
+      "options": ["extends", "implements", "inherits", "derives"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Does Java support multiple class inheritance?",
+      "options": ["No", "Yes", "Only with interfaces", "Only for abstract classes"],
+      "correctIndex": 0
+    }
+  ]
+}

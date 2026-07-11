@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started with Java",
+  "language": "java",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installing JDK\n\nTo develop Java applications, you need the Java Development Kit (JDK). Download the latest JDK from Oracle's official website or use OpenJDK.\n\n---\n\n### Setting Up\n\n1. Download JDK from oracle.com or adoptium.net\n2. Install the JDK on your system\n3. Set the JAVA_HOME environment variable\n4. Add JDK/bin to your PATH variable\n5. Verify installation by running `java -version` in terminal\n\n---\n\n### Your First Java Program\n\nCreate a file named `Main.java` with the following code. The filename must match the class name.\n\n---\n\n### Compilation and Execution\n\n| Step | Command | Description |\n|------|---------|-------------|\n| Compile | `javac Main.java` | Produces Main.class bytecode |\n| Run | `java Main` | JVM executes the bytecode |\n\n---\n\n### Recommended IDEs\n\n- **IntelliJ IDEA** — Most popular, feature-rich\n- **Eclipse** — Open-source, widely used\n- **VS Code** — Lightweight with Java extensions\n- **NetBeans** — Good for beginners\n\n> **Key Point:** The main method `public static void main(String[] args)` is the entry point of every Java application. The JVM looks for this exact signature to start execution.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What command compiles a Java file?",
+      "options": ["javac", "java", "javap", "javadoc"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the entry point of a Java program?",
+      "options": ["main method", "constructor", "init method", "start method"],
+      "correctIndex": 0
+    }
+  ]
+}

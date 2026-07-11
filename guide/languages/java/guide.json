@@ -1,0 +1,19 @@
+{
+  "title": "Java Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Java Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "datatypes", "typecasting", "operators", "strings", "numbers", "booleans", "input"]
+    },
+    {
+      "type": "group", "title": "Object-Oriented Programming", "folder": "oop",
+      "topics": ["classes", "objects", "constructors", "this_keyword", "static", "methods", "method_overloading", "inheritance", "method_overriding", "super", "polymorphism", "encapsulation", "abstraction", "interfaces"]
+    },
+    {
+      "type": "group", "title": "Advanced Java", "folder": "advanced",
+      "topics": ["arrays", "arraylist", "linkedlist", "hashmap", "hashset", "wrapper_classes", "generics", "exception_handling", "try_catch", "throw_throws", "custom_exceptions", "file_handling", "file_io", "file_read", "file_write", "serialization", "threads", "thread_sync", "lambda", "streams", "optional", "date_time", "regex", "enums", "annotations", "reflection", "jdbc_basics", "memory_management"]
+    }
+  ]
+}

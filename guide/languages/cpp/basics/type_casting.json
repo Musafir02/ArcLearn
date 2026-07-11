@@ -1,0 +1,17 @@
+{
+  "title": "C++ Type Casting",
+  "language": "cpp",
+  "topic": "type_casting",
+  "order": 14,
+  "nextTopic": "type_conversion",
+  "prevTopic": "input",
+  "content": "### Type Casting in C++\n\nType casting converts a value from one data type to another. C++ provides several casting mechanisms.\n\n---\n\n### C-Style Cast\n\n```cpp\nint a = 10;\ndouble b = (double)a;          // C-style cast\ndouble c = double(a);          // Function-style cast\n```\n\n---\n\n### C++ Cast Operators\n\n| Cast | Purpose | Syntax |\n|------|---------|--------|\n| `static_cast` | Standard conversions | `static_cast<type>(expr)` |\n| `dynamic_cast` | Polymorphic class casting | `dynamic_cast<type*>(ptr)` |\n| `const_cast` | Remove const/volatile | `const_cast<type>(expr)` |\n| `reinterpret_cast` | Bit pattern reinterpretation | `reinterpret_cast<type>(expr)` |\n\n---\n\n### static_cast\n\n```cpp\ndouble pi = 3.14159;\nint approx = static_cast<int>(pi);  // 3 (truncates)\n\nchar ch = static_cast<char>(65);    // 'A'\nvoid* ptr = &approx;\nint* intPtr = static_cast<int*>(ptr);\n```\n\n---\n\n### dynamic_cast\n\nUsed for safe downcasting in class hierarchies:\n\n```cpp\nBase* basePtr = new Derived();\nDerived* derivedPtr = dynamic_cast<Derived*>(basePtr);\nif (derivedPtr) {\n  // Safe to use derivedPtr\n}\n```\n\n---\n\n### const_cast\n\n```cpp\nconst int value = 5;\nint* modifiable = const_cast<int*>(&value);\n```\n\n---\n\n> **Key Point:** Prefer C++ casts (`static_cast`, `dynamic_cast`, `const_cast`, `reinterpret_cast`) over C-style casts. They are safer, more explicit, and checked by the compiler.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  double price = 19.99;\n  int dollars = static_cast<int>(price);\n  char firstChar = static_cast<char>(65);\n\n  cout << \"Original: \" << price << endl;\n  cout << \"Dollars: \" << dollars << endl;\n  cout << \"Char 65: \" << firstChar << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which C++ cast is used for standard type conversions?",
+      "options": ["dynamic_cast", "static_cast", "const_cast", "reinterpret_cast"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Java Strings",
+  "language": "java",
+  "topic": "strings",
+  "order": 10,
+  "nextTopic": "numbers",
+  "prevTopic": "operators",
+  "content": "### Strings in Java\n\nStrings are sequences of characters used to represent text.\n\n---\n\n### Creating Strings\n\n```java\nString str1 = \"Hello\";              // String literal\nString str2 = new String(\"Hello\");  // Using new keyword\n```\n\n---\n\n### String Methods\n\n| Method | Description |\n|--------|-------------|\n| `length()` | Returns string length |\n| `charAt()` | Character at index |\n| `substring()` | Extract substring |\n| `indexOf()` | Find first occurrence |\n| `toUpperCase()` | Convert to uppercase |\n| `toLowerCase()` | Convert to lowercase |\n| `replace()` | Replace characters |\n| `split()` | Split into array |\n| `equals()` | Compare strings |\n| `trim()` | Remove whitespace |\n\n---\n### String Concatenation\n\n```java\nString first = \"John\";\nString last = \"Doe\";\nString full = first + \" \" + last;     // Using +\nString full2 = first.concat(\" \").concat(last);  // Using concat()\n```\n\n---\n\n### String Comparison\n\n| Method | Behavior |\n|--------|----------|\n| `equals()` | Compares content (case-sensitive) |\n| `equalsIgnoreCase()` | Compares content (case-insensitive) |\n| `compareTo()` | Lexicographic comparison |\n\n> **Key Point:** Strings are immutable in Java. Any operation that modifies a string creates a new object. Use `StringBuilder` or `StringBuffer` for mutable strings.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        String str = \"Hello World\";\n        System.out.println(\"Length: \" + str.length());\n        System.out.println(\"Char at 1: \" + str.charAt(1));\n        System.out.println(\"Substring: \" + str.substring(0, 5));\n        System.out.println(\"Upper: \" + str.toUpperCase());\n        System.out.println(\"Replace: \" + str.replace(\"World\", \"Java\"));\n        \n        String a = \"Hello\";\n        String b = \"hello\";\n        System.out.println(\"Equals: \" + a.equals(b));\n        System.out.println(\"Equals Ignore Case: \" + a.equalsIgnoreCase(b));\n    }\n}",
+  "quiz": [
+    {
+      "question": "Are Strings mutable in Java?",
+      "options": ["No", "Yes", "Only in methods", "Depends on version"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method compares string content?",
+      "options": ["equals()", "==", "compare()", "match()"],
+      "correctIndex": 0
+    }
+  ]
+}

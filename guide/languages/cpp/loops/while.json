@@ -1,0 +1,17 @@
+{
+  "title": "C++ While Loop",
+  "language": "cpp",
+  "topic": "while",
+  "order": 20,
+  "nextTopic": "for",
+  "prevTopic": "ternary",
+  "content": "### While Loop\n\nThe `while` loop repeatedly executes a block of code as long as a given condition remains true.\n\n---\n\n### Basic Syntax\n\n```cpp\nwhile (condition) {\n  // Code to repeat\n}\n```\n\n---\n\n### Example\n\n```cpp\nint i = 0;\nwhile (i < 5) {\n  cout << i << \" \";\n  i++;\n}\n// Output: 0 1 2 3 4\n```\n\n---\n\n### Infinite Loop\n\n```cpp\nwhile (true) {\n  // Runs forever (until break)\n}\n```\n\n---\n\n### Sentinel-Controlled Loop\n\n```cpp\nint number;\nint sum = 0;\n\ncout << \"Enter numbers (negative to stop): \";\ncin >> number;\n\nwhile (number >= 0) {\n  sum += number;\n  cin >> number;\n}\n```\n\n---\n\n### Common Patterns\n\n| Pattern | Code |\n|---------|------|\n| Counter | `while (count < n) { ... count++; }` |\n| Sentinel | `while ((c = getchar()) != EOF) { }` |\n| Flag | `while (!done) { ... if (cond) done = true; }` |\n\n---\n\n> **Key Point:** Ensure the loop variable changes within the body to avoid infinite loops. The condition is checked before each iteration.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int count = 1;\n  while (count <= 5) {\n    cout << \"Count: \" << count << endl;\n    count++;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "When is the condition checked in a while loop?",
+      "options": ["After each iteration", "Before each iteration", "Only once at the beginning", "Only once at the end"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Arrays",
+  "language": "cpp",
+  "topic": "arrays",
+  "order": 25,
+  "nextTopic": "array_size",
+  "prevTopic": "goto",
+  "content": "### Arrays in C++\n\nArrays are fixed-size collections of elements of the same type stored in contiguous memory.\n\n---\n\n### Declaration and Initialization\n\n```cpp\nint numbers[5];                     // Uninitialized array of 5 ints\nint scores[3] = {90, 85, 88};      // Initialized\nint values[] = {1, 2, 3, 4, 5};    // Size inferred from initializer\nint zeros[10] = {0};               // First element 0, rest zero-initialized\n```\n\n---\n\n### Accessing Elements\n\n```cpp\nint arr[5] = {10, 20, 30, 40, 50};\n\ncout << arr[0];    // First element: 10\ncout << arr[2];    // Third element: 30\n\narr[4] = 100;      // Modify last element\n```\n\n---\n\n### Iterating Through Arrays\n\n```cpp\nint arr[] = {1, 2, 3, 4, 5};\n\n// Index-based\nfor (int i = 0; i < 5; i++) {\n  cout << arr[i] << \" \";\n}\n\n// Range-based (C++11)\nfor (int x : arr) {\n  cout << x << \" \";\n}\n```\n\n---\n\n### Common Mistakes\n\n| Mistake | Example | Problem |\n|---------|---------|---------|\n| Out-of-bounds | `arr[10]` when size is 5 | Undefined behavior |\n| Array decay | Passing to function | Array becomes pointer |\n| No bounds checking | No error on invalid index | Silent corruption |\n\n---\n\n> **Key Point:** Array indices start at 0 and go to size-1. C++ does not perform bounds checking - accessing out-of-bounds elements leads to undefined behavior.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int numbers[5] = {10, 20, 30, 40, 50};\n\n  cout << \"Array elements: \";\n  for (int i = 0; i < 5; i++) {\n    cout << numbers[i] << \" \";\n  }\n  cout << endl;\n\n  cout << \"First: \" << numbers[0] << \", Last: \" << numbers[4] << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the index of the first element in a C++ array?",
+      "options": ["0", "1", "-1", "Depends on the compiler"],
+      "correctIndex": 0
+    }
+  ]
+}

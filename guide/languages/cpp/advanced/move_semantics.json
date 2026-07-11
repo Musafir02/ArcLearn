@@ -1,0 +1,17 @@
+{
+  "title": "C++ Move Semantics",
+  "language": "cpp",
+  "topic": "move_semantics",
+  "order": 68,
+  "nextTopic": "multithreading",
+  "prevTopic": "smart_pointers",
+  "content": "### Move Semantics\n\nMove semantics allow transferring resources from one object to another without copying. Introduced in C++11, it significantly improves performance for expensive-to-copy objects.\n\n---\n\n### Lvalues and Rvalues\n\n```cpp\nint x = 5;       // x is an lvalue (has an address)\nint&& r = 5;     // 5 is an rvalue (temporary)\n\nint getValue() { return 42; }\ngetValue();      // Return value is an rvalue\n```\n\n---\n\n### Move Constructor and Move Assignment\n\n```cpp\nclass Buffer {\npublic:\n  // Move constructor\n  Buffer(Buffer&& other) noexcept\n    : data(other.data), size(other.size) {\n    other.data = nullptr;  // Steal resource\n    other.size = 0;\n  }\n\n  // Move assignment\n  Buffer& operator=(Buffer&& other) noexcept {\n    if (this != &other) {\n      delete[] data;          // Release current\n      data = other.data;      // Steal resource\n      size = other.size;\n      other.data = nullptr;   // Leave in valid state\n      other.size = 0;\n    }\n    return *this;\n  }\nprivate:\n  int* data;\n  size_t size;\n};\n```\n\n---\n\n### std::move\n\nCasts an lvalue to an rvalue reference:\n\n```cpp\nvector<int> v1 = {1, 2, 3, 4, 5};\nvector<int> v2 = std::move(v1);  // Transfer ownership\n// v1 is now empty (valid but unspecified state)\n```\n\n---\n\n### std::forward (Perfect Forwarding)\n\n```cpp\ntemplate <typename T>\nvoid wrapper(T&& arg) {\n  func(std::forward<T>(arg));  // Preserves value category\n}\n```\n\n---\n\n### When Move Happens Automatically\n\n- Returning a local variable\n- Passing a temporary to a function\n- `std::move()` is called explicitly\n- STL containers use move internally (e.g., `vector::push_back`)\n\n---\n\n> **Key Point:** Move semantics eliminate deep copying for temporary objects. Implement move constructors and move assignment operators for classes that manage resources. Mark them `noexcept` for optimal performance with STL containers.",
+  "codeExample": "#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\nint main() {\n  vector<string> source = {\"Hello\", \"World\", \"C++\"};\n  vector<string> dest = std::move(source);\n\n  cout << \"Source size: \" << source.size() << endl;  // 0\n  cout << \"Dest size: \" << dest.size() << endl;      // 3\n\n  for (const string& s : dest) {\n    cout << s << \" \";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does std::move do?",
+      "options": ["Moves data at runtime", "Casts to rvalue reference", "Copies the object", "Deletes the object"],
+      "correctIndex": 1
+    }
+  ]
+}

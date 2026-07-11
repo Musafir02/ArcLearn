@@ -1,0 +1,17 @@
+{
+  "title": "C++ Iterators",
+  "language": "cpp",
+  "topic": "iterators",
+  "order": 29,
+  "nextTopic": "functions",
+  "prevTopic": "vectors",
+  "content": "### Iterators\n\nIterators provide a uniform way to traverse elements in containers (vectors, maps, sets, etc.) regardless of the underlying data structure.\n\n---\n\n### Iterator Types\n\n| Iterator Category | Capabilities | Containers |\n|-------------------|-------------|------------|\n| Input | Read forward | `istream_iterator` |\n| Output | Write forward | `ostream_iterator` |\n| Forward | Read/write forward | `forward_list` |\n| Bidirectional | Read/write both directions | `list`, `set`, `map` |\n| Random Access | Full pointer-like access | `vector`, `deque`, `array` |\n\n---\n\n### Basic Usage\n\n```cpp\nvector<int> vec = {10, 20, 30, 40, 50};\n\n// Forward iteration\nauto it = vec.begin();\nwhile (it != vec.end()) {\n  cout << *it << \" \";\n  ++it;\n}\n\n// Reverse iteration\nauto rit = vec.rbegin();\nwhile (rit != vec.rend()) {\n  cout << *rit << \" \";\n  ++rit;\n}\n```\n\n---\n\n### Iterator Functions\n\n| Function | Returns |\n|----------|---------|\n| `begin()` / `end()` | Iterator to first / past-last |\n| `cbegin()` / `cend()` | Const iterator |\n| `rbegin()` / `rend()` | Reverse iterator |\n| `crbegin()` / `crend()` | Const reverse iterator |\n\n---\n\n### Modifying with Iterators\n\n```cpp\nvector<int> nums = {1, 2, 3, 4, 5};\n\nfor (auto it = nums.begin(); it != nums.end(); ++it) {\n  *it *= 2;  // Double each element\n}\n```\n\n---\n\n> **Key Point:** Iterators behave like pointers. Use `*` to dereference and access the element, `++` to advance, and `--` for bidirectional iterators.",
+  "codeExample": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n  vector<int> numbers = {100, 200, 300};\n\n  cout << \"Forward: \";\n  for (auto it = numbers.begin(); it != numbers.end(); ++it) {\n    cout << *it << \" \";\n  }\n\n  cout << \"\\nReverse: \";\n  for (auto it = numbers.rbegin(); it != numbers.rend(); ++it) {\n    cout << *it << \" \";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does `*it` do when `it` is an iterator?",
+      "options": ["Returns the iterator itself", "Dereferences the iterator", "Advances the iterator", "Compares iterators"],
+      "correctIndex": 1
+    }
+  ]
+}

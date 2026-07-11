@@ -1,0 +1,17 @@
+{
+  "title": "C++ Namespaces",
+  "language": "cpp",
+  "topic": "namespaces",
+  "order": 64,
+  "nextTopic": "preprocessor",
+  "prevTopic": "stl_algorithm",
+  "content": "### Namespaces\n\nNamespaces are used to organize code into logical groups and prevent name collisions in large projects.\n\n---\n\n### Defining a Namespace\n\n```cpp\nnamespace Math {\n  const double PI = 3.14159;\n\n  int add(int a, int b) {\n    return a + b;\n  }\n\n  class Calculator {\n  public:\n    int multiply(int a, int b) { return a * b; }\n  };\n}\n```\n\n---\n\n### Accessing Namespace Members\n\n```cpp\n// Qualified name\ncout << Math::PI;\nint sum = Math::add(5, 3);\nMath::Calculator calc;\n\n// Using declaration\nusing Math::PI;\ncout << PI;  // No need for Math::\n\n// Using directive\nusing namespace Math;\ncout << add(1, 2);  // All Math members available\n```\n\n---\n\n### Nested Namespaces\n\n```cpp\nnamespace Outer {\n  namespace Inner {\n    int value = 42;\n  }\n}\n\n// C++17: nested namespace definition\nnamespace Outer::Inner {\n  int another = 100;\n}\n\ncout << Outer::Inner::value;  // 42\n```\n\n---\n\n### Inline Namespaces (C++11)\n\n```cpp\nnamespace Library {\n  inline namespace V2 {\n    void func() { cout << \"v2\"; }\n  }\n  namespace V1 {\n    void func() { cout << \"v1\"; }\n  }\n}\n\nLibrary::func();  // Calls V2::func (inline makes it default)\n```\n\n---\n\n### Anonymous Namespaces\n\n```cpp\nnamespace {\n  int internalVar = 10;  // Internal linkage (like static)\n  void helper() { /* ... */ }\n}\n```\n\n---\n\n> **Key Point:** Avoid `using namespace std;` in header files. Use `using` declarations (`using std::cout;`) or fully qualified names for better clarity and to prevent pollution.",
+  "codeExample": "#include <iostream>\n\nnamespace Geometry {\n  const double PI = 3.14159;\n\n  double circleArea(double radius) {\n    return PI * radius * radius;\n  }\n}\n\nint main() {\n  std::cout << \"Area: \" << Geometry::circleArea(5.0) << std::endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What operator is used to access namespace members?",
+      "options": ["->", "::", ".", ":"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C Constants",
+  "language": "c",
+  "topic": "constants",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Constants in C\n\nConstants are fixed values that do not change during program execution.\n\n### Defining Constants\n\nThere are two ways to define constants:\n\n1. **Using `#define` preprocessor directive**\n\n```c\n#define PI 3.14159\n#define MAX_SIZE 100\n```\n\n2. **Using `const` keyword**\n\n```c\nconst int DAYS_IN_WEEK = 7;\nconst float GRAVITY = 9.81;\n```\n\n---\n\n### Difference Between `#define` and `const`\n\n| Feature | `#define` | `const` |\n|---------|-----------|---------|\n| Processing | Preprocessor (before compilation) | Compiler |\n| Type safety | No type checking | Type checked |\n| Memory | No memory allocated | Memory allocated |\n| Scope | Global from point of definition | Block-scoped |\n| Debugging | Harder to debug | Debugger friendly |\n\n### Literal Constants\n\n| Type | Example |\n|------|---------|\n| Integer | `42`, `-7`, `0xFF` |\n| Floating-point | `3.14`, `1.5e-3` |\n| Character | `'A'`, `'\\n'`, `'0'` |\n| String | `\"hello\"`, `\"C\\n\"` |\n\n---\n\n> **Key Point:** Use `const` for type safety and `#define` for simple value substitutions like array sizes.",
+  "codeExample": "#include <stdio.h>\n#define PI 3.14159\n\nint main() {\n  const int radius = 5;\n  float area = PI * radius * radius;\n  printf(\"Area: %.2f\\n\", area);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used to create a type-checked constant in C?",
+      "options": ["#define", "static", "const", "volatile"],
+      "correctIndex": 2
+    }
+  ]
+}

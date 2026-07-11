@@ -1,0 +1,17 @@
+{
+  "title": "C Math Functions",
+  "language": "c",
+  "topic": "math_functions",
+  "order": 37,
+  "nextTopic": "struct",
+  "prevTopic": "recursion",
+  "content": "### Math Functions in C\n\nThe `<math.h>` header provides mathematical functions.\n\n### Common Math Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `sqrt(x)` | Square root | `sqrt(16.0)` returns 4.0 |\n| `pow(x, y)` | x raised to power y | `pow(2.0, 3.0)` returns 8.0 |\n| `abs(x)` | Absolute value (int) | `abs(-5)` returns 5 |\n| `fabs(x)` | Absolute value (double) | `fabs(-3.14)` returns 3.14 |\n| `ceil(x)` | Rounds up | `ceil(3.2)` returns 4.0 |\n| `floor(x)` | Rounds down | `floor(3.8)` returns 3.0 |\n| `round(x)` | Rounds to nearest | `round(3.5)` returns 4.0 |\n| `sin(x)` | Sine (radians) | `sin(0.0)` returns 0.0 |\n| `cos(x)` | Cosine (radians) | `cos(0.0)` returns 1.0 |\n| `tan(x)` | Tangent (radians) | `tan(0.0)` returns 0.0 |\n| `log(x)` | Natural logarithm | `log(2.71828)` ~ 1.0 |\n| `log10(x)` | Base-10 logarithm | `log10(100.0)` returns 2.0 |\n| `exp(x)` | e raised to power x | `exp(1.0)` returns e |\n| `fmod(x, y)` | Floating-point remainder | `fmod(5.5, 2.0)` returns 1.5 |\n\n### Compilation Note\n\nOn many systems, you must link the math library with `-lm`:\n\n```\ngcc program.c -o program -lm\n```\n\n---\n\n> **Key Point:** Link the math library with `-lm` flag during compilation. Math functions typically work with `double` type.",
+  "codeExample": "#include <stdio.h>\n#include <math.h>\n\nint main() {\n  double x = 9.0;\n  printf(\"sqrt(%.1f) = %.2f\\n\", x, sqrt(x));\n  printf(\"pow(2, 10) = %.0f\\n\", pow(2, 10));\n  printf(\"ceil(3.2) = %.1f\\n\", ceil(3.2));\n  printf(\"floor(3.8) = %.1f\\n\", floor(3.8));\n  printf(\"fabs(-5.5) = %.1f\\n\", fabs(-5.5));\n  printf(\"log(e) = %.4f\\n\", log(exp(1.0)));\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What compiler flag is often needed to link math functions?",
+      "options": ["-lm", "-lc", "-lmath", "-lmth"],
+      "correctIndex": 0
+    }
+  ]
+}

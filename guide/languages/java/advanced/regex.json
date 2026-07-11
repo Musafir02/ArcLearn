@@ -1,0 +1,22 @@
+{
+  "title": "Java Regex",
+  "language": "java",
+  "topic": "regex",
+  "order": 50,
+  "nextTopic": "enums",
+  "prevTopic": "date_time",
+  "content": "### Regular Expressions in Java\n\nRegular expressions (regex) are patterns used for matching character sequences in strings.\n\n---\n\n### The Pattern and Matcher Classes\n\n```java\nimport java.util.regex.*;\n\nPattern pattern = Pattern.compile(\"regex\");\nMatcher matcher = pattern.matcher(\"input string\");\n```\n\n---\n\n### Common Regex Patterns\n\n| Pattern | Matches |\n|---------|---------|\n| `.` | Any character |\n| `\\d` | Digit (0-9) |\n| `\\D` | Non-digit |\n| `\\w` | Word character (a-z, A-Z, 0-9, _) |\n| `\\W` | Non-word character |\n| `\\s` | Whitespace |\n| `\\S` | Non-whitespace |\n| `^` | Start of line |\n| `$` | End of line |\n| `[abc]` | Any of a, b, c |\n| `[^abc]` | Not a, b, c |\n| `[a-z]` | Range a to z |\n\n---\n\n### Quantifiers\n\n| Quantifier | Description |\n|------------|-------------|\n| `*` | Zero or more |\n| `+` | One or more |\n| `?` | Zero or one |\n| `{n}` | Exactly n times |\n| `{n,}` | At least n times |\n| `{n,m}` | Between n and m times |\n\n---\n\n### Matcher Methods\n\n| Method | Description |\n|--------|-------------|\n| `matches()` | Full string matches pattern |\n| `find()` | Find next match in string |\n| `group()` | Return matched text |\n| `start()` | Start index of match |\n| `end()` | End index of match |\n| `replaceAll(replacement)` | Replace all matches |\n\n---\n\n### String Regex Methods\n\n```java\n\"Hello123\".matches(\".*\\\\d+\")       // true\n\"a,b,c\".split(\",\")                 // [\"a\", \"b\", \"c\"]\n\"Hello123\".replaceAll(\"\\\\d\", \"#\") // \"Hello###\"\n```\n\n> **Key Point:** In Java strings, backslashes must be escaped: `\\d` becomes `\\\\d`. Use `Pattern.compile()` for reusable patterns. Precompile patterns for performance in loops.",
+  "codeExample": "import java.util.regex.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // Email validation\n        String emailPattern = \"^[\\\\w.-]+@[\\\\w.-]+\\\\.\\\\w{2,}$\";\n        String[] emails = {\"user@example.com\", \"invalid@\", \"test@test.co.uk\"};\n        \n        for (String email : emails) {\n            System.out.println(email + \": \" + email.matches(emailPattern));\n        }\n        \n        // Extract phone numbers\n        String text = \"Contact: 555-1234 or 555-5678\";\n        Pattern phonePattern = Pattern.compile(\"\\\\d{3}-\\\\d{4}\");\n        Matcher matcher = phonePattern.matcher(text);\n        \n        while (matcher.find()) {\n            System.out.println(\"Found: \" + matcher.group() + \n                \" at (\" + matcher.start() + \"-\" + matcher.end() + \")\");\n        }\n        \n        // Replace all\n        String clean = \"Hello 123 World 456\".replaceAll(\"\\\\d+\", \"NUM\");\n        System.out.println(\"Cleaned: \" + clean);\n        \n        // Split\n        String[] parts = \"apple,banana;cherry|date\".split(\"[,;|]\");\n        for (String part : parts) {\n            System.out.println(\"Part: \" + part);\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which class compiles a regex pattern?",
+      "options": ["Pattern", "Matcher", "Regex", "String"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you represent a digit in Java regex?",
+      "options": ["\\\\d", "\\d", "%d", "[0-9]"],
+      "correctIndex": 0
+    }
+  ]
+}

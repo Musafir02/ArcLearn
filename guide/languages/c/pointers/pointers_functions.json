@@ -1,0 +1,17 @@
+{
+  "title": "C Pointers as Function Arguments",
+  "language": "c",
+  "topic": "pointers_functions",
+  "order": 30,
+  "nextTopic": "dynamic_memory",
+  "prevTopic": "pointers_arrays",
+  "content": "### Pointers as Function Arguments in C\n\nPassing pointers to functions allows the function to modify the original variables (call by reference).\n\n### Call by Value vs Call by Reference\n\n| Aspect | Call by Value | Call by Reference |\n|--------|--------------|------------------|\n| What is passed | Copy of value | Address of variable |\n| Original modified? | No | Yes |\n| Memory overhead | More for large data | Only pointer (4/8 bytes) |\n| Array parameter | Decays to pointer | Pointer explicitly |\n\n### Common Patterns\n\n1. **Modify multiple values** - Return more than one value\n2. **Avoid copying large structures** - Pass pointer to struct\n3. **Array modification** - Pass pointer to first element\n4. **Output parameters** - Fill in values via pointers\n\n### Const Parameter\n\nUse `const` to prevent modification when passing large data by pointer:\n\n```c\nvoid printData(const int *data, int size);\n```\n\n---\n\n> **Key Point:** Use pointer parameters when you need to modify the argument inside the function or when passing large data efficiently.",
+  "codeExample": "#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n  int temp = *a;\n  *a = *b;\n  *b = temp;\n}\n\nvoid increment(int *x) {\n  (*x)++;\n}\n\nint main() {\n  int x = 5, y = 10;\n  printf(\"Before: x=%d, y=%d\\n\", x, y);\n  swap(&x, &y);\n  printf(\"After: x=%d, y=%d\\n\", x, y);\n  increment(&x);\n  printf(\"After increment: x=%d\\n\", x);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What must you pass to a function to modify the original variable?",
+      "options": ["The value", "The address (&)", "A copy", "A reference alias"],
+      "correctIndex": 1
+    }
+  ]
+}

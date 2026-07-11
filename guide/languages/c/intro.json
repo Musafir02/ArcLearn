@@ -1,0 +1,17 @@
+{
+  "title": "C Introduction",
+  "language": "c",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is C?\n\nC is a general-purpose, procedural programming language developed by Dennis Ritchie at Bell Labs in 1972. It is one of the most influential programming languages and forms the foundation for many modern languages like C++, Java, C#, and Python.\n\n### History of C\n\nC was created to develop the UNIX operating system. It evolved from an earlier language called B, which was based on BCPL. The language was standardized by ANSI in 1989 (C89/C90) and later by ISO in 1999 (C99), 2011 (C11), and 2018 (C17).\n\n---\n\n### Why Learn C?\n\n| Feature | Benefit |\n|---------|--------|\n| Speed | Compiled language with excellent performance |\n| Portability | Code can run on virtually any platform |\n| Low-level access | Direct memory manipulation via pointers |\n| System programming | Used for OS kernels, embedded systems, drivers |\n| Foundation | Teaches core programming concepts deeply |\n\n### Common Uses of C\n\n- Operating systems (Linux, Windows kernel components)\n- Embedded systems and microcontrollers\n- Game engines and graphics libraries\n- Compilers and interpreters\n- Database systems (MySQL, SQLite)\n\n---\n\n> **Key Point:** C gives you fine-grained control over hardware and memory, making it ideal for systems programming where performance and efficiency are critical.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  printf(\"Hello, World!\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Who developed the C programming language?",
+      "options": ["Dennis Ritchie", "Bjarne Stroustrup", "James Gosling", "Ken Thompson"],
+      "correctIndex": 0
+    }
+  ]
+}

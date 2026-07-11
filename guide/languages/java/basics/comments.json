@@ -1,0 +1,22 @@
+{
+  "title": "Java Comments",
+  "language": "java",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Comments in Java\n\nComments are ignored by the compiler and used to explain code.\n\n---\n\n### Types of Comments\n\n| Type | Syntax | Usage |\n|------|--------|-------|\n| Single-line | `// comment` | Brief explanations |\n| Multi-line | `/* comment */` | Longer descriptions |\n| Documentation | `/** comment */` | Generate API docs with javadoc |\n\n---\n\n### Single-Line Comments\n\n```java\n// This is a single-line comment\nint x = 10; // Inline comment\n```\n\n### Multi-Line Comments\n\n```java\n/* This is a\n   multi-line comment\n   spanning several lines */\n```\n\n### Documentation Comments\n\n```java\n/**\n * Calculates the sum of two numbers\n * @param a first number\n * @param b second number\n * @return sum of a and b\n */\npublic int add(int a, int b) {\n    return a + b;\n}\n```\n\n> **Key Point:** Documentation comments (`/** */`) can be processed by the `javadoc` tool to generate HTML documentation. Use `@param`, `@return`, `@throws` tags for structured documentation.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        // Single-line comment\n        System.out.println(\"Hello\");\n        \n        /* Multi-line\n           comment */\n        System.out.println(\"World\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which comment type can be processed by javadoc?",
+      "options": ["/** */", "//", "/* */", "<!-- -->"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you write a single-line comment in Java?",
+      "options": ["//", "/*", "#", "--"],
+      "correctIndex": 0
+    }
+  ]
+}

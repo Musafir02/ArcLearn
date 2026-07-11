@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to Java",
+  "language": "java",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is Java?\n\nJava is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It was developed by James Gosling at Sun Microsystems in 1995 and later acquired by Oracle Corporation.\n\n---\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Platform Independent | Java code compiles to bytecode that runs on any JVM |\n| Object-Oriented | Everything in Java revolves around objects and classes |\n| Secure | Built-in security features including bytecode verification |\n| Robust | Strong memory management, exception handling, type checking |\n| Multithreaded | Built-in support for concurrent programming |\n| Portable | Write once, run anywhere (WORA) |\n\n---\n\n### Java Editions\n\n- **Java SE (Standard Edition)** — Core Java API and runtime\n- **Java EE (Enterprise Edition)** — For large-scale enterprise applications\n- **Java ME (Micro Edition)** — For mobile and embedded devices\n\n---\n\n### How Java Works\n\n1. Source code (.java) is compiled to bytecode (.class) by javac\n2. Bytecode is executed by the Java Virtual Machine (JVM)\n3. JVM interprets bytecode and translates it to native machine code\n4. Just-In-Time (JIT) compilation optimizes performance\n\n> **Key Point:** Java's platform independence comes from the JVM. Each platform has its own JVM, but all JVMs understand the same bytecode.",
+  "codeExample": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Who developed Java?",
+      "options": ["James Gosling", "Dennis Ritchie", "Bjarne Stroustrup", "Guido van Rossum"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does JVM stand for?",
+      "options": ["Java Virtual Machine", "Java Variable Module", "Java Version Manager", "Java Visual Memory"],
+      "correctIndex": 0
+    }
+  ]
+}

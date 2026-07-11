@@ -1,0 +1,17 @@
+{
+  "title": "Getting Started with C",
+  "language": "c",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Setting Up a C Compiler\n\nTo write C programs, you need a compiler. Here are the most popular options:\n\n| Compiler | Platform | Command |\n|----------|----------|---------|\n| GCC | Linux, macOS, WSL | `gcc program.c -o program` |\n| Clang | macOS, Linux | `clang program.c -o program` |\n| MinGW | Windows | `gcc program.c -o program.exe` |\n| MSVC | Windows (Visual Studio) | `cl program.c` |\n\n### Your First C Program\n\nEvery C program begins with `main()`, which is the entry point. The `#include <stdio.h>` directive includes the standard input/output library.\n\n---\n\n### Compilation Process\n\n1. **Preprocessing** - Handles directives (`#include`, `#define`)\n2. **Compilation** - Converts C to assembly code\n3. **Assembly** - Converts assembly to machine code (object file)\n4. **Linking** - Combines object files into an executable\n\n---\n\n> **Key Point:** Always use `return 0;` at the end of `main()` to signal successful execution to the operating system.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  printf(\"Hello, World!\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header file is needed for input/output functions like printf?",
+      "options": ["<stdlib.h>", "<stdio.h>", "<string.h>", "<math.h>"],
+      "correctIndex": 1
+    }
+  ]
+}

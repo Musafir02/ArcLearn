@@ -1,0 +1,17 @@
+{
+  "title": "C++ Output (cout)",
+  "language": "cpp",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Console Output with cout\n\nThe `cout` object, along with the insertion operator `<<`, is used to display output to the console.\n\n---\n\n### Basic Output\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n  cout << \"Hello World!\";\n  return 0;\n}\n```\n\n---\n\n### Multiple Items\n\nYou can chain multiple `<<` operators to output different data types:\n\n```cpp\ncout << \"The value is \" << 42 << \" and pi is \" << 3.14 << endl;\n```\n\n---\n\n### New Lines\n\n| Method | Code | Description |\n|--------|------|-------------|\n| endl | `cout << \"Line 1\" << endl;` | Flushes buffer, adds newline |\n| \\\\n | `cout << \"Line 1\\\\n\";` | Newline character only |\n\n---\n\n### Formatting Output\n\n```cpp\n#include <iomanip>\n\ncout << fixed << setprecision(2) << 3.14159;  // Output: 3.14\ncout << setw(10) << \"right\";                   // Right-aligned in 10 spaces\n```\n\n---\n\n> **Key Point:** Use `endl` to end a line and flush the output buffer. Use `\\\\n` when you only need a newline without flushing.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  cout << \"Welcome to C++!\";\n  cout << endl;\n  cout << \"Number: \" << 100 << \" and text: \" << \"example\";\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which operator is used with cout to output data?",
+      "options": [">>", "<<", "|", "&"],
+      "correctIndex": 1
+    }
+  ]
+}

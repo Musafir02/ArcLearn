@@ -1,0 +1,17 @@
+{
+  "title": "C Union",
+  "language": "c",
+  "topic": "union",
+  "order": 42,
+  "nextTopic": "enum",
+  "prevTopic": "typedef",
+  "content": "### Union in C\n\nA union is similar to a structure, but all members share the same memory location. Only one member can hold a value at a time.\n\n### Definition\n\n```c\nunion Data {\n  int i;\n  float f;\n  char str[20];\n};\n```\n\n### Union vs Structure\n\n| Feature | Structure | Union |\n|---------|-----------|-------|\n| Memory | Sum of all members | Size of largest member |\n| Member access | All members available | Only one member at a time |\n| Use case | Group related data | Store one of several types |\n| Alignment | Each member has its own space | All members share same space |\n\n### Memory Layout\n\nFor the `union Data` above:\n- `sizeof(union Data)` = 20 bytes (size of `char[20]`, the largest member)\n- `i`, `f`, and `str` all start at the same memory address\n\n### Use Cases\n\n- Storing different types in the same memory location\n- Implementing variant types\n- Type punning (interpreting bytes as different types)\n- Saving memory when only one type is used at a time\n\n---\n\n> **Key Point:** Writing to one union member overwrites the others. Accessing a member that was not the last one written leads to undefined behavior.",
+  "codeExample": "#include <stdio.h>\n#include <string.h>\n\nunion Data {\n  int i;\n  float f;\n  char str[20];\n};\n\nint main() {\n  union Data data;\n  data.i = 42;\n  printf(\"Integer: %d\\n\", data.i);\n  data.f = 3.14;\n  printf(\"Float: %.2f\\n\", data.f);\n  // Note: data.i is now overwritten\n  printf(\"Integer after float: %d\\n\", data.i);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "How much memory does a union allocate?",
+      "options": ["Sum of all members", "Size of the largest member", "Size of the first member", "Average of all members"],
+      "correctIndex": 1
+    }
+  ]
+}

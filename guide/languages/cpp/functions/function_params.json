@@ -1,0 +1,17 @@
+{
+  "title": "C++ Function Parameters",
+  "language": "cpp",
+  "topic": "function_params",
+  "order": 31,
+  "nextTopic": "function_overloading",
+  "prevTopic": "functions",
+  "content": "### Function Parameters\n\nParameters are variables that receive values passed into a function. C++ supports several parameter passing mechanisms.\n\n---\n\n### Pass by Value\n\nA copy of the argument is made. Changes inside the function do not affect the original:\n\n```cpp\nvoid increment(int x) {\n  x++;  // Only modifies local copy\n}\n\nint main() {\n  int a = 5;\n  increment(a);\n  cout << a;  // Still 5\n}\n```\n\n---\n\n### Pass by Reference\n\nThe function receives a reference to the original variable. Changes affect the original:\n\n```cpp\nvoid increment(int& x) {\n  x++;  // Modifies original\n}\n\nint a = 5;\nincrement(a);\ncout << a;  // 6\n```\n\n---\n\n### Pass by Const Reference\n\nEfficient for large objects without allowing modification:\n\n```cpp\nvoid display(const vector<int>& data) {\n  for (int x : data) {\n    cout << x << \" \";\n  }\n  // data.push_back(5);  // ERROR: const prevents modification\n}\n```\n\n---\n\n### Pass by Pointer\n\nSimilar to reference, but can accept `nullptr`:\n\n```cpp\nvoid setValue(int* ptr, int value) {\n  if (ptr) {         // Check for nullptr\n    *ptr = value;\n  }\n}\n```\n\n---\n\n### Parameter Passing Guide\n\n| Type | Use When |\n|------|----------|\n| By value | Small objects, no modification needed |\n| By reference | Modification needed |\n| Const reference | Large objects, read-only |\n| Pointer | Optional parameter or C-compatible API |\n\n---\n\n> **Key Point:** Use pass by reference (`&`) to modify the original argument. Use pass by const reference (`const &`) for large objects that should not be modified. Use pass by value for small, trivial types.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nvoid swap(int& a, int& b) {\n  int temp = a;\n  a = b;\n  b = temp;\n}\n\nint main() {\n  int x = 10, y = 20;\n  cout << \"Before: \" << x << \" \" << y << endl;\n  swap(x, y);\n  cout << \"After: \" << x << \" \" << y << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which symbol denotes a reference parameter?",
+      "options": ["*", "&", "->", "@"],
+      "correctIndex": 1
+    }
+  ]
+}

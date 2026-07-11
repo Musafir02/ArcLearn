@@ -1,0 +1,22 @@
+{
+  "title": "Java Abstraction",
+  "language": "java",
+  "topic": "abstraction",
+  "order": 26,
+  "nextTopic": "interfaces",
+  "prevTopic": "encapsulation",
+  "content": "### Abstraction in Java\n\nAbstraction hides implementation details and shows only the essential features of an object.\n\n---\n\n### Abstract Classes\n\nAn abstract class cannot be instantiated. It may contain abstract and concrete methods.\n\n```java\nabstract class Animal {\n    abstract void makeSound();  // no body\n    \n    void sleep() {              // concrete method\n        System.out.println(\"Sleeping\");\n    }\n}\n```\n\n---\n\n### Abstract Class Rules\n\n| Rule | Description |\n|------|-------------|\n| Declaration | `abstract class ClassName` |\n| Abstract methods | No body, must end with semicolon |\n| Instantiation | Cannot create objects directly |\n| Subclass | Must implement all abstract methods or be abstract |\n| Constructors | Allowed |\n| Fields | Can have instance variables |\n\n---\n\n### Why Use Abstraction?\n\n- Reduces complexity by hiding details\n- Provides a common interface for subclasses\n- Enforces a contract for subclasses\n- Improves code maintainability\n\n---\n\n### Abstract vs Concrete\n\n| Feature | Abstract Class | Concrete Class |\n|---------|---------------|----------------|\n| Instantiation | Not allowed | Allowed |\n| Abstract methods | Can have | Cannot have |\n| Implementation | Partial | Complete |\n\n> **Key Point:** An abstract method has no body. Any class with an abstract method must be declared abstract. Abstract classes can have constructors, fields, and concrete methods.",
+  "codeExample": "abstract class Shape {\n    String color;\n    \n    Shape(String color) {\n        this.color = color;\n    }\n    \n    abstract double getArea();\n    \n    void displayColor() {\n        System.out.println(\"Color: \" + color);\n    }\n}\n\nclass Circle extends Shape {\n    double radius;\n    \n    Circle(String color, double radius) {\n        super(color);\n        this.radius = radius;\n    }\n    \n    @Override\n    double getArea() {\n        return Math.PI * radius * radius;\n    }\n}\n\nclass Rectangle extends Shape {\n    double length, width;\n    \n    Rectangle(String color, double length, double width) {\n        super(color);\n        this.length = length;\n        this.width = width;\n    }\n    \n    @Override\n    double getArea() {\n        return length * width;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Shape s1 = new Circle(\"Red\", 5);\n        Shape s2 = new Rectangle(\"Blue\", 4, 6);\n        System.out.println(\"Circle area: \" + s1.getArea());\n        System.out.println(\"Rectangle area: \" + s2.getArea());\n        s1.displayColor();\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can you create an object of an abstract class?",
+      "options": ["No", "Yes", "Only with new keyword", "Only with a factory"],
+      "correctIndex": 0
+    },
+    {
+      "question": "An abstract method has...",
+      "options": ["No body", "Empty body", "Default implementation", "Final implementation"],
+      "correctIndex": 0
+    }
+  ]
+}

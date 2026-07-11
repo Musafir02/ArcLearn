@@ -1,0 +1,17 @@
+{
+  "title": "C File Handling",
+  "language": "c",
+  "topic": "file_handling",
+  "order": 44,
+  "nextTopic": "file_read",
+  "prevTopic": "enum",
+  "content": "### File Handling in C\n\nFile handling in C uses the `FILE` type from `<stdio.h>` to read from and write to files.\n\n### File Operations\n\n| Operation | Function |\n|-----------|----------|\n| Open file | `fopen()` |\n| Close file | `fclose()` |\n| Read character | `fgetc()` / `getc()` |\n| Write character | `fputc()` / `putc()` |\n| Read string | `fgets()` |\n| Write string | `fputs()` |\n| Read formatted | `fscanf()` |\n| Write formatted | `fprintf()` |\n| Read binary | `fread()` |\n| Write binary | `fwrite()` |\n| Check end of file | `feof()` |\n| Error checking | `ferror()` |\n\n### File Pointer\n\n```c\nFILE *filePointer;\nfilePointer = fopen(\"filename\", \"mode\");\n```\n\n---\n\n> **Key Point:** Always check if `fopen()` returns NULL before using the file pointer. Always close files with `fclose()` to flush buffers and free resources.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  FILE *fp;\n  fp = fopen(\"test.txt\", \"w\");\n  if (fp == NULL) {\n    printf(\"Error opening file\\n\");\n    return 1;\n  }\n  fprintf(fp, \"Hello, File!\\n\");\n  fputs(\"Second line\\n\", fp);\n  fclose(fp);\n  printf(\"File written successfully\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does fopen() return on failure?",
+      "options": ["0", "NULL", "-1", "EOF"],
+      "correctIndex": 1
+    }
+  ]
+}

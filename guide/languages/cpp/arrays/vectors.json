@@ -1,0 +1,17 @@
+{
+  "title": "C++ Vectors",
+  "language": "cpp",
+  "topic": "vectors",
+  "order": 28,
+  "nextTopic": "iterators",
+  "prevTopic": "multi_dim_arrays",
+  "content": "### Vectors\n\n`std::vector` is a dynamic array that can grow and shrink at runtime. It is part of the C++ Standard Template Library (STL).\n\n---\n\n### Declaration and Initialization\n\n```cpp\n#include <vector>\n\nvector<int> vec1;              // Empty vector\nvector<int> vec2(10);          // 10 elements, default-initialized (0)\nvector<int> vec3(5, 100);     // 5 elements, all 100\nvector<int> vec4 = {1, 2, 3}; // Initializer list (C++11)\nvector<int> vec5(vec4);       // Copy constructor\n```\n\n---\n\n### Common Operations\n\n| Operation | Code | Description |\n|-----------|------|-------------|\n| Add element | `vec.push_back(10)` | Append to end |\n| Remove last | `vec.pop_back()` | Remove last element |\n| Size | `vec.size()` | Number of elements |\n| Capacity | `vec.capacity()` | Allocated storage |\n| Access | `vec[0]` or `vec.at(0)` | Element at index |\n| Insert | `vec.insert(pos, val)` | Insert at position |\n| Erase | `vec.erase(pos)` | Remove at position |\n| Clear | `vec.clear()` | Remove all elements |\n| Empty | `vec.empty()` | Check if empty |\n\n---\n\n### Iterating\n\n```cpp\nvector<int> nums = {10, 20, 30};\n\n// Index-based\nfor (size_t i = 0; i < nums.size(); i++) {\n  cout << nums[i] << \" \";\n}\n\n// Range-based\nfor (int n : nums) {\n  cout << n << \" \";\n}\n\n// Iterator\nfor (auto it = nums.begin(); it != nums.end(); ++it) {\n  cout << *it << \" \";\n}\n```\n\n---\n\n### Memory Management\n\n| Property | std::vector | C-style array |\n|----------|-------------|---------------|\n| Dynamic size | Yes | No |\n| Bounds checking | `.at()` throws | None |\n| Memory managed | Automatic | Manual |\n| STL algorithm compatible | Yes | Limited |\n\n---\n\n> **Key Point:** Prefer `std::vector` over C-style arrays in modern C++. It is safer, more flexible, and integrates well with STL algorithms.",
+  "codeExample": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n  vector<string> names;\n\n  names.push_back(\"Alice\");\n  names.push_back(\"Bob\");\n  names.push_back(\"Charlie\");\n\n  cout << \"Size: \" << names.size() << endl;\n  cout << \"First: \" << names[0] << endl;\n\n  for (const string& name : names) {\n    cout << name << \" \";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which header is needed for std::vector?",
+      "options": ["<list>", "<vector>", "<array>", "<dynamic>"],
+      "correctIndex": 1
+    }
+  ]
+}

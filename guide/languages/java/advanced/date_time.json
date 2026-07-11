@@ -1,0 +1,22 @@
+{
+  "title": "Java Date and Time API",
+  "language": "java",
+  "topic": "date_time",
+  "order": 49,
+  "nextTopic": "regex",
+  "prevTopic": "optional",
+  "content": "### Date and Time API (Java 8+)\n\nThe `java.time` package provides a comprehensive date and time API.\n\n---\n\n### Core Classes\n\n| Class | Description |\n|-------|-------------|\n| `LocalDate` | Date without time (2024-01-15) |\n| `LocalTime` | Time without date (14:30:00) |\n| `LocalDateTime` | Date and time combined |\n| `ZonedDateTime` | Date and time with timezone |\n| `Instant` | Timestamp (epoch-based) |\n| `Duration` | Time-based duration |\n| `Period` | Date-based period |\n\n---\n\n### Creating Dates\n\n```java\nLocalDate today = LocalDate.now();\nLocalDate specific = LocalDate.of(2024, Month.JANUARY, 15);\nLocalDate parsed = LocalDate.parse(\"2024-01-15\");\n\nLocalTime now = LocalTime.now();\nLocalTime time = LocalTime.of(14, 30, 0);\n```\n\n---\n\n### Date Operations\n\n```java\nLocalDate tomorrow = today.plusDays(1);\nLocalDate nextWeek = today.plusWeeks(1);\nLocalDate lastMonth = today.minusMonths(1);\nDayOfWeek day = today.getDayOfWeek();\nint month = today.getMonthValue();\nboolean leap = today.isLeapYear();\n```\n\n---\n\n### Formatting\n\n```java\nDateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"dd/MM/yyyy\");\nString formatted = today.format(formatter);\nLocalDate parsed = LocalDate.parse(\"15/01/2024\", formatter);\n```\n\n### Common Patterns\n\n| Pattern | Output |\n|---------|--------|\n| `yyyy-MM-dd` | 2024-01-15 |\n| `dd/MM/yyyy` | 15/01/2024 |\n| `HH:mm:ss` | 14:30:00 |\n| `yyyy-MM-dd HH:mm` | 2024-01-15 14:30 |\n\n> **Key Point:** The `java.time` API is immutable and thread-safe. Avoid the old `java.util.Date` and `SimpleDateFormat` classes. Use `DateTimeFormatter` for thread-safe formatting.",
+  "codeExample": "import java.time.*;\nimport java.time.format.*;\nimport java.time.temporal.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // Current date and time\n        LocalDate today = LocalDate.now();\n        LocalTime now = LocalTime.now();\n        LocalDateTime current = LocalDateTime.now();\n        \n        System.out.println(\"Today: \" + today);\n        System.out.println(\"Now: \" + now);\n        \n        // Date manipulation\n        LocalDate birthday = LocalDate.of(1990, Month.MARCH, 25);\n        Period age = Period.between(birthday, today);\n        System.out.println(\"Age: \" + age.getYears() + \" years, \" + \n            age.getMonths() + \" months\");\n        \n        // Formatting\n        DateTimeFormatter fmt = DateTimeFormatter.ofPattern(\"EEEE, MMMM d, yyyy\");\n        System.out.println(\"Formatted: \" + today.format(fmt));\n        \n        // Parsing\n        String dateStr = \"2024-12-25\";\n        LocalDate parsed = LocalDate.parse(dateStr);\n        System.out.println(\"Parsed: \" + parsed.getDayOfWeek());\n        \n        // Duration\n        Duration duration = Duration.ofHours(2).plusMinutes(30);\n        System.out.println(\"Duration minutes: \" + duration.toMinutes());\n    }\n}",
+  "quiz": [
+    {
+      "question": "Is java.time API immutable?",
+      "options": ["Yes", "No", "Only LocalDate", "Only ZonedDateTime"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which class represents date without time?",
+      "options": ["LocalDate", "LocalDateTime", "Date", "ZonedDateTime"],
+      "correctIndex": 0
+    }
+  ]
+}

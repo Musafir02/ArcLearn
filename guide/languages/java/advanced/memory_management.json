@@ -1,0 +1,22 @@
+{
+  "title": "Java Memory Management",
+  "language": "java",
+  "topic": "memory_management",
+  "order": 55,
+  "nextTopic": "",
+  "prevTopic": "jdbc_basics",
+  "content": "### Memory Management in Java\n\nJava has automatic memory management through garbage collection (GC).\n\n---\n\n### JVM Memory Model\n\n```\nJVM Memory\n  |-- Heap (Objects, arrays)\n  |     |-- Young Generation\n  |     |     |-- Eden\n  |     |     |-- Survivor S0\n  |     |     |-- Survivor S1\n  |     |-- Old Generation (Tenured)\n  |-- Stack (Local variables, method calls)\n  |-- Method Area (Class metadata, static variables)\n  |-- Program Counter Register\n  |-- Native Method Stack\n```\n\n---\n\n### Heap Structure\n\n| Region | Purpose |\n|--------|---------|\n| Eden | New objects allocated here |\n| Survivor S0/S1 | Objects surviving minor GC |\n| Old Generation | Long-lived objects promoted here |\n| Metaspace (Java 8+) | Class metadata (replaced PermGen) |\n\n---\n\n### Garbage Collection Process\n\n1. **Minor GC** - Collects young generation\n2. **Major GC** - Collects old generation\n3. **Full GC** - Collects entire heap\n\n**GC Algorithms:**\n- Serial GC (single thread)\n- Parallel GC (multithreaded)\n- G1 GC (default since Java 9)\n- ZGC (low-latency, Java 11+)\n\n---\n\n### Memory Leaks\n\nCommon causes of memory leaks:\n- Unclosed resources (streams, connections)\n- Static collections growing indefinitely\n- Inner class references to outer class\n- Uncleared ThreadLocal variables\n- Listener/callback not unregistered\n\n---\n\n### JVM Tuning Flags\n\n| Flag | Purpose |\n|------|---------|\n| `-Xms512m` | Initial heap size |\n| `-Xmx2g` | Maximum heap size |\n| `-XX:+UseG1GC` | Use G1 GC |\n| `-XX:+PrintGCDetails` | Print GC details |\n| `-XX:MaxMetaspaceSize=256m` | Metaspace limit |\n\n---\n\n### Best Practices\n\n- Nullify references when no longer needed\n- Use try-with-resources for auto-closing\n- Avoid creating objects in loops\n- Use StringBuilder for string concatenation\n- Use object pools for expensive objects\n- Monitor with `jvisualvm`, `jconsole`, `jstat`\n\n> **Key Point:** Java GC automatically frees memory from unreachable objects. An object becomes eligible for GC when there are no strong references pointing to it. Use `System.gc()` as a hint (not guaranteed).",
+  "codeExample": "import java.util.*;\n\nclass Student {\n    String name;\n    List<Integer> grades = new ArrayList<>();\n    \n    Student(String name) {\n        this.name = name;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Runtime runtime = Runtime.getRuntime();\n        \n        System.out.println(\"Initial memory:\");\n        System.out.println(\"  Max: \" + runtime.maxMemory() / 1024 / 1024 + \" MB\");\n        System.out.println(\"  Total: \" + runtime.totalMemory() / 1024 / 1024 + \" MB\");\n        System.out.println(\"  Free: \" + runtime.freeMemory() / 1024 / 1024 + \" MB\");\n        \n        // Create many objects\n        List<Student> students = new ArrayList<>();\n        for (int i = 0; i < 10000; i++) {\n            Student s = new Student(\"Student\" + i);\n            for (int j = 0; j < 10; j++) {\n                s.grades.add((int)(Math.random() * 100));\n            }\n            students.add(s);\n        }\n        \n        System.out.println(\"\\nAfter creating 10000 objects:\");\n        System.out.println(\"  Free: \" + runtime.freeMemory() / 1024 / 1024 + \" MB\");\n        \n        // Remove references (eligible for GC)\n        students.clear();\n        System.gc();  // Hint to run GC\n        \n        System.out.println(\"\\nAfter clearing and GC:\");\n        System.out.println(\"  Free: \" + runtime.freeMemory() / 1024 / 1024 + \" MB\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which region holds new object allocations?",
+      "options": ["Eden", "Old Generation", "Metaspace", "Stack"],
+      "correctIndex": 0
+    },
+    {
+      "question": "When does an object become eligible for garbage collection?",
+      "options": ["No strong references remain", "When null is assigned", "When out of scope", "When program ends"],
+      "correctIndex": 0
+    }
+  ]
+}

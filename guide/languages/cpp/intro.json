@@ -1,0 +1,17 @@
+{
+  "title": "C++ Introduction",
+  "language": "cpp",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is C++?\n\nC++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language. It was first released in 1985 and has since become one of the most widely used programming languages in the world.\n\n---\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Object-Oriented | Supports classes, inheritance, polymorphism, encapsulation |\n| Performance | Compiled language with zero-cost abstractions |\n| Portability | Runs on virtually any platform |\n| Rich Standard Library | STL provides containers, algorithms, iterators |\n| Low-Level Access | Pointers, memory management, hardware access |\n\n---\n\n### C++ Standards Evolution\n\n| Standard | Year | Key Features |\n|----------|------|--------------|\n| C++98 | 1998 | First ISO standard, STL, templates |\n| C++11 | 2011 | Auto, lambdas, move semantics, smart pointers |\n| C++14 | 2014 | Generic lambdas, constexpr improvements |\n| C++17 | 2017 | Filesystem, parallel algorithms, structured bindings |\n| C++20 | 2020 | Concepts, coroutines, ranges, modules, spans |\n| C++23 | 2023 | `std::print`, `std::expected`, stacktrace library |\n| C++26 | 2026 | Reflection, pattern matching, contracts (planned) |\n\n---\n\n> **Key Point:** C++ is a compiled, statically-typed language that gives programmers fine-grained control over system resources and memory.",
+  "codeExample": "#include <iostream>\n\nint main() {\n  std::cout << \"Hello, C++!\" << std::endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Who created the C++ programming language?",
+      "options": ["Dennis Ritchie", "Bjarne Stroustrup", "James Gosling", "Guido van Rossum"],
+      "correctIndex": 1
+    }
+  ]
+}

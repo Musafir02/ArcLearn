@@ -1,0 +1,22 @@
+{
+  "title": "Java Operators",
+  "language": "java",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "strings",
+  "prevTopic": "typecasting",
+  "content": "### Operators in Java\n\nOperators are special symbols that perform operations on variables and values.\n\n---\n\n### Arithmetic Operators\n\n| Operator | Name | Example |\n|----------|------|---------|\n| `+` | Addition | `a + b` |\n| `-` | Subtraction | `a - b` |\n| `*` | Multiplication | `a * b` |\n| `/` | Division | `a / b` |\n| `%` | Modulus | `a % b` |\n| `++` | Increment | `a++` |\n| `--` | Decrement | `a--` |\n\n---\n\n### Comparison Operators\n\n| Operator | Name |\n|----------|------|\n| `==` | Equal to |\n| `!=` | Not equal |\n| `>` | Greater than |\n| `<` | Less than |\n| `>=` | Greater or equal |\n| `<=` | Less or equal |\n\n---\n\n### Logical Operators\n\n| Operator | Name | Description |\n|----------|------|-------------|\n| `&&` | AND | Both true |\n| `||` | OR | At least one true |\n| `!` | NOT | Inverts boolean |\n\n---\n\n### Assignment Operators\n\n| Operator | Example | Equivalent |\n|----------|---------|------------|\n| `=` | `x = 5` | `x = 5` |\n| `+=` | `x += 3` | `x = x + 3` |\n| `-=` | `x -= 3` | `x = x - 3` |\n| `*=` | `x *= 3` | `x = x * 3` |\n| `/=` | `x /= 3` | `x = x / 3` |\n| `%=` | `x %= 3` | `x = x % 3` |\n\n> **Key Point:** `==` compares primitives by value but objects by reference. Use `equals()` for object value comparison. `&&` and `||` use short-circuit evaluation.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        int a = 10, b = 3;\n        System.out.println(\"Sum: \" + (a + b));\n        System.out.println(\"Mod: \" + (a % b));\n        System.out.println(\"a++: \" + (a++));\n        \n        boolean x = true, y = false;\n        System.out.println(\"AND: \" + (x && y));\n        System.out.println(\"OR: \" + (x || y));\n        System.out.println(\"NOT: \" + (!x));\n        \n        System.out.println(\"a > b: \" + (a > b));\n        System.out.println(\"a == b: \" + (a == b));\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does the % operator do?",
+      "options": ["Modulus (remainder)", "Percentage", "Division", "Multiplication"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which operator checks if two values are equal?",
+      "options": ["==", "=", "!=", "equals()"],
+      "correctIndex": 0
+    }
+  ]
+}

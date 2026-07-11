@@ -1,0 +1,17 @@
+{
+  "title": "C Break and Continue",
+  "language": "c",
+  "topic": "break_continue",
+  "order": 20,
+  "nextTopic": "goto",
+  "prevTopic": "do_while",
+  "content": "### Break and Continue in C\n\n`break` and `continue` are loop control statements that alter the normal flow of loops.\n\n### Break Statement\n\n`break` immediately exits the loop (or switch). Execution resumes at the first statement after the loop.\n\n### Continue Statement\n\n`continue` skips the rest of the current iteration and jumps to the next iteration.\n\n---\n\n### Comparison\n\n| Statement | Effect | Use Case |\n|-----------|--------|----------|\n| `break` | Exits the loop entirely | Found what you need, early termination |\n| `continue` | Skips to next iteration | Skip invalid values, process only even numbers |\n\n### Break in Nested Loops\n\n`break` only exits the innermost loop. Use flags or `goto` to break out of multiple levels.\n\n---\n\n> **Key Point:** `break` in nested loops only exits the current (innermost) loop. `continue` in a `for` loop still executes the update expression before checking the condition.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  // Break: find first even number\n  for (int i = 1; i <= 10; i++) {\n    if (i == 6) {\n      break;\n    }\n    printf(\"%d \", i);\n  }\n  printf(\"\\n\");\n  // Continue: skip odd numbers\n  for (int i = 1; i <= 10; i++) {\n    if (i % 2 != 0) {\n      continue;\n    }\n    printf(\"%d \", i);\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does `break` do inside a loop?",
+      "options": ["Restarts the loop", "Skips one iteration", "Exits the loop immediately", "Pauses the loop"],
+      "correctIndex": 2
+    }
+  ]
+}

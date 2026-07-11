@@ -1,0 +1,17 @@
+{
+  "title": "C++ Switch Statement",
+  "language": "cpp",
+  "topic": "switch",
+  "order": 18,
+  "nextTopic": "ternary",
+  "prevTopic": "if_else",
+  "content": "### Switch Statement\n\nThe `switch` statement selects one of many code blocks to execute based on the value of an expression.\n\n---\n\n### Basic Syntax\n\n```cpp\nswitch (expression) {\n  case value1:\n    // Code for value1\n    break;\n  case value2:\n    // Code for value2\n    break;\n  default:\n    // Code if no match\n}\n```\n\n---\n\n### Example\n\n```cpp\nint day = 3;\n\nswitch (day) {\n  case 1:\n    cout << \"Monday\";\n    break;\n  case 2:\n    cout << \"Tuesday\";\n    break;\n  case 3:\n    cout << \"Wednesday\";\n    break;\n  default:\n    cout << \"Invalid day\";\n}\n```\n\n---\n\n### Fall-Through\n\nOmitting `break` causes execution to continue into the next case:\n\n```cpp\nchar grade = 'A';\n\nswitch (grade) {\n  case 'A':\n  case 'B':\n    cout << \"Good\";  // Both A and B print \"Good\"\n    break;\n  case 'C':\n    cout << \"Average\";\n    break;\n}\n```\n\n---\n\n### Switch Rules\n\n| Rule | Explanation |\n|------|-------------|\n| Expression type | Must be integral or enum type (int, char, enum) |\n| No floating point | `switch (3.14)` is invalid |\n| Duplicate cases | Each `case` value must be unique |\n| `default` optional | Executes when no case matches |\n| `break` required | Without it, fall-through occurs |\n\n---\n\n> **Key Point:** Always include `break` at the end of each case unless intentional fall-through is desired. Don't forget the `break` in the last case as well (good practice).",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int month = 2;\n\n  switch (month) {\n    case 1:\n      cout << \"January\";\n      break;\n    case 2:\n      cout << \"February\";\n      break;\n    case 3:\n      cout << \"March\";\n      break;\n    default:\n      cout << \"Other month\";\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What keyword stops fall-through in a switch statement?",
+      "options": ["stop", "exit", "break", "continue"],
+      "correctIndex": 2
+    }
+  ]
+}

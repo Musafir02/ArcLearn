@@ -1,0 +1,17 @@
+{
+  "title": "C Comments",
+  "language": "c",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Comments in C\n\nComments are used to explain code and are ignored by the compiler.\n\n### Single-Line Comments\n\nSingle-line comments start with `//`. Everything after `//` on that line is ignored.\n\n### Multi-Line Comments\n\nMulti-line comments start with `/*` and end with `*/`. They can span multiple lines.\n\n---\n\n### Comment Usage Guidelines\n\n| Type | Syntax | Use Case |\n|------|--------|----------|\n| Single-line | `// text` | Short explanations, inline notes |\n| Multi-line | `/* text */` | Block descriptions, disabling code |\n| Documentation | `/** ... */` | Function/API documentation (Doxygen) |\n\n---\n\n> **Key Point:** Comments cannot be nested. A `/*` inside another `/* */` block will cause an error.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  // This is a single-line comment\n  printf(\"Hello\\n\"); /* This is a\n                          multi-line comment */\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which symbol starts a single-line comment in C?",
+      "options": ["#", "//", "/*", "--"],
+      "correctIndex": 1
+    }
+  ]
+}

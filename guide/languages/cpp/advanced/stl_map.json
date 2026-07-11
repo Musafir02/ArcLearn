@@ -1,0 +1,17 @@
+{
+  "title": "C++ STL Map",
+  "language": "cpp",
+  "topic": "stl_map",
+  "order": 62,
+  "nextTopic": "stl_algorithm",
+  "prevTopic": "stl_vector",
+  "content": "### std::map\n\n`std::map` is an associative container that stores key-value pairs in sorted order by key. It is typically implemented as a balanced binary search tree (red-black tree).\n\n---\n\n### Declaration and Initialization\n\n```cpp\n#include <map>\n\nmap<string, int> ages;\n\nages[\"Alice\"] = 30;\nages[\"Bob\"] = 25;\nages[\"Charlie\"] = 35;\n\n// Initializer list (C++11)\nmap<string, int> scores = {{\"Alice\", 95}, {\"Bob\", 87}};\n```\n\n---\n\n### Common Operations\n\n| Operation | Code | Description |\n|-----------|------|-------------|\n| Insert | `m[key] = value;` or `m.insert({k, v});` | Add or update |\n| Access | `m.at(key);` | Access with bounds checking |\n| Find | `m.find(key);` | Returns iterator or `end()` |\n| Erase | `m.erase(key);` | Remove by key |\n| Check | `m.count(key);` | 0 or 1 (unique keys) |\n| Size | `m.size();` | Number of elements |\n| Empty | `m.empty();` | Check if empty |\n\n---\n\n### Iterating\n\n```cpp\nfor (const auto& pair : myMap) {\n  cout << pair.first << \": \" << pair.second << endl;\n}\n\n// With structured bindings (C++17)\nfor (const auto& [key, value] : myMap) {\n  cout << key << \": \" << value << endl;\n}\n```\n\n---\n\n### unordered_map\n\nFor O(1) average lookups (hash table):\n\n```cpp\n#include <unordered_map>\n\nunordered_map<string, int> hash;\nhash[\"key\"] = 42;\n```\n\n---\n\n> **Key Point:** `std::map` maintains sorted order with O(log n) operations. For unsorted data with faster average access, use `std::unordered_map` (hash table, C++11).",
+  "codeExample": "#include <iostream>\n#include <map>\nusing namespace std;\n\nint main() {\n  map<string, double> prices;\n\n  prices[\"apple\"] = 0.99;\n  prices[\"banana\"] = 0.59;\n  prices[\"orange\"] = 0.79;\n\n  for (const auto& [item, price] : prices) {\n    cout << item << \": $\" << price << endl;\n  }\n\n  string search = \"apple\";\n  if (prices.count(search)) {\n    cout << search << \" costs $\" << prices[search] << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What data structure typically implements std::map?",
+      "options": ["Hash table", "Red-black tree", "Array", "Linked list"],
+      "correctIndex": 1
+    }
+  ]
+}

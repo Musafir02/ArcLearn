@@ -1,0 +1,17 @@
+{
+  "title": "C++ STL Vector",
+  "language": "cpp",
+  "topic": "stl_vector",
+  "order": 61,
+  "nextTopic": "stl_map",
+  "prevTopic": "stl",
+  "content": "### std::vector in Detail\n\n`std::vector` is a dynamic array that provides fast random access and automatically manages its size.\n\n---\n\n### Memory Management\n\n```cpp\nvector<int> vec;\nvec.reserve(100);  // Pre-allocate capacity for 100 elements\n\ncout << vec.size();       // 0 (actual elements)\ncout << vec.capacity();   // 100 (allocated space)\n```\n\n---\n\n### Adding Elements\n\n| Method | Description | Complexity |\n|--------|-------------|------------|\n| `push_back(val)` | Add to end | Amortized O(1) |\n| `emplace_back(args...)` | Construct in-place | O(1) |\n| `insert(pos, val)` | Insert at position | O(n) |\n| `emplace(pos, args...)` | Construct at position | O(n) |\n\n```cpp\nvector<int> v = {1, 2, 3};\nv.push_back(4);              // {1, 2, 3, 4}\nv.emplace_back(5);           // {1, 2, 3, 4, 5}\nv.insert(v.begin() + 1, 99); // {1, 99, 2, 3, 4, 5}\n```\n\n---\n\n### Removing Elements\n\n| Method | Description |\n|--------|-------------|\n| `pop_back()` | Remove last element |\n| `erase(pos)` | Remove at position |\n| `erase(first, last)` | Remove range |\n| `clear()` | Remove all elements |\n\n---\n\n### Erase-Remove Idiom\n\n```cpp\nvector<int> v = {1, 2, 3, 2, 4, 2, 5};\n\n// Remove all 2s\nauto it = remove(v.begin(), v.end(), 2);\nv.erase(it, v.end());\n\n// Or in one line:\nv.erase(remove(v.begin(), v.end(), 2), v.end());\n```\n\n---\n\n> **Key Point:** Use `reserve()` to pre-allocate memory when you know the approximate size. This avoids repeated reallocations and improves performance.",
+  "codeExample": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n  vector<int> nums;\n\n  for (int i = 1; i <= 5; i++) {\n    nums.push_back(i * 10);\n  }\n\n  cout << \"Elements: \";\n  for (size_t i = 0; i < nums.size(); i++) {\n    cout << nums[i] << \" \";\n  }\n  cout << endl;\n\n  cout << \"Size: \" << nums.size() << \", Capacity: \" << nums.capacity() << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is the amortized time complexity of push_back()?",
+      "options": ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+      "correctIndex": 2
+    }
+  ]
+}

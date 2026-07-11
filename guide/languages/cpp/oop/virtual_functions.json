@@ -1,0 +1,17 @@
+{
+  "title": "C++ Virtual Functions",
+  "language": "cpp",
+  "topic": "virtual_functions",
+  "order": 43,
+  "nextTopic": "abstraction",
+  "prevTopic": "polymorphism",
+  "content": "### Virtual Functions\n\nA virtual function is a member function that can be overridden in a derived class. The correct function is called at runtime based on the actual object type, not the pointer/reference type.\n\n---\n\n### Declaring Virtual Functions\n\n```cpp\nclass Base {\npublic:\n  virtual void display() {\n    cout << \"Base class\";\n  }\n};\n```\n\n---\n\n### Override Specifier (C++11)\n\n```cpp\nclass Derived : public Base {\npublic:\n  void display() override {  // Compiler checks override\n    cout << \"Derived class\";\n  }\n};\n```\n\n---\n\n### Pure Virtual Functions\n\nA function with no body that must be overridden:\n\n```cpp\nclass Shape {\npublic:\n  virtual double area() = 0;  // Pure virtual\n};\n\n// Shape is now abstract - cannot instantiate\nclass Circle : public Shape {\npublic:\n  double area() override { return 3.14 * r * r; }\nprivate:\n  double r;\n};\n```\n\n---\n\n### Virtual Table (vtable)\n\nThe compiler creates a virtual table for each class with virtual functions:\n- Each object has a virtual pointer (`vptr`) pointing to the class's vtable\n- vtable contains function pointers to the most-derived overrides\n- Virtual dispatch adds a small runtime overhead\n\n---\n\n### Virtual Destructor\n\n```cpp\nclass Base {\npublic:\n  virtual ~Base() {}\n};\n```\n\nAlways make destructors virtual in base classes intended for inheritance.\n\n---\n\n> **Key Point:** A class with a pure virtual function is abstract and cannot be instantiated. Derived classes must implement all pure virtual functions or they remain abstract.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Shape {\npublic:\n  virtual double area() = 0;\n  virtual ~Shape() {}\n};\n\nclass Rectangle : public Shape {\npublic:\n  Rectangle(double w, double h) : width(w), height(h) {}\n  double area() override { return width * height; }\nprivate:\n  double width, height;\n};\n\nint main() {\n  Shape* shape = new Rectangle(4.0, 5.0);\n  cout << \"Area: \" << shape->area() << endl;\n  delete shape;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does `= 0` after a virtual function declaration mean?",
+      "options": ["Function is empty", "Function is pure virtual", "Function returns 0", "Function is deleted"],
+      "correctIndex": 1
+    }
+  ]
+}

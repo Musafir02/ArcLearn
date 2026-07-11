@@ -1,0 +1,22 @@
+{
+  "title": "Java Objects",
+  "language": "java",
+  "topic": "objects",
+  "order": 15,
+  "nextTopic": "constructors",
+  "prevTopic": "classes",
+  "content": "### Objects in Java\n\nAn object is an instance of a class. It has state (fields) and behavior (methods).\n\n---\n\n### Creating Objects\n\nObjects are created using the `new` keyword:\n\n```java\nClassName objectName = new ClassName();\n```\n\n---\n\n### Object Lifecycle\n\n| Stage | Description |\n|-------|-------------|\n| Declaration | `Car myCar;` (reference variable) |\n| Instantiation | `new Car()` (memory allocation) |\n| Initialization | Constructor executes |\n| Usage | Access fields and methods |\n| Garbage Collection | JVM reclaims memory |\n\n---\n\n### Accessing Object Members\n\nUse the dot operator (`.`):\n\n```java\nmyCar.brand = \"Toyota\";   // Access field\nmyCar.start();             // Call method\n```\n\n---\n\n### Multiple Objects\n\nEach object has its own copy of instance fields:\n\n```java\nCar car1 = new Car(\"Toyota\", 2020);\nCar car2 = new Car(\"Honda\", 2022);\n// car1 and car2 are independent\n```\n\n> **Key Point:** The `new` keyword allocates memory on the heap. Multiple objects from the same class are independent. Objects are reference types — variables hold references to the memory location, not the object itself.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        // Creating objects\n        Car myCar = new Car(\"Toyota\", 2022);\n        Car friendCar = new Car(\"Honda\", 2020);\n        \n        myCar.displayInfo();\n        friendCar.displayInfo();\n    }\n}\n\nclass Car {\n    String brand;\n    int year;\n    \n    Car(String brand, int year) {\n        this.brand = brand;\n        this.year = year;\n    }\n    \n    void displayInfo() {\n        System.out.println(brand + \" - \" + year);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword creates an object?",
+      "options": ["new", "create", "object", "instance"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where are objects stored in memory?",
+      "options": ["Heap", "Stack", "Method Area", "Register"],
+      "correctIndex": 0
+    }
+  ]
+}

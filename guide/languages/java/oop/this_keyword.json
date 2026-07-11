@@ -1,0 +1,22 @@
+{
+  "title": "Java this Keyword",
+  "language": "java",
+  "topic": "this_keyword",
+  "order": 17,
+  "nextTopic": "static",
+  "prevTopic": "constructors",
+  "content": "### The `this` Keyword\n\nThe `this` keyword refers to the current object within a class.\n\n---\n\n### Uses of `this`\n\n| Usage | Example |\n|-------|---------|\n| Distinguish fields from parameters | `this.name = name;` |\n| Call another constructor | `this(parameters);` |\n| Pass current object as argument | `method(this);` |\n| Return current object | `return this;` |\n\n---\n\n### Disambiguating Fields\n\nWhen parameter names match field names:\n\n```java\npublic class Person {\n    String name;\n    \n    public Person(String name) {\n        this.name = name;  // this.name = field, name = parameter\n    }\n}\n```\n\n---\n\n### Calling Constructor\n\n```java\npublic class Rectangle {\n    int width, height;\n    \n    public Rectangle() {\n        this(1, 1);  // calls Rectangle(int, int)\n    }\n    \n    public Rectangle(int width, int height) {\n        this.width = width;\n        this.height = height;\n    }\n}\n```\n\n---\n\n### Method Chaining\n\nReturn `this` to enable method chaining:\n\n```java\npublic class StringBuilder {\n    StringBuilder append(String s) {\n        // add string\n        return this;\n    }\n}\n// Usage: sb.append(\"a\").append(\"b\").append(\"c\");\n```\n\n> **Key Point:** `this` cannot be used in static contexts because static methods belong to the class, not to any object instance.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        Person p = new Person(\"Alice\", 25);\n        p.display();\n    }\n}\n\nclass Person {\n    String name;\n    int age;\n    \n    Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    Person setAge(int age) {\n        this.age = age;\n        return this;  // method chaining\n    }\n    \n    void display() {\n        System.out.println(\"Name: \" + this.name);\n        System.out.println(\"Age: \" + this.age);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does 'this' refer to?",
+      "options": ["Current object", "Current class", "Parent class", "Main method"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can 'this' be used in static methods?",
+      "options": ["No", "Yes", "Only in Java 8+", "Only in constructors"],
+      "correctIndex": 0
+    }
+  ]
+}

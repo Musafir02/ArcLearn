@@ -1,0 +1,17 @@
+{
+  "title": "C++ Constants",
+  "language": "cpp",
+  "topic": "constants",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Constants in C++\n\nConstants are variables whose values cannot be changed after initialization.\n\n---\n\n### The `const` Keyword\n\n```cpp\nconst double PI = 3.14159;\nconst int MAX_USERS = 100;\n// PI = 3.14; // ERROR: cannot modify const\n```\n\n---\n\n### The `constexpr` Keyword (C++11)\n\nCompile-time evaluation:\n\n```cpp\nconstexpr int square(int x) {\n  return x * x;\n}\n\nconstexpr int VALUE = square(5); // Evaluated at compile time\n```\n\n---\n\n### The `#define` Preprocessor\n\n```cpp\n#define PI 3.14159\n#define MAX 100\n\nint area = PI * r * r;\n```\n\n---\n\n### Comparison\n\n| Method | Keyword/Directive | When Evaluated | Type-safe |\n|--------|------------------|----------------|-----------|\n| const | `const` | Runtime | Yes |\n| constexpr | `constexpr` | Compile-time | Yes |\n| define | `#define` | Preprocessing | No |\n\n---\n\n### Enum Constants\n\n```cpp\nenum Color { RED, GREEN, BLUE };\nenum class Status { OK = 200, NOT_FOUND = 404 }; // C++11 scoped enum\n```\n\n---\n\n> **Key Point:** Prefer `const` and `constexpr` over `#define` for constants. They provide type safety and are visible to the debugger.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nconst double TAX_RATE = 0.08;\nconstexpr int HOURS_PER_DAY = 24;\n\nint main() {\n  double price = 100.0;\n  double tax = price * TAX_RATE;\n  cout << \"Tax: $\" << tax << endl;\n  cout << \"Hours in 3 days: \" << HOURS_PER_DAY * 3 << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which keyword creates a compile-time constant?",
+      "options": ["const", "constexpr", "static", "readonly"],
+      "correctIndex": 1
+    }
+  ]
+}

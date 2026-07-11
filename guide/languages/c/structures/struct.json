@@ -1,0 +1,17 @@
+{
+  "title": "C Structures",
+  "language": "c",
+  "topic": "struct",
+  "order": 38,
+  "nextTopic": "struct_arrays",
+  "prevTopic": "math_functions",
+  "content": "### Structures in C\n\nA structure (`struct`) is a user-defined data type that groups related variables of different types under one name.\n\n### Defining a Structure\n\n```c\nstruct Person {\n  char name[50];\n  int age;\n  float height;\n};\n```\n\n### Declaring Variables\n\n```c\nstruct Person person1;\nstruct Person person2 = {\"Alice\", 30, 5.6};\n```\n\n### Accessing Members\n\nUse the dot operator `.` to access structure members.\n\n```c\nperson1.age = 25;\nstrcpy(person1.name, \"Bob\");\n```\n\n### Structure Memory\n\nStructures may contain padding bytes between members for alignment. Use `sizeof()` to get the actual size.\n\n| Member | Size | Offset (may vary) |\n|--------|------|------------------|\n| `char name[50]` | 50 | 0 |\n| `int age` | 4 | 52 (with padding) |\n| `float height` | 4 | 56 (with padding) |\n\n---\n\n> **Key Point:** Structure members are accessed with `.` for variables and `->` for pointers. Structures can be passed to functions by value or by pointer.",
+  "codeExample": "#include <stdio.h>\n#include <string.h>\n\nstruct Student {\n  char name[50];\n  int age;\n  float gpa;\n};\n\nint main() {\n  struct Student s1;\n  strcpy(s1.name, \"Alice\");\n  s1.age = 20;\n  s1.gpa = 3.8;\n  printf(\"Name: %s\\n\", s1.name);\n  printf(\"Age: %d\\n\", s1.age);\n  printf(\"GPA: %.1f\\n\", s1.gpa);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What operator is used to access a structure member?",
+      "options": ["->", ".", "::", ":"],
+      "correctIndex": 1
+    }
+  ]
+}

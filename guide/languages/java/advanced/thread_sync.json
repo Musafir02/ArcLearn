@@ -1,0 +1,22 @@
+{
+  "title": "Java Thread Synchronization",
+  "language": "java",
+  "topic": "thread_sync",
+  "order": 45,
+  "nextTopic": "lambda",
+  "prevTopic": "threads",
+  "content": "### Thread Synchronization\n\nSynchronization prevents multiple threads from interfering with each other when accessing shared resources.\n\n---\n\n### The `synchronized` Keyword\n\n**Synchronized method:** Only one thread can execute this method at a time.\n\n```java\npublic synchronized void increment() {\n    count++;\n}\n```\n\n**Synchronized block:** Synchronize only a part of a method.\n\n```java\npublic void update() {\n    synchronized(this) {\n        count++;  // critical section\n    }\n}\n```\n\n---\n\n### The Race Condition Problem\n\nWithout synchronization:\n```java\ncount = 100;\nThread A: count++;  // reads 100, adds 1, writes 101\nThread B: count++;  // reads 100 (stale!), adds 1, writes 101\n// Final count = 101 (should be 102!)\n```\n\n---\n\n### Locks (Java 5+)\n\n```java\nimport java.util.concurrent.locks.*;\n\nLock lock = new ReentrantLock();\nlock.lock();\ntry {\n    // critical section\n} finally {\n    lock.unlock();\n}\n```\n\n---\n\n### Atomic Variables\n\n```java\nimport java.util.concurrent.atomic.*;\n\nAtomicInteger count = new AtomicInteger(0);\ncount.incrementAndGet();  // atomic operation\n```\n\n---\n\n### Synchronized vs Lock\n\n| Feature | synchronized | Lock |\n|---------|-------------|------|\n| Acquire | Automatic | Manual |\n| Release | Automatic | Manual (finally) |\n| Interruptible | No | Yes |\n| Timeout | No | Yes |\n| Fairness | No | Configurable |\n\n> **Key Point:** Synchronization uses intrinsic locks (monitors). Static synchronized methods lock on the class object. Consistent locking order prevents deadlocks.",
+  "codeExample": "class BankAccount {\n    private int balance = 1000;\n    \n    public synchronized void withdraw(String name, int amount) {\n        System.out.println(name + \" trying to withdraw \" + amount);\n        \n        if (balance >= amount) {\n            System.out.println(name + \" withdrawing...\");\n            try {\n                Thread.sleep(100);\n            } catch (InterruptedException e) {}\n            balance -= amount;\n            System.out.println(name + \" completed. Balance: \" + balance);\n        } else {\n            System.out.println(name + \" failed. Insufficient funds\");\n        }\n    }\n    \n    public int getBalance() {\n        return balance;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        BankAccount account = new BankAccount();\n        \n        Runnable task = () -> {\n            for (int i = 0; i < 3; i++) {\n                account.withdraw(Thread.currentThread().getName(), 200);\n            }\n        };\n        \n        Thread t1 = new Thread(task, \"Alice\");\n        Thread t2 = new Thread(task, \"Bob\");\n        \n        t1.start();\n        t2.start();\n        \n        t1.join();\n        t2.join();\n        \n        System.out.println(\"Final balance: \" + account.getBalance());\n    }\n}",
+  "quiz": [
+    {
+      "question": "What problem does synchronization solve?",
+      "options": ["Race conditions", "Deadlocks", "Memory leaks", "Stack overflow"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does a static synchronized method lock on?",
+      "options": ["Class object", "Instance", "Method", "Package"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Java Custom Exceptions",
+  "language": "java",
+  "topic": "custom_exceptions",
+  "order": 38,
+  "nextTopic": "file_handling",
+  "prevTopic": "throw_throws",
+  "content": "### Custom Exceptions\n\nYou can create your own exception classes by extending Exception (checked) or RuntimeException (unchecked).\n\n---\n\n### Creating a Custom Checked Exception\n\n```java\nclass InsufficientFundsException extends Exception {\n    public InsufficientFundsException(String message) {\n        super(message);\n    }\n    \n    public InsufficientFundsException(String message, Throwable cause) {\n        super(message, cause);\n    }\n}\n```\n\n---\n\n### Creating a Custom Unchecked Exception\n\n```java\nclass InvalidAccountException extends RuntimeException {\n    public InvalidAccountException(String message) {\n        super(message);\n    }\n}\n```\n\n---\n\n### Best Practices\n\n| Practice | Description |\n|----------|-------------|\n| Suffix | Name ends with \"Exception\" |\n| Constructors | Provide same constructors as Exception |\n| Serialization | Add serialVersionUID for serializable |\n| Documentation | Javadoc explaining when it's thrown |\n| Checked vs Unchecked | Checked for recoverable, unchecked for programming errors |\n\n---\n\n### Using Custom Exceptions\n\n```java\nclass BankAccount {\n    private double balance;\n    \n    public void withdraw(double amount) throws InsufficientFundsException {\n        if (amount > balance) {\n            throw new InsufficientFundsException(\n                \"Balance \" + balance + \" is less than \" + amount);\n        }\n        balance -= amount;\n    }\n}\n```\n\n> **Key Point:** Extend `Exception` for checked exceptions (caller must handle). Extend `RuntimeException` for unchecked exceptions (caller may handle). Always provide useful error messages.",
+  "codeExample": "// Custom checked exception\nclass InsufficientFundsException extends Exception {\n    private double deficit;\n    \n    public InsufficientFundsException(double balance, double amount) {\n        super(\"Insufficient funds: need $\" + amount + \", have $\" + balance);\n        this.deficit = amount - balance;\n    }\n    \n    public double getDeficit() {\n        return deficit;\n    }\n}\n\nclass BankAccount {\n    private double balance;\n    \n    BankAccount(double balance) {\n        this.balance = balance;\n    }\n    \n    void withdraw(double amount) throws InsufficientFundsException {\n        if (amount > balance) {\n            throw new InsufficientFundsException(balance, amount);\n        }\n        balance -= amount;\n        System.out.println(\"Withdrawn $\" + amount + \", balance: $\" + balance);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        BankAccount acc = new BankAccount(500);\n        try {\n            acc.withdraw(600);\n        } catch (InsufficientFundsException e) {\n            System.out.println(e.getMessage());\n            System.out.println(\"Deficit: $\" + e.getDeficit());\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which class should you extend for a custom checked exception?",
+      "options": ["Exception", "RuntimeException", "Error", "Throwable"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which class should you extend for a custom unchecked exception?",
+      "options": ["RuntimeException", "Exception", "Error", "Throwable"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Java Interfaces",
+  "language": "java",
+  "topic": "interfaces",
+  "order": 27,
+  "nextTopic": "arrays",
+  "prevTopic": "abstraction",
+  "content": "### Interfaces in Java\n\nAn interface is a reference type that contains abstract methods (until Java 7). It defines a contract that implementing classes must fulfill.\n\n---\n\n### Interface Declaration\n\n```java\ninterface Animal {\n    void makeSound();  // implicitly public and abstract\n    void eat();\n}\n```\n\n---\n\n### Implementing Interfaces\n\n```java\nclass Dog implements Animal {\n    @Override\n    public void makeSound() {\n        System.out.println(\"Bark\");\n    }\n    \n    @Override\n    public void eat() {\n        System.out.println(\"Dog eats\");\n    }\n}\n```\n\n---\n\n### Interface Features (Java 8+)\n\n| Feature | Description |\n|---------|-------------|\n| Default methods | `default` keyword, provide default implementation |\n| Static methods | `static` methods with body |\n| Private methods (Java 9+) | Helper methods within interface |\n\n---\n\n### Multiple Inheritance via Interfaces\n\nA class can implement multiple interfaces:\n\n```java\ninterface Flyable {\n    void fly();\n}\n\ninterface Swimmable {\n    void swim();\n}\n\nclass Duck implements Flyable, Swimmable {\n    public void fly() { System.out.println(\"Flying\"); }\n    public void swim() { System.out.println(\"Swimming\"); }\n}\n```\n\n---\n\n### Interface vs Abstract Class\n\n| Feature | Interface | Abstract Class |\n|---------|-----------|---------------|\n| Multiple inheritance | Yes | No |\n| Fields | public static final only | Any fields |\n| Constructors | No | Yes |\n| Methods (pre-Java 8) | Abstract only | Any methods |\n\n> **Key Point:** Interfaces enable multiple inheritance of behavior. All interface methods are implicitly `public`. From Java 8, interfaces can have `default` and `static` methods with bodies.",
+  "codeExample": "interface Drawable {\n    void draw();\n    default void print() {\n        System.out.println(\"Printing...\");\n    }\n}\n\ninterface Resizable {\n    void resize(double factor);\n}\n\nclass Circle implements Drawable, Resizable {\n    private double radius;\n    \n    Circle(double radius) {\n        this.radius = radius;\n    }\n    \n    @Override\n    public void draw() {\n        System.out.println(\"Drawing circle with radius \" + radius);\n    }\n    \n    @Override\n    public void resize(double factor) {\n        radius *= factor;\n        System.out.println(\"Resized to radius \" + radius);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Circle c = new Circle(5);\n        c.draw();\n        c.resize(2.0);\n        c.print();  // default method\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used to implement an interface?",
+      "options": ["implements", "extends", "inherits", "realizes"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can a class implement multiple interfaces?",
+      "options": ["Yes", "No", "Only with abstract class", "Only in Java 8+"],
+      "correctIndex": 0
+    }
+  ]
+}

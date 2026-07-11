@@ -1,0 +1,17 @@
+{
+  "title": "C++ Abstraction",
+  "language": "cpp",
+  "topic": "abstraction",
+  "order": 44,
+  "nextTopic": "encapsulation",
+  "prevTopic": "virtual_functions",
+  "content": "### Abstraction\n\nAbstraction hides complex implementation details and exposes only essential features to the user. In C++, abstraction is achieved through abstract classes and interfaces.\n\n---\n\n### Abstract Classes\n\nA class containing at least one pure virtual function is abstract:\n\n```cpp\nclass Device {\npublic:\n  virtual void turnOn() = 0;   // Pure virtual\n  virtual void turnOff() = 0;  // Pure virtual\n  virtual ~Device() {}\n};\n```\n\n---\n\n### Implementing Abstract Classes\n\n```cpp\nclass TV : public Device {\npublic:\n  void turnOn() override {\n    cout << \"TV is on\";\n  }\n  void turnOff() override {\n    cout << \"TV is off\";\n  }\n};\n```\n\n---\n\n### Benefits of Abstraction\n\n| Benefit | Description |\n|---------|-------------|\n| Reduced complexity | User sees only relevant interface |\n| Code reuse | Common interface for all implementations |\n| Security | Hide sensitive implementation details |\n| Flexibility | Change implementation without affecting users |\n\n---\n\n### Interface vs Abstract Class\n\n| Aspect | Interface | Abstract Class |\n|--------|-----------|---------------|\n| Methods | All pure virtual | Can have concrete methods |\n| Data members | Not allowed | Can have data members |\n| Constructors | Not allowed | Can have constructors |\n| C++ support | Use class with all pure virtual | Class with some pure virtual |\n\n---\n\n> **Key Point:** Abstraction focuses on what an object does, not how it does it. Use pure virtual functions to define interfaces in C++.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Database {\npublic:\n  virtual void connect(string connStr) = 0;\n  virtual void query(string sql) = 0;\n  virtual void disconnect() = 0;\n  virtual ~Database() {}\n};\n\nclass MySQLDatabase : public Database {\npublic:\n  void connect(string connStr) override {\n    cout << \"Connecting to MySQL: \" << connStr << endl;\n  }\n  void query(string sql) override {\n    cout << \"MySQL query: \" << sql << endl;\n  }\n  void disconnect() override {\n    cout << \"Disconnecting MySQL\" << endl;\n  }\n};\n\nint main() {\n  Database* db = new MySQLDatabase();\n  db->connect(\"localhost:3306\");\n  db->query(\"SELECT * FROM users\");\n  db->disconnect();\n  delete db;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What makes a class abstract in C++?",
+      "options": ["The abstract keyword", "At least one pure virtual function", "No constructors", "All private members"],
+      "correctIndex": 1
+    }
+  ]
+}

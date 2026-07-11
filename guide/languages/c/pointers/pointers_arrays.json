@@ -1,0 +1,17 @@
+{
+  "title": "C Pointers and Arrays",
+  "language": "c",
+  "topic": "pointers_arrays",
+  "order": 29,
+  "nextTopic": "pointers_functions",
+  "prevTopic": "pointer_arithmetic",
+  "content": "### Pointers and Arrays in C\n\nArrays and pointers are closely related in C. The array name acts as a pointer to the first element.\n\n### Array Name as Pointer\n\n```c\nint arr[5] = {10, 20, 30, 40, 50};\nint *p = arr;  // equivalent to int *p = &arr[0]\n```\n\n### Equivalence\n\n| Array Notation | Pointer Notation |\n|----------------|-----------------|\n| `arr[0]` | `*arr` |\n| `arr[i]` | `*(arr + i)` |\n| `&arr[i]` | `arr + i` |\n| `arr` | `&arr[0]` |\n\n### Key Difference\n\n| Aspect | Array | Pointer |\n|--------|-------|---------|\n| Declaration | `int arr[5]` | `int *p` |\n| sizeof | Total array bytes | Pointer size (4 or 8) |\n| Assignment | Cannot be reassigned | Can point elsewhere |\n| Memory | Fixed block on stack | Can point to heap or stack |\n\n### Pointer to Array vs Array of Pointers\n\n```c\nint (*ptr)[5];  // pointer to an array of 5 ints\nint *ptr[5];    // array of 5 int pointers\n```\n\n---\n\n> **Key Point:** `arr[i]` is equivalent to `*(arr + i)`. The array name cannot be reassigned, but a pointer can.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int arr[] = {10, 20, 30, 40, 50};\n  int *p = arr;\n  // Using array notation\n  for (int i = 0; i < 5; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n  // Using pointer notation\n  for (int i = 0; i < 5; i++) {\n    printf(\"%d \", *(p + i));\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does *(arr + 3) equal?",
+      "options": ["arr[0]", "arr[1]", "arr[2]", "arr[3]"],
+      "correctIndex": 3
+    }
+  ]
+}

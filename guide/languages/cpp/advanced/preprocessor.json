@@ -1,0 +1,17 @@
+{
+  "title": "C++ Preprocessor",
+  "language": "cpp",
+  "topic": "preprocessor",
+  "order": 65,
+  "nextTopic": "macros",
+  "prevTopic": "namespaces",
+  "content": "### Preprocessor\n\nThe preprocessor is a text-processing tool that runs before the compiler. It processes directives that start with `#`.\n\n---\n\n### Common Preprocessor Directives\n\n| Directive | Purpose |\n|-----------|---------|\n| `#include` | Insert file contents |\n| `#define` | Define a macro |\n| `#undef` | Undefine a macro |\n| `#ifdef` / `#ifndef` | Check if macro defined |\n| `#if` / `#elif` / `#else` / `#endif` | Conditional compilation |\n| `#pragma` | Compiler-specific instructions |\n| `#error` | Generate compile error |\n| `#line` | Set line number |\n\n---\n\n### Include Guards\n\nPrevent multiple inclusions of the same header:\n\n```cpp\n#ifndef MYHEADER_H\n#define MYHEADER_H\n\n// Header content\n\n#endif\n```\n\nOr using `#pragma once` (supported by most compilers):\n\n```cpp\n#pragma once\n```\n\n---\n\n### Conditional Compilation\n\n```cpp\n#ifdef DEBUG\n  cout << \"Debug: x = \" << x << endl;\n#endif\n\n#if __cplusplus >= 202002L\n  cout << \"C++20 or later\";\n#endif\n```\n\n---\n\n### Predefined Macros\n\n| Macro | Description |\n|-------|-------------|\n| `__cplusplus` | C++ standard version |\n| `__LINE__` | Current line number |\n| `__FILE__` | Current file name |\n| `__DATE__` | Compilation date |\n| `__TIME__` | Compilation time |\n| `__FUNCTION__` | Current function name |\n\n---\n\n> **Key Point:** The preprocessor runs before compilation. It performs text substitution, file inclusion, and conditional compilation. Use `#pragma once` or include guards to prevent double inclusion.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\n#define DEBUG\n#define PI 3.14159\n\nint main() {\n  cout << \"File: \" << __FILE__ << endl;\n  cout << \"Line: \" << __LINE__ << endl;\n\n#ifdef DEBUG\n  cout << \"Debug mode active\" << endl;\n#endif\n\n  cout << \"PI = \" << PI << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What character starts a preprocessor directive?",
+      "options": ["//", "#", "@", "$"],
+      "correctIndex": 1
+    }
+  ]
+}

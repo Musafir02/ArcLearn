@@ -1,0 +1,22 @@
+{
+  "title": "Java Type Casting",
+  "language": "java",
+  "topic": "typecasting",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Type Casting in Java\n\nType casting is converting a value from one data type to another.\n\n---\n\n### Widening Casting (Automatic)\n\nConverting a smaller type to a larger type (done automatically):\n\n```\nbyte -> short -> int -> long -> float -> double\n```\n\nNo data loss occurs in widening conversion.\n\n---\n\n### Narrowing Casting (Manual)\n\nConverting a larger type to a smaller type (must be done explicitly):\n\n```java\ndouble myDouble = 9.78;\nint myInt = (int) myDouble;  // Manual casting: 9\n```\n\nData loss can occur in narrowing conversion.\n\n---\n\n### Type Promotion Rules\n\n| Expression | Result Type |\n|------------|-------------|\n| byte + byte | int |\n| short + int | int |\n| int + long | long |\n| int + double | double |\n| int + float | float |\n\n---\n\n### Wrapper Class Conversion\n\n```java\nString str = \"123\";\nint num = Integer.parseInt(str);\nString back = String.valueOf(num);\n```\n\n> **Key Point:** Widening is safe and automatic. Narrowing requires explicit cast and may lose data. In expressions, Java automatically promotes operands to `int` or higher.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        // Widening (automatic)\n        int myInt = 9;\n        double myDouble = myInt;\n        System.out.println(\"Widened double: \" + myDouble);\n        \n        // Narrowing (manual)\n        double d = 9.78;\n        int i = (int) d;\n        System.out.println(\"Narrowed int: \" + i);\n        \n        // String to int\n        String s = \"456\";\n        int parsed = Integer.parseInt(s);\n        System.out.println(\"Parsed int: \" + parsed);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which type of casting is done automatically?",
+      "options": ["Widening", "Narrowing", "Both", "Neither"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the result of int + double?",
+      "options": ["double", "int", "float", "long"],
+      "correctIndex": 0
+    }
+  ]
+}

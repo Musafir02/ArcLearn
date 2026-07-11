@@ -1,0 +1,17 @@
+{
+  "title": "C Macros",
+  "language": "c",
+  "topic": "macros",
+  "order": 48,
+  "nextTopic": "header_files",
+  "prevTopic": "preprocessor",
+  "content": "### Macros in C\n\nA macro is a preprocessor directive that defines a name for a piece of code that gets substituted before compilation.\n\n### Object-like Macros\n\n```c\n#define PI 3.14159\n#define MAX_SIZE 1000\n```\n\n### Function-like Macros\n\n```c\n#define MAX(a, b) ((a) > (b) ? (a) : (b))\n#define SQUARE(x) ((x) * (x))\n```\n\n### Predefined Macros\n\n| Macro | Value |\n|-------|-------|\n| `__DATE__` | Compilation date (\"MMM DD YYYY\") |\n| `__TIME__` | Compilation time (\"HH:MM:SS\") |\n| `__FILE__` | Source file name |\n| `__LINE__` | Current line number |\n| `__STDC__` | 1 if compiler follows ANSI C |\n| `__cplusplus` | Defined if C++ compiler |\n\n### Macro Pitfalls\n\n```c\n#define BAD_SQUARE(x) x * x\n// BAD_SQUARE(2+3) expands to 2+3*2+3 = 11, not 25\n\n#define GOOD_SQUARE(x) ((x) * (x))\n// GOOD_SQUARE(2+3) expands to ((2+3) * (2+3)) = 25\n```\n\n### Macros vs Functions\n\n| Feature | Macro | Function |\n|---------|-------|----------|\n| Speed | No call overhead | Function call overhead |\n| Code size | Inlined each time | One copy |\n| Type checking | None | Full type checking |\n| Side effects | Multiple evaluation | Evaluated once |\n\n---\n\n> **Key Point:** Always parenthesize macro parameters and the entire macro body to prevent operator precedence bugs.",
+  "codeExample": "#include <stdio.h>\n#define PI 3.14159\n#define AREA(r) (PI * (r) * (r))\n#define MAX(a, b) ((a) > (b) ? (a) : (b))\n\nint main() {\n  printf(\"Area: %.2f\\n\", AREA(5));\n  printf(\"Max of 10 and 20: %d\\n\", MAX(10, 20));\n  printf(\"File: %s, Line: %d\\n\", __FILE__, __LINE__);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What is a potential problem with function-like macros?",
+      "options": ["Slow execution", "Multiple evaluation of arguments", "Cannot take parameters", "Require semicolons"],
+      "correctIndex": 1
+    }
+  ]
+}

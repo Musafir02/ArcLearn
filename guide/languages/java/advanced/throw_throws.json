@@ -1,0 +1,22 @@
+{
+  "title": "Java throw and throws",
+  "language": "java",
+  "topic": "throw_throws",
+  "order": 37,
+  "nextTopic": "custom_exceptions",
+  "prevTopic": "try_catch",
+  "content": "### throw vs throws\n\n`throw` is used to explicitly throw an exception. `throws` is used to declare that a method may throw exceptions.\n\n---\n\n### The `throw` Keyword\n\nUsed inside a method to throw an exception:\n\n```java\npublic void checkAge(int age) {\n    if (age < 18) {\n        throw new IllegalArgumentException(\"Must be 18+\");\n    }\n}\n```\n\n---\n\n### The `throws` Keyword\n\nUsed in method signature to declare exceptions:\n\n```java\npublic void readFile(String path) throws IOException {\n    FileReader fr = new FileReader(path);\n}\n```\n\n---\n\n### Key Differences\n\n| Feature | throw | throws |\n|---------|-------|--------|\n| Location | Inside method body | Method signature |\n| What it does | Actually throws exception | Declares possible exception |\n| Number | Only one | Multiple comma-separated |\n| Followed by | Throwable instance | Exception class names |\n\n---\n\n### Re-throwing Exceptions\n\n```java\ntry {\n    processFile();\n} catch (IOException e) {\n    System.out.println(\"Logging...\");\n    throw e;  // re-throw\n}\n```\n\n---\n\n### Exception Chaining\n\n```java\ntry {\n    // code\n} catch (IOException e) {\n    throw new RuntimeException(\"Operation failed\", e);  // cause = e\n}\n```\n\n> **Key Point:** `throw` is followed by an actual exception object. `throws` is followed by exception class names in the method signature. If a method throws a checked exception, the caller must handle or declare it.",
+  "codeExample": "import java.io.*;\n\npublic class Main {\n    // throws declaration\n    public static void validate(int age) throws IllegalArgumentException {\n        if (age < 0) {\n            throw new IllegalArgumentException(\"Age cannot be negative\");\n        }\n        System.out.println(\"Valid age: \" + age);\n    }\n    \n    public static String readLineFromFile(String file) \n            throws IOException, FileNotFoundException {\n        BufferedReader br = new BufferedReader(new FileReader(file));\n        return br.readLine();\n    }\n    \n    public static void main(String[] args) {\n        try {\n            validate(-5);\n        } catch (IllegalArgumentException e) {\n            System.out.println(\"Caught: \" + e.getMessage());\n        }\n        \n        try {\n            readLineFromFile(\"nonexistent.txt\");\n        } catch (FileNotFoundException e) {\n            System.out.println(\"File not found: \" + e.getMessage());\n        } catch (IOException e) {\n            System.out.println(\"IO Error: \" + e.getMessage());\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword actually throws an exception?",
+      "options": ["throw", "throws", "catch", "finally"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where is 'throws' placed?",
+      "options": ["In method signature", "Inside method body", "Before class", "After catch"],
+      "correctIndex": 0
+    }
+  ]
+}

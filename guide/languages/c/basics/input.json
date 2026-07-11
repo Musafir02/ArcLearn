@@ -1,0 +1,17 @@
+{
+  "title": "C User Input",
+  "language": "c",
+  "topic": "input",
+  "order": 12,
+  "nextTopic": "conditions",
+  "prevTopic": "type_conversion",
+  "content": "### User Input in C\n\nThe `scanf()` function from `<stdio.h>` reads user input from the keyboard.\n\n### Using scanf()\n\n```c\nscanf(\"format specifier\", &variable);\n```\n\nThe `&` (address-of) operator gives the memory address of the variable.\n\n### Format Specifiers for Input\n\n| Specifier | Variable Type |\n|-----------|--------------|\n| `%d` | `int` |\n| `%f` | `float` |\n| `%lf` | `double` |\n| `%c` | `char` |\n| `%s` | char array (string) |\n\n### Input Tips\n\n| Situation | Solution |\n|-----------|----------|\n| String with spaces | Use `fgets()` instead of `scanf()` |\n| Clearing input buffer | Use `while (getchar() != '\\n');` |\n| Reading a line | `fgets(buffer, size, stdin)` |\n| Reading a character | `getchar()` function |\n\n---\n\n> **Key Point:** Always use `&` before variables in `scanf()`. For strings (char arrays), the array name acts as a pointer so `&` is not needed.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int age;\n  char name[50];\n  printf(\"Enter your name: \");\n  scanf(\"%s\", name);\n  printf(\"Enter your age: \");\n  scanf(\"%d\", &age);\n  printf(\"Hello %s, you are %d years old\\n\", name, age);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What operator is needed before a variable in scanf()?",
+      "options": ["*", "&", "#", "@"],
+      "correctIndex": 1
+    }
+  ]
+}

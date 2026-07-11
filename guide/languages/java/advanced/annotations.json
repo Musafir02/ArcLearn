@@ -1,0 +1,22 @@
+{
+  "title": "Java Annotations",
+  "language": "java",
+  "topic": "annotations",
+  "order": 52,
+  "nextTopic": "reflection",
+  "prevTopic": "enums",
+  "content": "### Annotations in Java\n\nAnnotations are metadata tags that provide information about code. They don't directly affect execution.\n\n---\n\n### Built-in Annotations\n\n| Annotation | Purpose |\n|------------|---------|\n| `@Override` | Check method overrides parent |\n| `@Deprecated` | Mark element as deprecated |\n| `@SuppressWarnings` | Suppress compiler warnings |\n| `@FunctionalInterface` | Mark functional interface |\n| `@SafeVarargs` | Suppress varargs warnings |\n\n---\n\n### Creating Custom Annotations\n\n```java\nimport java.lang.annotation.*;\n\n@Retention(RetentionPolicy.RUNTIME)\n@Target(ElementType.METHOD)\npublic @interface MyAnnotation {\n    String value() default \"\";\n    int priority() default 1;\n}\n```\n\n---\n\n### Meta-Annotations\n\n| Annotation | Description |\n|------------|-------------|\n| `@Retention` | When annotation is available |\n| `@Target` | Where annotation can be applied |\n| `@Documented` | Include in javadoc |\n| `@Inherited` | Subclass inherits annotation |\n| `@Repeatable` | Can be applied multiple times |\n\n---\n\n### Retention Policy\n\n| Policy | Available At |\n|--------|-------------|\n| `SOURCE` | Compile time only (discarded) |\n| `CLASS` | In class file, not at runtime |\n| `RUNTIME` | Accessible via reflection at runtime |\n\n---\n\n### Target Types\n\n```java\n@Target({ElementType.METHOD, ElementType.FIELD, ElementType.TYPE})\n```\n\n| Type | Target |\n|------|--------|\n| `TYPE` | Class, interface, enum |\n| `FIELD` | Field |\n| `METHOD` | Method |\n| `PARAMETER` | Parameter |\n| `CONSTRUCTOR` | Constructor |\n\n> **Key Point:** Annotations at `RUNTIME` retention can be read via reflection. Annotation elements are declared as methods in the annotation interface with optional default values.",
+  "codeExample": "import java.lang.annotation.*;\nimport java.lang.reflect.*;\n\n// Custom annotation\n@Retention(RetentionPolicy.RUNTIME)\n@Target(ElementType.METHOD)\n@interface Author {\n    String name();\n    String date() default \"unknown\";\n}\n\nclass MyClass {\n    @Author(name = \"Alice\", date = \"2024-01-15\")\n    public void method1() {\n        System.out.println(\"Method 1\");\n    }\n    \n    @Author(name = \"Bob\")\n    public void method2() {\n        System.out.println(\"Method 2\");\n    }\n    \n    public void method3() {\n        System.out.println(\"Method 3 (no annotation)\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Class<?> clazz = MyClass.class;\n        \n        for (Method method : clazz.getMethods()) {\n            if (method.isAnnotationPresent(Author.class)) {\n                Author author = method.getAnnotation(Author.class);\n                System.out.println(method.getName() + \n                    \" was written by \" + author.name() + \n                    \" on \" + author.date());\n            }\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which retention policy allows reading annotations at runtime?",
+      "options": ["RUNTIME", "SOURCE", "CLASS", "ALL"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does @Override do?",
+      "options": ["Checks correct overriding at compile time", "Overrides the method", "Marks method for override", "Prevents override"],
+      "correctIndex": 0
+    }
+  ]
+}

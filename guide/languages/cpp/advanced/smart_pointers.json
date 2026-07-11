@@ -1,0 +1,17 @@
+{
+  "title": "C++ Smart Pointers",
+  "language": "cpp",
+  "topic": "smart_pointers",
+  "order": 67,
+  "nextTopic": "move_semantics",
+  "prevTopic": "macros",
+  "content": "### Smart Pointers\n\nSmart pointers are RAII wrappers around raw pointers that automatically manage memory. They ensure proper deallocation and prevent memory leaks.\n\n---\n\n### Types of Smart Pointers\n\n| Smart Pointer | Header | Ownership |\n|---------------|--------|-----------|\n| `std::unique_ptr` | `<memory>` | Exclusive ownership |\n| `std::shared_ptr` | `<memory>` | Shared ownership (reference counted) |\n| `std::weak_ptr` | `<memory>` | Non-owning observer |\n\n---\n\n### unique_ptr\n\n```cpp\n#include <memory>\n\n// Preferred creation (C++14)\nauto ptr = make_unique<int>(42);\n\n// Cannot be copied, only moved\nauto ptr2 = std::move(ptr);  // Transfer ownership\n// ptr is now nullptr\n```\n\n---\n\n### shared_ptr\n\n```cpp\nauto sptr = make_shared<MyClass>();\n\n{\n  auto sptr2 = sptr;  // Reference count: 2\n  // Both pointers share ownership\n}\n// Reference count back to 1\n// Object deleted when ref count reaches 0\n```\n\n---\n\n### weak_ptr\n\n```cpp\nauto sptr = make_shared<int>(42);\nweak_ptr<int> wptr = sptr;  // Non-owning reference\n\nif (auto locked = wptr.lock()) {  // Try to acquire shared ownership\n  cout << *locked;\n} else {\n  cout << \"Object already deleted\";\n}\n```\n\n---\n\n### Raw vs Smart Pointers\n\n| Aspect | Raw Pointer | Smart Pointer |\n|--------|-------------|---------------|\n| Memory management | Manual | Automatic |\n| Exception safety | Risk of leaks | Safe |\n| Nullable | Yes | Yes |\n| Ownership semantics | Unclear | Explicit |\n| Performance | No overhead | Slight overhead (shared_ptr) |\n\n---\n\n> **Key Point:** Prefer `std::unique_ptr` by default. Use `std::shared_ptr` only when shared ownership is required. Avoid raw `new`/`delete` in modern C++. Always use `std::make_unique` and `std::make_shared`.",
+  "codeExample": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nclass Resource {\npublic:\n  Resource() { cout << \"Resource acquired\" << endl; }\n  ~Resource() { cout << \"Resource released\" << endl; }\n  void work() { cout << \"Working...\" << endl; }\n};\n\nint main() {\n  unique_ptr<Resource> ptr = make_unique<Resource>();\n  ptr->work();\n  // Automatically deleted when ptr goes out of scope\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which smart pointer uses reference counting?",
+      "options": ["unique_ptr", "shared_ptr", "weak_ptr", "auto_ptr"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Java Reflection",
+  "language": "java",
+  "topic": "reflection",
+  "order": 53,
+  "nextTopic": "jdbc_basics",
+  "prevTopic": "annotations",
+  "content": "### Reflection in Java\n\nReflection allows code to inspect and manipulate classes, methods, fields, and constructors at runtime.\n\n---\n\n### Getting Class Object\n\n```java\n// Method 1: Class.forName()\nClass<?> c1 = Class.forName(\"java.lang.String\");\n\n// Method 2: .class syntax\nClass<?> c2 = String.class;\n\n// Method 3: getClass()\nString str = \"hello\";\nClass<?> c3 = str.getClass();\n```\n\n---\n\n### Reflection Operations\n\n| Operation | Method |\n|-----------|--------|\n| Get class name | `getClass().getName()` |\n| Get methods | `getMethods()`, `getDeclaredMethods()` |\n| Get fields | `getFields()`, `getDeclaredFields()` |\n| Get constructors | `getConstructors()` |\n| Get annotations | `getAnnotations()` |\n| Get superclass | `getSuperclass()` |\n| Get interfaces | `getInterfaces()` |\n| Get modifiers | `getModifiers()` |\n\n---\n\n### Invoking Methods via Reflection\n\n```java\nClass<?> clazz = Class.forName(\"com.example.MyClass\");\nObject obj = clazz.getDeclaredConstructor().newInstance();\nMethod method = clazz.getMethod(\"myMethod\", String.class);\nmethod.invoke(obj, \"Hello\");\n```\n\n---\n\n### Accessing Private Fields\n\n```java\nField field = clazz.getDeclaredField(\"privateField\");\nfield.setAccessible(true);  // bypass access check\nfield.set(obj, newValue);\nObject value = field.get(obj);\n```\n\n---\n\n### Uses and Cautions\n\n**Common Uses:**\n- Frameworks (Spring, Hibernate)\n- IDE autocompletion\n- Testing tools\n- Serialization\n\n**Cautions:**\n- Performance overhead\n- Security restrictions\n- Breaks encapsulation\n- No compile-time safety\n\n> **Key Point:** Reflection is powerful but should be used sparingly due to performance costs. Always handle `ClassNotFoundException`, `NoSuchMethodException`, `IllegalAccessException`, and `InvocationTargetException`.",
+  "codeExample": "import java.lang.reflect.*;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        // Get class info\n        Class<?> clazz = String.class;\n        System.out.println(\"Class: \" + clazz.getName());\n        System.out.println(\"Superclass: \" + clazz.getSuperclass().getName());\n        \n        // List methods\n        System.out.println(\"\\nMethods:\");\n        for (Method m : clazz.getDeclaredMethods()) {\n            System.out.println(\"  \" + m.getReturnType().getSimpleName() + \n                \" \" + m.getName() + \"()\");\n        }\n        \n        // Invoke method via reflection\n        String str = \"Hello World\";\n        Method lengthMethod = String.class.getMethod(\"length\");\n        int length = (int) lengthMethod.invoke(str);\n        System.out.println(\"\\nLength via reflection: \" + length);\n        \n        // Access private field\n        Class<?> integerClass = Integer.class;\n        Field[] fields = integerClass.getDeclaredFields();\n        for (Field f : fields) {\n            f.setAccessible(true);\n            System.out.println(\"Field: \" + f.getName() + \n                \" type: \" + f.getType().getSimpleName());\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which method gets a Class object from a fully qualified name?",
+      "options": ["Class.forName()", "Class.getClass()", "Class.loadClass()", "Class.byName()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a disadvantage of reflection?",
+      "options": ["Performance overhead", "Type safety", "Memory usage", "All of the above"],
+      "correctIndex": 0
+    }
+  ]
+}

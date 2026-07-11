@@ -1,0 +1,17 @@
+{
+  "title": "C if-else Statements",
+  "language": "c",
+  "topic": "if_else",
+  "order": 14,
+  "nextTopic": "switch",
+  "prevTopic": "conditions",
+  "content": "### if-else in C\n\nThe `if` statement executes a block of code if a condition is true. The optional `else` block executes when the condition is false.\n\n### Syntax\n\n```c\nif (condition) {\n  // code if true\n} else if (another_condition) {\n  // code if another_condition is true\n} else {\n  // code if all conditions are false\n}\n```\n\n### Common Mistakes\n\n| Mistake | Why It's Wrong |\n|---------|---------------|\n| `if (x = 5)` | Assignment `=` instead of comparison `==` |\n| Missing braces | Only first statement belongs to if |\n| Semicolon after if | `if (x > 5);` ends the condition |\n| Using `=` instead of `==` | Changes the variable instead of comparing |\n\n### Nested if-else\n\nYou can nest if-else statements inside other if-else statements.\n\n---\n\n> **Key Point:** Always use braces `{}` even for single statements to avoid bugs. Most C style guides enforce this rule.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int marks = 85;\n  if (marks >= 90) {\n    printf(\"Grade: A\\n\");\n  } else if (marks >= 75) {\n    printf(\"Grade: B\\n\");\n  } else if (marks >= 60) {\n    printf(\"Grade: C\\n\");\n  } else {\n    printf(\"Grade: F\\n\");\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What happens if you use `=` instead of `==` in an if condition?",
+      "options": ["Compilation error", "Assignment occurs, condition is always true (unless 0)", "Comparison still works", "Undefined behavior"],
+      "correctIndex": 1
+    }
+  ]
+}

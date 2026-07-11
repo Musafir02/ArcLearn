@@ -1,0 +1,17 @@
+{
+  "title": "C++ Encapsulation",
+  "language": "cpp",
+  "topic": "encapsulation",
+  "order": 45,
+  "nextTopic": "friend_function",
+  "prevTopic": "abstraction",
+  "content": "### Encapsulation\n\nEncapsulation bundles data and methods that operate on that data within a single unit (class), restricting direct access to some components.\n\n---\n\n### Data Hiding\n\n```cpp\nclass BankAccount {\nprivate:  // Hidden from outside\n  double balance;\n\npublic:   // Public interface\n  void deposit(double amount) {\n    if (amount > 0) {\n      balance += amount;\n    }\n  }\n\n  bool withdraw(double amount) {\n    if (amount > 0 && amount <= balance) {\n      balance -= amount;\n      return true;\n    }\n    return false;\n  }\n\n  double getBalance() const {\n    return balance;\n  }\n};\n```\n\n---\n\n### Getters and Setters\n\n```cpp\nclass Person {\nprivate:\n  string name;\n  int age;\n\npublic:\n  string getName() const { return name; }\n  void setName(const string& n) { name = n; }\n\n  int getAge() const { return age; }\n  void setAge(int a) {\n    if (a > 0 && a < 150) age = a;\n  }\n};\n```\n\n---\n\n### Benefits\n\n| Benefit | Explanation |\n|---------|-------------|\n| Control | Validate data before setting |\n| Flexibility | Change internal implementation freely |\n| Security | Prevent unauthorized access |\n| Maintainability | Isolate changes to class internals |\n\n---\n\n> **Key Point:** Use `private` for data members and provide public `getter`/`setter` methods for controlled access. This is a fundamental OOP principle that improves code maintainability.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Employee {\nprivate:\n  int id;\n  double salary;\n\npublic:\n  void setId(int empId) { id = empId; }\n  int getId() const { return id; }\n\n  void setSalary(double s) {\n    if (s >= 0) salary = s;\n  }\n\n  double getSalary() const { return salary; }\n};\n\nint main() {\n  Employee emp;\n  emp.setId(101);\n  emp.setSalary(50000);\n  cout << \"ID: \" << emp.getId() << \", Salary: $\" << emp.getSalary() << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Which access specifier is used for data hiding?",
+      "options": ["public", "private", "protected", "static"],
+      "correctIndex": 1
+    }
+  ]
+}

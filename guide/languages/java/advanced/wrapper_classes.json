@@ -1,0 +1,22 @@
+{
+  "title": "Java Wrapper Classes",
+  "language": "java",
+  "topic": "wrapper_classes",
+  "order": 33,
+  "nextTopic": "generics",
+  "prevTopic": "hashset",
+  "content": "### Wrapper Classes\n\nWrapper classes provide object representations for primitive data types.\n\n---\n\n### Primitive to Wrapper Mapping\n\n| Primitive | Wrapper Class |\n|-----------|---------------|\n| `byte` | `Byte` |\n| `short` | `Short` |\n| `int` | `Integer` |\n| `long` | `Long` |\n| `float` | `Float` |\n| `double` | `Double` |\n| `char` | `Character` |\n| `boolean` | `Boolean` |\n\n---\n\n### Autoboxing and Unboxing\n\n**Autoboxing**: Automatic conversion from primitive to wrapper.\n**Unboxing**: Automatic conversion from wrapper to primitive.\n\n```java\nInteger num = 10;          // autoboxing: int -> Integer\nint value = num;           // unboxing: Integer -> int\n\nArrayList<Integer> list = new ArrayList<>();\nlist.add(5);               // autoboxing\nint x = list.get(0);       // unboxing\n```\n\n---\n\n### Useful Methods\n\n| Method | Description |\n|--------|-------------|\n| `Integer.parseInt(String)` | String to int |\n| `Integer.valueOf(int)` | int to Integer |\n| `Integer.toString(int)` | int to String |\n| `Double.parseDouble(String)` | String to double |\n| `Character.isDigit(char)` | Check if digit |\n| `Character.isLetter(char)` | Check if letter |\n\n---\n\n### Caching\n\nWrapper classes cache common values:\n- `Integer`: -128 to 127\n- `Boolean`: true, false\n- `Byte`, `Short`, `Long`: -128 to 127\n- `Character`: 0 to 127\n\n> **Key Point:** Autoboxing/unboxing is done automatically by the compiler. Be careful with null wrapper objects — unboxing a null causes NullPointerException.",
+  "codeExample": "public class Main {\n    public static void main(String[] args) {\n        // Autoboxing\n        Integer num1 = 100;\n        Integer num2 = 100;\n        \n        // Caching: same object for -128 to 127\n        System.out.println(\"num1 == num2: \" + (num1 == num2));  // true\n        \n        Integer num3 = 200;\n        Integer num4 = 200;\n        System.out.println(\"num3 == num4: \" + (num3 == num4));  // false\n        \n        // Parsing\n        int parsed = Integer.parseInt(\"456\");\n        double d = Double.parseDouble(\"3.14\");\n        System.out.println(\"Parsed int: \" + parsed);\n        \n        // Char utilities\n        System.out.println(\"Is digit '5': \" + Character.isDigit('5'));\n        System.out.println(\"Is letter 'A': \" + Character.isLetter('A'));\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is autoboxing?",
+      "options": ["Primitive to wrapper automatic conversion", "Wrapper to primitive conversion", "String to int conversion", "Type casting"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What Integer values are cached?",
+      "options": ["-128 to 127", "0 to 255", "-255 to 255", "All integers"],
+      "correctIndex": 0
+    }
+  ]
+}

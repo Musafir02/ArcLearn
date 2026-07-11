@@ -1,0 +1,17 @@
+{
+  "title": "C++ Pointers",
+  "language": "cpp",
+  "topic": "pointers",
+  "order": 48,
+  "nextTopic": "references",
+  "prevTopic": "static_members",
+  "content": "### Pointers\n\nA pointer is a variable that stores the memory address of another variable. Pointers provide low-level memory access and are essential for dynamic memory management.\n\n---\n\n### Pointer Syntax\n\n```cpp\nint var = 42;\nint* ptr = &var;   // ptr holds the address of var\n\ncout << ptr;        // Address (e.g., 0x7ffd1234)\ncout << *ptr;       // Dereference: 42\n```\n\n---\n\n### Declaring Pointers\n\n```cpp\nint* p1;         // Pointer to int\nchar* p2;        // Pointer to char\ndouble* p3;      // Pointer to double\nvoid* p4;        // Generic pointer (type-erased)\nint** p5;        // Pointer to pointer to int\n```\n\n---\n\n### Null Pointers\n\n```cpp\nint* ptr1 = nullptr;      // Modern C++ (C++11)\nint* ptr2 = NULL;         // C-style NULL\nint* ptr3 = 0;            // Also null\n\nif (ptr1 == nullptr) {\n  cout << \"Pointer is null\";\n}\n```\n\n---\n\n### Pointer Arithmetic\n\n```cpp\nint arr[] = {10, 20, 30, 40, 50};\nint* ptr = arr;           // Points to arr[0]\n\ncout << *ptr;             // 10\nptr++;                    // Move to next int (4 bytes)\ncout << *ptr;             // 20\n\ncout << *(ptr + 2);       // 40 (offset by 2 positions)\n```\n\n---\n\n### Pointers and Arrays\n\n```cpp\nint arr[5] = {1, 2, 3, 4, 5};\nint* ptr = arr;  // Equivalent to &arr[0]\n\n// Array indexing via pointer\nfor (int i = 0; i < 5; i++) {\n  cout << *(ptr + i) << \" \";\n}\n```\n\n---\n\n> **Key Point:** Always initialize pointers. Uninitialized pointers contain garbage addresses and dereferencing them causes undefined behavior. Use `nullptr` for null pointers in modern C++.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int value = 42;\n  int* ptr = &value;\n\n  cout << \"Value: \" << value << endl;\n  cout << \"Address: \" << ptr << endl;\n  cout << \"Dereference: \" << *ptr << endl;\n\n  *ptr = 100;  // Modify via pointer\n  cout << \"Modified value: \" << value << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What operator gives the address of a variable?",
+      "options": ["*", "&", "->", "."],
+      "correctIndex": 1
+    }
+  ]
+}

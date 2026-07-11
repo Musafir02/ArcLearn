@@ -1,0 +1,17 @@
+{
+  "title": "C++ Type Conversion",
+  "language": "cpp",
+  "topic": "type_conversion",
+  "order": 15,
+  "nextTopic": "conditions",
+  "prevTopic": "type_casting",
+  "content": "### Type Conversion in C++\n\nType conversion (type coercion) happens automatically or explicitly when values of different types are used together.\n\n---\n\n### Implicit Conversion (Automatic)\n\nThe compiler automatically converts between compatible types:\n\n```cpp\nint a = 10;\ndouble b = a;          // int to double: 10.0\nchar c = 65;           // int to char: 'A'\nbool d = 0;            // int to bool: false\nint e = 3.14;          // double to int: 3 (truncation warning)\n```\n\n---\n\n### Conversion Hierarchy\n\n```\nbool < char < short < int < unsigned < long < long long < float < double\n```\n\n---\n\n### Arithmetic Conversions\n\nWhen mixing types in expressions:\n\n```cpp\nint i = 5;\ndouble d = 2.5;\nauto result = i + d;   // int promoted to double: 7.5\nauto result2 = 5 / 2;   // Integer division: 2\nauto result3 = 5 / 2.0; // Double division: 2.5\n```\n\n---\n\n### Numeric Promotion & Demotion\n\n| Conversion | Direction | Risk |\n|-----------|-----------|------|\n| Promotion | Smaller to larger type | Safe |\n| Demotion | Larger to smaller type | Data loss possible |\n\n```cpp\nint large = 1000;\nchar small = large;   // Demotion: potential overflow\n```\n\n---\n\n### User-Defined Conversion\n\n```cpp\nclass Fahrenheit {\npublic:\n  Fahrenheit(double temp) : temp_(temp) {}\n  operator double() const { return (temp_ - 32) * 5.0 / 9.0; }\nprivate:\n  double temp_;\n};\n```\n\n---\n\n> **Key Point:** Be aware of implicit conversions. When precision matters, use explicit casts to avoid unexpected data loss.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  int myInt = 9;\n  double myDouble = myInt;  // Implicit int to double\n\n  double pi = 3.14159;\n  int truncated = pi;       // Implicit double to int (warning)\n\n  cout << \"Int to double: \" << myDouble << endl;\n  cout << \"Double to int (truncated): \" << truncated << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What happens when you assign a double to an int?",
+      "options": ["Rounded to nearest", "Truncated to whole number", "Compile error", "Promoted to double"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ File Write",
+  "language": "cpp",
+  "topic": "file_write",
+  "order": 56,
+  "nextTopic": "templates",
+  "prevTopic": "file_read",
+  "content": "### Writing to Files\n\nThe `ofstream` class is used for writing data to files.\n\n---\n\n### Basic Writing\n\n```cpp\n#include <fstream>\n\nofstream file(\"output.txt\");\n\nif (file.is_open()) {\n  file << \"Hello, World!\" << endl;\n  file << \"The answer is \" << 42 << endl;\n  file.close();\n}\n```\n\n---\n\n### Writing Different Data Types\n\n```cpp\nofstream file(\"data.txt\");\n\nint age = 25;\ndouble salary = 50000.50;\nstring name = \"Alice\";\n\nfile << name << \" \" << age << \" \" << salary << endl;\n```\n\n---\n\n### Append Mode\n\n```cpp\nofstream file(\"log.txt\", ios::app);  // Append, don't overwrite\nfile << \"New log entry\" << endl;\nfile.close();\n```\n\n---\n\n### Binary Writing\n\n```cpp\n#include <fstream>\n\nstruct Record {\n  int id;\n  double value;\n};\n\nRecord rec = {1, 99.5};\nofstream file(\"data.bin\", ios::binary);\nfile.write(reinterpret_cast<char*>(&rec), sizeof(rec));\n```\n\n---\n\n### Error Checking\n\n```cpp\nofstream file(\"output.txt\");\nif (file.fail()) {\n  cout << \"Failed to open file\";\n  return 1;\n}\n\nfile << \"Data\";\nif (file.bad()) {\n  cout << \"Write error occurred\";\n}\n```\n\n---\n\n> **Key Point:** By default, `ofstream` truncates (overwrites) existing files. Use `ios::app` to append. Always check that the file opened successfully.",
+  "codeExample": "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main() {\n  ofstream file(\"students.txt\");\n\n  if (!file) {\n    cout << \"Error opening file\" << endl;\n    return 1;\n  }\n\n  file << \"Name,Grade,Age\" << endl;\n  file << \"Alice,A,20\" << endl;\n  file << \"Bob,B,22\" << endl;\n  file << \"Charlie,A-,21\" << endl;\n\n  file.close();\n  cout << \"Data written to students.txt\" << endl;\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does ofstream do by default when opening an existing file?",
+      "options": ["Appends to the file", "Truncates (overwrites) the file", "Creates a backup", "Throws an exception"],
+      "correctIndex": 1
+    }
+  ]
+}

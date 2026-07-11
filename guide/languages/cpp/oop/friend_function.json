@@ -1,0 +1,17 @@
+{
+  "title": "C++ Friend Function",
+  "language": "cpp",
+  "topic": "friend_function",
+  "order": 46,
+  "nextTopic": "static_members",
+  "prevTopic": "encapsulation",
+  "content": "### Friend Function\n\nA friend function is a non-member function that has access to a class's private and protected members. It is declared inside the class with the `friend` keyword.\n\n---\n\n### Syntax\n\n```cpp\nclass ClassName {\n  friend returnType functionName(parameters);\n};\n```\n\n---\n\n### Example\n\n```cpp\nclass Rectangle {\nprivate:\n  double width, height;\n\npublic:\n  Rectangle(double w, double h) : width(w), height(h) {}\n\n  friend double calculateArea(const Rectangle& rect);\n};\n\ndouble calculateArea(const Rectangle& rect) {\n  return rect.width * rect.height;  // Access private members\n}\n```\n\n---\n\n### Friend Class\n\nA class can be a friend of another class:\n\n```cpp\nclass A {\n  friend class B;  // B has access to all private members of A\nprivate:\n  int secret;\n};\n\nclass B {\npublic:\n  void reveal(A& a) {\n    cout << a.secret;  // Allowed: B is friend of A\n  }\n};\n```\n\n---\n\n### Friend Characteristics\n\n| Property | Description |\n|----------|-------------|\n| Not inherited | Friendship is not passed to derived classes |\n| Not transitive | A friend of B does not mean B is friend of A |\n| Not symmetric | A is friend of B does not mean B is friend of A |\n| Can be function or class | Both supported |\n\n---\n\n> **Key Point:** Use friend functions sparingly. They break encapsulation and should only be used when a non-member function genuinely needs access to private members (e.g., operator overloading).",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass Box {\nprivate:\n  double length;\n\npublic:\n  Box(double l) : length(l) {}\n\n  friend void printLength(const Box& b);\n};\n\nvoid printLength(const Box& b) {\n  cout << \"Length: \" << b.length << endl;\n}\n\nint main() {\n  Box box(10.5);\n  printLength(box);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "Can a friend function access private members of a class?",
+      "options": ["No", "Yes, only if declared friend", "Yes, always", "Only if it's a member function"],
+      "correctIndex": 1
+    }
+  ]
+}

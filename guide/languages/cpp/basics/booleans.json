@@ -1,0 +1,17 @@
+{
+  "title": "C++ Booleans",
+  "language": "cpp",
+  "topic": "booleans",
+  "order": 10,
+  "nextTopic": "strings",
+  "prevTopic": "operators",
+  "content": "### Booleans in C++\n\nThe `bool` data type represents true/false values. It is used extensively in conditions and logical operations.\n\n---\n\n### Declaration and Values\n\n```cpp\nbool isReady = true;\nbool isFinished = false;\n\nbool result = (5 > 3); // true\n```\n\n---\n\n### Boolean Conversion\n\nAny value can be implicitly converted to bool:\n\n| Value | Converts To |\n|-------|-------------|\n| 0 | `false` |\n| Non-zero (1, -1, 42) | `true` |\n| `nullptr` | `false` |\n| Non-null pointer | `true` |\n| Empty container | Depends on context |\n\n---\n\n### Printing Booleans\n\n```cpp\ncout << true << endl;  // Output: 1\ncout << false << endl; // Output: 0\n\n// Print as true/false\ncout << boolalpha << true << endl;  // Output: true\ncout << noboolalpha << true << endl; // Output: 1\n```\n\n---\n\n### Boolean Operators\n\n```cpp\nbool a = true, b = false;\nbool andResult = a && b;  // false\nbool orResult  = a || b;   // true\nbool notResult = !a;       // false\n```\n\n---\n\n> **Key Point:** In conditions, any non-zero value is treated as `true`. Always use boolean expressions explicitly for readability.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nint main() {\n  bool isCodingFun = true;\n  bool isTiring = false;\n\n  cout << boolalpha;\n  cout << \"Coding is fun: \" << isCodingFun << endl;\n  cout << \"Coding is tiring: \" << isTiring << endl;\n  cout << (10 > 5) << endl; // true\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does the expression `bool(0)` evaluate to?",
+      "options": ["true", "false", "0", "nullptr"],
+      "correctIndex": 1
+    }
+  ]
+}

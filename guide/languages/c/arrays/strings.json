@@ -1,0 +1,17 @@
+{
+  "title": "C Strings",
+  "language": "c",
+  "topic": "strings",
+  "order": 25,
+  "nextTopic": "string_functions",
+  "prevTopic": "multi_dim_arrays",
+  "content": "### Strings in C\n\nC does not have a dedicated string type. Strings are represented as arrays of characters terminated by a null character (`\\0`).\n\n### String Declaration\n\n```c\nchar str1[6] = {'H', 'e', 'l', 'l', 'o', '\\0'};\nchar str2[] = \"Hello\";  // size 6 (includes null terminator)\nchar *str3 = \"Hello\";   // string literal (read-only)\n```\n\n### Null Terminator\n\nEvery C string ends with a null character `\\0` (ASCII value 0). This marks the end of the string.\n\n| String | Memory Content |\n|--------|---------------|\n| `\"Hi\"` | `'H' 'i' '\\0'` |\n| `\"C\"` | `'C' '\\0'` |\n| Empty `\"\"` | `'\\0'` |\n\n### Important Notes\n\n- Always allocate one extra byte for the null terminator\n- String literals are stored in read-only memory (modifying them is undefined behavior)\n- Character arrays with `char name[]` can be modified\n- Pointer to string literal (`char *p = \"hello\"`) cannot be safely modified\n\n---\n\n> **Key Point:** Always ensure enough space for the null terminator `\\0`. A string of length n needs an array of size n+1.",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  char greeting[] = \"Hello\";\n  printf(\"%s\\n\", greeting);\n  greeting[0] = 'h';\n  printf(\"%s\\n\", greeting);\n  char name[20] = \"Alice\";\n  printf(\"Name: %s\\n\", name);\n  printf(\"Length: %zu\\n\", sizeof(name));\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What character terminates all C strings?",
+      "options": ["\\n", "\\0", "\\t", "\\r"],
+      "correctIndex": 1
+    }
+  ]
+}

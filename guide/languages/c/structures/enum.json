@@ -1,0 +1,17 @@
+{
+  "title": "C Enum",
+  "language": "c",
+  "topic": "enum",
+  "order": 43,
+  "nextTopic": "file_handling",
+  "prevTopic": "union",
+  "content": "### Enum in C\n\nAn enumeration (`enum`) is a user-defined type consisting of a set of named integer constants.\n\n### Definition\n\n```c\nenum Color {RED, GREEN, BLUE};\n```\n\n### Values\n\nBy default, the first enumerator has value 0, and each subsequent value increments by 1.\n\n```c\nenum Color {RED, GREEN, BLUE};\n// RED = 0, GREEN = 1, BLUE = 2\n```\n\n### Custom Values\n\n```c\nenum Status {OK = 200, NOT_FOUND = 404, ERROR = 500};\n```\n\n### Benefits of Enums\n\n| Benefit | Description |\n|---------|-------------|\n| Readability | `Color c = RED` vs `int c = 0` |\n| Type safety | Compiler can warn about type mismatches |\n| Maintainability | Adding values is easy |\n| Debugging | Symbolic names show in debugger |\n\n### Enum vs #define Constants\n\n| Feature | enum | #define |\n|---------|------|---------|\n| Type checking | Yes (enumerated type) | No (text substitution) |\n| Scope | Block-scoped | Global (from point of definition) |\n| Debugger support | Symbolic names visible | Names lost in compilation |\n| Values | Auto-incrementing | Must be assigned manually |\n\n---\n\n> **Key Point:** Enums improve code readability and maintainability. Use them instead of magic numbers or multiple #define constants.",
+  "codeExample": "#include <stdio.h>\n\nenum Day {MON, TUE, WED, THU, FRI, SAT, SUN};\nenum Weather {SUNNY = 1, CLOUDY = 2, RAINY = 3, SNOWY = 4};\n\nint main() {\n  enum Day today = WED;\n  printf(\"Day index: %d\\n\", today);\n  enum Weather w = RAINY;\n  printf(\"Weather code: %d\\n\", w);\n  if (today == SAT || today == SUN) {\n    printf(\"Weekend!\\n\");\n  } else {\n    printf(\"Weekday\\n\");\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What value does the first enum member default to?",
+      "options": ["-1", "0", "1", "Undefined"],
+      "correctIndex": 1
+    }
+  ]
+}

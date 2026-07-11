@@ -1,0 +1,17 @@
+{
+  "title": "C Pointers",
+  "language": "c",
+  "topic": "pointers",
+  "order": 27,
+  "nextTopic": "pointer_arithmetic",
+  "prevTopic": "string_functions",
+  "content": "### Pointers in C\n\nA pointer is a variable that stores the memory address of another variable.\n\n### Pointer Declaration\n\n```c\ntype *pointerName;\n```\n\n### Key Operators\n\n| Operator | Name | Description |\n|----------|------|-------------|\n| `&` | Address-of | Gets the memory address of a variable |\n| `*` | Dereference | Accesses the value at the stored address |\n\n### Example\n\n```c\nint x = 10;\nint *p = &x;  // p stores address of x\n*p = 20;      // changes x to 20\n```\n\n### Pointer Size\n\nAll pointers on a given system have the same size (4 bytes on 32-bit, 8 bytes on 64-bit), regardless of the type they point to.\n\n### Null Pointers\n\n```c\nint *p = NULL;  // points to nothing\n```\n\nA null pointer should not be dereferenced. Always check for NULL before using a pointer.\n\n---\n\n> **Key Point:** A pointer must be initialized before use. Dereferencing an uninitialized pointer causes undefined behavior (likely a crash).",
+  "codeExample": "#include <stdio.h>\n\nint main() {\n  int x = 42;\n  int *ptr = &x;\n  printf(\"Value of x: %d\\n\", x);\n  printf(\"Address of x: %p\\n\", &x);\n  printf(\"Pointer points to address: %p\\n\", ptr);\n  printf(\"Value via pointer: %d\\n\", *ptr);\n  *ptr = 100;\n  printf(\"x after modification: %d\\n\", x);\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What operator is used to get the address of a variable?",
+      "options": ["*", "&", "#", "@"],
+      "correctIndex": 1
+    }
+  ]
+}

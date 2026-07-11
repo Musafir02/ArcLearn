@@ -1,0 +1,22 @@
+{
+  "title": "Java File Handling",
+  "language": "java",
+  "topic": "file_handling",
+  "order": 39,
+  "nextTopic": "file_io",
+  "prevTopic": "custom_exceptions",
+  "content": "### File Handling in Java\n\nThe `java.io.File` class provides methods for working with files and directories.\n\n---\n\n### The File Class\n\n```java\nimport java.io.File;\n\nFile file = new File(\"example.txt\");\nFile dir = new File(\"mydir\");\n```\n\n---\n\n### Common File Methods\n\n| Method | Description |\n|--------|-------------|\n| `exists()` | Check if file exists |\n| `createNewFile()` | Create a new file |\n| `delete()` | Delete file |\n| `getName()` | Get filename |\n| `getPath()` | Get file path |\n| `length()` | File size in bytes |\n| `isFile()` | Check if it's a file |\n| `isDirectory()` | Check if it's a directory |\n| `list()` | List directory contents |\n| `mkdir()` | Create single directory |\n| `mkdirs()` | Create nested directories |\n\n---\n\n### Directory Operations\n\n```java\nFile dir = new File(\"documents/subfolder\");\ndir.mkdirs();  // creates both 'documents' and 'subfolder'\n\nfor (String fileName : dir.list()) {\n    System.out.println(fileName);\n}\n```\n\n---\n\n### File Filters\n\n```java\nFile dir = new File(\".\");\nFile[] txtFiles = dir.listFiles((f) -> f.getName().endsWith(\".txt\"));\n```\n\n> **Key Point:** The `File` class represents a pathname, not the actual file content. It is used for file metadata operations. Use `FileReader`, `FileWriter`, `InputStream`, `OutputStream` for reading/writing content.",
+  "codeExample": "import java.io.File;\nimport java.io.IOException;\n\npublic class Main {\n    public static void main(String[] args) {\n        File file = new File(\"example.txt\");\n        \n        try {\n            if (file.createNewFile()) {\n                System.out.println(\"File created: \" + file.getName());\n            } else {\n                System.out.println(\"File already exists\");\n            }\n            \n            System.out.println(\"Path: \" + file.getPath());\n            System.out.println(\"Absolute path: \" + file.getAbsolutePath());\n            System.out.println(\"Size: \" + file.length() + \" bytes\");\n            System.out.println(\"Is file: \" + file.isFile());\n            System.out.println(\"Is writable: \" + file.canWrite());\n            \n            // Directory listing\n            File dir = new File(\".\");\n            String[] contents = dir.list();\n            System.out.println(\"\\nDirectory contents:\");\n            for (String name : contents) {\n                System.out.println(\"  \" + name);\n            }\n            \n        } catch (IOException e) {\n            System.out.println(\"Error: \" + e.getMessage());\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does File.length() return?",
+      "options": ["File size in bytes", "Filename length", "Number of lines", "Path length"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method creates all nonexistent parent directories?",
+      "options": ["mkdirs()", "mkdir()", "createNewFile()", "createDir()"],
+      "correctIndex": 0
+    }
+  ]
+}

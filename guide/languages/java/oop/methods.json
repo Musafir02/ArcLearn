@@ -1,0 +1,22 @@
+{
+  "title": "Java Methods",
+  "language": "java",
+  "topic": "methods",
+  "order": 19,
+  "nextTopic": "method_overloading",
+  "prevTopic": "static",
+  "content": "### Methods in Java\n\nA method is a block of code that runs when called. It can accept parameters and return values.\n\n---\n\n### Method Declaration\n\n```java\naccessModifier returnType methodName(parameterList) {\n    // method body\n    return value;\n}\n```\n\n---\n\n### Method Components\n\n| Component | Description |\n|-----------|-------------|\n| Access Modifier | `public`, `private`, `protected`, default |\n| Return Type | Data type of return value (or `void`) |\n| Method Name | camelCase naming |\n| Parameters | Input values (optional) |\n| Body | Code to execute |\n\n---\n\n### Types of Methods\n\n| Type | Description |\n|------|-------------|\n| Instance method | Belongs to an object |\n| Static method | Belongs to the class |\n| Getter/Setter | Access private fields |\n| Abstract method | No body, must be overridden |\n| Final method | Cannot be overridden |\n\n---\n\n### Parameter Passing\n\nJava passes primitives by value and object references by value:\n\n```java\npublic void modifyValue(int x) {\n    x = 10;  // original variable unchanged\n}\n\npublic void modifyArray(int[] arr) {\n    arr[0] = 99;  // original array modified\n}\n```\n\n---\n\n### Varargs (Variable Arguments)\n\n```java\npublic static void printNumbers(int... numbers) {\n    for (int n : numbers) {\n        System.out.println(n);\n    }\n}\n```\n\n> **Key Point:** Methods must be declared inside a class. Return type is mandatory (use `void` if nothing returned). Java always passes arguments by value.",
+  "codeExample": "public class Main {\n    // Method with parameters and return value\n    static int add(int a, int b) {\n        return a + b;\n    }\n    \n    // Void method\n    static void greet(String name) {\n        System.out.println(\"Hello, \" + name);\n    }\n    \n    // Varargs method\n    static int sum(int... numbers) {\n        int total = 0;\n        for (int n : numbers) {\n            total += n;\n        }\n        return total;\n    }\n    \n    public static void main(String[] args) {\n        greet(\"Alice\");\n        System.out.println(\"Sum: \" + add(5, 3));\n        System.out.println(\"Varargs sum: \" + sum(1, 2, 3, 4, 5));\n    }\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used when a method returns nothing?",
+      "options": ["void", "null", "empty", "none"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Does Java pass objects by value or reference?",
+      "options": ["Value (reference by value)", "Reference", "Both", "Depends on the type"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "C++ Destructor",
+  "language": "cpp",
+  "topic": "destructor",
+  "order": 40,
+  "nextTopic": "inheritance",
+  "prevTopic": "constructors",
+  "content": "### Destructor\n\nA destructor is a special member function that is automatically called when an object goes out of scope or is deleted. It is used to release resources.\n\n---\n\n### Syntax\n\n```cpp\nclass ClassName {\npublic:\n  ~ClassName();  // Destructor (tilde + class name)\n};\n```\n\n---\n\n### Example\n\n```cpp\nclass Resource {\nprivate:\n  int* data;\npublic:\n  Resource() {\n    data = new int[100];  // Allocate resource\n  }\n\n  ~Resource() {\n    delete[] data;  // Release resource\n    cout << \"Destructor called\";\n  }\n};\n```\n\n---\n\n### Destructor Rules\n\n| Rule | Description |\n|------|-------------|\n| No parameters | Cannot be overloaded |\n| No return type | Same as constructors |\n| No exceptions | Should not throw (use `noexcept`) |\n| Virtual in base | Make virtual for polymorphic classes |\n| Called automatically | When object goes out of scope |\n\n---\n\n### Order of Destruction\n\n1. Derived class destructor runs first\n2. Base class destructor runs last\n3. Members destroyed in reverse order of construction\n\n```cpp\nclass Base {\n  ~Base() { cout << \"Base destroyed\"; }\n};\n\nclass Derived : public Base {\n  ~Derived() { cout << \"Derived destroyed\"; }\n};\n// Output: \"Derived destroyed\" \"Base destroyed\"\n```\n\n---\n\n### Virtual Destructor\n\n```cpp\nclass Base {\npublic:\n  virtual ~Base() {}\n};\n\nclass Derived : public Base {\n  ~Derived() { /* cleanup */ }\n};\n\nBase* ptr = new Derived();\ndelete ptr;  // Both destructors called correctly\n```\n\n---\n\n> **Key Point:** Always make destructors `virtual` in base classes that are meant to be inherited. This ensures proper cleanup of derived class resources when deleting through a base pointer.",
+  "codeExample": "#include <iostream>\nusing namespace std;\n\nclass MyArray {\nprivate:\n  int* arr;\n  int size;\n\npublic:\n  MyArray(int s) : size(s) {\n    arr = new int[size];\n    cout << \"Array allocated\" << endl;\n  }\n\n  ~MyArray() {\n    delete[] arr;\n    cout << \"Array deallocated\" << endl;\n  }\n};\n\nint main() {\n  MyArray nums(10);\n  // Destructor called automatically when nums goes out of scope\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What symbol prefixes the destructor name?",
+      "options": ["~", "!", "#", "@"],
+      "correctIndex": 0
+    }
+  ]
+}

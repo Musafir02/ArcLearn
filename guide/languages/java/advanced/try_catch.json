@@ -1,0 +1,22 @@
+{
+  "title": "Java Try-Catch Blocks",
+  "language": "java",
+  "topic": "try_catch",
+  "order": 36,
+  "nextTopic": "throw_throws",
+  "prevTopic": "exception_handling",
+  "content": "### Try-Catch Blocks\n\nThe `try-catch` block is used to handle exceptions gracefully.\n\n---\n\n### Basic Syntax\n\n```java\ntry {\n    // code that may throw exception\n} catch (ExceptionType e) {\n    // handle exception\n} finally {\n    // always executes (optional)\n}\n```\n\n---\n\n### Multiple Catch Blocks\n\n```java\ntry {\n    int[] arr = {1, 2};\n    int x = arr[5];\n    int y = 10 / 0;\n} catch (ArrayIndexOutOfBoundsException e) {\n    System.out.println(\"Array error\");\n} catch (ArithmeticException e) {\n    System.out.println(\"Math error\");\n}\n```\n\n---\n\n### Multi-Catch (Java 7+)\n\n```java\ntry {\n    // code\n} catch (IOException | SQLException e) {\n    // handle multiple exceptions with one block\n}\n```\n\n---\n\n### Try-with-Resources (Java 7+)\n\nAutomatically closes resources:\n\n```java\ntry (Scanner sc = new Scanner(System.in)) {\n    String line = sc.nextLine();\n} catch (Exception e) {\n    e.printStackTrace();\n}\n// Scanner is automatically closed\n```\n\n---\n\n### Finally Block\n\n```java\ntry {\n    // risky code\n} catch (Exception e) {\n    // handle\n} finally {\n    // always runs (even with return or exception)\n}\n```\n\n> **Key Point:** The `finally` block always executes, even if there is a `return` statement in try or catch. It is used for cleanup operations like closing files or releasing resources.",
+  "codeExample": "import java.util.Scanner;\nimport java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // Try-catch-finally\n        FileReader reader = null;\n        try {\n            reader = new FileReader(\"test.txt\");\n            int data = reader.read();\n            System.out.println((char) data);\n        } catch (FileNotFoundException e) {\n            System.out.println(\"File not found\");\n        } catch (IOException e) {\n            System.out.println(\"IO error\");\n        } finally {\n            try {\n                if (reader != null) reader.close();\n            } catch (IOException e) {\n                e.printStackTrace();\n            }\n        }\n        \n        // Try-with-resources (Java 7+)\n        try (BufferedReader br = new BufferedReader(\n                new FileReader(\"test.txt\"))) {\n            System.out.println(br.readLine());\n        } catch (IOException e) {\n            System.out.println(\"Error: \" + e.getMessage());\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "When does the finally block execute?",
+      "options": ["Always", "Only on exception", "Only on success", "Only if no return"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does try-with-resources do?",
+      "options": ["Auto-closes resources", "Creates resources", "Catches resources", "Logs resources"],
+      "correctIndex": 0
+    }
+  ]
+}

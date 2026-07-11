@@ -1,0 +1,17 @@
+{
+  "title": "C++ Standard Template Library (STL)",
+  "language": "cpp",
+  "topic": "stl",
+  "order": 60,
+  "nextTopic": "stl_vector",
+  "prevTopic": "template_classes",
+  "content": "### Standard Template Library (STL)\n\nThe STL is a powerful set of C++ template classes and functions that provide common data structures and algorithms.\n\n---\n\n### STL Components\n\n| Component | Description | Examples |\n|-----------|-------------|----------|\n| Containers | Data structures | `vector`, `list`, `map`, `set` |\n| Algorithms | Operations on data | `sort`, `find`, `binary_search` |\n| Iterators | Traverse containers | `begin()`, `end()`, `advance()` |\n| Functors | Function objects | `greater<int>()`, `less<int>()` |\n| Adaptors | Interface adapters | `stack`, `queue`, `priority_queue` |\n| Allocators | Memory management | `allocator<T>` |\n\n---\n\n### Container Categories\n\n| Category | Containers | Description |\n|----------|------------|-------------|\n| Sequence | `vector`, `deque`, `list`, `forward_list`, `array` | Ordered elements |\n| Associative | `set`, `multiset`, `map`, `multimap` | Sorted by key |\n| Unordered | `unordered_set`, `unordered_map`, `unordered_multiset`, `unordered_multimap` | Hash-based |\n\n---\n\n### Common STL Containers\n\n| Container | Header | Characteristics |\n|-----------|--------|-----------------|\n| `std::vector` | `<vector>` | Dynamic array, O(1) random access |\n| `std::list` | `<list>` | Doubly linked list, O(1) insert/delete |\n| `std::deque` | `<deque>` | Double-ended queue |\n| `std::map` | `<map>` | Sorted key-value pairs |\n| `std::set` | `<set>` | Sorted unique elements |\n| `std::unordered_map` | `<unordered_map>` | Hash table (C++11) |\n\n---\n\n> **Key Point:** The STL is a cornerstone of modern C++. Understanding containers, iterators, and algorithms will make you significantly more productive as a C++ programmer.",
+  "codeExample": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n  vector<int> numbers = {5, 2, 8, 1, 9, 3};\n\n  sort(numbers.begin(), numbers.end());\n\n  cout << \"Sorted: \";\n  for (int n : numbers) {\n    cout << n << \" \";\n  }\n  cout << endl;\n\n  auto it = find(numbers.begin(), numbers.end(), 8);\n  if (it != numbers.end()) {\n    cout << \"Found 8 at position \" << (it - numbers.begin()) << endl;\n  }\n  return 0;\n}",
+  "quiz": [
+    {
+      "question": "What does STL stand for?",
+      "options": ["Standard Type Library", "Standard Template Library", "Simple Template Library", "System Template Layer"],
+      "correctIndex": 1
+    }
+  ]
+}

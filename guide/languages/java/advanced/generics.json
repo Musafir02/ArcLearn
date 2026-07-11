@@ -1,0 +1,22 @@
+{
+  "title": "Java Generics",
+  "language": "java",
+  "topic": "generics",
+  "order": 34,
+  "nextTopic": "exception_handling",
+  "prevTopic": "wrapper_classes",
+  "content": "### Generics in Java\n\nGenerics enable types (classes and methods) to operate on objects of various types while providing compile-time type safety.\n\n---\n\n### Generic Classes\n\n```java\npublic class Box<T> {\n    private T content;\n    \n    public void set(T content) {\n        this.content = content;\n    }\n    \n    public T get() {\n        return content;\n    }\n}\n\nBox<String> stringBox = new Box<>();  // T = String\nBox<Integer> intBox = new Box<>();    // T = Integer\n```\n\n---\n\n### Generic Methods\n\n```java\npublic static <T> T getMiddle(T... args) {\n    return args[args.length / 2];\n}\n\nString mid = getMiddle(\"a\", \"b\", \"c\");  // returns \"b\"\n```\n\n---\n\n### Bounded Type Parameters\n\n| Bound | Syntax | Description |\n|-------|--------|-------------|\n| Upper bound | `<T extends Number>` | T must be Number or subclass |\n| Lower bound | `<T super Integer>` | T must be Integer or superclass |\n| Multiple bounds | `<T extends A & B & C>` | T must extend all |\n\n---\n\n### Wildcards\n\n| Wildcard | Syntax | Usage |\n|----------|--------|-------|\n| Unbounded | `List<?>` | Any type |\n| Upper bounded | `List<? extends Number>` | Number or subtypes |\n| Lower bounded | `List<? super Integer>` | Integer or supertypes |\n\n---\n\n### Type Erasure\n\nGenerics are implemented via type erasure. Generic type information is removed at runtime.\n\n```java\nList<String> strings = new ArrayList<>();\nList<Integer> integers = new ArrayList<>();\n// Both are List at runtime\n```\n\n> **Key Point:** Generics provide compile-time safety, eliminating the need for explicit casting and preventing ClassCastException. Type parameters use single uppercase letters: T (Type), E (Element), K (Key), V (Value).",
+  "codeExample": "import java.util.ArrayList;\nimport java.util.List;\n\nclass Pair<K, V> {\n    private K key;\n    private V value;\n    \n    public Pair(K key, V value) {\n        this.key = key;\n        this.value = value;\n    }\n    \n    public K getKey() { return key; }\n    public V getValue() { return value; }\n}\n\npublic class Main {\n    public static <T extends Comparable<T>> T max(T a, T b) {\n        return a.compareTo(b) > 0 ? a : b;\n    }\n    \n    public static void main(String[] args) {\n        Pair<String, Integer> pair = new Pair<>(\"Age\", 25);\n        System.out.println(pair.getKey() + \": \" + pair.getValue());\n        \n        System.out.println(\"Max of 10 and 20: \" + max(10, 20));\n        System.out.println(\"Max of A and B: \" + max(\"A\", \"B\"));\n        \n        List<Integer> numbers = new ArrayList<>();\n        numbers.add(1);\n        numbers.add(2);\n        printList(numbers);\n    }\n    \n    public static void printList(List<?> list) {\n        for (Object obj : list) {\n            System.out.println(obj);\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is type erasure?",
+      "options": ["Generic info removed at runtime", "Types are erased at compile time", "Classes are deleted", "Methods are removed"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which wildcard represents any type?",
+      "options": ["?", "? extends Object", "? super Object", "T"],
+      "correctIndex": 0
+    }
+  ]
+}

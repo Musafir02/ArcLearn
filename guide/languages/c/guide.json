@@ -1,0 +1,39 @@
+{
+  "title": "C Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "C Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "datatypes", "constants", "operators", "booleans", "type_conversion", "input"]
+    },
+    {
+      "type": "group", "title": "C Conditions", "folder": "conditions",
+      "topics": ["conditions", "if_else", "switch", "ternary"]
+    },
+    {
+      "type": "group", "title": "C Loops", "folder": "loops",
+      "topics": ["while", "for", "do_while", "break_continue", "goto"]
+    },
+    {
+      "type": "group", "title": "C Arrays", "folder": "arrays",
+      "topics": ["arrays", "array_size", "multi_dim_arrays", "strings", "string_functions"]
+    },
+    {
+      "type": "group", "title": "C Pointers", "folder": "pointers",
+      "topics": ["pointers", "pointer_arithmetic", "pointers_arrays", "pointers_functions", "dynamic_memory", "malloc_calloc_realloc"]
+    },
+    {
+      "type": "group", "title": "C Functions", "folder": "functions",
+      "topics": ["functions", "function_params", "function_prototypes", "recursion", "math_functions"]
+    },
+    {
+      "type": "group", "title": "C Structures", "folder": "structures",
+      "topics": ["struct", "struct_arrays", "struct_functions", "typedef", "union", "enum"]
+    },
+    {
+      "type": "group", "title": "C Advanced", "folder": "advanced",
+      "topics": ["file_handling", "file_read", "file_write", "preprocessor", "macros", "header_files", "command_line_args", "error_handling", "errno", "variable_scope", "storage_classes", "bitwise_operators", "function_pointers", "linked_list", "sorting_algorithms"]
+    }
+  ]
+}
