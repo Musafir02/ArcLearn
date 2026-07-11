@@ -1,0 +1,19 @@
+{
+  "title": "Handling Request Data",
+  "language": "flask",
+  "topic": "request_data",
+  "content": "### The Request Object\n\nFlask's `request` object provides access to all incoming request data:\n\n```python\nfrom flask import Flask, request\n\napp = Flask(__name__)\n```\n\n### Form Data (POST)\n\nAccess data submitted via HTML forms:\n\n```python\n@app.route(\"/login\", methods=[\"POST\"])\ndef login():\n    username = request.form[\"username\"]\n    password = request.form[\"password\"]\n    return f\"Welcome, {username}!\"\n```\n\n### Query Parameters (GET)\n\nAccess data from URL query strings:\n\n```python\n@app.route(\"/search\")\ndef search():\n    query = request.args.get(\"q\", \"\")\n    page = request.args.get(\"page\", 1, type=int)\n    return f\"Searching for {query}, page {page}\"\n```\n\n### JSON Data\n\nAccess JSON request bodies (from APIs):\n\n```python\n@app.route(\"/api/data\", methods=[\"POST\"])\ndef api_data():\n    data = request.json\n    return {\"received\": data[\"name\"]}\n```\n\n### File Uploads\n\nHandle uploaded files:\n\n```python\nimport os\nfrom werkzeug.utils import secure_filename\n\n@app.route(\"/upload\", methods=[\"POST\"])\ndef upload():\n    if \"file\" not in request.files:\n        return \"No file\", 400\n    file = request.files[\"file\"]\n    if file.filename == \"\":\n        return \"No selected file\", 400\n    filename = secure_filename(file.filename)\n    file.save(os.path.join(\"uploads\", filename))\n    return f\"File {filename} saved\"\n```\n\n### Request Headers\n\nAccess HTTP headers:\n\n```python\n@app.route(\"/headers\")\ndef show_headers():\n    user_agent = request.headers.get(\"User-Agent\")\n    content_type = request.headers.get(\"Content-Type\")\n    auth_token = request.headers.get(\"Authorization\")\n    return f\"UA: {user_agent}\"\n```\n\n### Parsing Different Content Types\n\nFlask automatically parses based on content type:\n\n| Content Type | Request Attribute |\n|-------------|-------------------|\n| `application/x-www-form-urlencoded` | `request.form` |\n| `multipart/form-data` | `request.form` + `request.files` |\n| `application/json` | `request.json` (or `request.get_json()`) |\n| `text/plain` | `request.data` |\n\n### Safe Access Methods\n\n- `request.form.get(\"key\")` - returns None if missing\n- `request.form.get(\"key\", \"default\")` - returns default if missing\n- `request.args.get(\"key\", type=int)` - converts type automatically\n- `request.get_json(silent=True)` - returns None if body is not valid JSON",
+  "codeExample": "from flask import Flask, request, jsonify\n\napp = Flask(__name__)\n\n@app.route(\"/submit\", methods=[\"POST\"])\ndef submit():\n    name = request.form.get(\"name\", \"Anonymous\")\n    email = request.args.get(\"ref\", \"direct\")\n    browser = request.headers.get(\"User-Agent\", \"Unknown\")\n    return jsonify({\n        \"name\": name,\n        \"referrer\": email,\n        \"browser\": browser[:50]\n    })",
+  "quiz": [
+    {
+      "question": "Which attribute of the request object contains form data from a POST request?",
+      "options": ["request.args", "request.form", "request.json", "request.data"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you safely get a query parameter with a default value?",
+      "options": ["request.args[\"key\"]", "request.args.get(\"key\", \"default\")", "request.form.get(\"key\", \"default\")", "request.get(\"key\")"],
+      "correctIndex": 1
+    }
+  ]
+}

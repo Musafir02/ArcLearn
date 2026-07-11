@@ -1,0 +1,18 @@
+{"title": "Template Engines in Express",
+  "language": "express",
+  "topic": "template_engines",
+  "content": "### EJS Setup\n\nEJS is a popular template engine for Express:\n\n```bash\nnpm install ejs\n```\n\n```javascript\napp.set('view engine', 'ejs');\napp.set('views', './views');\n```\n\nCreate `views/index.ejs`:\n\n```html\n<h1><%= title %></h1>\n<p>Welcome, <%= user.name %></p>\n```\n\nRender in route:\n\n```javascript\napp.get('/', (req, res) => {\n  res.render('index', { title: 'Home', user: { name: 'John' } });\n});\n```\n\n### Passing Data to Templates\n\nUse `<%= %>` for escaped output and `<%- %>` for raw HTML:\n\n```ejs\n<%= user.name %>           <!-- Escaped -->\n<%- user.bioHtml %>         <!-- Raw HTML -->\n<% if (user.loggedIn) { %>  <!-- Logic -->\n  <a href='/logout'>Logout</a>\n<% } %>\n```\n\n### Partials and Layouts (EJS)\n\nCreate reusable partials:\n\n```ejs\n<!-- views/partials/header.ejs -->\n<header><h1><%= title %></h1></header>\n\n<!-- views/index.ejs -->\n<%- include('partials/header') %>\n<%- include('partials/footer') %>\n```\n\n### Pug\n\n```bash\nnpm install pug\n```\n\n```javascript\napp.set('view engine', 'pug');\n```\n\nPug uses indentation-based syntax:\n\n```pug\nhtml\n  head\n    title= title\n  body\n    h1= message\n```",
+  "codeExample": "const express = require('express');\nconst app = express();\n\napp.set('view engine', 'ejs');\napp.set('views', './views');\n\napp.get('/profile', (req, res) => {\n  const user = { name: 'Alice', email: 'alice@example.com' };\n  res.render('profile', { title: 'Profile', user });\n});",
+  "quiz": [
+    {
+      "question": "Which method sets the template engine in Express?",
+      "options": ["app.set('view engine', 'ejs')", "app.engine('ejs')", "app.template('ejs')", "app.view('ejs')"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the EJS syntax for escaped output?",
+      "options": ["<%= %>", "<%- %>", "<% %>", "<%# %>"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{"title": "File Upload with Multer",
+  "language": "express",
+  "topic": "file_upload",
+  "content": "### Multer Middleware\n\nMulter is a middleware for handling multipart/form-data (file uploads).\n\n```bash\nnpm install multer\n```\n\n### Single File Upload\n\n```javascript\nconst multer = require('multer');\nconst upload = multer({ dest: 'uploads/' });\n\napp.post('/upload', upload.single('avatar'), (req, res) => {\n  console.log(req.file);  // File info\n  console.log(req.body);  // Other form fields\n  res.json({ file: req.file });\n});\n```\n\n### Multiple File Upload\n\n```javascript\n// Multiple files, same field name\napp.post('/upload', upload.array('photos', 5), (req, res) => {\n  console.log(req.files); // Array of files\n});\n\n// Multiple files, different field names\napp.post('/upload', upload.fields([\n  { name: 'avatar', maxCount: 1 },\n  { name: 'gallery', maxCount: 8 }\n]), (req, res) => {\n  console.log(req.files.avatar);\n  console.log(req.files.gallery);\n});\n```\n\n### File Filtering\n\nFilter by file type:\n\n```javascript\nconst fileFilter = (req, file, cb) => {\n  if (file.mimetype.startsWith('image')) {\n    cb(null, true);\n  } else {\n    cb(new Error('Only images allowed'), false);\n  }\n};\n\nconst upload = multer({ fileFilter });\n```\n\n### Storage Configuration\n\nDisk storage with custom filename:\n\n```javascript\nconst storage = multer.diskStorage({\n  destination: (req, file, cb) => cb(null, 'uploads/'),\n  filename: (req, file, cb) => {\n    const unique = Date.now() + '-' + file.originalname;\n    cb(null, unique);\n  }\n});\n\nconst upload = multer({ storage });\n```\n\n### File Validation\n\n```javascript\nconst upload = multer({\n  storage,\n  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB\n  fileFilter\n});\n```",
+  "codeExample": "const multer = require('multer');\nconst path = require('path');\n\nconst storage = multer.diskStorage({\n  destination: './uploads/',\n  filename: (req, file, cb) => {\n    cb(null, Date.now() + path.extname(file.originalname));\n  }\n});\n\nconst upload = multer({\n  storage,\n  limits: { fileSize: 2 * 1024 * 1024 },\n  fileFilter: (req, file, cb) => {\n    const allowed = /jpeg|jpg|png|gif/;\n    const extOk = allowed.test(path.extname(file.originalname).toLowerCase());\n    cb(null, extOk);\n  }\n});\n\napp.post('/api/upload', upload.single('image'), (req, res) => {\n  res.json({ filename: req.file.filename, path: req.file.path });\n});",
+  "quiz": [
+    {
+      "question": "Which middleware handles file uploads in Express?",
+      "options": ["multer", "formidable", "busboy", "file-upload"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you handle a single file upload with Multer?",
+      "options": ["upload.single('fieldname')", "upload.one('fieldname')", "upload.file('fieldname')", "upload.solo('fieldname')"],
+      "correctIndex": 0
+    }
+  ]
+}

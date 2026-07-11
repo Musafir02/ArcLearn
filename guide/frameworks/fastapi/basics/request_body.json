@@ -1,0 +1,19 @@
+{
+  "title": "Request Body",
+  "language": "fastapi",
+  "topic": "request_body",
+  "content": "### Pydantic BaseModel\n\nDefine request body models using Pydantic:\n\n```python\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass Item(BaseModel):\n    name: str\n    description: str | None = None\n    price: float\n    tax: float | None = None\n\n@app.post(\"/items/\")\nasync def create_item(item: Item):\n    return item\n```\n\n### Using the Model\n\nFastAPI validates the request body, converts types, and provides the model instance:\n\n```python\n@app.post(\"/items/\")\nasync def create_item(item: Item):\n    item_dict = item.model_dump()\n    if item.tax:\n        price_with_tax = item.price + item.tax\n        item_dict.update({\"price_with_tax\": price_with_tax})\n    return item_dict\n```\n\n### Nested Models\n\nModels can contain other models:\n\n```python\nfrom pydantic import BaseModel\nfrom datetime import date\n\nclass Image(BaseModel):\n    url: str\n    name: str\n\nclass Item(BaseModel):\n    name: str\n    price: float\n    images: list[Image] | None = None\n    tags: list[str] = []\n\nclass User(BaseModel):\n    username: str\n    full_name: str | None = None\n    items: list[Item] = []\n```\n\n### Optional Fields\n\nUse `| None` or `Optional` to make fields optional:\n\n```python\nclass Item(BaseModel):\n    name: str          # Required\n    price: float        # Required\n    tax: float | None = None   # Optional, defaults to None\n    tags: list[str] = []       # Optional, defaults to []\n```\n\n### Field Validators\n\nAdd custom validation with `@field_validator` (Pydantic v2):\n\n```python\nfrom pydantic import BaseModel, field_validator\n\nclass Item(BaseModel):\n    name: str\n    price: float\n    \n    @field_validator(\"price\")\n    @classmethod\n    def check_price(cls, v):\n        if v <= 0:\n            raise ValueError(\"Price must be positive\")\n        return v\n    \n    @field_validator(\"name\")\n    @classmethod\n    def name_must_be_cool(cls, v):\n        if \"bad\" in v.lower():\n            raise ValueError(\"Name contains inappropriate word\")\n        return v\n```\n\n### Union Types\n\nAccept different types for the same field:\n\n```python\nfrom typing import Union\n\nclass Item(BaseModel):\n    quantity: int | str  # Accept int or string\n```\n\n### Mixing Path, Query, and Body\n\n```python\n@app.post(\"/items/{item_id}\")\nasync def update_item(\n    item_id: int,                       # Path parameter\n    q: str | None = None,               # Query parameter\n    item: Item = None                   # Request body\n):\n    return {\"item_id\": item_id, \"q\": q, \"item\": item}\n```",
+  "codeExample": "from fastapi import FastAPI\nfrom pydantic import BaseModel, field_validator\n\napp = FastAPI()\n\nclass Item(BaseModel):\n    name: str\n    price: float\n    brand: str | None = None\n    \n    @field_validator(\"price\")\n    @classmethod\n    def price_must_be_positive(cls, v):\n        if v <= 0:\n            raise ValueError(\"Price must be positive\")\n        return v\n\n@app.post(\"/items/\")\nasync def create_item(item: Item):\n    return {\n        \"name\": item.name,\n        \"price\": item.price,\n        \"with_tax\": item.price * 1.1,\n        \"brand\": item.brand or \"Generic\"\n    }",
+  "quiz": [
+    {
+      "question": "Which Pydantic class is used to define a request body model?",
+      "options": ["BaseModel", "Schema", "Model", "DataModel"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you make a Pydantic field optional with a default of None?",
+      "options": ["field: str = None", "field: str | None = None", "field: Optional[str] = None", "All of the above"],
+      "correctIndex": 3
+    }
+  ]
+}

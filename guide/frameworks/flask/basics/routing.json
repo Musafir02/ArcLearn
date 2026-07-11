@@ -1,0 +1,19 @@
+{
+  "title": "Routing in Flask",
+  "language": "flask",
+  "topic": "routing",
+  "content": "### Route Decorators\n\nRouting in Flask is done using the `@app.route()` decorator:\n\n```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef index():\n    return \"Home Page\"\n```\n\n### HTTP Methods\n\nSpecify which HTTP methods a route accepts:\n\n```python\n@app.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    if request.method == \"POST\":\n        return \"Logging in...\"\n    return \"Login form\"\n```\n\n### Dynamic URL Segments\n\nCapture parts of the URL as variables:\n\n```python\n@app.route(\"/user/<int:user_id>\")\ndef profile(user_id):\n    return f\"User ID: {user_id}\"\n\n@app.route(\"/post/<string:slug>\")\ndef show_post(slug):\n    return f\"Post: {slug}\"\n\n@app.route(\"/path/<path:subpath>\")\ndef show_subpath(subpath):\n    return f\"Subpath: {subpath}\"\n```\n\n**Available converters:** `string`, `int`, `float`, `path`, `uuid`\n\n### URL Building with `url_for`\n\nGenerate URLs dynamically instead of hardcoding them:\n\n```python\nfrom flask import url_for, redirect\n\n@app.route(\"/\")\ndef index():\n    return redirect(url_for(\"profile\", user_id=42))\n\n# url_for(\"profile\", user_id=42) produces \"/user/42\"\n```\n\n### Route Conventions\n\n- Trailing slashes matter: `/page/` vs `/page`\n- `/page/` redirects to `/page` if the route is defined without trailing slash\n- Route names should be lowercase with underscores\n- Group related routes with blueprint prefixes\n\n### Multiple Routes for One Function\n\n```python\n@app.route(\"/\")\n@app.route(\"/home\")\ndef home():\n    return \"Home Page\"\n```",
+  "codeExample": "from flask import Flask, url_for\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef index():\n    return \"<a href='\" + url_for(\"user_profile\", user_id=1) + \"'>User 1</a>\"\n\n@app.route(\"/user/<int:user_id>\")\ndef user_profile(user_id):\n    return f\"<h1>Profile for user {user_id}</h1>\"\n\n@app.route(\"/search/\")\ndef search():\n    return \"Search page\"\n\nif __name__ == \"__main__\":\n    app.run(debug=True)",
+  "quiz": [
+    {
+      "question": "Which converter would you use to capture a URL segment as an integer?",
+      "options": ["<string:id>", "<int:id>", "<float:id>", "<uuid:id>"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does url_for('profile', user_id=5) generate?",
+      "options": ["/profile/5", "/user/5", "/profile?id=5", "/profile/user_id=5"],
+      "correctIndex": 0
+    }
+  ]
+}

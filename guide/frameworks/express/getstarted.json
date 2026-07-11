@@ -1,0 +1,18 @@
+{"title": "Getting Started with Express",
+  "language": "express",
+  "topic": "getstarted",
+  "content": "### Setup\n\nInitialize a Node.js project and install Express:\n\n```bash\nnpm init -y\nnpm install express\n```\n\n### Basic Server\n\nCreate an `index.js` file and set up a basic server:\n\n```javascript\nconst express = require('express');\nconst app = express();\nconst port = 3000;\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(port, () => {\n  console.log(`Server listening on port ${port}`);\n});\n```\n\n### Nodemon for Development\n\nInstall nodemon for auto-restart on file changes:\n\n```bash\nnpm install --save-dev nodemon\n```\n\n### Package.json Scripts\n\n```json\n\"scripts\": {\n  \"start\": \"node index.js\",\n  \"dev\": \"nodemon index.js\"\n}\n```\n\nRun with `npm run dev` during development and `npm start` in production.",
+  "codeExample": "const express = require('express');\nconst app = express();\nconst PORT = process.env.PORT || 3000;\n\napp.listen(PORT, () => {\n  console.log(`App started on http://localhost:${PORT}`);\n});",
+  "quiz": [
+    {
+      "question": "Which package is used for auto-restarting the server during development?",
+      "options": ["nodemon", "pm2", "forever", "concurrently"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method binds the Express server to a port?",
+      "options": ["app.listen()", "app.run()", "app.start()", "app.bind()"],
+      "correctIndex": 0
+    }
+  ]
+}

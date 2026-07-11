@@ -1,0 +1,18 @@
+{"title": "Request Handling in Express",
+  "language": "express",
+  "topic": "request_handling",
+  "content": "### req.params\n\nRoute parameters parsed into an object:\n\n```javascript\napp.get('/users/:id', (req, res) => {\n  console.log(req.params.id);\n});\n```\n\n### req.query\n\nParsed query string parameters:\n\n```javascript\napp.get('/search', (req, res) => {\n  // GET /search?q=express&page=2\n  console.log(req.query.q);    // 'express'\n  console.log(req.query.page); // '2'\n});\n```\n\n### req.body\n\nParsed request body (requires body-parsing middleware):\n\n```javascript\napp.use(express.json());\n\napp.post('/users', (req, res) => {\n  console.log(req.body.name);\n});\n```\n\n### req.headers\n\nAccess request headers as an object:\n\n```javascript\napp.get('/', (req, res) => {\n  console.log(req.headers['content-type']);\n  console.log(req.headers['authorization']);\n});\n```\n\n### Additional Properties\n\n- `req.ip` â€” Client IP address\n- `req.path` â€” The request path\n- `req.cookies` â€” Parsed cookies (requires cookie-parser)\n- `req.hostname` â€” Hostname from the Host header",
+  "codeExample": "app.get('/profile/:username', (req, res) => {\n  const { username } = req.params;\n  const { tab, page } = req.query;\n  const userAgent = req.headers['user-agent'];\n  res.json({ username, tab, page, userAgent, ip: req.ip });\n});",
+  "quiz": [
+    {
+      "question": "Which property holds query string parameters?",
+      "options": ["req.query", "req.params", "req.body", "req.data"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which middleware is required to access req.body?",
+      "options": ["express.json()", "express.static()", "express.Router()", "compression()"],
+      "correctIndex": 0
+    }
+  ]
+}

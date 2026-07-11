@@ -1,0 +1,19 @@
+{
+  "title": "Query Parameters",
+  "language": "fastapi",
+  "topic": "query_params",
+  "content": "### Basic Query Parameters\n\nFunction parameters that are not part of the path become query parameters:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items/\")\nasync def read_items(skip: int = 0, limit: int = 10):\n    return {\"skip\": skip, \"limit\": limit}\n```\n\nURL: `/items/?skip=0&limit=10`\n\n### Optional vs Required\n\nDefault values make query parameters optional. Without defaults, they are required:\n\n```python\n@app.get(\"/search/\")\nasync def search(\n    q: str,                    # Required query parameter\n    category: str = \"all\",     # Optional with default\n    page: int = 1,             # Optional with default\n    sort: str | None = None    # Optional, can be None\n):\n    return {\n        \"query\": q,\n        \"category\": category,\n        \"page\": page,\n        \"sort\": sort\n    }\n```\n\nURL: `/search/?q=python&category=books&page=2`\n\n### Type Validation with `Query`\n\nUse the `Query` class for additional validation:\n\n```python\nfrom fastapi import Query\n\n@app.get(\"/items/\")\nasync def read_items(\n    q: str | None = Query(None, min_length=3, max_length=50, regex=\"^[a-zA-Z]+\"),\n    page: int = Query(1, ge=1, le=100),\n    size: int = Query(10, ge=1, le=100)\n):\n    return {\"q\": q, \"page\": page, \"size\": size}\n```\n\n### Boolean Conversion\n\nFastAPI auto-converts common boolean string representations:\n\n```python\n@app.get(\"/items/\")\nasync def read_items(available: bool = False):\n    return {\"available\": available}\n```\n\n`/items/?available=true` -> `True`\n`/items/?available=1` -> `True`\n`/items/?available=yes` -> `True`\n`/items/?available=false` -> `False`\n`/items/?available=0` -> `False`\n\n### Multiple Values\n\nReceive multiple values for the same parameter:\n\n```python\n@app.get(\"/items/\")\nasync def read_items(q: list[str] = Query([])):\n    return {\"q\": q}\n```\n\nURL: `/items/?q=apple&q=banana&q=cherry`\nResponse: `{\"q\": [\"apple\", \"banana\", \"cherry\"]}`\n\n### Query Parameter Metadata\n\nAdd documentation to query parameters:\n\n```python\n@app.get(\"/items/\")\nasync def read_items(\n    q: str | None = Query(\n        None,\n        title=\"Search query\",\n        description=\"Search items by name or description\",\n        min_length=3,\n        deprecated=False\n    )\n):\n    return {\"q\": q}\n```",
+  "codeExample": "from fastapi import FastAPI, Query\n\napp = FastAPI()\n\n@app.get(\"/products/\")\nasync def list_products(\n    category: str | None = Query(None, description=\"Filter by category\"),\n    min_price: float = Query(0, ge=0),\n    max_price: float = Query(10000, le=100000),\n    in_stock: bool = True,\n    page: int = Query(1, ge=1),\n    per_page: int = Query(20, ge=1, le=100)\n):\n    return {\n        \"filters\": {\n            \"category\": category,\n            \"min_price\": min_price,\n            \"max_price\": max_price,\n            \"in_stock\": in_stock\n        },\n        \"pagination\": {\"page\": page, \"per_page\": per_page}\n    }",
+  "quiz": [
+    {
+      "question": "How do you make a query parameter optional in FastAPI?",
+      "options": ["Use Optional[str]", "Assign a default value", "Use Query(None)", "All of the above"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which class provides additional validation for query parameters?",
+      "options": ["Path", "Query", "Field", "Param"],
+      "correctIndex": 1
+    }
+  ]
+}

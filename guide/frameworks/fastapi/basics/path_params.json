@@ -1,0 +1,19 @@
+{
+  "title": "Path Parameters",
+  "language": "fastapi",
+  "topic": "path_params",
+  "content": "### Basic Path Parameters\n\nCapture values from the URL path using Python type hints:\n\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}\n```\n\n### Type Validation\n\nFastAPI automatically validates path parameters based on type annotations:\n\n```python\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):  # Only accepts integers\n    return {\"item_id\": item_id}\n\n@app.get(\"/users/{user_id}\")\nasync def read_user(user_id: str):  # Accepts any string\n    return {\"user_id\": user_id}\n\n@app.get(\"/prices/{price}\")\nasync def read_price(price: float):  # Accepts floats\n    return {\"price\": price}\n```\n\nIf `/items/abc` is requested, FastAPI returns a 422 validation error.\n\n### Path Order Matters\n\nFastAPI evaluates routes in order. More specific routes must come before parameterized ones:\n\n```python\n# Correct order: specific first\n@app.get(\"/users/me\")\nasync def read_current_user():\n    return {\"user\": \"current\"}\n\n@app.get(\"/users/{user_id}\")\nasync def read_user(user_id: int):\n    return {\"user_id\": user_id}\n```\n\n### Predefined Values with Enum\n\nRestrict a path parameter to a set of valid values:\n\n```python\nfrom enum import Enum\n\nclass ModelName(str, Enum):\n    alexnet = \"alexnet\"\n    resnet = \"resnet\"\n    vgg = \"vgg\"\n\n@app.get(\"/models/{model_name}\")\nasync def get_model(model_name: ModelName):\n    if model_name is ModelName.alexnet:\n        return {\"model\": \"AlexNet\", \"message\": \"Deep Learning FTW\"}\n    if model_name.value == \"resnet\":\n        return {\"model\": \"ResNet\"}\n    return {\"model\": model_name.value}\n```\n\n### Path Metadata with `Path`\n\nAdd validation and metadata using the `Path` class:\n\n```python\nfrom fastapi import Path\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(\n    item_id: int = Path(..., title=\"The ID of the item\", ge=1, le=1000)\n):\n    return {\"item_id\": item_id}\n```\n\n**Path parameters:**\n- `ge` (greater or equal), `gt` (greater than)\n- `le` (less or equal), `lt` (less than)\n- `min_length`, `max_length` (for strings)\n- `title`, `description` (for docs)\n- `deprecated` (mark as deprecated)\n\n### File Path Parameter\n\nUse `path` converter to match full file paths:\n\n```python\n@app.get(\"/files/{file_path:path}\")\nasync def read_file(file_path: str):\n    return {\"file_path\": file_path}\n# /files/home/user/docs/file.txt -> file_path=\"home/user/docs/file.txt\"\n```",
+  "codeExample": "from fastapi import FastAPI, Path\n\napp = FastAPI()\n\n@app.get(\"/products/{product_id}\")\nasync def get_product(\n    product_id: int = Path(..., title=\"Product ID\", ge=1, le=9999)\n):\n    return {\"product_id\": product_id, \"message\": f\"Product {product_id} details\"}\n\n@app.get(\"/products/{product_id}/reviews/{review_id}\")\nasync def get_review(\n    product_id: int,\n    review_id: int = Path(..., ge=1)\n):\n    return {\"product_id\": product_id, \"review_id\": review_id}",
+  "quiz": [
+    {
+      "question": "What happens if you pass a non-integer value like 'abc' to a path parameter typed as int?",
+      "options": ["It is converted automatically", "FastAPI returns a 422 validation error", "It raises a Python ValueError in the server", "It returns None"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which class adds metadata and validation to path parameters?",
+      "options": ["Query", "Path", "Param", "Field"],
+      "correctIndex": 1
+    }
+  ]
+}

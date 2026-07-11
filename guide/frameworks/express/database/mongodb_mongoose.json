@@ -1,0 +1,18 @@
+{"title": "MongoDB with Mongoose",
+  "language": "express",
+  "topic": "mongodb_mongoose",
+  "content": "### Mongoose ODM\n\nMongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js.\n\n```bash\nnpm install mongoose\n```\n\n### Schema Definition\n\nDefine the structure of documents:\n\n```javascript\nconst mongoose = require('mongoose');\n\nconst userSchema = new mongoose.Schema({\n  name: { type: String, required: true },\n  email: { type: String, required: true, unique: true },\n  age: { type: Number, min: 0 },\n  createdAt: { type: Date, default: Date.now }\n});\n```\n\n### Model\n\nCreate a Model from a Schema:\n\n```javascript\nconst User = mongoose.model('User', userSchema);\n```\n\n### CRUD with Mongoose\n\n```javascript\n// Create\nconst user = await User.create({ name: 'John', email: 'john@test.com' });\n\n// Find all\nconst users = await User.find();\n\n// Find by ID\nconst user = await User.findById('507f1f77bcf86cd799439011');\n\n// Update\nconst updated = await User.findByIdAndUpdate(id, { name: 'Jane' }, { new: true });\n\n// Delete\nawait User.findByIdAndDelete(id);\n```\n\n### Population (Joins)\n\nReference documents from other collections:\n\n```javascript\nconst postSchema = new mongoose.Schema({\n  title: String,\n  author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }\n});\n\n// Populate author\nconst posts = await Post.find().populate('author');\n```\n\n### Validation in Schema\n\nBuilt-in and custom validators:\n\n```javascript\nconst schema = new mongoose.Schema({\n  email: {\n    type: String,\n    validate: {\n      validator: v => /\\S+@\\S+\\.\\S+/.test(v),\n      message: props => `${props.value} is not a valid email`\n    }\n  }\n});\n```",
+  "codeExample": "const mongoose = require('mongoose');\n\nmongoose.connect('mongodb://localhost:27017/myapp')\n  .then(() => console.log('Connected to MongoDB'));\n\nconst userSchema = new mongoose.Schema({\n  name: { type: String, required: true, trim: true },\n  email: { type: String, required: true, unique: true, lowercase: true }\n});\n\nmodule.exports = mongoose.model('User', userSchema);",
+  "quiz": [
+    {
+      "question": "Which Mongoose method retrieves all documents from a collection?",
+      "options": ["Model.find()", "Model.getAll()", "Model.fetch()", "Model.list()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does { new: true } do in findByIdAndUpdate?",
+      "options": ["Returns the updated document", "Creates a new document", "Skips validation", "Returns the old document"],
+      "correctIndex": 0
+    }
+  ]
+}

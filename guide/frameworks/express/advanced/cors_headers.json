@@ -1,0 +1,18 @@
+{"title": "CORS Headers in Express",
+  "language": "express",
+  "topic": "cors_headers",
+  "content": "### cors Package\n\nCross-Origin Resource Sharing (CORS) is a security mechanism that restricts resources from being requested from a different origin.\n\n```bash\nnpm install cors\n```\n\n### Basic Usage\n\nEnable all CORS requests:\n\n```javascript\nconst cors = require('cors');\napp.use(cors());\n```\n\n### Configuring Origins\n\nRestrict to specific origins:\n\n```javascript\napp.use(cors({\n  origin: 'https://myapp.com'\n}));\n\n// Multiple origins\napp.use(cors({\n  origin: ['https://app1.com', 'https://app2.com']\n}));\n\n// Dynamic origin\napp.use(cors({\n  origin: (origin, callback) => {\n    if (whitelist.includes(origin) || !origin) {\n      callback(null, true);\n    } else {\n      callback(new Error('Not allowed by CORS'));\n    }\n  }\n}));\n```\n\n### Credentials\n\nAllow cookies and auth headers:\n\n```javascript\napp.use(cors({\n  origin: 'https://myapp.com',\n  credentials: true\n}));\n```\n\n### Allowed Methods and Headers\n\n```javascript\napp.use(cors({\n  methods: ['GET', 'POST', 'PUT', 'DELETE'],\n  allowedHeaders: ['Content-Type', 'Authorization'],\n  exposedHeaders: ['X-Total-Count']\n}));\n```\n\n### Preflight Requests\n\nBrowsers send an OPTIONS preflight request before actual cross-origin requests. The cors package handles this automatically.",
+  "codeExample": "const cors = require('cors');\n\nconst corsOptions = {\n  origin: process.env.FRONTEND_URL || 'http://localhost:3000',\n  credentials: true,\n  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],\n  allowedHeaders: ['Content-Type', 'Authorization']\n};\n\napp.use(cors(corsOptions));\n\napp.options('*', cors(corsOptions)); // Enable preflight for all routes",
+  "quiz": [
+    {
+      "question": "Which npm package handles CORS in Express?",
+      "options": ["cors", "helmet", "cors-anywhere", "cross-origin"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What HTTP method is used for CORS preflight requests?",
+      "options": ["OPTIONS", "HEAD", "GET", "PATCH"],
+      "correctIndex": 0
+    }
+  ]
+}

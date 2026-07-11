@@ -1,0 +1,18 @@
+{"title": "Response Methods in Express",
+  "language": "express",
+  "topic": "response_methods",
+  "content": "### res.send()\n\nSends a response of various types:\n\n```javascript\nres.send('Hello World');     // HTML string\nres.send({ user: 'John' }); // Object to JSON\nres.send(Buffer.from('hi'));// Buffer\n```\n\n### res.json()\n\nSends a JSON response:\n\n```javascript\nres.json({ success: true, data: users });\n```\n\n### res.status()\n\nSets the HTTP status code. Chainable:\n\n```javascript\nres.status(201).json({ id: 1 });\nres.status(404).send('Not found');\nres.status(500).json({ error: 'Server error' });\n```\n\n### res.redirect()\n\nRedirects the client:\n\n```javascript\nres.redirect('/login');\nres.redirect(301, '/new-url');\n```\n\n### res.render()\n\nRenders a template view:\n\n```javascript\nres.render('index', { title: 'Home', user: currentUser });\n```\n\n### res.sendFile()\n\nSends a file:\n\n```javascript\nres.sendFile('/path/to/file.pdf');\n```\n\n### res.download()\n\nPrompts file download:\n\n```javascript\nres.download('/path/to/report.pdf', 'report.pdf');\n```\n\n### res.set()\n\nSets response headers:\n\n```javascript\nres.set('X-Custom-Header', 'value');\nres.set({ 'X-API-Key': 'abc', 'X-Rate-Limit': '100' });\n```",
+  "codeExample": "app.get('/download/:file', (req, res) => {\n  const filePath = path.join(__dirname, 'files', req.params.file);\n  res.set('X-Download-Source', 'express-guide');\n  res.download(filePath);\n});",
+  "quiz": [
+    {
+      "question": "Which method sends a file for download with a prompt?",
+      "options": ["res.download()", "res.sendFile()", "res.attachment()", "res.file()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method sets the HTTP status code and can be chained?",
+      "options": ["res.status()", "res.code()", "res.httpStatus()", "res.error()"],
+      "correctIndex": 0
+    }
+  ]
+}

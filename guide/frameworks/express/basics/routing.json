@@ -1,0 +1,18 @@
+{"title": "Routing in Express",
+  "language": "express",
+  "topic": "routing",
+  "content": "### Route Methods\n\nExpress supports HTTP verb methods for defining routes:\n\n```javascript\napp.get('/users', getUsers);\napp.post('/users', createUser);\napp.put('/users/:id', updateUser);\napp.delete('/users/:id', deleteUser);\n```\n\n### Route Parameters\n\nUse `:param` syntax for dynamic segments:\n\n```javascript\napp.get('/users/:userId/books/:bookId', (req, res) => {\n  res.send(req.params);\n});\n```\n\n### Multiple Callback Functions\n\nPass an array of middleware functions:\n\n```javascript\nconst validate = (req, res, next) => {\n  if (req.params.id) next();\n  else res.status(400).send('Missing ID');\n};\n\napp.get('/users/:id', [validate, getUser]);\n```\n\n### app.route() Chaining\n\nChain multiple methods on a single path:\n\n```javascript\napp.route('/users/:id')\n  .get(getUser)\n  .put(updateUser)\n  .delete(deleteUser);\n```\n\n### express.Router()\n\nCreate modular route handlers:\n\n```javascript\nconst router = express.Router();\n\nrouter.get('/', (req, res) => res.send('Users list'));\nrouter.post('/', (req, res) => res.send('Create user'));\n\nmodule.exports = router;\n```\n\nMount in the main app:\n\n```javascript\nconst userRoutes = require('./routes/users');\napp.use('/users', userRoutes);\n```",
+  "codeExample": "const express = require('express');\nconst app = express();\nconst router = express.Router();\n\nrouter.route('/:id')\n  .get((req, res) => res.send(`Get ${req.params.id}`))\n  .put((req, res) => res.send(`Update ${req.params.id}`))\n  .delete((req, res) => res.send(`Delete ${req.params.id}`));\n\napp.use('/items', router);",
+  "quiz": [
+    {
+      "question": "Which Express method creates modular route handlers?",
+      "options": ["express.Router()", "express.Routes()", "express.Module()", "express.Group()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does req.params contain in a route like '/users/:id'?",
+      "options": ["An object with route parameters", "The query string", "The request body", "The request headers"],
+      "correctIndex": 0
+    }
+  ]
+}

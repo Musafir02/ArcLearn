@@ -1,0 +1,18 @@
+{"title": "Serving Static Files in Express",
+  "language": "express",
+  "topic": "static_files",
+  "content": "### express.static()\n\nExpress provides the built-in `express.static()` middleware to serve static files:\n\n```javascript\napp.use(express.static('public'));\n```\n\nNow files in the `public` directory are accessible from the root URL:\n- `public/images/logo.png` → `/images/logo.png`\n- `public/css/style.css` → `/css/style.css`\n\n### Virtual Path Prefix\n\nAdd a path prefix to avoid conflicts:\n\n```javascript\napp.use('/static', express.static('public'));\n```\n\nNow files are served under `/static`:\n- `/static/images/logo.png`\n- `/static/css/style.css`\n\n### Multiple Static Directories\n\nServe files from multiple directories:\n\n```javascript\napp.use(express.static('public'));\napp.use(express.static('uploads'));\n```\n\nExpress searches directories in the order they are defined.\n\n### Caching Headers\n\nUse the `maxAge` option to set cache-control headers:\n\n```javascript\napp.use(express.static('public', {\n  maxAge: '1d',\n  immutable: true\n}));\n```",
+  "codeExample": "const express = require('express');\nconst path = require('path');\nconst app = express();\n\napp.use('/assets', express.static(path.join(__dirname, 'public'), {\n  maxAge: '7d',\n  immutable: false\n}));\n\napp.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));",
+  "quiz": [
+    {
+      "question": "What is the default URL prefix for files served via express.static('public')?",
+      "options": ["/ (root)", "/public", "/static", "/assets"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What option controls cache duration for static files?",
+      "options": ["maxAge", "cacheAge", "ttl", "expires"],
+      "correctIndex": 0
+    }
+  ]
+}

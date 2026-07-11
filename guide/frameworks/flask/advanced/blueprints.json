@@ -1,0 +1,19 @@
+{
+  "title": "Flask Blueprints",
+  "language": "flask",
+  "topic": "blueprints",
+  "content": "### What are Blueprints?\n\nBlueprints are a way to organize Flask applications into modular components. They allow you to group related routes, templates, and static files together.\n\n### Creating a Blueprint\n\n```python\n# auth.py\nfrom flask import Blueprint, render_template, redirect, url_for\n\nauth_bp = Blueprint(\"auth\", __name__,\n                    template_folder=\"templates\",\n                    static_folder=\"static\",\n                    url_prefix=\"/auth\")\n\n@auth_bp.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    return render_template(\"login.html\")\n\n@auth_bp.route(\"/logout\")\ndef logout():\n    return redirect(url_for(\"index\"))\n```\n\n### Registering Blueprints\n\n```python\n# app.py\nfrom flask import Flask\nfrom auth import auth_bp\nfrom blog import blog_bp\n\napp = Flask(__name__)\napp.register_blueprint(auth_bp)\napp.register_blueprint(blog_bp, url_prefix=\"/blog\")\n```\n\n### Blueprint Parameters\n\n| Parameter | Purpose |\n|-----------|---------|\n| `name` | Blueprint name (used in `url_for`) |\n| `import_name` | Usually `__name__` |\n| `template_folder` | Template directory for this blueprint |\n| `static_folder` | Static files directory |\n| `url_prefix` | Prefix for all routes in this blueprint |\n| `subdomain` | Subdomain for this blueprint |\n\n### URL Building with Blueprints\n\nUse the blueprint name as a prefix when generating URLs:\n\n```python\n# From the auth blueprint\nurl_for(\"auth.login\")\nurl_for(\"auth.logout\")\n\n# From the blog blueprint\nurl_for(\"blog.post\", post_id=5)\n\n# With url_prefix=\"/auth\", auth.login is at /auth/login\n```\n\n### Blueprint Template Folders\n\nBlueprints can have their own `templates/` folder. Flask searches blueprint templates first, then the application templates folder.\n\n### Blueprint Structure\n\n```\nmyapp/\n\u251c\u2500\u2500 app.py\n\u251c\u2500\u2500 auth/\n\u2502   \u251c\u2500\u2500 __init__.py  # contains Blueprint and routes\n\u2502   \u251c\u2500\u2500 templates/\n\u2502   \u2502   \u2514\u2500\u2500 login.html\n\u2502   \u2514\u2500\u2500 static/\n\u2502       \u2514\u2500\u2500 auth.css\n\u2514\u2500\u2500 blog/\n    \u251c\u2500\u2500 __init__.py\n    \u2514\u2500\u2500 templates/\n        \u2514\u2500\u2500 post.html\n```\n\n### Subdomain Support\n\n```python\napi_bp = Blueprint(\"api\", __name__, subdomain=\"api\")\napp.register_blueprint(api_bp)\n# Routes at api.example.com/...\n```\n\n### Before Request in Blueprints\n\n```python\n@auth_bp.before_request\ndef check_user():\n    # Runs before each request in this blueprint\n    pass\n```",
+  "codeExample": "from flask import Blueprint, render_template, jsonify\n\napi_bp = Blueprint(\"api\", __name__, url_prefix=\"/api/v1\")\n\n@api_bp.route(\"/users\")\ndef get_users():\n    return jsonify([{\"id\": 1, \"name\": \"Alice\"}])\n\n@api_bp.route(\"/users/<int:user_id>\")\ndef get_user(user_id):\n    return jsonify({\"id\": user_id, \"name\": \"Bob\"})\n\n# Register in app.py:\n# from api import api_bp\n# app.register_blueprint(api_bp)",
+  "quiz": [
+    {
+      "question": "Which function registers a blueprint with the Flask application?",
+      "options": ["app.add_blueprint()", "app.register_blueprint()", "app.include_blueprint()", "app.attach_blueprint()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you generate a URL for a route inside a blueprint named 'auth'?",
+      "options": ["url_for(\"login\")", "url_for(\"auth.login\")", "url_for(\"auth\")", "url_for(\"auth/login\")"],
+      "correctIndex": 1
+    }
+  ]
+}

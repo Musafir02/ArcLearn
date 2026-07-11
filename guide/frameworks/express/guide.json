@@ -1,0 +1,22 @@
+{"title": "Express.js Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Express Basics", "folder": "basics",
+      "topics": ["routing", "middleware", "request_handling", "response_methods", "static_files", "template_engines"]
+    },
+    {
+      "type": "group", "title": "REST APIs", "folder": "rest_api",
+      "topics": ["rest_api", "crud_operations", "route_parameters", "query_strings", "request_body_parsing"]
+    },
+    {
+      "type": "group", "title": "Database", "folder": "database",
+      "topics": ["mongodb_mongoose", "sql_databases", "migrations"]
+    },
+    {
+      "type": "group", "title": "Advanced Express", "folder": "advanced",
+      "topics": ["error_handling", "authentication", "file_upload", "cors_headers", "websocket_integration", "rate_limiting", "environment_config"]
+    }
+  ]
+}

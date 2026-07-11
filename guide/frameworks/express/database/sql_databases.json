@@ -1,0 +1,18 @@
+{"title": "SQL Databases with Express",
+  "language": "express",
+  "topic": "sql_databases",
+  "content": "### Knex.js Query Builder\n\nKnex is a SQL query builder supporting PostgreSQL, MySQL, SQLite, and more.\n\n```bash\nnpm install knex pg\n```\n\n```javascript\nconst db = require('knex')({\n  client: 'pg',\n  connection: {\n    host: 'localhost',\n    database: 'myapp',\n    user: 'postgres',\n    password: 'password'\n  }\n});\n\n// Query\nconst users = await db('users').where({ active: true }).select('*');\nconst user = await db('users').where({ id: 1 }).first();\nawait db('users').insert({ name: 'John', email: 'john@test.com' });\nawait db('users').where({ id: 1 }).update({ name: 'Jane' });\nawait db('users').where({ id: 1 }).del();\n```\n\n### PostgreSQL with pg\n\n```javascript\nconst { Pool } = require('pg');\nconst pool = new Pool({\n  connectionString: process.env.DATABASE_URL\n});\n\napp.get('/users', async (req, res) => {\n  const result = await pool.query('SELECT * FROM users');\n  res.json(result.rows);\n});\n```\n\n### Sequelize ORM\n\nA full-featured ORM for SQL databases:\n\n```javascript\nconst { Sequelize, DataTypes } = require('sequelize');\nconst sequelize = new Sequelize(process.env.DATABASE_URL);\n\nconst User = sequelize.define('User', {\n  name: { type: DataTypes.STRING, allowNull: false },\n  email: { type: DataTypes.STRING, unique: true }\n});\n\nawait User.sync();\nconst users = await User.findAll();\nconst user = await User.findByPk(1);\n```\n\n### Connection Pooling\n\nConnection pools improve performance by reusing connections:\n\n```javascript\nconst pool = new Pool({ max: 20, idleTimeoutMillis: 30000 });\n```",
+  "codeExample": "const knex = require('knex');\nconst db = knex({\n  client: 'pg',\n  connection: { connectionString: process.env.DATABASE_URL },\n  pool: { min: 2, max: 10 }\n});\n\napp.get('/api/users', async (req, res) => {\n  const users = await db('users').orderBy('created_at', 'desc');\n  res.json({ data: users });\n});",
+  "quiz": [
+    {
+      "question": "What is Knex.js used for?",
+      "options": ["SQL query builder", "MongoDB ODM", "Template engine", "Validation library"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Sequelize method retrieves a record by primary key?",
+      "options": ["findByPk()", "findById()", "findOne()", "findPrimary()"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Database Migrations with Flask-Migrate",
+  "language": "flask",
+  "topic": "models_migrations",
+  "content": "### Installation\n\n```bash\npip install flask-migrate\n```\n\n### Setup\n\n```python\nfrom flask import Flask\nfrom flask_sqlalchemy import SQLAlchemy\nfrom flask_migrate import Migrate\n\napp = Flask(__name__)\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = \"sqlite:///site.db\"\ndb = SQLAlchemy(app)\nmigrate = Migrate(app, db)\n```\n\n### Migration Commands\n\nFlask-Migrate uses Alembic under the hood. Commands are run via Flask CLI:\n\n```bash\n# Initialize the migration repository (run once)\nflask db init\n\n# Generate a migration after model changes\nflask db migrate -m \"Add users table\"\n\n# Apply migrations to the database\nflask db upgrade\n\n# Rollback the last migration\nflask db downgrade\n\n# View migration history\nflask db history\n\n# Check current revision\nflask db current\n```\n\n### How Migrations Work\n\n1. `flask db init` creates a `migrations/` folder with Alembic config\n2. `flask db migrate` compares your models to the current database and generates a migration script in `migrations/versions/`\n3. `flask db upgrade` applies pending migrations\n\n### Migration Script Example\n\nGenerated migration scripts look like:\n\n```python\n\"\"\"Add users table\n\nRevision ID: abc123\nRevises: \nCreate Date: 2024-01-15 10:30:00\n\"\"\"\nfrom alembic import op\nimport sqlalchemy as sa\n\nrevision = \"abc123\"\ndown_revision = None\n\ndef upgrade():\n    op.create_table(\"users\",\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.Column(\"username\", sa.String(length=80), nullable=False),\n        sa.Column(\"email\", sa.String(length=120), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\")\n    )\n\ndef downgrade():\n    op.drop_table(\"users\")\n```\n\n### Auto vs Manual Migrations\n\n- **Auto-detected**: Adding/removing columns, tables, indexes\n- **Manual**: Data migrations, renaming columns (auto-detects as drop + add), complex schema changes\n\nEdit the generated script before running `upgrade` for complex migrations.\n\n### Best Practices\n\n- Always review generated migration scripts\n- Test migrations on a staging database first\n- Commit migration scripts to version control\n- Never edit already-applied migrations\n- Create a new migration for each logical change",
+  "codeExample": "from flask import Flask\nfrom flask_sqlalchemy import SQLAlchemy\nfrom flask_migrate import Migrate\n\napp = Flask(__name__)\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = \"sqlite:///app.db\"\ndb = SQLAlchemy(app)\nmigrate = Migrate(app, db)\n\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    bio = db.Column(db.Text, nullable=True)  # Added later via migration\n\n# After adding bio column:\n# flask db migrate -m \"Add bio column to users\"\n# flask db upgrade",
+  "quiz": [
+    {
+      "question": "Which command generates a new migration script from model changes?",
+      "options": ["flask db init", "flask db migrate", "flask db upgrade", "flask db generate"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does flask db upgrade do?",
+      "options": ["Creates the migration repository", "Generates a migration script", "Applies pending migrations to the database", "Rolls back the last migration"],
+      "correctIndex": 2
+    }
+  ]
+}

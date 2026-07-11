@@ -1,0 +1,19 @@
+{
+  "title": "FastAPI Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "FastAPI Basics", "folder": "basics",
+      "topics": ["path_params", "query_params", "request_body", "response_model", "error_handling"]
+    },
+    {
+      "type": "group", "title": "Advanced Features", "folder": "advanced",
+      "topics": ["dependency_injection", "security_auth", "database_sqlalchemy", "background_tasks", "websockets"]
+    },
+    {
+      "type": "group", "title": "Production", "folder": "production",
+      "topics": ["middleware_cors", "testing", "deployment", "async_operations"]
+    }
+  ]
+}

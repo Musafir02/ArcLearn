@@ -1,0 +1,19 @@
+{
+  "title": "Flask-SQLAlchemy",
+  "language": "flask",
+  "topic": "sqlalchemy",
+  "content": "### Installation\n\n```bash\npip install flask-sqlalchemy\n```\n\n### Configuration\n\n```python\nfrom flask import Flask\nfrom flask_sqlalchemy import SQLAlchemy\n\napp = Flask(__name__)\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = \"sqlite:///site.db\"\napp.config[\"SQLALCHEMY_TRACK_MODIFICATIONS\"] = False\n\ndb = SQLAlchemy(app)\n```\n\n### Defining Models\n\n```python\nclass User(db.Model):\n    __tablename__ = \"users\"\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True, nullable=False)\n    email = db.Column(db.String(120), unique=True, nullable=False)\n    posts = db.relationship(\"Post\", backref=\"author\", lazy=True)\n\n    def __repr__(self):\n        return f\"<User {self.username}>\"\n\nclass Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(200), nullable=False)\n    content = db.Column(db.Text, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey(\"users.id\"), nullable=False)\n```\n\n### Column Types\n\n| Type | Description |\n|------|-------------|\n| `db.Integer` | Integer |\n| `db.String(n)` | String with max length |\n| `db.Text` | Text without max length |\n| `db.Float` | Floating point |\n| `db.Boolean` | Boolean |\n| `db.DateTime` | Date and time |\n| `db.Date` | Date only |\n| `db.JSON` | JSON data |\n\n### CRUD Operations\n\n**Create:**\n```python\nuser = User(username=\"alice\", email=\"alice@example.com\")\ndb.session.add(user)\ndb.session.commit()\n```\n\n**Read:**\n```python\nusers = User.query.all()\nuser = User.query.get(1)\nuser = User.query.filter_by(username=\"alice\").first()\nusers = User.query.filter(User.email.endswith(\"@example.com\")).all()\n```\n\n**Update:**\n```python\nuser = User.query.get(1)\nuser.email = \"newemail@example.com\"\ndb.session.commit()\n```\n\n**Delete:**\n```python\nuser = User.query.get(1)\ndb.session.delete(user)\ndb.session.commit()\n```\n\n### Relationships\n\n- **One-to-Many**: `db.relationship()` on the parent, `db.ForeignKey()` on the child\n- **Backref**: The `backref` parameter adds a reverse reference (e.g., `post.author`)\n- **Lazy loading**: `lazy=True` loads related data only when accessed\n- **Eager loading**: `lazy=\"joined\"` or `lazy=\"subquery\"` loads with the main query",
+  "codeExample": "from flask import Flask\nfrom flask_sqlalchemy import SQLAlchemy\nfrom datetime import datetime\n\napp = Flask(__name__)\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = \"sqlite:///blog.db\"\ndb = SQLAlchemy(app)\n\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True, nullable=False)\n    posts = db.relationship(\"Post\", backref=\"author\", lazy=True)\n\nclass Post(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    title = db.Column(db.String(200), nullable=False)\n    content = db.Column(db.Text, nullable=False)\n    created_at = db.Column(db.DateTime, default=datetime.utcnow)\n    user_id = db.Column(db.Integer, db.ForeignKey(\"user.id\"), nullable=False)\n\nwith app.app_context():\n    db.create_all()",
+  "quiz": [
+    {
+      "question": "Which method commits changes to the database in Flask-SQLAlchemy?",
+      "options": ["db.session.save()", "db.session.commit()", "db.session.flush()", "db.save()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does db.ForeignKey() define in a model?",
+      "options": ["A relationship", "A column that references another table's primary key", "A unique constraint", "An index on a column"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{"title": "Introduction to Express.js",
+  "language": "express",
+  "topic": "intro",
+  "content": "### What is Express.js?\n\nExpress.js is a minimal, unopinionated web application framework for Node.js. It provides a robust set of features for building web applications and APIs, including a powerful routing system, middleware architecture, and HTTP utility methods.\n\n### Middleware Concept\n\nExpress uses a middleware pipeline where each function has access to the `req`, `res`, and `next` objects. Middleware can execute code, modify the request/response objects, end the request cycle, or call the next middleware in the stack.\n\n### Routing\n\nRouting refers to how an application responds to client requests at specific endpoints. Express provides HTTP verb methods like `app.get()`, `app.post()`, `app.put()`, and `app.delete()` for flexible route definitions.\n\n### Ecosystem\n\nExpress has a vast ecosystem of middleware packages available via npm, including `morgan` for logging, `helmet` for security, `cors` for cross-origin requests, and `express-rate-limit` for rate limiting.\n\n### Express vs Alternatives\n\n- **Fastify**: Faster JSON serialization, schema-based validation, plugin system. Better performance benchmarks.\n- **Koa**: Built by Express team, uses async/await natively, lighter core with no bundled middleware.\n- **Express**: Largest community, most tutorials, simplest learning curve, extensive middleware ecosystem.",
+  "codeExample": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});",
+  "quiz": [
+    {
+      "question": "What type of framework is Express.js?",
+      "options": ["Minimal and unopinionated", "Full-stack and opinionated", "Database ORM", "Frontend framework"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which function passes control to the next middleware in Express?",
+      "options": ["next()", "continue()", "forward()", "skip()"],
+      "correctIndex": 0
+    }
+  ]
+}

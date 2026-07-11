@@ -1,0 +1,18 @@
+{"title": "Environment Configuration",
+  "language": "express",
+  "topic": "environment_config",
+  "content": "### dotenv Package\n\nLoad environment variables from a `.env` file into `process.env`.\n\n```bash\nnpm install dotenv\n```\n\n### .env Files\n\nCreate a `.env` file in the project root:\n\n```env\nPORT=3000\nNODE_ENV=development\nDATABASE_URL=mongodb://localhost:27017/myapp\nJWT_SECRET=my-super-secret-key\nJWT_EXPIRES_IN=90d\n```\n\nLoad in your application:\n\n```javascript\nrequire('dotenv').config();\n\nconst port = process.env.PORT || 3000;\nconst dbUrl = process.env.DATABASE_URL;\n```\n\n### NODE_ENV\n\nThe `NODE_ENV` environment variable is a convention to indicate the current environment:\n\n```javascript\nif (process.env.NODE_ENV === 'production') {\n  app.use(compression());\n  app.use(helmet());\n} else {\n  app.use(morgan('dev'));\n}\n```\n\n### Environment-Specific Config\n\nCreate separate config files:\n\n```javascript\n// config/env.js\nconst config = {\n  development: {\n    port: 3000,\n    dbUrl: 'mongodb://localhost:27017/dev',\n    logLevel: 'debug'\n  },\n  production: {\n    port: process.env.PORT,\n    dbUrl: process.env.DATABASE_URL,\n    logLevel: 'info'\n  },\n  test: {\n    port: 3001,\n    dbUrl: 'mongodb://localhost:27017/test',\n    logLevel: 'silent'\n  }\n};\n\nmodule.exports = config[process.env.NODE_ENV || 'development'];\n```\n\n### Config Module Pattern\n\nCentralized configuration:\n\n```javascript\n// config/index.js\nconst dotenv = require('dotenv');\ndotenv.config({ path: `.env.${process.env.NODE_ENV}` });\n\nmodule.exports = {\n  port: process.env.PORT || 3000,\n  database: {\n    url: process.env.DATABASE_URL,\n    password: process.env.DB_PASSWORD\n  },\n  jwt: {\n    secret: process.env.JWT_SECRET,\n    expiresIn: process.env.JWT_EXPIRES_IN\n  }\n};\n```",
+  "codeExample": "// config/index.js\nrequire('dotenv').config({ path: `.env.${process.env.NODE_ENV || 'development'}` });\n\nmodule.exports = {\n  port: parseInt(process.env.PORT, 10) || 3000,\n  db: {\n    url: process.env.DATABASE_URL,\n    pool: { min: 2, max: 10 }\n  },\n  jwt: {\n    secret: process.env.JWT_SECRET,\n    expiresIn: process.env.JWT_EXPIRES_IN || '7d'\n  },\n  env: process.env.NODE_ENV || 'development'\n};",
+  "quiz": [
+    {
+      "question": "Which package loads .env files into process.env?",
+      "options": ["dotenv", "env-loader", "config", "cross-env"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the default value of NODE_ENV if not set?",
+      "options": ["undefined", "development", "production", "test"],
+      "correctIndex": 0
+    }
+  ]
+}

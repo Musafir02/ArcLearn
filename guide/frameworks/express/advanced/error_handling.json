@@ -1,0 +1,18 @@
+{"title": "Error Handling in Express",
+  "language": "express",
+  "topic": "error_handling",
+  "content": "### Error-Handling Middleware\n\nError-handling middleware has four arguments:\n\n```javascript\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(err.status || 500).json({\n    error: err.message || 'Internal Server Error'\n  });\n});\n```\n\n### AppError Class\n\nCreate a custom error class:\n\n```javascript\nclass AppError extends Error {\n  constructor(message, statusCode) {\n    super(message);\n    this.statusCode = statusCode;\n    this.isOperational = true;\n    Error.captureStackTrace(this, this.constructor);\n  }\n}\n```\n\n### Async Error Wrapper\n\nCatch errors in async route handlers:\n\n```javascript\nconst catchAsync = (fn) => {\n  return (req, res, next) => {\n    fn(req, res, next).catch(next);\n  };\n};\n\napp.get('/users', catchAsync(async (req, res) => {\n  const users = await User.find();\n  res.json(users);\n}));\n```\n\n### 404 Handler\n\nCatch-all for unmatched routes:\n\n```javascript\napp.all('*', (req, res, next) => {\n  next(new AppError(`Route ${req.originalUrl} not found`, 404));\n});\n```\n\n### Global Error Handler\n\n```javascript\napp.use((err, req, res, next) => {\n  err.statusCode = err.statusCode || 500;\n  err.status = err.status || 'error';\n\n  res.status(err.statusCode).json({\n    status: err.status,\n    message: err.message\n  });\n});\n```\n\n### Catching Unhandled Rejections\n\n```javascript\nprocess.on('unhandledRejection', (err) => {\n  console.error('UNHANDLED REJECTION! Shutting down...');\n  server.close(() => process.exit(1));\n});\n```",
+  "codeExample": "class AppError extends Error {\n  constructor(message, statusCode) {\n    super(message);\n    this.statusCode = statusCode;\n  }\n}\n\nconst catchAsync = (fn) => (req, res, next) => fn(req, res, next).catch(next);\n\napp.get('/users/:id', catchAsync(async (req, res) => {\n  const user = await User.findById(req.params.id);\n  if (!user) throw new AppError('User not found', 404);\n  res.json({ data: user });\n}));",
+  "quiz": [
+    {
+      "question": "How many parameters does error-handling middleware take?",
+      "options": ["4", "3", "2", "5"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where should the 404 handler be placed in the middleware stack?",
+      "options": ["After all routes", "Before all routes", "In the beginning", "Inside error middleware"],
+      "correctIndex": 0
+    }
+  ]
+}

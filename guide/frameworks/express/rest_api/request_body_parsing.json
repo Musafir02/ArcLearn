@@ -1,0 +1,18 @@
+{"title": "Request Body Parsing in Express",
+  "language": "express",
+  "topic": "request_body_parsing",
+  "content": "### express.json()\n\nParses incoming JSON payloads:\n\n```javascript\napp.use(express.json());\n\napp.post('/users', (req, res) => {\n  console.log(req.body.name);\n  console.log(req.body.email);\n});\n```\n\n### express.urlencoded()\n\nParses form data (application/x-www-form-urlencoded):\n\n```javascript\napp.use(express.urlencoded({ extended: true }));\n// extended: true allows parsing of nested objects\n```\n\nWith `extended: false`, values are strings or arrays only. With `extended: true`, nested objects are supported.\n\n### Parsing Nested Objects\n\nWith `extended: true`, form data like `user[name]=John&user[age]=30` parses to:\n\n```javascript\n{ user: { name: 'John', age: '30' } }\n```\n\n### Body Size Limits\n\nLimit request body size:\n\n```javascript\napp.use(express.json({ limit: '10kb' }));\napp.use(express.urlencoded({ limit: '5mb', extended: true }));\n```\n\n### Raw Text Parsing\n\nParse plain text bodies:\n\n```javascript\napp.use(express.text());\n\napp.post('/raw', (req, res) => {\n  console.log(req.body); // string\n});\n```",
+  "codeExample": "const express = require('express');\nconst app = express();\n\napp.use(express.json({ limit: '1mb' }));\napp.use(express.urlencoded({ extended: true, limit: '1mb' }));\n\napp.post('/api/register', (req, res) => {\n  const { username, email, password } = req.body;\n  res.status(201).json({ username, email });\n});",
+  "quiz": [
+    {
+      "question": "Which middleware parses URL-encoded form data?",
+      "options": ["express.urlencoded()", "express.json()", "express.form()", "express.data()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does 'extended: true' allow in urlencoded parsing?",
+      "options": ["Nested objects", "File uploads", "JSON arrays", "Binary data"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Building Responses",
+  "language": "flask",
+  "topic": "response",
+  "content": "### Return Values\n\nA view function can return various types:\n\n```python\n@app.route(\"/\")\ndef index():\n    # String response\n    return \"Hello, World!\"\n\n@app.route(\"/tuple\")\ndef tuple_response():\n    # (response, status_code)\n    return \"Created\", 201\n\n@app.route(\"/tuple-headers\")\ndef with_headers():\n    # (response, status_code, headers_dict)\n    return \"Redirect\", 302, {\"Location\": \"/\"}\n```\n\n### Using `make_response`\n\nBuild a response object explicitly:\n\n```python\nfrom flask import make_response\n\n@app.route(\"/custom\")\ndef custom():\n    resp = make_response(\"Custom Response\", 200)\n    resp.headers[\"X-Custom-Header\"] = \"value\"\n    resp.content_type = \"text/plain\"\n    return resp\n```\n\n### JSON Responses with `jsonify`\n\nReturn JSON data:\n\n```python\nfrom flask import jsonify\n\n@app.route(\"/api/user\")\ndef get_user():\n    return jsonify({\n        \"id\": 1,\n        \"name\": \"Alice\",\n        \"email\": \"alice@example.com\"\n    })\n\n# Or using dict return (Flask 2.0+)\n@app.route(\"/api/user2\")\ndef get_user2():\n    return {\"id\": 2, \"name\": \"Bob\"}\n```\n\n### Redirects and Errors\n\n```python\nfrom flask import redirect, url_for, abort\n\n@app.route(\"/\")\ndef home():\n    return redirect(url_for(\"dashboard\"))\n\n@app.route(\"/admin\")\ndef admin():\n    abort(403)  # Forbidden\n\n@app.route(\"/doc/<id>\")\ndef doc(id):\n    doc = find_document(id)\n    if not doc:\n        abort(404, description=\"Document not found\")\n    return doc\n```\n\n### Response Object Methods\n\n| Method | Description |\n|--------|-------------|\n| `resp.set_cookie(key, value)` | Set a cookie |\n| `resp.delete_cookie(key)` | Delete a cookie |\n| `resp.headers.add(name, value)` | Add a header |\n| `resp.status_code` | Get/set status code |\n| `resp.mimetype` | Get/set MIME type |\n\n### Common Status Codes\n\n- `200` OK\n- `201` Created\n- `204` No Content\n- `301` Moved Permanently\n- `302` Found (redirect)\n- `400` Bad Request\n- `401` Unauthorized\n- `403` Forbidden\n- `404` Not Found\n- `500` Internal Server Error",
+  "codeExample": "from flask import Flask, jsonify, make_response, redirect, url_for\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef index():\n    return redirect(url_for(\"api_info\"))\n\n@app.route(\"/api/info\")\ndef api_info():\n    resp = make_response(jsonify({\n        \"app\": \"MyApp\",\n        \"version\": \"1.0.0\",\n        \"status\": \"running\"\n    }), 200)\n    resp.headers[\"X-API-Version\"] = \"1.0\"\n    return resp\n\n@app.route(\"/api/error\")\ndef error():\n    return jsonify({\"error\": \"Not found\"}), 404",
+  "quiz": [
+    {
+      "question": "Which Flask function creates a JSON response?",
+      "options": ["json.dumps()", "jsonify()", "to_json()", "json_response()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you return a 201 status code with a message?",
+      "options": ["return 201, \"Created\"", "return \"Created\", 201", "return (\"Created\", 201)", "make_response(201, \"Created\")"],
+      "correctIndex": 1
+    }
+  ]
+}

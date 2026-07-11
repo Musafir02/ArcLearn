@@ -1,0 +1,18 @@
+{"title": "Authentication with JWT",
+  "language": "express",
+  "topic": "authentication",
+  "content": "### JWT Authentication\n\nJSON Web Tokens provide stateless authentication.\n\n```bash\nnpm install jsonwebtoken bcryptjs\n```\n\n### Password Hashing with bcrypt\n\n```javascript\nconst bcrypt = require('bcryptjs');\n\nconst hashedPassword = await bcrypt.hash(password, 12);\nconst isMatch = await bcrypt.compare(inputPassword, hashedPassword);\n```\n\n### Login/Signup Routes\n\n```javascript\nconst jwt = require('jsonwebtoken');\n\nconst signToken = (userId) => {\n  return jwt.sign({ id: userId }, process.env.JWT_SECRET, {\n    expiresIn: process.env.JWT_EXPIRES_IN || '90d'\n  });\n};\n\napp.post('/api/auth/signup', async (req, res) => {\n  const user = await User.create({\n    name: req.body.name,\n    email: req.body.email,\n    password: await bcrypt.hash(req.body.password, 12)\n  });\n  const token = signToken(user._id);\n  res.status(201).json({ token, user });\n});\n\napp.post('/api/auth/login', async (req, res) => {\n  const user = await User.findOne({ email: req.body.email });\n  if (!user || !(await bcrypt.compare(req.body.password, user.password))) {\n    return res.status(401).json({ error: 'Invalid credentials' });\n  }\n  const token = signToken(user._id);\n  res.json({ token, user });\n});\n```\n\n### Auth Middleware\n\nProtect routes with token verification:\n\n```javascript\nconst protect = async (req, res, next) => {\n  let token;\n  if (req.headers.authorization?.startsWith('Bearer')) {\n    token = req.headers.authorization.split(' ')[1];\n  }\n  if (!token) return next(new AppError('Not authenticated', 401));\n\n  const decoded = jwt.verify(token, process.env.JWT_SECRET);\n  req.user = await User.findById(decoded.id);\n  next();\n};\n\napp.use('/api/protected', protect);\n```",
+  "codeExample": "const jwt = require('jsonwebtoken');\nconst bcrypt = require('bcryptjs');\n\nconst authMiddleware = (req, res, next) => {\n  const token = req.header('Authorization')?.replace('Bearer ', '');\n  if (!token) return res.status(401).json({ error: 'Access denied' });\n  try {\n    req.user = jwt.verify(token, process.env.JWT_SECRET);\n    next();\n  } catch (err) {\n    res.status(401).json({ error: 'Invalid token' });\n  }\n};\n\napp.get('/api/profile', authMiddleware, (req, res) => {\n  res.json({ user: req.user });\n});",
+  "quiz": [
+    {
+      "question": "Which library is commonly used for password hashing in Node.js?",
+      "options": ["bcryptjs", "crypto", "argon2", "hash.js"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What HTTP header carries the JWT token in Bearer auth?",
+      "options": ["Authorization", "Authentication", "X-Auth-Token", "Token"],
+      "correctIndex": 0
+    }
+  ]
+}

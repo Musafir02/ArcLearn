@@ -1,0 +1,19 @@
+{
+  "title": "Flask-WTF Forms",
+  "language": "flask",
+  "topic": "wtf_forms",
+  "content": "### Installation\n\n```bash\npip install flask-wtf\n```\n\n### Configuration\n\nFlask-WTF requires a secret key for CSRF protection:\n\n```python\napp = Flask(__name__)\napp.config[\"SECRET_KEY\"] = \"your-secret-key-here\"\n```\n\n### Defining a Form Class\n\nCreate form classes using wtforms:\n\n```python\nfrom flask_wtf import FlaskForm\nfrom wtforms import StringField, PasswordField, SubmitField, BooleanField\nfrom wtforms.validators import DataRequired, Email, Length\n\nclass LoginForm(FlaskForm):\n    email = StringField(\"Email\", validators=[DataRequired(), Email()])\n    password = PasswordField(\"Password\", validators=[DataRequired(), Length(min=6)])\n    remember = BooleanField(\"Remember Me\")\n    submit = SubmitField(\"Log In\")\n```\n\n### Common Field Types\n\n| Field | HTML Output |\n|-------|-------------|\n| `StringField` | `<input type=\"text\">` |\n| `PasswordField` | `<input type=\"password\">` |\n| `BooleanField` | `<input type=\"checkbox\">` |\n| `SubmitField` | `<input type=\"submit\">` |\n| `TextAreaField` | `<textarea>` |\n| `SelectField` | `<select>` |\n| `DateField` | `<input type=\"date\">` |\n| `FileField` | `<input type=\"file\">` |\n| `HiddenField` | `<input type=\"hidden\">` |\n\n### Using Forms in Routes\n\n```python\nfrom flask import render_template, redirect, url_for, flash\n\n@app.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    form = LoginForm()\n    if form.validate_on_submit():\n        # Process form data\n        return redirect(url_for(\"dashboard\"))\n    return render_template(\"login.html\", form=form)\n```\n\n### Rendering Forms in Templates\n\n```html\n<form method=\"POST\" action=\"\">\n    {{ form.hidden_tag() }}\n    <div>\n        {{ form.email.label }}<br>\n        {{ form.email(size=32) }}<br>\n        {% for error in form.email.errors %}\n            <span style=\"color: red;\">{{ error }}</span><br>\n        {% endfor %}\n    </div>\n    <div>\n        {{ form.password.label }}<br>\n        {{ form.password(size=32) }}<br>\n        {% for error in form.password.errors %}\n            <span style=\"color: red;\">{{ error }}</span><br>\n        {% endfor %}\n    </div>\n    <div>{{ form.remember() }} {{ form.remember.label }}</div>\n    <div>{{ form.submit() }}</div>\n</form>\n```\n\n### CSRF Protection\n\n- Enabled by default with Flask-WTF\n- Requires `SECRET_KEY` config\n- `form.hidden_tag()` renders the CSRF token field\n- All POST forms must include the CSRF token\n- CSRF token is validated automatically on form submission",
+  "codeExample": "from flask import Flask, render_template\nfrom flask_wtf import FlaskForm\nfrom wtforms import StringField, PasswordField, SubmitField\nfrom wtforms.validators import DataRequired, Email, Length\n\napp = Flask(__name__)\napp.config[\"SECRET_KEY\"] = \"hard-to-guess-secret\"\n\nclass RegistrationForm(FlaskForm):\n    username = StringField(\"Username\", validators=[DataRequired(), Length(min=3, max=20)])\n    email = StringField(\"Email\", validators=[DataRequired(), Email()])\n    password = PasswordField(\"Password\", validators=[DataRequired(), Length(min=6)])\n    submit = SubmitField(\"Register\")\n\n@app.route(\"/register\", methods=[\"GET\", \"POST\"])\ndef register():\n    form = RegistrationForm()\n    if form.validate_on_submit():\n        return f\"Registered {form.username.data}!\"\n    return render_template(\"register.html\", form=form)",
+  "quiz": [
+    {
+      "question": "What does form.hidden_tag() render in a Flask-WTF template?",
+      "options": ["All hidden fields", "The CSRF token field", "Hidden submit button", "Validation errors"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which configuration key is required for CSRF protection?",
+      "options": ["CSRF_ENABLED", "SECRET_KEY", "WTF_CSRF_KEY", "FLASK_SECRET"],
+      "correctIndex": 1
+    }
+  ]
+}

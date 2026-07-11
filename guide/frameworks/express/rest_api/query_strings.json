@@ -1,0 +1,18 @@
+{"title": "Query Strings in Express",
+  "language": "express",
+  "topic": "query_strings",
+  "content": "### req.query Parsing\n\nExpress automatically parses query strings into an object:\n\n```javascript\n// GET /search?q=express&type=framework\napp.get('/search', (req, res) => {\n  console.log(req.query);\n  // { q: 'express', type: 'framework' }\n});\n```\n\n### Filtering with Query Params\n\nBuild filters from query parameters:\n\n```javascript\napp.get('/products', (req, res) => {\n  const filter = {};\n  if (req.query.category) filter.category = req.query.category;\n  if (req.query.minPrice) filter.price = { $gte: req.query.minPrice };\n  // Use filter to query database\n});\n```\n\n### Pagination\n\nStandard pagination pattern:\n\n```javascript\napp.get('/users', (req, res) => {\n  const page = parseInt(req.query.page) || 1;\n  const limit = parseInt(req.query.limit) || 10;\n  const skip = (page - 1) * limit;\n  // db.find().skip(skip).limit(limit)\n  res.json({ page, limit, data: results });\n});\n```\n\n### Sorting\n\n```javascript\napp.get('/posts', (req, res) => {\n  const sortBy = req.query.sort || '-createdAt';\n  // db.find().sort(sortBy)\n});\n```\n\n### Search\n\n```javascript\napp.get('/search', (req, res) => {\n  const query = req.query.q;\n  if (!query) return res.status(400).json({ error: 'Search query required' });\n  // Perform search\n});\n```",
+  "codeExample": "app.get('/api/products', (req, res) => {\n  const { category, page = 1, limit = 20, sort = 'name' } = req.query;\n  const skip = (page - 1) * limit;\n  res.json({ filters: { category }, pagination: { page, limit, skip }, sort });\n});",
+  "quiz": [
+    {
+      "question": "Which property contains the parsed query string?",
+      "options": ["req.query", "req.params", "req.body", "req.data"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How is pagination typically handled in query strings?",
+      "options": ["?page=1&limit=10", "?p=1&l=10", "?offset=0&count=10", "?start=1&end=10"],
+      "correctIndex": 0
+    }
+  ]
+}

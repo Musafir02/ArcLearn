@@ -1,0 +1,18 @@
+{"title": "CRUD Operations in Express",
+  "language": "express",
+  "topic": "crud_operations",
+  "content": "### Full CRUD for a Resource\n\nComplete CRUD implementation for a `posts` resource:\n\n```javascript\nconst express = require('express');\nconst router = express.Router();\n\nlet posts = [];\nlet idCounter = 1;\n\n// GET all\nrouter.get('/', (req, res) => {\n  res.json({ data: posts });\n});\n\n// GET by id\nrouter.get('/:id', (req, res) => {\n  const post = posts.find(p => p.id === parseInt(req.params.id));\n  if (!post) return res.status(404).json({ error: 'Post not found' });\n  res.json({ data: post });\n});\n\n// POST create\nrouter.post('/', (req, res) => {\n  const post = { id: idCounter++, ...req.body };\n  posts.push(post);\n  res.status(201).json({ data: post });\n});\n\n// PUT update\nrouter.put('/:id', (req, res) => {\n  const index = posts.findIndex(p => p.id === parseInt(req.params.id));\n  if (index === -1) return res.status(404).json({ error: 'Post not found' });\n  posts[index] = { ...posts[index], ...req.body };\n  res.json({ data: posts[index] });\n});\n\n// DELETE\nrouter.delete('/:id', (req, res) => {\n  const index = posts.findIndex(p => p.id === parseInt(req.params.id));\n  if (index === -1) return res.status(404).json({ error: 'Post not found' });\n  posts.splice(index, 1);\n  res.status(204).send();\n});\n\nmodule.exports = router;\n```\n\n### Proper Status Codes\n\n- **200 OK** — Successful GET, PUT, PATCH\n- **201 Created** — Successful POST\n- **204 No Content** — Successful DELETE\n- **400 Bad Request** — Invalid input\n- **404 Not Found** — Resource missing\n- **500 Internal Server Error** — Server failure",
+  "codeExample": "app.delete('/api/posts/:id', (req, res) => {\n  const { id } = req.params;\n  PostModel.findByIdAndDelete(id)\n    .then(() => res.status(204).end())\n    .catch(() => res.status(500).json({ error: 'Delete failed' }));\n});",
+  "quiz": [
+    {
+      "question": "What status code should a successful POST request return?",
+      "options": ["201", "200", "204", "202"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What status code should a successful DELETE request return?",
+      "options": ["204", "200", "201", "404"],
+      "correctIndex": 0
+    }
+  ]
+}

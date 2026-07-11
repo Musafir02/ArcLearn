@@ -1,0 +1,18 @@
+{"title": "WebSocket Integration with Socket.io",
+  "language": "express",
+  "topic": "websocket_integration",
+  "content": "### Socket.io with Express\n\nSocket.io provides real-time bidirectional communication between clients and servers.\n\n```bash\nnpm install socket.io\n```\n\n### WebSocket Server Setup\n\n```javascript\nconst http = require('http');\nconst express = require('express');\nconst { Server } = require('socket.io');\n\nconst app = express();\nconst server = http.createServer(app);\nconst io = new Server(server);\n\nio.on('connection', (socket) => {\n  console.log('A user connected:', socket.id);\n\n  socket.on('disconnect', () => {\n    console.log('User disconnected:', socket.id);\n  });\n});\n\nserver.listen(3000);\n```\n\n### Event Emission\n\n```javascript\n// Server to client\nio.emit('broadcast', { message: 'Hello everyone' });\nsocket.emit('private', { message: 'Hello you' });\nsocket.broadcast.emit('others', { message: 'Hello others' });\n\n// Client to server (listening on socket)\nsocket.on('chat message', (msg) => {\n  io.emit('chat message', msg);\n});\n```\n\n### Rooms and Namespaces\n\n```javascript\n// Join a room\nsocket.join('room-123');\nio.to('room-123').emit('room message', { data: 'For room only' });\n\n// Namespaces\nconst adminNamespace = io.of('/admin');\nadminNamespace.on('connection', (socket) => {\n  // Only clients connected to /admin\n});\n```\n\n### Real-Time Chat Example\n\n```javascript\nio.on('connection', (socket) => {\n  socket.on('join room', (room) => {\n    socket.join(room);\n  });\n\n  socket.on('chat message', ({ room, message, user }) => {\n    io.to(room).emit('chat message', { user, message, timestamp: Date.now() });\n  });\n});\n```",
+  "codeExample": "const http = require('http');\nconst { Server } = require('socket.io');\n\nconst server = http.createServer(app);\nconst io = new Server(server, {\n  cors: { origin: 'http://localhost:5173' }\n});\n\nio.on('connection', (socket) => {\n  socket.on('message', (data) => {\n    io.emit('message', { id: socket.id, text: data.text });\n  });\n});\n\nserver.listen(3000);",
+  "quiz": [
+    {
+      "question": "Which Server constructor is used for Socket.io?",
+      "options": ["Server from socket.io", "WebSocket from ws", "Socket from net", "IO from socket.io-client"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you emit an event to all connected clients?",
+      "options": ["io.emit()", "socket.emit()", "socket.broadcast.emit()", "io.send()"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Flask Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Flask Basics", "folder": "basics",
+      "topics": ["routing", "templates_jinja", "static_files", "request_data", "response"]
+    },
+    {
+      "type": "group", "title": "Database & Forms", "folder": "database_forms",
+      "topics": ["sqlalchemy", "models_migrations", "wtf_forms", "form_validation"]
+    },
+    {
+      "type": "group", "title": "Advanced Flask", "folder": "advanced",
+      "topics": ["blueprints", "error_handling", "authentication", "rest_api", "testing", "deployment"]
+    }
+  ]
+}

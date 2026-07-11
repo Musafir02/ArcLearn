@@ -1,0 +1,19 @@
+{
+  "title": "Templates and Jinja2",
+  "language": "flask",
+  "topic": "templates_jinja",
+  "content": "### Rendering Templates\n\nUse `render_template()` to serve HTML files from the `templates/` folder:\n\n```python\nfrom flask import Flask, render_template\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef home():\n    return render_template(\"index.html\", title=\"Home\", name=\"Alice\")\n```\n\n### Jinja2 Template Syntax\n\nJinja2 uses `{{ }}` for expressions and `{% %}` for control flow:\n\n```html\n<!-- template variables -->\n<h1>{{ title }}</h1>\n<p>Hello, {{ name }}!</p>\n\n<!-- filters -->\n<p>{{ name|upper }}</p>\n<p>{{ price|round(2) }}</p>\n\n<!-- loops -->\n<ul>\n{% for item in items %}\n    <li>{{ item.name }} - ${{ item.price }}</li>\n{% endfor %}\n</ul>\n\n<!-- conditionals -->\n{% if user.is_admin %}\n    <a href=\"/admin\">Admin Panel</a>\n{% endif %}\n```\n\n### Template Inheritance\n\nCreate a base template with blocks that child templates can override:\n\n**`templates/base.html`:**\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>{% block title %}My App{% endblock %}</title>\n</head>\n<body>\n    <header>\n        {% block header %}Default Header{% endblock %}\n    </header>\n    <main>\n        {% block content %}{% endblock %}\n    </main>\n    <footer>\n        {% block footer %}&copy; 2024{% endblock %}\n    </footer>\n</body>\n</html>\n```\n\n**`templates/about.html`:**\n```html\n{% extends \"base.html\" %}\n\n{% block title %}About Us{% endblock %}\n\n{% block content %}\n    <h1>About Page</h1>\n    <p>This is the about page content.</p>\n{% endblock %}\n```\n\n### Built-in Filters\n\n| Filter | Description | Example |\n|--------|-------------|--------|\n| `safe` | Marks text as safe HTML | `{{ html_content|safe }}` |\n| `capitalize` | Capitalizes first letter | `{{ \"hello\"|capitalize }}` |\n| `length` | Returns length | `{{ items|length }}` |\n| `default` | Default value if None | `{{ name|default(\"Guest\") }}` |\n| `date` | Format datetime | `{{ post.date|date(\"Y-m-d\") }}` |\n\n### Variables\n\nVariables can be any Python type passed to `render_template`:\n- Strings, numbers, lists, dictionaries\n- Objects with attributes\n- Functions (callable in templates)",
+  "codeExample": "from flask import Flask, render_template\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef home():\n    user = {\"name\": \"Alice\", \"is_admin\": True}\n    posts = [\n        {\"title\": \"Post 1\", \"date\": \"2024-01-01\"},\n        {\"title\": \"Post 2\", \"date\": \"2024-01-15\"}\n    ]\n    return render_template(\"home.html\", user=user, posts=posts)",
+  "quiz": [
+    {
+      "question": "Which Jinja2 syntax is used for expressions that output values?",
+      "options": ["{% %}", "{{ }}", "{# #}", "{{% %}}"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword allows a child template to inherit from a base template?",
+      "options": ["block", "include", "extends", "inherit"],
+      "correctIndex": 2
+    }
+  ]
+}

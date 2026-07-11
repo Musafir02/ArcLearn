@@ -1,0 +1,19 @@
+{
+  "title": "Error Handling in Flask",
+  "language": "flask",
+  "topic": "error_handling",
+  "content": "### Custom Error Handlers\n\nRegister custom handlers for HTTP error codes:\n\n```python\nfrom flask import Flask, render_template\n\napp = Flask(__name__)\n\n@app.errorhandler(404)\ndef not_found(error):\n    return render_template(\"404.html\", error=error), 404\n\n@app.errorhandler(500)\ndef server_error(error):\n    return render_template(\"500.html\", error=error), 500\n\n@app.errorhandler(403)\ndef forbidden(error):\n    return render_template(\"403.html\", error=error), 403\n```\n\n### Using `abort()`\n\nRaise HTTP errors from anywhere in your code:\n\n```python\nfrom flask import abort\n\n@app.route(\"/admin\")\ndef admin():\n    abort(403)\n\n@app.route(\"/user/<int:user_id>\")\ndef get_user(user_id):\n    user = User.query.get(user_id)\n    if user is None:\n        abort(404, description=\"User not found\")\n    return render_template(\"user.html\", user=user)\n\n@app.route(\"/api/data\")\ndef api_data():\n    if not request.headers.get(\"X-API-Key\"):\n        abort(401, description=\"API key required\")\n```\n\n### Generic Error Handler\n\nCatch all unhandled exceptions:\n\n```python\n@app.errorhandler(Exception)\ndef handle_exception(error):\n    # Log the error\n    app.logger.error(f\"Unhandled error: {error}\")\n    return render_template(\"500.html\", error=error), 500\n```\n\n### Logging Errors\n\nFlask provides a built-in logger:\n\n```python\nimport logging\n\n# Set log level\napp.logger.setLevel(logging.ERROR)\n\n# In production, add file handler\nfile_handler = logging.FileHandler(\"app.log\")\nfile_handler.setLevel(logging.ERROR)\napp.logger.addHandler(file_handler)\n\n# Usage\n@app.route(\"/risky\")\ndef risky():\n    try:\n        result = 1 / 0\n    except Exception as e:\n        app.logger.exception(\"Division failed\")\n        abort(500)\n```\n\n### Custom Error Responses for APIs\n\nReturn JSON errors for API routes:\n\n```python\n@app.errorhandler(404)\ndef api_not_found(error):\n    return jsonify({\n        \"error\": \"Not found\",\n        \"message\": str(error.description)\n    }), 404\n\n@app.errorhandler(400)\ndef api_bad_request(error):\n    return jsonify({\n        \"error\": \"Bad request\",\n        \"message\": str(error.description)\n    }), 400\n```\n\n### Error Handler with Blueprints\n\nBlueprints can have their own error handlers:\n\n```python\n@api_bp.errorhandler(404)\ndef api_not_found(error):\n    return jsonify(error=\"Not found\"), 404\n```",
+  "codeExample": "from flask import Flask, jsonify, abort\n\napp = Flask(__name__)\n\n@app.errorhandler(404)\ndef not_found(error):\n    return jsonify({\n        \"error\": \"resource not found\",\n        \"message\": str(error.description or \"The requested URL was not found\")\n    }), 404\n\n@app.errorhandler(400)\ndef bad_request(error):\n    return jsonify({\n        \"error\": \"bad request\",\n        \"message\": str(error.description)\n    }), 400\n\n@app.route(\"/items/<int:item_id>\")\ndef get_item(item_id):\n    items = {1: \"Apple\", 2: \"Banana\"}\n    if item_id not in items:\n        abort(404, description=f\"Item {item_id} not found\")\n    return jsonify({\"id\": item_id, \"name\": items[item_id]})",
+  "quiz": [
+    {
+      "question": "Which decorator registers a custom error handler in Flask?",
+      "options": ["@app.errorhandler()", "@app.error_page()", "@app.error()", "@app.exception_handler()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you raise a 404 error programmatically in Flask?",
+      "options": ["raise 404", "abort(404)", "return 404", "error(404)"],
+      "correctIndex": 1
+    }
+  ]
+}

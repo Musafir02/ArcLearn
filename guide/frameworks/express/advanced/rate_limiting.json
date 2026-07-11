@@ -1,0 +1,18 @@
+{"title": "Rate Limiting in Express",
+  "language": "express",
+  "topic": "rate_limiting",
+  "content": "### express-rate-limit\n\nRate limiting protects your API from abuse by limiting the number of requests a client can make in a time window.\n\n```bash\nnpm install express-rate-limit\n```\n\n### Basic Usage\n\n```javascript\nconst rateLimit = require('express-rate-limit');\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100, // limit each IP to 100 requests per window\n  message: 'Too many requests, please try again later.'\n});\n\napp.use('/api/', limiter);\n```\n\n### Window and Time Limits\n\nConfigure different limits for different routes:\n\n```javascript\nconst authLimiter = rateLimit({\n  windowMs: 60 * 60 * 1000, // 1 hour\n  max: 5, // 5 login attempts per hour\n  message: 'Too many login attempts, try again later.'\n});\n\napp.use('/api/auth/login', authLimiter);\n```\n\n### Rate Limit Headers\n\nExpress-rate-limit sets these response headers by default:\n\n- `RateLimit-Limit` — Max requests per window\n- `RateLimit-Remaining` — Requests left in window\n- `RateLimit-Reset` — When the window resets (epoch)\n\n### Skip Failed Requests\n\nOnly count successful requests:\n\n```javascript\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000,\n  max: 100,\n  skipFailedRequests: true\n});\n```\n\n### Distributed Rate Limiting\n\nFor multi-server deployments, use an external store:\n\n```bash\nnpm install rate-limit-redis ioredis\n```\n\n```javascript\nconst RedisStore = require('rate-limit-redis');\nconst Redis = require('ioredis');\n\nconst limiter = rateLimit({\n  store: new RedisStore({\n    sendCommand: (...args) => new Redis().call(...args)\n  }),\n  windowMs: 15 * 60 * 1000,\n  max: 100\n});\n```",
+  "codeExample": "const rateLimit = require('express-rate-limit');\n\nconst apiLimiter = rateLimit({\n  windowMs: 15 * 60 * 1000,\n  max: 100,\n  standardHeaders: true,\n  legacyHeaders: false,\n  message: { error: 'Rate limit exceeded', retryAfter: '15 minutes' }\n});\n\napp.use('/api', apiLimiter);",
+  "quiz": [
+    {
+      "question": "Which package provides rate limiting for Express?",
+      "options": ["express-rate-limit", "rate-limiter", "express-throttle", "limit-express"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the 'max' option configure in express-rate-limit?",
+      "options": ["Max requests per window", "Max window size", "Max response time", "Max concurrent connections"],
+      "correctIndex": 0
+    }
+  ]
+}

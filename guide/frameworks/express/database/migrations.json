@@ -1,0 +1,18 @@
+{"title": "Migrations with Knex",
+  "language": "express",
+  "topic": "migrations",
+  "content": "### Migration Concept\n\nMigrations are version-controlled changes to your database schema. They allow teams to evolve the database schema consistently across environments.\n\n### Knex Migration Files\n\nCreate a migration:\n\n```bash\nnpx knex migrate:make create_users_table\n```\n\nThis generates a file with a timestamp prefix:\n\n```javascript\nexports.up = function(knex) {\n  return knex.schema.createTable('users', (table) => {\n    table.increments('id').primary();\n    table.string('name').notNullable();\n    table.string('email').unique().notNullable();\n    table.timestamps(true, true);\n  });\n};\n\nexports.down = function(knex) {\n  return knex.schema.dropTableIfExists('users');\n};\n```\n\n### up/down Functions\n\n- **up()**: Defines the forward change (create table, add column, etc.)\n- **down()**: Reverts the change (drop table, remove column, etc.)\n\n### Migration Commands\n\n```bash\nnpx knex migrate:latest   # Run all pending migrations\nnpx knex migrate:up        # Run the next pending migration\nnpx knex migrate:down      # Roll back the last migration\nnpx knex migrate:rollback  # Roll back all migrations\nnpx knex migrate:status    # Check migration status\n```\n\n### Seeding Data\n\nCreate seed files to populate tables with test data:\n\n```bash\nnpx knex seed:make 01_users\n```\n\n```javascript\nexports.seed = function(knex) {\n  return knex('users').insert([\n    { name: 'John', email: 'john@test.com' },\n    { name: 'Jane', email: 'jane@test.com' }\n  ]);\n};\n```\n\n```bash\nnpx knex seed:run\n```",
+  "codeExample": "// 20240101000000_create_posts_table.js\nexports.up = function(knex) {\n  return knex.schema.createTable('posts', (table) => {\n    table.increments('id');\n    table.string('title', 200).notNullable();\n    table.text('content');\n    table.integer('user_id').unsigned().references('id').inTable('users');\n    table.timestamps(true, true);\n  });\n};\n\nexports.down = function(knex) {\n  return knex.schema.dropTableIfExists('posts');\n};",
+  "quiz": [
+    {
+      "question": "What does the down() function in a migration do?",
+      "options": ["Reverts the migration", "Runs the migration", "Seeds data", "Shows migration status"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which command runs all pending migrations?",
+      "options": ["knex migrate:latest", "knex migrate:up", "knex migrate:run", "knex migrate:all"],
+      "correctIndex": 0
+    }
+  ]
+}

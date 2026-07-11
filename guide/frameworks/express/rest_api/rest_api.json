@@ -1,0 +1,18 @@
+{"title": "REST APIs with Express",
+  "language": "express",
+  "topic": "rest_api",
+  "content": "### REST Principles\n\nREST (Representational State Transfer) is an architectural style for designing networked applications. Key principles:\n\n- **Stateless**: Each request contains all necessary information\n- **Resource-based**: URLs represent resources (nouns, not verbs)\n- **HTTP methods**: Used as CRUD operations\n- **JSON responses**: Standard data format for APIs\n\n### Resource-Based URLs\n\n```\nGET    /users       → List users\nPOST   /users       → Create user\nGET    /users/:id   → Get single user\nPUT    /users/:id   → Update user\nDELETE /users/:id   → Delete user\n```\n\n### HTTP Methods as CRUD\n\n| HTTP Method | CRUD Operation |\n|------------|----------------|\n| GET        | Read           |\n| POST       | Create         |\n| PUT / PATCH| Update         |\n| DELETE     | Delete         |\n\n### API Versioning\n\nPrefix routes with version numbers:\n\n```javascript\napp.use('/api/v1/users', userRoutes);\napp.use('/api/v1/posts', postRoutes);\n```\n\n### API Design Best Practices\n\n- Use plural nouns for resources: `/users` not `/user`\n- Use proper HTTP status codes\n- Consistent error response format\n- Paginate collections\n- Version your API",
+  "codeExample": "const express = require('express');\nconst app = express();\n\napp.use(express.json());\n\n// RESTful endpoints\napp.get('/api/v1/items', (req, res) => res.json({ data: [] }));\napp.post('/api/v1/items', (req, res) => res.status(201).json({ data: req.body }));\n\napp.listen(3000);",
+  "quiz": [
+    {
+      "question": "Which URL pattern follows REST best practices?",
+      "options": ["/users", "/getUsers", "/userList", "/fetchUsers"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What should POST requests return on successful creation?",
+      "options": ["201 Created", "200 OK", "204 No Content", "301 Redirect"],
+      "correctIndex": 0
+    }
+  ]
+}

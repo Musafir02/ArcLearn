@@ -1,0 +1,18 @@
+{"title": "Middleware in Express",
+  "language": "express",
+  "topic": "middleware",
+  "content": "### What is Middleware?\n\nMiddleware functions are functions that execute during the request-response cycle. They have access to the `req` object, `res` object, and the `next()` function.\n\n### The next() Function\n\nCalling `next()` passes control to the next middleware function. Without it, the request will hang.\n\n### Application-Level Middleware\n\nBound to the app instance using `app.use()` or `app.METHOD()`:\n\n```javascript\napp.use((req, res, next) => {\n  console.log('Time:', Date.now());\n  next();\n});\n```\n\n### Router-Level Middleware\n\nWorks the same as application-level but bound to a router instance:\n\n```javascript\nconst router = express.Router();\nrouter.use((req, res, next) => next());\n```\n\n### Error-Handling Middleware\n\nFour arguments identify it as error-handling middleware:\n\n```javascript\napp.use((err, req, res, next) => {\n  console.error(err.stack);\n  res.status(500).send('Something broke!');\n});\n```\n\n### Built-in Middleware\n\n- `express.json()` â€” Parses JSON bodies\n- `express.static()` â€” Serves static files\n- `express.urlencoded()` â€” Parses URL-encoded bodies\n\n### Third-Party Middleware\n\n- **morgan**: HTTP request logger\n- **helmet**: Security headers\n- **cors**: Cross-Origin Resource Sharing",
+  "codeExample": "const express = require('express');\nconst morgan = require('morgan');\nconst helmet = require('helmet');\n\nconst app = express();\n\napp.use(helmet());\napp.use(morgan('dev'));\napp.use(express.json());\n\napp.get('/', (req, res) => res.send('Protected with helmet'));",
+  "quiz": [
+    {
+      "question": "How many arguments does an error-handling middleware function have?",
+      "options": ["4", "3", "2", "5"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which middleware parses incoming JSON request bodies?",
+      "options": ["express.json()", "express.raw()", "express.text()", "express.urlencoded()"],
+      "correctIndex": 0
+    }
+  ]
+}

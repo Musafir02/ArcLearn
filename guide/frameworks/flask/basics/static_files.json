@@ -1,0 +1,19 @@
+{
+  "title": "Serving Static Files",
+  "language": "flask",
+  "topic": "static_files",
+  "content": "### Static File Folder\n\nFlask automatically serves files from the `static/` folder at the application root:\n\n```\nmyapp/\n\u251c\u2500\u2500 static/\n\u2502   \u251c\u2500\u2500 css/\n\u2502   \u2502   \u2514\u2500\u2500 style.css\n\u2502   \u251c\u2500\u2500 js/\n\u2502   \u2502   \u2514\u2500\u2500 app.js\n\u2502   \u2514\u2500\u2500 images/\n\u2502       \u2514\u2500\u2500 logo.png\n\u2514\u2500\u2500 app.py\n```\n\n### Generating Static URLs with `url_for`\n\nUse `url_for('static', filename='...')` to generate URLs:\n\n```python\nfrom flask import url_for\n\n# In Python\nlogo_url = url_for('static', filename='images/logo.png')\n```\n\n```html\n<!-- In templates -->\n<link rel=\"stylesheet\" href=\"{{ url_for('static', filename='css/style.css') }}\">\n<script src=\"{{ url_for('static', filename='js/app.js') }}\"></script>\n<img src=\"{{ url_for('static', filename='images/logo.png') }}\" alt=\"Logo\">\n```\n\n### Custom Static Folder\n\nYou can configure a different static folder:\n\n```python\napp = Flask(__name__, static_folder=\"assets\", static_url_path=\"/assets\")\n```\n\n### Cache Busting\n\nTo prevent browsers from using cached versions of static files after updates, append a version parameter:\n\n```html\n<link rel=\"stylesheet\" href=\"{{ url_for('static', filename='css/style.css') }}?v=2.0\">\n```\n\nOr use a dynamic version from your app config:\n\n```python\n@app.context_processor\ndef inject_global_vars():\n    return {\"static_version\": \"1.0.3\"}\n\n# In template:\n# {{ url_for('static', filename='css/style.css') }}?v={{ static_version }}\n```\n\n### Serving Uploads\n\nFor user-uploaded files, configure a dedicated upload folder:\n\n```python\nimport os\nfrom flask import send_from_directory\n\nUPLOAD_FOLDER = \"uploads\"\napp.config[\"UPLOAD_FOLDER\"] = UPLOAD_FOLDER\n\n@app.route(\"/uploads/<filename>\")\ndef uploaded_file(filename):\n    return send_from_directory(app.config[\"UPLOAD_FOLDER\"], filename)\n```",
+  "codeExample": "from flask import Flask, url_for\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef home():\n    return f'''\n    <!DOCTYPE html>\n    <html>\n    <head>\n        <link rel=\"stylesheet\" href=\"{url_for('static', filename='css/style.css')}\">\n    </head>\n    <body>\n        <h1>Welcome!</h1>\n        <img src=\"{url_for('static', filename='images/logo.png')}\" alt=\"Logo\">\n        <script src=\"{url_for('static', filename='js/app.js')}\"></script>\n    </body>\n    </html>\n    '''",
+  "quiz": [
+    {
+      "question": "Which function generates URLs for static files in Flask?",
+      "options": ["static_url()", "url_for('static', filename=...)", "asset_path()", "static_file()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the default folder name for serving static files in Flask?",
+      "options": ["assets", "public", "static", "resources"],
+      "correctIndex": 2
+    }
+  ]
+}

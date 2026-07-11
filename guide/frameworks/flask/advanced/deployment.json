@@ -1,0 +1,19 @@
+{
+  "title": "Deploying Flask Applications",
+  "language": "flask",
+  "topic": "deployment",
+  "content": "### Production vs Development\n\nFlask's built-in server is not suitable for production. Use a production WSGI server:\n\n| Server | Description |\n|--------|-------------|\n| Gunicorn | Popular WSGI server (Unix) |\n| Waitress | WSGI server for Windows |\n| uWSGI | Feature-rich WSGI server |\n\n### Gunicorn\n\n```bash\npip install gunicorn\n\n# Basic usage\ngunicorn app:app\n\n# With workers and binding\ngunicorn -w 4 -b 0.0.0.0:8000 app:app\n\n# With timeout\ngunicorn -w 4 --timeout 120 app:app\n```\n\n### Waitress (Windows)\n\n```bash\npip install waitress\n\npython -c \"from waitress import serve; from app import app; serve(app, host='0.0.0.0', port=8080)\"\n```\n\n### Environment Variables\n\nUse environment variables for configuration:\n\n```python\nimport os\n\napp.config[\"SECRET_KEY\"] = os.environ.get(\"SECRET_KEY\", \"fallback-dev-key\")\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = os.environ.get(\"DATABASE_URL\", \"sqlite:///site.db\")\n```\n\n```bash\n# Set environment variables before running\n$env:DATABASE_URL = \"postgresql://user:pass@localhost/db\"\n$env:SECRET_KEY = \"production-secret\"\ngunicorn app:app\n```\n\n### requirements.txt\n\n```txt\nFlask==3.0.0\nFlask-SQLAlchemy==3.1.1\nFlask-Migrate==4.0.5\nFlask-Login==0.6.3\nFlask-WTF==1.2.1\ngunicorn==21.2.0\n```\n\nGenerate with:\n\n```bash\npip freeze > requirements.txt\n```\n\n### Docker Deployment\n\n```dockerfile\n# Dockerfile\nFROM python:3.12-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nEXPOSE 8000\n\nCMD [\"gunicorn\", \"-w\", \"4\", \"-b\", \"0.0.0.0:8000\", \"app:app\"]\n```\n\n```bash\ndocker build -t flask-app .\ndocker run -p 8000:8000 flask-app\n```\n\n### Deployment Platforms\n\n| Platform | Features |\n|----------|----------|\n| **Heroku** | Easy Git-based deploy, PostgreSQL, free tier |\n| **Render** | Simple deploy from Git, auto HTTPS |\n| **PythonAnywhere** | Beginner-friendly, web UI |\n| **Railway** | Modern, auto-deploy from GitHub |\n| **DigitalOcean App Platform** | Scalable, managed |\n| **AWS Elastic Beanstalk** | Enterprise-grade |\n\n### Production Checklist\n\n- [ ] Set `FLASK_ENV=production`\n- [ ] Use a production WSGI server (Gunicorn/Waitress)\n- [ ] Set a strong `SECRET_KEY` via environment variable\n- [ ] Use a production database (PostgreSQL)\n- [ ] Enable HTTPS\n- [ ] Set up logging to files\n- [ ] Configure error tracking (Sentry)\n- [ ] Use a reverse proxy (Nginx)\n- [ ] Run database migrations on deploy\n- [ ] Set up monitoring",
+  "codeExample": "import os\nfrom flask import Flask\n\napp = Flask(__name__)\napp.config[\"SECRET_KEY\"] = os.environ.get(\"SECRET_KEY\", \"dev-key-change-in-production\")\napp.config[\"SQLALCHEMY_DATABASE_URI\"] = os.environ.get(\"DATABASE_URL\", \"sqlite:///dev.db\")\n\n@app.route(\"/\")\ndef home():\n    return \"Hello, Production!\"\n\nif __name__ == \"__main__\":\n    port = int(os.environ.get(\"PORT\", 5000))\n    app.run(host=\"0.0.0.0\", port=port)",
+  "quiz": [
+    {
+      "question": "Which WSGI server is recommended for Flask in production on Unix?",
+      "options": ["Flask built-in server", "Gunicorn", "Werkzeug", "Alembic"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What should you use to store configuration secrets in production?",
+      "options": ["Hardcoded in app.py", "Environment variables", "requirements.txt", "GitHub repository"],
+      "correctIndex": 1
+    }
+  ]
+}
