@@ -1,0 +1,19 @@
+{
+  "title": "Package Managers",
+  "language": "linux",
+  "topic": "package_managers",
+  "content": "### apt — Debian/Ubuntu\n\n```bash\nsudo apt update                # refresh package lists\nsudo apt upgrade               # upgrade all packages\nsudo apt install nginx         # install package\nsudo apt remove nginx          # remove package\nsudo apt purge nginx           # remove package + config\nsudo apt autoremove            # remove unused dependencies\napt search \"web server\"        # search for packages\napt show nginx                 # show package info\n```\n\n### dpkg — Low-Level Debian Packages\n\n```bash\ndpkg -i package.deb            # install .deb file\ndpkg -r package                # remove package\ndpkg -l                        # list installed packages\ndpkg -L nginx                  # list files owned by package\ndpkg -S /bin/ls                # which package owns file\n```\n\n### snap / flatpak — Universal Packages\n\n```bash\nsnap find vlc                  # search snap store\nsnap install vlc               # install snap\nsnap list                      # list installed snaps\n\nflatpak search gimp\nflatpak install flathub org.gimp.GIMP\n```\n\n### yum/dnf — RHEL/Fedora/CentOS\n\n```bash\nsudo dnf install nginx         # install package\nsudo dnf update                # update system\nsudo dnf remove nginx          # remove package\ndnf search \"web server\"\n```\n\n### pacman — Arch Linux\n\n```bash\nsudo pacman -S nginx           # install package\nsudo pacman -R nginx           # remove package\nsudo pacman -Syu               # full system update\npacman -Ss web server          # search\n```",
+  "codeExample": "sudo apt update\nsudo apt install -y htop\napt search \"text editor\"\ndpkg -L bash | head\ndnf --version",
+  "quiz": [
+    {
+      "question": "What does `sudo apt update` do?",
+      "options": ["Refreshes the package list from repositories", "Upgrades all installed packages", "Installs a package", "Removes unused packages"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the difference between `apt remove` and `apt purge`?",
+      "options": ["purge also removes configuration files", "purge only removes configuration files", "They do the same thing", "remove is for Debian, purge is for Arch"],
+      "correctIndex": 0
+    }
+  ]
+}

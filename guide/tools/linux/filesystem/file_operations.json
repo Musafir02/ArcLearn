@@ -1,0 +1,19 @@
+{
+  "title": "File Operations",
+  "language": "linux",
+  "topic": "file_operations",
+  "content": "### touch — Create Empty Files or Update Timestamps\n\n```bash\ntouch newfile.txt\ntouch file1 file2 file3   # create multiple\n```\n\n### mkdir — Create Directories\n\n```bash\nmkdir mydir\nmkdir -p parent/child/grandchild   # create nested directories\n```\n\n### cp — Copy Files and Directories\n\n| Option | Purpose |\n|--------|---------|\n| `-r` | Recursive (copy directories) |\n| `-i` | Interactive (prompt before overwrite) |\n| `-v` | Verbose (show what's being copied) |\n| `-u` | Update (only copy newer files) |\n\n```bash\ncp file.txt backup.txt\ncp -r /src /dest\n```\n\n### mv — Move or Rename\n\n```bash\nmv oldname newname          # rename\nmv file.txt /tmp/           # move to directory\nmv -i source dest           # prompt before overwrite\n```\n\n### rm — Remove Files and Directories\n\n| Option | Purpose |\n|--------|---------|\n| `-r` | Recursive (delete directories) |\n| `-f` | Force (no confirmation) |\n| `-i` | Interactive (prompt each file) |\n\n```bash\nrm file.txt\nrm -rf tempdir/        # DANGEROUS — deletes without confirmation\n```\n\n### ln — Create Links\n\n```bash\nln file.txt hardlink       # hard link (same inode)\nln -s target symlink       # symbolic link (different inode)\n```\n\n### file — Determine File Type\n\n```bash\nfile document.pdf\nfile /bin/ls\n```",
+  "codeExample": "mkdir -p projects/website\ncp -v index.html projects/website/\nmv projects/website projects/site\nrm -i temp.txt\nfile /bin/bash",
+  "quiz": [
+    {
+      "question": "What does `mkdir -p a/b/c` do?",
+      "options": ["Creates nested directories a, b, and c", "Creates a single directory named a/b/c", "Creates a file named a/b/c", "Shows permissions of a/b/c"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the difference between `cp` and `mv`?",
+      "options": ["cp copies; mv moves or renames", "cp moves; mv copies", "cp deletes the original; mv keeps it", "They do the same thing"],
+      "correctIndex": 0
+    }
+  ]
+}

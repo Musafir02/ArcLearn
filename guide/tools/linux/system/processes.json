@@ -1,0 +1,19 @@
+{
+  "title": "Process Management",
+  "language": "linux",
+  "topic": "processes",
+  "content": "### ps — Process Snapshot\n\n```bash\nps aux                        # all processes (BSD style)\nps -ef                        # all processes (System V style)\nps aux --sort=-%mem           # sorted by memory usage\nps aux | grep nginx           # find specific process\n```\n\n### top / htop — Interactive Process Viewer\n\n```bash\ntop                           # real-time process list\nhtop                          # improved, color-coded version\n```\n\n- `P` — sort by CPU\n- `M` — sort by memory\n- `k` — kill a process\n- `q` — quit\n\n### kill — Terminate Processes\n\n```bash\nkill PID                      # send SIGTERM (graceful)\nkill -9 PID                   # send SIGKILL (force)\nkill -15 PID                  # explicit SIGTERM\nkill -l                       # list all signal names\n```\n\n### pgrep / pkill — Pattern-Based\n\n```bash\npgrep -u alice                # find PIDs by user\npkill -f \"node server\"        # kill based on full command line\npgrep -a ssh                  # show PIDs and command names\n```\n\n### Jobs — Background & Foreground\n\n```bash\ncommand &                      # run in background\nCtrl+Z                         # suspend current job\njobs                           # list background jobs\nbg %1                          # resume job 1 in background\nfg %1                          # bring job 1 to foreground\n```\n\n### nohup — Ignore Hangup\n\n```bash\nnohup long-running-script.sh &\n```\n\n### systemctl — systemd Service Manager\n\n```bash\nsystemctl start nginx\nsystemctl stop nginx\nsystemctl enable nginx        # start on boot\nsystemctl status nginx\nsystemctl restart nginx\nsystemctl --type=service --all  # list all services\n```",
+  "codeExample": "ps aux --sort=-%cpu | head -10\nhtop\nsleep 100 &\npgrep -a python3\nsystemctl status sshd",
+  "quiz": [
+    {
+      "question": "What signal does `kill -9` send?",
+      "options": ["SIGKILL (force immediate termination)", "SIGTERM (graceful termination)", "SIGSTOP (pause)", "SIGHUP (reload)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `systemctl enable nginx` do?",
+      "options": ["Configures nginx to start on boot", "Starts nginx immediately", "Installs nginx", "Checks nginx status"],
+      "correctIndex": 0
+    }
+  ]
+}

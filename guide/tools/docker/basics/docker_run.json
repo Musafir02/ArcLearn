@@ -1,0 +1,24 @@
+{
+  "title": "Docker Run",
+  "language": "docker",
+  "topic": "docker_run",
+  "content": "### The `docker run` Command\n\n`docker run` creates and starts a container from an image. It's the most frequently used Docker command.\n\n### Common Flags\n\n| Flag | Description |\n|---|---|\n| `-d` / `--detach` | Run container in background (detached mode) |\n| `--name` | Assign a name to the container |\n| `--rm` | Automatically remove container when it exits |\n| `-i` / `--interactive` | Keep STDIN open (used with -t) |\n| `-t` / `--tty` | Allocate a pseudo-TTY (used with -i) |\n\n### Basic Examples\n\n```bash\n# Run in foreground\ndocker run nginx\n\n# Run in background\ndocker run -d nginx\n\n# Run with a name\ndocker run -d --name my-nginx nginx\n\n# Interactive terminal (e.g., for a shell)\ndocker run -it ubuntu bash\n\n# Auto-remove after exit\ndocker run --rm -it ubuntu bash\n```\n\n### Managing Container State\n\n```bash\ndocker start my-nginx    # start a stopped container\ndocker stop my-nginx     # gracefully stop a running container\ndocker restart my-nginx  # restart a container\ndocker pause my-nginx    # pause all processes\ndocker unpause my-nginx  # unpause processes\n```\n\n### Restart Policies\n\nUse `--restart` to control automatic restart behavior:\n\n| Policy | Behavior |\n|---|---|\n| `no` | Never restart (default) |\n| `always` | Always restart unless explicitly stopped |\n| `unless-stopped` | Restart unless manually stopped |\n| `on-failure` | Restart only if container exits with non-zero code |\n\n```bash\ndocker run -d --restart always nginx\n```\n\n### Resource Limits\n\nControl CPU and memory usage:\n\n```bash\ndocker run -d --memory=512m --cpus=1.5 nginx\ndocker run -d --memory=256m --memory-swap=512m nginx\n```\n\n- `--memory` sets the hard memory limit\n- `--memory-swap` sets the total (memory + swap)\n- `--cpus` limits CPU cores (1.5 = one and a half cores)",
+  "codeExample": "docker run -d --name web --restart always --memory=512m --cpus=1 -p 8080:80 nginx",
+  "quiz": [
+    {
+      "question": "Which flag runs a container in the background?",
+      "options": ["-i", "-t", "-d", "--rm"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the `--restart always` policy do?",
+      "options": [
+        "Restarts the container only if it crashes",
+        "Always restarts the container even after manual stop",
+        "Always restarts the container unless manually stopped",
+        "Never restarts the container"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

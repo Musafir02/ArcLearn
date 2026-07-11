@@ -1,0 +1,24 @@
+{
+  "title": "Ports and Volumes",
+  "language": "docker",
+  "topic": "ports_volumes",
+  "content": "### Port Mapping\n\nMap a container port to a host port using `-p`:\n\n```bash\ndocker run -d -p 8080:80 nginx\n# Host port 8080 -> container port 80\n```\n\nYou can map multiple ports:\n\n```bash\ndocker run -d -p 8080:80 -p 443:443 nginx\n```\n\nBind to a specific interface:\n\n```bash\ndocker run -d -p 127.0.0.1:8080:80 nginx\n```\n\n### EXPOSE vs Publish\n\n- **EXPOSE** in a Dockerfile is documentation — it declares which ports the container listens on but does not publish them\n- **`-p` / `--publish`** actually makes ports accessible from the host\n- **`-P`** (capital P) publishes all exposed ports to random host ports\n\n### Volumes — Persisting Data\n\nContainers are ephemeral — data is lost when a container is removed. Volumes persist data.\n\n### Volume Types\n\n1. **Named volumes** — managed by Docker, stored in Docker's storage directory\n2. **Bind mounts** — map a host directory into the container\n3. **tmpfs mounts** — stored in memory only (fast, non-persistent)\n\n### Named Volumes\n\n```bash\ndocker volume create my-data\ndocker run -d -v my-data:/app/data nginx\n```\n\n### Bind Mounts\n\n```bash\ndocker run -d -v C:\\Users\\me\\project:/app nginx\n# On Linux:\ndocker run -d -v /home/user/project:/app nginx\n```\n\n### Docker Volume Commands\n\n```bash\ndocker volume ls\ndocker volume inspect my-data\ndocker volume prune\ndocker volume rm my-data\n```\n\n### --volumes-from\n\nShare volumes between containers:\n\n```bash\ndocker run -d --name db -v /data mysql\ndocker run -d --volumes-from db --name backup ubuntu tar czf /backup.tar.gz /data\n```\n\n### Data Persistence Best Practices\n\n- Use named volumes for persistent application data\n- Use bind mounts for development (hot-reloading code)\n- Keep databases in named volumes, never in the container writable layer\n- Use `--rm` for ephemeral containers to avoid clutter",
+  "codeExample": "docker volume create app-data\ndocker run -d -p 8080:80 -v app-data:/usr/share/nginx/html --name web nginx",
+  "quiz": [
+    {
+      "question": "What is the difference between EXPOSE in a Dockerfile and -p in docker run?",
+      "options": [
+        "They do the same thing",
+        "EXPOSE publishes the port, -p documents it",
+        "EXPOSE is documentation, -p actually publishes the port",
+        "EXPOSE is deprecated, -p is the modern way"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which volume type is best for persistent production data?",
+      "options": ["Bind mount", "tmpfs mount", "Named volume", "Container layer"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Images and Containers",
+  "language": "docker",
+  "topic": "images_containers",
+  "content": "### Docker Images\n\nA Docker image is a read-only template with instructions for creating a container. Images are built from layers, each representing a set of filesystem changes.\n\n### Pulling Images\n\nDownload an image from a registry:\n\n```bash\ndocker pull nginx:latest\ndocker pull python:3.11-slim\n```\n\n### Listing Images\n\nView all locally stored images:\n\n```bash\ndocker images\n# or\ndocker image ls\n```\n\nEach image has an **ID** (SHA256 hash), **repository**, **tag**, and **size**. Tags identify image versions — `nginx:latest`, `node:18-alpine`, `ubuntu:22.04`.\n\n### Docker Layers (UnionFS)\n\nDocker images are built in layers using union filesystems (OverlayFS). Each `RUN`, `COPY`, or `ADD` instruction creates a new layer. Layers are cached and reused across builds, making subsequent builds faster and saving disk space.\n\n### Removing Images\n\n```bash\ndocker rmi nginx:latest\ndocker image prune  # removes dangling images\n```\n\n### Container Lifecycle\n\nA container moves through these states:\n\n1. **Created** — Container is created but not running\n2. **Running** — Container process is active\n3. **Paused** — Processes are frozen\n4. **Stopped** — Container has exited\n5. **Removed** — Container is deleted\n\n```bash\ndocker create nginx          # create (but don't start)\ndocker start my_container     # start an existing container\ndocker stop my_container      # stop a running container\ndocker rm my_container        # remove a stopped container\n```\n\n### Container Lifecycle Shortcut\n\nFor most workflows, `docker run` combines create + start:\n\n```bash\ndocker run --name web -d nginx  # create + start in detached mode\n```",
+  "codeExample": "docker pull nginx:latest\ndocker images\ndocker run --name web -d nginx\ndocker stop web\ndocker rm web",
+  "quiz": [
+    {
+      "question": "What filesystem technology does Docker use for image layers?",
+      "options": ["EXT4", "NTFS", "UnionFS (OverlayFS)", "ZFS"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which command removes a Docker image from local storage?",
+      "options": ["docker delete", "docker remove", "docker rmi", "docker image delete"],
+      "correctIndex": 2
+    }
+  ]
+}

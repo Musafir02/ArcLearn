@@ -1,0 +1,19 @@
+{
+  "title": "Deployment Workflows",
+  "language": "cicd",
+  "topic": "deployment_workflows",
+  "content": "### Deployment Workflows\n\nDeployment workflows take the built artifact and push it to a target environment (staging, production). GitHub Actions provides several mechanisms for safe deployments.\n\n### Environment Protection Rules\n\nGitHub Environments enforce rules like required reviewers or a waiting period before deployment:\n\n```yaml\njobs:\n  deploy:\n    environment:\n      name: production\n      url: https://myapp.com\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo \"Deploying to production\"\n```\n\n### Deployment to Azure\n\n```yaml\n- name: Deploy to Azure Web App\n  uses: azure/webapps-deploy@v2\n  with:\n    app-name: my-app\n    slot-name: staging\n    publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}\n```\n\n### Deployment to AWS (ECS)\n\n```yaml\n- name: Deploy to Amazon ECS\n  uses: aws-actions/amazon-ecs-deploy-task-definition@v1\n  with:\n    task-definition: task-definition.json\n    service: my-service\n    cluster: my-cluster\n    wait-for-service-stability: true\n```\n\n### Deployment to GCP (Cloud Run)\n\n```yaml\n- name: Deploy to Cloud Run\n  uses: google-github-actions/deploy-cloudrun@v1\n  with:\n    service: my-service\n    image: gcr.io/my-project/my-image:latest\n```\n\n### Docker Build and Push\n\n```yaml\n- name: Build and Push Docker Image\n  uses: docker/build-push-action@v5\n  with:\n    context: .\n    push: true\n    tags: user/app:latest\n```\n\n### GitHub Pages Deployment\n\n```yaml\n- name: Deploy to GitHub Pages\n  uses: actions/deploy-pages@v4\n```\n\n### Full Deployment Workflow Example\n\n```yaml\nname: Deploy to Production\n\non:\n  push:\n    branches: [main]\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    environment: production\n    steps:\n      - uses: actions/checkout@v4\n      - name: Build Docker image\n        run: docker build -t my-app .\n      - name: Push to registry\n        run: docker push my-registry/my-app:latest\n      - name: Deploy\n        run: echo \"Deploy script goes here\"\n```",
+  "codeExample": "name: Deploy to Production\n\non:\n  push:\n    branches: [main]\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    environment:\n      name: production\n      url: https://example.com\n    steps:\n      - uses: actions/checkout@v4\n      - uses: docker/setup-buildx-action@v3\n      - uses: docker/build-push-action@v5\n        with:\n          push: true\n          tags: ghcr.io/myorg/myapp:latest\n      - run: echo \"Deployed!\"",
+  "quiz": [
+    {
+      "question": "What is the purpose of GitHub Environments in deployment workflows?",
+      "options": ["To define environment variables", "To enforce protection rules like required reviewers", "To run jobs on specific hardware", "To log deployment metrics"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which GitHub Action is commonly used to check out repository code?",
+      "options": ["actions/setup-node", "actions/checkout", "actions/cache", "actions/upload-artifact"],
+      "correctIndex": 1
+    }
+  ]
+}

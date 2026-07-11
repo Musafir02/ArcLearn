@@ -1,0 +1,19 @@
+{
+  "title": "Finding Files",
+  "language": "linux",
+  "topic": "finding_files",
+  "content": "### find — Search the Filesystem\n\nThe most powerful search tool.\n\n**By name:**\n\n```bash\nfind /home -name \"*.txt\"\nfind . -iname \"README*\"     # case-insensitive\nfind . -name \"[a-z]*.py\"    # glob pattern\n```\n\n**By type:**\n\n```bash\nfind . -type f               # regular files only\nfind . -type d               # directories\nfind . -type l               # symlinks\n```\n\n**By size and time:**\n\n```bash\nfind . -size +100M           # files larger than 100MB\nfind . -size -1k             # files smaller than 1KB\nfind . -mtime -7             # modified in last 7 days\nfind . -mmin +60             # modified more than 60 min ago\n```\n\n**Executing commands on results:**\n\n```bash\nfind . -name \"*.log\" -exec rm {} \\;\nfind . -type f -exec chmod 644 {} +\n```\n\n### locate / updatedb\n\nFast database-backed search (requires `mlocate` or `plocate`):\n\n```bash\nsudo updatedb           # update database\nlocate .bashrc          # instant search\n```\n\n### which — Locate a Command\n\n```bash\nwhich python3           # /usr/bin/python3\nwhich -a ls             # show all matches in PATH\n```\n\n### whereis — Find Binary, Source, and Man Page\n\n```bash\nwhereis ls              # /usr/bin/ls /usr/share/man/man1/ls.1.gz\n```\n\n### type — How Shell Interprets a Command\n\n```bash\ntype ls                 # ls is aliased to 'ls --color=auto'\ntype cd                 # cd is a shell builtin\ntype /bin/ls            # /bin/ls is /bin/ls\n```\n\n### fd — Modern Alternative to find\n\n```bash\nfd \"pattern\"            # fast, user-friendly\nfd -e py                # all .py files\n```",
+  "codeExample": "find /home -name \"*.txt\" -type f\nfind . -size +1M -exec ls -lh {} \\;\nlocate bashrc\nwhich python3\ntype cd\nfd -e pdf",
+  "quiz": [
+    {
+      "question": "How do you find all files modified in the last 7 days?",
+      "options": ["find . -mtime -7", "find . -size -7", "find . -name \"*7*\"", "find . -mmin -7"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `which python3` do?",
+      "options": ["Shows the path to the python3 executable", "Searches for Python 3 source files", "Runs Python 3", "Shows the man page for python3"],
+      "correctIndex": 0
+    }
+  ]
+}

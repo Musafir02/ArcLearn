@@ -1,0 +1,24 @@
+{
+  "title": "Getting Started with Docker",
+  "language": "docker",
+  "topic": "getstarted",
+  "content": "### Installing Docker Desktop\n\nDocker Desktop is the easiest way to get Docker running on your machine. It includes Docker Engine, Docker CLI, Docker Compose, and a GUI interface.\n\nDownload Docker Desktop from [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop) and install it for your operating system (Windows, macOS, or Linux).\n\n### Verifying the Installation\n\nAfter installation, open a terminal and verify Docker is working:\n\n```bash\ndocker --version\n```\n\nThis prints the installed Docker version. You can also get more detailed system information:\n\n```bash\ndocker info\n```\n\n### Hello World\n\nThe classic first step is running the hello-world container:\n\n```bash\ndocker run hello-world\n```\n\nThis command pulls the `hello-world` image from Docker Hub (if not cached locally) and runs it in a container that prints a welcome message and exits.\n\n### Docker Hub Account\n\nDocker Hub is the default public registry for container images. Create a free account at [hub.docker.com](https://hub.docker.com). You'll need it to:\n- Pull public images (like `nginx`, `node`, `python`)\n- Push your own images\n- Access private repositories\n\n### Docker Engine vs Docker Desktop\n\n- **Docker Engine**: The core server (daemon) and CLI — runs on Linux, typically installed via package managers\n- **Docker Desktop**: Includes Docker Engine plus a VM (on Windows/macOS), GUI dashboard, Kubernetes integration, and extra developer tools\n\nOn Windows and macOS, Docker Desktop runs the Docker Engine inside a lightweight VM since those OSes don't natively support Linux containers.",
+  "codeExample": "docker --version\ndocker run hello-world\ndocker info",
+  "quiz": [
+    {
+      "question": "Which command checks the installed Docker version?",
+      "options": ["docker version", "docker --version", "docker info", "docker check"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does Docker Desktop use a VM on Windows and macOS?",
+      "options": [
+        "To improve performance",
+        "Because those OSes don't natively support Linux containers",
+        "To run Windows containers",
+        "For security isolation"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

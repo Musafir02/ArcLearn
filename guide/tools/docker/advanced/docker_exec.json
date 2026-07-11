@@ -1,0 +1,29 @@
+{
+  "title": "Docker Exec",
+  "language": "docker",
+  "topic": "docker_exec",
+  "content": "### What is docker exec?\n\n`docker exec` runs a command inside a running container. It's the primary way to interact with containers without modifying the Dockerfile or rebuilding.\n\n### Basic Usage\n\n```bash\ndocker exec my-container ls -la /app\ndocker exec my-container cat /etc/nginx/nginx.conf\n```\n\n### Interactive Shell\n\nOpen a shell inside a running container:\n\n```bash\ndocker exec -it my-container sh\ndocker exec -it my-container bash   # if bash is available\ndocker exec -it my-container /bin/sh\n```\n\n- `-i` keeps STDIN open (allows typing input)\n- `-t` allocates a pseudo-TTY (proper terminal)\n\n### Running as a Different User\n\n```bash\ndocker exec -u root my-container whoami\ndocker exec -u 1000 my-container touch /app/test.txt\n```\n\n### Setting Environment Variables\n\n```bash\ndocker exec -e MY_VAR=value my-container env\ndocker exec -it -e TERM=xterm my-container bash\n```\n\n### Working Directory\n\n```bash\ndocker exec -w /var/log my-container ls\n```\n\n### Debugging Containers\n\nCommon debugging tasks:\n\n```bash\n# Check running processes\ndocker exec my-container ps aux\n\n# Check network connectivity\ndocker exec my-container ping google.com\ndocker exec my-container curl http://localhost:8080/health\n\n# View environment variables\ndocker exec my-container env\n\n# Check resource usage inside container\ndocker exec my-container cat /sys/fs/cgroup/memory/memory.usage_in_bytes\n```\n\n### exec vs attach\n\n| Command | Purpose |\n|---|---|\n| `docker exec` | Run a **new** command in a running container |\n| `docker attach` | Connect to the **main** process of a running container |\n\n`docker attach` attaches your terminal to the container's main process (PID 1). If you detach (Ctrl+P, Ctrl+Q), the container keeps running. If you exit, the main process terminates and the container stops.\n\n`docker exec` is generally more useful for debugging — it doesn't interfere with the main process.",
+  "codeExample": "docker exec -it my-container bash\ndocker exec my-container ls -la /app\ndocker exec -u root my-container apt-get update\ndocker exec my-container cat /var/log/app.log",
+  "quiz": [
+    {
+      "question": "What does `docker exec -it my-container bash` do?",
+      "options": [
+        "Starts a new container running bash",
+        "Opens an interactive bash shell inside a running container",
+        "Replaces the main process with bash",
+        "Attaches to the container's main process"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does docker exec differ from docker attach?",
+      "options": [
+        "They are the same",
+        "exec runs a new command, attach connects to the main process",
+        "attach runs a new command, exec connects to the main process",
+        "exec can only run non-interactive commands"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

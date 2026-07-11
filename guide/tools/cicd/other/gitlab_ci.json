@@ -1,0 +1,19 @@
+{
+  "title": "GitLab CI/CD",
+  "language": "cicd",
+  "topic": "gitlab_ci",
+  "content": "### GitLab CI/CD\n\nGitLab CI is GitLab's built-in CI/CD system. It is configured with a `.gitlab-ci.yml` file at the root of your repository.\n\n### `.gitlab-ci.yml` Structure\n\n```yaml\nstages:\n  - build\n  - test\n  - deploy\n\nbuild-job:\n  stage: build\n  script:\n    - echo \"Building...\"\n    - npm install\n    - npm run build\n\ntest-job:\n  stage: test\n  script:\n    - npm test\n\ndeploy-job:\n  stage: deploy\n  script:\n    - echo \"Deploying...\"\n```\n\n### Stages\n\nJobs are grouped into **stages**. All jobs in a stage run in parallel. The next stage starts only when all jobs in the current stage succeed.\n\n### Jobs\n\nEach job has a unique name and belongs to a stage. Jobs define what commands to run and can specify additional configuration.\n\n### `before_script`\n\nCommands that run before every job or all jobs in a pipeline:\n\n```yaml\nbefore_script:\n  - npm ci\n  - echo \"Running on $CI_RUNNER_EXECUTABLE_ARCH\"\n```\n\n### Artifacts\n\nFiles and directories passed between stages:\n\n```yaml\nbuild-job:\n  stage: build\n  artifacts:\n    paths:\n      - dist/\n    expire_in: 1 week\n```\n\n### Cache\n\nReuse dependency directories across pipelines to speed up builds:\n\n```yaml\ncache:\n  key: $CI_COMMIT_REF_SLUG\n  paths:\n    - node_modules/\n```\n\n### GitLab Runners\n\nRunners execute CI jobs. GitLab offers shared runners (free tier with limits) and you can install your own specific runners on any machine.\n\n### Docker Execution\n\nJobs can run inside Docker containers:\n\n```yaml\nbuild-job:\n  image: node:20\n  script:\n    - npm ci\n    - npm run build\n```\n\n### Key Differences from GitHub Actions\n\n- Uses `stages` with sequential progression\n- Jobs in same stage run in parallel\n- `.gitlab-ci.yml` at repository root (not `.github/workflows/`)\n- Built-in container registry and artifact management",
+  "codeExample": "stages:\n  - build\n  - test\n  - deploy\n\nvariables:\n  NODE_ENV: production\n\nbefore_script:\n  - npm ci\n\ncache:\n  key: ${CI_COMMIT_REF_SLUG}\n  paths:\n    - node_modules/\n\nbuild:\n  stage: build\n  image: node:20\n  script:\n    - npm run build\n  artifacts:\n    paths:\n      - dist/\n\ntest:\n  stage: test\n  image: node:20\n  script:\n    - npm test\n\ndeploy:\n  stage: deploy\n  image: alpine:latest\n  script:\n    - echo \"Deploying application\"\n  only:\n    - main",
+  "quiz": [
+    {
+      "question": "What file configures GitLab CI/CD pipelines?",
+      "options": [".github/workflows/ci.yml", ".gitlab-ci.yml", "gitlab-ci.yaml", "ci-config.yml"],
+      "correctIndex": 1
+    },
+    {
+      "question": "In GitLab CI, when does the next stage begin?",
+      "options": ["Immediately after any job finishes", "Only when all jobs in the current stage succeed", "When a manual trigger is clicked", "After a timeout"],
+      "correctIndex": 1
+    }
+  ]
+}

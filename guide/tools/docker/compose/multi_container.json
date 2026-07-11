@@ -1,0 +1,29 @@
+{
+  "title": "Multi-Container Applications",
+  "language": "docker",
+  "topic": "multi_container",
+  "content": "### Multi-Service Architecture\n\nReal applications rarely run in a single container. Common patterns:\n\n- **Web + Database**: Frontend/API server + PostgreSQL/MySQL\n- **Web + Cache + DB**: Add Redis for caching\n- **App + Queue + Worker**: Background job processing\n\n### Example: Web + Database + Cache\n\n```yaml\nservices:\n  app:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      DB_URL: postgres://user:pass@db:5432/app\n      REDIS_URL: redis://cache:6379\n    depends_on:\n      - db\n      - cache\n\n  db:\n    image: postgres:15\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n    environment:\n      POSTGRES_PASSWORD: secret\n\n  cache:\n    image: redis:7-alpine\n\nvolumes:\n  pgdata:\n```\n\n### depends_on with Conditions\n\nBy default, `depends_on` only waits for containers to start, not for services to be ready. Use `condition` for stronger guarantees:\n\n```yaml\ndepends_on:\n  db:\n    condition: service_healthy\n```\n\nYou'll need a healthcheck on the dependency.\n\n### Service Discovery\n\nContainers in the same Compose network can reach each other using the service name as the hostname. In the example above, `app` connects to `db:5432` and `cache:6379`. Docker's built-in DNS resolves service names to container IPs.\n\n### Init Container Pattern\n\nUse a separate service for initialization tasks (migrations, seed data):\n\n```yaml\nservices:\n  db:\n    image: postgres:15\n\n  migrate:\n    build: .\n    command: npm run migrate\n    depends_on:\n      db:\n        condition: service_healthy\n    restart: \"no\"  # run once and exit\n\n  app:\n    build: .\n    depends_on:\n      - db\n```\n\nRun the init service separately:\n\n```bash\ndocker compose run --rm migrate\n```",
+  "codeExample": "services:\n  app:\n    build: .\n    environment:\n      DB_URL: postgres://user:pass@db:5432/app\n    depends_on:\n      db:\n        condition: service_healthy\n  db:\n    image: postgres:15\n    healthcheck:\n      test: [\"CMD-SHELL\", \"pg_isready\"]\n      interval: 5s\n      timeout: 5s",
+  "quiz": [
+    {
+      "question": "How do containers in the same Compose network discover each other?",
+      "options": [
+        "By IP address only",
+        "By service name (DNS resolution)",
+        "By container ID",
+        "By environment variable"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does `depends_on` with `condition: service_healthy` guarantee?",
+      "options": [
+        "The container is built before others",
+        "The container is running and its healthcheck passes",
+        "The container has network access",
+        "The container has all environment variables set"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

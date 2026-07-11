@@ -1,0 +1,19 @@
+{
+  "title": "Linux & Bash CLI Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "File System", "folder": "filesystem",
+      "topics": ["navigation", "file_operations", "permissions", "finding_files", "symlinks"]
+    },
+    {
+      "type": "group", "title": "Text & Editors", "folder": "text",
+      "topics": ["cat_echo", "grep_sed", "vim_nano", "redirection_pipes", "sort_uniq_wc"]
+    },
+    {
+      "type": "group", "title": "System & Shell", "folder": "system",
+      "topics": ["processes", "package_managers", "environment_vars", "bash_scripting", "cron_jobs"]
+    }
+  ]
+}

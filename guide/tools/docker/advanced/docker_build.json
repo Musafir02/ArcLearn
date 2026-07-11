@@ -1,0 +1,24 @@
+{
+  "title": "Docker Build",
+  "language": "docker",
+  "topic": "docker_build",
+  "content": "### docker build\n\nBuild an image from a Dockerfile:\n\n```bash\ndocker build -t my-app:latest .\n```\n\n### Common Flags\n\n| Flag | Description |\n|---|---|\n| `-t, --tag` | Name and tag the image (`name:tag`) |\n| `-f, --file` | Path to Dockerfile (default: `./Dockerfile`) |\n| `--no-cache` | Disable layer caching |\n| `--target` | Build a specific multi-stage target |\n\n### Build Context\n\nThe last argument (`.` in the example) is the **build context** — the directory sent to the Docker daemon. Only files within the context are available for `COPY` and `ADD` instructions.\n\n```bash\ndocker build -t my-app -f docker/Dockerfile .\n```\n\n### BuildKit\n\nBuildKit is Docker's modern build backend (enabled by default in recent versions). It provides:\n\n- **Better performance**: Parallel builds, efficient layer caching\n- **--progress**: `auto`, `plain`, or `tty` output format\n\n```bash\ndocker build --progress=plain -t my-app .\n```\n\n- **--secret**: Pass secrets without baking them into the image\n\n```bash\necho \"my-token\" | docker build --secret id=mytoken -t my-app .\n```\n\nDockerfile:\n```dockerfile\nRUN --mount=type=secret,id=mytoken cat /run/secrets/mytoken\n```\n\n- **--ssh**: Forward SSH agent to build\n\n```bash\ndocker build --ssh default -t my-app .\n```\n\n### Buildx — Multi-Platform Builds\n\nBuild images for multiple architectures:\n\n```bash\ndocker buildx create --use\ndocker buildx build --platform linux/amd64,linux/arm64 -t my-app:latest --push .\n```\n\nThis enables building for ARM from an x86 machine (using QEMU emulation).",
+  "codeExample": "docker build -t my-app:latest .\ndocker build --no-cache -t my-app:latest .\ndocker build --progress=plain --secret id=token,src=./token.txt -t my-app .",
+  "quiz": [
+    {
+      "question": "What is the build context in a docker build command?",
+      "options": [
+        "The Dockerfile path",
+        "The directory sent to the Docker daemon for the build",
+        "The target registry",
+        "The base image"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which BuildKit flag passes a secret during build without storing it in the image?",
+      "options": ["--secret", "--env", "--arg", "--private"],
+      "correctIndex": 0
+    }
+  ]
+}

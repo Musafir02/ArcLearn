@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Linux & Bash",
+  "language": "linux",
+  "topic": "intro",
+  "content": "### What is Linux?\n\nLinux is a free, open-source Unix-like operating system kernel created by Linus Torvalds in 1991. It powers servers, desktops, Android, and embedded devices worldwide.\n\n### The Shell (Bash)\n\nBash (Bourne Again SHell) is the most common command-line interpreter on Linux. It reads commands and executes them, providing scripting capabilities.\n\n### Terminal vs Console\n\n- **Terminal**: A graphical program that emulates a text-based terminal window (e.g., GNOME Terminal, xterm)\n- **Console**: The physical/virtual text-based interface (Ctrl+Alt+F1-F6 on most distros)\n\n### Linux Philosophy\n\n- Everything is a file\n- Small, single-purpose programs that chain together\n- Store data in plain text files\n- Avoid captive user interfaces\n\n### Filesystem Hierarchy\n\n| Path | Purpose |\n|------|---------|\n| `/` | Root directory, top of the tree |\n| `/home` | User home directories |\n| `/etc` | System configuration files |\n| `/var` | Variable data (logs, spools) |\n| `/usr` | User-installed programs and libraries |\n| `/tmp` | Temporary files (cleared on reboot) |\n\n### Root vs Sudo\n\n- **Root**: The superuser account with unrestricted system access\n- **Sudo**: `sudo command` runs a command with root privileges temporarily\n- Best practice: use `sudo` instead of logging in as root",
+  "codeExample": "whoami\nid\nsudo whoami\nls /\ncat /etc/os-release",
+  "quiz": [
+    {
+      "question": "What does the /etc directory contain?",
+      "options": ["System configuration files", "User home directories", "Temporary files", "Installed programs"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the difference between root and sudo?",
+      "options": ["sudo runs a command as root temporarily; root is always logged in as superuser", "root is a file, sudo is a directory", "They are the same thing", "sudo is only for Debian systems"],
+      "correctIndex": 0
+    }
+  ]
+}

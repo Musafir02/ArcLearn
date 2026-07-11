@@ -1,0 +1,19 @@
+{
+  "title": "Navigating the Filesystem",
+  "language": "linux",
+  "topic": "navigation",
+  "content": "### pwd — Print Working Directory\n\nShows your current location in the filesystem.\n\n```bash\npwd\n# /home/user/projects\n```\n\n### ls — List Directory Contents\n\n| Option | Effect |\n|--------|--------|\n| `-l` | Long format (permissions, size, date) |\n| `-a` | Show hidden files (starting with `.`) |\n| `-h` | Human-readable sizes (KB, MB, GB) |\n| `-R` | Recursive listing |\n| `-t` | Sort by modification time |\n| `-S` | Sort by file size |\n\n### cd — Change Directory\n\n| Expression | Meaning |\n|------------|---------|\n| `cd /etc` | Go to absolute path |\n| `cd ..` | Go up one directory |\n| `cd -` | Go to previous directory |\n| `cd ~` or `cd` | Go to home directory |\n\n### pushd / popd — Directory Stack\n\n```bash\npushd /var/log   # switch and push to stack\npushd /tmp       # switch again\npopd             # go back to /var/log\npopd             # go back to original\n```\n\n### tree — Visual Directory Tree\n\n```bash\ntree -L 2 /etc   # show 2 levels deep\n```\n\n### realpath — Resolve Symlinks\n\n```bash\nrealpath ~/..\n# /home\n```",
+  "codeExample": "pwd\nls -lah /home\ncd /tmp\npushd /var/log\npwd\npopd\ntree -L 1 /etc",
+  "quiz": [
+    {
+      "question": "What does `cd -` do?",
+      "options": ["Takes you to the previous directory", "Takes you to the root directory", "Takes you to the home directory", "Goes up one directory"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which ls option shows hidden files?",
+      "options": ["-a", "-l", "-h", "-R"],
+      "correctIndex": 0
+    }
+  ]
+}

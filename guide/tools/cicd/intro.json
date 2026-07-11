@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to CI/CD",
+  "language": "cicd",
+  "topic": "intro",
+  "content": "### What is CI/CD?\n\n**CI/CD** stands for **Continuous Integration** and **Continuous Delivery/Deployment**. It is a modern software engineering practice that automates the building, testing, and deployment of applications.\n\n### Continuous Integration (CI)\n\nCI is the practice of automatically building and testing every code change when it is pushed to a shared repository. Developers integrate code frequently — often multiple times a day — and each integration is verified by an automated build and test suite.\n\n**Key CI practices:**\n- Frequent code commits to a shared branch\n- Automated build on every push\n- Automated test execution (unit, integration, lint)\n- Fast feedback on broken code\n\n### Continuous Delivery vs Continuous Deployment\n\n**Continuous Delivery (CD)** extends CI by ensuring the code is always in a deployable state. The release process is automated, but a manual approval step triggers the deployment to production.\n\n**Continuous Deployment** takes it further — every change that passes all stages of the pipeline is automatically deployed to production with no manual intervention.\n\n### CI/CD Pipeline\n\nA pipeline is a series of automated steps that code goes through from commit to deployment. A typical pipeline looks like:\n\n1. **Source** — Code is pushed to a repository\n2. **Build** — Application is compiled or bundled\n3. **Test** — Automated tests run (unit, integration, e2e)\n4. **Deploy** — Code is deployed to staging or production\n5. **Monitor** — Application health and performance are observed\n\n### Benefits of CI/CD\n\n- **Early bug detection** — Tests run on every commit, catching issues immediately\n- **Faster releases** — Automated pipelines remove manual bottlenecks\n- **Reduced risk** — Smaller, incremental changes are easier to debug and roll back\n- **Developer productivity** — Less time spent on manual builds and deployments\n- **Consistency** — Every change goes through the same standardized process\n\n### Key Concepts\n\n| Concept | Description |\n|---------|-------------|\n| **Build** | Compile source code into an executable or deployable artifact |\n| **Test** | Run automated tests to validate the build |\n| **Deploy** | Push the artifact to a target environment |\n| **Artifact** | The output of a build (JAR, Docker image, ZIP) |\n| **Runner** | An agent that executes pipeline jobs |\n| **Stage** | A logical phase in the pipeline (build, test, deploy) |",
+  "codeExample": "stages:\n  - build\n  - test\n  - deploy\n\nbuild-job:\n  stage: build\n  script:\n    - npm install\n    - npm run build\n\ntest-job:\n  stage: test\n  script:\n    - npm test",
+  "quiz": [
+    {
+      "question": "What does CI stand for in CI/CD?",
+      "options": ["Continuous Integration", "Code Integration", "Continuous Improvement", "Compiled Integration"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the key difference between Continuous Delivery and Continuous Deployment?",
+      "options": ["Continuous Deployment requires manual approval for production", "Continuous Delivery requires manual approval for production", "Continuous Delivery skips automated testing", "Continuous Deployment only works with Docker"],
+      "correctIndex": 1
+    }
+  ]
+}

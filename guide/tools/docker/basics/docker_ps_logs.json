@@ -1,0 +1,19 @@
+{
+  "title": "Listing Containers and Viewing Logs",
+  "language": "docker",
+  "topic": "docker_ps_logs",
+  "content": "### docker ps — Listing Containers\n\n`docker ps` lists running containers. Common variants:\n\n```bash\ndocker ps              # running containers only\ndocker ps -a           # all containers (including stopped)\ndocker ps -q           # quiet mode — only container IDs\ndocker ps -l           # latest created container\n```\n\n### Filtering and Formatting\n\n```bash\n# Filter by status\ndocker ps -a --filter \"status=exited\"\ndocker ps --filter \"name=web\"\n\n# Custom format\ndocker ps --format \"table {{.Names}}\\t{{.Status}}\\t{{.Ports}}\"\ndocker ps --format \"json\"\n```\n\n### docker logs — Viewing Logs\n\n```bash\ndocker logs my-container          # all logs\ndocker logs -f my-container       # follow (tail -f style)\ndocker logs --tail 100 my-container  # last 100 lines\ndocker logs --timestamps my-container  # with timestamps\ndocker logs --since 5m my-container    # last 5 minutes\n```\n\n### docker stats — Live Resource Usage\n\nShows real-time CPU, memory, network, and disk I/O for running containers:\n\n```bash\ndocker stats\ndocker stats my-container\ndocker stats --no-stream  # single shot, no live feed\n```\n\n### docker top — Processes Inside a Container\n\n```bash\ndocker top my-container\ndocker top my-container aux  # with aux flags\n```\n\n### docker inspect — Detailed Metadata\n\nReturns JSON with full configuration, network settings, mount points, etc.:\n\n```bash\ndocker inspect my-container\ndocker inspect my-container | grep IPAddress\n\n# Extract specific fields with --format\ndocker inspect --format '{{.State.Status}}' my-container\ndocker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-container\n```",
+  "codeExample": "docker ps -a --filter \"status=exited\"\ndocker logs -f --tail 50 my-container\ndocker stats --no-stream\ndocker inspect --format '{{.State.Status}}' my-container",
+  "quiz": [
+    {
+      "question": "Which command shows all containers including stopped ones?",
+      "options": ["docker ps", "docker ps -a", "docker ps -q", "docker ps -l"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you follow log output from a container in real time?",
+      "options": ["docker logs --live", "docker logs -f", "docker logs --stream", "docker logs --real"],
+      "correctIndex": 1
+    }
+  ]
+}

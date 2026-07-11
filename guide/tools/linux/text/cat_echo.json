@@ -1,0 +1,19 @@
+{
+  "title": "cat, echo, head, tail & Pagers",
+  "language": "linux",
+  "topic": "cat_echo",
+  "content": "### cat — Concatenate and Display\n\n```bash\ncat file.txt                # display file\ncat file1 file2 > merged    # concatenate files\ncat -n file.txt             # number all lines\ncat -b file.txt             # number non-blank lines\n```\n\n### echo — Print Text\n\n```bash\necho \"Hello World\"\necho -n \"No newline\"        # suppress trailing newline\necho -e \"tab\\there\"         # interpret escape sequences\n```\n\n### printf — Formatted Print\n\n```bash\nprintf \"Name: %s\\nAge: %d\\n\" \"Alice\" 30\n```\n\n### tac — Reverse cat\n\n```bash\ntac file.txt                # display file in reverse line order\n```\n\n### nl — Number Lines\n\n```bash\nnl file.txt                 # numbered lines (more options than cat -n)\n```\n\n### head / tail\n\n```bash\nhead -20 file.txt           # first 20 lines\nhead -n -5 file.txt         # all except last 5 lines\ntail -20 file.txt           # last 20 lines\ntail -f /var/log/syslog     # follow (watch live updates)\ntail -n +10 file.txt        # from line 10 to end\n```\n\n### less / more — Pagers\n\n```bash\nless file.txt               # scrollable viewer (q to quit)\nless -N file.txt            # with line numbers\nmore file.txt               # simpler pager (space for next page)\n```\n\n### Common Patterns\n\n```bash\ntail -100f access.log       # watch last 100 lines of a log\ncat file.txt | head -5      # pipe to head\n```",
+  "codeExample": "cat -n /etc/passwd | head -10\necho \"Home: $HOME\"\nprintf \"%-10s %s\\n\" \"User\" \"Shell\"\ntail -f /var/log/syslog &\nless /etc/os-release",
+  "quiz": [
+    {
+      "question": "What does `tail -f` do?",
+      "options": ["Follows a file and shows new lines as they're written", "Shows only the first few lines", "Searches for a pattern in a file", "Reverses the file content"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the difference between `cat` and `tac`?",
+      "options": ["tac displays lines in reverse order", "tac uses tabs instead of spaces", "cat can only display one file", "tac is a text editor"],
+      "correctIndex": 0
+    }
+  ]
+}

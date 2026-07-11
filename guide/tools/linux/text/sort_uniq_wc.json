@@ -1,0 +1,19 @@
+{
+  "title": "sort, uniq, wc & Text Utilities",
+  "language": "linux",
+  "topic": "sort_uniq_wc",
+  "content": "### sort — Sort Lines\n\n| Option | Purpose |\n|--------|---------|\n| `-n` | Numeric sort |\n| `-r` | Reverse order |\n| `-k` | Sort by column/field |\n| `-t` | Field separator |\n| `-u` | Unique (same as sort then uniq) |\n| `-h` | Human-readable sizes (K, M, G) |\n\n```bash\nsort file.txt\nsort -n numbers.txt\nsort -t: -k3 -n /etc/passwd    # sort by 3rd field (UID)\ndu -h | sort -rh               # sort by size\n```\n\n### uniq — Filter Repeated Lines\n\nRequires sorted input (or use `sort -u`).\n\n```bash\nuniq file.txt                  # remove adjacent duplicates\nuniq -c file.txt               # count occurrences\nuniq -d file.txt               # only show duplicates\nuniq -u file.txt               # only show unique lines\n```\n\n### wc — Word Count\n\n```bash\nwc file.txt                    # lines, words, bytes\nwc -l file.txt                 # line count\nwc -w file.txt                 # word count\nwc -c file.txt                 # byte count\nwc -m file.txt                 # character count (multibyte)\n```\n\n### cut — Extract Columns\n\n```bash\ncut -d: -f1,3 /etc/passwd     # fields 1 and 3, colon delimiter\ncut -c1-10 file.txt            # characters 1-10\n```\n\n### tr — Translate Characters\n\n```bash\ntr '[:lower:]' '[:upper:]' < file.txt\ntr -d ' ' < file.txt           # delete spaces\ntr -s '\\n' < file.txt          # squeeze repeated newlines\ntr ',' '\\t' < data.csv         # replace comma with tab\n```\n\n### diff — Compare Files\n\n```bash\ndiff file1 file2\ndiff -u file1 file2            # unified format (for patches)\n```\n\n### comm — Compare Sorted Files\n\n```bash\ncomm file1 file2               # 3-column output: file1-only, file2-only, common\ncomm -12 file1 file2           # only lines common to both\n```",
+  "codeExample": "sort -t: -k3 -n /etc/passwd | head\nps aux | awk '{print $11}' | sort | uniq -c | sort -rn | head\nwc -l *.py\ncut -d: -f1 /etc/passwd | sort\necho \"hello world\" | tr 'a-z' 'A-Z'",
+  "quiz": [
+    {
+      "question": "What does `uniq -c` do?",
+      "options": ["Prefixes each line with its occurrence count", "Shows only duplicate lines", "Shows only unique lines", "Removes all duplicate lines"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `wc -l` count?",
+      "options": ["Number of lines", "Number of words", "Number of characters", "Number of bytes"],
+      "correctIndex": 0
+    }
+  ]
+}

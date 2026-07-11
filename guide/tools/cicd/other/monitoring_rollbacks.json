@@ -1,0 +1,19 @@
+{
+  "title": "Monitoring and Rollbacks",
+  "language": "cicd",
+  "topic": "monitoring_rollbacks",
+  "content": "### Post-Deployment Monitoring\n\nDeploying is only half the battle. Monitoring ensures the new version operates correctly in production.\n\n### Key Metrics to Monitor\n\n| Metric | What It Tells You |\n|--------|-------------------|\n| **Error rate** | HTTP 5xx responses, exceptions |\n| **Latency** | Request response time (p50, p95, p99) |\n| **Throughput** | Requests per second |\n| **CPU/Memory** | Resource utilization |\n| **Business metrics** | signups, orders, conversions |\n\n### Health Checks\n\nExpose a health endpoint that returns the application status:\n\n```python\n@app.get(\"/health\")\ndef health():\n    return {\n        \"status\": \"ok\",\n        \"version\": os.environ.get(\"APP_VERSION\"),\n        \"db\": check_database()\n    }\n```\n\n### Automated Rollback\n\nWhen health checks fail or error rates spike, trigger an automated rollback:\n\n```yaml\n# Conceptual rollback pipeline\n- name: Health check\n  run: |\n    for i in 1 2 3 4 5; do\n      STATUS=$(curl -s -o /dev/null -w \"%{http_code}\" $URL)\n      if [ \"$STATUS\" -ne 200 ]; then\n        echo \"Health check failed - rolling back\"\n        # trigger rollback script\n        exit 1\n      fi\n      sleep 10\n    done\n```\n\n### Rollback Strategies\n\n#### Git Revert\n\nRevert the code change in version control:\n\n```bash\ngit revert HEAD~1\n```\n\n#### Docker Tags\n\nRe-deploy the previous Docker image tag:\n\n```yaml\n# Kubernetes: revert to previous image\nkubectl set image deployment/myapp \\\n  myapp=myapp:v1.0.0\n```\n\n#### Database Migrations\n\nMaintain backward-compatible migrations (additive changes only) so rollbacks don't break:\n\n```sql\n-- Create new column (safe - won't break old code)\nALTER TABLE users ADD COLUMN display_name text;\n\n-- Drop column (dangerous - revert may fail)\n-- Avoid: DROP COLUMN old_column\n```\n\n### Alerting\n\nSet up alerts for critical conditions:\n\n- **PagerDuty** / **Opsgenie** — on-call notifications\n- **Slack** — team channel updates\n- **Email** — fallback notification\n\n### Runbook\n\nDocument rollback procedures so any engineer can perform them:\n\n```markdown\n# Rollback Runbook\n\n1. Identify the failing version: git log --oneline -5\n2. Revert the change: git revert <hash>\n3. Push revert: git push origin main\n4. Monitor pipeline: verify re-deployment succeeds\n5. Confirm fix: check health dashboard\n```",
+  "codeExample": "#!/bin/bash\n# monitor_and_rollback.sh\n\nDEPLOY_URL=\"https://api.example.com/health\"\nROLLBACK_VERSION=\"v1.0.0\"\n\nfor i in {1..10}; do\n  HTTP_CODE=$(curl -s -o /dev/null -w \"%{http_code}\" $DEPLOY_URL)\n  if [ \"$HTTP_CODE\" != \"200\" ]; then\n    echo \"Deploy failed (HTTP $HTTP_CODE). Rolling back to $ROLLBACK_VERSION\"\n    kubectl set image deployment/myapp \\\n      myapp=myapp:$ROLLBACK_VERSION\n    exit 1\n  fi\n  sleep 5\ndone\n\necho \"Deployment healthy\"",
+  "quiz": [
+    {
+      "question": "What is the recommended approach for database migrations to support safe rollbacks?",
+      "options": ["Drop old columns immediately", "Use additive changes that are backward-compatible", "Delete unused tables", "Use a separate database for rollbacks"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which HTTP status code range typically indicates a healthy endpoint?",
+      "options": ["4xx", "5xx", "2xx", "3xx"],
+      "correctIndex": 2
+    }
+  ]
+}

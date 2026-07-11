@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with the Terminal",
+  "language": "linux",
+  "topic": "getstarted",
+  "content": "### Opening the Terminal\n\n- **Ubuntu/Debian**: Ctrl+Alt+T or search \"Terminal\"\n- **macOS**: Cmd+Space, type \"Terminal\"\n- **General**: Ctrl+Alt+F1-F6 for TTY consoles\n\n### Command Structure\n\nCommands follow this pattern:\n\n```\ncommand -options arguments\n```\n\n- `ls -la /home` — list all files in /home with details\n- `cp -r src dest` — copy recursively\n\n### Getting Help\n\n| Command | Description |\n|---------|-------------|\n| `man ls` | Full manual page for `ls` |\n| `whatis ls` | One-line description |\n| `apropos keyword` | Search man pages by keyword |\n| `ls --help` | Quick usage summary |\n\n### TAB Completion\n\nPress TAB while typing to auto-complete commands, file paths, and arguments. Double-TAB shows all matches.\n\n### Command History\n\n- `history` — show command history\n- `!!` — repeat last command\n- `!$` — last argument of previous command\n- `!100` — repeat command #100 from history\n- Ctrl+R — reverse search through history",
+  "codeExample": "man ls\nls --help | head\nwhatis cp\necho hello\nhistory | tail -5",
+  "quiz": [
+    {
+      "question": "How do you view the full manual for the ls command?",
+      "options": ["man ls", "ls --help", "whatis ls", "apropos ls"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does pressing TAB twice do in the terminal?",
+      "options": ["Shows all matching completions", "Executes the command", "Clears the screen", "Exits the terminal"],
+      "correctIndex": 0
+    }
+  ]
+}

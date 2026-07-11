@@ -1,0 +1,19 @@
+{
+  "title": "Jenkins Basics",
+  "language": "cicd",
+  "topic": "jenkins_basics",
+  "content": "### Jenkins\n\nJenkins is a self-hosted, open-source automation server with extensive plugin support for building, testing, and deploying software.\n\n### Jenkins Installation\n\nJenkins can be installed via:\n\n```bash\n# Windows\n# Download the installer from jenkins.io\n\n# macOS\nbrew install jenkins-lts\n\n# Linux (Debian/Ubuntu)\nwget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -\napt-get install jenkins\n\n# Docker\ndocker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts\n```\n\n### Jenkinsfile (Declarative Pipeline)\n\nA `Jenkinsfile` is a text file defining a Jenkins pipeline. It lives in the root of the repository.\n\n```groovy\npipeline {\n    agent any\n\n    stages {\n        stage('Build') {\n            steps {\n                echo 'Building...'\n            }\n        }\n        stage('Test') {\n            steps {\n                echo 'Testing...'\n            }\n        }\n        stage('Deploy') {\n            steps {\n                echo 'Deploying...'\n            }\n        }\n    }\n}\n```\n\n### Stages and Parallel Execution\n\nStages run sequentially by default. Use `parallel` to run stages concurrently:\n\n```groovy\nstage('Parallel Tests') {\n    parallel {\n        stage('Unit Tests') {\n            steps { sh 'npm run test:unit' }\n        }\n        stage('Integration Tests') {\n            steps { sh 'npm run test:integration' }\n        }\n    }\n}\n```\n\n### Plugins\n\nJenkins has over 1,800 plugins. Essential ones include:\n- **Git Plugin** — source control integration\n- **Pipeline Plugin** — pipeline as code\n- **Docker Plugin** — Docker build and run\n- **Blue Ocean** — modern pipeline UI\n- **Kubernetes Plugin** — dynamic agents on Kubernetes\n\n### Agents\n\nAn **agent** is a machine (or container) that executes pipeline jobs. The master distributes work to agents.\n\n```groovy\npipeline {\n    agent { label 'linux' }\n    stages {\n        stage('Build') {\n            agent { docker 'node:20' }\n            steps {\n                sh 'npm install'\n            }\n        }\n    }\n}\n```\n\n### Blue Ocean UI\n\nBlue Ocean provides a modern, visual interface for Jenkins pipelines, making it easier to view pipeline status, logs, and errors at a glance.",
+  "codeExample": "pipeline {\n    agent any\n\n    tools {\n        nodejs 'NodeJS-20'\n    }\n\n    stages {\n        stage('Install') {\n            steps {\n                sh 'npm ci'\n            }\n        }\n        stage('Test') {\n            parallel {\n                stage('Lint') {\n                    steps { sh 'npm run lint' }\n                }\n                stage('Unit') {\n                    steps { sh 'npm test' }\n                }\n            }\n        }\n        stage('Build') {\n            steps {\n                sh 'npm run build'\n            }\n        }\n        stage('Deploy') {\n            when { branch 'main' }\n            steps {\n                sh 'npm run deploy'\n            }\n        }\n    }\n\n    post {\n        always {\n            echo 'Pipeline finished'\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the Jenkinsfile used for?",
+      "options": ["Installing Jenkins plugins", "Defining a Jenkins pipeline as code", "Configuring Jenkins users", "Setting up Jenkins agents"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can stages run in parallel in a Jenkins declarative pipeline?",
+      "options": ["Using the `parallel` directive inside a stage", "Stages automatically run in parallel", "Using the `fork` keyword", "Parallel execution is not supported"],
+      "correctIndex": 0
+    }
+  ]
+}

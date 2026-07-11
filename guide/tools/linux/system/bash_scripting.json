@@ -1,0 +1,19 @@
+{
+  "title": "Bash Scripting Basics",
+  "language": "linux",
+  "topic": "bash_scripting",
+  "content": "### Shebang\n\nThe first line tells the system which interpreter to use:\n\n```bash\n#!/bin/bash\n```\n\n### Variables\n\n```bash\nname=\"Alice\"\necho \"Hello, $name\"\necho \"Hello, ${name}\"         # braces optional, needed for complex\necho \"File count: $(ls | wc -l)\"\n```\n\n### Positional Arguments\n\n```bash\n#!/bin/bash\necho \"Script: $0\"\necho \"First arg: $1\"\necho \"Second arg: $2\"\necho \"All args: $@\"\necho \"Arg count: $#\"\n```\n\n### Exit Codes\n\n- `0` = success, non-zero = error\n- `$?` holds the exit code of the last command\n\n```bash\nls /nonexistent\necho $?   # prints 2 (error)\n```\n\n### Conditionals\n\n```bash\nif [ -f \"file.txt\" ]; then\n    echo \"File exists\"\nelif [ -d \"mydir\" ]; then\n    echo \"Directory exists\"\nelse\n    echo \"Nothing found\"\nfi\n```\n\n**Common test operators:**\n\n| Operator | True if |\n|----------|---------|\n| `-f file` | File exists |\n| `-d dir` | Directory exists |\n| `-z str` | String empty |\n| `-n str` | String not empty |\n| `$a -eq $b` | Integers equal |\n| `$a -gt $b` | Integer greater than |\n\n### Loops\n\n```bash\n# For loop\nfor i in {1..5}; do\n    echo \"Number $i\"\ndone\n\nfor file in *.txt; do\n    echo \"Processing $file\"\ndone\n\n# While loop\ncount=1\nwhile [ $count -le 5 ]; do\n    echo \"Count: $count\"\n    ((count++))\ndone\n```\n\n### Functions\n\n```bash\ngreet() {\n    echo \"Hello, $1!\"\n}\n\ngreet \"World\"\n```\n\n### Making a Script Executable\n\n```bash\nchmod +x script.sh\n./script.sh\n```",
+  "codeExample": "#!/bin/bash\nname=\"World\"\necho \"Hello, $name!\"\nfor i in {1..3}; do\n    echo \"Count: $i\"\ndone",
+  "quiz": [
+    {
+      "question": "What does the shebang `#!/bin/bash` do?",
+      "options": ["Tells the system to use Bash to interpret the script", "Comments out the first line", "Sets the script's permissions", "Creates a new Bash session"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `$?` represent in a Bash script?",
+      "options": ["Exit code of the last executed command", "Number of arguments passed", "Process ID of the script", "The script name"],
+      "correctIndex": 0
+    }
+  ]
+}

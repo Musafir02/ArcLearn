@@ -1,0 +1,29 @@
+{
+  "title": "Docker Commit and Export/Import",
+  "language": "docker",
+  "topic": "docker_commit",
+  "content": "### docker commit — Creating Images from Containers\n\n`docker commit` creates a new image from a container's current state. This is useful for:\n- Saving the state of a container you modified interactively\n- Creating snapshots for debugging\n- Quick prototyping (though Dockerfiles are preferred for production)\n\n```bash\n# Make changes inside a container\ndocker run -it --name my-container ubuntu bash\n# Inside: apt-get update && apt-get install -y nginx\n# Exit the container\n\ndocker commit my-container my-nginx:custom\n```\n\n### Commit Options\n\n```bash\ndocker commit -a \"Author Name\" -m \"Added nginx\" my-container my-nginx:v1\n```\n\n- `-a, --author`: Set author\n- `-m, --message`: Commit message\n- `--change`: Apply Dockerfile instructions (like `CMD` or `EXPOSE`)\n\n```bash\ndocker commit --change 'CMD [\"nginx\", \"-g\", \"daemon off;\"]' my-container my-nginx:v1\n```\n\n### Exporting/Importing Containers\n\n**Export** a container's filesystem as a tar archive:\n\n```bash\ndocker export my-container > my-container.tar\ndocker export -o backup.tar my-container\n```\n\n**Import** the tar archive as an image:\n\n```bash\ndocker import my-container.tar my-image:imported\ndocker import http://example.com/backup.tar my-image:imported\n```\n\nNote: `docker export` exports the filesystem (no metadata, history, or layers). `docker import` creates a single-layer image.\n\n### save/load — Images as Archives\n\nUnlike export/import, `save` and `load` preserve image layers, history, and metadata:\n\n```bash\n# Save image to tar (preserves layers)\ndocker save -o my-image.tar my-app:latest\ndocker save my-app:latest | gzip > my-image.tar.gz\n\n# Load image from tar\ndocker load -i my-image.tar\ndocker load < my-image.tar.gz\n```\n\n### Comparison\n\n| Command | Source | Destination | Preserves history? |\n|---|---|---|---|\n| `docker commit` | Container | Image | Yes (new layer) |\n| `docker export` | Container | tar of filesystem | No |\n| `docker import` | tar | Image | No (single layer) |\n| `docker save` | Image | tar (with layers) | Yes |\n| `docker load` | tar | Image | Yes |\n\n### When to Use Each\n\n- **commit**: Quick snapshots during development\n- **export/import**: Backing up container filesystems, migrating data\n- **save/load**: Distributing images offline, moving between registries",
+  "codeExample": "docker commit my-container my-snapshot:v1\ndocker save -o backup.tar my-app:latest\ndocker load -i backup.tar\ndocker export -o container-backup.tar my-container",
+  "quiz": [
+    {
+      "question": "What does `docker commit` do?",
+      "options": [
+        "Saves an image to a tar file",
+        "Creates a new image from a container's current state",
+        "Uploads an image to a registry",
+        "Removes a container"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which pair of commands preserves all image layers and history?",
+      "options": [
+        "export / import",
+        "commit / save",
+        "save / load",
+        "commit / import"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

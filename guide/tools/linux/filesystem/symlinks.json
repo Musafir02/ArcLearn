@@ -1,0 +1,19 @@
+{
+  "title": "Symbolic Links (Symlinks)",
+  "language": "linux",
+  "topic": "symlinks",
+  "content": "### What are Symlinks?\n\nA symbolic link is a special file that points to another file or directory. Like a shortcut in Windows.\n\n### Creating Symlinks\n\n```bash\nln -s /original/file.txt link_name\nln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default\n```\n\n### Hard Links vs Symbolic Links\n\n| Feature | Hard Link | Symbolic Link |\n|---------|-----------|---------------|\n| Shares inode | Yes (same data on disk) | No (separate inode) |\n| Works across filesystems | No | Yes |\n| Works for directories | No (root only) | Yes |\n| Broken if original deleted | No (data still exists) | Yes (dangling link) |\n| Created with | `ln target link` | `ln -s target link` |\n\n### readlink — Read Symlink Target\n\n```bash\nreadlink mylink\n# /path/to/original\nreadlink -f mylink     # resolve full absolute path\n```\n\n### Finding Broken Symlinks\n\n```bash\nfind . -xtype l                             # broken symlinks\nfind . -type l ! -exec test -e {} \\; -print\n```\n\n### Symlink Security Concerns\n\n- Symlinks in world-writable directories can be exploited (symlink attacks)\n- `open()` with `O_NOFOLLOW` prevents following symlinks\n- `chmod` on a symlink changes the target, not the link itself\n- Use `chmod -h` (if supported) to change symlink permissions\n\n### Practical Examples\n\n```bash\n# Version switching\nln -sf nginx-1.25 nginx-current\n\n# Dotfile management\nln -s ~/dotfiles/.bashrc ~/.bashrc\n\n# Shared libraries\nln -s libfoo.so.2 libfoo.so\n```",
+  "codeExample": "ln -s /etc/hosts myhostlink\nls -l myhostlink\nreadlink myhostlink\nfind . -xtype l\nln -sf ~/dotfiles/.bashrc ~/.bashrc",
+  "quiz": [
+    {
+      "question": "What happens to a hard link when the original file is deleted?",
+      "options": ["The data still exists and is accessible via the hard link", "The hard link becomes broken", "Both are deleted", "The hard link becomes a symlink"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `ln -s target link` create?",
+      "options": ["A symbolic link pointing to target", "A hard link pointing to target", "A copy of target", "A directory entry"],
+      "correctIndex": 0
+    }
+  ]
+}

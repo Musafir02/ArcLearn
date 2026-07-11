@@ -1,0 +1,24 @@
+{
+  "title": "Docker Compose File Structure",
+  "language": "docker",
+  "topic": "compose_file",
+  "content": "### Compose File Structure\n\nA `docker-compose.yml` file has three top-level sections:\n\n```yaml\nservices:   # application components (containers)\nnetworks:   # network configuration\nvolumes:    # volume definitions\n```\n\n### Service Definition\n\nEach service defines how a container is run:\n\n```yaml\nservices:\n  web:\n    image: nginx:alpine\n    build: .                    # build from Dockerfile in current dir\n    ports:\n      - \"8080:80\"\n    volumes:\n      - ./html:/usr/share/nginx/html\n    depends_on:\n      - api\n    environment:\n      - NODE_ENV=production\n    restart: unless-stopped\n```\n\n### Key Service Fields\n\n| Field | Description |\n|---|---|\n| `image` | Image to use (from registry or local) |\n| `build` | Path to Dockerfile (alternative to image) |\n| `ports` | Port mappings (`\"host:container\"`) |\n| `volumes` | Volume or bind mount mappings |\n| `depends_on` | Startup dependencies between services |\n| `environment` | Environment variables (list or map) |\n| `restart` | Restart policy (no, always, unless-stopped, on-failure) |\n\n### Healthcheck\n\nDefine a command to check if a service is healthy:\n\n```yaml\nservices:\n  web:\n    image: nginx\n    healthcheck:\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost\"]\n      interval: 30s\n      timeout: 10s\n      retries: 3\n      start_period: 10s\n```\n\n### Restart Policies\n\n```yaml\nservices:\n  app:\n    restart: \"no\"              # never restart\n    restart: always            # always restart\n    restart: unless-stopped    # restart unless manually stopped\n    restart: on-failure        # restart only on error\n```",
+  "codeExample": "services:\n  web:\n    build: .\n    ports:\n      - \"8080:80\"\n    depends_on:\n      - db\n    environment:\n      DB_HOST: db\n    restart: unless-stopped\n  db:\n    image: postgres:15\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n    environment:\n      POSTGRES_PASSWORD: secret\n\nvolumes:\n  pgdata:",
+  "quiz": [
+    {
+      "question": "Which field defines startup dependencies between services in a Compose file?",
+      "options": ["links", "depends_on", "needs", "requires"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What are the three top-level sections in a Compose file?",
+      "options": [
+        "services, containers, volumes",
+        "services, networks, volumes",
+        "apps, networks, storage",
+        "containers, networking, storage"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

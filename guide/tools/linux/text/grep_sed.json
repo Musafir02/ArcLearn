@@ -1,0 +1,19 @@
+{
+  "title": "grep, sed & awk",
+  "language": "linux",
+  "topic": "grep_sed",
+  "content": "### grep — Search Text with Patterns\n\n**Basic usage:**\n\n```bash\ngrep \"error\" logfile.txt\ngrep -i \"warning\" log.txt      # case-insensitive\ngrep -r \"TODO\" ./src/          # recursive search\ngrep -l \"main\" *.c             # list filenames only\ngrep -v \"#\" config.conf        # lines NOT matching\ngrep -c \"FAIL\" results.log     # count matches\ngrep -n \"error\" log.txt        # show line numbers\n```\n\n**Regex patterns:**\n\n```bash\ngrep \"^#\" config.conf          # lines starting with #\ngrep \"error\\|fatal\" log.txt    # OR pattern (basic RE)\ngrep -E \"[0-9]{3}-[0-9]{4}\"    # extended regex (ERE)\n```\n\n### sed — Stream Editor\n\n**Substitution:**\n\n```bash\nsed 's/old/new/' file.txt          # replace first occurrence per line\nsed 's/old/new/g' file.txt         # replace all globally\nsed 's/old/new/2' file.txt         # replace second occurrence per line\nsed -i 's/foo/bar/g' file.txt      # edit in-place\nsed -i.backup 's/foo/bar/g' file   # edit in-place with backup\n```\n\n**Line operations:**\n\n```bash\nsed '3d' file.txt                  # delete line 3\nsed '/^#/d' file.txt               # delete all comment lines\nsed -n '10,20p' file.txt           # print lines 10-20\n```\n\n### awk — Pattern Scanning and Processing\n\n```bash\nawk '{print $1}' file.txt           # print first field\nawk -F: '{print $1, $3}' /etc/passwd  # field separator\nawk '$3 > 100 {print $1, $3}' data   # conditional\nawk 'NR==1 {print \"Header:\", $0}'    # first record only\n```",
+  "codeExample": "grep -rn \"FIXME\" .\ngrep -E \"^[A-Z]\" file.txt\nsed -i 's/oldname/newname/g' config.json\nawk '{print NR, $0}' file.txt\nps aux | grep nginx",
+  "quiz": [
+    {
+      "question": "What does `grep -v \"error\" log.txt` do?",
+      "options": ["Shows lines that do NOT contain 'error'", "Shows only lines with 'error'", "Shows version info", "Deletes lines with 'error'"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `sed -i 's/foo/bar/g' file.txt` do?",
+      "options": ["Replaces all 'foo' with 'bar' in-place", "Replaces the first 'foo' per line in-place", "Prints changes without modifying", "Deletes all lines containing 'foo'"],
+      "correctIndex": 0
+    }
+  ]
+}

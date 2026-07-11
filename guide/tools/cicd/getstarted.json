@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with CI/CD",
+  "language": "cicd",
+  "topic": "getstarted",
+  "content": "### Setting Up Your First CI Pipeline\n\nA CI pipeline automates the build and test process for your project. Here is how to get started.\n\n### 1. Choose a CI Provider\n\n| Provider | Best For | Key Feature |\n|----------|----------|-------------|\n| **GitHub Actions** | GitHub-hosted repos | Tight GitHub integration, marketplace |\n| **GitLab CI** | GitLab-hosted repos | Built-in container registry |\n| **Jenkins** | Self-hosted, customizable | Highly extensible, any SCM |\n| **CircleCI** | Speed-focused teams | Fast caching, parallelism |\n\n### 2. Basic YAML Syntax\n\nCI/CD configuration files use YAML. Here are the basics:\n\n```yaml\n# Key-value pairs\nname: value\n\n# Lists\nitems:\n  - item1\n  - item2\n  - item3\n\n# Nested structures\nparent:\n  child: value\n  list:\n    - a\n    - b\n```\n\n### 3. Runners\n\nA **runner** is an agent that executes CI jobs. Providers like GitHub and GitLab offer hosted runners (Linux, macOS, Windows). You can also self-host runners on your own infrastructure for more control or to use custom hardware.\n\n### 4. Pipeline Status Badges\n\nMost CI providers generate status badges that you can embed in your README:\n\n```markdown\n![CI Status](https://img.shields.io/github/actions/workflow/status/user/repo/ci.yml?branch=main)\n```\n\nThese badges show whether the latest pipeline run passed or failed.",
+  "codeExample": "name: CI Pipeline\n\non:\n  push:\n    branches: [main]\n  pull_request:\n    branches: [main]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 20\n      - run: npm install\n      - run: npm test",
+  "quiz": [
+    {
+      "question": "What file format is most commonly used for CI/CD configuration?",
+      "options": ["JSON", "YAML", "XML", "TOML"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a CI runner?",
+      "options": ["A developer who runs CI pipelines", "A server that executes CI jobs", "A database for test results", "A type of unit test"],
+      "correctIndex": 1
+    }
+  ]
+}

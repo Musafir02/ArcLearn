@@ -1,0 +1,19 @@
+{
+  "title": "Docker Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Docker Basics", "folder": "basics",
+      "topics": ["images_containers", "dockerfile", "docker_run", "docker_ps_logs", "ports_volumes"]
+    },
+    {
+      "type": "group", "title": "Docker Compose", "folder": "compose",
+      "topics": ["compose_intro", "compose_file", "multi_container", "networks", "environment_vars"]
+    },
+    {
+      "type": "group", "title": "Advanced Docker", "folder": "advanced",
+      "topics": ["docker_registry", "docker_build", "multi_stage", "docker_exec", "docker_commit"]
+    }
+  ]
+}

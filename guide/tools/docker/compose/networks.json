@@ -1,0 +1,24 @@
+{
+  "title": "Docker Networks",
+  "language": "docker",
+  "topic": "networks",
+  "content": "### Network Types\n\nDocker provides several built-in network drivers:\n\n| Driver | Description |\n|---|---|\n| **bridge** | Default network — containers communicate via IP (default bridge) or name (user-defined bridge) |\n| **host** | Container shares the host's network stack — no isolation, better performance |\n| **none** | No network access — full isolation |\n| **overlay** | Connects containers across multiple Docker hosts (Swarm) |\n| **macvlan** | Assigns a MAC address to the container on the physical network |\n\n### User-Defined Bridge Networks\n\nCreating a custom bridge network provides automatic DNS resolution between containers:\n\n```bash\ndocker network create my-network\ndocker run -d --net my-network --name web nginx\ndocker run -it --net my-network alpine ping web  # resolves by name!\n```\n\nThis is much better than `--link` (legacy) which is now deprecated.\n\n### Network Commands\n\n```bash\ndocker network ls                    # list networks\ndocker network inspect my-network    # inspect network details\ndocker network create --driver bridge my-network\ndocker network connect my-network my-container\ndocker network disconnect my-network my-container\ndocker network prune                 # remove unused networks\n```\n\n### Networks in Docker Compose\n\n```yaml\nservices:\n  web:\n    image: nginx\n    networks:\n      - frontend\n      - backend\n  api:\n    image: my-api\n    networks:\n      - backend\n  db:\n    image: postgres\n    networks:\n      - backend\n\nnetworks:\n  frontend:\n    driver: bridge\n  backend:\n    driver: bridge\n```\n\nThis creates two isolated bridge networks — web can talk to both, but db can only talk to api (via backend).\n\n### Exposing Ports in Networks\n\n- Ports published with `-p` are accessible from outside the host\n- Within Docker networks, all container ports are accessible without publishing\n- Only publish ports that need external access",
+  "codeExample": "docker network create --driver bridge app-net\ndocker run -d --net app-net --name db postgres:15\ndocker run -d --net app-net --name app -p 3000:3000 my-app",
+  "quiz": [
+    {
+      "question": "What advantage does a user-defined bridge network have over the default bridge?",
+      "options": [
+        "Better performance",
+        "Automatic DNS resolution between containers",
+        "It's the only way to connect containers",
+        "No difference"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which network driver makes a container share the host's network stack?",
+      "options": ["bridge", "overlay", "host", "macvlan"],
+      "correctIndex": 2
+    }
+  ]
+}

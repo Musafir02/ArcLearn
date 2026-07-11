@@ -1,0 +1,24 @@
+{
+  "title": "Multi-Stage Builds",
+  "language": "docker",
+  "topic": "multi_stage",
+  "content": "### Why Multi-Stage?\n\nMulti-stage builds use multiple `FROM` statements in one Dockerfile to create separate stages. This separates build-time dependencies from the runtime environment, producing smaller and more secure images.\n\n### Basic Pattern\n\n```dockerfile\n# Stage 1: Build\nFROM golang:1.20 AS builder\nWORKDIR /app\nCOPY . .\nRUN go build -o myapp\n\n# Stage 2: Runtime\nFROM alpine:3.18\nRUN apk add --no-cache ca-certificates\nCOPY --from=builder /app/myapp /usr/local/bin/myapp\nCMD [\"myapp\"]\n```\n\nThe final image is based on `alpine` (5MB), not `golang:1.20` (800MB+).\n\n### Multiple FROM Statements\n\nEach `FROM` starts a new stage. Previous stages are available with `--from=`:\n\n```dockerfile\nFROM node:18 AS deps\nWORKDIR /app\nCOPY package*.json .\nRUN npm ci --only=production\n\nFROM node:18 AS build\nWORKDIR /app\nCOPY --from=deps /app/node_modules ./node_modules\nCOPY . .\nRUN npm run build\n\nFROM nginx:alpine\nCOPY --from=build /app/dist /usr/share/nginx/html\n```\n\n### --target for Specific Stages\n\nBuild only a specific stage:\n\n```bash\ndocker build --target build -t my-app:build .\ndocker build --target deps -t my-app:deps .\n```\n\nThis is useful for debugging or extracting intermediate artifacts.\n\n### Reducing Image Size\n\n| Technique | Impact |\n|---|---|\n| Multi-stage | Remove build tools from final image |\n| Distroless base images | ~5MB images with only runtime |\n| Alpine Linux | ~5MB base vs ~150MB Debian |\n| Layer optimization | Combine RUN commands, clean up in same layer |\n\n### Distroless Images\n\nGoogle's [distroless](https://github.com/GoogleContainerTools/distroless) images contain only your application and its runtime dependencies — no shell, package manager, or other tools:\n\n```dockerfile\nFROM golang:1.20 AS builder\nWORKDIR /app\nCOPY . .\nRUN go build -o myapp\n\nFROM gcr.io/distroless/base\nCOPY --from=builder /app/myapp /myapp\nCMD [\"/myapp\"]\n```\n\nThis significantly reduces the attack surface.",
+  "codeExample": "FROM golang:1.20 AS builder\nWORKDIR /app\nCOPY . .\nRUN CGO_ENABLED=0 go build -o server\n\nFROM alpine:3.18\nRUN apk add --no-cache ca-certificates\nCOPY --from=builder /app/server /server\nEXPOSE 8080\nCMD [\"/server\"]",
+  "quiz": [
+    {
+      "question": "What is the main benefit of multi-stage builds?",
+      "options": [
+        "Faster builds",
+        "Smaller final image size",
+        "Multiple languages in one image",
+        "Better logging"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which flag builds only a specific stage in a multi-stage Dockerfile?",
+      "options": ["--stage", "--target", "--only", "--build-stage"],
+      "correctIndex": 1
+    }
+  ]
+}

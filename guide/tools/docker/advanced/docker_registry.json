@@ -1,0 +1,24 @@
+{
+  "title": "Docker Registry",
+  "language": "docker",
+  "topic": "docker_registry",
+  "content": "### Docker Hub\n\nDocker Hub is the default public registry. It hosts millions of images including official images from software vendors.\n\n### docker login\n\nAuthenticate with a registry:\n\n```bash\ndocker login                    # Docker Hub\ndocker login myregistry.com     # private registry\n```\n\nCredentials are stored in Docker's config file (`~/.docker/config.json`).\n\n### docker tag\n\nTag an image for pushing to a registry:\n\n```bash\ndocker tag my-app:latest username/my-app:latest\ndocker tag my-app:latest myregistry.com/my-app:v1\n```\n\n### docker push\n\nUpload an image to a registry:\n\n```bash\ndocker push username/my-app:latest\ndocker push myregistry.com/my-app:v1\n```\n\n### Private Registries\n\nRun your own registry:\n\n```bash\ndocker run -d -p 5000:5000 --name registry registry:2\ndocker tag my-app localhost:5000/my-app\ndocker push localhost:5000/my-app\n```\n\nCloud providers offer managed registries:\n- AWS ECR (Elastic Container Registry)\n- Azure Container Registry (ACR)\n- Google Container Registry (GCR) / Artifact Registry\n\n### Docker Hub Repositories\n\n- **Public repos**: Visible to everyone, free with unlimited pulls\n- **Private repos**: Only accessible to authorized users (free tier includes 1 private repo)\n\n### Registry Authentication\n\nDocker supports several authentication methods:\n- Username/password (HTTPS)\n- Token-based authentication\n- Credential helpers (OS keychain)\n\nFor automation (CI/CD), use personal access tokens instead of passwords:\n\n```bash\necho $PAT | docker login -u username --password-stdin\n```",
+  "codeExample": "docker tag nginx:latest myusername/nginx:custom\ndocker push myusername/nginx:custom\ndocker pull myusername/nginx:custom",
+  "quiz": [
+    {
+      "question": "Which command uploads a local image to a registry?",
+      "options": ["docker upload", "docker push", "docker publish", "docker send"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the purpose of `docker tag` before pushing?",
+      "options": [
+        "It is required before every push",
+        "It adds a label for versioning",
+        "It renames the image with the registry path",
+        "It compresses the image"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

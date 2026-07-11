@@ -1,0 +1,24 @@
+{
+  "title": "Environment Variables in Docker",
+  "language": "docker",
+  "topic": "environment_vars",
+  "content": "### ENV in Dockerfile\n\nSet environment variables at build time — they persist in the running container:\n\n```dockerfile\nFROM node:18-alpine\nENV NODE_ENV=production\nENV APP_PORT=3000\n```\n\n### --env / -e with docker run\n\nOverride or set variables at runtime:\n\n```bash\ndocker run -e NODE_ENV=production -e DB_HOST=localhost my-app\ndocker run --env MY_VAR=value my-app\n```\n\n### env_file\n\nLoad variables from a file:\n\n```bash\ndocker run --env-file ./.env my-app\n```\n\nThe file format (`KEY=value` per line):\n\n```\nDB_HOST=localhost\nDB_USER=admin\nDB_PASS=secret123\n```\n\n### Environment in Docker Compose\n\n```yaml\nservices:\n  app:\n    image: my-app\n    environment:\n      NODE_ENV: production        # map syntax\n      DB_HOST: db\n    # OR list syntax:\n    environment:\n      - NODE_ENV=production\n      - DB_HOST=db\n    # OR from file:\n    env_file:\n      - .env\n      - .env.production\n```\n\n### ARG — Build-Time Variables\n\n`ARG` variables are only available during `docker build`, not in the running container:\n\n```dockerfile\nARG VERSION=latest\nFROM node:${VERSION}\nARG APP_DIR=/app\nWORKDIR ${APP_DIR}\n```\n\nPass build args:\n\n```bash\ndocker build --build-arg VERSION=18-alpine -t my-app .\n```\n\n### ENV vs ARG\n\n| | ENV | ARG |\n|---|---|---|\n| Available during build | Yes | Yes |\n| Persists in container | Yes | No |\n| Set in Dockerfile | `ENV key=val` | `ARG key=val` |\n| Override at build | — | `--build-arg key=val` |\n| Override at run | `-e key=val` | — |\n\n### Security Note\n\nNever hardcode secrets in Dockerfiles. Use:\n- `--env-file` for runtime secrets\n- Docker Secrets (in Swarm mode)\n- BuildKit `--secret` for build-time secrets",
+  "codeExample": "docker build --build-arg VERSION=18-alpine -t my-app .\ndocker run -d -e NODE_ENV=production --env-file .env my-app",
+  "quiz": [
+    {
+      "question": "What is the key difference between ENV and ARG in a Dockerfile?",
+      "options": [
+        "ENV is for build, ARG is for runtime",
+        "ARG persists in the container, ENV does not",
+        "ENV persists in the container, ARG does not",
+        "There is no difference"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do you pass environment variables from a file to docker run?",
+      "options": ["--env-file .env", "--env .env", "--file .env", "--source .env"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Docker Compose",
+  "language": "docker",
+  "topic": "compose_intro",
+  "content": "### What is Docker Compose?\n\nDocker Compose is a tool for defining and running multi-container Docker applications. You define services, networks, and volumes in a YAML file, then start everything with a single command.\n\n### docker-compose.yml\n\nThe default configuration file is `docker-compose.yml` (or `compose.yaml`):\n\n```yaml\nversion: '3.8'\n\nservices:\n  web:\n    image: nginx:latest\n    ports:\n      - \"8080:80\"\n```\n\n### Basic Commands\n\n```bash\ndocker compose up          # create and start containers\ndocker compose up -d       # detached mode\ndocker compose down        # stop and remove containers\ndocker compose ps          # list containers\ndocker compose logs        # view logs\ndocker compose exec        # run commands in a running service\n```\n\n### docker compose vs docker-compose\n\n- **`docker compose`** (v2, no hyphen) — newer plugin integrated into the Docker CLI, recommended\n- **`docker-compose`** (v1, with hyphen) — legacy standalone binary, still works but v2 is preferred\n\n### Project Name\n\nBy default, the project name is the directory name. Override with:\n\n```bash\ndocker compose -p myproject up\n# Or set COMPOSE_PROJECT_NAME environment variable\n```\n\nThe project name prefixes container names: `projectname_servicename_1`.\n\n### Docker Compose Versions\n\nThe compose specification has evolved. Current best practice is to use `version: '3.8'` or omit version entirely (modern Docker interprets the latest specification). Compose files declare services, networks, and volumes at the top level.",
+  "codeExample": "docker compose up -d\ndocker compose ps\ndocker compose logs -f web\ndocker compose down",
+  "quiz": [
+    {
+      "question": "What is the default file name for Docker Compose configuration?",
+      "options": ["docker-compose.yaml", "compose.yaml", "docker-compose.yml", "Both B and C"],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Docker Compose command stops and removes containers?",
+      "options": ["docker compose stop", "docker compose down", "docker compose rm", "docker compose remove"],
+      "correctIndex": 1
+    }
+  ]
+}

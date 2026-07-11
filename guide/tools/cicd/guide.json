@@ -1,0 +1,15 @@
+{
+  "title": "CI/CD Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "GitHub Actions", "folder": "github_actions",
+      "topics": ["workflow_basics", "jobs_steps", "triggers", "matrix_builds", "deployment_workflows"]
+    },
+    {
+      "type": "group", "title": "Other CI/CD Tools", "folder": "other",
+      "topics": ["gitlab_ci", "jenkins_basics", "deployment_strategies", "monitoring_rollbacks"]
+    }
+  ]
+}

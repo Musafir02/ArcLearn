@@ -1,0 +1,19 @@
+{
+  "title": "Jobs and Steps in GitHub Actions",
+  "language": "cicd",
+  "topic": "jobs_steps",
+  "content": "### Jobs vs Steps\n\nIn GitHub Actions, **jobs** run in parallel by default, while **steps** within a job run sequentially. This distinction is key to designing efficient pipelines.\n\n### Jobs (Parallel by Default)\n\n```yaml\njobs:\n  lint:\n    runs-on: ubuntu-latest\n    steps:\n      - run: npm run lint\n\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - run: npm test\n\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - run: npm run build\n```\n\nAll three jobs (`lint`, `test`, `build`) run simultaneously.\n\n### Dependencies with `needs`\n\nUse `needs` to make one job wait for another:\n\n```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - run: npm run build\n\n  deploy:\n    needs: build\n    runs-on: ubuntu-latest\n    steps:\n      - run: npm run deploy\n```\n\n`deploy` only starts after `build` completes successfully.\n\n### Steps (Sequential)\n\nSteps within a job are ordered and run one after another. If a step fails, subsequent steps (by default) do not run.\n\n```yaml\nsteps:\n  - uses: actions/checkout@v4\n  - run: npm ci\n  - run: npm test\n  - run: npm run build\n```\n\n### `if` Conditions\n\nConditionally run a step based on context:\n\n```yaml\n- name: Deploy to production\n  if: github.ref == 'refs/heads/main'\n  run: npm run deploy\n```\n\n### `continue-on-error`\n\nAllow a step to fail without failing the entire job:\n\n```yaml\n- name: Run optional linting\n  continue-on-error: true\n  run: npm run lint\n```\n\n### `timeout-minutes`\n\nSet a maximum runtime for a step or job to prevent runaway processes:\n\n```yaml\njobs:\n  build:\n    timeout-minutes: 30\n    steps:\n      - run: npm test\n        timeout-minutes: 10\n```",
+  "codeExample": "name: CI with Dependencies\n\non: [push]\n\njobs:\n  lint:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm ci\n      - run: npm run lint\n\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm ci\n      - run: npm test\n        continue-on-error: true\n\n  deploy:\n    needs: [lint, test]\n    runs-on: ubuntu-latest\n    if: github.ref == 'refs/heads/main'\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm ci\n      - run: npm run deploy",
+  "quiz": [
+    {
+      "question": "How do jobs run in GitHub Actions by default?",
+      "options": ["In parallel", "Sequentially", "One at a time in alphabetical order", "Randomly"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which keyword makes one job depend on another?",
+      "options": ["depends", "needs", "after", "requires"],
+      "correctIndex": 1
+    }
+  ]
+}

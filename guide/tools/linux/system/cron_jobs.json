@@ -1,0 +1,19 @@
+{
+  "title": "Cron Jobs & Scheduling",
+  "language": "linux",
+  "topic": "cron_jobs",
+  "content": "### What is Cron?\n\nA time-based job scheduler in Unix-like systems. Runs commands at specified times, dates, or intervals.\n\n### Crontab — Cron Table\n\nEach user has their own crontab file.\n\n```bash\ncrontab -e                     # edit your crontab\ncrontab -l                     # list your crontab\ncrontab -r                     # remove your crontab\n```\n\n### Cron Syntax\n\n```\n* * * * * command_to_execute\n│ │ │ │ │\n│ │ │ │ └── Day of week (0-7, 0=Sun, 7=Sun)\n│ │ │ └──── Month (1-12)\n│ │ └────── Day of month (1-31)\n│ └──────── Hour (0-23)\n└────────── Minute (0-59)\n```\n\n### Common Examples\n\n```\n# Every minute\n* * * * * /script.sh\n\n# Every day at 2:30 AM\n30 2 * * * /backup.sh\n\n# Every Monday at 9 AM\n0 9 * * 1 /weekly-report.sh\n\n# Every 15 minutes\n*/15 * * * * /check-status.sh\n\n# First day of every month at midnight\n0 0 1 * * /monthly-cleanup.sh\n```\n\n### Special Shorthands\n\n| String | Equivalent |\n|--------|------------|\n| `@reboot` | Run once at boot |\n| `@yearly` | `0 0 1 1 *` |\n| `@monthly` | `0 0 1 * *` |\n| `@weekly` | `0 0 * * 0` |\n| `@daily` | `0 0 * * *` |\n| `@hourly` | `0 * * * *` |\n\n```\n@reboot /path/to/startup.sh\n@daily /backup-daily.sh\n```\n\n### Cron Logs\n\n```bash\ngrep CRON /var/log/syslog      # Debian/Ubuntu\ngrep crond /var/log/messages   # RHEL/CentOS\nsudo journalctl -u cron        # systemd systems\n```\n\n### systemd Timers — Modern Alternative\n\n```bash\nsystemctl list-timers          # list active timers\n```\n\n### anacron — For Systems That Shut Down\n\nAnacron runs missed jobs (e.g., daily backup on a laptop that's off at midnight).\n\n```bash\n# /etc/anacrontab format:\n# period delay job-identifier command\n1       15    daily-backup    /backup.sh\n```",
+  "codeExample": "crontab -l\ncrontab -e\n# Inside editor:\n# 0 3 * * * /usr/bin/backup.sh\n# @daily ~/scripts/cleanup.sh\nsudo journalctl -u cron | tail -20",
+  "quiz": [
+    {
+      "question": "What does `30 2 * * 1 /script.sh` do?",
+      "options": ["Runs /script.sh every Monday at 2:30 AM", "Runs /script.sh every day at 2:30 PM", "Runs /script.sh on the 30th at 2 AM", "Runs /script.sh every 30 minutes"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the purpose of `@reboot` in cron?",
+      "options": ["Runs a command once when the system boots", "Reboots the system", "Runs a command every hour", "Runs a command after a crash"],
+      "correctIndex": 0
+    }
+  ]
+}

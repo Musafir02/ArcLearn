@@ -1,0 +1,24 @@
+{
+  "title": "Dockerfile Basics",
+  "language": "docker",
+  "topic": "dockerfile",
+  "content": "### What is a Dockerfile?\n\nA Dockerfile is a text file containing instructions to build a Docker image. Each instruction creates a layer in the image.\n\n### Key Instructions\n\n| Instruction | Purpose |\n|---|---|\n| `FROM` | Sets the base image (must be first instruction) |\n| `RUN` | Executes commands in a new layer |\n| `COPY` | Copies files from build context into the image |\n| `ADD` | Like COPY but supports URLs and tar auto-extraction |\n| `WORKDIR` | Sets the working directory for subsequent instructions |\n| `ENV` | Sets environment variables |\n| `EXPOSE` | Documents which ports the container listens on |\n| `CMD` | Default command when container starts (can be overridden) |\n| `ENTRYPOINT` | Main command — can't be overridden without --entrypoint |\n| `LABEL` | Adds metadata (maintainer, version, etc.) |\n\n### Example Dockerfile\n\n```dockerfile\nFROM node:18-alpine\n\nWORKDIR /app\n\nCOPY package.json .\nRUN npm install\n\nCOPY . .\n\nEXPOSE 3000\n\nCMD [\"node\", \"server.js\"]\n```\n\n### .dockerignore\n\nPrevent files from being sent in the build context:\n\n```\nnode_modules\n.git\n*.md\n.env\n```\n\n### Best Practices\n\n- **Layer caching**: Order instructions from least to most frequently changing — install dependencies before copying source code\n- **Minimal layers**: Combine related `RUN` commands with `&&` and clean up in the same layer\n- **Use specific tags**: Prefer `node:18-alpine` over `node:latest` for reproducible builds\n- **Use `.dockerignore`**: Exclude unnecessary files from the build context\n- **Prefer COPY over ADD**: `COPY` is more transparent; use `ADD` only when you need URL downloads or tar extraction",
+  "codeExample": "FROM node:18-alpine\nWORKDIR /app\nCOPY package.json .\nRUN npm install\nCOPY . .\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]",
+  "quiz": [
+    {
+      "question": "Which instruction must be the first non-comment line in a Dockerfile?",
+      "options": ["RUN", "WORKDIR", "FROM", "COPY"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why should COPY be preferred over ADD in most Dockerfiles?",
+      "options": [
+        "COPY is faster",
+        "COPY is more transparent and predictable",
+        "ADD is deprecated",
+        "COPY supports URL downloads"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

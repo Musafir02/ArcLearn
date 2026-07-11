@@ -1,0 +1,19 @@
+{
+  "title": "File Permissions",
+  "language": "linux",
+  "topic": "permissions",
+  "content": "### Understanding `ls -l` Permission Strings\n\n```\n-rwxr-xr--  1 user group  4096 Jul 12 10:00 script.sh\n```\n\n- First char: `-` (file), `d` (directory), `l` (symlink)\n- Next 9 chars split into 3 groups of 3:\n  - Owner (`rwx`) — read, write, execute\n  - Group (`r-x`) — read, execute\n  - Others (`r--`) — read only\n\n### chmod — Change Mode\n\n**Symbolic mode:**\n\n```bash\nchmod u+x script.sh    # add execute for owner\nchmod g-w file.txt     # remove write for group\nchmod o+r file.txt     # add read for others\nchmod a+x script.sh    # add execute for all\n```\n\n**Numeric (octal) mode:**\n\n| Number | Permission |\n|--------|------------|\n| 7 | rwx (read, write, execute) |\n| 6 | rw- |\n| 5 | r-x |\n| 4 | r-- |\n| 0 | --- |\n\n```bash\nchmod 755 script.sh   # rwxr-xr-x (owner all, rest rx)\nchmod 644 file.txt    # rw-r--r-- (owner rw, rest r)\n```\n\n### chown — Change Owner\n\n```bash\nchown user:group file.txt\nchown alice file.txt\nchown :admin file.txt         # change group only\n```\n\n### chgrp — Change Group\n\n```bash\nchgrp staff project/\n```\n\n### umask — Default Permission Mask\n\n```bash\numask 022    # files: 644, dirs: 755 (default)\numask 077    # files: 600, dirs: 700 (restrictive)\n```\n\n### Special Permissions\n\n- **SUID (4xxx)**: `chmod u+s` — runs as file owner\n- **SGID (2xxx)**: `chmod g+s` — runs as group / inherits group on dirs\n- **Sticky bit (1xxx)**: `chmod +t` — only owner can delete files in shared dir (like `/tmp`)",
+  "codeExample": "chmod 755 script.sh\nchmod u+x script.sh\nls -l script.sh\nchown root:root file.txt\numask\nchmod +t /shared",
+  "quiz": [
+    {
+      "question": "What does `chmod 755` do?",
+      "options": ["Sets rwxr-xr-x permissions", "Sets rw-r--r-- permissions", "Sets rwxrwxrwx permissions", "Sets rwx------ permissions"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the sticky bit (`chmod +t`) do on a directory?",
+      "options": ["Only file owners can delete their own files", "Everyone can delete any file", "Files are automatically compressed", "Prevents files from being read"],
+      "correctIndex": 0
+    }
+  ]
+}

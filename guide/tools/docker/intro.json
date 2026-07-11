@@ -1,0 +1,24 @@
+{
+  "title": "Introduction to Docker",
+  "language": "docker",
+  "topic": "intro",
+  "content": "### What is Docker?\n\nDocker is an open-source platform that automates the deployment, scaling, and management of applications inside lightweight, portable containers. Containers package an application with all its dependencies (libraries, config files, binaries) into a single unit that runs consistently across any environment.\n\n### Containers vs Virtual Machines\n\nUnlike virtual machines (VMs), containers share the host OS kernel instead of running a full guest OS. This makes containers much lighter — they start in seconds, use less memory, and have minimal overhead. VMs include a full OS per instance, while containers only include the application and its dependencies.\n\n### Containerization Benefits\n\n- **Portability**: Run the same container on a developer's laptop, a test server, or production\n- **Consistency**: Eliminates \"it works on my machine\" problems\n- **Efficiency**: Higher density per host compared to VMs\n- **Speed**: Containers start in milliseconds\n- **Isolation**: Each container has its own filesystem, network, and process space\n\n### Docker Architecture\n\nDocker uses a client-server architecture:\n\n- **Client** (`docker` CLI): Sends commands via REST API to the daemon\n- **Daemon** (`dockerd`): Builds, runs, and manages containers\n- **Registry** (Docker Hub / private): Stores and distributes images\n- **Images**: Read-only templates used to create containers\n- **Containers**: Runnable instances of an image\n\n### OCI Standards\n\nThe Open Container Initiative (OCI) governs industry standards for container formats and runtimes. Docker images follow the OCI Image Specification, ensuring compatibility across different container runtimes like containerd, CRI-O, and Podman.",
+  "codeExample": "docker run hello-world",
+  "quiz": [
+    {
+      "question": "What is the main difference between containers and virtual machines?",
+      "options": [
+        "Containers run a full guest OS, VMs share the host kernel",
+        "Containers share the host OS kernel, VMs run a full guest OS",
+        "Containers are slower than VMs",
+        "There is no difference"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which component of Docker architecture stores and distributes images?",
+      "options": ["Docker client", "Docker daemon", "Docker registry", "Container runtime"],
+      "correctIndex": 2
+    }
+  ]
+}

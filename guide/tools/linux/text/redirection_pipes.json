@@ -1,0 +1,19 @@
+{
+  "title": "Redirection & Pipes",
+  "language": "linux",
+  "topic": "redirection_pipes",
+  "content": "### Standard Streams\n\n| Name | Descriptor | Symbol |\n|------|-----------|--------|\n| stdin | 0 | Input to command |\n| stdout | 1 | Normal output |\n| stderr | 2 | Error output |\n\n### Redirecting Output\n\n```bash\ncommand > file.txt         # redirect stdout to file (overwrite)\ncommand >> file.txt        # redirect stdout to file (append)\ncommand 2> error.log       # redirect stderr to file\ncommand 2>&1               # redirect stderr to stdout\ncommand &> file.txt        # redirect both stdout and stderr\ncommand > /dev/null        # discard output\n```\n\n### Redirecting Input\n\n```bash\ncommand < file.txt         # read stdin from file\nsort < unsorted.txt > sorted.txt\n```\n\n### Pipes — Chain Commands\n\nThe pipe `|` sends stdout of one command to stdin of the next.\n\n```bash\nls -la | less\ndmesg | grep error\ncat access.log | cut -d' ' -f1 | sort | uniq -c | sort -rn\n```\n\n### tee — Split Output\n\nSends output to both file and stdout.\n\n```bash\nls -la | tee listing.txt\nls -la | tee -a log.txt    # append mode\n```\n\n### xargs — Build and Execute Commands\n\n```bash\nfind . -name \"*.tmp\" | xargs rm\ncat urls.txt | xargs -n 1 curl -O\nfind . -type f -name \"*.jpg\" | xargs -P 4 -I {} convert {} {}.png\n```\n\n### /dev/null — The Bit Bucket\n\n```bash\ncommand > /dev/null 2>&1   # completely silence output\n```",
+  "codeExample": "echo \"hello world\" > file.txt\ncat file.txt | wc -w\nls /nonexistent 2> error.log\nls -la | tee output.txt | wc -l\nfind . -name \"*.log\" | xargs rm",
+  "quiz": [
+    {
+      "question": "What does `command &> file.txt` do?",
+      "options": ["Redirects both stdout and stderr to file", "Redirects only stderr to file", "Redirects stdout to file and stderr to terminal", "Runs the command in the background"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `tee` do in a pipeline?",
+      "options": ["Sends output to both a file and stdout", "Splits a file into parts", "Redirects to /dev/null", "Measures execution time"],
+      "correctIndex": 0
+    }
+  ]
+}

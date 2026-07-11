@@ -1,0 +1,19 @@
+{
+  "title": "Environment Variables",
+  "language": "linux",
+  "topic": "environment_vars",
+  "content": "### What Are Environment Variables?\n\nKey-value pairs that affect how programs and the shell behave. They're inherited by child processes.\n\n### Setting Variables\n\n```bash\nexport MY_VAR=\"hello\"          # set and export to child processes\nMY_VAR=\"hello\"                 # set for current shell only\nexport PATH=\"$PATH:/custom/bin\"  # append to PATH\n```\n\n### Viewing Variables\n\n```bash\necho $PATH\necho \"$HOME\"\nenv                            # list all environment variables\nprintenv                       # same as env\nprintenv HOME                  # value of specific variable\nset                            # list all variables (including shell)\n```\n\n### The PATH Variable\n\nA colon-separated list of directories where the shell looks for executables.\n\n```bash\necho $PATH\n# /usr/local/bin:/usr/bin:/bin:/usr/games\n```\n\n### Common Environment Variables\n\n| Variable | Purpose |\n|----------|---------|\n| `HOME` | User's home directory |\n| `USER` | Current username |\n| `SHELL` | Path to current shell |\n| `PWD` | Current working directory |\n| `PATH` | Executable search path |\n| `LANG` | Locale setting |\n| `EDITOR` | Default text editor |\n\n### Persisting Variables\n\nAdd `export` lines to shell startup files:\n\n| File | When Loaded |\n|------|-------------|\n| `~/.bashrc` | Each interactive Bash session |\n| `~/.profile` | Login shell |\n| `~/.bash_profile` | Login shell (macOS often) |\n| `/etc/environment` | System-wide (no shell syntax) |\n\n```bash\necho 'export EDITOR=vim' >> ~/.bashrc\nsource ~/.bashrc               # reload without logout\n```",
+  "codeExample": "export MY_VAR=\"Hello from Bash\"\necho $MY_VAR\nprintenv HOME USER SHELL\necho \"$PATH\" | tr ':' '\\n'\necho 'export EDITOR=nano' >> ~/.bashrc",
+  "quiz": [
+    {
+      "question": "What does `export PATH=\"$PATH:/new/dir\"` do?",
+      "options": ["Appends /new/dir to the PATH variable", "Overwrites PATH with /new/dir", "Removes /new/dir from PATH", "Creates a new directory"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which file should you edit to set environment variables for all interactive Bash sessions?",
+      "options": ["~/.bashrc", "~/.bash_logout", "/etc/hosts", "~/.ssh/config"],
+      "correctIndex": 0
+    }
+  ]
+}

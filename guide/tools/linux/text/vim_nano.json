@@ -1,0 +1,19 @@
+{
+  "title": "Text Editors: Nano & Vim",
+  "language": "linux",
+  "topic": "vim_nano",
+  "content": "### Nano — Simple Terminal Editor\n\nNano is beginner-friendly with on-screen shortcuts.\n\n| Shortcut | Action |\n|----------|--------|\n| Ctrl+O | Save (WriteOut) |\n| Ctrl+X | Exit |\n| Ctrl+W | Search |\n| Ctrl+K | Cut line |\n| Ctrl+U | Paste line |\n| Ctrl+G | Help |\n\n```bash\nnano file.txt\n```\n\n### Vim — Modal Editor (Powerful but Steep)\n\n**Modes:**\n| Mode | Description |\n|------|-------------|\n| Normal | Default (navigation and commands) |\n| Insert | Type text (press `i` to enter) |\n| Visual | Select text (press `v`) |\n| Command-line | Ex commands (press `:`) |\n\n**Essential Normal Mode Keys:**\n\n| Key | Action |\n|-----|--------|\n| `i` | Enter insert mode |\n| `Esc` | Back to normal mode |\n| `dd` | Delete line |\n| `yy` | Yank (copy) line |\n| `p` | Paste below |\n| `u` | Undo |\n| Ctrl+r | Redo |\n| `/pattern` | Search forward |\n| `?pattern` | Search backward |\n| `n` / `N` | Next / previous match |\n\n**Saving and Quitting:**\n\n| Command | Action |\n|---------|--------|\n| `:w` | Save |\n| `:q` | Quit |\n| `:wq` or `ZZ` | Save and quit |\n| `:q!` | Quit without saving |\n| `:wq!` | Force save and quit (if readonly) |\n\n**Search and Replace:**\n\n```\n:%s/old/new/g          # replace all in file\n:5,10s/old/new/g       # replace in lines 5-10\n:%s/old/new/gc         # with confirmation\n```",
+  "codeExample": "nano ~/.bashrc\nvim ~/.bashrc\n# In vim:\n# i to insert, type, Esc, :wq to save and quit",
+  "quiz": [
+    {
+      "question": "How do you save and quit in Vim?",
+      "options": [":wq", ":q", ":exit", "Ctrl+S"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does Ctrl+O do in Nano?",
+      "options": ["Saves (WriteOut) the file", "Opens a new file", "Exits Nano", "Searches for text"],
+      "correctIndex": 0
+    }
+  ]
+}

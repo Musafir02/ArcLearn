@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Actions Workflow Basics",
+  "language": "cicd",
+  "topic": "workflow_basics",
+  "content": "### GitHub Actions Workflow YAML\n\nA GitHub Actions workflow is a YAML file placed in `.github/workflows/` in your repository. It defines an automated process triggered by events.\n\n### Workflow Structure\n\n```yaml\nname: CI\n\non:\n  push:\n    branches: [main]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: echo \"Hello, world!\"\n```\n\n### Key Fields\n\n| Field | Description |\n|-------|-------------|\n| **name** | The name of the workflow displayed in the Actions tab |\n| **on** | The event that triggers the workflow (push, pull_request, etc.) |\n| **jobs** | A collection of jobs to run (parallel by default) |\n| **runs-on** | The runner environment (ubuntu-latest, windows-latest, macos-latest) |\n| **steps** | Sequential tasks within a job |\n| **uses** | References a reusable action (e.g., `actions/checkout@v4`) |\n| **run** | Runs a shell command directly |\n\n### The `actions/checkout` Action\n\nThe most commonly used action is `actions/checkout@v4`. It checks out your repository so that the workflow can access its contents. Almost every workflow starts with this step.\n\n### Simple Build Workflow\n\n```yaml\nname: Build and Test\n\non:\n  push:\n    branches: [main]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - name: Use Node.js\n        uses: actions/setup-node@v4\n        with:\n          node-version: 20\n      - name: Install dependencies\n        run: npm ci\n      - name: Build\n        run: npm run build\n      - name: Test\n        run: npm test\n```\n\nWorkflows live in `.github/workflows/` and each file defines one workflow. You can have multiple workflow files for different purposes (CI, CD, linting, etc.).",
+  "codeExample": "name: Node.js CI\n\non:\n  push:\n    branches: [main]\n\njobs:\n  ci:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 20\n      - run: npm ci\n      - run: npm run build --if-present\n      - run: npm test",
+  "quiz": [
+    {
+      "question": "What does the `uses: actions/checkout@v4` step do?",
+      "options": ["Checks out the repository contents", "Checks code style", "Checks for security vulnerabilities", "Checks out a new branch"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where are GitHub Actions workflow files stored?",
+      "options": [".github/workflows/", ".github/actions/", "workflows/", "root of repository"],
+      "correctIndex": 0
+    }
+  ]
+}

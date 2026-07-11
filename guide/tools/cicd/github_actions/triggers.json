@@ -1,0 +1,19 @@
+{
+  "title": "Workflow Triggers in GitHub Actions",
+  "language": "cicd",
+  "topic": "triggers",
+  "content": "### Workflow Triggers\n\nTriggers define **when** a workflow runs. The `on` field specifies the event or events that activate the workflow.\n\n### `push`\n\nRuns when code is pushed to the repository:\n\n```yaml\non:\n  push:\n    branches:\n      - main\n      - develop\n```\n\n### `pull_request`\n\nRuns when a pull request is opened, synchronized, or reopened:\n\n```yaml\non:\n  pull_request:\n    branches:\n      - main\n```\n\n### `schedule` (Cron)\n\nRuns on a scheduled basis using cron syntax:\n\n```yaml\non:\n  schedule:\n    - cron: '0 2 * * *'  # Runs daily at 2 AM UTC\n```\n\n### `workflow_dispatch`\n\nEnables manual triggering from the GitHub UI:\n\n```yaml\non:\n  workflow_dispatch:\n    inputs:\n      environment:\n        description: 'Target environment'\n        required: true\n        default: 'staging'\n```\n\n### `release`\n\nRuns when a release is published:\n\n```yaml\non:\n  release:\n    types: [published]\n```\n\n### Path Filtering\n\nLimit workflow runs to changes in specific paths:\n\n```yaml\non:\n  push:\n    paths:\n      - 'src/**'\n      - 'package.json'\n```\n\nUse `paths-ignore` to exclude certain paths:\n\n```yaml\non:\n  push:\n    paths-ignore:\n      - 'docs/**'\n      - 'README.md'\n```\n\n### Branch Filtering\n\n```yaml\non:\n  push:\n    branches:\n      - main\n      - 'releases/**'\n```\n\nYou can also use `branches-ignore` to exclude branches.\n\n### Common Trigger Patterns\n\n```yaml\non:\n  push:\n    branches: [main]\n  pull_request:\n    branches: [main]\n  workflow_dispatch:\n```",
+  "codeExample": "name: Trigger Examples\n\non:\n  push:\n    branches: [main, develop]\n    paths:\n      - 'src/**'\n      - 'tests/**'\n  pull_request:\n    branches: [main]\n  schedule:\n    - cron: '0 6 * * 1'\n  workflow_dispatch:\n    inputs:\n      debug:\n        type: boolean\n        default: false\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: echo \"Triggered by ${{ github.event_name }}\"",
+  "quiz": [
+    {
+      "question": "Which trigger runs a workflow at a specific time?",
+      "options": ["push", "schedule", "workflow_dispatch", "pull_request"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does `paths-ignore` do?",
+      "options": ["Ignores the workflow files", "Prevents workflow from running when specified files change", "Ignores test failures", "Skips jobs with matching names"],
+      "correctIndex": 1
+    }
+  ]
+}

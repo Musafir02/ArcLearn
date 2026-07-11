@@ -1,0 +1,19 @@
+{
+  "title": "Matrix Builds in GitHub Actions",
+  "language": "cicd",
+  "topic": "matrix_builds",
+  "content": "### Matrix Strategy\n\nA **matrix build** lets you test across multiple combinations of operating systems, language versions, and other variables — all with a single workflow definition.\n\n### Basic Matrix\n\n```yaml\njobs:\n  test:\n    runs-on: ${{ matrix.os }}\n    strategy:\n      matrix:\n        os: [ubuntu-latest, windows-latest, macos-latest]\n        node: [18, 20]\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: ${{ matrix.node }}\n      - run: npm ci\n      - run: npm test\n```\n\nThis creates **6 jobs** (3 OS × 2 Node versions).\n\n### `fail-fast`\n\nStops all matrix jobs when one fails:\n\n```yaml\nstrategy:\n  fail-fast: true\n  matrix:\n    node: [16, 18, 20]\n    os: [ubuntu-latest, windows-latest]\n```\n\n### `include`\n\nAdd extra combinations or override variables:\n\n```yaml\nstrategy:\n  matrix:\n    node: [18, 20]\n    os: [ubuntu-latest]\n    include:\n      - node: 20\n        os: windows-latest\n        experimental: true\n```\n\n### `exclude`\n\nRemove specific combinations:\n\n```yaml\nstrategy:\n  matrix:\n    node: [16, 18, 20]\n    os: [ubuntu-latest, windows-latest]\n    exclude:\n      - node: 16\n        os: windows-latest\n```\n\n### Use Cases for Matrix Builds\n\n- **Cross-platform testing** — ensure the app works on Linux, macOS, and Windows\n- **Multiple runtime versions** — test against different Node.js, Python, or Java versions\n- **Environment variations** — test with different dependency sets or configurations",
+  "codeExample": "name: Matrix Build\n\non: [push]\n\njobs:\n  build:\n    runs-on: ${{ matrix.os }}\n    strategy:\n      fail-fast: false\n      matrix:\n        os: [ubuntu-latest, windows-latest]\n        node: [18, 20, 22]\n        include:\n          - os: macos-latest\n            node: 20\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: ${{ matrix.node }}\n      - run: npm ci\n      - run: npm test",
+  "quiz": [
+    {
+      "question": "How many jobs does a matrix with 3 OS values and 2 Node versions create?",
+      "options": ["3", "5", "6", "2"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does `fail-fast: true` do in a matrix build?",
+      "options": ["Speeds up failed jobs", "Stops all running matrix jobs when one fails", "Skips the failing combination", "Automatically retries failed jobs"],
+      "correctIndex": 1
+    }
+  ]
+}

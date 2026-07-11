@@ -1,0 +1,19 @@
+{
+  "title": "Deployment Strategies",
+  "language": "cicd",
+  "topic": "deployment_strategies",
+  "content": "### Deployment Strategies\n\nChoosing the right deployment strategy is critical for minimizing downtime and risk when releasing new software.\n\n### Blue-Green Deployment\n\nTwo identical environments — **Blue** (current live) and **Green** (new version). Traffic is switched from Blue to Green once Green is ready.\n\n**Pros:** Instant rollback, zero downtime  \n**Cons:** Requires double the infrastructure\n\n```yaml\n# Conceptual flow\n1. Deploy v2 to Green\n2. Run smoke tests on Green\n3. Switch load balancer to Green\n4. Keep Blue as rollback target\n```\n\n### Canary Releases\n\nGradually route a small percentage of users to the new version, then increase traffic as confidence grows.\n\n```yaml\n# Canary release flow\n1. Deploy new version to 5% of servers\n2. Monitor error rates for 10 minutes\n3. Increase to 25%\n4. Monitor again\n5. Increase to 100%\n```\n\n**Pros:** Reduced blast radius, real-user validation  \n**Cons:** Complex routing, slow rollout\n\n### Rolling Updates\n\nUpdate instances one by one (or in batches), replacing old versions with new ones without taking the entire service down.\n\n```yaml\n# Kubernetes rolling update\n# Updates pods incrementally\nkubectl set image deployment/myapp \\\n  myapp=myapp:v2 --record\n```\n\n**Pros:** No additional infrastructure, gradual  \n**Cons:** Slower than blue-green, mixed versions during update\n\n### Feature Flags\n\nShip code behind runtime toggles. Features are deployed in inactive state and activated when ready.\n\n```javascript\nif (flags.isEnabled('new-checkout')) {\n  renderNewCheckout()\n} else {\n  renderOldCheckout()\n}\n```\n\n**Pros:** Decouple deploy from release, instant kill switch  \n**Cons:** Technical debt from old flags, testing complexity\n\n### A/B Testing\n\nShow different versions to different user segments to compare metrics.\n\n**Pros:** Data-driven decisions  \n**Cons:** Requires analytics infrastructure\n\n### Immutable Infrastructure\n\nServers are never updated in place. Instead, a new image is built and deployed fresh.\n\n**Pros:** No configuration drift, reproducible builds  \n**Cons:** Longer build times, larger images",
+  "codeExample": "# Blue-Green deployment script concept\ndeploy_blue_green() {\n  NEW=\"green\"\n  OLD=\"blue\"\n  \n  # Deploy new version\n  docker compose -f docker-compose.$NEW.yml up -d\n  \n  # Health check\n  curl -f http://localhost:8080/health || exit 1\n  \n  # Switch traffic\n  sed -i \"s/upstream .*/upstream $NEW/\" nginx.conf\n  nginx -s reload\n  \n  # Stop old version\n  docker compose -f docker-compose.$OLD.yml down\n}",
+  "quiz": [
+    {
+      "question": "Which deployment strategy requires two identical production environments?",
+      "options": ["Canary release", "Blue-green deployment", "Rolling update", "Feature flags"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a key benefit of canary releases?",
+      "options": ["Instant rollback to previous version", "Reduced blast radius by exposing few users initially", "No infrastructure cost", "Faster build times"],
+      "correctIndex": 1
+    }
+  ]
+}
