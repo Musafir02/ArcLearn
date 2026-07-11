@@ -1,0 +1,22 @@
+{
+  "title": "Go Goto",
+  "language": "go",
+  "topic": "goto",
+  "order": 24,
+  "nextTopic": "arrays",
+  "prevTopic": "break_continue",
+  "content": "### Goto in Go\n\n`goto` performs an unconditional jump to a labeled statement.\n\n### Basic Syntax\n\n```go\nfunc main() {\n    fmt.Println(\"start\")\n    goto end\n    fmt.Println(\"this is skipped\")\nend:\n    fmt.Println(\"end\")\n}\n```\n\n### Restrictions\n\n`goto` cannot jump:\n1. Into a block (variable scope)\n2. Over variable declarations\n3. From inside a for/switch/select to outside\n\n```go\n// ILLEGAL - jumps over variable declaration\nif condition {\n    goto target\n}\ntarget:\n    x := 42 // Error: goto skips declaration of x\n```\n\n```go\n// ILLEGAL - jumps into block\nif condition {\n    goto target\n}\n{\ntarget:\n    fmt.Println(\"inside block\")\n}\n```\n\n### Practical Use: Error Handling\n\n```go\nfunc process() error {\n    f, err := os.Open(\"file.txt\")\n    if err != nil {\n        goto cleanup\n    }\n    // ... use file ...\n\ncleanup:\n    if f != nil {\n        f.Close()\n    }\n    return err\n}\n```\n\n### Goto vs Structured Control\n\n| Use Case | Prefer |\n|----------|--------|\n| Exiting nested loops | Break with label |\n| Error handling with cleanup | Defer |\n| State machine transitions | Switch |\n| Deeply nested error paths | Goto (rare) |\n\n> **Key Point:** Goto should be used sparingly. In most cases, `defer`, labeled `break`, or structured error handling is clearer. Goto is mainly useful for breaking out of deeply nested structures in performance-critical code.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    i := 0\nstart:\n    if i >= 5 {\n        goto end\n    }\n    fmt.Println(i)\n    i++\n    goto start\nend:\n    fmt.Println(\"done\")\n}",
+  "quiz": [
+    {
+      "question": "Can goto jump over variable declarations?",
+      "options": ["Yes, always", "No, never", "Only in the same scope", "Only for certain types"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What should be preferred over goto for cleanup?",
+      "options": ["break", "defer", "continue", "return"],
+      "correctIndex": 1
+    }
+  ]
+}

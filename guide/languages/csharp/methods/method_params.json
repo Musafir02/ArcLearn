@@ -1,0 +1,22 @@
+{
+  "title": "C# Method Parameters",
+  "language": "csharp",
+  "topic": "method_params",
+  "order": 31,
+  "nextTopic": "method_overloading",
+  "prevTopic": "methods",
+  "content": "### Method Parameters in C#\n\nC# provides several ways to pass parameters to methods: value, reference, output, and params.\n\n### Value Parameters (Default)\n\nBy default, arguments are passed by value - a copy is made:\n\n```csharp\nstatic void Increment(int x)\n{\n    x++;  // Only modifies the copy\n}\n\nint num = 5;\nIncrement(num);\nConsole.WriteLine(num);  // 5 (unchanged)\n```\n\n### Reference Parameters (ref)\n\nModifies the original variable using `ref`:\n\n```csharp\nstatic void Increment(ref int x)\n{\n    x++;  // Modifies the original\n}\n\nint num = 5;\nIncrement(ref num);\nConsole.WriteLine(num);  // 6\n```\n\n### Output Parameters (out)\n\nReturns multiple values from a method:\n\n```csharp\nstatic void Divide(int a, int b, out int quotient, out int remainder)\n{\n    quotient = a / b;\n    remainder = a % b;\n}\n\nDivide(10, 3, out int q, out int r);\nConsole.WriteLine($\"{q} remainder {r}\");  // 3 remainder 1\n```\n\n### ref vs out\n\n| Aspect | ref | out |\n|--------|-----|-----|\n| Initialization | Must be initialized before passing | Need not be initialized |\n| Method requirement | May read/write | Must assign before returning |\n| Purpose | Modify existing value | Return extra values |\n\n### Params (Variable-Length Arguments)\n\nAccepts a variable number of arguments:\n\n```csharp\nstatic int Sum(params int[] numbers)\n{\n    int total = 0;\n    foreach (int n in numbers)\n        total += n;\n    return total;\n}\n\nConsole.WriteLine(Sum(1, 2, 3));        // 6\nConsole.WriteLine(Sum(1, 2, 3, 4, 5)); // 15\nConsole.WriteLine(Sum());              // 0\n```\n\n### In Parameters (C# 7.2+)\n\nRead-only reference parameter (no copying, no modification):\n\n```csharp\nstatic void Display(in int value)\n{\n    // value = 10;  // Compile error - in is readonly\n    Console.WriteLine(value);\n}\n```\n\n### Parameter Combinations\n\n```csharp\n// Params must be the last parameter\nstatic void Log(string format, params object[] args)\n{\n    Console.WriteLine(string.Format(format, args));\n}\n```\n\n> **Key Point:** Use `ref` when you need to modify the caller's variable. Use `out` when a method returns multiple values. Use `params` for methods that accept a variable number of arguments (must be the last parameter). Prefer value parameters (pass by value) for immutability.\n\n### ref Locals (C# 7+)\n\n```csharp\nint[] numbers = { 1, 2, 3 };\nref int refElement = ref numbers[0];\nrefElement = 100;  // numbers[0] is now 100\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // ref\n        int x = 5;\n        Increment(ref x);\n        Console.WriteLine($\"After ref increment: {x}\");\n        \n        // out\n        int.TryParse(\"123\", out int parsed);\n        Console.WriteLine($\"Parsed: {parsed}\");\n        \n        // params\n        Console.WriteLine($\"Sum: {Sum(10, 20, 30, 40)}\");\n        Console.WriteLine($\"Sum (no args): {Sum()}\");\n    }\n    \n    static void Increment(ref int n) => n++;\n    \n    static int Sum(params int[] numbers)\n    {\n        int total = 0;\n        foreach (var n in numbers) total += n;\n        return total;\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword allows a method to modify the caller's variable?",
+      "options": ["out", "ref", "in", "param"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword allows a variable number of method arguments?",
+      "options": ["variable", "params", "args", "many"],
+      "correctIndex": 1
+    }
+  ]
+}

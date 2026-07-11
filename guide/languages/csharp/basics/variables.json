@@ -1,0 +1,22 @@
+{
+  "title": "C# Variables",
+  "language": "csharp",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Variables in C#\n\nA variable is a container for storing data values. C# is strongly typed, meaning every variable must have a declared type.\n\n### Variable Declaration\n\n```csharp\n// Syntax: type variableName = value;\nint age = 25;\nstring name = \"Alice\";\ndouble price = 19.99;\nbool isActive = true;\n```\n\n### Naming Rules\n\n| Rule | Example |\n|------|---------|\n| Must start with letter or underscore | `int _count;` |\n| Can contain letters, digits, underscores | `int myVar2;` |\n| Case-sensitive | `age` and `Age` are different |\n| Cannot use C# keywords | `int class;` is invalid |\n| Cannot start with digit | `int 1var;` is invalid |\n\n### Naming Conventions\n\n- **camelCase** for local variables and parameters: `firstName`, `totalAmount`\n- **PascalCase** for public fields and properties: `FirstName`, `TotalAmount`\n- **Underscore prefix** for private fields: `_firstName`, `_totalAmount`\n\n### Multiple Declarations\n\n```csharp\nint a, b, c;                    // Declare multiple variables\nint x = 1, y = 2, z = 3;       // Declare and initialize\n```\n\n### Implicitly Typed Variables (var)\n\n```csharp\nvar message = \"Hello\";       // Compiler infers string\nvar number = 42;             // Compiler infers int\nvar list = new List<int>();  // Compiler infers List<int>\n```\n\n> **Key Point:** Use `var` only when the type is obvious from the right-hand side. It does NOT mean dynamic typing; the type is determined at compile time.\n\n### Constants\n\nUse `const` for values that never change:\n\n```csharp\nconst double Pi = 3.14159;\nconst int MaxUsers = 100;\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        string firstName = \"John\";\n        string lastName = \"Doe\";\n        int age = 30;\n        double height = 5.9;\n        bool isStudent = false;\n        \n        Console.WriteLine($\"Name: {firstName} {lastName}\");\n        Console.WriteLine($\"Age: {age}, Height: {height}, Student: {isStudent}\");\n        \n        // Variable reassignment\n        age = 31;\n        Console.WriteLine($\"Next year: {age}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the correct way to declare a variable in C#?",
+      "options": ["variable name = value;", "name = value var;", "type name = value;", "name type = value;"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the 'var' keyword mean in C#?",
+      "options": ["Dynamic typing", "The type is inferred by the compiler", "The variable is optional", "The variable is global"],
+      "correctIndex": 1
+    }
+  ]
+}

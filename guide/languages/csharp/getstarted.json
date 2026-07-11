@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started with C#",
+  "language": "csharp",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Setting Up Your Environment\n\nTo write and run C# code, you need the .NET SDK installed on your machine.\n\n### Installation\n\n| Platform | Download |\n|----------|----------|\n| Windows | Download .NET SDK from dotnet.microsoft.com |\n| macOS | Download .NET SDK or use `brew install dotnet` |\n| Linux | Use package manager: `sudo apt install dotnet-sdk-8.0` |\n\n### Your First Program\n\nCreate a new console application:\n\n```bash\ndotnet new console -n MyApp\ncd MyApp\ndotnet run\n```\n\n### File Structure\n\nA basic C# project contains:\n\n- `.cs` files - C# source code\n- `.csproj` - Project configuration file\n- `Program.cs` - Entry point of the application\n\n> **Key Point:** With top-level statements (C# 9+), you can write executable code directly without wrapping it in a class.\n\n### IDE Options\n\n- **Visual Studio** - Full-featured IDE for Windows\n- **Visual Studio Code** - Lightweight cross-platform editor\n- **JetBrains Rider** - Powerful cross-platform IDE\n- **dotnet CLI** - Command-line tools for building and running",
+  "codeExample": "using System;\n\nConsole.WriteLine(\"Welcome to C#!\");\nConsole.Write(\"Enter your name: \");\nstring name = Console.ReadLine();\nConsole.WriteLine($\"Hello, {name}!\");",
+  "quiz": [
+    {
+      "question": "Which command creates a new C# console application?",
+      "options": ["dotnet create console", "dotnet new console -n MyApp", "new dotnet console", "dotnet init console"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the file extension for C# source files?",
+      "options": [".cs", ".csharp", ".csx", ".c#"],
+      "correctIndex": 0
+    }
+  ]
+}

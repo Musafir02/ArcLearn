@@ -1,0 +1,22 @@
+{
+  "title": "C# Nullable Reference Types",
+  "language": "csharp",
+  "topic": "nullable_reference_types",
+  "order": 76,
+  "nextTopic": "tuple_types",
+  "prevTopic": "records",
+  "content": "### Nullable Reference Types in C#\n\nNullable reference types (C# 8+) help prevent NullReferenceException by distinguishing between nullable and non-nullable reference types.\n\n### Enabling Nullable Context\n\n```csharp\n// File-level enable\n#nullable enable\n\n// Project-level (in .csproj)\n<Nullable>enable</Nullable>\n\n// Disable selectively\n#nullable disable\n```\n\n### Nullable vs Non-Nullable\n\n```csharp\n#nullable enable\n\nstring name = \"Hello\";       // Non-nullable (compiler ensures not null)\nstring? maybeNull = null;     // Nullable (may be null)\n\nname = null;                  // Warning!\nmaybeNull = null;             // OK\n\nConsole.WriteLine(name.Length);   // OK\nConsole.WriteLine(maybeNull.Length);  // Warning! Possible null dereference\n```\n\n### Null Checking\n\n```csharp\n// Traditional null check\nif (maybeNull != null)\n    Console.WriteLine(maybeNull.Length);  // No warning\n\n// Null-conditional operator\nint? length = maybeNull?.Length;  // null if maybeNull is null\n\n// Null-forgiving operator (!)\nint len = maybeNull!.Length;  // Suppress warning (use carefully)\n\n// Null coalescing\nstring result = maybeNull ?? \"default\";\n```\n\n### Nullable Annotations in APIs\n\n```csharp\npublic class Person\n{\n    public string Name { get; set; }        // Required, non-nullable\n    public string? MiddleName { get; set; }  // Optional, nullable\n    public int Age { get; set; }             // Value type\n}\n```\n\n### Nullable Flow Analysis\n\nThe compiler tracks null state through code paths:\n\n```csharp\nstring? text = GetValue();\n\nif (text is null)\n    return;\n\nConsole.WriteLine(text.Length);  // No warning - compiler knows not null here\n```\n\n### Nullable Warnings\n\n| Warning | Meaning |\n|---------|---------|\n| CS8600 | Converting null literal to non-nullable type |\n| CS8602 | Dereference of a possibly null reference |\n| CS8603 | Possible null reference return |\n| CS8618 | Non-nullable field not initialized |\n| CS8625 | Cannot convert null literal to non-nullable type |\n\n### Null-Friendly Operators\n\n```csharp\n// Null-conditional operator\nint? count = list?.Count;\nstring? first = list?[0];\n\n// Null coalescing\nstring display = name ?? \"Guest\";\n\n// Null coalescing assignment\nlist ??= new List<string>();\n\n// Null-forgiving operator\nvar result = GetValue()!;  // I know it's not null\n```\n\n### Generic Nullable\n\n```csharp\npublic T? Find<T>(IEnumerable<T> source, Func<T, bool> predicate) where T : class\n{\n    return source.FirstOrDefault(predicate);\n}\n```\n\n> **Key Point:** Nullable reference types add compile-time safety against null reference exceptions. Use `?` to mark nullable references. The compiler tracks null state through your code. Treat warnings as errors for best results. The null-forgiving operator `!` suppresses warnings but doesn't prevent runtime nulls.\n\n### Migration from Legacy Code\n\n```csharp\n#nullable disable  // Legacy file\n// Old code without nullable annotations\n\n#nullable enable  // New code\nstring? maybe = GetValue();\n```\n\n### [MaybeNull] and [NotNull] Attributes\n\n```csharp\npublic static bool TryParse(string? input, [MaybeNullWhen(false)] out int result)\n{\n    // Implementation\n}",
+  "codeExample": "using System;\n\n#nullable enable\n\nclass Program\n{\n    static void Main()\n    {\n        string? nullableMessage = GetNullMessage();\n        string nonNullableMessage = GetMessage();\n        \n        // Safe access\n        if (nullableMessage is not null)\n            Console.WriteLine(nullableMessage.Length);\n        \n        Console.WriteLine(nonNullableMessage.Length);  // No warning\n    }\n    \n    static string? GetNullMessage() => null;\n    static string GetMessage() => \"Hello!\";\n}\n\n#nullable restore",
+  "quiz": [
+    {
+      "question": "Which symbol marks a reference type as nullable?",
+      "options": ["! suffix", "? suffix", "* suffix", "~ prefix"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the null-forgiving operator (!) do?",
+      "options": ["Throws if null", "Suppresses null warnings", "Creates a default value", "Checks for null"],
+      "correctIndex": 1
+    }
+  ]
+}

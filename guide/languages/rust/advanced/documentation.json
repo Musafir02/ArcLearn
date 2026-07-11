@@ -1,0 +1,17 @@
+{
+  "title": "Documentation in Rust",
+  "language": "rust",
+  "topic": "documentation",
+  "order": 68,
+  "nextTopic": "macros",
+  "prevTopic": "unit_tests",
+  "content": "### Documentation in Rust\n\nRust's documentation system, `rustdoc`, generates HTML documentation from doc comments. It supports Markdown and code examples that are tested.\n\n---\n\n### Doc Comment Syntax\n\n| Syntax | Location | Generates docs for |\n|--------|----------|-------------------|\n| `///` | Before items | The following item |\n| `//!` | Inside items | The parent item (crate/module) |\n\n---\n\n### Documentation Sections\n\n```rust\n/// Adds two numbers together.\n///\n/// # Examples\n///\n/// ```\n/// let result = add(2, 3);\n/// assert_eq!(result, 5);\n/// ```\n///\n/// # Panics\n///\n/// Panics if the result overflows.\n///\n/// # Safety\n///\n/// This function is safe to call from any context.\nfn add(a: i32, b: i32) -> i32 {\n    a + b\n}\n\n//! # My Crate\n//!\n//! `my_crate` provides utility functions for common tasks.\n//!\n//! This documentation describes the public API.\n```\n\n---\n\n### Running rustdoc\n\n```bash\ncargo doc        # Generate docs\ncargo doc --open # Generate and open in browser\ncargo test       # Also tests doc examples\n```\n\n> **Key Point:** Documentation code examples are run as tests via `cargo test`. Use `///` for item documentation and `//!` for crate/module-level documentation. Include sections like `# Examples`, `# Panics`, `# Errors`, and `# Safety`.",
+  "codeExample": "/// Calculates the area of a rectangle.\n///\n/// # Arguments\n/// * `width` - The width of the rectangle\n/// * `height` - The height of the rectangle\n///\n/// # Examples\n/// ```\n/// let area = rectangle_area(5, 10);\n/// assert_eq!(area, 50);\n/// ```\npub fn rectangle_area(width: u32, height: u32) -> u32 {\n    width * height\n}\n\nfn main() {\n    println!(\"Area: {}\", rectangle_area(5, 10));\n}",
+  "quiz": [
+    {
+      "question": "Which syntax generates documentation for the parent item (crate/module)?",
+      "options": ["///", "//!", "/*! */", "/** */"],
+      "correctIndex": 1
+    }
+  ]
+}

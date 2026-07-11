@@ -1,0 +1,22 @@
+{
+  "title": "Go Constants",
+  "language": "go",
+  "topic": "constants",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Constants in Go\n\nConstants are immutable values declared with `const`.\n\n### Declaration\n\n```go\nconst Pi = 3.14159\nconst Greeting = \"Hello\"\n\n// Typed constant\nconst MaxSize int = 1024\n\n// Multiple constants\nconst (\n    StatusOK = 200\n    StatusNotFound = 404\n    StatusError = 500\n)\n```\n\n### Typed vs Untyped Constants\n\n```go\nconst A = 42            // untyped integer constant\nconst B int = 42        // typed integer constant\n\n// Untyped constants can be used in flexible contexts\nvar f float64 = A       // OK - A is untyped\n// var f float64 = B    // Error - B is typed int\n```\n\n### Iota\n\n`iota` is a constant generator for related constants:\n\n```go\nconst (\n    Sunday = iota  // 0\n    Monday         // 1\n    Tuesday        // 2\n    Wednesday      // 3\n    Thursday       // 4\n    Friday         // 5\n    Saturday       // 6\n)\n```\n\nIota resets to 0 in each `const` block. You can skip values with `_`:\n\n```go\nconst (\n    _ = iota      // 0 (discarded)\n    KB = 1 << (10 * iota)  // 1024\n    MB                        // 1048576\n    GB                        // 1073741824\n)\n```\n\n### Enum Pattern\n\nUse `iota` with a custom type for enums:\n\n```go\ntype Color int\n\nconst (\n    Red Color = iota\n    Green\n    Blue\n)\n```\n\n> **Key Point:** Constants in Go are **not** variables - they are replaced at compile time. Untyped constants have greater flexibility in assignments.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nconst (\n    PI = 3.14159\n    Language = \"Go\"\n    Version = 1.22\n)\n\nconst (\n    A = iota\n    B\n    C\n)\n\nfunc main() {\n    fmt.Println(PI, Language, Version)\n    fmt.Println(A, B, C) // 0, 1, 2\n}",
+  "quiz": [
+    {
+      "question": "What keyword declares constants in Go?",
+      "options": ["let", "const", "static", "final"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does `iota` represent?",
+      "options": ["A constant value", "A constant generator", "A variable", "A function"],
+      "correctIndex": 1
+    }
+  ]
+}

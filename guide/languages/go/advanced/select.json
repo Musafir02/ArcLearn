@@ -1,0 +1,22 @@
+{
+  "title": "Go Select",
+  "language": "go",
+  "topic": "select",
+  "order": 57,
+  "nextTopic": "mutex",
+  "prevTopic": "channel_buffered",
+  "content": "### Select Statement\n\n`select` lets a goroutine wait on multiple channel operations.\n\n### Basic Select\n\n```go\nfunc main() {\n    ch1 := make(chan string)\n    ch2 := make(chan string)\n\n    go func() {\n        time.Sleep(1 * time.Second)\n        ch1 <- \"one\"\n    }()\n    go func() {\n        time.Sleep(2 * time.Second)\n        ch2 <- \"two\"\n    }()\n\n    select {\n    case msg1 := <-ch1:\n        fmt.Println(\"Received from ch1:\", msg1)\n    case msg2 := <-ch2:\n        fmt.Println(\"Received from ch2:\", msg2)\n    }\n}\n```\n\n### Select with Default\n\nThe `default` case runs immediately if no channels are ready:\n\n```go\nselect {\ncase msg := <-ch:\n    fmt.Println(\"Received:\", msg)\ndefault:\n    fmt.Println(\"No messages ready\")\n}\n```\n\n### Non-blocking Send\n\n```go\nselect {\ncase ch <- msg:\n    fmt.Println(\"Sent message\")\ndefault:\n    fmt.Println(\"Channel full, message dropped\")\n}\n```\n\n### Timeout with Select\n\n```go\nselect {\ncase result := <-ch:\n    fmt.Println(result)\ncase <-time.After(2 * time.Second):\n    fmt.Println(\"Timeout after 2s\")\n}\n```\n\n### Select with Empty Channels\n\nA nil channel is never ready, useful for disabling cases:\n\n```go\nfunc main() {\n    ch1 := make(chan int)\n    var ch2 chan int // nil\n\n    go func() {\n        ch1 <- 42\n    }()\n\n    select {\n    case v := <-ch1:\n        fmt.Println(\"from ch1:\", v)\n    case v := <-ch2: // never selected\n        fmt.Println(\"from ch2:\", v)\n    }\n}\n```\n\n### Select Loop\n\n```go\nfor {\n    select {\n    case v, ok := <-ch1:\n        if !ok {\n            ch1 = nil // disable this case\n        } else {\n            fmt.Println(\"ch1:\", v)\n        }\n    case v, ok := <-ch2:\n        if !ok {\n            ch2 = nil\n        } else {\n            fmt.Println(\"ch2:\", v)\n        }\n    }\n    if ch1 == nil && ch2 == nil {\n        break\n    }\n}\n```\n\n> **Key Point:** `select` chooses randomly when multiple channels are ready. The `default` case makes the select non-blocking.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"time\"\n)\n\nfunc main() {\n    ch := make(chan int, 1)\n\n    // Timeout pattern\n    select {\n    case msg := <-ch:\n        fmt.Println(\"Received:\", msg)\n    case <-time.After(1 * time.Second):\n        fmt.Println(\"Timeout\")\n    }\n\n    // Non-blocking send\n    msg := \"hello\"\n    strCh := make(chan string, 1)\n    strCh <- msg\n    \n    select {\n    case strCh <- \"world\":\n        fmt.Println(\"Sent world\")\n    default:\n        fmt.Println(\"Channel full\")\n    }\n}",
+  "quiz": [
+    {
+      "question": "How does select behave when multiple channels are ready?",
+      "options": ["Chooses first case", "Chooses randomly", "Panics", "Processes all"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the default case in select do?",
+      "options": ["Blocks forever", "Runs immediately if no channels ready", "Panics", "Ignores all channels"],
+      "correctIndex": 1
+    }
+  ]
+}

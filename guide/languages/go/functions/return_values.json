@@ -1,0 +1,22 @@
+{
+  "title": "Go Return Values",
+  "language": "go",
+  "topic": "return_values",
+  "order": 34,
+  "nextTopic": "multiple_returns",
+  "prevTopic": "function_params",
+  "content": "### Return Values in Go\n\nFunctions can return zero or more values.\n\n### Single Return Value\n\n```go\nfunc square(x int) int {\n    return x * x\n}\n```\n\n### Return Type Declaration\n\n```go\nfunc divide(a, b float64) float64 {\n    if b == 0 {\n        return 0 // must return the declared type\n    }\n    return a / b\n}\n```\n\n### Named Return Values\n\nNamed return values are declared in the function signature:\n\n```go\nfunc split(sum int) (x, y int) {\n    x = sum * 4 / 9\n    y = sum - x\n    return // naked return\n}\n```\n\n### Naked Return\n\nWhen return values are named, a bare `return` returns the current values of those names:\n\n```go\nfunc getCoordinates() (x, y int) {\n    x = 10\n    y = 20\n    return  // returns 10, 20\n}\n```\n\nUse naked returns sparingly - they can harm readability in longer functions.\n\n### Returning Local Variables\n\nReturning a pointer to a local variable is safe in Go (escape analysis handles it):\n\n```go\nfunc newPerson(name string) *Person {\n    p := Person{Name: name}\n    return &p // safe! allocated on heap if needed\n}\n```\n\n### Ignoring Return Values\n\nUse `_` to discard return values:\n\n```go\nresult, _ := divide(10, 3)\n// only care about result\n```\n\n> **Key Point:** Go functions can return multiple values. Named returns provide automatic variable declaration and initialization with zero values.",
+  "codeExample": "package main\n\nimport (\n    \"errors\"\n    \"fmt\"\n)\n\n// Standard return\nfunc add(a, b int) int {\n    return a + b\n}\n\n// Named return\nfunc getDimensions() (width, height int) {\n    width = 1920\n    height = 1080\n    return\n}\n\n// Error return\nfunc safeDivide(a, b float64) (float64, error) {\n    if b == 0 {\n        return 0, errors.New(\"division by zero\")\n    }\n    return a / b, nil\n}\n\nfunc main() {\n    fmt.Println(add(5, 3))\n    w, h := getDimensions()\n    fmt.Println(w, h)\n    result, err := safeDivide(10, 0)\n    fmt.Println(result, err)\n}",
+  "quiz": [
+    {
+      "question": "What is a naked return?",
+      "options": ["Return without expression when using named returns", "Return with no parameters", "Return that ignores errors", "Return from anonymous function"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you ignore a return value?",
+      "options": ["Use _", "Use nil", "Omit it", "Use ignore()"],
+      "correctIndex": 0
+    }
+  ]
+}

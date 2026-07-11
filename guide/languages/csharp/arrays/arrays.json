@@ -1,0 +1,22 @@
+{
+  "title": "C# Arrays",
+  "language": "csharp",
+  "topic": "arrays",
+  "order": 26,
+  "nextTopic": "array_methods",
+  "prevTopic": "foreach",
+  "content": "### Arrays in C#\n\nAn array stores a fixed-size sequential collection of elements of the same type.\n\n### Declaring Arrays\n\n```csharp\nint[] numbers;                // Declaration\nint[] numbers = new int[5];   // Declaration with size\nint[] numbers = new int[] { 1, 2, 3 };  // Declaration with values\nint[] numbers = { 1, 2, 3 };  // Shorthand\n```\n\n### Array Indexing\n\nArrays are zero-indexed. The first element is at index 0.\n\n```csharp\nint[] arr = { 10, 20, 30, 40, 50 };\nConsole.WriteLine(arr[0]);   // 10\nConsole.WriteLine(arr[2]);   // 30\narr[4] = 55;                 // Change last element\n```\n\n### Array Properties\n\n| Property | Description | Example |\n|----------|-------------|---------|\n| `Length` | Total number of elements | `arr.Length` |\n| `Rank` | Number of dimensions | `arr.Rank` |\n| `IsFixedSize` | Always true for arrays | `arr.IsFixedSize` |\n| `IsReadOnly` | Is the array read-only | `arr.IsReadOnly` |\n\n### Iterating Over Arrays\n\n```csharp\nint[] numbers = { 2, 4, 6, 8 };\n\n// For loop with index\nfor (int i = 0; i < numbers.Length; i++)\n{\n    Console.WriteLine(numbers[i]);\n}\n\n// Foreach\nforeach (int num in numbers)\n{\n    Console.WriteLine(num);\n}\n```\n\n### Array Initialization\n\n```csharp\n// All elements default to 0\nint[] arr1 = new int[5];  // { 0, 0, 0, 0, 0 }\n\n// Explicit initialization\nint[] arr2 = new int[3] { 1, 2, 3 };\nint[] arr3 = { 1, 2, 3 };\n\n// Using Enumerable\nint[] arr4 = Enumerable.Range(0, 10).ToArray();  // { 0, 1, ..., 9 }\n```\n\n> **Key Point:** Arrays have a fixed size determined at creation. Use `Length` property (not `Count()` method) to get array size. Arrays are reference types, so assigning one array to another creates a reference, not a copy.\n\n### Reference Behavior\n\n```csharp\nint[] original = { 1, 2, 3 };\nint[] copy = original;  // Both reference the same array\ncopy[0] = 99;\nConsole.WriteLine(original[0]);  // 99\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] scores = { 85, 92, 78, 95, 88 };\n        \n        Console.WriteLine($\"Array length: {scores.Length}\");\n        Console.WriteLine(\"\\nAll scores:\");\n        \n        int sum = 0;\n        foreach (int score in scores)\n        {\n            Console.WriteLine($\"- {score}\");\n            sum += score;\n        }\n        \n        double average = (double)sum / scores.Length;\n        Console.WriteLine($\"\\nAverage: {average:F2}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the index of the first element in a C# array?",
+      "options": ["-1", "0", "1", "It depends"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which property gives the number of elements in an array?",
+      "options": ["Size", "Length", "Count", "Total"],
+      "correctIndex": 1
+    }
+  ]
+}

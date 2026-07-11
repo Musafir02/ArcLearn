@@ -1,0 +1,22 @@
+{
+  "title": "C# Recursion",
+  "language": "csharp",
+  "topic": "recursion",
+  "order": 34,
+  "nextTopic": "lambda_expressions",
+  "prevTopic": "named_optional_params",
+  "content": "### Recursion in C#\n\nRecursion is a technique where a method calls itself to solve a problem by breaking it into smaller subproblems.\n\n### Basic Structure\n\nEvery recursive method needs:\n\n1. **Base case** - Condition that stops recursion\n2. **Recursive case** - Method calls itself with modified parameters\n\n```csharp\nstatic int Factorial(int n)\n{\n    if (n <= 1)     // Base case\n        return 1;\n    return n * Factorial(n - 1);  // Recursive case\n}\n```\n\n### Classic Examples\n\n**Factorial:**\n\n```csharp\nstatic int Factorial(int n) => n <= 1 ? 1 : n * Factorial(n - 1);\n// Factorial(5) = 5 * 4 * 3 * 2 * 1 = 120\n```\n\n**Fibonacci:**\n\n```csharp\nstatic int Fibonacci(int n)\n{\n    if (n <= 1) return n;\n    return Fibonacci(n - 1) + Fibonacci(n - 2);\n}\n```\n\n### Iteration vs Recursion\n\n| Aspect | Iteration | Recursion |\n|--------|-----------|-----------|\n| Code | Loops (for, while) | Method calls itself |\n| Memory | Stack frame reused | New frame per call |\n| Performance | Faster, less overhead | Slower for deep recursion |\n| Readability | Complex problems verbose | Elegant for certain problems |\n| Stack overflow | Never | Possible with deep recursion |\n\n### Tail Recursion\n\nWhen the recursive call is the last operation:\n\n```csharp\nstatic int FactorialTail(int n, int accumulator = 1)\n{\n    if (n <= 1) return accumulator;\n    return FactorialTail(n - 1, n * accumulator);\n}\n```\n\n### Tree Traversal\n\n```csharp\nstatic void Traverse(TreeNode node)\n{\n    if (node == null) return;\n    Console.WriteLine(node.Value);\n    Traverse(node.Left);\n    Traverse(node.Right);\n}\n```\n\n### Directory Traversal\n\n```csharp\nstatic void ListFiles(string path, string indent = \"\")\n{\n    foreach (var file in Directory.GetFiles(path))\n        Console.WriteLine($\"{indent}{Path.GetFileName(file)}\");\n    \n    foreach (var dir in Directory.GetDirectories(path))\n    {\n        Console.WriteLine($\"{indent}[{Path.GetFileName(dir)}]\");\n        ListFiles(dir, indent + \"  \");\n    }\n}\n```\n\n> **Key Point:** Always ensure a base case exists to prevent infinite recursion. Deep recursion can cause StackOverflowException. Consider iterative solutions for performance-critical code. Recursion is ideal for tree-like data structures and divide-and-conquer algorithms.\n\n### Recursion Depth Warnings\n\n```csharp\n// Will cause stack overflow for large n\nstatic int BadFactorial(int n) => n <= 1 ? 1 : n * BadFactorial(n - 1);\n// Factorial(100000) will crash\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine($\"Factorial of 5: {Factorial(5)}\");\n        Console.WriteLine($\"Fibonacci of 10: {Fibonacci(10)}\");\n        Console.WriteLine($\"Sum of 1-100: {Sum(100)}\");\n    }\n    \n    static int Factorial(int n) => n <= 1 ? 1 : n * Factorial(n - 1);\n    \n    static int Fibonacci(int n) => n <= 1 ? n : Fibonacci(n - 1) + Fibonacci(n - 2);\n    \n    static int Sum(int n) => n <= 0 ? 0 : n + Sum(n - 1);\n}",
+  "quiz": [
+    {
+      "question": "What is the base case in recursion?",
+      "options": ["The first call", "The condition that stops recursion", "The recursive call itself", "The return statement"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What problem can occur with very deep recursion?",
+      "options": ["Memory leak", "Stack overflow", "Infinite loop", "Null reference"],
+      "correctIndex": 1
+    }
+  ]
+}

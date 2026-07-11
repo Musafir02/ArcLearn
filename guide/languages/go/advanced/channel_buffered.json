@@ -1,0 +1,22 @@
+{
+  "title": "Go Buffered Channels",
+  "language": "go",
+  "topic": "channel_buffered",
+  "order": 56,
+  "nextTopic": "select",
+  "prevTopic": "channels",
+  "content": "### Buffered Channels\n\nBuffered channels have a capacity and only block when full.\n\n### Creating Buffered Channels\n\n```go\nch := make(chan int, 3) // buffer capacity of 3\n```\n\n### Behavior\n\n```go\nch := make(chan int, 3)\nch <- 1  // no block\nch <- 2  // no block\nch <- 3  // no block\n// ch <- 4 // BLOCKS: buffer is full\n\nfmt.Println(<-ch) // 1 (buffer now has room)\nch <- 4           // OK\n```\n\n### Unbuffered vs Buffered\n\n| Aspect | Unbuffered (cap=0) | Buffered (cap>0) |\n|--------|-------------------|------------------|\n| Send | Blocks until received | Blocks when full |\n| Receive | Blocks until sent | Blocks when empty |\n| Sync | Guaranteed sync | Async up to capacity |\n\n### Len and Cap\n\n```go\nch := make(chan int, 5)\nch <- 10\nch <- 20\n\nfmt.Println(len(ch)) // 2 (elements in buffer)\nfmt.Println(cap(ch)) // 5 (total capacity)\n```\n\n### Producer-Consumer Pattern\n\n```go\nfunc producer(ch chan<- int) {\n    for i := 0; i < 10; i++ {\n        ch <- i\n        fmt.Println(\"Produced:\", i)\n    }\n    close(ch)\n}\n\nfunc consumer(ch <-chan int) {\n    for val := range ch {\n        fmt.Println(\"Consumed:\", val)\n        time.Sleep(100 * time.Millisecond)\n    }\n}\n\nfunc main() {\n    ch := make(chan int, 5) // buffer smooths out production/consumption\n    go producer(ch)\n    consumer(ch)\n}\n```\n\n### When to Use Buffered Channels\n\n- Bursty workloads with occasional spikes\n- Decoupling producer and consumer speeds\n- Limiting parallelism (semaphore pattern)\n\n> **Key Point:** A buffered channel with capacity 1 behaves like a mutex. A buffered channel of size N acts as a counting semaphore. Choose your buffer size carefully - too large wastes memory, too small causes blocking.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    ch := make(chan string, 2)\n\n    ch <- \"buffered\"\n    ch <- \"channel\"\n\n    fmt.Println(<-ch)\n    fmt.Println(<-ch)\n\n    // Demonstrate len and cap\n    ch2 := make(chan int, 5)\n    fmt.Println(\"cap:\", cap(ch2), \"len:\", len(ch2))\n    ch2 <- 1\n    ch2 <- 2\n    fmt.Println(\"cap:\", cap(ch2), \"len:\", len(ch2))\n}",
+  "quiz": [
+    {
+      "question": "When does a send to a buffered channel block?",
+      "options": ["Always", "When the buffer is full", "When the buffer is empty", "Never"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does len(ch) return for a buffered channel?",
+      "options": ["Total capacity", "Number of elements in buffer", "Number of senders", "Number of receivers"],
+      "correctIndex": 1
+    }
+  ]
+}

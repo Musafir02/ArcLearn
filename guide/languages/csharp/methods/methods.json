@@ -1,0 +1,22 @@
+{
+  "title": "C# Methods",
+  "language": "csharp",
+  "topic": "methods",
+  "order": 30,
+  "nextTopic": "method_params",
+  "prevTopic": "multidimensional_arrays",
+  "content": "### Methods in C#\n\nA method is a block of code that performs a specific task. Methods help organize code, reduce repetition, and improve readability.\n\n### Method Syntax\n\n```csharp\n[accessModifier] [returnType] MethodName([parameters])\n{\n    // Method body\n    return value;  // If not void\n}\n```\n\n### Basic Example\n\n```csharp\nstatic void Greet(string name)\n{\n    Console.WriteLine($\"Hello, {name}!\");\n}\n\nstatic int Add(int a, int b)\n{\n    return a + b;\n}\n```\n\n### Calling Methods\n\n```csharp\nGreet(\"Alice\");          // Call void method\nint sum = Add(5, 3);     // Call method with return value\nConsole.WriteLine(sum);  // 8\n```\n\n### Method Components\n\n| Part | Description | Example |\n|------|-------------|---------|\n| Access modifier | Visibility of the method | `public`, `private`, `static` |\n| Return type | What the method returns | `int`, `string`, `void` |\n| Method name | Identifier for the method | `CalculateTotal` |\n| Parameters | Input values | `(int x, int y)` |\n| Body | Code to execute | `{ return x + y; }` |\n\n### Return Types\n\n```csharp\n// Returns nothing\nstatic void PrintMessage(string msg)\n{\n    Console.WriteLine(msg);\n}\n\n// Returns a value\nstatic int Square(int x)\n{\n    return x * x;\n}\n\n// Returns multiple values (tuple)\nstatic (int, int) GetMinMax(int[] numbers)\n{\n    return (numbers.Min(), numbers.Max());\n}\n```\n\n### Expression-Bodied Methods (C# 6+)\n\n```csharp\nstatic int Add(int a, int b) => a + b;\nstatic void Print(string msg) => Console.WriteLine(msg);\nstatic bool IsEven(int n) => n % 2 == 0;\n```\n\n### Local Functions (C# 7+)\n\nMethods inside methods:\n\n```csharp\nstatic int Calculate(int x, int y)\n{\n    return Multiply(x, y) + Add(x, y);\n    \n    int Multiply(int a, int b) => a * b;\n    int Add(int a, int b) => a + b;\n}\n```\n\n### Method Overloading\n\nSame method name with different parameters:\n\n```csharp\nstatic int Sum(int a, int b) => a + b;\nstatic int Sum(int a, int b, int c) => a + b + c;\nstatic double Sum(double a, double b) => a + b;\n```\n\n> **Key Point:** Methods should perform a single, well-defined task. Use camelCase for method parameters and PascalCase for method names. Methods with `void` return type do not require a `return` statement.\n\n### Default Parameters\n\n```csharp\nstatic void Log(string message, string level = \"INFO\")\n{\n    Console.WriteLine($\"[{level}] {message}\");\n}\n\nLog(\"Starting\");           // [INFO] Starting\nLog(\"Error!\", \"ERROR\");    // [ERROR] Error!",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int result = Add(10, 20);\n        Console.WriteLine($\"10 + 20 = {result}\");\n        \n        PrintGreeting(\"Alice\");\n        \n        double area = CalculateCircleArea(5);\n        Console.WriteLine($\"Circle area: {area:F2}\");\n    }\n    \n    static int Add(int a, int b) => a + b;\n    \n    static void PrintGreeting(string name)\n    {\n        Console.WriteLine($\"Hello, {name}!\");\n    }\n    \n    static double CalculateCircleArea(double radius)\n    {\n        return Math.PI * radius * radius;\n    }\n}",
+  "quiz": [
+    {
+      "question": "What keyword indicates a method returns no value?",
+      "options": ["null", "void", "empty", "none"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is method overloading?",
+      "options": ["Calling a method too many times", "Same name with different parameters", "Using too many parameters", "A method calling itself"],
+      "correctIndex": 1
+    }
+  ]
+}

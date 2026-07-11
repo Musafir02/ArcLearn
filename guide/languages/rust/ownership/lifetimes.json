@@ -1,0 +1,17 @@
+{
+  "title": "Lifetimes in Rust",
+  "language": "rust",
+  "topic": "lifetimes",
+  "order": 29,
+  "nextTopic": "lifetime_elision",
+  "prevTopic": "slices",
+  "content": "### Lifetimes in Rust\n\nLifetimes ensure that references are always valid. They are Rust's mechanism for preventing dangling references.\n\n---\n\n### Lifetime Annotations\n\n| Syntax | Meaning |\n|--------|---------|\n| `&'a T` | Reference valid for lifetime `'a` |\n| `&'a mut T` | Mutable reference valid for `'a` |\n| `<'a>` | Generic lifetime parameter |\n| `'static` | Entire program duration |\n\n---\n\n### Function Lifetime Annotations\n\n```rust\n// This function takes two string slices and returns the longer one\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\n    if x.len() > y.len() { x } else { y }\n}\n\n// Multiple lifetime parameters\nfn example<'a, 'b>(x: &'a str, y: &'b str) -> &'a str {\n    x\n}\n\n// Lifetimes in structs\nstruct Excerpt<'a> {\n    part: &'a str,\n}\n\nlet novel = String::from(\"Call me Ishmael. Some years ago...\");\nlet first_sentence = novel.split('.').next().expect(\"Could not find a '.'\");\nlet excerpt = Excerpt { part: first_sentence };\n```\n\n> **Key Point:** Lifetime annotations describe the relationship between the lifetimes of parameters and return values. They don't change how long a reference lives; they just ensure references are valid. The `'static` lifetime means the reference can live for the entire program.",
+  "codeExample": "fn main() {\n    let string1 = String::from(\"long\");\n    let string2 = String::from(\"longer\");\n    let result = longest(string1.as_str(), string2.as_str());\n    println!(\"The longest string is: {}\", result);\n}\n\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\n    if x.len() > y.len() { x } else { y }\n}",
+  "quiz": [
+    {
+      "question": "What do lifetime annotations prevent?",
+      "options": ["Memory leaks", "Dangling references", "Stack overflow", "Type mismatches"],
+      "correctIndex": 1
+    }
+  ]
+}

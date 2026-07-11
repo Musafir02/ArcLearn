@@ -1,0 +1,22 @@
+{
+  "title": "C# Structs",
+  "language": "csharp",
+  "topic": "structs",
+  "order": 49,
+  "nextTopic": "enums",
+  "prevTopic": "static",
+  "content": "### Structs in C#\n\nStructs are value types that can contain data and methods. They are more lightweight than classes.\n\n### Declaring Structs\n\n```csharp\npublic struct Point\n{\n    public int X;\n    public int Y;\n    \n    public Point(int x, int y)\n    {\n        X = x;\n        Y = y;\n    }\n    \n    public double Distance => Math.Sqrt(X * X + Y * Y);\n}\n```\n\n### Struct vs Class\n\n| Aspect | Struct | Class |\n|--------|--------|-------|\n| Type | Value type | Reference type |\n| Memory | Stack (usually) | Heap |\n| Assignment | Copies data | Copies reference |\n| Inheritance | Cannot inherit | Supports inheritance |\n| Default constructor | Always has parameterless | Generated if no constructor |\n| Nullable | Use `?` | Always nullable |\n| `==` operator | By value (with overrides) | By reference |\n| Performance | Better for small data | Better for large data |\n\n### When to Use Structs\n\n```csharp\n// Good - small, simple, immutable-like\npublic struct Color\n{\n    public byte R { get; }\n    public byte G { get; }\n    public byte B { get; }\n    \n    public Color(byte r, byte g, byte b) => (R, G, B) = (r, g, b);\n}\n\n// Use for:\n// - Small data types (16-64 bytes)\n// - Short-lived values\n// - Immutable data carriers\n// - Performance-critical code\n```\n\n### Readonly Structs (C# 7.2+)\n\n```csharp\npublic readonly struct Measurement\n{\n    public double Value { get; }\n    public string Unit { get; }\n    \n    public Measurement(double value, string unit)\n    {\n        Value = value;\n        Unit = unit;\n    }\n}\n```\n\n### Ref Structs (C# 7.2+)\n\nStack-only structs used for performance:\n\n```csharp\nref struct SpanExample\n{\n    // Can only live on the stack\n    // Cannot be boxed\n    // Cannot be a field of a class\n}\n```\n\n### Struct Constructors\n\n```csharp\npublic struct Vector2\n{\n    public float X;\n    public float Y;\n    \n    // Parameterized constructor must initialize all fields\n    public Vector2(float x, float y)\n    {\n        X = x;\n        Y = y;\n    }\n    \n    // C# 10+ allows parameterless constructors\n    public Vector2()\n    {\n        X = 0;\n        Y = 0;\n    }\n}\n```\n\n### Record Structs (C# 10+)\n\n```csharp\npublic readonly record struct Point(int X, int Y);\n\npublic record struct Person\n{\n    public string Name { get; init; }\n    public int Age { get; init; }\n}\n```\n\n> **Key Point:** Use structs for small, immutable data types that represent simple values. Structs are copied on assignment. Avoid boxing structs (assigning to object) for performance-critical code. Prefer readonly structs for immutability.\n\n### Boxing and Unboxing\n\n```csharp\nPoint p = new Point(3, 4);\nobject boxed = p;          // Boxing (heap allocation)\nPoint unboxed = (Point)boxed;  // Unboxing\n```\n\n### Best Practices\n\n| Recommendation | Reason |\n|---------------|--------|\n| Keep structs small | < 16-24 bytes |\n| Make them immutable | Use readonly fields/properties |\n| Avoid reference type fields | Increases size |\n| Implement IEquatable<T> | Avoid boxing in equality checks |\n| Use readonly modifier | Improves performance (C# 7.2+) |",
+  "codeExample": "using System;\n\npublic readonly struct Money\n{\n    public decimal Amount { get; }\n    public string Currency { get; }\n    \n    public Money(decimal amount, string currency)\n    {\n        Amount = amount;\n        Currency = currency;\n    }\n    \n    public Money Add(Money other)\n    {\n        if (Currency != other.Currency)\n            throw new ArgumentException(\"Currency mismatch\");\n        return new Money(Amount + other.Amount, Currency);\n    }\n    \n    public override string ToString() => $\"{Currency} {Amount:F2}\";\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var price1 = new Money(29.99m, \"USD\");\n        var price2 = new Money(9.99m, \"USD\");\n        var total = price1.Add(price2);\n        Console.WriteLine(total);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Are structs value types or reference types?",
+      "options": ["Value types", "Reference types", "Both", "Neither"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happens when you assign one struct variable to another?",
+      "options": ["Reference is copied", "Data is copied", "Nothing happens", "Exception is thrown"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "if/else in Rust",
+  "language": "rust",
+  "topic": "if_else",
+  "order": 18,
+  "nextTopic": "loop",
+  "prevTopic": "conditions",
+  "content": "### if/else in Rust\n\nThe `if` keyword branches execution based on a boolean condition. Unlike many languages, `if` in Rust is an expression.\n\n---\n\n### Syntax\n\n| Construct | Example |\n|-----------|---------|\n| if | `if condition { }` |\n| if-else | `if cond { } else { }` |\n| if-else if | `if a { } else if b { } else { }` |\n| if let | `if let Pattern(value) = expr { }` |\n\n---\n\n### Using if as an Expression\n\n```rust\n// Assign based on condition\nlet condition = true;\nlet number = if condition { 5 } else { 6 };\n\n// All branches must return the same type\nlet result = if x > 0 {\n    \"positive\"\n} else if x < 0 {\n    \"negative\"\n} else {\n    \"zero\"\n};\n\n// Traditional if for side effects\nif number > 10 {\n    println!(\"Big number!\");\n}\n```\n\n> **Key Point:** When using `if` as an expression, all branches must have the same type. If one branch returns a value and another doesn't, the compiler will reject it.",
+  "codeExample": "fn main() {\n    let temperature = 25;\n    \n    let weather = if temperature > 30 {\n        \"hot\"\n    } else if temperature > 20 {\n        \"warm\"\n    } else if temperature > 10 {\n        \"cool\"\n    } else {\n        \"cold\"\n    };\n    \n    println!(\"The weather is {}.\", weather);\n}",
+  "quiz": [
+    {
+      "question": "What type must all branches of an if expression return?",
+      "options": ["The same type", "Any type", "bool", "unit type"],
+      "correctIndex": 0
+    }
+  ]
+}

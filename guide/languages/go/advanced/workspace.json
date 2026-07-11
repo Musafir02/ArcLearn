@@ -1,0 +1,22 @@
+{
+  "title": "Go Workspace",
+  "language": "go",
+  "topic": "workspace",
+  "order": 72,
+  "nextTopic": "",
+  "prevTopic": "modules_imports",
+  "content": "### Go Workspaces (Go 1.18+)\n\nWorkspaces allow working on multiple modules simultaneously.\n\n### What is a Workspace?\n\nA workspace is a directory with a `go.work` file that specifies a set of local modules.\n\n### Creating a Workspace\n\n```bash\ngo work init ./module1 ./module2\n```\n\n### go.work File\n\n```\ngo 1.22\n\nuse (\n    ./myapp\n    ./mylib\n    ./tools/formatter\n)\n\nreplace example.com/old => ./local-fork\n```\n\n### Why Workspaces?\n\n| Scenario | Without Workspace | With Workspace |\n|----------|------------------|----------------|\n| Multi-module project | Manual replace directives | Single go.work file |\n| Local development | go.mod replace in each module | Centralized workspace |\n| Shared tooling | Complicated setup | Simple workspace config |\n\n### Workspace Commands\n\n```bash\ngo work init      # create go.work\ngo work use       # add module to workspace\ngo work sync      # sync dependencies\ngo work edit      # edit go.work programmatically\n```\n\n### Workspace Example\n\n```\nproject/\n  go.work          -- defines workspace\n  myapp/\n    go.mod\n    main.go\n  mylib/\n    go.mod\n    lib.go\n```\n\n`go.work`:\n\n```\ngo 1.22\n\nuse (\n    ./myapp\n    ./mylib\n)\n```\n\n### Build with Workspace\n\n```bash\ngo build ./...   # builds all modules in workspace\ngo test ./...    # tests all modules in workspace\n```\n\n### GOWORK Environment Variable\n\n```bash\nexport GOWORK=off    # disable workspace mode\n# Default: auto (detects go.work in parent directories)\n```\n\n### Workspace vs Replace\n\n```\n// Without workspace (in each go.mod):\nreplace example.com/mylib => ../mylib\n\n// With workspace (single go.work):\nuse (\n    ./myapp\n    ./mylib\n)\n```\n\n> **Key Point:** Workspaces are ideal for developing multiple related modules together (e.g., a library and its consumer). The `go.work` file is not committed to production repositories.",
+  "codeExample": "// project structure:\n//\n// myproject/\n//   go.work\n//   app/\n//     go.mod        -- module example.com/app\n//     main.go\n//   lib/\n//     go.mod        -- module example.com/lib\n//     helper.go\n//\n// go.work content:\n//   go 1.22\n//   use (\n//       ./app\n//       ./lib\n//   )\n//\n// Run from myproject/: go run ./app\n\npackage main\n\nimport (\n    \"fmt\"\n    \"example.com/lib\"\n)\n\nfunc main() {\n    fmt.Println(lib.Help())\n}",
+  "quiz": [
+    {
+      "question": "What file defines a Go workspace?",
+      "options": ["go.mod", "go.work", "workspace.json", "go.env"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What command adds a module to a workspace?",
+      "options": ["go work add", "go work use", "go mod use", "go workspace add"],
+      "correctIndex": 1
+    }
+  ]
+}

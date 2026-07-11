@@ -1,0 +1,22 @@
+{
+  "title": "Go Empty Interface",
+  "language": "go",
+  "topic": "empty_interface",
+  "order": 51,
+  "nextTopic": "type_assertions",
+  "prevTopic": "interface_satisfaction",
+  "content": "### Empty Interface\n\nThe empty interface `interface{}` (or `any`) has no methods, so all types satisfy it.\n\n### Declaration\n\n```go\nvar x interface{}\n// or in Go 1.18+\nvar y any\n```\n\n### Usage\n\n```go\nvar val any\nval = 42\nval = \"hello\"\nval = 3.14\nval = []int{1, 2, 3}\nval = map[string]int{\"a\": 1}\n```\n\n### Printing with any\n\n```go\nfunc printAny(v any) {\n    fmt.Printf(\"Value: %v, Type: %T\\n\", v, v)\n}\n\nprintAny(42)       // Value: 42, Type: int\nprintAny(\"hello\")  // Value: hello, Type: string\nprintAny(3.14)     // Value: 3.14, Type: float64\n```\n\n### Common Use Cases\n\n| Use Case | Example |\n|----------|---------|\n| JSON decoding | `json.Unmarshal(data, &v)` where v is `any` |\n| fmt.Printf | `%v` and `%T` verbs work with any type |\n| Error wrapping | `errors.As` works with any target |\n| Container types | `[]any` for heterogeneous lists |\n\n### JSON with any\n\n```go\nvar data any\nerr := json.Unmarshal(jsonBytes, &data)\n\n// data is a nested structure of map[string]any and []any\nif m, ok := data.(map[string]any); ok {\n    for k, v := range m {\n        fmt.Printf(\"%s: %v\\n\", k, v)\n    }\n}\n```\n\n### Limits of any\n\n- No type safety at compile time\n- Requires type assertions or type switches to access the underlying value\n- Performance overhead (interface boxing)\n\n```go\nfunc double(v any) any {\n    switch val := v.(type) {\n    case int:\n        return val * 2\n    case float64:\n        return val * 2\n    default:\n        return nil\n    }\n}\n```\n\n> **Key Point:** Prefer specific interfaces over `any`. Use `any` only when you truly need to handle values of unknown type, like JSON decoding or logging.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc describe(v any) {\n    fmt.Printf(\"(%T) %v\\n\", v, v)\n}\n\nfunc main() {\n    describe(42)\n    describe(\"hello\")\n    describe(3.14)\n    describe([]int{1, 2, 3})\n    \n    // Mixed slice\n    mixed := []any{1, \"two\", 3.0, true}\n    for _, v := range mixed {\n        describe(v)\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is `any` in Go?",
+      "options": ["A specific type", "Alias for interface{}", "A generic type", "A base class"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does the empty interface provide type safety?",
+      "options": ["Yes, at compile time", "No, only at runtime", "Yes, always", "No, never"],
+      "correctIndex": 1
+    }
+  ]
+}

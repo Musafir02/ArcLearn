@@ -1,0 +1,22 @@
+{
+  "title": "Go Defer",
+  "language": "go",
+  "topic": "defer",
+  "order": 19,
+  "nextTopic": "for_loop",
+  "prevTopic": "switch",
+  "content": "### Defer in Go\n\n`defer` schedules a function call to run after the surrounding function returns.\n\n### Basic Usage\n\n```go\nfunc main() {\n    defer fmt.Println(\"world\")\n    fmt.Println(\"hello\")\n}\n// Output: hello world\n```\n\n### Resource Cleanup\n\nDefer is commonly used for cleanup operations:\n\n```go\nfunc readFile(filename string) error {\n    f, err := os.Open(filename)\n    if err != nil {\n        return err\n    }\n    defer f.Close() // runs when function returns\n\n    // use file...\n    return nil\n}\n```\n\n### Multiple Defers\n\nDeferred calls are executed in LIFO (Last-In-First-Out) order:\n\n```go\nfunc main() {\n    defer fmt.Println(\"first defer\")\n    defer fmt.Println(\"second defer\")\n    defer fmt.Println(\"third defer\")\n}\n// Output:\n// third defer\n// second defer\n// first defer\n```\n\n### Defer with Anonymous Functions\n\n```go\nfunc main() {\n    x := 10\n    defer func() {\n        fmt.Println(\"deferred:\", x)\n    }()\n    x = 20\n    fmt.Println(\"before defer:\", x)\n}\n// Output:\n// before defer: 20\n// deferred: 20\n```\n\n### Defer with Arguments\n\nArguments are evaluated immediately, not deferred:\n\n```go\nfunc main() {\n    x := 10\n    defer fmt.Println(\"deferred:\", x) // prints 10, not 20\n    x = 20\n    fmt.Println(\"before defer:\", x)\n}\n// Output:\n// before defer: 20\n// deferred: 10\n```\n\n### Common Use Cases\n\n| Use Case | Example |\n|----------|---------|\n| File close | `defer f.Close()` |\n| Mutex unlock | `defer mu.Unlock()` |\n| Timer cleanup | `defer timer.Stop()` |\n| DB connection close | `defer db.Close()` |\n| Logging | `defer log.Println(\"done\")` |\n\n> **Key Point:** Defer is not for performance-critical code (has overhead). Arguments are evaluated at the defer statement, not when the deferred function runs.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc main() {\n    var mu sync.Mutex\n\n    // Simulate locked operation\n    mu.Lock()\n    defer mu.Unlock()\n\n    fmt.Println(\"Critical section\")\n\n    // Multiple defers run in LIFO\n    defer fmt.Println(\"Cleanup 1\")\n    defer fmt.Println(\"Cleanup 2\")\n}",
+  "quiz": [
+    {
+      "question": "When are deferred function arguments evaluated?",
+      "options": ["When the function returns", "When defer is called", "When the deferred function runs", "At compile time"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What order do multiple defers execute in?",
+      "options": ["FIFO", "LIFO", "Random", "By priority"],
+      "correctIndex": 1
+    }
+  ]
+}

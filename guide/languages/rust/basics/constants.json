@@ -1,0 +1,17 @@
+{
+  "title": "Constants in Rust",
+  "language": "rust",
+  "topic": "constants",
+  "order": 9,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Constants in Rust\n\nConstants in Rust are values that are bound to a name and never change. They are declared with `const` or `static`.\n\n---\n\n### `const` vs `static`\n\n| Feature | `const` | `static` |\n|---------|---------|----------|\n| Inlined at compile time | Yes | No (fixed memory location) |\n| Type annotation required | Always | Always |\n| Mutable | No (use `static mut` unsafely) | `static mut` is unsafe |\n| Global scope | Yes | Yes |\n\n---\n\n### Usage\n\n```rust\nconst MAX_POINTS: u32 = 100_000;\nconst LANGUAGE: &str = \"Rust\";\n\nstatic APP_NAME: &str = \"MyApp\";\nstatic mut COUNTER: u32 = 0;  // requires unsafe to mutate\n```\n\nConstants can be declared in any scope, including global scope. They must be explicitly typed and can only be set to a constant expression (not a runtime-computed value).\n\n> **Key Point:** Use `const` for compile-time constants that never change. Avoid `static mut` unless absolutely necessary, as accessing it requires `unsafe` blocks and can lead to data races.",
+  "codeExample": "fn main() {\n    const PI: f64 = 3.14159;\n    const RADIUS: f64 = 5.0;\n    \n    let area = PI * RADIUS * RADIUS;\n    println!(\"Area: {}\", area);\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used to declare compile-time constants in Rust?",
+      "options": ["let", "const", "static", "immutable"],
+      "correctIndex": 1
+    }
+  ]
+}

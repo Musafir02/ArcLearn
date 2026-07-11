@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to C#",
+  "language": "csharp",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is C#?\n\nC# (pronounced \"C Sharp\") is a modern, object-oriented programming language developed by Microsoft as part of the .NET ecosystem. It was released in 2000 and has evolved significantly over the years.\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Object-Oriented | Supports classes, inheritance, polymorphism, encapsulation |\n| Type-Safe | Strongly typed language with compile-time type checking |\n| Cross-Platform | Runs on Windows, Linux, macOS via .NET |\n| Garbage Collected | Automatic memory management |\n| Async/Await | Built-in asynchronous programming support |\n\n### Why Learn C#?\n\nC# is widely used for:\n\n- **Desktop applications** with WPF and WinForms\n- **Web applications** with ASP.NET\n- **Game development** with Unity\n- **Mobile apps** with Xamarin / .NET MAUI\n- **Cloud services** with Azure\n- **Microservices** and enterprise software\n\n> **Key Point:** C# combines the power of C++ with the simplicity of Visual Basic, making it a versatile language for beginners and experts alike.\n\n### C# Evolution Timeline\n\n```\nC# 1.0 (2002) - Basic OOP features\nC# 2.0 (2005) - Generics, nullable types\nC# 3.0 (2007) - LINQ, lambda expressions\nC# 4.0 (2010) - Dynamic binding, named arguments\nC# 5.0 (2012) - Async/await\nC# 6.0 (2015) - String interpolation, null-conditional operators\nC# 7.0 (2017) - Pattern matching, tuples\nC# 8.0 (2019) - Nullable reference types, async streams\nC# 9.0 (2020) - Records, top-level statements\nC# 10 (2021) - Global usings, file-scoped namespaces\nC# 11 (2022) - Raw string literals, required members\nC# 12 (2023) - Primary constructors, collection expressions\nC# 13 (2024) - Params collections, new locking primitives\nC# 14 (2026) - Experimental features in preview\n```",
+  "codeExample": "using System;\n\nConsole.WriteLine(\"Hello, World!\");",
+  "quiz": [
+    {
+      "question": "Who developed the C# programming language?",
+      "options": ["Google", "Microsoft", "Oracle", "Apple"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of language is C#?",
+      "options": ["Interpreted", "Object-oriented", "Functional only", "Markup"],
+      "correctIndex": 1
+    }
+  ]
+}

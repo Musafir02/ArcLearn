@@ -1,0 +1,17 @@
+{
+  "title": "Modules in Rust",
+  "language": "rust",
+  "topic": "modules",
+  "order": 49,
+  "nextTopic": "crates",
+  "prevTopic": "trait_bounds",
+  "content": "### Modules in Rust\n\nModules organize code into logical groups and control visibility (public/private). They are the foundation of Rust's module system.\n\n---\n\n### Module Visibility\n\n| Keyword | Visibility |\n|---------|------------|\n| `pub` | Public (accessible outside module) |\n| `pub(crate)` | Public within the crate |\n| `pub(super)` | Public to parent module |\n| Default | Private to parent module |\n\n---\n\n### Module Organization\n\n```rust\n// In lib.rs or main.rs\nmod math {\n    // Private by default\n    fn internal_helper() { }\n    \n    // Public function\n    pub fn add(a: i32, b: i32) -> i32 {\n        a + b\n    }\n    \n    // Public submodule\n    pub mod advanced {\n        pub fn power(base: i32, exp: u32) -> i32 {\n            base.pow(exp)\n        }\n    }\n}\n\n// Using modules\nuse math::add;\nuse math::advanced::power;\n\n// Re-exporting\npub use math::advanced::power;\n\n// File-based module\n// math.rs or math/mod.rs\n// mod math;  // imports from math.rs\n```\n\n> **Key Point:** Everything in Rust is private by default. Use `pub` to make items visible outside their module. The module tree starts at the crate root (lib.rs or main.rs). Use `use` to bring items into scope.",
+  "codeExample": "mod greetings {\n    pub fn hello() -> String {\n        String::from(\"Hello!\")\n    }\n    \n    pub fn goodbye() -> String {\n        String::from(\"Goodbye!\")\n    }\n    \n    fn internal() -> String {\n        String::from(\"Internal only\")\n    }\n}\n\nfn main() {\n    println!(\"{}\", greetings::hello());\n    println!(\"{}\", greetings::goodbye());\n    // greetings::internal();  // ERROR: private function\n}",
+  "quiz": [
+    {
+      "question": "What is the default visibility of items in a module?",
+      "options": ["Public", "Private", "pub(crate)", "pub(super)"],
+      "correctIndex": 1
+    }
+  ]
+}

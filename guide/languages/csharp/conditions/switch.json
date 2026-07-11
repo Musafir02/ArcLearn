@@ -1,0 +1,22 @@
+{
+  "title": "C# Switch Statement",
+  "language": "csharp",
+  "topic": "switch",
+  "order": 19,
+  "nextTopic": "ternary",
+  "prevTopic": "if_else",
+  "content": "### Switch Statement in C#\n\nThe `switch` statement evaluates an expression and executes code based on matching cases.\n\n### Basic Switch\n\n```csharp\nswitch (expression)\n{\n    case value1:\n        // Code for value1\n        break;\n    case value2:\n        // Code for value2\n        break;\n    default:\n        // Code if no match\n        break;\n}\n```\n\n### Example\n\n```csharp\nint day = 3;\nstring dayName;\n\nswitch (day)\n{\n    case 1:\n        dayName = \"Monday\";\n        break;\n    case 2:\n        dayName = \"Tuesday\";\n        break;\n    case 3:\n        dayName = \"Wednesday\";\n        break;\n    case 4:\n        dayName = \"Thursday\";\n        break;\n    case 5:\n        dayName = \"Friday\";\n        break;\n    default:\n        dayName = \"Weekend\";\n        break;\n}\n```\n\n### Switch on String\n\n```csharp\nswitch (command)\n{\n    case \"start\":\n        Start();\n        break;\n    case \"stop\":\n        Stop();\n        break;\n    default:\n        Console.WriteLine(\"Unknown command\");\n        break;\n}\n```\n\n### Switch Expressions (C# 8+)\n\nConcise switch as an expression:\n\n```csharp\nstring grade = score switch\n{\n    >= 90 => \"A\",\n    >= 80 => \"B\",\n    >= 70 => \"C\",\n    >= 60 => \"D\",\n    _ => \"F\"\n};\n```\n\n### Pattern Matching in Switch\n\n```csharp\nswitch (obj)\n{\n    case int i:\n        Console.WriteLine($\"Integer: {i}\");\n        break;\n    case string s when s.Length > 5:\n        Console.WriteLine($\"Long string: {s}\");\n        break;\n    case null:\n        Console.WriteLine(\"Null value\");\n        break;\n}\n```\n\n### Multiple Case Labels\n\n```csharp\nswitch (letter)\n{\n    case 'a':\n    case 'e':\n    case 'i':\n    case 'o':\n    case 'u':\n        Console.WriteLine(\"Vowel\");\n        break;\n    default:\n        Console.WriteLine(\"Consonant\");\n        break;\n}\n```\n\n> **Key Point:** Every non-empty case must end with `break`, `return`, `throw`, or `goto`. Switch expressions (C# 8+) are more concise and preferred for simple mappings. Use pattern matching for type-based switching.\n\n### Relational Patterns (C# 9+)\n\n```csharp\nstring category = temperature switch\n{\n    < 0 => \"Freezing\",\n    >= 0 and < 20 => \"Cold\",\n    >= 20 and < 30 => \"Warm\",\n    >= 30 => \"Hot\"\n};",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.Write(\"Enter a day number (1-7): \");\n        int day = int.Parse(Console.ReadLine());\n        \n        string dayName = day switch\n        {\n            1 => \"Monday\",\n            2 => \"Tuesday\",\n            3 => \"Wednesday\",\n            4 => \"Thursday\",\n            5 => \"Friday\",\n            6 => \"Saturday\",\n            7 => \"Sunday\",\n            _ => \"Invalid day\"\n        };\n        \n        Console.WriteLine(dayName);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword ends a case block in a traditional switch?",
+      "options": ["stop", "break", "end", "exit"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the default case represent in a switch?",
+      "options": ["The first case", "No match found", "The last case", "An error"],
+      "correctIndex": 1
+    }
+  ]
+}

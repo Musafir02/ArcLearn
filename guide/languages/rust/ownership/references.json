@@ -1,0 +1,17 @@
+{
+  "title": "References in Rust",
+  "language": "rust",
+  "topic": "references",
+  "order": 27,
+  "nextTopic": "slices",
+  "prevTopic": "borrowing",
+  "content": "### References in Rust\n\nA reference is a pointer that follows the borrowing rules. References are created with the `&` operator and dereferenced with `*`.\n\n---\n\n### Reference Types\n\n| Type | Syntax | Description |\n|------|--------|-------------|\n| Immutable reference | `&T` | Read-only access |\n| Mutable reference | `&mut T` | Read-write access |\n\n---\n\n### Dereferencing\n\n```rust\nlet x = 5;\nlet y = &x;  // y is a reference to x\n\nassert_eq!(x, 5);\nassert_eq!(*y, 5);  // dereference to get the value\n\n// Auto-dereferencing\n// Rust automatically dereferences when calling methods\nlet s = String::from(\"hello\");\nlet r = &s;\nprintln!(\"{}\", r.len());   // auto-deref: (*r).len()\nprintln!(\"{}\", (*r).len()); // explicit deref\n\n// Mutable reference\nlet mut z = 10;\nlet z_ref = &mut z;\n*z_ref = 20;  // dereference to mutate\nprintln!(\"{}\", z);  // 20\n```\n\n> **Key Point:** Rust automatically dereferences references when calling methods or accessing fields, so you rarely need the `*` operator explicitly. This is called auto-dereferencing.",
+  "codeExample": "fn main() {\n    let mut value = 42;\n    \n    let ref1 = &value;\n    let ref2 = &value;\n    println!(\"ref1: {}, ref2: {}\", ref1, ref2);\n    // ref1 and ref2 go out of scope here\n    \n    let ref_mut = &mut value;\n    *ref_mut += 10;\n    println!(\"value after mutable ref: {}\", value);\n}",
+  "quiz": [
+    {
+      "question": "Which operator creates a reference in Rust?",
+      "options": ["*", "&", "@", "#"],
+      "correctIndex": 1
+    }
+  ]
+}

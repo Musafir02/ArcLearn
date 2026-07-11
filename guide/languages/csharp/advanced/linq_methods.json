@@ -1,0 +1,22 @@
+{
+  "title": "C# LINQ Methods",
+  "language": "csharp",
+  "topic": "linq_methods",
+  "order": 58,
+  "nextTopic": "linq_lambda",
+  "prevTopic": "linq",
+  "content": "### LINQ Methods in Detail\n\nLINQ provides a comprehensive set of extension methods for querying data.\n\n### Filtering (Where)\n\n```csharp\nint[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8 };\n\nvar evens = numbers.Where(n => n % 2 == 0);\nvar evensWithIndex = numbers.Where((n, index) => n % 2 == 0 && index > 2);\n```\n\n### Projection (Select, SelectMany)\n\n```csharp\nvar squares = numbers.Select(n => n * n);\nvar withIndex = numbers.Select((n, i) => new { Index = i, Value = n });\n\n// Flatten nested collections\nvar words = new[] { \"one two\", \"three four\" };\nvar allWords = words.SelectMany(w => w.Split(' '));\n// \"one\", \"two\", \"three\", \"four\"\n```\n\n### Sorting (OrderBy, ThenBy)\n\n```csharp\nvar people = new[] { (\"Alice\", 30), (\"Bob\", 25), (\"Charlie\", 30) };\n\nvar sorted = people\n    .OrderBy(p => p.Age)\n    .ThenBy(p => p.Name)\n    .ThenByDescending(p => p.Name.Length);\n```\n\n### Aggregation\n\n```csharp\nint[] nums = { 1, 2, 3, 4, 5 };\n\nint count = nums.Count();\nint sum = nums.Sum();\ndouble avg = nums.Average();\nint min = nums.Min();\nint max = nums.Max();\nint product = nums.Aggregate((a, b) => a * b);  // 120\n```\n\n### Quantifiers\n\n```csharp\nbool allPositive = nums.All(n => n > 0);      // true\nbool anyEven = nums.Any(n => n % 2 == 0);     // true\nbool contains5 = nums.Contains(5);             // true\n```\n\n### Set Operations\n\n```csharp\nint[] set1 = { 1, 2, 3, 4 };\nint[] set2 = { 3, 4, 5, 6 };\n\nvar distinct = set1.Distinct();\nvar union = set1.Union(set2);        // 1, 2, 3, 4, 5, 6\nvar intersect = set1.Intersect(set2); // 3, 4\nvar except = set1.Except(set2);       // 1, 2\n```\n\n### Partitioning\n\n```csharp\nint[] nums = { 1, 2, 3, 4, 5, 6 };\n\nvar first3 = nums.Take(3);           // 1, 2, 3\nvar skip2 = nums.Skip(2);            // 3, 4, 5, 6\nvar whileLess5 = nums.TakeWhile(n => n < 5);  // 1, 2, 3, 4\nvar skipWhileLess3 = nums.SkipWhile(n => n < 3);  // 3, 4, 5, 6\n```\n\n### Element Operations\n\n```csharp\nint first = nums.First();              // 1\nint last = nums.Last();                // 6\nint firstMatch = nums.First(n => n > 3);  // 4\nint? maybe = nums.FirstOrDefault(n => n > 10);  // null\nint single = nums.Single(n => n == 5);  // 5 (throws if not exactly one)\nint elementAt = nums.ElementAt(2);     // 3\n```\n\n### Grouping\n\n```csharp\nvar people = new[] { (\"Alice\", \"A\"), (\"Bob\", \"B\"), (\"Andy\", \"A\") };\n\nvar grouped = people.GroupBy(p => p.Item2);\nforeach (var group in grouped)\n{\n    Console.WriteLine($\"{group.Key}: {group.Count()} people\");\n}\n```\n\n> **Key Point:** LINQ methods chain together for complex queries. Most methods use deferred execution. Methods like `ToList()`, `ToArray()`, `Count()`, `First()`, `Sum()` force immediate execution.\n\n### Join Operations\n\n```csharp\nvar orders = new[] { (1, \"Alice\"), (2, \"Bob\") };\nvar items = new[] { (1, \"Laptop\"), (1, \"Mouse\"), (2, \"Keyboard\") };\n\nvar query = orders.Join(items,\n    o => o.Item1,  // orders key\n    i => i.Item1,  // items key\n    (o, i) => new { Customer = o.Item2, Item = i.Item2 });",
+  "codeExample": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var nums = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n        \n        var pipeline = nums\n            .Where(n => n % 2 == 0)     // 2, 4, 6, 8, 10\n            .Select(n => n * n)          // 4, 16, 36, 64, 100\n            .Where(n => n > 10)          // 16, 36, 64, 100\n            .OrderByDescending(n => n)   // 100, 64, 36, 16\n            .Take(3);                    // 100, 64, 36\n        \n        Console.WriteLine(\"Result: \" + string.Join(\", \", pipeline));\n        Console.WriteLine($\"Count: {nums.Count(n => n % 3 == 0)}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which method flattens nested collections in LINQ?",
+      "options": ["Select()", "SelectMany()", "Flatten()", "Expand()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which LINQ methods force immediate execution?",
+      "options": ["Where(), Select()", "ToList(), Count()", "OrderBy(), GroupBy()", "All of them"],
+      "correctIndex": 1
+    }
+  ]
+}

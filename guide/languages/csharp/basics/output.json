@@ -1,0 +1,22 @@
+{
+  "title": "C# Output",
+  "language": "csharp",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Console Output\n\nC# provides several ways to output text to the console using the `Console` class.\n\n### WriteLine vs Write\n\n| Method | Behavior | Example |\n|--------|----------|---------|\n| `Console.WriteLine()` | Prints text followed by a newline | `Console.WriteLine(\"Hello\");` |\n| `Console.Write()` | Prints text without a newline | `Console.Write(\"Hello\");` |\n\n### String Interpolation\n\nIntroduced in C# 6, string interpolation allows embedding expressions directly in strings:\n\n```csharp\nstring name = \"Alice\";\nint age = 30;\nConsole.WriteLine($\"Name: {name}, Age: {age}\");\n```\n\n### Format Strings\n\n```csharp\ndouble price = 19.99;\nConsole.WriteLine(\"Price: {0:C}\", price);  // Currency format\nConsole.WriteLine(\"{0:F2}\", 3.14159);      // Fixed-point format\n```\n\n### Composite Formatting\n\n```csharp\nConsole.WriteLine(\"Hello {0}, you have {1} messages.\", name, count);\n```\n\n### Escape Sequences\n\n| Sequence | Meaning |\n|----------|---------|\n| `\\n` | Newline |\n| `\\t` | Tab |\n| `\\\\` | Backslash |\n| `\\\"` | Double quote |\n\n> **Key Point:** `Console.WriteLine()` automatically appends a newline, while `Console.Write()` does not. Use string interpolation `$\"...\"` for cleaner, more readable output formatting.",
+  "codeExample": "using System;\n\nstring name = \"Bob\";\nint score = 95;\ndouble gpa = 3.75;\n\nConsole.WriteLine(\"Student Information\");\nConsole.WriteLine(\"-------------------\");\nConsole.WriteLine($\"Name: {name}\");\nConsole.WriteLine($\"Score: {score}\");\nConsole.WriteLine($\"GPA: {gpa:F2}\");\nConsole.Write(\"Press any key to exit...\");",
+  "quiz": [
+    {
+      "question": "What is the difference between WriteLine and Write?",
+      "options": ["WriteLine is faster", "WriteLine adds a newline at the end", "Write adds brackets", "There is no difference"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which C# feature allows embedding expressions directly in strings with $ prefix?",
+      "options": ["Format strings", "String concatenation", "String interpolation", "String builder"],
+      "correctIndex": 2
+    }
+  ]
+}

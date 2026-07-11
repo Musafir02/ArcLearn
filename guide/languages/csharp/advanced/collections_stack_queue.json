@@ -1,0 +1,22 @@
+{
+  "title": "C# Stack and Queue",
+  "language": "csharp",
+  "topic": "collections_stack_queue",
+  "order": 56,
+  "nextTopic": "linq",
+  "prevTopic": "collections_dictionary",
+  "content": "### Stack and Queue in C#\n\nStack and Queue are specialized collections for LIFO (Last-In-First-Out) and FIFO (First-In-First-Out) scenarios.\n\n### Stack<T>\n\nA stack is a LIFO collection. The last element added is the first one removed.\n\n```csharp\nStack<string> stack = new Stack<string>();\nstack.Push(\"First\");\nstack.Push(\"Second\");\nstack.Push(\"Third\");\n\nstring top = stack.Peek();  // \"Third\" (without removing)\nstring item = stack.Pop();  // \"Third\" (removes and returns)\n```\n\n### Stack Methods\n\n| Method | Description |\n|--------|-------------|\n| `Push(T)` | Add element to top |\n| `Pop()` | Remove and return top element |\n| `Peek()` | Return top element without removing |\n| `Contains(T)` | Check if element exists |\n| `Clear()` | Remove all elements |\n| `Count` | Number of elements |\n| `ToArray()` | Copy to array |\n\n### Stack Use Cases\n\n```csharp\n// Undo/Redo operations\nvar undoStack = new Stack<string>();\nundoStack.Push(\"Change 1\");\nundoStack.Push(\"Change 2\");\nstring lastChange = undoStack.Pop();  // \"Change 2\"\n\n// Expression evaluation\n// Backtracking algorithms\n// Call stack simulation\n```\n\n### Queue<T>\n\nA queue is a FIFO collection. The first element added is the first one removed.\n\n```csharp\nQueue<string> queue = new Queue<string>();\nqueue.Enqueue(\"First\");\nqueue.Enqueue(\"Second\");\nqueue.Enqueue(\"Third\");\n\nstring next = queue.Peek();    // \"First\" (without removing)\nstring served = queue.Dequeue();  // \"First\" (removes and returns)\n```\n\n### Queue Methods\n\n| Method | Description |\n|--------|-------------|\n| `Enqueue(T)` | Add element to end |\n| `Dequeue()` | Remove and return front element |\n| `Peek()` | Return front element without removing |\n| `Contains(T)` | Check if element exists |\n| `Clear()` | Remove all elements |\n| `Count` | Number of elements |\n| `ToArray()` | Copy to array |\n\n### Queue Use Cases\n\n```csharp\n// Print job scheduling\nvar printQueue = new Queue<string>();\nprintQueue.Enqueue(\"Doc1.pdf\");\nprintQueue.Enqueue(\"Doc2.pdf\");\nstring nextJob = printQueue.Dequeue();\n\n// Request processing\n// Task scheduling\n// Breadth-first search\n```\n\n### Stack vs Queue\n\n| Aspect | Stack | Queue |\n|--------|-------|-------|\n| Order | LIFO | FIFO |\n| Add | Push (top) | Enqueue (back) |\n| Remove | Pop (top) | Dequeue (front) |\n| Peek | Top element | Front element |\n| Use case | Undo, backtracking | Queuing, scheduling |\n\n### Priority Queue (C# 10+)\n\n```csharp\n// Elements with priority\nPriorityQueue<string, int> pq = new();\npq.Enqueue(\"Low\", 3);\npq.Enqueue(\"High\", 1);\npq.Enqueue(\"Medium\", 2);\n\nstring next = pq.Dequeue();  // \"High\" (highest priority)\n```\n\n> **Key Point:** Use Stack<T> for LIFO scenarios (undo, backtracking). Use Queue<T> for FIFO scenarios (job scheduling, request processing). Both provide O(1) push/enqueue and pop/dequeue operations. For priority-based queuing, use PriorityQueue<TElement, TPriority>.\n\n### Concurrent Versions\n\n```csharp\nConcurrentStack<T>    // Thread-safe stack\nConcurrentQueue<T>    // Thread-safe queue\n```",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        // Stack - LIFO\n        var browserHistory = new Stack<string>();\n        browserHistory.Push(\"Home\");\n        browserHistory.Push(\"About\");\n        browserHistory.Push(\"Contact\");\n        \n        Console.WriteLine(\"Back button:\");\n        while (browserHistory.Count > 0)\n            Console.WriteLine($\"- {browserHistory.Pop()}\");\n        \n        // Queue - FIFO\n        var ticketQueue = new Queue<string>();\n        ticketQueue.Enqueue(\"Ticket #1\");\n        ticketQueue.Enqueue(\"Ticket #2\");\n        ticketQueue.Enqueue(\"Ticket #3\");\n        \n        Console.WriteLine(\"\\nProcessing tickets:\");\n        while (ticketQueue.Count > 0)\n            Console.WriteLine($\"- {ticketQueue.Dequeue()}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What order does a Stack follow?",
+      "options": ["FIFO", "LIFO", "Priority", "Random"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Queue method removes and returns the front element?",
+      "options": ["Pop()", "Dequeue()", "Remove()", "Peek()"],
+      "correctIndex": 1
+    }
+  ]
+}

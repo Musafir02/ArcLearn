@@ -1,0 +1,22 @@
+{
+  "title": "C# While Loop",
+  "language": "csharp",
+  "topic": "while",
+  "order": 21,
+  "nextTopic": "for",
+  "prevTopic": "ternary",
+  "content": "### While Loop in C#\n\nThe `while` loop executes a block of code as long as a specified condition is true.\n\n### Syntax\n\n```csharp\nwhile (condition)\n{\n    // Code to repeat\n}\n```\n\n### Basic Example\n\n```csharp\nint i = 0;\nwhile (i < 5)\n{\n    Console.WriteLine($\"Count: {i}\");\n    i++;\n}\n```\n\n### Loop Flow\n\n1. Check condition\n2. If true, execute block\n3. Go back to step 1\n4. If false, exit loop\n\n### Infinite Loop\n\n```csharp\nwhile (true)\n{\n    Console.WriteLine(\"Press Q to quit\");\n    var key = Console.ReadKey();\n    if (key.Key == ConsoleKey.Q)\n        break;\n}\n```\n\n### Common Use Cases\n\n| Use Case | Example |\n|----------|---------|\n| Reading data until end | `while ((line = reader.ReadLine()) != null)` |\n| User input validation | `while (!int.TryParse(input, out num))` |\n| Game loop | `while (isRunning) { Update(); Render(); }` |\n| Retry logic | `while (attempts < maxRetries)` |\n\n### Input Validation Pattern\n\n```csharp\nint age;\nConsole.Write(\"Enter age: \");\nwhile (!int.TryParse(Console.ReadLine(), out age) || age < 0)\n{\n    Console.Write(\"Invalid. Enter a positive number: \");\n}\nConsole.WriteLine($\"Age: {age}\");\n```\n\n### Sentinel-Controlled Loop\n\n```csharp\nstring input = \"\";\nwhile (input != \"exit\")\n{\n    Console.Write(\"Enter command: \");\n    input = Console.ReadLine();\n    Console.WriteLine($\"You entered: {input}\");\n}\n```\n\n> **Key Point:** The while loop checks the condition BEFORE executing the block. If the condition is false initially, the block never executes. Ensure the loop variable changes to avoid infinite loops.\n\n### do-while Alternative\n\nThe `do-while` loop guarantees at least one execution:\n\n```csharp\ndo\n{\n    // Executes at least once\n} while (condition);",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int count = 1;\n        int sum = 0;\n        \n        while (count <= 10)\n        {\n            sum += count;\n            Console.WriteLine($\"Adding {count}, sum = {sum}\");\n            count++;\n        }\n        \n        Console.WriteLine($\"\\nTotal sum: {sum}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "When does a while loop check its condition?",
+      "options": ["After executing the block", "Before executing the block", "During execution", "At the end of the program"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens if the while condition is false from the start?",
+      "options": ["The loop runs once", "The block never executes", "An exception is thrown", "The program crashes"],
+      "correctIndex": 1
+    }
+  ]
+}

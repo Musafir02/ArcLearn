@@ -1,0 +1,17 @@
+{
+  "title": "Strings in Rust",
+  "language": "rust",
+  "topic": "strings",
+  "order": 13,
+  "nextTopic": "input",
+  "prevTopic": "numbers",
+  "content": "### Strings in Rust\n\nRust has two primary string types: `String` (heap-allocated, growable) and `&str` (string slice, borrowed reference).\n\n---\n\n### `String` vs `&str`\n\n| Feature | `String` | `&str` |\n|---------|----------|--------|\n| Ownership | Owned | Borrowed reference |\n| Mutable | Yes | No |\n| Heap allocated | Yes | No (can be anywhere) |\n| Growable | Yes | No |\n| Creation | `String::from()`, `to_string()` | String literals are `&str` |\n\n---\n\n### Common Operations\n\n```rust\n// Creating strings\nlet s1 = String::from(\"hello\");\nlet s2 = \"world\".to_string();\nlet s3 = &s1[0..2];  // slice: \"he\"\n\n// Concatenation\nlet s4 = s1 + \" \" + &s2;  // s1 is moved!\nlet s5 = format!(\"{} {}\", \"hello\", \"world\");\n\n// Methods\nprintln!(\"Length: {}\", s5.len());\nprintln!(\"Is empty: {}\", s5.is_empty());\nlet contains = s5.contains(\"world\");\n```\n\n> **Key Point:** Strings are UTF-8 encoded, so indexing by byte position is not always safe. Use string slices with caution, as they operate on bytes, not characters.",
+  "codeExample": "fn main() {\n    let mut s = String::from(\"Hello\");\n    s.push_str(\", \");\n    s.push_str(\"Rust!\");\n    s.push('\\n');\n    \n    let slice: &str = &s[0..5];\n    println!(\"Slice: {}\", slice);\n    println!(\"Full: {}\", s);\n    println!(\"Length: {}\", s.len());\n}",
+  "quiz": [
+    {
+      "question": "Which type represents an owned, growable string in Rust?",
+      "options": ["&str", "str", "String", "char[]"],
+      "correctIndex": 2
+    }
+  ]
+}

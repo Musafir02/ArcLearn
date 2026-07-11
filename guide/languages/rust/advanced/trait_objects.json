@@ -1,0 +1,17 @@
+{
+  "title": "Trait Objects in Rust",
+  "language": "rust",
+  "topic": "trait_objects",
+  "order": 47,
+  "nextTopic": "trait_bounds",
+  "prevTopic": "traits",
+  "content": "### Trait Objects in Rust\n\nTrait objects enable dynamic dispatch, allowing you to store values of different types that implement the same trait.\n\n---\n\n### Trait Objects vs Generics\n\n| Aspect | Generics (static dispatch) | Trait Objects (dynamic dispatch) |\n|--------|---------------------------|----------------------------------|\n| Dispatch | Compile time (monomorphized) | Runtime (vtable lookup) |\n| Performance | No overhead | Small runtime cost |\n| Flexibility | Fixed type per instantiation | Multiple types in one container |\n| Syntax | `fn foo<T: Trait>(t: T)` | `fn foo(t: &dyn Trait)` |\n\n---\n\n### Using Trait Objects\n\n```rust\ntrait Shape {\n    fn area(&self) -> f64;\n}\n\nstruct Circle { radius: f64 }\nstruct Square { side: f64 }\n\nimpl Shape for Circle { fn area(&self) -> f64 { std::f64::consts::PI * self.radius * self.radius } }\nimpl Shape for Square { fn area(&self) -> f64 { self.side * self.side } }\n\nlet shapes: Vec<Box<dyn Shape>> = vec![\n    Box::new(Circle { radius: 1.0 }),\n    Box::new(Square { side: 2.0 }),\n];\n\nfor shape in &shapes {\n    println!(\"Area: {}\", shape.area());\n}\n\nfn print_area(shape: &dyn Shape) {\n    println!(\"Area: {}\", shape.area());\n}\n```\n\n> **Key Point:** Trait objects use `dyn Trait` syntax and require either `&` or `Box` wrapper. They use dynamic dispatch via a vtable, which has a small performance cost. Only object-safe traits can be made into trait objects.",
+  "codeExample": "trait Animal {\n    fn make_sound(&self) -> String;\n}\n\nstruct Dog { name: String }\nstruct Cat { name: String }\n\nimpl Animal for Dog {\n    fn make_sound(&self) -> String {\n        format!(\"{} says: Woof!\", self.name)\n    }\n}\n\nimpl Animal for Cat {\n    fn make_sound(&self) -> String {\n        format!(\"{} says: Meow!\", self.name)\n    }\n}\n\nfn main() {\n    let animals: Vec<Box<dyn Animal>> = vec![\n        Box::new(Dog { name: String::from(\"Rex\") }),\n        Box::new(Cat { name: String::from(\"Whiskers\") }),\n    ];\n    \n    for animal in &animals {\n        println!(\"{}\", animal.make_sound());\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used with trait objects for dynamic dispatch?",
+      "options": ["dyn", "impl", "trait", "obj"],
+      "correctIndex": 0
+    }
+  ]
+}

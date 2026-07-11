@@ -1,0 +1,17 @@
+{
+  "title": "Pattern Matching in Rust",
+  "language": "rust",
+  "topic": "pattern_matching",
+  "order": 36,
+  "nextTopic": "methods",
+  "prevTopic": "result",
+  "content": "### Pattern Matching in Rust\n\nPattern matching is a fundamental feature in Rust used with `match`, `if let`, `while let`, and `let` destructuring.\n\n---\n\n### Pattern Types\n\n| Pattern | Example | Description |\n|---------|---------|-------------|\n| Literal | `1` | Match a specific value |\n| Variable | `x` | Binds to any value |\n| Wildcard | `_` | Matches any value, ignores it |\n| Range | `1..=5` | Matches values in range |\n| Or | `a | b` | Matches a or b |\n| Struct | `Point { x, y }` | Destructures a struct |\n| Tuple | `(a, b, c)` | Destructures a tuple |\n| Array | `[a, .., b]` | Matches array with rest |\n| Guard | `x if x > 0` | Additional condition |\n\n---\n\n### Advanced Pattern Examples\n\n```rust\n// Destructuring structs\nlet p = Point { x: 0, y: 7 };\nlet Point { x: a, y: b } = p;\n\n// Destructuring with match guards\nmatch pair {\n    (x, y) if x == y => println!(\"Equal\"),\n    (x, _) if x % 2 == 0 => println!(\"Even x\"),\n    _ => println!(\"No match\"),\n}\n\n// @ bindings\nmatch id {\n    e @ 0..=9 => println!(\"Single digit: {}\", e),\n    _ => println!(\"Other\"),\n}\n```\n\n> **Key Point:** Patterns in Rust are irrefutable (always match, like in `let`) or refutable (can fail, like in `match`). Use irrefutable patterns in `let` bindings and refutable patterns in `match` arms.",
+  "codeExample": "fn main() {\n    let pair = (2, -2);\n    \n    match pair {\n        (x, y) if x == y => println!(\"Equal\"),\n        (x, _) if x % 2 == 0 => println!(\"x is even\"),\n        (_, y) if y < 0 => println!(\"y is negative\"),\n        _ => println!(\"No match\"),\n    }\n    \n    // @ binding\n    let number = 5;\n    match number {\n        n @ 1..=10 => println!(\"n is between 1 and 10: {}\", n),\n        _ => println!(\"Other\"),\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which pattern matches any value but ignores it?",
+      "options": ["*", "any", "_", "?"],
+      "correctIndex": 2
+    }
+  ]
+}

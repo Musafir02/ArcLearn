@@ -1,0 +1,22 @@
+{
+  "title": "Go File Handling",
+  "language": "go",
+  "topic": "file_handling",
+  "order": 63,
+  "nextTopic": "file_io",
+  "prevTopic": "panic_recover",
+  "content": "### File Handling in Go\nThe `os` package provides functions for file operations.\n\n### Creating a File\n\n```go\nfile, err := os.Create(\"example.txt\")\nif err != nil {\n    fmt.Println(\"Error:\", err)\n    return\n}\ndefer file.Close()\n```\n\n### Opening a File\n\n```go\n// Open for reading\nfile, err := os.Open(\"example.txt\")\n\n// Open with flags\nfile, err := os.OpenFile(\"example.txt\", os.O_RDWR|os.O_CREATE, 0644)\n```\n\n### Flags for OpenFile\n\n| Flag | Description |\n|------|-------------|\n| `os.O_RDONLY` | Read only |\n| `os.O_WRONLY` | Write only |\n| `os.O_RDWR` | Read and write |\n| `os.O_APPEND` | Append to file |\n| `os.O_CREATE` | Create if not exists |\n| `os.O_TRUNC` | Truncate if exists |\n| `os.O_EXCL` | Fail if file exists |\n\n### File Permissions\n\nUnix permission bits in octal:\n\n```go\n0644 // owner: rw, group: r, other: r\n0755 // owner: rwx, group: rx, other: rx\n```\n\n### File Info\n\n```go\ninfo, err := os.Stat(\"example.txt\")\nif err != nil {\n    fmt.Println(\"Error:\", err)\n    return\n}\n\nfmt.Println(\"Name:\", info.Name())\nfmt.Println(\"Size:\", info.Size())\nfmt.Println(\"Mode:\", info.Mode())\nfmt.Println(\"ModTime:\", info.ModTime())\nfmt.Println(\"IsDir:\", info.IsDir())\n```\n\n### Directory Operations\n\n```go\n// Create directory\nos.Mkdir(\"mydir\", 0755)\nos.MkdirAll(\"a/b/c\", 0755) // creates all parents\n\n// Read directory\nentries, err := os.ReadDir(\".\")\nfor _, entry := range entries {\n    fmt.Println(entry.Name(), entry.IsDir())\n}\n\n// Remove\nos.Remove(\"file.txt\")\nos.RemoveAll(\"mydir\") // removes non-empty\n```\n\n### File Existence Check\n\n```go\nfunc fileExists(path string) bool {\n    _, err := os.Stat(path)\n    return err == nil\n}\n\nfunc isNotExist(path string) bool {\n    _, err := os.Stat(path)\n    return os.IsNotExist(err)\n}\n```\n\n> **Key Point:** Always close files with `defer file.Close()`. Check file operations for errors. Use `os.OpenFile` for fine-grained control over file opening behavior.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    // Create file\n    file, err := os.Create(\"test.txt\")\n    if err != nil {\n        fmt.Println(\"Error creating file:\", err)\n        return\n    }\n    defer file.Close()\n    fmt.Println(\"File created successfully\")\n\n    // File info\n    info, _ := os.Stat(\"test.txt\")\n    fmt.Printf(\"Name: %s, Size: %d bytes\\n\", info.Name(), info.Size())\n\n    // Cleanup\n    os.Remove(\"test.txt\")\n}",
+  "quiz": [
+    {
+      "question": "What flag creates a file if it doesn't exist?",
+      "options": ["os.O_RDONLY", "os.O_CREATE", "os.O_APPEND", "os.O_TRUNC"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you check if a file exists?",
+      "options": ["os.Exists()", "os.Stat()", "os.IsExist()", "os.FileExists()"],
+      "correctIndex": 1
+    }
+  ]
+}

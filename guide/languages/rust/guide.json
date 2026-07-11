@@ -1,0 +1,31 @@
+{
+  "title": "Rust Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Rust Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "mutability", "datatypes", "constants", "operators", "booleans", "numbers", "strings", "input", "type_casting", "shadowing"]
+    },
+    {
+      "type": "group", "title": "Conditions and Loops", "folder": "conditions",
+      "topics": ["conditions", "if_else", "loop", "while", "for", "match", "if_let", "while_let"]
+    },
+    {
+      "type": "group", "title": "Ownership and Borrowing", "folder": "ownership",
+      "topics": ["ownership", "borrowing", "references", "slices", "lifetimes", "lifetime_elision"]
+    },
+    {
+      "type": "group", "title": "Structs, Enums, and Pattern Matching", "folder": "structs_enums",
+      "topics": ["structs", "tuple_structs", "enums", "option", "result", "pattern_matching", "methods", "impl_blocks"]
+    },
+    {
+      "type": "group", "title": "Collections and Iterators", "folder": "collections",
+      "topics": ["vectors", "hashmap", "hashset", "strings_slice", "iterators", "closures"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["generics", "traits", "trait_objects", "trait_bounds", "modules", "crates", "cargo_toml", "error_handling", "panic", "unwrap_expect", "file_handling", "file_read", "file_write", "smart_pointers", "box", "rc_arc", "refcell", "mutex", "concurrency", "threads", "async_await", "testing", "unit_tests", "documentation", "macros", "unsafe_rust", "common_collections"]
+    }
+  ]
+}

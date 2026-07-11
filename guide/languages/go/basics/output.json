@@ -1,0 +1,22 @@
+{
+  "title": "Go Output",
+  "language": "go",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Printing Output in Go\n\nThe `fmt` package provides formatted I/O functions.\n\n### Print vs Println vs Printf\n\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Print(\"No newline\")\n    fmt.Println(\"With newline\")\n    fmt.Printf(\"Formatted: %s, %d\\n\", \"hello\", 42)\n}\n```\n\n| Function | Description |\n|----------|-------------|\n| `fmt.Print()` | Prints without newline |\n| `fmt.Println()` | Prints with newline |\n| `fmt.Printf()` | Formatted printing |\n\n### Formatting Verbs\n\n| Verb | Description |\n|------|-------------|\n| `%v` | Default value format |\n| `%+v` | Struct field names + values |\n| `%#v` | Go-syntax representation |\n| `%T` | Type of the value |\n| `%d` | Decimal integer |\n| `%s` | String |\n| `%f` | Float |\n| `%t` | Boolean |\n| `%b` | Binary |\n| `%x` | Hexadecimal |\n\n### Examples\n\n```go\nname := \"Alice\"\nage := 30\nfmt.Printf(\"Name: %s, Age: %d\\n\", name, age)\nfmt.Printf(\"Type: %T, Value: %v\\n\", name, name)\n```\n\n### Sprintf\n\nReturns a formatted string without printing:\n\n```go\nresult := fmt.Sprintf(\"%s is %d years old\", name, age)\n```\n\n> **Key Point:** `fmt.Printf` uses format verbs similar to C's printf but with Go-specific additions like `%v` and `%#v`.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    name := \"Go\"\n    year := 2009\n    fmt.Println(\"Hello,\", name)\n    fmt.Printf(\"%s was created in %d\\n\", name, year)\n    fmt.Printf(\"Value: %v, Type: %T\\n\", year, year)\n}",
+  "quiz": [
+    {
+      "question": "Which function prints with a newline?",
+      "options": ["fmt.Print()", "fmt.Println()", "fmt.Printf()", "fmt.Sprint()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What verb prints the type of a value?",
+      "options": ["%v", "%T", "%t", "%#v"],
+      "correctIndex": 1
+    }
+  ]
+}

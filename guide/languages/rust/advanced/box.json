@@ -1,0 +1,17 @@
+{
+  "title": "Box in Rust",
+  "language": "rust",
+  "topic": "box",
+  "order": 59,
+  "nextTopic": "rc_arc",
+  "prevTopic": "smart_pointers",
+  "content": "### Box in Rust\n\n`Box<T>` is the simplest smart pointer. It allocates data on the heap while keeping the pointer (with the data's address) on the stack.\n\n---\n\n### Box Use Cases\n\n| Use Case | Description |\n|----------|-------------|\n| Heap allocation | Store large data on heap instead of stack |\n| Recursive types | Enable recursive data structures |\n| Trait objects | Store values of types implementing a trait |\n| Unknown size at compile time | Types whose size can't be determined |\n\n---\n\n### Examples\n\n```rust\n// Basic usage\nlet b = Box::new(5);\nprintln!(\"b = {}\", b);  // auto-deref\n\n// Recursive type (would fail without Box)\n#[derive(Debug)]\nenum List {\n    Cons(i32, Box<List>),\n    Nil,\n}\n\nuse List::{Cons, Nil};\n\nlet list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));\n\n// Trait objects\nlet shapes: Vec<Box<dyn Shape>> = vec![\n    Box::new(Circle { radius: 1.0 }),\n    Box::new(Square { side: 2.0 }),\n];\n\n// Large data on heap\nlet large = Box::new([0u8; 1024 * 1024]);  // 1MB on heap\n```\n\n> **Key Point:** Use `Box` when you need to allocate on the heap. It's essential for recursive types (like linked lists) where the compiler can't determine the size at compile time. `Box` provides ownership semantics with a single owner.",
+  "codeExample": "#[derive(Debug)]\nenum LinkedList {\n    Node(i32, Box<LinkedList>),\n    End,\n}\n\nfn main() {\n    let list = LinkedList::Node(\n        1,\n        Box::new(LinkedList::Node(\n            2,\n            Box::new(LinkedList::Node(\n                3,\n                Box::new(LinkedList::End),\n            )),\n        )),\n    );\n    \n    println!(\"Linked list: {:?}\", list);\n}",
+  "quiz": [
+    {
+      "question": "What is `Box<T>` primarily used for?",
+      "options": ["Stack allocation", "Heap allocation with single ownership", "Shared ownership", "Atomic operations"],
+      "correctIndex": 1
+    }
+  ]
+}

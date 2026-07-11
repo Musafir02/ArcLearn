@@ -1,0 +1,22 @@
+{
+  "title": "Go Variadic Functions",
+  "language": "go",
+  "topic": "variadic",
+  "order": 37,
+  "nextTopic": "closures",
+  "prevTopic": "named_returns",
+  "content": "### Variadic Functions\n\nVariadic functions accept a variable number of arguments.\n\n### Syntax\n\nUse `...` before the type to declare a variadic parameter:\n\n```go\nfunc sum(nums ...int) int {\n    total := 0\n    for _, n := range nums {\n        total += n\n    }\n    return total\n}\n\nfunc main() {\n    fmt.Println(sum(1, 2))       // 3\n    fmt.Println(sum(1, 2, 3, 4)) // 10\n    fmt.Println(sum())           // 0\n}\n```\n\n### Variadic Parameter Position\n\nThe variadic parameter must be the last parameter:\n\n```go\n// Correct\nfunc greet(prefix string, names ...string) string {\n    result := prefix\n    for _, name := range names {\n        result += \" \" + name\n    }\n    return result\n}\n\n// Error: variadic must be last\n// func bad(names ...string, prefix string) { }\n```\n\n### Passing a Slice\n\nUse `...` to expand a slice into variadic arguments:\n\n```go\nnums := []int{1, 2, 3, 4}\nfmt.Println(sum(nums...)) // 10\n```\n\n### Empty Variadic\n\nIf no arguments are provided, the variadic parameter is nil:\n\n```go\nfunc printItems(items ...string) {\n    if items == nil {\n        fmt.Println(\"no items\")\n        return\n    }\n    for i, item := range items {\n        fmt.Printf(\"%d: %s\\n\", i, item)\n    }\n}\n```\n\n### Mixed Parameter Example\n\n```go\nfunc log(level string, messages ...string) {\n    fmt.Printf(\"[%s] \", level)\n    for _, msg := range messages {\n        fmt.Print(msg, \" \")\n    }\n    fmt.Println()\n}\n\nlog(\"INFO\", \"server\", \"started\", \"on\", \"port 8080\")\nlog(\"ERROR\", \"connection refused\")\n```\n\n### Append is Variadic\n\nThe built-in `append` function is variadic:\n\n```go\ns := append(s, 1, 2, 3)\ns = append(s, []int{4, 5}...)\n```\n\n> **Key Point:** The variadic parameter is treated as a slice inside the function. Use `...` to pass an existing slice to a variadic function.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc join(sep string, words ...string) string {\n    result := \"\"\n    for i, word := range words {\n        if i > 0 {\n            result += sep\n        }\n        result += word\n    }\n    return result\n}\n\nfunc main() {\n    fmt.Println(join(\", \", \"apple\", \"banana\", \"cherry\"))\n\n    // Pass slice with ...\n    fruits := []string{\"date\", \"elderberry\", \"fig\"}\n    fmt.Println(join(\" - \", fruits...))\n\n    fmt.Println(join(\" \")) // no words\n}",
+  "quiz": [
+    {
+      "question": "Where must the variadic parameter be positioned?",
+      "options": ["First", "Last", "Anywhere", "Before required params"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the type of the variadic parameter inside the function?",
+      "options": ["...int", "[]int", "interface{}", "int"],
+      "correctIndex": 1
+    }
+  ]
+}

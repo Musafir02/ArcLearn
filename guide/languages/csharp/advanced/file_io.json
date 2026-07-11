@@ -1,0 +1,22 @@
+{
+  "title": "C# File I/O",
+  "language": "csharp",
+  "topic": "file_io",
+  "order": 63,
+  "nextTopic": "stream_reader_writer",
+  "prevTopic": "custom_exceptions",
+  "content": "### File I/O in C#\n\nC# provides comprehensive file I/O capabilities through the `System.IO` namespace.\n\n### File Class (Static Methods)\n\n```csharp\nusing System.IO;\n\n// Read\nstring content = File.ReadAllText(\"file.txt\");\nstring[] lines = File.ReadAllLines(\"file.txt\");\nbyte[] bytes = File.ReadAllBytes(\"file.bin\");\n\n// Write\nFile.WriteAllText(\"file.txt\", \"Hello World\");\nFile.WriteAllLines(\"file.txt\", new[] { \"Line1\", \"Line2\" });\nFile.WriteAllBytes(\"file.bin\", new byte[] { 0x48, 0x65 });\n\n// Append\nFile.AppendAllText(\"file.txt\", \"More text\");\nFile.AppendAllLines(\"file.txt\", new[] { \"More\" });\n```\n\n### FileInfo Class (Instance Methods)\n\n```csharp\nFileInfo file = new FileInfo(@\"C:\\data\\file.txt\");\n\nConsole.WriteLine($\"Name: {file.Name}\");\nConsole.WriteLine($\"Size: {file.Length} bytes\");\nConsole.WriteLine($\"Extension: {file.Extension}\");\nConsole.WriteLine($\"Exists: {file.Exists}\");\nConsole.WriteLine($\"Created: {file.CreationTime}\");\n\n// Operations\nfile.CopyTo(\"copy.txt\");\nfile.MoveTo(\"new.txt\");\nfile.Delete();\n```\n\n### Directory Operations\n\n```csharp\n// Create\nDirectory.CreateDirectory(@\"C:\\data\\subfolder\");\n\n// Check existence\nbool exists = Directory.Exists(@\"C:\\data\");\n\n// Enumerate\nstring[] files = Directory.GetFiles(@\"C:\\data\");\nstring[] dirs = Directory.GetDirectories(@\"C:\\data\");\n\n// Enumerate (lazy, better for large dirs)\nforeach (string file in Directory.EnumerateFiles(@\"C:\\data\", \"*.txt\"))\n    Console.WriteLine(file);\n```\n\n### Path Operations\n\n```csharp\nstring dir = Path.GetDirectoryName(path);\nstring file = Path.GetFileName(path);\nstring ext = Path.GetExtension(path);\nstring name = Path.GetFileNameWithoutExtension(path);\n\nstring combined = Path.Combine(\"folder\", \"sub\", \"file.txt\");\nstring temp = Path.GetTempFileName();\nstring tempDir = Path.GetTempPath();\n```\n\n### File Access Modes\n\n| Mode | Description |\n|------|-------------|\n| `FileMode.Create` | Creates new; overwrites if exists |\n| `FileMode.Open` | Opens existing; throws if not found |\n| `FileMode.OpenOrCreate` | Opens or creates |\n| `FileMode.Append` | Opens or creates for appending |\n\n### File Sharing\n\n```csharp\nusing var fs = new FileStream(\"file.txt\", FileMode.Open,\n    FileAccess.Read, FileShare.Read);\n```\n\n> **Key Point:** The `File` class provides simple static methods for common operations. Use `FileInfo` when you need multiple operations on the same file. Always use `using` or `try-finally` to ensure file handles are closed. Use `Directory.Enumerate*` for large directories (lazy enumeration).\n\n### Checking File Existence\n\n```csharp\nif (File.Exists(\"file.txt\"))\n    string content = File.ReadAllText(\"file.txt\");\n```\n\n### File Attributes\n\n```csharp\nFile.SetAttributes(\"file.txt\", FileAttributes.ReadOnly);\nFileAttributes attrs = File.GetAttributes(\"file.txt\");\nbool isReadOnly = attrs.HasFlag(FileAttributes.ReadOnly);\n```\n\n### Temporary Files\n\n```csharp\nstring tempFile = Path.GetTempFileName();\nFile.WriteAllText(tempFile, \"Temporary data\");\nFile.Delete(tempFile);\n```",
+  "codeExample": "using System;\nusing System.IO;\n\nclass Program\n{\n    static void Main()\n    {\n        string path = \"notes.txt\";\n        \n        // Write\n        File.WriteAllText(path, \"Hello, C# File I/O!\\nThis is a test.\");\n        Console.WriteLine($\"Written to {path}\");\n        \n        // Read\n        if (File.Exists(path))\n        {\n            string content = File.ReadAllText(path);\n            Console.WriteLine($\"\\nFile content:\\n{content}\");\n            \n            var info = new FileInfo(path);\n            Console.WriteLine($\"\\nSize: {info.Length} bytes\");\n            Console.WriteLine($\"Created: {info.CreationTime}\");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which class provides static file I/O methods?",
+      "options": ["FileInfo", "File", "FileStream", "Directory"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method reads all text from a file?",
+      "options": ["ReadAllText()", "ReadText()", "GetContent()", "LoadFile()"],
+      "correctIndex": 0
+    }
+  ]
+}

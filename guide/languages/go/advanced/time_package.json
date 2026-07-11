@@ -1,0 +1,22 @@
+{
+  "title": "Go Time Package",
+  "language": "go",
+  "topic": "time_package",
+  "order": 66,
+  "nextTopic": "stringer_interface",
+  "prevTopic": "json_encoding",
+  "content": "### Time Package\n\nThe `time` package provides time measurement and manipulation.\n\n### Current Time\n\n```go\nnow := time.Now()\nfmt.Println(now) // 2024-01-15 10:30:00 +0000 UTC\n```\n\n### Creating Time Values\n\n```go\n// Specific date\nt := time.Date(2024, time.January, 15, 10, 30, 0, 0, time.UTC)\n\n// Unix timestamp\nt := time.Unix(1705312200, 0)\n```\n\n### Time Components\n\n```go\nt := time.Now()\nfmt.Println(t.Year())       // 2024\nfmt.Println(t.Month())      // January\nfmt.Println(t.Day())        // 15\nfmt.Println(t.Hour())       // 10\nfmt.Println(t.Minute())     // 30\nfmt.Println(t.Second())     // 0\nfmt.Println(t.Weekday())    // Monday\n```\n\n### Time Formatting\n\nGo uses a reference time: `Mon Jan 2 15:04:05 MST 2006` (01/02 03:04:05PM '06 -0700)\n\n```go\nnow := time.Now()\n\nfmt.Println(now.Format(\"2006-01-02\"))              // 2024-01-15\nfmt.Println(now.Format(\"15:04:05\"))                // 10:30:00\nfmt.Println(now.Format(\"2006-01-02 15:04:05\"))     // 2024-01-15 10:30:00\nfmt.Println(now.Format(time.RFC3339))               // 2024-01-15T10:30:00Z\n```\n\n### Parsing Time\n\n```go\nt, err := time.Parse(\"2006-01-02\", \"2024-01-15\")\nt, err := time.Parse(time.RFC3339, \"2024-01-15T10:30:00Z\")\nt, err := time.Parse(\"2006-01-02 15:04:05\", \"2024-01-15 10:30:00\")\n```\n\n### Duration\n\n```go\ndur := 5 * time.Second\ndur2 := 100 * time.Millisecond\ndur3 := 2 * time.Hour + 30 * time.Minute\n\nfmt.Println(dur) // 5s\n\n// Sleep\ntime.Sleep(1 * time.Second)\n\n// Since/Until\nelapsed := time.Since(startTime)\ntimeRemaining := time.Until(deadline)\n```\n\n### Time Arithmetic\n\n```go\nnow := time.Now()\nfuture := now.Add(24 * time.Hour)\npast := now.Add(-1 * time.Hour)\n\ndiff := future.Sub(past)\nfmt.Println(diff.Hours()) // 25\n```\n\n### Timers and Tickers\n\n```go\n// Timer - fires once\ntimer := time.NewTimer(2 * time.Second)\n<-timer.C\nfmt.Println(\"Timer fired\")\n\n// Ticker - fires repeatedly\nticker := time.NewTicker(1 * time.Second)\nfor i := 0; i < 3; i++ {\n    <-ticker.C\n    fmt.Println(\"Tick\")\n}\nticker.Stop()\n```\n\n> **Key Point:** Go uses the reference time `Mon Jan 2 15:04:05 MST 2006` for formatting. Never use arbitrary format strings. Use the predefined constants in `time` package.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"time\"\n)\n\nfunc main() {\n    now := time.Now()\n    fmt.Println(\"Current:\", now.Format(\"2006-01-02 15:04:05\"))\n\n    // Parsing\n    t, _ := time.Parse(\"2006-01-02\", \"2024-12-25\")\n    fmt.Println(\"Christmas:\", t)\n\n    // Duration\n    dur := time.Until(t)\n    fmt.Printf(\"Days until Christmas: %.0f\\n\", dur.Hours()/24)\n\n    // Timer\n    fmt.Println(\"Waiting 100ms...\")\n    timer := time.NewTimer(100 * time.Millisecond)\n    <-timer.C\n    fmt.Println(\"Done!\")\n}",
+  "quiz": [
+    {
+      "question": "What is Go's reference time for formatting?",
+      "options": ["01/01/1970", "Mon Jan 2 15:04:05 MST 2006", "01-01-2000", "Jan 2 2006"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which function creates a recurring timer?",
+      "options": ["time.NewTimer", "time.NewTicker", "time.After", "time.Sleep"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "C# Nullables",
+  "language": "csharp",
+  "topic": "nullables",
+  "order": 14,
+  "nextTopic": "var_dynamic",
+  "prevTopic": "input",
+  "content": "### Nullable Types in C#\n\nNullable types allow value types (like `int`, `bool`, `double`) to represent `null` in addition to their normal range of values.\n\n### Declaring Nullable Types\n\nAdd `?` after the value type:\n\n```csharp\nint? age = null;\nbool? isComplete = null;\ndouble? price = 9.99;\nint?[] numbers = new int?[] { 1, null, 3 };\n```\n\n### Nullable<T> Struct\n\nThe `?` syntax is shorthand for `Nullable<T>`:\n\n```csharp\nNullable<int> age = null;\nint? age2 = null;  // Same as above\n```\n\n### Properties of Nullable Types\n\n| Property | Description |\n|----------|-------------|\n| `HasValue` | Returns true if value is not null |\n| `Value` | Gets the actual value (throws if null) |\n\n```csharp\nint? number = null;\nif (number.HasValue)\n{\n    Console.WriteLine(number.Value);\n}\nelse\n{\n    Console.WriteLine(\"Number is null\");\n}\n```\n\n### Null Coalescing Operator (??)\n\nProvides a default value when the nullable is null:\n\n```csharp\nint? maybe = null;\nint definite = maybe ?? 0;  // definite = 0\n```\n\n### Null-Conditional Operator (?.)\n\nAccess members safely without null check:\n\n```csharp\nstring? text = null;\nint? length = text?.Length;  // null, not exception\n```\n\n### Null Coalescing Assignment (??=) (C# 8+)\n\nAssigns a value only if the variable is null:\n\n```csharp\nint? count = null;\ncount ??= 10;  // count is now 10\ncount ??= 20;  // count stays 10\n```\n\n### Nullable Reference Types (C# 8+)\n\nWarns at compile time about potential null references:\n\n```csharp\n#nullable enable\nstring name = null;  // Warning\nstring? nullableName = null;  // OK\n```\n\n> **Key Point:** Only value types can be made nullable with `?`. Reference types like `string` are already nullable by default. Use `??` to provide fallback values and `?.` for safe member access.",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int? score = null;\n        \n        if (score.HasValue)\n        {\n            Console.WriteLine($\"Score: {score.Value}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Score not available\");\n        }\n        \n        score = 95;\n        Console.WriteLine($\"Final score: {score ?? 0}\");\n        \n        string? name = null;\n        Console.WriteLine($\"Name length: {name?.Length ?? 0}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "How do you declare a nullable int in C#?",
+      "options": ["int null", "int?", "nullable int", "int! null"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the ?? operator do?",
+      "options": ["Throws if null", "Returns default value if null", "Checks for null", "Creates a nullable type"],
+      "correctIndex": 1
+    }
+  ]
+}

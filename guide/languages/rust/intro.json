@@ -1,0 +1,17 @@
+{
+  "title": "Introduction to Rust",
+  "language": "rust",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### Introduction to Rust\n\nRust is a systems programming language focused on safety, speed, and concurrency. Created by Graydon Hoare at Mozilla Research in 2006, Rust reached its first stable release (1.0) in May 2015. It has since been voted the \"most loved language\" on the Stack Overflow Developer Survey for multiple consecutive years.\n\n---\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Memory Safety | Rust's ownership system guarantees memory safety at compile time without a garbage collector |\n| Zero-Cost Abstractions | High-level abstractions compile down to efficient low-level code |\n| Fearless Concurrency | The type system prevents data races at compile time |\n| Pattern Matching | Powerful match expressions and destructuring |\n| Trait System | Provides polymorphism through traits with compile-time dispatch |\n| Cargo | Built-in package manager and build system |\n\n---\n\n### Why Rust?\n\nRust is used by companies like Microsoft, Google, Amazon, Meta, and Dropbox for systems where reliability and performance are critical. It has applications in web browsers (Servo), operating systems (Redox), game engines, embedded systems, and cloud infrastructure. The Linux kernel now officially supports Rust as a second language for kernel modules.\n\n> **Key Point:** Rust's key innovation is the ownership system that guarantees memory safety without needing a garbage collector, making it ideal for performance-critical applications where safety matters.\n\n### Rust 2026 Status\n\nAs of 2026, Rust has continued to evolve with editions every 3 years. The Rust 2024 edition brought improvements to trait resolution, impl Trait in return position, and async closures. Rust is now used in production by thousands of organizations worldwide, with growing adoption in embedded systems, WebAssembly, and cloud-native development.",
+  "codeExample": "fn main() {\n    println!(\"Hello, Rust!\");\n}",
+  "quiz": [
+    {
+      "question": "Who originally created Rust?",
+      "options": ["Bjarne Stroustrup", "Graydon Hoare", "Linus Torvalds", "Brendan Eich"],
+      "correctIndex": 1
+    }
+  ]
+}

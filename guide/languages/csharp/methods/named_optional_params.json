@@ -1,0 +1,22 @@
+{
+  "title": "C# Named and Optional Parameters",
+  "language": "csharp",
+  "topic": "named_optional_params",
+  "order": 33,
+  "nextTopic": "recursion",
+  "prevTopic": "method_overloading",
+  "content": "### Named and Optional Parameters in C#\n\nC# supports named arguments and optional parameters for more flexible method calls.\n\n### Optional Parameters\n\nParameters with default values that can be omitted when calling:\n\n```csharp\nstatic void Log(string message, string level = \"INFO\", DateTime? timestamp = null)\n{\n    var time = timestamp ?? DateTime.Now;\n    Console.WriteLine($\"[{time}] [{level}] {message}\");\n}\n\n// Calls\nLog(\"Starting\");                    // Uses defaults\nLog(\"Error!\", \"ERROR\");             // Custom level\nLog(\"Debug\", \"DEBUG\", DateTime.Now); // All specified\n```\n\n### Rules for Optional Parameters\n\n| Rule | Example |\n|------|---------|\n| Must come after required parameters | `void Foo(int a, int b = 0)` |\n| Default must be compile-time constant | `int x = 5` or `string s = \"hi\"` |\n| Cannot use `this`, `base`, `new` as defaults | - |\n| Default is evaluated once at compile time | - |\n\n### Named Arguments\n\nSpecify arguments by name instead of position:\n\n```csharp\nstatic void CreateUser(string name, int age, bool isAdmin = false)\n{\n    Console.WriteLine($\"{name}, {age}, Admin: {isAdmin}\");\n}\n\n// Named arguments\nCreateUser(age: 30, name: \"Alice\");\nCreateUser(\"Bob\", isAdmin: true, age: 25);\nCreateUser(name: \"Charlie\", age: 28, isAdmin: false);\n```\n\n### Combining Named and Positional\n\n```csharp\n// Positional first, then named\nCreateUser(\"Dave\", isAdmin: true, age: 35);\n\n// Named out of order (C# 7.2+)\nCreateUser(age: 40, name: \"Eve\");\n```\n\n### Benefits of Named Arguments\n\n| Benefit | Example |\n|---------|---------|\n| Readability | `Parse(input: text, format: \"json\")` |\n| Skip optional params | `Method(required1: a, optional3: c)` |\n| Reorder arguments | `Method(z: 3, x: 1, y: 2)` |\n| Documentation | Clear intent at call site |\n\n### Overload Resolution\n\nNamed arguments help resolve ambiguous overloads:\n\n```csharp\nstatic void Display(int x, int y) { }\nstatic void Display(string x, string y) { }\n\nDisplay(x: 5, y: 10);  // Calls the int version\n```\n\n> **Key Point:** Optional parameters must appear after all required parameters. Named arguments can appear in any order, but positional arguments must come before named ones. Use named arguments to improve readability when a method has many parameters or multiple parameters of the same type.\n\n### params with Optional\n\n```csharp\nstatic void Log(string message, params object[] args)\n{\n    // params must be last, cannot have default\n}\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Optional parameters\n        PrintOrder(\"Laptop\", 1);           // Uses default: urgent=false\n        PrintOrder(\"Mouse\", 2, true);      // Urgent\n        \n        // Named arguments\n        PrintOrder(quantity: 5, product: \"Keyboard\");\n        PrintOrder(product: \"Monitor\", urgent: true);\n    }\n    \n    static void PrintOrder(string product, int quantity = 1, bool urgent = false)\n    {\n        Console.WriteLine($\"{product} x{quantity} {(urgent ? \"(URGENT)\" : \"\")}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Where must optional parameters appear in a method signature?",
+      "options": ["At the beginning", "After all required parameters", "Anywhere", "At the end only with params"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can named arguments be provided in any order?",
+      "options": ["Yes", "No", "Only if all are named", "Only if preceded by positional"],
+      "correctIndex": 0
+    }
+  ]
+}

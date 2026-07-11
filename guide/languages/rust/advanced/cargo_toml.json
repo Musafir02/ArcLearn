@@ -1,0 +1,17 @@
+{
+  "title": "Cargo.toml in Rust",
+  "language": "rust",
+  "topic": "cargo_toml",
+  "order": 51,
+  "nextTopic": "error_handling",
+  "prevTopic": "crates",
+  "content": "### Cargo.toml\n\n`Cargo.toml` is the manifest file for Rust projects. It contains metadata, dependencies, build configuration, and more.\n\n---\n\n### Key Sections\n\n| Section | Purpose |\n|---------|---------|\n| `[package]` | Crate metadata (name, version, edition) |\n| `[dependencies]` | Runtime dependencies |\n| `[dev-dependencies]` | Dependencies for tests only |\n| `[build-dependencies]` | Dependencies for build scripts |\n| `[features]` | Feature flags for conditional compilation |\n| `[profile.*]` | Compiler optimization settings |\n| `[workspace]` | Multi-crate workspace configuration |\n\n---\n\n### Example Cargo.toml\n\n```toml\n[package]\nname = \"my_app\"\nversion = \"0.1.0\"\nedition = \"2024\"\ndescription = \"A Rust application\"\nauthors = [\"Your Name <email@example.com>\"]\nlicense = \"MIT\"\n\n[dependencies]\nserde = { version = \"1.0\", features = [\"derive\"] }\nserde_json = \"1.0\"\ntokio = { version = \"1.0\", features = [\"full\"] }\n\n[dev-dependencies]\ncriterion = \"0.5\"\n\n[profile.release]\nopt-level = 3  # max optimization\nlto = true     # link-time optimization\n\n[features]\ndefault = [\"std\"]\nstd = []\n```\n\n> **Key Point:** Use `cargo add` to add dependencies from the command line. Specify `edition = \"2024\"` for the latest Rust edition features. Use `[profile.release]` to control release build optimizations.",
+  "codeExample": "[package]\nname = \"hello_world\"\nversion = \"0.1.0\"\nedition = \"2024\"\n\n[dependencies]\nrand = \"0.8\"\n\n# Adding dependencies:\n# cargo add serde --features derive\n# cargo add --dev criterion",
+  "quiz": [
+    {
+      "question": "Which section in Cargo.toml lists runtime dependencies?",
+      "options": ["[dev-dependencies]", "[build-dependencies]", "[dependencies]", "[package]"],
+      "correctIndex": 2
+    }
+  ]
+}

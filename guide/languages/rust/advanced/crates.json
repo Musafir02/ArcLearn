@@ -1,0 +1,17 @@
+{
+  "title": "Crates in Rust",
+  "language": "rust",
+  "topic": "crates",
+  "order": 50,
+  "nextTopic": "cargo_toml",
+  "prevTopic": "modules",
+  "content": "### Crates in Rust\n\nA crate is Rust's compilation unit. It can be a binary (executable) or a library. Crates are the foundation of code distribution and reuse.\n\n---\n\n### Crate Types\n\n| Type | Entry Point | Purpose |\n|------|-------------|---------|\n| Binary crate | `src/main.rs` | Produces an executable |\n| Library crate | `src/lib.rs` | Produces a reusable library |\n\n---\n\n### Working with Crates\n\n```rust\n// Using external crates (in Cargo.toml)\n// [dependencies]\n// serde = { version = \"1.0\", features = [\"derive\"] }\n// rand = \"0.8\"\n\n// In source code\nuse serde::{Serialize, Deserialize};\nuse rand::Rng;\n\n// Your crate as a library\npub fn add(x: i32, y: i32) -> i32 {\n    x + y\n}\n\n// Multiple crates in a workspace\n// [workspace]\n// members = [\"crate_a\", \"crate_b\"]\n```\n\n### Crate Structure\n\n```\nmy_crate/\n  Cargo.toml\n  src/\n    main.rs    (or lib.rs for library)\n    submodule.rs\n  tests/\n    integration_test.rs\n  examples/\n    example.rs\n```\n\n> **Key Point:** Library crates are reusable across projects. Binary crates are executables. A package can contain one library crate and multiple binary crates. Crates are published to crates.io for public distribution.",
+  "codeExample": "// In src/lib.rs - library crate\npub mod math {\n    pub fn add(a: i32, b: i32) -> i32 { a + b }\n    pub fn multiply(a: i32, b: i32) -> i32 { a * b }\n}\n\npub fn greet(name: &str) -> String {\n    format!(\"Hello, {}!\", name)\n}\n\n// Using in another project:\n// use my_crate::{math, greet};",
+  "quiz": [
+    {
+      "question": "What is the entry point of a library crate?",
+      "options": ["main.rs", "lib.rs", "mod.rs", "index.rs"],
+      "correctIndex": 1
+    }
+  ]
+}

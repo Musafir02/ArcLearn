@@ -1,0 +1,22 @@
+{
+  "title": "Go Type Switches",
+  "language": "go",
+  "topic": "type_switches",
+  "order": 53,
+  "nextTopic": "goroutines",
+  "prevTopic": "type_assertions",
+  "content": "### Type Switches\n\nA type switch is a cleaner way to do multiple type assertions.\n\n### Basic Syntax\n\n```go\nfunc describe(v any) {\n    switch v := v.(type) {\n    case int:\n        fmt.Printf(\"Integer: %d\\n\", v)\n    case string:\n        fmt.Printf(\"String: %s (len=%d)\\n\", v, len(v))\n    case float64:\n        fmt.Printf(\"Float: %.2f\\n\", v)\n    case bool:\n        fmt.Printf(\"Boolean: %t\\n\", v)\n    default:\n        fmt.Printf(\"Unknown type: %T\\n\", v)\n    }\n}\n```\n\n### Variable Shadowing\n\n```go\nfunc check(v any) {\n    switch val := v.(type) {\n    case int:\n        // val is int here\n        fmt.Println(val * 2)\n    case string:\n        // val is string here\n        fmt.Println(len(val))\n    default:\n        // val is still any here\n        fmt.Println(\"unknown\")\n    }\n}\n```\n\n### Multiple Types in One Case\n\n```go\nfunc isNumeric(v any) bool {\n    switch v.(type) {\n    case int, int8, int16, int32, int64:\n        return true\n    case uint, uint8, uint16, uint32, uint64:\n        return true\n    case float32, float64:\n        return true\n    case complex64, complex128:\n        return true\n    }\n    return false\n}\n```\n\n### Nil Case\n\n```go\nfunc checkNil(v any) {\n    switch v.(type) {\n    case nil:\n        fmt.Println(\"is nil\")\n    case string:\n        fmt.Println(\"is string\")\n    }\n}\n```\n\n### Type Switch with Interface\n\n```go\nfunc isStringer(v any) bool {\n    switch v.(type) {\n    case fmt.Stringer:\n        return true\n    }\n    return false\n}\n```\n\n### Comparison: Type Switch vs Type Assertions\n\n| Aspect | Type Switch | Type Assertions |\n|--------|-------------|-----------------|\n| Readability | Clean for 3+ types | Verbose |\n| Variable typing | Typed per case | One type at a time |\n| Default case | Yes | No |\n| Multiple types per case | Yes | No |\n\n> **Key Point:** Type switches are preferred over chained type assertions when checking 3 or more types. The variable in each case takes on the concrete type automatically.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc inspect(v any) {\n    switch val := v.(type) {\n    case nil:\n        fmt.Println(\"nil\")\n    case int:\n        fmt.Printf(\"int %d (double: %d)\\n\", val, val*2)\n    case string:\n        fmt.Printf(\"string %q (len: %d)\\n\", val, len(val))\n    case []int:\n        fmt.Printf(\"[]int %v\\n\", val)\n    default:\n        fmt.Printf(\"unknown %T\\n\", val)\n    }\n}\n\nfunc main() {\n    inspect(nil)\n    inspect(42)\n    inspect(\"hello\")\n    inspect([]int{1, 2, 3})\n    inspect(3.14)\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used in a type switch?",
+      "options": [".(switch)", ".(\"type\")", ".(type)", ".(T)"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can multiple types share a single case in a type switch?",
+      "options": ["Yes, using comma", "No, each type needs its own case", "Yes, using OR", "Only for numeric types"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "HashSet in Rust",
+  "language": "rust",
+  "topic": "hashset",
+  "order": 41,
+  "nextTopic": "strings_slice",
+  "prevTopic": "hashmap",
+  "content": "### HashSet in Rust\n\n`HashSet<T>` is a set data structure that stores unique values with no duplicates. It is implemented as a wrapper around `HashMap<T, ()>`.\n\n---\n\n### HashSet Operations\n\n| Method | Description |\n|--------|-------------|\n| `HashSet::new()` | Create empty set |\n| `insert(val)` | Add value |\n| `remove(&val)` | Remove value |\n| `contains(&val)` | Check if contains |\n| `len()` | Number of elements |\n| `union(&other)` | Union of two sets |\n| `intersection(&other)` | Intersection of two sets |\n| `difference(&other)` | Difference of two sets |\n| `symmetric_difference(&other)` | Symmetric difference |\n\n---\n\n### Examples\n\n```rust\nuse std::collections::HashSet;\n\nlet mut set = HashSet::new();\nset.insert(1);\nset.insert(2);\nset.insert(3);\nset.insert(1);  // no effect, already present\n\nprintln!(\"Length: {}\", set.len());  // 3\n\n// Set operations\nlet a: HashSet<i32> = [1, 2, 3].iter().copied().collect();\nlet b: HashSet<i32> = [3, 4, 5].iter().copied().collect();\n\nlet union: HashSet<_> = a.union(&b).copied().collect();\nlet intersection: HashSet<_> = a.intersection(&b).copied().collect();\n```\n\n> **Key Point:** Use HashSet when you need fast membership checks and want to eliminate duplicates. The set operations (union, intersection, difference) return iterators, so use `.copied().collect()` to create new sets.",
+  "codeExample": "use std::collections::HashSet;\n\nfn main() {\n    let mut seen = HashSet::new();\n    let items = vec![\"a\", \"b\", \"a\", \"c\", \"b\", \"d\"];\n    \n    for item in items {\n        if seen.insert(item) {\n            println!(\"First time seeing: {}\", item);\n        } else {\n            println!(\"Already seen: {}\", item);\n        }\n    }\n    \n    println!(\"Unique items: {:?}\", seen);\n}",
+  "quiz": [
+    {
+      "question": "What happens when you insert a duplicate value into a HashSet?",
+      "options": ["Panics", "Returns false, no change", "Overwrites the old value", "Creates a second entry"],
+      "correctIndex": 1
+    }
+  ]
+}

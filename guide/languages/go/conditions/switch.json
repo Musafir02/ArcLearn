@@ -1,0 +1,22 @@
+{
+  "title": "Go Switch",
+  "language": "go",
+  "topic": "switch",
+  "order": 18,
+  "nextTopic": "defer",
+  "prevTopic": "if_else",
+  "content": "### Switch Statement\n\n`switch` provides a cleaner alternative to long if-else chains.\n\n### Basic Switch\n\n```go\nday := \"Monday\"\nswitch day {\ncase \"Monday\":\n    fmt.Println(\"Start of work week\")\ncase \"Friday\":\n    fmt.Println(\"Almost weekend\")\ncase \"Saturday\", \"Sunday\":\n    fmt.Println(\"Weekend!\")\ndefault:\n    fmt.Println(\"Regular day\")\n}\n```\n\n### No Break Needed\n\nGo automatically breaks after each case. No `break` statement needed:\n\n```go\nswitch x {\ncase 1:\n    fmt.Println(\"one\")\ncase 2:\n    fmt.Println(\"two\")\n// No break - implicit\n}\n```\n\n### Fallthrough\n\nUse `fallthrough` to continue to the next case:\n\n```go\nswitch num {\ncase 1:\n    fmt.Println(\"one\")\n    fallthrough\ncase 2:\n    fmt.Println(\"two\") // also executed if num == 1\n}\n```\n\n### Switch with No Expression\n\nA switch without an expression is like `switch true`:\n\n```go\nscore := 85\nswitch {\ncase score >= 90:\n    grade = \"A\"\ncase score >= 80:\n    grade = \"B\"\ncase score >= 70:\n    grade = \"C\"\ndefault:\n    grade = \"F\"\n}\n```\n\n### Type Switch\n\nSwitch on interface types:\n\n```go\nvar val interface{} = 42\nswitch v := val.(type) {\ncase int:\n    fmt.Println(\"Integer:\", v)\ncase string:\n    fmt.Println(\"String:\", v)\ndefault:\n    fmt.Println(\"Unknown type\")\n}\n```\n\n> **Key Point:** Go switch is more flexible than C's - cases can have multiple values, no implicit fallthrough, and expressions are evaluated only once.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"time\"\n)\n\nfunc main() {\n    today := time.Now().Weekday()\n\n    switch today {\n    case time.Saturday, time.Sunday:\n        fmt.Println(\"It's the weekend!\")\n    case time.Friday:\n        fmt.Println(\"Almost weekend!\")\n    default:\n        fmt.Println(\"It's a weekday\")\n    }\n\n    // Tagless switch\n    hour := time.Now().Hour()\n    switch {\n    case hour < 12:\n        fmt.Println(\"Good morning\")\n    case hour < 17:\n        fmt.Println(\"Good afternoon\")\n    default:\n        fmt.Println(\"Good evening\")\n    }\n}",
+  "quiz": [
+    {
+      "question": "Does Go require break statements in switch cases?",
+      "options": ["Yes, always", "No, it's automatic", "Only in default cases", "Only for integer cases"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword continues execution to the next case?",
+      "options": ["continue", "fallthrough", "next", "proceed"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Threads in Rust",
+  "language": "rust",
+  "topic": "threads",
+  "order": 64,
+  "nextTopic": "async_await",
+  "prevTopic": "concurrency",
+  "content": "### Threads in Rust\n\nRust uses 1:1 threading where each Rust thread corresponds to one OS thread. The `std::thread` module provides thread creation and management.\n\n---\n\n### Thread Operations\n\n| Function/Method | Description |\n|-----------------|-------------|\n| `thread::spawn(closure)` | Spawn a new thread |\n| `handle.join()` | Wait for thread to finish |\n| `thread::sleep(duration)` | Sleep current thread |\n| `thread::current()` | Get current thread handle |\n| `park()` / `unpark()` | Block/unblock a thread |\n| `thread::yield_now()` | Yield to scheduler |\n\n---\n\n### Examples\n\n```rust\nuse std::thread;\nuse std::time::Duration;\n\n// Spawning\nlet handle = thread::spawn(|| {\n    for i in 1..10 {\n        println!(\"Thread: {}\", i);\n        thread::sleep(Duration::from_millis(1));\n    }\n});\n\nfor i in 1..5 {\n    println!(\"Main: {}\", i);\n    thread::sleep(Duration::from_millis(1));\n}\n\nhandle.join().unwrap();  // wait for spawned thread\n\n// Spawning with move closure\nlet v = vec![1, 2, 3];\nlet handle = thread::spawn(move || {\n    println!(\"Vector: {:?}\", v);  // v is moved into thread\n});\nhandle.join().unwrap();\n// println!(\"{:?}\", v);  // ERROR: v was moved\n```\n\n> **Key Point:** Use `move` closures with `thread::spawn` to transfer ownership of captured variables. Always join spawned threads to ensure they complete. Threads are OS-level, so creating many threads can be expensive.",
+  "codeExample": "use std::thread;\nuse std::time::Duration;\n\nfn main() {\n    let handle = thread::spawn(|| {\n        for i in 1..=5 {\n            println!(\"Spawned thread: count {}\", i);\n            thread::sleep(Duration::from_millis(10));\n        }\n    });\n    \n    for i in 1..=3 {\n        println!(\"Main thread: count {}\", i);\n        thread::sleep(Duration::from_millis(10));\n    }\n    \n    handle.join().expect(\"Thread panicked\");\n    println!(\"All done\");\n}",
+  "quiz": [
+    {
+      "question": "What is the threading model used by Rust?",
+      "options": ["M:N threading", "1:1 threading (one OS thread per Rust thread)", "Green threads", "User-space threads"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "C# Classes",
+  "language": "csharp",
+  "topic": "classes",
+  "order": 36,
+  "nextTopic": "objects",
+  "prevTopic": "lambda_expressions",
+  "content": "### Classes in C#\n\nA class is a blueprint for creating objects. It defines properties, methods, and events that the created objects will have.\n\n### Class Declaration\n\n```csharp\n[accessModifier] class ClassName\n{\n    // Fields, properties, methods, events\n}\n```\n\n### Basic Class Example\n\n```csharp\npublic class Person\n{\n    // Fields (data)\n    private string name;\n    private int age;\n    \n    // Properties\n    public string Name\n    {\n        get { return name; }\n        set { name = value; }\n    }\n    \n    public int Age\n    {\n        get { return age; }\n        set { age = value; }\n    }\n    \n    // Methods\n    public void Introduce()\n    {\n        Console.WriteLine($\"Hi, I'm {name} and I'm {age} years old.\");\n    }\n}\n```\n\n### Access Modifiers\n\n| Modifier | Description |\n|----------|-------------|\n| `public` | Accessible from anywhere |\n| `private` | Only within the same class |\n| `protected` | Within class and derived classes |\n| `internal` | Within the same assembly |\n| `protected internal` | Same assembly or derived classes |\n| `private protected` | Same assembly AND derived classes |\n\n### Class Members\n\n| Member | Description |\n|--------|-------------|\n| Fields | Variables that hold data |\n| Properties | Expose fields with get/set |\n| Methods | Define behavior |\n| Constructors | Initialize objects |\n| Events | Notifications |\n| Indexers | Array-like access |\n| Operators | Define operator behavior |\n\n### Static Classes\n\nCannot be instantiated. Contains only static members:\n\n```csharp\npublic static class MathHelper\n{\n    public static double Pi = 3.14159;\n    public static int Square(int x) => x * x;\n}\n```\n\n### Partial Classes\n\nSplit a class across multiple files:\n\n```csharp\n// File1.cs\npublic partial class Employee\n{\n    public string Name { get; set; }\n}\n\n// File2.cs\npublic partial class Employee\n{\n    public void Work() => Console.WriteLine($\"{Name} is working\");\n}\n```\n\n> **Key Point:** Classes are reference types. When you assign an object to another variable, both reference the same object. Use the `new` keyword to create an instance. Follow PascalCase naming convention for class names.\n\n### Auto-Implemented Properties\n\n```csharp\npublic class Product\n{\n    public string Name { get; set; }\n    public decimal Price { get; set; }\n}\n```",
+  "codeExample": "using System;\n\npublic class Car\n{\n    public string Make { get; set; }\n    public string Model { get; set; }\n    public int Year { get; set; }\n    \n    public void Start()\n    {\n        Console.WriteLine($\"{Year} {Make} {Model} is starting...\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Car myCar = new Car();\n        myCar.Make = \"Toyota\";\n        myCar.Model = \"Camry\";\n        myCar.Year = 2023;\n        myCar.Start();\n    }\n}",
+  "quiz": [
+    {
+      "question": "What keyword creates an instance of a class?",
+      "options": ["create", "new", "instance", "make"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which access modifier makes a member accessible only within the same class?",
+      "options": ["public", "internal", "private", "protected"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started with Go",
+  "language": "go",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installing Go\n\n1. Download the latest Go distribution from [go.dev/dl](https://go.dev/dl)\n2. Run the installer for your operating system\n3. Verify installation:\n\n```bash\ngo version\n```\n\n### Setting Up Your Workspace\n\nIn modern Go (1.16+), you don't need a specific `GOPATH` setup. Just create a module:\n\n```bash\nmkdir myproject\ncd myproject\ngo mod init myproject\n```\n\n### Your First Program\n\nCreate a file named `main.go`:\n\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n```\n\n### Running Your Program\n\n```bash\ngo run main.go\n```\n\n### Compiling\n\n```bash\ngo build -o myapp main.go\n./myapp\n```\n\n### Go Tools\n\n| Command | Purpose |\n|---------|---------|\n| `go run` | Compile and run |\n| `go build` | Compile to binary |\n| `go fmt` | Format source code |\n| `go vet` | Report suspicious constructs |\n| `go test` | Run tests |\n| `go mod` | Module management |\n| `go doc` | Display documentation |\n\n> **Key Point:** Go 1.x guarantees backward compatibility. Code written for Go 1.0 still compiles on modern versions.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n    fmt.Println(\"Go is installed and working!\")\n}",
+  "quiz": [
+    {
+      "question": "What command initializes a new Go module?",
+      "options": ["go start", "go init", "go mod init", "go new"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which command formats Go source code?",
+      "options": ["go format", "go fmt", "go style", "go tidy"],
+      "correctIndex": 1
+    }
+  ]
+}

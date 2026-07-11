@@ -1,0 +1,22 @@
+{
+  "title": "Go Panic and Recover",
+  "language": "go",
+  "topic": "panic_recover",
+  "order": 62,
+  "nextTopic": "file_handling",
+  "prevTopic": "custom_errors",
+  "content": "### Panic and Recover\n\nPanic is Go's mechanism for unrecoverable errors. Recover catches panics.\n\n### Panic\n\n```go\nfunc main() {\n    fmt.Println(\"before\")\n    panic(\"something bad happened\")\n    fmt.Println(\"after\") // never runs\n}\n```\n\n### How Panic Works\n\n1. Current function stops execution\n2. All deferred functions run\n3. Panic propagates up the call stack\n4. If unrecovered, program crashes with stack trace\n\n### Recover\n\n`recover()` regains control of a panicking goroutine:\n\n```go\nfunc safeDiv(a, b int) (result int) {\n    defer func() {\n        if r := recover(); r != nil {\n            fmt.Println(\"Recovered from:\", r)\n            result = 0\n        }\n    }()\n    return a / b\n}\n\nfunc main() {\n    fmt.Println(safeDiv(10, 0)) // Recovers, returns 0\n    fmt.Println(\"Program continues...\")\n}\n```\n\n### Recover Only in Deferred Functions\n\n`recover()` only works inside a deferred function:\n\n```go\nfunc wrong() {\n    r := recover() // nil - not in defer\n    fmt.Println(r)\n}\n\nfunc correct() {\n    defer func() {\n        r := recover() // works here\n        fmt.Println(r)\n    }()\n}\n```\n\n### Panic in Goroutines\n\nA panic in one goroutine cannot be recovered by another:\n\n```go\ngo func() {\n    defer func() {\n        recover() // catches panic in this goroutine only\n    }()\n    panic(\"in goroutine\")\n}()\n```\n\n### When to Use Panic\n\n| Appropriate | Inappropriate |\n|-------------|---------------|\n| Startup failures | Regular error handling |\n| Impossible conditions | User input validation |\n| nil dereference guard | Network/IO errors |\n| Testing failures | Business logic errors |\n\n### Common Recover Pattern\n\n```go\nfunc must(err error) {\n    if err != nil {\n        panic(err)\n    }\n}\n\nfunc safeExec(fn func()) (err error) {\n    defer func() {\n        if r := recover(); r != nil {\n            switch x := r.(type) {\n            case error:\n                err = x\n            case string:\n                err = fmt.Errorf(\"panic: %s\", x)\n            default:\n                err = fmt.Errorf(\"panic: %v\", x)\n            }\n        }\n    }()\n    fn()\n    return nil\n}\n```\n\n> **Key Point:** Panic is not a substitute for error handling. Use it for truly exceptional conditions. Only recover in defer, and typically at package boundaries like HTTP handlers or goroutine entry points.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc safeAccess(arr []int, index int) (val int, ok bool) {\n    defer func() {\n        if r := recover(); r != nil {\n            fmt.Println(\"Recovered:\", r)\n            ok = false\n        }\n    }()\n    return arr[index], true\n}\n\nfunc main() {\n    nums := []int{10, 20, 30}\n    \n    if v, ok := safeAccess(nums, 1); ok {\n        fmt.Println(\"Value:\", v)\n    }\n    \n    if v, ok := safeAccess(nums, 10); ok {\n        fmt.Println(\"Value:\", v)\n    } else {\n        fmt.Println(\"Access failed, got:\", v)\n    }\n}",
+  "quiz": [
+    {
+      "question": "Where must recover() be called to work?",
+      "options": ["Anywhere in the function", "Inside a deferred function", "At the start of main()", "Inside a for loop"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can one goroutine recover a panic from another goroutine?",
+      "options": ["Yes", "No", "Only with channels", "Only in the same package"],
+      "correctIndex": 1
+    }
+  ]
+}

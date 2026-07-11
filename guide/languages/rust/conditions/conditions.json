@@ -1,0 +1,17 @@
+{
+  "title": "Conditions and Control Flow",
+  "language": "rust",
+  "topic": "conditions",
+  "order": 17,
+  "nextTopic": "if_else",
+  "prevTopic": "shadowing",
+  "content": "### Conditions and Control Flow\n\nRust provides several constructs for controlling the flow of execution based on conditions.\n\n---\n\n### Overview\n\n| Construct | Purpose |\n|-----------|---------|\n| `if` / `else` | Conditional branching |\n| `loop` | Infinite loop with `break` |\n| `while` | Conditional loop |\n| `for` | Iteration over collections |\n| `match` | Pattern matching |\n| `if let` | Concise pattern match for one case |\n| `while let` | Loop while pattern matches |\n\n---\n\n### Key Concepts\n\n- `if` is an expression, not just a statement\n- `if` conditions must be `bool` (no implicit conversion)\n- All branches in `if` must return the same type\n- `match` is exhaustive and must cover all possibilities\n- `loop` can return values with `break value`\n\n> **Key Point:** In Rust, `if` and `match` are expressions that can return values. This allows for concise, functional-style code where conditionals produce values directly.",
+  "codeExample": "fn main() {\n    let number = 7;\n    \n    let description = if number % 2 == 0 {\n        \"even\"\n    } else {\n        \"odd\"\n    };\n    \n    println!(\"{} is {}\", number, description);\n}",
+  "quiz": [
+    {
+      "question": "Is `if` an expression or a statement in Rust?",
+      "options": ["Statement", "Expression", "Both", "Neither"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Go Strings",
+  "language": "go",
+  "topic": "strings",
+  "order": 11,
+  "nextTopic": "numbers",
+  "prevTopic": "booleans",
+  "content": "### Strings in Go\n\nStrings are sequences of bytes, typically UTF-8 encoded. They are immutable.\n\n### Declaration\n\n```go\nvar s1 string = \"Hello\"\ns2 := \"World\"\ns3 := `raw string literal\ncan span multiple lines`\n```\n\n### String Operations\n\n```go\n// Concatenation\ngreeting := \"Hello\" + \" \" + \"World\"\n\n// Length (bytes, not runes)\nlen(\"Hello\") // 5\n\n// Indexing (byte access)\ns := \"Hello\"\nfmt.Println(s[0]) // 72 (byte value of 'H')\n\n// Slicing\nfmt.Println(s[1:4]) // \"ell\"\n```\n\n### String Functions (strings package)\n\n```go\nimport \"strings\"\n\nstrings.Contains(\"hello\", \"ll\")     // true\nstrings.Count(\"hello\", \"l\")        // 2\nstrings.HasPrefix(\"hello\", \"he\")   // true\nstrings.HasSuffix(\"hello\", \"lo\")   // true\nstrings.Index(\"hello\", \"l\")        // 2\nstrings.Join([]string{\"a\", \"b\"}, \":\") // \"a:b\"\nstrings.Replace(\"hello\", \"l\", \"x\", 1) // \"hexlo\"\nstrings.ReplaceAll(\"hello\", \"l\", \"x\") // \"hexxo\"\nstrings.Split(\"a:b:c\", \":\")        // [\"a\", \"b\", \"c\"]\nstrings.ToLower(\"HELLO\")           // \"hello\"\nstrings.ToUpper(\"hello\")           // \"HELLO\"\nstrings.Trim(\"  hello  \", \" \")    // \"hello\"\n```\n\n### strconv for Conversions\n\n```go\nimport \"strconv\"\n\n// String to int\ni, err := strconv.Atoi(\"123\")\n\n// Int to string\ns := strconv.Itoa(123)\n\n// Parse float\nf, err := strconv.ParseFloat(\"3.14\", 64)\n```\n\n### Runes and Unicode\n\n```go\ns := \"Hello, 世界\"\nfor i, r := range s {\n    fmt.Printf(\"%d: %c (%U)\\n\", i, r, r)\n}\n```\n\n> **Key Point:** Strings are byte sequences, not rune sequences. `len(s)` returns byte count, not character count. Use `utf8.RuneCountInString` for character count.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\nfunc main() {\n    s := \"Hello, Go World!\"\n    fmt.Println(\"Length:\", len(s))\n    fmt.Println(\"Uppercase:\", strings.ToUpper(s))\n    fmt.Println(\"Contains Go:\", strings.Contains(s, \"Go\"))\n    fmt.Println(strings.ReplaceAll(s, \"o\", \"0\"))\n}",
+  "quiz": [
+    {
+      "question": "What does `len(\"Hello\")` return?",
+      "options": ["5", "6", "4", "Depends on encoding"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Are strings in Go mutable?",
+      "options": ["Yes", "No", "Only in some cases", "Depends on the string type"],
+      "correctIndex": 1
+    }
+  ]
+}

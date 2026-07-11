@@ -1,0 +1,22 @@
+{
+  "title": "C# Generics",
+  "language": "csharp",
+  "topic": "generics",
+  "order": 51,
+  "nextTopic": "generic_methods",
+  "prevTopic": "enums",
+  "content": "### Generics in C#\n\nGenerics allow you to define type-safe data structures and methods without committing to a specific data type.\n\n### Why Generics?\n\nWithout generics, you would need to use `object` type with boxing/unboxing:\n\n```csharp\n// Without generics (non-generic ArrayList)\nArrayList list = new ArrayList();\nlist.Add(123);       // Boxing\nint x = (int)list[0];  // Unboxing, no type safety\n\n// With generics (List<T>)\nList<int> list = new List<int>();\nlist.Add(123);       // No boxing\nint x = list[0];     // No unboxing, type safe\n```\n\n### Generic Benefits\n\n| Benefit | Description |\n|---------|-------------|\n| Type safety | Compile-time type checking |\n| Performance | No boxing/unboxing for value types |\n| Code reuse | Single implementation for all types |\n| Readability | Clear intent in code |\n\n### Generic Constraints\n\n```csharp\npublic class Repository<T> where T : class\n{\n    public void Save(T item) { }\n}\n\n// Constraint types\npublic class Example<T> where T : struct        // Value type\npublic class Example<T> where T : class         // Reference type\npublic class Example<T> where T : new()         // Parameterless constructor\npublic class Example<T> where T : SomeClass    // Derives from SomeClass\npublic class Example<T> where T : ISomeInterface  // Implements interface\npublic class Example<T, U> where T : U          // Type argument constraint\n```\n\n### Multiple Constraints\n\n```csharp\npublic class DataStore<T> where T : class, IComparable<T>, new()\n{\n    public T Create() => new T();\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n```\n\n### Default Keyword\n\n```csharp\npublic T GetDefault<T>()\n{\n    return default(T);  // null for reference, 0 for numeric, false for bool\n}\n```\n\n### Generic Interfaces\n\n```csharp\npublic interface IRepository<T>\n{\n    T GetById(int id);\n    void Save(T item);\n    void Delete(int id);\n}\n\npublic class UserRepository : IRepository<User>\n{\n    public User GetById(int id) => /* ... */;\n    public void Save(User user) => /* ... */;\n    public void Delete(int id) => /* ... */;\n}\n```\n\n### Generic Delegates\n\n```csharp\npublic delegate T Transformer<T>(T input);\n\nTransformer<int> square = x => x * x;\nint result = square(5);  // 25\n```\n\n> **Key Point:** Generics provide type safety without performance overhead. Use constraints to specify what capabilities the type parameter must support. The `default` keyword returns the default value for any type. Generics work with classes, methods, interfaces, delegates, and structs.\n\n### Covariance and Contravariance\n\n```csharp\nIEnumerable<object> objs = new List<string>();  // Covariance (out T)\nAction<string> strAction = (Action<object> obj) => { };  // Contravariance (in T)\n```\n\n### Generic Type Inference\n\n```csharp\nvoid Process<T>(T item) { }\nProcess(\"hello\");  // T inferred as string\n```",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var intStack = new Stack<int>();\n        intStack.Push(10);\n        intStack.Push(20);\n        Console.WriteLine($\"Pop: {intStack.Pop()}\");\n        \n        var stringStack = new Stack<string>();\n        stringStack.Push(\"Hello\");\n        stringStack.Push(\"World\");\n        Console.WriteLine($\"Pop: {stringStack.Pop()}\");\n    }\n}\n\npublic class Stack<T>\n{\n    private List<T> items = new List<T>();\n    \n    public void Push(T item) => items.Add(item);\n    public T Pop()\n    {\n        var item = items[^1];\n        items.RemoveAt(items.Count - 1);\n        return item;\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the primary benefit of generics over using object type?",
+      "options": ["Simpler syntax", "Type safety and performance", "Better debugging", "Smaller binaries"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword returns the default value for a generic type?",
+      "options": ["null", "default", "empty", "zero"],
+      "correctIndex": 1
+    }
+  ]
+}

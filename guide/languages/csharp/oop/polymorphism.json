@@ -1,0 +1,22 @@
+{
+  "title": "C# Polymorphism",
+  "language": "csharp",
+  "topic": "polymorphism",
+  "order": 43,
+  "nextTopic": "method_overriding",
+  "prevTopic": "inheritance",
+  "content": "### Polymorphism in C#\n\nPolymorphism (many forms) allows objects of different types to respond to the same method call in their own way.\n\n### Compile-Time vs Runtime Polymorphism\n\n| Type | Mechanism | Example |\n|------|-----------|---------|\n| Compile-time | Method overloading | `Add(int, int)` vs `Add(double, double)` |\n| Runtime | Method overriding | `virtual` / `override` |\n\n### Runtime Polymorphism with virtual/override\n\n```csharp\npublic class Animal\n{\n    public virtual void MakeSound()\n    {\n        Console.WriteLine(\"Animal makes a sound\");\n    }\n}\n\npublic class Dog : Animal\n{\n    public override void MakeSound()\n    {\n        Console.WriteLine(\"Dog barks\");\n    }\n}\n\npublic class Cat : Animal\n{\n    public override void MakeSound()\n    {\n        Console.WriteLine(\"Cat meows\");\n    }\n}\n```\n\n### Polymorphic Behavior\n\n```csharp\nAnimal[] animals = { new Dog(), new Cat(), new Animal() };\n\nforeach (Animal a in animals)\n{\n    a.MakeSound();  // Each calls its own implementation\n}\n// Output:\n// Dog barks\n// Cat meows\n// Animal makes a sound\n```\n\n### Method Hiding (new keyword)\n\n```csharp\npublic class Base\n{\n    public void Display() { Console.WriteLine(\"Base\"); }\n}\n\npublic class Derived : Base\n{\n    public new void Display() { Console.WriteLine(\"Derived\"); }\n}\n\n// Usage\nBase obj = new Derived();\nobj.Display();  // \"Base\" (not polymorphic)\n```\n\n### Polymorphism with Interfaces\n\n```csharp\ninterface IShape\n{\n    double GetArea();\n}\n\nclass Circle : IShape { public double GetArea() => Math.PI * 4; }\nclass Square : IShape { public double GetArea() => 25; }\n\nIShape[] shapes = { new Circle(), new Square() };\nforeach (var s in shapes)\n    Console.WriteLine(s.GetArea());\n```\n\n### Benefits of Polymorphism\n\n| Benefit | Description |\n|---------|-------------|\n| Extensibility | Add new types without changing existing code |\n| Maintainability | Centralized behavior in base class |\n| Flexibility | Program to interfaces, not implementations |\n| Code reuse | Common interface for different types |\n\n### Polymorphism with Abstract Classes\n\n```csharp\npublic abstract class Shape\n{\n    public abstract double GetArea();\n}\n\npublic class Circle : Shape\n{\n    public override double GetArea() => Math.PI * Radius * Radius;\n}\n```\n\n> **Key Point:** Runtime polymorphism requires `virtual` in the base class and `override` in derived classes. The correct method is determined at runtime based on the actual object type, not the variable type. This enables writing flexible, extensible code.\n\n### Pattern Matching with Polymorphism\n\n```csharp\nforeach (Animal a in animals)\n{\n    if (a is Dog dog)\n        dog.Bark();\n    else if (a is Cat cat)\n        cat.Meow();\n}",
+  "codeExample": "using System;\n\npublic class Shape\n{\n    public virtual double GetArea() => 0;\n}\n\npublic class Circle : Shape\n{\n    public double Radius { get; set; }\n    public Circle(double r) => Radius = r;\n    public override double GetArea() => Math.PI * Radius * Radius;\n}\n\npublic class Rectangle : Shape\n{\n    public double Width { get; set; }\n    public double Height { get; set; }\n    public Rectangle(double w, double h) { Width = w; Height = h; }\n    public override double GetArea() => Width * Height;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Shape[] shapes = { new Circle(5), new Rectangle(4, 6) };\n        foreach (Shape s in shapes)\n            Console.WriteLine($\"Area: {s.GetArea():F2}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword enables method overriding in the base class?",
+      "options": ["override", "virtual", "abstract", "new"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What determines which method is called in runtime polymorphism?",
+      "options": ["Variable type", "Actual object type", "Method parameters", "Return type"],
+      "correctIndex": 1
+    }
+  ]
+}

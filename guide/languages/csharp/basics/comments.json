@@ -1,0 +1,22 @@
+{
+  "title": "C# Comments",
+  "language": "csharp",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Comments in C#\n\nComments are non-executable text used to document your code. C# supports three types of comments.\n\n### Single-Line Comments\n\nStart with `//` and extend to the end of the line:\n\n```csharp\n// This is a single-line comment\nint x = 5; // Inline comment\n```\n\n### Multi-Line Comments\n\nEnclosed between `/*` and `*/`:\n\n```csharp\n/*\n  This is a multi-line comment.\n  It can span multiple lines.\n*/\nint y = 10;\n```\n\n### XML Documentation Comments\n\nStart with `///` and produce API documentation:\n\n```csharp\n/// <summary>\n/// Calculates the area of a circle.\n/// </summary>\n/// <param name=\"radius\">The radius of the circle.</param>\n/// <returns>The area of the circle.</returns>\ndouble CalculateArea(double radius)\n{\n    return Math.PI * radius * radius;\n}\n```\n\n| Comment Type | Syntax | Use Case |\n|-------------|--------|----------|\n| Single-line | `// text` | Short explanations |\n| Multi-line | `/* text */` | Longer descriptions |\n| XML Doc | `/// <tag>` | API documentation |\n\n> **Key Point:** XML documentation comments (///) can generate documentation files and are used by IDEs to provide IntelliSense tooltips. Use them for public APIs.\n\nComments should explain WHY, not WHAT. The code itself shows what it does.",
+  "codeExample": "using System;\n\nclass Program\n{\n    /// <summary>\n    /// The main entry point for the application.\n    /// </summary>\n    static void Main()\n    {\n        // Print welcome message\n        Console.WriteLine(\"Welcome!\");\n        \n        /* Calculate and display\n           the result of 5 + 3 */\n        int sum = 5 + 3;\n        Console.WriteLine($\"Sum: {sum}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which symbol starts a single-line comment in C#?",
+      "options": ["#", "//", "/*", "--"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the purpose of XML documentation comments (///)?",
+      "options": ["To hide code", "To generate API documentation", "To create variables", "To format output"],
+      "correctIndex": 1
+    }
+  ]
+}

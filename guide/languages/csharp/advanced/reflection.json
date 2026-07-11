@@ -1,0 +1,22 @@
+{
+  "title": "C# Reflection",
+  "language": "csharp",
+  "topic": "reflection",
+  "order": 70,
+  "nextTopic": "attributes",
+  "prevTopic": "extension_methods",
+  "content": "### Reflection in C#\n\nReflection provides the ability to inspect types, methods, properties, and fields at runtime, and to invoke members dynamically.\n\n### Getting Type Information\n\n```csharp\nusing System.Reflection;\n\n// Get Type object\nType type1 = typeof(string);\nType type2 = \"hello\".GetType();\nType? type3 = Type.GetType(\"System.String\");\n\nConsole.WriteLine($\"Name: {type1.Name}\");\nConsole.WriteLine($\"FullName: {type1.FullName}\");\nConsole.WriteLine($\"Namespace: {type1.Namespace}\");\nConsole.WriteLine($\"IsClass: {type1.IsClass}\");\nConsole.WriteLine($\"IsValueType: {type1.IsValueType}\");\nConsole.WriteLine($\"BaseType: {type1.BaseType}\");\n```\n\n### Inspecting Members\n\n```csharp\nType type = typeof(List<int>);\n\n// Methods\nforeach (MethodInfo method in type.GetMethods(BindingFlags.Public | BindingFlags.Instance))\n    Console.WriteLine($\"Method: {method.Name}\");\n\n// Properties\nforeach (PropertyInfo prop in type.GetProperties())\n    Console.WriteLine($\"Property: {prop.Name}, Type: {prop.PropertyType.Name}\");\n\n// Fields\nforeach (FieldInfo field in type.GetFields())\n    Console.WriteLine($\"Field: {field.Name}\");\n```\n\n### Dynamic Invocation\n\n```csharp\nType type = typeof(Math);\nMethodInfo? method = type.GetMethod(\"Max\", new[] { typeof(int), typeof(int) });\n\nif (method != null)\n{\n    object? result = method.Invoke(null, new object[] { 10, 20 });\n    Console.WriteLine(result);  // 20\n}\n```\n\n### Creating Instances\n\n```csharp\n// Using Activator\nType type = typeof(StringBuilder);\nobject? instance = Activator.CreateInstance(type);\n\n// With constructor arguments\ninstance = Activator.CreateInstance(type, new object[] { \"Hello\" });\n```\n\n### Reflection at Assembly Level\n\n```csharp\nAssembly assembly = Assembly.GetExecutingAssembly();\nConsole.WriteLine($\"Assembly: {assembly.FullName}\");\n\nAssembly loadAssembly = Assembly.Load(\"System.Text.Json\");\n\nforeach (Type t in assembly.GetTypes())\n    Console.WriteLine(t.Name);\n```\n\n### Performance Considerations\n\n| Aspect | Impact |\n|--------|--------|\n| Type checking | Minor (typeof, is, as) |\n| Member enumeration | Moderate |\n| Dynamic invocation | Slow (10-100x slower) |\n| Expression trees | Faster alternative |\n| Source generators | Best performance (compile-time) |\n\n### Use Cases\n\n```csharp\n// Dependency injection containers\n// Serialization/deserialization\n// Plugin systems\n// Unit testing frameworks\n// Code analysis tools\n// Attribute-based validation\n```\n\n> **Key Point:** Reflection is powerful but slow. Use it for scenarios that require runtime type discovery. For performance-critical code, prefer expression trees or source generators. Reflection can break with code obfuscation or trimming.\n\n### Accessing Private Members\n\n```csharp\nType type = typeof(MyClass);\nFieldInfo? field = type.GetField(\"_secret\", BindingFlags.NonPublic | BindingFlags.Instance);\nobject? value = field?.GetValue(instance);\n```\n\n### Getting Custom Attributes\n\n```csharp\nType type = typeof(MyClass);\nvar attrs = type.GetCustomAttributes(typeof(SerializableAttribute), false);\n```\n\n### Reflection with Generics\n\n```csharp\nType openGeneric = typeof(List<>);\nType closedGeneric = openGeneric.MakeGenericType(typeof(int));\nobject? list = Activator.CreateInstance(closedGeneric);",
+  "codeExample": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main()\n    {\n        Type type = typeof(string);\n        \n        Console.WriteLine($\"Type: {type.Name}\");\n        Console.WriteLine($\"Methods:\");\n        \n        foreach (MethodInfo m in type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static))\n        {\n            if (m.Name.StartsWith(\"To\"))\n                Console.WriteLine($\"  {m.Name} -> {m.ReturnType.Name}\");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What namespace provides reflection in C#?",
+      "options": ["System.IO", "System.Reflection", "System.Runtime", "System.CodeDom"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method dynamically creates an instance of a type?",
+      "options": ["Type.Create()", "Activator.CreateInstance()", "Reflection.New()", "Instance.Creator()"],
+      "correctIndex": 1
+    }
+  ]
+}

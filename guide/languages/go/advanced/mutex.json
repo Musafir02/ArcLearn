@@ -1,0 +1,22 @@
+{
+  "title": "Go Mutex",
+  "language": "go",
+  "topic": "mutex",
+  "order": 58,
+  "nextTopic": "waitgroup",
+  "prevTopic": "select",
+  "content": "### Mutex (Mutual Exclusion)\n\n`sync.Mutex` provides mutual exclusion to protect shared resources.\n\n### Basic Mutex\n\n```go\nvar mu sync.Mutex\nvar counter int\n\nfunc increment() {\n    mu.Lock()\n    counter++\n    mu.Unlock()\n}\n```\n\n### Always Use defer\n\n```go\nfunc increment() {\n    mu.Lock()\n    defer mu.Unlock()\n    counter++\n    // more operations...\n}\n```\n\n### RWMutex (Read-Write Mutex)\n\n```go\nvar rw sync.RWMutex\nvar data map[string]int\n\nfunc read(key string) int {\n    rw.RLock()\n    defer rw.RUnlock()\n    return data[key]\n}\n\nfunc write(key string, value int) {\n    rw.Lock()\n    defer rw.Unlock()\n    data[key] = value\n}\n```\n\nRWMutex allows multiple concurrent readers but exclusive writers.\n\n### Mutex vs RWMutex\n\n| Aspect | Mutex | RWMutex |\n|--------|-------|---------|\n| Read concurrency | 1 reader | N readers |\n| Write concurrency | 1 writer | 1 writer |\n| Overhead | Lower | Higher |\n| Best for | Mixed read/write | Read-heavy workloads |\n\n### Common Pitfalls\n\n```go\n// DEADLOCK: Locking already locked mutex (non-reentrant)\nfunc main() {\n    var mu sync.Mutex\n    mu.Lock()\n    mu.Lock() // deadlock!\n}\n\n// FORGOT UNLOCK: Use defer to ensure unlock\nfunc process() {\n    mu.Lock()\n    if someCondition {\n        return // forgets to unlock!\n    }\n    mu.Unlock()\n}\n```\n\n### Mutex with Struct\n\n```go\ntype SafeCounter struct {\n    mu    sync.Mutex\n    value int\n}\n\nfunc (c *SafeCounter) Increment() {\n    c.mu.Lock()\n    defer c.mu.Unlock()\n    c.value++\n}\n\nfunc (c *SafeCounter) Value() int {\n    c.mu.Lock()\n    defer c.mu.Unlock()\n    return c.value\n}\n```\n\n> **Key Point:** A Mutex must not be copied after first use. Always pass pointer to a struct containing a Mutex. Use `defer mu.Unlock()` immediately after `Lock()`.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\ntype Counter struct {\n    mu    sync.Mutex\n    value int\n}\n\nfunc (c *Counter) Increment() {\n    c.mu.Lock()\n    defer c.mu.Unlock()\n    c.value++\n}\n\nfunc main() {\n    var wg sync.WaitGroup\n    counter := Counter{}\n\n    for i := 0; i < 1000; i++ {\n        wg.Add(1)\n        go func() {\n            defer wg.Done()\n            counter.Increment()\n        }()\n    }\n\n    wg.Wait()\n    fmt.Println(\"Counter:\", counter.value)\n}",
+  "quiz": [
+    {
+      "question": "What happens if a goroutine locks an already locked mutex?",
+      "options": ["Returns error", "Panics", "Deadlocks", "Skipped the lock"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is RWMutex good for?",
+      "options": ["Write-heavy workloads", "Read-heavy workloads", "Equal read/write", "Single goroutine access"],
+      "correctIndex": 1
+    }
+  ]
+}

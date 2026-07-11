@@ -1,0 +1,22 @@
+{
+  "title": "Go Conditions",
+  "language": "go",
+  "topic": "conditions",
+  "order": 16,
+  "nextTopic": "if_else",
+  "prevTopic": "type_conversion",
+  "content": "### Conditional Statements in Go\n\nConditions control the flow of execution based on boolean expressions.\n\n### The if Statement\n\n```go\nif x > 0 {\n    fmt.Println(\"positive\")\n}\n```\n\n### Parentheses\n\nUnlike C/Java, conditions do not need parentheses:\n\n```go\n// Go style (preferred)\nif x > 0 {\n    fmt.Println(\"positive\")\n}\n\n// Parentheses are allowed but not idiomatic\nif (x > 0) {\n    fmt.Println(\"positive\")\n}\n```\n\n### Short Statement\n\n`if` can include a short statement before the condition:\n\n```go\nif result, err := doSomething(); err != nil {\n    fmt.Println(\"Error:\", err)\n} else {\n    fmt.Println(\"Result:\", result)\n}\n```\n\nThe variables declared in the short statement are scoped to the `if`/`else` blocks.\n\n### Comparison and Logical Operators\n\n```go\nif age >= 18 && country == \"US\" {\n    fmt.Println(\"Adult in US\")\n}\n\nif !isWeekend || isHoliday {\n    fmt.Println(\"Work day\")\n}\n```\n\n### if-else Chain\n\n```go\nif score >= 90 {\n    grade = \"A\"\n} else if score >= 80 {\n    grade = \"B\"\n} else if score >= 70 {\n    grade = \"C\"\n} else {\n    grade = \"F\"\n}\n```\n\n> **Key Point:** The short statement in `if` is a Go idiom, especially useful for error handling. Variables declared there are only accessible inside the if/else blocks.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"strconv\"\n)\n\nfunc main() {\n    score := 85\n\n    if score >= 90 {\n        fmt.Println(\"Grade: A\")\n    } else if score >= 80 {\n        fmt.Println(\"Grade: B\")\n    } else if score >= 70 {\n        fmt.Println(\"Grade: C\")\n    } else {\n        fmt.Println(\"Grade: F\")\n    }\n\n    // Short statement\n    if num, err := strconv.Atoi(\"42\"); err == nil {\n        fmt.Println(\"Parsed:\", num)\n    }\n}",
+  "quiz": [
+    {
+      "question": "Are parentheses required around conditions in Go?",
+      "options": ["Yes, always", "No, never", "Only for complex expressions", "Only in else clauses"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where are variables declared in an if short statement accessible?",
+      "options": ["Entire function", "Only in the if block", "In if and else blocks", "Package level"],
+      "correctIndex": 2
+    }
+  ]
+}

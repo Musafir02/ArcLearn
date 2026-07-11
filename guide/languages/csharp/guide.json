@@ -1,0 +1,35 @@
+{
+  "title": "C# Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "C# Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "datatypes", "typecasting", "operators", "booleans", "strings", "numbers", "input", "nullables", "var_dynamic", "constants"]
+    },
+    {
+      "type": "group", "title": "Conditions", "folder": "conditions",
+      "topics": ["conditions", "if_else", "switch", "ternary"]
+    },
+    {
+      "type": "group", "title": "Loops", "folder": "loops",
+      "topics": ["while", "for", "do_while", "break_continue", "foreach"]
+    },
+    {
+      "type": "group", "title": "Arrays", "folder": "arrays",
+      "topics": ["arrays", "array_methods", "array_sort", "multidimensional_arrays"]
+    },
+    {
+      "type": "group", "title": "Methods", "folder": "methods",
+      "topics": ["methods", "method_params", "method_overloading", "named_optional_params", "recursion", "lambda_expressions"]
+    },
+    {
+      "type": "group", "title": "OOP", "folder": "oop",
+      "topics": ["classes", "objects", "constructors", "this", "properties", "get_set", "inheritance", "polymorphism", "method_overriding", "abstract", "interfaces", "sealed", "static", "structs", "enums"]
+    },
+    {
+      "type": "group", "title": "Advanced", "folder": "advanced",
+      "topics": ["generics", "generic_methods", "generic_classes", "collections_list", "collections_dictionary", "collections_stack_queue", "linq", "linq_methods", "linq_lambda", "exception_handling", "try_catch_finally", "custom_exceptions", "file_io", "stream_reader_writer", "async_await", "tasks", "delegates", "events", "extension_methods", "reflection", "attributes", "indexers", "operator_overloading", "pattern_matching", "records", "nullable_reference_types", "tuple_types", "top_level_statements"]
+    }
+  ]
+}

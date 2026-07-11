@@ -1,0 +1,22 @@
+{
+  "title": "Go Slice Make",
+  "language": "go",
+  "topic": "slice_make",
+  "order": 28,
+  "nextTopic": "slice_append_copy",
+  "prevTopic": "slice_functions",
+  "content": "### The make Function\n\n`make` creates slices, maps, and channels with specific length and capacity.\n\n### Slice with make\n\n```go\n// Length only\ns1 := make([]int, 5)    // len=5, cap=5\n\n// Length and capacity\ns2 := make([]int, 3, 10) // len=3, cap=10\n```\n\n### Why Use make?\n\n1. Pre-allocate capacity to avoid reallocations\n2. Create slices with default zero values\n3. Control memory allocation\n\n### Performance Example\n\n```go\n// Without capacity - many reallocations\nvar s []int\nfor i := 0; i < 10000; i++ {\n    s = append(s, i) // may reallocate many times\n}\n\n// With capacity - single allocation\ns := make([]int, 0, 10000)\nfor i := 0; i < 10000; i++ {\n    s = append(s, i) // no reallocation\n}\n```\n\n### Pre-allocated vs Nil Slice\n\n```go\nvar s1 []int        // nil, len=0, cap=0, no allocation\ns2 := []int{}       // non-nil, len=0, cap=0, allocated\ns3 := make([]int, 0) // non-nil, len=0, cap=0, allocated\n```\n\n### Make for Map\n\n```go\nm := make(map[string]int)     // empty map\nm2 := make(map[string]int, 100) // capacity hint\n```\n\n### Make for Channel\n\n```go\nch := make(chan int)     // unbuffered\nch2 := make(chan int, 10) // buffered with capacity 10\n```\n\n### Comparison\n\n| Approach | Allocation | Use Case |\n|----------|------------|----------|\n| `var s []int` | None (nil) | Deferred init, or append builds it |\n| `[]int{...}` | Yes + data | Known initial values |\n| `make([]int, n)` | Yes | Known size, zero values |\n| `make([]int, 0, n)` | Capacity only | Known capacity, build with append |\n\n> **Key Point:** Use `make([]T, 0, capacity)` when you know the approximate size in advance. This reduces memory allocations and improves performance.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // Different make forms\n    s1 := make([]int, 3)      // [0, 0, 0]\n    s2 := make([]int, 2, 5)   // [0, 0] with cap=5\n\n    fmt.Println(\"s1:\", s1, \"len:\", len(s1), \"cap:\", cap(s1))\n    fmt.Println(\"s2:\", s2, \"len:\", len(s2), \"cap:\", cap(s2))\n\n    // Build with pre-allocated capacity\n    s3 := make([]int, 0, 5)\n    for i := 1; i <= 5; i++ {\n        s3 = append(s3, i*10)\n    }\n    fmt.Println(\"s3:\", s3, \"len:\", len(s3), \"cap:\", cap(s3))\n\n    // Map with make\n    m := make(map[string]int, 10)\n    m[\"key\"] = 42\n    fmt.Println(\"map:\", m)\n}",
+  "quiz": [
+    {
+      "question": "What does `make([]int, 3, 10)` create?",
+      "options": ["len=3, cap=10", "len=10, cap=3", "len=3, cap=3", "len=10, cap=10"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the capacity hint parameter in make?",
+      "options": ["The initial length", "The pre-allocated capacity", "The element type", "The alignment"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Go While Loop Pattern",
+  "language": "go",
+  "topic": "for_while",
+  "order": 21,
+  "nextTopic": "for_range",
+  "prevTopic": "for_loop",
+  "content": "### While Loop Pattern in Go\n\nGo doesn't have a `while` keyword. Use `for` with only a condition.\n\n### For as While\n\n```go\n// Equivalent to while(condition)\nsum := 1\nfor sum < 1000 {\n    sum += sum\n}\n```\n\n### Do-While Pattern\n\nUse `for` with a break condition at the end:\n\n```go\n// Do-while equivalent\nfor {\n    // do work\n    if condition {\n        break\n    }\n}\n```\n\n### Sentinel-Controlled Loop\n\n```go\nscanner := bufio.NewScanner(os.Stdin)\nfor scanner.Scan() {\n    line := scanner.Text()\n    if line == \"\" {\n        break\n    }\n    fmt.Println(\"Got:\", line)\n}\n```\n\n### Flag-Controlled Loop\n\n```go\nrunning := true\nfor running {\n    // process\n    if shouldStop {\n        running = false\n    }\n}\n```\n\n### Common While Patterns\n\n| Pattern | Go Code |\n|---------|---------|\n| while (cond) | `for cond { }` |\n| do { } while (cond) | `for { }` with break |\n| while (true) | `for { }` |\n| while (--i) | `for ; i > 0; i-- { }` |\n\n> **Key Point:** Any `while` loop from other languages can be written as `for` with just the condition. This keeps Go's syntax simple and uniform.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // While pattern\n    n := 10\n    for n > 0 {\n        fmt.Println(n)\n        n--\n    }\n\n    // Do-while pattern\n    x := 0\n    for {\n        fmt.Println(\"x =\", x)\n        x++\n        if x >= 3 {\n            break\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "How do you write a while loop in Go?",
+      "options": ["while cond { }", "for cond { }", "loop cond { }", "do { } while cond"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the do-while pattern in Go?",
+      "options": ["for { } with break at end", "do { } while cond", "for cond { }", "for ; ; { }"],
+      "correctIndex": 0
+    }
+  ]
+}

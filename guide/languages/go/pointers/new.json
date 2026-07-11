@@ -1,0 +1,22 @@
+{
+  "title": "Go new Function",
+  "language": "go",
+  "topic": "new",
+  "order": 43,
+  "nextTopic": "stack_heap",
+  "prevTopic": "pointers_functions",
+  "content": "### The new Function\n\n`new(T)` allocates memory for a type T and returns a pointer to it.\n\n### Basic Usage\n\n```go\np := new(int)   // *int, initialized to 0\nfmt.Println(*p) // 0\n*p = 42\nfmt.Println(*p) // 42\n```\n\n### new vs make\n\n| Function | Works With | Returns | Memory |\n|----------|------------|---------|--------|\n| `new(T)` | Any type | `*T` (pointer) | Zeroed |\n| `make(T)` | Slice, map, channel only | `T` (initialized) | Initialized |\n\n### new with Structs\n\n```go\ntype Person struct {\n    Name string\n    Age  int\n}\n\np := new(Person)\nfmt.Println(p.Name) // \"\" (zero value)\nfmt.Println(p.Age)  // 0 (zero value)\n\np.Name = \"Alice\"\np.Age = 30\n```\n\n### new vs &T{}\n\n```go\n// These are equivalent:\np1 := new(Person)\np2 := &Person{}\n\n// But &Person{Name: \"Alice\"} is NOT possible with new\np3 := &Person{Name: \"Alice\", Age: 30}\n```\n\n### new for Built-in Types\n\n```go\ni := new(int)\nfmt.Println(*i) // 0\n\nf := new(float64)\nfmt.Println(*f) // 0\n\ns := new(string)\nfmt.Println(*s) // \"\" (empty)\n\nb := new([3]int)\nfmt.Println(*b) // [0, 0, 0]\n```\n\n### Idiomatic Usage\n\n`new` is rarely used in Go. Most Go developers prefer:\n\n```go\n// Instead of new(int)\nvar x int\n\n// Instead of new(MyStruct)\nms := MyStruct{}\n\n// For pointers to initialized values\nms := &MyStruct{Field: \"value\"}\n```\n\n> **Key Point:** `new` is not commonly used in Go. The `&T{}` syntax is more idiomatic for structs, and `var x T` is preferred for zero-valued types.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\ntype Config struct {\n    Host string\n    Port int\n}\n\nfunc main() {\n    // new\n    p := new(int)\n    fmt.Println(\"new(int):\", *p)\n\n    // new with struct\n    cfg := new(Config)\n    cfg.Host = \"localhost\"\n    cfg.Port = 8080\n    fmt.Println(\"Config:\", cfg.Host, cfg.Port)\n\n    // &T{} is more idiomatic\n    cfg2 := &Config{Host: \"example.com\", Port: 443}\n    fmt.Println(\"Config2:\", cfg2.Host, cfg2.Port)\n}",
+  "quiz": [
+    {
+      "question": "What does new(T) return?",
+      "options": ["T", "*T", "interface{}", "unsafe.Pointer"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can new() be used with slices?",
+      "options": ["Yes, and it initializes them", "Yes, but returns nil pointer", "No, use make for slices", "No, slices are not supported"],
+      "correctIndex": 2
+    }
+  ]
+}

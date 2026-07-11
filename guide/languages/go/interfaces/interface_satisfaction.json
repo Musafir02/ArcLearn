@@ -1,0 +1,22 @@
+{
+  "title": "Go Interface Satisfaction",
+  "language": "go",
+  "topic": "interface_satisfaction",
+  "order": 50,
+  "nextTopic": "empty_interface",
+  "prevTopic": "interfaces",
+  "content": "### Interface Satisfaction\n\nA type satisfies an interface if it implements all the interface's methods.\n\n### Implicit Satisfaction\n\n```go\ntype Speaker interface {\n    Speak() string\n}\n\ntype Dog struct{}\nfunc (d Dog) Speak() string { return \"Woof!\" }\n\ntype Cat struct{}\nfunc (c Cat) Speak() string { return \"Meow!\" }\n\ntype Robot struct{}\nfunc (r Robot) Speak() string { return \"Beep boop\" }\n\n// All three types satisfy Speaker implicitly\nvar speakers []Speaker = []Speaker{Dog{}, Cat{}, Robot{}}\n```\n\n### Compile-Time Check\n\nTo verify satisfaction at compile time:\n\n```go\ntype MyWriter struct{}\nfunc (m MyWriter) Write(p []byte) (n int, err error) {\n    return len(p), nil\n}\n\n// Compile-time check\nvar _ io.Writer = (*MyWriter)(nil)\n```\n\n### Interface Embedding\n\n```go\ntype Reader interface {\n    Read(p []byte) (n int, err error)\n}\n\ntype Closer interface {\n    Close() error\n}\n\ntype ReadCloser interface {\n    Reader\n    Closer\n}\n\n// A type must have ALL methods from all embedded interfaces\n```\n\n### Pointer vs Value Receiver\n\n```go\ntype Incrementer interface {\n    Increment()\n}\n\ntype Counter struct {\n    Value int\n}\n\n// Method with pointer receiver\nfunc (c *Counter) Increment() {\n    c.Value++\n}\n\nvar inc Incrementer\n// inc = Counter{} // ERROR: Counter does not implement Incrementer\ninc = &Counter{}     // OK: *Counter implements Incrementer\n```\n\n### Checking Satisfaction\n\n```go\nvar v any = \"hello\"\n\nif s, ok := v.(fmt.Stringer); ok {\n    fmt.Println(\"implements Stringer:\", s.String())\n}\n```\n\n> **Key Point:** If a method uses a pointer receiver, only the pointer type satisfies the interface. For value receivers, both value and pointer types satisfy it.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\ntype Greeter interface {\n    Greet() string\n}\n\ntype English struct{}\nfunc (e English) Greet() string { return \"Hello\" }\n\ntype Spanish struct{}\nfunc (s Spanish) Greet() string { return \"Hola\" }\n\ntype French struct{}\nfunc (f French) Greet() string { return \"Bonjour\" }\n\n// Compile-time check\nvar _ Greeter = (*English)(nil)\n\nfunc main() {\n    greeters := []Greeter{English{}, Spanish{}, French{}}\n    for _, g := range greeters {\n        fmt.Println(g.Greet())\n    }\n}",
+  "quiz": [
+    {
+      "question": "If a method has a pointer receiver, does the value type satisfy the interface?",
+      "options": ["Yes", "No, only the pointer type", "Both do", "Depends on the method"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you verify interface satisfaction at compile time?",
+      "options": ["run go vet", "Use var _ Interface = (*Type)(nil)", "Use if statement", "Use reflect"],
+      "correctIndex": 1
+    }
+  ]
+}

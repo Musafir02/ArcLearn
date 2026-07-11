@@ -1,0 +1,22 @@
+{
+  "title": "C# Static Members",
+  "language": "csharp",
+  "topic": "static",
+  "order": 48,
+  "nextTopic": "structs",
+  "prevTopic": "sealed",
+  "content": "### Static Members in C#\n\nStatic members belong to the type itself, not to any specific instance. They are shared across all instances.\n\n### Static Fields\n\n```csharp\npublic class Counter\n{\n    public static int TotalCount = 0;\n    \n    public Counter()\n    {\n        TotalCount++;\n    }\n}\n```\n\n### Static Methods\n\n```csharp\npublic class MathUtility\n{\n    public static int Add(int a, int b) => a + b;\n    public static int Max(int a, int b) => a > b ? a : b;\n}\n\n// Called on the type, not an instance\nint result = MathUtility.Add(5, 3);\n```\n\n### Static Properties\n\n```csharp\npublic class AppConfig\n{\n    public static string AppName { get; } = \"MyApp\";\n    public static string Version { get; private set; } = \"1.0.0\";\n}\n```\n\n### Static Classes\n\nAll members must be static. Cannot be instantiated:\n\n```csharp\npublic static class FileHelper\n{\n    public static string ReadAllText(string path) => File.ReadAllText(path);\n    public static void WriteAllText(string path, string content) => File.WriteAllText(path, content);\n}\n```\n\n### Static Constructor\n\nRuns once before any static member is accessed or any instance is created:\n\n```csharp\npublic class Database\n{\n    public static readonly string ConnectionString;\n    \n    static Database()\n    {\n        ConnectionString = \"Server=localhost;Database=MyDB;\";\n        Console.WriteLine(\"Static constructor called\");\n    }\n}\n```\n\n### Static vs Instance Members\n\n| Aspect | Static | Instance |\n|--------|--------|----------|\n| Belongs to | Type | Object |\n| Memory | One per type | One per instance |\n| Access | `ClassName.Member` | `object.Member` |\n| `this` keyword | Not accessible | Accessible |\n| Lifetime | App domain lifetime | Object lifetime |\n\n### Extension Methods\n\nAll extension methods must be static:\n\n```csharp\npublic static class StringExtensions\n{\n    public static bool IsPalindrome(this string str)\n    {\n        return str.SequenceEqual(str.Reverse());\n    }\n}\n```\n\n### Static Local Functions (C# 8+)\n\nCannot capture variables from enclosing scope:\n\n```csharp\nint Calculate(int x, int y)\n{\n    static int Multiply(int a, int b) => a * b;\n    return Multiply(x, y);\n}\n```\n\n> **Key Point:** Static members are accessed through the class name, not an instance. Use static members for utility functions, shared state, and singleton patterns. Static constructors run once per type at an indeterminate time before the type is first used.\n\n### Common Static Members in .NET\n\n```csharp\nConsole.WriteLine();     // Static method\nMath.PI;                 // Static property\nint.Parse(\"123\");       // Static method\nString.IsNullOrEmpty();  // Static method\nDateTime.Now;            // Static property\n```",
+  "codeExample": "using System;\n\npublic static class TemperatureConverter\n{\n    public static double CelsiusToFahrenheit(double celsius)\n        => (celsius * 9 / 5) + 32;\n    \n    public static double FahrenheitToCelsius(double fahrenheit)\n        => (fahrenheit - 32) * 5 / 9;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        double tempC = 25;\n        double tempF = TemperatureConverter.CelsiusToFahrenheit(tempC);\n        Console.WriteLine($\"{tempC}C = {tempF}F\");\n        \n        double backToC = TemperatureConverter.FahrenheitToCelsius(tempF);\n        Console.WriteLine($\"{tempF}F = {backToC:F1}C\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Do static members belong to instances or the type?",
+      "options": ["Instances", "The type", "Both", "Neither"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a static class have instance members?",
+      "options": ["Yes", "No", "Only properties", "Only methods"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "String Slices in Rust",
+  "language": "rust",
+  "topic": "strings_slice",
+  "order": 42,
+  "nextTopic": "iterators",
+  "prevTopic": "hashset",
+  "content": "### String Slices in Rust\n\n`&str` (pronounced \"string slice\") is a reference to a sequence of UTF-8 bytes. It is the preferred string type for function parameters.\n\n---\n\n### &str vs String\n\n| Aspect | `&str` | `String` |\n|--------|--------|----------|\n| Memory | Points to existing data | Owned heap buffer |\n| Mutability | Immutable | Mutable |\n| Creation | Literals are `&str` | `String::from()` |\n| Parameter | Preferred for function args | Use when ownership needed |\n\n---\n\n### String Slice Methods\n\n```rust\nlet s = \"Hello, Rust!\";\n\n// Length and inspection\nprintln!(\"{}\", s.len());         // byte length\nprintln!(\"{}\", s.is_empty());    // false\nprintln!(\"{}\", s.contains(\"Rust\"));  // true\n\n// Slicing\nlet hello = &s[0..5];   // \"Hello\"\n\n// Methods returning &str\nlet trimmed = \"  text  \".trim();     // \"text\"\nlet words: Vec<&str> = s.split(\" \").collect();\nlet upper = s.to_uppercase();         // returns String\n\n// Checking prefixes/suffixes\ns.starts_with(\"Hello\");  // true\ns.ends_with(\"Rust!\");    // true\n\n// Finding\ns.find('R');  // Some(7)\n```\n\n> **Key Point:** `&str` is the idiomatic parameter type for functions that need string data. It can accept both `&String` (via deref coercion) and string literals. String slices operate on byte indices, not character indices.",
+  "codeExample": "fn main() {\n    let greeting = \"Hello, Rust world!\";\n    \n    // Find and extract a word\n    if let Some(start) = greeting.find(\"Rust\") {\n        let end = start + 4;\n        let word = &greeting[start..end];\n        println!(\"Found: {}\", word);\n    }\n    \n    // Split and process\n    for word in greeting.split_whitespace() {\n        println!(\"Word: {}\", word);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What type do string literals have in Rust?",
+      "options": ["String", "&str", "char[]", "str"],
+      "correctIndex": 1
+    }
+  ]
+}

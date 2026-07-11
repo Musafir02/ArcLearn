@@ -1,0 +1,17 @@
+{
+  "title": "Methods in Rust",
+  "language": "rust",
+  "topic": "methods",
+  "order": 37,
+  "nextTopic": "impl_blocks",
+  "prevTopic": "pattern_matching",
+  "content": "### Methods in Rust\n\nMethods are functions defined within the context of a struct (or enum) that operate on instances of that type.\n\n---\n\n### Method Types\n\n| Self Parameter | Access | Description |\n|----------------|--------|-------------|\n| `self` | Owned | Takes ownership of the instance |\n| `&self` | Immutable borrow | Read-only access |\n| `&mut self` | Mutable borrow | Can modify the instance |\n\n---\n\n### Defining Methods\n\n```rust\nstruct Rectangle {\n    width: u32,\n    height: u32,\n}\n\nimpl Rectangle {\n    // Immutable borrow\n    fn area(&self) -> u32 {\n        self.width * self.height\n    }\n    \n    // Mutable borrow\n    fn scale(&mut self, factor: u32) {\n        self.width *= factor;\n        self.height *= factor;\n    }\n    \n    // Ownership (rare)\n    fn destroy(self) {\n        println!(\"Destroying {} x {}\", self.width, self.height);\n    }\n}\n\nlet mut rect = Rectangle { width: 30, height: 50 };\nprintln!(\"Area: {}\", rect.area());\nrect.scale(2);\n```\n\n> **Key Point:** Methods use `&self` by default. Use `&mut self` when you need to modify the instance. Using `self` (ownership) is rare and usually only for methods that consume the value.",
+  "codeExample": "struct Circle {\n    radius: f64,\n}\n\nimpl Circle {\n    fn new(radius: f64) -> Circle {\n        Circle { radius }\n    }\n    \n    fn area(&self) -> f64 {\n        std::f64::consts::PI * self.radius * self.radius\n    }\n    \n    fn circumference(&self) -> f64 {\n        2.0 * std::f64::consts::PI * self.radius\n    }\n}\n\nfn main() {\n    let circle = Circle::new(5.0);\n    println!(\"Area: {:.2}\", circle.area());\n    println!(\"Circumference: {:.2}\", circle.circumference());\n}",
+  "quiz": [
+    {
+      "question": "Which self parameter allows modifying the struct instance?",
+      "options": ["self", "&self", "&mut self", "mut self"],
+      "correctIndex": 2
+    }
+  ]
+}

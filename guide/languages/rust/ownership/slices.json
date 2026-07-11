@@ -1,0 +1,17 @@
+{
+  "title": "Slices in Rust",
+  "language": "rust",
+  "topic": "slices",
+  "order": 28,
+  "nextTopic": "lifetimes",
+  "prevTopic": "references",
+  "content": "### Slices in Rust\n\nA slice is a reference to a contiguous sequence of elements in a collection. Slices are fat pointers: they store a pointer and a length.\n\n---\n\n### Slice Types\n\n| Type | Description |\n|------|-------------|\n| `&[T]` | Slice of elements of type T |\n| `&str` | String slice (special) |\n| `&mut [T]` | Mutable slice |\n\n---\n\n### Working with Slices\n\n```rust\nlet arr = [1, 2, 3, 4, 5];\n\nlet slice = &arr[1..3];     // elements at index 1, 2\nlet full = &arr[..];         // all elements\nlet from = &arr[2..];        // from index 2 to end\nlet to = &arr[..3];          // from start to index 2\n\n// String slices\nlet s = String::from(\"hello world\");\nlet hello = &s[0..5];       // \"hello\"\nlet world = &s[6..11];      // \"world\"\nlet whole = &s[..];           // \"hello world\"\n\n// Functions accepting slices\nfn first_word(s: &str) -> &str {\n    &s[..s.find(' ').unwrap_or(s.len())]\n}\n```\n\n> **Key Point:** String slice indices operate on bytes, not characters. Slicing at a non-UTF-8 boundary will panic. Prefer using string methods like `find`, `split`, or `chars` for safe string manipulation.",
+  "codeExample": "fn main() {\n    let arr = [10, 20, 30, 40, 50];\n    let slice = &arr[1..4];\n    \n    println!(\"Array: {:?}\", arr);\n    println!(\"Slice [1..4]: {:?}\", slice);\n    println!(\"Length: {}, first: {}\", slice.len(), slice[0]);\n    \n    let s = String::from(\"Rust programming\");\n    let first = &s[0..4];\n    println!(\"First word: {}\", first);\n}",
+  "quiz": [
+    {
+      "question": "What does a slice reference store?",
+      "options": ["Just a pointer", "A pointer and a length", "A pointer and a capacity", "Just a length"],
+      "correctIndex": 1
+    }
+  ]
+}

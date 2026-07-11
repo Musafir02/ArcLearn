@@ -1,0 +1,22 @@
+{
+  "title": "C# StreamReader and StreamWriter",
+  "language": "csharp",
+  "topic": "stream_reader_writer",
+  "order": 64,
+  "nextTopic": "async_await",
+  "prevTopic": "file_io",
+  "content": "### StreamReader and StreamWriter\n\n`StreamReader` and `StreamWriter` provide efficient character-level I/O for text files.\n\n### StreamWriter (Writing)\n\n```csharp\nusing StreamWriter writer = new StreamWriter(\"output.txt\");\n\nwriter.WriteLine(\"Hello, World!\");\nwriter.Write(\"Numbers: \");\nwriter.Write(42);\nwriter.WriteLine();\nwriter.WriteLine($\"Today is {DateTime.Now:d}\");\n// Auto-closes when disposed\n```\n\n### StreamWriter Options\n\n```csharp\n// Append mode\nusing StreamWriter writer = new StreamWriter(\"log.txt\", append: true);\n\n// Encoding\nusing StreamWriter writer = new StreamWriter(\"file.txt\", false, Encoding.UTF8);\n\n// Buffer size\nusing StreamWriter writer = new StreamWriter(\"file.txt\", false, Encoding.UTF8, 4096);\n```\n\n### StreamReader (Reading)\n\n```csharp\nusing StreamReader reader = new StreamReader(\"input.txt\");\n\n// Read all at once\nstring all = reader.ReadToEnd();\n\n// Read line by line\nstring? line;\nwhile ((line = reader.ReadLine()) != null)\n{\n    Console.WriteLine(line);\n}\n\n// Read characters\nint char;\nwhile ((char = reader.Read()) != -1)\n{\n    Console.Write((char)ch);\n}\n```\n\n### StreamReader Methods\n\n| Method | Description |\n|--------|-------------|\n| `Read()` | Reads next character (-1 if end) |\n| `ReadLine()` | Reads next line (null if end) |\n| `ReadToEnd()` | Reads all remaining text |\n| `Peek()` | Returns next character without consuming |\n| `ReadBlock()` | Reads a block of characters |\n\n### Reading Large Files Efficiently\n\n```csharp\nusing StreamReader reader = new StreamReader(\"largefile.txt\");\n\n// Process line by line (not ReadToEnd)\nstring? line;\nwhile ((line = reader.ReadLine()) != null)\n{\n    ProcessLine(line);\n}\n```\n\n### Reading CSV Example\n\n```csharp\nusing StreamReader reader = new StreamReader(\"data.csv\");\n\n// Skip header\nreader.ReadLine();\n\nwhile (!reader.EndOfStream)\n{\n    string line = reader.ReadLine()!;\n    string[] fields = line.Split(',');\n    Console.WriteLine($\"{fields[0]} - {fields[1]}\");\n}\n```\n\n### FileStream (Binary I/O)\n\n```csharp\nusing FileStream fs = new FileStream(\"data.bin\", FileMode.Create);\nbyte[] data = Encoding.UTF8.GetBytes(\"Hello\");\nfs.Write(data, 0, data.Length);\n```\n\n### StreamReader/Writer with Using\n\n```csharp\n// Traditional using block\nusing (var reader = new StreamReader(\"file.txt\"))\n{\n    string content = reader.ReadToEnd();\n}  // Disposed here\n\n// Using declaration (C# 8+)\nusing var writer = new StreamWriter(\"file.txt\");\nwriter.WriteLine(\"Data\");\n// Disposed at end of scope\n```\n\n> **Key Point:** StreamReader/Writer provide efficient text I/O. Always wrap in `using` for proper disposal. Use `ReadLine()` in a loop for large files instead of `ReadToEnd()`. StreamReader supports different encodings. Use `FileStream` for binary data.\n\n### TextReader/TextWriter Base Classes\n\n```csharp\nTextReader reader = new StreamReader(\"file.txt\");\nTextWriter writer = new StreamWriter(\"file.txt\");\n// StringReader/StringWriter for string-based I/O\n```\n\n### Asynchronous I/O\n\n```csharp\nusing StreamReader reader = new StreamReader(\"file.txt\");\nstring content = await reader.ReadToEndAsync();\n```",
+  "codeExample": "using System;\nusing System.IO;\n\nclass Program\n{\n    static void Main()\n    {\n        // Write multiple lines\n        using (var writer = new StreamWriter(\"data.txt\"))\n        {\n            writer.WriteLine(\"Name,Score\");\n            writer.WriteLine(\"Alice,95\");\n            writer.WriteLine(\"Bob,87\");\n            writer.WriteLine(\"Charlie,92\");\n        }\n        \n        // Read and display\n        using var reader = new StreamReader(\"data.txt\");\n        Console.WriteLine(\"File content:\");\n        string? line;\n        while ((line = reader.ReadLine()) != null)\n            Console.WriteLine($\"  {line}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which method reads a single line from a StreamReader?",
+      "options": ["Read()", "ReadLine()", "ReadToEnd()", "Peek()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does StreamReader.ReadLine() return at the end of the file?",
+      "options": ["Empty string", "null", "-1", "EOF character"],
+      "correctIndex": 1
+    }
+  ]
+}

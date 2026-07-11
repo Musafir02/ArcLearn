@@ -1,0 +1,22 @@
+{
+  "title": "C# Numbers",
+  "language": "csharp",
+  "topic": "numbers",
+  "order": 12,
+  "nextTopic": "input",
+  "prevTopic": "strings",
+  "content": "### Numeric Types in C#\n\nC# provides a rich set of numeric types for different scenarios.\n\n### Integer Types\n\n| Type | Size | Range | Suffix |\n|------|------|-------|--------|\n| `byte` | 8-bit | 0 to 255 | - |\n| `sbyte` | 8-bit | -128 to 127 | - |\n| `short` | 16-bit | -32,768 to 32,767 | - |\n| `ushort` | 16-bit | 0 to 65,535 | - |\n| `int` | 32-bit | -2.1B to 2.1B | - |\n| `uint` | 32-bit | 0 to 4.3B | `u` |\n| `long` | 64-bit | -9E18 to 9E18 | `L` |\n| `ulong` | 64-bit | 0 to 1.8E19 | `UL` |\n| `nint` | Platform | Platform-specific | - |\n| `nuint` | Platform | Platform-specific | - |\n\n### Floating-Point Types\n\n| Type | Size | Precision | Suffix |\n|------|------|-----------|--------|\n| `float` | 32-bit | ~7 digits | `f` or `F` |\n| `double` | 64-bit | ~15-16 digits | `d` or `D` (optional) |\n| `decimal` | 128-bit | ~28-29 digits | `m` or `M` |\n\n### Number Operations\n\n```csharp\nint sum = 10 + 5;\nint difference = 10 - 5;\nint product = 10 * 5;\ndouble quotient = 10.0 / 3.0;\nint remainder = 10 % 3;\n```\n\n### Math Class\n\nThe `Math` class provides common mathematical functions:\n\n```csharp\nMath.Max(5, 10);       // 10\nMath.Min(5, 10);       // 5\nMath.Abs(-5);          // 5\nMath.Round(3.14159);   // 3\nMath.Pow(2, 3);        // 8\nMath.Sqrt(16);         // 4\nMath.Ceiling(3.1);     // 4\nMath.Floor(3.9);       // 3\n```\n\n### Numeric Formatting\n\n```csharp\ndouble amount = 1234.5678;\nConsole.WriteLine(amount.ToString(\"C\"));   // $1,234.57 (currency)\nConsole.WriteLine(amount.ToString(\"F2\"));  // 1234.57 (fixed-point)\nConsole.WriteLine(amount.ToString(\"N3\"));  // 1,234.568 (number)\nConsole.WriteLine(amount.ToString(\"P\"));   // 123,456.78% (percent)\n```\n\n> **Key Point:** Use `int` for general integers, `double` for most decimals, and `decimal` for financial calculations. Always add the correct suffix (`f`, `m`, `L`) when assigning literal values to avoid compilation errors.\n\n### Overflow Checking\n\n```csharp\nchecked\n{\n    int max = int.MaxValue;\n    int overflow = max + 1;  // Throws OverflowException\n}\n\nunchecked\n{\n    int max = int.MaxValue;\n    int overflow = max + 1;  // Wraps around silently\n}\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int a = 42;\n        double b = 3.14;\n        decimal c = 19.99m;\n        \n        Console.WriteLine($\"int: {a}\");\n        Console.WriteLine($\"double: {b}\");\n        Console.WriteLine($\"decimal: {c}\");\n        Console.WriteLine($\"Max of 10 and 20: {Math.Max(10, 20)}\");\n        Console.WriteLine($\"Round 3.14159: {Math.Round(3.14159, 2)}\");\n        Console.WriteLine($\"2^10: {Math.Pow(2, 10)}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which suffix is required for decimal literals in C#?",
+      "options": ["f", "d", "m", "L"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which type has the highest precision for decimal values?",
+      "options": ["float", "double", "decimal", "int"],
+      "correctIndex": 2
+    }
+  ]
+}

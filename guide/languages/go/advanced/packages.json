@@ -1,0 +1,22 @@
+{
+  "title": "Go Packages",
+  "language": "go",
+  "topic": "packages",
+  "order": 70,
+  "nextTopic": "modules_imports",
+  "prevTopic": "go_mod",
+  "content": "### Go Packages\n\nA package is a collection of Go source files in the same directory.\n\n### Package Declaration\n\nEvery Go file starts with a package declaration:\n\n```go\npackage mathutil\n```\n\n### Naming Conventions\n\n- Package names are lowercase, single words\n- No underscores or mixed case\n- Name matches the import path's last element\n\n### Package Structure\n\n```\nmyproject/\n  go.mod          -- module: example.com/myproject\n  main.go         -- package main\n  calc/\n    add.go        -- package calc\n    subtract.go   -- package calc\n  utils/\n    strings.go    -- package utils\n```\n\n### Calling Functions from Other Packages\n\n```go\n// calculator/add.go\npackage calculator\n\nfunc Add(a, b int) int {\n    return a + b\n}\n\n// main.go\npackage main\n\nimport \"example.com/myproject/calculator\"\n\nfunc main() {\n    sum := calculator.Add(2, 3)\n}\n```\n\n### Exported vs Unexported\n\n| Naming | Visibility |\n|--------|------------|\n| Capitalized | Exported (public) |\n| Lowercase | Unexported (private to package) |\n\n```go\npackage mypackage\n\nvar ExportedVar = 42     // accessible outside package\nvar unexportedVar = 10   // only accessible within package\n\nfunc ExportedFunc() {}   // exported\nfunc unexportedFunc() {} // unexported\n```\n\n### Package main\n\nThe `main` package is special - it defines an executable program:\n\n```go\npackage main\n\nfunc main() {\n    // entry point\n}\n```\n\n### Internal Packages\n\nThe `internal` package is special - it restricts who can import it:\n\n```\nmyproject/\n  internal/\n    auth/\n      auth.go  -- only importable by siblings of myproject/\n  web/\n    handler.go  -- can import myproject/internal/auth\n  cmd/\n    main.go     -- can also import\n```\n\n### Blank Import\n\nImport a package solely for its `init()` side effects:\n\n```go\nimport _ \"github.com/lib/pq\"\n```\n\n> **Key Point:** All files in the same directory must belong to the same package. A package can be split across multiple files. Only exported names are accessible outside the package.",
+  "codeExample": "// greetings/greetings.go\npackage greetings\n\nimport \"fmt\"\n\nfunc Hello(name string) string {\n    return fmt.Sprintf(\"Hello, %s!\", name)\n}\n\nfunc hi(name string) string { // unexported\n    return \"hi \" + name\n}\n\n// main.go\npackage main\n\nimport (\n    \"fmt\"\n    \"example.com/myapp/greetings\"\n)\n\nfunc main() {\n    msg := greetings.Hello(\"Alice\")\n    fmt.Println(msg)\n    // greetings.hi(\"Bob\") // compile error: unexported\n}",
+  "quiz": [
+    {
+      "question": "What makes a function exported from a package?",
+      "options": ["Adding //export comment", "Capitalized first letter", "Placing in a separate file", "Using pub keyword"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can files in the same directory have different package names?",
+      "options": ["Yes, always", "No, must be the same package", "Yes, with package declaration", "Only in test files"],
+      "correctIndex": 1
+    }
+  ]
+}

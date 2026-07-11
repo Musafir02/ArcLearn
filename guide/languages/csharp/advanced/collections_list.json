@@ -1,0 +1,22 @@
+{
+  "title": "C# List Collections",
+  "language": "csharp",
+  "topic": "collections_list",
+  "order": 54,
+  "nextTopic": "collections_dictionary",
+  "prevTopic": "generic_classes",
+  "content": "### List<T> in C#\n\n`List<T>` is a dynamic array that can grow and shrink automatically. It is the most commonly used collection in C#.\n\n### Creating Lists\n\n```csharp\nList<int> numbers = new List<int>();\nList<string> names = new List<string>() { \"Alice\", \"Bob\", \"Charlie\" };\nvar scores = new List<double> { 85.5, 92.3, 78.0 };\n```\n\n### Adding Elements\n\n```csharp\nList<int> list = new List<int>();\nlist.Add(10);              // Add single\nlist.AddRange(new[] { 20, 30, 40 });  // Add multiple\nlist.Insert(1, 15);         // Insert at index\nlist.InsertRange(2, new[] { 25, 35 });  // Insert multiple\n```\n\n### Removing Elements\n\n```csharp\nlist.Remove(10);            // Remove first occurrence\nlist.RemoveAt(0);           // Remove at index\nlist.RemoveAll(x => x > 30);  // Remove by condition\nlist.RemoveRange(1, 3);     // Remove range\nlist.Clear();               // Remove all\n```\n\n### Accessing Elements\n\n```csharp\nList<string> fruits = new() { \"Apple\", \"Banana\", \"Cherry\" };\n\nstring first = fruits[0];        // Index (zero-based)\nstring last = fruits[^1];        // Index from end (C# 8+)\nstring fruit = fruits[^2];       // Second from end\n\n// Safe access with bounds checking\nif (fruits.Count > 0) { }\n```\n\n### Common Methods\n\n| Method | Description |\n|--------|-------------|\n| `Add()` | Add element to end |\n| `AddRange()` | Add multiple elements |\n| `Insert()` | Insert at index |\n| `Remove()` | Remove first match |\n| `RemoveAt()` | Remove at index |\n| `IndexOf()` | Find index of element |\n| `Contains()` | Check if element exists |\n| `Sort()` | Sort the list |\n| `Reverse()` | Reverse order |\n| `Find()` | Find first match |\n| `FindAll()` | Find all matches |\n| `Exists()` | Check if any match |\n| `TrueForAll()` | Check all match condition |\n\n### Searching and Finding\n\n```csharp\nList<int> nums = new() { 5, 3, 8, 1, 9, 3 };\n\nint firstMatch = nums.Find(x => x > 5);       // 8\nList<int> allMatch = nums.FindAll(x => x > 3);  // 5, 8, 9\nint index = nums.IndexOf(3);                   // 1\nint lastIndex = nums.LastIndexOf(3);           // 5\nbool exists = nums.Exists(x => x > 10);        // false\nbool allPositive = nums.TrueForAll(x => x > 0); // true\n```\n\n### List Capacity\n\n```csharp\nList<int> list = new List<int>(100);  // Initial capacity\nConsole.WriteLine($\"Capacity: {list.Capacity}\");  // 100\nConsole.WriteLine($\"Count: {list.Count}\");  // 0\n\n// Trim excess\nlist.TrimExcess();\n```\n\n> **Key Point:** List<T> is the go-to collection for most scenarios. It provides O(1) index access and O(n) search. Use `Capacity` to pre-allocate memory for large lists. `Count` returns the actual number of elements.\n\n### Converting to Array\n\n```csharp\nint[] arr = list.ToArray();\n```\n\n### List Initialization Syntax\n\n```csharp\nvar numbers = new List<int> { 1, 2, 3 };\n// Collection expressions (C# 12+)\nList<int> numbers2 = [1, 2, 3];\nint[] array = [1, 2, 3];\n```",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var students = new List<string> { \"Alice\", \"Bob\", \"Charlie\", \"Diana\" };\n        \n        students.Add(\"Eve\");\n        students.Remove(\"Bob\");\n        students.Insert(1, \"Frank\");\n        \n        Console.WriteLine($\"Students ({students.Count}):\");\n        foreach (var s in students)\n            Console.WriteLine($\"- {s}\");\n        \n        Console.WriteLine($\"Contains Charlie: {students.Contains(\"Charlie\")}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is List<T> in C#?",
+      "options": ["Fixed-size array", "Dynamic array", "Linked list", "Stack"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method adds multiple elements to a List<T>?",
+      "options": ["AddMultiple()", "AddRange()", "InsertAll()", "PushRange()"],
+      "correctIndex": 1
+    }
+  ]
+}

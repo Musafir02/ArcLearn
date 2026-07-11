@@ -1,0 +1,17 @@
+{
+  "title": "Mutex in Rust",
+  "language": "rust",
+  "topic": "mutex",
+  "order": 62,
+  "nextTopic": "concurrency",
+  "prevTopic": "refcell",
+  "content": "### Mutex in Rust\n\n`Mutex<T>` provides mutual exclusion for sharing data across threads. Only one thread can access the data at a time.\n\n---\n\n### Mutex Features\n\n| Feature | Description |\n|---------|-------------|\n| Lock | Blocks until exclusive access is obtained |\n| Try lock | Returns immediately (success or would block) |\n| Poisoning | If a thread panics while holding the lock, the mutex is poisoned |\n| RAII guard | Lock is automatically released when `MutexGuard` drops |\n\n---\n\n### Examples\n\n```rust\nuse std::sync::{Arc, Mutex};\nuse std::thread;\n\nlet counter = Arc::new(Mutex::new(0));\nlet mut handles = vec![];\n\nfor _ in 0..10 {\n    let counter = Arc::clone(&counter);\n    let handle = thread::spawn(move || {\n        let mut num = counter.lock().unwrap();\n        *num += 1;\n    });\n    handles.push(handle);\n}\n\nfor handle in handles {\n    handle.join().unwrap();\n}\n\nprintln!(\"Result: {}\", *counter.lock().unwrap());  // 10\n\n// Try lock (non-blocking)\nif let Ok(mut guard) = mutex.try_lock() {\n    *guard = 42;\n} else {\n    println!(\"Mutex is locked by another thread\");\n}\n```\n\n> **Key Point:** Always use `Arc<Mutex<T>>` for shared mutable state across threads. The lock is released when the `MutexGuard` goes out of scope. Handle mutex poisoning by checking if `.lock()` returns an `Err` and recovering if needed.",
+  "codeExample": "use std::sync::{Arc, Mutex};\nuse std::thread;\n\nfn main() {\n    let shared_data = Arc::new(Mutex::new(Vec::new()));\n    let mut handles = vec![];\n    \n    for i in 0..5 {\n        let data = Arc::clone(&shared_data);\n        handles.push(thread::spawn(move || {\n            let mut vec = data.lock().unwrap();\n            vec.push(i);\n            println!(\"Thread {} added\", i);\n        }));\n    }\n    \n    for handle in handles {\n        handle.join().unwrap();\n    }\n    \n    println!(\"Final data: {:?}\", shared_data.lock().unwrap());\n}",
+  "quiz": [
+    {
+      "question": "What happens to a Mutex if a thread panics while holding the lock?",
+      "options": ["Nothing", "The mutex is poisoned", "The lock is released automatically", "The program aborts"],
+      "correctIndex": 1
+    }
+  ]
+}

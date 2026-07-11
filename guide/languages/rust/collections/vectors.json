@@ -1,0 +1,17 @@
+{
+  "title": "Vectors in Rust",
+  "language": "rust",
+  "topic": "vectors",
+  "order": 39,
+  "nextTopic": "hashmap",
+  "prevTopic": "impl_blocks",
+  "content": "### Vectors in Rust\n\n`Vec<T>` is a growable, heap-allocated array type. It stores elements of the same type in contiguous memory.\n\n---\n\n### Vector Operations\n\n| Method | Description |\n|--------|-------------|\n| `Vec::new()` | Create empty vector |\n| `vec![]` | Macro to create with initial values |\n| `push(val)` | Add element to end |\n| `pop()` | Remove and return last element |\n| `get(index)` | Return `Option<&T>` at index |\n| `len()` | Number of elements |\n| `is_empty()` | Check if empty |\n| `contains(&val)` | Check if contains value |\n| `remove(index)` | Remove at index (shifts elements) |\n| `sort()` | Sort in place |\n\n---\n\n### Examples\n\n```rust\nlet mut v1: Vec<i32> = Vec::new();\nv1.push(1);\nv1.push(2);\n\nlet v2 = vec![1, 2, 3, 4, 5];\n\n// Accessing elements\nlet third = &v2[2];             // panics if out of bounds\nlet third = v2.get(2);          // returns Option<&i32>\n\n// Iterating\nfor i in &v2 {\n    println!(\"{}\", i);\n}\n\n// Iterating with mutation\nfor i in &mut v { \n    *i *= 2; \n}\n\n// Collecting from iterator\nlet squares: Vec<i32> = (0..10).map(|x| x * x).collect();\n```\n\n> **Key Point:** Use `vec![]` macro for creating vectors with initial values. Prefer `get()` over indexing for safe access. Vectors own their data and drop all elements when they go out of scope.",
+  "codeExample": "fn main() {\n    let mut numbers = vec![5, 2, 8, 1, 9];\n    \n    numbers.sort();\n    println!(\"Sorted: {:?}\", numbers);\n    \n    numbers.push(3);\n    println!(\"After push: {:?}\", numbers);\n    \n    if let Some(last) = numbers.pop() {\n        println!(\"Popped: {}\", last);\n    }\n    \n    println!(\"Length: {}\", numbers.len());\n}",
+  "quiz": [
+    {
+      "question": "Which macro creates a vector with initial values?",
+      "options": ["vec![]", "vector![]", "arr![]", "list![]"],
+      "correctIndex": 0
+    }
+  ]
+}

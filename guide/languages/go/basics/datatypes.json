@@ -1,0 +1,22 @@
+{
+  "title": "Go Data Types",
+  "language": "go",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "constants",
+  "prevTopic": "variables",
+  "content": "### Basic Data Types\n\nGo is statically typed - every variable has a known type at compile time.\n\n### Numeric Types\n\n| Type | Description | Size |\n|------|-------------|------|\n| `int` | Platform-dependent | 32 or 64 bit |\n| `int8` | Signed 8-bit | -128 to 127 |\n| `int16` | Signed 16-bit | -32768 to 32767 |\n| `int32` | Signed 32-bit | -2^31 to 2^31-1 |\n| `int64` | Signed 64-bit | -2^63 to 2^63-1 |\n| `uint` | Unsigned platform-dependent | 32 or 64 bit |\n| `uint8` | Unsigned 8-bit (byte) | 0 to 255 |\n| `uint16` | Unsigned 16-bit | 0 to 65535 |\n| `uint32` | Unsigned 32-bit | 0 to 2^32-1 |\n| `uint64` | Unsigned 64-bit | 0 to 2^64-1 |\n| `float32` | IEEE-754 32-bit | ~6 decimal digits |\n| `float64` | IEEE-754 64-bit | ~15 decimal digits |\n| `complex64` | Complex with float32 parts | real + imag |\n| `complex128` | Complex with float64 parts | real + imag |\n\n### Other Basic Types\n\n```go\nbool        // true or false\nstring      // sequence of bytes (UTF-8)\nerror       // built-in interface for errors\nbyte        // alias for uint8\nrune        // alias for int32 (Unicode code point)\n```\n\n### Composite Types\n\n| Type | Description |\n|------|-------------|\n| `array` | Fixed-length sequence |\n| `slice` | Variable-length sequence |\n| `struct` | Collection of fields |\n| `map` | Key-value pairs |\n| `pointer` | Memory address |\n| `function` | First-class functions |\n| `interface` | Method sets |\n| `channel` | Communication |\n\n> **Key Point:** `int` and `uint` are platform-dependent (32-bit on 32-bit systems, 64-bit on 64-bit systems). Use explicit sizes for portability.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"math\"\n)\n\nfunc main() {\n    var i int = 42\n    var f float64 = 3.14\n    var b bool = true\n    var s string = \"hello\"\n    var r rune = 'A'\n\n    fmt.Printf(\"int: %d\\n\", i)\n    fmt.Printf(\"float64: %f\\n\", f)\n    fmt.Printf(\"bool: %t\\n\", b)\n    fmt.Printf(\"string: %s\\n\", s)\n    fmt.Printf(\"rune: %c\\n\", r)\n    fmt.Printf(\"max int64: %d\\n\", math.MaxInt64)\n}",
+  "quiz": [
+    {
+      "question": "What is `byte` an alias for?",
+      "options": ["int8", "uint8", "int32", "rune"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which type represents a Unicode code point?",
+      "options": ["byte", "string", "rune", "char"],
+      "correctIndex": 2
+    }
+  ]
+}

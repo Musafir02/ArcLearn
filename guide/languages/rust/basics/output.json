@@ -1,0 +1,17 @@
+{
+  "title": "Output in Rust",
+  "language": "rust",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Output in Rust\n\nRust provides macros for formatted output: `print!` and `println!` for stdout, `eprint!` and `eprintln!` for stderr.\n\n---\n\n### Print Macros\n\n| Macro | Description |\n|-------|-------------|\n| `println!()` | Print with newline to stdout |\n| `print!()` | Print without newline to stdout |\n| `eprintln!()` | Print with newline to stderr |\n| `eprint!()` | Print without newline to stderr |\n\n---\n\n### Formatting Placeholders\n\n```rust\n// Positional arguments\nprintln!(\"{} {}\", \"Hello\", \"World\");\n\n// Named arguments\nprintln!(\"{greeting} {name}\", greeting = \"Hi\", name = \"Bob\");\n\n// Debug formatting (for any type)\nprintln!(\"{:?}\", vec![1, 2, 3]);\n\n// Pretty debug\nprintln!(\"{:#?}\", vec![1, 2, 3]);\n```\n\n> **Key Point:** Use `println!` for standard output and `eprintln!` for error messages. The `{:?}` format specifier works with any type that implements the `Debug` trait.",
+  "codeExample": "fn main() {\n    let name = \"Rust\";\n    let year = 2026;\n    println!(\"Hello, {}!\", name);\n    print!(\"Rust version \");\n    println!(\"{}\", year);\n    eprintln!(\"This goes to stderr\");\n}",
+  "quiz": [
+    {
+      "question": "Which macro prints to stderr with a newline?",
+      "options": ["println!", "print!", "eprintln!", "eprint!"],
+      "correctIndex": 2
+    }
+  ]
+}

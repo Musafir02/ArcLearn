@@ -1,0 +1,22 @@
+{
+  "title": "C# if-else",
+  "language": "csharp",
+  "topic": "if_else",
+  "order": 18,
+  "nextTopic": "switch",
+  "prevTopic": "conditions",
+  "content": "### if-else Statements in C#\n\nThe `if-else` statement provides branching logic based on boolean conditions.\n\n### Basic if-else\n\n```csharp\nif (condition)\n{\n    // Runs when condition is true\n}\nelse\n{\n    // Runs when condition is false\n}\n```\n\n### Example\n\n```csharp\nint temperature = 30;\nif (temperature > 25)\n{\n    Console.WriteLine(\"It is hot outside\");\n}\nelse\n{\n    Console.WriteLine(\"It is not too hot\");\n}\n```\n\n### else-if Chain\n\n```csharp\nif (score >= 90)\n{\n    grade = \"A\";\n}\nelse if (score >= 80)\n{\n    grade = \"B\";\n}\nelse if (score >= 70)\n{\n    grade = \"C\";\n}\nelse if (score >= 60)\n{\n    grade = \"D\";\n}\nelse\n{\n    grade = \"F\";\n}\n```\n\n### Ternary Operator\n\nShorthand for simple if-else:\n\n```csharp\nstring result = (score >= 60) ? \"Pass\" : \"Fail\";\n```\n\n### Common Pitfalls\n\n| Mistake | Wrong | Correct |\n|---------|-------|---------|\n| Assignment in condition | `if (x = 5)` | `if (x == 5)` |\n| Missing braces | `if (true) x = 5; y = 10;` | `if (true) { x = 5; y = 10; }` |\n| Semicolon after if | `if (condition); { ... }` | `if (condition) { ... }` |\n\n### Short-Circuit Evaluation\n\n```csharp\n// Second condition is NOT evaluated if first is false\nif (obj != null && obj.Count > 0)\n{\n    Console.WriteLine(\"Has items\");\n}\n```\n\n> **Key Point:** Always use braces `{}` even for single statements to avoid bugs. Only the first matching condition executes in an if-else chain - the rest are skipped.\n\n### Pattern Matching with if (C# 7+)\n\n```csharp\nif (shape is Circle c)\n{\n    Console.WriteLine($\"Circle radius: {c.Radius}\");\n}\nelse if (shape is Rectangle r && r.Width > 0)\n{\n    Console.WriteLine($\"Rectangle area: {r.Width * r.Height}\");\n}\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.Write(\"Enter your score: \");\n        int score = int.Parse(Console.ReadLine());\n        \n        string grade;\n        \n        if (score >= 90)\n            grade = \"A\";\n        else if (score >= 80)\n            grade = \"B\";\n        else if (score >= 70)\n            grade = \"C\";\n        else if (score >= 60)\n            grade = \"D\";\n        else\n            grade = \"F\";\n        \n        Console.WriteLine($\"Your grade: {grade}\");\n        Console.WriteLine(grade == \"F\" ? \"Better luck next time\" : \"Good job!\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What happens when you put a semicolon after an if condition?",
+      "options": ["It causes a syntax error", "The if body always executes", "The condition is ignored", "It creates a loop"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the ternary operator syntax in C#?",
+      "options": ["condition ? value1 : value0", "condition ? then : else", "if condition then else", "condition ? true : false"],
+      "correctIndex": 1
+    }
+  ]
+}

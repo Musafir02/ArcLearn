@@ -1,0 +1,17 @@
+{
+  "title": "While Loop in Rust",
+  "language": "rust",
+  "topic": "while",
+  "order": 20,
+  "nextTopic": "for",
+  "prevTopic": "loop",
+  "content": "### While Loop in Rust\n\nThe `while` loop repeats a block of code while a condition remains true. It is similar to `while` in C-like languages.\n\n---\n\n### While Loop Syntax\n\n| Form | Description |\n|------|-------------|\n| `while condition { }` | Standard while loop |\n| `while let pattern = expr { }` | While pattern matches |\n\n---\n\n### Using While\n\n```rust\nlet mut number = 3;\n\nwhile number != 0 {\n    println!(\"{}!\", number);\n    number -= 1;\n}\nprintln!(\"Liftoff!\");\n\n// While with an index\nlet arr = [10, 20, 30];\nlet mut index = 0;\nwhile index < 3 {\n    println!(\"arr[{}] = {}\", index, arr[index]);\n    index += 1;\n}\n```\n\nWhile is preferred over `loop` when the number of iterations is determined by a condition at the start of each iteration. For iterating over collections, `for` is usually more idiomatic.\n\n> **Key Point:** Unlike `loop`, `while` cannot directly return a value. Use a mutable variable or convert to a `loop` with `break value` if you need to return a value from a conditional loop.",
+  "codeExample": "fn main() {\n    let mut count = 0;\n    let mut sum = 0;\n    \n    while count <= 100 {\n        sum += count;\n        count += 1;\n    }\n    \n    println!(\"Sum of 0 to 100: {}\", sum);\n}",
+  "quiz": [
+    {
+      "question": "Can a `while` loop directly return a value like `loop`?",
+      "options": ["Yes", "No, only `loop` can with `break value`", "Only with `return`", "Yes, using `yield`"],
+      "correctIndex": 1
+    }
+  ]
+}

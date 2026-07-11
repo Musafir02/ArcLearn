@@ -1,0 +1,17 @@
+{
+  "title": "Shadowing in Rust",
+  "language": "rust",
+  "topic": "shadowing",
+  "order": 16,
+  "nextTopic": "conditions",
+  "prevTopic": "type_casting",
+  "content": "### Shadowing in Rust\n\nShadowing allows declaring a new variable with the same name as a previous variable, effectively hiding the original. This is different from mutation.\n\n---\n\n### Shadowing vs Mutation\n\n| Aspect | Shadowing | Mutation |\n|--------|-----------|----------|\n| Syntax | `let x = ...` again | `let mut x = ...; x = ...` |\n| Type change | Allowed | Not allowed |\n| Mutability change | Allowed | Not applicable |\n| New memory | Creates a new binding | Modifies existing binding |\n\n---\n\n### Examples\n\n```rust\nlet x = 5;\nlet x = x + 1;  // shadows, now x = 6\n\n// Type change via shadowing\nlet spaces = \"   \";       // &str\nlet spaces = spaces.len(); // usize (type changed!)\n\n// Scope-based shadowing\nlet y = 10;\n{\n    let y = 20;  // shadows outer y inside this block\n    println!(\"{}\", y);  // 20\n}\nprintln!(\"{}\", y);  // 10 (outer y restored)\n```\n\n> **Key Point:** Shadowing allows you to reuse a variable name after performing transformations, including changing its type. This can improve code clarity by avoiding the need for separate variable names like `input`, `input_trimmed`, `input_parsed`.",
+  "codeExample": "fn main() {\n    let greeting = \"Hello\";\n    let greeting = String::from(greeting);\n    let greeting = greeting.to_uppercase();\n    println!(\"{}\", greeting);  // HELLO\n    \n    // Shadowing with type change\n    let value = \"42\";\n    let value: i32 = value.parse().unwrap();\n    println!(\"Value doubled: {}\", value * 2);\n}",
+  "quiz": [
+    {
+      "question": "Can shadowing change the type of a variable?",
+      "options": ["No, types are fixed", "Yes, because it creates a new binding", "Only for numeric types", "Only with the `mut` keyword"],
+      "correctIndex": 1
+    }
+  ]
+}

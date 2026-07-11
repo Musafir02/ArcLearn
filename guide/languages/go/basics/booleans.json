@@ -1,0 +1,22 @@
+{
+  "title": "Go Booleans",
+  "language": "go",
+  "topic": "booleans",
+  "order": 10,
+  "nextTopic": "strings",
+  "prevTopic": "operators",
+  "content": "### Booleans in Go\n\nThe `bool` type represents truth values: `true` and `false`.\n\n### Declaration\n\n```go\nvar isActive bool = true\nvar isDone bool      // false (zero value)\nisReady := false\n```\n\n### Boolean Operations\n\n```go\na := true\nb := false\n\nfmt.Println(a && b)  // false (AND)\nfmt.Println(a || b)  // true  (OR)\nfmt.Println(!a)      // false (NOT)\n```\n\n### Comparison Results\n\nAll comparison operators return a boolean:\n\n```go\nx := 10\ny := 20\n\nfmt.Println(x == y)  // false\nfmt.Println(x != y)  // true\nfmt.Println(x < y)   // true\nfmt.Println(x > y)   // false\nfmt.Println(x <= y)  // true\nfmt.Println(x >= y)  // false\n```\n\n### Zero Value\n\nThe zero value of `bool` is `false`:\n\n```go\nvar flag bool\nfmt.Println(flag) // false\n```\n\n### Short-Circuit Evaluation\n\nGo uses short-circuit evaluation for boolean operators:\n\n```go\n// If isAdmin is false, the second expression is NOT evaluated\nif isAdmin && hasPermission(\"delete\") {\n    // delete\n}\n\n// If isCached is true, the second expression is NOT evaluated\nif isCached || fetchData() {\n    // use data\n}\n```\n\n> **Key Point:** Booleans cannot be converted to/from integers (0/1) in Go. Use explicit comparison instead.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    isSunny := true\n    isWarm := false\n\n    fmt.Println(\"isSunny:\", isSunny)\n    fmt.Println(\"isWarm:\", isWarm)\n    fmt.Println(\"Go outside:\", isSunny && isWarm)\n    fmt.Println(\"Maybe go:\", isSunny || isWarm)\n\n    var isReady bool\n    fmt.Println(\"isReady (zero value):\", isReady)\n}",
+  "quiz": [
+    {
+      "question": "What is the zero value of a boolean?",
+      "options": ["true", "false", "nil", "0"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does Go support short-circuit evaluation?",
+      "options": ["Yes, for && and ||", "No", "Only for &&", "Only for ||"],
+      "correctIndex": 0
+    }
+  ]
+}

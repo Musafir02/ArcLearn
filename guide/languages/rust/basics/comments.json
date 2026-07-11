@@ -1,0 +1,17 @@
+{
+  "title": "Comments in Rust",
+  "language": "rust",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Comments in Rust\n\nRust supports several styles of comments for different purposes.\n\n---\n\n### Comment Types\n\n| Type | Syntax | Purpose |\n|------|--------|---------|\n| Line comment | `//` | Single-line notes |\n| Block comment | `/* ... */` | Multi-line notes |\n| Doc comment | `///` | Documentation for items |\n| Module doc | `//!` | Documentation for the parent item |\n\n---\n\n### Usage Examples\n\n```rust\n// This is a line comment\n\n/*\nThis is a block comment\nthat spans multiple lines\n*/\n\n/// Adds two numbers together\n///\n/// # Examples\n/// ```\n/// let result = add(2, 3);\n/// assert_eq!(result, 5);\n/// ```\nfn add(a: i32, b: i32) -> i32 {\n    a + b\n}\n\n//! This module contains utility functions\n```\n\n> **Key Point:** Use `///` for public API documentation that gets rendered by `rustdoc`. These support Markdown and code examples that are tested via `cargo test`.",
+  "codeExample": "fn main() {\n    // This is a single-line comment\n    let x = 5; // inline comment\n    \n    /* Block comments\n       can span multiple lines */\n    let y = 10;\n    \n    println!(\"x = {}, y = {}\", x, y);\n}",
+  "quiz": [
+    {
+      "question": "Which comment syntax is used for documentation comments?",
+      "options": ["//", "/* */", "///", "//!"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Closures in Rust",
+  "language": "rust",
+  "topic": "closures",
+  "order": 44,
+  "nextTopic": "generics",
+  "prevTopic": "iterators",
+  "content": "### Closures in Rust\n\nClosures are anonymous functions that can capture variables from their environment. They are similar to lambdas in other languages.\n\n---\n\n### Closure Traits\n\n| Trait | Capture | Called |\n|-------|---------|--------|\n| `Fn` | Immutable borrow | Multiple times |\n| `FnMut` | Mutable borrow | Multiple times |\n| `FnOnce` | Ownership | Once |\n\n---\n\n### Closure Syntax\n\n```rust\n// Full form\nlet add = |a: i32, b: i32| -> i32 { a + b };\n\n// Type inference\nlet add = |a, b| a + b;\n\n// Capture by reference\nlet x = 10;\nlet print_x = || println!(\"{}\", x);\nprint_x();  // x is borrowed immutably\n\n// Capture by mutable reference\nlet mut count = 0;\nlet mut increment = || count += 1;\nincrement();\n\n// Capture by value (move)\nlet s = String::from(\"hello\");\nlet consume = move || println!(\"{}\", s);\nconsume();  // s is moved into closure\n```\n\n> **Key Point:** The `move` keyword forces the closure to take ownership of captured variables. Without `move`, the closure infers the least restrictive capture mode needed. Closures are commonly used with iterators (`map`, `filter`, etc.).",
+  "codeExample": "fn main() {\n    let numbers = vec![1, 2, 3, 4, 5];\n    let multiplier = 3;\n    \n    let multiplied: Vec<i32> = numbers.iter()\n        .map(|x| x * multiplier)  // captures multiplier by reference\n        .collect();\n    \n    println!(\"Multiplied: {:?}\", multiplied);\n    \n    // Sorting with closure\n    let mut words = vec![\"banana\", \"apple\", \"cherry\", \"date\"];\n    words.sort_by(|a, b| a.len().cmp(&b.len()));\n    println!(\"By length: {:?}\", words);\n}",
+  "quiz": [
+    {
+      "question": "Which trait must a closure implement if it captures by mutable reference?",
+      "options": ["Fn", "FnMut", "FnOnce", "Clone"],
+      "correctIndex": 1
+    }
+  ]
+}

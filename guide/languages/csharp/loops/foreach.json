@@ -1,0 +1,22 @@
+{
+  "title": "C# Foreach Loop",
+  "language": "csharp",
+  "topic": "foreach",
+  "order": 25,
+  "nextTopic": "arrays",
+  "prevTopic": "break_continue",
+  "content": "### Foreach Loop in C#\n\nThe `foreach` loop iterates over elements in a collection or array without using an index variable.\n\n### Syntax\n\n```csharp\nforeach (type variableName in collection)\n{\n    // Code for each element\n}\n```\n\n### Basic Example\n\n```csharp\nstring[] fruits = { \"Apple\", \"Banana\", \"Cherry\" };\nforeach (string fruit in fruits)\n{\n    Console.WriteLine(fruit);\n}\n```\n\n### With var (Implicit Typing)\n\n```csharp\nint[] numbers = { 10, 20, 30 };\nforeach (var num in numbers)\n{\n    Console.WriteLine(num);\n}\n```\n\n### Foreach with Different Collections\n\n| Collection Type | Example |\n|-----------------|---------|\n| Array | `foreach (int n in array)` |\n| List | `foreach (string s in list)` |\n| Dictionary | `foreach (var kvp in dict)` |\n| String | `foreach (char c in \"hello\")` |\n\n### Dictionary Iteration\n\n```csharp\nvar capitals = new Dictionary<string, string>\n{\n    { \"USA\", \"Washington\" },\n    { \"France\", \"Paris\" },\n    { \"Japan\", \"Tokyo\" }\n};\n\nforeach (var pair in capitals)\n{\n    Console.WriteLine($\"{pair.Key}: {pair.Value}\");\n}\n```\n\n### for vs foreach\n\n| Aspect | for | foreach |\n|--------|-----|---------|\n| Index access | Yes | No |\n| Modify during iteration | Yes (carefully) | No (throws exception) |\n| Readability | More verbose | Cleaner |\n| Performance | Slightly faster | Comparable |\n\n### LINQ Integration\n\n```csharp\nvar evenNumbers = numbers.Where(n => n % 2 == 0);\nforeach (var num in evenNumbers)\n{\n    Console.WriteLine(num);\n}\n```\n\n### Limitations\n\n```csharp\n// Cannot modify collection during foreach\nforeach (var item in list)\n{\n    // list.Remove(item);  // Throws InvalidOperationException\n}\n\n// Use for loop instead when modifying\nfor (int i = list.Count - 1; i >= 0; i--)\n{\n    if (list[i] % 2 == 0)\n        list.RemoveAt(i);\n}\n```\n\n> **Key Point:** `foreach` provides read-only access to elements. You cannot add or remove items from the collection during iteration. Use `for` when you need index access or need to modify the collection.\n\n### Multiple Enumeration\n\n```csharp\nforeach (var item in collection)\n{\n    foreach (var subitem in subcollection)\n    {\n        Console.WriteLine($\"{item}: {subitem}\");\n    }\n}",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var scores = new List<int> { 85, 92, 78, 95, 88 };\n        \n        Console.WriteLine(\"Scores:\");\n        int sum = 0;\n        foreach (int score in scores)\n        {\n            Console.WriteLine($\"- {score}\");\n            sum += score;\n        }\n        \n        double average = (double)sum / scores.Count;\n        Console.WriteLine($\"\\nAverage: {average:F1}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can you modify a collection while iterating over it with foreach?",
+      "options": ["Yes", "No", "Depends on collection type", "Only with List"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword is used in a foreach loop to refer to the current element?",
+      "options": ["index", "current", "The declared variable name", "element"],
+      "correctIndex": 2
+    }
+  ]
+}

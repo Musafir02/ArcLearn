@@ -1,0 +1,17 @@
+{
+  "title": "Type Casting in Rust",
+  "language": "rust",
+  "topic": "type_casting",
+  "order": 15,
+  "nextTopic": "shadowing",
+  "prevTopic": "input",
+  "content": "### Type Casting in Rust\n\nRust uses explicit type conversion through the `as` keyword and the `From`/`Into` traits.\n\n---\n\n### Casting Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `as` keyword | Primitive type conversion | `x as i64` |\n| `From` trait | Infallible conversion | `String::from(\"hello\")` |\n| `Into` trait | Infallible (auto-derived from `From`) | `s.into()` |\n| `TryFrom` trait | Fallible conversion | `i32::try_from(x)` |\n| `.parse()` | String to numeric | `\"42\".parse::<i32>()` |\n\n---\n\n### Safe vs Unsafe Casting\n\n```rust\n// Safe numeric casts\nlet x: i32 = 42;\nlet y: i64 = x as i64;  // widening: always safe\n\nlet a: f64 = 3.99;\nlet b: i32 = a as i32;  // truncates to 3\n\n// Potential data loss\nlet big: u16 = 1000;\nlet small: u8 = big as u8;  // 1000 mod 256 = 232\n\n// Converting with From trait\nlet s = String::from(\"hello\");\n```\n\n> **Key Point:** Use `as` for numeric conversions between primitive types. For type conversions between complex types, prefer the `From` and `Into` traits. Use `TryFrom` for conversions that can fail.",
+  "codeExample": "fn main() {\n    let decimal: f64 = 97.99;\n    let integer: i32 = decimal as i32;  // truncates to 97\n    let character: char = integer as u8 as char;  // 'a'\n    \n    println!(\"decimal: {}, integer: {}, char: {}\", decimal, integer, character);\n    \n    let parsed: i32 = \"42\".parse().expect(\"Not a number\");\n    println!(\"parsed: {}\", parsed);\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used for primitive type conversion in Rust?",
+      "options": ["cast", "as", "convert", "into"],
+      "correctIndex": 1
+    }
+  ]
+}

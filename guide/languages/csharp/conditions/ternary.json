@@ -1,0 +1,22 @@
+{
+  "title": "C# Ternary Operator",
+  "language": "csharp",
+  "topic": "ternary",
+  "order": 20,
+  "nextTopic": "while",
+  "prevTopic": "switch",
+  "content": "### Ternary Operator in C#\n\nThe ternary operator `?:` is a shorthand for simple if-else statements. It evaluates a condition and returns one of two expressions.\n\n### Syntax\n\n```csharp\ncondition ? expressionTrue : expressionFalse;\n```\n\n### Basic Example\n\n```csharp\nint age = 20;\nstring status = (age >= 18) ? \"Adult\" : \"Minor\";\nConsole.WriteLine(status);  // Adult\n```\n\n### Nested Ternary (Use with Caution)\n\n```csharp\nstring grade = score >= 90 ? \"A\" :\n               score >= 80 ? \"B\" :\n               score >= 70 ? \"C\" :\n               score >= 60 ? \"D\" : \"F\";\n```\n\n### Ternary vs if-else\n\n| Aspect | Ternary | if-else |\n|--------|---------|---------|\n| Syntax | Single line | Multiple lines |\n| Readability | Simple only | Complex logic |\n| Return value | Returns value | Statement |\n| Best for | Assignments | Multiple actions |\n\n### Practical Examples\n\n```csharp\n// Minimum of two numbers\nint min = (a < b) ? a : b;\n\n// Conditional formatting\nConsole.WriteLine($\"Status: {(isActive ? \"Active\" : \"Inactive\")}\");\n\n// Default value\nstring name = input ?? \"default\";  // Null coalescing (similar)\n\n// Inline in expressions\nint absolute = (x < 0) ? -x : x;\n```\n\n### Common Mistakes\n\n| Mistake | Wrong | Correct |\n|---------|-------|---------|\n| Wrong type | `int x = (true) ? \"hello\" : 5;` | Both types must match |\n| Side effects | `(true) ? a++ : b++;` | Prefer if-else for side effects |\n| Over-nesting | Multi-level nesting | Use if-else or switch |\n\n### Null Coalescing Operator (??)\n\nRelated operator for null checks:\n\n```csharp\nstring? name = null;\nstring display = name ?? \"Guest\";  // \"Guest\"\n```\n\n> **Key Point:** The ternary operator is best for simple conditional assignments. Both expressions must have the same type (or be implicitly convertible). Avoid nesting ternaries for complex logic - use if-else or switch instead.\n\n### Conditional Ref Operator (C# 7.2+)\n\n```csharp\nref var r = ref (condition ? ref x : ref y);\nr = 100;  // Assigns to x or y based on condition\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int x = 10, y = 20;\n        \n        // Simple ternary\n        int max = (x > y) ? x : y;\n        Console.WriteLine($\"Max: {max}\");\n        \n        // Ternary in string interpolation\n        int score = 75;\n        Console.WriteLine($\"Result: { (score >= 60 ? \"Pass\" : \"Fail\") }\");\n        \n        // Null coalescing\n        string? userInput = null;\n        string result = userInput ?? \"No input provided\";\n        Console.WriteLine(result);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the syntax of the ternary operator in C#?",
+      "options": ["condition ? then : else", "if condition then else", "condition ? true ? false", "?: condition then else"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a common limitation of the ternary operator?",
+      "options": ["It can only return strings", "Both expressions must have the same type", "It cannot be used with numbers", "It requires three conditions"],
+      "correctIndex": 1
+    }
+  ]
+}

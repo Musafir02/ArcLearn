@@ -1,0 +1,17 @@
+{
+  "title": "Data Types in Rust",
+  "language": "rust",
+  "topic": "datatypes",
+  "order": 8,
+  "nextTopic": "constants",
+  "prevTopic": "mutability",
+  "content": "### Data Types in Rust\n\nRust is statically typed and every value has a known type at compile time. Types are divided into two categories: scalar and compound.\n\n---\n\n### Scalar Types\n\n| Type | Category | Examples |\n|------|----------|----------|\n| Integers | Signed/Unsigned | `i32`, `u64`, `i8`, `usize` |\n| Floats | Floating point | `f32`, `f64` |\n| bool | Boolean | `true`, `false` |\n| char | Unicode character | `'a'`, `'♥'`, `'🦀'` |\n\n---\n\n### Compound Types\n\n| Type | Description | Example |\n|------|-------------|---------|\n| Tuple | Group of values (possibly different types) | `(i32, f64, char)` |\n| Array | Fixed-length, same type | `[i32; 5]` |\n| Slice | Dynamic view into a sequence | `&[i32]` |\n| String | Growable UTF-8 string | `String` |\n\n```rust\nlet tup: (i32, f64, u8) = (500, 6.4, 1);\nlet arr: [i32; 3] = [1, 2, 3];\n```\n\n> **Key Point:** Rust uses type inference, so you often don't need to annotate types explicitly. However, you can always add type annotations for clarity or when inference is ambiguous.",
+  "codeExample": "fn main() {\n    let guess: i32 = \"42\".parse().expect(\"Not a number!\");\n    let float_num: f64 = 3.14;\n    let letter: char = 'R';\n    let tuple = (500, 6.4, 'a');\n    println!(\"guess: {}, pi: {}, char: {}, tuple: {:?}\", guess, float_num, letter, tuple);\n}",
+  "quiz": [
+    {
+      "question": "Which type represents a 32-bit signed integer in Rust?",
+      "options": ["u32", "i32", "i64", "int32"],
+      "correctIndex": 1
+    }
+  ]
+}

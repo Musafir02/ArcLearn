@@ -1,0 +1,17 @@
+{
+  "title": "while let in Rust",
+  "language": "rust",
+  "topic": "while_let",
+  "order": 24,
+  "nextTopic": "ownership",
+  "prevTopic": "if_let",
+  "content": "### while let in Rust\n\n`while let` runs a loop as long as a pattern continues to match. It is useful for processing data that produces values until a stopping condition.\n\n---\n\n### while let vs loop + match\n\n```rust\n// Verbose approach\nlet mut stack = vec![1, 2, 3];\nloop {\n    match stack.pop() {\n        Some(val) => println!(\"{}\", val),\n        None => break,\n    }\n}\n\n// Concise while let\nlet mut stack = vec![1, 2, 3];\nwhile let Some(val) = stack.pop() {\n    println!(\"{}\", val);\n}\n```\n\n---\n\n### Common Patterns\n\n```rust\n// Iterator consumption\nlet mut iter = 0..3;\nwhile let Some(val) = iter.next() {\n    println!(\"{}\", val);\n}\n\n// Reading from a channel\nwhile let Some(msg) = receiver.recv() {\n    println!(\"Got: {}\", msg);\n}\n\n// Parsing command-line arguments\nwhile let Some(arg) = args.next() {\n    // process arg\n}\n```\n\n> **Key Point:** `while let` is ideal for loops that consume data until exhaustion. It combines pattern matching with iteration, making the intent clearer than a `loop` with `match` and `break`.",
+  "codeExample": "fn main() {\n    let mut numbers = vec![1, 2, 3, 4, 5];\n    \n    println!(\"Popping values:\");\n    while let Some(top) = numbers.pop() {\n        println!(\"{}\", top);\n    }\n    \n    println!(\"Vector is now empty: {:?}\", numbers);\n}",
+  "quiz": [
+    {
+      "question": "What does `while let Some(val) = expr` do?",
+      "options": ["Loops once", "Loops while expr matches Some, binding val", "Loops forever", "Compile error"],
+      "correctIndex": 1
+    }
+  ]
+}

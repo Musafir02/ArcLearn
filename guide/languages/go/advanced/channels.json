@@ -1,0 +1,22 @@
+{
+  "title": "Go Channels",
+  "language": "go",
+  "topic": "channels",
+  "order": 55,
+  "nextTopic": "channel_buffered",
+  "prevTopic": "goroutines",
+  "content": "### Channels\n\nChannels are typed conduits for communication between goroutines.\n\n### Declaration\n\n```go\nch := make(chan int) // unbuffered channel of ints\n```\n\n### Send and Receive\n\n```go\nch <- 42   // send\nvalue := <-ch // receive\n```\n\n### Unbuffered Channel\n\nSend blocks until receiver is ready, and vice versa:\n\n```go\nfunc main() {\n    ch := make(chan string)\n\n    go func() {\n        ch <- \"ping\" // blocks until main() receives\n    }()\n\n    msg := <-ch // blocks until goroutine sends\n    fmt.Println(msg) // \"ping\"\n}\n```\n\n### Channel Direction\n\n```go\n// Send-only channel\nfunc sendOnly(ch chan<- int) {\n    ch <- 42\n}\n\n// Receive-only channel\nfunc receiveOnly(ch <-chan int) {\n    val := <-ch\n    fmt.Println(val)\n}\n\n// Bidirectional\nfunc readWrite(ch chan int) {\n    ch <- 42\n    <-ch\n}\n```\n\n### Closing Channels\n\n```go\nclose(ch)\n\n// Check if closed\nval, ok := <-ch\nif !ok {\n    fmt.Println(\"channel closed\")\n}\n\n// Range over channel\nfor val := range ch {\n    fmt.Println(val)\n}\n```\n\n### Channel State Table\n\n| State | Send | Receive | Close |\n|-------|------|---------|-------|\n| Open (buffered) | Blocks if full | Blocks if empty | OK |\n| Open (unbuffered) | Blocks until recv | Blocks until send | OK |\n| Closed | Panic | Returns zero value (buf), ok=false | Panic |\n| Nil | Blocks forever | Blocks forever | Panic |\n\n> **Key Point:** \"Do not communicate by sharing memory; instead, share memory by communicating.\" - Go proverb. Channels are the primary synchronization primitive in Go.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc sum(s []int, ch chan int) {\n    total := 0\n    for _, v := range s {\n        total += v\n    }\n    ch <- total\n}\n\nfunc main() {\n    nums := []int{1, 2, 3, 4, 5, 6}\n    ch := make(chan int)\n\n    go sum(nums[:3], ch)\n    go sum(nums[3:], ch)\n\n    x, y := <-ch, <-ch\n    fmt.Println(\"Sums:\", x, y)\n    fmt.Println(\"Total:\", x+y)\n}",
+  "quiz": [
+    {
+      "question": "What happens when sending to a nil channel?",
+      "options": ["Panics", "Blocks forever", "Returns immediately", "Closes the channel"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does receiving from a closed channel return?",
+      "options": ["Panic", "Zero value with ok=false", "Last sent value", "nil"],
+      "correctIndex": 1
+    }
+  ]
+}

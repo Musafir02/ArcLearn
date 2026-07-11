@@ -1,0 +1,17 @@
+{
+  "title": "Lifetime Elision in Rust",
+  "language": "rust",
+  "topic": "lifetime_elision",
+  "order": 30,
+  "nextTopic": "structs",
+  "prevTopic": "lifetimes",
+  "content": "### Lifetime Elision in Rust\n\nRust has rules that allow omitting lifetime annotations in certain common patterns. The compiler infers lifetimes automatically.\n\n---\n\n### Elision Rules\n\n| Rule | Description |\n|------|-------------|\n| Each input reference gets its own lifetime | `&T` becomes `&'_ T` |\n| If exactly one input lifetime, it's assigned to all outputs | `fn f(x: &T) -> &U` becomes `fn f<'a>(x: &'a T) -> &'a U` |\n| If `&self` or `&mut self`, its lifetime is assigned to all outputs | Methods follow this rule |\n\n---\n\n### Examples\n\n```rust\n// Elided: compiler adds lifetimes automatically\nfn first_word(s: &str) -> &str {\n    s.split_whitespace().next().unwrap()\n}\n\n// Desugared: what the compiler sees\nfn first_word<'a>(s: &'a str) -> &'a str {\n    s.split_whitespace().next().unwrap()\n}\n\n// Multiple inputs require explicit annotations\nfn longest(x: &str, y: &str) -> &str {  // ERROR!\n    if x.len() > y.len() { x } else { y }\n}\n\n// Must write explicitly:\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str { ... }\n```\n\n> **Key Point:** You never need to write lifetime annotations for simple functions with one input reference. The compiler's elision rules handle the common cases automatically, reducing noise while maintaining safety.",
+  "codeExample": "fn main() {\n    let s = String::from(\"hello world\");\n    let word = first_word(&s);  // lifetimes elided\n    println!(\"First word: {}\", word);\n}\n\n// Lifetime elision handles this automatically\nfn first_word(s: &str) -> &str {\n    match s.find(' ') {\n        Some(pos) => &s[..pos],\n        None => s,\n    }\n}",
+  "quiz": [
+    {
+      "question": "How many input references must a function have for lifetime elision to apply to the output?",
+      "options": ["Zero", "One", "Two", "Any number"],
+      "correctIndex": 1
+    }
+  ]
+}

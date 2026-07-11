@@ -1,0 +1,17 @@
+{
+  "title": "Macros in Rust",
+  "language": "rust",
+  "topic": "macros",
+  "order": 69,
+  "nextTopic": "unsafe_rust",
+  "prevTopic": "documentation",
+  "content": "### Macros in Rust\n\nMacros are a form of metaprogramming that generate code at compile time. Rust has declarative macros (`macro_rules!`) and procedural macros.\n\n---\n\n### Macro Types\n\n| Type | Description |\n|------|-------------|\n| `macro_rules!` | Declarative macros, pattern matching |\n| Procedural macros | Function-like, derive, attribute macros |\n| Built-in macros | `println!`, `vec!`, `assert!`, etc. |\n\n---\n\n### Declarative Macros\n\n```rust\n// Simple macro\nmacro_rules! say_hello {\n    () => {\n        println!(\"Hello!\");\n    };\n}\n\n// Macro with parameters\nmacro_rules! create_function {\n    ($func_name:ident, $val:expr) => {\n        fn $func_name() {\n            println!(\"Value: {}\", $val);\n        }\n    };\n}\n\ncreate_function!(foo, 42);\n\n// Repetition\nmacro_rules! vec {\n    ( $( $x:expr ),* ) => {\n        {\n            let mut temp_vec = Vec::new();\n            $(\n                temp_vec.push($x);\n            )*\n            temp_vec\n        }\n    };\n}\n```\n\n> **Key Point:** Macros operate on the syntax tree level and can take variable numbers of arguments. `macro_rules!` uses pattern matching to transform input code. Procedural macros (like `#[derive(Debug)]`) are more powerful but require a separate crate.",
+  "codeExample": "macro_rules! calculate {\n    (add $a:expr, $b:expr) => {\n        $a + $b\n    };\n    (sub $a:expr, $b:expr) => {\n        $a - $b\n    };\n    (mul $a:expr, $b:expr) => {\n        $a * $b\n    };\n}\n\nfn main() {\n    println!(\"Add: {}\", calculate!(add 10, 5));\n    println!(\"Sub: {}\", calculate!(sub 10, 5));\n    println!(\"Mul: {}\", calculate!(mul 10, 5));\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used to define declarative macros?",
+      "options": ["macro", "macro_rules", "macro!", "defmacro"],
+      "correctIndex": 1
+    }
+  ]
+}

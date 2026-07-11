@@ -1,0 +1,22 @@
+{
+  "title": "Go Type Conversion",
+  "language": "go",
+  "topic": "type_conversion",
+  "order": 15,
+  "nextTopic": "conditions",
+  "prevTopic": "zero_values",
+  "content": "### Type Conversion in Go\n\nGo requires **explicit** type conversion between different types.\n\n### Numeric Conversions\n\n```go\nvar i int = 42\nvar f float64 = float64(i)\nvar u uint = uint(f)\nvar b byte = byte(i)\n```\n\n### String Conversions\n\n```go\n// Integer to string\ns := string(65)   // \"A\" (ASCII value)\n\n// strconv package\nimport \"strconv\"\n\ns := strconv.Itoa(42)              // \"42\"\ni, err := strconv.Atoi(\"42\")       // 42\nf, err := strconv.ParseFloat(\"3.14\", 64) // 3.14\ns := strconv.FormatFloat(3.14, 'f', 2, 64) // \"3.14\"\n\n// Parse bool\nb, err := strconv.ParseBool(\"true\") // true\n```\n\n### Type Assertions\n\nFor interfaces:\n\n```go\nvar val interface{} = \"hello\"\ns := val.(string)\nfmt.Println(s) // \"hello\"\n\ns, ok := val.(string)\nif ok {\n    fmt.Println(\"is string:\", s)\n}\n```\n\n### Conversion Between Strings and Bytes\n\n```go\ns := \"hello\"\nb := []byte(s)  // string to byte slice\ns2 := string(b) // byte slice to string\n```\n\n### Conversion Between Strings and Runes\n\n```go\ns := \"hello\"\nr := []rune(s)  // string to rune slice\ns2 := string(r) // rune slice to string\n```\n\n### Int to String Caution\n\n```go\n// This does NOT convert the number to its string representation:\nstr := string(42)  // \"*\" (ASCII 42 = asterisk)\n\n// Use strconv.Itoa instead:\nstr := strconv.Itoa(42)  // \"42\"\n```\n\n> **Key Point:** Go has no implicit type conversion. You must explicitly convert between types, even for related numeric types.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"strconv\"\n)\n\nfunc main() {\n    // Numeric\n    var i int = 42\n    var f float64 = float64(i)\n    fmt.Printf(\"int %d to float64 %f\\n\", i, f)\n\n    // String conv\n    num := strconv.Itoa(123)\n    val, _ := strconv.Atoi(\"456\")\n    fmt.Println(num, val)\n\n    // Bytes\n    s := \"Go\"\n    bytes := []byte(s)\n    fmt.Println(bytes)\n}",
+  "quiz": [
+    {
+      "question": "Does Go support implicit type conversion?",
+      "options": ["Yes, for all types", "No, never", "Only for widening conversions", "Only for numeric types"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you safely convert a string to an int?",
+      "options": ["int(\"42\")", "string(42)", "strconv.Atoi(\"42\")", "\"42\".toInt()"],
+      "correctIndex": 2
+    }
+  ]
+}

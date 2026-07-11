@@ -1,0 +1,22 @@
+{
+  "title": "Go Stringer Interface",
+  "language": "go",
+  "topic": "stringer_interface",
+  "order": 67,
+  "nextTopic": "testing",
+  "prevTopic": "time_package",
+  "content": "### The Stringer Interface\n\n`fmt.Stringer` is one of the most common interfaces in Go.\n\n### Definition\n\n```go\ntype Stringer interface {\n    String() string\n}\n```\n\n### Basic Implementation\n\n```go\ntype Person struct {\n    Name string\n    Age  int\n}\n\nfunc (p Person) String() string {\n    return fmt.Sprintf(\"%s (%d years old)\", p.Name, p.Age)\n}\n\nfunc main() {\n    p := Person{Name: \"Alice\", Age: 30}\n    fmt.Println(p) // Alice (30 years old)\n}\n```\n\n### Where Stringer is Used\n\n- `fmt.Print`, `fmt.Println`, `fmt.Printf` with `%v` or `%s`\n- `fmt.Sprint`, `fmt.Sprintln`\n- `log.Println`, `log.Printf`\n- String concatenation with `+`\n\n### Without Stringer\n\n```go\ntype Point struct {\n    X, Y int\n}\n\nfunc main() {\n    p := Point{3, 4}\n    fmt.Println(p) // {3 4} (default format)\n}\n```\n\n### With Stringer\n\n```go\nfunc (p Point) String() string {\n    return fmt.Sprintf(\"(%d, %d)\", p.X, p.Y)\n}\n\nfunc main() {\n    p := Point{3, 4}\n    fmt.Println(p) // (3, 4)\n}\n```\n\n### Stringer for Enums\n\n```go\ntype CardSuit int\n\nconst (\n    Hearts CardSuit = iota\n    Diamonds\n    Clubs\n    Spades\n)\n\nfunc (s CardSuit) String() string {\n    switch s {\n    case Hearts:\n        return \"Hearts\"\n    case Diamonds:\n        return \"Diamonds\"\n    case Clubs:\n        return \"Clubs\"\n    case Spades:\n        return \"Spades\"\n    default:\n        return fmt.Sprintf(\"CardSuit(%d)\", int(s))\n    }\n}\n\nfunc main() {\n    fmt.Println(Hearts) // Hearts\n}\n```\n\n### Stringer for Complex Types\n\n```go\ntype Matrix struct {\n    Rows, Cols int\n    Data       [][]float64\n}\n\nfunc (m Matrix) String() string {\n    var result string\n    for _, row := range m.Data {\n        result += \"[ \"\n        for _, val := range row {\n            result += fmt.Sprintf(\"%6.2f \", val)\n        }\n        result += \"]\\n\"\n    }\n    return result\n}\n```\n\n> **Key Point:** Implementing `String()` on your types makes them print nicely everywhere in Go - fmt, log, and test output. It takes no parameters and returns a string.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\ntype IPAddr [4]byte\n\nfunc (ip IPAddr) String() string {\n    return fmt.Sprintf(\"%d.%d.%d.%d\", ip[0], ip[1], ip[2], ip[3])\n}\n\nfunc main() {\n    hosts := map[string]IPAddr{\n        \"loopback\":  {127, 0, 0, 1},\n        \"googleDNS\": {8, 8, 8, 8},\n    }\n\n    for name, ip := range hosts {\n        fmt.Printf(\"%s: %s\\n\", name, ip)\n    }\n}",
+  "quiz": [
+    {
+      "question": "What method must the Stringer interface implement?",
+      "options": ["String() string", "ToString() string", "Format() string", "Print() string"],
+      "correctIndex": 0
+    },
+    {
+      "question": "When is String() called automatically?",
+      "options": ["On type conversion", "When printed with fmt", "When compared with == ", "When assigned to a variable"],
+      "correctIndex": 1
+    }
+  ]
+}

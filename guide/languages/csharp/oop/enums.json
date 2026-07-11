@@ -1,0 +1,22 @@
+{
+  "title": "C# Enums",
+  "language": "csharp",
+  "topic": "enums",
+  "order": 50,
+  "nextTopic": "generics",
+  "prevTopic": "structs",
+  "content": "### Enums in C#\n\nAn enum (enumeration) is a value type that defines a set of named constants.\n\n### Declaring Enums\n\n```csharp\npublic enum DayOfWeek\n{\n    Monday,      // 0\n    Tuesday,     // 1\n    Wednesday,   // 2\n    Thursday,    // 3\n    Friday,       // 4\n    Saturday,    // 5\n    Sunday       // 6\n}\n```\n\n### Using Enums\n\n```csharp\nDayOfWeek today = DayOfWeek.Monday;\n\nif (today == DayOfWeek.Saturday || today == DayOfWeek.Sunday)\n    Console.WriteLine(\"Weekend!\");\nelse\n    Console.WriteLine(\"Weekday\");\n```\n\n### Custom Values\n\n```csharp\npublic enum HttpStatusCode\n{\n    OK = 200,\n    Created = 201,\n    BadRequest = 400,\n    Unauthorized = 401,\n    NotFound = 404,\n    InternalServerError = 500\n}\n```\n\n### Enum as Flags (Bitwise)\n\n```csharp\n[Flags]\npublic enum FilePermissions\n{\n    None = 0,\n    Read = 1,\n    Write = 2,\n    Execute = 4,\n    ReadWrite = Read | Write,\n    All = Read | Write | Execute\n}\n\n// Usage\nFilePermissions perms = FilePermissions.Read | FilePermissions.Write;\nbool canRead = perms.HasFlag(FilePermissions.Read);\n```\n\n### Enum Methods\n\n```csharp\n// Parse string to enum\nDayOfWeek day = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), \"Monday\");\n\n// TryParse (generic)\nEnum.TryParse(\"Tuesday\", out DayOfWeek result);\n\n// Get all values\nDayOfWeek[] allDays = (DayOfWeek[])Enum.GetValues(typeof(DayOfWeek));\n\n// Get name from value\nstring name = Enum.GetName(typeof(DayOfWeek), 1);  // \"Tuesday\"\n\n// Get numeric value\nint value = (int)DayOfWeek.Wednesday;  // 2\n```\n\n### Enum Underlying Types\n\n```csharp\npublic enum Color : byte  // Default is int\n{\n    Red = 0,\n    Green = 1,\n    Blue = 2\n}\n\n// Allowed: byte, sbyte, short, ushort, int, uint, long, ulong\n```\n\n### Enum as Switch\n\n```csharp\nswitch (status)\n{\n    case HttpStatusCode.OK:\n        Console.WriteLine(\"Success\");\n        break;\n    case HttpStatusCode.NotFound:\n        Console.WriteLine(\"Not found\");\n        break;\n    default:\n        Console.WriteLine($\"Status code: {(int)status}\");\n        break;\n}\n```\n\n> **Key Point:** Enums improve code readability by using meaningful names instead of magic numbers. Use the `[Flags]` attribute for bitmask enums. Enum values are integers by default but can be any integer type. Use `Enum.TryParse()` for safe string-to-enum conversion.\n\n### Best Practices\n\n| Practice | Description |\n|----------|-------------|\n| Singular names | `DayOfWeek` not `DaysOfWeek` |\n| Flags attribute | Required for bitwise operations |\n| Default value 0 | Should represent \"None\" or \"Unknown\" |\n| Explicit values | Helps with serialization stability |\n| Avoid complex logic | Enums are for simple constants |",
+  "codeExample": "using System;\n\npublic enum OrderStatus\n{\n    Pending = 0,\n    Processing = 1,\n    Shipped = 2,\n    Delivered = 3,\n    Cancelled = 4\n}\n\nclass Program\n{\n    static void Main()\n    {\n        OrderStatus status = OrderStatus.Shipped;\n        \n        string message = status switch\n        {\n            OrderStatus.Pending => \"Your order is pending\",\n            OrderStatus.Processing => \"We are preparing your order\",\n            OrderStatus.Shipped => \"Your order has been shipped\",\n            OrderStatus.Delivered => \"Order delivered\",\n            OrderStatus.Cancelled => \"Order cancelled\",\n            _ => \"Unknown status\"\n        };\n        \n        Console.WriteLine($\"Status: {status} ({(int)status})\");\n        Console.WriteLine(message);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What base type do enums use by default?",
+      "options": ["byte", "short", "int", "long"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which attribute enables bitwise operations on an enum?",
+      "options": ["[Flags]", "[Bitwise]", "[EnumFlags]", "[Mask]"],
+      "correctIndex": 0
+    }
+  ]
+}

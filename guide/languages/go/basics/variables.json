@@ -1,0 +1,22 @@
+{
+  "title": "Go Variables",
+  "language": "go",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Variables in Go\n\nVariables are used to store data values.\n\n### Declaration\n\n```go\nvar name string = \"Alice\"       // explicit type\nvar age = 30                     // type inference\ncountry := \"USA\"                 // short declaration (inside functions only)\nvar x, y int = 1, 2             // multiple variables\nvar (\n    a int = 5\n    b string = \"hello\"\n)                               // grouped declaration\n```\n\n### Zero Values\n\nVariables declared without an initial value get zero values:\n\n```go\nvar i int       // 0\nvar f float64   // 0.0\nvar s string    // \"\"\nvar b bool      // false\nvar p *int      // nil\n```\n\n### Short Declaration\n\nThe `:=` operator declares and initializes in one step. It can only be used inside functions:\n\n```go\nfunc main() {\n    x := 42\n    name := \"Go\"\n}\n```\n\n### Redeclaration\n\nWith `:=`, at least one variable on the left must be new:\n\n```go\nx, y := 1, 2\nx, z := 3, 4  // y is not redeclared\n```\n\n### Type Inference\n\nGo infers types from the right-hand side:\n\n```go\nvar i = 42          // int\nvar f = 3.14        // float64\nvar s = \"hello\"     // string\n```\n\n| Declaration | Scope | Notes |\n|-------------|-------|-------|\n| `var x type` | Package or function | Zero value assigned |\n| `var x = value` | Package or function | Type inferred |\n| `x := value` | Function only | Short declaration |\n| `var x, y type` | Package or function | Multiple variables |\n\n> **Key Point:** Use `:=` inside functions for concise declarations. Use `var` for package-level variables or when you need explicit zero values.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nvar appVersion = \"1.0.0\" // package-level variable\n\nfunc main() {\n    var name string = \"Go\"\n    year := 2009\n    version := appVersion\n    fmt.Println(name, year, version)\n}",
+  "quiz": [
+    {
+      "question": "Which operator is used for short variable declaration?",
+      "options": ["=", "==", ":=", "=>"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where can short declaration `:=` be used?",
+      "options": ["Anywhere in the package", "Only inside functions", "Only at package level", "Only in loops"],
+      "correctIndex": 1
+    }
+  ]
+}

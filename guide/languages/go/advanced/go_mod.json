@@ -1,0 +1,22 @@
+{
+  "title": "Go Mod and Modules",
+  "language": "go",
+  "topic": "go_mod",
+  "order": 69,
+  "nextTopic": "packages",
+  "prevTopic": "testing",
+  "content": "### Go Modules\n\nGo modules are the standard dependency management system.\n\n### Initializing a Module\n\n```bash\ngo mod init example.com/myproject\n```\n\nThis creates a `go.mod` file:\n\n```\nmodule example.com/myproject\n\ngo 1.22\n```\n\n### Adding Dependencies\n\n```bash\ngo get github.com/gorilla/mux@v1.8.0\n```\n\n### go.mod File\n\n```\nmodule github.com/user/myapp\n\ngo 1.22\n\nrequire (\n    github.com/gorilla/mux v1.8.0\n    golang.org/x/text v0.14.0\n)\n```\n\n### go.sum File\n\nThe `go.sum` file contains cryptographic checksums for dependency verification:\n\n```\ngithub.com/gorilla/mux v1.8.0 h1:Tu10...\ngithub.com/gorilla/mux v1.8.0/go.mod h1:...\n```\n\n### Common go mod Commands\n\n| Command | Description |\n|---------|-------------|\n| `go mod init` | Initialize new module |\n| `go mod tidy` | Add missing, remove unused deps |\n| `go mod download` | Download all dependencies |\n| `go mod verify` | Verify dependencies |\n| `go mod why` | Explain why a dependency is needed |\n| `go mod graph` | Print dependency graph |\n\n### Upgrading Dependencies\n\n```bash\ngo get -u                   # update all direct deps\ngo get -u ./...            # update all deps (including indirect)\ngo get github.com/foo@v1.2.3  # specific version\ngo get github.com/foo@latest  # latest version\n```\n### Vendor Directory\n\n```bash\ngo mod vendor  # creates vendor/ directory with all deps\n```\n\nBuild with vendored dependencies:\n\n```bash\ngo build -mod=vendor\n```\n\n### Replacing Dependencies\n\nUseful for local development:\n\n```\nreplace github.com/mycompany/lib => ../local/lib\n```\n\n> **Key Point:** Since Go 1.16, `GOPATH` mode is deprecated. All projects should use modules. `go mod tidy` should be run after any dependency change.",
+  "codeExample": "// Creating and using a module:\n//\n// mkdir myapp\n// cd myapp\n// go mod init example.com/myapp\n//\n// Create main.go:\npackage main\n\nimport (\n    \"fmt\"\n    \"rsc.io/quote\"\n)\n\nfunc main() {\n    fmt.Println(quote.Go())\n}\n//\n// go mod tidy\n// go run main.go",
+  "quiz": [
+    {
+      "question": "What command initializes a new Go module?",
+      "options": ["go new", "go mod init", "go create", "go start"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does go mod tidy do?",
+      "options": ["Formats source code", "Adds missing deps, removes unused", "Downloads all deps", "Vendors all deps"],
+      "correctIndex": 1
+    }
+  ]
+}

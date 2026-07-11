@@ -1,0 +1,22 @@
+{
+  "title": "C# For Loop",
+  "language": "csharp",
+  "topic": "for",
+  "order": 22,
+  "nextTopic": "do_while",
+  "prevTopic": "while",
+  "content": "### For Loop in C#\n\nThe `for` loop is ideal when you know the exact number of iterations in advance.\n\n### Syntax\n\n```csharp\nfor (initializer; condition; iterator)\n{\n    // Code to repeat\n}\n```\n\n### Basic Example\n\n```csharp\nfor (int i = 0; i < 5; i++)\n{\n    Console.WriteLine($\"Iteration: {i}\");\n}\n```\n\n### Loop Components\n\n| Part | Description | Example |\n|------|-------------|---------|\n| Initializer | Runs once before loop starts | `int i = 0;` |\n| Condition | Checked before each iteration | `i < 5;` |\n| Iterator | Runs after each iteration | `i++` |\n\n### Multiple Variables\n\n```csharp\nfor (int i = 0, j = 10; i < j; i++, j--)\n{\n    Console.WriteLine($\"i={i}, j={j}\");\n}\n```\n\n### Looping Through Arrays\n\n```csharp\nint[] numbers = { 10, 20, 30, 40, 50 };\nfor (int i = 0; i < numbers.Length; i++)\n{\n    Console.WriteLine($\"Index {i}: {numbers[i]}\");\n}\n```\n\n### Optional Parts\n\nAll three parts of the for loop are optional:\n\n```csharp\n// Infinite loop\nfor (;;)\n{\n    // Runs forever unless break\n}\n\n// Only initializer and condition\nint i = 0;\nfor (; i < 10;)\n{\n    Console.WriteLine(i);\n    i++;\n}\n```\n\n### Nested For Loops\n\n```csharp\nfor (int row = 0; row < 3; row++)\n{\n    for (int col = 0; col < 3; col++)\n    {\n        Console.Write($\"({row},{col}) \");\n    }\n    Console.WriteLine();\n}\n```\n\n### for vs while\n\n| Aspect | for | while |\n|--------|-----|-------|\n| Best for | Known iteration count | Unknown iteration count |\n| Compactness | All loop logic in one line | Condition separated from init/iterator |\n| Readability | Counting loops | Condition-based loops |\n\n> **Key Point:** The for loop is best for iterating a known number of times. The initializer runs once, the condition is checked before each iteration, and the iterator runs after each iteration's code block.\n\n### Range-Based Loops\n\nUse `foreach` for collections, but for index access, `for` is still needed:\n\n```csharp\nfor (int i = 0; i < list.Count; i++)\n{\n    if (i % 2 == 0)\n        Console.WriteLine(list[i]);\n}",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Multiplication Table (5):\");\n        for (int i = 1; i <= 10; i++)\n        {\n            Console.WriteLine($\"5 x {i} = {5 * i}\");\n        }\n        \n        Console.WriteLine(\"\\nCountdown:\");\n        for (int i = 10; i >= 0; i--)\n        {\n            Console.Write($\"{i} \");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "How many parts does a for loop have in parentheses?",
+      "options": ["Two", "Three", "Four", "Five"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When does the iterator expression run?",
+      "options": ["Before each iteration", "After each iteration", "At the start", "At the end"],
+      "correctIndex": 1
+    }
+  ]
+}

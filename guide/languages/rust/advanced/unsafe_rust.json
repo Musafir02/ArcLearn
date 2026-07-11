@@ -1,0 +1,17 @@
+{
+  "title": "Unsafe Rust",
+  "language": "rust",
+  "topic": "unsafe_rust",
+  "order": 70,
+  "nextTopic": "common_collections",
+  "prevTopic": "macros",
+  "content": "### Unsafe Rust\n\nUnsafe Rust allows operations that the compiler cannot guarantee memory safety for. It is used for FFI, raw pointer manipulation, and performance-critical code.\n\n---\n\n### Unsafe Superpowers\n\n| Operation | Description |\n|-----------|-------------|\n| Dereference raw pointer | `*const T` or `*mut T` |\n| Call unsafe function | Functions marked `unsafe` |\n| Access/modify mutable static | `static mut` variables |\n| Implement unsafe trait | Traits marked `unsafe` |\n| Access union fields | Unions |\n\n---\n\n### Examples\n\n```rust\n// Raw pointer dereferencing\nlet mut num = 5;\nlet r1 = &num as *const i32;\nlet r2 = &mut num as *mut i32;\n\nunsafe {\n    println!(\"r1: {}\", *r1);\n    println!(\"r2: {}\", *r2);\n}\n\n// Calling unsafe functions\nextern \"C\" {\n    fn abs(input: i32) -> i32;\n}\n\nunsafe {\n    println!(\"Absolute value: {}\", abs(-3));\n}\n\n// Mutable static variable\nstatic mut COUNTER: u32 = 0;\n\nunsafe fn increment() {\n    COUNTER += 1;\n}\n\n// Unsafe trait\nunsafe trait Foo { }\nunsafe impl Foo for i32 { }\n```\n\n> **Key Point:** Unsafe Rust does not disable the borrow checker or ownership rules. The `unsafe` block only enables the five superpowers listed above. Always minimize unsafe code and wrap it in safe abstractions.",
+  "codeExample": "fn split_at_mut<T>(slice: &mut [T], mid: usize) -> (&mut [T], &mut [T]) {\n    let len = slice.len();\n    let ptr = slice.as_mut_ptr();\n    \n    assert!(mid <= len);\n    \n    unsafe {\n        (\n            std::slice::from_raw_parts_mut(ptr, mid),\n            std::slice::from_raw_parts_mut(ptr.add(mid), len - mid),\n        )\n    }\n}\n\nfn main() {\n    let mut v = vec![1, 2, 3, 4, 5, 6];\n    let (left, right) = split_at_mut(&mut v, 3);\n    \n    println!(\"Left: {:?}, Right: {:?}\", left, right);\n}",
+  "quiz": [
+    {
+      "question": "How many superpowers does unsafe Rust grant?",
+      "options": ["3", "5", "7", "Unlimited"],
+      "correctIndex": 1
+    }
+  ]
+}

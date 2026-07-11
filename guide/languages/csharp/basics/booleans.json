@@ -1,0 +1,22 @@
+{
+  "title": "C# Booleans",
+  "language": "csharp",
+  "topic": "booleans",
+  "order": 10,
+  "nextTopic": "strings",
+  "prevTopic": "operators",
+  "content": "### Booleans in C#\n\nA boolean data type represents one of two values: `true` or `false`. In C#, the `bool` keyword is used.\n\n### Declaring Booleans\n\n```csharp\nbool isComplete = true;\nbool isActive = false;\n```\n\n### Boolean Expressions\n\nA boolean expression evaluates to either true or false:\n\n```csharp\nint x = 10, y = 20;\nbool result = x < y;     // true\nbool same = x == y;      // false\nbool notEqual = x != y;  // true\n```\n\n### Using Booleans in Conditions\n\n```csharp\nif (isComplete)\n{\n    Console.WriteLine(\"Task is complete\");\n}\nelse\n{\n    Console.WriteLine(\"Task is not complete\");\n}\n```\n\n### Logical Operators with Booleans\n\n| Expression | Result |\n|------------|--------|\n| `true && true` | true |\n| `true && false` | false |\n| `false && true` | false |\n| `false && false` | false |\n| `true || true` | true |\n| `true || false` | true |\n| `false || true` | true |\n| `false || false` | false |\n| `!true` | false |\n| `!false` | true |\n\n### Boolean Methods\n\nThe `bool` type provides useful methods:\n\n```csharp\nbool.TryParse(\"true\", out bool parsed);  // parsed = true\nbool result = bool.Parse(\"false\");         // result = false\nstring text = true.ToString();             // \"True\"\n```\n\n### Comparison Operators Return Bool\n\n```csharp\nint a = 5, b = 10;\nConsole.WriteLine(a > b);    // False\nConsole.WriteLine(a < b);    // True\nConsole.WriteLine(a == b);   // False\nConsole.WriteLine(a != b);   // True\n```\n\n> **Key Point:** In C#, booleans cannot be implicitly converted to integers (0/1). You must explicitly compare. Use `&&` and `||` for short-circuit evaluation. A boolean expression is any expression that evaluates to `true` or `false`.",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        bool isLoggedIn = true;\n        bool isAdmin = false;\n        \n        if (isLoggedIn && isAdmin)\n        {\n            Console.WriteLine(\"Welcome admin!\");\n        }\n        else if (isLoggedIn)\n        {\n            Console.WriteLine(\"Welcome user!\");\n        }\n        else\n        {\n            Console.WriteLine(\"Please log in.\");\n        }\n        \n        int age = 18;\n        bool canVote = age >= 18;\n        Console.WriteLine($\"Can vote: {canVote}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What values can a C# bool hold?",
+      "options": ["0 and 1", "true and false", "Yes and No", "On and Off"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the result of !true in C#?",
+      "options": ["true", "false", "null", "0"],
+      "correctIndex": 1
+    }
+  ]
+}

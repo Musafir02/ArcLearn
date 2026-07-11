@@ -1,0 +1,17 @@
+{
+  "title": "Writing Files in Rust",
+  "language": "rust",
+  "topic": "file_write",
+  "order": 57,
+  "nextTopic": "smart_pointers",
+  "prevTopic": "file_read",
+  "content": "### Writing Files in Rust\n\nRust provides several ways to write data to files, from simple convenience functions to buffered writing.\n\n---\n\n### Writing Methods\n\n| Method | Description |\n|--------|-------------|\n| `fs::write(path, content)` | Write string or bytes (overwrites) |\n| `File::create()` | Create or truncate file, returns File |\n| `File::append()` | Open for appending |\n| `write!()` / `writeln!()` | Formatted writing via File |\n| `BufWriter` | Buffered writing for performance |\n\n---\n\n### Examples\n\n```rust\nuse std::fs;\nuse std::io::Write;\n\n// Simple write (overwrites existing)\nfs::write(\"output.txt\", \"Hello, Rust!\")?;\n\n// Open for writing (create or truncate)\nlet mut file = File::create(\"output.txt\")?;\nfile.write_all(b\"Hello, world!\")?;\n\n// Formatted write\nwriteln!(file, \"Number: {}\", 42)?;\nwrite!(file, \"Pi: {:.2}\", 3.14159)?;\n\n// Appending\nlet mut file = fs::OpenOptions::new()\n    .append(true)\n    .open(\"log.txt\")?;\nwriteln!(file, \"Log entry\")?;\n\n// Buffered writing (better for many writes)\nlet file = File::create(\"large_output.txt\")?;\nlet mut writer = BufWriter::new(file);\nfor i in 0..1000 {\n    writeln!(writer, \"Line {}\", i)?;\n}\n```\n\n> **Key Point:** For simple writes, `fs::write` is the easiest. For multiple writes, use `BufWriter` for performance. Use `OpenOptions` for fine-grained control over file open behavior (append, read-write, create, truncate).",
+  "codeExample": "use std::fs::{self, File, OpenOptions};\nuse std::io::Write;\n\nfn main() -> std::io::Result<()> {\n    // Overwrite file\n    fs::write(\"hello.txt\", b\"Hello, Rust!\")?;\n    \n    // Append to file\n    let mut log = OpenOptions::new()\n        .create(true)\n        .append(true)\n        .open(\"log.txt\")?;\n    writeln!(log, \"Program started\")?;\n    writeln!(log, \"Operation completed\")?;\n    \n    println!(\"Files written successfully\");\n    Ok(())\n}",
+  "quiz": [
+    {
+      "question": "Which function is used for simple file writing in Rust?",
+      "options": ["fs::write", "File::write", "write_file", "fs::save"],
+      "correctIndex": 0
+    }
+  ]
+}

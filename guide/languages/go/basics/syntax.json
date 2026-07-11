@@ -1,0 +1,22 @@
+{
+  "title": "Go Syntax",
+  "language": "go",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### Basic Go Syntax Rules\n\nGo syntax is clean, minimal, and designed for readability.\n\n### Package Declaration\n\nEvery Go file starts with a package declaration:\n\n```go\npackage main\n```\n\nExecutable programs use `package main`. Libraries use their own package name.\n\n### Import Statement\n\nImport packages to use their functionality:\n\n```go\nimport \"fmt\"\nimport \"math\"\n\n// or grouped:\nimport (\n    \"fmt\"\n    \"math\"\n)\n```\n\n### Function Declaration\n\nFunctions start with `func`, then name, parameters, return type:\n\n```go\nfunc add(x int, y int) int {\n    return x + y\n}\n```\n\n### Semicolons\n\nSemicolons are optional. Go inserts them automatically at line endings.\n\n### Braces\n\nOpening braces `{` must be on the same line as the declaration:\n\n```go\n// Correct\nif x > 0 {\n    fmt.Println(\"positive\")\n}\n\n// Incorrect - will not compile\nif x > 0\n{\n    fmt.Println(\"positive\")\n}\n```\n\n### Comments\n\n| Style | Usage |\n|-------|-------|\n| `//` | Single-line comments |\n| `/* */` | Multi-line comments (block comments) |\n\n### Naming Conventions\n\n| Element | Convention | Example |\n|---------|------------|--------|\n| Variables | camelCase | `userName` |\n| Exported names | PascalCase | `Println` |\n| Unexported names | camelCase | `println` |\n| Constants | PascalCase or camelCase | `MaxSize` |\n| Acronyms | Uppercase | `HTTP`, `URL` |\n\n> **Key Point:** Names starting with a capital letter are exported (public). Names starting with lowercase are unexported (private to the package).",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var message string = \"Hello, Go!\"\n    fmt.Println(message)\n}",
+  "quiz": [
+    {
+      "question": "What must every Go source file begin with?",
+      "options": ["import", "func", "package", "var"],
+      "correctIndex": 2
+    },
+    {
+      "question": "How are exported names identified in Go?",
+      "options": ["They start with a lowercase letter", "They start with a capital letter", "They use underscores", "They are marked with @export"],
+      "correctIndex": 1
+    }
+  ]
+}

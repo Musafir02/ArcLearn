@@ -1,0 +1,22 @@
+{
+  "title": "C# Dictionary Collections",
+  "language": "csharp",
+  "topic": "collections_dictionary",
+  "order": 55,
+  "nextTopic": "collections_stack_queue",
+  "prevTopic": "collections_list",
+  "content": "### Dictionary<TKey, TValue> in C#\n\nDictionary stores key-value pairs for fast lookup by key. Keys must be unique.\n\n### Creating Dictionaries\n\n```csharp\nDictionary<string, int> ages = new Dictionary<string, int>();\nvar scores = new Dictionary<string, int>\n{\n    { \"Alice\", 95 },\n    { \"Bob\", 87 },\n    { \"Charlie\", 92 }\n};\n\n// Target-typed (C# 9+)\nDictionary<string, int> map = new();\n```\n\n### Adding and Accessing\n\n```csharp\nvar dict = new Dictionary<string, int>();\n\n// Add\ndict.Add(\"Alice\", 30);\ndict[\"Bob\"] = 25;  // Add or update\n\n// Access\nint age = dict[\"Alice\"];     // Throws if key not found\nbool exists = dict.TryGetValue(\"Bob\", out int bobAge);  // Safe access\n```\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Unique keys | Each key must be unique |\n| Fast lookup | O(1) average time complexity |\n| Ordered | Insertion order NOT preserved (use OrderedDictionary) |\n| Key types | Any type with GetHashCode() and Equals() |\n\n### Checking Keys\n\n```csharp\nif (dict.ContainsKey(\"Alice\"))\n    Console.WriteLine($\"Alice is {dict[\"Alice\"]}\");\n\nif (dict.ContainsValue(95))\n    Console.WriteLine(\"Someone scored 95\");\n```\n\n### Iterating\n\n```csharp\nforeach (var kvp in dict)\n{\n    Console.WriteLine($\"{kvp.Key}: {kvp.Value}\");\n}\n\n// Keys only\nforeach (var key in dict.Keys) { }\n\n// Values only\nforeach (var value in dict.Values) { }\n```\n\n### Removing\n\n```csharp\ndict.Remove(\"Bob\");        // Remove by key\ndict.Clear();               // Remove all\n```\n\n### Common Methods\n\n| Method | Description |\n|--------|-------------|\n| `Add(key, value)` | Adds key-value pair |\n| `TryGetValue(key, out value)` | Safe value retrieval |\n| `ContainsKey(key)` | Checks if key exists |\n| `Remove(key)` | Removes by key |\n| `TryAdd(key, value)` | Adds if key doesn't exist |\n| `EnsureCapacity(capacity)` | Pre-allocates |\n| `TrimExcess()` | Reduces capacity |\n\n### Alternative Dictionary Types\n\n```csharp\nSortedList<TKey, TValue>   // Sorted by key\nSortedDictionary<TKey, TValue>  // Sorted with tree\nOrderedDictionary           // Preserves insertion order (.NET 9+)\nConcurrentDictionary<TKey, TValue>  // Thread-safe\n```\n\n> **Key Point:** Dictionaries provide fast O(1) key-based lookups. Keys must be unique and implement GetHashCode/Equals. Use `TryGetValue` for safe access instead of catching exceptions. Iterate with `KeyValuePair<TKey, TValue>`.\n\n### Custom Key Types\n\n```csharp\npublic record Person(string Name, int Age);\n\nvar dict = new Dictionary<Person, string>();\n// Records have built-in HashCode and Equals\n```\n\n### Dictionary with Default Value\n\n```csharp\n// C# 8.0+ pattern\nvar value = dict.TryGetValue(key, out var val) ? val : defaultValue;\n\n// Using GetValueOrDefault extension\nvar value = dict.GetValueOrDefault(key, defaultValue);\n```",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var inventory = new Dictionary<string, int>\n        {\n            [\"Apples\"] = 50,\n            [\"Bananas\"] = 30,\n            [\"Cherries\"] = 20\n        };\n        \n        Console.WriteLine(\"Inventory:\");\n        foreach (var item in inventory)\n            Console.WriteLine($\"{item.Key}: {item.Value}\");\n        \n        // Lookup\n        if (inventory.TryGetValue(\"Apples\", out int count))\n            Console.WriteLine($\"\\nApples in stock: {count}\");\n        \n        // Update\n        inventory[\"Apples\"] = 45;\n        Console.WriteLine($\"After update: {inventory[\"Apples\"]}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the time complexity of dictionary lookup?",
+      "options": ["O(n)", "O(log n)", "O(1) average", "O(n^2)"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which method safely retrieves a value without throwing if key is missing?",
+      "options": ["GetValue()", "TryGetValue()", "SafeGet()", "PeekValue()"],
+      "correctIndex": 1
+    }
+  ]
+}

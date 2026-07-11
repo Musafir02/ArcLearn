@@ -1,0 +1,22 @@
+{
+  "title": "C# Inheritance",
+  "language": "csharp",
+  "topic": "inheritance",
+  "order": 42,
+  "nextTopic": "polymorphism",
+  "prevTopic": "get_set",
+  "content": "### Inheritance in C#\n\nInheritance allows a class to inherit members (fields, properties, methods) from another class. It promotes code reuse and establishes a hierarchical relationship.\n\n### Base and Derived Classes\n\n```csharp\n// Base class\npublic class Animal\n{\n    public string Name { get; set; }\n    \n    public void Eat()\n    {\n        Console.WriteLine($\"{Name} is eating\");\n    }\n}\n\n// Derived class\npublic class Dog : Animal\n{\n    public void Bark()\n    {\n        Console.WriteLine($\"{Name} is barking\");\n    }\n}\n```\n\n### Using Inherited Members\n\n```csharp\nDog dog = new Dog();\ndog.Name = \"Buddy\";      // From Animal\ndog.Eat();                // From Animal\ndog.Bark();               // From Dog\n```\n\n### The base Keyword\n\nAccess base class members from derived class:\n\n```csharp\npublic class Dog : Animal\n{\n    public Dog(string name) : base(name) { }  // Call base constructor\n    \n    public void Display()\n    {\n        base.Eat();  // Explicitly call base method\n    }\n}\n```\n\n### Constructor Inheritance\n\n```csharp\npublic class Vehicle\n{\n    public string Brand { get; }\n    \n    public Vehicle(string brand)\n    {\n        Brand = brand;\n    }\n}\n\npublic class Car : Vehicle\n{\n    public string Model { get; }\n    \n    public Car(string brand, string model) : base(brand)\n    {\n        Model = model;\n    }\n}\n```\n\n### Sealed Classes\n\nPrevent further inheritance:\n\n```csharp\npublic sealed class FinalClass { }\n// public class Derived : FinalClass { }  // Error\n```\n\n### Inheritance Chain\n\n```csharp\npublic class LivingThing { }\npublic class Animal : LivingThing { }\npublic class Mammal : Animal { }\npublic class Dog : Mammal { }\n```\n\n### Inheritance Rules\n\n| Rule | Description |\n|------|-------------|\n| Single inheritance | A class can inherit from only one base class |\n| Multi-level | A -> B -> C is allowed |\n| Multiple interfaces | A class can implement multiple interfaces |\n| Object base | All types implicitly inherit from `System.Object` |\n\n> **Key Point:** C# supports single inheritance (one base class). Use `:` to specify inheritance. The derived class calls the base constructor using `: base()`. Private members are not inherited. Use `sealed` to prevent inheritance.\n\n### Object Class Members\n\nAll classes inherit these from `System.Object`:\n\n```csharp\nEquals()      // Compare objects\nGetHashCode() // Hash code for dictionaries\nToString()    // String representation\nGetType()     // Runtime type\n```",
+  "codeExample": "using System;\n\npublic class Employee\n{\n    public string Name { get; set; }\n    public decimal Salary { get; set; }\n    \n    public Employee(string name, decimal salary)\n    {\n        Name = name;\n        Salary = salary;\n    }\n    \n    public void Work() => Console.WriteLine($\"{Name} is working\");\n}\n\npublic class Manager : Employee\n{\n    public int TeamSize { get; set; }\n    \n    public Manager(string name, decimal salary, int teamSize)\n        : base(name, salary)\n    {\n        TeamSize = teamSize;\n    }\n    \n    public void Manage() => Console.WriteLine($\"{Name} manages {TeamSize} people\");\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var mgr = new Manager(\"Alice\", 80000, 5);\n        mgr.Work();\n        mgr.Manage();\n    }\n}",
+  "quiz": [
+    {
+      "question": "How many base classes can a C# class inherit from?",
+      "options": ["Multiple", "Two", "One", "Unlimited"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which keyword is used to call a base class constructor?",
+      "options": ["super", "base", "parent", "this"],
+      "correctIndex": 1
+    }
+  ]
+}

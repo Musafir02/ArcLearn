@@ -1,0 +1,22 @@
+{
+  "title": "C# User Input",
+  "language": "csharp",
+  "topic": "input",
+  "order": 13,
+  "nextTopic": "nullables",
+  "prevTopic": "numbers",
+  "content": "### User Input in C#\n\nC# provides the `Console` class for reading user input from the command line.\n\n### Console.ReadLine()\n\nReads a line of text from the console as a string:\n\n```csharp\nConsole.Write(\"Enter your name: \");\nstring name = Console.ReadLine();\nConsole.WriteLine($\"Hello, {name}!\");\n```\n\n### Reading Numbers\n\n`Console.ReadLine()` always returns a string. Convert it to numeric types:\n\n```csharp\nConsole.Write(\"Enter your age: \");\nstring input = Console.ReadLine();\nint age = Convert.ToInt32(input);\n\n// Alternative with parsing\nint age = int.Parse(Console.ReadLine());\n```\n\n### Safe Input Parsing\n\nUse `TryParse` to handle invalid input without exceptions:\n\n```csharp\nConsole.Write(\"Enter a number: \");\nif (int.TryParse(Console.ReadLine(), out int number))\n{\n    Console.WriteLine($\"You entered: {number}\");\n}\nelse\n{\n    Console.WriteLine(\"Invalid number!\");\n}\n```\n\n### Console.Read() and Console.ReadKey()\n\n| Method | Description |\n|--------|-------------|\n| `Console.Read()` | Reads next character as int (ASCII value) |\n| `Console.ReadKey()` | Reads a single key press |\n\n```csharp\nConsole.Write(\"Press any key to continue...\");\nConsoleKeyInfo key = Console.ReadKey();\nConsole.WriteLine($\"\\nYou pressed: {key.Key}\");\n```\n\n### Multiple Input Values\n\n```csharp\nConsole.Write(\"Enter two numbers (space-separated): \");\nstring[] parts = Console.ReadLine().Split(' ');\nint a = int.Parse(parts[0]);\nint b = int.Parse(parts[1]);\nConsole.WriteLine($\"Sum: {a + b}\");\n```\n\n> **Key Point:** Always validate user input. Use `TryParse()` instead of `Parse()` or `Convert` to avoid runtime exceptions when users enter invalid data.\n\n### Console Color\n\n```csharp\nConsole.ForegroundColor = ConsoleColor.Green;\nConsole.WriteLine(\"Green text\");\nConsole.ResetColor();\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.Write(\"What is your name? \");\n        string name = Console.ReadLine();\n        \n        Console.Write(\"How old are you? \");\n        if (int.TryParse(Console.ReadLine(), out int age))\n        {\n            Console.WriteLine($\"Hello {name}, you are {age} years old.\");\n            Console.WriteLine($\"Next year you will be {age + 1}.\");\n        }\n        else\n        {\n            Console.WriteLine($\"Hello {name}, nice to meet you!\");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What type does Console.ReadLine() return?",
+      "options": ["int", "string", "char", "object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method is safest for converting user input to int?",
+      "options": ["int.Parse()", "Convert.ToInt32()", "int.TryParse()", "(int) cast"],
+      "correctIndex": 2
+    }
+  ]
+}

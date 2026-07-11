@@ -1,0 +1,17 @@
+{
+  "title": "Reading Files in Rust",
+  "language": "rust",
+  "topic": "file_read",
+  "order": 56,
+  "nextTopic": "file_write",
+  "prevTopic": "file_handling",
+  "content": "### Reading Files in Rust\n\nRust provides multiple ways to read files, from simple convenience functions to buffered reading for large files.\n\n---\n\n### Reading Methods\n\n| Method | Use Case |\n|--------|----------|\n| `fs::read_to_string(path)` | Read entire file as String (small files) |\n| `fs::read(path)` | Read entire file as Vec<u8> (binary) |\n| `File::open() + read_to_string()` | More control over reading |\n| `BufReader` | Efficient line-by-line reading |\n\n---\n\n### Examples\n\n```rust\nuse std::fs;\nuse std::io::{self, BufRead, BufReader, Read};\n\n// Read entire file as string (most common for text)\nlet content = fs::read_to_string(\"file.txt\")?;\n\n// Read as bytes (binary files)\nlet bytes = fs::read(\"image.png\")?;\n\n// Read with BufReader (large files)\nlet file = File::open(\"large_file.txt\")?;\nlet reader = BufReader::new(file);\n\nfor line in reader.lines() {\n    let line = line?;\n    println!(\"{}\", line);\n}\n\n// Read with explicit buffer\nlet mut file = File::open(\"file.bin\")?;\nlet mut buffer = Vec::new();\nfile.read_to_end(&mut buffer)?;\n\n// Read exact number of bytes\nlet mut buf = [0u8; 1024];\nfile.read_exact(&mut buf)?;\n```\n\n> **Key Point:** For small text files, `fs::read_to_string` is the simplest approach. For large files, use `BufReader` with `lines()` for efficient line-by-line processing without loading the entire file into memory.",
+  "codeExample": "use std::fs;\nuse std::io::{BufRead, BufReader, Read};\n\nfn main() -> std::io::Result<()> {\n    // Simple read\n    let content = fs::read_to_string(\"Cargo.toml\")?;\n    println!(\"Cargo.toml contents:\\n{}\", content);\n    \n    // Line by line\n    println!(\"\\n--- Lines ---\");\n    for line in BufReader::new(fs::File::open(\"Cargo.toml\")?).lines() {\n        let line = line?;\n        if !line.is_empty() {\n            println!(\"> {}\", line);\n        }\n    }\n    \n    Ok(())\n}",
+  "quiz": [
+    {
+      "question": "Which is the simplest method to read a small text file?",
+      "options": ["fs::read_to_string", "fs::read", "BufReader::new", "File::open"],
+      "correctIndex": 0
+    }
+  ]
+}

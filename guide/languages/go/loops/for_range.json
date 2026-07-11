@@ -1,0 +1,22 @@
+{
+  "title": "Go For-Range Loop",
+  "language": "go",
+  "topic": "for_range",
+  "order": 22,
+  "nextTopic": "break_continue",
+  "prevTopic": "for_while",
+  "content": "### For-Range Loop\n\nThe `range` keyword iterates over data structures.\n\n### Range Over Slice/Array\n\n```go\nnums := []int{10, 20, 30}\nfor index, value := range nums {\n    fmt.Printf(\"nums[%d] = %d\\n\", index, value)\n}\n\n// Skip index with _\nfor _, value := range nums {\n    fmt.Println(value)\n}\n\n// Skip value\nfor index := range nums {\n    fmt.Println(index)\n}\n```\n\n### Range Over Map\n\n```go\nages := map[string]int{\"Alice\": 30, \"Bob\": 25}\nfor key, value := range ages {\n    fmt.Printf(\"%s is %d years old\\n\", key, value)\n}\n```\n\nMap iteration order is NOT guaranteed.\n\n### Range Over String\n\nIterates over runes, not bytes:\n\n```go\nfor index, runeValue := range \"Hello, 世界\" {\n    fmt.Printf(\"%d: %c\\n\", index, runeValue)\n}\n```\n\n### Range Over Channel\n\n```go\nch := make(chan int)\ngo func() {\n    for i := 0; i < 5; i++ {\n        ch <- i\n    }\n    close(ch)\n}()\n\nfor value := range ch {\n    fmt.Println(value)\n}\n```\n\n### Range Over String vs Bytes\n\n| Type | Iterates Over | Value Type |\n|------|---------------|------------|\n| string | runes | rune |\n| []byte | bytes | byte |\n| []int | elements | int |\n| map[K]V | key-value pairs | K, V |\n| channel | received values | element type |\n\n### Go 1.22+ Range Improvements\n\nIn Go 1.22+, `range` can iterate over functions:\n\n```go\n// Custom iterator (experimental in 1.22, stable in 1.23+)\nfor i := range squares(5) {\n    fmt.Println(i)\n}\n```\n\n> **Key Point:** Range over strings iterates over Unicode code points (runes), not bytes. The index is the byte position, not the rune index.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // Slice\n    fruits := []string{\"apple\", \"banana\", \"cherry\"}\n    for i, fruit := range fruits {\n        fmt.Printf(\"%d: %s\\n\", i, fruit)\n    }\n\n    // Map\n    capitals := map[string]string{\n        \"US\": \"Washington\",\n        \"UK\": \"London\",\n        \"JP\": \"Tokyo\",\n    }\n    for country, capital := range capitals {\n        fmt.Printf(\"%s -> %s\\n\", country, capital)\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does range over a string iterate over?",
+      "options": ["Bytes", "Runes (Unicode code points)", "Characters", "Words"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is map iteration order guaranteed in Go?",
+      "options": ["Yes, sorted by key", "Yes, insertion order", "No, not guaranteed", "Yes, alphabetical"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "C# Interfaces",
+  "language": "csharp",
+  "topic": "interfaces",
+  "order": 46,
+  "nextTopic": "sealed",
+  "prevTopic": "abstract",
+  "content": "### Interfaces in C#\n\nAn interface defines a contract that implementing classes must follow. It contains declarations of methods, properties, events, and indexers.\n\n### Declaring Interfaces\n\n```csharp\npublic interface IAnimal\n{\n    void MakeSound();\n    string Name { get; set; }\n}\n\npublic interface IMovable\n{\n    void Move();\n}\n```\n\n### Implementing Interfaces\n\n```csharp\npublic class Dog : IAnimal, IMovable\n{\n    public string Name { get; set; }\n    \n    public void MakeSound() => Console.WriteLine(\"Woof!\");\n    public void Move() => Console.WriteLine(\"Dog runs\");\n}\n```\n\n### Interface Naming Convention\n\nInterfaces are typically named with an `I` prefix:\n\n```csharp\nIComparable, IDisposable, IEnumerable, ICloneable\n```\n\n### Default Interface Methods (C# 8+)\n\nInterfaces can provide default implementations:\n\n```csharp\npublic interface ILogger\n{\n    void Log(string message);\n    \n    void LogError(string message)  // Default implementation\n    {\n        Log($\"[ERROR] {message}\");\n    }\n}\n\npublic class ConsoleLogger : ILogger\n{\n    public void Log(string message) => Console.WriteLine(message);\n    // LogError is inherited from interface\n}\n```\n\n### Explicit Interface Implementation\n\n```csharp\npublic interface IReader { void Read(); }\npublic interface IWriter { void Write(); }\n\npublic class FileHandler : IReader, IWriter\n{\n    void IReader.Read() => Console.WriteLine(\"Reading...\");\n    void IWriter.Write() => Console.WriteLine(\"Writing...\");\n    \n    // Public method\n    public void Process() { ((IReader)this).Read(); ((IWriter)this).Write(); }\n}\n```\n\n### Interfaces vs Abstract Classes\n\n| Feature | Interface | Abstract Class |\n|---------|-----------|---------------|\n| Multiple inheritance | Yes (multiple interfaces) | No (single base class) |\n| Default implementation | Yes (C# 8+) | Yes |\n| Fields | No | Yes |\n| Constructors | No | Yes |\n| Access modifiers | Public by default | All |\n| When to use | Capability contract | Related class hierarchy |\n\n### Common .NET Interfaces\n\n```csharp\nIDisposable     // Manual resource cleanup\nIComparable     // Sorting support\nIEnumerable     // foreach support\nICloneable      // Object cloning\nIEquatable<T>   // Type-specific equality\nINotifyPropertyChanged  // Data binding notifications\n```\n\n> **Key Point:** Interfaces define WHAT a class can do, not HOW. A class can implement multiple interfaces. Use explicit interface implementation to resolve conflicts when implementing multiple interfaces with the same method signature. Interface members are public by default.\n\n### Interface Inheritance\n\n```csharp\npublic interface IShape\n{\n    double GetArea();\n}\n\npublic interface IColoredShape : IShape\n{\n    string Color { get; }\n}\n\npublic class RedCircle : IColoredShape\n{\n    public double GetArea() => Math.PI * 25;\n    public string Color => \"Red\";\n}",
+  "codeExample": "using System;\n\npublic interface IPlayable\n{\n    void Play();\n    void Stop();\n}\n\npublic class MusicPlayer : IPlayable\n{\n    public void Play() => Console.WriteLine(\"Playing music...\");\n    public void Stop() => Console.WriteLine(\"Music stopped\");\n}\n\npublic class VideoPlayer : IPlayable\n{\n    public void Play() => Console.WriteLine(\"Playing video...\");\n    public void Stop() => Console.WriteLine(\"Video stopped\");\n}\n\nclass Program\n{\n    static void Main()\n    {\n        IPlayable[] players = { new MusicPlayer(), new VideoPlayer() };\n        foreach (var p in players)\n        {\n            p.Play();\n            p.Stop();\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "How many interfaces can a class implement?",
+      "options": ["One", "Two", "Multiple", "Unlimited with limitations"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the naming convention for interfaces in C#?",
+      "options": ["Prefix with I", "Suffix with Interface", "All uppercase", "No convention"],
+      "correctIndex": 0
+    }
+  ]
+}

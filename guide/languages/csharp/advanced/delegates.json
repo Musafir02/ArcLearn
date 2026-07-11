@@ -1,0 +1,22 @@
+{
+  "title": "C# Delegates",
+  "language": "csharp",
+  "topic": "delegates",
+  "order": 67,
+  "nextTopic": "events",
+  "prevTopic": "tasks",
+  "content": "### Delegates in C#\n\nA delegate is a type-safe function pointer. It holds a reference to a method and can call it indirectly.\n\n### Declaring Delegates\n\n```csharp\n// Declare a delegate type\npublic delegate void Notify(string message);\npublic delegate int MathOperation(int x, int y);\n\n// Methods matching the delegate signature\npublic static void ShowMessage(string msg) => Console.WriteLine(msg);\npublic static int Add(int a, int b) => a + b;\n```\n\n### Using Delegates\n\n```csharp\n// Create delegate instance and assign method\nNotify notifier = ShowMessage;\nnotifier(\"Hello from delegate!\");  // Invoke\n\nMathOperation op = Add;\nint result = op(5, 3);  // 8\n```\n\n### Multicast Delegates\n\nDelegates can hold multiple method references:\n\n```csharp\nNotify notifier = ShowMessage;\nnotifier += LogToFile;\nnotifier += SendEmail;\n\nnotifier(\"System starting...\");  // All three methods called in order\n\nnotifier -= LogToFile;  // Remove a method\n```\n\n### Built-in Delegate Types\n\n```csharp\n// Action - returns void\nAction greet = () => Console.WriteLine(\"Hello\");\nAction<string> log = (msg) => Console.WriteLine(msg);\nAction<int, int> printSum = (a, b) => Console.WriteLine(a + b);\n\n// Func - returns value\nFunc<int> getNumber = () => 42;\nFunc<int, int> square = x => x * x;\nFunc<int, int, int> add = (a, b) => a + b;\n\n// Predicate - returns bool\nPredicate<int> isEven = x => x % 2 == 0;\n```\n\n### Delegates as Parameters\n\n```csharp\npublic void ProcessData(int[] data, Func<int, bool> filter, Action<int> process)\n{\n    foreach (var item in data)\n    {\n        if (filter(item))\n            process(item);\n    }\n}\n\n// Usage\nProcessData(\n    new[] { 1, 2, 3, 4, 5 },\n    n => n % 2 == 0,       // Filter: even numbers\n    n => Console.WriteLine(n)  // Process: print\n);\n```\n\n### Anonymous Methods\n\n```csharp\nFunc<int, int> square = delegate (int x) { return x * x; };\n// Same as:\nFunc<int, int> square = x => x * x;\n```\n\n### Delegate Variance\n\n```csharp\nFunc<object> getObj = () => \"Hello\";  // Return type covariance\nAction<string> logObj = (object o) => Console.WriteLine(o);  // Parameter contravariance\n```\n\n> **Key Point:** Use `Func` for methods that return a value, `Action` for void methods, and `Predicate` for bool-returning methods. Delegates enable callback patterns, event handling, and LINQ-style method chaining. Multicast delegates call multiple methods from a single invocation.\n\n### Real-World Example: Callbacks\n\n```csharp\npublic void DownloadFile(string url, Action<double> onProgress, Action<string> onComplete)\n{\n    // Simulate download\n    for (int i = 0; i <= 100; i += 10)\n    {\n        onProgress(i / 100.0);\n        Thread.Sleep(200);\n    }\n    onComplete(\"Download finished\");\n}\n\n// Usage\nDownloadFile(\"file.zip\",\n    progress => Console.WriteLine($\"{progress:P0} complete\"),\n    msg => Console.WriteLine(msg));",
+  "codeExample": "using System;\n\nclass Program\n{\n    delegate string StringTransformer(string s);\n    \n    static void Main()\n    {\n        StringTransformer transform = ToUpper;\n        transform += ToLower;\n        transform += Reverse;\n        \n        string result = transform(\"Hello\");  // Only last return value kept\n        Console.WriteLine(result);\n        \n        // Using built-in delegates\n        Func<string, string> upper = s => s.ToUpper();\n        Console.WriteLine(upper(\"world\"));\n    }\n    \n    static string ToUpper(string s) => s.ToUpper();\n    static string ToLower(string s) => s.ToLower();\n    static string Reverse(string s) => new string(s.Reverse().ToArray());\n}",
+  "quiz": [
+    {
+      "question": "What is a delegate in C#?",
+      "options": ["A class", "A type-safe function pointer", "An interface", "A struct"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which built-in delegate type returns a value?",
+      "options": ["Action", "Func", "Predicate", "EventHandler"],
+      "correctIndex": 1
+    }
+  ]
+}

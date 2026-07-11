@@ -1,0 +1,22 @@
+{
+  "title": "Go Recursion",
+  "language": "go",
+  "topic": "recursion",
+  "order": 39,
+  "nextTopic": "init",
+  "prevTopic": "closures",
+  "content": "### Recursion in Go\n\nA recursive function calls itself.\n\n### Factorial Example\n\n```go\nfunc factorial(n int) int {\n    if n <= 1 {\n        return 1\n    }\n    return n * factorial(n-1)\n}\n\nfunc main() {\n    fmt.Println(factorial(5)) // 120\n}\n```\n\n### Fibonacci Example\n\n```go\nfunc fibonacci(n int) int {\n    if n <= 1 {\n        return n\n    }\n    return fibonacci(n-1) + fibonacci(n-2)\n}\n```\n\n### Tail Recursion\n\nGo does not optimize tail recursion, but you can manually convert:\n\n```go\n// Tail recursive style\nfunc factorialTail(n, acc int) int {\n    if n <= 1 {\n        return acc\n    }\n    return factorialTail(n-1, n*acc)\n}\n\nfunc factorial(n int) int {\n    return factorialTail(n, 1)\n}\n```\n\n### Recursion with Slice\n\n```go\nfunc sum(nums []int) int {\n    if len(nums) == 0 {\n        return 0\n    }\n    return nums[0] + sum(nums[1:])\n}\n```\n\n### Tree Traversal\n\n```go\ntype TreeNode struct {\n    Value int\n    Left  *TreeNode\n    Right *TreeNode\n}\n\nfunc inOrder(node *TreeNode) {\n    if node == nil {\n        return\n    }\n    inOrder(node.Left)\n    fmt.Println(node.Value)\n    inOrder(node.Right)\n}\n```\n\n### Stack Safety\n\nRecursion depth is limited by the call stack. Go's goroutines start with small stacks (2KB) that grow as needed, but very deep recursion can still cause stack overflow:\n\n```go\nfunc deep(n int) int {\n    if n == 0 {\n        return 0\n    }\n    return 1 + deep(n-1)\n}\n// Safe up to ~100000 in Go\n```\n\n> **Key Point:** Go supports recursion but does not optimize tail calls. For very deep recursion, consider iterative approaches or use goroutines.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc factorial(n int) int {\n    if n <= 1 {\n        return 1\n    }\n    return n * factorial(n-1)\n}\n\nfunc reverse(s string) string {\n    if len(s) <= 1 {\n        return s\n    }\n    return reverse(s[1:]) + string(s[0])\n}\n\nfunc main() {\n    fmt.Println(\"factorial(6):\", factorial(6))\n    fmt.Println(\"reverse('hello'):\", reverse(\"hello\"))\n}",
+  "quiz": [
+    {
+      "question": "Does Go optimize tail recursion?",
+      "options": ["Yes", "No", "Only for certain types", "Only in release builds"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the base case in the factorial recursion?",
+      "options": ["n == 0", "n <= 1", "n == 10", "n >= 100"],
+      "correctIndex": 1
+    }
+  ]
+}

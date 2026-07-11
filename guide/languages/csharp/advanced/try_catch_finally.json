@@ -1,0 +1,22 @@
+{
+  "title": "C# try-catch-finally",
+  "language": "csharp",
+  "topic": "try_catch_finally",
+  "order": 61,
+  "nextTopic": "custom_exceptions",
+  "prevTopic": "exception_handling",
+  "content": "### Try-Catch-Finally Blocks\n\nThe try-catch-finally construct provides structured exception handling in C#.\n\n### Basic Try-Catch\n\n```csharp\ntry\n{\n    // Code that may throw exceptions\n    int result = int.Parse(\"not-a-number\");\n}\ncatch (FormatException ex)\n{\n    Console.WriteLine($\"Invalid format: {ex.Message}\");\n}\n```\n\n### Multiple Catch Blocks\n\n```csharp\ntry\n{\n    int.Parse(input);\n}\ncatch (FormatException)\n{\n    Console.WriteLine(\"Invalid number format\");\n}\ncatch (OverflowException)\n{\n    Console.WriteLine(\"Number is too large\");\n}\ncatch (Exception)\n{\n    Console.WriteLine(\"An error occurred\");\n}\n```\n\n### Finally Block\n\nAlways executes regardless of exceptions:\n\n```csharp\nFileStream? file = null;\ntry\n{\n    file = File.OpenRead(\"data.txt\");\n    // Read file\n}\ncatch (FileNotFoundException ex)\n{\n    Console.WriteLine($\"File not found: {ex.Message}\");\n}\nfinally\n{\n    file?.Close();  // Always executed\n    Console.WriteLine(\"Cleanup complete\");\n}\n```\n\n### Try-Catch-Finally Flow\n\n| Scenario | try | catch | finally |\n|----------|-----|-------|---------|\n| No exception | Executes fully | Skipped | Executes |\n| Exception caught | Stops at exception | Executes | Executes |\n| Exception uncaught | Stops at exception | Skipped | Executes, then propagates |\n\n### Using Statement (IDisposable)\n\nA cleaner alternative to try-finally for resources:\n\n```csharp\nusing (var file = File.OpenRead(\"data.txt\"))\n{\n    // Use file - auto-disposed at end\n}\n\n// Using declaration (C# 8+)\nusing var reader = new StreamReader(\"data.txt\");\nstring content = reader.ReadToEnd();\n// Disposed at end of scope\n```\n\n### Nested Try Blocks\n\n```csharp\ntry\n{\n    try\n    {\n        // Inner operation\n    }\n    catch (InvalidOperationException innerEx)\n    {\n        // Handle inner exception\n    }\n}\ncatch (Exception outerEx)\n{\n    // Handle outer exception\n}\n```\n\n### Exception Filters (when)\n\n```csharp\ntry { Process(); }\ncatch (HttpException ex) when (ex.StatusCode == 404)\n{\n    // Only catch 404 errors\n}\n```\n\n> **Key Point:** Use `finally` to clean up resources (close files, connections). `catch` blocks are checked in order - catch specific exceptions before general ones. Use `using` for IDisposable resources instead of manual try-finally. The `finally` block always executes, even if there's a return statement in try.\n\n### Try-Catch as Expression\n\n```csharp\nint result;\ntry\n{\n    result = int.Parse(input);\n}\ncatch\n{\n    result = 0;\n}\n```\n\n### Throw in Finally\n\nAvoid throwing exceptions in finally blocks - it can mask the original exception.",
+  "codeExample": "using System;\nusing System.IO;\n\nclass Program\n{\n    static void Main()\n    {\n        string path = \"test.txt\";\n        \n        try\n        {\n            Console.WriteLine(\"Attempting to read file...\");\n            string content = File.ReadAllText(path);\n            Console.WriteLine(content);\n        }\n        catch (FileNotFoundException)\n        {\n            Console.WriteLine($\"File '{path}' not found\");\n        }\n        catch (IOException ex)\n        {\n            Console.WriteLine($\"IO error: {ex.Message}\");\n        }\n        finally\n        {\n            Console.WriteLine(\"Operation completed\");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "Does the finally block execute if an exception is thrown?",
+      "options": ["No", "Yes, always", "Only if caught", "Only if not caught"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword provides automatic resource cleanup for IDisposable?",
+      "options": ["using", "finally", "resource", "auto"],
+      "correctIndex": 0
+    }
+  ]
+}

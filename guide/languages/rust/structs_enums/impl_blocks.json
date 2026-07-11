@@ -1,0 +1,17 @@
+{
+  "title": "Impl Blocks in Rust",
+  "language": "rust",
+  "topic": "impl_blocks",
+  "order": 38,
+  "nextTopic": "vectors",
+  "prevTopic": "methods",
+  "content": "### Impl Blocks in Rust\n\nThe `impl` block is where you define methods and associated functions for a struct, enum, or trait.\n\n---\n\n### Key Concepts\n\n| Concept | Description |\n|---------|-------------|\n| Associated functions | Functions without `self` (like `new`) |\n| Methods | Functions with `self`, `&self`, or `&mut self` |\n| Multiple impl blocks | A type can have multiple `impl` blocks |\n| Generic impl | `impl<T> MyType<T> { }` |\n| Trait impl | `impl TraitName for MyType { }` |\n\n---\n\n### Multiple Impl Blocks\n\n```rust\nstruct Point {\n    x: f64,\n    y: f64,\n}\n\n// First impl block\nimpl Point {\n    fn new(x: f64, y: f64) -> Point {\n        Point { x, y }\n    }\n}\n\n// Second impl block\nimpl Point {\n    fn distance_from_origin(&self) -> f64 {\n        (self.x.powi(2) + self.y.powi(2)).sqrt()\n    }\n    \n    fn translate(&mut self, dx: f64, dy: f64) {\n        self.x += dx;\n        self.y += dy;\n    }\n}\n```\n\n> **Key Point:** Rust allows multiple `impl` blocks for the same type. This is useful for organizing code, especially when implementing multiple traits. Associated functions (without `self`) are called with `::` syntax like `Type::function()`.",
+  "codeExample": "struct Counter {\n    count: u32,\n}\n\nimpl Counter {\n    fn new() -> Counter {\n        Counter { count: 0 }\n    }\n}\n\nimpl Counter {\n    fn increment(&mut self) {\n        self.count += 1;\n    }\n    \n    fn get_count(&self) -> u32 {\n        self.count\n    }\n}\n\nfn main() {\n    let mut counter = Counter::new();\n    counter.increment();\n    counter.increment();\n    println!(\"Count: {}\", counter.get_count());\n}",
+  "quiz": [
+    {
+      "question": "How do you call an associated function (without self)?",
+      "options": ["object.method()", "Type::method()", "Type.method()", "method(Type)"],
+      "correctIndex": 1
+    }
+  ]
+}

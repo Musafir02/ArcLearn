@@ -1,0 +1,17 @@
+{
+  "title": "Panic in Rust",
+  "language": "rust",
+  "topic": "panic",
+  "order": 53,
+  "nextTopic": "unwrap_expect",
+  "prevTopic": "error_handling",
+  "content": "### Panic in Rust\n\nA panic is an unrecoverable error that causes the program to abort or unwind the stack. It is Rust's mechanism for handling unrecoverable errors.\n\n---\n\n### Panic Behavior\n\n| Build Mode | Behavior |\n|------------|----------|\n| Debug | Unwinds the stack, prints error message, backtrace |\n| Release | Can unwind or abort (configure via Cargo.toml) |\n\n---\n\n### Panic Configuration\n\n```toml\n# Cargo.toml - Set panic to abort (no stack unwinding)\n[profile.release]\npanic = \"abort\"\n```\n\n### When to Panic\n\n```rust\n// Examples of appropriate panic usage\nfn main() {\n    // Array index out of bounds\n    let v = vec![1, 2, 3];\n    // v[99];  // panics\n    \n    // Unwrap when you know it can't fail\n    let value = \"42\".parse::<i32>().unwrap();\n    \n    // assert! family (in tests)\n    assert!(true);\n    assert_eq!(1, 1);\n    assert_ne!(1, 2);\n    \n    // Explicit panic\n    if some_fatal_condition {\n        panic!(\"fatal error: something went wrong\");\n    }\n}\n```\n\n> **Key Point:** Panics are for unrecoverable errors and bugs. For recoverable errors, use `Result<T, E>`. Set `panic = \"abort\"` in release builds for smaller binaries if stack unwinding is not needed.",
+  "codeExample": "fn main() {\n    println!(\"Before panic\");\n    \n    // Uncomment to see panic behavior:\n    // panic!(\"something went wrong!\");\n    \n    // Array out of bounds panics\n    let arr = [1, 2, 3];\n    // println!(\"{}\", arr[10]);  // this would panic\n    \n    // Catching panic (advanced)\n    let result = std::panic::catch_unwind(|| {\n        panic!(\"caught panic\");\n    });\n    \n    match result {\n        Ok(_) => println!(\"Completed\"),\n        Err(e) => println!(\"Panic caught: {:?}\", e),\n    }\n    \n    println!(\"After panic catch\");\n}",
+  "quiz": [
+    {
+      "question": "What does panic! do in Rust?",
+      "options": ["Returns an error", "Aborts or unwinds the stack", "Logs a warning", "Continues execution"],
+      "correctIndex": 1
+    }
+  ]
+}

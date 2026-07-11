@@ -1,0 +1,17 @@
+{
+  "title": "Concurrency in Rust",
+  "language": "rust",
+  "topic": "concurrency",
+  "order": 63,
+  "nextTopic": "threads",
+  "prevTopic": "mutex",
+  "content": "### Concurrency in Rust\n\nRust provides fearless concurrency through its type system. The ownership and type rules prevent data races at compile time.\n\n---\n\n### Concurrency Models\n\n| Model | Description |\n|-------|-------------|\n| Threads | OS threads via `std::thread` |\n| Message passing | Channels via `std::sync::mpsc` |\n| Shared state | `Arc<Mutex<T>>` for shared mutable state |\n| Async/Await | Cooperative multitasking via `async`/`.await` |\n\n---\n\n### Send and Sync Traits\n\n| Trait | Meaning |\n|-------|---------|\n| `Send` | Ownership can be transferred between threads |\n| `Sync` | Can be shared via reference across threads (`&T` is `Send`) |\n\n```rust\n// Most types are Send + Sync automatically\nlet x: i32 = 5;  // i32: Send + Sync\nlet s: Rc<i32>;  // Rc: NOT Send (not thread-safe)\nlet a: Arc<i32>; // Arc: Send + Sync\nlet m: Mutex<i32>; // Mutex: Send + Sync\n\n// Types that are !Send include: Rc, RefCell (unsafe cell variants)\n// Raw pointers are !Send by default\n\n// Functions can require thread-safety\nfn requires_send<T: Send>(t: T) { }\nfn requires_sync<T: Sync>(t: T) { }\n```\n\n> **Key Point:** The `Send` and `Sync` traits are automatically implemented for most types based on their composition. You rarely need to implement them manually. The compiler ensures thread-safety through these marker traits.",
+  "codeExample": "use std::thread;\n\nfn main() {\n    let mut handles = vec![];\n    \n    // Demonstrate that closures can capture and send data\n    for i in 0..5 {\n        handles.push(thread::spawn(move || {\n            println!(\"Thread {} says hello\", i);\n        }));\n    }\n    \n    for handle in handles {\n        handle.join().unwrap();\n    }\n    \n    println!(\"All threads completed\");\n}",
+  "quiz": [
+    {
+      "question": "Which trait indicates a type can be transferred between threads?",
+      "options": ["Sync", "Send", "Clone", "Copy"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Tuple Structs in Rust",
+  "language": "rust",
+  "topic": "tuple_structs",
+  "order": 32,
+  "nextTopic": "enums",
+  "prevTopic": "structs",
+  "content": "### Tuple Structs in Rust\n\nTuple structs are structs with unnamed fields, accessed by position rather than by name.\n\n---\n\n### Tuple Struct vs Named Struct\n\n| Feature | Named Struct | Tuple Struct |\n|---------|--------------|--------------|\n| Field access | By name | By position (`.0`, `.1`) |\n| Definition | `struct S { x: T, y: U }` | `struct S(T, U)` |\n| Destructuring | `S { x, y }` | `S(a, b)` |\n| Newtype pattern | N/A | `struct Wrapper(T)` |\n\n---\n\n### Examples\n\n```rust\n// Tuple struct\nstruct Color(u8, u8, u8);\nstruct Point(f64, f64, f64);\n\nlet black = Color(0, 0, 0);\nlet origin = Point(0.0, 0.0, 0.0);\n\nprintln!(\"R: {}, G: {}, B: {}\", black.0, black.1, black.2);\n\n// Destructuring\nlet Color(r, g, b) = black;\nprintln!(\"RGB({}, {}, {})\", r, g, b);\n\n// Newtype pattern - wrap an existing type\nstruct UserId(i32);\nstruct ProductId(i32);\n// UserId and ProductId are different types, even though both wrap i32\n```\n\n> **Key Point:** Tuple structs are useful for creating distinct types from existing types (newtype pattern). This provides type safety by preventing accidental mixing of values that have the same underlying type.",
+  "codeExample": "fn main() {\n    struct Meters(f64);\n    struct Kilograms(f64);\n    \n    let distance = Meters(100.0);\n    let weight = Kilograms(75.0);\n    \n    // distance = weight;  // ERROR: type mismatch!\n    \n    println!(\"Distance: {} meters\", distance.0);\n    println!(\"Weight: {} kg\", weight.0);\n}",
+  "quiz": [
+    {
+      "question": "How do you access the first field of a tuple struct?",
+      "options": [".first", ".0", "[0]", ".field0"],
+      "correctIndex": 1
+    }
+  ]
+}

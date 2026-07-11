@@ -1,0 +1,17 @@
+{
+  "title": "Getting Started with Rust",
+  "language": "rust",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Getting Started with Rust\n\nTo install Rust, use `rustup`, the official Rust toolchain installer:\n\n```bash\n# On Windows, download from https://rustup.rs\n# On macOS/Linux:\ncurl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh\n```\n\n---\n\n### What rustup Installs\n\n| Tool | Description |\n|------|-------------|\n| rustc | The Rust compiler |\n| cargo | Package manager and build tool |\n| rustdoc | Documentation generator |\n| rustfmt | Code formatter |\n| clippy | Linter for catching common mistakes |\n\n---\n\n### Creating Your First Project\n\n```bash\ncargo new hello_rust\ncd hello_rust\n```\n\nThis creates a project with:\n- `Cargo.toml` - manifest file with metadata and dependencies\n- `src/main.rs` - source file with a `main` function\n\nBuild and run:\n\n```bash\ncargo build      # Compile\ncargo run        # Build and run\ncargo check      # Check for errors without producing binary\n```\n\n> **Key Point:** Always prefer `cargo new` over manually creating files. Cargo sets up the standard project structure and a Git repository automatically.",
+  "codeExample": "fn main() {\n    println!(\"Hello, world!\");\n}",
+  "quiz": [
+    {
+      "question": "Which command creates a new Rust project?",
+      "options": ["rustc new", "cargo new", "rustup new", "cargo init"],
+      "correctIndex": 1
+    }
+  ]
+}

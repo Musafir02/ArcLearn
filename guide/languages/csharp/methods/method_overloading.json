@@ -1,0 +1,22 @@
+{
+  "title": "C# Method Overloading",
+  "language": "csharp",
+  "topic": "method_overloading",
+  "order": 32,
+  "nextTopic": "named_optional_params",
+  "prevTopic": "method_params",
+  "content": "### Method Overloading in C#\n\nMethod overloading allows multiple methods with the same name but different parameters within the same class.\n\n### Rules for Overloading\n\nMethods must differ in:\n\n- Number of parameters\n- Type of parameters\n- Order of parameters\n\nReturn type alone is NOT sufficient for overloading.\n\n### Examples\n\n```csharp\n// Different number of parameters\nstatic int Sum(int a, int b) => a + b;\nstatic int Sum(int a, int b, int c) => a + b + c;\n\n// Different types\nstatic int Sum(int a, int b) => a + b;\nstatic double Sum(double a, double b) => a + b;\n\n// Different order\nstatic void Display(string name, int age) { }\nstatic void Display(int id, string name) { }\n```\n\n### Invalid Overloading\n\n```csharp\n// INVALID - only return type differs\nstatic int Calculate(int x) { return x; }\nstatic double Calculate(int x) { return x; }  // Error\n\n// INVALID - same signature, different parameter name\nstatic void Print(int value) { }\nstatic void Print(int number) { }  // Error\n```\n\n### Overloading and Type Promotion\n\n```csharp\nstatic void Show(int x) => Console.WriteLine($\"int: {x}\");\nstatic void Show(double x) => Console.WriteLine($\"double: {x}\");\n\nShow(5);       // Calls Show(int)\nShow(5.0);     // Calls Show(double)\nShow(5f);      // Calls Show(double) after float->double\n```\n\n### Overloading Constructors\n\n```csharp\nclass Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n    \n    public Person() : this(\"Unknown\", 0) { }\n    public Person(string name) : this(name, 0) { }\n    public Person(string name, int age)\n    {\n        Name = name;\n        Age = age;\n    }\n}\n```\n\n### Overloading with Nullable Parameters\n\n```csharp\nstatic void Process(int value) { }\nstatic void Process(int? value) { }  // Valid overload\n```\n\n### Benefits of Overloading\n\n| Benefit | Description |\n|---------|-------------|\n| Readability | Same logical operation, same name |\n| Consistency | Similar behavior across different types |\n| API design | Flexible method signatures |\n| Optional behavior | Defaults without optional parameters |\n\n> **Key Point:** Overloading is about compile-time method resolution. The compiler selects the best match based on arguments. Return type cannot be used to distinguish overloads. Use overloading to provide different ways to call the same logical operation.\n\n### Generic Overloading\n\n```csharp\nstatic void Process<T>(T value) { }\nstatic void Process(string value) { }  // More specific match for strings\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(Add(5, 3));         // int\n        Console.WriteLine(Add(5.5, 3.2));     // double\n        Console.WriteLine(Add(\"Hello\", \"World\"));  // string\n    }\n    \n    static int Add(int a, int b) => a + b;\n    static double Add(double a, double b) => a + b;\n    static string Add(string a, string b) => a + \" \" + b;\n}",
+  "quiz": [
+    {
+      "question": "Can two methods be overloaded based on return type alone?",
+      "options": ["Yes", "No", "Only in static methods", "Only with generics"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of these is a valid way to overload a method?",
+      "options": ["Different return type only", "Different parameter types", "Different parameter names", "Different access modifiers only"],
+      "correctIndex": 1
+    }
+  ]
+}

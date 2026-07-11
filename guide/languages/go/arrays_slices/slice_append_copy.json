@@ -1,0 +1,22 @@
+{
+  "title": "Go Slice Append and Copy",
+  "language": "go",
+  "topic": "slice_append_copy",
+  "order": 29,
+  "nextTopic": "maps",
+  "prevTopic": "slice_make",
+  "content": "### Append and Copy in Detail\n\nThese two built-in functions are fundamental for slice manipulation.\n\n### append - Deep Dive\n\n```go\ns := []int{1, 2, 3}\ns = append(s, 4)       // single element\ns = append(s, 5, 6)    // multiple elements\ns = append(s, []int{7, 8}...) // another slice\n```\n\nThe `...` operator (ellipsis) expands a slice into individual arguments.\n\n### Append Growth Algorithm\n\nGo grows slices by a growth factor:\n- For small slices (cap < 256): approximately 2x\n- For larger slices: approximately 1.25x\n\n```go\ns := make([]int, 0, 1)\noldCap := cap(s)\nfor i := 0; i < 100; i++ {\n    s = append(s, i)\n    if cap(s) != oldCap {\n        fmt.Printf(\"cap: %d -> %d (factor: %.2f)\\n\", oldCap, cap(s), float64(cap(s))/float64(oldCap))\n        oldCap = cap(s)\n    }\n}\n```\n\n### copy - Deep Dive\n\n```go\nn := copy(dst, src)\n```\n\n- Copies min(len(dst), len(src)) elements\n- Returns number of elements copied\n- Works correctly even if src and dst overlap\n\n### Copy Examples\n\n```go\n// Full copy\nsrc := []int{1, 2, 3}\ndst := make([]int, len(src))\ncopy(dst, src)\n\n// Partial copy - only 2 elements fit\ndst2 := make([]int, 2)\ncopy(dst2, src) // dst2 = [1, 2]\n\n// Copy into middle of slice\ns := []int{1, 2, 3, 4, 5}\ncopy(s[2:], []int{99, 100})\n// s = [1, 2, 99, 100, 5]\n```\n\n### Move Elements with Copy\n\n```go\n// Shift elements left (delete first two elements)\ns := []int{1, 2, 3, 4, 5}\ncopy(s, s[2:]) // [3, 4, 5, 4, 5]\ns = s[:3]      // [3, 4, 5]\n```\n\n> **Key Point:** `append` and `copy` are built-in, not part of any package. They work with all element types without imports.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // Append examples\n    var s []int\n    s = append(s, 10, 20, 30)\n    s = append(s, []int{40, 50}...)\n    fmt.Println(\"after append:\", s)\n\n    // Copy examples\n    a := []int{1, 2, 3, 4, 5}\n    b := make([]int, 3)\n    copy(b, a[1:])  // copy [2,3,4] into b\n    fmt.Println(\"copy:\", b)\n\n    // Copy into specific position\n    c := []int{10, 20, 30, 40, 50}\n    copy(c[2:], []int{99, 100})\n    fmt.Println(\"in-place copy:\", c)\n}",
+  "quiz": [
+    {
+      "question": "What does the `...` operator do in `append(a, b...)`?",
+      "options": ["Creates a variadic", "Expands the slice into arguments", "Creates a copy", "Reverses the slice"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does copy return?",
+      "options": ["A new slice", "Number of elements copied", "True on success", "The destination slice"],
+      "correctIndex": 1
+    }
+  ]
+}

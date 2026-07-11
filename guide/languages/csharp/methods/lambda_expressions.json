@@ -1,0 +1,22 @@
+{
+  "title": "C# Lambda Expressions",
+  "language": "csharp",
+  "topic": "lambda_expressions",
+  "order": 35,
+  "nextTopic": "classes",
+  "prevTopic": "recursion",
+  "content": "### Lambda Expressions in C#\n\nLambda expressions are anonymous functions that provide a concise way to write inline code blocks.\n\n### Syntax\n\n```csharp\n(parameters) => expression_or_statement\n```\n\n### Basic Examples\n\n```csharp\n// Expression lambda (single expression)\nFunc<int, int> square = x => x * x;\nFunc<int, int, int> add = (a, b) => a + b;\n\n// Statement lambda (multiple statements)\nFunc<int, int> factorial = n =>\n{\n    int result = 1;\n    for (int i = 2; i <= n; i++)\n        result *= i;\n    return result;\n};\n\n// No parameters\nAction greet = () => Console.WriteLine(\"Hello!\");\n```\n\n### Lambda with LINQ\n\n```csharp\nint[] numbers = { 1, 2, 3, 4, 5, 6 };\n\nvar evens = numbers.Where(n => n % 2 == 0);\nvar squared = numbers.Select(n => n * n);\nvar sorted = numbers.OrderByDescending(n => n);\nvar sum = numbers.Aggregate((a, b) => a + b);\n```\n\n### Lambda Types\n\n| Type | Description | Example |\n|------|-------------|---------|\n| `Func<T, TResult>` | Takes T, returns TResult | `Func<int, int> f = x => x * 2;` |\n| `Action<T>` | Takes T, returns void | `Action<string> a = s => Console.WriteLine(s);` |\n| `Predicate<T>` | Takes T, returns bool | `Predicate<int> p = x => x > 0;` |\n\n### Capturing Variables (Closures)\n\nLambdas can capture variables from the enclosing scope:\n\n```csharp\nint multiplier = 10;\nFunc<int, int> multiply = x => x * multiplier;\nConsole.WriteLine(multiply(5));  // 50\n\nmultiplier = 20;\nConsole.WriteLine(multiply(5));  // 100 (reflects change)\n```\n\n### Type Inference\n\n```csharp\n// Explicit parameter types\nFunc<int, int> f1 = (int x) => x + 1;\n\n// Implicit parameter types (most common)\nFunc<int, int> f2 = (x) => x + 1;\nFunc<int, int> f3 = x => x + 1;  // Single param, no parens\n```\n\n### Discard Parameters (C# 9+)\n\n```csharp\nFunc<int, int, int> sum = (_, _) => 0;  // Ignore both params\n```\n\n> **Key Point:** Lambdas are essential for LINQ queries, event handlers, and functional programming patterns in C#. Expression lambdas (single expression without braces) are more concise than statement lambdas. Be aware of closure semantics when capturing loop variables.\n\n### Event Handlers\n\n```csharp\nbutton.Click += (sender, args) => Console.WriteLine(\"Clicked!\");\n```\n\n### Lambda with Tuples\n\n```csharp\nvar items = new[] { (1, \"A\"), (2, \"B\") };\nvar filtered = items.Where(x => x.Item1 > 1);\n```",
+  "codeExample": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };\n        \n        // Lambda with Where and Select\n        var result = numbers\n            .Where(n => n % 2 == 0)\n            .Select(n => n * n);\n        \n        Console.WriteLine(\"Even squares: \" + string.Join(\", \", result));\n        \n        // Lambda with FindAll\n        var evens = numbers.FindAll(n => n > 4);\n        Console.WriteLine(\"Greater than 4: \" + string.Join(\", \", evens));\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is a lambda expression in C#?",
+      "options": ["A named function", "An anonymous function", "A class member", "A namespace"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which syntax is used for lambda expressions?",
+      "options": ["=>", "->", "=>", "lambda"],
+      "correctIndex": 2
+    }
+  ]
+}

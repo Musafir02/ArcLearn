@@ -1,0 +1,22 @@
+{
+  "title": "Go Custom Errors",
+  "language": "go",
+  "topic": "custom_errors",
+  "order": 61,
+  "nextTopic": "panic_recover",
+  "prevTopic": "error_handling",
+  "content": "### Custom Errors\n\nDefine your own error types for richer error information.\n\n### Simple Custom Error\n\n```go\ntype MyError struct {\n    Code    int\n    Message string\n}\n\nfunc (e *MyError) Error() string {\n    return fmt.Sprintf(\"error %d: %s\", e.Code, e.Message)\n}\n\nfunc doSomething() error {\n    return &MyError{Code: 404, Message: \"not found\"}\n}\n```\n\n### Custom Error with Fields\n\n```go\ntype ValidationError struct {\n    Field   string\n    Value   any\n    Message string\n}\n\nfunc (e *ValidationError) Error() string {\n    return fmt.Sprintf(\"validation: %s %v - %s\", e.Field, e.Value, e.Message)\n}\n\nfunc validateAge(age int) error {\n    if age < 0 {\n        return &ValidationError{\n            Field:   \"age\",\n            Value:   age,\n            Message: \"must be non-negative\",\n        }\n    }\n    return nil\n}\n```\n\n### Implementing Unwrap\n\nMake custom errors compatible with `errors.Is` and `errors.As`:\n\n```go\ntype WrappedError struct {\n    Msg string\n    Err error\n}\n\nfunc (e *WrappedError) Error() string {\n    return fmt.Sprintf(\"%s: %v\", e.Msg, e.Err)\n}\n\nfunc (e *WrappedError) Unwrap() error {\n    return e.Err\n}\n```\n\n### Comparing Custom Errors\n\n```go\n// Use errors.As to extract custom error type\nvar valErr *ValidationError\nif errors.As(err, &valErr) {\n    fmt.Println(\"Field:\", valErr.Field)\n    fmt.Println(\"Value:\", valErr.Value)\n}\n```\n\n### Sentinel Errors Pattern\n\n```go\nvar (\n    ErrNotFound   = errors.New(\"not found\")\n    ErrPermission = errors.New(\"permission denied\")\n    ErrTimeout    = errors.New(\"timeout\")\n)\n\n// Custom error wrapping a sentinel\ntype QueryError struct {\n    Query string\n    Err   error\n}\n\nfunc (e *QueryError) Error() string {\n    return fmt.Sprintf(\"query %q: %v\", e.Query, e.Err)\n}\n\nfunc (e *QueryError) Unwrap() error {\n    return e.Err\n}\n```\n\n> **Key Point:** Custom errors are useful when you need additional context (status codes, field names, stack traces). Implement `Unwrap()` for compatibility with standard error handling functions.",
+  "codeExample": "package main\n\nimport (\n    \"errors\"\n    \"fmt\"\n)\n\ntype NotFoundError struct {\n    Resource string\n    ID       int\n}\n\nfunc (e *NotFoundError) Error() string {\n    return fmt.Sprintf(\"%s with id %d not found\", e.Resource, e.ID)\n}\n\nfunc findUser(id int) error {\n    return &NotFoundError{Resource: \"user\", ID: id}\n}\n\nfunc main() {\n    err := findUser(42)\n    \n    var nf *NotFoundError\n    if errors.As(err, &nf) {\n        fmt.Printf(\"Resource: %s, ID: %d\\n\", nf.Resource, nf.ID)\n    }\n    \n    fmt.Println(\"Error:\", err)\n}",
+  "quiz": [
+    {
+      "question": "What method must be implemented to satisfy the error interface?",
+      "options": ["String()", "Error()", "Message()", "Detail()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you extract a custom error type from an error?",
+      "options": ["errors.Is", "errors.As", "errors.Unwrap", "type assertion"],
+      "correctIndex": 1
+    }
+  ]
+}

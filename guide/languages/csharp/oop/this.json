@@ -1,0 +1,22 @@
+{
+  "title": "C# this Keyword",
+  "language": "csharp",
+  "topic": "this",
+  "order": 39,
+  "nextTopic": "properties",
+  "prevTopic": "constructors",
+  "content": "### The this Keyword in C#\n\nThe `this` keyword refers to the current instance of a class. It is used to access members of the current object.\n\n### Resolving Name Conflicts\n\nWhen parameter names match field names:\n\n```csharp\npublic class Person\n{\n    private string name;\n    private int age;\n    \n    public Person(string name, int age)\n    {\n        this.name = name;  // this.name = field, name = parameter\n        this.age = age;\n    }\n}\n```\n\n### Passing Current Object\n\n```csharp\npublic class Car\n{\n    public void Drive()\n    {\n        TrafficManager.RegisterVehicle(this);\n    }\n}\n```\n\n### Constructor Chaining\n\n```csharp\npublic class Employee\n{\n    public Employee(string name) : this(name, 0, \"General\")\n    {\n    }\n    \n    public Employee(string name, int id, string department)\n    {\n        // Primary constructor\n    }\n}\n```\n\n### Returning Current Object (Fluent Interface)\n\n```csharp\npublic class StringBuilder\n{\n    public StringBuilder Append(string text)\n    {\n        // Append logic\n        return this;  // Enables chaining\n    }\n}\n\n// Usage: sb.Append(\"Hello\").Append(\" \").Append(\"World\");\n```\n\n### Extension Methods\n\n`this` is used in extension methods as the first parameter:\n\n```csharp\npublic static class StringExtensions\n{\n    public static bool IsNullOrEmpty(this string str)\n    {\n        return string.IsNullOrEmpty(str);\n    }\n}\n// Usage: \"hello\".IsNullOrEmpty()\n```\n\n### Indexers with this\n\n```csharp\npublic class SampleCollection<T>\n{\n    private T[] arr = new T[100];\n    \n    public T this[int i]\n    {\n        get => arr[i];\n        set => arr[i] = value;\n    }\n}\n```\n\n### this in Structs\n\n`this` behaves similarly in structs but cannot be reassigned (structs are value types).\n\n### When to Use this\n\n| Use Case | Example |\n|----------|---------|\n| Ambiguity resolution | `this.name = name;` |\n| Passing to other methods | `DoSomething(this);` |\n| Constructor chaining | `: this(...)` |\n| Extension methods | `this string str` |\n| Indexer declaration | `public T this[int i]` |\n\n> **Key Point:** Use `this` to distinguish between fields and parameters with the same name. It is optional in most cases but makes the code clearer. `this` cannot be used in static members since they are not associated with an instance.\n\n### Restrictions\n\n| Context | Usage |\n|---------|-------|\n| Static methods | Not allowed |\n| Static constructor | Not allowed |\n| Static field initializers | Not allowed |\n| Instance methods | Allowed |\n| Instance constructors | Allowed |",
+  "codeExample": "using System;\n\npublic class Calculator\n{\n    private int value;\n    \n    public Calculator Add(int value)\n    {\n        this.value += value;\n        return this;\n    }\n    \n    public Calculator Subtract(int value)\n    {\n        this.value -= value;\n        return this;\n    }\n    \n    public int Result() => this.value;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        int result = new Calculator()\n            .Add(10)\n            .Subtract(3)\n            .Add(5)\n            .Result();\n        \n        Console.WriteLine($\"Result: {result}\");  // 12\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does the 'this' keyword represent in C#?",
+      "options": ["The base class", "The current instance", "A static member", "The namespace"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can 'this' be used in a static method?",
+      "options": ["Yes", "No", "Only in static constructors", "Only for fields"],
+      "correctIndex": 1
+    }
+  ]
+}

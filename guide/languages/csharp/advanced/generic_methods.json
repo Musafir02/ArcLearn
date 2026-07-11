@@ -1,0 +1,22 @@
+{
+  "title": "C# Generic Methods",
+  "language": "csharp",
+  "topic": "generic_methods",
+  "order": 52,
+  "nextTopic": "generic_classes",
+  "prevTopic": "generics",
+  "content": "### Generic Methods in C#\n\nGeneric methods have type parameters listed in angle brackets. They can exist in non-generic classes.\n\n### Basic Generic Method\n\n```csharp\npublic static T DisplayAndReturn<T>(T value)\n{\n    Console.WriteLine($\"Value: {value}\");\n    return value;\n}\n\n// Usage\nint result = DisplayAndReturn(42);\nstring text = DisplayAndReturn(\"Hello\");\n```\n\n### Type Inference\n\nThe compiler can infer type parameters from arguments:\n\n```csharp\n// Explicit\nint max = FindMax<int>(5, 10);\n\n// Inferred (cleaner)\nint max = FindMax(5, 10);\ndouble maxVal = FindMax(3.14, 2.71);\n\nstatic T FindMax<T>(T a, T b) where T : IComparable<T>\n{\n    return a.CompareTo(b) > 0 ? a : b;\n}\n```\n\n### Generic Methods with Constraints\n\n```csharp\npublic static void ProcessItems<T>(List<T> items) where T : class\n{\n    foreach (var item in items)\n        Console.WriteLine(item?.ToString() ?? \"null\");\n}\n```\n\n### Multiple Type Parameters\n\n```csharp\npublic static Dictionary<TKey, TValue> CreateDictionary<TKey, TValue>\n    (TKey key, TValue value) where TKey : notnull\n{\n    return new Dictionary<TKey, TValue> { { key, value } };\n}\n\nvar dict = CreateDictionary(\"key1\", 42);\n```\n\n### Generic Method in Non-Generic Class\n\n```csharp\npublic static class ArrayHelper\n{\n    public static T[] CreateAndFill<T>(int size, T value)\n    {\n        T[] array = new T[size];\n        Array.Fill(array, value);\n        return array;\n    }\n    \n    public static void Swap<T>(ref T a, ref T b)\n    {\n        T temp = a;\n        a = b;\n        b = temp;\n    }\n}\n\n// Usage\nint[] tens = ArrayHelper.CreateAndFill(5, 10);\nint x = 1, y = 2;\nArrayHelper.Swap(ref x, ref y);\n```\n\n### Generic Extension Methods\n\n```csharp\npublic static class Extensions\n{\n    public static T? GetRandomElement<T>(this IEnumerable<T> source)\n    {\n        var list = source.ToList();\n        if (list.Count == 0) return default;\n        return list[Random.Shared.Next(list.Count)];\n    }\n}\n```\n\n### Method Type Inference Rules\n\n| Rule | Example |\n|------|---------|\n| Inferred from parameters | `Foo(42)` infers `int` |\n| Cannot infer from return only | `var x = Foo<int>()` requires explicit |\n| Mixed inference | `Foo<int>(42, \"text\")` partial |\n\n> **Key Point:** The compiler infers generic type parameters from method arguments when possible. Use constraints to restrict what types can be used. Generic methods work in both generic and non-generic classes. Type inference makes calling code cleaner.\n\n### Generic Method Overloading\n\n```csharp\nstatic void Process<T>(T item) { }\nstatic void Process<T1, T2>(T1 a, T2 b) { }\nstatic void Process<T>(T item, int count) where T : class { }\n```\n\n### Performance Note\n\nGeneric methods are specialized at runtime for each value type but share a single implementation for reference types.",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 3, 1, 4, 1, 5 };\n        var words = new List<string> { \"apple\", \"banana\", \"cherry\" };\n        \n        Console.WriteLine($\"First number: {GetFirstOrDefault(numbers)}\");\n        Console.WriteLine($\"First word: {GetFirstOrDefault(words)}\");\n        Console.WriteLine($\"Empty list: {GetFirstOrDefault(new List<double>())}\");\n    }\n    \n    static T? GetFirstOrDefault<T>(List<T> list)\n    {\n        return list.Count > 0 ? list[0] : default;\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can generic methods exist in non-generic classes?",
+      "options": ["Yes", "No", "Only static classes", "Only abstract classes"],
+      "correctIndex": 0
+    },
+    {
+      "question": "When can the compiler infer generic type parameters?",
+      "options": ["Always", "From method arguments", "From return type only", "Never"],
+      "correctIndex": 1
+    }
+  ]
+}

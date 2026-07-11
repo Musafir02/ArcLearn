@@ -1,0 +1,22 @@
+{
+  "title": "C# async and await",
+  "language": "csharp",
+  "topic": "async_await",
+  "order": 65,
+  "nextTopic": "tasks",
+  "prevTopic": "stream_reader_writer",
+  "content": "### Async/Await in C#\n\nAsync/await enables asynchronous programming, allowing non-blocking operations while maintaining readable code.\n\n### Basic Async Method\n\n```csharp\npublic async Task<string> DownloadDataAsync(string url)\n{\n    using HttpClient client = new HttpClient();\n    string result = await client.GetStringAsync(url);\n    return result;\n}\n\n// Calling\nstring data = await DownloadDataAsync(\"https://example.com\");\n```\n\n### Async Method Patterns\n\n```csharp\n// Async void - only for event handlers\npublic async void Button_Click(object sender, EventArgs e)\n{\n    await LoadDataAsync();\n}\n\n// Async Task - no return value\npublic async Task SaveDataAsync(string data)\n{\n    await File.WriteAllTextAsync(\"data.txt\", data);\n}\n\n// Async Task<T> - returns value\npublic async Task<int> GetCountAsync()\n{\n    return await CountItemsAsync();\n}\n```\n\n### Async Naming Convention\n\nAsync methods should end with `Async` suffix:\n\n```csharp\nTask<string> ReadFileAsync()\nTask SaveDataAsync()\nTask<int> CalculateAsync()\n```\n\n### Await Rules\n\n| Rule | Description |\n|------|-------------|\n| `await` can only be used in `async` methods | Compiler requirement |\n| `await` awaits an awaitable (Task, Task<T>, ValueTask) | Awaitable types |\n| `await` suspends execution, not the thread | No blocking |\n| Multiple `await` in sequence are serial | Each completes before next |\n\n### Multiple Async Operations\n\n```csharp\n// Sequential execution\nvar result1 = await Task1Async();\nvar result2 = await Task2Async();  // Starts after Task1 completes\n\n// Parallel execution\nvar task1 = Task1Async();\nvar task2 = Task2Async();\nawait Task.WhenAll(task1, task2);  // Both running concurrently\n\n// Get results\nvar result1 = await task1;\nvar result2 = await task2;\n```\n\n### Async Streams (C# 8+)\n\n```csharp\nawait foreach (var item in GetDataAsync())\n{\n    Console.WriteLine(item);\n}\n\npublic async IAsyncEnumerable<int> GetDataAsync()\n{\n    for (int i = 0; i < 10; i++)\n    {\n        await Task.Delay(100);\n        yield return i;\n    }\n}\n```\n\n### Error Handling\n\n```csharp\ntry\n{\n    await someAsyncMethod();\n}\ncatch (HttpRequestException ex)\n{\n    Console.WriteLine($\"Network error: {ex.Message}\");\n}\n```\n\n### ConfigureAwait\n\n```csharp\nawait someTask.ConfigureAwait(false);  // Don't capture synchronization context\n```\n\n> **Key Point:** Use `async Task` (not `async void`) for async methods. `await` yields control to the caller until the operation completes. Use `Task.WhenAll` for parallel operations. Async methods should end with `Async` suffix. Avoid mixing blocking calls (.Result, .Wait()) with async code.\n\n### Common Async Methods\n\n```csharp\nawait Task.Delay(1000);           // Non-blocking delay\nawait File.ReadAllTextAsync(path); // Async file read\nawait client.GetStringAsync(url);  // Async HTTP request\nawait db.QueryAsync(sql);          // Async database (Dapper)\n```\n\n### ValueTask for Performance\n\n```csharp\npublic ValueTask<int> GetCachedAsync()\n{\n    if (cache is not null)\n        return new ValueTask<int>(cache);\n    return new ValueTask<int>(LoadAsync());\n}",
+  "codeExample": "using System;\nusing System.Net.Http;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        Console.WriteLine(\"Downloading...\");\n        \n        string content = await DownloadAsync();\n        Console.WriteLine($\"Downloaded: {content.Length} characters\");\n        \n        Console.WriteLine(\"Done!\");\n    }\n    \n    static async Task<string> DownloadAsync()\n    {\n        using HttpClient client = new HttpClient();\n        return await client.GetStringAsync(\"https://example.com\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What return type should async methods use (except event handlers)?",
+      "options": ["async void", "Task or Task<T>", "void", "Thread"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the await keyword do?",
+      "options": ["Blocks the thread", "Suspends execution until task completes", "Creates a new thread", "Cancels the operation"],
+      "correctIndex": 1
+    }
+  ]
+}

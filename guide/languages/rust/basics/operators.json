@@ -1,0 +1,17 @@
+{
+  "title": "Operators in Rust",
+  "language": "rust",
+  "topic": "operators",
+  "order": 10,
+  "nextTopic": "booleans",
+  "prevTopic": "constants",
+  "content": "### Operators in Rust\n\nRust provides a comprehensive set of operators for arithmetic, comparison, logical, and bitwise operations.\n\n---\n\n### Arithmetic Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| `+` | Addition | `a + b` |\n| `-` | Subtraction | `a - b` |\n| `*` | Multiplication | `a * b` |\n| `/` | Division | `a / b` |\n| `%` | Remainder | `a % b` |\n\n---\n\n### Comparison and Logical Operators\n\n| Operator | Description |\n|----------|-------------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `>` / `<` | Greater / Less than |\n| `>=` / `<=` | Greater or equal / Less or equal |\n| `&&` | Logical AND |\n| `||` | Logical OR |\n| `!` | Logical NOT |\n\n---\n\n### Bitwise Operators\n\n```rust\nlet a = 5;  // 0b0101\nlet b = 3;  // 0b0011\n\nlet and = a & b;   // 0b0001 = 1\nlet or = a | b;    // 0b0111 = 7\nlet xor = a ^ b;   // 0b0110 = 6\nlet not = !a;      // bitwise NOT\nlet shift = a << 1; // 0b1010 = 10\n```\n\n> **Key Point:** Rust does not have the `++` or `--` operators found in C/C++. Use `+= 1` or `-= 1` instead. Also note that Rust uses `==` for equality (not `=`).",
+  "codeExample": "fn main() {\n    let a = 10;\n    let b = 3;\n    \n    println!(\"a + b = {}\", a + b);\n    println!(\"a - b = {}\", a - b);\n    println!(\"a * b = {}\", a * b);\n    println!(\"a / b = {}\", a / b);\n    println!(\"a % b = {}\", a % b);\n    println!(\"a > b: {}\", a > b);\n}",
+  "quiz": [
+    {
+      "question": "Which operator is used for remainder/modulo in Rust?",
+      "options": ["/", "//", "%", "mod"],
+      "correctIndex": 2
+    }
+  ]
+}

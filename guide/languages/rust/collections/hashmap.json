@@ -1,0 +1,17 @@
+{
+  "title": "HashMap in Rust",
+  "language": "rust",
+  "topic": "hashmap",
+  "order": 40,
+  "nextTopic": "hashset",
+  "prevTopic": "vectors",
+  "content": "### HashMap in Rust\n\n`HashMap<K, V>` stores key-value pairs where keys are unique. It provides O(1) average lookup time.\n\n---\n\n### HashMap Operations\n\n| Method | Description |\n|--------|-------------|\n| `HashMap::new()` | Create empty map |\n| `insert(key, val)` | Insert key-value pair |\n| `get(&key)` | Return `Option<&V>` |\n| `remove(&key)` | Remove entry, return `Option<V>` |\n| `contains_key(&key)` | Check if key exists |\n| `len()` | Number of entries |\n| `iter()` | Iterate over key-value pairs |\n| `entry(key)` | Get entry for in-place manipulation |\n\n---\n\n### Examples\n\n```rust\nuse std::collections::HashMap;\n\nlet mut scores = HashMap::new();\nscores.insert(String::from(\"Blue\"), 10);\nscores.insert(String::from(\"Yellow\"), 50);\n\n// Access\nlet score = scores.get(\"Blue\").copied().unwrap_or(0);\n\n// Iteration\nfor (key, value) in &scores {\n    println!(\"{}: {}\", key, value);\n}\n\n// Entry API\nscores.entry(String::from(\"Blue\")).or_insert(20);\n```\n\n> **Key Point:** HashMap keys must implement the `Eq` and `Hash` traits. By default, HashMap uses SipHash for DoS resistance. For performance-critical code, consider using a different hasher.",
+  "codeExample": "use std::collections::HashMap;\n\nfn main() {\n    let mut word_count = HashMap::new();\n    \n    let text = \"hello world hello rust world\";\n    \n    for word in text.split_whitespace() {\n        let count = word_count.entry(word).or_insert(0);\n        *count += 1;\n    }\n    \n    println!(\"Word counts: {:?}\", word_count);\n}",
+  "quiz": [
+    {
+      "question": "Which trait must HashMap keys implement?",
+      "options": ["Eq and Hash", "Clone", "Copy", "Debug"],
+      "correctIndex": 0
+    }
+  ]
+}

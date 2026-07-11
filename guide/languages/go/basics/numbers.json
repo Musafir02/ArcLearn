@@ -1,0 +1,22 @@
+{
+  "title": "Go Numbers",
+  "language": "go",
+  "topic": "numbers",
+  "order": 12,
+  "nextTopic": "input",
+  "prevTopic": "strings",
+  "content": "### Numbers in Go\n\nGo provides both integer and floating-point numeric types.\n\n### Integer Types\n\n```go\nvar a int = 42\nvar b int8 = 127\nvar c int16 = 32767\nvar d int32 = 2147483647\nvar e int64 = 9223372036854775807\nvar f uint = 42\nvar g byte = 255     // alias for uint8\nvar h rune = 'A'     // alias for int32\n```\n\n### Floating-Point Types\n\n```go\nvar f32 float32 = 3.1415926535  // ~6 decimal digits precision\nvar f64 float64 = 3.1415926535  // ~15 decimal digits precision\n```\n\n### Complex Numbers\n\n```go\nvar c1 complex64 = 1 + 2i\nvar c2 complex128 = 3 + 4i\n\nfmt.Println(real(c1))  // 1\nfmt.Println(imag(c1))  // 2\n```\n\n### Numeric Operations\n\n```go\n// Integer division truncates toward zero\nfmt.Println(7 / 3)   // 2\nfmt.Println(7 % 3)   // 1\n\n// Mixed types require explicit conversion\nvar x int = 5\nvar y float64 = 2.5\n// fmt.Println(x + y) // Compile error!\nfmt.Println(float64(x) + y) // OK: 7.5\n```\n\n### Math Package\n\n```go\nimport \"math\"\n\nmath.Abs(-5)           // 5\nmath.Ceil(3.14)        // 4\nmath.Floor(3.14)       // 3\nmath.Pow(2, 3)         // 8\nmath.Sqrt(16)          // 4\nmath.Max(10, 20)       // 20\nmath.Min(10, 20)       // 10\nmath.Round(3.5)        // 4\n```\n\n### Overflow\n\nNumbers overflow silently at compile time for constants, and at runtime for variables:\n\n```go\nvar x int8 = 127\nx = x + 1  // wraps to -128\n```\n\n> **Key Point:** Go does not allow implicit type conversion between numeric types. You must use explicit conversion.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"math\"\n)\n\nfunc main() {\n    var i int = 42\n    var f float64 = 3.14\n    conv := float64(i) + f\n    fmt.Println(\"int to float:\", conv)\n\n    fmt.Println(\"sqrt(16):\", math.Sqrt(16))\n    fmt.Println(\"pow(2,10):\", math.Pow(2, 10))\n\n    var overflow int8 = 127\n    overflow++\n    fmt.Println(\"overflow:\", overflow) // -128\n}",
+  "quiz": [
+    {
+      "question": "What is the result of `7 / 3` in Go?",
+      "options": ["2.333", "2", "3", "2.0"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does Go allow implicit numeric type conversion?",
+      "options": ["Yes, always", "No, never", "Only for int to float", "Only for smaller to larger types"],
+      "correctIndex": 1
+    }
+  ]
+}

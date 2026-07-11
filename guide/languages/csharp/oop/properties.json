@@ -1,0 +1,22 @@
+{
+  "title": "C# Properties",
+  "language": "csharp",
+  "topic": "properties",
+  "order": 40,
+  "nextTopic": "get_set",
+  "prevTopic": "this",
+  "content": "### Properties in C#\n\nProperties are members that provide a flexible mechanism to read, write, or compute field values. They combine the functionality of fields and methods.\n\n### Auto-Implemented Properties\n\nThe simplest form, introduced in C# 3:\n\n```csharp\npublic class Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}\n```\n\n### Full Property Declaration\n\n```csharp\nprivate string name;\n\npublic string Name\n{\n    get { return name; }\n    set { name = value; }\n}\n```\n\n### Read-Only Properties\n\n```csharp\n// No set accessor\npublic string FullName { get; }\n\n// Expression-bodied (C# 6+)\npublic string Greeting => $\"Hello, {Name}\";\n\n// Init-only setter (C# 9+)\npublic string Id { get; init; }\n```\n\n### Computed Properties\n\n```csharp\npublic class Rectangle\n{\n    public double Width { get; set; }\n    public double Height { get; set; }\n    \n    // Computed property (no backing field)\n    public double Area => Width * Height;\n    \n    // Expression-bodied getter\n    public double Perimeter => 2 * (Width + Height);\n}\n```\n\n### Property Validation\n\n```csharp\nprivate int age;\n\npublic int Age\n{\n    get { return age; }\n    set\n    {\n        if (value < 0 || value > 150)\n            throw new ArgumentException(\"Age must be 0-150\");\n        age = value;\n    }\n}\n```\n\n### Private Set\n\n```csharp\npublic string Name { get; private set; }  // Public get, private set\n```\n\n### Static Properties\n\n```csharp\npublic static class Config\n{\n    public static string AppName { get; set; } = \"MyApp\";\n    public static int MaxUsers { get; } = 100;\n}\n```\n\n### Property Modifiers\n\n| Modifier | Effect |\n|----------|--------|\n| `virtual` | Can be overridden in derived class |\n| `override` | Override a virtual property |\n| `abstract` | Must be implemented in derived class |\n| `sealed` | Cannot be overridden further |\n| `static` | Belongs to the type, not instances |\n\n### Required Properties (C# 11+)\n\n```csharp\npublic class Product\n{\n    public required string Name { get; init; }\n    public required decimal Price { get; init; }\n}\n```\n\n> **Key Point:** Properties are accessed like fields but implemented like methods. Use auto-implemented properties for simplicity, full properties when validation or logic is needed. Use `init` for immutable properties set during initialization. Use `required` (C# 11+) for mandatory properties.\n\n### Field-Backed Properties (C# 13 Preview)\n\n```csharp\npublic class Person\n{\n    public string Name { get => field; set => field = value; }\n}\n```",
+  "codeExample": "using System;\n\npublic class BankAccount\n{\n    public string AccountNumber { get; init; }\n    public string Owner { get; set; }\n    \n    private decimal balance;\n    public decimal Balance\n    {\n        get { return balance; }\n        private set { balance = value; }\n    }\n    \n    public void Deposit(decimal amount)\n    {\n        if (amount > 0)\n            Balance += amount;\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var account = new BankAccount\n        {\n            AccountNumber = \"123-456\",\n            Owner = \"Alice\"\n        };\n        account.Deposit(1000);\n        Console.WriteLine($\"Balance: {account.Balance:C}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is an auto-implemented property?",
+      "options": ["A property without get", "A property with compiler-generated backing field", "A static property", "A virtual property"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword allows a property to be set only during initialization?",
+      "options": ["set", "init", "readonly", "const"],
+      "correctIndex": 1
+    }
+  ]
+}

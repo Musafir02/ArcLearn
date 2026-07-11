@@ -1,0 +1,17 @@
+{
+  "title": "Traits in Rust",
+  "language": "rust",
+  "topic": "traits",
+  "order": 46,
+  "nextTopic": "trait_objects",
+  "prevTopic": "generics",
+  "content": "### Traits in Rust\n\nTraits define shared behavior that types can implement. They are similar to interfaces in other languages.\n\n---\n\n### Trait Basics\n\n| Concept | Syntax |\n|---------|--------|\n| Define | `trait Name { fn method(&self); }` |\n| Implement | `impl Name for Type { fn method(&self) { } }` |\n| Default impl | `trait Name { fn method(&self) { default } }` |\n| Derive | `#[derive(Trait)]` for common traits |\n\n---\n\n### Examples\n\n```rust\n// Defining a trait\ntrait Summary {\n    fn summarize(&self) -> String;\n    \n    // Default implementation\n    fn author_info(&self) -> String {\n        String::from(\"Unknown author\")\n    }\n}\n\n// Implementing a trait\nstruct Article {\n    title: String,\n    author: String,\n    content: String,\n}\n\nimpl Summary for Article {\n    fn summarize(&self) -> String {\n        format!(\"{} by {}\", self.title, self.author)\n    }\n}\n\n// Common derive traits\n#[derive(Debug, Clone, PartialEq)]\nstruct Point {\n    x: i32,\n    y: i32,\n}\n```\n\n> **Key Point:** Traits can have default implementations. Types can implement multiple traits. Common traits like `Debug`, `Clone`, `Copy`, `PartialEq`, `Eq`, `Hash`, `Default` can be auto-derived with `#[derive(...)]`.",
+  "codeExample": "trait Greet {\n    fn greet(&self) -> String;\n}\n\nstruct Person {\n    name: String,\n}\n\nstruct Robot {\n    id: u32,\n}\n\nimpl Greet for Person {\n    fn greet(&self) -> String {\n        format!(\"Hello, I'm {}!\", self.name)\n    }\n}\n\nimpl Greet for Robot {\n    fn greet(&self) -> String {\n        format!(\"Greetings. I am unit #{}\", self.id)\n    }\n}\n\nfn main() {\n    let person = Person { name: String::from(\"Alice\") };\n    let robot = Robot { id: 42 };\n    \n    println!(\"{}\", person.greet());\n    println!(\"{}\", robot.greet());\n}",
+  "quiz": [
+    {
+      "question": "What are traits similar to in other languages?",
+      "options": ["Classes", "Interfaces", "Abstract classes", "Modules"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Go Input",
+  "language": "go",
+  "topic": "input",
+  "order": 13,
+  "nextTopic": "zero_values",
+  "prevTopic": "numbers",
+  "content": "### Reading User Input in Go\nThe `fmt` package provides functions for reading input.\n\n### fmt.Scan\n\n```go\nvar name string\nfmt.Print(\"Enter your name: \")\nfmt.Scan(&name)\nfmt.Println(\"Hello,\", name)\n```\n\n### fmt.Scanf\n\nFormatted input:\n\n```go\nvar name string\nvar age int\nfmt.Print(\"Enter name and age: \")\nfmt.Scanf(\"%s %d\", &name, &age)\n```\n\n### fmt.Scanln\n\nReads until newline:\n\n```go\nvar name string\nfmt.Print(\"Enter name: \")\nfmt.Scanln(&name)\n```\n\n### bufio.Scanner for Lines\n\n```go\nimport (\n    \"bufio\"\n    \"os\"\n)\n\nscanner := bufio.NewScanner(os.Stdin)\nfmt.Print(\"Enter a line: \")\nscanner.Scan()\ninput := scanner.Text()\nfmt.Println(\"You entered:\", input)\n```\n\n### Reading Multiple Lines\n\n```go\nscanner := bufio.NewScanner(os.Stdin)\nfmt.Println(\"Enter lines (Ctrl+D to stop):\")\nfor scanner.Scan() {\n    line := scanner.Text()\n    fmt.Println(\"Got:\", line)\n}\n```\n\n### Reading Integers\n\n```go\nvar num int\nfmt.Print(\"Enter a number: \")\n_, err := fmt.Scan(&num)\nif err != nil {\n    fmt.Println(\"Invalid input:\", err)\n}\n```\n\n| Method | Best For |\n|--------|----------|\n| `fmt.Scan` | Space-separated values |\n| `fmt.Scanf` | Formatted input |\n| `fmt.Scanln` | Single line |\n| `bufio.Scanner` | Multi-line or complex input |\n\n> **Key Point:** Always check the error returned by Scan functions. Invalid input can cause unexpected behavior.",
+  "codeExample": "package main\n\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    reader := bufio.NewReader(os.Stdin)\n    fmt.Print(\"Enter your name: \")\n    name, _ := reader.ReadString('\\n')\n    name = name[:len(name)-1] // trim newline\n    fmt.Printf(\"Hello, %s!\\n\", name)\n}",
+  "quiz": [
+    {
+      "question": "Which function is best for reading a full line of text?",
+      "options": ["fmt.Scan", "fmt.Scanf", "bufio.Scanner", "fmt.Scanln"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What package provides Scanner for input?",
+      "options": ["fmt", "os", "bufio", "io"],
+      "correctIndex": 2
+    }
+  ]
+}

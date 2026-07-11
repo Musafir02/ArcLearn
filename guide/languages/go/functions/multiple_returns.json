@@ -1,0 +1,22 @@
+{
+  "title": "Go Multiple Returns",
+  "language": "go",
+  "topic": "multiple_returns",
+  "order": 35,
+  "nextTopic": "named_returns",
+  "prevTopic": "return_values",
+  "content": "### Multiple Return Values\n\nGo functions can return multiple values. This is commonly used for returning results alongside errors.\n\n### Basic Multiple Returns\n\n```go\nfunc swap(a, b string) (string, string) {\n    return b, a\n}\n\nfunc main() {\n    x, y := swap(\"hello\", \"world\")\n    fmt.Println(x, y) // world hello\n}\n```\n\n### Result + Error Pattern\n\nThe idiomatic Go pattern:\n\n```go\nfunc readFile(filename string) ([]byte, error) {\n    data, err := os.ReadFile(filename)\n    if err != nil {\n        return nil, err\n    }\n    return data, nil\n}\n```\n\n### Multiple Returns for Errors\n\n```go\nfunc parse(input string) (int, float64, bool, error) {\n    // parse multiple values...\n    return 42, 3.14, true, nil\n}\n\nfunc main() {\n    i, f, b, err := parse(\"test\")\n    if err != nil {\n        return\n    }\n    fmt.Println(i, f, b)\n}\n```\n\n### Calling Functions with Multiple Returns\n\n```go\n// Assign all\nx, y, err := doSomething()\n\n// Discard some\nresult, _, err := doSomething()\n\n// Discard all but error\n_, _, err := doSomething()\n```\n\n### Functions as Expressions\n\n```go\nif result, err := divide(10, 2); err == nil {\n    fmt.Println(result)\n} else {\n    fmt.Println(\"Error:\", err)\n}\n```\n\n> **Key Point:** Multiple return values are a core Go idiom, especially for error handling. The `(result, error)` pattern is used throughout the standard library.",
+  "codeExample": "package main\n\nimport (\n    \"errors\"\n    \"fmt\"\n)\n\nfunc divide(a, b float64) (float64, error) {\n    if b == 0 {\n        return 0, errors.New(\"cannot divide by zero\")\n    }\n    return a / b, nil\n}\n\nfunc main() {\n    result, err := divide(10, 2)\n    if err != nil {\n        fmt.Println(\"Error:\", err)\n    } else {\n        fmt.Println(\"Result:\", result)\n    }\n\n    // Error case\n    result, err = divide(10, 0)\n    if err != nil {\n        fmt.Println(\"Error:\", err)\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the idiomatic Go pattern for error handling?",
+      "options": ["Exceptions", "Result, error tuple", "Callbacks", "Null checks"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a Go function return more than two values?",
+      "options": ["No, max 2", "Yes, any number", "Up to 3", "Up to 5"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Go Range Clause",
+  "language": "go",
+  "topic": "range",
+  "order": 31,
+  "nextTopic": "functions",
+  "prevTopic": "maps",
+  "content": "### Range Clause\n\nThe `range` clause iterates over elements of various data structures.\n\n### Range Over Map\n\n```go\nm := map[string]int{\"a\": 1, \"b\": 2, \"c\": 3}\n\nfor key, value := range m {\n    fmt.Printf(\"%s -> %d\\n\", key, value)\n}\n\n// Keys only\nfor key := range m {\n    fmt.Println(key)\n}\n```\n\nMap iteration order is intentionally randomized in Go.\n\n### Range Over Channel\n\n```go\nch := make(chan int)\ngo func() {\n    for i := 0; i < 5; i++ {\n        ch <- i\n    }\n    close(ch)\n}()\n\nfor val := range ch {\n    fmt.Println(val) // 0, 1, 2, 3, 4\n}\n```\n\nThe channel must be closed or the loop will deadlock.\n\n### Range Over String\n\n```go\ns := \"Hello, 世界\"\nfor i, r := range s {\n    fmt.Printf(\"byte index %d: %c (U+%04X)\\n\", i, r, r)\n}\n```\n\n### Range Over Array/Slice Pointer\n\n```go\narr := [3]int{10, 20, 30}\nfor i, v := range &arr {\n    fmt.Println(i, v)\n}\n```\n\n### Iteration Values\n\n| Structure | Variables | Value Type |\n|-----------|-----------|------------|\n| array/slice | index, value | index: int, value: element |\n| string | index, rune | index: int, rune: rune |\n| map | key, value | same as K, V |\n| channel | value | element type |\n| pointer to array | index, value | same as array |\n\n### Go 1.22+ Range Over Functions\n\nGo 1.22 introduced experimental support for ranging over functions. Stable in Go 1.23:\n\n```go\nfunc Backward[E any](s []E) func(func(int, E) bool) {\n    return func(yield func(int, E) bool) {\n        for i := len(s) - 1; i >= 0; i-- {\n            if !yield(i, s[i]) {\n                return\n            }\n        }\n    }\n}\n\n// Usage\nfor i, v := range Backward([]int{10, 20, 30}) {\n    fmt.Println(i, v)\n}\n```\n\n> **Key Point:** Range always copies the value. To modify elements in a slice, use the index to access `s[i]`.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // Slice - modifying via range\n    nums := []int{10, 20, 30}\n    for i := range nums {\n        nums[i] *= 2 // modify original\n    }\n    fmt.Println(\"doubled:\", nums)\n\n    // String - rune iteration\n    for i, r := range \"Go!\" {\n        fmt.Printf(\"byte[%d] = %c\\n\", i, r)\n    }\n\n    // Channel\n    ch := make(chan int)\n    go func() {\n        for _, v := range []int{1, 2, 3} {\n            ch <- v\n        }\n        close(ch)\n    }()\n    for v := range ch {\n        fmt.Println(\"from chan:\", v)\n    }\n}",
+  "quiz": [
+    {
+      "question": "Is map iteration order guaranteed?",
+      "options": ["Yes, sorted by key", "Yes, insertion order", "No, randomized", "Yes, by hash value"],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do you modify slice elements in a range loop?",
+      "options": ["Use val *= 2", "Use s[i] *= 2", "Modify the value directly", "Use a for loop instead"],
+      "correctIndex": 1
+    }
+  ]
+}

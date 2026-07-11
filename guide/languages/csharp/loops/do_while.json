@@ -1,0 +1,22 @@
+{
+  "title": "C# do-while Loop",
+  "language": "csharp",
+  "topic": "do_while",
+  "order": 23,
+  "nextTopic": "break_continue",
+  "prevTopic": "for",
+  "content": "### do-while Loop in C#\n\nThe `do-while` loop is similar to `while`, but it guarantees that the code block executes at least once before checking the condition.\n\n### Syntax\n\n```csharp\ndo\n{\n    // Code to execute at least once\n} while (condition);\n```\n\n### Basic Example\n\n```csharp\nint i = 0;\ndo\n{\n    Console.WriteLine($\"Count: {i}\");\n    i++;\n} while (i < 5);\n```\n\n### while vs do-while\n\n| Aspect | while | do-while |\n|--------|-------|----------|\n| Condition check | Before execution | After execution |\n| Minimum executions | 0 | 1 |\n| Semantics | Entry-controlled | Exit-controlled |\n\n### When condition is initially false\n\n```csharp\nint x = 100;\n\nwhile (x < 10)  // Never executes\n{\n    Console.WriteLine(\"while: \" + x);\n}\n\ndo               // Executes once\n{\n    Console.WriteLine(\"do-while: \" + x);\n} while (x < 10);\n```\n\n### Menu-Driven Program Pattern\n\n```csharp\nstring choice;\ndo\n{\n    Console.WriteLine(\"\\n=== MENU ===\");\n    Console.WriteLine(\"1. Add\");\n    Console.WriteLine(\"2. Delete\");\n    Console.WriteLine(\"3. Exit\");\n    Console.Write(\"Choice: \");\n    \n    choice = Console.ReadLine();\n    \n    switch (choice)\n    {\n        case \"1\": Console.WriteLine(\"Adding...\"); break;\n        case \"2\": Console.WriteLine(\"Deleting...\"); break;\n        case \"3\": Console.WriteLine(\"Goodbye!\"); break;\n        default: Console.WriteLine(\"Invalid choice\"); break;\n    }\n} while (choice != \"3\");\n```\n\n### Input Validation\n\n```csharp\nstring input;\ndo\n{\n    Console.Write(\"Enter 'yes' or 'no': \");\n    input = Console.ReadLine().ToLower();\n} while (input != \"yes\" && input != \"no\");\n\nConsole.WriteLine($\"You entered: {input}\");\n```\n\n> **Key Point:** Use do-while when you need the code to run at least once before checking the condition. Common use cases include menu systems and input validation where you need to show options or prompt user before checking exit conditions.\n\n### do-while Scope\n\n```csharp\ndo\n{\n    int temp = 5;  // Local to block\n    Console.WriteLine(temp);\n} while (false);\n// Console.WriteLine(temp);  // Error - temp is out of scope\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int number;\n        do\n        {\n            Console.Write(\"Enter a positive number: \");\n        } while (!int.TryParse(Console.ReadLine(), out number) || number <= 0);\n        \n        Console.WriteLine($\"You entered: {number}\");\n        \n        // Countdown from number\n        do\n        {\n            Console.Write($\"{number} \");\n            number--;\n        } while (number > 0);\n        \n        Console.WriteLine(\"\\nDone!\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "How many times does a do-while loop execute at minimum?",
+      "options": ["0", "1", "2", "Depends on condition"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What distinguishes do-while from while?",
+      "options": ["Faster execution", "Condition check timing", "Supports more variables", "Shorter syntax"],
+      "correctIndex": 1
+    }
+  ]
+}

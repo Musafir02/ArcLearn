@@ -1,0 +1,17 @@
+{
+  "title": "Structs in Rust",
+  "language": "rust",
+  "topic": "structs",
+  "order": 31,
+  "nextTopic": "tuple_structs",
+  "prevTopic": "lifetime_elision",
+  "content": "### Structs in Rust\n\nA struct is a custom data type that groups related fields together. Structs are similar to classes in other languages but without inheritance.\n\n---\n\n### Defining and Using Structs\n\n| Component | Syntax |\n|-----------|--------|\n| Definition | `struct Name { field: Type, }` |\n| Instantiation | `let s = Name { field: value };` |\n| Field access | `s.field` |\n| Update syntax | `Name { field: val, ..other }` |\n\n---\n\n### Examples\n\n```rust\n// Define a struct\nstruct User {\n    username: String,\n    email: String,\n    sign_in_count: u64,\n    active: bool,\n}\n\n// Create an instance\nlet user1 = User {\n    email: String::from(\"user@example.com\"),\n    username: String::from(\"user123\"),\n    active: true,\n    sign_in_count: 1,\n};\n\n// Mutable instance\nlet mut user2 = User {\n    email: String::from(\"other@example.com\"),\n    username: String::from(\"other\"),\n    ..user1  // remaining fields from user1\n};\nuser2.email = String::from(\"changed@example.com\");\n```\n\n> **Key Point:** Struct instances are immutable by default. Use `let mut` for mutable fields. The struct update syntax `..other` moves or copies the remaining fields from another instance.",
+  "codeExample": "fn main() {\n    struct Book {\n        title: String,\n        author: String,\n        pages: u32,\n    }\n    \n    let book = Book {\n        title: String::from(\"Rust Programming\"),\n        author: String::from(\"John Doe\"),\n        pages: 350,\n    };\n    \n    println!(\"{} by {}, {} pages\", book.title, book.author, book.pages);\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used to define a struct in Rust?",
+      "options": ["class", "struct", "type", "object"],
+      "correctIndex": 1
+    }
+  ]
+}

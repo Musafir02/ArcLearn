@@ -1,0 +1,22 @@
+{
+  "title": "C# Constructors",
+  "language": "csharp",
+  "topic": "constructors",
+  "order": 38,
+  "nextTopic": "this",
+  "prevTopic": "objects",
+  "content": "### Constructors in C#\n\nA constructor is a special method that initializes an object when it is created. It has the same name as the class and no return type.\n\n### Default Constructor\n\nEvery class has an implicit parameterless constructor if no constructors are defined:\n\n```csharp\npublic class Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n    // Implicit default constructor: Person() { }\n}\n```\n\n### Custom Constructors\n\n```csharp\npublic class Person\n{\n    public string Name { get; }\n    public int Age { get; }\n    \n    // Parameterized constructor\n    public Person(string name, int age)\n    {\n        Name = name;\n        Age = age;\n    }\n}\n```\n\n### Constructor Overloading\n\n```csharp\npublic class Rectangle\n{\n    public int Width { get; }\n    public int Height { get; }\n    \n    public Rectangle() : this(1, 1) { }  // Default\n    public Rectangle(int side) : this(side, side) { }  // Square\n    public Rectangle(int width, int height)\n    {\n        Width = width;\n        Height = height;\n    }\n}\n```\n\n### Constructor Chaining with : this()\n\n```csharp\npublic class Employee\n{\n    public string Name { get; }\n    public int Id { get; }\n    public string Department { get; }\n    \n    public Employee(string name) : this(name, 0) { }\n    public Employee(string name, int id) : this(name, id, \"General\") { }\n    public Employee(string name, int id, string department)\n    {\n        Name = name;\n        Id = id;\n        Department = department;\n    }\n}\n```\n\n### Static Constructors\n\nRuns once before any instance is created:\n\n```csharp\npublic class Database\n{\n    public static readonly string ConnectionString;\n    \n    static Database()\n    {\n        ConnectionString = \"Server=localhost;Database=MyDB;\";\n        Console.WriteLine(\"Static constructor called\");\n    }\n}\n```\n\n### Primary Constructors (C# 12+)\n\n```csharp\npublic class Person(string name, int age)\n{\n    public string Name { get; } = name;\n    public int Age { get; } = age;\n}\n```\n\n### Private Constructors\n\nPrevents instantiation from outside:\n\n```csharp\npublic class Logger\n{\n    private Logger() { }\n    public static Logger Instance { get; } = new Logger();\n}\n```\n\n> **Key Point:** If you define any constructor, the default parameterless constructor is no longer generated. Use `: this()` to chain constructors and avoid code duplication. Static constructors run once per type and cannot have parameters.\n\n### Constructor Rules\n\n| Rule | Description |\n|------|-------------|\n| Name | Must match class name |\n| Return type | No return type (not even void) |\n| Overloading | Can have multiple constructors |\n| Inheritance | Base constructor called with `: base()` |",
+  "codeExample": "using System;\n\npublic class Student\n{\n    public string Name { get; }\n    public int Grade { get; }\n    public string Subject { get; }\n    \n    public Student(string name) : this(name, 9) { }\n    public Student(string name, int grade) : this(name, grade, \"Math\") { }\n    public Student(string name, int grade, string subject)\n    {\n        Name = name;\n        Grade = grade;\n        Subject = subject;\n    }\n    \n    public void Display()\n    {\n        Console.WriteLine($\"{Name}, Grade {Grade}, {Subject}\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var s1 = new Student(\"Alice\");\n        var s2 = new Student(\"Bob\", 10, \"Science\");\n        s1.Display();\n        s2.Display();\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the return type of a constructor?",
+      "options": ["void", "The class type", "No return type", "int"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which keyword is used to call another constructor in the same class?",
+      "options": ["base", "this", "self", "super"],
+      "correctIndex": 1
+    }
+  ]
+}

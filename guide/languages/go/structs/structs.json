@@ -1,0 +1,22 @@
+{
+  "title": "Go Structs",
+  "language": "go",
+  "topic": "structs",
+  "order": 45,
+  "nextTopic": "struct_methods",
+  "prevTopic": "stack_heap",
+  "content": "### Structs in Go\n\nA struct is a collection of named fields.\n\n### Declaration\n\n```go\ntype Person struct {\n    Name    string\n    Age     int\n    Email   string\n}\n```\n\n### Initialization\n\n```go\n// Positional (order matters)\np1 := Person{\"Alice\", 30, \"alice@example.com\"}\n\n// Named fields (preferred)\np2 := Person{\n    Name:  \"Bob\",\n    Age:   25,\n    Email: \"bob@example.com\",\n}\n\n// Zero value\nvar p3 Person\nfmt.Println(p3.Name) // \"\"\n\n// Partial initialization\np4 := Person{Name: \"Charlie\"}\nfmt.Println(p4.Age) // 0\n```\n\n### Accessing Fields\n\n```go\np := Person{Name: \"Alice\", Age: 30}\nfmt.Println(p.Name) // Alice\np.Age = 31\nfmt.Println(p.Age)  // 31\n```\n\n### Structs are Values\n\n```go\na := Person{Name: \"Alice\"}\nb := a                // copy\nb.Name = \"Bob\"\nfmt.Println(a.Name)   // Alice (unchanged)\n```\n\n### Anonymous Structs\n\n```go\npoint := struct {\n    X, Y int\n}{\n    X: 10,\n    Y: 20,\n}\nfmt.Println(point.X) // 10\n```\n\n### Nested Structs\n\n```go\ntype Address struct {\n    Street string\n    City   string\n}\n\ntype Person struct {\n    Name    string\n    Address Address\n}\n\np := Person{\n    Name: \"Alice\",\n    Address: Address{\n        Street: \"123 Main St\",\n        City:   \"Springfield\",\n    },\n}\nfmt.Println(p.Address.City)\n```\n\n### Struct Tags\n\n```go\ntype User struct {\n    ID    int    `json:\"id\"`\n    Name  string `json:\"name\"`\n    Email string `json:\"email,omitempty\"`\n}\n```\n\n> **Key Point:** Structs are Go's way of creating complex data types. They are value types (copied on assignment). Use pointers to share struct instances.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\ntype Car struct {\n    Make  string\n    Model string\n    Year  int\n}\n\nfunc main() {\n    // Initialize\n    car1 := Car{\"Toyota\", \"Camry\", 2022}\n    car2 := Car{Make: \"Honda\", Model: \"Civic\", Year: 2023}\n\n    fmt.Printf(\"%+v\\n\", car1)\n    fmt.Printf(\"%+v\\n\", car2)\n\n    // Modify\n    car1.Year = 2024\n    fmt.Println(\"Updated year:\", car1.Year)\n}",
+  "quiz": [
+    {
+      "question": "Are structs value or reference types in Go?",
+      "options": ["Value types (copied on assignment)", "Reference types", "Depends on size", "Always reference"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What struct field access is like in Go?",
+      "options": ["Using -> for pointers", "Using . for both values and pointers", "Using [] for arrays", "Using :: for fields"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Option Enum in Rust",
+  "language": "rust",
+  "topic": "option",
+  "order": 34,
+  "nextTopic": "result",
+  "prevTopic": "enums",
+  "content": "### Option Enum in Rust\n\n`Option<T>` is a built-in enum that represents a value that may or may not be present. It is Rust's alternative to null pointers.\n\n---\n\n### Option Variants\n\n| Variant | Meaning |\n|---------|---------|\n| `Some(T)` | A value of type T is present |\n| `None` | No value is present |\n\n---\n\n### Using Option\n\n```rust\nfn divide(numerator: f64, denominator: f64) -> Option<f64> {\n    if denominator == 0.0 {\n        None\n    } else {\n        Some(numerator / denominator)\n    }\n}\n\nlet result = divide(10.0, 2.0);\nlet result2 = divide(10.0, 0.0);\n\n// Unwrapping options\nmatch result {\n    Some(value) => println!(\"Result: {}\", value),\n    None => println!(\"Cannot divide by zero\"),\n}\n\n// Common Option methods\nlet val = result.unwrap_or(0.0);         // default if None\nlet val2 = result.expect(\"Division failed\"); // panic with message if None\nlet is_some = result.is_some();         // true\nlet is_none = result.is_none();         // false\n```\n\n> **Key Point:** `Option<T>` forces you to handle the case where a value might be absent. This eliminates null pointer exceptions entirely. The compiler will warn you if you try to use an `Option` value without handling the `None` case.",
+  "codeExample": "fn find_char(s: &str, c: char) -> Option<usize> {\n    for (i, ch) in s.chars().enumerate() {\n        if ch == c {\n            return Some(i);\n        }\n    }\n    None\n}\n\nfn main() {\n    let pos = find_char(\"hello\", 'e');\n    \n    match pos {\n        Some(index) => println!(\"Found at position {}\", index),\n        None => println!(\"Not found\"),\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does `Option::None` represent?",
+      "options": ["No value present", "Error occurred", "Empty collection", "Null pointer"],
+      "correctIndex": 0
+    }
+  ]
+}

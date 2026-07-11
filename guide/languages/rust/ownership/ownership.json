@@ -1,0 +1,17 @@
+{
+  "title": "Ownership in Rust",
+  "language": "rust",
+  "topic": "ownership",
+  "order": 25,
+  "nextTopic": "borrowing",
+  "prevTopic": "while_let",
+  "content": "### Ownership in Rust\n\nOwnership is Rust's most unique feature and the foundation of its memory safety guarantees without a garbage collector.\n\n---\n\n### Ownership Rules\n\n| Rule | Description |\n|------|-------------|\n| Each value has exactly one owner | The variable that owns the value |\n| Ownership can be transferred | Assignment or function calls can move ownership |\n| Owner goes out of scope, value dropped | Memory is freed automatically |\n\n---\n\n### Move Semantics\n\n```rust\nlet s1 = String::from(\"hello\");\nlet s2 = s1;  // s1 is MOVED to s2\n// println!(\"{}\", s1);  // ERROR: s1 is no longer valid\n\n// For Copy types, assignment copies instead\nlet x = 5;\nlet y = x;  // x is i32 (Copy), both are valid\nprintln!(\"{}\", x);  // OK\n```\n\nTypes that implement the `Copy` trait are copied on assignment instead of moved. Scalar types and tuples of Copy types are Copy.\n\n> **Key Point:** In Rust, only one variable owns a value at any time. When ownership is transferred (moved), the original owner can no longer use the value. This eliminates dangling pointers and double-free errors at compile time.",
+  "codeExample": "fn main() {\n    let s = String::from(\"hello\");\n    takes_ownership(s);  // s is moved into the function\n    // println!(\"{}\", s);  // ERROR: s no longer valid\n    \n    let x = 5;\n    makes_copy(x);  // x is i32, implements Copy\n    println!(\"x is still valid: {}\", x);  // OK\n}\n\nfn takes_ownership(some_string: String) {\n    println!(\"{}\", some_string);\n}  // some_string dropped here\n\nfn makes_copy(some_integer: i32) {\n    println!(\"{}\", some_integer);\n}",
+  "quiz": [
+    {
+      "question": "What happens when ownership of a value is moved?",
+      "options": ["The original owner retains access", "The original owner can no longer use the value", "The value is cloned", "The value is deleted"],
+      "correctIndex": 1
+    }
+  ]
+}

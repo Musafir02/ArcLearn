@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to Go",
+  "language": "go",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is Go?\n\nGo (also known as Golang) is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. Go was publicly announced in 2009 and has since become one of the most popular languages for backend development, cloud services, and DevOps tooling.\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Statically Typed | Types are checked at compile time |\n| Compiled | Produces fast, standalone binaries |\n| Garbage Collected | Automatic memory management |\n| Concurrency Built-in | Goroutines and channels |\n| Fast Compilation | Compiles single programs quickly |\n| Cross-Platform | Build for Windows, Linux, macOS |\n\n### Why Learn Go?\n\n- Simple and readable syntax\n- Excellent standard library\n- Strong tooling (formatting, linting, testing)\n- Great for microservices, CLI tools, web servers\n- Increasingly used in cloud-native ecosystems (Docker, Kubernetes, Terraform)\n\n### Go 2026 Highlights\n\nRecent Go versions have introduced:\n- Improved iterators and range expressions\n- Enhanced generics with type inference\n- Better build caching with the new `gvc` tool\n- Expanded standard library with `slog` for structured logging\n- Improved WASM support for browser and server-side WebAssembly\n- Iterators over functions in `range` clauses\n\n> **Key Point:** Go prioritizes simplicity, readability, and productivity over language complexity.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, Go!\")\n}",
+  "quiz": [
+    {
+      "question": "Which company designed the Go programming language?",
+      "options": ["Microsoft", "Google", "Apple", "Mozilla"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a key feature of Go?",
+      "options": ["Dynamic typing", "Built-in concurrency", "Manual memory management", "Interpreted execution"],
+      "correctIndex": 1
+    }
+  ]
+}

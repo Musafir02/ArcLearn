@@ -1,0 +1,22 @@
+{
+  "title": "C# Break and Continue",
+  "language": "csharp",
+  "topic": "break_continue",
+  "order": 24,
+  "nextTopic": "foreach",
+  "prevTopic": "do_while",
+  "content": "### Break and Continue in C#\n\n`break` and `continue` give you control over loop execution by either exiting the loop early or skipping to the next iteration.\n\n### The break Statement\n\nExits the loop immediately, regardless of the loop condition:\n\n```csharp\nfor (int i = 0; i < 10; i++)\n{\n    if (i == 5)\n        break;  // Loop stops when i reaches 5\n    Console.Write($\"{i} \");\n}\n// Output: 0 1 2 3 4\n```\n\n### The continue Statement\n\nSkips the rest of the current iteration and moves to the next:\n\n```csharp\nfor (int i = 0; i < 10; i++)\n{\n    if (i % 2 == 0)\n        continue;  // Skip even numbers\n    Console.Write($\"{i} \");\n}\n// Output: 1 3 5 7 9\n```\n\n### break vs continue\n\n| Aspect | break | continue |\n|--------|-------|----------|\n| Effect | Exits the loop entirely | Skips to next iteration |\n| Loop variable | Loop stops completely | Loop continues with next value |\n| Use case | Found what you need | Skip certain values |\n\n### break with while\n\n```csharp\nwhile (true)\n{\n    string input = Console.ReadLine();\n    if (input == \"quit\")\n        break;  // Exit infinite loop\n    Console.WriteLine($\"You said: {input}\");\n}\n```\n\n### continue with while\n\n```csharp\nint i = 0;\nwhile (i < 10)\n{\n    i++;\n    if (i % 3 == 0)\n        continue;  // Skip multiples of 3\n    Console.WriteLine(i);\n}\n```\n\n### break in Nested Loops\n\n`break` only exits the innermost loop:\n\n```csharp\nfor (int i = 0; i < 3; i++)\n{\n    for (int j = 0; j < 3; j++)\n    {\n        if (i == 1 && j == 1)\n            break;  // Only breaks inner loop\n        Console.WriteLine($\"i={i}, j={j}\");\n    }\n}\n```\n\n### Using Labels with break\n\nTo break out of outer loops, use a labeled break:\n\n```csharp\nescaped:\nfor (int i = 0; i < 3; i++)\n{\n    for (int j = 0; j < 3; j++)\n    {\n        if (i == 1 && j == 1)\n            break escaped;  // Breaks outer loop\n        Console.WriteLine($\"i={i}, j={j}\");\n    }\n}\n```\n\n> **Key Point:** Use `break` to exit a loop early when a condition is met. Use `continue` to skip the rest of the current iteration. `break` in nested loops only affects the innermost loop. Use labels to break out of outer loops.",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n        \n        Console.WriteLine(\"Odd numbers:\");\n        foreach (int num in numbers)\n        {\n            if (num % 2 == 0)\n                continue;\n            Console.Write($\"{num} \");\n        }\n        \n        Console.WriteLine(\"\\n\\nStop at first number greater than 5:\");\n        foreach (int num in numbers)\n        {\n            if (num > 5)\n                break;\n            Console.Write($\"{num} \");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does the break statement do in a loop?",
+      "options": ["Skips to next iteration", "Exits the loop immediately", "Restarts the loop", "Pauses the loop"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the continue statement do in a loop?",
+      "options": ["Exits the loop", "Skips to next iteration", "Restarts from beginning", "Stops the program"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "C# Array Methods",
+  "language": "csharp",
+  "topic": "array_methods",
+  "order": 27,
+  "nextTopic": "array_sort",
+  "prevTopic": "arrays",
+  "content": "### Array Methods in C#\n\nThe `Array` class provides static methods for working with arrays.\n\n### Sorting and Reversing\n\n```csharp\nint[] numbers = { 3, 1, 4, 1, 5 };\nArray.Sort(numbers);      // { 1, 1, 3, 4, 5 }\nArray.Reverse(numbers);   // { 5, 4, 3, 1, 1 }\n```\n\n### Searching\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `Array.IndexOf()` | Returns first index of value | `Array.IndexOf(arr, 5)` |\n| `Array.LastIndexOf()` | Returns last index of value | `Array.LastIndexOf(arr, 5)` |\n| `Array.BinarySearch()` | Binary search on sorted array | `Array.BinarySearch(arr, 5)` |\n| `Array.Exists()` | Checks if element exists | `Array.Exists(arr, x => x > 5)` |\n| `Array.Find()` | Finds first matching element | `Array.Find(arr, x => x > 3)` |\n| `Array.FindAll()` | Finds all matching elements | `Array.FindAll(arr, x => x > 3)` |\n\n### Resizing and Copying\n\n```csharp\nint[] arr = { 1, 2, 3 };\nArray.Resize(ref arr, 5);  // Resize to 5 elements, new are 0\n\nint[] copy = new int[3];\nArray.Copy(arr, copy, 3);  // Copy elements\n\nint[] clone = (int[])arr.Clone();  // Shallow clone\n```\n\n### Converting\n\n```csharp\nstring[] words = { \"1\", \"2\", \"3\" };\nint[] numbers = Array.ConvertAll(words, int.Parse);\n```\n\n### Clearing\n\n```csharp\nint[] arr = { 1, 2, 3, 4, 5 };\nArray.Clear(arr, 0, arr.Length);  // All elements set to 0/null\n```\n\n### Array.ForEach\n\n```csharp\nint[] numbers = { 1, 2, 3, 4, 5 };\nArray.ForEach(numbers, n => Console.WriteLine(n * 2));\n```\n\n### LINQ with Arrays\n\nArrays support LINQ extension methods:\n\n```csharp\nint[] numbers = { 1, 2, 3, 4, 5, 6 };\nint[] evens = numbers.Where(n => n % 2 == 0).ToArray();\nint[] squared = numbers.Select(n => n * n).ToArray();\nint sum = numbers.Sum();\ndouble avg = numbers.Average();\nint max = numbers.Max();\nint min = numbers.Min();\n```\n\n> **Key Point:** Array.Sort sorts in place (modifies the original array). Array.IndexOf returns -1 if not found. Array.Resize creates a new array and copies elements. For complex operations, consider using List<T> instead of arrays.\n\n### Common Pattern: Find Maximum\n\n```csharp\nint[] numbers = { 3, 7, 2, 9, 4 };\nint max = numbers.Max();  // Using LINQ\n// Or manually:\nint maxVal = numbers[0];\nforeach (var n in numbers) if (n > maxVal) maxVal = n;",
+  "codeExample": "using System;\nusing System.Linq;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] numbers = { 5, 2, 8, 1, 9, 3 };\n        \n        Console.WriteLine(\"Original: \" + string.Join(\", \", numbers));\n        \n        Array.Sort(numbers);\n        Console.WriteLine(\"Sorted: \" + string.Join(\", \", numbers));\n        \n        Array.Reverse(numbers);\n        Console.WriteLine(\"Reversed: \" + string.Join(\", \", numbers));\n        \n        Console.WriteLine($\"Index of 5: {Array.IndexOf(numbers, 5)}\");\n        Console.WriteLine($\"Max: {numbers.Max()}\");\n        Console.WriteLine($\"Sum: {numbers.Sum()}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does Array.Sort() do?",
+      "options": ["Creates a new sorted array", "Sorts the array in place", "Returns a sorted copy", "Reverses the array"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Array.IndexOf return when the value is not found?",
+      "options": ["0", "null", "-1", "Throws exception"],
+      "correctIndex": 2
+    }
+  ]
+}

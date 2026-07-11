@@ -1,0 +1,17 @@
+{
+  "title": "Unit Tests in Rust",
+  "language": "rust",
+  "topic": "unit_tests",
+  "order": 67,
+  "nextTopic": "documentation",
+  "prevTopic": "testing",
+  "content": "### Unit Tests in Rust\n\nUnit tests verify individual functions and modules in isolation. They are placed alongside the code they test.\n\n---\n\n### Test Attributes\n\n| Attribute | Purpose |\n|-----------|---------|\n| `#[test]` | Marks a function as a test |\n| `#[should_panic]` | Test passes only if it panics |\n| `#[should_panic(expected = \"msg\")]` | Panic must contain expected message |\n| `#[ignore]` | Skip test by default |\n| `#[cfg(test)]` | Only compile in test configuration |\n\n---\n\n### Assertion Macros\n\n| Macro | Purpose |\n|-------|---------|\n| `assert!(expr)` | Assert expression is true |\n| `assert_eq!(a, b)` | Assert a == b |\n| `assert_ne!(a, b)` | Assert a != b |\n| `debug_assert!(expr)` | Assert only in debug builds |\n\n---\n\n### Examples\n\n```rust\n#[cfg(test)]\nmod tests {\n    use super::*;\n    \n    #[test]\n    fn it_works() {\n        assert_eq!(2 + 2, 4);\n    }\n    \n    #[test]\n    fn custom_failure() {\n        let result = divide(10, 2);\n        assert!(result.is_ok(), \"Division failed: {:?}\", result);\n    }\n    \n    #[test]\n    #[should_panic(expected = \"divide by zero\")]\n    fn test_divide_by_zero() {\n        divide(10, 0);\n    }\n    \n    #[test]\n    #[ignore = \"expensive computation\"]\n    fn expensive_test() {\n        // long running test\n    }\n}\n```\n\n> **Key Point:** Unit tests use the `#[cfg(test)]` module attribute so they are compiled only during testing. Use `#[should_panic]` for testing error conditions. Use `#[ignore]` for tests that are expensive or currently failing.",
+  "codeExample": "pub fn is_even(n: i32) -> bool {\n    n % 2 == 0\n}\n\n#[cfg(test)]\nmod tests {\n    use super::*;\n    \n    #[test]\n    fn test_is_even() {\n        assert!(is_even(4));\n        assert!(!is_even(7));\n        assert_eq!(is_even(0), true);\n    }\n    \n    #[test]\n    fn test_is_even_negative() {\n        assert!(is_even(-2));\n        assert!(!is_even(-3));\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which attribute marks a function as a test?",
+      "options": ["#[test_case]", "#[test]", "#[testing]", "#[test_fn]"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "C# Syntax",
+  "language": "csharp",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### Basic Syntax Rules\n\nC# syntax is similar to other C-family languages like Java and C++.\n\n### Structure of a C# Program\n\n```\nusing System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Hello!\");\n    }\n}\n```\n\n### Key Syntax Elements\n\n| Element | Description | Example |\n|---------|-------------|---------|\n| Semicolons | End every statement | `int x = 5;` |\n| Curly braces | Define code blocks | `{ ... }` |\n| Comments | Document code | `// single line` |\n| Case sensitivity | C# is case-sensitive | `Main` vs `main` |\n\n### Identifiers\n\n- Must start with a letter or underscore\n- Can contain letters, digits, underscores\n- Cannot be keywords (`class`, `int`, `void`, etc.)\n- C# naming conventions: PascalCase for methods/classes, camelCase for variables\n\n### Top-Level Statements (C# 9+)\n\nStarting from C# 9, you can omit the class and Main method wrapper:\n\n```csharp\n// No namespace, class, or Main required\nConsole.WriteLine(\"Hello from top-level!\");\n```\n\n> **Key Point:** Every statement in C# ends with a semicolon. Code blocks are enclosed in curly braces.\n\nThe `Main` method is the entry point of any C# application. It can return `void`, `int`, `Task`, or `Task<int>`.",
+  "codeExample": "using System;\n\nnamespace MyApp\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            // This is a comment\n            Console.WriteLine(\"Hello, World!\");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What terminates every statement in C#?",
+      "options": ["Period", "Semicolon", "Colon", "Comma"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the entry point of a C# application?",
+      "options": ["Start()", "Main()", "Begin()", "Entry()"],
+      "correctIndex": 1
+    }
+  ]
+}

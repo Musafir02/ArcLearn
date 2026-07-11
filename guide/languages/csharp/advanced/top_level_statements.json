@@ -1,0 +1,22 @@
+{
+  "title": "C# Top-Level Statements",
+  "language": "csharp",
+  "topic": "top_level_statements",
+  "order": 78,
+  "nextTopic": "",
+  "prevTopic": "tuple_types",
+  "content": "### Top-Level Statements in C#\n\nIntroduced in C# 9, top-level statements allow you to write executable code directly without wrapping it in a class or Main method.\n\n### Before and After\n\n**Traditional approach (C# 1-8):**\n\n```csharp\nusing System;\n\nnamespace MyApp\n{\n    class Program\n    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(\"Hello, World!\");\n        }\n    }\n}\n```\n\n**Top-level statements (C# 9+):**\n\n```csharp\nusing System;\n\nConsole.WriteLine(\"Hello, World!\");\n```\n\n### Key Features\n\n```csharp\nusing System;\nusing System.Net.Http;\n\n// Top-level statements - no class or Main needed\nConsole.WriteLine(\"Application starting...\");\n\n// Variables at global scope\nstring name = \"Alice\";\nConsole.WriteLine($\"Hello, {name}\");\n\n// Can use await directly\nusing var client = new HttpClient();\nstring result = await client.GetStringAsync(\"https://example.com\");\nConsole.WriteLine($\"Downloaded {result.Length} characters\");\n\n// Local functions still work\nstatic int Add(int a, int b) => a + b;\nConsole.WriteLine(Add(5, 3));\n```\n\n### Accessing Command-Line Arguments\n\n```csharp\n// args is available automatically\nif (args.Length > 0)\n    Console.WriteLine($\"Arguments: {string.Join(\", \", args)}\");\n```\n\n### Async Top-Level Statements\n\n```csharp\n// No need for async Task Main\nConsole.WriteLine(\"Starting async work...\");\n\nawait Task.Delay(1000);\n\nConsole.WriteLine(\"Done!\");\n```\n\n### Return Value\n\n```csharp\n// Return an exit code\nConsole.WriteLine(\"Processing...\");\nreturn 0;  // Exit code\n```\n\n### Namespaces and Classes Still Work\n\n```csharp\nusing System;\n\nConsole.WriteLine(\"From top-level\");\n\nnamespace MyApp\n{\n    class Helper\n    {\n        public static void DoSomething() => Console.WriteLine(\"From Helper class\");\n    }\n}\n\nMyApp.Helper.DoSomething();\n```\n\n### Rules and Limitations\n\n| Rule | Description |\n|------|-------------|\n| One file | Only one file with top-level statements |\n| Must come first | Before any type declarations in the file |\n| Cannot be in namespace | Not inside a namespace block |\n| Implicit Main | Compiler generates a Main method |\n| Using directives | Must be at the top, before statements |\n\n### Best Practices\n\n| Use Case | Recommendation |\n|----------|---------------|\n| Simple programs | Great for scripts, demos, tutorials |\n| Utility tools | Quick console tools |\n| Production apps | Use for Program.cs entry point |\n| Complex apps | Traditional class structure better |\n\n> **Key Point:** Top-level statements simplify the entry point of C# applications. They are ideal for simple programs, scripts, and tutorials. For complex applications, keep the entry point concise and delegate to other classes. Only one file can use top-level statements.\n\n### Limitations\n\n```csharp\n// Cannot have top-level statements in:\n// - Class libraries\n// - WinForms/WPF entry points (still require [STAThread])\n// - Multiple files in same project\n\n// Still need traditional Main for:\n// - Multiple entry points\n// - Custom Main method signature\n```\n\n### Generated Main Method\n\nThe compiler generates something similar to:\n\n```csharp\nstatic class Program\n{\n    static void Main(string[] args)\n    {\n        // Your top-level statements\n    }\n}",
+  "codeExample": "using System;\nusing System.Linq;\n\nConsole.WriteLine(\"=== Number Analyzer ===\\n\");\n\nint[] numbers = Enumerable.Range(1, 100).ToArray();\n\nvar evens = numbers.Where(n => n % 2 == 0);\nvar odds = numbers.Where(n => n % 2 != 0);\n\nConsole.WriteLine($\"Total numbers: {numbers.Length}\");\nConsole.WriteLine($\"Even count: {evens.Count()}\");\nConsole.WriteLine($\"Odd count: {odds.Count()}\");\nConsole.WriteLine($\"Sum: {numbers.Sum()}\");\nConsole.WriteLine($\"Average: {numbers.Average():F2}\");\n\nreturn 0;",
+  "quiz": [
+    {
+      "question": "Which C# version introduced top-level statements?",
+      "options": ["C# 7.0", "C# 8.0", "C# 9.0", "C# 11.0"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can you have top-level statements in multiple files of the same project?",
+      "options": ["Yes", "No, only one file", "Up to 2 files", "Any file with Program.cs name"],
+      "correctIndex": 1
+    }
+  ]
+}

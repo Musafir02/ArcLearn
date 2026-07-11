@@ -1,0 +1,17 @@
+{
+  "title": "Common Collections in Rust",
+  "language": "rust",
+  "topic": "common_collections",
+  "order": 71,
+  "nextTopic": "",
+  "prevTopic": "unsafe_rust",
+  "content": "### Common Collections in Rust\n\nRust's standard library provides several collection types beyond basic arrays and vectors. This topic covers the full range of collection utilities.\n\n---\n\n### Collection Overview\n\n| Type | Description |\n|------|-------------|\n| `Vec<T>` | Growable array |\n| `VecDeque<T>` | Double-ended queue |\n| `LinkedList<T>` | Doubly-linked list |\n| `HashMap<K, V>` | Key-value map with hash |\n| `HashSet<T>` | Set with hash |\n| `BTreeMap<K, V>` | Sorted key-value map |\n| `BTreeSet<T>` | Sorted set |\n| `BinaryHeap<T>` | Max-heap priority queue |\n\n---\n\n### Choosing the Right Collection\n\n```rust\nuse std::collections::*;\n\n// VecDeque - efficient push/pop at both ends\nlet mut deque = VecDeque::new();\ndeque.push_back(1);\ndeque.push_front(2);\n\n// BinaryHeap - max-heap\nlet mut heap = BinaryHeap::new();\nheap.push(5);\nheap.push(1);\nheap.push(10);\nassert_eq!(heap.pop(), Some(10));  // largest first\n\n// BTreeMap - sorted keys\nlet mut map = BTreeMap::new();\nmap.insert(3, \"three\");\nmap.insert(1, \"one\");\nmap.insert(2, \"two\");\n// Iterates in key order: 1, 2, 3\n\n// BTreeSet - sorted set\nlet mut set = BTreeSet::new();\nset.insert(3);\nset.insert(1);\nset.insert(2);\n// Iterates in order: 1, 2, 3\n```\n\n> **Key Point:** The standard library collections cover most use cases. Use `VecDeque` for FIFO/LIFO queues, `BTreeMap` when you need sorted iteration, `BinaryHeap` for priority queue behavior, and `HashMap`/`HashSet` for hash-based lookup.",
+  "codeExample": "use std::collections::{BinaryHeap, VecDeque, BTreeMap};\n\nfn main() {\n    // VecDeque as queue\n    let mut queue = VecDeque::new();\n    queue.push_back(\"first\");\n    queue.push_back(\"second\");\n    queue.push_back(\"third\");\n    println!(\"Queue front: {:?}\", queue.pop_front());\n    \n    // BinaryHeap as priority queue\n    let mut heap = BinaryHeap::new();\n    heap.push(3);\n    heap.push(1);\n    heap.push(5);\n    println!(\"Max: {:?}\", heap.pop());\n    \n    // BTreeMap maintains sorted order\n    let mut scores = BTreeMap::new();\n    scores.insert(\"Charlie\", 85);\n    scores.insert(\"Alice\", 92);\n    scores.insert(\"Bob\", 78);\n    println!(\"Sorted scores: {:?}\", scores);\n}",
+  "quiz": [
+    {
+      "question": "Which collection should you use for a priority queue?",
+      "options": ["VecDeque", "BinaryHeap", "BTreeMap", "LinkedList"],
+      "correctIndex": 1
+    }
+  ]
+}

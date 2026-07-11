@@ -1,0 +1,22 @@
+{
+  "title": "Go Error Handling",
+  "language": "go",
+  "topic": "error_handling",
+  "order": 60,
+  "nextTopic": "custom_errors",
+  "prevTopic": "waitgroup",
+  "content": "### Error Handling in Go\n\nGo uses explicit error returns, not exceptions.\n\n### The error Interface\n\n```go\ntype error interface {\n    Error() string\n}\n```\n\n### Basic Error Handling\n\n```go\nf, err := os.Open(\"filename.txt\")\nif err != nil {\n    fmt.Println(\"Error:\", err)\n    return\n}\ndefer f.Close()\n```\n\n### Creating Errors\n\n```go\nimport \"errors\"\n\nerr := errors.New(\"something went wrong\")\n\n// With formatting\nimport \"fmt\"\nerr2 := fmt.Errorf(\"file %s not found\", filename)\n```\n\n### Error Wrapping (Go 1.13+)\n\n```go\nimport \"fmt\"\n\nif err != nil {\n    return fmt.Errorf(\"open config: %w\", err)\n}\n```\n\nUse `%w` to wrap errors. Use `errors.Is` and `errors.As` to unwrap.\n\n### errors.Is\n\n```go\nimport \"errors\"\n\nvar ErrNotFound = errors.New(\"not found\")\n\nif errors.Is(err, ErrNotFound) {\n    fmt.Println(\"File not found\")\n}\n```\n\n### errors.As\n\n```go\nvar pathErr *os.PathError\nif errors.As(err, &pathErr) {\n    fmt.Println(\"Path:\", pathErr.Path)\n}\n```\n\n### Sentinel Errors vs Custom Types\n\n```go\n// Sentinel error\nvar ErrInvalidInput = errors.New(\"invalid input\")\n\n// Custom error type\ntype ValidationError struct {\n    Field string\n    Err   error\n}\n\nfunc (e *ValidationError) Error() string {\n    return fmt.Sprintf(\"validation failed on %s: %v\", e.Field, e.Err)\n}\n\nfunc (e *ValidationError) Unwrap() error {\n    return e.Err\n}\n```\n\n### Error Handling Patterns\n\n```go\n// Guard clause\nif err != nil {\n    return err\n}\n\n// Log and continue\nif err != nil {\n    log.Printf(\"warning: %v\", err)\n}\n\n// Retry pattern\nfor attempts := 0; attempts < 3; attempts++ {\n    err := doSomething()\n    if err == nil {\n        break\n    }\n    time.Sleep(time.Second)\n}\n```\n\n> **Key Point:** Always handle errors. The `%w` verb wraps errors for unwrapping with `errors.Is` and `errors.As`. Use `%v` to create a new error without wrapping.",
+  "codeExample": "package main\n\nimport (\n    \"errors\"\n    \"fmt\"\n    \"os\"\n)\n\nfunc readFile(name string) ([]byte, error) {\n    data, err := os.ReadFile(name)\n    if err != nil {\n        return nil, fmt.Errorf(\"readFile %s: %w\", name, err)\n    }\n    return data, nil\n}\n\nfunc main() {\n    _, err := readFile(\"nonexistent.txt\")\n    if err != nil {\n        fmt.Println(\"Error:\", err)\n        if errors.Is(err, os.ErrNotExist) {\n            fmt.Println(\"File does not exist\")\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "How does Go handle errors?",
+      "options": ["Exceptions", "Explicit error return values", "Callbacks", "Global error handler"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What verb wraps an error in fmt.Errorf?",
+      "options": ["%v", "%s", "%w", "%e"],
+      "correctIndex": 2
+    }
+  ]
+}

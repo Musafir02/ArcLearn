@@ -1,0 +1,17 @@
+{
+  "title": "Match in Rust",
+  "language": "rust",
+  "topic": "match",
+  "order": 22,
+  "nextTopic": "if_let",
+  "prevTopic": "for",
+  "content": "### Match in Rust\n\n`match` is Rust's powerful pattern matching construct. It compares a value against a series of patterns and executes code for the matching pattern.\n\n---\n\n### Match Characteristics\n\n| Feature | Description |\n|---------|-------------|\n| Exhaustive | Must cover all possible cases |\n| Expression | Can return a value |\n| Irrefutable patterns | Patterns that always match |\n| Refutable patterns | Patterns that can fail |\n\n---\n\n### Match Examples\n\n```rust\nlet number = 3;\n\nmatch number {\n    1 => println!(\"one\"),\n    2 | 3 | 5 | 7 => println!(\"prime\"),\n    8..=10 => println!(\"eight to ten\"),\n    _ => println!(\"other\"),\n}\n\n// Match as expression\nlet value = match coin {\n    Coin::Penny => 1,\n    Coin::Nickel => 5,\n    Coin::Dime => 10,\n    Coin::Quarter => 25,\n};\n\n// Match with destructuring\nmatch point {\n    (0, 0) => \"origin\",\n    (0, y) => \"on x axis\",\n    (x, 0) => \"on y axis\",\n    (x, y) => \"somewhere else\",\n};\n```\n\n> **Key Point:** `match` must be exhaustive. The wildcard `_` pattern matches anything and is commonly used as a catch-all. Matches are evaluated in order, but the compiler optimizes pattern matching efficiently.",
+  "codeExample": "fn main() {\n    let grade = 'B';\n    \n    let description = match grade {\n        'A' => \"Excellent\",\n        'B' => \"Good\",\n        'C' | 'D' => \"Passing\",\n        'F' => \"Failing\",\n        _ => \"Invalid grade\",\n    };\n    \n    println!(\"Grade {}: {}\", grade, description);\n}",
+  "quiz": [
+    {
+      "question": "What does the `_` pattern do in a match expression?",
+      "options": ["Matches nothing", "Matches everything (catch-all)", "Matches only underscores", "Causes a compiler error"],
+      "correctIndex": 1
+    }
+  ]
+}

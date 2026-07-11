@@ -1,0 +1,22 @@
+{
+  "title": "Go Type Assertions",
+  "language": "go",
+  "topic": "type_assertions",
+  "order": 52,
+  "nextTopic": "type_switches",
+  "prevTopic": "empty_interface",
+  "content": "### Type Assertions\n\nType assertions access the underlying concrete value of an interface.\n\n### Basic Syntax\n\n```go\nvar i any = \"hello\"\n\ns := i.(string)       // panics if i is not string\nfmt.Println(s)        // \"hello\"\n```\n\n### Safe Assertion\n\n```go\nvar i any = \"hello\"\n\ns, ok := i.(string)   // ok is true\nfmt.Println(s, ok)    // \"hello\" true\n\nn, ok := i.(int)      // ok is false\nfmt.Println(n, ok)    // 0 false (n is zero value)\n```\n\nWithout `ok`, a failed assertion panics. Always use the safe form unless you're certain.\n\n### Assertion to Interface\n\n```go\nvar i any = \"hello\"\n\n// Assert to a different interface\nif s, ok := i.(fmt.Stringer); ok {\n    fmt.Println(s.String())\n}\n```\n\n### Pattern: Type-Dependent Logic\n\n```go\nfunc process(v any) {\n    if s, ok := v.(string); ok {\n        fmt.Println(\"String length:\", len(s))\n    } else if n, ok := v.(int); ok {\n        fmt.Println(\"Integer doubled:\", n*2)\n    }\n}\n```\n\n### Assertion on nil Interface\n\n```go\nvar i any // nil\n\n_, ok := i.(string)  // ok is false, no panic\n// s := i.(string)   // PANIC: interface conversion on nil\n```\n\n### Internal Mechanism\n\n```go\n// Syntax: x.(T)\n// If T is concrete type: checks if x is T\n// If T is interface type: checks if x implements T\n\nvar r io.Reader = bytes.NewReader([]byte(\"hello\"))\n\n// Concrete type assertion\nbr := r.(*bytes.Reader)  // check if r is *bytes.Reader\n\n// Interface assertion\nw := r.(io.Writer)       // check if r implements io.Writer\n```\n\n> **Key Point:** Always use the two-value form `(value, ok)` for type assertions unless you are absolutely certain the assertion will succeed. Failed assertions without `ok` cause panics.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc printValue(v any) {\n    if s, ok := v.(string); ok {\n        fmt.Println(\"String:\", s)\n    } else if n, ok := v.(int); ok {\n        fmt.Println(\"Int:\", n)\n    } else if f, ok := v.(float64); ok {\n        fmt.Println(\"Float:\", f)\n    } else {\n        fmt.Println(\"Unknown type\")\n    }\n}\n\nfunc main() {\n    printValue(\"hello\")\n    printValue(42)\n    printValue(3.14)\n    printValue(true)\n}",
+  "quiz": [
+    {
+      "question": "What happens if a type assertion fails without the ok form?",
+      "options": ["Returns nil", "Panics", "Returns zero value", "Returns error"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does a type assertion return when T is an interface?",
+      "options": ["Checks if value implements T", "Checks if value is T", "Always succeeds", "Always fails"],
+      "correctIndex": 0
+    }
+  ]
+}

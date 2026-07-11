@@ -1,0 +1,17 @@
+{
+  "title": "Booleans in Rust",
+  "language": "rust",
+  "topic": "booleans",
+  "order": 11,
+  "nextTopic": "numbers",
+  "prevTopic": "operators",
+  "content": "### Booleans in Rust\n\nThe `bool` type in Rust represents a boolean value, which can be either `true` or `false`. Booleans are used in conditional expressions and control flow.\n\n---\n\n### Boolean Operations\n\n| Operation | Example | Result |\n|-----------|---------|--------|\n| AND | `true && false` | `false` |\n| OR | `true || false` | `true` |\n| NOT | `!true` | `false` |\n| Equality | `true == false` | `false` |\n| Inequality | `true != false` | `true` |\n\n---\n\n### Usage in Control Flow\n\n```rust\nlet is_ready = true;\n\nif is_ready {\n    println!(\"Ready!\");\n}\n\nlet result = if is_ready { \"yes\" } else { \"no\" };\n\n// Booleans in while loops\nwhile is_ready {\n    // loop body\n}\n\n// Boolean conversion is explicit\nlet number: i32 = is_ready as i32;  // true -> 1, false -> 0\nlet bool_val = number != 0;          // explicit conversion back\n```\n\n> **Key Point:** Rust requires explicit boolean expressions in `if` conditions. Unlike C, you cannot use `if (x)` where `x` is an integer; you must write `if x != 0`.",
+  "codeExample": "fn main() {\n    let a = true;\n    let b = false;\n    \n    println!(\"a AND b: {}\", a && b);\n    println!(\"a OR b: {}\", a || b);\n    println!(\"NOT a: {}\", !a);\n    println!(\"a == b: {}\", a == b);\n    \n    let number = 10;\n    let is_positive = number > 0;\n    println!(\"Is positive? {}\", is_positive);\n}",
+  "quiz": [
+    {
+      "question": "What are the two possible values of a `bool` type in Rust?",
+      "options": ["0 and 1", "true and false", "yes and no", "on and off"],
+      "correctIndex": 1
+    }
+  ]
+}

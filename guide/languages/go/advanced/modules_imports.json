@@ -1,0 +1,22 @@
+{
+  "title": "Go Modules and Imports",
+  "language": "go",
+  "topic": "modules_imports",
+  "order": 71,
+  "nextTopic": "workspace",
+  "prevTopic": "packages",
+  "content": "### Importing Packages\n\nUse `import` to access exported names from other packages.\n\n### Import Syntax\n\n```go\n// Single import\nimport \"fmt\"\n\n// Multiple imports\nimport (\n    \"fmt\"\n    \"math\"\n    \"strings\"\n)\n\n// Local package\nimport \"example.com/myproject/calculator\"\n\n// Third-party package\nimport \"github.com/gorilla/mux\"\n```\n\n### Import Aliases\n\n```go\nimport (\n    \"crypto/rand\"\n    mrand \"math/rand\" // alias to avoid conflict\n)\n\nfunc main() {\n    mrand.Intn(100)\n}\n```\n\n### Dot Import\n\nImport names directly into current namespace (use sparingly):\n\n```go\nimport . \"fmt\"\n\nfunc main() {\n    Println(\"Hello\") // no fmt. prefix\n}\n```\n\n### Blank Import\n\nFor side effects (init functions):\n\n```go\nimport _ \"image/png\" // registers PNG decoder\nimport _ \"net/http/pprof\" // enables profiling\n```\n\n### Import Path Conventions\n\n| Path Pattern | Description |\n|--------------|-------------|\n| `std` | Standard library |\n| `example.com/pkg` | Your own package |\n| `github.com/user/repo` | GitHub hosted |\n| `golang.org/x/tools` | Go sub-repositories |\n\n### Go Workspace (pre-1.16)\n\nBefore modules, Go used `GOPATH`:\n\n```\n$GOPATH/\n  src/\n    github.com/user/repo/\n  bin/\n  pkg/\n```\n\n### Module Path Best Practices\n\n```\n// Repository-based: good for published modules\ngithub.com/username/project\n\n// Domain-based: good for private code\nexample.com/team/project\n\n// Simple path: for local experiments\nmyproject\n```\n\n### Import Resolution Order\n\n1. Standard library (no path prefix)\n2. Module dependencies (from go.mod)\n3. Local packages (relative to module)\n\n> **Key Point:** Import paths must be unique. Use aliases when names conflict. Blank imports are for side effects only. Standard library packages have no path prefix.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"math/rand\"\n    \"time\"\n\n    cr \"crypto/rand\" // aliased import\n    \"encoding/hex\"\n)\n\nfunc main() {\n    // Standard library\n    fmt.Println(\"Random:\", rand.Intn(100))\n\n    // Crypto random via alias\n    b := make([]byte, 4)\n    cr.Read(b)\n    fmt.Println(\"Crypto random:\", hex.EncodeToString(b))\n\n    // Time seeded random\n    rand.Seed(time.Now().UnixNano())\n    fmt.Println(\"Seeded:\", rand.Intn(100))\n}",
+  "quiz": [
+    {
+      "question": "How do you resolve naming conflicts between imported packages?",
+      "options": ["Dot import", "Import alias", "Blank import", "Rename the package"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does a blank import (_) do?",
+      "options": ["Ignores the import", "Runs init() side effects only", "Creates alias", "Imports all names"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Enums in Rust",
+  "language": "rust",
+  "topic": "enums",
+  "order": 33,
+  "nextTopic": "option",
+  "prevTopic": "tuple_structs",
+  "content": "### Enums in Rust\n\nEnums (enumerations) define a type by enumerating its possible variants. Each variant can optionally carry data.\n\n---\n\n### Enum Variants\n\n| Form | Example |\n|------|---------|\n| No data | `enum Color { Red, Green, Blue }` |\n| With data | `enum IpAddr { V4(u8, u8, u8, u8), V6(String) }` |\n| With struct | `enum Message { Quit, Move { x: i32, y: i32 } }` |\n\n---\n\n### Examples\n\n```rust\n// Simple enum\nenum Direction {\n    Up,\n    Down,\n    Left,\n    Right,\n}\n\n// Enum with associated data\n#[derive(Debug)]\nenum IpAddrKind {\n    V4(u8, u8, u8, u8),\n    V6(String),\n}\n\nlet home = IpAddrKind::V4(127, 0, 0, 1);\nlet loopback = IpAddrKind::V6(String::from(\"::1\"));\n\n// Enum with different variant types\nenum Message {\n    Quit,                       // no data\n    Move { x: i32, y: i32 },    // anonymous struct\n    Write(String),              // tuple struct\n    ChangeColor(i32, i32, i32), // tuple\n}\n```\n\n> **Key Point:** Enums in Rust are powerful algebraic data types. Each variant can hold different types and amounts of data. Combined with `match`, enums enable expressive and safe code.",
+  "codeExample": "#[derive(Debug)]\nenum Coin {\n    Penny,\n    Nickel,\n    Dime,\n    Quarter,\n}\n\nfn value_in_cents(coin: Coin) -> u8 {\n    match coin {\n        Coin::Penny => 1,\n        Coin::Nickel => 5,\n        Coin::Dime => 10,\n        Coin::Quarter => 25,\n    }\n}\n\nfn main() {\n    let coin = Coin::Quarter;\n    println!(\"Value: {} cents\", value_in_cents(coin));\n}",
+  "quiz": [
+    {
+      "question": "Can enum variants in Rust carry different types of data?",
+      "options": ["No, all variants must be the same", "Yes, each variant can have different data", "Only numeric data", "Only references"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Go Closures",
+  "language": "go",
+  "topic": "closures",
+  "order": 38,
+  "nextTopic": "recursion",
+  "prevTopic": "variadic",
+  "content": "### Closures in Go\n\nA closure is a function that references variables from outside its body.\n\n### Basic Closure\n\n```go\nfunc main() {\n    message := \"Hello\"\n    \n    // Closure capturing 'message'\n    printMsg := func() {\n        fmt.Println(message)\n    }\n    \n    printMsg() // Hello\n}\n```\n\n### Closure Modifying Captured Variables\n\n```go\nfunc main() {\n    count := 0\n    \n    increment := func() int {\n        count++\n        return count\n    }\n    \n    fmt.Println(increment()) // 1\n    fmt.Println(increment()) // 2\n    fmt.Println(increment()) // 3\n}\n```\n\n### Returning Closures\n\n```go\nfunc counter() func() int {\n    count := 0\n    return func() int {\n        count++\n        return count\n    }\n}\n\nfunc main() {\n    c1 := counter()\n    c2 := counter()\n    \n    fmt.Println(c1()) // 1\n    fmt.Println(c1()) // 2\n    fmt.Println(c2()) // 1 (independent)\n}\n```\n\n### Closure with Parameters\n\n```go\nfunc multiplier(factor int) func(int) int {\n    return func(x int) int {\n        return x * factor\n    }\n}\n\ndouble := multiplier(2)\ntriple := multiplier(3)\n\nfmt.Println(double(5))  // 10\nfmt.Println(triple(5))  // 15\n```\n\n### Middleware Pattern\n\n```go\ntype Handler func(string)\n\nfunc withLogging(next Handler) Handler {\n    return func(msg string) {\n        fmt.Println(\"[LOG] before\")\n        next(msg)\n        fmt.Println(\"[LOG] after\")\n    }\n}\n```\n\n### Capture by Reference\n\nClosures capture variables by reference, not by value:\n\n```go\nfunc main() {\n    var funcs []func()\n    for i := 0; i < 3; i++ {\n        funcs = append(funcs, func() {\n            fmt.Println(i) // prints 3, 3, 3 (in Go <1.22)\n        })\n    }\n    // Go 1.22+ fixes this with per-iteration scope\n}\n```\n\n> **Key Point:** Closures capture variables by reference. In Go 1.22+, loop variables have per-iteration scope, fixing the classic closure-in-loop bug.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // Closure as factory\n    nextId := func() func() int {\n        id := 0\n        return func() int {\n            id++\n            return id\n        }\n    }()\n\n    fmt.Println(nextId()) // 1\n    fmt.Println(nextId()) // 2\n    fmt.Println(nextId()) // 3\n\n    // Closure with params\n    addTo := func(base int) func(int) int {\n        return func(x int) int {\n            return base + x\n        }\n    }\n\n    addFive := addTo(5)\n    fmt.Println(addFive(10)) // 15\n}",
+  "quiz": [
+    {
+      "question": "Do closures capture variables by value or reference?",
+      "options": ["By value", "By reference", "Depends on type", "By pointer"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a common use of closures?",
+      "options": ["Defining constants", "Creating function factories", "Declaring types", "Importing packages"],
+      "correctIndex": 1
+    }
+  ]
+}

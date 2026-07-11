@@ -1,0 +1,22 @@
+{
+  "title": "Go Break and Continue",
+  "language": "go",
+  "topic": "break_continue",
+  "order": 23,
+  "nextTopic": "goto",
+  "prevTopic": "for_range",
+  "content": "### Break and Continue\n\nControl the flow within loops.\n\n### Break\n\n`break` exits the innermost loop immediately:\n\n```go\nfor i := 0; i < 10; i++ {\n    if i == 5 {\n        break // exits loop\n    }\n    fmt.Print(i, \" \")\n}\n// Output: 0 1 2 3 4\n```\n\n### Continue\n\n`continue` skips to the next iteration:\n\n```go\nfor i := 0; i < 10; i++ {\n    if i%2 == 0 {\n        continue // skip even numbers\n    }\n    fmt.Print(i, \" \")\n}\n// Output: 1 3 5 7 9\n```\n\n### Break with Label\n\nBreak to an outer loop:\n\n```go\nouter:\nfor i := 0; i < 5; i++ {\n    for j := 0; j < 5; j++ {\n        if i*j > 6 {\n            fmt.Println()\n            break outer\n        }\n        fmt.Printf(\"(%d,%d) \", i, j)\n    }\n    fmt.Println()\n}\n```\n\n### Continue with Label\n\nContinue an outer loop:\n\n```go\nouter:\nfor i := 0; i < 3; i++ {\n    for j := 0; j < 3; j++ {\n        if i == j {\n            continue outer\n        }\n        fmt.Printf(\"(%d,%d) \", i, j)\n    }\n}\n// Output: (0,1) (0,2) (1,0) (1,2) (2,0) (2,1)\n```\n\n### Switch Inside Loop\n\n`break` in a switch exits the switch, not the loop. Use labels to break the loop:\n\n```go\nloop:\nfor i := 0; i < 10; i++ {\n    switch i {\n    case 5:\n        break loop // breaks the for loop\n    }\n}\n```\n\n> **Key Point:** `break` and `continue` apply to the innermost `for`, `switch`, or `select`. Use labels to control outer constructs.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Break at 5:\")\n    for i := 0; i < 10; i++ {\n        if i == 5 {\n            break\n        }\n        fmt.Print(i, \" \")\n    }\n    fmt.Println()\n\n    fmt.Println(\"Continue (odd only):\")\n    for i := 0; i < 10; i++ {\n        if i%2 == 0 {\n            continue\n        }\n        fmt.Print(i, \" \")\n    }\n    fmt.Println()\n}",
+  "quiz": [
+    {
+      "question": "What does `break` do inside a loop?",
+      "options": ["Skips one iteration", "Exits the loop", "Restarts the loop", "Pauses the loop"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you break an outer loop from inside a switch?",
+      "options": ["break outer", "Use label with break", "Use continue", "Use return"],
+      "correctIndex": 1
+    }
+  ]
+}

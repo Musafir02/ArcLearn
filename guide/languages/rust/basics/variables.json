@@ -1,0 +1,17 @@
+{
+  "title": "Variables in Rust",
+  "language": "rust",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "mutability",
+  "prevTopic": "comments",
+  "content": "### Variables in Rust\n\nVariables in Rust are declared with the `let` keyword. By default, variables are immutable.\n\n---\n\n### Variable Declaration\n\n| Syntax | Description |\n|--------|-------------|\n| `let x = 5;` | Immutable variable with type inference |\n| `let x: i32 = 5;` | Immutable variable with explicit type |\n| `let mut x = 5;` | Mutable variable |\n| `let (a, b) = (1, 2);` | Destructuring assignment |\n\n---\n\n### Naming Rules\n\n- Must start with a letter or underscore\n- Can contain letters, digits, and underscores\n- Snake case is conventional: `my_variable`\n- Reserved keywords cannot be used as names\n\n```rust\nlet _unused = 10;  // underscore prefix suppresses unused warning\nlet valid_name = \"ok\";\n```\n\n> **Key Point:** Variables in Rust are immutable by default. This is a deliberate design choice to encourage safe code. Use `mut` only when you need to change a value.",
+  "codeExample": "fn main() {\n    let x = 5;          // immutable\n    let mut y = 10;     // mutable\n    \n    println!(\"x = {}, y = {}\", x, y);\n    y = 15;\n    println!(\"y is now: {}\", y);\n}",
+  "quiz": [
+    {
+      "question": "What keyword makes a variable mutable in Rust?",
+      "options": ["mut", "var", "mutable", "change"],
+      "correctIndex": 0
+    }
+  ]
+}

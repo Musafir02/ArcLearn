@@ -1,0 +1,22 @@
+{
+  "title": "Go Struct Tags",
+  "language": "go",
+  "topic": "struct_tags",
+  "order": 47,
+  "nextTopic": "embedding",
+  "prevTopic": "struct_methods",
+  "content": "### Struct Tags\n\nTags are string literals attached to struct fields that provide metadata.\n\n### Syntax\n\n```go\ntype User struct {\n    ID    int    `json:\"id\"`\n    Name  string `json:\"name\"`\n    Email string `json:\"email,omitempty\"`\n    Pass  string `json:\"-\"`\n}\n```\n\n### Common Tag Formats\n\n```go\ntype Config struct {\n    Host    string `json:\"host\" yaml:\"host\" xml:\"host,attr\"`\n    Port    int    `json:\"port\" yaml:\"port\"`\n    Timeout int    `json:\"timeout,omitempty\"`\n    debug   bool   `json:\"-\"` // unexported, ignored\n}\n```\n\n### JSON Tags\n\n```go\ntype Product struct {\n    ID          int     `json:\"id\"`\n    Name        string  `json:\"name\"`\n    Price       float64 `json:\"price,omitempty\"`\n    Description string  `json:\"description,omitempty\"`\n    Secret      string  `json:\"-\"`  // never serialized\n}\n```\n\n| Tag Option | Effect |\n|------------|--------|\n| `json:\"name\"` | Rename field to \"name\" |\n| `json:\"-\"` | Skip this field |\n| `json:\"name,omitempty\"` | Omit if zero value |\n| `json:\"name,string\"` | Force string encoding |\n\n### Reading Tags with reflect\n\n```go\nimport \"reflect\"\n\ntype Person struct {\n    Name string `json:\"full_name\"`\n}\n\nfunc main() {\n    t := reflect.TypeOf(Person{})\n    field, _ := t.FieldByName(\"Name\")\n    tag := field.Tag.Get(\"json\")\n    fmt.Println(tag) // \"full_name\"\n}\n```\n\n### Custom Tags\n\nYou can define custom tag keys for your own use:\n\n```go\ntype Field struct {\n    Name string `validate:\"required,max=100\" db:\"user_name\"`\n}\n```\n\n### Validation Tags\n\nPopular libraries like `validator` use struct tags:\n\n```go\ntype LoginRequest struct {\n    Email    string `validate:\"required,email\"`\n    Password string `validate:\"required,min=8\"`\n    Age      int    `validate:\"gte=0,lte=130\"`\n}\n```\n\n> **Key Point:** Struct tags are space-separated key:\"value\" pairs. The reflect package reads them. Unexported fields cannot have tags used for serialization.",
+  "codeExample": "package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n)\n\ntype Person struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age,omitempty\"`\n    Bio  string `json:\"-\"`\n}\n\nfunc main() {\n    p := Person{Name: \"Alice\", Age: 30, Bio: \"secret\"}\n    data, _ := json.Marshal(p)\n    fmt.Println(string(data)) // {\"name\":\"Alice\",\"age\":30}\n\n    p2 := Person{Name: \"Bob\"}\n    data2, _ := json.Marshal(p2)\n    fmt.Println(string(data2)) // {\"name\":\"Bob\"}\n}",
+  "quiz": [
+    {
+      "question": "What does `json:\"-\"` do?",
+      "options": ["Omits the field from JSON", "Uses default name", "Makes field required", "Renames to dash"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What package reads struct tags at runtime?",
+      "options": ["fmt", "os", "reflect", "runtime"],
+      "correctIndex": 2
+    }
+  ]
+}

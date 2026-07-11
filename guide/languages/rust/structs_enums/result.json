@@ -1,0 +1,17 @@
+{
+  "title": "Result Enum in Rust",
+  "language": "rust",
+  "topic": "result",
+  "order": 35,
+  "nextTopic": "pattern_matching",
+  "prevTopic": "option",
+  "content": "### Result Enum in Rust\n\n`Result<T, E>` is a built-in enum for operations that can succeed or fail. It is Rust's primary error handling mechanism.\n\n---\n\n### Result Variants\n\n| Variant | Meaning |\n|---------|---------|\n| `Ok(T)` | Operation succeeded with value T |\n| `Err(E)` | Operation failed with error E |\n\n---\n\n### Using Result\n\n```rust\nuse std::fs::File;\nuse std::io::Read;\n\nfn read_file(path: &str) -> Result<String, std::io::Error> {\n    let mut file = File::open(path)?;  // ? propagates error\n    let mut contents = String::new();\n    file.read_to_string(&mut contents)?;\n    Ok(contents)\n}\n\nfn main() {\n    match read_file(\"hello.txt\") {\n        Ok(content) => println!(\"File: {}\", content),\n        Err(e) => eprintln!(\"Error: {}\", e),\n    }\n}\n\n// Common Result methods\nlet val = result.unwrap();          // panic on Err\nlet val = result.expect(\"msg\");    // panic with message on Err\nlet val = result.unwrap_or_default(); // default on Err\nlet is_ok = result.is_ok();          // true if Ok\nlet is_err = result.is_err();        // true if Err\n```\n\n> **Key Point:** The `?` operator is the idiomatic way to propagate errors in Rust. It unwraps `Ok` values and returns `Err` early from the function. Use `?` in functions that return `Result` or `Option`.",
+  "codeExample": "fn divide(a: f64, b: f64) -> Result<f64, String> {\n    if b == 0.0 {\n        Err(String::from(\"Cannot divide by zero\"))\n    } else {\n        Ok(a / b)\n    }\n}\n\nfn main() {\n    let result = divide(10.0, 2.0);\n    \n    match result {\n        Ok(value) => println!(\"Result: {}\", value),\n        Err(msg) => println!(\"Error: {}\", msg),\n    }\n    \n    // Using ? requires a function returning Result\n    fn try_divide() -> Result<(), String> {\n        let val = divide(10.0, 0.0)?;\n        println!(\"Value: {}\", val);\n        Ok(())\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which operator propagates errors in Rust?",
+      "options": ["!", "?", "~", "->"],
+      "correctIndex": 1
+    }
+  ]
+}

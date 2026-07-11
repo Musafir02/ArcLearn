@@ -1,0 +1,17 @@
+{
+  "title": "Borrowing in Rust",
+  "language": "rust",
+  "topic": "borrowing",
+  "order": 26,
+  "nextTopic": "references",
+  "prevTopic": "ownership",
+  "content": "### Borrowing in Rust\n\nBorrowing allows you to access a value without taking ownership. References are created with `&` and `&mut`.\n\n---\n\n### Borrowing Rules\n\n| Rule | Description |\n|------|-------------|\n| One mutable reference XOR any number of immutable references | No data races |\n| References must always be valid | No dangling references |\n| The borrower's scope cannot outlive the owner | Ensures memory safety |\n\n---\n\n### Mutable vs Immutable Borrowing\n\n```rust\nfn main() {\n    let mut s = String::from(\"hello\");\n    \n    let r1 = &s;      // immutable borrow\n    let r2 = &s;      // OK: multiple immutable borrows\n    // let r3 = &mut s; // ERROR: cannot borrow as mutable while immutable exists\n    println!(\"{}, {}\", r1, r2);  // r1 and r2 go out of scope here\n    \n    let r3 = &mut s;  // OK: no immutable borrows active\n    r3.push_str(\" world\");\n    println!(\"{}\", r3);\n}\n```\n\n> **Key Point:** The borrow checker enforces that you cannot have a mutable reference and immutable references to the same data at the same time. This prevents data races at compile time. The scope of a reference ends at its last use.",
+  "codeExample": "fn main() {\n    let s = String::from(\"hello\");\n    let len = calculate_length(&s);  // borrow s\n    println!(\"The length of '{}' is {}.\", s, len);\n}\n\nfn calculate_length(s: &String) -> usize {\n    s.len()\n}  // s goes out of scope, but since it was borrowed, nothing happens",
+  "quiz": [
+    {
+      "question": "How many mutable references can exist to a value at once?",
+      "options": ["Multiple", "One", "Zero", "Unlimited"],
+      "correctIndex": 1
+    }
+  ]
+}

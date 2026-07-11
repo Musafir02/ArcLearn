@@ -1,0 +1,22 @@
+{
+  "title": "Go Goroutines",
+  "language": "go",
+  "topic": "goroutines",
+  "order": 54,
+  "nextTopic": "channels",
+  "prevTopic": "type_switches",
+  "content": "### Goroutines\n\nA goroutine is a lightweight thread managed by the Go runtime.\n\n### Starting a Goroutine\n\nUse the `go` keyword to start a goroutine:\n\n```go\nfunc sayHello() {\n    fmt.Println(\"Hello from goroutine!\")\n}\n\nfunc main() {\n    go sayHello()\n    time.Sleep(time.Millisecond) // wait for goroutine\n}\n```\n\n### Anonymous Goroutines\n\n```go\nfunc main() {\n    go func() {\n        fmt.Println(\"Anonymous goroutine\")\n    }()\n    time.Sleep(time.Millisecond)\n}\n```\n\n### Goroutines are Lightweight\n\n- Stack starts at 2KB (vs ~1MB for OS threads)\n- Goroutines are multiplexed onto OS threads\n- Thousands of goroutines are practical\n\n```go\nfunc main() {\n    var wg sync.WaitGroup\n    for i := 0; i < 1000; i++ {\n        wg.Add(1)\n        go func(id int) {\n            defer wg.Done()\n            fmt.Println(\"goroutine\", id)\n        }(i)\n    }\n    wg.Wait()\n}\n```\n\n### Goroutine Scheduling\n\n- Go uses M:N scheduling (M goroutines on N OS threads)\n- `GOMAXPROCS` controls the number of OS threads\n- Default: number of CPU cores\n\n```go\nimport \"runtime\"\nfmt.Println(\"CPUs:\", runtime.NumCPU())\nfmt.Println(\"GOMAXPROCS:\", runtime.GOMAXPROCS(0))\n```\n\n### Main Goroutine\n\nThe `main()` function itself runs as a goroutine. When `main()` returns, all goroutines are terminated.\n\n```go\nfunc main() {\n    go func() {\n        fmt.Println(\"This may not print\")\n    }()\n    // main returns, program exits\n}\n```\n\nUse synchronization (WaitGroup, channels) to ensure goroutines complete.\n\n> **Key Point:** Goroutines are not OS threads - they are cooperatively scheduled by the Go runtime and are very cheap to create. Always use synchronization to wait for goroutines.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc worker(id int, wg *sync.WaitGroup) {\n    defer wg.Done()\n    fmt.Printf(\"Worker %d starting\\n\", id)\n    fmt.Printf(\"Worker %d done\\n\", id)\n}\n\nfunc main() {\n    var wg sync.WaitGroup\n\n    for i := 1; i <= 5; i++ {\n        wg.Add(1)\n        go worker(i, &wg)\n    }\n\n    wg.Wait()\n    fmt.Println(\"All workers completed\")\n}",
+  "quiz": [
+    {
+      "question": "What keyword starts a goroutine?",
+      "options": ["thread", "go", "async", "spawn"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when main() returns while goroutines are running?",
+      "options": ["Goroutines continue", "Program exits immediately", "Goroutines complete first", "Panic occurs"],
+      "correctIndex": 1
+    }
+  ]
+}

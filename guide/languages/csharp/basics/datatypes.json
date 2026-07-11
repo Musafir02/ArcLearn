@@ -1,0 +1,22 @@
+{
+  "title": "C# Data Types",
+  "language": "csharp",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "typecasting",
+  "prevTopic": "variables",
+  "content": "### Data Types in C#\n\nC# is a strongly typed language with two main categories of data types: value types and reference types.\n\n### Value Types\n\nStored directly on the stack. Each variable has its own copy of the data.\n\n| Type | Size | Range | Example |\n|------|------|-------|---------|\n| `byte` | 8-bit | 0 to 255 | `byte b = 100;` |\n| `short` | 16-bit | -32,768 to 32,767 | `short s = 1000;` |\n| `int` | 32-bit | -2.1B to 2.1B | `int i = 100000;` |\n| `long` | 64-bit | -9E18 to 9E18 | `long l = 100L;` |\n| `float` | 32-bit | ~7 digits precision | `float f = 3.14f;` |\n| `double` | 64-bit | ~15-16 digits precision | `double d = 3.14;` |\n| `decimal` | 128-bit | ~28-29 digits precision | `decimal m = 3.14m;` |\n| `bool` | 8-bit | true or false | `bool b = true;` |\n| `char` | 16-bit | Single Unicode character | `char c = 'A';` |\n\n### Reference Types\n\nStored on the heap. Variables hold a reference (memory address) to the data.\n\n| Type | Description | Example |\n|------|-------------|---------|\n| `string` | Sequence of characters | `string s = \"Hello\";` |\n| `object` | Base type of all types | `object o = 42;` |\n| `dynamic` | Bypasses compile-time checking | `dynamic d = \"test\";` |\n| `class` | User-defined reference type | `class Car { }` |\n| `array` | Collection of same-type elements | `int[] arr = {1, 2, 3};` |\n\n### Nullable Types\n\nValue types can be made nullable with `?`:\n\n```csharp\nint? nullableInt = null;\nbool? isComplete = null;\ndouble? price = 10.99;\n```\n\n> **Key Point:** Use `int` for general integers, `double` for decimals, and `decimal` for financial calculations that require high precision. `string` is a reference type but behaves like a value type in many ways.\n\n### Default Values\n\n| Type | Default Value |\n|------|---------------|\n| Numeric types | 0 |\n| bool | false |\n| char | '\\0' |\n| string | null |\n| Reference types | null |",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int age = 25;\n        double salary = 55000.50;\n        decimal price = 19.99m;\n        bool isActive = true;\n        char grade = 'A';\n        string name = \"Alice\";\n        \n        Console.WriteLine($\"Type: int, Value: {age}\");\n        Console.WriteLine($\"Type: decimal, Value: {price}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which data type is best for financial calculations requiring high precision?",
+      "options": ["float", "double", "decimal", "int"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following is a value type in C#?",
+      "options": ["string", "int", "class", "array"],
+      "correctIndex": 1
+    }
+  ]
+}

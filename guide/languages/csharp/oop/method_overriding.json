@@ -1,0 +1,22 @@
+{
+  "title": "C# Method Overriding",
+  "language": "csharp",
+  "topic": "method_overriding",
+  "order": 44,
+  "nextTopic": "abstract",
+  "prevTopic": "polymorphism",
+  "content": "### Method Overriding in C#\n\nMethod overriding allows a derived class to provide a specific implementation of a method defined in its base class.\n\n### Requirements\n\n1. Base class method must be marked with `virtual`, `abstract`, or `override`\n2. Derived class method must use the `override` keyword\n3. Method signature (name, return type, parameters) must match exactly\n\n### Virtual and Override\n\n```csharp\npublic class Base\n{\n    public virtual void Show()\n    {\n        Console.WriteLine(\"Base implementation\");\n    }\n}\n\npublic class Derived : Base\n{\n    public override void Show()\n    {\n        Console.WriteLine(\"Derived implementation\");\n    }\n}\n```\n\n### Calling Base Implementation\n\n```csharp\npublic class Derived : Base\n{\n    public override void Show()\n    {\n        base.Show();  // Call base version\n        Console.WriteLine(\"Then add derived behavior\");\n    }\n}\n```\n\n### Override vs New\n\n| Aspect | override | new |\n|--------|----------|-----|\n| Polymorphism | Yes (runtime) | No (compile-time) |\n| Base method | Must be virtual/abstract/override | Can be any method |\n| Intent | Extend/replace behavior | Hide base method |\n\n```csharp\nBase b = new Derived();\nb.Show();  // override -> \"Derived\"; new -> \"Base\"\n```\n\n### Sealed Override\n\nStop further overriding:\n\n```csharp\npublic class Base\n{\n    public virtual void Show() { }\n}\n\npublic class Derived : Base\n{\n    public sealed override void Show() { }\n}\n\npublic class MoreDerived : Derived\n{\n    // public override void Show() { }  // Error - sealed\n}\n```\n\n### Overriding Properties\n\n```csharp\npublic class Base\n{\n    public virtual string Name { get; set; }\n}\n\npublic class Derived : Base\n{\n    private string _name;\n    \n    public override string Name\n    {\n        get => _name.ToUpper();\n        set => _name = value;\n    }\n}\n```\n\n### Rules for Overriding\n\n| Rule | Explanation |\n|------|-------------|\n| Same signature | Name, parameters, return type must match |\n| Cannot override static | Static methods are not virtual |\n| Cannot override non-virtual | Base method must be virtual, abstract, or override |\n| Access level | Override must have same or greater access |\n| Covariant return types | C# 9+ allows more specific return type |\n\n### Covariant Return Types (C# 9+)\n\n```csharp\npublic class Base\n{\n    public virtual Base Clone() => new Base();\n}\n\npublic class Derived : Base\n{\n    public override Derived Clone() => new Derived();\n}\n```\n\n> **Key Point:** Use `override` to replace behavior polymorphically. Use `new` to hide a method (not polymorphic). Always call `base.MethodName()` if you want to extend the base behavior. Use `sealed override` to prevent further overrides in the inheritance chain.\n\n### Abstract Override\n\n```csharp\npublic abstract class Base\n{\n    public abstract void MustImplement();\n}\n\npublic class Derived : Base\n{\n    public override void MustImplement() { }\n}\n```",
+  "codeExample": "using System;\n\npublic class Account\n{\n    public virtual decimal CalculateInterest(decimal balance)\n    {\n        return balance * 0.01m;  // 1% base rate\n    }\n}\n\npublic class SavingsAccount : Account\n{\n    public override decimal CalculateInterest(decimal balance)\n    {\n        return balance * 0.03m;  // 3% for savings\n    }\n}\n\npublic class PremiumAccount : Account\n{\n    public override decimal CalculateInterest(decimal balance)\n    {\n        return base.CalculateInterest(balance) + balance * 0.02m;\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Account[] accounts = { new Account(), new SavingsAccount(), new PremiumAccount() };\n        foreach (var acc in accounts)\n            Console.WriteLine($\"Interest: {acc.CalculateInterest(1000):C}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which keyword must the base method have to allow overriding?",
+      "options": ["virtual", "static", "new", "sealed"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the difference between override and new?",
+      "options": ["No difference", "override uses runtime polymorphism, new does not", "new is for static methods", "override is faster"],
+      "correctIndex": 1
+    }
+  ]
+}

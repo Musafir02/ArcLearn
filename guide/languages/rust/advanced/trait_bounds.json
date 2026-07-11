@@ -1,0 +1,17 @@
+{
+  "title": "Trait Bounds in Rust",
+  "language": "rust",
+  "topic": "trait_bounds",
+  "order": 48,
+  "nextTopic": "modules",
+  "prevTopic": "trait_objects",
+  "content": "### Trait Bounds in Rust\n\nTrait bounds constrain generic types to types that implement specific traits. They specify what capabilities a generic type must have.\n\n---\n\n### Syntax Forms\n\n| Form | Example |\n|------|---------|\n| Colon syntax | `fn foo<T: Display>(t: T)` |\n| Where clause | `fn foo<T>(t: T) where T: Display + Clone` |\n| Multiple bounds | `fn foo<T: Display + Clone>(t: T)` |\n| Nested bounds | `fn foo<T: Into<Vec<U>>, U: Debug>()` |\n\n---\n\n### Examples\n\n```rust\nuse std::fmt::Display;\n\n// Colon syntax\nfn print<T: Display>(value: T) {\n    println!(\"{}\", value);\n}\n\n// Where clause (preferred for complex signatures)\nfn compare<T, U>(a: T, b: U) -> bool\nwhere\n    T: PartialEq<U>,\n    T: Display,\n    U: Display,\n{\n    println!(\"Comparing: {} and {}\", a, b);\n    a == b\n}\n\n// Multiple bounds\nfn clone_and_print<T: Display + Clone>(value: T) {\n    let cloned = value.clone();\n    println!(\"Original: {}, Clone: {}\", value, cloned);\n}\n\n// Bound on return type\nfn pair<T: Display>(a: T, b: T) -> impl Display {\n    format!(\"({}, {})\", a, b)\n}\n```\n\n> **Key Point:** Use the `where` clause for complex trait bounds to improve readability. The `+` syntax combines multiple trait bounds. The `impl Trait` syntax in return position hides the concrete type while specifying its capabilities.",
+  "codeExample": "use std::fmt::Debug;\n\nfn print_debug<T: Debug>(val: &T) {\n    println!(\"{:?}\", val);\n}\n\nfn largest<T: PartialOrd + Copy>(list: &[T]) -> T {\n    let mut largest = list[0];\n    for &item in list {\n        if item > largest {\n            largest = item;\n        }\n    }\n    largest\n}\n\nfn main() {\n    print_debug(&vec![1, 2, 3]);\n    let max = largest(&[3, 7, 1, 9, 4]);\n    println!(\"Largest: {}\", max);\n}",
+  "quiz": [
+    {
+      "question": "Which keyword introduces trait bounds for better readability in complex signatures?",
+      "options": ["using", "where", "with", "as"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Smart Pointers in Rust",
+  "language": "rust",
+  "topic": "smart_pointers",
+  "order": 58,
+  "nextTopic": "box",
+  "prevTopic": "file_write",
+  "content": "### Smart Pointers in Rust\n\nSmart pointers are data structures that act like pointers but also have additional metadata and capabilities. They implement the `Deref` and `Drop` traits.\n\n---\n\n### Common Smart Pointers\n\n| Type | Ownership | Use Case |\n|------|-----------|----------|\n| `Box<T>` | Single owner | Heap allocation, trait objects |\n| `Rc<T>` | Shared (reference counted) | Multiple read-only owners |\n| `Arc<T>` | Atomic shared | Thread-safe shared ownership |\n| `RefCell<T>` | Single owner | Interior mutability |\n| `Mutex<T>` | Thread-safe | Mutual exclusion |\n| `Cell<T>` | Single owner | Copy types interior mutability |\n\n---\n\n### Key Traits\n\n```rust\n// Deref - allows smart pointers to be used like references\nuse std::ops::Deref;\n\nstruct MyBox<T>(T);\n\nimpl<T> Deref for MyBox<T> {\n    type Target = T;\n    fn deref(&self) -> &T {\n        &self.0\n    }\n}\n\n// Drop - custom cleanup when value goes out of scope\nimpl<T> Drop for MyBox<T> {\n    fn drop(&mut self) {\n        println!(\"Dropping MyBox\");\n    }\n}\n```\n\n> **Key Point:** Smart pointers implement `Deref` for auto-dereferencing and `Drop` for automatic cleanup. Choose the right smart pointer based on ownership and concurrency needs: `Box` for single ownership, `Rc` for shared ownership in single-threaded, `Arc` for multi-threaded.",
+  "codeExample": "use std::ops::Deref;\n\nstruct CustomBox<T>(T);\n\nimpl<T> CustomBox<T> {\n    fn new(x: T) -> CustomBox<T> {\n        CustomBox(x)\n    }\n}\n\nimpl<T> Deref for CustomBox<T> {\n    type Target = T;\n    fn deref(&self) -> &T {\n        &self.0\n    }\n}\n\nimpl<T> Drop for CustomBox<T> {\n    fn drop(&mut self) {\n        println!(\"CustomBox dropped\");\n    }\n}\n\nfn main() {\n    let x = 5;\n    let y = CustomBox::new(x);\n    \n    assert_eq!(5, *y);  // dereference works\n    println!(\"Value: {}\", *y);\n}",
+  "quiz": [
+    {
+      "question": "Which two traits do smart pointers typically implement?",
+      "options": ["Deref and Drop", "Clone and Copy", "Eq and Hash", "Debug and Display"],
+      "correctIndex": 0
+    }
+  ]
+}

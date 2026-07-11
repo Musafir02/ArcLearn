@@ -1,0 +1,22 @@
+{
+  "title": "C# Sealed Classes and Methods",
+  "language": "csharp",
+  "topic": "sealed",
+  "order": 47,
+  "nextTopic": "static",
+  "prevTopic": "interfaces",
+  "content": "### Sealed in C#\n\nThe `sealed` keyword prevents inheritance for classes or further overriding of methods/properties.\n\n### Sealed Classes\n\nA sealed class cannot be used as a base class:\n\n```csharp\npublic sealed class SecurityManager\n{\n    public void Authenticate() { }\n}\n\n// public class CustomSecurity : SecurityManager { }  // Error\n```\n\n### Sealed Methods\n\nPrevent further overriding of a virtual method:\n\n```csharp\npublic class Base\n{\n    public virtual void Show() { }\n}\n\npublic class Derived : Base\n{\n    public sealed override void Show() { }\n}\n\npublic class MoreDerived : Derived\n{\n    // public override void Show() { }  // Error - sealed\n}\n```\n\n### Sealed Properties\n\n```csharp\npublic class Base\n{\n    public virtual string Name { get; set; }\n}\n\npublic class Derived : Base\n{\n    public sealed override string Name { get; set; }\n}\n```\n\n### Why Use Sealed?\n\n| Reason | Benefit |\n|--------|---------|\n| Security | Prevents malicious inheritance |\n| Performance | Enables compiler optimizations |\n| Design | Intent is clear - no extension |\n| Safety | Prevents breaking subclass behavior |\n\n### Common Sealed Types in .NET\n\n```csharp\nsealed class String\nsealed class Int32\nsealed class Double\nsealed class Boolean\n```\n\n### Sealed vs Static Classes\n\n| Aspect | Sealed Class | Static Class |\n|--------|--------------|--------------|\n| Can be instantiated | Yes | No |\n| Can have instance members | Yes | No |\n| Can inherit | No (sealed) | No (static) |\n| Can be inherited from | No | No |\n| Use case | Prevent extension | Utility classes |\n\n### Static Sealed Class\n\nAll static classes are implicitly sealed:\n\n```csharp\npublic static class MathHelper\n{\n    public static double Square(double x) => x * x;\n}\n// Equivalent: static classes are always sealed\n```\n\n### Record and Sealed\n\nRecords can be sealed:\n\n```csharp\npublic sealed record Point(int X, int Y);\n// Cannot derive from Point\n```\n\n> **Key Point:** Use `sealed` when you want to prevent inheritance for security, performance, or design reasons. Sealing a method prevents further overrides in derived classes. The compiler can optimize virtual calls for sealed classes.\n\n### Performance Benefit\n\n```csharp\n// Without sealed - virtual call overhead\npublic class Base { public virtual void Foo() { } }\n\n// With sealed - can be devirtualized\npublic sealed class Derived : Base { public override void Foo() { } }\n```\n\n### When NOT to Seal\n\n- Library/framework code where extension is expected\n- When the Open/Closed principle favors extension\n- When you cannot predict future requirements",
+  "codeExample": "using System;\n\npublic class Account\n{\n    public virtual void Display() => Console.WriteLine(\"Account\");\n}\n\npublic class SavingsAccount : Account\n{\n    public sealed override void Display()\n    {\n        Console.WriteLine(\"Savings Account - cannot override further\");\n    }\n}\n\n// public class PremiumAccount : SavingsAccount\n// {\n//     public override void Display() { }  // Error - sealed\n// }\n\nsealed class Configuration\n{\n    public string ConnectionString { get; init; }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var config = new Configuration { ConnectionString = \"Server=local;\" };\n        Console.WriteLine(config.ConnectionString);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does the sealed keyword prevent?",
+      "options": ["Method calls", "Inheritance or further overriding", "Object creation", "Memory allocation"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are static classes implicitly sealed?",
+      "options": ["Yes", "No", "Only in C# 9+", "Only for public classes"],
+      "correctIndex": 0
+    }
+  ]
+}

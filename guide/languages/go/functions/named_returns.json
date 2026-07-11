@@ -1,0 +1,22 @@
+{
+  "title": "Go Named Returns",
+  "language": "go",
+  "topic": "named_returns",
+  "order": 36,
+  "nextTopic": "variadic",
+  "prevTopic": "multiple_returns",
+  "content": "### Named Return Values\n\nNamed return values give names to the return values of a function.\n\n### Declaration\n\n```go\nfunc getBounds() (min, max int) {\n    min = 0\n    max = 100\n    return\n}\n```\n\n### How Named Returns Work\n\nWhen you name the return values:\n1. Variables are declared automatically\n2. They are initialized to their zero values\n3. A bare `return` returns their current values\n\n### Named vs Unnamed\n\n```go\n// Without names - must specify return values\nfunc add(a, b int) int {\n    return a + b\n}\n\n// With names - can use bare return\nfunc subtract(a, b int) (result int) {\n    result = a - b\n    return\n}\n```\n\n### When to Use Named Returns\n\nGood use cases:\n- Short functions where the return value purpose is clear\n- Deferred functions that modify return values\n\n```go\nfunc readFile(filename string) (data []byte, err error) {\n    f, err := os.Open(filename)\n    if err != nil {\n        return\n    }\n    defer f.Close()\n    \n    // Named returns allow defer to modify them\n    defer func() {\n        if r := recover(); r != nil {\n            err = fmt.Errorf(\"panic: %v\", r)\n        }\n    }()\n    \n    data, err = io.ReadAll(f)\n    return\n}\n```\n\n### Defer with Named Returns\n\nDeferred functions can modify named return values:\n\n```go\nfunc count() (n int) {\n    defer func() {\n        n++ // modifies the return value\n    }()\n    return 5\n}\n// count() returns 6\n```\n\n### Overuse Warning\n\nNamed returns can reduce readability in complex functions. Use them sparingly.\n\n> **Key Point:** Named return values are initialized to zero values and allow bare returns. They are most useful with deferred functions that need to modify return values.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc divide(a, b float64) (result float64, err error) {\n    if b == 0 {\n        err = fmt.Errorf(\"division by zero\")\n        return\n    }\n    result = a / b\n    return\n}\n\n// Defer modifies named return\nfunc increment() (x int) {\n    defer func() {\n        x++\n    }()\n    return 10\n}\n\nfunc main() {\n    r, e := divide(10, 3)\n    fmt.Println(\"result:\", r, \"err:\", e)\n    \n    _, e = divide(10, 0)\n    fmt.Println(\"err:\", e)\n    \n    fmt.Println(\"increment:\", increment()) // 11\n}",
+  "quiz": [
+    {
+      "question": "What is the initial value of named return variables?",
+      "options": ["undefined", "Zero value of the type", "nil", "Depends on scope"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a deferred function modify named return values?",
+      "options": ["Yes", "No", "Only for strings", "Only for integers"],
+      "correctIndex": 0
+    }
+  ]
+}

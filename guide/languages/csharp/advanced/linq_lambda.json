@@ -1,0 +1,22 @@
+{
+  "title": "C# LINQ with Lambda",
+  "language": "csharp",
+  "topic": "linq_lambda",
+  "order": 59,
+  "nextTopic": "exception_handling",
+  "prevTopic": "linq_methods",
+  "content": "### LINQ with Lambda Expressions\n\nLambda expressions are the foundation of LINQ method syntax. They provide concise, inline function definitions.\n\n### Lambda Basics in LINQ\n\n```csharp\n// Full lambda syntax\nnumbers.Where((int n) => { return n > 5; });\n\n// Simplified\nnumbers.Where(n => n > 5);\nnumbers.Select(n => n * n);\n```\n\n### Common LINQ Lambda Patterns\n\n```csharp\nvar people = new List<Person>\n{\n    new Person { Name = \"Alice\", Age = 30, Salary = 50000 },\n    new Person { Name = \"Bob\", Age = 25, Salary = 40000 },\n    new Person { Name = \"Charlie\", Age = 35, Salary = 60000 }\n};\n\n// Filter with complex condition\nvar result = people.Where(p => p.Age >= 30 && p.Salary > 45000);\n\n// Projection with anonymous type\nvar projected = people.Select(p => new { p.Name, Bonus = p.Salary * 0.1 });\n\n// Sorting with lambda\nvar sorted = people.OrderByDescending(p => p.Salary).ThenBy(p => p.Name);\n```\n\n### Lambda with Index\n\n```csharp\nstring[] fruits = { \"Apple\", \"Banana\", \"Cherry\" };\n\n// Index parameter in Where and Select\nvar indexed = fruits.Select((fruit, index) => $\"{index + 1}. {fruit}\");\nvar filtered = fruits.Where((fruit, index) => index % 2 == 0);\n```\n\n### Aggregation with Lambda\n\n```csharp\nint[] numbers = { 1, 2, 3, 4, 5 };\n\n// Custom aggregation\nint product = numbers.Aggregate((acc, n) => acc * n);  // 120\n\n// Aggregate with seed\nint factorial = numbers.Aggregate(1, (acc, n) => acc * n);  // 120\n\n// Running total\nvar runningTotal = numbers.Select((n, i) => numbers.Take(i + 1).Sum());\n```\n\n### Complex Grouping\n\n```csharp\nvar grouped = people\n    .GroupBy(p => new { \n        p.Age / 10 * 10,  // Group by decade\n        p.Name[0]          // Group by first letter\n    })\n    .Select(g => new { \n        Decade = g.Key, \n        Count = g.Count(),\n        People = g.Select(p => p.Name)\n    });\n```\n\n### Lambda Performance\n\n| Aspect | Effect |\n|--------|--------|\n| Inlined lambdas | Compiled to delegate instances |\n| Captured variables | Closure allocation overhead |\n| Static lambdas | No closure (C# 9+ static lambda) |\n| Deferred execution | Lambda runs per element during iteration |\n\n### Static Anonymous Functions (C# 9+)\n\nPrevent accidental captures:\n\n```csharp\nint threshold = 5;\nvar result = numbers.Where(static n => n > 0);  // Can't capture threshold\n// var result = numbers.Where(n => n > threshold);  // Can capture\n```\n\n> **Key Point:** Lambda expressions are the primary way to express LINQ queries in method syntax. They can capture variables (closures) from the enclosing scope. Use lambdas for filter conditions, projections, sorting keys, and custom aggregations.\n\n### Common Lambda Mistakes\n\n```csharp\n// Bad - unintended closure\nfor (int i = 0; i < 10; i++)\n    tasks.Add(Task.Run(() => Console.WriteLine(i)));  // All print 10\n\n// Fix - capture loop variable\nfor (int i = 0; i < 10; i++)\n{\n    int captured = i;\n    tasks.Add(Task.Run(() => Console.WriteLine(captured)));\n}",
+  "codeExample": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var employees = new List<(string Name, string Dept, int Salary)>\n        {\n            (\"Alice\", \"IT\", 70000),\n            (\"Bob\", \"HR\", 50000),\n            (\"Charlie\", \"IT\", 80000),\n            (\"Diana\", \"HR\", 55000)\n        };\n        \n        var result = employees\n            .Where(e => e.Salary > 60000)\n            .GroupBy(e => e.Dept)\n            .Select(g => new {\n                Department = g.Key,\n                Count = g.Count(),\n                AvgSalary = g.Average(e => e.Salary)\n            });\n        \n        foreach (var item in result)\n            Console.WriteLine($\"{item.Department}: {item.Count} employees, avg {item.AvgSalary:C}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is a lambda expression in LINQ context?",
+      "options": ["A named method", "An anonymous function", "A class definition", "A type"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What problem can occur when capturing loop variables in lambdas?",
+      "options": ["Syntax error", "All closures reference the last value", "Memory leak", "Stack overflow"],
+      "correctIndex": 1
+    }
+  ]
+}

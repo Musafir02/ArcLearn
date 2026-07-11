@@ -1,0 +1,22 @@
+{
+  "title": "Go Functions",
+  "language": "go",
+  "topic": "functions",
+  "order": 32,
+  "nextTopic": "function_params",
+  "prevTopic": "range",
+  "content": "### Functions in Go\n\nFunctions are reusable blocks of code that take input, perform operations, and return output.\n\n### Basic Function\n\n```go\nfunc greet() {\n    fmt.Println(\"Hello!\")\n}\n```\n\n### Function with Parameters\n\n```go\nfunc greet(name string) {\n    fmt.Println(\"Hello,\", name)\n}\n```\n\n### Function with Return Value\n\n```go\nfunc add(a int, b int) int {\n    return a + b\n}\n```\n\n### Functions are First-Class\n\nFunctions can be assigned to variables and passed as arguments:\n\n```go\n// Function variable\nfn := func(x int) int {\n    return x * 2\n}\nresult := fn(5) // 10\n\n// Function as argument\nfunc apply(f func(int) int, x int) int {\n    return f(x)\n}\n\nresult := apply(fn, 5) // 10\n```\n\n### Anonymous Functions\n\n```go\n// Inline anonymous function\nsum := func(nums ...int) int {\n    total := 0\n    for _, n := range nums {\n        total += n\n    }\n    return total\n}\nfmt.Println(sum(1, 2, 3)) // 6\n```\n\n### Function Types\n\n```go\ntype Handler func(name string) string\n\nfunc format(handler Handler, name string) string {\n    return handler(name)\n}\n```\n\n### Method vs Function\n\n```go\n// Function (package-level)\nfunc SayHello(name string) string {\n    return \"Hello, \" + name\n}\n\n// Method (attached to a type)\ntype Greeter struct {\n    Greeting string\n}\n\nfunc (g Greeter) SayHello(name string) string {\n    return g.Greeting + \", \" + name\n}\n```\n\n> **Key Point:** Functions in Go are first-class citizens. They can be assigned to variables, passed as arguments, and returned from other functions.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\n// Named function\nfunc add(a, b int) int {\n    return a + b\n}\n\nfunc main() {\n    result := add(5, 3)\n    fmt.Println(\"5 + 3 =\", result)\n\n    // Anonymous function\n    multiply := func(x, y int) int {\n        return x * y\n    }\n    fmt.Println(\"4 * 7 =\", multiply(4, 7))\n\n    // Function as value\n    fmt.Printf(\"add type: %T\\n\", add)\n}",
+  "quiz": [
+    {
+      "question": "Are functions first-class citizens in Go?",
+      "options": ["Yes", "No", "Only named functions", "Only anonymous functions"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a method in Go?",
+      "options": ["A package-level function", "A function with a receiver", "A built-in function", "A function without parameters"],
+      "correctIndex": 1
+    }
+  ]
+}

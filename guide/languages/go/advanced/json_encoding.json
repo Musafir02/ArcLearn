@@ -1,0 +1,22 @@
+{
+  "title": "Go JSON Encoding",
+  "language": "go",
+  "topic": "json_encoding",
+  "order": 65,
+  "nextTopic": "time_package",
+  "prevTopic": "file_io",
+  "content": "### JSON Encoding\n\nThe `encoding/json` package provides JSON encoding and decoding.\n\n### Marshaling (Go to JSON)\n\n```go\nimport \"encoding/json\"\n\ntype Person struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age\"`\n}\n\np := Person{Name: \"Alice\", Age: 30}\ndata, err := json.Marshal(p)\nif err != nil {\n    log.Fatal(err)\n}\nfmt.Println(string(data)) // {\"name\":\"Alice\",\"age\":30}\n```\n\n### Pretty Print JSON\n\n```go\ndata, err := json.MarshalIndent(p, \"\", \"  \")\nfmt.Println(string(data))\n```\n\n### Unmarshaling (JSON to Go)\n\n```go\njsonStr := `{\"name\":\"Bob\",\"age\":25}`\nvar p Person\nerr := json.Unmarshal([]byte(jsonStr), &p)\nif err != nil {\n    log.Fatal(err)\n}\nfmt.Println(p.Name) // Bob\nfmt.Println(p.Age)  // 25\n```\n\n### JSON with Dynamic Keys\n\n```go\nvar data map[string]any\nerr := json.Unmarshal([]byte(`{\"key\": \"value\", \"num\": 42}`), &data)\nfmt.Println(data[\"key\"]) // \"value\"\n```\n\n### JSON with Slices\n\n```go\njsonStr := `[{\"name\":\"Alice\"},{\"name\":\"Bob\"}]`\nvar people []Person\nerr := json.Unmarshal([]byte(jsonStr), &people)\n```\n\n### JSON Streams (Encoder/Decoder)\n\n```go\nfile, _ := os.Create(\"output.json\")\ndefer file.Close()\n\nencoder := json.NewEncoder(file)\nencoder.SetIndent(\"\", \"  \")\nencoder.Encode(p)\n\n// Reading\nfile2, _ := os.Open(\"input.json\")\ndefer file2.Close()\n\ndecoder := json.NewDecoder(file2)\nvar p2 Person\ndecoder.Decode(&p2)\n```\n\n### Custom JSON Marshaling\n\nImplement `json.Marshaler` and `json.Unmarshaler`:\n\n```go\ntype Color struct {\n    R, G, B uint8\n}\n\nfunc (c Color) MarshalJSON() ([]byte, error) {\n    return json.Marshal(fmt.Sprintf(\"#%02X%02X%02X\", c.R, c.G, c.B))\n}\n\nfunc (c *Color) UnmarshalJSON(data []byte) error {\n    var s string\n    if err := json.Unmarshal(data, &s); err != nil {\n        return err\n    }\n    // parse hex string...\n    return nil\n}\n```\n\n> **Key Point:** Only exported fields (capitalized) are JSON-encoded. Use struct tags to control field names and behavior. Use `json.NewEncoder`/`json.NewDecoder` for streaming large JSON data.",
+  "codeExample": "package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n)\n\ntype Product struct {\n    ID    int     `json:\"id\"`\n    Name  string  `json:\"name\"`\n    Price float64 `json:\"price,omitempty\"`\n    Tags  []string `json:\"tags,omitempty\"`\n}\n\nfunc main() {\n    // Marshal\n    p := Product{ID: 1, Name: \"Widget\", Price: 9.99, Tags: []string{\"sale\", \"new\"}}\n    data, _ := json.MarshalIndent(p, \"\", \"  \")\n    fmt.Println(string(data))\n\n    // Unmarshal\n    jsonStr := `{\"id\":2,\"name\":\"Gadget\",\"tags\":[\"popular\"]}`\n    var p2 Product\n    json.Unmarshal([]byte(jsonStr), &p2)\n    fmt.Printf(\"%+v\\n\", p2)\n}",
+  "quiz": [
+    {
+      "question": "What fields are JSON-encoded?",
+      "options": ["All fields", "Only exported fields", "Only tagged fields", "Only string fields"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What tag option omits a field if it has a zero value?",
+      "options": ["json:\"skipempty\"", "json:\"omitempty\"", "json:\"zero\"", "json:\"optional\""],
+      "correctIndex": 1
+    }
+  ]
+}

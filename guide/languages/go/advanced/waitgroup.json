@@ -1,0 +1,22 @@
+{
+  "title": "Go WaitGroup",
+  "language": "go",
+  "topic": "waitgroup",
+  "order": 59,
+  "nextTopic": "error_handling",
+  "prevTopic": "mutex",
+  "content": "### WaitGroup\n\n`sync.WaitGroup` waits for a collection of goroutines to finish.\n\n### Basic Usage\n\n```go\nvar wg sync.WaitGroup\n\nfor i := 0; i < 5; i++ {\n    wg.Add(1)\n    go func(id int) {\n        defer wg.Done()\n        fmt.Println(\"Worker\", id)\n    }(i)\n}\n\nwg.Wait() // blocks until all Done() calls\nfmt.Println(\"All workers done\")\n```\n\n### Methods\n\n| Method | Description |\n|--------|-------------|\n| `Add(delta int)` | Increment counter |\n| `Done()` | Decrement counter (usually via defer) |\n| `Wait()` | Block until counter is 0 |\n\n### Important: Add Before Go\n\n```go\n// CORRECT: Add before starting goroutine\nwg.Add(1)\ngo func() {\n    defer wg.Done()\n    // work\n}()\n\n// WRONG: Add inside goroutine (race condition)\ngo func() {\n    wg.Add(1) // may not complete before Wait()\n    defer wg.Done()\n    // work\n}()\n```\n\n### Negative Counter\n\nCalling Done() more times than Add() will cause a panic.\n\n```go\nvar wg sync.WaitGroup\nwg.Add(1)\nwg.Done()\nwg.Done() // panic: negative WaitGroup counter\n```\n\n### WaitGroup with Worker Pool\n\n```go\nfunc worker(id int, jobs <-chan int, wg *sync.WaitGroup) {\n    defer wg.Done()\n    for job := range jobs {\n        fmt.Printf(\"Worker %d processing job %d\\n\", id, job)\n    }\n}\n\nfunc main() {\n    const numWorkers = 3\n    jobs := make(chan int, 10)\n    var wg sync.WaitGroup\n\n    // Start workers\n    for i := 1; i <= numWorkers; i++ {\n        wg.Add(1)\n        go worker(i, jobs, &wg)\n    }\n\n    // Send jobs\n    for j := 1; j <= 5; j++ {\n        jobs <- j\n    }\n    close(jobs)\n\n    wg.Wait()\n}\n```\n\n> **Key Point:** Always call `wg.Add()` before starting the goroutine, not inside it. Always use `defer wg.Done()` to ensure the counter decrements even on panics.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc main() {\n    var wg sync.WaitGroup\n\n    for i := 0; i < 5; i++ {\n        wg.Add(1)\n        go func(id int) {\n            defer wg.Done()\n            fmt.Printf(\"Goroutine %d done\\n\", id)\n        }(i)\n    }\n\n    wg.Wait()\n    fmt.Println(\"All goroutines finished\")\n}",
+  "quiz": [
+    {
+      "question": "What happens if Done() is called more times than Add()?",
+      "options": ["Nothing", "Panics with negative counter", "Wait() returns immediately", "Goroutine blocks"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where should Add() be called?",
+      "options": ["Inside the goroutine", "Before starting the goroutine", "After the goroutine starts", "In the defer statement"],
+      "correctIndex": 1
+    }
+  ]
+}

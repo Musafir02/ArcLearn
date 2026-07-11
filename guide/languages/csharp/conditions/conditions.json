@@ -1,0 +1,22 @@
+{
+  "title": "C# Conditions",
+  "language": "csharp",
+  "topic": "conditions",
+  "order": 17,
+  "nextTopic": "if_else",
+  "prevTopic": "constants",
+  "content": "### Conditional Statements in C#\n\nConditional statements control the flow of execution based on boolean conditions.\n\n### The if Statement\n\nThe `if` statement executes a block of code if a condition is true:\n\n```csharp\nif (condition)\n{\n    // Code to execute if condition is true\n}\n```\n\n### Comparison and Logical Operators\n\n| Operator | Meaning | Example |\n|----------|---------|---------|\n| `==` | Equal to | `if (x == 5)` |\n| `!=` | Not equal to | `if (x != 5)` |\n| `>` | Greater than | `if (x > 5)` |\n| `<` | Less than | `if (x < 5)` |\n| `>=` | Greater or equal | `if (x >= 5)` |\n| `<=` | Less or equal | `if (x <= 5)` |\n| `&&` | AND | `if (x > 0 && x < 100)` |\n| `||` | OR | `if (x < 0 || x > 100)` |\n| `!` | NOT | `if (!isComplete)` |\n\n### Boolean Expressions\n\nAny expression that evaluates to `true` or `false`:\n\n```csharp\nint age = 18;\nbool canVote = age >= 18;  // true\n\nif (canVote)\n{\n    Console.WriteLine(\"Eligible to vote\");\n}\n\nif (age >= 18 && age <= 65)\n{\n    Console.WriteLine(\"Working age\");\n}\n```\n\n### Nested Conditions\n\n```csharp\nif (isLoggedIn)\n{\n    if (isAdmin)\n    {\n        Console.WriteLine(\"Admin panel\");\n    }\n    else\n    {\n        Console.WriteLine(\"User dashboard\");\n    }\n}\n```\n\n### Common Patterns\n\n```csharp\n// Range check\nif (temperature >= 0 && temperature <= 100)\n{\n    Console.WriteLine(\"Water is liquid\");\n}\n\n// Null check\nif (name != null)\n{\n    Console.WriteLine(name.Length);\n}\n```\n\n> **Key Point:** Conditions must evaluate to a boolean value. C# does not treat non-boolean values like 0 or 1 as true/false. Use `&&` for AND and `||` for OR with short-circuit evaluation.\n\n### Pattern Matching in Conditions (C# 7+)\n\n```csharp\nif (obj is string str)\n{\n    Console.WriteLine($\"String length: {str.Length}\");\n}\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int age = 25;\n        bool hasLicense = true;\n        \n        if (age >= 18 && hasLicense)\n        {\n            Console.WriteLine(\"You can drive\");\n        }\n        else if (age >= 18 && !hasLicense)\n        {\n            Console.WriteLine(\"Get a license first\");\n        }\n        else\n        {\n            Console.WriteLine(\"Too young to drive\");\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What type must an if condition evaluate to in C#?",
+      "options": ["int", "bool", "object", "string"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the && operator do?",
+      "options": ["OR", "NOT", "AND", "XOR"],
+      "correctIndex": 2
+    }
+  ]
+}

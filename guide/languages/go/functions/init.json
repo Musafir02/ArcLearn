@@ -1,0 +1,22 @@
+{
+  "title": "Go init Function",
+  "language": "go",
+  "topic": "init",
+  "order": 40,
+  "nextTopic": "pointers",
+  "prevTopic": "recursion",
+  "content": "### init Function\n\n`init()` is a special function that runs before `main()`.\n\n### Characteristics\n\n```go\nfunc init() {\n    // Runs automatically before main()\n    // Cannot be called explicitly\n    // No parameters, no return values\n}\n```\n\n- `init()` runs automatically at program startup\n- Each source file can have multiple `init()` functions\n- `init()` cannot be called explicitly\n- `init()` has no parameters or return values\n\n### Execution Order\n\n1. Imported packages are initialized first\n2. Package-level variable declarations are evaluated\n3. `init()` functions run in declaration order\n4. `main()` function runs last\n\n```go\nvar Version = getVersion()\n\nfunc getVersion() string {\n    return \"1.0.0\"\n}\n\nfunc init() {\n    fmt.Println(\"Initializing...\")\n}\n\nfunc init() {\n    fmt.Println(\"More initialization...\")\n}\n\nfunc main() {\n    fmt.Println(\"Main running...\")\n}\n// Output:\n// Initializing...\n// More initialization...\n// Main running...\n```\n\n### Multiple Files\n\nIf multiple files in the same package have `init()` functions, they run in filename order within the same package.\n\n### Uses for init\n\n| Use Case | Example |\n|----------|---------|\n| Register drivers | `database/sql` driver registration |\n| Load configuration | Parse config files |\n| Set up logging | Configure log levels |\n| Initialize pools | Connection pools |\n| Seed random source | `rand.Seed(time.Now().UnixNano())` |\n\n### Import Side Effects\n\nUse a blank import `_` to trigger `init()` without using the package:\n\n```go\nimport (\n    \"database/sql\"\n    _ \"github.com/lib/pq\" // registers PostgreSQL driver via init()\n)\n```\n\n> **Key Point:** `init()` runs automatically and cannot be called directly. Use it sparingly - explicit initialization is preferred over side effects in init().",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nvar config string\n\nfunc init() {\n    config = \"default config\"\n    fmt.Println(\"init: config loaded\")\n}\n\nfunc init() {\n    fmt.Println(\"init: additional setup\")\n}\n\nfunc main() {\n    fmt.Println(\"main: starting with config =\", config)\n}",
+  "quiz": [
+    {
+      "question": "When does init() run?",
+      "options": ["After main()", "Before main(), automatically", "When explicitly called", "At compile time"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can init() be called explicitly?",
+      "options": ["Yes", "No", "Only from main()", "Only from other init() functions"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Unwrap and Expect in Rust",
+  "language": "rust",
+  "topic": "unwrap_expect",
+  "order": 54,
+  "nextTopic": "file_handling",
+  "prevTopic": "panic",
+  "content": "### Unwrap and Expect in Rust\n\n`unwrap()` and `expect()` are convenience methods on `Option` and `Result` that either return the inner value or panic.\n\n---\n\n### Methods Overview\n\n| Method | On Success | On Failure |\n|--------|------------|------------|\n| `unwrap()` | Returns value | Panics with generic message |\n| `expect(msg)` | Returns value | Panics with custom message |\n| `unwrap_or(default)` | Returns value | Returns default |\n| `unwrap_or_else(fn)` | Returns value | Calls closure for default |\n| `unwrap_or_default()` | Returns value | Returns `Default::default()` |\n\n---\n\n### Usage Examples\n\n```rust\n// unwrap - panics on failure with generic message\nlet x: i32 = \"42\".parse().unwrap();\n// let y: i32 = \"not_a_number\".parse().unwrap();  // PANICS\n\n// expect - panics with custom message\nlet file = File::open(\"config.toml\").expect(\"Failed to open config\");\n\n// Safe alternatives\nlet num = \"not_a_number\".parse::<i32>().unwrap_or(0);  // returns 0\nlet num = \"42\".parse::<i32>().unwrap_or_else(|e| {\n    eprintln!(\"Parse error: {}, using default\", e);\n    0\n});\n\n// In production: avoid unwrap in library code\npub fn parse_config(path: &str) -> Result<Config, io::Error> {\n    let content = std::fs::read_to_string(path)?;  // propagate error\n    Ok(serde_json::from_str(&content).map_err(|e| {\n        io::Error::new(io::ErrorKind::InvalidData, e)\n    })?)\n}\n```\n\n> **Key Point:** Use `expect()` with descriptive messages instead of `unwrap()` - it makes debugging easier. In production code, prefer proper error handling with `Result` over unwrapping. Reserve `unwrap` for prototypes and cases where failure is impossible.",
+  "codeExample": "fn main() {\n    // unwrap - use when you're confident it won't fail\n    let number: i32 = \"100\".parse().unwrap();\n    println!(\"Number: {}\", number);\n    \n    // expect - better because it provides context\n    let config = std::env::var(\"HOME\")\n        .expect(\"HOME environment variable not set\");\n    println!(\"Home: {}\", config);\n    \n    // Safe alternative\n    let port: u16 = std::env::var(\"PORT\")\n        .unwrap_or_else(|_| \"8080\".to_string())\n        .parse()\n        .unwrap_or(8080);\n    println!(\"Port: {}\", port);\n}",
+  "quiz": [
+    {
+      "question": "What is the advantage of `expect()` over `unwrap()`?",
+      "options": ["It returns a default value", "It provides a custom panic message", "It never panics", "It catches the panic"],
+      "correctIndex": 1
+    }
+  ]
+}

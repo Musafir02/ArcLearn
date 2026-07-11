@@ -1,0 +1,17 @@
+{
+  "title": "File Handling in Rust",
+  "language": "rust",
+  "topic": "file_handling",
+  "order": 55,
+  "nextTopic": "file_read",
+  "prevTopic": "unwrap_expect",
+  "content": "### File Handling in Rust\n\nThe `std::fs` module provides functions for file and filesystem operations. Combined with `std::io`, it enables comprehensive file manipulation.\n\n---\n\n### Key Types\n\n| Type | Purpose |\n|------|---------|\n| `File` | Represents an open file |\n| `Path` / `PathBuf` | Filesystem paths |\n| `DirEntry` | Directory entry |\n| `Metadata` | File metadata |\n\n---\n\n### Common File Operations\n\n```rust\nuse std::fs;\nuse std::path::Path;\n\n// File existence\nif Path::new(\"file.txt\").exists() {\n    println!(\"File exists\");\n}\n\n// Copy, rename, remove\nfs::copy(\"source.txt\", \"dest.txt\")?;\nfs::rename(\"old.txt\", \"new.txt\")?;\nfs::remove_file(\"temp.txt\")?;\n\n// Directory operations\nfs::create_dir(\"new_dir\")?;\nfs::create_dir_all(\"a/b/c\")?;  // recursive\nfs::remove_dir(\"empty_dir\")?;\nfs::remove_dir_all(\"dir_tree\")?;  // recursive\n\n// Metadata\nlet metadata = fs::metadata(\"file.txt\")?;\nprintln!(\"Size: {} bytes\", metadata.len());\nprintln!(\"Is file: {}\", metadata.is_file());\nprintln!(\"Is dir: {}\", metadata.is_dir());\n```\n\n> **Key Point:** Most file operations return `Result` types and require error handling. Use `fs::create_dir_all` for recursive directory creation. Path operations are platform-independent via the `Path` type.",
+  "codeExample": "use std::fs;\nuse std::path::Path;\n\nfn main() -> std::io::Result<()> {\n    // Check if file exists\n    let config_path = Path::new(\"config.json\");\n    if config_path.exists() {\n        println!(\"Config file found\");\n        let metadata = fs::metadata(config_path)?;\n        println!(\"Size: {} bytes\", metadata.len());\n    } else {\n        println!(\"Config file not found\");\n    }\n    \n    Ok(())\n}",
+  "quiz": [
+    {
+      "question": "Which function creates directories recursively?",
+      "options": ["create_dir", "create_dir_all", "mkdir", "mkdir_recursive"],
+      "correctIndex": 1
+    }
+  ]
+}

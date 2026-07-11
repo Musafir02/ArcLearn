@@ -1,0 +1,22 @@
+{
+  "title": "C# var and dynamic",
+  "language": "csharp",
+  "topic": "var_dynamic",
+  "order": 15,
+  "nextTopic": "constants",
+  "prevTopic": "nullables",
+  "content": "### var and dynamic in C#\n\nC# provides two keywords for flexible type declarations: `var` (implicitly typed) and `dynamic` (dynamically typed).\n\n### The var Keyword\n\n`var` tells the compiler to infer the type from the expression. It is strongly typed at compile time.\n\n```csharp\nvar name = \"Alice\";        // string\nvar age = 25;              // int\nvar price = 19.99;         // double\nvar items = new List<int>(); // List<int>\n```\n\n### Rules for var\n\n| Rule | Explanation |\n|------|-------------|\n| Must initialize | `var x;` is invalid |\n| Cannot be null | `var x = null;` is invalid |\n| Cannot change type | Once inferred, type is fixed |\n| Local scope only | Cannot be used for fields or return types |\n\n### When to Use var\n\n```csharp\n// Good - type is obvious\nvar dict = new Dictionary<string, List<int>>();\n\n// Bad - type is unclear\nvar result = ProcessData();  // What type is result?\n```\n\n### The dynamic Keyword\n\n`dynamic` bypasses compile-time type checking. Type is resolved at runtime.\n\n```csharp\ndynamic value = 10;\nConsole.WriteLine(value + 5);  // 15\n\nvalue = \"Hello\";\nConsole.WriteLine(value.Length);  // 5\n\nvalue = new { Name = \"Test\" };\nConsole.WriteLine(value.Name);  // \"Test\"\n```\n\n### var vs dynamic\n\n| Aspect | var | dynamic |\n|--------|-----|---------|\n| Type resolution | Compile time | Runtime |\n| IntelliSense | Full support | Limited |\n| Performance | No overhead | Reflection overhead |\n| Type safety | Strongly typed | Errors at runtime |\n| Null assignment | Not allowed | Allowed |\n\n> **Key Point:** Use `var` for obvious types (especially with generics) to reduce verbosity. Use `dynamic` only for interop scenarios or when dealing with dynamic data (COM, JSON, dynamic languages). Prefer `var` over `dynamic` for type safety.\n\n### dynamic Limitations\n\n```csharp\ndynamic d = 5;\nd.SomeMethod();  // Compiles but throws RuntimeBinderException\n```",
+  "codeExample": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        // var - compile time type inference\n        var number = 42;\n        var message = \"Hello\";\n        var numbers = new List<int> { 1, 2, 3 };\n        \n        // dynamic - runtime type resolution\n        dynamic value = 100;\n        Console.WriteLine(value + 50);\n        \n        value = \"Dynamic string\";\n        Console.WriteLine(value.ToUpper());\n    }\n}",
+  "quiz": [
+    {
+      "question": "When is the type of a var variable determined?",
+      "options": ["At runtime", "At compile time", "At declaration only", "Never"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword bypasses compile-time type checking?",
+      "options": ["var", "dynamic", "object", "auto"],
+      "correctIndex": 1
+    }
+  ]
+}

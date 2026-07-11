@@ -1,0 +1,22 @@
+{
+  "title": "C# Operators",
+  "language": "csharp",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "booleans",
+  "prevTopic": "typecasting",
+  "content": "### Operators in C#\n\nOperators are symbols that perform operations on variables and values.\n\n### Arithmetic Operators\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `+` | Addition | `5 + 3` | 8 |\n| `-` | Subtraction | `5 - 3` | 2 |\n| `*` | Multiplication | `5 * 3` | 15 |\n| `/` | Division | `10 / 3` | 3 (int), 3.333 (double) |\n| `%` | Modulus | `10 % 3` | 1 |\n| `++` | Increment | `x++` or `++x` | x + 1 |\n| `--` | Decrement | `x--` or `--x` | x - 1 |\n\n### Assignment Operators\n\n| Operator | Example | Equivalent |\n|----------|---------|------------|\n| `=` | `x = 5` | x = 5 |\n| `+=` | `x += 3` | x = x + 3 |\n| `-=` | `x -= 3` | x = x - 3 |\n| `*=` | `x *= 3` | x = x * 3 |\n| `/=` | `x /= 3` | x = x / 3 |\n| `%=` | `x %= 3` | x = x % 3 |\n\n### Comparison Operators\n\n| Operator | Name | Example |\n|----------|------|---------|\n| `==` | Equal to | `5 == 5` true |\n| `!=` | Not equal to | `5 != 3` true |\n| `>` | Greater than | `5 > 3` true |\n| `<` | Less than | `5 < 3` false |\n| `>=` | Greater than or equal to | `5 >= 5` true |\n| `<=` | Less than or equal to | `5 <= 3` false |\n\n### Logical Operators\n\n| Operator | Name | Description |\n|----------|------|-------------|\n| `&&` | AND | True if both are true |\n| `||` | OR | True if at least one is true |\n| `!` | NOT | Reverses boolean value |\n\n### Bitwise Operators\n\n| Operator | Name | Example |\n|----------|------|---------|\n| `&` | Bitwise AND | `5 & 3` = 1 |\n| `|` | Bitwise OR | `5 | 3` = 7 |\n| `^` | Bitwise XOR | `5 ^ 3` = 6 |\n| `~` | Bitwise NOT | `~5` = -6 |\n| `<<` | Left shift | `5 << 1` = 10 |\n| `>>` | Right shift | `5 >> 1` = 2 |\n\n> **Key Point:** Division of two integers yields an integer (truncated). Use at least one double operand for floating-point division. Short-circuit evaluation: `&&` stops if left is false, `||` stops if left is true.",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int a = 10, b = 3;\n        \n        Console.WriteLine($\"Addition: {a + b}\");\n        Console.WriteLine($\"Subtraction: {a - b}\");\n        Console.WriteLine($\"Multiplication: {a * b}\");\n        Console.WriteLine($\"Division (int): {a / b}\");\n        Console.WriteLine($\"Modulus: {a % b}\");\n        \n        int x = 5;\n        x += 3;\n        Console.WriteLine($\"x after += 3: {x}\");\n        \n        bool isTrue = (a > 5) && (b < 5);\n        Console.WriteLine($\"Logical: {isTrue}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the result of 10 % 3 in C#?",
+      "options": ["3", "3.33", "1", "0"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which operator is used for logical AND in C#?",
+      "options": ["&", "&&", "|", "||"],
+      "correctIndex": 1
+    }
+  ]
+}

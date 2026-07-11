@@ -1,0 +1,22 @@
+{
+  "title": "C# Constants",
+  "language": "csharp",
+  "topic": "constants",
+  "order": 16,
+  "nextTopic": "conditions",
+  "prevTopic": "var_dynamic",
+  "content": "### Constants in C#\n\nConstants are immutable values whose values are known at compile time and do not change throughout the program.\n\n### The const Keyword\n\n```csharp\nconst double Pi = 3.14159;\nconst int MaxUsers = 100;\nconst string AppName = \"MyApp\";\n```\n\n### Rules for const\n\n| Rule | Description |\n|------|-------------|\n| Must be initialized | `const int X;` is invalid |\n| Compile-time values only | Cannot use runtime values like `DateTime.Now` |\n| Implicitly static | Cannot use `static` with `const` |\n| Cannot be modified | Value cannot change after compilation |\n\n### Readonly (Runtime Constants)\n\nUse `readonly` when the value is determined at runtime but should not change:\n\n```csharp\nclass Settings\n{\n    public readonly int MaxRetries = 3;\n    public readonly DateTime CreatedAt = DateTime.Now;\n}\n```\n\n### const vs readonly\n\n| Aspect | const | readonly |\n|--------|-------|----------|\n| Initialization | Compile time | Runtime |\n| Storage | Embedded in IL | Stored in memory |\n| Scope | Local, class | Instance or class |\n| Static keyword | Implicitly static | Explicitly if needed |\n| Reference types | Only string and null | Any type |\n\n### Static Readonly\n\n```csharp\nclass Config\n{\n    public static readonly string ConnectionString = GetConnectionString();\n    \n    private static string GetConnectionString()\n    {\n        return \"Server=localhost;Database=MyDB;\";\n    }\n}\n```\n\n### Naming Conventions\n\n- **const**: PascalCase for public (`const int MaxSize = 100;`)\n- **const** (private): camelCase or PascalCase\n- **readonly**: _camelCase for private fields\n\n> **Key Point:** Use `const` for values that are truly constant and known at compile time. Use `readonly` when the value is set once (e.g., in a constructor) but can vary between instances or depends on runtime data.\n\n### Const in Expressions\n\n```csharp\nconst double Pi = 3.14159;\nconst double Radius = 5.0;\nconst double Area = Pi * Radius * Radius;  // Allowed\n```",
+  "codeExample": "using System;\n\nclass Program\n{\n    const double TaxRate = 0.08;\n    const string CurrencySymbol = \"$\";\n    \n    static void Main()\n    {\n        double price = 49.99;\n        double tax = price * TaxRate;\n        double total = price + tax;\n        \n        Console.WriteLine($\"Price: {CurrencySymbol}{price}\");\n        Console.WriteLine($\"Tax: {CurrencySymbol}{tax:F2}\");\n        Console.WriteLine($\"Total: {CurrencySymbol}{total:F2}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "When are const values evaluated in C#?",
+      "options": ["At runtime", "At compile time", "At instantiation", "At first use"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which keyword allows a runtime value that cannot be changed after initialization?",
+      "options": ["const", "readonly", "static", "fixed"],
+      "correctIndex": 1
+    }
+  ]
+}

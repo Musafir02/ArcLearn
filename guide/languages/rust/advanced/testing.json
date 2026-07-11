@@ -1,0 +1,17 @@
+{
+  "title": "Testing in Rust",
+  "language": "rust",
+  "topic": "testing",
+  "order": 66,
+  "nextTopic": "unit_tests",
+  "prevTopic": "async_await",
+  "content": "### Testing in Rust\n\nRust has built-in testing support with the `#[test]` attribute and `cargo test` command.\n\n---\n\n### Test Types\n\n| Type | Description |\n|------|-------------|\n| Unit tests | Test individual functions, placed in same file |\n| Integration tests | Test public API from external perspective |\n| Doc tests | Run code examples in documentation |\n\n---\n\n### Running Tests\n\n```bash\n# Run all tests\ncargo test\n\n# Run tests with filter\ncargo test test_name\n\n# Run ignored tests\ncargo test -- --ignored\n\n# Show output\ncargo test -- --nocapture\n\n# Run specific test file\ncargo test --test integration_test\n```\n\n### Test Organization\n\n```rust\n// In src/lib.rs or src/file.rs\npub fn add(a: i32, b: i32) -> i32 {\n    a + b\n}\n\n#[cfg(test)]\nmod tests {\n    use super::*;\n    \n    #[test]\n    fn test_add() {\n        assert_eq!(add(2, 3), 5);\n    }\n}\n```\n\n> **Key Point:** Unit tests go in a `#[cfg(test)]` module in the same file as the code. Integration tests go in the `tests/` directory. Use `#[should_panic]` for tests that expect panics. The `#[cfg(test)]` attribute ensures test code is not compiled in release builds.",
+  "codeExample": "pub fn factorial(n: u64) -> u64 {\n    match n {\n        0 | 1 => 1,\n        _ => n * factorial(n - 1),\n    }\n}\n\n#[cfg(test)]\nmod tests {\n    use super::*;\n    \n    #[test]\n    fn test_factorial_zero() {\n        assert_eq!(factorial(0), 1);\n    }\n    \n    #[test]\n    fn test_factorial_five() {\n        assert_eq!(factorial(5), 120);\n    }\n    \n    #[test]\n    #[should_panic]\n    fn test_overflow() {\n        factorial(100);  // panics on overflow in debug\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which command runs all tests in a Rust project?",
+      "options": ["cargo run", "cargo test", "cargo check", "cargo build"],
+      "correctIndex": 1
+    }
+  ]
+}

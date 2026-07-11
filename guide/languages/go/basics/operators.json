@@ -1,0 +1,22 @@
+{
+  "title": "Go Operators",
+  "language": "go",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "booleans",
+  "prevTopic": "constants",
+  "content": "### Operators in Go\n\nOperators perform operations on operands.\n\n### Arithmetic Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| `+` | Addition | `5 + 3 = 8` |\n| `-` | Subtraction | `5 - 3 = 2` |\n| `*` | Multiplication | `5 * 3 = 15` |\n| `/` | Division | `5 / 3 = 1` (int) or `1.666` (float) |\n| `%` | Modulus | `5 % 3 = 2` |\n| `++` | Increment | `x++` (postfix only) |\n| `--` | Decrement | `x--` (postfix only) |\n\n### Comparison Operators\n\n| Operator | Description |\n|----------|-------------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `<` | Less than |\n| `>` | Greater than |\n| `<=` | Less than or equal |\n| `>=` | Greater than or equal |\n\n### Logical Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| `&&` | Logical AND | `true && false = false` |\n| `||` | Logical OR | `true || false = true` |\n| `!` | Logical NOT | `!true = false` |\n\n### Bitwise Operators\n\n| Operator | Description |\n|----------|-------------|\n| `&` | Bitwise AND |\n| `|` | Bitwise OR |\n| `^` | Bitwise XOR |\n| `&^` | Bit clear (AND NOT) |\n| `<<` | Left shift |\n| `>>` | Right shift |\n\n### Assignment Operators\n\n```go\nx += 5   // x = x + 5\nx -= 3   // x = x - 3\nx *= 2   // x = x * 2\nx /= 4   // x = x / 4\nx %= 2   // x = x % 2\nx &= 1   // x = x & 1\nx |= 2   // x = x | 2\nx ^= 3   // x = x ^ 3\nx <<= 2  // x = x << 2\nx >>= 2  // x = x >> 2\n```\n\n> **Key Point:** Go does not have a prefix `++x` or `--x`. Increment and decrement are statements, not expressions.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    a, b := 10, 3\n    fmt.Println(\"a + b =\", a+b)\n    fmt.Println(\"a - b =\", a-b)\n    fmt.Println(\"a * b =\", a*b)\n    fmt.Println(\"a / b =\", a/b)\n    fmt.Println(\"a % b =\", a%b)\n\n    fmt.Println(\"a == b:\", a == b)\n    fmt.Println(\"a > b:\", a > b)\n\n    x := true\n    y := false\n    fmt.Println(\"x && y:\", x && y)\n    fmt.Println(\"x || y:\", x || y)\n    fmt.Println(\"!x:\", !x)\n}",
+  "quiz": [
+    {
+      "question": "Which operator computes the remainder of division?",
+      "options": ["/", "%", "&", "^"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the result of `!true`?",
+      "options": ["true", "false", "nil", "0"],
+      "correctIndex": 1
+    }
+  ]
+}

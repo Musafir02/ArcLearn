@@ -1,0 +1,22 @@
+{
+  "title": "Go Maps",
+  "language": "go",
+  "topic": "maps",
+  "order": 30,
+  "nextTopic": "range",
+  "prevTopic": "slice_append_copy",
+  "content": "### Maps in Go\n\nMaps are built-in hash tables with key-value pairs.\n\n### Declaration\n\n```go\nvar m1 map[string]int        // nil map, cannot add elements\nm2 := make(map[string]int)   // empty map\nm3 := make(map[string]int, 10) // with capacity hint\nm4 := map[string]int{        // map literal\n    \"Alice\": 30,\n    \"Bob\":   25,\n}\n```\n\n### Basic Operations\n\n```go\nm := make(map[string]int)\n\n// Add / Update\nm[\"Alice\"] = 30\nm[\"Bob\"] = 25\n\n// Get\nage := m[\"Alice\"]\n\n// Delete\ndelete(m, \"Bob\")\n\n// Check existence\nage, exists := m[\"Alice\"]\nif exists {\n    fmt.Println(\"Alice's age:\", age)\n}\n\n// Length\nfmt.Println(len(m))\n```\n\n### Map Literals\n\n```go\n// Map literal\nconfig := map[string]string{\n    \"host\": \"localhost\",\n    \"port\": \"8080\",\n}\n\n// Nested maps\nmatrix := map[string]map[string]int{\n    \"row1\": {\"col1\": 1, \"col2\": 2},\n}\n```\n\n### Zero Value\n\nThe zero value of a map is `nil`. Reading from a nil map returns the zero value, but writing panics:\n\n```go\nvar m map[string]int\nfmt.Println(m == nil) // true\nfmt.Println(m[\"key\"]) // 0 (safe)\n// m[\"key\"] = 1     // panic: assignment to entry in nil map\n```\n\n### Maps are References\n\n```go\na := map[string]int{\"x\": 1}\nb := a\nb[\"x\"] = 99\nfmt.Println(a[\"x\"]) // 99 (shared reference)\n```\n\n| Operation | Syntax | Notes |\n|-----------|--------|-------|\n| Create | `make(map[K]V)` | Use make for non-nil maps |\n| Insert/Update | `m[k] = v` | Creates or updates |\n| Get | `v := m[k]` | Returns zero value if missing |\n| Check | `v, ok := m[k]` | ok is true if key exists |\n| Delete | `delete(m, k)` | Safe even if key missing |\n| Length | `len(m)` | Number of key-value pairs |\n\n> **Key Point:** Always use `make` to create a map before adding elements. Reading a missing key returns the zero value, not an error.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    capitals := map[string]string{\n        \"US\": \"Washington\",\n        \"UK\": \"London\",\n        \"JP\": \"Tokyo\",\n    }\n\n    // Add\n    capitals[\"IN\"] = \"New Delhi\"\n\n    // Get with check\n    if capital, ok := capitals[\"JP\"]; ok {\n        fmt.Println(\"Capital of JP:\", capital)\n    }\n\n    // Delete\n    delete(capitals, \"UK\")\n\n    // Iterate\n    for country, capital := range capitals {\n        fmt.Printf(\"%s -> %s\\n\", country, capital)\n    }\n}",
+  "quiz": [
+    {
+      "question": "What happens when you read a missing key from a map?",
+      "options": ["Panic", "Returns zero value", "Returns nil", "Returns error"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does `delete(m, k)` do if key k doesn't exist?",
+      "options": ["Panics", "Returns false", "Does nothing", "Creates the key with zero value"],
+      "correctIndex": 2
+    }
+  ]
+}

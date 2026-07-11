@@ -1,0 +1,17 @@
+{
+  "title": "Async/Await in Rust",
+  "language": "rust",
+  "topic": "async_await",
+  "order": 65,
+  "nextTopic": "testing",
+  "prevTopic": "threads",
+  "content": "### Async/Await in Rust\n\nRust's async/await provides cooperative multitasking for I/O-bound operations. Async functions return `Future` values that are polled to completion.\n\n---\n\n### Async Concepts\n\n| Concept | Description |\n|---------|-------------|\n| `async fn` | Declares an async function, returns `impl Future` |\n| `.await` | Suspends execution until future completes |\n| `Future` trait | Values that can be polled for completion |\n| Executor | Runtime that drives futures (e.g., tokio, async-std) |\n| `async { }` | Async block |\n\n---\n\n### Examples\n\n```rust\nuse tokio;\n\n#[tokio::main]\nasync fn main() {\n    let result = fetch_data().await;\n    println!(\"Result: {}\", result);\n}\n\nasync fn fetch_data() -> String {\n    // Simulate async I/O\n    tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;\n    String::from(\"data loaded\")\n}\n\n// Concurrent execution\nasync fn parallel() {\n    let (a, b) = tokio::join!(\n        task_one(),\n        task_two(),\n    );\n}\n\n// Async streams (like async iterators)\nuse futures::stream::StreamExt;\nasync fn process_stream() {\n    let mut stream = some_async_stream();\n    while let Some(item) = stream.next().await {\n        println!(\"Got: {}\", item);\n    }\n}\n```\n\n> **Key Point:** Async/await requires an executor runtime like `tokio` or `async-std`. `tokio` is the most popular async runtime. Add `tokio = { version = \"1\", features = [\"full\"] }` to use it. Async is best for I/O-bound operations.",
+  "codeExample": "async fn compute_square(n: u32) -> u32 {\n    println!(\"Computing square of {}\", n);\n    tokio::time::sleep(std::time::Duration::from_millis(100)).await;\n    n * n\n}\n\n#[tokio::main]\nasync fn main() {\n    let (a, b, c) = tokio::join!(\n        compute_square(2),\n        compute_square(3),\n        compute_square(4),\n    );\n    \n    println!(\"Results: {}, {}, {}\", a, b, c);\n}",
+  "quiz": [
+    {
+      "question": "What does the `.await` keyword do?",
+      "options": ["Spawns a thread", "Suspends execution until a future completes", "Blocks the current thread", "Creates a new async task"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Rust Syntax",
+  "language": "rust",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### Rust Syntax\n\nRust syntax is influenced by C and C++ but with modern ergonomics. Functions are defined with `fn`, variables with `let`, and blocks with curly braces.\n\n---\n\n### Basic Structure\n\n| Element | Syntax |\n|---------|--------|\n| Function | `fn name(params) -> ReturnType { }` |\n| Variable | `let name = value;` |\n| Constant | `const NAME: Type = value;` |\n| Comment | `// line comment` or `/* block */` |\n| Macro call | `macro_name!(args)` |\n\n---\n\n### Statements vs Expressions\n\nRust is expression-oriented. An expression returns a value, while a statement does not. The last expression in a block is implicitly returned:\n\n```rust\nfn add(x: i32, y: i32) -> i32 {\n    x + y  // expression, no semicolon = return this value\n}\n```\n\nNote: semicolons turn expressions into statements, discarding the value.\n\n> **Key Point:** In Rust, the last expression in a function body is automatically returned. Adding a semicolon suppresses this behavior.",
+  "codeExample": "fn main() {\n    let x = 5;\n    let y = {\n        let x = 3;\n        x + 1  // expression returns 4\n    };\n    println!(\"y is: {}\", y);\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used to define a function in Rust?",
+      "options": ["func", "def", "fn", "function"],
+      "correctIndex": 2
+    }
+  ]
+}

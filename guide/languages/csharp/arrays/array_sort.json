@@ -1,0 +1,22 @@
+{
+  "title": "C# Sorting Arrays",
+  "language": "csharp",
+  "topic": "array_sort",
+  "order": 28,
+  "nextTopic": "multidimensional_arrays",
+  "prevTopic": "array_methods",
+  "content": "### Sorting Arrays in C#\n\nC# provides multiple ways to sort arrays based on your needs.\n\n### Array.Sort()\n\nSorts an array in place using the default comparer:\n\n```csharp\nint[] numbers = { 5, 2, 8, 1, 9 };\nArray.Sort(numbers);  // { 1, 2, 5, 8, 9 }\n```\n\n### Array.Sort() with Custom Comparer\n\n```csharp\n// Descending order\nArray.Sort(numbers, (a, b) => b.CompareTo(a));\n\n// Sort by last character\nstring[] words = { \"apple\", \"banana\", \"cherry\" };\nArray.Sort(words, (x, y) => x[^1].CompareTo(y[^1]));\n```\n\n### Sorting Part of an Array\n\n```csharp\nint[] numbers = { 3, 1, 4, 1, 5, 9, 2 };\nArray.Sort(numbers, 2, 3);  // Sort index 2-4 only\n```\n\n### LINQ Sorting\n\nLINQ provides sorting without modifying the original array:\n\n```csharp\nint[] numbers = { 5, 2, 8, 1, 9 };\n\n// Ascending\nvar sorted = numbers.OrderBy(n => n);\n\n// Descending\nvar sortedDesc = numbers.OrderByDescending(n => n);\n\n// Custom key\nvar byLastChar = words.OrderBy(w => w[^1]);\n```\n\n### Sorting with IComparer\n\n```csharp\nclass LengthComparer : IComparer<string>\n{\n    public int Compare(string? x, string? y)\n    {\n        if (x == null || y == null) return 0;\n        return x.Length.CompareTo(y.Length);\n    }\n}\n\nArray.Sort(words, new LengthComparer());\n```\n\n### Sorting by Multiple Criteria\n\n```csharp\nvar people = new (string Name, int Age)[]\n{\n    (\"Alice\", 30),\n    (\"Bob\", 25),\n    (\"Charlie\", 30)\n};\n\nvar sorted = people\n    .OrderBy(p => p.Age)\n    .ThenBy(p => p.Name);\n```\n\n### Sort Methods Comparison\n\n| Method | Modifies Original | Returns New | Use Case |\n|--------|------------------|-------------|----------|\n| `Array.Sort()` | Yes | No | In-place sorting |\n| `Enumerable.OrderBy()` | No | Yes | LINQ queries |\n| `List.Sort()` | Yes | No | List<T> sorting |\n\n### Sorting Custom Types\n\n```csharp\npublic class Person : IComparable<Person>\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n    \n    public int CompareTo(Person? other)\n    {\n        return Age.CompareTo(other?.Age);\n    }\n}\n```\n\n> **Key Point:** `Array.Sort()` modifies the original array. LINQ's `OrderBy()` returns a new sequence without modifying the original. Use `OrderBy()` followed by `ThenBy()` for multi-criteria sorting.",
+  "codeExample": "using System;\nusing System.Linq;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] numbers = { 9, 3, 7, 1, 6, 4, 8, 2, 5 };\n        \n        // In-place sort\n        int[] sortedCopy = numbers.OrderBy(n => n).ToArray();\n        Console.WriteLine(\"Original: \" + string.Join(\", \", numbers));\n        Console.WriteLine(\"Sorted: \" + string.Join(\", \", sortedCopy));\n        \n        // Descending\n        var descending = numbers.OrderByDescending(n => n);\n        Console.WriteLine(\"Descending: \" + string.Join(\", \", descending));\n    }\n}",
+  "quiz": [
+    {
+      "question": "Does Array.Sort() modify the original array?",
+      "options": ["Yes", "No", "Creates a new array", "Depends on type"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which LINQ method sorts in ascending order?",
+      "options": ["Sort()", "OrderBy()", "Arrange()", "Sequence()"],
+      "correctIndex": 1
+    }
+  ]
+}

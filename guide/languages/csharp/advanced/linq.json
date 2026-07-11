@@ -1,0 +1,22 @@
+{
+  "title": "C# LINQ",
+  "language": "csharp",
+  "topic": "linq",
+  "order": 57,
+  "nextTopic": "linq_methods",
+  "prevTopic": "collections_stack_queue",
+  "content": "### LINQ in C#\n\nLINQ (Language Integrated Query) allows you to query data from collections, databases, XML, and more using a SQL-like syntax integrated into C#.\n\n### Two Forms of LINQ\n\n**Query Syntax (SQL-like):**\n\n```csharp\nint[] numbers = { 1, 2, 3, 4, 5, 6 };\n\nvar result = from n in numbers\n             where n > 3\n             orderby n descending\n             select n * n;\n```\n\n**Method Syntax (Fluent):**\n\n```csharp\nvar result = numbers\n    .Where(n => n > 3)\n    .OrderByDescending(n => n)\n    .Select(n => n * n);\n```\n\n### Basic Query Operations\n\n```csharp\nvar fruits = new[] { \"Apple\", \"Banana\", \"Cherry\", \"Date\", \"Elderberry\" };\n\n// Filtering\nvar longFruits = fruits.Where(f => f.Length > 5);\n\n// Projection\nvar firstLetters = fruits.Select(f => f[0]);\n\n// Sorting\nvar sorted = fruits.OrderBy(f => f.Length);\n\n// Aggregation\nint count = fruits.Count();\nint totalLength = fruits.Sum(f => f.Length);\ndouble avgLength = fruits.Average(f => f.Length);\n```\n\n### LINQ on Different Data Sources\n\n```csharp\n// In-memory collections\nList<int> nums = new() { 1, 2, 3 };\nvar query1 = nums.Where(n => n > 1);\n\n// Arrays\nint[] arr = { 1, 2, 3 };\nvar query2 = arr.Select(n => n * 2);\n\n// Strings\nstring text = \"Hello World\";\nvar vowels = text.Where(c => \"aeiou\".Contains(c));\n\n// Databases (Entity Framework)\n// var users = db.Users.Where(u => u.Age > 18);\n```\n\n### Deferred Execution\n\nLINQ queries use deferred execution - the query is not executed until you iterate over it:\n\n```csharp\nvar query = numbers.Where(n => n > 3);  // Not executed yet\n\nforeach (var n in query)  // Executed here\n    Console.WriteLine(n);\n\n// Force execution\nList<int> list = query.ToList();\nint[] array = query.ToArray();\nint first = query.First();\n```\n\n### Standard Query Operators\n\n| Category | Methods |\n|----------|---------|\n| Filtering | `Where`, `OfType` |\n| Projection | `Select`, `SelectMany` |\n| Sorting | `OrderBy`, `OrderByDescending`, `ThenBy` |\n| Grouping | `GroupBy`, `ToLookup` |\n| Join | `Join`, `GroupJoin` |\n| Aggregation | `Count`, `Sum`, `Average`, `Min`, `Max` |\n| Quantifiers | `All`, `Any`, `Contains` |\n| Set | `Distinct`, `Union`, `Intersect`, `Except` |\n| Partitioning | `Take`, `Skip`, `TakeWhile`, `SkipWhile` |\n| Element | `First`, `FirstOrDefault`, `Single`, `SingleOrDefault` |\n| Conversion | `ToList`, `ToArray`, `ToDictionary`, `ToHashSet` |\n\n> **Key Point:** LINQ works with any IEnumerable<T> source. Query syntax is more readable for complex queries; method syntax is more flexible. Queries are lazily evaluated (deferred execution). Use `ToList()` or `ToArray()` to materialize results.\n\n### LINQ with Multiple Sources\n\n```csharp\nvar cartesian = from x in new[] { 1, 2 }\n                from y in new[] { 3, 4 }\n                select (x, y);\n// Result: (1,3), (1,4), (2,3), (2,4)\n```\n\n### Let Clause\n\n```csharp\nvar query = from s in students\n            let avg = s.Scores.Average()\n            where avg > 80\n            select new { s.Name, Average = avg };",
+  "codeExample": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 5, 2, 8, 1, 9, 3, 7, 4, 6 };\n        \n        // Query syntax\n        var queryResult = from n in numbers\n                          where n % 2 == 0\n                          orderby n\n                          select n;\n        \n        Console.WriteLine(\"Even numbers (query): \" + string.Join(\", \", queryResult));\n        \n        // Method syntax\n        var methodResult = numbers\n            .Where(n => n > 5)\n            .OrderByDescending(n => n)\n            .Select(n => n * 10);\n        \n        Console.WriteLine(\"Greater than 5 (method): \" + string.Join(\", \", methodResult));\n    }\n}",
+  "quiz": [
+    {
+      "question": "What are the two LINQ syntax forms?",
+      "options": ["SQL and NoSQL", "Query and Method", "Simple and Complex", "Inline and Block"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is deferred execution in LINQ?",
+      "options": ["Query runs on a delay", "Query executes when iterated", "Query runs in background", "Query never executes"],
+      "correctIndex": 1
+    }
+  ]
+}

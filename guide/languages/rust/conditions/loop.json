@@ -1,0 +1,17 @@
+{
+  "title": "Loop in Rust",
+  "language": "rust",
+  "topic": "loop",
+  "order": 19,
+  "nextTopic": "while",
+  "prevTopic": "if_else",
+  "content": "### Loop in Rust\n\nThe `loop` keyword creates an infinite loop that runs until explicitly stopped with `break`. It can also return a value.\n\n---\n\n### Loop Constructs\n\n| Feature | Description |\n|---------|-------------|\n| `loop { }` | Infinite loop |\n| `break` | Exit the loop |\n| `break value` | Exit and return a value |\n| `continue` | Skip to next iteration |\n| `'label:` | Loop label for nested loops |\n\n---\n\n### Examples\n\n```rust\n// Basic infinite loop\nloop {\n    println!(\"Running...\");\n    break;\n}\n\n// Loop with a return value\nlet mut counter = 0;\nlet result = loop {\n    counter += 1;\n    if counter == 10 {\n        break counter * 2;  // returns 20\n    }\n};\n\n// Labeled loops for nested break/continue\n'outer: loop {\n    loop {\n        break 'outer;  // breaks out of outer loop\n    }\n};\n```\n\n> **Key Point:** `loop` is the only looping construct that can return a value via `break expression`. Labeled loops are useful for breaking out of nested loops from an inner loop.",
+  "codeExample": "fn main() {\n    let mut counter = 0;\n    \n    let result = loop {\n        counter += 1;\n        \n        if counter == 5 {\n            continue;\n        }\n        \n        if counter == 10 {\n            break counter;\n        }\n    };\n    \n    println!(\"Result: {}\", result);\n}",
+  "quiz": [
+    {
+      "question": "Can a `loop` return a value in Rust?",
+      "options": ["No", "Yes, using `break value`", "Yes, using `return`", "Yes, using `exit`"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "User Input in Rust",
+  "language": "rust",
+  "topic": "input",
+  "order": 14,
+  "nextTopic": "type_casting",
+  "prevTopic": "strings",
+  "content": "### User Input in Rust\n\nReading user input in Rust is done through the standard library's `io` module.\n\n---\n\n### Reading from stdin\n\n| Method | Description |\n|--------|-------------|\n| `io::stdin()` | Returns a handle to standard input |\n| `.read_line(&mut buf)` | Reads a line into a String buffer |\n| `.lines()` | Returns an iterator over lines |\n\n---\n\n### Basic Input Example\n\n```rust\nuse std::io;\n\nfn main() {\n    let mut input = String::new();\n    \n    println!(\"Enter your name:\");\n    io::stdin()\n        .read_line(&mut input)\n        .expect(\"Failed to read line\");\n    \n    let name = input.trim();  // remove trailing newline\n    println!(\"Hello, {}!\", name);\n}\n```\n\n### Parsing Input\n\n```rust\nlet mut input = String::new();\nio::stdin().read_line(&mut input).unwrap();\nlet number: i32 = input.trim().parse().expect(\"Please enter a number\");\n```\n\nThe `trim()` method removes whitespace including the newline character. The `parse()` method converts the string to a number and needs a type annotation.\n\n> **Key Point:** Always use `trim()` after reading input to remove the trailing newline character. Always handle parse errors gracefully with `expect` or `match`.",
+  "codeExample": "use std::io;\n\nfn main() {\n    println!(\"Enter a number:\");\n    \n    let mut input = String::new();\n    io::stdin().read_line(&mut input).expect(\"Failed to read\");\n    \n    let num: i32 = input.trim().parse().expect(\"Not a number!\");\n    println!(\"You entered: {}\", num);\n    println!(\"Doubled: {}\", num * 2);\n}",
+  "quiz": [
+    {
+      "question": "Which method removes the trailing newline from input?",
+      "options": ["strip()", "trim()", "clear()", "newline()"],
+      "correctIndex": 1
+    }
+  ]
+}

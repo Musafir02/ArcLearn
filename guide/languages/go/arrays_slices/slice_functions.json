@@ -1,0 +1,22 @@
+{
+  "title": "Go Slice Functions",
+  "language": "go",
+  "topic": "slice_functions",
+  "order": 27,
+  "nextTopic": "slice_make",
+  "prevTopic": "slices",
+  "content": "### Slice Functions\n\nThe built-in `append` and `copy` functions are essential for slice manipulation.\n\n### append\n\nAdds elements to a slice. Returns a new slice (may reallocate).\n\n```go\ns := []int{1, 2, 3}\ns = append(s, 4)        // [1, 2, 3, 4]\ns = append(s, 5, 6, 7)  // [1, 2, 3, 4, 5, 6, 7]\n```\n\n### Append One Slice to Another\n\n```go\na := []int{1, 2, 3}\nb := []int{4, 5, 6}\na = append(a, b...)  // [1, 2, 3, 4, 5, 6]\n```\n\n### copy\n\nCopies elements from source to destination. Returns number of elements copied.\n\n```go\nsrc := []int{1, 2, 3}\ndst := make([]int, len(src))\nn := copy(dst, src)  // n = 3, dst = [1, 2, 3]\n```\n\n### Capacity Growth\n\nWhen `append` needs to grow, it roughly doubles the capacity for small slices:\n\n```go\ns := make([]int, 0, 3)\nfmt.Println(cap(s)) // 3\ns = append(s, 1, 2, 3, 4)\nfmt.Println(cap(s)) // 6 (typically doubles)\n```\n\n### Clear Function (Go 1.21+)\n\n```go\ns := []int{1, 2, 3, 4, 5}\nclear(s)  // sets all elements to zero value\nfmt.Println(s) // [0, 0, 0, 0, 0]\n```\n\n### Common Slice Operations\n\n```go\n// Insert\ni := 2\ns = append(s[:i], append([]int{99}, s[i:]...)...)\n\n// Delete\ni := 2\ns = append(s[:i], s[i+1:]...)\n\n// Pop front\ns = s[1:]\n\n// Pop back\ns = s[:len(s)-1]\n\n// Filter\nvar filtered []int\nfor _, v := range s {\n    if v > 0 {\n        filtered = append(filtered, v)\n    }\n}\n```\n\n> **Key Point:** Always assign the result of `append` back to the same variable: `s = append(s, x)`. If capacity is exceeded, `append` allocates a new backing array.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var s []int\n    \n    // Append\n    for i := 0; i < 5; i++ {\n        s = append(s, i*10)\n        fmt.Printf(\"len=%d cap=%d %v\\n\", len(s), cap(s), s)\n    }\n\n    // Copy\n    src := []int{100, 200, 300}\n    dst := make([]int, len(src))\n    n := copy(dst, src)\n    fmt.Println(\"copied:\", n, \"dst:\", dst)\n\n    // Append slice\n    a := []int{1, 2, 3}\n    b := []int{4, 5}\n    a = append(a, b...)\n    fmt.Println(\"appended:\", a)\n}",
+  "quiz": [
+    {
+      "question": "What happens to the original slice when append exceeds capacity?",
+      "options": ["It extends in place", "A new backing array is allocated", "It panics", "It truncates the data"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you append all elements of slice b to slice a?",
+      "options": ["append(a, b)", "append(a, b...)", "a.append(b)", "a = a + b"],
+      "correctIndex": 1
+    }
+  ]
+}

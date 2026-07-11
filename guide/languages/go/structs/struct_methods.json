@@ -1,0 +1,22 @@
+{
+  "title": "Go Struct Methods",
+  "language": "go",
+  "topic": "struct_methods",
+  "order": 46,
+  "nextTopic": "struct_tags",
+  "prevTopic": "structs",
+  "content": "### Struct Methods\n\nMethods are functions with a special receiver argument.\n\n### Value Receiver\n\n```go\ntype Rectangle struct {\n    Width  float64\n    Height float64\n}\n\nfunc (r Rectangle) Area() float64 {\n    return r.Width * r.Height\n}\n\nfunc main() {\n    rect := Rectangle{Width: 10, Height: 5}\n    fmt.Println(rect.Area()) // 50\n}\n```\n\n### Pointer Receiver\n\n```go\nfunc (r *Rectangle) Scale(factor float64) {\n    r.Width *= factor\n    r.Height *= factor\n}\n\nfunc main() {\n    rect := Rectangle{Width: 10, Height: 5}\n    rect.Scale(2)\n    fmt.Println(rect.Width) // 20\n}\n```\n\n### Value vs Pointer Receiver\n\n| Aspect | Value Receiver | Pointer Receiver |\n|--------|---------------|------------------|\n| Modifies struct | No (copy) | Yes (original) |\n| Performance | Copies struct | Passes pointer |\n| Consistency | Read-only methods | All methods |\n\n### When to Use Pointer Receiver\n\n1. Method modifies the receiver\n2. Struct is large (avoid copying)\n3. Consistency - if any method needs pointer, use pointer for all\n\n### Method on Non-Struct Types\n\nMethods can be defined on any type in the same package:\n\n```go\ntype MyInt int\n\nfunc (m MyInt) IsPositive() bool {\n    return m > 0\n}\n\nfunc main() {\n    var n MyInt = 42\n    fmt.Println(n.IsPositive()) // true\n}\n```\n\n### Method Chaining\n\n```go\ntype Builder struct {\n    result string\n}\n\nfunc (b *Builder) Add(s string) *Builder {\n    b.result += s\n    return b\n}\n\nfunc (b *Builder) String() string {\n    return b.result\n}\n\n// Usage\nvar b Builder\nresult := b.Add(\"Hello \").Add(\"World \").Add(\"!\").String()\n```\n\n> **Key Point:** If any method needs a pointer receiver, use pointer receivers for all methods on that type. This provides consistent behavior.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\ntype Counter struct {\n    Value int\n}\n\n// Pointer receiver - modifies the counter\nfunc (c *Counter) Increment() {\n    c.Value++\n}\n\n// Value receiver - read only\nfunc (c Counter) Display() string {\n    return fmt.Sprintf(\"Count: %d\", c.Value)\n}\n\nfunc main() {\n    c := Counter{}\n    c.Increment()\n    c.Increment()\n    fmt.Println(c.Display()) // Count: 2\n}",
+  "quiz": [
+    {
+      "question": "When should you use a pointer receiver?",
+      "options": ["Always", "When modifying the struct or struct is large", "When the struct is small", "Never"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can methods be defined on non-struct types?",
+      "options": ["Yes, on any type in the same package", "No, only structs", "Only on built-in types", "Only on pointer types"],
+      "correctIndex": 0
+    }
+  ]
+}

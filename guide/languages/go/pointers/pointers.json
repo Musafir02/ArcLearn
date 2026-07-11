@@ -1,0 +1,22 @@
+{
+  "title": "Go Pointers",
+  "language": "go",
+  "topic": "pointers",
+  "order": 41,
+  "nextTopic": "pointers_functions",
+  "prevTopic": "init",
+  "content": "### Pointers in Go\n\nA pointer holds the memory address of a value.\n\n### Declaration\n\n```go\nvar p *int              // nil pointer to int\ni := 42\np = &i                  // p points to i\n```\n\n### & and * Operators\n\n| Operator | Meaning | Example |\n|----------|---------|---------|\n| `&` | Address of | `&i` gives address of i |\n| `*` | Dereference | `*p` gives value at p |\n\n### Basic Usage\n\n```go\ni := 42\np := &i          // p points to i\nfmt.Println(*p)  // 42 (read i through pointer)\n*p = 21          // set i through pointer\nfmt.Println(i)   // 21\ni = 100\nfmt.Println(*p)  // 100\n```\n\n### Zero Value\n\nThe zero value of a pointer is `nil`:\n\n```go\nvar p *int\nfmt.Println(p == nil) // true\n// fmt.Println(*p)    // panic: nil pointer dereference\n```\n\n### Pointer to Pointer\n\n```go\nx := 10\np := &x\npp := &p\n\nfmt.Println(**pp) // 10\n```\n\n### Comparing Pointers\n\nPointers are equal if they point to the same variable:\n\n```go\na, b := 10, 10\npa, pb := &a, &b\nfmt.Println(pa == pb) // false (different addresses)\n\npc := &a\nfmt.Println(pa == pc) // true (same address)\n```\n\n### Pointers and Structs\n\n```go\ntype Person struct {\n    Name string\n    Age  int\n}\n\np := Person{\"Alice\", 30}\np2 := &p\n\nfmt.Println(p2.Name)  // Alice (no * needed)\np2.Age = 31\nfmt.Println(p.Age)    // 31\n```\n\nGo automatically dereferences struct pointers for field access (no `->` needed).\n\n> **Key Point:** Unlike C/C++, Go does not allow pointer arithmetic. Pointers are safe and have no dangling reference issues due to garbage collection.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    x := 42\n    p := &x\n\n    fmt.Println(\"value of x:\", x)\n    fmt.Println(\"address of x:\", p)\n    fmt.Println(\"value through pointer:\", *p)\n\n    *p = 100\n    fmt.Println(\"x after *p = 100:\", x)\n\n    // Zero value\n    var nilPtr *int\n    fmt.Println(\"nil pointer:\", nilPtr)\n    if nilPtr == nil {\n        fmt.Println(\"nilPtr is nil\")\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does the & operator do?",
+      "options": ["Dereferences a pointer", "Returns the address of a variable", "Creates a pointer", "Allocates memory"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the zero value of a pointer?",
+      "options": ["0", "nil", "undefined", "void"],
+      "correctIndex": 1
+    }
+  ]
+}

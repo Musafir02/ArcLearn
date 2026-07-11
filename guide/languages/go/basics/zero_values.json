@@ -1,0 +1,22 @@
+{
+  "title": "Go Zero Values",
+  "language": "go",
+  "topic": "zero_values",
+  "order": 14,
+  "nextTopic": "type_conversion",
+  "prevTopic": "input",
+  "content": "### Zero Values in Go\n\nIn Go, variables declared without an explicit initial value are assigned a **zero value**.\n\n### Zero Values by Type\n\n```go\nvar i int       // 0\nvar f float64   // 0.0\nvar b bool      // false\nvar s string    // \"\"\nvar p *int      // nil\nvar arr [3]int  // [0, 0, 0]\nvar sl []int    // nil\nvar m map[string]int // nil\nvar ch chan int  // nil\nvar fn func()    // nil\nvar iface interface{} // nil\nvar st struct{}  // {}\n```\n\n### Zero Value Table\n\n| Type | Zero Value |\n|------|------------|\n| All integer types | `0` |\n| All float types | `0.0` |\n| bool | `false` |\n| string | `\"\"` (empty string) |\n| pointer | `nil` |\n| slice | `nil` |\n| map | `nil` |\n| channel | `nil` |\n| function | `nil` |\n| interface | `nil` |\n| array | Zero for each element |\n| struct | Zero for each field |\n\n### Practical Use\n\nZero values make Go programs safer - variables are never uninitialized:\n\n```go\nvar counter int\ncounter++ // safe, counter starts at 0\n\nvar buffer string\nbuffer += \"data\" // safe, buffer starts as \"\"\n```\n\n### Checking for Zero Values\n\n```go\nif counter == 0 {\n    fmt.Println(\"counter is at zero value\")\n}\n\nif buffer == \"\" {\n    fmt.Println(\"buffer is empty\")\n}\n```\n\n> **Key Point:** Unlike C/C++, Go variables are never left uninitialized. This prevents a whole class of bugs caused by undefined behavior.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var i int\n    var f float64\n    var b bool\n    var s string\n    var p *int\n\n    fmt.Printf(\"int:    %d\\n\", i)\n    fmt.Printf(\"float64: %.1f\\n\", f)\n    fmt.Printf(\"bool:   %t\\n\", b)\n    fmt.Printf(\"string: %q\\n\", s)\n    fmt.Printf(\"pointer: %v\\n\", p)\n\n    if s == \"\" {\n        fmt.Println(\"String is zero value (empty)\")\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the zero value of a string?",
+      "options": ["null", "undefined", "\"\"", "\" \""],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the zero value of a pointer?",
+      "options": ["0", "nil", "undefined", "null"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "if let in Rust",
+  "language": "rust",
+  "topic": "if_let",
+  "order": 23,
+  "nextTopic": "while_let",
+  "prevTopic": "match",
+  "content": "### if let in Rust\n\n`if let` provides a concise way to match a single pattern without the boilerplate of a full `match` expression.\n\n---\n\n### if let vs match\n\n```rust\n// Verbose match\nlet optional = Some(7);\nmatch optional {\n    Some(x) => println!(\"Value: {}\", x),\n    None => {},\n}\n\n// Concise if let\nif let Some(x) = optional {\n    println!(\"Value: {}\", x);\n}\n\n// if let with else\nif let Some(x) = optional {\n    println!(\"Value: {}\", x);\n} else {\n    println!(\"No value\");\n}\n```\n\n---\n\n### Common Use Cases\n\n| Use Case | Example |\n|----------|---------|\n| Option unwrapping | `if let Some(val) = option { }` |\n| Result checking | `if let Ok(val) = result { }` |\n| Enum variant check | `if let Status::Active = status { }` |\n\n> **Key Point:** Use `if let` when you care about matching one specific pattern and want to ignore the rest. Use `match` when you need exhaustive handling of all patterns.",
+  "codeExample": "fn main() {\n    let config_max = Some(3u8);\n    \n    if let Some(max) = config_max {\n        println!(\"Maximum is configured to {}\", max);\n    } else {\n        println!(\"No maximum configured\");\n    }\n    \n    // Equivalent match is more verbose:\n    // match config_max {\n    //     Some(max) => println!(\"Maximum is {}\", max),\n    //     None => {},\n    // }\n}",
+  "quiz": [
+    {
+      "question": "When should you prefer `if let` over `match`?",
+      "options": ["Always", "When matching one pattern and ignoring others", "When matching all patterns", "Never, match is always better"],
+      "correctIndex": 1
+    }
+  ]
+}

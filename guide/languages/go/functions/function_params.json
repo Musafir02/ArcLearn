@@ -1,0 +1,22 @@
+{
+  "title": "Go Function Parameters",
+  "language": "go",
+  "topic": "function_params",
+  "order": 33,
+  "nextTopic": "return_values",
+  "prevTopic": "functions",
+  "content": "### Function Parameters in Go\n\nFunctions can accept various kinds of parameters.\n\n### Type Shorthand\n\nWhen consecutive parameters have the same type, you can omit types except the last:\n\n```go\n// Verbose\nfunc add(a int, b int) int {\n    return a + b\n}\n\n// Shorthand\nfunc add(a, b int) int {\n    return a + b\n}\n```\n\n### Pass by Value\n\nIn Go, all parameters are passed by value (copied):\n\n```go\nfunc double(x int) {\n    x *= 2 // only modifies local copy\n}\n\nfunc main() {\n    n := 5\n    double(n)\n    fmt.Println(n) // 5 (unchanged)\n}\n```\n\n### Pass by Pointer\n\nTo modify the original value, pass a pointer:\n\n```go\nfunc double(x *int) {\n    *x *= 2\n}\n\nfunc main() {\n    n := 5\n    double(&n)\n    fmt.Println(n) // 10 (changed)\n}\n```\n\n### Slice/Maps as Parameters\n\nSlices and maps contain references to underlying data, so modifications may be visible:\n\n```go\nfunc update(s []int) {\n    s[0] = 99 // modifies underlying array\n}\n\nfunc main() {\n    s := []int{1, 2, 3}\n    update(s)\n    fmt.Println(s) // [99, 2, 3]\n}\n```\n\nHowever, `append` may not be visible if it causes reallocation:\n\n```go\nfunc appendItem(s []int) {\n    s = append(s, 4) // not visible to caller\n}\n```\n\n### Named Parameters?\n\nGo does not support named or optional parameters. Use a struct for complex configs:\n\n```go\ntype Config struct {\n    Host string\n    Port int\n    TLS  bool\n}\n\nfunc connect(cfg Config) {\n    // ...\n}\n```\n\n> **Key Point:** Go always passes by value. However, slices, maps, channels, and pointers contain references, so their contents can be modified.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\n// Same-type shorthand\nfunc multiply(a, b, c int) int {\n    return a * b * c\n}\n\n// Pointer parameter\nfunc swap(x, y *int) {\n    *x, *y = *y, *x\n}\n\nfunc main() {\n    fmt.Println(\"3 * 4 * 5 =\", multiply(3, 4, 5))\n\n    a, b := 10, 20\n    swap(&a, &b)\n    fmt.Println(\"a:\", a, \"b:\", b)\n}",
+  "quiz": [
+    {
+      "question": "Does Go support named or optional parameters?",
+      "options": ["Yes", "No", "Only optional parameters", "Only named parameters"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How are parameters passed in Go?",
+      "options": ["By reference", "By value", "By pointer always", "Depends on the type"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "RefCell in Rust",
+  "language": "rust",
+  "topic": "refcell",
+  "order": 61,
+  "nextTopic": "mutex",
+  "prevTopic": "rc_arc",
+  "content": "### RefCell in Rust\n\n`RefCell<T>` provides interior mutability - the ability to mutate data even when there are immutable references to it. Borrowing rules are enforced at runtime instead of compile time.\n\n---\n\n### Cell vs RefCell\n\n| Feature | `Cell<T>` | `RefCell<T>` |\n|---------|-----------|--------------|\n| Types | Copy types only | Any type |\n| Borrow check | No borrows (get/set) | Runtime borrow checking |\n| Method | `get()`, `set()` | `borrow()`, `borrow_mut()` |\n| Thread-safe | No | No |\n\n---\n\n### Examples\n\n```rust\nuse std::cell::RefCell;\n\n// Interior mutability pattern\nstruct Messenger {\n    messages: RefCell<Vec<String>>,\n}\n\nimpl Messenger {\n    fn new() -> Self {\n        Messenger {\n            messages: RefCell::new(vec![]),\n        }\n    }\n    \n    fn send(&self, msg: &str) {\n        self.messages.borrow_mut().push(String::from(msg));\n        // self is &self, but we can mutate!\n    }\n    \n    fn message_count(&self) -> usize {\n        self.messages.borrow().len()\n    }\n}\n\n// Runtime borrow checking\nlet cell = RefCell::new(5);\n{\n    let m1 = cell.borrow_mut();  // OK\n    // let m2 = cell.borrow_mut();  // PANICS at runtime!\n}\n```\n\n> **Key Point:** `RefCell` enforces borrowing rules at runtime. Violating the rules (e.g., two mutable borrows) causes a panic. Use `RefCell` when you need mutation in code that only has `&self` access. Combine with `Rc` for multiple owners with interior mutability.",
+  "codeExample": "use std::cell::RefCell;\n\nfn main() {\n    let data = RefCell::new(vec![1, 2, 3]);\n    \n    // Immutable reference to RefCell, but we can mutate the inner data\n    {\n        let mut borrowed = data.borrow_mut();\n        borrowed.push(4);\n        borrowed.push(5);\n    }  // mutable borrow ends here\n    \n    println!(\"Data: {:?}\", data.borrow());\n    \n    // Try to create two mutable borrows (will panic if both active)\n    let mut ref1 = data.borrow_mut();\n    // let mut ref2 = data.borrow_mut();  // PANICS at runtime\n    ref1.push(6);\n}",
+  "quiz": [
+    {
+      "question": "When does RefCell enforce borrowing rules?",
+      "options": ["At compile time", "At runtime", "Never", "At link time"],
+      "correctIndex": 1
+    }
+  ]
+}

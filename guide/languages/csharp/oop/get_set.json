@@ -1,0 +1,22 @@
+{
+  "title": "C# Getters and Setters",
+  "language": "csharp",
+  "topic": "get_set",
+  "order": 41,
+  "nextTopic": "inheritance",
+  "prevTopic": "properties",
+  "content": "### Getters and Setters in C#\n\nProperties use `get` and `set` accessors to control how values are read and written.\n\n### Get Accessor\n\nReturns the property value. Can contain any logic:\n\n```csharp\nprivate int temperature;\n\npublic int Temperature\n{\n    get\n    {\n        // Custom logic when reading\n        Console.WriteLine($\"Temperature was read: {temperature}\");\n        return temperature;\n    }\n}\n```\n\n### Set Accessor\n\nAssigns a value using the implicit `value` parameter:\n\n```csharp\npublic int Temperature\n{\n    set\n    {\n        // 'value' is the assigned value\n        if (value < -273)\n            throw new ArgumentException(\"Below absolute zero\");\n        temperature = value;\n    }\n}\n```\n\n### Access Modifiers on Accessors\n\nDifferent accessibility for get and set:\n\n```csharp\npublic string Name\n{\n    get { return name; }\n    private set { name = value; }  // Only the class can set\n}\n\npublic int Id { get; private set; }\npublic string Email { get; init; }  // Init-only setter (C# 9+)\n```\n\n### Expression-Bodied Accessors (C# 6+)\n\n```csharp\nprivate string name;\n\npublic string Name\n{\n    get => name;\n    set => name = value ?? \"Unknown\";\n}\n```\n\n### Get-Only Auto-Property with Constructor\n\n```csharp\npublic class Person\n{\n    public string Name { get; }\n    \n    public Person(string name)\n    {\n        Name = name;  // Can set in constructor only\n    }\n}\n```\n\n### Init-Only Setters (C# 9+)\n\n```csharp\npublic class WeatherData\n{\n    public double Temperature { get; init; }\n    public double Humidity { get; init; }\n}\n\n// Can only be set during object initialization\nvar data = new WeatherData\n{\n    Temperature = 25.5,\n    Humidity = 0.6\n};\n// data.Temperature = 30;  // Error - init only\n```\n\n### Required with Init (C# 11+)\n\n```csharp\npublic class Product\n{\n    public required string Name { get; init; }\n    public required decimal Price { get; init; }\n}\n```\n\n### Getter/Setter Combinations\n\n| Pattern | Get | Set | Use Case |\n|---------|-----|-----|----------|\n| Read/write | public | public | Standard mutable property |\n| Read-only | public | private | Controlled mutation |\n| Write-only | private | public | Rare, mostly for setters |\n| Init-only | public | init | Immutable after init |\n| Computed | expression | none | Derived values |\n\n> **Key Point:** The `value` keyword in a setter represents the assigned value. Use `init` for properties that should be immutable after object creation. `required` ensures callers provide the value during initialization.\n\n### Property Change Notification\n\n```csharp\nprivate string name;\npublic string Name\n{\n    get => name;\n    set\n    {\n        if (name != value)\n        {\n            name = value;\n            OnPropertyChanged();\n        }\n    }\n}",
+  "codeExample": "using System;\n\npublic class Thermostat\n{\n    private double currentTemp = 20;\n    \n    public double CurrentTemp\n    {\n        get => currentTemp;\n        private set\n        {\n            currentTemp = Math.Round(value, 1);\n        }\n    }\n    \n    public void Increase(double amount) => CurrentTemp += amount;\n    public void Decrease(double amount) => CurrentTemp -= amount;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var t = new Thermostat();\n        Console.WriteLine($\"Temp: {t.CurrentTemp}C\");\n        t.Increase(5);\n        Console.WriteLine($\"After increase: {t.CurrentTemp}C\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "What keyword represents the assigned value in a setter?",
+      "options": ["val", "value", "input", "assignment"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the init keyword do in a property?",
+      "options": ["Allows setting anytime", "Allows setting only during initialization", "Makes property required", "Makes property static"],
+      "correctIndex": 1
+    }
+  ]
+}

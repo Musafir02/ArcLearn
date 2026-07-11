@@ -1,0 +1,22 @@
+{
+  "title": "Go Stack vs Heap",
+  "language": "go",
+  "topic": "stack_heap",
+  "order": 44,
+  "nextTopic": "structs",
+  "prevTopic": "new",
+  "content": "### Stack vs Heap in Go\n\nUnderstanding memory allocation helps write efficient Go code.\n\n### Stack\n\n- Fast, automatic memory management\n- Function call frames are pushed/popped\n- Limited size (goroutines start with 2KB, grows as needed)\n- No garbage collection overhead\n\n### Heap\n\n- Slower, managed by garbage collector\n- For data that outlives the function scope\n- Requires GC cycles to clean up\n\n### Escape Analysis\n\nGo's compiler decides where to allocate memory:\n\n```go\nfunc onStack() int {\n    x := 42     // stays on stack\n    return x\n}\n\nfunc onHeap() *int {\n    x := 42     // escapes to heap!\n    return &x\n}\n```\n\n### When Does Escape Happen?\n\n| Situation | Allocation |\n|-----------|------------|\n| Returning pointer to local | Heap |\n| Storing pointer in interface | Heap |\n| Variable too large for stack | Heap |\n| Variable used in closure | Heap |\n| Pointer passed to function that stores it | Heap |\n\n### Checking Escape Analysis\n\n```bash\ngo build -gcflags='-m' main.go\n```\n\n### Optimization Tips\n\n```go\n// Inefficient - returns slice reference\nfunc readFile() []byte {\n    data := make([]byte, 1000)\n    // ...\n    return data // escapes to heap\n}\n\n// Better - pass buffer in\nfunc readFile(buf []byte) []byte {\n    // use provided buffer\n    return buf\n}\n```\n\n### Pointer vs Value Trade-off\n\n```go\n// Pointer - may cause escape\nfunc newPerson(name string) *Person {\n    return &Person{Name: name} // escapes\n}\n\n// Value - stays on stack (if small)\nfunc makePerson(name string) Person {\n    return Person{Name: name} // on stack\n}\n```\n\n> **Key Point:** Go's escape analysis makes allocation decisions automatically. Focus on writing clear code first, optimize allocations only when profiling shows issues.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\n//go:noinline\nfunc stackOnly() int {\n    x := 42\n    return x\n}\n\n//go:noinline\nfunc heapEscape() *int {\n    x := 42\n    return &x // escapes to heap\n}\n\nfunc main() {\n    a := stackOnly()\n    b := heapEscape()\n    fmt.Println(a, *b)\n}",
+  "quiz": [
+    {
+      "question": "Which memory region is faster?",
+      "options": ["Heap", "Stack", "Both are equal", "Depends on data"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is escape analysis?",
+      "options": ["A runtime check", "Compile-time decision of stack vs heap", "A garbage collection algorithm", "A memory leak detector"],
+      "correctIndex": 1
+    }
+  ]
+}

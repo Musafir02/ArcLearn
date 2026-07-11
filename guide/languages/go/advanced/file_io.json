@@ -1,0 +1,22 @@
+{
+  "title": "Go File I/O",
+  "language": "go",
+  "topic": "file_io",
+  "order": 64,
+  "nextTopic": "json_encoding",
+  "prevTopic": "file_handling",
+  "content": "### File I/O Operations\n\nReading from and writing to files in Go.\n\n### Reading Entire File\n\n```go\n// Go 1.16+\ndata, err := os.ReadFile(\"file.txt\")\nif err != nil {\n    log.Fatal(err)\n}\nfmt.Println(string(data))\n```\n\n### Writing Entire File\n\n```go\n// Go 1.16+\ndata := []byte(\"Hello, World!\")\nerr := os.WriteFile(\"output.txt\", data, 0644)\nif err != nil {\n    log.Fatal(err)\n}\n```\n\n### Buffered Reading with bufio\n\n```go\nfile, err := os.Open(\"file.txt\")\nif err != nil {\n    log.Fatal(err)\n}\ndefer file.Close()\n\nscanner := bufio.NewScanner(file)\nfor scanner.Scan() {\n    fmt.Println(scanner.Text())\n}\n\nif err := scanner.Err(); err != nil {\n    log.Fatal(err)\n}\n```\n\n### Buffered Writing\n\n```go\nfile, err := os.Create(\"output.txt\")\nif err != nil {\n    log.Fatal(err)\n}\ndefer file.Close()\n\nwriter := bufio.NewWriter(file)\nwriter.WriteString(\"Hello, World!\")\nwriter.WriteString(\"\\nSecond line\")\nwriter.Flush() // important: flush buffer to disk\n```\n\n### Reading with io.Reader\n\n```go\nfile, err := os.Open(\"file.txt\")\nif err != nil {\n    log.Fatal(err)\n}\ndefer file.Close()\n\nbuf := make([]byte, 1024)\nfor {\n    n, err := file.Read(buf)\n    if err == io.EOF {\n        break\n    }\n    if err != nil {\n        log.Fatal(err)\n    }\n    fmt.Print(string(buf[:n]))\n}\n```\n\n### Writing with io.Writer\n\n```go\nfile, _ := os.Create(\"output.txt\")\ndefer file.Close()\n\nfile.Write([]byte(\"Hello\\n\"))\nfile.WriteString(\"World\\n\")\nfmt.Fprintf(file, \"Number: %d\\n\", 42)\n```\n\n### Copy Files\n\n```go\nsrc, _ := os.Open(\"source.txt\")\ndefer src.Close()\n\ndst, _ := os.Create(\"dest.txt\")\ndefer dst.Close()\n\nwritten, err := io.Copy(dst, src)\nfmt.Printf(\"Copied %d bytes\\n\", written)\n```\n\n> **Key Point:** For small files, use `os.ReadFile` and `os.WriteFile`. For large files or line-by-line processing, use `bufio.Scanner` and `bufio.Writer`. Always call `Flush()` on buffered writers.",
+  "codeExample": "package main\n\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    // Write\n    content := \"Line 1\\nLine 2\\nLine 3\\n\"\n    err := os.WriteFile(\"sample.txt\", []byte(content), 0644)\n    if err != nil {\n        fmt.Println(\"Error:\", err)\n        return\n    }\n\n    // Read line by line\n    file, _ := os.Open(\"sample.txt\")\n    defer file.Close()\n\n    scanner := bufio.NewScanner(file)\n    for scanner.Scan() {\n        fmt.Println(\"Read:\", scanner.Text())\n    }\n\n    os.Remove(\"sample.txt\")\n}",
+  "quiz": [
+    {
+      "question": "What package provides buffered file reading?",
+      "options": ["fmt", "os", "bufio", "io"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What must be called on a buffered writer?",
+      "options": ["Save()", "Flush()", "Close()", "Sync()"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "C# Type Casting",
+  "language": "csharp",
+  "topic": "typecasting",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Type Casting in C#\n\nType casting is converting a variable from one data type to another. C# supports implicit and explicit casting.\n\n### Implicit Casting (Automatic)\n\nSafe conversion from smaller to larger type. No data loss.\n\n```csharp\nint myInt = 100;\ndouble myDouble = myInt;  // int to double (implicit)\nConsole.WriteLine(myDouble);  // Output: 100\n```\n\nImplicit conversion chain: `byte` -> `short` -> `int` -> `long` -> `float` -> `double` -> `decimal`\n\n### Explicit Casting (Manual)\n\nRequires a cast operator `(type)`. Used when data loss may occur.\n\n```csharp\ndouble myDouble = 9.78;\nint myInt = (int)myDouble;  // Truncates decimal part\nConsole.WriteLine(myInt);    // Output: 9\n```\n\n### Conversion Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `Convert.ToInt32()` | Converts to int | `int i = Convert.ToInt32(\"123\");` |\n| `Convert.ToDouble()` | Converts to double | `double d = Convert.ToDouble(\"3.14\");` |\n| `Convert.ToString()` | Converts to string | `string s = Convert.ToString(123);` |\n| `int.Parse()` | Parses string to int | `int i = int.Parse(\"123\");` |\n| `int.TryParse()` | Safe parsing | `int.TryParse(\"123\", out i);` |\n\n### Parse vs TryParse\n\n```csharp\n// Parse throws exception on failure\nint number = int.Parse(\"abc\");  // Throws FormatException\n\n// TryParse returns bool and uses out parameter\nif (int.TryParse(\"abc\", out int result))\n{\n    Console.WriteLine(result);\n}\nelse\n{\n    Console.WriteLine(\"Invalid number\");\n}\n```\n\n### Type Conversion with `as` Operator\n\n```csharp\nobject obj = \"Hello\";\nstring str = obj as string;  // Returns null if conversion fails\n```\n\n> **Key Point:** Implicit casting is safe and automatic. Explicit casting requires a cast operator and may lose data. Use `Convert` class for type conversions and `TryParse` for safe string-to-number parsing.",
+  "codeExample": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Implicit\n        int num = 123;\n        double bigNum = num;\n        Console.WriteLine($\"Implicit: {bigNum}\");\n        \n        // Explicit\n        double pi = 3.14159;\n        int truncated = (int)pi;\n        Console.WriteLine($\"Explicit: {truncated}\");\n        \n        // Convert class\n        string text = \"456\";\n        int parsed = Convert.ToInt32(text);\n        Console.WriteLine($\"Converted: {parsed}\");\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which type of casting is automatic and safe in C#?",
+      "options": ["Explicit casting", "Implicit casting", "Manual casting", "Forced casting"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when you explicitly cast 9.78 to int?",
+      "options": ["It rounds to 10", "It truncates to 9", "It throws an error", "It returns 9.78"],
+      "correctIndex": 1
+    }
+  ]
+}

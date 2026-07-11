@@ -1,0 +1,22 @@
+{
+  "title": "Go Testing",
+  "language": "go",
+  "topic": "testing",
+  "order": 68,
+  "nextTopic": "go_mod",
+  "prevTopic": "stringer_interface",
+  "content": "### Testing in Go\n\nGo has a built-in testing framework in the `testing` package.\n\n### Test Files\n\nTest files are named `*_test.go` and contain functions starting with `Test`:\n\n```go\n// math_test.go\npackage main\n\nimport \"testing\"\n\nfunc TestAdd(t *testing.T) {\n    result := Add(2, 3)\n    expected := 5\n    if result != expected {\n        t.Errorf(\"Add(2, 3) = %d; want %d\", result, expected)\n    }\n}\n```\n\n### Running Tests\n\n```bash\ngo test           # run tests in current package\ngo test ./...     # run all tests in all packages\ngo test -v        # verbose output\ngo test -run TestName  # run specific test\ngo test -cover    # with coverage\n```\n\n### Table-Driven Tests\n\n```go\nfunc TestDivide(t *testing.T) {\n    tests := []struct {\n        name     string\n        a, b     int\n        expected int\n        wantErr  bool\n    }{\n        {\"positive\", 10, 2, 5, false},\n        {\"by zero\", 10, 0, 0, true},\n        {\"negative\", -6, 3, -2, false},\n    }\n\n    for _, tt := range tests {\n        t.Run(tt.name, func(t *testing.T) {\n            result, err := Divide(tt.a, tt.b)\n            if tt.wantErr && err == nil {\n                t.Error(\"expected error\")\n            }\n            if !tt.wantErr && result != tt.expected {\n                t.Errorf(\"got %d, want %d\", result, tt.expected)\n            }\n        })\n    }\n}\n```\n\n### Test Helpers\n\n```go\nfunc TestProcess(t *testing.T) {\n    t.Helper() // marks as helper, not test\n    // setup\n}\n```\n\n### Benchmark Tests\n\n```go\nfunc BenchmarkAdd(b *testing.B) {\n    for i := 0; i < b.N; i++ {\n        Add(100, 200)\n    }\n}\n// Run: go test -bench=.\n```\n\n### Fuzz Tests (Go 1.18+)\n\n```go\nfunc FuzzAdd(f *testing.F) {\n    f.Add(1, 2)\n    f.Fuzz(func(t *testing.T, a, b int) {\n        Add(a, b)\n    })\n}\n// Run: go test -fuzz=.\n```\n\n### Test Coverage\n\n```bash\ngo test -cover\n# Generate HTML report:\ngo test -coverprofile=coverage.out\ngo tool cover -html=coverage.out\n```\n\n> **Key Point:** Go testing is built-in, no third-party test framework required. Table-driven tests are the idiomatic Go testing pattern. Test files end with `_test.go` and live alongside the source.",
+  "codeExample": "// main.go\npackage main\n\nfunc Add(a, b int) int {\n    return a + b\n}\n\n// main_test.go\npackage main\n\nimport \"testing\"\n\nfunc TestAdd(t *testing.T) {\n    result := Add(2, 3)\n    if result != 5 {\n        t.Errorf(\"Add(2, 3) = %d; want 5\", result)\n    }\n}\n\nfunc TestAddTable(t *testing.T) {\n    tests := []struct{ a, b, expected int }{\n        {1, 1, 2},\n        {0, 0, 0},\n        {-1, 1, 0},\n        {100, -50, 50},\n    }\n    for _, tt := range tests {\n        if got := Add(tt.a, tt.b); got != tt.expected {\n            t.Errorf(\"Add(%d, %d) = %d; want %d\", tt.a, tt.b, got, tt.expected)\n        }\n    }\n}",
+  "quiz": [
+    {
+      "question": "What naming convention do test files follow?",
+      "options": ["*_test.go", "test_*.go", "*.spec.go", "*_testify.go"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the idiomatic testing pattern in Go?",
+      "options": ["Mock objects", "Table-driven tests", "Test fixtures", "Setup/teardown"],
+      "correctIndex": 1
+    }
+  ]
+}

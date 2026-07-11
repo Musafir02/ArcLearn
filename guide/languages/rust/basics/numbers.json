@@ -1,0 +1,17 @@
+{
+  "title": "Numeric Types in Rust",
+  "language": "rust",
+  "topic": "numbers",
+  "order": 12,
+  "nextTopic": "strings",
+  "prevTopic": "booleans",
+  "content": "### Numeric Types in Rust\n\nRust has a rich set of numeric types covering integers and floating-point numbers with various sizes.\n\n---\n\n### Integer Types\n\n| Size | Signed | Unsigned |\n|------|--------|----------|\n| 8-bit | `i8` | `u8` |\n| 16-bit | `i16` | `u16` |\n| 32-bit | `i32` | `u32` |\n| 64-bit | `i64` | `u64` |\n| 128-bit | `i128` | `u128` |\n| Architecture | `isize` | `usize` |\n\n---\n\n### Floating-Point Types\n\n| Type | Size | Precision |\n|------|------|-----------|\n| `f32` | 32-bit | ~7 decimal digits |\n| `f64` | 64-bit | ~15 decimal digits |\n\n---\n\n### Numeric Literals\n\n```rust\nlet decimal = 98_222;       // underscores for readability\nlet hex = 0xff;\nlet octal = 0o77;\nlet binary = 0b1111_0000;\nlet byte = b'A';            // u8 only\n```\n\nInteger overflow behavior depends on build mode. In debug mode, overflow panics. In release mode, two's complement wrapping occurs. Use `wrapping_add`, `checked_add`, `overflowing_add`, or `saturating_add` for explicit control.\n\n> **Key Point:** The default integer type is `i32` and the default float type is `f64`. Most of the time, these defaults are what you want.",
+  "codeExample": "fn main() {\n    let a: i32 = -42;\n    let b: u32 = 100;\n    let c: f64 = 3.14159;\n    let d: f32 = 2.5;\n    \n    let sum = a + (b as i32);\n    println!(\"Sum: {}\", sum);\n    println!(\"PI: {:.4}\", c);\n}",
+  "quiz": [
+    {
+      "question": "What is the default integer type in Rust?",
+      "options": ["i64", "u32", "i32", "isize"],
+      "correctIndex": 2
+    }
+  ]
+}

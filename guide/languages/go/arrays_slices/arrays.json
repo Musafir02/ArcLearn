@@ -1,0 +1,22 @@
+{
+  "title": "Go Arrays",
+  "language": "go",
+  "topic": "arrays",
+  "order": 25,
+  "nextTopic": "slices",
+  "prevTopic": "goto",
+  "content": "### Arrays in Go\n\nArrays are fixed-length sequences of elements of the same type.\n\n### Declaration\n\n```go\nvar nums [5]int             // array of 5 integers, all zero\nvar nums2 [3]int = [3]int{1, 2, 3}\nnums3 := [4]int{10, 20, 30, 40}\nnums4 := [...]int{1, 2, 3}  // compiler counts elements\n```\n\n### Accessing Elements\n\n```go\narr := [3]string{\"a\", \"b\", \"c\"}\nfmt.Println(arr[0]) // \"a\"\narr[1] = \"x\"\nfmt.Println(arr)    // [\"a\", \"x\", \"c\"]\n```\n\n### Length\n\n```go\narr := [5]int{1, 2, 3}\nfmt.Println(len(arr)) // 5\n```\n\n### Array of Arrays\n\n```go\nmatrix := [2][3]int{\n    {1, 2, 3},\n    {4, 5, 6},\n}\n```\n\n### Arrays are Values\n\nIn Go, arrays are values, not pointers. Assigning or passing an array copies all elements:\n\n```go\na := [3]int{1, 2, 3}\nb := a  // copies the entire array\nb[0] = 99\nfmt.Println(a[0]) // 1 (unchanged)\n```\n\n### Array Literals\n\n```go\n// With index initialization\narr := [5]int{0: 10, 4: 50}\n// Result: [10, 0, 0, 0, 50]\n```\n\n### Comparing Arrays\n\nArrays are comparable if the element type is comparable:\n\n```go\na := [3]int{1, 2, 3}\nb := [3]int{1, 2, 3}\nfmt.Println(a == b) // true\n```\n\n| Feature | Detail |\n|---------|--------|\n| Fixed size | Yes, part of the type |\n| `[3]int` and `[5]int` | Different types! |\n| Copy semantics | Yes, pass by value |\n| Comparable | Yes (if elements are) |\n\n> **Key Point:** In practice, slices are used far more often than arrays in Go. Arrays are mainly used as building blocks for slices or when fixed-size buffers are needed.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // Declare and initialize\n    arr1 := [3]int{1, 2, 3}\n    arr2 := [...]string{\"go\", \"rust\", \"zig\"}\n\n    fmt.Println(\"arr1:\", arr1)\n    fmt.Println(\"arr2:\", arr2)\n    fmt.Println(\"length:\", len(arr2))\n\n    // Array is copied, not referenced\n    copy := arr1\n    copy[0] = 99\n    fmt.Println(\"original:\", arr1)\n    fmt.Println(\"copy:\", copy)\n\n    // Multi-dimensional\n    grid := [2][2]int{{1, 2}, {3, 4}}\n    fmt.Println(\"grid:\", grid)\n}",
+  "quiz": [
+    {
+      "question": "Are `[3]int` and `[5]int` the same type?",
+      "options": ["Yes, both are int arrays", "No, size is part of the type", "Yes, if used in the same package", "No, unless explicitly converted"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when you assign an array to another variable?",
+      "options": ["A copy is made", "A reference is created", "The original is moved", "Nothing"],
+      "correctIndex": 0
+    }
+  ]
+}

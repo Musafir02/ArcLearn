@@ -1,0 +1,22 @@
+{
+  "title": "Go if-else",
+  "language": "go",
+  "topic": "if_else",
+  "order": 17,
+  "nextTopic": "switch",
+  "prevTopic": "conditions",
+  "content": "### If-Else in Go\n\n`if-else` statements allow branching execution.\n\n### Basic if-else\n\n```go\nif temperature > 30 {\n    fmt.Println(\"Hot day\")\n} else {\n    fmt.Println(\"Cool day\")\n}\n```\n\n### Nested if\n\n```go\nif x > 0 {\n    if x > 100 {\n        fmt.Println(\"Large positive\")\n    } else {\n        fmt.Println(\"Small positive\")\n    }\n} else if x < 0 {\n    fmt.Println(\"Negative\")\n} else {\n    fmt.Println(\"Zero\")\n}\n```\n\n### Short Statement Pattern\n\n```go\nif err := validate(input); err != nil {\n    fmt.Println(\"Validation failed:\", err)\n    return\n} else {\n    fmt.Println(\"Input is valid\")\n}\n```\n\n### Common Patterns\n\n```go\n// Guard clause pattern\nfunc process(x int) error {\n    if x < 0 {\n        return fmt.Errorf(\"negative value: %d\", x)\n    }\n    // normal processing\n    return nil\n}\n\n// Initialize and check\nif file, err := os.Open(\"data.txt\"); err == nil {\n    defer file.Close()\n    // use file\n} else {\n    fmt.Println(\"Cannot open:\", err)\n}\n```\n\n### Truthiness\n\nGo has no truthiness - conditions must be boolean:\n\n```go\n// Correct:\nif x > 0 { ... }\n\n// Compile error:\n// if x { ... }\n// if 1 { ... }\n```\n\n> **Key Point:** Always prefer the guard clause pattern (early return) over deep nesting for error handling in Go.",
+  "codeExample": "package main\n\nimport (\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    args := os.Args[1:]\n\n    if len(args) == 0 {\n        fmt.Println(\"No arguments provided\")\n    } else if len(args) == 1 {\n        fmt.Println(\"One argument:\", args[0])\n    } else {\n        fmt.Printf(\"%d arguments: %v\\n\", len(args), args)\n    }\n}",
+  "quiz": [
+    {
+      "question": "Can you use a non-boolean value in an if condition?",
+      "options": ["Yes, like C", "No, only booleans", "Only integers", "Only strings"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the guard clause pattern?",
+      "options": ["Nested if statements", "Early return for error cases", "Using else extensively", "No return statements"],
+      "correctIndex": 1
+    }
+  ]
+}

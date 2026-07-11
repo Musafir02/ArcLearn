@@ -1,0 +1,17 @@
+{
+  "title": "Generics in Rust",
+  "language": "rust",
+  "topic": "generics",
+  "order": 45,
+  "nextTopic": "traits",
+  "prevTopic": "closures",
+  "content": "### Generics in Rust\n\nGenerics allow writing code that works with multiple types while maintaining type safety. They are a form of parametric polymorphism.\n\n---\n\n### Generic Syntax\n\n| Context | Syntax |\n|---------|--------|\n| Functions | `fn name<T>(arg: T) -> T` |\n| Structs | `struct Point<T> { x: T, y: T }` |\n| Enums | `enum Option<T> { Some(T), None }` |\n| Methods | `impl<T> Point<T> { fn x(&self) -> &T }` |\n\n---\n\n### Examples\n\n```rust\n// Generic function\nfn largest<T: PartialOrd>(list: &[T]) -> &T {\n    let mut largest = &list[0];\n    for item in list {\n        if item > largest {\n            largest = item;\n        }\n    }\n    largest\n}\n\n// Generic struct\nstruct Pair<T, U> {\n    first: T,\n    second: U,\n}\n\n// Generic impl\nimpl<T, U> Pair<T, U> {\n    fn new(first: T, second: U) -> Self {\n        Self { first, second }\n    }\n}\n\n// Monomorphization: compiler generates concrete code for each type\nlet result = largest(&vec![1, 2, 3]);      // i32 version\nlet result = largest(&vec!['a', 'b', 'c']); // char version\n```\n\n> **Key Point:** Generics in Rust are monomorphized at compile time, meaning there is no runtime overhead. The compiler generates separate code for each concrete type used. This is zero-cost abstraction.",
+  "codeExample": "struct Point<T> {\n    x: T,\n    y: T,\n}\n\nimpl<T> Point<T> {\n    fn x(&self) -> &T {\n        &self.x\n    }\n}\n\nimpl Point<f64> {\n    fn distance_from_origin(&self) -> f64 {\n        (self.x.powi(2) + self.y.powi(2)).sqrt()\n    }\n}\n\nfn main() {\n    let p = Point { x: 5, y: 10 };\n    println!(\"p.x = {}\", p.x());\n    \n    let pf = Point { x: 3.0, y: 4.0 };\n    println!(\"Distance: {}\", pf.distance_from_origin());\n}",
+  "quiz": [
+    {
+      "question": "What is monomorphization in Rust?",
+      "options": ["Runtime type checking", "Generating concrete code for each type at compile time", "Converting types at runtime", "Dynamic dispatch"],
+      "correctIndex": 1
+    }
+  ]
+}

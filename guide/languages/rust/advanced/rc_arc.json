@@ -1,0 +1,17 @@
+{
+  "title": "Rc and Arc in Rust",
+  "language": "rust",
+  "topic": "rc_arc",
+  "order": 60,
+  "nextTopic": "refcell",
+  "prevTopic": "box",
+  "content": "### Rc and Arc in Rust\n\n`Rc<T>` (Reference Counted) and `Arc<T>` (Atomic Reference Counted) enable multiple ownership of the same data through reference counting.\n\n---\n\n### Rc vs Arc\n\n| Feature | `Rc<T>` | `Arc<T>` |\n|---------|---------|----------|\n| Thread-safe | No | Yes (atomic operations) |\n| Performance | Faster (non-atomic) | Slightly slower (atomic) |\n| Use case | Single-threaded | Multi-threaded |\n| Counter type | `usize` | `AtomicUsize` |\n\n---\n\n### Examples\n\n```rust\nuse std::rc::Rc;\nuse std::sync::Arc;\n\n// Rc - single threaded\nlet a = Rc::new(String::from(\"shared\"));\nlet b = Rc::clone(&a);  // increments reference count\nlet c = Rc::clone(&a);\n\nprintln!(\"Count: {}\", Rc::strong_count(&a));  // 3\n\n// Arc - multi-threaded\nlet data = Arc::new(vec![1, 2, 3]);\n\nlet handles: Vec<_> = (0..3).map(|i| {\n    let data = Arc::clone(&data);\n    std::thread::spawn(move || {\n        println!(\"Thread {}: {:?}\", i, data);\n    })\n}).collect();\n\n// Weak references (Rc::downgrade) prevent reference cycles\nuse std::rc::Weak;\n```\n\n> **Key Point:** `Rc::clone()` increments the reference count (it's cheap, not a deep copy). Use `Arc` instead of `Rc` when sharing data across threads. Use `Weak` to break reference cycles that could cause memory leaks.",
+  "codeExample": "use std::rc::Rc;\n\n#[derive(Debug)]\nstruct Node {\n    value: i32,\n    children: Vec<Rc<Node>>,\n}\n\nfn main() {\n    let leaf = Rc::new(Node {\n        value: 3,\n        children: vec![],\n    });\n    \n    let branch = Rc::new(Node {\n        value: 5,\n        children: vec![Rc::clone(&leaf)],\n    });\n    \n    println!(\"leaf: {:?}\", leaf);\n    println!(\"branch: {:?}\", branch);\n    println!(\"Leaf strong count: {}\", Rc::strong_count(&leaf));\n}",
+  "quiz": [
+    {
+      "question": "Which smart pointer should you use for shared ownership in multi-threaded code?",
+      "options": ["Rc", "Arc", "Box", "RefCell"],
+      "correctIndex": 1
+    }
+  ]
+}

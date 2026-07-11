@@ -1,0 +1,43 @@
+{
+  "title": "Go Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Go Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "datatypes", "constants", "operators", "booleans", "strings", "numbers", "input", "zero_values", "type_conversion"]
+    },
+    {
+      "type": "group", "title": "Conditions", "folder": "conditions",
+      "topics": ["conditions", "if_else", "switch", "defer"]
+    },
+    {
+      "type": "group", "title": "Loops", "folder": "loops",
+      "topics": ["for_loop", "for_while", "for_range", "break_continue", "goto"]
+    },
+    {
+      "type": "group", "title": "Arrays and Slices", "folder": "arrays_slices",
+      "topics": ["arrays", "slices", "slice_functions", "slice_make", "slice_append_copy", "maps", "range"]
+    },
+    {
+      "type": "group", "title": "Functions", "folder": "functions",
+      "topics": ["functions", "function_params", "return_values", "multiple_returns", "named_returns", "variadic", "closures", "recursion", "init"]
+    },
+    {
+      "type": "group", "title": "Pointers", "folder": "pointers",
+      "topics": ["pointers", "pointers_functions", "new", "stack_heap"]
+    },
+    {
+      "type": "group", "title": "Structs", "folder": "structs",
+      "topics": ["structs", "struct_methods", "struct_tags", "embedding"]
+    },
+    {
+      "type": "group", "title": "Interfaces", "folder": "interfaces",
+      "topics": ["interfaces", "interface_satisfaction", "empty_interface", "type_assertions", "type_switches"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["goroutines", "channels", "channel_buffered", "select", "mutex", "waitgroup", "error_handling", "custom_errors", "panic_recover", "file_handling", "file_io", "json_encoding", "time_package", "stringer_interface", "testing", "go_mod", "packages", "modules_imports", "workspace"]
+    }
+  ]
+}

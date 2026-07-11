@@ -1,0 +1,22 @@
+{
+  "title": "Go Struct Embedding",
+  "language": "go",
+  "topic": "embedding",
+  "order": 48,
+  "nextTopic": "interfaces",
+  "prevTopic": "struct_tags",
+  "content": "### Struct Embedding\n\nGo supports struct embedding (composition), not inheritance.\n\n### Basic Embedding\n\n```go\ntype Base struct {\n    ID int\n}\n\nfunc (b Base) GetID() int {\n    return b.ID\n}\n\ntype User struct {\n    Base               // embedded\n    Name string\n}\n\nfunc main() {\n    u := User{Base: Base{ID: 1}, Name: \"Alice\"}\n    fmt.Println(u.ID)        // 1 (promoted field)\n    fmt.Println(u.GetID())   // 1 (promoted method)\n}\n```\n\n### Method Promotion\n\nMethods of the embedded struct are promoted to the embedding struct:\n\n```go\ntype Logger struct{}\n\nfunc (l Logger) Log(msg string) {\n    fmt.Println(\"[LOG]:\", msg)\n}\n\ntype Service struct {\n    Logger  // embedded\n    Name string\n}\n\nfunc main() {\n    s := Service{Name: \"API\"}\n    s.Log(\"server started\") // promoted method\n}\n```\n\n### Field Shadowing\n\nIf the outer struct has a field with the same name, it shadows the inner:\n\n```go\ntype A struct {\n    X int\n}\n\ntype B struct {\n    A\n    X string // shadows A.X\n}\n\nfunc main() {\n    b := B{A: A{X: 10}, X: \"hello\"}\n    fmt.Println(b.X)   // \"hello\"\n    fmt.Println(b.A.X) // 10\n}\n```\n\n### Multiple Embedding\n\n```go\ntype Reader struct{}\nfunc (r Reader) Read() string { return \"data\" }\n\ntype Writer struct{}\nfunc (w Writer) Write(data string) { fmt.Println(\"wrote:\", data) }\n\ntype ReadWriter struct {\n    Reader\n    Writer\n}\n\nfunc main() {\n    rw := ReadWriter{}\n    data := rw.Read()   // from Reader\n    rw.Write(data)      // from Writer\n}\n```\n\n### Embedding vs Inheritance\n\n| Aspect | Go Embedding | Classical Inheritance |\n|--------|-------------|---------------------|\n| Type relationship | Has-a | Is-a |\n| Method override | Shadowing | Overriding |\n| Polymorphism | Via interfaces | Via class hierarchy |\n| Complexity | Simple | Complex |\n\n> **Key Point:** Go uses composition over inheritance. Embedding promotes fields and methods to the outer type, providing code reuse without class hierarchies.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\ntype Position struct {\n    X, Y int\n}\n\nfunc (p Position) Distance() int {\n    if p.X > p.Y {\n        return p.X - p.Y\n    }\n    return p.Y - p.X\n}\n\ntype Entity struct {\n    Position\n    Name string\n}\n\nfunc main() {\n    e := Entity{\n        Position: Position{X: 10, Y: 5},\n        Name:     \"Monster\",\n    }\n    fmt.Println(e.X, e.Y)         // promoted fields\n    fmt.Println(e.Distance())     // promoted method\n    fmt.Println(e.Name)\n}",
+  "quiz": [
+    {
+      "question": "Does Go support classical inheritance?",
+      "options": ["Yes, with extends keyword", "No, uses composition via embedding", "Yes, with type hierarchies", "No, only interfaces"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when the outer type has a field with the same name as an embedded type?",
+      "options": ["Compile error", "Outer field shadows the inner", "Inner field shadows the outer", "Both are accessible directly"],
+      "correctIndex": 1
+    }
+  ]
+}

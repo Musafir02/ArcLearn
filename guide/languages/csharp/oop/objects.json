@@ -1,0 +1,22 @@
+{
+  "title": "C# Objects",
+  "language": "csharp",
+  "topic": "objects",
+  "order": 37,
+  "nextTopic": "constructors",
+  "prevTopic": "classes",
+  "content": "### Objects in C#\n\nAn object is an instance of a class. It represents a concrete entity with state and behavior.\n\n### Creating Objects\n\n```csharp\nClassName objectName = new ClassName();\n// or with var\nvar objectName = new ClassName();\n// or with target-typed new (C# 9+)\nClassName objectName = new();\n```\n\n### Object Initialization\n\n```csharp\n// Default constructor\nPerson person1 = new Person();\nperson1.Name = \"Alice\";\nperson1.Age = 30;\n\n// Object initializer (C# 3+)\nPerson person2 = new Person\n{\n    Name = \"Bob\",\n    Age = 25\n};\n\n// Constructor with parameters\nPerson person3 = new Person(\"Charlie\", 35);\n```\n\n### Object Members\n\n```csharp\nvar car = new Car();\ncar.Make = \"Honda\";        // Set property\nstring model = car.Model;  // Get property\ncar.Start();               // Call method\n```\n\n### Reference Type Behavior\n\nObjects are reference types - variables hold references, not the actual data:\n\n```csharp\nPerson p1 = new Person { Name = \"Alice\" };\nPerson p2 = p1;  // Both reference the same object\np2.Name = \"Bob\";\nConsole.WriteLine(p1.Name);  // \"Bob\"\n```\n\n### Object Equality\n\n```csharp\nPerson a = new Person { Name = \"Alice\" };\nPerson b = new Person { Name = \"Alice\" };\n\nConsole.WriteLine(a == b);          // False (different references)\nConsole.WriteLine(a.Equals(b));     // False (unless overridden)\nConsole.WriteLine(ReferenceEquals(a, b));  // False\n```\n\n### Anonymous Objects\n\n```csharp\nvar person = new { Name = \"Dave\", Age = 40 };\nConsole.WriteLine($\"{person.Name}, {person.Age}\");\n```\n\n### Object Lifecycle\n\n| Stage | Description |\n|-------|-------------|\n| Declaration | Variable declaration |\n| Instantiation | Memory allocation with `new` |\n| Initialization | Setting initial state |\n| Usage | Accessing members |\n| Garbage Collection | Automatic memory cleanup |\n\n> **Key Point:** Use object initializers for concise object creation. Remember that objects are reference types - assignment creates another reference, not a copy. Compare objects by value using `.Equals()` (if overridden) rather than `==` (which checks reference equality by default).\n\n### Object Casting\n\n```csharp\nobject obj = new Person();\nPerson p = (Person)obj;  // Explicit cast\nPerson? p2 = obj as Person;  // Safe cast\nbool isPerson = obj is Person;  // Type check\n```",
+  "codeExample": "using System;\n\npublic class Book\n{\n    public string Title { get; set; }\n    public string Author { get; set; }\n    public int Pages { get; set; }\n    \n    public void DisplayInfo()\n    {\n        Console.WriteLine($\"'{Title}' by {Author} ({Pages} pages)\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Object initializer\n        var book = new Book\n        {\n            Title = \"1984\",\n            Author = \"George Orwell\",\n            Pages = 328\n        };\n        \n        book.DisplayInfo();\n    }\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used to create a new object in C#?",
+      "options": ["create", "new", "instanceof", "make"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are classes in C# reference types or value types?",
+      "options": ["Value types", "Reference types", "Both", "Neither"],
+      "correctIndex": 1
+    }
+  ]
+}

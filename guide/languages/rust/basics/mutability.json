@@ -1,0 +1,17 @@
+{
+  "title": "Mutability in Rust",
+  "language": "rust",
+  "topic": "mutability",
+  "order": 7,
+  "nextTopic": "datatypes",
+  "prevTopic": "variables",
+  "content": "### Mutability in Rust\n\nRust enforces strict rules around mutability to ensure memory safety and prevent data races.\n\n---\n\n### Key Rules\n\n| Rule | Explanation |\n|------|-------------|\n| Immutable by default | Variables declared without `mut` cannot be reassigned |\n| `mut` keyword | Explicitly allows mutation |\n| Shadowing | Allows reusing a variable name (creates a new binding) |\n| Interior mutability | Special types like `RefCell<T>` allow mutation through immutable references |\n\n---\n\n### Mutable vs Immutable\n\n```rust\nlet immutable = 5;\n// immutable = 6;  // ERROR: cannot assign twice to immutable variable\n\nlet mut mutable = 5;\nmutable = 6;  // OK\n\n// Shadowing creates a new variable\nlet x = 10;\nlet x = x + 5;  // This is shadowing, not mutation\nprintln!(\"{}\", x);  // 15\n```\n\n> **Key Point:** Shadowing is different from mutation. Shadowing creates a completely new variable, while mutation modifies the existing binding. Shadowing also allows changing the type of the variable.",
+  "codeExample": "fn main() {\n    let mut count = 0;\n    \n    for _ in 0..5 {\n        count += 1;\n    }\n    \n    println!(\"Count: {}\", count);\n}",
+  "quiz": [
+    {
+      "question": "What is the default mutability of a variable declared with `let`?",
+      "options": ["Mutable", "Immutable", "Depends on the type", "Always constant"],
+      "correctIndex": 1
+    }
+  ]
+}

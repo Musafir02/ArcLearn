@@ -1,0 +1,22 @@
+{
+  "title": "Go Comments",
+  "language": "go",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Comments in Go\n\nComments are non-executable text that explain code.\n\n### Single-Line Comments\n\nUse `//` for single-line comments:\n\n```go\n// This is a single-line comment\nx := 42 // inline comment\n```\n\n### Multi-Line Comments\n\nUse `/* */` for block comments:\n\n```go\n/*\nThis is a multi-line comment.\nIt can span multiple lines.\n*/\n```\n\n### Doc Comments\n\nEvery exported declaration should have a doc comment. Doc comments appear immediately before the declaration:\n\n```go\n// Package math provides basic mathematical constants and functions.\npackage math\n\n// Pi is the mathematical constant pi.\nconst Pi = 3.14159\n\n// Add returns the sum of two integers.\nfunc Add(a, b int) int {\n    return a + b\n}\n```\n\n### Godoc Format\n\nDoc comments are processed by `go doc` and rendered on [pkg.go.dev](https://pkg.go.dev).\n\n| Comment Style | Usage |\n|---------------|-------|\n| `//` | Preferred for most comments |\n| `// Package xxx` | Package-level doc comment |\n| `/* */` | Block comments, disabled code |\n| `//go:directive` | Compiler directives (special) |\n\n> **Key Point:** Good comments explain *why*, not *what*. The code itself should make the *what* clear.",
+  "codeExample": "package main\n\nimport \"fmt\"\n\n// Greet returns a greeting message for the given name.\nfunc Greet(name string) string {\n    return \"Hello, \" + name\n}\n\nfunc main() {\n    // Call the Greet function\n    msg := Greet(\"World\")\n    fmt.Println(msg)\n}",
+  "quiz": [
+    {
+      "question": "Which comment style is preferred for most Go comments?",
+      "options": ["/* */", "//", "#", "--"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What should doc comments explain?",
+      "options": ["How the code works internally", "What the code does and why", "Who wrote the code", "When the code was written"],
+      "correctIndex": 1
+    }
+  ]
+}

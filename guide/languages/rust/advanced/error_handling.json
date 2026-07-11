@@ -1,0 +1,17 @@
+{
+  "title": "Error Handling in Rust",
+  "language": "rust",
+  "topic": "error_handling",
+  "order": 52,
+  "nextTopic": "panic",
+  "prevTopic": "cargo_toml",
+  "content": "### Error Handling in Rust\n\nRust has robust error handling without exceptions. Errors are classified as recoverable (`Result<T, E>`) and unrecoverable (`panic!`).\n\n---\n\n### Error Handling Strategies\n\n| Approach | When to Use |\n|----------|-------------|\n| `Result<T, E>` | Recoverable errors |\n| `Option<T>` | Optional values (None instead of error) |\n| `panic!` | Unrecoverable errors |\n| Custom error types | Rich error context |\n| `anyhow` / `thiserror` | Third-party error libraries |\n\n---\n\n### Propagating Errors\n\n```rust\nuse std::fs::File;\nuse std::io::{self, Read};\n\n// Verbose propagation\nfn read_username_verbose(path: &str) -> Result<String, io::Error> {\n    let file_result = File::open(path);\n    let mut file = match file_result {\n        Ok(f) => f,\n        Err(e) => return Err(e),\n    };\n    let mut contents = String::new();\n    match file.read_to_string(&mut contents) {\n        Ok(_) => Ok(contents),\n        Err(e) => Err(e),\n    }\n}\n\n// Concise with ? operator\nfn read_username(path: &str) -> Result<String, io::Error> {\n    let mut file = File::open(path)?;\n    let mut contents = String::new();\n    file.read_to_string(&mut contents)?;\n    Ok(contents)\n}\n```\n\n> **Key Point:** The `?` operator is the idiomatic way to propagate errors. It unwraps `Ok` values and returns `Err` early. The `?` operator can also convert error types automatically if the proper `From` implementations exist.",
+  "codeExample": "use std::num::ParseIntError;\n\nfn parse_number(s: &str) -> Result<i32, ParseIntError> {\n    s.parse()\n}\n\nfn multiply(first: &str, second: &str) -> Result<i32, ParseIntError> {\n    let a = parse_number(first)?;\n    let b = parse_number(second)?;\n    Ok(a * b)\n}\n\nfn main() {\n    match multiply(\"10\", \"20\") {\n        Ok(result) => println!(\"Result: {}\", result),\n        Err(e) => eprintln!(\"Error: {}\", e),\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which operator is used to propagate errors in Rust?",
+      "options": ["!", "?", "~", "->"],
+      "correctIndex": 1
+    }
+  ]
+}

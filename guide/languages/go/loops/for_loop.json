@@ -1,0 +1,22 @@
+{
+  "title": "Go For Loop",
+  "language": "go",
+  "topic": "for_loop",
+  "order": 20,
+  "nextTopic": "for_while",
+  "prevTopic": "defer",
+  "content": "### For Loop in Go\n\nGo has only one looping construct: `for`. It is extremely flexible.\n\n### Classic For Loop\n\n```go\nfor i := 0; i < 5; i++ {\n    fmt.Println(i)\n}\n```\n\nComponents: initialization, condition, post-increment. All are optional.\n\n### Infinite Loop\n\n```go\nfor {\n    fmt.Println(\"runs forever\")\n    break // exit loop\n}\n```\n\n### For with Only Condition\n\n```go\nsum := 1\nfor sum < 100 {\n    sum += sum\n}\nfmt.Println(sum) // 128\n```\n\n### Initialization Scope\n\nVariables declared in the init statement are scoped to the loop:\n\n```go\nfor i := 0; i < 10; i++ {\n    // i is accessible here\n}\n// i is NOT accessible here\n```\n\n### Loop Labels\n\nLabels allow breaking or continuing outer loops:\n\n```go\nouter:\nfor i := 0; i < 3; i++ {\n    for j := 0; j < 3; j++ {\n        if i+j > 3 {\n            break outer\n        }\n        fmt.Printf(\"(%d,%d) \", i, j)\n    }\n}\n```\n\n### Loop Variable Capture (Go 1.22+)\n\nSince Go 1.22, loop variables have per-iteration scope:\n\n```go\nfor i := 0; i < 3; i++ {\n    go func() {\n        fmt.Println(i) // 0, 1, 2 (correct in Go 1.22+)\n    }()\n}\n```\n\n> **Key Point:** Go's `for` is the only loop keyword. It covers all looping patterns (C-style for, while, infinite loops).",
+  "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Classic for:\")\n    for i := 0; i < 5; i++ {\n        fmt.Printf(\"%d \", i)\n    }\n    fmt.Println()\n\n    fmt.Println(\"Condition-only for:\")\n    sum := 1\n    for sum < 100 {\n        sum *= 2\n    }\n    fmt.Println(\"Sum:\", sum)\n}",
+  "quiz": [
+    {
+      "question": "How many loop constructs does Go have?",
+      "options": ["One (for)", "Two (for, while)", "Three (for, while, do-while)", "Four (for, while, do-while, until)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the scope of variables declared in the for init statement?",
+      "options": ["Package level", "Function level", "Loop block level", "Global scope"],
+      "correctIndex": 2
+    }
+  ]
+}
