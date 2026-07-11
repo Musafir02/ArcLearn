@@ -1,0 +1,22 @@
+{
+  "title": "useId Hook",
+  "language": "react",
+  "topic": "useid",
+  "order": 25,
+  "nextTopic": "usedeferredvalue",
+  "prevTopic": "rules_of_hooks",
+  "content": "### useId\n\n`useId` generates unique IDs for accessibility attributes. It produces stable, unique strings that are consistent between server and client rendering.\n\n---\n\n### Syntax\n\n```jsx\nimport { useId } from 'react';\n\nconst id = useId();\n```\n\n### Accessibility Example\n\n```jsx\nfunction EmailField() {\n  const id = useId();\n\n  return (\n    <>\n      <label htmlFor={id}>Email</label>\n      <input id={id} type=\"email\" aria-describedby={`${id}-hint`} />\n      <p id={`${id}-hint`}>We'll never share your email.</p>\n    </>\n  );\n}\n```\n\n### Multiple Instances\n\nEach component instance gets its own unique ID, preventing collisions:\n\n```jsx\nfunction FormField({ label }) {\n  const id = useId();\n  return (\n    <>\n      <label htmlFor={id}>{label}</label>\n      <input id={id} />\n    </>\n  );\n}\n\n// Three instances, three unique IDs\n<FormField label=\"Name\" />\n<FormField label=\"Email\" />\n<FormField label=\"Password\" />\n```\n\n| Feature | Description |\n|---------|-------------|\n| SSR compatible | IDs match between server and client |\n| Unique per instance | Different IDs for each component instance |\n| Stable | IDs don't change between renders |\n| Accessibility | Designed for `aria-*` and `htmlFor` attributes |\n\n> **Key Point:** Do not use useId for generating keys in lists. Use IDs from your data. useId is specifically for accessibility attributes that need unique, stable identifiers.",
+  "codeExample": "import { useId } from 'react';\n\nfunction Accordion({ title, children }) {\n  const id = useId();\n  return (\n    <div>\n      <button aria-expanded=\"false\" aria-controls={id}>\n        {title}\n      </button>\n      <div id={id} hidden>\n        {children}\n      </div>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is the primary purpose of useId?",
+      "options": ["Generating list keys", "Generating unique IDs for accessibility", "Generating unique state keys", "Generating IDs for database records"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is useId suitable for list keys?",
+      "options": ["Yes", "No, use data IDs instead", "Only with useRef", "Only in SSR"],
+      "correctIndex": 1
+    }
+  ]
+}

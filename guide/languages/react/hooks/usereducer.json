@@ -1,0 +1,22 @@
+{
+  "title": "useReducer Hook",
+  "language": "react",
+  "topic": "usereducer",
+  "order": 20,
+  "nextTopic": "usememo",
+  "prevTopic": "useref",
+  "content": "### useReducer\n\n`useReducer` is an alternative to `useState` for complex state logic. It manages state through a reducer function and dispatched actions, similar to Redux.\n\n---\n\n### Syntax\n\n```jsx\nimport { useReducer } from 'react';\n\nconst [state, dispatch] = useReducer(reducer, initialState);\n```\n\n### Basic Example\n\n```jsx\nfunction reducer(state, action) {\n  switch (action.type) {\n    case 'increment':\n      return { count: state.count + 1 };\n    case 'decrement':\n      return { count: state.count - 1 };\n    default:\n      return state;\n  }\n}\n\nfunction Counter() {\n  const [state, dispatch] = useReducer(reducer, { count: 0 });\n\n  return (\n    <>\n      Count: {state.count}\n      <button onClick={() => dispatch({ type: 'increment' })}>+</button>\n      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>\n    </>\n  );\n}\n```\n\n### Action Conventions\n\n| Pattern | Example |\n|---------|---------|\n| Type only | `{ type: 'increment' }` |\n| With payload | `{ type: 'setUser', payload: user }` |\n| Multiple fields | `{ type: 'update', field: 'name', value: 'Alice' }` |\n\n### When to Use\n\n- State depends on previous state\n- State logic is complex (multiple sub-values)\n- Multiple actions update state in different ways\n- State updates are easier to reason about as a reducer\n\n### Lazy Initialization\n\n```jsx\nconst [state, dispatch] = useReducer(reducer, initialArg, init);\n```\n\n> **Key Point:** useReducer is preferred over useState when state logic is complex and involves multiple sub-values or when the next state depends on the previous state heavily. It makes state transitions predictable and testable.",
+  "codeExample": "function todoReducer(state, action) {\n  switch (action.type) {\n    case 'add':\n      return [...state, { id: Date.now(), text: action.payload }];\n    case 'remove':\n      return state.filter(t => t.id !== action.payload);\n    case 'toggle':\n      return state.map(t =>\n        t.id === action.payload ? { ...t, done: !t.done } : t\n      );\n    default:\n      return state;\n  }\n}\n\nfunction TodoList() {\n  const [todos, dispatch] = useReducer(todoReducer, []);\n  return (\n    <button onClick={() => dispatch({ type: 'add', payload: 'New task' })}>\n      Add\n    </button>\n  );\n}",
+  "quiz": [
+    {
+      "question": "When should you use useReducer over useState?",
+      "options": ["For simple state", "For complex state logic with multiple transitions", "For all state management", "For storing API data"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the dispatch function do?",
+      "options": ["Updates state directly", "Sends an action to the reducer", "Calls the reducer automatically", "Returns the new state"],
+      "correctIndex": 1
+    }
+  ]
+}

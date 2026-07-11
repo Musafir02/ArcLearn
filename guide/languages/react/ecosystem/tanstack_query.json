@@ -1,0 +1,22 @@
+{
+  "title": "TanStack Query",
+  "language": "react",
+  "topic": "tanstack_query",
+  "order": 55,
+  "nextTopic": "testing_react",
+  "prevTopic": "zustand_intro",
+  "content": "### TanStack Query (React Query)\n\nTanStack Query is a data-fetching and caching library for React. It manages server state including caching, background refetching, pagination, and optimistic updates.\n\n---\n\n### Installation\n\n```bash\nnpm install @tanstack/react-query\n```\n\n### Setup Provider\n\n```jsx\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\n\nconst queryClient = new QueryClient();\n\nfunction App() {\n  return (\n    <QueryClientProvider client={queryClient}>\n      <YourApp />\n    </QueryClientProvider>\n  );\n}\n```\n\n### Basic Query\n\n```jsx\nimport { useQuery } from '@tanstack/react-query';\n\nfunction UserProfile({ userId }) {\n  const { data, isLoading, error } = useQuery({\n    queryKey: ['user', userId],\n    queryFn: () => fetch(`/api/users/${userId}`).then(r => r.json()),\n  });\n\n  if (isLoading) return <Spinner />;\n  if (error) return <Error message={error.message} />;\n  return <h1>{data.name}</h1>;\n}\n```\n\n### Mutations\n\n```jsx\nimport { useMutation, useQueryClient } from '@tanstack/react-query';\n\nfunction AddTodo() {\n  const queryClient = useQueryClient();\n\n  const mutation = useMutation({\n    mutationFn: (newTodo) => fetch('/api/todos', {\n      method: 'POST',\n      body: JSON.stringify(newTodo),\n    }),\n    onSuccess: () => {\n      queryClient.invalidateQueries({ queryKey: ['todos'] });\n    },\n  });\n\n  return (\n    <button onClick={() => mutation.mutate({ title: 'New Task' })}>\n      Add Todo\n    </button>\n  );\n}\n```\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Caching | Automatic in-memory cache |\n| Background refetch | Stale data refreshes automatically |\n| Pagination | Built-in infinite queries |\n| Optimistic updates | Update UI before server confirms |\n| Retry | Automatic retry on failure |\n| DevTools | Query devtools for debugging |\n\n> **Key Point:** TanStack Query replaces manual useEffect fetch patterns. It handles caching, loading states, error handling, and refetching automatically. Use it for all server state in your React applications.",
+  "codeExample": "import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';\n\nfunction TodoApp() {\n  const queryClient = useQueryClient();\n\n  const { data: todos } = useQuery({\n    queryKey: ['todos'],\n    queryFn: () => fetch('/api/todos').then(r => r.json()),\n  });\n\n  const deleteMutation = useMutation({\n    mutationFn: (id) => fetch(`/api/todos/${id}`, { method: 'DELETE' }),\n    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['todos'] }),\n  });\n\n  return todos?.map(todo => (\n    <div key={todo.id}>\n      <span>{todo.title}</span>\n      <button onClick={() => deleteMutation.mutate(todo.id)}>Delete</button>\n    </div>\n  ));\n}",
+  "quiz": [
+    {
+      "question": "What problem does TanStack Query primarily solve?",
+      "options": ["UI state management", "Server state and caching", "Routing", "Form validation"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you refresh data after a mutation?",
+      "options": ["Reload the page", "Invalidate related queries", "Reset the store", "Re-render the component"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "useEffect Hook",
+  "language": "react",
+  "topic": "useeffect",
+  "order": 17,
+  "nextTopic": "usecontext",
+  "prevTopic": "usestate",
+  "content": "### useEffect\n\n`useEffect` lets you perform side effects in functional components: data fetching, subscriptions, timers, DOM manipulation, and logging.\n\n---\n\n### Syntax\n\n```jsx\nuseEffect(() => {\n  // Side effect code\n  return () => {\n    // Cleanup code\n  };\n}, [dependencies]);\n```\n\n### Dependency Array Patterns\n\n| Dependency Array | Runs |\n|-----------------|------|\n| `undefined` | After every render |\n| `[]` | Once on mount, cleanup on unmount |\n| `[a, b]` | When `a` or `b` changes |\n\n### Common Use Cases\n\n```jsx\n// Data fetching\nuseEffect(() => {\n  fetch('/api/users')\n    .then(res => res.json())\n    .then(data => setUsers(data));\n}, []);\n\n// Subscriptions\nuseEffect(() => {\n  const subscription = source.subscribe(data => setData(data));\n  return () => subscription.unsubscribe();\n}, [source]);\n\n// Timers\nuseEffect(() => {\n  const id = setInterval(() => setTime(new Date()), 1000);\n  return () => clearInterval(id);\n}, []);\n```\n\n### Cleanup Function\n\nReturn a function from the effect to clean up subscriptions, timers, or event listeners:\n\n```jsx\nuseEffect(() => {\n  window.addEventListener('resize', handleResize);\n  return () => window.removeEventListener('resize', handleResize);\n}, []);\n```\n\n> **Key Point:** Always specify all reactive values in the dependency array. Use the exhaustive-deps ESLint rule to catch missing dependencies.",
+  "codeExample": "import { useEffect, useState } from 'react';\n\nfunction UserProfile({ userId }) {\n  const [user, setUser] = useState(null);\n\n  useEffect(() => {\n    let cancelled = false;\n    fetch(`/api/users/${userId}`)\n      .then(res => res.json())\n      .then(data => {\n        if (!cancelled) setUser(data);\n      });\n    return () => { cancelled = true; };\n  }, [userId]);\n\n  return user ? <h1>{user.name}</h1> : <p>Loading...</p>;\n}",
+  "quiz": [
+    {
+      "question": "What does an empty dependency array `[]` mean?",
+      "options": ["Effect never runs", "Effect runs once on mount", "Effect runs on every render", "Effect runs only on unmount"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the purpose of the cleanup function in useEffect?",
+      "options": ["Optimize performance", "Prevent memory leaks from subscriptions", "Log errors", "Force re-render"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to React",
+  "language": "react",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is React?\n\nReact is a JavaScript library for building user interfaces, maintained by Meta. It enables developers to create single-page applications (SPAs) with reusable components and a declarative approach to UI development.\n\n---\n\n### Key Concepts\n\n| Concept | Description |\n|---------|-------------|\n| Components | Reusable, self-contained pieces of UI |\n| Virtual DOM | Lightweight in-memory representation of the real DOM |\n| Declarative | Describe what the UI should look like, React handles updates |\n| Unidirectional Data Flow | Data flows from parent to child via props |\n\n### Single-Page Applications (SPA)\n\nIn a traditional multi-page app, each navigation triggers a full page reload. SPAs load a single HTML page and dynamically update content using JavaScript. React excels at building SPAs because it efficiently updates only the parts of the DOM that change.\n\n### Virtual DOM\n\nWhen state changes, React creates a new virtual DOM tree, compares it with the previous one (diffing), and applies only the necessary real DOM updates (reconciliation). This minimizes expensive DOM operations.\n\n> **Key Point:** React is a library, not a framework. It focuses on the view layer and integrates with other libraries for routing, state management, and data fetching.",
+  "codeExample": "import React from 'react';\nimport { createRoot } from 'react-dom/client';\n\nconst root = createRoot(document.getElementById('root'));\nroot.render(<h1>Hello, React!</h1>);",
+  "quiz": [
+    {
+      "question": "What is React primarily used for?",
+      "options": ["Building user interfaces", "Database management", "Server-side scripting", "File system operations"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the Virtual DOM?",
+      "options": ["A direct copy of the real DOM", "A lightweight in-memory representation of the DOM", "A database for storing DOM elements", "A browser API for DOM manipulation"],
+      "correctIndex": 1
+    }
+  ]
+}

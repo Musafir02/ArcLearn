@@ -1,0 +1,22 @@
+{
+  "title": "Protected Routes",
+  "language": "react",
+  "topic": "protected_routes",
+  "order": 35,
+  "nextTopic": "context_api",
+  "prevTopic": "nested_routes",
+  "content": "### Protected Routes\n\nProtected routes control access based on authentication or authorization. Unauthenticated users are redirected to login.\n\n---\n\n### ProtectedRoute Component\n\n```jsx\nimport { Navigate, Outlet } from 'react-router-dom';\n\nfunction ProtectedRoute({ isAuthenticated, redirectTo = '/login' }) {\n  if (!isAuthenticated) {\n    return <Navigate to={redirectTo} replace />;\n  }\n  return <Outlet />;\n}\n```\n\n### Route Configuration\n\n```jsx\nimport { useAuth } from './hooks/useAuth';\n\nfunction AppRoutes() {\n  const { user } = useAuth();\n\n  return (\n    <Routes>\n      <Route path=\"/login\" element={<Login />} />\n      <Route path=\"/register\" element={<Register />} />\n\n      <Route element={<ProtectedRoute isAuthenticated={!!user} />}>\n        <Route path=\"/dashboard\" element={<Dashboard />} />\n        <Route path=\"/profile\" element={<Profile />} />\n        <Route path=\"/settings\" element={<Settings />} />\n      </Route>\n\n      <Route path=\"*\" element={<NotFound />} />\n    </Routes>\n  );\n}\n```\n\n### Role-Based Access\n\n```jsx\nfunction RoleRoute({ allowedRoles }) {\n  const { user } = useAuth();\n\n  if (!user) return <Navigate to=\"/login\" replace />;\n  if (!allowedRoles.includes(user.role)) return <Navigate to=\"/unauthorized\" replace />;\n\n  return <Outlet />;\n}\n\n// Usage\n<Route element={<RoleRoute allowedRoles={['admin', 'manager']} />}>\n  <Route path=\"/admin\" element={<AdminPanel />} />\n</Route>\n```\n\n### Auth Context Provider\n\n```jsx\nfunction AuthProvider({ children }) {\n  const [user, setUser] = useState(null);\n\n  const login = async (credentials) => {\n    const user = await authApi.login(credentials);\n    setUser(user);\n  };\n\n  const logout = () => {\n    setUser(null);\n  };\n\n  return (\n    <AuthContext.Provider value={{ user, login, logout }}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n```\n\n| Pattern | Description |\n|---------|-------------|\n| Auth guard | Redirect to login if not authenticated |\n| Role guard | Redirect if user lacks required role |\n| Layout outlet | Protected routes share a layout |\n\n> **Key Point:** Protected routes wrap child routes. The `<Navigate>` component with `replace` prevents the login page from appearing in the browser's back history. Always validate auth on the server too.",
+  "codeExample": "import { Navigate, Outlet } from 'react-router-dom';\n\nfunction ProtectedLayout() {\n  const token = localStorage.getItem('token');\n  \n  if (!token) {\n    return <Navigate to=\"/login\" state={{ from: location }} replace />;\n  }\n  \n  return (\n    <div>\n      <header>App Header</header>\n      <Outlet />\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does a protected route typically do for unauthenticated users?",
+      "options": ["Shows an error", "Redirects to login", "Renders nothing", "Shows a warning"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why use replace: true when redirecting?",
+      "options": ["Faster performance", "Prevents login page in back history", "Prevents caching", "Enables SSR"],
+      "correctIndex": 1
+    }
+  ]
+}

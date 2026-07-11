@@ -1,0 +1,22 @@
+{
+  "title": "Suspense",
+  "language": "react",
+  "topic": "suspense",
+  "order": 40,
+  "nextTopic": "lazy_loading",
+  "prevTopic": "error_boundaries",
+  "content": "### Suspense\n\nSuspense lets components wait for something (like data or code) before rendering. It displays a fallback while the content is loading.\n\n---\n\n### Basic Usage\n\n```jsx\nimport { Suspense, lazy } from 'react';\n\nconst LazyComponent = lazy(() => import('./HeavyComponent'));\n\nfunction App() {\n  return (\n    <Suspense fallback={<div>Loading...</div>}>\n      <LazyComponent />\n    </Suspense>\n  );\n}\n```\n\n### Multiple Suspense Boundaries\n\n```jsx\nfunction Dashboard() {\n  return (\n    <div>\n      <h1>Dashboard</h1>\n      <Suspense fallback={<ProfileSkeleton />}>\n        <UserProfile userId={userId} />\n      </Suspense>\n      <Suspense fallback={<PostsSkeleton />}>\n        <UserPosts userId={userId} />\n      </Suspense>\n    </div>\n  );\n}\n```\n\n### Suspense with Data Fetching (React 19)\n\nReact 19 integrates Suspense with async components:\n\n```jsx\nasync function UserProfile({ userId }) {\n  const user = await fetchUser(userId);\n  return <h1>{user.name}</h1>;\n}\n\nfunction App() {\n  return (\n    <Suspense fallback={<Spinner />}>\n      <UserProfile userId={5} />\n    </Suspense>\n  );\n}\n```\n\n| Aspect | Description |\n|--------|-------------|\n| Purpose | Declarative loading states |\n| Fallback | React node shown during loading |\n| Boundaries | Can be nested at any level |\n| Coordination | Loading the slowest child determines display |\n\n> **Key Point:** Suspense enables a declarative loading pattern. Use multiple boundaries for independent sections so one slow load does not block the entire page. Combine with lazy() for code splitting.",
+  "codeExample": "import { Suspense } from 'react';\n\nfunction VideoPage() {\n  return (\n    <div>\n      <h1>Video Player</h1>\n      <Suspense fallback={<div className=\"skeleton\">Loading video...</div>}>\n        <VideoPlayer id=\"abc123\" />\n      </Suspense>\n      <Suspense fallback={<div className=\"skeleton\">Loading comments...</div>}>\n        <Comments videoId=\"abc123\" />\n      </Suspense>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does Suspense display during loading?",
+      "options": ["Nothing", "A fallback React node", "An error message", "The raw component"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when Suspense contains multiple children?",
+      "options": ["All wait for the slowest", "Each has its own fallback", "They render independently", "Only the first loads"],
+      "correctIndex": 0
+    }
+  ]
+}

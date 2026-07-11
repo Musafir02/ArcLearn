@@ -1,0 +1,22 @@
+{
+  "title": "Components",
+  "language": "react",
+  "topic": "components",
+  "order": 5,
+  "nextTopic": "props",
+  "prevTopic": "rendering",
+  "content": "### Components\n\nComponents are independent, reusable pieces of UI. They accept inputs (props) and return React elements describing what should appear on screen.\n\n---\n\n### Function Components\n\n```jsx\nfunction Welcome(props) {\n  return <h1>Hello, {props.name}</h1>;\n}\n```\n\n### Arrow Function Components\n\n```jsx\nconst Welcome = (props) => {\n  return <h1>Hello, {props.name}</h1>;\n};\n```\n\n### Component Composition\n\nComponents can reference other components:\n\n```jsx\nfunction App() {\n  return (\n    <div>\n      <Welcome name=\"Alice\" />\n      <Welcome name=\"Bob\" />\n    </div>\n  );\n}\n```\n\n### Component Rules\n\n| Rule | Description |\n|------|-------------|\n| Name must start with capital letter | Distinguishes from HTML elements |\n| Must return a single root element | Use fragments `<>...</>` |\n| Pure functions preferred | Should not modify inputs |\n\n> **Key Point:** Component names must be capitalized. React treats lowercase tags as HTML elements and capitalized tags as custom components.",
+  "codeExample": "function Greeting({ name, role }) {\n  return (\n    <div className=\"greeting\">\n      <h2>{name}</h2>\n      <p>{role}</p>\n    </div>\n  );\n}\n\nexport default Greeting;",
+  "quiz": [
+    {
+      "question": "Why must component names start with a capital letter?",
+      "options": ["It's a style preference", "React distinguishes them from HTML elements", "JavaScript requires it", "Build tools require it"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What must every component return?",
+      "options": ["A string", "A single root element", "An array of elements", "A function"],
+      "correctIndex": 1
+    }
+  ]
+}

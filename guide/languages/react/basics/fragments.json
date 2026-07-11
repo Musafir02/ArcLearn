@@ -1,0 +1,22 @@
+{
+  "title": "Fragments",
+  "language": "react",
+  "topic": "fragments",
+  "order": 15,
+  "nextTopic": "usestate",
+  "prevTopic": "portals",
+  "content": "### Fragments\n\nFragments let you group multiple elements without adding extra nodes to the DOM. They solve the requirement that components must return a single root element.\n\n---\n\n### Basic Usage\n\n```jsx\nfunction Columns() {\n  return (\n    <>\n      <td>Column 1</td>\n      <td>Column 2</td>\n    </>\n  );\n}\n```\n\n### Explicit Fragment with Key\n\n```jsx\nimport { Fragment } from 'react';\n\nfunction Glossary({ items }) {\n  return items.map(item => (\n    <Fragment key={item.id}>\n      <dt>{item.term}</dt>\n      <dd>{item.definition}</dd>\n    </Fragment>\n  ));\n}\n```\n\n### Why Use Fragments?\n\n| Approach | DOM Output |\n|----------|------------|\n| `<div>` wrapper | `<div><td>...</td></div>` |\n| Short syntax `<>...</>` | `<td>...</td>` (no wrapper) |\n| `<Fragment>` with key | No extra wrapper, supports keys |\n\n### Without Fragment (Bad)\n\n```jsx\n// Adds unnecessary div to DOM\nfunction Table() {\n  return (\n    <div>\n      <td>Item</td>\n      <td>Price</td>\n    </div>\n  );\n}\n```\n\n> **Key Point:** Short syntax `<>...</>` does not support keys or attributes. Use `<Fragment>` when you need to pass a key prop inside a loop.",
+  "codeExample": "function App() {\n  return (\n    <>\n      <Header />\n      <main>\n        <Content />\n      </main>\n      <Footer />\n    </>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is the purpose of React Fragments?",
+      "options": ["Improve performance", "Group elements without adding extra DOM nodes", "Add styling", "Handle errors"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When must you use `<Fragment>` instead of `<>...</>`?",
+      "options": ["When returning multiple elements", "When you need to pass a key prop", "When using TypeScript", "When using useState"],
+      "correctIndex": 1
+    }
+  ]
+}

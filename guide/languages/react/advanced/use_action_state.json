@@ -1,0 +1,22 @@
+{
+  "title": "useActionState Hook",
+  "language": "react",
+  "topic": "use_action_state",
+  "order": 51,
+  "nextTopic": "use_form_status",
+  "prevTopic": "server_components_intro",
+  "content": "### useActionState\n\n`useActionState` (formerly `useFormState`) is a React 19 hook that manages form submission state. It accepts a form action function and returns the current state and a new form action.\n\n---\n\n### Syntax\n\n```jsx\nimport { useActionState } from 'react';\n\nconst [state, formAction, isPending] = useActionState(fn, initialState);\n```\n\n### Basic Example\n\n```jsx\nimport { useActionState } from 'react';\n\nasync function updateName(previousState, formData) {\n  const name = formData.get('name');\n  \n  if (!name) {\n    return { error: 'Name is required' };\n  }\n\n  try {\n    await api.updateUser({ name });\n    return { success: true, name };\n  } catch (err) {\n    return { error: err.message };\n  }\n}\n\nfunction UpdateNameForm() {\n  const [state, formAction, isPending] = useActionState(updateName, { error: null });\n\n  return (\n    <form action={formAction}>\n      <input type=\"text\" name=\"name\" defaultValue={state.name} />\n      {state.error && <p style={{ color: 'red' }}>{state.error}</p>}\n      <button type=\"submit\" disabled={isPending}>\n        {isPending ? 'Saving...' : 'Save'}\n      </button>\n    </form>\n  );\n}\n```\n\n### Return Values\n\n| Value | Purpose |\n|-------|---------|\n| `state` | Current state returned by the action |\n| `formAction` | New form action to pass to `<form>` |\n| `isPending` | Boolean indicating submission in progress |\n\n### Comparison with useState\n\n| Aspect | useActionState | useState + onSubmit |\n|--------|---------------|-------------------|\n| Form handling | Built-in action pattern | Manual event handling |\n| Pending state | Automatic `isPending` | Manual loading state |\n| Progressive enhancement | Works without JS | Requires JavaScript |\n\n> **Key Point:** useActionState is the modern way to handle form submissions in React 19. It provides automatic pending state, form reset on success, and works with the `<form>` action prop for progressive enhancement.",
+  "codeExample": "import { useActionState } from 'react';\n\nasync function submitFeedback(prev, formData) {\n  const feedback = formData.get('feedback');\n  await new Promise(r => setTimeout(r, 1000));\n  return { message: 'Thank you!', feedback };\n}\n\nfunction FeedbackForm() {\n  const [state, action, pending] = useActionState(submitFeedback, null);\n  \n  if (state?.message) {\n    return <p>{state.message}</p>;\n  }\n  \n  return (\n    <form action={action}>\n      <textarea name=\"feedback\" rows={4} />\n      <button disabled={pending}>{pending ? 'Sending...' : 'Submit'}</button>\n    </form>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does the isPending value from useActionState indicate?",
+      "options": ["Form is invalid", "Form submission is in progress", "Form has errors", "Form has been submitted"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What form prop does useActionState integrate with?",
+      "options": ["onSubmit", "action", "method", "encType"],
+      "correctIndex": 1
+    }
+  ]
+}

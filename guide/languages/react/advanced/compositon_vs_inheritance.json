@@ -1,0 +1,22 @@
+{
+  "title": "Composition vs Inheritance",
+  "language": "react",
+  "topic": "compositon_vs_inheritance",
+  "order": 45,
+  "nextTopic": "useref_dom",
+  "prevTopic": "render_props",
+  "content": "### Composition vs Inheritance\n\nReact recommends using composition over inheritance to reuse code between components. Composition builds complex UIs by combining simpler components.\n\n---\n\n### Composition with Children\n\n```jsx\nfunction FancyBorder({ color, children }) {\n  return (\n    <div className={`border-${color}`}>\n      {children}\n    </div>\n  );\n}\n\nfunction WelcomeDialog() {\n  return (\n    <FancyBorder color=\"blue\">\n      <h1>Welcome</h1>\n      <p>Thank you for visiting</p>\n    </FancyBorder>\n  );\n}\n```\n\n### Composition with Multiple Slots\n\n```jsx\nfunction SplitPane({ left, right }) {\n  return (\n    <div className=\"split-pane\">\n      <div className=\"left\">{left}</div>\n      <div className=\"right\">{right}</div>\n    </div>\n  );\n}\n\n<SplitPane\n  left={<Contacts />}\n  right={<Chat />}\n/>\n```\n\n### Specialization\n\n```jsx\nfunction Dialog({ title, message, children }) {\n  return (\n    <div className=\"dialog\">\n      <h2>{title}</h2>\n      <p>{message}</p>\n      {children}\n    </div>\n  );\n}\n\nfunction SignUpDialog() {\n  return (\n    <Dialog title=\"Sign Up\" message=\"Create your account\">\n      <input placeholder=\"Email\" />\n      <button>Sign Up</button>\n    </Dialog>\n  );\n}\n```\n\n| Approach | Use Case |\n|----------|----------|\n| Containment | Generic containers (modals, cards) |\n| Specialization | Specific variants of a base component |\n| Props | Passing configuration and data |\n| Children | Rendering nested arbitrary content |\n\n> **Key Point:** Class inheritance in React creates tight coupling and is rarely needed. Composition through children props, render props, or hooks provides more flexibility and cleaner separation of concerns.",
+  "codeExample": "function Card({ title, actions, children }) {\n  return (\n    <div className=\"card\">\n      <div className=\"card-header\">\n        <h3>{title}</h3>\n        {actions}\n      </div>\n      <div className=\"card-body\">\n        {children}\n      </div>\n    </div>\n  );\n}\n\n<Card\n  title=\"User Profile\"\n  actions={<button>Edit</button>}\n>\n  <p>Name: John Doe</p>\n  <p>Email: john@example.com</p>\n</Card>",
+  "quiz": [
+    {
+      "question": "What does React recommend for code reuse?",
+      "options": ["Class inheritance", "Composition", "Mixins", "Global variables"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What pattern lets a component accept arbitrary content?",
+      "options": ["children prop", "inheritance", "context", "refs"],
+      "correctIndex": 0
+    }
+  ]
+}

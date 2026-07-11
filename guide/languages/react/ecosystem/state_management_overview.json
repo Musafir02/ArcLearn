@@ -1,0 +1,22 @@
+{
+  "title": "State Management Overview",
+  "language": "react",
+  "topic": "state_management_overview",
+  "order": 53,
+  "nextTopic": "zustand_intro",
+  "prevTopic": "use_form_status",
+  "content": "### State Management Overview\n\nReact state management ranges from built-in hooks to external libraries. Choosing the right tool depends on the complexity and scope of your state.\n\n---\n\n### Types of State\n\n| State Type | Description | Tool |\n|-----------|-------------|------|\n| Local state | Component-scoped data | useState, useReducer |\n| Shared state | Data used by multiple components | Context, lifting state up |\n| Server state | Data from external APIs | TanStack Query, SWR |\n| URL state | Data in the URL | React Router |\n| Global state | App-wide data | Zustand, Redux, Jotai |\n\n### When to Use What\n\n```jsx\n// 1. Local: useState for simple component state\nconst [count, setCount] = useState(0);\n\n// 2. Shared: useReducer for complex state logic\nconst [state, dispatch] = useReducer(reducer, initialState);\n\n// 3. Global: Context for widely-shared data\nconst ThemeContext = createContext('light');\n\n// 4. Server: TanStack Query for API data\nconst { data } = useQuery({ queryKey: ['users'], queryFn: fetchUsers });\n\n// 5. URL: React Router for navigation state\nconst { userId } = useParams();\n```\n\n### Library Comparison\n\n| Library | Bundle Size | Learning Curve | Use Case |\n|---------|------------|----------------|----------|\n| Context API | 0 B | Low | Theme, locale, auth |\n| Zustand | ~1 KB | Low | General global state |\n| Redux Toolkit | ~12 KB | Medium | Large-scale apps |\n| Jotai | ~3 KB | Low | Atomic state |\n| TanStack Query | ~13 KB | Medium | Server state |\n\n### State Management Decision Tree\n\n- Form state? -> useState / useReducer\n- API data? -> TanStack Query / SWR\n- UI theme/locale? -> Context API\n- Complex global state? -> Zustand / Redux\n\n> **Key Point:** Start with the simplest solution. Most apps need Context for global UI state and TanStack Query for server state. Only reach for Redux or Zustand when sharing complex state across many components.",
+  "codeExample": "// Example: combining local and server state\nfunction Dashboard() {\n  // Local UI state\n  const [filter, setFilter] = useState('all');\n  \n  // Server state\n  const { data: tasks, isLoading } = useQuery({\n    queryKey: ['tasks', filter],\n    queryFn: () => fetchTasks(filter),\n  });\n\n  if (isLoading) return <Spinner />;\n  return <TaskList tasks={tasks} />;\n}",
+  "quiz": [
+    {
+      "question": "What type of state is best suited for TanStack Query?",
+      "options": ["UI state", "Server/API state", "Form state", "URL state"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the simplest solution for global UI state like theme?",
+      "options": ["Redux", "Context API", "Zustand", "Jotai"],
+      "correctIndex": 1
+    }
+  ]
+}

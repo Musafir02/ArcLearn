@@ -1,0 +1,22 @@
+{
+  "title": "Link and NavLink",
+  "language": "react",
+  "topic": "link_navlink",
+  "order": 31,
+  "nextTopic": "useparams",
+  "prevTopic": "browserrouter_routes",
+  "content": "### Link and NavLink\n\n`Link` provides declarative navigation without page reloads. `NavLink` extends `Link` with styling capabilities for active and pending states.\n\n---\n\n### Link\n\n```jsx\nimport { Link } from 'react-router-dom';\n\nfunction Nav() {\n  return (\n    <nav>\n      <Link to=\"/\">Home</Link>\n      <Link to=\"/products\">Products</Link>\n      <Link to=\"/about\">About</Link>\n    </nav>\n  );\n}\n```\n\n### NavLink with Active Styling\n\n```jsx\nimport { NavLink } from 'react-router-dom';\n\nfunction NavBar() {\n  return (\n    <nav>\n      <NavLink\n        to=\"/\"\n        className={({ isActive }) => isActive ? 'active' : ''}\n      >\n        Home\n      </NavLink>\n      <NavLink\n        to=\"/products\"\n        style={({ isActive }) => ({\n          fontWeight: isActive ? 'bold' : 'normal'\n        })}\n      >\n        Products\n      </NavLink>\n    </nav>\n  );\n}\n```\n\n### Link Props\n\n| Prop | Type | Description |\n|------|------|-------------|\n| `to` | string | Target path |\n| `replace` | boolean | Replace current entry in history stack |\n| `state` | any | Pass state to the target route |\n| `reloadDocument` | boolean | Full page navigation instead of SPA |\n\n### NavLink ClassName Function\n\n```jsx\n<NavLink\n  to=\"/faq\"\n  className={({ isActive, isPending }) =>\n    [isActive ? 'active' : '', isPending ? 'pending' : ''].join(' ')\n  }\n>\n  FAQ\n</NavLink>\n```\n\n> **Key Point:** Use NavLink when you need to style the active link (navigation menus, tabs). Use Link for general navigation. Both prevent full page reloads.",
+  "codeExample": "import { NavLink, Outlet } from 'react-router-dom';\n\nfunction Layout() {\n  return (\n    <div>\n      <nav>\n        <NavLink to=\"/\" end>Home</NavLink>\n        <NavLink to=\"/dashboard\">Dashboard</NavLink>\n        <NavLink to=\"/settings\">Settings</NavLink>\n      </nav>\n      <Outlet />\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What extra feature does NavLink provide over Link?",
+      "options": ["Faster navigation", "Active and pending state styling", "Prefetching", "Scroll restoration"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you access the isActive state in NavLink's className?",
+      "options": ["Via a string", "Via a function that receives { isActive }", "Via CSS class only", "Via a ref"],
+      "correctIndex": 1
+    }
+  ]
+}

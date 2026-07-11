@@ -1,0 +1,22 @@
+{
+  "title": "useNavigate Hook",
+  "language": "react",
+  "topic": "usenavigate",
+  "order": 33,
+  "nextTopic": "nested_routes",
+  "prevTopic": "useparams",
+  "content": "### useNavigate\n\n`useNavigate` returns a function for programmatic navigation. Use it to redirect users after form submissions, logins, or timeouts.\n\n---\n\n### Syntax\n\n```jsx\nimport { useNavigate } from 'react-router-dom';\n\nconst navigate = useNavigate();\n```\n\n### Basic Navigation\n\n```jsx\nfunction LoginPage() {\n  const navigate = useNavigate();\n\n  const handleLogin = async (formData) => {\n    await login(formData);\n    navigate('/dashboard');\n  };\n\n  return <LoginForm onSubmit={handleLogin} />;\n}\n```\n\n### Navigation Options\n\n```jsx\n// Navigate to path\nnavigate('/dashboard');\n\n// Replace current entry (no back button)\nnavigate('/login', { replace: true });\n\n// Pass state to target route\nnavigate('/profile', { state: { userId: 123 } });\n\n// Go back / forward\nnavigate(-1);  // Go back\nnavigate(1);   // Go forward\n\n// Relative navigation\nnavigate('settings');   // Relative to current route\nnavigate('../admin');   // Up one level\n```\n\n### Navigate Component\n\nFor declarative navigation (e.g., in redirects):\n\n```jsx\nimport { Navigate } from 'react-router-dom';\n\nfunction ProtectedRoute({ user, children }) {\n  if (!user) {\n    return <Navigate to=\"/login\" replace />;\n  }\n  return children;\n}\n```\n\n| Method | Description |\n|--------|-------------|\n| `navigate(to)` | Navigate forward |\n| `navigate(to, { replace: true })` | Replace history entry |\n| `navigate(delta)` | Go back/forward by delta |\n| `Navigate` component | Declarative redirect |\n\n> **Key Point:** useNavigate replaces the old `useHistory` hook from React Router v5. Use `navigate(-1)` for back buttons. The `replace` option prevents users from navigating back to login after authenticating.",
+  "codeExample": "import { useNavigate } from 'react-router-dom';\n\nfunction OrderConfirmation({ orderId }) {\n  const navigate = useNavigate();\n\n  return (\n    <div>\n      <h1>Order #{orderId} confirmed</h1>\n      <button onClick={() => navigate('/orders')}>View Orders</button>\n      <button onClick={() => navigate('/')}>Back to Home</button>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "How do you navigate back one page with useNavigate?",
+      "options": ["navigate('back')", "navigate(-1)", "navigate.goBack()", "navigate.back()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does `{ replace: true }` do?",
+      "options": ["Adds to history", "Replaces current entry in history stack", "Refreshes the page", "Redirects externally"],
+      "correctIndex": 1
+    }
+  ]
+}

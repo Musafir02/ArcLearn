@@ -1,0 +1,22 @@
+{
+  "title": "useState Hook",
+  "language": "react",
+  "topic": "usestate",
+  "order": 16,
+  "nextTopic": "useeffect",
+  "prevTopic": "fragments",
+  "content": "### useState\n\n`useState` is the most fundamental React hook. It adds state to functional components, allowing them to remember values across renders.\n\n---\n\n### Syntax\n\n```jsx\nimport { useState } from 'react';\n\nconst [state, setState] = useState(initialValue);\n```\n\n### Multiple State Variables\n\n```jsx\nconst [name, setName] = useState('');\nconst [age, setAge] = useState(0);\nconst [items, setItems] = useState([]);\n```\n\n### Lazy Initialization\n\nPass a function to compute the initial state only once:\n\n```jsx\nconst [data, setData] = useState(() => {\n  return expensiveComputation();\n});\n```\n\n### State Update Patterns\n\n| Pattern | Code | Use Case |\n|---------|------|----------|\n| Direct | `setCount(5)` | Setting to a specific value |\n| Functional | `setCount(c => c + 1)` | Based on previous state |\n| Object spread | `setUser(u => ({...u, name}))` | Merging object state |\n| Array spread | `setItems(i => [...i, newItem])` | Adding to array |\n\n### State Batching\n\nReact batches state updates for performance. Multiple `setState` calls in an event handler trigger a single re-render.\n\n```jsx\nfunction handleClick() {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // Single re-render at the end\n}\n```\n\n> **Key Point:** State updates are asynchronous. If you need the latest state immediately, use useEffect or calculate the value from the updater function.",
+  "codeExample": "import { useState } from 'react';\n\nfunction ShoppingCart() {\n  const [items, setItems] = useState([]);\n  const [total, setTotal] = useState(0);\n\n  const addItem = (item) => {\n    setItems(prev => [...prev, item]);\n    setTotal(prev => prev + item.price);\n  };\n\n  return (\n    <div>\n      <p>Items: {items.length}</p>\n      <p>Total: ${total.toFixed(2)}</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is lazy initialization in useState?",
+      "options": ["Setting state lazily", "Passing a function to compute initial state once", "Delaying state updates", "Using state without declaring it"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many re-renders occur when calling setState twice in one handler?",
+      "options": ["Two", "One (batched)", "Zero", "Depends on the value"],
+      "correctIndex": 1
+    }
+  ]
+}

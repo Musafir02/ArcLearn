@@ -1,0 +1,22 @@
+{
+  "title": "Performance Optimization",
+  "language": "react",
+  "topic": "performance_optimization",
+  "order": 60,
+  "nextTopic": "",
+  "prevTopic": "react_devtools",
+  "content": "### Performance Optimization\n\nReact is performant by default, but certain patterns can cause unnecessary re-renders, slow loading, or jank. Optimize based on measured issues, not assumptions.\n\n---\n\n### Common Performance Issues\n\n| Issue | Cause | Solution |\n|-------|-------|----------|\n| Unnecessary re-renders | Parent re-renders trigger children | React.memo, useMemo, useCallback |\n| Large bundle size | Too many components imported | Code splitting, lazy loading |\n| Expensive computations | Heavy calculations on every render | useMemo |\n| Large lists | Rendering thousands of items | Windowing (react-window) |\n\n### React.memo\n\n```jsx\nimport { memo } from 'react';\n\nconst ExpensiveList = memo(function ExpensiveList({ items }) {\n  return items.map(item => <ListItem key={item.id} {...item} />);\n});\n```\n\n### Windowing with react-window\n\n```jsx\nimport { FixedSizeList } from 'react-window';\n\nfunction VirtualList({ items }) {\n  const Row = ({ index, style }) => (\n    <div style={style}>{items[index].name}</div>\n  );\n\n  return (\n    <FixedSizeList height={400} itemCount={items.length} itemSize={35}>\n      {Row}\n    </FixedSizeList>\n  );\n}\n```\n\n### Image Optimization\n\n```jsx\n// Lazy load images\n<img loading=\"lazy\" src={image.src} alt={image.alt} />\n\n// Use modern formats\n<picture>\n  <source srcSet={image.avif} type=\"image/avif\" />\n  <source srcSet={image.webp} type=\"image/webp\" />\n  <img src={image.jpg} alt={image.alt} />\n</picture>\n```\n\n### Measuring Performance\n\n| Tool | Use |\n|------|-----|\n| React DevTools Profiler | Component render timing |\n| Chrome Performance Tab | Overall page performance |\n| Lighthouse | Audits and scoring |\n| Web Vitals | Real user metrics (LCP, FID, CLS) |\n\n### Optimization Checklist\n\n- [ ] Use production builds\n- [ ] Implement code splitting by routes\n- [ ] Memoize expensive calculations with useMemo\n- [ ] Wrap stable components with React.memo\n- [ ] Use windowing for long lists\n- [ ] Optimize images (lazy loading, modern formats)\n- [ ] Debounce search inputs\n- [ ] Avoid unnecessary state updates\n\n> **Key Point:** Do not optimize prematurely. Measure first, then optimize the actual bottlenecks. The React 19 compiler reduces the need for manual memoization. Focus on code splitting and bundle size for the biggest gains.",
+  "codeExample": "import { memo, useMemo } from 'react';\n\nconst ProductCard = memo(function ProductCard({ product }) {\n  return (\n    <div className=\"card\">\n      <img src={product.image} alt={product.name} loading=\"lazy\" />\n      <h3>{product.name}</h3>\n      <p>${product.price}</p>\n    </div>\n  );\n});\n\nexport function ProductGrid({ products, filter }) {\n  const filtered = useMemo(\n    () => products.filter(p => p.category === filter),\n    [products, filter]\n  );\n\n  return (\n    <div className=\"grid\">\n      {filtered.map(p => (\n        <ProductCard key={p.id} product={p} />\n      ))}\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What tool helps identify unnecessary re-renders?",
+      "options": ["Chrome DevTools", "React DevTools Profiler", "Lighthouse", "Web Vitals"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When should you use React.memo?",
+      "options": ["For every component", "When profiling shows a component re-renders with the same props", "Never", "Only for class components"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Refs",
+  "language": "react",
+  "topic": "refs",
+  "order": 13,
+  "nextTopic": "portals",
+  "prevTopic": "forms",
+  "content": "### Refs\n\nRefs provide a way to access DOM nodes or React elements directly. Use them for imperative operations like focusing inputs, measuring elements, or integrating with third-party libraries.\n\n---\n\n### Creating Refs with useRef\n\n```jsx\nimport { useRef } from 'react';\n\nfunction TextInput() {\n  const inputRef = useRef(null);\n\n  const focusInput = () => {\n    inputRef.current.focus();\n  };\n\n  return (\n    <>\n      <input ref={inputRef} type=\"text\" />\n      <button onClick={focusInput}>Focus Input</button>\n    </>\n  );\n}\n```\n\n### When to Use Refs\n\n| Use Case | Example |\n|----------|---------|\n| Managing focus | `inputRef.current.focus()` |\n| Text selection | `inputRef.current.select()` |\n| Media playback | `videoRef.current.play()` |\n| Animations | Triggering imperative animations |\n| Third-party DOM libraries | Integrating D3, Chart.js |\n\n### Refs and State\n\nRefs do not cause re-renders when changed. Use state for values that affect the UI and refs for values that don't:\n\n```jsx\nconst countRef = useRef(0);\n// Changing countRef.current does NOT re-render\n```\n\n> **Key Point:** Avoid overusing refs. They are an escape hatch for imperative code. Default to state and props for declarative React patterns.",
+  "codeExample": "import { useRef } from 'react';\n\nfunction VideoPlayer() {\n  const videoRef = useRef(null);\n\n  const play = () => videoRef.current.play();\n  const pause = () => videoRef.current.pause();\n\n  return (\n    <div>\n      <video ref={videoRef} src=\"video.mp4\" />\n      <button onClick={play}>Play</button>\n      <button onClick={pause}>Pause</button>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Do ref updates cause re-renders?",
+      "options": ["Yes", "No", "Only in development mode", "Only with useRef hook"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you access the DOM node from a ref?",
+      "options": ["ref.node", "ref.current", "ref.value", "ref.element"],
+      "correctIndex": 1
+    }
+  ]
+}

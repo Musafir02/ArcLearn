@@ -1,0 +1,22 @@
+{
+  "title": "forwardRef",
+  "language": "react",
+  "topic": "forwardref",
+  "order": 47,
+  "nextTopic": "strict_mode",
+  "prevTopic": "useref_dom",
+  "content": "### forwardRef\n\n`forwardRef` lets your component expose a DOM node to a parent component using a ref. It passes the ref through to a child element.\n\n---\n\n### Syntax\n\n```jsx\nimport { forwardRef } from 'react';\n\nconst MyInput = forwardRef(function MyInput(props, ref) {\n  return <input ref={ref} {...props} />;\n});\n```\n\n### Usage in Parent\n\n```jsx\nfunction Form() {\n  const inputRef = useRef(null);\n\n  const focusInput = () => {\n    inputRef.current.focus();\n  };\n\n  return (\n    <>\n      <MyInput ref={inputRef} placeholder=\"Type here\" />\n      <button onClick={focusInput}>Focus Input</button>\n    </>\n  );\n}\n```\n\n### Exposing Custom Handles with useImperativeHandle\n\n```jsx\nimport { forwardRef, useImperativeHandle, useRef } from 'react';\n\nconst CustomInput = forwardRef(function CustomInput(props, ref) {\n  const inputRef = useRef(null);\n\n  useImperativeHandle(ref, () => ({\n    focus: () => inputRef.current.focus(),\n    clear: () => { inputRef.current.value = ''; },\n    scrollToView: () => inputRef.current.scrollIntoView()\n  }), []);\n\n  return <input ref={inputRef} {...props} />;\n});\n\n// Parent usage\n<inputRef.current.focus(); />\n<inputRef.current.clear(); />\n```\n\n| Concept | Description |\n|---------|-------------|\n| forwardRef | Passes ref through to a child |\n| useImperativeHandle | Customizes the exposed ref value |\n| Ref forwarding | Essential for reusable component libraries |\n\n### Common Use Cases\n\n- Reusable input components\n- Third-party library integration\n- Animation libraries requiring DOM access\n- Focus management in forms\n\n> **Key Point:** forwardRef is primarily used in reusable component libraries. For app-internal components, consider whether a declarative approach (props for focus, state for values) could work instead.",
+  "codeExample": "import { forwardRef } from 'react';\n\nconst FancyButton = forwardRef(function FancyButton({ children, ...props }, ref) {\n  return (\n    <button ref={ref} className=\"fancy-btn\" {...props}>\n      {children}\n    </button>\n  );\n});\n\nexport default FancyButton;",
+  "quiz": [
+    {
+      "question": "What problem does forwardRef solve?",
+      "options": ["Performance optimization", "Passing refs through to child DOM elements", "State management", "Error handling"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which hook customizes the exposed ref value?",
+      "options": ["useRef", "useImperativeHandle", "useCallback", "useMemo"],
+      "correctIndex": 1
+    }
+  ]
+}

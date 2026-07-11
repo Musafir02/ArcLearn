@@ -1,0 +1,22 @@
+{
+  "title": "useParams Hook",
+  "language": "react",
+  "topic": "useparams",
+  "order": 32,
+  "nextTopic": "usenavigate",
+  "prevTopic": "link_navlink",
+  "content": "### useParams\n\n`useParams` returns an object of key-value pairs for dynamic route parameters. It lets you extract variables from the URL path.\n\n---\n\n### Syntax\n\n```jsx\nimport { useParams } from 'react-router-dom';\n\nconst params = useParams();\n```\n\n### Route Definition\n\n```jsx\n<Route path=\"/users/:userId\" element={<UserProfile />} />\n<Route path=\"/products/:category/:id\" element={<ProductPage />} />\n```\n\n### Accessing Params\n\n```jsx\nfunction UserProfile() {\n  const { userId } = useParams();\n  const [user, setUser] = useState(null);\n\n  useEffect(() => {\n    fetch(`/api/users/${userId}`)\n      .then(res => res.json())\n      .then(setUser);\n  }, [userId]);\n\n  return user ? <h1>{user.name}</h1> : <p>Loading...</p>;\n}\n```\n\n### Multiple Params\n\n```jsx\nfunction ProductPage() {\n  const { category, id } = useParams();\n  return (\n    <div>\n      <p>Category: {category}</p>\n      <p>Product ID: {id}</p>\n    </div>\n  );\n}\n```\n\n| URL | Route Pattern | useParams Returns |\n|-----|--------------|-------------------|\n| `/users/42` | `/users/:userId` | `{ userId: '42' }` |\n| `/posts/5/comments/3` | `/posts/:postId/comments/:commentId` | `{ postId: '5', commentId: '3' }` |\n| `/products/electronics/123` | `/products/:category/:id` | `{ category: 'electronics', id: '123' }` |\n\n> **Key Point:** URL parameters are always strings. Parse them to numbers if needed. useParams triggers a re-render when the params change, making it safe to use in dependency arrays.",
+  "codeExample": "import { useParams, Link } from 'react-router-dom';\n\nfunction BlogPost() {\n  const { slug } = useParams();\n\n  return (\n    <div>\n      <Link to=\"/blog\">Back to Blog</Link>\n      <h1>Post: {slug}</h1>\n    </div>\n  );\n}\n\n// Route: <Route path=\"/blog/:slug\" element={<BlogPost />} />",
+  "quiz": [
+    {
+      "question": "What type does useParams return?",
+      "options": ["A string", "An object of key-value pairs", "An array", "A number"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are URL parameters always strings?",
+      "options": ["Yes", "No, they can be numbers", "No, they can be objects", "It depends on the route"],
+      "correctIndex": 0
+    }
+  ]
+}

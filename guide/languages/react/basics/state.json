@@ -1,0 +1,22 @@
+{
+  "title": "State",
+  "language": "react",
+  "topic": "state",
+  "order": 7,
+  "nextTopic": "lifecycle",
+  "prevTopic": "props",
+  "content": "### State\n\nState is data that changes over time within a component. Unlike props, state is managed internally and can be updated by the component itself.\n\n---\n\n### useState Hook\n\n```jsx\nimport { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>+</button>\n    </div>\n  );\n}\n```\n\n### State Rules\n\n- State updates trigger re-renders\n- Never mutate state directly; use the setter function\n- State updates are asynchronous (batched)\n- Use functional updates when new state depends on previous\n\n### Functional Updates\n\n```jsx\nsetCount(prevCount => prevCount + 1);\n```\n\n### State with Objects\n\n```jsx\nconst [user, setUser] = useState({ name: '', age: 0 });\nsetUser(prev => ({ ...prev, name: 'Alice' }));\n```\n\n| Hook | Purpose |\n|------|---------|\n| `useState(initialValue)` | Declares a state variable |\n| `const [state, setState] = useState()` | Destructured return |\n| `setState(newValue)` | Updates state and triggers re-render |\n\n> **Key Point:** State is local to the component. When state changes, the component re-renders along with its children.",
+  "codeExample": "import { useState } from 'react';\n\nfunction Toggle() {\n  const [isOn, setIsOn] = useState(false);\n  return (\n    <button onClick={() => setIsOn(prev => !prev)}>\n      {isOn ? 'ON' : 'OFF'}\n    </button>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What happens when state is updated?",
+      "options": ["Nothing happens", "The component re-renders", "The page reloads", "The browser refreshes"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How should you update state when new value depends on previous?",
+      "options": ["Direct mutation", "Functional update", "Force update", "Double render"],
+      "correctIndex": 1
+    }
+  ]
+}

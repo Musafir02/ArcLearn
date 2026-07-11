@@ -1,0 +1,22 @@
+{
+  "title": "useMemo Hook",
+  "language": "react",
+  "topic": "usememo",
+  "order": 21,
+  "nextTopic": "usecallback",
+  "prevTopic": "usereducer",
+  "content": "### useMemo\n\n`useMemo` memoizes the result of an expensive computation, recalculating only when dependencies change. It optimizes performance by avoiding unnecessary calculations.\n\n---\n\n### Syntax\n\n```jsx\nimport { useMemo } from 'react';\n\nconst memoizedValue = useMemo(() => {\n  return expensiveComputation(a, b);\n}, [a, b]);\n```\n\n### Example\n\n```jsx\nfunction Dashboard({ transactions }) {\n  const total = useMemo(() => {\n    return transactions.reduce((sum, t) => sum + t.amount, 0);\n  }, [transactions]);\n\n  const average = useMemo(() => {\n    return transactions.length > 0 ? total / transactions.length : 0;\n  }, [total, transactions.length]);\n\n  return (\n    <div>\n      <p>Total: ${total}</p>\n      <p>Average: ${average.toFixed(2)}</p>\n    </div>\n  );\n}\n```\n\n### When to Use\n\n| Use Case | Example |\n|----------|---------|\n| Expensive calculations | Filtering, sorting large arrays |\n| Creating objects/arrays for child props | Memoize reference to prevent child re-render |\n| Derived state | Computing values from complex state |\n\n### When NOT to Use\n\n- Simple calculations (addition, string concat)\n- Primitive values that rarely change\n- Without profiling evidence of a bottleneck\n\n> **Key Point:** useMemo is a performance optimization, not a guarantee. React may recalculate values if memory is needed. Do not rely on useMemo for correctness; use it to avoid expensive calculations.",
+  "codeExample": "import { useMemo } from 'react';\n\nfunction SearchResults({ items, query }) {\n  const filtered = useMemo(() => {\n    console.log('Filtering...');\n    return items.filter(item =>\n      item.name.toLowerCase().includes(query.toLowerCase())\n    );\n  }, [items, query]);\n\n  return (\n    <ul>\n      {filtered.map(item => <li key={item.id}>{item.name}</li>)}\n    </ul>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does useMemo return?",
+      "options": ["A function", "A memoized value", "A ref object", "A state variable"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Should you use useMemo for simple calculations?",
+      "options": ["Always", "Only when profiling shows a bottleneck", "Never", "Only for string operations"],
+      "correctIndex": 1
+    }
+  ]
+}

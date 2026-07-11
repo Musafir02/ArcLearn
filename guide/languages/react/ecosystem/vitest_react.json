@@ -1,0 +1,22 @@
+{
+  "title": "Vitest for React",
+  "language": "react",
+  "topic": "vitest_react",
+  "order": 57,
+  "nextTopic": "testing_library",
+  "prevTopic": "testing_react",
+  "content": "### Vitest\n\nVitest is a blazing-fast test runner for Vite projects. It is compatible with Jest's API and provides native ESM support, HMR for tests, and TypeScript out of the box.\n\n---\n\n### Installation\n\n```bash\nnpm install -D vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom\n```\n\n### Configuration\n\n```js\n// vite.config.js\nimport { defineConfig } from 'vite';\nimport react from '@vitejs/plugin-react';\n\nexport default defineConfig({\n  plugins: [react()],\n  test: {\n    environment: 'jsdom',\n    globals: true,\n    setupFiles: './src/test/setup.js',\n  },\n});\n```\n\n### Setup File\n\n```js\n// src/test/setup.js\nimport '@testing-library/jest-dom';\n```\n\n### Writing Tests\n\n```jsx\nimport { render, screen } from '@testing-library/react';\nimport { describe, it, expect } from 'vitest';\n\nfunction Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}\n\ndescribe('Greeting', () => {\n  it('renders the name', () => {\n    render(<Greeting name=\"Alice\" />);\n    expect(screen.getByText('Hello, Alice!')).toBeInTheDocument();\n  });\n\n  it('renders with default', () => {\n    render(<Greeting />);\n    expect(screen.getByText('Hello, !')).toBeInTheDocument();\n  });\n});\n```\n\n### Vitest vs Jest\n\n| Feature | Vitest | Jest |\n|---------|--------|------|\n| Speed | Fast (native ESM, HMR) | Moderate |\n| Configuration | Zero-config for Vite | Requires config |\n| TypeScript | Built-in | Via ts-jest |\n| Watch mode | Instant HMR | File watcher |\n\n> **Key Point:** Vitest is the recommended test runner for new React + Vite projects. It integrates seamlessly with Vite's config and provides a faster, native ESM testing experience.",
+  "codeExample": "import { render, screen } from '@testing-library/react';\nimport userEvent from '@testing-library/user-event';\nimport { describe, it, expect, vi } from 'vitest';\n\nimport Button from './Button';\n\ndescribe('Button', () => {\n  it('calls onClick when clicked', async () => {\n    const handleClick = vi.fn();\n    render(<Button onClick={handleClick}>Click</Button>);\n    await userEvent.click(screen.getByRole('button'));\n    expect(handleClick).toHaveBeenCalledOnce();\n  });\n});",
+  "quiz": [
+    {
+      "question": "What environment should Vitest use for React tests?",
+      "options": ["node", "jsdom", "browser", "happy-dom"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is Vitest compatible with Jest's API?",
+      "options": ["No", "Yes, mostly compatible", "Only with a plugin", "Only for unit tests"],
+      "correctIndex": 1
+    }
+  ]
+}

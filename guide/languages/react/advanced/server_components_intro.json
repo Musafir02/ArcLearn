@@ -1,0 +1,22 @@
+{
+  "title": "Server Components",
+  "language": "react",
+  "topic": "server_components_intro",
+  "order": 50,
+  "nextTopic": "use_action_state",
+  "prevTopic": "react_19_features",
+  "content": "### Server Components\n\nReact Server Components (RSC) run exclusively on the server at request time. They reduce the client bundle by keeping heavy dependencies and data fetching on the server.\n\n---\n\n### Key Characteristics\n\n| Feature | Server Component | Client Component |\n|---------|-----------------|-----------------|\n| Execution | Server only | Browser + SSR |\n| State/Effects | Not supported | Full support |\n| Bundle size | Not sent to client | Included in JS bundle |\n| Database access | Direct | Via API |\n| File system access | Direct | Not accessible |\n\n### Server Component Example\n\n```jsx\n// ProductList.server.js\nimport db from './database';\n\nasync function ProductList() {\n  const products = await db.product.findMany();\n\n  return (\n    <ul>\n      {products.map(product => (\n        <li key={product.id}>\n          {product.name} - ${product.price}\n        </li>\n      ))}\n    </ul>\n  );\n}\n```\n\n### Client Component Directive\n\n```jsx\n'use client';\n\nimport { useState } from 'react';\n\nexport function AddToCart({ productId }) {\n  const [added, setAdded] = useState(false);\n  return (\n    <button onClick={() => setAdded(true)}>\n      {added ? 'Added!' : 'Add to Cart'}\n    </button>\n  );\n}\n```\n\n### Composition Model\n\n```jsx\n// Server Component\nimport { AddToCart } from './AddToCart.client';\n\nasync function ProductPage({ id }) {\n  const product = await db.product.findUnique(id);\n  \n  return (\n    <div>\n      <h1>{product.name}</h1>\n      <p>{product.description}</p>\n      <AddToCart productId={product.id} />\n    </div>\n  );\n}\n```\n\n> **Key Point:** Server Components run once per request on the server. They cannot use hooks, event handlers, or browser APIs. Client Components are marked with `'use client'` and support interactivity. Next.js App Router uses RSCs by default.",
+  "codeExample": "// NoteItem.server.js - runs on server\nimport { NoteContent } from './NoteContent.client';\n\nexport async function NoteItem({ id }) {\n  const note = await fetchNoteFromDB(id);\n  \n  return (\n    <article>\n      <h2>{note.title}</h2>\n      <NoteContent content={note.body} />\n    </article>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Can Server Components use useState?",
+      "options": ["Yes", "No, they don't support state or effects", "Only with 'use client'", "Only in development"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you mark a component as a Client Component?",
+      "options": ["No marker needed", "With 'use client' directive", "With @client decorator", "With Client suffix"],
+      "correctIndex": 1
+    }
+  ]
+}

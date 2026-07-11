@@ -1,0 +1,22 @@
+{
+  "title": "Props",
+  "language": "react",
+  "topic": "props",
+  "order": 6,
+  "nextTopic": "state",
+  "prevTopic": "components",
+  "content": "### Props\n\nProps (short for properties) are read-only inputs passed to components. They allow data to flow from parent to child.\n\n---\n\n### Passing Props\n\n```jsx\nfunction User({ name, age, isAdmin }) {\n  return (\n    <div>\n      <p>Name: {name}</p>\n      <p>Age: {age}</p>\n      {isAdmin && <span>Admin</span>}\n    </div>\n  );\n}\n\n<User name=\"Alice\" age={30} isAdmin={true} />\n```\n\n### Default Props\n\n```jsx\nfunction Button({ label = 'Click', variant = 'primary' }) {\n  return <button className={`btn-${variant}`}>{label}</button>;\n}\n```\n\n### Props Are Read-Only\n\nComponents must never modify their own props. React enforces a strict unidirectional data flow.\n\n| Concept | Description |\n|---------|-------------|\n| Props | Data passed from parent to child |\n| Immutable | Cannot be changed by the receiving component |\n| Any type | Strings, numbers, objects, arrays, functions, JSX |\n| Children | Special prop for nested content |\n\n### The Children Prop\n\n```jsx\nfunction Card({ children }) {\n  return <div className=\"card\">{children}</div>;\n}\n\n<Card>\n  <h2>Title</h2>\n  <p>Content</p>\n</Card>\n```\n\n> **Key Point:** Props are the primary mechanism for component communication. Data always flows downward.",
+  "codeExample": "function Product({ title, price, inStock }) {\n  return (\n    <div className=\"product\">\n      <h3>{title}</h3>\n      <p>${price.toFixed(2)}</p>\n      {inStock ? <span>In Stock</span> : <span>Out of Stock</span>}\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Can a component modify its own props?",
+      "options": ["Yes", "No, they are read-only", "Only class components can", "Only with useRef"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What special prop is used for nested content?",
+      "options": ["content", "children", "nested", "slot"],
+      "correctIndex": 1
+    }
+  ]
+}

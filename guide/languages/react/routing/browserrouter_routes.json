@@ -1,0 +1,22 @@
+{
+  "title": "BrowserRouter and Routes",
+  "language": "react",
+  "topic": "browserrouter_routes",
+  "order": 30,
+  "nextTopic": "link_navlink",
+  "prevTopic": "react_router_intro",
+  "content": "### BrowserRouter and Routes\n\n`BrowserRouter` uses the HTML5 history API to keep the UI in sync with the URL. `Routes` evaluates its children `<Route>` elements and renders the first match.\n\n---\n\n### BrowserRouter\n\n```jsx\nimport { BrowserRouter } from 'react-router-dom';\n\ncreateRoot(document.getElementById('root')).render(\n  <BrowserRouter>\n    <App />\n  </BrowserRouter>\n);\n```\n\n### Routes and Route\n\n```jsx\nimport { Routes, Route } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <Routes>\n      <Route path=\"/\" element={<Home />} />\n      <Route path=\"/products\" element={<Products />} />\n      <Route path=\"/products/:id\" element={<ProductDetail />} />\n      <Route path=\"*\" element={<NotFound />} />\n    </Routes>\n  );\n}\n```\n\n### Route Props\n\n| Prop | Type | Description |\n|------|------|-------------|\n| `path` | string | URL path to match |\n| `element` | ReactNode | Component to render |\n| `index` | boolean | Renders at parent route's exact path |\n| `children` | Route[] | Nested route definitions |\n\n### Path Patterns\n\n| Pattern | Matches |\n|---------|---------|\n| `/products` | Exact `/products` |\n| `/products/:id` | `/products/123`, `/products/abc` |\n| `/products/*` | `/products/anything/here` |\n| `*` | All unmatched paths (404) |\n\n### Wildcard Route (404)\n\nAlways place the wildcard route last:\n\n```jsx\n<Route path=\"*\" element={<NotFound />} />\n```\n\n> **Key Point:** Route paths are case-insensitive by default. Use trailing `*` for catch-all matching. Routes are matched on a best-fit basis, so order matters for sibling routes.",
+  "codeExample": "import { Routes, Route } from 'react-router-dom';\n\nfunction AppRoutes() {\n  return (\n    <Routes>\n      <Route path=\"/\" element={<Layout />}>\n        <Route index element={<Home />} />\n        <Route path=\"about\" element={<About />} />\n        <Route path=\"contact\" element={<Contact />} />\n        <Route path=\"*\" element={<NoMatch />} />\n      </Route>\n    </Routes>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does the wildcard path `*` match?",
+      "options": ["Only root path", "All unmatched paths", "Only paths with asterisk", "Paths ending in slash"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the `index` prop on a Route do?",
+      "options": ["Makes it the default child route", "Sets route priority", "Enables caching", "Adds URL indexing"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Error Boundaries",
+  "language": "react",
+  "topic": "error_boundaries",
+  "order": 39,
+  "nextTopic": "suspense",
+  "prevTopic": "prop_drilling_solution",
+  "content": "### Error Boundaries\n\nError boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the whole app.\n\n---\n\n### Class Component Requirement\n\nError boundaries must be class components because React requires `componentDidCatch` and `getDerivedStateFromError` lifecycle methods:\n\n```jsx\nclass ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false };\n  }\n\n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n\n  componentDidCatch(error, errorInfo) {\n    console.error('Error caught:', error, errorInfo);\n  }\n\n  render() {\n    if (this.state.hasError) {\n      return <h1>Something went wrong.</h1>;\n    }\n    return this.props.children;\n  }\n}\n```\n\n### Usage\n\n```jsx\n<ErrorBoundary>\n  <MyWidget />\n</ErrorBoundary>\n```\n\n### What Error Boundaries Do NOT Catch\n\n| Event Type | Handled? |\n|-----------|----------|\n| Render errors | Yes |\n| Lifecycle errors | Yes |\n| Event handler errors | No (use try-catch) |\n| Async errors | No (use try-catch) |\n| SSR errors | No |\n| Errors in the boundary itself | No |\n\n### Event Handler Error Handling\n\n```jsx\nfunction handleClick() {\n  try {\n    doSomething();\n  } catch (error) {\n    // Handle error locally\n  }\n}\n```\n\n> **Key Point:** Place error boundaries strategically. Wrap routes independently so one crashing page does not take down the entire app. Consider using `react-error-boundary` library for a reusable implementation.",
+  "codeExample": "import React from 'react';\n\nclass ErrorBoundary extends React.Component {\n  state = { hasError: false, error: null };\n\n  static getDerivedStateFromError(error) {\n    return { hasError: true, error };\n  }\n\n  render() {\n    if (this.state.hasError) {\n      return (\n        <div role=\"alert\">\n          <h2>Something went wrong</h2>\n          <button onClick={() => this.setState({ hasError: false })}>\n            Try again\n          </button>\n        </div>\n      );\n    }\n    return this.props.children;\n  }\n}",
+  "quiz": [
+    {
+      "question": "Why must error boundaries be class components?",
+      "options": ["Performance reasons", "They need componentDidCatch and getDerivedStateFromError lifecycle methods", "Functional components cannot handle errors", "It's a legacy requirement"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Do error boundaries catch event handler errors?",
+      "options": ["Yes", "No, use try-catch instead", "Only in development", "Only with async handlers"],
+      "correctIndex": 1
+    }
+  ]
+}

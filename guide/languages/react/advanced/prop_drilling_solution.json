@@ -1,0 +1,22 @@
+{
+  "title": "Prop Drilling Solution",
+  "language": "react",
+  "topic": "prop_drilling_solution",
+  "order": 38,
+  "nextTopic": "error_boundaries",
+  "prevTopic": "context_consumer",
+  "content": "### Prop Drilling\n\nProp drilling occurs when data passes through multiple intermediate components that do not need the data themselves, only to reach a deeply nested child.\n\n---\n\n### The Problem\n\n```jsx\nfunction App() {\n  const [user, setUser] = useState(null);\n  return <Layout user={user} setUser={setUser} />;\n}\n\nfunction Layout({ user, setUser }) {\n  return <Header user={user} setUser={setUser} />;\n}\n\nfunction Header({ user, setUser }) {\n  return <UserMenu user={user} setUser={setUser} />;\n}\n\nfunction UserMenu({ user, setUser }) {\n  return <button onClick={() => setUser(null)}>Logout</button>;\n}\n```\n\n### Solutions Comparison\n\n| Solution | Best For |\n|----------|----------|\n| Component composition | Simple restructuring |\n| Context API | Global data (theme, auth, locale) |\n| State management library | Complex app state |\n| Children prop / render props | Localized prop passing |\n\n### Solution 1: Component Composition\n\n```jsx\nfunction App() {\n  const [user, setUser] = useState(null);\n  return (\n    <Layout>\n      <Header>\n        <UserMenu user={user} setUser={setUser} />\n      </Header>\n    </Layout>\n  );\n}\n```\n\n### Solution 2: Context API\n\n```jsx\nconst UserContext = createContext(null);\n\nfunction App() {\n  const [user, setUser] = useState(null);\n  return (\n    <UserContext.Provider value={{ user, setUser }}>\n      <Layout />\n    </UserContext.Provider>\n  );\n}\n\nfunction UserMenu() {\n  const { user, setUser } = useContext(UserContext);\n  return <button onClick={() => setUser(null)}>Logout</button>;\n}\n```\n\n> **Key Point:** Before reaching for context, consider if component composition solves the problem. Lifting content up (using children) often eliminates the need for prop drilling without adding complexity.",
+  "codeExample": "// Composition approach\nfunction App() {\n  const [theme, setTheme] = useState('light');\n  \n  return (\n    <Page\n      header={<Header><ThemeToggle theme={theme} setTheme={setTheme} /></Header>}\n      sidebar={<Sidebar />}\n      content={<Content />}\n    />\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is prop drilling?",
+      "options": ["Optimizing props", "Passing props through unnecessary intermediate components", "Creating props dynamically", "Drilling holes in components"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What should you try before using Context API?",
+      "options": ["useState", "Component composition", "Redux", "useReducer"],
+      "correctIndex": 1
+    }
+  ]
+}

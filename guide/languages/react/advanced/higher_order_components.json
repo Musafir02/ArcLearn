@@ -1,0 +1,22 @@
+{
+  "title": "Higher-Order Components",
+  "language": "react",
+  "topic": "higher_order_components",
+  "order": 43,
+  "nextTopic": "render_props",
+  "prevTopic": "code_splitting",
+  "content": "### Higher-Order Components (HOC)\n\nA higher-order component is a function that takes a component and returns a new enhanced component. HOCs are a pattern for reusing component logic, predating hooks.\n\n---\n\n### Basic HOC Pattern\n\n```jsx\nfunction withLogger(WrappedComponent) {\n  return function EnhancedComponent(props) {\n    console.log('Rendering:', WrappedComponent.name);\n    return <WrappedComponent {...props} />;\n  };\n}\n\nconst EnhancedButton = withLogger(Button);\n```\n\n### Common HOC Examples\n\n```jsx\n// Loading state HOC\nfunction withLoading(WrappedComponent) {\n  return function WithLoading({ isLoading, ...props }) {\n    if (isLoading) return <Spinner />;\n    return <WrappedComponent {...props} />;\n  };\n}\n\n// Auth guard HOC\nfunction withAuth(WrappedComponent) {\n  return function WithAuth(props) {\n    const { user } = useAuth();\n    if (!user) return <Navigate to=\"/login\" />;\n    return <WrappedComponent {...props} user={user} />;\n  };\n}\n```\n\n### Composition\n\n```jsx\nconst EnhancedComponent = withAuth(withLogger(withLoading(MyComponent)));\n```\n\n### HOC vs Hooks\n\n| Aspect | HOC | Hooks |\n|--------|-----|-------|\n| Pattern | Wraps component | Function composition |\n| Code reuse | Yes | Yes |\n| Naming conflicts | Risk with prop names | No conflicts |\n| Complexity | Higher (wrapper hell) | Lower |\n| Modern preference | Legacy | Recommended |\n\n> **Key Point:** Hooks are the modern replacement for most HOC patterns. However, HOCs are still used for third-party libraries (connect in Redux, withRouter, withStyles). Understand HOCs to maintain legacy codebases.",
+  "codeExample": "function withTheme(WrappedComponent) {\n  return function WithTheme(props) {\n    const { theme } = useContext(ThemeContext);\n    return <WrappedComponent {...props} theme={theme} />;\n  };\n}\n\nconst ThemedButton = withTheme(Button);\n\n// Usage: <ThemedButton onClick={handleClick}>Click</ThemedButton>",
+  "quiz": [
+    {
+      "question": "What is a higher-order component?",
+      "options": ["A component that renders other components", "A function that takes a component and returns an enhanced component", "A component with higher priority", "A class that extends React.Component"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the modern alternative to HOCs?",
+      "options": ["Class components", "Hooks", "PureComponent", "StrictMode"],
+      "correctIndex": 1
+    }
+  ]
+}

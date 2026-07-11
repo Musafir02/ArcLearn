@@ -1,0 +1,22 @@
+{
+  "title": "React Testing Library",
+  "language": "react",
+  "topic": "testing_library",
+  "order": 58,
+  "nextTopic": "react_devtools",
+  "prevTopic": "vitest_react",
+  "content": "### React Testing Library\n\nReact Testing Library (RTL) provides light utility functions on top of react-dom and react-dom/test-utils. It encourages testing components from the user's perspective.\n\n---\n\n### Core Methods\n\n| Method | Purpose |\n|--------|---------|\n| `render(ui)` | Renders component into a DOM container |\n| `screen.getByText()` | Finds element by visible text |\n| `screen.getByRole()` | Finds element by ARIA role |\n| `screen.getByLabelText()` | Finds input by associated label |\n| `screen.getByTestId()` | Finds element by data-testid |\n| `screen.queryByText()` | Returns null if not found (no error) |\n| `screen.findByText()` | Returns promise (for async elements) |\n\n### Query Priority\n\n1. Accessible by everyone: `getByRole`, `getByLabelText`, `getByPlaceholderText`\n2. Semantic queries: `getByText`, `getByDisplayValue`\n3. Test IDs: `getByTestId` (last resort)\n\n### User Events\n\n```jsx\nimport userEvent from '@testing-library/user-event';\n\nconst user = userEvent.setup();\n\nawait user.type(input, 'Hello');\nawait user.click(button);\nawait user.selectOptions(select, ['option1']);\nawait user.clear(input);\nawait user.keyboard('{Enter}');\n// Prefer userEvent over fireEvent for realistic interactions\n```\n\n### Async Testing\n\n```jsx\nimport { render, screen, waitFor } from '@testing-library/react';\n\nit('loads data', async () => {\n  render(<UserProfile userId={1} />);\n  \n  expect(screen.getByText(/loading/i)).toBeInTheDocument();\n  \n  const name = await screen.findByText('Alice');\n  expect(name).toBeInTheDocument();\n});\n```\n\n> **Key Point:** Always query elements the way users find them: by role, label, or visible text. Avoid test IDs unless there is no accessible way. Use userEvent instead of fireEvent for realistic interactions.",
+  "codeExample": "import { render, screen } from '@testing-library/react';\nimport userEvent from '@testing-library/user-event';\nimport { describe, it, expect } from 'vitest';\n\nimport SearchBar from './SearchBar';\n\ndescribe('SearchBar', () => {\n  it('updates search value on type', async () => {\n    const user = userEvent.setup();\n    render(<SearchBar onSearch={() => {}} />);\n    \n    const input = screen.getByRole('textbox');\n    await user.type(input, 'react');\n    \n    expect(input).toHaveValue('react');\n  });\n\n  it('shows suggestions when focused', async () => {\n    render(<SearchBar onSearch={() => {}} />);\n    const input = screen.getByRole('textbox');\n    await userEvent.click(input);\n    expect(screen.getByText(/recent searches/i)).toBeInTheDocument();\n  });\n});",
+  "quiz": [
+    {
+      "question": "What is the preferred query method in React Testing Library?",
+      "options": ["getByTestId", "getByRole", "getByClassName", "getById"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which library provides realistic user interactions?",
+      "options": ["fireEvent", "userEvent", "simulate", "trigger"],
+      "correctIndex": 1
+    }
+  ]
+}

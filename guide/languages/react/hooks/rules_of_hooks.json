@@ -1,0 +1,22 @@
+{
+  "title": "Rules of Hooks",
+  "language": "react",
+  "topic": "rules_of_hooks",
+  "order": 24,
+  "nextTopic": "useid",
+  "prevTopic": "custom_hooks",
+  "content": "### Rules of Hooks\n\nReact enforces two fundamental rules for hooks to ensure state consistency across renders. Violating them leads to bugs that are hard to debug.\n\n---\n\n### Rule 1: Only Call Hooks at the Top Level\n\nDo not call hooks inside conditions, loops, or nested functions:\n\n```jsx\n// Bad - conditional hook\nfunction Bad({ flag }) {\n  if (flag) {\n    const [data, setData] = useState(null); // Violation\n  }\n}\n\n// Good - moved to top level\nfunction Good({ flag }) {\n  const [data, setData] = useState(null);\n  // Use data conditionally\n}\n```\n\n### Rule 2: Only Call Hooks from React Functions\n\nCall hooks from React function components or custom hooks, never from regular JavaScript functions:\n\n```jsx\n// Bad - regular function\nfunction getState() {\n  const [state, setState] = useState(0); // Violation\n}\n\n// Good - custom hook\nfunction useCustomState() {\n  const [state, setState] = useState(0);\n  return [state, setState];\n}\n```\n\n### Why These Rules?\n\n| Rule | Reason |\n|------|--------|\n| Top level only | React relies on call order to maintain state across renders |\n| React functions only | Hooks need access to the component's React internals |\n\n### ESLint Plugin\n\nInstall `eslint-plugin-react-hooks` to catch violations automatically:\n\n```bash\nnpm install eslint-plugin-react-hooks --save-dev\n```\n\n### Common Violations\n\n```jsx\n// Loops - wrong\nfor (const item of items) {\n  useEffect(() => {}); // Violation\n}\n\n// Early returns - wrong\nfunction Component() {\n  if (something) return null;\n  const [state, setState] = useState(); // Violation\n}\n```\n\n> **Key Point:** The order of hook calls must be identical between renders. Conditions and loops break this order, causing state corruption. Always use the ESLint plugin.",
+  "codeExample": "// Correct usage\nfunction Search({ items }) {\n  const [query, setQuery] = useState(''); // Top level\n  const results = useMemo(               // Top level\n    () => items.filter(i => i.includes(query)),\n    [items, query]\n  );\n  return <input value={query} onChange={e => setQuery(e.target.value)} />;\n}",
+  "quiz": [
+    {
+      "question": "Can hooks be called inside if statements?",
+      "options": ["Yes", "No", "Only useRef", "Only in development"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why must hooks be called in the same order every render?",
+      "options": ["Performance optimization", "React relies on call order to maintain state", "JavaScript requires it", "TypeScript requires it"],
+      "correctIndex": 1
+    }
+  ]
+}

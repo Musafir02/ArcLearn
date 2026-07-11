@@ -1,0 +1,37 @@
+{
+  "title": "React Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group",
+      "title": "React Basics",
+      "folder": "basics",
+      "topics": ["jsx", "rendering", "components", "props", "state", "lifecycle", "events", "conditional_rendering", "lists_keys", "forms", "refs", "portals", "fragments"]
+    },
+    {
+      "type": "group",
+      "title": "React Hooks",
+      "folder": "hooks",
+      "topics": ["usestate", "useeffect", "usecontext", "useref", "usereducer", "usememo", "usecallback", "custom_hooks", "rules_of_hooks", "useid", "usedeferredvalue", "usetransition", "usesyncexternalstore"]
+    },
+    {
+      "type": "group",
+      "title": "React Router",
+      "folder": "routing",
+      "topics": ["react_router_intro", "browserrouter_routes", "link_navlink", "useparams", "usenavigate", "nested_routes", "protected_routes"]
+    },
+    {
+      "type": "group",
+      "title": "Advanced React",
+      "folder": "advanced",
+      "topics": ["context_api", "context_consumer", "prop_drilling_solution", "error_boundaries", "suspense", "lazy_loading", "code_splitting", "higher_order_components", "render_props", "compositon_vs_inheritance", "useref_dom", "forwardref", "strict_mode", "react_19_features", "server_components_intro", "use_action_state", "use_form_status"]
+    },
+    {
+      "type": "group",
+      "title": "React Ecosystem",
+      "folder": "ecosystem",
+      "topics": ["state_management_overview", "zustand_intro", "tanstack_query", "testing_react", "vitest_react", "testing_library", "react_devtools", "performance_optimization"]
+    }
+  ]
+}

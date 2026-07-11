@@ -1,0 +1,22 @@
+{
+  "title": "JSX",
+  "language": "react",
+  "topic": "jsx",
+  "order": 3,
+  "nextTopic": "rendering",
+  "prevTopic": "getstarted",
+  "content": "### JSX\n\nJSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks like HTML but compiles to `React.createElement()` calls.\n\n---\n\n### JSX Rules\n\n1. Return a single root element (use a fragment `<>...</>`)\n2. Close all tags (self-closing: `<img />`)\n3. Use `camelCase` for attributes (`className`, `onClick`, `tabIndex`)\n\n### Embedding Expressions\n\nUse curly braces `{}` to embed JavaScript expressions:\n\n```jsx\nconst name = 'Alice';\nconst element = <h1>Hello, {name}!</h1>;\n```\n\n### JSX vs HTML\n\n| HTML | JSX |\n|------|-----|\n| `class` | `className` |\n| `for` | `htmlFor` |\n| `style=\"color: red\"` | `style={{ color: 'red' }}` |\n| `onclick` | `onClick` |\n\n> **Key Point:** JSX prevents injection attacks by escaping values before rendering. Never concatenate user input directly into JSX.",
+  "codeExample": "const element = (\n  <div className=\"container\">\n    <h1>Hello, {name}</h1>\n    <p>Today is {new Date().toLocaleDateString()}</p>\n  </div>\n);",
+  "quiz": [
+    {
+      "question": "What attribute replaces `class` in JSX?",
+      "options": ["cssClass", "className", "htmlClass", "class"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you embed a JavaScript expression in JSX?",
+      "options": ["{{ }}", "${ }", "{ }", "[( )]"],
+      "correctIndex": 2
+    }
+  ]
+}

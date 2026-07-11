@@ -1,0 +1,22 @@
+{
+  "title": "useDeferredValue Hook",
+  "language": "react",
+  "topic": "usedeferredvalue",
+  "order": 26,
+  "nextTopic": "usetransition",
+  "prevTopic": "useid",
+  "content": "### useDeferredValue\n\n`useDeferredValue` lets you defer updating a non-urgent part of the UI. It accepts a value and returns a deferred copy that may lag behind the original during urgent updates.\n\n---\n\n### Syntax\n\n```jsx\nimport { useDeferredValue } from 'react';\n\nconst deferredValue = useDeferredValue(value);\n```\n\n### Example: Search with Filtering\n\n```jsx\nfunction SearchPage({ query }) {\n  const deferredQuery = useDeferredValue(query);\n  const isStale = query !== deferredQuery;\n\n  const results = useMemo(() => {\n    return filterItems(items, deferredQuery);\n  }, [items, deferredQuery]);\n\n  return (\n    <>\n      <input value={query} onChange={...} />\n      <List style={{ opacity: isStale ? 0.5 : 1 }}>\n        {results.map(item => <li key={item.id}>{item.name}</li>)}\n      </List>\n    </>\n  );\n}\n```\n\n### How It Works\n\n| Aspect | Description |\n|--------|-------------|\n| Urgent update | Input stays responsive immediately |\n| Deferred update | List re-renders after urgent work finishes |\n| Stale state | `isStale` flag for visual feedback |\n| Dependency | Works alongside useMemo for expensive computations |\n\n### Comparison with useTransition\n\n| Hook | Use Case |\n|------|----------|\n| `useDeferredValue` | Deferring a value you receive (props) |\n| `useTransition` | Deferring state updates you trigger |\n\n> **Key Point:** useDeferredValue helps keep inputs responsive when rendering expensive lists. Combine with useMemo to avoid recomputing during urgent renders. Show visual feedback using the isStale flag.",
+  "codeExample": "import { useDeferredValue, useMemo } from 'react';\n\nfunction ProductList({ products, filter }) {\n  const deferredFilter = useDeferredValue(filter);\n\n  const filtered = useMemo(() => {\n    return products.filter(p =>\n      p.name.toLowerCase().includes(deferredFilter.toLowerCase())\n    );\n  }, [products, deferredFilter]);\n\n  return (\n    <ul style={{ opacity: filter !== deferredFilter ? 0.5 : 1 }}>\n      {filtered.map(p => <li key={p.id}>{p.name}</li>)}\n    </ul>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What problem does useDeferredValue solve?",
+      "options": ["State management", "Keeping UI responsive during expensive renders", "Data fetching", "Form validation"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the isStale comparison tell you?",
+      "options": ["Data is loading", "The deferred value hasn't caught up to the original", "An error occurred", "Component is unmounting"],
+      "correctIndex": 1
+    }
+  ]
+}

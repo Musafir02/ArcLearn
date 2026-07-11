@@ -1,0 +1,22 @@
+{
+  "title": "Strict Mode",
+  "language": "react",
+  "topic": "strict_mode",
+  "order": 48,
+  "nextTopic": "react_19_features",
+  "prevTopic": "forwardref",
+  "content": "### Strict Mode\n\n`StrictMode` is a development-only tool that highlights potential problems in an application. It does not render any visible UI but activates additional checks and warnings for its descendants.\n\n---\n\n### Usage\n\n```jsx\nimport { StrictMode } from 'react';\nimport { createRoot } from 'react-dom/client';\n\nconst root = createRoot(document.getElementById('root'));\nroot.render(\n  <StrictMode>\n    <App />\n  </StrictMode>\n);\n```\n\n### What StrictMode Checks\n\n| Check | Purpose |\n|-------|---------|\n| Detecting unsafe lifecycles | Flags legacy lifecycle methods |\n| Warning about legacy string ref API | Promotes modern callback refs |\n| Detecting unexpected side effects | Double-invokes state updaters to find bugs |\n| Detecting legacy context API | Flags old context patterns |\n| Ensuring reusable state | Double-renders to verify state isolation |\n\n### Double Invocation in Development\n\nIn Strict Mode, React intentionally double-invokes certain functions to help detect side effects:\n\n```jsx\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  // Runs twice in development to catch side effects\n  return <p>{count}</p>;\n}\n```\n\n### StrictMode in Different Parts\n\n```jsx\n<StrictMode>\n  <Header />\n  <main>\n    <StrictMode>\n      <Dashboard />\n    </StrictMode>\n  </main>\n  <Footer />\n</StrictMode>\n```\n\n> **Key Point:** StrictMode only affects development mode. The double-rendering behavior helps find bugs caused by impure components. It does not affect production builds. Always wrap your root app with StrictMode during development.",
+  "codeExample": "import { StrictMode } from 'react';\n\nfunction App() {\n  return (\n    <StrictMode>\n      <ErrorBoundary>\n        <Suspense fallback={<h1>Loading...</h1>}>\n          <Router />\n        </Suspense>\n      </ErrorBoundary>\n    </StrictMode>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Does StrictMode affect production builds?",
+      "options": ["Yes", "No, it only works in development", "Only with certain flags", "Only with React 19"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does StrictMode double-invoke functions?",
+      "options": ["To slow down development", "To detect impure components and side effects", "To improve performance", "To test error boundaries"],
+      "correctIndex": 1
+    }
+  ]
+}

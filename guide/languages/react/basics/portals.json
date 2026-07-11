@@ -1,0 +1,22 @@
+{
+  "title": "Portals",
+  "language": "react",
+  "topic": "portals",
+  "order": 14,
+  "nextTopic": "fragments",
+  "prevTopic": "refs",
+  "content": "### Portals\n\nPortals let you render a child element into a different part of the DOM tree outside the parent component's hierarchy. They are useful for modals, tooltips, and dropdowns.\n\n---\n\n### Creating a Portal\n\n```jsx\nimport { createPortal } from 'react-dom';\n\nfunction Modal({ children, isOpen }) {\n  if (!isOpen) return null;\n\n  return createPortal(\n    <div className=\"modal-overlay\">\n      <div className=\"modal-content\">\n        {children}\n      </div>\n    </div>,\n    document.getElementById('modal-root')\n  );\n}\n```\n\n### HTML Setup\n\n```html\n<div id=\"root\"></div>\n<div id=\"modal-root\"></div>\n```\n\n### Event Bubbling Through Portals\n\nEven though the portal renders outside the parent DOM tree, events still bubble according to the React component tree:\n\n```jsx\nfunction Parent() {\n  const handleClick = () => console.log('Clicked');\n\n  return (\n    <div onClick={handleClick}>\n      <Modal>\n        <button>Click me</button>\n      </Modal>\n    </div>\n  );\n}\n```\n\n| Aspect | Behavior |\n|--------|----------|\n| DOM position | Outside parent container |\n| React tree | Maintains parent-child relationship |\n| Event bubbling | Follows React tree, not DOM tree |\n| CSS stacking | Controlled by DOM position |\n\n> **Key Point:** Portals are ideal for overlays that need to break out of overflow:hidden or z-index contexts while preserving React component hierarchy.",
+  "codeExample": "import { createPortal } from 'react-dom';\n\nfunction Tooltip({ text, children }) {\n  return createPortal(\n    <div className=\"tooltip\">{text}</div>,\n    document.getElementById('tooltip-root')\n  );\n}",
+  "quiz": [
+    {
+      "question": "What problem do portals solve?",
+      "options": ["Performance issues", "CSS z-index and overflow context problems", "State management", "Routing issues"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do events bubble with portals?",
+      "options": ["Follow the DOM tree", "Follow the React component tree", "Events don't bubble through portals", "Events stop at the portal boundary"],
+      "correctIndex": 1
+    }
+  ]
+}

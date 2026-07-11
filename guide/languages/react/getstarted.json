@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started",
+  "language": "react",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "jsx",
+  "prevTopic": "intro",
+  "content": "### Setting Up a React Project with Vite\n\nVite is the recommended build tool for new React projects. It provides fast development servers and optimized production builds.\n\n---\n\n### Creating a New Project\n\n```bash\nnpm create vite@latest my-app -- --template react\ncd my-app\nnpm install\nnpm run dev\n```\n\nThis scaffolds a React project with:\n\n- A `src/` directory for source code\n- `public/` for static assets\n- `vite.config.js` for build configuration\n- `index.html` as the entry point\n\n### Project Structure\n\n| File/Directory | Purpose |\n|----------------|---------|\n| `src/main.jsx` | Application entry point |\n| `src/App.jsx` | Root component |\n| `src/App.css` | Root component styles |\n| `index.html` | HTML template |\n| `vite.config.js` | Vite configuration |\n\n### Your First Component\n\nCreate `src/App.jsx` with a simple component:\n\n```jsx\nfunction App() {\n  return (\n    <div>\n      <h1>Hello, React!</h1>\n    </div>\n  );\n}\n\nexport default App;\n```\n\n> **Key Point:** Always run `npm install` after creating a project to install dependencies. Use `npm run dev` for development and `npm run build` for production.",
+  "codeExample": "npm create vite@latest my-app -- --template react\ncd my-app\nnpm install\nnpm run dev",
+  "quiz": [
+    {
+      "question": "Which build tool is recommended for new React projects?",
+      "options": ["Webpack", "Parcel", "Vite", "Gulp"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What command starts the development server in a Vite React project?",
+      "options": ["npm start", "npm run dev", "npm run serve", "npm build"],
+      "correctIndex": 1
+    }
+  ]
+}

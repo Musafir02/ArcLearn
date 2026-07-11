@@ -1,0 +1,22 @@
+{
+  "title": "useSyncExternalStore Hook",
+  "language": "react",
+  "topic": "usesyncexternalstore",
+  "order": 28,
+  "nextTopic": "react_router_intro",
+  "prevTopic": "usetransition",
+  "content": "### useSyncExternalStore\n\n`useSyncExternalStore` lets you subscribe to an external store (like Redux, Zustand, or browser APIs) and get synchronous updates. It ensures consistency with React's concurrent features.\n\n---\n\n### Syntax\n\n```jsx\nimport { useSyncExternalStore } from 'react';\n\nconst state = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?);\n```\n\n### Basic Example\n\n```jsx\nfunction useOnlineStatus() {\n  const isOnline = useSyncExternalStore(\n    (callback) => {\n      window.addEventListener('online', callback);\n      window.addEventListener('offline', callback);\n      return () => {\n        window.removeEventListener('online', callback);\n        window.removeEventListener('offline', callback);\n      };\n    },\n    () => navigator.onLine\n  );\n  return isOnline;\n}\n\nfunction StatusIndicator() {\n  const isOnline = useOnlineStatus();\n  return <div>{isOnline ? 'Online' : 'Offline'}</div>;\n}\n```\n\n### Parameters\n\n| Parameter | Purpose |\n|-----------|---------|\n| `subscribe` | Registers a callback to call when store changes |\n| `getSnapshot` | Returns current value of the store |\n| `getServerSnapshot` (optional) | Returns snapshot for SSR |\n\n### External Store Subscription\n\n```jsx\nfunction useStore(store) {\n  return useSyncExternalStore(\n    store.subscribe,\n    () => store.getState()\n  );\n}\n```\n\n> **Key Point:** useSyncExternalStore is the correct way to integrate external state management libraries with React 18+. It prevents tearing (inconsistent UI) during concurrent rendering. Libraries like Redux and Zustand use this internally.",
+  "codeExample": "import { useSyncExternalStore } from 'react';\n\nconst store = {\n  state: { count: 0 },\n  listeners: new Set(),\n  subscribe(listener) {\n    this.listeners.add(listener);\n    return () => this.listeners.delete(listener);\n  },\n  getState() { return this.state; },\n  setState(next) {\n    this.state = typeof next === 'function' ? next(this.state) : next;\n    this.listeners.forEach(l => l());\n  }\n};\n\nfunction Counter() {\n  const state = useSyncExternalStore(\n    store.subscribe.bind(store),\n    store.getState.bind(store)\n  );\n  return <button onClick={() => store.setState(s => ({ count: s.count + 1 }))}>{state.count}</button>;\n}",
+  "quiz": [
+    {
+      "question": "What problem does useSyncExternalStore solve?",
+      "options": ["Server-side rendering", "Ensuring external store consistency with concurrent React", "State initialization", "Performance optimization"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the subscribe parameter do?",
+      "options": ["Returns the current state", "Registers a callback for store changes", "Updates the store", "Creates a new store"],
+      "correctIndex": 1
+    }
+  ]
+}

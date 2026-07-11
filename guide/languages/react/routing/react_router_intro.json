@@ -1,0 +1,22 @@
+{
+  "title": "React Router Introduction",
+  "language": "react",
+  "topic": "react_router_intro",
+  "order": 29,
+  "nextTopic": "browserrouter_routes",
+  "prevTopic": "usesyncexternalstore",
+  "content": "### React Router\n\nReact Router is the most popular routing library for React. It enables navigation between views in a single-page application while keeping the UI in sync with the URL.\n\n---\n\n### Installation\n\n```bash\nnpm install react-router-dom\n```\n\n### Core Concepts\n\n| Concept | Purpose |\n|---------|---------|\n| Router | Wraps the app and provides routing context |\n| Route | Maps a URL path to a component |\n| Link | Declarative navigation anchor tag |\n| NavLink | Link with active state styling |\n| Outlet | Renders matched child routes |\n\n### Router Types\n\n| Router | Use Case |\n|--------|----------|\n| `BrowserRouter` | Standard web apps with clean URLs |\n| `HashRouter` | Static file serving, legacy browsers |\n| `MemoryRouter` | Testing and non-browser environments |\n| `StaticRouter` | Server-side rendering |\n\n### Basic Setup\n\n```jsx\nimport { BrowserRouter, Routes, Route } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n      </Routes>\n    </BrowserRouter>\n  );\n}\n```\n\n> **Key Point:** React Router v6 uses a component-based approach with `<Routes>` and `<Route>`. The `element` prop replaces the `component` or `render` props from v5. Absolute paths are the default.",
+  "codeExample": "import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <nav>\n        <Link to=\"/\">Home</Link>\n        <Link to=\"/about\">About</Link>\n      </nav>\n      <Routes>\n        <Route path=\"/\" element={<h1>Home</h1>} />\n        <Route path=\"/about\" element={<h1>About</h1>} />\n      </Routes>\n    </BrowserRouter>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Which package provides React Router for web apps?",
+      "options": ["react-router", "react-router-dom", "react-navigation", "react-routes"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What prop does Route use to specify the component in React Router v6?",
+      "options": ["component", "render", "element", "children"],
+      "correctIndex": 2
+    }
+  ]
+}

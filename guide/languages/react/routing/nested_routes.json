@@ -1,0 +1,22 @@
+{
+  "title": "Nested Routes",
+  "language": "react",
+  "topic": "nested_routes",
+  "order": 34,
+  "nextTopic": "protected_routes",
+  "prevTopic": "usenavigate",
+  "content": "### Nested Routes\n\nNested routes let you compose UI with shared layouts. A parent route renders a layout with an `<Outlet>` where child routes render their content.\n\n---\n\n### Outlet Component\n\n```jsx\nimport { Outlet } from 'react-router-dom';\n\nfunction DashboardLayout() {\n  return (\n    <div className=\"dashboard\">\n      <Sidebar />\n      <main>\n        <Outlet />\n      </main>\n    </div>\n  );\n}\n```\n\n### Route Configuration\n\n```jsx\n<Routes>\n  <Route path=\"/dashboard\" element={<DashboardLayout />}>\n    <Route index element={<Overview />} />\n    <Route path=\"analytics\" element={<Analytics />} />\n    <Route path=\"settings\" element={<Settings />} />\n    <Route path=\"users/:id\" element={<UserDetail />} />\n  </Route>\n</Routes>\n```\n\n### URL to Component Mapping\n\n| URL | Rendered |\n|-----|----------|\n| `/dashboard` | DashboardLayout + Overview (index) |\n| `/dashboard/analytics` | DashboardLayout + Analytics |\n| `/dashboard/settings` | DashboardLayout + Settings |\n| `/dashboard/users/5` | DashboardLayout + UserDetail |\n\n### Relative Paths\n\nNested routes use relative paths by default:\n\n```jsx\n// Inside DashboardLayout\n<Link to=\"analytics\">          // -> /dashboard/analytics\n<Link to=\"..\">                 // -> /dashboard\n<Link to=\"../settings\">        // -> /settings\n```\n\n### Deep Nesting\n\n```jsx\n<Route path=\"app\" element={<AppLayout />}>\n  <Route path=\"projects\" element={<ProjectsLayout />}>\n    <Route index element={<ProjectList />} />\n    <Route path=\":id\" element={<ProjectDetail />} />\n  </Route>\n</Route>\n```\n\n> **Key Point:** Outlet is a placeholder where child routes render. The index route renders at the parent's exact path. Nested routes make layout reuse clean and eliminate the need for manual conditional rendering.",
+  "codeExample": "import { Outlet, Link } from 'react-router-dom';\n\nfunction SettingsLayout() {\n  return (\n    <div>\n      <nav>\n        <Link to=\"profile\">Profile</Link>\n        <Link to=\"security\">Security</Link>\n        <Link to=\"billing\">Billing</Link>\n      </nav>\n      <Outlet />\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What component renders child routes in a nested route setup?",
+      "options": ["Child", "Outlet", "Render", "Content"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is an index route?",
+      "options": ["The first route defined", "A route that renders at the parent's exact path", "A route with index in its path", "A 404 route"],
+      "correctIndex": 1
+    }
+  ]
+}

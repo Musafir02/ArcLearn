@@ -1,0 +1,22 @@
+{
+  "title": "Event Handling",
+  "language": "react",
+  "topic": "events",
+  "order": 9,
+  "nextTopic": "conditional_rendering",
+  "prevTopic": "lifecycle",
+  "content": "### Event Handling\n\nReact events are named using camelCase and passed as JSX attributes. They are synthetic events wrapping native browser events for cross-browser consistency.\n\n---\n\n### Basic Event Handlers\n\n```jsx\nfunction Button() {\n  function handleClick(event) {\n    console.log('Button clicked', event);\n  }\n\n  return <button onClick={handleClick}>Click me</button>;\n}\n```\n\n### Event Object\n\nReact's synthetic event provides the same interface as native events but works consistently across browsers.\n\n```jsx\nfunction Input() {\n  const handleChange = (e) => {\n    console.log(e.target.value);\n  };\n  return <input onChange={handleChange} />;\n}\n```\n\n### Common Events\n\n| Event | Fires When |\n|-------|-----------|\n| `onClick` | Element is clicked |\n| `onChange` | Input value changes |\n| `onSubmit` | Form is submitted |\n| `onKeyDown` | Key is pressed |\n| `onFocus` | Element gains focus |\n| `onBlur` | Element loses focus |\n| `onMouseEnter` | Mouse enters element |\n| `onMouseLeave` | Mouse leaves element |\n\n### Passing Arguments\n\n```jsx\n<button onClick={() => handleDelete(id)}>Delete</button>\n<button onClick={(e) => handleClick(id, e)}>Click</button>\n```\n\n> **Key Point:** Do not call the function in the JSX attribute. Pass a reference to the function or use an arrow function. Avoid inline arrow functions in performance-critical lists.",
+  "codeExample": "function Form() {\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    console.log('Form submitted');\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input type=\"text\" placeholder=\"Name\" />\n      <button type=\"submit\">Submit</button>\n    </form>\n  );\n}",
+  "quiz": [
+    {
+      "question": "How do React events differ from native DOM events?",
+      "options": ["They are identical", "React uses camelCase naming", "React uses lowercase naming", "React events are strings"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you prevent default form submission in React?",
+      "options": ["return false", "e.preventDefault()", "event.stopPropagation()", "preventDefault() as attribute"],
+      "correctIndex": 1
+    }
+  ]
+}

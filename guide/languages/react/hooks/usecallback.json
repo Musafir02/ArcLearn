@@ -1,0 +1,22 @@
+{
+  "title": "useCallback Hook",
+  "language": "react",
+  "topic": "usecallback",
+  "order": 22,
+  "nextTopic": "custom_hooks",
+  "prevTopic": "usememo",
+  "content": "### useCallback\n\n`useCallback` returns a memoized version of a callback function that only changes when dependencies change. It prevents unnecessary re-renders of child components.\n\n---\n\n### Syntax\n\n```jsx\nimport { useCallback } from 'react';\n\nconst memoizedCallback = useCallback(() => {\n  doSomething(a, b);\n}, [a, b]);\n```\n\n### Example with React.memo\n\n```jsx\nimport { useCallback } from 'react';\n\nfunction Parent() {\n  const [count, setCount] = useState(0);\n\n  const handleClick = useCallback(() => {\n    console.log('Clicked');\n  }, []);\n\n  return (\n    <>\n      <ExpensiveButton onClick={handleClick} />\n      <p>Count: {count}</p>\n    </>\n  );\n}\n\nconst ExpensiveButton = React.memo(({ onClick }) => {\n  console.log('Rendered');\n  return <button onClick={onClick}>Click</button>;\n});\n```\n\n### useCallback vs useMemo\n\n| Hook | Returns | Use Case |\n|------|---------|----------|\n| `useCallback(fn, deps)` | The function itself | Memoizing callbacks passed to children |\n| `useMemo(() => fn, deps)` | The returned value | Memoizing computation results |\n\n### When to Use\n\n- Passing callbacks to optimized child components with `React.memo`\n- Functions in dependency arrays of other hooks\n- Event handlers in components that re-render often\n\n> **Key Point:** Do not use useCallback on every function. Premature optimization adds complexity. Use it when you have profiled and identified that a child component re-renders unnecessarily due to callback identity changes.",
+  "codeExample": "import { useCallback, useState } from 'react';\n\nfunction SearchBar({ onSearch }) {\n  const [query, setQuery] = useState('');\n\n  const handleChange = useCallback((e) => {\n    setQuery(e.target.value);\n    onSearch(e.target.value);\n  }, [onSearch]);\n\n  return <input value={query} onChange={handleChange} />;\n}",
+  "quiz": [
+    {
+      "question": "What does useCallback return?",
+      "options": ["A value", "A memoized function", "An object", "A state variable"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When is useCallback most useful?",
+      "options": ["For all functions", "When passing callbacks to memoized child components", "For simple event handlers", "For API calls"],
+      "correctIndex": 1
+    }
+  ]
+}

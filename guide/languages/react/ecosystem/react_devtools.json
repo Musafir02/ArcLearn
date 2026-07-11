@@ -1,0 +1,22 @@
+{
+  "title": "React DevTools",
+  "language": "react",
+  "topic": "react_devtools",
+  "order": 59,
+  "nextTopic": "performance_optimization",
+  "prevTopic": "testing_library",
+  "content": "### React DevTools\n\nReact DevTools is a browser extension for inspecting React component trees, profiling performance, and debugging state and props.\n\n---\n\n### Installation\n\nInstall the React DevTools browser extension:\n\n- Chrome Web Store: React Developer Tools\n- Firefox Add-ons: React Developer Tools\n- Edge Add-ons: React Developer Tools\n\n### Components Tab\n\nThe Components tab displays the component tree with:\n\n| Feature | Description |\n|---------|-------------|\n| Component hierarchy | Tree view of rendered components |\n| Props | Current props for selected component |\n| State | Current state values (useState, useReducer) |\n| Hooks | All hooks and their current values |\n| Source | File location of the component |\n| Rendered by | Parent that triggered the render |\n\n### Profiler Tab\n\nThe Profiler records render performance:\n\n```jsx\nimport { Profiler } from 'react';\n\nfunction onRender(id, phase, actualDuration) {\n  console.log(`${id} ${phase}: ${actualDuration}ms`);\n}\n\n<Profiler id=\"Navigation\" onRender={onRender}>\n  <Navigation />\n</Profiler>\n```\n\n### Using the Profiler\n\n1. Click the record button\n2. Interact with your app\n3. Stop recording\n4. Analyze the flamegraph\n\n### DevTools Tips\n\n| Action | Benefit |\n|--------|---------|\n| Inspect props | Verify data flow |\n| Check hooks state | Debug state issues |\n| Profile renders | Find performance bottlenecks |\n| Search components | Quickly find components in the tree |\n\n> **Key Point:** React DevTools is essential for debugging React apps. Use the Components tab to inspect state and props. Use the Profiler to identify unnecessary re-renders and optimize performance.",
+  "codeExample": "// Programmatic profiling\nimport { Profiler } from 'react';\n\nfunction App() {\n  const logRender = (id, phase, actualDuration) => {\n    console.table({ id, phase, duration: `${actualDuration.toFixed(2)}ms` });\n  };\n\n  return (\n    <Profiler id=\"App\" onRender={logRender}>\n      <MainApp />\n    </Profiler>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Which DevTools tab profiles component render performance?",
+      "options": ["Components", "Profiler", "Performance", "Debugger"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What can you inspect in the Components tab?",
+      "options": ["Only props", "Props, state, hooks, and component tree", "Only the DOM tree", "Only network requests"],
+      "correctIndex": 1
+    }
+  ]
+}

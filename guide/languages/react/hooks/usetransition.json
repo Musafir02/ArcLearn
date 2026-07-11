@@ -1,0 +1,22 @@
+{
+  "title": "useTransition Hook",
+  "language": "react",
+  "topic": "usetransition",
+  "order": 27,
+  "nextTopic": "usesyncexternalstore",
+  "prevTopic": "usedeferredvalue",
+  "content": "### useTransition\n\n`useTransition` lets you mark state updates as non-urgent transitions. Urgent updates (like input changes) remain responsive while transitions (like filtering lists) happen in the background.\n\n---\n\n### Syntax\n\n```jsx\nimport { useTransition } from 'react';\n\nconst [isPending, startTransition] = useTransition();\n```\n\n### Basic Usage\n\n```jsx\nfunction Search() {\n  const [query, setQuery] = useState('');\n  const [isPending, startTransition] = useTransition();\n\n  const handleChange = (e) => {\n    // Urgent: update input display\n    setQuery(e.target.value);\n\n    // Non-urgent: filter results\n    startTransition(() => {\n      setFilteredItems(filterItems(items, e.target.value));\n    });\n  };\n\n  return (\n    <>\n      <input value={query} onChange={handleChange} />\n      {isPending && <Spinner />}\n      <List items={filteredItems} />\n    </>\n  );\n}\n```\n\n### When to Use\n\n| Situation | Use Transition? |\n|-----------|---------------|\n| Input changes | Urgent (no) |\n| Filtering long lists | Non-urgent (yes) |\n| Navigation tabs | Non-urgent (yes) |\n| Animations | Non-urgent (yes) |\n| API call results | Non-urgent (yes) |\n\n### useTransition vs useDeferredValue\n\n| Feature | useTransition | useDeferredValue |\n|---------|---------------|------------------|\n| Control | Wraps state update | Wraps the value |\n| Use case | You control the update | Value comes from props |\n| Pending flag | `isPending` | Manual comparison |\n\n> **Key Point:** Use startTransition for state updates that can be interrupted. The isPending flag lets you show loading indicators without blocking the UI. Do not use transitions for urgent updates like form validation.",
+  "codeExample": "import { useState, useTransition } from 'react';\n\nfunction TabView() {\n  const [tab, setTab] = useState('home');\n  const [isPending, startTransition] = useTransition();\n\n  const switchTab = (newTab) => {\n    startTransition(() => {\n      setTab(newTab);\n    });\n  };\n\n  return (\n    <div>\n      <button onClick={() => switchTab('home')}>Home</button>\n      <button onClick={() => switchTab('settings')}>Settings</button>\n      {isPending && <p>Loading...</p>}\n      <TabContent tab={tab} />\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does startTransition wrap?",
+      "options": ["A component", "A state update as non-urgent", "A data fetch", "A DOM manipulation"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the isPending flag indicate?",
+      "options": ["Data is loading", "A transition is still in progress", "An error occurred", "Component is mounted"],
+      "correctIndex": 1
+    }
+  ]
+}

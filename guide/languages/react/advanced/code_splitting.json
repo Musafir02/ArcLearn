@@ -1,0 +1,22 @@
+{
+  "title": "Code Splitting",
+  "language": "react",
+  "topic": "code_splitting",
+  "order": 42,
+  "nextTopic": "higher_order_components",
+  "prevTopic": "lazy_loading",
+  "content": "### Code Splitting\n\nCode splitting breaks your bundle into smaller chunks loaded on demand. React.lazy and Suspense are the primary tools for component-level splitting, while dynamic imports handle module-level splitting.\n\n---\n\n### Dynamic Import\n\n```jsx\n// Instead of static import:\n// import { format } from './utils';\n\n// Dynamic import (loaded when needed):\nconst formatModule = await import('./utils');\n```\n\n### Webpack and Vite Configuration\n\nBoth Vite and webpack automatically create separate chunks for dynamic imports. No additional configuration needed:\n\n```js\n// vite.config.js - zero config for code splitting\n// webpack.config.js - automatic with dynamic import()\n```\n\n### Chunk Naming with Magic Comments (Webpack)\n\n```jsx\nconst AdminPanel = lazy(() =>\n  import(/* webpackChunkName: \"admin\" */ './AdminPanel')\n);\n```\n\n### Splitting Libraries\n\n```jsx\n// Split third-party libraries\nconst moment = await import('moment');\nconst _ = await import('lodash');\n```\n\n| Split Strategy | Granularity | Effort |\n|---------------|-------------|--------|\n| Route-based | Page chunks | Low |\n| Component-based | Individual heavy components | Medium |\n| Library-based | Third-party libs on demand | Medium |\n\n### Preload for Anticipated Navigation\n\n```jsx\nconst Dashboard = lazy(() => import('./Dashboard'));\n\n// Preload when hovering over link\n<link\n  onMouseEnter={() => import('./Dashboard')}\n  to=\"/dashboard\"\n>\n  Dashboard\n</link>\n```\n\n> **Key Point:** Use route-based code splitting by default. Check the Network tab to verify chunks are loading correctly. Avoid splitting components that are always needed on the first screen.",
+  "codeExample": "import { lazy, Suspense } from 'react';\n\nconst AdminRoutes = lazy(() => import('./admin/Routes'));\nconst UserRoutes = lazy(() => import('./user/Routes'));\n\nfunction App() {\n  const { role } = useAuth();\n\n  return (\n    <Suspense fallback={<Loader />}>\n      {role === 'admin' ? <AdminRoutes /> : <UserRoutes />}\n    </Suspense>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What tool creates separate chunks for dynamic imports?",
+      "options": ["Babel", "Webpack / Vite (bundler)", "React itself", "Node.js"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the easiest code splitting strategy?",
+      "options": ["Library splitting", "Route-based splitting", "Component splitting", "Utility splitting"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "useRef for DOM Manipulation",
+  "language": "react",
+  "topic": "useref_dom",
+  "order": 46,
+  "nextTopic": "forwardref",
+  "prevTopic": "compositon_vs_inheritance",
+  "content": "### useRef for DOM Manipulation\n\nuseRef provides direct access to DOM nodes for imperative operations. While React promotes declarative rendering, refs are necessary for certain imperative needs.\n\n---\n\n### Accessing DOM Nodes\n\n```jsx\nimport { useRef, useEffect } from 'react';\n\nfunction VideoPlayer() {\n  const videoRef = useRef(null);\n\n  useEffect(() => {\n    // Access DOM node after mount\n    videoRef.current.play();\n  }, []);\n\n  return <video ref={videoRef} src=\"video.mp4\" controls />;\n}\n```\n\n### Common DOM Operations\n\n```jsx\nfunction TextEditor() {\n  const textareaRef = useRef(null);\n\n  const insertText = (text) => {\n    const textarea = textareaRef.current;\n    const start = textarea.selectionStart;\n    const end = textarea.selectionEnd;\n    const value = textarea.value;\n\n    textarea.value = value.substring(0, start) + text + value.substring(end);\n    textarea.focus();\n    textarea.selectionStart = textarea.selectionEnd = start + text.length;\n  };\n\n  return (\n    <>\n      <textarea ref={textareaRef} />\n      <button onClick={() => insertText('**bold**')}>Bold</button>\n    </>\n  );\n}\n```\n\n### Measuring DOM Nodes\n\n```jsx\nfunction MeasureExample() {\n  const divRef = useRef(null);\n  const [height, setHeight] = useState(0);\n\n  useEffect(() => {\n    if (divRef.current) {\n      setHeight(divRef.current.getBoundingClientRect().height);\n    }\n  }, []);\n\n  return (\n    <>\n      <div ref={divRef}>Content</div>\n      <p>Height: {height}px</p>\n    </>\n  );\n}\n```\n\n| Operation | Code |\n|-----------|------|\n| Focus | `ref.current.focus()` |\n| Scroll | `ref.current.scrollIntoView()` |\n| Measure | `ref.current.getBoundingClientRect()` |\n| Animation | `ref.current.animate()` |\n| Media | `ref.current.play()`, `ref.current.pause()` |\n\n> **Key Point:** Refs should be used sparingly for imperative DOM operations that cannot be expressed declaratively. For most UI logic, prefer state and props.",
+  "codeExample": "import { useRef } from 'react';\n\nfunction ScrollToTop() {\n  const listRef = useRef(null);\n  const scrollToTop = () => {\n    listRef.current.scrollTo({ top: 0, behavior: 'smooth' });\n  };\n\n  return (\n    <div>\n      <ul ref={listRef} style={{ height: 200, overflow: 'auto' }}>\n        {Array.from({ length: 50 }, (_, i) => (\n          <li key={i}>Item {i + 1}</li>\n        ))}\n      </ul>\n      <button onClick={scrollToTop}>Scroll to Top</button>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "When should you use refs for DOM access?",
+      "options": ["For all DOM operations", "Only for imperative operations not possible declaratively", "Never", "For styling elements"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you measure a DOM node's dimensions?",
+      "options": ["ref.current.size", "ref.current.getBoundingClientRect()", "ref.current.offset()", "ref.current.measure()"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "React 19 Features",
+  "language": "react",
+  "topic": "react_19_features",
+  "order": 49,
+  "nextTopic": "server_components_intro",
+  "prevTopic": "strict_mode",
+  "content": "### React 19 Features\n\nReact 19 introduced major new features including async server components, improved hooks, and a new compiler.\n\n---\n\n### React Compiler (React Forget)\n\nReact 19 includes an optimizing compiler that automatically memoizes components and hooks:\n\n```jsx\n// No need for manual useMemo/useCallback - compiler handles it\nfunction Profile({ user, posts }) {\n  const filtered = posts.filter(p => p.authorId === user.id);\n  return <List items={filtered} />;\n}\n```\n\n### Server Components\n\nServer Components run exclusively on the server, reducing client bundle size:\n\n```jsx\n// ServerComponent.server.js\nasync function ProductList() {\n  const products = await db.products.findAll();\n  return (\n    <ul>\n      {products.map(p => <li key={p.id}>{p.name}</li>)}\n    </ul>\n  );\n}\n```\n\n### New Hooks in React 19\n\n| Hook | Purpose |\n|------|---------|\n| `use()` | Reads resources (promises, context) inside render |\n| `useActionState` | Manages form submission state |\n| `useFormStatus` | Provides form submission status to descendants |\n| `useOptimistic` | Optimistic UI updates |\n\n### The `use()` Hook\n\n```jsx\nimport { use } from 'react';\n\nfunction Comments({ commentsPromise }) {\n  const comments = use(commentsPromise);\n  return comments.map(c => <p key={c.id}>{c.text}</p>);\n}\n```\n\n### Improved `<form>` Actions\n\n```jsx\n<form action={async (formData) => {\n  await submitToServer(formData);\n}}>\n  <input name=\"email\" type=\"email\" />\n  <button type=\"submit\">Submit</button>\n</form>\n```\n\n> **Key Point:** React 19 focuses on performance (compiler), data loading (server components, use()), and form handling (actions, useActionState). The compiler eliminates the need for manual memoization.",
+  "codeExample": "import { use, Suspense } from 'react';\n\nfunction fetchUser(id) {\n  return fetch(`/api/users/${id}`).then(r => r.json());\n}\n\nfunction UserProfile({ userId }) {\n  const userPromise = useMemo(() => fetchUser(userId), [userId]);\n  \n  return (\n    <Suspense fallback={<p>Loading user...</p>}>\n      <UserDetails userPromise={userPromise} />\n    </Suspense>\n  );\n}\n\nfunction UserDetails({ userPromise }) {\n  const user = use(userPromise);\n  return <h1>{user.name}</h1>;\n}",
+  "quiz": [
+    {
+      "question": "What does the React 19 compiler automatically handle?",
+      "options": ["Routing", "Memoization", "Styling", "Testing"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the `use()` hook do?",
+      "options": ["Creates state", "Reads promises and context inside render", "Handles forms", "Manages effects"],
+      "correctIndex": 1
+    }
+  ]
+}

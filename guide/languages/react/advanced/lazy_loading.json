@@ -1,0 +1,22 @@
+{
+  "title": "Lazy Loading",
+  "language": "react",
+  "topic": "lazy_loading",
+  "order": 41,
+  "nextTopic": "code_splitting",
+  "prevTopic": "suspense",
+  "content": "### Lazy Loading\n\n`React.lazy` lets you defer loading a component until it is first rendered. Combined with Suspense, it reduces the initial bundle size and improves performance.\n\n---\n\n### Basic Usage\n\n```jsx\nimport { lazy, Suspense } from 'react';\n\nconst HeavyChart = lazy(() => import('./HeavyChart'));\n\nfunction Dashboard() {\n  const [showChart, setShowChart] = useState(false);\n\n  return (\n    <div>\n      <button onClick={() => setShowChart(true)}>Show Chart</button>\n      <Suspense fallback={<div>Loading chart...</div>}>\n        {showChart && <HeavyChart />}\n      </Suspense>\n    </div>\n  );\n}\n```\n\n### Named Exports\n\n```jsx\nconst { MyComponent } = lazy(() =>\n  import('./MyModule').then(module => ({ default: module.MyComponent }))\n);\n```\n\n### Route-Based Lazy Loading\n\n```jsx\nimport { lazy, Suspense } from 'react';\nimport { Routes, Route } from 'react-router-dom';\n\nconst Home = lazy(() => import('./pages/Home'));\nconst About = lazy(() => import('./pages/About'));\nconst Dashboard = lazy(() => import('./pages/Dashboard'));\n\nfunction App() {\n  return (\n    <Suspense fallback={<PageLoader />}>\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n        <Route path=\"/dashboard\" element={<Dashboard />} />\n      </Routes>\n    </Suspense>\n  );\n}\n```\n\n| Strategy | Use Case |\n|----------|----------|\n| Route-level | Each page loads on demand |\n| Component-level | Heavy components (charts, editors) |\n| Conditional | Components shown only on user action |\n\n> **Key Point:** Lazy loading improves initial load time but adds a brief loading state when the lazy component renders. Use it for routes and heavy components not needed on the first screen (below the fold).",
+  "codeExample": "import { lazy, Suspense, useState } from 'react';\n\nconst MarkdownEditor = lazy(() => import('./MarkdownEditor'));\nconst ImageGallery = lazy(() => import('./ImageGallery'));\n\nfunction PostCreator() {\n  const [mode, setMode] = useState('text');\n\n  return (\n    <div>\n      <button onClick={() => setMode('text')}>Text</button>\n      <button onClick={() => setMode('gallery')}>Gallery</button>\n      <Suspense fallback={<Spinner />}>\n        {mode === 'text' ? <MarkdownEditor /> : <ImageGallery />}\n      </Suspense>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does React.lazy() require?",
+      "options": ["A component object", "A function that calls dynamic import()", "A string path", "A configuration object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What must wrap a lazy component?",
+      "options": ["ErrorBoundary", "Suspense", "Fragment", "StrictMode"],
+      "correctIndex": 1
+    }
+  ]
+}

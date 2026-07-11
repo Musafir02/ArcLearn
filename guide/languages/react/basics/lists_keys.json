@@ -1,0 +1,22 @@
+{
+  "title": "Lists and Keys",
+  "language": "react",
+  "topic": "lists_keys",
+  "order": 11,
+  "nextTopic": "forms",
+  "prevTopic": "conditional_rendering",
+  "content": "### Lists and Keys\n\nUse JavaScript's `map()` method to render lists of elements. Each item needs a unique `key` prop for React to track changes efficiently.\n\n---\n\n### Rendering Lists\n\n```jsx\nconst items = ['Apple', 'Banana', 'Cherry'];\nconst listItems = items.map((item, index) => <li key={index}>{item}</li>);\nreturn <ul>{listItems}</ul>;\n```\n\n### Keys\n\nKeys help React identify which items changed, were added, or removed:\n\n```jsx\nfunction TodoList({ todos }) {\n  return (\n    <ul>\n      {todos.map(todo => (\n        <li key={todo.id}>\n          {todo.text}\n        </li>\n      ))}\n    </ul>\n  );\n}\n```\n\n### Key Rules\n\n| Rule | Reason |\n|------|--------|\n| Use stable IDs | Index can shift when items change order |\n| Unique among siblings | Duplicate keys cause unpredictable behavior |\n| Avoid using index | Use only as last resort for static lists |\n| Keys are not passed as props | React uses keys internally |\n\n### Filtering Lists\n\n```jsx\nconst filtered = items.filter(item => item.active);\nreturn filtered.map(item => <Item key={item.id} {...item} />);\n```\n\n> **Key Point:** A good key is a unique and stable identifier from your data (like a database ID). Using array index as key can cause bugs with dynamic lists.",
+  "codeExample": "function ProductList({ products }) {\n  return (\n    <div className=\"product-list\">\n      {products.map(product => (\n        <ProductCard\n          key={product.id}\n          title={product.name}\n          price={product.price}\n        />\n      ))}\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is the purpose of the key prop in lists?",
+      "options": ["Styling", "Performance tracking and identity", "Data validation", "Sorting"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the best practice for selecting a key?",
+      "options": ["Use array index", "Use a unique and stable ID", "Use Math.random()", "Keys are optional"],
+      "correctIndex": 1
+    }
+  ]
+}

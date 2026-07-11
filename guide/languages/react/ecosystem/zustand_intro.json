@@ -1,0 +1,22 @@
+{
+  "title": "Zustand Introduction",
+  "language": "react",
+  "topic": "zustand_intro",
+  "order": 54,
+  "nextTopic": "tanstack_query",
+  "prevTopic": "state_management_overview",
+  "content": "### Zustand\n\nZustand is a minimal state management library for React. It provides a simple API to create global stores with hooks-based access.\n\n---\n\n### Installation\n\n```bash\nnpm install zustand\n```\n\n### Creating a Store\n\n```jsx\nimport { create } from 'zustand';\n\nconst useStore = create((set) => ({\n  count: 0,\n  increment: () => set((state) => ({ count: state.count + 1 })),\n  decrement: () => set((state) => ({ count: state.count - 1 })),\n  reset: () => set({ count: 0 }),\n}));\n```\n\n### Using the Store\n\n```jsx\nfunction Counter() {\n  const count = useStore((state) => state.count);\n  const increment = useStore((state) => state.increment);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>+</button>\n    </div>\n  );\n}\n```\n\n### Zustand vs Redux\n\n| Feature | Zustand | Redux Toolkit |\n|---------|---------|--------------|\n| Boilerplate | Minimal | Moderate |\n| Bundle size | ~1 KB | ~12 KB |\n| Learning curve | Low | Medium |\n| DevTools | Supported | Built-in |\n| Middleware | Built-in (immer, persist) | Built-in (thunk, saga) |\n\n### Async Actions\n\n```jsx\nconst useStore = create((set) => ({\n  users: [],\n  loading: false,\n  fetchUsers: async () => {\n    set({ loading: true });\n    const response = await fetch('/api/users');\n    const users = await response.json();\n    set({ users, loading: false });\n  },\n}));\n```\n\n### Persisting State\n\n```jsx\nimport { persist } from 'zustand/middleware';\n\nconst useStore = create(\n  persist(\n    (set) => ({\n      theme: 'light',\n      setTheme: (theme) => set({ theme }),\n    }),\n    { name: 'theme-storage' }\n  )\n);\n```\n\n> **Key Point:** Zustand is ideal when you need simple global state without Redux's boilerplate. It works outside React too, making it suitable for sharing state with non-React code.",
+  "codeExample": "import { create } from 'zustand';\nimport { persist } from 'zustand/middleware';\n\nconst useCartStore = create(\n  persist(\n    (set, get) => ({\n      items: [],\n      addItem: (item) => set((state) => ({ items: [...state.items, item] })),\n      removeItem: (id) => set((state) => ({\n        items: state.items.filter((i) => i.id !== id)\n      })),\n      total: () => get().items.reduce((sum, i) => sum + i.price, 0),\n    }),\n    { name: 'cart-storage' }\n  )\n);",
+  "quiz": [
+    {
+      "question": "How do you select a specific piece of state from Zustand store?",
+      "options": ["With a selector function", "By destructuring the whole store", "With a string key", "By using useState"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a key advantage of Zustand over Redux?",
+      "options": ["More features", "Smaller bundle size and less boilerplate", "Better TypeScript support", "Built-in routing"],
+      "correctIndex": 1
+    }
+  ]
+}

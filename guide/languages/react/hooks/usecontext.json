@@ -1,0 +1,22 @@
+{
+  "title": "useContext Hook",
+  "language": "react",
+  "topic": "usecontext",
+  "order": 18,
+  "nextTopic": "useref",
+  "prevTopic": "useeffect",
+  "content": "### useContext\n\n`useContext` lets you subscribe to React context without nesting. It reads the current value of a context object created by `createContext`.\n\n---\n\n### Creating Context\n\n```jsx\nimport { createContext } from 'react';\n\nconst ThemeContext = createContext('light');\n```\n\n### Providing Context\n\n```jsx\nfunction App() {\n  return (\n    <ThemeContext.Provider value=\"dark\">\n      <Toolbar />\n    </ThemeContext.Provider>\n  );\n}\n```\n\n### Consuming Context\n\n```jsx\nimport { useContext } from 'react';\n\nfunction Button() {\n  const theme = useContext(ThemeContext);\n  return <button className={`btn-${theme}`}>Click</button>;\n}\n```\n\n### Multiple Contexts\n\n```jsx\nconst UserContext = createContext(null);\nconst ThemeContext = createContext('light');\n\nfunction Profile() {\n  const user = useContext(UserContext);\n  const theme = useContext(ThemeContext);\n  return <div className={theme}>{user.name}</div>;\n}\n```\n\n| Aspect | Description |\n|--------|-------------|\n| Purpose | Share data without prop drilling |\n| Scope | All children within Provider |\n| Re-render | All consumers re-render when value changes |\n| Default value | Used when no Provider exists above |\n\n> **Key Point:** Context is not a state management tool. Use it for global data like themes, locales, and auth. Overusing context can hurt performance since all consumers re-render on value change.",
+  "codeExample": "import { createContext, useContext, useState } from 'react';\n\nconst AuthContext = createContext(null);\n\nfunction AuthProvider({ children }) {\n  const [user, setUser] = useState(null);\n  return (\n    <AuthContext.Provider value={{ user, setUser }}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n\nfunction useAuth() {\n  return useContext(AuthContext);\n}",
+  "quiz": [
+    {
+      "question": "What is the main benefit of useContext?",
+      "options": ["Improving performance", "Avoiding prop drilling", "Managing server state", "Handling forms"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When do context consumers re-render?",
+      "options": ["Never", "When the context value changes", "Only on mount", "Every render"],
+      "correctIndex": 1
+    }
+  ]
+}

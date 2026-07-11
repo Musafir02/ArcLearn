@@ -1,0 +1,22 @@
+{
+  "title": "useFormStatus Hook",
+  "language": "react",
+  "topic": "use_form_status",
+  "order": 52,
+  "nextTopic": "state_management_overview",
+  "prevTopic": "use_action_state",
+  "content": "### useFormStatus\n\n`useFormStatus` provides the form submission status to components inside a `<form>`. It lets child components (like buttons) know about the parent form's pending state.\n\n---\n\n### Syntax\n\n```jsx\nimport { useFormStatus } from 'react-dom';\n\nconst { pending, data, method, action } = useFormStatus();\n```\n\n### Basic Example\n\n```jsx\nimport { useFormStatus } from 'react-dom';\n\nfunction SubmitButton() {\n  const { pending } = useFormStatus();\n\n  return (\n    <button type=\"submit\" disabled={pending}>\n      {pending ? 'Submitting...' : 'Submit'}\n    </button>\n  );\n}\n\nfunction SignupForm() {\n  return (\n    <form action={handleSignup}>\n      <input name=\"email\" type=\"email\" required />\n      <SubmitButton />\n    </form>\n  );\n}\n```\n\n### Properties Returned\n\n| Property | Type | Description |\n|----------|------|-------------|\n| `pending` | boolean | Form is currently submitting |\n| `data` | FormData | Data being submitted |\n| `method` | string | Form method (get/post) |\n| `action` | function | Form action function |\n\n### Custom Styled Button\n\n```jsx\nfunction LoadingButton({ children }) {\n  const { pending } = useFormStatus();\n\n  return (\n    <button type=\"submit\" disabled={pending}>\n      {pending ? (\n        <span className=\"spinner\" />\n      ) : (\n        children\n      )}\n    </button>\n  );\n}\n```\n\n### useFormStatus vs useActionState\n\n| Hook | Scope |\n|------|-------|\n| `useFormStatus` | Descendant of a `<form>` |\n| `useActionState` | Component containing the `<form>` |\n| Both | Can be used together |\n\n> **Key Point:** useFormStatus must be called from a component rendered inside a `<form>`. It is ideal for building reusable form components like SubmitButton that automatically show loading states without prop drilling.",
+  "codeExample": "import { useFormStatus } from 'react-dom';\n\nfunction SubmitButton({ children }) {\n  const { pending } = useFormStatus();\n  \n  return (\n    <button\n      type=\"submit\"\n      disabled={pending}\n      className={pending ? 'opacity-50' : ''}\n    >\n      {pending ? (\n        <span>Processing...</span>\n      ) : (\n        children\n      )}\n    </button>\n  );\n}\n\nfunction ContactForm() {\n  return (\n    <form action={submitContact}>\n      <input name=\"email\" required />\n      <textarea name=\"message\" required />\n      <SubmitButton>Send Message</SubmitButton>\n    </form>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Where must useFormStatus be called?",
+      "options": ["Anywhere in the app", "Inside a <form> element", "Only at the top level", "Only in Server Components"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the pending property indicate?",
+      "options": ["Form has errors", "Form submission is in progress", "Form data is being validated", "Form has been submitted"],
+      "correctIndex": 1
+    }
+  ]
+}

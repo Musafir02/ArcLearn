@@ -1,0 +1,22 @@
+{
+  "title": "Custom Hooks",
+  "language": "react",
+  "topic": "custom_hooks",
+  "order": 23,
+  "nextTopic": "rules_of_hooks",
+  "prevTopic": "usecallback",
+  "content": "### Custom Hooks\n\nCustom hooks let you extract component logic into reusable functions. They are JavaScript functions that can call other hooks and share stateful logic across components.\n\n---\n\n### Naming Convention\n\nCustom hooks must start with `use` followed by a capital letter (e.g., `useFetch`, `useLocalStorage`).\n\n### Basic Custom Hook\n\n```jsx\nimport { useState, useEffect } from 'react';\n\nfunction useWindowWidth() {\n  const [width, setWidth] = useState(window.innerWidth);\n\n  useEffect(() => {\n    const handleResize = () => setWidth(window.innerWidth);\n    window.addEventListener('resize', handleResize);\n    return () => window.removeEventListener('resize', handleResize);\n  }, []);\n\n  return width;\n}\n```\n\n### Using the Hook\n\n```jsx\nfunction MyComponent() {\n  const width = useWindowWidth();\n  return <p>Window width: {width}px</p>;\n}\n```\n\n### Common Custom Hook Patterns\n\n| Hook | Purpose |\n|------|---------|\n| `useFetch(url)` | Data fetching with loading/error |\n| `useLocalStorage(key)` | Synced localStorage state |\n| `useDebounce(value, delay)` | Debounced value |\n| `useToggle(initial)` | Boolean toggle |\n| `useMediaQuery(query)` | Responsive breakpoints |\n\n### Example: useFetch\n\n```jsx\nfunction useFetch(url) {\n  const [data, setData] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    setLoading(true);\n    fetch(url)\n      .then(res => res.json())\n      .then(data => {\n        setData(data);\n        setLoading(false);\n      });\n  }, [url]);\n\n  return { data, loading };\n}\n```\n\n> **Key Point:** Custom hooks promote code reuse and separation of concerns. They can call other hooks, manage state, and return any value. Two components using the same custom hook share logic but not state.",
+  "codeExample": "function useLocalStorage(key, initialValue) {\n  const [value, setValue] = useState(() => {\n    const stored = localStorage.getItem(key);\n    return stored ? JSON.parse(stored) : initialValue;\n  });\n\n  useEffect(() => {\n    localStorage.setItem(key, JSON.stringify(value));\n  }, [key, value]);\n\n  return [value, setValue];\n}",
+  "quiz": [
+    {
+      "question": "What naming convention must custom hooks follow?",
+      "options": ["Start with 'hook'", "Start with 'use'", "Start with a capital letter", "Any name is fine"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Do two components using the same custom hook share state?",
+      "options": ["Yes", "No, each component has independent state", "Only with useRef", "Only with useContext"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Component Lifecycle",
+  "language": "react",
+  "topic": "lifecycle",
+  "order": 8,
+  "nextTopic": "events",
+  "prevTopic": "state",
+  "content": "### Component Lifecycle\n\nEvery React component goes through three phases: mounting, updating, and unmounting. With hooks, the `useEffect` hook manages side effects across all phases.\n\n---\n\n### Lifecycle Phases\n\n| Phase | Description |\n|-------|-------------|\n| Mounting | Component is inserted into the DOM |\n| Updating | Component re-renders due to state or prop changes |\n| Unmounting | Component is removed from the DOM |\n\n### useEffect Mapping\n\n```jsx\nimport { useEffect } from 'react';\n\n// Mount (runs once)\nuseEffect(() => {\n  console.log('Mounted');\n}, []);\n\n// Update (runs when count changes)\nuseEffect(() => {\n  console.log('Count changed');\n}, [count]);\n\n// Unmount (cleanup function)\nuseEffect(() => {\n  return () => console.log('Unmounted');\n}, []);\n```\n\n### Class Component Lifecycle (Legacy)\n\n```jsx\nclass MyComponent extends React.Component {\n  componentDidMount() { /* runs after first render */ }\n  componentDidUpdate(prevProps, prevState) { /* runs after updates */ }\n  componentWillUnmount() { /* runs before unmount */ }\n}\n```\n\n> **Key Point:** In functional components, useEffect replaces componentDidMount, componentDidUpdate, and componentWillUnmount. The dependency array controls when the effect runs.",
+  "codeExample": "import { useEffect, useState } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const id = setInterval(() => setSeconds(s => s + 1), 1000);\n    return () => clearInterval(id);\n  }, []);\n\n  return <p>{seconds}s</p>;\n}",
+  "quiz": [
+    {
+      "question": "Which hook handles side effects in functional components?",
+      "options": ["useState", "useEffect", "useRef", "useContext"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the purpose of the cleanup function in useEffect?",
+      "options": ["To optimize performance", "To clean up subscriptions and prevent memory leaks", "To update state", "To log errors"],
+      "correctIndex": 1
+    }
+  ]
+}

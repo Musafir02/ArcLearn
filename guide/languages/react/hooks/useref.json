@@ -1,0 +1,22 @@
+{
+  "title": "useRef Hook",
+  "language": "react",
+  "topic": "useref",
+  "order": 19,
+  "nextTopic": "usereducer",
+  "prevTopic": "usecontext",
+  "content": "### useRef\n\n`useRef` returns a mutable ref object whose `.current` property persists across renders. Unlike state, changing a ref does not trigger a re-render.\n\n---\n\n### Syntax\n\n```jsx\nimport { useRef } from 'react';\n\nconst ref = useRef(initialValue);\n// ref.current persists across renders\n```\n\n### Use Case 1: Accessing DOM Nodes\n\n```jsx\nfunction AutoFocus() {\n  const inputRef = useRef(null);\n\n  useEffect(() => {\n    inputRef.current.focus();\n  }, []);\n\n  return <input ref={inputRef} type=\"text\" />;\n}\n```\n\n### Use Case 2: Storing Mutable Values\n\n```jsx\nfunction Timer() {\n  const intervalRef = useRef(null);\n\n  const start = () => {\n    intervalRef.current = setInterval(() => {}, 1000);\n  };\n\n  const stop = () => {\n    clearInterval(intervalRef.current);\n  };\n}\n```\n\n### Use Case 3: Tracking Previous Values\n\n```jsx\nfunction usePrevious(value) {\n  const ref = useRef();\n  useEffect(() => {\n    ref.current = value;\n  }, [value]);\n  return ref.current;\n}\n```\n\n| Feature | useState | useRef |\n|---------|----------|--------|\n| Triggers re-render | Yes | No |\n| Persists across renders | Yes | Yes |\n| Asynchronous update | Yes | No |\n\n> **Key Point:** useRef is useful for values that need to persist across renders but should not trigger re-renders when changed. Common uses: interval IDs, previous values, and DOM refs.",
+  "codeExample": "import { useRef } from 'react';\n\nfunction ClickCounter() {\n  const countRef = useRef(0);\n\n  const handleClick = () => {\n    countRef.current += 1;\n    console.log(`Clicked ${countRef.current} times`);\n  };\n\n  return <button onClick={handleClick}>Click (no re-render)</button>;\n}",
+  "quiz": [
+    {
+      "question": "Does changing ref.current cause a re-render?",
+      "options": ["Yes", "No", "Only in strict mode", "Only with useRef hook"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a common use case for useRef?",
+      "options": ["Managing form state", "Accessing DOM nodes imperatively", "Fetching API data", "Creating context"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Render Props",
+  "language": "react",
+  "topic": "render_props",
+  "order": 44,
+  "nextTopic": "compositon_vs_inheritance",
+  "prevTopic": "higher_order_components",
+  "content": "### Render Props\n\nA render prop is a function prop that a component uses to determine what to render. It is another pattern for sharing code between components.\n\n---\n\n### Basic Pattern\n\n```jsx\nfunction MouseTracker({ render }) {\n  const [position, setPosition] = useState({ x: 0, y: 0 });\n\n  useEffect(() => {\n    const handler = (e) => setPosition({ x: e.clientX, y: e.clientY });\n    window.addEventListener('mousemove', handler);\n    return () => window.removeEventListener('mousemove', handler);\n  }, []);\n\n  return render(position);\n}\n\n// Usage\n<MouseTracker\n  render={({ x, y }) => (\n    <p>Mouse position: {x}, {y}</p>\n  )}\n/>\n```\n\n### Children as Function\n\n```jsx\nfunction DataFetcher({ url, children }) {\n  const [data, setData] = useState(null);\n\n  useEffect(() => {\n    fetch(url).then(res => res.json()).then(setData);\n  }, [url]);\n\n  return children(data);\n}\n\n<DataFetcher url=\"/api/users\">\n  {(data) => data ? <UserList users={data} /> : <p>Loading...</p>}\n</DataFetcher>\n```\n\n### Render Props vs Hooks\n\n| Aspect | Render Props | Hooks |\n|--------|-------------|-------|\n| Composition | Through JSX nesting | Through function composition |\n| Tree depth | Adds nesting | No nesting |\n| Reusability | At component level | At function level |\n| Readability | Can create nesting hell | Linear logic |\n| Modern | Legacy pattern | Recommended |\n\n> **Key Point:** Render props are largely superseded by hooks, which provide the same code reuse without nesting. However, render props pattern is still common in some libraries and legacy code.",
+  "codeExample": "function WindowSize({ children }) {\n  const [size, setSize] = useState({\n    width: window.innerWidth,\n    height: window.innerHeight\n  });\n\n  useEffect(() => {\n    const handler = () => setSize({\n      width: window.innerWidth,\n      height: window.innerHeight\n    });\n    window.addEventListener('resize', handler);\n    return () => window.removeEventListener('resize', handler);\n  }, []);\n\n  return children(size);\n}\n\n<WindowSize>\n  {({ width, height }) => <p>{width}x{height}</p>}\n</WindowSize>",
+  "quiz": [
+    {
+      "question": "What is a render prop?",
+      "options": ["A prop that renders a component", "A function prop that controls what to render", "A prop that styles components", "A prop that handles events"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the modern alternative to render props?",
+      "options": ["Class components", "Hooks", "PureComponent", "getDerivedStateFromProps"],
+      "correctIndex": 1
+    }
+  ]
+}

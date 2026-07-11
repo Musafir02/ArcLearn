@@ -1,0 +1,22 @@
+{
+  "title": "Rendering Elements",
+  "language": "react",
+  "topic": "rendering",
+  "order": 4,
+  "nextTopic": "components",
+  "prevTopic": "jsx",
+  "content": "### Rendering Elements\n\nElements are the smallest building blocks of React apps. An element describes what you want to see on the screen.\n\n---\n\n### Rendering to the DOM\n\n```jsx\nimport { createRoot } from 'react-dom/client';\n\nconst root = createRoot(document.getElementById('root'));\nconst element = <h1>Hello, world</h1>;\nroot.render(element);\n```\n\n### Updating the Rendered Element\n\nReact elements are immutable. To update the UI, create a new element and pass it to `root.render()`:\n\n```jsx\nfunction tick() {\n  const element = (\n    <div>\n      <h1>Current Time</h1>\n      <h2>{new Date().toLocaleTimeString()}</h2>\n    </div>\n  );\n  root.render(element);\n}\n\nsetInterval(tick, 1000);\n```\n\n### React Only Updates What's Necessary\n\nReact DOM compares the element and its children to the previous version and applies only the necessary DOM updates.\n\n| Method | Purpose |\n|--------|---------|\n| `createRoot(container)` | Creates a React root |\n| `root.render(element)` | Renders the element into the root |\n| `root.unmount()` | Destroys the rendered tree |\n\n> **Key Point:** In practice, you call `root.render()` once in your app. State updates within components trigger re-renders automatically.",
+  "codeExample": "import { createRoot } from 'react-dom/client';\n\nconst root = createRoot(document.getElementById('root'));\nroot.render(<h1>Hello, React!</h1>);",
+  "quiz": [
+    {
+      "question": "How do you create a React root?",
+      "options": ["ReactDOM.createRoot()", "createRoot()", "React.createRoot()", "new ReactRoot()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are React elements mutable?",
+      "options": ["Yes", "No", "Only class components", "Only functional components"],
+      "correctIndex": 1
+    }
+  ]
+}

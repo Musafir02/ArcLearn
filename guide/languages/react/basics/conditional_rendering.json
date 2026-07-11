@@ -1,0 +1,22 @@
+{
+  "title": "Conditional Rendering",
+  "language": "react",
+  "topic": "conditional_rendering",
+  "order": 10,
+  "nextTopic": "lists_keys",
+  "prevTopic": "events",
+  "content": "### Conditional Rendering\n\nReact allows you to conditionally render elements based on state or props using JavaScript operators.\n\n---\n\n### If/Else\n\n```jsx\nfunction Greeting({ isLoggedIn }) {\n  if (isLoggedIn) {\n    return <h1>Welcome back</h1>;\n  }\n  return <h1>Please sign in</h1>;\n}\n```\n\n### Ternary Operator\n\n```jsx\nfunction Status({ isOnline }) {\n  return (\n    <div>\n      User is {isOnline ? 'Online' : 'Offline'}\n    </div>\n  );\n}\n```\n\n### Logical AND (&&)\n\n```jsx\nfunction Notification({ messages }) {\n  return (\n    <div>\n      {messages.length > 0 && (\n        <p>You have {messages.length} unread messages</p>\n      )}\n    </div>\n  );\n}\n```\n\n### Pattern Comparison\n\n| Pattern | Use Case |\n|---------|----------|\n| `if` statement | Multiple branches |\n| Ternary `? :` | Toggle between two values |\n| `&&` | Render or render nothing |\n| `||` | Default fallback value |\n| Switch/Map | Multiple conditions |\n\n> **Key Point:** Be careful with `&&` - do not put numbers on the left side. `0 && <Component />` renders `0`, not nothing.",
+  "codeExample": "function Dashboard({ user }) {\n  return (\n    <div>\n      <h1>{user ? `Welcome, ${user.name}` : 'Please log in'}</h1>\n      {user?.role === 'admin' && <AdminPanel />}\n      {!user && <LoginButton />}\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Why should you avoid numbers on the left side of &&?",
+      "options": ["Syntax error", "0 is falsy and will render '0'", "Performance issues", "React ignores it"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which operator is best for toggling between two values?",
+      "options": ["&&", "||", "Ternary ? :", "if/else"],
+      "correctIndex": 2
+    }
+  ]
+}

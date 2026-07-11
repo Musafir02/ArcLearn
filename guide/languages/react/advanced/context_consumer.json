@@ -1,0 +1,22 @@
+{
+  "title": "Context Consumer",
+  "language": "react",
+  "topic": "context_consumer",
+  "order": 37,
+  "nextTopic": "prop_drilling_solution",
+  "prevTopic": "context_api",
+  "content": "### Context Consumer\n\nThere are multiple ways to consume context values in React: the `useContext` hook, the `Context.Consumer` render prop pattern, and the `Context.displayName` for DevTools.\n\n---\n\n### Method 1: useContext Hook (Recommended)\n\n```jsx\nimport { useContext } from 'react';\nimport { ThemeContext } from './ThemeContext';\n\nfunction ThemedButton() {\n  const { theme, toggleTheme } = useContext(ThemeContext);\n  return (\n    <button\n      onClick={toggleTheme}\n      style={{\n        background: theme === 'dark' ? '#333' : '#fff',\n        color: theme === 'dark' ? '#fff' : '#333'\n      }}\n    >\n      Toggle Theme\n    </button>\n  );\n}\n```\n\n### Method 2: Context.Consumer (Class Components)\n\n```jsx\nimport { ThemeContext } from './ThemeContext';\n\nclass ThemedButton extends React.Component {\n  render() {\n    return (\n      <ThemeContext.Consumer>\n        {({ theme, toggleTheme }) => (\n          <button onClick={toggleTheme}>\n            Current theme: {theme}\n          </button>\n        )}\n      </ThemeContext.Consumer>\n    );\n  }\n}\n```\n\n### Method 3: contextType (Class Components, Single Context)\n\n```jsx\nclass ThemedButton extends React.Component {\n  static contextType = ThemeContext;\n  render() {\n    const { theme } = this.context;\n    return <button>{theme}</button>;\n  }\n}\n```\n\n### Display Name for DevTools\n\n```jsx\nThemeContext.displayName = 'ThemeContext';\n```\n\n| Method | Component Type | Supports Multiple Contexts |\n|--------|---------------|---------------------------|\n| `useContext` | Functional | Yes |\n| `Context.Consumer` | Both | Yes |\n| `contextType` | Class | No (single only) |\n\n> **Key Point:** useContext is the modern and recommended approach. Context.Consumer is useful in class components or when you need multiple context subscriptions inside a single render prop.",
+  "codeExample": "import { useContext } from 'react';\nimport { AuthContext } from './AuthContext';\n\nfunction UserAvatar() {\n  const { user, logout } = useContext(AuthContext);\n\n  if (!user) return <p>Not logged in</p>;\n\n  return (\n    <div>\n      <img src={user.avatar} alt={user.name} />\n      <span>{user.name}</span>\n      <button onClick={logout}>Logout</button>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is the recommended way to consume context in functional components?",
+      "options": ["Context.Consumer", "useContext hook", "contextType", "useContextConsumer"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a class component use multiple contexts with contextType?",
+      "options": ["Yes", "No, only one contextType per class", "Only with Context.Consumer", "Only in React 19"],
+      "correctIndex": 1
+    }
+  ]
+}

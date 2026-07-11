@@ -1,0 +1,22 @@
+{
+  "title": "Testing React Applications",
+  "language": "react",
+  "topic": "testing_react",
+  "order": 56,
+  "nextTopic": "vitest_react",
+  "prevTopic": "tanstack_query",
+  "content": "### Testing React Applications\n\nTesting ensures React components work correctly. The modern testing stack combines Vitest as the test runner and React Testing Library for rendering and interaction.\n\n---\n\n### Testing Pyramid\n\n| Level | Speed | Confidence | Tools |\n|-------|-------|------------|-------|\n| Unit tests | Fast | Low | Vitest |\n| Integration tests | Medium | Medium | Testing Library |\n| E2E tests | Slow | High | Playwright, Cypress |\n\n### What to Test\n\n- User interactions (clicks, typing, form submission)\n- Conditional rendering (loading, error, empty states)\n- Component behavior (state changes, side effects)\n- Accessibility (aria attributes, roles)\n\n### What NOT to Test\n\n- Implementation details (internal state, methods)\n- Third-party library internals\n- Exact CSS classes\n- Every line of code (focus on behavior)\n\n### Testing Philosophy\n\n> Test components the way users interact with them. Find elements by accessible roles and text, not by CSS classes or implementation details.\n\n```jsx\n// Bad: testing implementation\nconst button = wrapper.find('.submit-btn');\n\n// Good: testing behavior\nconst button = screen.getByRole('button', { name: /submit/i });\n```\n\n### Test Types\n\n| Test Type | Example |\n|-----------|---------|\n| Smoke test | Renders without crashing |\n| Behavior test | Click, type, verify output |\n| Edge case test | Empty list, error state |\n| Accessibility test | Labels, roles, aria attributes |\n\n> **Key Point:** Follow the testing trophy, not pyramid. Write more integration tests than unit or E2E tests. Integration tests give the best confidence-to-speed ratio for React apps.",
+  "codeExample": "import { render, screen } from '@testing-library/react';\nimport userEvent from '@testing-library/user-event';\nimport { describe, it, expect } from 'vitest';\n\nimport Counter from './Counter';\n\ndescribe('Counter', () => {\n  it('renders initial count', () => {\n    render(<Counter />);\n    expect(screen.getByText('Count: 0')).toBeInTheDocument();\n  });\n\n  it('increments count on click', async () => {\n    render(<Counter />);\n    await userEvent.click(screen.getByRole('button', { name: '+' }));\n    expect(screen.getByText('Count: 1')).toBeInTheDocument();\n  });\n});",
+  "quiz": [
+    {
+      "question": "What should you focus on when testing React components?",
+      "options": ["Implementation details", "User behavior and accessibility", "CSS class names", "Internal state values"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the recommended testing tool for React?",
+      "options": ["Enzyme", "React Testing Library", "Jasmine", "Mocha"],
+      "correctIndex": 1
+    }
+  ]
+}

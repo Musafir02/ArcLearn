@@ -1,0 +1,22 @@
+{
+  "title": "Context API",
+  "language": "react",
+  "topic": "context_api",
+  "order": 36,
+  "nextTopic": "context_consumer",
+  "prevTopic": "protected_routes",
+  "content": "### Context API\n\nContext provides a way to pass data through the component tree without manually passing props at every level. It is designed for global or widely-shared data.\n\n---\n\n### Creating Context\n\n```jsx\nimport { createContext } from 'react';\n\nconst ThemeContext = createContext('light');\n```\n\n### Provider Component\n\n```jsx\nfunction ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n\n  const toggleTheme = () => {\n    setTheme(prev => prev === 'light' ? 'dark' : 'light');\n  };\n\n  return (\n    <ThemeContext.Provider value={{ theme, toggleTheme }}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n```\n\n### Context and Performance\n\n| Issue | Solution |\n|-------|----------|\n| All consumers re-render on any value change | Split contexts by concern |\n| Deep tree of providers | Compose providers into a single wrapper |\n| Frequent updates | Use memoization or separate fast-changing values |\n\n### Composing Providers\n\n```jsx\nfunction AppProviders({ children }) {\n  return (\n    <ThemeProvider>\n      <AuthProvider>\n        <LanguageProvider>\n          {children}\n        </LanguageProvider>\n      </AuthProvider>\n    </ThemeProvider>\n  );\n}\n```\n\n### When to Use Context\n\n| Good for Context | Not good for Context |\n|-----------------|---------------------|\n| Theme (light/dark) | Frequently updating data |\n| User authentication | High-frequency real-time data |\n| Locale/language | Server state (use TanStack Query) |\n| Feature flags | Form state (keep local) |\n\n> **Key Point:** Context is NOT a replacement for state management libraries. It solves prop drilling for data that is truly global. Overusing context leads to unnecessary re-renders and performance issues.",
+  "codeExample": "import { createContext, useState, useContext } from 'react';\n\nconst LocaleContext = createContext('en');\n\nfunction LocaleProvider({ children }) {\n  const [locale, setLocale] = useState('en');\n  return (\n    <LocaleContext.Provider value={{ locale, setLocale }}>\n      {children}\n    </LocaleContext.Provider>\n  );\n}\n\nfunction useLocale() {\n  return useContext(LocaleContext);\n}",
+  "quiz": [
+    {
+      "question": "What problem does Context API solve?",
+      "options": ["Performance optimization", "Prop drilling", "Data fetching", "Form validation"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is Context API a replacement for state management libraries?",
+      "options": ["Yes", "No, it solves a different problem", "Only for small apps", "Only for global state"],
+      "correctIndex": 1
+    }
+  ]
+}
