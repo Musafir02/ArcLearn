@@ -1,0 +1,19 @@
+{
+  "title": "URLs and Views",
+  "language": "django",
+  "topic": "urls_views",
+  "content": "### URL Configuration\n\nDjango uses URL configurations (urlconf) to map URL patterns to views. The main `urls.py` file defines the `urlpatterns` list:\n\n```python\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('', views.home, name='home'),\n    path('about/', views.about, name='about'),\n]\n```\n\n### path() and re_path()\n\n- **path()**: Simple URL routing with converters\n- **re_path()**: Uses regular expressions for complex patterns\n\n```python\nfrom django.urls import path, re_path\n\nurlpatterns = [\n    path('articles/2026/', views.special_case),\n    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive),\n]\n```\n\n### Path Converters\n\nDjango provides built-in path converters to capture URL parameters:\n\n```python\npath('articles/<int:year>/', views.year_archive)\npath('articles/<int:year>/<slug:slug>/', views.article_detail)\npath('blog/<uuid:uuid>/', views.blog_detail)\npath('profile/<str:username>/', views.profile)\n```\n\n| Converter | Matches | Example |\n|-----------|---------|---------|\n| `str` | Any non-empty string (no slashes) | `hello` |\n| `int` | Zero or positive integer | `2026` |\n| `slug` | ASCII letters, numbers, hyphens, underscores | `my-article-title` |\n| `uuid` | UUID format | `550e8400-e29b-41d4-a716-446655440000` |\n| `path` | Any non-empty string (can include slashes) | `segment/foo/bar` |\n\n### Function-Based Views\n\nA view is a callable that takes an `HttpRequest` and returns an `HttpResponse`:\n\n```python\nfrom django.http import HttpResponse, Http404\nfrom django.shortcuts import render, get_object_or_404\n\ndef article_detail(request, year, slug):\n    # request: HttpRequest object\n    # year, slug: captured from URL\n    article = get_object_or_404(Article, year=year, slug=slug)\n    return render(request, 'blog/detail.html', {'article': article})\n```\n\n### include() for App URLs\n\nUse `include()` to delegate URL patterns to individual apps, keeping the project organized:\n\n```python\n# mysite/urls.py\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('polls/', include('polls.urls')),\n    path('blog/', include('blog.urls')),\n    path('admin/', admin.site.urls),\n]\n\n# polls/urls.py\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('<int:question_id>/', views.detail, name='detail'),\n]\n```\n\n### Naming URLs\n\nNaming URLs allows you to reference them in templates and views without hardcoding paths:\n\n```python\nurlpatterns = [\n    path('articles/<int:year>/', views.year_archive, name='articles-year'),\n]\n```\n\nIn templates:\n```html\n<a href=\"{% url 'articles-year' year=2026 %}\">2026 Archives</a>\n```\n\nIn views:\n```python\nfrom django.urls import reverse\nurl = reverse('articles-year', args=[2026])\n```",
+  "codeExample": "from django.urls import path\nfrom . import views\n\napp_name = 'blog'\nurlpatterns = [\n    path('', views.PostListView.as_view(), name='post_list'),\n    path('<int:pk>/', views.PostDetailView.as_view(), name='post_detail'),\n    path('<int:pk>/comment/', views.add_comment, name='add_comment'),\n]",
+  "quiz": [
+    {
+      "question": "Which function is used to include URL patterns from other apps?",
+      "options": ["url()", "include()", "extend()", "import_urls()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the <int:year> path converter capture?",
+      "options": ["A string like 'twenty-twenty-six'", "A zero or positive integer", "Any character including slashes", "A UUID format string"],
+      "correctIndex": 1
+    }
+  ]
+}

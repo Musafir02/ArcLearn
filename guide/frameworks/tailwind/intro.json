@@ -1,0 +1,24 @@
+{
+  "title": "Introduction to Tailwind CSS",
+  "language": "tailwind",
+  "topic": "intro",
+  "content": "### What is Tailwind CSS?\n\nTailwind CSS is a utility-first CSS framework that provides low-level, composable utility classes to build custom designs directly in your HTML. Unlike traditional CSS frameworks like Bootstrap that offer pre-built components, Tailwind gives you building blocks to create your own.\n\n### Utility-First Approach\n\nInstead of writing custom CSS, you apply pre-existing utility classes directly in your markup. Each utility class maps to a single CSS property-value pair:\n\n```html\n<button class=\"bg-blue-500 text-white font-bold py-2 px-4 rounded\">\n  Click Me\n</button>\n```\n\n### Atomic CSS\n\nTailwind follows atomic CSS principles where each class does one thing. `.bg-blue-500` sets the background color, `.text-white` sets text color, `.font-bold` sets font weight, etc.\n\n### Benefits Over Traditional CSS\n\n- **No naming conventions** - No more BEM or CSS methodology debates\n- **Smaller bundles** - JIT engine purges unused styles\n- **Consistent design system** - Built-in spacing, color, and typography scales\n- **Rapid prototyping** - Style directly in markup without switching files\n- **Responsive by default** - Prefixes for every breakpoint on any utility\n\n### Comparison with Bootstrap\n\n| Feature | Tailwind | Bootstrap |\n|---------|----------|-----------|\n| Approach | Utility-first | Component-first |\n| Customization | Highly configurable | Override variables |\n| Output size | Tiny (purged) | Larger (includes unused) |\n| Learning curve | Steeper (many utilities) | Easier (pre-built components) |\n| Design uniqueness | Easy to achieve | Harder to differentiate |\n\n### Design System Philosophy\n\nTailwind enforces a consistent design system through its configuration file. You define your colors, spacing, typography, and breakpoints in one place, ensuring consistency across your entire project.\n\n### JIT (Just-In-Time) Engine\n\nTailwind v3 introduced a JIT compiler that generates styles on-demand as you author your HTML. This means:\n- **Fast build times** - No full purging step needed\n- **All variants work** - Every combination is generated when used\n- **Arbitrary values** - Use any value with square bracket syntax: `w-[500px]`\n- **Smaller CSS** - Only the classes you use are included",
+  "codeExample": "<div class=\"bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-xl shadow-lg\">\n  <h1 class=\"text-4xl font-bold text-white mb-4\">\n    Tailwind CSS\n  </h1>\n  <p class=\"text-blue-100 text-lg\">\n    A utility-first CSS framework for rapid UI development.\n  </p>\n  <button class=\"mt-6 bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition\">\n    Get Started\n  </button>\n</div>",
+  "quiz": [
+    {
+      "question": "What approach does Tailwind CSS use for styling?",
+      "options": ["Utility-first", "Component-first", "Semantic CSS", "Inline styles"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the JIT engine in Tailwind CSS v3 do?",
+      "options": [
+        "Generates styles on-demand as you author HTML",
+        "Compiles SCSS to CSS",
+        "Minifies all CSS files",
+        "Converts Tailwind to Bootstrap classes"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

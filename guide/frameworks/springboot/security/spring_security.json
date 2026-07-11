@@ -1,0 +1,19 @@
+{
+  "title": "Spring Security Fundamentals",
+  "language": "springboot",
+  "topic": "spring_security",
+  "content": "### Spring Security Starter\n\nAdd the dependency:\n```xml\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-security</artifactId>\n</dependency>\n```\n\n### SecurityFilterChain\n\nModern Spring Security uses a `SecurityFilterChain` bean to configure HTTP security.\n\n```java\n@Configuration\n@EnableWebSecurity\npublic class SecurityConfig {\n\n    @Bean\n    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {\n        http\n            .authorizeHttpRequests(auth -> auth\n                .requestMatchers(\"/api/public/**\").permitAll()\n                .requestMatchers(\"/api/admin/**\").hasRole(\"ADMIN\")\n                .anyRequest().authenticated()\n            )\n            .httpBasic(Customizer.withDefaults());\n        return http.build();\n    }\n}\n```\n\n### Authentication vs Authorization\n\n- **Authentication**: Who are you? (login, identity verification)\n- **Authorization**: What are you allowed to do? (permissions, roles)\n\n### UserDetailsService & PasswordEncoder\n\n```java\n@Service\npublic class CustomUserDetailsService implements UserDetailsService {\n    @Override\n    public UserDetails loadUserByUsername(String username) {\n        // Load user from database\n    }\n}\n\n@Bean\npublic PasswordEncoder passwordEncoder() {\n    return new BCryptPasswordEncoder();\n}\n```\n\n### In-Memory Authentication\n\n```java\n@Bean\npublic UserDetailsManager users() {\n    UserDetails user = User.withDefaultPasswordEncoder()\n        .username(\"user\").password(\"pass\").roles(\"USER\").build();\n    return new InMemoryUserDetailsManager(user);\n}\n```",
+  "codeExample": "@Configuration\n@EnableWebSecurity\npublic class SecurityConfig {\n\n    @Bean\n    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {\n        http\n            .authorizeHttpRequests(auth -> auth\n                .requestMatchers(\"/\", \"/home\", \"/public/**\").permitAll()\n                .requestMatchers(\"/admin/**\").hasRole(\"ADMIN\")\n                .anyRequest().authenticated()\n            )\n            .formLogin(form -> form.loginPage(\"/login\").permitAll())\n            .logout(logout -> logout.permitAll());\n        return http.build();\n    }\n\n    @Bean\n    public PasswordEncoder passwordEncoder() {\n        return new BCryptPasswordEncoder();\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which bean defines HTTP security rules in modern Spring Security?",
+      "options": ["SecurityFilterChain", "WebSecurityConfigurerAdapter", "HttpSecurityBuilder", "AuthenticationManager"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the recommended PasswordEncoder implementation?",
+      "options": ["BCryptPasswordEncoder", "NoOpPasswordEncoder", "StandardPasswordEncoder", "MD5PasswordEncoder"],
+      "correctIndex": 0
+    }
+  ]
+}

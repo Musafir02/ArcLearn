@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with Django",
+  "language": "django",
+  "topic": "getstarted",
+  "content": "### Installation\n\nInstall Django using pip in a virtual environment:\n\n```bash\npip install django\n```\n\nVerify the installation:\n\n```bash\npython -m django --version\n```\n\n### Creating a Project\n\nUse the `django-admin` command-line tool to create a new project:\n\n```bash\ndjango-admin startproject mysite\n```\n\nThis creates a project directory with the following structure:\n\n```\nmysite/\n    manage.py\n    mysite/\n        __init__.py\n        settings.py\n        urls.py\n        asgi.py\n        wsgi.py\n```\n\n### Manage.py\n\n`manage.py` is a command-line utility that lets you interact with the Django project. Common commands:\n\n```bash\n# Run the development server\npython manage.py runserver\n\n# Create a new app\npython manage.py startapp polls\n\n# Make database migrations\npython manage.py makemigrations\n\n# Apply migrations\npython manage.py migrate\n\n# Open the Django shell\npython manage.py shell\n\n# Create a superuser\npython manage.py createsuperuser\n```\n\n### Running the Development Server\n\n```bash\npython manage.py runserver\n```\n\nBy default, the server runs on `http://127.0.0.1:8000`. You can specify a different port:\n\n```bash\npython manage.py runserver 8080\n```\n\n### Project Structure Explained\n\n- **settings.py**: Configuration for the project — database, installed apps, middleware, templates, static files, etc.\n- **urls.py**: URL declarations — maps URLs to views.\n- **wsgi.py**: Entry-point for WSGI-compatible web servers (production).\n- **asgi.py**: Entry-point for ASGI-compatible servers (async).\n\n### Creating an App\n\nDjango projects are composed of apps. Create an app:\n\n```bash\npython manage.py startapp polls\n```\n\nThis creates:\n\n```\npolls/\n    __init__.py\n    admin.py\n    apps.py\n    migrations/\n        __init__.py\n    models.py\n    tests.py\n    views.py\n```\n\nAfter creating an app, add it to `INSTALLED_APPS` in `settings.py`:\n\n```python\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'polls',  # Your new app\n]\n```",
+  "codeExample": "# Start a project and app\n# django-admin startproject mysite\n# cd mysite\n# python manage.py startapp polls\n\n# In polls/views.py\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world. You're at the polls index.\")",
+  "quiz": [
+    {
+      "question": "Which command is used to create a new Django project?",
+      "options": ["django-admin createproject mysite", "django-admin startproject mysite", "python manage.py createproject mysite", "django startproject mysite"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What must you do after creating a new app in Django?",
+      "options": ["Run python manage.py collectstatic", "Add it to INSTALLED_APPS in settings.py", "Create a requirements.txt file", "Rebuild the Django framework"],
+      "correctIndex": 1
+    }
+  ]
+}

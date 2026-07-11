@@ -1,0 +1,24 @@
+{
+  "title": "Colors",
+  "language": "tailwind",
+  "topic": "colors",
+  "content": "### Color System\n\nTailwind ships with an extensive color palette. Each color family has shades from 50 (lightest) to 950 (darkest):\n\n**Neutral Colors:**\n- **slate** - Blue-gray tones\n- **gray** - True gray tones\n- **zinc** - Slightly warm gray\n- **neutral** - Pure neutral gray\n- **stone** - Warm gray\n\n**Color Families:**\n- **red**, **orange**, **amber**, **yellow** - Warm colors\n- **lime**, **green**, **emerald** - Green spectrum\n- **teal**, **cyan** - Cool greens/blues\n- **sky**, **blue**, **indigo** - Blue spectrum\n- **violet**, **purple**, **fuchsia**, **pink**, **rose** - Purple/pink spectrum\n\n### Shade Scale\n\nEach color has shades: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950\n\n- **50-200**: Light backgrounds, hover states\n- **300-400**: Borders, muted elements\n- **500**: Default/base brand color\n- **600-700**: Darker accents, hover states for buttons\n- **800-900**: Text, dark backgrounds\n- **950**: Deepest shade\n\n### Text Color\n\n```html\n<p class=\"text-blue-600\">Blue text</p>\n<p class=\"text-gray-900\">Dark text</p>\n```\n\n### Background Color\n\n```html\n<div class=\"bg-green-100\">Light green background</div>\n<div class=\"bg-indigo-600\">Indigo background</div>\n```\n\n### Border Color\n\n```html\n<div class=\"border border-gray-300\">Light gray border</div>\n<div class=\"border-2 border-red-500\">Red border</div>\n```\n\n### Ring Color (Focus Indicators)\n\n```html\n<button class=\"focus:ring-2 focus:ring-blue-500\">\n  Focused button\n</button>\n```\n\n### Custom Colors\n\nExtend the default palette in `tailwind.config.js`:\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brand: {\n          50: '#eff6ff',\n          100: '#dbeafe',\n          500: '#3b82f6',\n          900: '#1e3a5f',\n        },\n      },\n    },\n  },\n}\n```\n\nThen use with `text-brand-500`, `bg-brand-100`, etc.",
+  "codeExample": "<div class=\"space-y-4\">\n  <div class=\"bg-blue-50 text-blue-800 p-4 rounded-lg border border-blue-200\">\n    Blue light variant\n  </div>\n  <div class=\"bg-blue-500 text-white p-4 rounded-lg\">\n    Blue default\n  </div>\n  <div class=\"bg-blue-900 text-blue-200 p-4 rounded-lg\">\n    Blue dark variant\n  </div>\n  <button class=\"bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg shadow\">\n    Success Button\n  </button>\n</div>",
+  "quiz": [
+    {
+      "question": "Which shade number represents the lightest color in Tailwind's color scale?",
+      "options": ["50", "100", "0", "25"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you add a custom color to Tailwind's palette?",
+      "options": [
+        "Using theme.extend.colors in tailwind.config.js",
+        "Using @define-color in CSS",
+        "Using --custom-color CSS variable",
+        "Using theme.colors in package.json"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Flexbox",
+  "language": "tailwind",
+  "topic": "flexbox",
+  "content": "### Flex Container\n\nTurn any element into a flex container:\n\n```html\n<div class=\"flex\">    /* display: flex */\n<div class=\"inline-flex\"> /* display: inline-flex */\n```\n\n### Flex Direction\n\nControl the main axis direction:\n\n```html\n<div class=\"flex flex-row\">        /* row (default) */\n<div class=\"flex flex-row-reverse\"> /* row reverse */\n<div class=\"flex flex-col\">         /* column */\n<div class=\"flex flex-col-reverse\"> /* column reverse */\n```\n\n### Justify Content (Main Axis)\n\n```html\n<div class=\"flex justify-start\">   /* flex-start */\n<div class=\"flex justify-end\">     /* flex-end */\n<div class=\"flex justify-center\">  /* center */\n<div class=\"flex justify-between\"> /* space-between */\n<div class=\"flex justify-around\">  /* space-around */\n<div class=\"flex justify-evenly\">  /* space-evenly */\n```\n\n### Align Items (Cross Axis)\n\n```html\n<div class=\"flex items-start\">     /* align-items: flex-start */\n<div class=\"flex items-end\">       /* align-items: flex-end */\n<div class=\"flex items-center\">    /* align-items: center */\n<div class=\"flex items-baseline\">  /* align-items: baseline */\n<div class=\"flex items-stretch\">   /* align-items: stretch */\n```\n\n### Flex Wrap\n\n```html\n<div class=\"flex flex-wrap\">          /* allow wrapping */\n<div class=\"flex flex-wrap-reverse\">  /* wrap reverse */\n<div class=\"flex flex-nowrap\">        /* no wrapping */\n```\n\n### Flex Grow & Shrink\n\n```html\n<div class=\"flex-1\">    /* flex: 1 1 0% (grow & shrink) */\n<div class=\"flex-auto\"> /* flex: 1 1 auto */\n<div class=\"flex-none\"> /* flex: none (no grow/shrink) */\n<div class=\"grow\">      /* flex-grow: 1 */\n<div class=\"grow-0\">    /* flex-grow: 0 */\n<div class=\"shrink\">    /* flex-shrink: 1 */\n<div class=\"shrink-0\">  /* flex-shrink: 0 */\n```\n\n### Gap Utilities\n\nSpace between flex items:\n\n```html\n<div class=\"flex gap-0\">     /* gap: 0px */\n<div class=\"flex gap-4\">     /* gap: 1rem */\n<div class=\"flex gap-x-4\">   /* column gap */\n<div class=\"flex gap-y-2\">   /* row gap */\n<div class=\"flex gap-8\">     /* gap: 2rem */\n```\n\n### Order\n\n```html\n<div class=\"order-1\">    /* order: 1 */\n<div class=\"order-2\">    /* order: 2 */\n<div class=\"order-first\">/* order: -9999 */\n<div class=\"order-last\"> /* order: 9999 */\n<div class=\"order-none\"> /* order: 0 */\n```\n\n### Align Self\n\nOverride alignment for a single item:\n\n```html\n<div class=\"self-auto\">     /* align-self: auto */\n<div class=\"self-start\">    /* align-self: flex-start */\n<div class=\"self-end\">      /* align-self: flex-end */\n<div class=\"self-center\">   /* align-self: center */\n<div class=\"self-stretch\">  /* align-self: stretch */\n```",
+  "codeExample": "<nav class=\"flex items-center justify-between p-6 bg-gray-800 text-white\">\n  <div class=\"flex items-center gap-2\">\n    <span class=\"text-xl font-bold\">Logo</span>\n  </div>\n  <ul class=\"flex gap-6\">\n    <li><a href=\"#\" class=\"hover:text-gray-300\">Home</a></li>\n    <li><a href=\"#\" class=\"hover:text-gray-300\">About</a></li>\n    <li><a href=\"#\" class=\"hover:text-gray-300\">Contact</a></li>\n  </ul>\n  <button class=\"bg-blue-500 px-4 py-2 rounded hover:bg-blue-600\">\n    Sign Up\n  </button>\n</nav>",
+  "quiz": [
+    {
+      "question": "Which class distributes flex items with equal space between them?",
+      "options": ["justify-between", "justify-around", "justify-evenly", "justify-center"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does flex-1 do to a flex child?",
+      "options": [
+        "Allows it to grow and shrink equally",
+        "Makes it full width",
+        "Removes it from flex flow",
+        "Orders it first"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

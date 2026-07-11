@@ -1,0 +1,19 @@
+{
+  "title": "Dark Mode",
+  "language": "tailwind",
+  "topic": "dark_mode",
+  "content": "### Dark Mode Setup\n\nTailwind supports two strategies for dark mode:\n\n**Class strategy** (recommended) - Toggle via a CSS class:\n\n```js\n// tailwind.config.js\nmodule.exports = {\n  darkMode: 'class',  // or 'media'\n}\n```\n\n**Media strategy** - Uses `prefers-color-scheme` media query:\n\n```js\nmodule.exports = {\n  darkMode: 'media',  // automatic based on OS setting\n}\n```\n\n### Dark Variant\n\nUse the `dark:` prefix to apply styles in dark mode:\n\n```html\n<div class=\"bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100\">\n  <h1 class=\"text-gray-900 dark:text-white\">Dark Mode Supported</h1>\n  <p class=\"text-gray-600 dark:text-gray-400\">\n    This text adapts to dark mode.\n  </p>\n</div>\n```\n\n### Toggling Dark Mode with JavaScript\n\nWith the `class` strategy, toggle dark mode by adding/removing the `dark` class on a parent element:\n\n```html\n<!-- HTML -->\n<button id=\"darkToggle\">Toggle Dark Mode</button>\n```\n\n```js\n// JavaScript\nconst toggle = document.getElementById('darkToggle');\ntoggle.addEventListener('click', () => {\n  document.documentElement.classList.toggle('dark');\n});\n\n// Persist preference\nlocalStorage.setItem('theme', \n  document.documentElement.classList.contains('dark') ? 'dark' : 'light'\n);\n```\n\n### Dark Mode Color Scheme\n\nCommon dark mode patterns:\n\n```html\n<!-- Page background -->\n<body class=\"bg-white dark:bg-gray-900\">\n\n<!-- Cards -->\n<div class=\"bg-white dark:bg-gray-800 shadow dark:shadow-2xl\">\n\n<!-- Text -->\n<p class=\"text-gray-700 dark:text-gray-300\">\n\n<!-- Borders -->\n<div class=\"border-gray-200 dark:border-gray-700\">\n\n<!-- Buttons -->\n<button class=\"bg-gray-200 dark:bg-gray-700 \n               text-gray-800 dark:text-gray-200\n               hover:bg-gray-300 dark:hover:bg-gray-600\">\n```\n\n### Dark Mode Best Practices\n\n- **Use the `class` strategy** for user-controlled toggling\n- **Always define both light and dark values** for text and backgrounds\n- **Test with system preference** using `prefers-color-scheme`\n- **Use semantic colors** (e.g., `bg-default`, `text-primary`) via custom config\n- **Don't force dark mode** - respect user preferences\n- **Avoid hardcoding colors** - use Tailwind's color palette consistently",
+  "codeExample": "<div class=\"bg-white dark:bg-gray-900 min-h-screen p-8 transition-colors\">\n  <div class=\"max-w-md mx-auto bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg\">\n    <h2 class=\"text-2xl font-bold text-gray-900 dark:text-white\">\n      Dark Mode Demo\n    </h2>\n    <p class=\"mt-2 text-gray-600 dark:text-gray-400\">\n      Toggle dark mode to see the theme change.\n    </p>\n    <button onclick=\"document.documentElement.classList.toggle('dark')\"\n            class=\"mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg\n                   hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400\">\n      Toggle Theme\n    </button>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "What is the recommended darkMode strategy for user-controlled toggling?",
+      "options": ["class", "media", "manual", "auto"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you apply a style only in dark mode using Tailwind?",
+      "options": ["dark:utility", "night:utility", "dm:utility", "theme-dark:utility"],
+      "correctIndex": 0
+    }
+  ]
+}

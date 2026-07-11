@@ -1,0 +1,19 @@
+{
+  "title": "Typography",
+  "language": "tailwind",
+  "topic": "typography",
+  "content": "### Font Family\n\nTailwind provides three font family utilities:\n\n```html\n<p class=\"font-sans\">Sans-serif font (system UI)</p>\n<p class=\"font-serif\">Serif font (Georgia, etc.)</p>\n<p class=\"font-mono\">Monospace font (SF Mono, etc.)</p>\n```\n\n### Font Size\n\nScale from `text-xs` (0.75rem) to `text-9xl` (8rem):\n\n```html\n<p class=\"text-xs\">Extra small (12px)</p>\n<p class=\"text-sm\">Small (14px)</p>\n<p class=\"text-base\">Base (16px) - default</p>\n<p class=\"text-lg\">Large (18px)</p>\n<p class=\"text-xl\">Extra large (20px)</p>\n<p class=\"text-2xl\">2xl (24px)</p>\n<p class=\"text-3xl\">3xl (30px)</p>\n<p class=\"text-4xl\">4xl (36px)</p>\n<p class=\"text-5xl\">5xl (48px)</p>\n<p class=\"text-6xl\">6xl (60px)</p>\n<p class=\"text-7xl\">7xl (72px)</p>\n<p class=\"text-8xl\">8xl (96px)</p>\n<p class=\"text-9xl\">9xl (128px)</p>\n```\n\n### Font Weight\n\n```html\n<p class=\"font-thin\">     /* 100 */\n<p class=\"font-extralight\">/* 200 */\n<p class=\"font-light\">    /* 300 */\n<p class=\"font-normal\">   /* 400 */\n<p class=\"font-medium\">   /* 500 */\n<p class=\"font-semibold\"> /* 600 */\n<p class=\"font-bold\">     /* 700 */\n<p class=\"font-extrabold\">/* 800 */\n<p class=\"font-black\">    /* 900 */\n```\n\n### Text Color\n\n```html\n<p class=\"text-gray-500\">Gray text</p>\n<p class=\"text-blue-600\">Blue text</p>\n<p class=\"text-red-400\">Light red text</p>\n```\n\n### Text Alignment\n\n```html\n<p class=\"text-left\">   /* text-align: left */\n<p class=\"text-center\"> /* text-align: center */\n<p class=\"text-right\">  /* text-align: right */\n<p class=\"text-justify\">/* text-align: justify */\n```\n\n### Text Decoration\n\n```html\n<p class=\"underline\">           /* text-decoration: underline */\n<p class=\"line-through\">        /* text-decoration: line-through */\n<p class=\"no-underline\">        /* text-decoration: none */\n<p class=\"underline decoration-2\">/* underline with thickness */\n<p class=\"underline decoration-dashed\">\n```\n\n### Line Height\n\n```html\n<p class=\"leading-none\">    /* line-height: 1 */\n<p class=\"leading-tight\">   /* line-height: 1.25 */\n<p class=\"leading-normal\">  /* line-height: 1.5 */\n<p class=\"leading-relaxed\"> /* line-height: 1.625 */\n<p class=\"leading-loose\">   /* line-height: 2 */\n<p class=\"leading-6\">       /* line-height: 1.5rem */\n<p class=\"leading-10\">      /* line-height: 2.5rem */\n```\n\n### Letter Spacing\n\n```html\n<p class=\"tracking-tighter\"> /* letter-spacing: -0.05em */\n<p class=\"tracking-tight\">   /* letter-spacing: -0.025em */\n<p class=\"tracking-normal\">  /* letter-spacing: 0 */\n<p class=\"tracking-wide\">    /* letter-spacing: 0.025em */\n<p class=\"tracking-wider\">   /* letter-spacing: 0.05em */\n<p class=\"tracking-widest\">  /* letter-spacing: 0.1em */\n```",
+  "codeExample": "<article class=\"prose prose-lg max-w-2xl mx-auto\">\n  <h1 class=\"text-4xl font-bold tracking-tight text-gray-900\">\n    The Art of Typography\n  </h1>\n  <h2 class=\"text-2xl font-semibold text-gray-700 mt-8 mb-4\">\n    Chapter 1: Scale & Proportion\n  </h2>\n  <p class=\"text-base leading-relaxed text-gray-600\">\n    Good typography establishes a clear visual hierarchy. Using heading sizes,\n    font weights, and line spacing creates rhythm and readability.\n  </p>\n  <p class=\"text-sm tracking-wide uppercase text-gray-400 mt-8\">\n    — Design Principles\n  </p>\n</article>",
+  "quiz": [
+    {
+      "question": "Which class sets font-size to the base default of 16px?",
+      "options": ["text-base", "text-md", "text-normal", "text-default"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does leading-relaxed control in Tailwind?",
+      "options": ["Line height", "Letter spacing", "Font weight", "Padding top"],
+      "correctIndex": 0
+    }
+  ]
+}

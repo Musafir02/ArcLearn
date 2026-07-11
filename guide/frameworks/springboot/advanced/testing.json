@@ -1,0 +1,19 @@
+{
+  "title": "Testing Spring Boot Applications",
+  "language": "springboot",
+  "topic": "testing",
+  "content": "### Testing Annotations\n\nSpring Boot provides slice test annotations to load only relevant parts of the application.\n\n| Annotation | Description |\n|---|---|\n| `@SpringBootTest` | Full application context for integration tests |\n| `@WebMvcTest` | Web layer only (controllers) |\n| `@DataJpaTest` | JPA layer only (repositories) |\n| `@RestClientTest` | REST client components |\n| `@JsonTest` | JSON serialization |\n\n### Testing Controllers with MockMvc\n\n```java\n@WebMvcTest(UserController.class)\nclass UserControllerTest {\n\n    @Autowired\n    private MockMvc mockMvc;\n\n    @MockBean\n    private UserService userService;\n\n    @Test\n    void shouldReturnUsers() throws Exception {\n        when(userService.findAll()).thenReturn(List.of(new User(1L, \"Alice\")));\n\n        mockMvc.perform(get(\"/api/users\"))\n            .andExpect(status().isOk())\n            .andExpect(jsonPath(\"$[0].name\").value(\"Alice\"));\n    }\n}\n```\n\n### Testing Repositories\n\n```java\n@DataJpaTest\n@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)\nclass UserRepositoryTest {\n\n    @Autowired\n    private UserRepository userRepository;\n\n    @Test\n    void shouldFindByEmail() {\n        User user = new User(\"test@example.com\", \"Test\");\n        userRepository.save(user);\n\n        Optional<User> found = userRepository.findByEmail(\"test@example.com\");\n        assertThat(found).isPresent();\n    }\n}\n```\n\n### @MockBean and @SpyBean\n\n- **@MockBean**: Replaces a bean with a Mockito mock in the application context\n- **@SpyBean**: Wraps a real bean with a Mockito spy\n\n### Integration Test with TestRestTemplate / WebTestClient\n\n```java\n@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)\nclass UserControllerIntegrationTest {\n    @Autowired\n    private TestRestTemplate restTemplate;\n\n    @Test\n    void shouldCreateUser() {\n        var request = new CreateUserRequest(\"Alice\", \"alice@test.com\");\n        ResponseEntity<User> response = restTemplate.postForEntity(\n            \"/api/users\", request, User.class);\n        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);\n    }\n}\n```",
+  "codeExample": "@WebMvcTest(OrderController.class)\nclass OrderControllerTest {\n\n    @Autowired private MockMvc mockMvc;\n    @MockBean private OrderService orderService;\n\n    @Test\n    void getOrder_shouldReturn200() throws Exception {\n        Order order = new Order(1L, \"PENDING\");\n        when(orderService.findById(1L)).thenReturn(Optional.of(order));\n\n        mockMvc.perform(get(\"/api/orders/1\"))\n            .andExpect(status().isOk())\n            .andExpect(jsonPath(\"$.status\").value(\"PENDING\"));\n    }\n\n    @Test\n    void getOrder_shouldReturn404() throws Exception {\n        when(orderService.findById(99L)).thenReturn(Optional.empty());\n\n        mockMvc.perform(get(\"/api/orders/99\"))\n            .andExpect(status().isNotFound());\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which annotation loads only the web layer for controller testing?",
+      "options": ["@WebMvcTest", "@SpringBootTest", "@DataJpaTest", "@RestClientTest"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does @MockBean do?",
+      "options": ["Replaces a bean with a Mockito mock in the context", "Creates a new mock bean", "Mocks static methods", "Spies on an existing bean"],
+      "correctIndex": 0
+    }
+  ]
+}

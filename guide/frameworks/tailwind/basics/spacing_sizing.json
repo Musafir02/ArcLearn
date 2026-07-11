@@ -1,0 +1,19 @@
+{
+  "title": "Spacing & Sizing",
+  "language": "tailwind",
+  "topic": "spacing_sizing",
+  "content": "### Spacing Scale\n\nTailwind uses a consistent 4px-based spacing scale. Each unit = 0.25rem (4px by default):\n\n| Class | Value | px |\n|-------|-------|----|\n| `p-0` | 0 | 0px |\n| `p-1` | 0.25rem | 4px |\n| `p-2` | 0.5rem | 8px |\n| `p-3` | 0.75rem | 12px |\n| `p-4` | 1rem | 16px |\n| `p-6` | 1.5rem | 24px |\n| `p-8` | 2rem | 32px |\n| `p-12` | 3rem | 48px |\n| `p-16` | 4rem | 64px |\n| `p-20` | 5rem | 80px |\n| `p-24` | 6rem | 96px |\n\n### Padding Utilities\n\n```html\n<div class=\"p-4\">    /* padding: 1rem all sides */\n<div class=\"px-4\">   /* padding-left/right: 1rem */\n<div class=\"py-2\">   /* padding-top/bottom: 0.5rem */\n<div class=\"pt-4\">   /* padding-top: 1rem */\n<div class=\"pr-4\">   /* padding-right: 1rem */\n<div class=\"pb-4\">   /* padding-bottom: 1rem */\n<div class=\"pl-4\">   /* padding-left: 1rem */\n```\n\n### Margin Utilities\n\n```html\n<div class=\"m-4\">    /* margin: 1rem all sides */\n<div class=\"mx-auto\">/* margin-left/right: auto (center) */\n<div class=\"my-8\">   /* margin-top/bottom: 2rem */\n<div class=\"mt-6\">   /* margin-top: 1.5rem */\n<div class=\"mb-2\">   /* margin-bottom: 0.5rem */\n<div class=\"ml-auto\">/* margin-left: auto */\n```\n\n### Width Utilities\n\n```html\n<div class=\"w-0\">    /* width: 0px */\n<div class=\"w-4\">    /* width: 1rem */\n<div class=\"w-64\">   /* width: 16rem */\n<div class=\"w-1/2\">  /* width: 50% */\n<div class=\"w-2/3\">  /* width: 66.666667% */\n<div class=\"w-3/4\">  /* width: 75% */\n<div class=\"w-full\"> /* width: 100% */\n<div class=\"w-screen\">/* width: 100vw */\n<div class=\"w-auto\"> /* width: auto */\n<div class=\"w-[200px]\"> /* arbitrary value */\n```\n\n### Height Utilities\n\n```html\n<div class=\"h-4\">     /* height: 1rem */\n<div class=\"h-64\">    /* height: 16rem */\n<div class=\"h-full\">  /* height: 100% */\n<div class=\"h-screen\">/* height: 100vh */\n<div class=\"h-auto\">  /* height: auto */\n```\n\n### Min/Max Width & Height\n\n```html\n<div class=\"min-w-0\">     /* min-width: 0px */\n<div class=\"min-w-full\">  /* min-width: 100% */\n<div class=\"min-h-screen\">/* min-height: 100vh */\n<div class=\"max-w-xs\">    /* max-width: 20rem */\n<div class=\"max-w-lg\">    /* max-width: 32rem */\n<div class=\"max-w-7xl\">   /* max-width: 80rem */\n<div class=\"max-h-96\">    /* max-height: 24rem */\n```\n\n### Arbitrary Values\n\nTailwind v3+ supports any value with square bracket syntax:\n\n```html\n<div class=\"w-[calc(100%-2rem)]\">\n<div class=\"h-[32px]\">\n<div class=\"p-[13px]\">\n<div class=\"m-[2.5rem]\">\n```",
+  "codeExample": "<div class=\"max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden\">\n  <div class=\"p-8\">\n    <div class=\"uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-2\">\n      Spacing Demo\n    </div>\n    <p class=\"mt-2 mb-6 text-gray-500\">\n      Padding (p-8), margin (mt-2, mb-6), and max-width (max-w-md)\n    </p>\n    <div class=\"flex gap-4\">\n      <div class=\"w-1/2 h-12 bg-blue-500 rounded\"></div>\n      <div class=\"w-1/2 h-12 bg-purple-500 rounded\"></div>\n    </div>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "What is the base unit increment for Tailwind's spacing scale?",
+      "options": ["0.25rem (4px)", "0.5rem (8px)", "1rem (16px)", "0.125rem (2px)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which class centers a block element horizontally?",
+      "options": ["mx-auto", "m-auto", "ml-auto", "my-auto"],
+      "correctIndex": 0
+    }
+  ]
+}

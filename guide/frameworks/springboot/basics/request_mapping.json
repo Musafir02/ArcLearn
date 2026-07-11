@@ -1,0 +1,19 @@
+{
+  "title": "Request Mapping in Spring Boot",
+  "language": "springboot",
+  "topic": "request_mapping",
+  "content": "### @RequestMapping\n\n`@RequestMapping` maps HTTP requests to handler methods. It can be applied at the class level (to set a base path) and at the method level.\n\n### Class-Level vs Method-Level\n\n```java\n@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n\n    @GetMapping\n    public List<User> getAll() { ... }\n\n    @GetMapping(\"/{id}\")\n    public User getById(@PathVariable Long id) { ... }\n}\n```\n\n### Path Patterns\n\n- Static: `/users`, `/orders`\n- Variable: `/users/{id}`, `/orders/{orderId}/items/{itemId}`\n- Wildcard: `/api/**`, `/files/*.txt`\n- Regex: `/{name:[a-z]+}`\n\n### Produces and Consumes\n\n- **produces**: Restricts mapping by the request's Accept header (e.g., `application/json`)\n- **consumes**: Restricts mapping by the Content-Type header\n\n```java\n@PostMapping(consumes = \"application/json\", produces = \"application/json\")\npublic User create(@RequestBody User user) { ... }\n```\n\n### Headers and Params Conditions\n\n```java\n@GetMapping(headers = \"X-API-Version=1\", params = \"active=true\")\npublic List<User> getActiveUsers() { ... }\n```",
+  "codeExample": "@RestController\n@RequestMapping(path = \"/api/orders\", produces = \"application/json\")\npublic class OrderController {\n\n    @GetMapping(\"/{orderId}\")\n    public Order getOrder(@PathVariable String orderId) {\n        return orderService.findById(orderId);\n    }\n\n    @PostMapping(consumes = \"application/json\")\n    @ResponseStatus(HttpStatus.CREATED)\n    public Order createOrder(@RequestBody Order order) {\n        return orderService.save(order);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does the 'produces' attribute of @RequestMapping restrict?",
+      "options": ["The request's Accept header", "The request's Content-Type", "The request's HTTP method", "The request's query parameters"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which path pattern matches /api/users/123?",
+      "options": ["/api/users/{id}", "/api/users/*", "/api/**", "All of the above"],
+      "correctIndex": 3
+    }
+  ]
+}

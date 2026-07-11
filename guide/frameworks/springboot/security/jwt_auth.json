@@ -1,0 +1,19 @@
+{
+  "title": "JWT Authentication",
+  "language": "springboot",
+  "topic": "jwt_auth",
+  "content": "### JWT Structure\n\nJSON Web Tokens consist of three parts:\n- **Header**: Algorithm and token type\n- **Payload**: Claims (user data, expiration, etc.)\n- **Signature**: Verifies token integrity\n\nFormat: `xxxxx.yyyyy.zzzzz`\n\n### JJWT Library\n\n```xml\n<dependency>\n    <groupId>io.jsonwebtoken</groupId>\n    <artifactId>jjwt-api</artifactId>\n    <version>0.12.5</version>\n</dependency>\n```\n\n### Token Generation\n\n```java\n@Component\npublic class JwtTokenProvider {\n    private final String secretKey = \"your-256-bit-secret-here-must-be-long-enough\";\n    private final long validityMs = 3600000; // 1 hour\n\n    public String generateToken(UserDetails userDetails) {\n        return Jwts.builder()\n            .subject(userDetails.getUsername())\n            .issuedAt(new Date())\n            .expiration(new Date(System.currentTimeMillis() + validityMs))\n            .signWith(getSigningKey())\n            .compact();\n    }\n\n    public boolean validateToken(String token) {\n        try {\n            Jwts.parser().verifyWith(getSigningKey()).build()\n                .parseSignedClaims(token);\n            return true;\n        } catch (JwtException e) {\n            return false;\n        }\n    }\n\n    private SecretKey getSigningKey() {\n        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));\n    }\n}\n```\n\n### JwtAuthenticationFilter\n\n```java\n@Component\npublic class JwtAuthenticationFilter extends OncePerRequestFilter {\n    @Override\n    protected void doFilterInternal(HttpServletRequest request,\n                                    HttpServletResponse response,\n                                    FilterChain chain) {\n        String token = extractToken(request);\n        if (token != null && jwtTokenProvider.validateToken(token)) {\n            String username = jwtTokenProvider.getUsername(token);\n            UserDetails userDetails = userDetailsService.loadUserByUsername(username);\n            UsernamePasswordAuthenticationToken auth =\n                new UsernamePasswordAuthenticationToken(\n                    userDetails, null, userDetails.getAuthorities());\n            SecurityContextHolder.getContext().setAuthentication(auth);\n        }\n        chain.doFilter(request, response);\n    }\n}\n```",
+  "codeExample": "// Login endpoint returns JWT\n@RestController\n@RequestMapping(\"/api/auth\")\npublic class AuthController {\n\n    private final AuthenticationManager authManager;\n    private final JwtTokenProvider tokenProvider;\n\n    @PostMapping(\"/login\")\n    public ResponseEntity<JwtResponse> login(@RequestBody @Valid LoginRequest request) {\n        Authentication auth = authManager.authenticate(\n            new UsernamePasswordAuthenticationToken(request.email(), request.password()));\n        String token = tokenProvider.generateToken((UserDetails) auth.getPrincipal());\n        return ResponseEntity.ok(new JwtResponse(token, \"Bearer\"));\n    }\n}",
+  "quiz": [
+    {
+      "question": "How many parts does a JWT token consist of?",
+      "options": ["3 (header, payload, signature)", "2 (header + payload)", "4 (header, payload, signature, metadata)", "1 (encoded string)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which class should a JWT authentication filter extend?",
+      "options": ["OncePerRequestFilter", "GenericFilterBean", "AbstractAuthenticationProcessingFilter", "Filter"],
+      "correctIndex": 0
+    }
+  ]
+}

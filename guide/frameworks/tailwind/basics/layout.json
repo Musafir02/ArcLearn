@@ -1,0 +1,24 @@
+{
+  "title": "Layout",
+  "language": "tailwind",
+  "topic": "layout",
+  "content": "### Container Class\n\nThe `.container` class sets max-width based on the current breakpoint and centers with `mx-auto`:\n\n```html\n<div class=\"container mx-auto px-4\">\n  <!-- Content centered with padding -->\n</div>\n```\n\n### Display Utilities\n\n```html\n<div class=\"block\">Block level</div>\n<span class=\"inline-block\">Inline-block</span>\n<div class=\"inline\">Inline</div>\n<div class=\"flex\">Flex container</div>\n<div class=\"grid\">Grid container</div>\n<div class=\"inline-flex\">Inline flex</div>\n<div class=\"hidden\">Display: none</div>\n```\n\n### Position Utilities\n\n```html\n<div class=\"static\">   /* position: static */</div>\n<div class=\"relative\"> /* position: relative */</div>\n<div class=\"absolute\"> /* position: absolute */</div>\n<div class=\"fixed\">    /* position: fixed */</div>\n<div class=\"sticky\">   /* position: sticky */</div>\n```\n\n### Top / Right / Bottom / Left\n\n```html\n<div class=\"absolute top-0 left-0\">       /* top: 0; left: 0 */\n<div class=\"absolute inset-0\">            /* top/right/bottom/left: 0 */\n<div class=\"absolute inset-x-0 bottom-0\"> /* left/right: 0; bottom: 0 */\n<div class=\"top-4 right-4\">              /* top: 1rem; right: 1rem */\n<div class=\"top-1/2 left-1/2\">          /* top: 50%; left: 50% */\n```\n\n### Overflow\n\n```html\n<div class=\"overflow-auto\">   /* scroll if content overflows */\n<div class=\"overflow-hidden\"> /* clip overflowing content */\n<div class=\"overflow-scroll\"> /* always show scrollbars */\n<div class=\"overflow-visible\">/* allow overflow */\n<div class=\"overflow-x-auto\"> /* horizontal scroll */\n```\n\n### Z-Index\n\n```html\n<div class=\"z-0\">    /* z-index: 0 */\n<div class=\"z-10\">   /* z-index: 10 */\n<div class=\"z-50\">   /* z-index: 50 */\n<div class=\"z-auto\"> /* z-index: auto */\n```\n\nZ-index goes from `z-0` through `z-50` with increments of 10.\n\n### Visibility\n\n```html\n<div class=\"visible\">   /* visibility: visible */\n<div class=\"invisible\"> /* visibility: hidden (takes space) */\n```",
+  "codeExample": "<div class=\"relative h-48 bg-gray-200 rounded-lg overflow-hidden\">\n  <div class=\"absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-75\"></div>\n  <div class=\"relative z-10 flex items-center justify-center h-full\">\n    <h2 class=\"text-white text-2xl font-bold\">Overlay Content</h2>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which class sets position to absolute and top/right/bottom/left all to 0?",
+      "options": ["inset-0", "absolute fill", "cover-0", "stretch-0"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the container class do in Tailwind?",
+      "options": [
+        "Sets max-width based on breakpoint",
+        "Adds padding to all sides",
+        "Centers content with margin auto",
+        "Both sets max-width and centers with mx-auto when combined"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

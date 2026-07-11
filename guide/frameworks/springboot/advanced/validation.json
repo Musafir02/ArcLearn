@@ -1,0 +1,19 @@
+{
+  "title": "Request Validation",
+  "language": "springboot",
+  "topic": "validation",
+  "content": "### Jakarta Bean Validation\n\nSpring Boot supports Jakarta Bean Validation (previously Javax Validation) through annotations.\n\n### Common Validation Annotations\n\n| Annotation | Description |\n|---|---|\n| `@NotBlank` | String must not be null or whitespace |\n| `@NotEmpty` | Collection/map must not be empty |\n| `@NotNull` | Value must not be null |\n| `@Size(min, max)` | String length or collection size |\n| `@Min` / `@Max` | Numeric minimum/maximum |\n| `@Email` | Valid email format |\n| `@Pattern(regexp)` | Regex pattern match |\n| `@Positive` / `@PositiveOrZero` | Positive numbers |\n| `@Future` / `@Past` | Date in future/past |\n\n### Request Body Validation\n\n```java\npublic record CreateUserRequest(\n    @NotBlank(message = \"Name is required\")\n    @Size(min = 2, max = 100)\n    String name,\n\n    @NotBlank\n    @Email\n    String email,\n\n    @Min(18) @Max(120)\n    int age,\n\n    @Pattern(regexp = \"^\\\\+?[1-9]\\\\d{1,14}$\")\n    String phone\n) {}\n\n// In controller:\n@PostMapping\npublic ResponseEntity<User> create(@RequestBody @Valid CreateUserRequest request) {\n    // If validation fails, MethodArgumentNotValidException is thrown\n}\n```\n\n### Custom Validators\n\n```java\n@Target(ElementType.FIELD)\n@Retention(RetentionPolicy.RUNTIME)\n@Constraint(validatedBy = UniqueEmailValidator.class)\npublic @interface UniqueEmail {\n    String message() default \"Email already exists\";\n    Class<?>[] groups() default {};\n    Class<? extends Payload>[] payload() default {};\n}\n\npublic class UniqueEmailValidator implements ConstraintValidator<UniqueEmail, String> {\n    @Autowired private UserRepository userRepository;\n\n    @Override\n    public boolean isValid(String email, ConstraintValidatorContext context) {\n        return email != null && !userRepository.existsByEmail(email);\n    }\n}\n```\n\n### Group Validation\n\n```java\npublic interface CreateGroup {}\npublic interface UpdateGroup {}\n\n@NotBlank(groups = CreateGroup.class)\nprivate String id;  // Required on create, optional on update\n```",
+  "codeExample": "public record RegisterRequest(\n    @NotBlank @Size(min = 3, max = 50)\n    String username,\n\n    @NotBlank @Email\n    String email,\n\n    @NotBlank @Size(min = 8, max = 100)\n    String password,\n\n    @NotBlank @Pattern(regexp = \"\\\\d{10}\")\n    String phone\n) {}\n\n@RestController\n@RequestMapping(\"/api/auth\")\npublic class AuthController {\n\n    @PostMapping(\"/register\")\n    public ResponseEntity<User> register(@RequestBody @Valid RegisterRequest request) {\n        User user = authService.register(request);\n        return ResponseEntity.status(HttpStatus.CREATED).body(user);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which annotation triggers validation on a @RequestBody parameter?",
+      "options": ["@Valid", "@Validated", "@Validate", "@Check"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which annotation ensures a string is not null, not empty, and contains at least one non-whitespace character?",
+      "options": ["@NotBlank", "@NotEmpty", "@NotNull", "@Size(min=1)"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "JPQL Queries with @Query",
+  "language": "springboot",
+  "topic": "jpql_queries",
+  "content": "### JPQL (Java Persistence Query Language)\n\nJPQL is an object-oriented query language similar to SQL but operates on JPA entities rather than database tables.\n\n### @Query with JPQL\n\n```java\n@Query(\"SELECT u FROM User u WHERE u.email = :email\")\nOptional<User> findByEmail(@Param(\"email\") String email);\n\n@Query(\"SELECT u FROM User u WHERE u.age BETWEEN :min AND :max\")\nList<User> findByAgeRange(@Param(\"min\") int min, @Param(\"max\") int max);\n```\n\n### Named Queries\n\n```java\n@Entity\n@NamedQuery(name = \"User.findByEmail\",\n    query = \"SELECT u FROM User u WHERE u.email = :email\")\npublic class User { ... }\n\n// Repository\n@Query(name = \"User.findByEmail\")\nOptional<User> findByEmail(@Param(\"email\") String email);\n```\n\n### Native Queries\n\nUse `nativeQuery = true` for database-specific SQL.\n\n```java\n@Query(value = \"SELECT * FROM users WHERE MATCH(name) AGAINST(:keyword IN BOOLEAN MODE)\",\n       nativeQuery = true)\nList<User> fullTextSearch(@Param(\"keyword\") String keyword);\n```\n\n### Aggregate Queries\n\n```java\n@Query(\"SELECT COUNT(u) FROM User u WHERE u.active = true\")\nlong countActiveUsers();\n\n@Query(\"SELECT NEW com.example.dto.OrderSummary(o.customer, SUM(o.total)) \" +\n       \"FROM Order o GROUP BY o.customer\")\nList<OrderSummary> getOrderSummaries();\n```\n\n### Subqueries\n\n```java\n@Query(\"SELECT u FROM User u WHERE u.id IN \" +\n       \"(SELECT o.user.id FROM Order o WHERE o.total > :minTotal)\")\nList<User> findUsersWithHighValueOrders(@Param(\"minTotal\") BigDecimal minTotal);\n```",
+  "codeExample": "@Repository\npublic interface EmployeeRepository extends JpaRepository<Employee, Long> {\n\n    @Query(\"SELECT e FROM Employee e WHERE e.department.name = :deptName \" +\n           \"ORDER BY e.salary DESC\")\n    List<Employee> findByDepartmentOrderedBySalary(@Param(\"deptName\") String deptName);\n\n    @Query(value = \"SELECT * FROM employees WHERE YEAR(hire_date) = :year\",\n           nativeQuery = true)\n    List<Employee> findByHireYear(@Param(\"year\") int year);\n\n    @Query(\"SELECT AVG(e.salary) FROM Employee e WHERE e.department.id = :deptId\")\n    Double averageSalaryByDepartment(@Param(\"deptId\") Long deptId);\n}",
+  "quiz": [
+    {
+      "question": "What does nativeQuery = true in @Query indicate?",
+      "options": ["The query is plain SQL, not JPQL", "The query runs natively on the database server", "The query is automatically optimized", "The query skips the persistence context"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which annotation binds a method parameter to a JPQL named parameter?",
+      "options": ["@Param", "@Bind", "@Named", "@Parameter"],
+      "correctIndex": 0
+    }
+  ]
+}

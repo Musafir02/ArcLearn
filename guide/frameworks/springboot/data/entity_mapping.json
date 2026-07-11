@@ -1,0 +1,19 @@
+{
+  "title": "JPA Entity Mapping",
+  "language": "springboot",
+  "topic": "entity_mapping",
+  "content": "### JPA Annotations\n\nJPA entities map Java objects to database tables.\n\n### Basic Mapping\n\n```java\n@Entity\n@Table(name = \"users\")\npublic class User {\n    @Id\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\n    private Long id;\n\n    @Column(name = \"full_name\", nullable = false)\n    private String fullName;\n\n    @Column(unique = true)\n    private String email;\n\n    // getters and setters\n}\n```\n\n### Relationship Mapping\n\n#### @OneToOne\n```java\n@OneToOne(cascade = CascadeType.ALL)\n@JoinColumn(name = \"profile_id\")\nprivate Profile profile;\n```\n\n#### @OneToMany / @ManyToOne\n```java\n@OneToMany(mappedBy = \"user\", cascade = CascadeType.ALL, orphanRemoval = true)\nprivate List<Order> orders;\n\n@ManyToOne(fetch = FetchType.LAZY)\n@JoinColumn(name = \"user_id\")\nprivate User user;\n```\n\n#### @ManyToMany\n```java\n@ManyToMany\n@JoinTable(\n    name = \"user_roles\",\n    joinColumns = @JoinColumn(name = \"user_id\"),\n    inverseJoinColumns = @JoinColumn(name = \"role_id\")\n)\nprivate Set<Role> roles;\n```\n\n### Fetch Types\n\n- **LAZY**: Loads related entities on demand (default for @OneToMany, @ManyToMany)\n- **EAGER**: Loads related entities immediately (default for @OneToOne, @ManyToOne)",
+  "codeExample": "@Entity\n@Table(name = \"products\")\npublic class Product {\n\n    @Id\n    @GeneratedValue(strategy = GenerationType.UUID)\n    private String id;\n\n    @Column(nullable = false)\n    private String name;\n\n    @Column(nullable = false)\n    private BigDecimal price;\n\n    @ManyToOne(fetch = FetchType.LAZY)\n    @JoinColumn(name = \"category_id\")\n    private Category category;\n\n    @OneToMany(mappedBy = \"product\", cascade = CascadeType.ALL, orphanRemoval = true)\n    private List<Review> reviews = new ArrayList<>();\n}",
+  "quiz": [
+    {
+      "question": "What is the default fetch type for @OneToMany?",
+      "options": ["LAZY", "EAGER", "DEFAULT", "NONE"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which annotation specifies the foreign key column in a @ManyToOne relationship?",
+      "options": ["@JoinColumn", "@Column", "@ForeignKey", "@PrimaryKeyJoinColumn"],
+      "correctIndex": 0
+    }
+  ]
+}

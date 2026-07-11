@@ -1,0 +1,24 @@
+{
+  "title": "Hover, Focus & State Variants",
+  "language": "tailwind",
+  "topic": "hover_focus",
+  "content": "### State Variants Overview\n\nTailwind provides prefixes for styling elements in different states:\n\n```html\n<button class=\"hover:bg-blue-600 focus:outline-none active:bg-blue-800 disabled:opacity-50\">\n  Submit\n</button>\n```\n\n### Hover Variant\n\n```html\n<div class=\"bg-gray-100 hover:bg-gray-200 transition\">\n  Hover over me\n</div>\n<a class=\"text-blue-600 hover:text-blue-800 underline\">Hover link</a>\n```\n\n### Focus Variant\n\n```html\n<input class=\"border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded\">\n```\n\n### Active Variant\n\n```html\n<button class=\"bg-blue-500 hover:bg-blue-600 active:bg-blue-700\">\n  Click me (active state on press)\n</button>\n```\n\n### Disabled Variant\n\n```html\n<button class=\"bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed\" disabled>\n  Disabled Button\n</button>\n```\n\n### Visited Variant\n\n```html\n<a class=\"text-blue-600 visited:text-purple-600\">Visited link</a>\n```\n\n### Focus-Within\n\nStyle a parent when any child has focus:\n\n```html\n<div class=\"focus-within:ring-2 focus-within:ring-blue-500 rounded p-2\">\n  <label>Search</label>\n  <input type=\"text\" class=\"outline-none\">\n</div>\n```\n\n### Focus-Visible\n\nOnly show focus ring when using keyboard navigation:\n\n```html\n<button class=\"focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500\">\n  Keyboard-friendly focus\n</button>\n```\n\n### Group Hover\n\nStyle a child when hovering over a parent group:\n\n```html\n<div class=\"group hover:bg-gray-50 p-4 rounded cursor-pointer\">\n  <h3 class=\"text-gray-900 group-hover:text-blue-600\">\n    Title changes on parent hover\n  </h3>\n  <p class=\"text-gray-500 group-hover:text-gray-700\">\n    Subtitle also changes\n  </p>\n</div>\n```\n\n### Peer Variants\n\nStyle one element based on a sibling's state:\n\n```html\n<input type=\"checkbox\" class=\"peer\" id=\"agree\">\n<label for=\"agree\" class=\"ml-2\">I agree</label>\n<p class=\"text-red-500 hidden peer-checked:block\">\n  You agreed to terms (hidden when unchecked)\n</p>\n```\n\nPeer variants: `peer-checked`, `peer-focus`, `peer-hover`, `peer-disabled`",
+  "codeExample": "<div class=\"max-w-sm mx-auto p-4\">\n  <div class=\"group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow\">\n    <div class=\"h-48 bg-gradient-to-br from-blue-400 to-purple-500\"></div>\n    <div class=\"p-6\">\n      <h3 class=\"text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors\">\n        Card Title\n      </h3>\n      <p class=\"mt-2 text-gray-600 group-hover:text-gray-800 transition-colors\">\n        Hover the card to see effects.\n      </p>\n      <button class=\"mt-4 px-4 py-2 bg-blue-600 text-white rounded\n                     hover:bg-blue-700 active:bg-blue-800\n                     focus:outline-none focus:ring-2 focus:ring-blue-400\">\n        Learn More\n      </button>\n    </div>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which variant styles an element when its parent is hovered?",
+      "options": ["group-hover:", "parent-hover:", "hover-group:", "parent-hovered:"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the focus-visible: variant do?",
+      "options": [
+        "Only shows focus styles during keyboard navigation",
+        "Always shows focus styles",
+        "Shows focus styles on hover",
+        "Hides focus styles"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

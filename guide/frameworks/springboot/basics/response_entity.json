@@ -1,0 +1,19 @@
+{
+  "title": "ResponseEntity in Spring Boot",
+  "language": "springboot",
+  "topic": "response_entity",
+  "content": "### ResponseEntity<T>\n\n`ResponseEntity<T>` gives you full control over the HTTP response: status code, headers, and body.\n\n### Builder Methods\n\n```java\n@GetMapping(\"/{id}\")\npublic ResponseEntity<User> getUser(@PathVariable Long id) {\n    User user = userService.findById(id);\n    if (user == null) {\n        return ResponseEntity.notFound().build();\n    }\n    return ResponseEntity.ok(user);\n}\n```\n\n### Common Static Builders\n\n| Method | Description |\n|---|---|\n| `ResponseEntity.ok(body)` | 200 OK with body |\n| `ResponseEntity.created(uri)` | 201 Created with Location header |\n| `ResponseEntity.noContent()` | 204 No Content |\n| `ResponseEntity.badRequest()` | 400 Bad Request |\n| `ResponseEntity.notFound()` | 404 Not Found |\n| `ResponseEntity.status(HttpStatus.N)` | Any custom status code |\n\n### Custom Headers\n\n```java\n@GetMapping(\"/export\")\npublic ResponseEntity<byte[]> exportData() {\n    byte[] data = reportService.generateCsv();\n    HttpHeaders headers = new HttpHeaders();\n    headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);\n    headers.setContentDisposition(ContentDisposition.attachment()\n            .filename(\"report.csv\").build());\n    return new ResponseEntity<>(data, headers, HttpStatus.OK);\n}\n```\n\n### Parameterized Type Responses\n\n```java\n@GetMapping\npublic ResponseEntity<List<User>> getAllUsers() {\n    List<User> users = userService.findAll();\n    return ResponseEntity.ok(users);\n}\n```",
+  "codeExample": "@PutMapping(\"/users/{id}\")\npublic ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {\n    try {\n        User updated = userService.update(id, user);\n        return ResponseEntity.ok(updated);\n    } catch (UserNotFoundException e) {\n        return ResponseEntity.notFound().build();\n    } catch (ValidationException e) {\n        return ResponseEntity.badRequest().build();\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which ResponseEntity method returns a 201 Created response?",
+      "options": ["ResponseEntity.created(uri)", "ResponseEntity.ok(body)", "ResponseEntity.status(201)", "Both A and C are valid"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What should a findById endpoint return when the resource is not found?",
+      "options": ["ResponseEntity.notFound().build()", "ResponseEntity.badRequest().build()", "ResponseEntity.noContent().build()", "Throw an exception and let the global handler deal with it"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with Spring Boot",
+  "language": "springboot",
+  "topic": "getstarted",
+  "content": "### Spring Initializr\n\nVisit [start.spring.io](https://start.spring.io) to bootstrap a new Spring Boot project. Select the build tool (Maven or Gradle), language (Java, Kotlin, Groovy), Spring Boot version, and dependencies (starters).\n\n### Project Structure\n\n```\nmy-project/\n\u251c\u2500\u2500 pom.xml (or build.gradle)\n\u251c\u2500\u2500 src/\n    \u251c\u2500\u2500 main/\n    \u2502   \u251c\u2500\u2500 java/\n    \u2502   \u2502   \u2514\u2500\u2500 com/example/\n    \u2502   \u2502       \u2514\u2500\u2500 MyApplication.java\n    \u2502   \u2514\u2500\u2500 resources/\n    \u2502       \u251c\u2500\u2500 application.properties\n    \u2502       \u2514\u2500\u2500 static/ (or templates/)\n    \u2514\u2500\u2500 test/\n        \u2514\u2500\u2500 java/\n```\n\n### @SpringBootApplication\n\nThis is a convenience annotation that combines `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan`. The main class should be placed in the root package.\n\n```java\n@SpringBootApplication\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}\n```\n\n### Build and Run\n\nUse the Maven wrapper (`mvnw`) or Gradle wrapper (`gradlew`):\n```bash\n./mvnw spring-boot:run\n./mvnw package && java -jar target/my-app.jar\n```",
+  "codeExample": "@SpringBootApplication\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which three annotations are combined by @SpringBootApplication?",
+      "options": ["@Configuration, @EnableAutoConfiguration, @ComponentScan", "@Controller, @Service, @Repository", "@Bean, @Autowired, @Value", "@SpringBootConfiguration, @EnableWebMvc, @ComponentScan"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where should you place the main Spring Boot application class?",
+      "options": ["In the root package above all other packages", "Inside a config sub-package", "Inside a web sub-package", "Anywhere, component scan finds it automatically"],
+      "correctIndex": 0
+    }
+  ]
+}

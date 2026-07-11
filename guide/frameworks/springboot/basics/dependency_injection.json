@@ -1,0 +1,19 @@
+{
+  "title": "Dependency Injection in Spring Boot",
+  "language": "springboot",
+  "topic": "dependency_injection",
+  "content": "### Dependency Injection Container\n\nSpring's IoC (Inversion of Control) container manages bean creation and wiring. Beans are instantiated and injected automatically based on configuration.\n\n### @Autowired\n\n`@Autowired` tells Spring to inject a bean automatically. It can be applied to constructors, setters, or fields.\n\n### Constructor Injection (Recommended)\n\nConstructor injection is preferred because it makes dependencies explicit, enables immutable fields, and simplifies testing.\n\n```java\n@Service\npublic class UserService {\n    private final UserRepository userRepository;\n    private final EmailService emailService;\n\n    public UserService(UserRepository userRepository, EmailService emailService) {\n        this.userRepository = userRepository;\n        this.emailService = emailService;\n    }\n}\n```\n\n### Setter Injection\n\n```java\n@Autowired\npublic void setUserRepository(UserRepository userRepository) {\n    this.userRepository = userRepository;\n}\n```\n\n### Qualifiers\n- **@Qualifier**: Resolves ambiguity when multiple beans of the same type exist.\n- **@Primary**: Marks a bean as the default when multiple candidates exist.\n\n### Circular Dependency\nA circular dependency occurs when Bean A depends on Bean B and Bean B depends on Bean A. To resolve: restructure code, use `@Lazy` on one dependency, or use setter injection.",
+  "codeExample": "@Service\npublic class OrderService {\n    private final OrderRepository orderRepository;\n    private final InventoryClient inventoryClient;\n\n    public OrderService(OrderRepository orderRepository,\n                        @Qualifier(\"restInventoryClient\") InventoryClient inventoryClient) {\n        this.orderRepository = orderRepository;\n        this.inventoryClient = inventoryClient;\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which form of dependency injection is recommended in Spring?",
+      "options": ["Constructor injection", "Field injection", "Setter injection", "Method injection"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you resolve ambiguity when multiple beans of the same type exist?",
+      "options": ["@Qualifier", "@Primary", "@Autowired(required=false)", "Both @Qualifier and @Primary"],
+      "correctIndex": 3
+    }
+  ]
+}

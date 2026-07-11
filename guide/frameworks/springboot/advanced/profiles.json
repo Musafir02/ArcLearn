@@ -1,0 +1,19 @@
+{
+  "title": "Spring Profiles",
+  "language": "springboot",
+  "topic": "profiles",
+  "content": "### Spring Profiles\n\nProfiles provide a way to segregate parts of application configuration for different environments (dev, test, prod).\n\n### Profile-Specific Properties\n\nName property files as `application-{profile}.properties`:\n\n```\napplication-dev.properties   # Development settings\napplication-test.properties  # Test settings\napplication-prod.properties  # Production settings\napplication.properties       # Shared defaults\n```\n\n### Activating Profiles\n\n```bash\n# Command line\njava -jar app.jar --spring.profiles.active=prod\n\n# Environment variable\nset SPRING_PROFILES_ACTIVE=dev\n\n# application.properties\nspring.profiles.active=dev\n```\n\n### @Profile Annotation\n\nConditionally enable beans based on active profiles.\n\n```java\n@Service\n@Profile(\"dev\")\npublic class DevDataSourceInitializer {\n    // Only loaded in dev profile\n}\n\n@Service\n@Profile(\"!dev\")\npublic class ProductionService {\n    // Loaded in all profiles except dev\n}\n\n@Service\n@Profile({\"test\", \"dev\"})\npublic class TestDataLoader {\n    // Loaded in test and dev profiles\n}\n```\n\n### Profile Groups\n\n```yaml\nspring:\n  profiles:\n    group:\n      dev: [dev, local-logging]\n      staging: [staging, debug-logging]\n      prod: [prod, minimal-logging]\n```\n\n### Programmatic Profile Check\n\n```java\n@Autowired\nprivate Environment env;\n\npublic boolean isDevProfile() {\n    return Arrays.asList(env.getActiveProfiles()).contains(\"dev\");\n}\n```",
+  "codeExample": "# application-dev.properties\nserver.port=8081\ndebug=true\nspring.datasource.url=jdbc:h2:mem:devdb\nspring.jpa.show-sql=true\n\n# application-prod.properties\nserver.port=80\ndebug=false\nspring.datasource.url=jdbc:postgresql://prod-db:5432/app\nspring.datasource.username=${DB_USER}\nspring.datasource.password=${DB_PASS}\n\n# application.yml profile groups\nspring:\n  profiles:\n    group:\n      dev: [dev, local]\n      prod: [prod, cloud]",
+  "quiz": [
+    {
+      "question": "How are profile-specific property files named?",
+      "options": ["application-{profile}.properties", "{profile}-application.properties", "application.{profile}.properties", "config-{profile}.properties"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you activate a profile when running a JAR?",
+      "options": ["--spring.profiles.active=prod", "--profile=prod", "-Dspring.profile=prod", "--env=prod"],
+      "correctIndex": 0
+    }
+  ]
+}

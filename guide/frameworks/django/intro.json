@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Django",
+  "language": "django",
+  "topic": "intro",
+  "content": "### What is Django?\n\nDjango is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel.\n\n### Batteries-Included Philosophy\n\nDjango follows a \"batteries-included\" philosophy, providing almost everything developers need out of the box:\n\n- **ORM** (Object-Relational Mapping) for database interactions\n- **Authentication** system\n- **Admin panel** automatically generated from models\n- **Form handling** with validation\n- **Security features** (CSRF, XSS, SQL injection protection)\n- **Template engine** for dynamic HTML\n- **Internationalization** support\n- **Caching framework**\n\n### MVT Architecture\n\nDjango follows the **Model-View-Template (MVT)** pattern:\n\n- **Model**: Defines the data structure (database schema)\n- **View**: Handles business logic and returns responses\n- **Template**: Manages the presentation layer (HTML)\n\n```\nRequest → URL Dispatcher → View → Model (database)\n                      ↘ Template (renders HTML)\n                              → HTTP Response\n```\n\n### Django ORM\n\nThe ORM lets you define data models as Python classes and automatically creates the database tables. You can query the database using Python rather than raw SQL:\n\n```python\nfrom django.db import models\n\nclass Book(models.Model):\n    title = models.CharField(max_length=200)\n    author = models.ForeignKey(Author, on_delete=models.CASCADE)\n    published_date = models.DateField()\n\n# Querying\nbooks = Book.objects.filter(author__name=\"Tolkien\").order_by(\"-published_date\")\n```\n\n### Admin Panel\n\nDjango automatically generates a production-ready admin interface based on your models. Register a model in `admin.py` to get CRUD functionality instantly.\n\n### Security Features\n\n- **CSRF Protection**: Built-in cross-site request forgery protection\n- **XSS Prevention**: Template auto-escapes HTML\n- **SQL Injection Protection**: ORM uses parameterized queries\n- **Clickjacking Protection**: X-Frame-Options middleware\n- **Password Hashing**: Uses PBKDF2 by default\n- **HTTPS Redirect**: Can enforce secure connections\n\n### Django vs Flask\n\n| Feature | Django | Flask |\n|---------|--------|-------|\n| Philosophy | Batteries-included | Minimalist / Micro |\n| ORM | Built-in ORM | None (use SQLAlchemy) |\n| Admin Panel | Built-in | Third-party extensions |\n| Authentication | Built-in | Flask-Login extension |\n| Template Engine | DTL (own) | Jinja2 |\n| Learning Curve | Steeper initially | Gentle |\n| Best For | Large, feature-rich apps | Microservices, small apps |\n| Flexibility | Convention over configuration | Highly flexible |\n\nDjango is ideal for content-heavy applications, e-commerce platforms, social networks, and any project that benefits from a standardized structure and built-in tools.",
+  "codeExample": "from django.http import HttpResponse\nfrom django.shortcuts import render\n\n# A simple view that returns an HTTP response\ndef home(request):\n    return HttpResponse(\"Hello, Django!\")",
+  "quiz": [
+    {
+      "question": "Which architectural pattern does Django follow?",
+      "options": ["MVC (Model-View-Controller)", "MVT (Model-View-Template)", "MVP (Model-View-Presenter)", "MVVM (Model-View-ViewModel)"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which statement best describes Django's 'batteries-included' philosophy?",
+      "options": ["Django requires many external libraries to function", "Django includes built-in tools for common web development tasks", "Django only provides a basic HTTP server", "Django does not include any security features by default"],
+      "correctIndex": 1
+    }
+  ]
+}

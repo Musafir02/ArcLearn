@@ -1,0 +1,19 @@
+{
+  "title": "Tailwind CSS Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Tailwind Basics", "folder": "basics",
+      "topics": ["utility_fundamentals", "layout", "typography", "colors", "spacing_sizing", "flexbox", "grid"]
+    },
+    {
+      "type": "group", "title": "Responsive & Design", "folder": "responsive",
+      "topics": ["responsive_design", "dark_mode", "hover_focus", "transitions_animations"]
+    },
+    {
+      "type": "group", "title": "Advanced Tailwind", "folder": "advanced",
+      "topics": ["custom_config", "components_extracting", "plugins", "optimization", "integration_frameworks"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Responsive Design",
+  "language": "tailwind",
+  "topic": "responsive_design",
+  "content": "### Breakpoints System\n\nTailwind provides five responsive breakpoints:\n\n| Prefix | Min Width | CSS |\n|--------|-----------|-----|\n| `sm:` | 640px | `@media (min-width: 640px)` |\n| `md:` | 768px | `@media (min-width: 768px)` |\n| `lg:` | 1024px | `@media (min-width: 1024px)` |\n| `xl:` | 1280px | `@media (min-width: 1280px)` |\n| `2xl:` | 1536px | `@media (min-width: 1536px)` |\n\n### Mobile-First Approach\n\nTailwind is mobile-first. Unprefixed classes apply to all screen sizes, and breakpoint prefixes apply at that size and above:\n\n```html\n<div class=\"\n  grid grid-cols-1    /* mobile: 1 column */\n  sm:grid-cols-2     /* tablet: 2 columns */\n  lg:grid-cols-4     /* desktop: 4 columns */\n\">\n```\n\n### Responsive Variants on Any Utility\n\nAlmost every utility has responsive variants:\n\n```html\n<div class=\"\n  text-sm             /* mobile: small */\n  md:text-base        /* md+: base */\n  lg:text-lg          /* lg+: large */\n  text-center         /* mobile: center */\n  md:text-left        /* md+: left */\n\">\n```\n\n### Responsive Layout Patterns\n\n```html\n<!-- Stack on mobile, side-by-side on desktop -->\n<div class=\"flex flex-col md:flex-row\">\n  <div class=\"w-full md:w-1/3\">Sidebar</div>\n  <div class=\"w-full md:w-2/3\">Content</div>\n</div>\n\n<!-- Hidden on mobile, visible on desktop -->\n<div class=\"hidden lg:block\">Desktop sidebar</div>\n\n<!-- Visible on mobile, hidden on desktop -->\n<div class=\"block lg:hidden\">Mobile menu</div>\n```\n\n### Container with Max-Width\n\nThe `.container` class changes its max-width at each breakpoint:\n\n```html\n<div class=\"container mx-auto px-4\">\n  <!--\n    sm: max-w-640px\n    md: max-w-768px\n    lg: max-w-1024px\n    xl: max-w-1280px\n    2xl: max-w-1536px\n  -->\n</div>\n```\n\n### Custom Breakpoints\n\nAdd custom breakpoints in config:\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      screens: {\n        'xs': '475px',\n        '3xl': '1600px',\n      },\n    },\n  },\n}\n```",
+  "codeExample": "<div class=\"max-w-6xl mx-auto p-4 sm:p-6 lg:p-8\">\n  <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8\">\n    <div class=\"bg-white p-6 rounded-lg shadow\">\n      <h3 class=\"text-lg sm:text-xl font-bold\">Card Title</h3>\n      <p class=\"mt-2 text-sm sm:text-base text-gray-600\">Responsive card content</p>\n    </div>\n    <div class=\"bg-white p-6 rounded-lg shadow\">Card 2</div>\n    <div class=\"bg-white p-6 rounded-lg shadow sm:col-span-2 lg:col-span-1\">Card 3</div>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "What is the min-width for the lg: breakpoint in Tailwind?",
+      "options": ["1024px", "768px", "1280px", "640px"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tailwind CSS follows which responsive design approach?",
+      "options": ["Mobile-first", "Desktop-first", "Print-first", "Tablet-first"],
+      "correctIndex": 0
+    }
+  ]
+}

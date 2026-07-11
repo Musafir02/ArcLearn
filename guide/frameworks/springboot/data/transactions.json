@@ -1,0 +1,19 @@
+{
+  "title": "Transaction Management",
+  "language": "springboot",
+  "topic": "transactions",
+  "content": "### @Transactional\n\n`@Transactional` declaratively manages transactions. It can be applied to interfaces, classes, or methods.\n\n### Propagation Levels\n\n| Propagation | Behavior |\n|---|---|\n| `REQUIRED` (default) | Joins an existing transaction or creates a new one |\n| `REQUIRES_NEW` | Suspends any existing transaction and creates a new one |\n| `MANDATORY` | Requires an existing transaction; throws if none exists |\n| `SUPPORTS` | Joins an existing transaction if one exists; runs non-transactionally otherwise |\n| `NOT_SUPPORTED` | Suspends any existing transaction and runs non-transactionally |\n| `NEVER` | Throws if a transaction exists |\n| `NESTED` | Creates a savepoint within an existing transaction |\n\n### Isolation Levels\n\n| Level | Phenomena Prevented |\n|---|---|\n| `READ_UNCOMMITTED` | Nothing |\n| `READ_COMMITTED` | Dirty reads |\n| `REPEATABLE_READ` | Dirty, non-repeatable reads |\n| `SERIALIZABLE` | Dirty, non-repeatable, phantom reads |\n\n### Rollback Configuration\n\n```java\n@Transactional(rollbackFor = DataIntegrityViolationException.class,\n               noRollbackFor = OptimisticLockException.class)\npublic void updateOrder(Order order) {\n    // If DataIntegrityViolationException occurs, rollback\n    // If OptimisticLockException occurs, commit anyway\n}\n```\n\n### readOnly Optimization\n\nMark read operations with `readOnly = true` for performance hints.\n\n```java\n@Transactional(readOnly = true)\npublic Optional<User> findById(Long id) {\n    return userRepository.findById(id);\n}\n```",
+  "codeExample": "@Service\n@Transactional\npublic class TransferService {\n    private final AccountRepository accountRepository;\n\n    public TransferService(AccountRepository accountRepository) {\n        this.accountRepository = accountRepository;\n    }\n\n    public void transfer(Long fromId, Long toId, BigDecimal amount) {\n        Account from = accountRepository.findById(fromId)\n                .orElseThrow(() -> new AccountNotFoundException(fromId));\n        Account to = accountRepository.findById(toId)\n                .orElseThrow(() -> new AccountNotFoundException(toId));\n\n        from.debit(amount);\n        to.credit(amount);\n\n        accountRepository.save(from);\n        accountRepository.save(to);\n        // Transaction commits automatically\n        // If any exception is thrown, both saves roll back\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the default propagation level in Spring transactions?",
+      "options": ["REQUIRED", "REQUIRES_NEW", "MANDATORY", "SUPPORTS"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which isolation level prevents dirty reads, non-repeatable reads, and phantom reads?",
+      "options": ["SERIALIZABLE", "REPEATABLE_READ", "READ_COMMITTED", "READ_UNCOMMITTED"],
+      "correctIndex": 0
+    }
+  ]
+}

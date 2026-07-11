@@ -1,0 +1,29 @@
+{
+  "title": "Optimization",
+  "language": "tailwind",
+  "topic": "optimization",
+  "content": "### JIT Engine (Tree Shaking)\n\nTailwind v3's JIT engine generates CSS on-demand, scanning your templates and only producing the classes you actually use:\n\n```js\n// tailwind.config.js\nmodule.exports = {\n  content: [\n    './src/**/*.{html,js,jsx,tsx}',\n    './public/index.html',\n  ],\n}\n```\n\n### Content Paths Configuration\n\nProper content paths are crucial for JIT to find all classes:\n\n```js\nmodule.exports = {\n  content: [\n    // All template files\n    './pages/**/*.{js,ts,jsx,tsx}',\n    './components/**/*.{js,ts,jsx,tsx}',\n    './layouts/**/*.{js,ts,jsx,tsx}',\n    \n    // Include any file that uses Tailwind classes\n    './safelist.txt',\n  ],\n}\n```\n\n### Safelisting Classes\n\nPrevent specific classes from being purged:\n\n```js\nmodule.exports = {\n  content: {\n    files: ['./src/**/*.{html,js}'],\n  },\n  safelist: [\n    'bg-red-500',\n    'text-center',\n    'lg:text-right',\n    // Pattern matching\n    {\n      pattern: /bg-(red|green|blue)-(100|200|300)/,\n    },\n    // All variants\n    {\n      pattern: /text-(red|green|blue)-(400|500|600)/,\n      variants: ['hover', 'focus'],\n    },\n  ],\n}\n```\n\n### PurgeCSS in Tailwind v2\n\nIn Tailwind v2, purging was configured via `purge` instead of `content`:\n\n```js\n// Tailwind v2\nmodule.exports = {\n  purge: {\n    content: ['./src/**/*.html'],\n    options: {\n      safelist: ['bg-red-500'],\n    },\n  },\n}\n```\n\n### Production Build Optimization\n\n```bash\n# Build for production (minified + purged)\nNODE_ENV=production npx tailwindcss -o build.css --minify\n\n# Or use PostCSS CLI\nNODE_ENV=production npx postcss src/styles.css -o public/styles.css\n```\n\n### File Size Best Practices\n\n- **Use JIT engine** (Tailwind v3+) - automatically small output\n- **Configure content paths precisely** - don't scan node_modules\n- **Avoid dynamic class construction** - don't use template literals for class names\n\n```html\n<!-- Bad - JIT can't scan this -->\n<div class=\"text-{{ size }}-{{ color }}\">\n\n<!-- Good - JIT sees full class names -->\n<div class=\"{{ size === 'lg' ? 'text-lg' : 'text-base' }} {{ color === 'blue' ? 'text-blue-600' : 'text-gray-600' }}\">\n```\n\n- **Use safelist sparingly** - only when absolutely necessary\n- **Minify CSS output** with the `--minify` flag\n- **Enable compression** (gzip/Brotli) on your web server\n- **Use CSSNano** in your PostCSS workflow for additional minification",
+  "codeExample": "/* postcss.config.js - optimized for production */\nmodule.exports = {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: process.env.NODE_ENV === 'production' ? {} : false,\n    cssnano: process.env.NODE_ENV === 'production' ? {} : false,\n  },\n}\n\n/* tailwind.config.js - safelist example */\nmodule.exports = {\n  content: ['./src/**/*.{html,js}'],\n  safelist: [\n    'bg-green-500',\n    'bg-red-500',\n    'bg-yellow-500',\n    { pattern: /^border-/ },\n  ],\n  theme: { extend: {} },\n  plugins: [],\n}\n\n/* Build commands */\n// Development: npx tailwindcss -i src/input.css -o dist/output.css --watch\n// Production:  NODE_ENV=production npx tailwindcss -i src/input.css -o dist/output.css --minify",
+  "quiz": [
+    {
+      "question": "How does Tailwind v3's JIT engine optimize CSS output size?",
+      "options": [
+        "Generates only the classes found in your templates",
+        "Compresses all CSS with gzip",
+        "Removes all comments from CSS",
+        "Combines all media queries"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the correct way to ensure dynamic class names are not purged?",
+      "options": [
+        "Use safelist in the config",
+        "Use inline styles instead",
+        "Add them to a separate CSS file",
+        "Disable the JIT engine"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

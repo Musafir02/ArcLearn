@@ -1,0 +1,29 @@
+{
+  "title": "Custom Configuration",
+  "language": "tailwind",
+  "topic": "custom_config",
+  "content": "### Configuration File Deep Dive\n\nThe `tailwind.config.js` file controls every aspect of your Tailwind setup:\n\n```js\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: ['./src/**/*.{html,js}'],\n  theme: {\n    extend: {\n      // custom additions\n    },\n  },\n  plugins: [],\n}\n```\n\n### theme.extend vs theme\n\n- **theme** - Completely replaces the default theme\n- **theme.extend** - Merges your values on top of the defaults (recommended)\n\n```js\n// Extend (adds to defaults - recommended)\ntheme: {\n  extend: {\n    colors: {\n      brand: '#3490dc',\n    },\n  },\n}\n\n// Override (replaces entire default theme)\ntheme: {\n  colors: {\n    brand: '#3490dc',\n  },\n}\n```\n\n### Custom Colors\n\n```js\ntheme: {\n  extend: {\n    colors: {\n      primary: {\n        50: '#eff6ff',\n        100: '#dbeafe',\n        200: '#bfdbfe',\n        500: '#3b82f6',\n        600: '#2563eb',\n        700: '#1d4ed8',\n        800: '#1e40af',\n        900: '#1e3a5f',\n      },\n    },\n  },\n}\n```\n\nUsage: `bg-primary-500`, `text-primary-700`\n\n### Custom Spacing\n\n```js\ntheme: {\n  extend: {\n    spacing: {\n      '18': '4.5rem',\n      '72': '18rem',\n      '84': '21rem',\n      '96': '24rem',\n    },\n  },\n}\n```\n\n### Custom Fonts\n\n```js\ntheme: {\n  extend: {\n    fontFamily: {\n      display: ['Inter', 'sans-serif'],\n      body: ['Merriweather', 'serif'],\n    },\n  },\n}\n```\n\nUsage: `font-display`, `font-body`\n\n### Custom Breakpoints\n\n```js\ntheme: {\n  extend: {\n    screens: {\n      'xs': '475px',\n      '3xl': '1600px',\n    },\n  },\n}\n```\n\n### @apply Directive\n\nUse `@apply` to extract repeated utility patterns into custom classes in your CSS:\n\n```css\n.btn-primary {\n  @apply bg-blue-600 text-white font-bold py-2 px-4 rounded\n         hover:bg-blue-700 transition-colors;\n}\n```\n\n### Config Presets\n\nShare configuration across projects:\n\n```js\nmodule.exports = {\n  presets: [\n    require('@acme/tailwind-preset'),\n  ],\n  theme: {\n    extend: {\n      // project-specific overrides\n    },\n  },\n}\n```",
+  "codeExample": "/* tailwind.config.js */\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: ['./src/**/*.{html,js,jsx}'],\n  darkMode: 'class',\n  theme: {\n    extend: {\n      colors: {\n        brand: {\n          light: '#93c5fd',\n          DEFAULT: '#3b82f6',\n          dark: '#1e40af',\n        },\n      },\n      fontFamily: {\n        heading: ['Poppins', 'sans-serif'],\n      },\n      spacing: {\n        '128': '32rem',\n      },\n      animation: {\n        'fade-in': 'fadeIn 0.5s ease-in-out',\n      },\n      keyframes: {\n        fadeIn: {\n          '0%': { opacity: '0' },\n          '100%': { opacity: '1' },\n        },\n      },\n    },\n  },\n  plugins: [],\n}",
+  "quiz": [
+    {
+      "question": "What is the difference between theme and theme.extend?",
+      "options": [
+        "extend merges with defaults, theme replaces entirely",
+        "theme is for colors, extend is for spacing",
+        "theme applies to components, extend to utilities",
+        "There is no difference"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does @apply do in Tailwind?",
+      "options": [
+        "Inlines utility classes into custom CSS",
+        "Applies a JavaScript function",
+        "Generates new utility classes",
+        "Imports a CSS file"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

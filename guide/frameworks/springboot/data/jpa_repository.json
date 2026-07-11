@@ -1,0 +1,19 @@
+{
+  "title": "JPA Repositories with Spring Data JPA",
+  "language": "springboot",
+  "topic": "jpa_repository",
+  "content": "### Spring Data JPA\n\nSpring Data JPA reduces boilerplate data access code. By extending `JpaRepository`, your interface automatically inherits CRUD operations and more.\n\n### JpaRepository Interface\n\n```java\npublic interface UserRepository extends JpaRepository<User, Long> {\n    // Inherits: save(), findById(), findAll(), count(), deleteById(), etc.\n}\n```\n\n### Query Derivation\n\nSpring Data JPA derives queries from method names. No implementation needed.\n\n```java\npublic interface UserRepository extends JpaRepository<User, Long> {\n    Optional<User> findByEmail(String email);\n    List<User> findByLastNameAndFirstName(String lastName, String firstName);\n    List<User> findByAgeGreaterThan(int age);\n    List<User> findByActiveTrueOrderByCreatedAtDesc();\n    List<User> findByDepartmentName(String departmentName);\n}\n```\n\n### @Query for Custom JPQL\n\nUse `@Query` when method naming becomes unwieldy or for complex queries.\n\n```java\npublic interface UserRepository extends JpaRepository<User, Long> {\n    @Query(\"SELECT u FROM User u WHERE u.email = :email\")\n    Optional<User> findByEmailCustom(@Param(\"email\") String email);\n\n    @Query(\"SELECT u FROM User u WHERE u.lastName LIKE %:search% OR u.firstName LIKE %:search%\")\n    List<User> searchByName(@Param(\"search\") String search);\n}\n```",
+  "codeExample": "@Repository\npublic interface OrderRepository extends JpaRepository<Order, Long> {\n    List<Order> findByCustomerEmail(String email);\n    List<Order> findByStatusAndCreatedAtAfter(OrderStatus status, LocalDateTime date);\n    Long countByStatus(OrderStatus status);\n\n    @Query(\"SELECT o FROM Order o JOIN FETCH o.items WHERE o.id = :id\")\n    Optional<Order> findByIdWithItems(@Param(\"id\") Long id);\n\n    @Query(\"SELECT SUM(o.totalAmount) FROM Order o WHERE o.customer.id = :customerId\")\n    BigDecimal getTotalSpentByCustomer(@Param(\"customerId\") Long customerId);\n}",
+  "quiz": [
+    {
+      "question": "Which interface should you extend to get full JPA repository support?",
+      "options": ["JpaRepository", "CrudRepository", "PagingAndSortingRepository", "Repository"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Spring Data JPA know what query to execute for findByEmail(String email)?",
+      "options": ["Query derivation from method name", "It scans the database schema", "It reads the @Query annotation", "It uses reflection on the entity class"],
+      "correctIndex": 0
+    }
+  ]
+}

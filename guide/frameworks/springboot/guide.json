@@ -1,0 +1,23 @@
+{
+  "title": "Spring Boot Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Spring Boot Basics", "folder": "basics",
+      "topics": ["annotations", "dependency_injection", "rest_controller", "request_mapping", "request_params", "response_entity", "bean_scopes"]
+    },
+    {
+      "type": "group", "title": "Data Access", "folder": "data",
+      "topics": ["jpa_repository", "entity_mapping", "crud_repository", "jpql_queries", "transactions"]
+    },
+    {
+      "type": "group", "title": "Security", "folder": "security",
+      "topics": ["spring_security", "jwt_auth", "oauth2", "method_security"]
+    },
+    {
+      "type": "group", "title": "Advanced Spring", "folder": "advanced",
+      "topics": ["exception_handling", "validation", "testing", "actuator", "profiles", "async_messaging"]
+    }
+  ]
+}

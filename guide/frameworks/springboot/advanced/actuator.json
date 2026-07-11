@@ -1,0 +1,19 @@
+{
+  "title": "Spring Boot Actuator",
+  "language": "springboot",
+  "topic": "actuator",
+  "content": "### Spring Boot Actuator\n\nActuator provides production-ready features for monitoring and managing your application.\n\n### Setup\n\n```xml\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-actuator</artifactId>\n</dependency>\n```\n\n### Configuration\n\n```yaml\nmanagement:\n  endpoints:\n    web:\n      exposure:\n        include: health,info,metrics,env,beans,heapdump\n  endpoint:\n    health:\n      show-details: always\n```\n\n### Key Endpoints\n\n| Endpoint | Description |\n|---|---|\n| `/actuator/health` | Application health status (uptime, DB, disk) |\n| `/actuator/info` | Custom application info (from application.properties) |\n| `/actuator/metrics` | Application metrics (memory, threads, HTTP requests) |\n| `/actuator/env` | Environment properties |\n| `/actuator/beans` | All Spring beans in the context |\n| `/actuator/heapdump` | JVM heap dump (triggers a download) |\n| `/actuator/loggers` | View and change log levels at runtime |\n| `/actuator/mappings` | Request mapping details |\n\n### Custom Health Indicator\n\n```java\n@Component\npublic class DatabaseHealthIndicator implements HealthIndicator {\n\n    private final DataSource dataSource;\n\n    public DatabaseHealthIndicator(DataSource dataSource) {\n        this.dataSource = dataSource;\n    }\n\n    @Override\n    public Health health() {\n        try (Connection conn = dataSource.getConnection()) {\n            if (conn.isValid(1000)) {\n                return Health.up()\n                    .withDetail(\"database\", \"Reachable\")\n                    .build();\n            }\n            return Health.down()\n                .withDetail(\"database\", \"Unreachable\")\n                .build();\n        } catch (SQLException e) {\n            return Health.down(e).build();\n        }\n    }\n}\n```\n\n### Custom Endpoint\n\n```java\n@Endpoint(id = \"features\")\n@Component\npublic class FeaturesEndpoint {\n\n    @ReadOperation\n    public Map<String, Boolean> features() {\n        return Map.of(\n            \"feature-a\", true,\n            \"feature-b\", false\n        );\n    }\n}\n```",
+  "codeExample": "# application.yml\nmanagement:\n  endpoints:\n    web:\n      exposure:\n        include: health,info,metrics,loggers\n      base-path: /actuator\n  endpoint:\n    health:\n      show-details: when_authorized\n\n# Custom info in application.properties\ninfo.app.name=@project.name@\ninfo.app.version=@project.version@\ninfo.app.description=My Spring Boot Application",
+  "quiz": [
+    {
+      "question": "Which dependency adds monitoring endpoints to a Spring Boot application?",
+      "options": ["spring-boot-starter-actuator", "spring-boot-starter-web", "spring-boot-starter-monitoring", "spring-boot-starter-management"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which endpoint allows viewing and changing log levels at runtime?",
+      "options": ["/actuator/loggers", "/actuator/env", "/actuator/metrics", "/actuator/beans"],
+      "correctIndex": 0
+    }
+  ]
+}

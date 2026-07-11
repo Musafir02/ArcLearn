@@ -1,0 +1,24 @@
+{
+  "title": "Extracting Components",
+  "language": "tailwind",
+  "topic": "components_extracting",
+  "content": "### @apply Directive for Extraction\n\nWhen you repeat the same utility pattern, extract it using `@apply` in a CSS file:\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer components {\n  .btn-primary {\n    @apply bg-blue-600 text-white font-semibold py-2 px-6 \n           rounded-lg shadow-md hover:bg-blue-700 \n           focus:outline-none focus:ring-2 focus:ring-blue-400\n           transition-all duration-200;\n  }\n  \n  .card {\n    @apply bg-white rounded-xl shadow-md p-6;\n  }\n}\n```\n\nUsage in HTML:\n\n```html\n<button class=\"btn-primary\">Click Me</button>\n<div class=\"card\">Content</div>\n```\n\n### Creating Utility Components\n\nExtract larger patterns while keeping flexibility:\n\n```css\n@layer components {\n  .input-field {\n    @apply w-full border border-gray-300 rounded-lg px-4 py-2\n           focus:border-blue-500 focus:ring-2 focus:ring-blue-200\n           focus:outline-none transition-colors;\n  }\n  \n  .badge {\n    @apply inline-flex items-center px-3 py-1 rounded-full \n           text-sm font-medium;\n  }\n  \n  .badge-success {\n    @apply badge bg-green-100 text-green-800;\n  }\n  \n  .badge-error {\n    @apply badge bg-red-100 text-red-800;\n  }\n}\n```\n\n### Component Classes vs Utility Approach\n\n| Approach | Pros | Cons |\n|----------|------|------|\n| Pure utilities | Flexible, no extra CSS, smaller bundles | Verbose HTML, repetition |\n| Component classes | Cleaner HTML, reusable | Extra CSS, less flexible |\n| Hybrid (recommended) | Balance of both | Slightly more setup |\n\n### Partial Extraction\n\nExtract only the most repetitive parts, keep inline utilities for unique styles:\n\n```css\n@layer components {\n  .section-heading {\n    @apply text-2xl font-bold text-gray-900;\n  }\n}\n```\n\n```html\n<h2 class=\"section-heading mb-4 text-center\">Title</h2>\n<h2 class=\"section-heading mb-2 text-left\">Another Title</h2>\n```\n\n### Component Best Practices\n\n- Extract only when you see the pattern **3+ times**\n- Keep extracted components **focused** (single responsibility)\n- Use `@layer components` for component styles\n- Don't over-extract - utility classes are the primary way\n- Use **Tailwind's config** for design tokens, not custom CSS\n- Name components semantically (`.card`, `.btn`, `.badge`)\n- Consider using a **frontend framework** (React, Vue) for true components",
+  "codeExample": "/* styles.css */\n@layer components {\n  .card {\n    @apply bg-white rounded-xl shadow-md overflow-hidden \n           hover:shadow-lg transition-shadow duration-300;\n  }\n  \n  .card-image {\n    @apply w-full h-48 object-cover;\n  }\n  \n  .card-body {\n    @apply p-6;\n  }\n  \n  .card-title {\n    @apply text-xl font-semibold text-gray-900 mb-2;\n  }\n  \n  .card-text {\n    @apply text-gray-600 leading-relaxed;\n  }\n}\n\n<!-- usage.html -->\n<div class=\"card max-w-sm\">\n  <img src=\"photo.jpg\" alt=\"\" class=\"card-image\">\n  <div class=\"card-body\">\n    <h3 class=\"card-title\">Card Title</h3>\n    <p class=\"card-text\">This is reusable card component using @apply.</p>\n    <button class=\"mt-4 btn-primary\">Read More</button>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "What is the recommended approach for using Tailwind component extraction?",
+      "options": [
+        "Extract patterns that repeat 3+ times, otherwise use inline utilities",
+        "Always use @apply for everything",
+        "Never use @apply, always inline utilities",
+        "Always use Tailwind components instead of utilities"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which CSS layer should component classes using @apply be placed in?",
+      "options": ["@layer components", "@layer base", "@layer utilities", "@layer theme"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Bean Scopes in Spring",
+  "language": "springboot",
+  "topic": "bean_scopes",
+  "content": "### Spring Bean Scopes\n\nSpring supports several bean scopes that control the lifecycle and visibility of beans.\n\n### Scope Types\n\n| Scope | Description |\n|---|---|\n| **Singleton** (default) | One instance per Spring IoC container. Shared across the entire application. |\n| **Prototype** | A new instance is created every time the bean is requested. |\n| **Request** | One instance per HTTP request. Available only in web-aware contexts. |\n| **Session** | One instance per HTTP session. Available only in web-aware contexts. |\n| **Application** | One instance per ServletContext. Similar to singleton but scoped to the ServletContext. |\n\n### @Scope Annotation\n\n```java\n@Component\n@Scope(\"prototype\")\npublic class ShoppingCart {\n    // A new cart for each injection point\n}\n\n@Component\n@Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)\npublic class UserPreferences {\n    // Separate preferences per user session\n}\n```\n\n### Proxy Mode for Web Scopes\n\nRequest and session scoped beans require a proxy because the singleton beans that inject them exist longer. Spring creates a proxy that delegates to the actual request/session-scoped instance.\n\n### Singleton vs Prototype\n\n- **Singleton**: Stateless services, utility classes, DAOs/repositories\n- **Prototype**: Stateful beans, shopping carts, per-operation helpers",
+  "codeExample": "@Component\n@Scope(value = \"prototype\")\npublic class PaymentProcessor {\n    private final PaymentGateway gateway;\n\n    public PaymentProcessor(PaymentGateway gateway) {\n        this.gateway = gateway;\n        System.out.println(\"New PaymentProcessor instance created\");\n    }\n\n    public PaymentResult process(Order order) {\n        return gateway.charge(order.getTotal());\n    }\n}",
+  "quiz": [
+    {
+      "question": "What is the default bean scope in Spring?",
+      "options": ["Singleton", "Prototype", "Request", "Session"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why do request and session scoped beans need a proxyMode?",
+      "options": ["Singleton beans that inject them cannot be recreated per request", "To improve performance", "To enable AOP features", "To support method-level security"],
+      "correctIndex": 0
+    }
+  ]
+}

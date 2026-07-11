@@ -1,0 +1,19 @@
+{
+  "title": "Spring Boot Annotations",
+  "language": "springboot",
+  "topic": "annotations",
+  "content": "### Core Annotations\n\nSpring Boot provides a rich set of annotations for declaring beans, wiring dependencies, and configuring the application.\n\n#### Stereotype Annotations\n- **@Component**: Generic stereotype for any Spring-managed bean.\n- **@Service**: Specialization of @Component for service-layer logic.\n- **@Repository**: Specialization of @Component for data access; adds persistence exception translation.\n- **@Controller**: Specialization for MVC controllers (returns view names).\n- **@RestController**: @Controller + @ResponseBody for REST APIs.\n\n#### Configuration Annotations\n- **@Configuration**: Declares a class as a source of bean definitions.\n- **@Bean**: Declares a single bean produced by a method inside a @Configuration class.\n\n#### Property & External Config\n- **@Value**: Injects values from properties files, environment variables, or SpEL expressions.\n- **@PropertySource**: Specifies the location of property files to load.\n\n```java\n@Configuration\n@PropertySource(\"classpath:app.properties\")\npublic class AppConfig {\n    @Value(\"${app.name}\")\n    private String appName;\n\n    @Bean\n    public MyService myService() {\n        return new MyService(appName);\n    }\n}\n```",
+  "codeExample": "import org.springframework.stereotype.Service;\nimport org.springframework.beans.factory.annotation.Value;\n\n@Service\npublic class GreetingService {\n\n    @Value(\"${greeting.default:Hello}\")\n    private String defaultGreeting;\n\n    public String greet(String name) {\n        return defaultGreeting + \", \" + name + \"!\";\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which annotation is a specialization of @Component that adds persistence exception translation?",
+      "options": ["@Repository", "@Service", "@Controller", "@Configuration"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the difference between @Controller and @RestController?",
+      "options": ["@RestController = @Controller + @ResponseBody", "@RestController is for views, @Controller is for REST", "They are identical", "@Controller is deprecated in favor of @RestController"],
+      "correctIndex": 0
+    }
+  ]
+}

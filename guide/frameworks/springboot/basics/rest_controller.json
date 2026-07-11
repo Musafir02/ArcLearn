@@ -1,0 +1,19 @@
+{
+  "title": "Building REST Controllers",
+  "language": "springboot",
+  "topic": "rest_controller",
+  "content": "### @RestController\n\n`@RestController` is a convenience annotation combining `@Controller` and `@ResponseBody`. Every method automatically serializes return values to JSON (via Jackson) or XML.\n\n### HTTP Method Mappings\n\n| Annotation | HTTP Method |\n|---|---|\n| `@GetMapping` | GET |\n| `@PostMapping` | POST |\n| `@PutMapping` | PUT |\n| `@DeleteMapping` | DELETE |\n| `@PatchMapping` | PATCH |\n\n### RESTful Design Principles\n\n- Use nouns for resource paths (`/users`, `/orders`)\n- Use HTTP methods for actions (GET = read, POST = create, PUT = replace, PATCH = partial update, DELETE = delete)\n- Return appropriate HTTP status codes\n- Use consistent error response format\n\n```java\n@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n\n    private final UserService userService;\n\n    public UserController(UserService userService) {\n        this.userService = userService;\n    }\n\n    @GetMapping\n    public List<User> getAllUsers() {\n        return userService.findAll();\n    }\n\n    @GetMapping(\"/{id}\")\n    public User getUserById(@PathVariable Long id) {\n        return userService.findById(id);\n    }\n\n    @PostMapping\n    @ResponseStatus(HttpStatus.CREATED)\n    public User createUser(@RequestBody User user) {\n        return userService.save(user);\n    }\n}\n```",
+  "codeExample": "@RestController\n@RequestMapping(\"/api/products\")\npublic class ProductController {\n\n    private final ProductService productService;\n\n    public ProductController(ProductService productService) {\n        this.productService = productService;\n    }\n\n    @GetMapping\n    public List<Product> getAll() {\n        return productService.findAll();\n    }\n\n    @PostMapping\n    @ResponseStatus(HttpStatus.CREATED)\n    public Product create(@RequestBody Product product) {\n        return productService.save(product);\n    }\n\n    @DeleteMapping(\"/{id}\")\n    public void delete(@PathVariable Long id) {\n        productService.deleteById(id);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which annotation combines @Controller and @ResponseBody?",
+      "options": ["@RestController", "@WebController", "@ApiController", "@RequestMapping"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which HTTP method annotation should you use for partial updates?",
+      "options": ["@PatchMapping", "@PutMapping", "@PostMapping", "@GetMapping"],
+      "correctIndex": 0
+    }
+  ]
+}

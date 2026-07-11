@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Spring Boot",
+  "language": "springboot",
+  "topic": "intro",
+  "content": "### What is Spring Boot?\n\nSpring Boot is an opinionated framework built on top of the Spring Framework that simplifies the setup and development of Spring applications. It eliminates boilerplate configuration by providing auto-configuration, embedded servers, and production-ready features.\n\n### Key Features\n\n- **Auto-Configuration**: Automatically configures Spring beans based on dependencies in the classpath.\n- **Embedded Tomcat**: Ships with embedded Tomcat, Jetty, or Undertow so you can run apps as standalone JARs.\n- **Opinionated Starter Dependencies**: Curated starters like `spring-boot-starter-web` bundle compatible dependencies.\n- **Convention over Configuration**: Sensible defaults reduce the need for manual XML or Java config.\n- **Production Readiness**: Actuator, metrics, health checks, and externalized configuration out of the box.\n\n### Spring Ecosystem\n\nSpring Boot is part of the larger Spring ecosystem which includes Spring Data, Spring Security, Spring Cloud, Spring Batch, and more. It's the foundation for modern Java microservices development.\n\n```java\n@SpringBootApplication\npublic class Application {\n    public static void main(String[] args) {\n        SpringApplication.run(Application.class, args);\n    }\n}\n```",
+  "codeExample": "// A minimal Spring Boot application\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@SpringBootApplication\npublic class DemoApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(DemoApplication.class, args);\n    }\n}\n\n@RestController\nclass HelloController {\n    @GetMapping(\"/hello\")\n    public String hello() {\n        return \"Hello, Spring Boot!\";\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does Spring Boot's auto-configuration rely on to configure beans?",
+      "options": ["Classpath dependencies", "XML configuration files", "Runtime bytecode analysis", "Environment variables only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which embedded server does Spring Boot include by default for web applications?",
+      "options": ["Tomcat", "JBoss", "WebLogic", "GlassFish"],
+      "correctIndex": 0
+    }
+  ]
+}

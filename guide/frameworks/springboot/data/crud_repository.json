@@ -1,0 +1,19 @@
+{
+  "title": "CRUD Repository Operations",
+  "language": "springboot",
+  "topic": "crud_repository",
+  "content": "### CRUD Methods\n\n`JpaRepository` inherits from `PagingAndSortingRepository` and `CrudRepository`, providing standard CRUD operations.\n\n| Method | Description |\n|---|---|\n| `save(S entity)` | Insert or update an entity |\n| `saveAll(Iterable<S> entities)` | Batch insert/update |\n| `findById(ID id)` | Find by primary key, returns Optional |\n| `findAll()` | Returns all entities |\n| `findAllById(Iterable<ID> ids)` | Find by multiple IDs |\n| `findAll(Sort sort)` | Find all with sorting |\n| `findAll(Pageable pageable)` | Find all with pagination |\n| `count()` | Returns the total count |\n| `deleteById(ID id)` | Delete by ID |\n| `delete(S entity)` | Delete specific entity |\n| `deleteAll()` | Delete all |\n| `existsById(ID id)` | Check if exists |\n\n### @Modifying for Update/Delete\n\nCustom update operations require `@Modifying` and `@Transactional`.\n\n```java\n@Modifying\n@Transactional\n@Query(\"UPDATE User u SET u.active = false WHERE u.lastLoginAt < :date\")\nint deactivateInactiveUsers(@Param(\"date\") LocalDateTime date);\n```\n\n### Pagination\n\n```java\n@Repository\npublic interface PostRepository extends JpaRepository<Post, Long> {\n    Page<Post> findByPublishedTrue(Pageable pageable);\n}\n\n// Usage:\nPageable pageable = PageRequest.of(0, 10, Sort.by(\"createdAt\").descending());\nPage<Post> postPage = postRepository.findByPublishedTrue(pageable);\n```",
+  "codeExample": "@Service\npublic class ProductService {\n    private final ProductRepository productRepository;\n\n    public ProductService(ProductRepository productRepository) {\n        this.productRepository = productRepository;\n    }\n\n    public Page<Product> getProducts(int page, int size) {\n        Pageable pageable = PageRequest.of(page, size, Sort.by(\"name\"));\n        return productRepository.findAll(pageable);\n    }\n\n    @Transactional\n    public Product updatePrice(Long id, BigDecimal newPrice) {\n        Product product = productRepository.findById(id)\n                .orElseThrow(() -> new ProductNotFoundException(id));\n        product.setPrice(newPrice);\n        return productRepository.save(product);\n    }\n\n    public boolean existsBySku(String sku) {\n        return productRepository.existsById(sku);\n    }\n}",
+  "quiz": [
+    {
+      "question": "What does findById return?",
+      "options": ["Optional<T>", "T (null if not found)", "T (throws if not found)", "ResponseEntity<T>"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which two annotations are needed for custom update queries?",
+      "options": ["@Modifying and @Transactional", "@Query and @Update", "@Modifying and @Query", "@Transactional and @Query"],
+      "correctIndex": 0
+    }
+  ]
+}

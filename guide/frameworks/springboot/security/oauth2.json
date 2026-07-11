@@ -1,0 +1,19 @@
+{
+  "title": "OAuth2 with Spring Security",
+  "language": "springboot",
+  "topic": "oauth2",
+  "content": "### OAuth2 with Spring Security\n\nSpring Security provides comprehensive OAuth2 support for both client and resource server roles.\n\n### Authorization Code Flow\n\n1. User clicks \"Login with Google\"\n2. App redirects to Google's authorization endpoint\n3. User authenticates and consents\n4. Google redirects back with an authorization code\n5. App exchanges code for an access token\n6. App uses the access token to fetch user info\n\n### OAuth2 Client Configuration\n\n```yaml\nspring:\n  security:\n    oauth2:\n      client:\n        registration:\n          google:\n            client-id: your-google-client-id\n            client-secret: your-google-client-secret\n            scope: profile, email\n          github:\n            client-id: your-github-client-id\n            client-secret: your-github-client-secret\n```\n\n### Resource Server with JWT\n\n```java\n@Configuration\n@EnableWebSecurity\npublic class SecurityConfig {\n\n    @Bean\n    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {\n        http\n            .authorizeHttpRequests(auth -> auth\n                .requestMatchers(\"/api/public/**\").permitAll()\n                .anyRequest().authenticated()\n            )\n            .oauth2ResourceServer(oauth2 -> oauth2\n                .jwt(Customizer.withDefaults())\n            );\n        return http.build();\n    }\n}\n```\n\n### Social Login\n\n```yaml\nspring:\n  security:\n    oauth2:\n      client:\n        registration:\n          google:\n            client-id: ...\n            client-secret: ...\n```\n\n```java\n@GetMapping(\"/login/oauth2/code/google\")\npublic String handleGoogleLogin() {\n    // Handled automatically by Spring Security\n    return \"redirect:/home\";\n}\n```",
+  "codeExample": "@Configuration\n@EnableWebSecurity\npublic class OAuth2SecurityConfig {\n\n    @Bean\n    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {\n        http\n            .authorizeHttpRequests(auth -> auth\n                .requestMatchers(\"/\", \"/login\").permitAll()\n                .anyRequest().authenticated()\n            )\n            .oauth2Login(oauth2 -> oauth2\n                .loginPage(\"/login\")\n                .defaultSuccessUrl(\"/home\", true)\n            )\n            .oauth2ResourceServer(oauth2 -> oauth2\n                .jwt(Customizer.withDefaults())\n            );\n        return http.build();\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which OAuth2 grant flow is most commonly used for social login?",
+      "options": ["Authorization Code", "Client Credentials", "Implicit", "Resource Owner Password"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does an OAuth2 resource server typically validate?",
+      "options": ["JWT tokens", "Session cookies", "API keys", "Basic auth headers"],
+      "correctIndex": 0
+    }
+  ]
+}

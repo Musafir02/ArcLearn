@@ -1,0 +1,24 @@
+{
+  "title": "Transitions & Animations",
+  "language": "tailwind",
+  "topic": "transitions_animations",
+  "content": "### Transition Utilities\n\nTailwind provides transition utilities for smooth state changes:\n\n```html\n<div class=\"transition\">           /* transition-property: all */\n<div class=\"transition-all\">       /* transition: all */\n<div class=\"transition-colors\">    /* color, bg, border-color */\n<div class=\"transition-opacity\">   /* opacity */\n<div class=\"transition-shadow\">    /* box-shadow */\n<div class=\"transition-transform\"> /* transform */\n```\n\n### Transition Duration\n\nControl how long a transition takes:\n\n```html\n<div class=\"transition duration-75\">    /* 75ms */\n<div class=\"transition duration-100\">   /* 100ms */\n<div class=\"transition duration-300\">   /* 300ms (default) */\n<div class=\"transition duration-500\">   /* 500ms */\n<div class=\"transition duration-700\">   /* 700ms */\n<div class=\"transition duration-1000\">  /* 1000ms */\n```\n\n### Transition Timing Function\n\n```html\n<div class=\"transition ease-linear\">    /* linear */\n<div class=\"transition ease-in\">        /* cubic-bezier: in */\n<div class=\"transition ease-out\">       /* cubic-bezier: out */\n<div class=\"transition ease-in-out\">    /* cubic-bezier: in-out */\n```\n\n### Transition Delay\n\n```html\n<div class=\"transition delay-100\">   /* 100ms delay */\n<div class=\"transition delay-500\">   /* 500ms delay */\n<div class=\"transition delay-1000\">  /* 1000ms delay */\n```\n\n### Animation Utilities\n\n```html\n<div class=\"animate-spin\">    /* infinite spin */\n<div class=\"animate-ping\">    /* ping/pulse effect */\n<div class=\"animate-pulse\">   /* pulse/fade effect */\n<div class=\"animate-bounce\">  /* bounce effect */\n<div class=\"animate-none\">    /* no animation */\n```\n\n### Practical Examples\n\n```html\n<!-- Button hover transition -->\n<button class=\"bg-blue-600 hover:bg-blue-700 \n               transition-colors duration-200\">\n  Hover me\n</button>\n\n<!-- Scale on hover -->\n<div class=\"transform transition-transform \n            duration-300 hover:scale-105\">\n  Scale on hover\n</div>\n\n<!-- Loading spinner -->\n<div class=\"animate-spin h-8 w-8 border-4 \n            border-blue-500 border-t-transparent rounded-full\"></div>\n```\n\n### Custom Animations\n\nDefine custom animations in `tailwind.config.js`:\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      keyframes: {\n        wiggle: {\n          '0%, 100%': { transform: 'rotate(-3deg)' },\n          '50%': { transform: 'rotate(3deg)' },\n        },\n      },\n      animation: {\n        wiggle: 'wiggle 1s ease-in-out infinite',\n      },\n    },\n  },\n}\n```\n\nUsage: `<div class=\"animate-wiggle\">`",
+  "codeExample": "<div class=\"flex gap-4 items-center p-8 bg-gray-100 rounded-lg\">\n  <div class=\"transition-all duration-300 hover:scale-110 \n              hover:bg-blue-500 bg-blue-400 w-16 h-16 rounded-lg\n              flex items-center justify-center text-white cursor-pointer\">\n    Hover\n  </div>\n  <div class=\"animate-bounce bg-green-500 w-16 h-16 rounded-lg \n              flex items-center justify-center text-white\">\n    Bounce\n  </div>\n  <div class=\"animate-spin h-8 w-8 border-4 border-indigo-500 \n              border-t-transparent rounded-full\"></div>\n  <div class=\"animate-pulse bg-purple-400 w-16 h-16 rounded-lg \n              flex items-center justify-center text-white\">\n    Pulse\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which utility creates a smooth transition specifically for color, background, and border-color?",
+      "options": ["transition-colors", "transition-all", "transition", "transition-color"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you add a custom animation keyframe in Tailwind?",
+      "options": [
+        "Using keyframes and animation in theme.extend",
+        "Using @keyframes in CSS file",
+        "Using the animate- directive",
+        "Using keyframe() function in config"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

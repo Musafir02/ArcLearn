@@ -1,0 +1,19 @@
+{
+  "title": "Static and Media Files",
+  "language": "django",
+  "topic": "static_files",
+  "content": "### Static Files Configuration\n\nStatic files include CSS, JavaScript, and images. Configure them in `settings.py`:\n\n```python\n# Static files (CSS, JavaScript, images)\nSTATIC_URL = '/static/'\n\n# Additional directories for collectstatic to look for static files\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',  # project-level static folder\n]\n\n# Where collectstatic places all files for production\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\n```\n\n### Using Static Files in Templates\n\nLoad the `static` template tag:\n\n```html\n{% load static %}\n\n<link rel=\"stylesheet\" href=\"{% static 'css/style.css' %}\">\n<script src=\"{% static 'js/app.js' %}\"></script>\n<img src=\"{% static 'images/logo.png' %}\" alt=\"Logo\">\n```\n\n### Collectstatic\n\nIn production, `collectstatic` gathers all static files from apps and `STATICFILES_DIRS` into `STATIC_ROOT`:\n\n```bash\npython manage.py collectstatic\n```\n\nThis makes it easy to serve all static files from a single directory.\n\n### Organizing Static Files\n\nPer-app static files are automatically discovered:\n\n```\nmyapp/\n  static/\n    myapp/\n      css/\n        app.css\n      js/\n        app.js\n      images/\n        icon.png\n```\n\nAlways namespace your static files inside a subdirectory named after the app to avoid conflicts.\n\n### Media Files\n\nMedia files are user-uploaded content (avatars, images, documents). Configure in `settings.py`:\n\n```python\n# URL that serves media files\nMEDIA_URL = '/media/'\n\n# Filesystem path for uploaded files\nMEDIA_ROOT = BASE_DIR / 'media'\n```\n\n### Serving Media Files During Development\n\nIn `urls.py`, add media serving (only for development):\n\n```python\nfrom django.conf import settings\nfrom django.conf.urls.static import static\n\nurlpatterns = [\n    # ... your URL patterns\n]\n\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n```\n\n### File Fields in Models\n\n```python\nfrom django.db import models\n\ndef user_avatar_path(instance, filename):\n    return f'avatars/user_{instance.user.id}/{filename}'\n\nclass Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    avatar = models.ImageField(upload_to=user_avatar_path, blank=True)\n    resume = models.FileField(upload_to='resumes/', blank=True)\n```\n\n### In Templates\n\n```html\n{% load static %}\n\n<!-- Uploaded media file -->\n<img src=\"{{ profile.avatar.url }}\" alt=\"{{ user.username }}\">\n\n<!-- Static file fallback -->\n<img src=\"{% static 'images/default-avatar.png' %}\" alt=\"Default Avatar\">\n```\n\n### Production Deployment\n\nFor production, use dedicated serving:\n\n- **Static files**: Serve via Nginx, Apache, or WhiteNoise\n- **Media files**: Serve via Nginx or cloud storage (S3, Google Cloud Storage)\n\n```nginx\n# Nginx configuration\nlocation /static/ {\n    alias /path/to/staticfiles/;\n}\n\nlocation /media/ {\n    alias /path/to/media/;\n}\n```",
+  "codeExample": "<!-- In a Django template -->\n{% load static %}\n<!DOCTYPE html>\n<html>\n<head>\n    <link rel=\"stylesheet\" href=\"{% static 'css/style.css' %}\">\n    <title>{{ title }}</title>\n</head>\n<body>\n    <img src=\"{% static 'images/banner.jpg' %}\" alt=\"Banner\">\n    <img src=\"{{ user.profile.avatar.url }}\" alt=\"Avatar\">\n</body>\n</html>",
+  "quiz": [
+    {
+      "question": "What does the 'python manage.py collectstatic' command do?",
+      "options": ["Deletes all static files", "Gathers all static files into a single directory (STATIC_ROOT)", "Compiles SCSS files to CSS", "Minifies JavaScript and CSS files"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which setting defines the base URL for serving user-uploaded files?",
+      "options": ["STATIC_URL", "MEDIA_URL", "FILE_URL", "UPLOAD_URL"],
+      "correctIndex": 1
+    }
+  ]
+}

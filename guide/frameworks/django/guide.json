@@ -1,0 +1,19 @@
+{
+  "title": "Django Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Django Basics", "folder": "basics",
+      "topics": ["urls_views", "templates", "models", "admin", "migrations", "static_files", "forms"]
+    },
+    {
+      "type": "group", "title": "Authentication & API", "folder": "auth_api",
+      "topics": ["authentication", "class_based_views", "rest_api_drf", "serializers", "viewsets_routers"]
+    },
+    {
+      "type": "group", "title": "Advanced Django", "folder": "advanced",
+      "topics": ["middleware", "signals", "custom_management_commands", "caching", "testing", "deployment"]
+    }
+  ]
+}

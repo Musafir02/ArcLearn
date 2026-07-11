@@ -1,0 +1,19 @@
+{
+  "title": "Method-Level Security",
+  "language": "springboot",
+  "topic": "method_security",
+  "content": "### @EnableMethodSecurity\n\nEnable method-level security with `@EnableMethodSecurity` (modern) or `@EnableGlobalMethodSecurity` (legacy).\n\n```java\n@Configuration\n@EnableMethodSecurity\npublic class MethodSecurityConfig {\n    // Method security annotations are now active\n}\n```\n\n### @PreAuthorize\n\nThe most flexible annotation. Uses SpEL expressions to control access before method execution.\n\n```java\n@RestController\n@RequestMapping(\"/api/orders\")\npublic class OrderController {\n\n    @PreAuthorize(\"hasRole('ADMIN') or #order.userId == authentication.principal.id\")\n    @PostMapping\n    public Order createOrder(@RequestBody Order order) {\n        return orderService.save(order);\n    }\n\n    @PreAuthorize(\"hasAuthority('ORDER_READ')\")\n    @GetMapping(\"/{id}\")\n    public Order getOrder(@PathVariable Long id) {\n        return orderService.findById(id);\n    }\n}\n```\n\n### @PostAuthorize\n\nEvaluates after method execution. Can access the return value via the `returnObject` variable.\n\n```java\n@PostAuthorize(\"returnObject.ownerId == authentication.principal.id\")\npublic Document getDocument(Long id) {\n    return documentRepository.findById(id).orElse(null);\n}\n```\n\n### @Secured and @RolesAllowed\n\nSimpler alternatives that only check roles by name.\n\n```java\n@Secured(\"ROLE_ADMIN\")\npublic void deleteUser(Long id) { ... }\n\n@RolesAllowed({\"USER\", \"ADMIN\"})\npublic List<Item> getItems() { ... }\n```\n\n### SpEL Expressions\n\n- `hasRole('ROLE')` - Checks if user has the given role\n- `hasAuthority('AUTHORITY')` - Checks if user has the given authority\n- `hasAnyRole('A', 'B')` - Checks multiple roles\n- `#paramName` - References method parameters\n- `authentication` - The current Authentication object",
+  "codeExample": "@Service\n@EnableMethodSecurity\npublic class DocumentService {\n\n    @PreAuthorize(\"hasRole('ADMIN') or #document.ownerId == authentication.principal.id\")\n    public Document updateDocument(@P(\"document\") Document document) {\n        return documentRepository.save(document);\n    }\n\n    @PreAuthorize(\"hasAuthority('DOCUMENT_DELETE')\")\n    @PostAuthorize(\"returnObject == null or returnObject.ownerId == authentication.principal.id\")\n    public Document deleteDocument(Long id) {\n        Document doc = documentRepository.findById(id).orElse(null);\n        if (doc != null) documentRepository.delete(doc);\n        return doc;\n    }\n\n    @Secured(\"ROLE_ADMIN\")\n    public List<Document> getAllDocuments() {\n        return documentRepository.findAll();\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which annotation enables method-level security in modern Spring Security?",
+      "options": ["@EnableMethodSecurity", "@EnableGlobalMethodSecurity", "@EnableWebSecurity", "@EnableAspectJAutoProxy"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you refer to the return value in a @PostAuthorize expression?",
+      "options": ["returnObject", "result", "returnValue", "methodResult"],
+      "correctIndex": 0
+    }
+  ]
+}

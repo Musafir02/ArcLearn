@@ -1,0 +1,24 @@
+{
+  "title": "Getting Started with Tailwind CSS",
+  "language": "tailwind",
+  "topic": "getstarted",
+  "content": "### Installation via npm\n\nThe recommended way to install Tailwind CSS is through npm:\n\n```bash\nnpm install -D tailwindcss\n```\n\n### Initialize Configuration\n\nGenerate a `tailwind.config.js` file:\n\n```bash\nnpx tailwindcss init\n```\n\nThis creates a minimal config file:\n\n```js\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: [\n    \"./src/**/*.{html,js}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n```\n\n### Content Paths\n\nThe `content` array tells Tailwind which files to scan for class names:\n\n```js\nmodule.exports = {\n  content: [\n    \"./pages/**/*.{js,ts,jsx,tsx}\",\n    \"./components/**/*.{js,ts,jsx,tsx}\",\n    \"./index.html\",\n  ],\n}\n```\n\n### @tailwind Directives\n\nAdd Tailwind's layers to your main CSS file:\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n\n- **base** - Resets and default styles (like normalize.css)\n- **components** - Component classes (used with @apply)\n- **utilities** - All utility classes\n\n### CDN Usage\n\nFor quick prototyping, use the Play CDN:\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <script src=\"https://cdn.tailwindcss.com\"></script>\n</head>\n<body>\n  <h1 class=\"text-3xl font-bold text-center\">Hello World</h1>\n</body>\n</html>\n```\n\n### PostCSS Setup\n\nAdd Tailwind as a PostCSS plugin in `postcss.config.js`:\n\n```js\nmodule.exports = {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n}\n```\n\nThen run your build command:\n\n```bash\nnpx tailwindcss -i ./src/input.css -o ./dist/output.css --watch\n```",
+  "codeExample": "<!-- index.html -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <link href=\"/dist/output.css\" rel=\"stylesheet\">\n</head>\n<body>\n  <div class=\"container mx-auto p-6\">\n    <h1 class=\"text-4xl font-bold text-gray-800\">Welcome</h1>\n    <p class=\"mt-4 text-gray-600\">Tailwind is set up and ready!</p>\n  </div>\n</body>\n</html>",
+  "quiz": [
+    {
+      "question": "What does the content array in tailwind.config.js specify?",
+      "options": [
+        "Which files to scan for class names",
+        "Which CSS files to compile",
+        "Which images to optimize",
+        "Which JavaScript files to bundle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which @tailwind directive adds CSS reset and default styles?",
+      "options": ["@tailwind base", "@tailwind components", "@tailwind utilities", "@tailwind reset"],
+      "correctIndex": 0
+    }
+  ]
+}

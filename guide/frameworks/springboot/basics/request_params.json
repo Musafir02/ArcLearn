@@ -1,0 +1,19 @@
+{
+  "title": "Request Parameters in Spring Boot",
+  "language": "springboot",
+  "topic": "request_params",
+  "content": "### Extracting Data from Requests\n\nSpring Boot provides annotations to extract different parts of an HTTP request.\n\n### @PathVariable\n\nExtracts values from URI template placeholders.\n\n```java\n@GetMapping(\"/users/{id}\")\npublic User getUser(@PathVariable Long id) { ... }\n\n@GetMapping(\"/orders/{year}/{month}\")\npublic List<Order> getOrders(@PathVariable int year, @PathVariable int month) { ... }\n```\n\n### @RequestParam\n\nExtracts query parameters from the URL. Supports default values and the `required` flag.\n\n```java\n@GetMapping(\"/users\")\npublic List<User> getUsers(\n        @RequestParam(defaultValue = \"0\") int page,\n        @RequestParam(defaultValue = \"20\") int size,\n        @RequestParam(required = false) String search) { ... }\n```\n\n### @RequestHeader\n\nExtracts HTTP header values.\n\n```java\n@GetMapping(\"/me\")\npublic User getProfile(@RequestHeader(\"Authorization\") String token) { ... }\n```\n\n### @RequestBody\n\nDeserializes the HTTP request body into a Java object (JSON/XML).\n\n```java\n@PostMapping(\"/users\")\n@ResponseStatus(HttpStatus.CREATED)\npublic User createUser(@RequestBody @Valid User user) { ... }\n```\n\n### @RequestPart\n\nUsed for multipart file uploads combined with JSON data.\n\n```java\n@PostMapping(value = \"/upload\", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)\npublic void uploadFile(@RequestPart(\"file\") MultipartFile file,\n                       @RequestPart(\"metadata\") Metadata metadata) { ... }\n```",
+  "codeExample": "@RestController\n@RequestMapping(\"/api/search\")\npublic class SearchController {\n\n    @GetMapping\n    public List<Result> search(\n            @RequestParam String q,\n            @RequestParam(defaultValue = \"1\") int page,\n            @RequestParam(defaultValue = \"10\") @Min(1) @Max(100) int size,\n            @RequestHeader(\"Accept-Language\") String lang) {\n        return searchService.search(q, page, size, lang);\n    }\n}",
+  "quiz": [
+    {
+      "question": "Which annotation extracts URL template placeholders?",
+      "options": ["@PathVariable", "@RequestParam", "@RequestHeader", "@RequestBody"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you make a @RequestParam optional?",
+      "options": ["Set required = false", "Set optional = true", "Use @RequestParam Optional<T>", "Both A and C are valid approaches"],
+      "correctIndex": 0
+    }
+  ]
+}

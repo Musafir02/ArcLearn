@@ -1,0 +1,19 @@
+{
+  "title": "Plugins",
+  "language": "tailwind",
+  "topic": "plugins",
+  "content": "### Official Plugins\n\nTailwind provides official plugins for common patterns:\n\n```bash\nnpm install @tailwindcss/typography @tailwindcss/forms @tailwindcss/aspect-ratio @tailwindcss/container-queries\n```\n\nAdd to config:\n\n```js\nmodule.exports = {\n  plugins: [\n    require('@tailwindcss/typography'),\n    require('@tailwindcss/forms'),\n    require('@tailwindcss/aspect-ratio'),\n    require('@tailwindcss/container-queries'),\n  ],\n}\n```\n\n### @tailwindcss/typography (Prose)\n\nAdds beautiful typographic defaults for rich text content:\n\n```html\n<article class=\"prose prose-lg prose-blue max-w-none\">\n  <h1>Article Title</h1>\n  <p>This will be styled with beautiful typography defaults.</p>\n  <blockquote>A styled blockquote.</blockquote>\n  <ul>\n    <li>List items</li>\n    <li>With proper spacing</li>\n  </ul>\n</article>\n```\n\nVariants: `prose-sm`, `prose-lg`, `prose-xl`, `prose-2xl`\nColor modifiers: `prose-blue`, `prose-gray`, `prose-slate`\nDark mode: `<div class=\"prose dark:prose-invert\">`\n\n### @tailwindcss/forms\n\nResets form elements for easier styling:\n\n```html\n<input type=\"text\" class=\"form-input rounded\">\n<select class=\"form-select rounded\">\n<textarea class=\"form-textarea rounded\">\n```\n\n### @tailwindcss/aspect-ratio\n\nMaintain aspect ratios for embeds and images:\n\n```html\n<div class=\"aspect-w-16 aspect-h-9\">\n  <iframe src=\"https://youtube.com/watch?v=...\" class=\"...\"></iframe>\n</div>\n```\n\nModern alternative using native CSS: `<div class=\"aspect-[16/9]\">`\n\n### @tailwindcss/container-queries\n\nStyle elements based on container size (not viewport):\n\n```html\n<div class=\"@container\">\n  <div class=\"@md:grid-cols-2 grid grid-cols-1\">\n    <div>Responsive to container, not viewport</div>\n  </div>\n</div>\n```\n\n### Custom Plugins\n\nCreate custom utilities with the `plugin()` function:\n\n```js\nconst plugin = require('tailwindcss/plugin')\n\nmodule.exports = {\n  plugins: [\n    plugin(function({ addUtilities, addComponents, addBase, theme }) {\n      // Add new utilities\n      addUtilities({\n        '.text-shadow': {\n          textShadow: '2px 2px 4px rgba(0,0,0,0.3)',\n        },\n        '.text-shadow-none': {\n          textShadow: 'none',\n        },\n      })\n    }),\n  ],\n}\n```\n\n### Adding New Utilities with Plugin\n\n```js\nplugin(function({ addUtilities, theme }) {\n  const newUtilities = {\n    '.scrollbar-hide': {\n      '-ms-overflow-style': 'none',\n      'scrollbar-width': 'none',\n      '&::-webkit-scrollbar': {\n        display: 'none',\n      },\n    },\n  }\n  addUtilities(newUtilities)\n})\n```",
+  "codeExample": "/* tailwind.config.js with plugins */\nconst plugin = require('tailwindcss/plugin')\n\nmodule.exports = {\n  content: ['./src/**/*.{html,js}'],\n  theme: { extend: {} },\n  plugins: [\n    require('@tailwindcss/typography'),\n    require('@tailwindcss/forms'),\n    plugin(function({ addBase, theme }) {\n      addBase({\n        'h1': { fontSize: theme('fontSize.4xl')[0] },\n        'h2': { fontSize: theme('fontSize.3xl')[0] },\n      })\n    }),\n  ],\n}\n\n<!-- Using prose -->\n<article class=\"prose prose-slate dark:prose-invert max-w-none\">\n  <h1>Plugin-powered Typography</h1>\n  <p>This entire article is styled by the typography plugin.</p>\n  <pre><code>// code here</code></pre>\n</article>",
+  "quiz": [
+    {
+      "question": "Which plugin adds the prose class for styling rich text content?",
+      "options": ["@tailwindcss/typography", "@tailwindcss/forms", "@tailwindcss/prose", "@tailwindcss/text"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What function is used to create custom utilities in a plugin?",
+      "options": ["addUtilities", "addUtility", "newUtility", "createUtilities"],
+      "correctIndex": 0
+    }
+  ]
+}
