@@ -1,0 +1,22 @@
+{
+  "title": "Conditional Types",
+  "language": "typescript",
+  "topic": "conditional_types",
+  "order": 52,
+  "nextTopic": "template_literal_types",
+  "prevTopic": "mapped_types",
+  "content": "Conditional Types\n\nConditional types select a type based on a condition, similar to a ternary expression but at the type level.\n\n### Basic Syntax\n\n```typescript\ntype IsString<T> = T extends string ? \"yes\" : \"no\";\n\ntype A = IsString<string>; // \"yes\"\ntype B = IsString<number>; // \"no\"\ntype C = IsString<boolean>; // \"no\"\n```\n\n### Type Inference with infer\n\nThe `infer` keyword allows you to extract a type from a conditional:\n\n```typescript\ntype ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;\n\ntype Fn = (a: number, b: string) => boolean;\ntype R = ReturnType<Fn>; // boolean\n```\n\n### Distributive Conditional Types\n\nWhen a conditional type acts on a naked type parameter, it distributes over unions:\n\n```typescript\ntype ToArray<T> = T extends unknown ? T[] : never;\n\ntype Result = ToArray<string | number>;\n// string[] | number[] (distributed)\n\n// Non-distributive version\ntype ToArrayNonDist<T> = [T] extends [unknown] ? T[] : never;\ntype Result2 = ToArrayNonDist<string | number>;\n// (string | number)[]\n```\n\n### Practical Examples\n\n```typescript\ntype IsNever<T> = [T] extends [never] ? true : false;\n\ntype ExtractStrings<T> = T extends string ? T : never;\n\ntype ExcludeNull<T> = T extends null | undefined ? never : T;\n\ntype NonNullable<T> = T extends null | undefined ? never : T;\n```\n\n### Chained Conditionals\n\n```typescript\ntype TypeName<T> =\n  T extends string ? \"string\" :\n  T extends number ? \"number\" :\n  T extends boolean ? \"boolean\" :\n  T extends undefined ? \"undefined\" :\n  T extends Function ? \"function\" :\n  \"object\";\n\ntype T1 = TypeName<string>; // \"string\"\ntype T2 = TypeName<() => void>; // \"function\"\n```\n\n> **Key Point:** Conditional types enable type-level programming and are foundational for utility types.",
+  "codeExample": "// Extract element type from array\ntype ElementType<T> = T extends (infer U)[] ? U : never;\n\ntype E1 = ElementType<string[]>; // string\ntype E2 = ElementType<number[]>; // number\ntype E3 = ElementType<boolean>; // never\n\n// Extract promise type\ntype Unwrap<T> = T extends Promise<infer U> ? U : T;\n\ntype P1 = Unwrap<Promise<string>>; // string\ntype P2 = Unwrap<number>; // number\n\n// Recursive conditional type\ntype DeepReadonly<T> = {\n  readonly [P in keyof T]: T[P] extends object\n    ? DeepReadonly<T[P]>\n    : T[P];\n};",
+  "quiz": [
+    {
+      "question": "What keyword extracts a type inside a conditional type?",
+      "options": ["extract", "infer", "typeof", "keyof"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does a conditional type behave with union types?",
+      "options": ["Returns never", "Distributes over the union", "Returns the union unchanged", "Returns any"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Interfaces",
+  "language": "typescript",
+  "topic": "interfaces",
+  "order": 26,
+  "nextTopic": "interface_extends",
+  "prevTopic": "generics_functions",
+  "content":"### Interfaces\n\nInterfaces define the shape of an object — the names and types of its properties.\n\n### Basic Interface\n\n```typescript\ninterface User {\n  name: string;\n  age: number;\n  email: string;\n}\n\nfunction greet(user: User): string {\n  return `Hello, ${user.name}!`;\n}\n\nconst alice: User = {\n  name: \"Alice\",\n  age: 30,\n  email: \"alice@example.com\"\n};\n```\n\n### Readonly Properties\n\n```typescript\ninterface Config {\n  readonly apiKey: string;\n  readonly endpoint: string;\n}\n\nconst config: Config = {\n  apiKey: \"abc123\",\n  endpoint: \"https://api.example.com\"\n};\n// config.apiKey = \"new\"; // Error: readonly\n```\n\n### Optional Properties\n\n```typescript\ninterface User {\n  name: string;\n  age?: number; // Optional\n  email?: string; // Optional\n}\n```\n\n### Index Signatures\n\n```typescript\ninterface StringDictionary {\n  [key: string]: string;\n}\n\nconst dict: StringDictionary = {\n  hello: \"world\",\n  foo: \"bar\"\n};\n```\n\n### Excess Property Checks\n\nTypeScript checks for unexpected properties:\n\n```typescript\ninterface Point {\n  x: number;\n  y: number;\n}\n\n// Error: 'z' does not exist in type 'Point'\n// const p: Point = { x: 1, y: 2, z: 3 };\n```\n\n> **Key Point:** Interfaces can be merged (declaration merging) and extended.",
+  "codeExample": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n  description?: string;\n  readonly createdAt: Date;\n}\n\nfunction displayProduct(product: Product): string {\n  return `${product.name}: $${product.price}`;\n}\n\nconst item: Product = {\n  id: 1,\n  name: \"Laptop\",\n  price: 999.99,\n  createdAt: new Date()\n};\n\ninterface StringMap {\n  [key: string]: string | number;\n}\n\nconst env: StringMap = {\n  NODE_ENV: \"development\",\n  PORT: 3000\n};",
+  "quiz": [
+    {
+      "question": "What does an interface define?",
+      "options": ["A class implementation", "The shape of an object", "A function's behavior", "A module structure"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword makes a property unchangeable after initialization?",
+      "options": ["static", "const", "readonly", "final"],
+      "correctIndex": 2
+    }
+  ]
+}

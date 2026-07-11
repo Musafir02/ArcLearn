@@ -1,0 +1,22 @@
+{
+  "title": "PHP Built-in Functions",
+  "language": "php",
+  "topic": "builtin_functions",
+  "order": 36,
+  "nextTopic": "scope",
+  "prevTopic": "variable_functions",
+  "content": "### PHP Built-in Functions\n\nPHP has over 1000 built-in functions available for various tasks.\n\n### String Functions\n\n| Function | Description |\n|----------|-------------|\n| `strlen()` | String length |\n| `strpos()` | Find position of substring |\n| `substr()` | Extract substring |\n| `str_replace()` | Replace text |\n| `strtolower()` / `strtoupper()` | Change case |\n| `trim()` | Remove whitespace |\n| `explode()` / `implode()` | Split / Join strings |\n\n### Array Functions\n\n| Function | Description |\n|----------|-------------|\n| `count()` | Count elements |\n| `array_merge()` | Merge arrays |\n| `array_map()` | Apply callback to each element |\n| `array_filter()` | Filter array by callback |\n| `array_reduce()` | Reduce array to single value |\n\n```php\n<?php\n// String\n$text = \"Hello World\";\necho strlen($text);         // 11\necho strpos($text, \"World\"); // 6\necho strtolower($text);     // hello world\n\n// Array\n$numbers = [1, 2, 3, 4, 5];\n$squared = array_map(fn($n) => $n ** 2, $numbers);\n$even = array_filter($numbers, fn($n) => $n % 2 == 0);\n?>\n```\n\n### Math, Date, File Functions\n\n| Category | Examples |\n|----------|----------|\n| Math | `abs()`, `round()`, `max()`, `min()`, `rand()` |\n| Date/Time | `date()`, `time()`, `strtotime()` |\n| File | `fopen()`, `fwrite()`, `fread()`, `file_get_contents()` |\n| JSON | `json_encode()`, `json_decode()` |\n\n> **Key Point:** PHP functions are not case-sensitive, but it is best practice to call them as defined in the documentation.",
+  "codeExample": "<?php\n// Array map/filter/reduce\n$nums = [1, 2, 3, 4, 5, 6];\n\n$even = array_filter($nums, fn($n) => $n % 2 == 0);\n$doubled = array_map(fn($n) => $n * 2, $even);\n$sum = array_reduce($doubled, fn($carry, $n) => $carry + $n, 0);\n\nprint_r($even);   // [2, 4, 6]\nprint_r($doubled); // [4, 8, 12]\necho $sum;         // 24\n?>",
+  "quiz": [
+    {
+      "question": "What does array_map() do?",
+      "options": ["Filters an array", "Applies a callback to each element", "Merges arrays", "Sorts arrays"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which function removes whitespace from string start and end?",
+      "options": ["strip()", "trim()", "clean()", "sanitize()"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Access Modifiers",
+  "language": "typescript",
+  "topic": "access_modifiers",
+  "order": 39,
+  "nextTopic": "readonly",
+  "prevTopic": "implements",
+  "content": "Access Modifiers\n\nTypeScript provides three access modifiers to control the visibility of class members.\n\n### public\n\nAccessible from anywhere (default if no modifier specified):\n\n```typescript\nclass User {\n  public name: string;\n\n  constructor(name: string) {\n    this.name = name;\n  }\n\n  public greet(): string {\n    return `Hello, ${this.name}`;\n  }\n}\n\nconst user = new User(\"Alice\");\nconsole.log(user.name); // OK\nconsole.log(user.greet()); // OK\n```\n\n### private\n\nAccessible only within the declaring class:\n\n```typescript\nclass BankAccount {\n  private balance: number = 0;\n\n  deposit(amount: number): void {\n    this.balance += amount; // OK\n  }\n\n  getBalance(): number {\n    return this.balance; // OK\n  }\n}\n\nconst account = new BankAccount();\n// account.balance // Error: Property 'balance' is private\n```\n\n### protected\n\nAccessible within the class and its subclasses:\n\n```typescript\nclass Animal {\n  protected dna: string = \"secret-code\";\n}\n\nclass Dog extends Animal {\n  showDna(): string {\n    return this.dna; // OK: protected in subclass\n  }\n}\n\nconst dog = new Dog();\n// dog.dna // Error: Property 'dna' is protected\n```\n\n### Comparison\n\n| Modifier | Class | Subclass | External |\n|----------|-------|----------|----------|\n| public | Yes | Yes | Yes |\n| protected | Yes | Yes | No |\n| private | Yes | No | No |\n\n### ECMAScript Private Fields (#)\n\n```typescript\nclass MyClass {\n  #privateField: number = 42;\n\n  getPrivate(): number {\n    return this.#privateField;\n  }\n}\n```\n\n> **Key Point:** TypeScript's `private` is enforced at compile time only. Use ECMAScript `#` private fields for runtime privacy.",
+  "codeExample": "class Employee {\n  constructor(\n    public name: string,\n    private salary: number,\n    protected department: string\n  ) {}\n\n  public getSalary(): number {\n    return this.salary;\n  }\n}\n\nclass Manager extends Employee {\n  constructor(name: string, salary: number, department: string) {\n    super(name, salary, department);\n  }\n\n  public getDepartment(): string {\n    return this.department;\n  }\n\n  public getSalaryInfo(): string {\n    return `Manager ${this.name}`;\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which access modifier is default if none is specified?",
+      "options": ["private", "protected", "public", "internal"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which modifier allows access only within the class itself?",
+      "options": ["public", "protected", "private", "static"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Numbers",
+  "language": "typescript",
+  "topic": "numbers",
+  "order": 13,
+  "nextTopic": "null_undefined",
+  "prevTopic": "strings",
+  "content":"### Number Type\n\nTypeScript uses a single `number` type for all numeric values (integers and floating-point).\n\n### Number Declaration\n\n```typescript\nlet integer: number = 42;\nlet float: number = 3.14;\nlet negative: number = -10;\n```\n\n### Numeric Literals\n\n```typescript\nlet decimal: number = 255;\nlet hex: number = 0xFF; // 255\nlet binary: number = 0b11111111; // 255\nlet octal: number = 0o377; // 255\n```\n\n### Numeric Separators\n\n```typescript\nlet million: number = 1_000_000;\nlet bytes: number = 0xFF_FF_FF;\n```\n\n### Number Methods\n\n| Method | Description |\n|--------|------------|\n| `toFixed(n)` | Format with n decimal places |\n| `toPrecision(n)` | Format with n significant digits |\n| `toString(n)` | Convert to string with base n |\n| `isNaN()` | Check if value is NaN |\n| `isFinite()` | Check if value is finite |\n\n### Special Values\n\n```typescript\nlet notANumber: number = NaN;\nlet infinity: number = Infinity;\nlet negativeInfinity: number = -Infinity;\n```\n\n### BigInt\n\nFor integers beyond the safe range:\n\n```typescript\nlet big: bigint = 9007199254740991n;\nlet bigFromNumber: bigint = BigInt(42);\n```\n\n> **Key Point:** Number is a 64-bit floating-point value. Use `bigint` for arbitrary precision integers.",
+  "codeExample": "// Number declarations\nlet price: number = 29.99;\nlet quantity: number = 100;\nlet total: number = price * quantity;\n\n// Numeric separators for readability\nlet population: number = 8_000_000_000;\n\n// Methods\nconsole.log(total.toFixed(2)); // \"2999.00\"\nconsole.log((255).toString(16)); // \"ff\"\n\n// BigInt (ES2020+)\nlet largeNumber: bigint = 12345678901234567890n;\n\n// NaN check\nlet result: number = NaN;\nconsole.log(Number.isNaN(result)); // true",
+  "quiz": [
+    {
+      "question": "What type is used for integers beyond the safe range?",
+      "options": ["number", "bigint", "int", "long"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the decimal value of 0xFF?",
+      "options": ["15", "255", "256", "16"],
+      "correctIndex": 1
+    }
+  ]
+}

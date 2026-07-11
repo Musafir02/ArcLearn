@@ -1,0 +1,22 @@
+{
+  "title": "PHP Form Handling",
+  "language": "php",
+  "topic": "form_handling",
+  "order": 43,
+  "nextTopic": "get_post",
+  "prevTopic": "explode_implode",
+  "content": "### PHP Form Handling\n\nPHP is excellent for processing HTML form data sent via GET or POST methods.\n\n### Simple Form\n\n```php\n<form method=\"post\" action=\"<?php echo htmlspecialchars($_SERVER[\"PHP_SELF\"]); ?>\">\n    Name: <input type=\"text\" name=\"name\">\n    <input type=\"submit\">\n</form>\n\n<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $name = htmlspecialchars($_POST[\"name\"]);\n    echo \"Hello, $name\";\n}\n?>\n```\n\n### Form Attributes\n\n| Attribute | Value | Description |\n|-----------|-------|-------------|\n| `method` | `get` or `post` | HTTP method |\n| `action` | URL | Where to send form data |\n| `enctype` | `multipart/form-data` | For file uploads |\n\n### GET vs POST\n\n| Feature | GET | POST |\n|---------|-----|------|\n| Data location | URL parameters | Request body |\n| Visibility | Visible in URL | Hidden |\n| Bookmarkable | Yes | No |\n| Size limit | ~2000 chars | Much larger |\n| Security | Not secure | More secure |\n| File uploads | No | Yes |\n\n> **Key Point:** Use `$_SERVER[\"REQUEST_METHOD\"]` to check the form method. Always use `htmlspecialchars()` when outputting form data to prevent XSS attacks.",
+  "codeExample": "<?php\n$nameErr = $emailErr = \"\";\n$name = $email = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $name = htmlspecialchars($_POST[\"name\"]);\n    $email = htmlspecialchars($_POST[\"email\"]);\n    echo \"Received: $name ($email)\";\n}\n?>\n\n<form method=\"post\">\n    Name: <input type=\"text\" name=\"name\" value=\"<?php echo $name; ?>\"><br>\n    Email: <input type=\"text\" name=\"email\" value=\"<?php echo $email; ?>\"><br>\n    <input type=\"submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which superglobal contains POST data?",
+      "options": ["$_GET", "$_POST", "$_REQUEST", "$_FORM"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What function helps prevent XSS when outputting form data?",
+      "options": ["strip_tags()", "htmlspecialchars()", "escape()", "sanitize()"],
+      "correctIndex": 1
+    }
+  ]
+}

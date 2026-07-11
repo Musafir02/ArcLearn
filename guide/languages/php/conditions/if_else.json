@@ -1,0 +1,22 @@
+{
+  "title": "PHP if-else",
+  "language": "php",
+  "topic": "if_else",
+  "order": 17,
+  "nextTopic": "switch",
+  "prevTopic": "conditions",
+  "content": "### PHP if-else Statement\n\nThe `if-else` statement executes one block of code if a condition is true and another block if the condition is false.\n\n### Syntax\n\n```php\n<?php\nif (condition) {\n    // code if condition is true\n} else {\n    // code if condition is false\n}\n?>\n```\n\n### Examples\n\n```php\n<?php\n$num = 10;\n\nif ($num > 0) {\n    echo \"$num is positive\";\n} elseif ($num < 0) {\n    echo \"$num is negative\";\n} else {\n    echo \"$num is zero\";\n}\n?>\n```\n\n### Nested if\n\n```php\n<?php\n$age = 20;\n$hasID = true;\n\nif ($age >= 18) {\n    if ($hasID) {\n        echo \"Entry allowed\";\n    } else {\n        echo \"ID required\";\n    }\n} else {\n    echo \"Too young\";\n}\n?>\n```\n\n> **Key Point:** You can nest `if` statements inside other `if` statements, but consider using logical operators to avoid deep nesting.",
+  "codeExample": "<?php\n$temp = 30;\n\nif ($temp > 35) {\n    echo \"Very hot\";\n} elseif ($temp > 25) {\n    echo \"Warm\";\n} elseif ($temp > 15) {\n    echo \"Pleasant\";\n} else {\n    echo \"Cold\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "How many elseif blocks can you have in a single if statement?",
+      "options": ["One", "Two", "Unlimited", "None"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can you have multiple else blocks in a single if statement?",
+      "options": ["Yes", "No", "Only with elseif"],
+      "correctIndex": 1
+    }
+  ]
+}

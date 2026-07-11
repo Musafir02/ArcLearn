@@ -1,0 +1,22 @@
+{
+  "title": "PHP Indexed Arrays",
+  "language": "php",
+  "topic": "array_indexed",
+  "order": 27,
+  "nextTopic": "array_associative",
+  "prevTopic": "arrays",
+  "content": "### PHP Indexed Arrays\n\nIndexed arrays use numeric indices, starting from 0 by default.\n\n### Creating Indexed Arrays\n\n```php\n<?php\n// Method 1\n$cars = [\"Volvo\", \"BMW\", \"Toyota\"];\n\n// Method 2\n$cars[0] = \"Volvo\";\n$cars[1] = \"BMW\";\n$cars[2] = \"Toyota\";\n\n// Method 3 - range()\n$numbers = range(1, 5); // [1, 2, 3, 4, 5]\n?>\n```\n\n### Accessing Elements\n\n```php\n<?php\n$colors = [\"Red\", \"Green\", \"Blue\", \"Yellow\"];\n\necho $colors[0];   // Red\necho $colors[2];   // Blue\n\n// Loop through\nfor ($i = 0; $i < count($colors); $i++) {\n    echo $colors[$i] . \" \";\n}\n\n// Or use foreach\nforeach ($colors as $color) {\n    echo \"$color \";\n}\n?>\n```\n\n### Key Characteristics\n\n| Feature | Description |\n|---------|-------------|\n| Default index | Starts at 0 |\n| Auto-increment | New elements get next available index |\n| Non-sequential | Can assign any index |\n| Mixed indices | Can mix auto and manual indexing |\n\n> **Key Point:** When you add elements with `[]`, PHP automatically uses the next available integer index (max integer key + 1).",
+  "codeExample": "<?php\n$numbers = [10, 20, 30, 40, 50];\n\n// Access by index\necho \"First: \" . $numbers[0] . \"<br>\";\necho \"Last: \" . $numbers[count($numbers) - 1] . \"<br>\";\n\n// Add elements\n$numbers[] = 60;\narray_push($numbers, 70);\n\n// Loop through\nforeach ($numbers as $num) {\n    echo \"$num \";\n}\n// Output: 10 20 30 40 50 60 70\n?>",
+  "quiz": [
+    {
+      "question": "What is the index of the third element in an indexed array?",
+      "options": ["2", "3", "4", "Depends"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you add an element to the end of an indexed array?",
+      "options": ["$arr[] = value", "$arr.add(value)", "$arr.push(value)", "$arr[last] = value"],
+      "correctIndex": 0
+    }
+  ]
+}

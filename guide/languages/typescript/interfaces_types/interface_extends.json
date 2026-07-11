@@ -1,0 +1,22 @@
+{
+  "title": "Interface Extension",
+  "language": "typescript",
+  "topic": "interface_extends",
+  "order": 27,
+  "nextTopic": "interface_optional",
+  "prevTopic": "interfaces",
+  "content":"### Extending Interfaces\n\nInterfaces can extend one or more other interfaces, inheriting their properties.\n\n### Single Extension\n\n```typescript\ninterface Person {\n  name: string;\n  age: number;\n}\n\ninterface Employee extends Person {\n  employeeId: number;\n  department: string;\n}\n\nconst employee: Employee = {\n  name: \"Alice\",\n  age: 30,\n  employeeId: 123,\n  department: \"Engineering\"\n};\n```\n\n### Multiple Extension\n\n```typescript\ninterface Named {\n  name: string;\n}\n\ninterface Aged {\n  age: number;\n}\n\ninterface Contact {\n  email: string;\n}\n\ninterface Person extends Named, Aged, Contact {\n  isActive: boolean;\n}\n\n// Person has: name, age, email, isActive\n```\n\n### Overriding Properties\n\nYou can override inherited property types:\n\n```typescript\ninterface Base {\n  id: string;\n}\n\ninterface Derived extends Base {\n  id: number; // OK, narrows or widens\n}\n```\n\n### Extending from Multiple Sources\n\n```typescript\ninterface Shape {\n  color: string;\n}\n\ninterface Dimensions {\n  width: number;\n  height: number;\n}\n\ninterface Rectangle extends Shape, Dimensions {\n  borderRadius?: number;\n}\n\nconst rect: Rectangle = {\n  color: \"red\",\n  width: 100,\n  height: 50\n};\n```\n\n### Interface vs Type Extension\n\n| Feature | Interface extends | Type intersection |\n|---------|------------------|-------------------|\n| Syntax | `extends` | `&` |\n| Conflicts | Override (with check) | Never (creates never) |\n| Reopening | Yes (declaration merging) | No |\n\n> **Key Point:** Interface extension creates a single flat type, not an intersection.",
+  "codeExample": "interface Timestamp {\n  createdAt: Date;\n  updatedAt: Date;\n}\n\ninterface SoftDelete {\n  deletedAt?: Date;\n  isDeleted: boolean;\n}\n\n// Multiple extension\ninterface DatabaseRecord extends Timestamp, SoftDelete {\n  id: number;\n  data: unknown;\n}\n\nconst record: DatabaseRecord = {\n  id: 1,\n  data: { key: \"value\" },\n  createdAt: new Date(),\n  updatedAt: new Date(),\n  isDeleted: false\n};",
+  "quiz": [
+    {
+      "question": "How many interfaces can one interface extend?",
+      "options": ["Only one", "Up to two", "Multiple", "None"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What keyword is used for interface extension?",
+      "options": ["extends", "implements", "inherits", "&"],
+      "correctIndex": 0
+    }
+  ]
+}

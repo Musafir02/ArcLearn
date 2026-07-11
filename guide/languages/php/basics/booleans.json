@@ -1,0 +1,22 @@
+{
+  "title": "PHP Booleans",
+  "language": "php",
+  "topic": "booleans",
+  "order": 10,
+  "nextTopic": "strings",
+  "prevTopic": "operators",
+  "content": "### PHP Booleans\n\nA boolean represents two possible states: `true` or `false`.\n\n### Boolean Values\n\n```php\n<?php\n$isAdmin = true;\n$isLoggedIn = false;\n\nif ($isAdmin) {\n    echo \"Access granted\";\n}\n?>\n```\n\n### Values That Evaluate to False\n\n| Value | Type |\n|-------|------|\n| `false` | boolean |\n| `0` | integer |\n| `0.0` | float |\n| `\"\"` | empty string |\n| `\"0\"` | string |\n| `[]` | empty array |\n| `null` | null |\n\n### Boolean Operations\n\n| Operation | Example | Result |\n|-----------|---------|--------|\n| AND | `true && false` | `false` |\n| OR | `true || false` | `true` |\n| NOT | `!true` | `false` |\n| XOR | `true xor true` | `false` |\n\n> **Key Point:** Use `is_bool()` to check if a value is a boolean. Be careful with loose comparisons that can auto-convert types.",
+  "codeExample": "<?php\n$isMember = true;\n$hasCoupon = false;\n\nif ($isMember && !$hasCoupon) {\n    echo \"Standard member discount applied\";\n}\n\nvar_dump((bool) \"\");     // false\nvar_dump((bool) \"text\"); // true\nvar_dump((bool) 0);      // false\n?>",
+  "quiz": [
+    {
+      "question": "Which value evaluates to false in PHP?",
+      "options": ["\"false\"", "0", "\"0\"", "Both 0 and \"0\""],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does is_bool(0) return?",
+      "options": ["true", "false", "null", "0"],
+      "correctIndex": 1
+    }
+  ]
+}

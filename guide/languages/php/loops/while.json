@@ -1,0 +1,22 @@
+{
+  "title": "PHP while Loop",
+  "language": "php",
+  "topic": "while",
+  "order": 21,
+  "nextTopic": "for",
+  "prevTopic": "ternary",
+  "content": "### PHP while Loop\n\nThe `while` loop executes a block of code as long as a condition is true.\n\n### Syntax\n\n```php\n<?php\nwhile (condition) {\n    // code to execute\n}\n?>\n```\n\n### Example\n\n```php\n<?php\n$i = 1;\nwhile ($i <= 5) {\n    echo \"Number: $i<br>\";\n    $i++;\n}\n?>\n```\n\n### Common Use Cases\n\n| Use Case | Description |\n|----------|-------------|\n| Reading files | Loop until end of file |\n| Database results | Fetch until no more rows |\n| User input validation | Repeat until valid input |\n| Counter loops | When end condition is known |\n\n> **Key Point:** Be careful of infinite loops. Always ensure the condition can become false. If the condition is initially false, the loop body never executes.",
+  "codeExample": "<?php\n$i = 0;\nwhile ($i < 3) {\n    echo \"Iteration $i<br>\";\n    $i++;\n}\n\n// Practical: sum 1 to 10\n$sum = 0;\n$n = 1;\nwhile ($n <= 10) {\n    $sum += $n;\n    $n++;\n}\necho \"Sum: $sum\";\n?>",
+  "quiz": [
+    {
+      "question": "When does a while loop stop executing?",
+      "options": ["When condition becomes true", "When condition becomes false", "After 100 iterations", "Never"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens if the while condition is false from the start?",
+      "options": ["Error", "Loop runs once", "Loop never executes", "Infinite loop"],
+      "correctIndex": 2
+    }
+  ]
+}

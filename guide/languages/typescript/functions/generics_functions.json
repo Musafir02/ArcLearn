@@ -1,0 +1,22 @@
+{
+  "title": "Generic Functions",
+  "language": "typescript",
+  "topic": "generics_functions",
+  "order": 25,
+  "nextTopic": "interfaces",
+  "prevTopic": "callbacks",
+  "content":"### Generic Functions\n\nGenerics allow creating functions that work with any type while preserving type information.\n\n### Basic Syntax\n\n```typescript\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nlet result1 = identity<string>(\"hello\"); // type: string\nlet result2 = identity(42); // type: number (inferred)\n```\n\n### Type Parameters\n\n```typescript\n// Single type parameter\nfunction firstElement<T>(arr: T[]): T | undefined {\n  return arr[0];\n}\n\n// Multiple type parameters\nfunction pair<T, U>(first: T, second: U): [T, U] {\n  return [first, second];\n}\n\nlet result = pair(\"hello\", 42); // type: [string, number]\n```\n\n### Generic Constraints\n\n```typescript\ninterface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(arg: T): T {\n  console.log(arg.length);\n  return arg;\n}\n\nlogLength(\"hello\"); // OK, string has length\nlogLength([1, 2, 3]); // OK, array has length\n// logLength(123); // Error: number doesn't have length\n```\n\n### Generic Defaults\n\n```typescript\nfunction createArray<T = string>(length: number, value: T): T[] {\n  return Array(length).fill(value);\n}\n\nlet arr = createArray(3, \"a\"); // type: string[]\n```\n\n### Generic Inference\n\nTypeScript often infers generic types from arguments:\n\n```typescript\nfunction merge<T, U>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\n\nlet merged = merge({ name: \"Alice\" }, { age: 30 });\n// type: { name: string } & { age: number }\n```\n\n> **Key Point:** Generics provide type safety without sacrificing flexibility.",
+  "codeExample": "// Identity function\nfunction wrap<T>(value: T): { value: T } {\n  return { value };\n}\n\nconst wrapped = wrap(42); // type: { value: number }\n\n// Generic array functions\nfunction getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}\n\nconst user = { name: \"Alice\", age: 30 };\nconst name = getProperty(user, \"name\"); // type: string\n\n// Generic with callback\nfunction map<T, U>(arr: T[], fn: (item: T) => U): U[] {\n  return arr.map(fn);\n}\n\nconst lengths = map([\"a\", \"bb\", \"ccc\"], (s) => s.length);",
+  "quiz": [
+    {
+      "question": "What do generics provide in TypeScript?",
+      "options": ["Dynamic typing", "Type safety with flexibility", "Runtime type checking", "Faster execution"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is the generic type parameter typically specified?",
+      "options": ["Inside square brackets", "Inside angle brackets", "Inside parentheses", "Inside curly braces"],
+      "correctIndex": 1
+    }
+  ]
+}

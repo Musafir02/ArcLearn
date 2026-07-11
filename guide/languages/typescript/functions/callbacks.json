@@ -1,0 +1,22 @@
+{
+  "title": "Callbacks",
+  "language": "typescript",
+  "topic": "callbacks",
+  "order": 24,
+  "nextTopic": "generics_functions",
+  "prevTopic": "arrow_functions",
+  "content":"### Callbacks in TypeScript\n\nCallbacks are functions passed as arguments to other functions, to be executed later.\n\n### Typing Callbacks\n\n```typescript\nfunction processData(\n  data: number[],\n  callback: (item: number) => void\n): void {\n  data.forEach((item) => callback(item));\n}\n```\n\n### Callback Type Aliases\n\n```typescript\ntype ErrorHandler = (error: Error) => void;\ntype SuccessHandler<T> = (result: T) => void;\ntype CompletionHandler = () => void;\n\nfunction fetchData<T>(\n  url: string,\n  onSuccess: SuccessHandler<T>,\n  onError: ErrorHandler,\n  onComplete?: CompletionHandler\n): void {\n  // Implementation\n}\n```\n\n### Error-First Callbacks\n\n```typescript\ntype NodeCallback<T> = (error: Error | null, result?: T) => void;\n\nfunction readFile(\n  path: string,\n  callback: NodeCallback<string>\n): void {\n  try {\n    const content = \"file content\";\n    callback(null, content);\n  } catch (err) {\n    callback(err as Error);\n  }\n}\n```\n\n### Callback Hell\n\nNested callbacks create hard-to-read code. Prefer Promises or async/await:\n\n```typescript\n// Avoid deeply nested callbacks\ngetData((data) => {\n  processData(data, (processed) => {\n    saveData(processed, (result) => {\n      console.log(result);\n    });\n  });\n});\n```\n\n> **Key Point:** Always type callback parameters explicitly for better IntelliSense and type safety.",
+  "codeExample": "// Generic callback type\ntype Callback<T> = (error: Error | null, result?: T) => void;\n\nfunction asyncOperation<T>(value: T, cb: Callback<T>): void {\n  setTimeout(() => {\n    cb(null, value);\n  }, 100);\n}\n\nasyncOperation<string>(\"hello\", (err, result) => {\n  if (err) {\n    console.error(err);\n    return;\n  }\n  console.log(result?.toUpperCase());\n});\n\n// Array method callbacks\nconst items = [1, 2, 3, 4, 5];\nconst filtered = items.filter((n: number): boolean => n > 2);",
+  "quiz": [
+    {
+      "question": "What is a callback function?",
+      "options": ["A function that returns a callback", "A function passed as an argument to another function", "A function that calls itself", "A function with no parameters"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What pattern should replace deeply nested callbacks?",
+      "options": ["More callbacks", "Promises/async-await", "Loops", "Recursion"],
+      "correctIndex": 1
+    }
+  ]
+}

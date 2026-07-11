@@ -1,0 +1,22 @@
+{
+  "title": "PHP switch Statement",
+  "language": "php",
+  "topic": "switch",
+  "order": 18,
+  "nextTopic": "match",
+  "prevTopic": "if_else",
+  "content": "### PHP switch Statement\n\nThe `switch` statement selects one of many code blocks to execute based on a value.\n\n### Syntax\n\n```php\n<?php\nswitch (expression) {\n    case value1:\n        // code for value1\n        break;\n    case value2:\n        // code for value2\n        break;\n    default:\n        // code if no case matches\n}\n?>\n```\n\n### Example\n\n```php\n<?php\n$day = \"Monday\";\n\nswitch ($day) {\n    case \"Monday\":\n        echo \"Start of the week\";\n        break;\n    case \"Friday\":\n        echo \"TGIF\";\n        break;\n    case \"Saturday\":\n    case \"Sunday\":\n        echo \"Weekend!\";\n        break;\n    default:\n        echo \"Midweek\";\n}\n?>\n```\n\n### Important Notes\n\n| Aspect | Details |\n|--------|---------|\n| Break | Required to prevent fall-through |\n| Default | Optional, runs if no case matches |\n| Fall-through | Omitting `break` continues to next case |\n| Comparison | Uses loose comparison (`==`) |\n\n> **Key Point:** Without `break`, PHP continues executing the next case (fall-through). This can be useful but is often a source of bugs.",
+  "codeExample": "<?php\n$grade = 'B';\n\nswitch ($grade) {\n    case 'A':\n        echo \"Excellent!\";\n        break;\n    case 'B':\n        echo \"Good job\";\n        break;\n    case 'C':\n        echo \"Fair\";\n        break;\n    case 'D':\n    case 'F':\n        echo \"Needs improvement\";\n        break;\n    default:\n        echo \"Invalid grade\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "What happens if you omit break in a case?",
+      "options": ["Syntax error", "Fall-through to next case", "Exit the switch", "Skip to default"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does switch use loose or strict comparison?",
+      "options": ["Loose (==)", "Strict (===)", "Both", "Neither"],
+      "correctIndex": 0
+    }
+  ]
+}

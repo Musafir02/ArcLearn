@@ -1,0 +1,22 @@
+{
+  "title": "keyof Operator",
+  "language": "typescript",
+  "topic": "keyof",
+  "order": 49,
+  "nextTopic": "typeof",
+  "prevTopic": "generics_constraints",
+  "content": "The keyof Operator\n\nThe `keyof` operator takes an object type and produces a union of its keys (property names).\n\n### Basic Usage\n\n```typescript\ninterface Person {\n  name: string;\n  age: number;\n  email: string;\n}\n\ntype PersonKeys = keyof Person;\n// \"name\" | \"age\" | \"email\"\n\nlet key: PersonKeys = \"name\";\nkey = \"age\";\nkey = \"email\";\n// key = \"salary\"; // Error\n```\n\n### keyof with Index Signatures\n\n```typescript\ninterface StringMap {\n  [key: string]: unknown;\n}\n\ntype MapKeys = keyof StringMap;\n// string | number\n```\n\n### keyof with typeof\n\n```typescript\nconst colors = {\n  red: \"#FF0000\",\n  green: \"#00FF00\",\n  blue: \"#0000FF\"\n} as const;\n\ntype ColorKey = keyof typeof colors;\n// \"red\" | \"green\" | \"blue\"\n\ntype ColorValue = (typeof colors)[ColorKey];\n// \"#FF0000\" | \"#00FF00\" | \"#0000FF\"\n```\n\n### Practical Use: Type-Safe Property Access\n\n```typescript\nfunction getValue<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}\n\nconst user = { id: 1, name: \"Alice\" };\nconst id = getValue(user, \"id\"); // number\nconst name = getValue(user, \"name\"); // string\n```\n\n### keyof with Mapped Types\n\n```typescript\ntype Optional<T> = {\n  [K in keyof T]?: T[K];\n};\n\ntype Readonly<T> = {\n  readonly [K in keyof T]: T[K];\n};\n```\n\n> **Key Point:** `keyof` is essential for creating type-safe accessor functions and mapped types.",
+  "codeExample": "interface ApiConfig {\n  baseUrl: string;\n  timeout: number;\n  retries: number;\n  headers: Record<string, string>;\n}\n\n// Type-safe config updater\nfunction updateConfig<K extends keyof ApiConfig>(\n  config: ApiConfig,\n  key: K,\n  value: ApiConfig[K]\n): void {\n  config[key] = value;\n  console.log(`Updated ${key} to ${value}`);\n}\n\nconst config: ApiConfig = {\n  baseUrl: \"https://api.example.com\",\n  timeout: 5000,\n  retries: 3,\n  headers: {}\n};\n\nupdateConfig(config, \"timeout\", 10000);\nupdateConfig(config, \"baseUrl\", \"https://new-api.com\");\n\n// Get all keys\ntype ConfigKeys = keyof ApiConfig;\n// \"baseUrl\" | \"timeout\" | \"retries\" | \"headers\"",
+  "quiz": [
+    {
+      "question": "What does 'keyof T' produce?",
+      "options": ["A type with all values of T", "A union of property names of T", "A string type", "A number type"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is 'keyof typeof obj' useful for?",
+      "options": ["Getting runtime keys", "Getting compile-time keys from a value", "Creating new objects", "Checking types"],
+      "correctIndex": 1
+    }
+  ]
+}

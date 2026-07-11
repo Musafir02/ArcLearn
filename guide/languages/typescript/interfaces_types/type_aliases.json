@@ -1,0 +1,22 @@
+{
+  "title": "Type Aliases",
+  "language": "typescript",
+  "topic": "type_aliases",
+  "order": 29,
+  "nextTopic": "intersection_types",
+  "prevTopic": "interface_optional",
+  "content":"### Type Aliases\n\nType aliases create a new name for a type. They can represent any type, not just object shapes.\n\n### Basic Syntax\n\n```typescript\ntype Age = number;\ntype Name = string;\ntype IsActive = boolean;\n\nlet age: Age = 30;\n```\n\n### Object Types\n\n```typescript\ntype User = {\n  name: string;\n  age: number;\n  email?: string;\n};\n\nconst user: User = {\n  name: \"Alice\",\n  age: 30\n};\n```\n\n### Union Types\n\n```typescript\ntype Status = \"active\" | \"inactive\" | \"pending\";\ntype Id = string | number;\ntype Nullable<T> = T | null;\n```\n\n### Function Types\n\n```typescript\ntype Callback = (error: Error | null, result?: unknown) => void;\ntype MathOp = (a: number, b: number) => number;\n\nconst add: MathOp = (a, b) => a + b;\n```\n\n### Generic Type Aliases\n\n```typescript\ntype Result<T> = {\n  success: true;\n  data: T;\n} | {\n  success: false;\n  error: string;\n};\n\nconst success: Result<string> = {\n  success: true,\n  data: \"Operation completed\"\n};\n```\n\n### Type Alias vs Interface\n\n| Feature | Type Alias | Interface |\n|---------|-----------|-----------|\n| Object shapes | Yes | Yes |\n| Union types | Yes | No |\n| Mapped types | Yes | No |\n| Declaration merging | No | Yes |\n| Extends | Intersection (&) | extends keyword |\n\n> **Key Point:** Type aliases can represent any type, including primitives, unions, and tuples.",
+  "codeExample": "// Primitive alias\ntype ID = string;\ntype Coordinate = number;\n\n// Union alias\ntype Result<T> = { ok: true; value: T } | { ok: false; error: string };\n\n// Function alias\ntype Transformer<T, U> = (input: T) => U;\n\nconst toString: Transformer<number, string> = (n) => n.toString();\n\n// Complex generic type\ntype ApiResponse<T> = {\n  data: T;\n  status: number;\n  message: string;\n};\n\n// Mapped type alias\ntype Readonly<T> = {\n  readonly [P in keyof T]: T[P];\n};",
+  "quiz": [
+    {
+      "question": "What keyword creates a type alias?",
+      "options": ["type", "interface", "alias", "typedef"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can type aliases represent union types?",
+      "options": ["Yes", "No", "Only with objects", "Only with primitives"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP Variable Functions and Anonymous Functions",
+  "language": "php",
+  "topic": "variable_functions",
+  "order": 35,
+  "nextTopic": "builtin_functions",
+  "prevTopic": "return_values",
+  "content": "### PHP Variable Functions\n\nPHP supports variable functions where a variable name followed by parentheses calls a function with that name.\n\n### Variable Functions\n\n```php\n<?php\nfunction greet() {\n    echo \"Hello!\";\n}\n\n$func = \"greet\";\n$func(); // Calls greet()\n?>\n```\n\n### Anonymous Functions (Closures)\n\n```php\n<?php\n$greet = function($name) {\n    echo \"Hello, $name\";\n};\n\n$greet(\"Alice\"); // Hello, Alice\n?>\n```\n\n### Arrow Functions (PHP 7.4+)\n\n```php\n<?php\n$multiply = fn($a, $b) => $a * $b;\necho $multiply(3, 4); // 12\n\n// Arrow functions automatically capture parent scope\n$x = 10;\n$addX = fn($n) => $n + $x;\necho $addX(5); // 15\n?>\n```\n\n### Closures with use\n\n```php\n<?php\n$prefix = \"User: \";\n$format = function($name) use ($prefix) {\n    return $prefix . $name;\n};\n\necho $format(\"John\"); // User: John\n?>\n```\n\n### Comparison\n\n| Feature | Anonymous | Arrow |\n|---------|-----------|-------|\n| Syntax | `function($x) { }` | `fn($x) => expr` |\n| Multi-line | Yes | No (single expression) |\n| Parent scope | Requires `use` | Automatic |\n| Return | Explicit | Implicit |\n\n> **Key Point:** Arrow functions (`fn`) automatically capture variables from the parent scope by value, eliminating the need for `use`.",
+  "codeExample": "<?php\n// Variable function\nfunction sayHello() { echo \"Hi!\"; }\nfunction sayBye() { echo \"Bye!\"; }\n\n$action = \"sayHello\";\n$action(); // Hi!\n\n// Array of callables\n$operations = [\n    'double' => fn($n) => $n * 2,\n    'triple' => fn($n) => $n * 3\n];\necho $operations['double'](5); // 10\n\n// Closure as callback\n$numbers = [1, 2, 3, 4];\n$squared = array_map(fn($n) => $n ** 2, $numbers);\nprint_r($squared);\n?>",
+  "quiz": [
+    {
+      "question": "What PHP version introduced arrow functions?",
+      "options": ["PHP 5.6", "PHP 7.0", "PHP 7.4", "PHP 8.0"],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do anonymous functions access parent scope variables?",
+      "options": ["Directly", "With use keyword", "With global keyword", "With import keyword"],
+      "correctIndex": 1
+    }
+  ]
+}

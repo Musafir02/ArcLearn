@@ -1,0 +1,22 @@
+{
+  "title": "PHP Date and Time",
+  "language": "php",
+  "topic": "date_time",
+  "order": 65,
+  "nextTopic": "include_require",
+  "prevTopic": "namespaces",
+  "content": "### PHP Date and Time\n\nPHP provides powerful functions for date and time manipulation.\n\n### date() Function\n\n```php\n<?php\necho date(\"Y-m-d H:i:s\");      // 2026-07-11 22:30:00\necho date(\"l, F j, Y\");        // Saturday, July 11, 2026\necho date(\"g:i A\");            // 10:30 PM\necho date(\"\\T\\o\\d\\a\\y \\i\\s l\"); // Today is Saturday\n?>\n```\n\n### Common Format Characters\n\n| Char | Description | Example |\n|------|-------------|---------|\n| `d` | Day (01-31) | `11` |\n| `D` | Day short | `Sat` |\n| `l` | Day full | `Saturday` |\n| `m` | Month (01-12) | `07` |\n| `M` | Month short | `Jul` |\n| `F` | Month full | `July` |\n| `Y` | Year (4 digit) | `2026` |\n| `y` | Year (2 digit) | `26` |\n| `H` | Hour (00-23) | `22` |\n| `i` | Minutes (00-59) | `30` |\n| `s` | Seconds (00-59) | `00` |\n| `A` | AM/PM | `PM` |\n\n### time() and strtotime()\n\n```php\n<?php\necho time(); // Unix timestamp: 1777069800\n\necho strtotime(\"now\");\necho strtotime(\"+1 day\");\necho strtotime(\"next Monday\");\necho strtotime(\"last day of this month\");\necho date(\"Y-m-d\", strtotime(\"+2 weeks\"));\n?>\n```\n\n### DateTime Class (PHP 5.2+)\n\n```php\n<?php\n$date = new DateTime();\necho $date->format(\"Y-m-d H:i:s\");\n\n$date->modify(\"+1 day\");\n$date->setDate(2026, 12, 25);\n$date->setTime(10, 30, 0);\n\n$interval = new DateInterval(\"P1M\"); // 1 month\n$date->add($interval);\n\n$now = new DateTime();\n$diff = $now->diff($date);\necho $diff->days . \" days remaining\";\n?>\n```\n\n> **Key Point:** Use the `DateTime` class for complex date manipulation. It provides better OOP interface and immutability with `DateTimeImmutable`.",
+  "codeExample": "<?php\n// Use DateTime class\necho \"Current: \" . (new DateTime())->format(\"Y-m-d H:i:s\") . \"<br>\";\n\n// Date comparison\n$deadline = new DateTime(\"2026-08-01\");\n$today = new DateTime(\"now\");\n\nif ($today < $deadline) {\n    $remaining = $today->diff($deadline);\n    echo \"Deadline in: {$remaining->days} days, {$remaining->h} hours<br>\";\n}\n\n// strtotime examples\necho \"Next week: \" . date(\"Y-m-d\", strtotime(\"+1 week\")) . \"<br>\";\necho \"Next month: \" . date(\"Y-m-d\", strtotime(\"+1 month\")) . \"<br>\";\necho \"Last Monday: \" . date(\"Y-m-d\", strtotime(\"last Monday\")) . \"<br>\";\n\n// Timezone\n$tz = new DateTimeZone(\"America/New_York\");\n$nyTime = new DateTime(\"now\", $tz);\necho \"NY time: \" . $nyTime->format(\"Y-m-d H:i:s\") . \"<br>\";\n\n// Unix timestamp\necho \"Timestamp: \" . time() . \"<br>\";\necho \"From timestamp: \" . date(\"Y-m-d\", 1777069800) . \"<br>\";\n?>",
+  "quiz": [
+    {
+      "question": "What does date('Y') return?",
+      "options": ["Month", "Day", "Year (4 digit)", "Year (2 digit)"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which function creates a DateTime from a relative string like '+1 day'?",
+      "options": ["strtotime()", "time()", "mktime()", "date_create()"],
+      "correctIndex": 0
+    }
+  ]
+}

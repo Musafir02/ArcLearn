@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Strings",
+  "language": "typescript",
+  "topic": "strings",
+  "order": 12,
+  "nextTopic": "numbers",
+  "prevTopic": "booleans",
+  "content":"### String Type\n\nThe `string` type represents textual data.\n\n### String Declaration\n\n```typescript\nlet single: string = 'Single quotes';\nlet double: string = \"Double quotes\";\nlet template: string = `Template literals`;\n```\n\n### Template Literals\n\nTemplate literals support interpolation and multi-line strings:\n\n```typescript\nlet name: string = \"Alice\";\nlet age: number = 30;\nlet greeting: string = `Hello, ${name}! You are ${age} years old.`;\n\nlet multiLine: string = `\n  This is a\n  multi-line string\n`;\n```\n\n### Common String Methods\n\n| Method | Description | Example |\n|--------|------------|--------|\n| `.length` | Returns string length | `\"hello\".length` |\n| `.toUpperCase()` | Converts to uppercase | `\"hello\".toUpperCase()` |\n| `.toLowerCase()` | Converts to lowercase | `\"HELLO\".toLowerCase()` |\n| `.includes()` | Checks if substring exists | `\"hello\".includes(\"ell\")` |\n| `.startsWith()` | Checks prefix | `\"hello\".startsWith(\"he\")` |\n| `.endsWith()` | Checks suffix | `\"hello\".endsWith(\"lo\")` |\n| `.indexOf()` | Find index of substring | `\"hello\".indexOf(\"l\")` |\n| `.slice()` | Extract a portion | `\"hello\".slice(1, 4)` |\n| `.replace()` | Replace substring | `\"hello\".replace(\"l\", \"x\")` |\n| `.split()` | Split into array | `\"a,b,c\".split(\",\")` |\n| `.trim()` | Remove whitespace | `\" hello \".trim()` |\n\n### TypeScript Specifics\n\n```typescript\n// String literal types\nlet direction: \"left\" | \"right\" = \"left\";\n\n// Template literal types\ntype EventName = `on${Capitalize<string>}`;\n```\n\n> **Key Point:** Strings are immutable in TypeScript/JavaScript.",
+  "codeExample": "const firstName: string = \"Alice\";\nconst lastName: string = \"Smith\";\n\n// Template literals\nconst fullName: string = `${firstName} ${lastName}`;\n\n// String methods\nconsole.log(fullName.length); // 10\nconsole.log(fullName.toUpperCase()); // ALICE SMITH\nconsole.log(fullName.includes(\"lice\")); // true\n\n// String splitting\nconst csv: string = \"apple,banana,cherry\";\nconst fruits: string[] = csv.split(\",\");\n\n// String literal type\ntype Color = \"red\" | \"green\" | \"blue\";\nlet primary: Color = \"red\";",
+  "quiz": [
+    {
+      "question": "Which syntax supports string interpolation?",
+      "options": ["Single quotes", "Double quotes", "Template literals", "All of the above"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does 'hello'.length return?",
+      "options": ["4", "5", "6", "undefined"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP File Handling",
+  "language": "php",
+  "topic": "file_handling",
+  "order": 52,
+  "nextTopic": "file_read",
+  "prevTopic": "cookies",
+  "content": "### PHP File Handling\n\nPHP provides a rich set of functions for working with files on the server.\n\n### Opening a File\n\n```php\n<?php\n$file = fopen(\"test.txt\", \"r\") or die(\"Unable to open file!\");\n?>\n```\n\n### File Modes\n\n| Mode | Name | Description |\n|------|------|-------------|\n| `r` | Read | Read from start |\n| `r+` | Read/Write | Read and write from start |\n| `w` | Write | Write from start (truncates) |\n| `w+` | Read/Write | Read and write (truncates) |\n| `a` | Append | Write to end |\n| `a+` | Read/Append | Read and append |\n| `x` | Create | Create for writing (fails if exists) |\n| `x+` | Create | Create for read/write |\n\n### Basic File Functions\n\n| Function | Description |\n|----------|-------------|\n| `fopen()` | Open a file |\n| `fclose()` | Close a file |\n| `fgets()` | Read a line |\n| `fgetc()` | Read a character |\n| `fwrite()` / `fputs()` | Write to a file |\n| `feof()` | Check end of file |\n| `filesize()` | Get file size |\n| `file_exists()` | Check if file exists |\n\n> **Key Point:** Always close files with `fclose()` when done to free system resources and prevent data corruption.",
+  "codeExample": "<?php\n$filename = \"data.txt\";\n\n// Check if file exists\nif (file_exists($filename)) {\n    echo \"File size: \" . filesize($filename) . \" bytes<br>\";\n    \n    $file = fopen($filename, \"r\");\n    if ($file) {\n        echo \"File opened successfully<br>\";\n        while (!feof($file)) {\n            echo fgets($file) . \"<br>\";\n        }\n        fclose($file);\n    }\n} else {\n    echo \"File does not exist\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "Which function opens a file in PHP?",
+      "options": ["file_open()", "fopen()", "open_file()", "file()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does mode 'w' do to an existing file?",
+      "options": ["Appends to end", "Truncates to zero length", "Fails if exists", "Reads only"],
+      "correctIndex": 1
+    }
+  ]
+}

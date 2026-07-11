@@ -1,0 +1,22 @@
+{
+  "title": "Classes in TypeScript",
+  "language": "typescript",
+  "topic": "classes",
+  "order": 35,
+  "nextTopic": "constructors",
+  "prevTopic": "typeof_typeof",
+  "content":"### Classes\n\nTypeScript classes extend JavaScript classes with type annotations, access modifiers, and more.\n\n### Basic Class\n\n```typescript\nclass Person {\n  name: string;\n  age: number;\n\n  constructor(name: string, age: number) {\n    this.name = name;\n    this.age = age;\n  }\n\n  greet(): string {\n    return `Hello, I'm ${this.name}`;\n  }\n}\n\nconst alice = new Person(\"Alice\", 30);\nconsole.log(alice.greet());\n```\n\n### Property Initialization\n\nTypeScript requires properties to be initialized:\n\n```typescript\nclass Point {\n  x: number = 0;\n  y: number = 0;\n\n  constructor(x?: number, y?: number) {\n    if (x !== undefined) this.x = x;\n    if (y !== undefined) this.y = y;\n  }\n}\n```\n\n### Parameter Properties\n\nTypeScript provides shorthand for declaring and initializing properties from constructor parameters:\n\n```typescript\nclass Person {\n  constructor(\n    public name: string,\n    public age: number\n  ) {}\n  // Properties name and age are automatically created\n}\n```\n\n### Methods\n\n```typescript\nclass Calculator {\n  add(a: number, b: number): number {\n    return a + b;\n  }\n\n  subtract(a: number, b: number): number {\n    return a - b;\n  }\n}\n```\n\n> **Key Point:** Parameter properties with access modifiers (`public`, `private`, `protected`) create and initialize properties automatically.",
+  "codeExample": "class Product {\n  constructor(\n    public id: number,\n    public name: string,\n    public price: number\n  ) {}\n\n  applyDiscount(percent: number): void {\n    this.price = this.price * (1 - percent / 100);\n  }\n\n  getInfo(): string {\n    return `${this.name}: $${this.price.toFixed(2)}`;\n  }\n}\n\nconst laptop = new Product(1, \"Laptop\", 999.99);\nlaptop.applyDiscount(10);\nconsole.log(laptop.getInfo()); // Laptop: $899.99",
+  "quiz": [
+    {
+      "question": "What keyword creates an instance of a class?",
+      "options": ["create", "new", "instance", "make"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What do parameter properties with access modifiers do?",
+      "options": ["Make parameters optional", "Auto-create and initialize properties", "Disable type checking", "Create static properties"],
+      "correctIndex": 1
+    }
+  ]
+}

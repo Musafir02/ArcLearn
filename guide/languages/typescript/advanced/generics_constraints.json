@@ -1,0 +1,22 @@
+{
+  "title": "Generic Constraints",
+  "language": "typescript",
+  "topic": "generics_constraints",
+  "order": 48,
+  "nextTopic": "keyof",
+  "prevTopic": "generics",
+  "content": "Generic Constraints\n\nConstraints limit the types that can be used with a generic parameter using the `extends` keyword.\n\n### Basic Constraint\n\n```typescript\ninterface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(arg: T): T {\n  console.log(arg.length);\n  return arg;\n}\n\nlogLength(\"hello\"); // OK - string has length\nlogLength([1, 2, 3]); // OK - array has length\n// logLength(123); // Error - number has no length\n```\n\n### Using keyof in Constraints\n\n```typescript\nfunction getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}\n\nconst person = { name: \"Alice\", age: 30, email: \"alice@example.com\" };\nconst name = getProperty(person, \"name\"); // string\nconst age = getProperty(person, \"age\"); // number\n// getProperty(person, \"salary\"); // Error: \"salary\" not in keyof\n```\n\n### Constraining to Constructor\n\n```typescript\nfunction createInstance<T>(ctor: new (...args: any[]) => T): T {\n  return new ctor();\n}\n```\n\n### Multiple Constraints\n\n```typescript\ninterface Identifiable {\n  id: number;\n}\n\ninterface Timestampable {\n  createdAt: Date;\n}\n\nclass Entity<T extends Identifiable & Timestampable> {\n  constructor(public data: T) {}\n}\n```\n\n### Conditional Constraints\n\n```typescript\ntype IsString<T> = T extends string ? \"yes\" : \"no\";\n\ntype A = IsString<string>; // \"yes\"\ntype B = IsString<number>; // \"no\"\n```\n\n> **Key Point:** Constraints ensure generics only accept types that meet specific requirements.",
+  "codeExample": "interface Shape {\n  color: string;\n  area(): number;\n}\n\nfunction describeShape<T extends Shape>(shape: T): string {\n  return `A ${shape.color} shape with area ${shape.area()}`;\n}\n\nclass Circle implements Shape {\n  constructor(public color: string, private radius: number) {}\n  area(): number {\n    return Math.PI * this.radius ** 2;\n  }\n}\n\nconst circle = new Circle(\"red\", 5);\nconsole.log(describeShape(circle));\n\n// Constrained generic with keyof\nfunction pluck<T, K extends keyof T>(items: T[], key: K): T[K][] {\n  return items.map(item => item[key]);\n}\n\nconst users = [{ name: \"Alice\", age: 30 }, { name: \"Bob\", age: 25 }];\nconst names = pluck(users, \"name\"); // string[]\nconst ages = pluck(users, \"age\"); // number[]",
+  "quiz": [
+    {
+      "question": "What keyword is used to constrain a generic type parameter?",
+      "options": ["extends", "implements", "constraint", "where"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does 'keyof T' return?",
+      "options": ["Values of T", "Keys of T as a union", "Type of T", "Length of T"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Mapped Types",
+  "language": "typescript",
+  "topic": "mapped_types",
+  "order": 51,
+  "nextTopic": "conditional_types",
+  "prevTopic": "typeof",
+  "content": "Mapped Types\n\nMapped types transform existing types by iterating over their keys and modifying properties.\n\n### Basic Syntax\n\n```typescript\ntype Readonly<T> = {\n  readonly [P in keyof T]: T[P];\n};\n\ntype Optional<T> = {\n  [P in keyof T]?: T[P];\n};\n\ninterface Person {\n  name: string;\n  age: number;\n  email: string;\n}\n\ntype ReadonlyPerson = Readonly<Person>;\n// { readonly name: string; readonly age: number; readonly email: string }\n```\n\n### Adding or Removing Modifiers\n\n```typescript\n// Remove readonly\ntype Mutable<T> = {\n  -readonly [P in keyof T]: T[P];\n};\n\n// Remove optional\ntype Required<T> = {\n  [P in keyof T]-?: T[P];\n};\n```\n\n### Key Remapping via `as`\n\n```typescript\ntype Getters<T> = {\n  [P in keyof T as `get${Capitalize<string & P>}`]: () => T[P];\n};\n\ninterface Person {\n  name: string;\n  age: number;\n}\n\ntype PersonGetters = Getters<Person>;\n// { getName: () => string; getAge: () => number }\n```\n\n### Filtering Keys\n\n```typescript\ntype StringProperties<T> = {\n  [P in keyof T as T[P] extends string ? P : never]: T[P];\n};\n\ninterface Mixed {\n  name: string;\n  age: number;\n  email: string;\n}\n\ntype OnlyStrings = StringProperties<Mixed>;\n// { name: string; email: string }\n```\n\n> **Key Point:** Mapped types use `in keyof` to iterate over an object type's keys and transform properties.",
+  "codeExample": "// Nullable mapped type\ntype Nullable<T> = {\n  [P in keyof T]: T[P] | null;\n};\n\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\ntype NullableUser = Nullable<User>;\n// { id: number | null; name: string | null; email: string | null }\n\n// Pick subset by key pattern\ntype PickByPrefix<T, Prefix extends string> = {\n  [P in keyof T as P extends `${Prefix}${string}` ? P : never]: T[P];\n};\n\ninterface Settings {\n  themeColor: string;\n  themeFont: string;\n  language: string;\n}\n\ntype ThemeSettings = PickByPrefix<Settings, \"theme\">;\n// { themeColor: string; themeFont: string }",
+  "quiz": [
+    {
+      "question": "What does 'P in keyof T' do in a mapped type?",
+      "options": ["Creates a new object", "Iterates over keys of T", "Appends to T", "Deletes from T"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you add a readonly modifier in a mapped type?",
+      "options": ["static", "readonly before P", "const", "final"],
+      "correctIndex": 1
+    }
+  ]
+}

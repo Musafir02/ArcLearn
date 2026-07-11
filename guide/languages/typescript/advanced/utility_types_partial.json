@@ -1,0 +1,22 @@
+{
+  "title": "Utility Types: Partial",
+  "language": "typescript",
+  "topic": "utility_types_partial",
+  "order": 54,
+  "nextTopic": "utility_types_pick_omit",
+  "prevTopic": "template_literal_types",
+  "content": "Partial<T>\n\n`Partial<T>` constructs a type with all properties of `T` set to optional.\n\n### Basic Usage\n\n```typescript\ninterface User {\n  name: string;\n  age: number;\n  email: string;\n}\n\ntype PartialUser = Partial<User>;\n// { name?: string; age?: number; email?: string }\n\nfunction updateUser(id: number, updates: Partial<User>): void {\n  // updates can have any subset of User properties\n  console.log(`Updating user ${id}:`, updates);\n}\n\nupdateUser(1, { name: \"Alice\" });\nupdateUser(1, { age: 31, email: \"alice@example.com\" });\nupdateUser(1, {}); // Empty object is also valid\n```\n\n### How It Works\n\n```typescript\n// Built-in definition:\ntype Partial<T> = {\n  [P in keyof T]?: T[P];\n};\n```\n\n### Practical Use Cases\n\n- API PATCH requests (partial updates)\n- Form state where fields are gradually filled\n- Configuration with defaults\n- Builder pattern stages\n\n### Deep Partial\n\n```typescript\ntype DeepPartial<T> = {\n  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];\n};\n\ninterface Config {\n  server: { host: string; port: number };\n  auth: { key: string; secret: string };\n}\n\ntype DeepPartialConfig = DeepPartial<Config>;\n// { server?: { host?: string; port?: number }; auth?: { key?: string; secret?: string } }\n```\n\n> **Key Point:** `Partial` is ideal for making all properties optional in update operations.",
+  "codeExample": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n  category: string;\n  inStock: boolean;\n}\n\nclass ProductService {\n  updateProduct(id: number, changes: Partial<Product>): Product {\n    // Partial allows us to update only specific fields\n    console.log(`Updating product ${id} with:`, changes);\n    return { id, name: \"\", price: 0, description: \"\", category: \"\", inStock: false, ...changes };\n  }\n\n  validateProduct(product: Partial<Product>): boolean {\n    if (product.price !== undefined && product.price < 0) {\n      return false;\n    }\n    return true;\n  }\n}",
+  "quiz": [
+    {
+      "question": "What does Partial<T> do?",
+      "options": ["Makes all properties required", "Makes all properties optional", "Makes all properties readonly", "Removes all properties"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is Partial commonly used for?",
+      "options": ["Creating new objects", "Partial updates like PATCH requests", "Making objects immutable", "Deleting properties"],
+      "correctIndex": 1
+    }
+  ]
+}

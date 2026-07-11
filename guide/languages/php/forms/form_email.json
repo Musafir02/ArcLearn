@@ -1,0 +1,22 @@
+{
+  "title": "PHP Form Email Validation",
+  "language": "php",
+  "topic": "form_email",
+  "order": 47,
+  "nextTopic": "form_url",
+  "prevTopic": "form_required",
+  "content": "### PHP Form Email Validation\n\nEmail validation ensures users provide properly formatted email addresses.\n\n### Using filter_var\n\nThe most reliable way to validate an email in PHP:\n\n```php\n<?php\n$email = \"user@example.com\";\nif (filter_var($email, FILTER_VALIDATE_EMAIL)) {\n    echo \"$email is a valid email address\";\n} else {\n    echo \"$email is not a valid email address\";\n}\n?>\n```\n\n### Complete Email Validation\n\n```php\n<?php\n$email = $emailErr = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    if (empty($_POST[\"email\"])) {\n        $emailErr = \"Email is required\";\n    } else {\n        $email = trim($_POST[\"email\"]);\n        // Remove all illegal characters\n        $email = filter_var($email, FILTER_SANITIZE_EMAIL);\n        // Validate\n        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {\n            $emailErr = \"Invalid email format\";\n        }\n    }\n}\n?>\n```\n\n### Validation Methods\n\n| Method | Description | Reliability |\n|--------|-------------|-------------|\n| `filter_var()` with FILTER_VALIDATE_EMAIL | Built-in validation | High |\n| Regex pattern | Custom pattern matching | Medium |\n| DNS check | Check if domain has MX records | Additional |\n| Send confirmation email | Verify ownership | Highest |\n\n### Regex Alternative\n\n```php\n<?php\nif (preg_match(\"/^[\\w.-]+@[\\w.-]+\\.\\w{2,}$/\", $email)) {\n    echo \"Valid email\";\n}\n?>\n```\n\n> **Key Point:** `FILTER_VALIDATE_EMAIL` follows the RFC standard for email validation and is the recommended approach.",
+  "codeExample": "<?php\n$email = $emailErr = $success = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $email = trim($_POST[\"email\"] ?? \"\");\n\n    if (empty($email)) {\n        $emailErr = \"Email is required\";\n    } else {\n        $sanitized = filter_var($email, FILTER_SANITIZE_EMAIL);\n        if (!filter_var($sanitized, FILTER_VALIDATE_EMAIL)) {\n            $emailErr = \"Invalid email format\";\n        } else {\n            $domain = substr(strrchr($sanitized, \"@\"), 1);\n            $success = \"Valid email. Domain: $domain\";\n        }\n    }\n}\n?>\n\n<form method=\"post\">\n    Email: <input type=\"text\" name=\"email\" value=\"<?php echo $email; ?>\">\n    <span><?php echo $emailErr ?: $success; ?></span><br>\n    <input type=\"submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which PHP filter validates email addresses?",
+      "options": ["FILTER_SANITIZE_EMAIL", "FILTER_VALIDATE_EMAIL", "FILTER_CHECK_EMAIL", "FILTER_EMAIL"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does FILTER_SANITIZE_EMAIL do?",
+      "options": ["Validates email", "Removes illegal characters", "Encrypts email", "Sends test email"],
+      "correctIndex": 1
+    }
+  ]
+}

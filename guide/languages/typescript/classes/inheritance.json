@@ -1,0 +1,22 @@
+{
+  "title": "Class Inheritance",
+  "language": "typescript",
+  "topic": "inheritance",
+  "order": 37,
+  "nextTopic": "implements",
+  "prevTopic": "constructors",
+  "content":"### Class Inheritance\n\nInheritance allows a class to derive properties and methods from another class.\n\n### Basic Inheritance\n\n```typescript\nclass Animal {\n  constructor(public name: string) {}\n\n  move(distance: number = 0): void {\n    console.log(`${this.name} moved ${distance}m`);\n  }\n}\n\nclass Dog extends Animal {\n  bark(): void {\n    console.log(\"Woof!\");\n  }\n}\n\nconst dog = new Dog(\"Buddy\");\ndog.move(10); // Inherited from Animal\ndog.bark(); // Dog's own method\n```\n\n### Method Overriding\n\n```typescript\nclass Animal {\n  makeSound(): string {\n    return \"Some sound\";\n  }\n}\n\nclass Cat extends Animal {\n  makeSound(): string {\n    return \"Meow\";\n  }\n}\n```\n\n### super Keyword\n\n```typescript\nclass Animal {\n  constructor(public name: string) {}\n  \n  describe(): string {\n    return `Animal: ${this.name}`;\n  }\n}\n\nclass Bird extends Animal {\n  constructor(name: string, public wingspan: number) {\n    super(name);\n  }\n\n  describe(): string {\n    return `${super.describe()}, Wingspan: ${this.wingspan}cm`;\n  }\n}\n```\n\n### Protected Members\n\n```typescript\nclass Base {\n  protected secret: string = \"hidden\";\n  private verySecret: string = \"very hidden\";\n}\n\nclass Derived extends Base {\n  reveal(): string {\n    return this.secret; // OK: protected is accessible\n    // return this.verySecret; // Error: private\n  }\n}\n```\n\n> **Key Point:** JavaScript supports single inheritance — a class can extend only one other class.",
+  "codeExample": "class Vehicle {\n  constructor(\n    public make: string,\n    public model: string,\n    protected year: number\n  ) {}\n\n  getInfo(): string {\n    return `${this.make} ${this.model} (${this.year})`;\n  }\n}\n\nclass Car extends Vehicle {\n  constructor(\n    make: string,\n    model: string,\n    year: number,\n    public doors: number\n  ) {\n    super(make, model, year);\n  }\n\n  getInfo(): string {\n    return `${super.getInfo()}, ${this.doors} doors`;\n  }\n}\n\nconst myCar = new Car(\"Toyota\", \"Camry\", 2024, 4);\nconsole.log(myCar.getInfo());",
+  "quiz": [
+    {
+      "question": "Which keyword enables a class to inherit from another?",
+      "options": ["implements", "extends", "inherits", "derives"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many classes can a TypeScript class extend?",
+      "options": ["Unlimited", "Two", "One", "None"],
+      "correctIndex": 2
+    }
+  ]
+}

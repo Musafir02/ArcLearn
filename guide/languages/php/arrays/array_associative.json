@@ -1,0 +1,22 @@
+{
+  "title": "PHP Associative Arrays",
+  "language": "php",
+  "topic": "array_associative",
+  "order": 28,
+  "nextTopic": "array_multidimensional",
+  "prevTopic": "array_indexed",
+  "content": "### PHP Associative Arrays\n\nAssociative arrays use named keys that you assign to values.\n\n### Creating Associative Arrays\n\n```php\n<?php\n// Method 1\n$person = [\n    \"name\" => \"John\",\n    \"age\" => 30,\n    \"city\" => \"New York\"\n];\n\n// Method 2\n$person[\"name\"] = \"John\";\n$person[\"age\"] = 30;\n$person[\"city\"] = \"New York\";\n?>\n```\n\n### Accessing Elements\n\n```php\n<?php\n$student = [\n    \"first_name\" => \"Alice\",\n    \"last_name\" => \"Johnson\",\n    \"grade\" => 92,\n    \"active\" => true\n];\n\necho $student[\"first_name\"]; // Alice\necho $student[\"grade\"];      // 92\n\n// Loop through\nforeach ($student as $key => $value) {\n    echo \"$key: $value<br>\";\n}\n?>\n```\n\n### Common Operations\n\n| Operation | Code |\n|-----------|------|\n| Check key exists | `array_key_exists(\"key\", $arr)` |\n| Get all keys | `array_keys($arr)` |\n| Get all values | `array_values($arr)` |\n| Remove by key | `unset($arr[\"key\"])` |\n| Check value exists | `in_array($value, $arr)` |\n\n> **Key Point:** Associative arrays are ideal for representing structured data like records or settings where meaningful keys improve code readability.",
+  "codeExample": "<?php\n$product = [\n    \"id\" => 101,\n    \"name\" => \"Laptop\",\n    \"price\" => 999.99,\n    \"in_stock\" => true\n];\n\necho \"Product: \" . $product[\"name\"] . \"<br>\";\necho \"Price: $\" . $product[\"price\"] . \"<br>\";\n\n// Check if key exists\nif (array_key_exists(\"discount\", $product)) {\n    echo \"Discount available\";\n} else {\n    $product[\"discount\"] = 0;\n    echo \"Discount set to 0\";\n}\n\n// List all keys\nprint_r(array_keys($product));\n?>",
+  "quiz": [
+    {
+      "question": "What type of keys do associative arrays use?",
+      "options": ["Numeric", "Strings", "Both numeric and strings", "Objects"],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do you check if a key exists in an associative array?",
+      "options": ["isset()", "array_key_exists()", "key_exists()", "exists()"],
+      "correctIndex": 1
+    }
+  ]
+}

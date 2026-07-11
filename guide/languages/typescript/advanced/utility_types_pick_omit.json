@@ -1,0 +1,22 @@
+{
+  "title": "Utility Types: Pick and Omit",
+  "language": "typescript",
+  "topic": "utility_types_pick_omit",
+  "order": 55,
+  "nextTopic": "utility_types_record",
+  "prevTopic": "utility_types_partial",
+  "content": "Pick<T, K> and Omit<T, K>\n\n`Pick<T, K>` creates a type with a subset of properties. `Omit<T, K>` creates a type excluding specified properties.\n\n### Pick<T, K>\n\n```typescript\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n  password: string;\n}\n\ntype PublicUser = Pick<User, \"id\" | \"name\" | \"email\">;\n// { id: number; name: string; email: string }\n\nconst publicUser: PublicUser = {\n  id: 1,\n  name: \"Alice\",\n  email: \"alice@example.com\"\n};\n```\n\n### How Pick Works\n\n```typescript\ntype Pick<T, K extends keyof T> = {\n  [P in K]: T[P];\n};\n```\n\n### Omit<T, K>\n\n```typescript\ntype UserWithoutPassword = Omit<User, \"password\">;\n// { id: number; name: string; email: string; age: number }\n\nconst safeUser: UserWithoutPassword = {\n  id: 1,\n  name: \"Alice\",\n  email: \"alice@example.com\",\n  age: 30\n};\n```\n\n### How Omit Works\n\n```typescript\ntype Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;\n```\n\n### Practical Examples\n\n| Use Case | Utility |\n|----------|---------|\n| Public API response (remove sensitive fields) | `Omit` |\n| Form input (select specific fields) | `Pick` |\n| Base type (add fields later) | `Omit` then extend |\n| Component props | `Pick` from a larger config |\n\n### Combining with Partial\n\n```typescript\n// Allow updating only non-sensitive fields\nfunction updateUserProfile(\n  id: number,\n  updates: Partial<Omit<User, \"id\" | \"password\">>\n): void {\n  console.log(`Updating profile for user ${id}:`, updates);\n}\n```\n\n> **Key Point:** `Pick` selects properties, `Omit` excludes them.",
+  "codeExample": "interface Todo {\n  id: number;\n  title: string;\n  description: string;\n  completed: boolean;\n  createdAt: Date;\n  userId: number;\n}\n\n// For creating a todo (no id, createdAt, userId)\ntype CreateTodo = Omit<Todo, \"id\" | \"createdAt\" | \"userId\">;\n\n// For displaying in a list (only essential fields)\ntype TodoListItem = Pick<Todo, \"id\" | \"title\" | \"completed\">;\n\n// For updating (partial + no system fields)\ntype UpdateTodo = Partial<Omit<Todo, \"id\" | \"createdAt\" | \"userId\">>;\n\nfunction createTodo(input: CreateTodo): Todo {\n  return {\n    ...input,\n    id: Date.now(),\n    createdAt: new Date(),\n    userId: 1\n  };\n}",
+  "quiz": [
+    {
+      "question": "What does Pick<T, K> do?",
+      "options": ["Removes K from T", "Selects only properties K from T", "Makes K optional", "Adds K to T"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Omit<T, K> do?",
+      "options": ["Selects K from T", "Excludes properties K from T", "Adds K to T", "Makes K required"],
+      "correctIndex": 1
+    }
+  ]
+}

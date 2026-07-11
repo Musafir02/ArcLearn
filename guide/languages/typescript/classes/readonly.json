@@ -1,0 +1,22 @@
+{
+  "title": "Readonly Modifier",
+  "language": "typescript",
+  "topic": "readonly",
+  "order": 40,
+  "nextTopic": "static",
+  "prevTopic": "access_modifiers",
+  "content": "The Readonly Modifier\n\nThe `readonly` modifier makes a property immutable after initialization.\n\n### Basic Usage\n\n```typescript\nclass Config {\n  readonly apiKey: string;\n  readonly endpoint: string;\n\n  constructor(apiKey: string, endpoint: string) {\n    this.apiKey = apiKey;\n    this.endpoint = endpoint;\n  }\n}\n\nconst config = new Config(\"abc\", \"https://api.example.com\");\n// config.apiKey = \"new\"; // Error: Cannot assign to readonly\n```\n\n### readonly with Constructor Parameters\n\n```typescript\nclass Point {\n  constructor(\n    public readonly x: number,\n    public readonly y: number\n  ) {}\n}\n\nconst p = new Point(3, 4);\nconsole.log(p.x, p.y); // 3, 4\n// p.x = 5; // Error: readonly\n```\n\n### readonly vs const\n\n| Feature | readonly | const |\n|---------|----------|-------|\n| Scope | Class/interface properties | Variables |\n| Assignment | Only in declaration or constructor | Only in declaration |\n| Objects | Reference immutable, contents mutable | Reference immutable |\n\n### Readonly Arrays\n\n```typescript\nclass DataStore {\n  readonly items: readonly number[] = [1, 2, 3];\n\n  getItems(): readonly number[] {\n    return this.items;\n  }\n}\n\nconst store = new DataStore();\n// store.items.push(4); // Error: push does not exist on readonly\n```\n\n### Readonly in Interfaces\n\n```typescript\ninterface User {\n  readonly id: number;\n  readonly createdAt: Date;\n  name: string;\n}\n\nconst user: User = {\n  id: 1,\n  createdAt: new Date(),\n  name: \"Alice\"\n};\n\n// user.id = 2; // Error: readonly\nuser.name = \"Bob\"; // OK\n```\n\n> **Key Point:** Use `readonly` for properties that should not change after construction.",
+  "codeExample": "class ImmutablePerson {\n  constructor(\n    public readonly firstName: string,\n    public readonly lastName: string,\n    public readonly birthYear: number\n  ) {}\n\n  getAge(currentYear: number): number {\n    return currentYear - this.birthYear;\n  }\n}\n\nconst person = new ImmutablePerson(\"Alice\", \"Smith\", 1995);\nconsole.log(person.firstName); // Alice\n\n// Readonly array property\nclass TodoList {\n  readonly items: readonly string[] = [];\n\n  constructor(...items: string[]) {\n    this.items = items; // Can assign in constructor\n  }\n}",
+  "quiz": [
+    {
+      "question": "When can a readonly property be assigned?",
+      "options": ["Anytime", "Only in the declaration or constructor", "Only in methods", "Only from outside"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does readonly make object contents immutable too?",
+      "options": ["Yes", "No, only the reference is immutable", "Only for arrays", "Only for primitives"],
+      "correctIndex": 1
+    }
+  ]
+}

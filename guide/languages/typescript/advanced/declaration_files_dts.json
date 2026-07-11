@@ -1,0 +1,22 @@
+{
+  "title": "Declaration Files (.d.ts)",
+  "language": "typescript",
+  "topic": "declaration_files_dts",
+  "order": 60,
+  "nextTopic": "tsconfig",
+  "prevTopic": "namespaces",
+  "content": "Declaration Files (.d.ts)\n\nDeclaration files describe the shape of JavaScript code to TypeScript without providing implementation.\n\n### What Are .d.ts Files?\n\nDeclaration files have a `.d.ts` extension and contain only type information — no runtime code.\n\n```typescript\n// types.d.ts\nexport interface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nexport function createUser(name: string, email: string): User;\n```\n\n### Ambient Declarations\n\nUsed to type external JavaScript libraries:\n\n```typescript\n// globals.d.ts\ndeclare const API_VERSION: string;\n\ndeclare function logToConsole(message: string): void;\n\ndeclare namespace MyLib {\n  function doSomething(): void;\n}\n```\n\n### Declare Module\n\n```typescript\n// For libraries without TypeScript types\ndeclare module \"old-library\" {\n  export function doThing(): void;\n  export const VERSION: string;\n}\n\n// Then you can import:\nimport { doThing } from \"old-library\";\n```\n\n### Triple-Slash Directives\n\n```typescript\n/// <reference types=\"node\" />\n/// <reference path=\"./types.d.ts\" />\n```\n\n### Generating Declaration Files\n\nIn `tsconfig.json`:\n\n```json\n{\n  \"compilerOptions\": {\n    \"declaration\": true,\n    \"declarationDir\": \"./types\"\n  }\n}\n```\n\n### Module Augmentation\n\nAdd types to existing modules:\n\n```typescript\n// augmentations.d.ts\nimport \"some-library\";\n\ndeclare module \"some-library\" {\n  interface SomeInterface {\n    newProperty: number;\n  }\n}\n```\n\n> **Key Point:** Declaration files enable TypeScript to understand untyped JavaScript code.",
+  "codeExample": "// jquery.d.ts - Ambient declaration for a library\ndeclare module \"jquery\" {\n  function $(selector: string): JQuery;\n\n  interface JQuery {\n    addClass(className: string): JQuery;\n    removeClass(className: string): JQuery;\n    text(content?: string): string;\n  }\n\n  export default $;\n}\n\n// Global augmentation\ndeclare global {\n  interface Window {\n    myApp: {\n      version: string;\n    };\n  }\n}\n\n// Usage\nwindow.myApp = { version: \"1.0.0\" };",
+  "quiz": [
+    {
+      "question": "What extension do TypeScript declaration files use?",
+      "options": [".ts", ".d.ts", ".types.ts", ".decl.ts"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword declares types for external JavaScript?",
+      "options": ["module", "declare", "ambient", "external"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP OOP - Classes and Objects",
+  "language": "php",
+  "topic": "oop_classes",
+  "order": 59,
+  "nextTopic": "oop_constructors",
+  "prevTopic": "try_catch",
+  "content": "### PHP OOP - Classes and Objects\n\nPHP supports object-oriented programming with classes and objects.\n\n### Defining a Class\n\n```php\n<?php\nclass Car {\n    // Properties\n    public $brand;\n    public $color;\n    \n    // Method\n    public function start() {\n        return \"The $this->color $this->brand is starting\";\n    }\n}\n?>\n```\n\n### Creating Objects\n\n```php\n<?php\n$myCar = new Car();\n$myCar->brand = \"Toyota\";\n$myCar->color = \"Red\";\necho $myCar->start(); // The Red Toyota is starting\n?>\n```\n\n### Visibility Modifiers\n\n| Modifier | Same Class | Subclasses | Outside |\n|----------|-----------|------------|---------|\n| `public` | Yes | Yes | Yes |\n| `protected` | Yes | Yes | No |\n| `private` | Yes | No | No |\n\n### $this Keyword\n\n`$this` refers to the current object instance.\n\n```php\n<?php\nclass User {\n    public $name;\n    \n    public function setName($name) {\n        $this->name = $name;\n    }\n    \n    public function getName() {\n        return $this->name;\n    }\n}\n?>\n```\n\n### Static Methods and Properties\n\n```php\n<?php\nclass MathHelper {\n    public static $pi = 3.14159;\n    \n    public static function square($num) {\n        return $num * $num;\n    }\n}\n\necho MathHelper::$pi;       // Access static property\necho MathHelper::square(5); // 25\n?>\n```\n\n> **Key Point:** Use `->` to access object properties/methods and `::` (Scope Resolution Operator) for static members.",
+  "codeExample": "<?php\nclass Product {\n    public $name;\n    public $price;\n    private $sku;\n    \n    public function __construct($name, $price, $sku) {\n        $this->name = $name;\n        $this->price = $price;\n        $this->sku = $sku;\n    }\n    \n    public function getInfo() {\n        return \"$this->name - \\$$this->price (SKU: $this->sku)\";\n    }\n}\n\n$product = new Product(\"Laptop\", 999.99, \"LAP001\");\necho $product->getInfo(); // Laptop - $999.99 (SKU: LAP001)\n\n// Static usage\nclass Counter {\n    public static $count = 0;\n    public static function increment() {\n        self::$count++;\n    }\n}\n\nCounter::increment();\nCounter::increment();\necho Counter::$count; // 2\n?>",
+  "quiz": [
+    {
+      "question": "Which keyword creates an object from a class?",
+      "options": ["new", "create", "object", "instance"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does $this refer to in a class method?",
+      "options": ["The class", "The current object", "The parent class", "The static context"],
+      "correctIndex": 1
+    }
+  ]
+}

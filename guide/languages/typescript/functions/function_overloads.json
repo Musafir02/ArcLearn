@@ -1,0 +1,22 @@
+{
+  "title": "Function Overloads",
+  "language": "typescript",
+  "topic": "function_overloads",
+  "order": 22,
+  "nextTopic": "arrow_functions",
+  "prevTopic": "rest_params",
+  "content":"### Function Overloads\n\nFunction overloads allow a single function to have multiple call signatures.\n\n### Syntax\n\n```typescript\n// Overload signatures\nfunction process(x: number): number;\nfunction process(x: string): string;\nfunction process(x: boolean): boolean;\n\n// Implementation signature (not publicly visible)\nfunction process(x: any): any {\n  if (typeof x === \"number\") return x * 2;\n  if (typeof x === \"string\") return x.toUpperCase();\n  return !x;\n}\n```\n\n### How Overloads Work\n\n| Component | Description |\n|-----------|------------|\n| Overload signatures | Declare the public call signatures (no body) |\n| Implementation signature | Has the actual body, must be compatible with all overloads |\n\n### Call Resolution\n\n```typescript\nconsole.log(process(10)); // 20 (number overload)\nconsole.log(process(\"hello\")); // \"HELLO\" (string overload)\nconsole.log(process(true)); // false (boolean overload)\n// console.log(process([1, 2, 3])); // Error: no matching overload\n```\n\n### Best Practices\n\n- Keep the implementation signature compatible with all overloads\n- Order overloads from most specific to least specific\n- Use union types when overloads are similar\n\n### Overloads vs Union Types\n\n```typescript\n// Overloads (more explicit)\nfunction fn(x: string): string;\nfunction fn(x: number): number;\nfunction fn(x: any): any { return x; }\n\n// Union type (simpler)\nfunction fn<T extends string | number>(x: T): T { return x; }\n```\n\n> **Key Point:** The implementation signature is not callable from outside — only the overload signatures are.",
+  "codeExample": "// Overloads for a function with different return types\nfunction getValue(key: \"name\"): string;\nfunction getValue(key: \"age\"): number;\nfunction getValue(key: \"active\"): boolean;\nfunction getValue(key: string): string | number | boolean {\n  const data: Record<string, string | number | boolean> = {\n    name: \"Alice\",\n    age: 30,\n    active: true\n  };\n  return data[key];\n}\n\nconsole.log(getValue(\"name\")); // string\nconsole.log(getValue(\"age\")); // number\nconsole.log(getValue(\"active\")); // boolean",
+  "quiz": [
+    {
+      "question": "How many overload signatures can a function have?",
+      "options": ["At most one", "At most two", "Unlimited", "Only three"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which signature contains the function body in overloads?",
+      "options": ["The first overload", "The implementation signature", "The last overload", "All signatures"],
+      "correctIndex": 1
+    }
+  ]
+}

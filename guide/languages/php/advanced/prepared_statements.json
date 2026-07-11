@@ -1,0 +1,22 @@
+{
+  "title": "PHP PDO Prepared Statements",
+  "language": "php",
+  "topic": "prepared_statements",
+  "order": 70,
+  "nextTopic": "",
+  "prevTopic": "pdo_basics",
+  "content": "### PHP PDO Prepared Statements\n\nPrepared statements protect against SQL injection by separating SQL logic from data.\n\n### Why Prepared Statements?\n\n```php\n<?php\n// DANGEROUS: SQL injection vulnerability\n$sql = \"SELECT * FROM users WHERE email = '\" . $_POST[\"email\"] . \"'\";\n\n// SAFE: Using prepared statement\n$stmt = $pdo->prepare(\"SELECT * FROM users WHERE email = :email\");\n$stmt->execute([\"email\" => $_POST[\"email\"]]);\n?>\n```\n\n### Named Parameters\n\n```php\n<?php\n$sql = \"INSERT INTO users (name, email, age) VALUES (:name, :email, :age)\";\n$stmt = $pdo->prepare($sql);\n\n$stmt->execute([\n    \":name\" => \"John\",\n    \":email\" => \"john@example.com\",\n    \":age\" => 30\n]);\n?>\n```\n\n### Positional Parameters (Question Marks)\n\n```php\n<?php\n$sql = \"INSERT INTO users (name, email) VALUES (?, ?)\";\n$stmt = $pdo->prepare($sql);\n\n$stmt->execute([\"Jane\", \"jane@example.com\"]);\n?>\n```\n\n### Fetching Results\n\n```php\n<?php\n// Single row\n$stmt = $pdo->prepare(\"SELECT * FROM users WHERE id = ?\");\n$stmt->execute([$id]);\n$user = $stmt->fetch(); // Single row\n\n// Multiple rows\n$stmt = $pdo->prepare(\"SELECT * FROM users WHERE age > ?\");\n$stmt->execute([18]);\n$users = $stmt->fetchAll(); // All matching rows\n\n// Column count\n$count = $stmt->rowCount();\n?>\n```\n\n### Insert with Last Insert ID\n\n```php\n<?php\n$stmt = $pdo->prepare(\"INSERT INTO users (name) VALUES (?)\");\n$stmt->execute([\"Alice\"]);\n\n$lastId = $pdo->lastInsertId();\necho \"New user ID: $lastId\";\n?>\n```\n\n### Benefits\n\n| Benefit | Description |\n|---------|-------------|\n| Security | Prevents SQL injection |\n| Performance | SQL parsed once, executed multiple times |\n| Maintainability | Cleaner code with named parameters |\n| Portability | Works across all PDO-supported databases |\n\n> **Key Point:** Always use prepared statements when accepting user input in SQL queries. Never concatenate or interpolate user data directly into SQL strings.",
+  "codeExample": "<?php\ntry {\n    $pdo = new PDO(\"mysql:host=localhost;dbname=test;charset=utf8mb4\", \"root\", \"\");\n    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n    \n    // Bulk insert with prepared statement\n    $sql = \"INSERT INTO users (name, email, age) VALUES (:name, :email, :age)\";\n    $stmt = $pdo->prepare($sql);\n    \n    $users = [\n        [\"name\" => \"Alice\", \"email\" => \"alice@test.com\", \"age\" => 25],\n        [\"name\" => \"Bob\", \"email\" => \"bob@test.com\", \"age\" => 30],\n        [\"name\" => \"Charlie\", \"email\" => \"charlie@test.com\", \"age\" => 35]\n    ];\n    \n    foreach ($users as $user) {\n        $stmt->execute($user);\n        echo \"Inserted: \" . $pdo->lastInsertId() . \"<br>\";\n    }\n    \n    // Select with prepared statement\n    $searchStmt = $pdo->prepare(\n        \"SELECT * FROM users WHERE age BETWEEN :min AND :max ORDER BY age\"\n    );\n    $searchStmt->execute([\"min\" => 20, \"max\" => 35]);\n    \n    echo \"<h3>Users aged 20-35:</h3>\";\n    foreach ($searchStmt->fetchAll() as $user) {\n        echo \"{$user['name']} ({$user['age']}) - {$user['email']}<br>\";\n    }\n    \n} catch (PDOException $e) {\n    echo \"Database error: \" . $e->getMessage();\n}\n?>",
+  "quiz": [
+    {
+      "question": "What does a prepared statement protect against?",
+      "options": ["XSS attacks", "SQL injection", "CSRF attacks", "Session hijacking"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method executes a prepared statement in PDO?",
+      "options": ["run()", "execute()", "exec()", "query()"],
+      "correctIndex": 1
+    }
+  ]
+}

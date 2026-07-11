@@ -1,0 +1,22 @@
+{
+  "title": "PHP Multidimensional Arrays",
+  "language": "php",
+  "topic": "array_multidimensional",
+  "order": 29,
+  "nextTopic": "array_functions",
+  "prevTopic": "array_associative",
+  "content": "### PHP Multidimensional Arrays\n\nA multidimensional array is an array that contains one or more arrays.\n\n### Creating Multidimensional Arrays\n\n```php\n<?php\n// 2D indexed array\n$matrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n];\n\n// Array of associative arrays\n$users = [\n    [\"name\" => \"Alice\", \"email\" => \"alice@example.com\"],\n    [\"name\" => \"Bob\", \"email\" => \"bob@example.com\"],\n    [\"name\" => \"Charlie\", \"email\" => \"charlie@example.com\"]\n];\n?>\n```\n\n### Accessing Elements\n\n```php\n<?php\n$matrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n];\n\necho $matrix[0][0]; // 1 (first row, first col)\necho $matrix[1][2]; // 6 (second row, third col)\n\n// Loop through\nfor ($row = 0; $row < count($matrix); $row++) {\n    for ($col = 0; $col < count($matrix[$row]); $col++) {\n        echo $matrix[$row][$col] . \" \";\n    }\n    echo \"<br>\";\n}\n?>\n```\n\n### Nested foreach\n\n```php\n<?php\nforeach ($users as $user) {\n    foreach ($user as $key => $value) {\n        echo \"$key: $value<br>\";\n    }\n    echo \"---<br>\";\n}\n?>\n```\n\n> **Key Point:** Multidimensional arrays are useful for representing tables, matrices, or collections of complex records.",
+  "codeExample": "<?php\n$inventory = [\n    \"electronics\" => [\n        [\"item\" => \"Laptop\", \"price\" => 999],\n        [\"item\" => \"Phone\", \"price\" => 699]\n    ],\n    \"clothing\" => [\n        [\"item\" => \"Shirt\", \"price\" => 29],\n        [\"item\" => \"Jeans\", \"price\" => 59]\n    ]\n];\n\nforeach ($inventory as $category => $products) {\n    echo \"<h3>$category</h3>\";\n    foreach ($products as $product) {\n        echo $product[\"item\"] . \": $\" . $product[\"price\"] . \"<br>\";\n    }\n}\n?>",
+  "quiz": [
+    {
+      "question": "How do you access the element in row 2, column 3 of a 2D array?",
+      "options": ["$arr[2][3]", "$arr[1][2]", "$arr[3][2]", "$arr[2][1]"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a multidimensional array have mixed associative and indexed keys?",
+      "options": ["Yes", "No", "Only PHP 8+", "Only numeric"],
+      "correctIndex": 0
+    }
+  ]
+}

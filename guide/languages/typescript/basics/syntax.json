@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Syntax",
+  "language": "typescript",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### Basic Syntax Rules\n\nTypeScript syntax is very similar to JavaScript with the addition of type annotations.\n\n### Case Sensitivity\n\nTypeScript is case-sensitive. `name` and `Name` are different variables.\n\n### Statements\n\nStatements are separated by semicolons (optional in most cases due to automatic semicolon insertion):\n\n```typescript\nlet x: number = 5;\nlet y: number = 10;\n```\n\n### Whitespace\n\nTypeScript ignores whitespace, tabs, and newlines. You can format code freely.\n\n### Identifiers\n\nIdentifiers are names given to variables, functions, classes, etc. Rules:\n\n| Rule | Description |\n|------|------------|\n| First character | Must be a letter, underscore, or dollar sign |\n| Subsequent characters | Can include letters, digits, underscores, dollars |\n| Reserved words | Cannot use keywords like `let`, `const`, `class` |\n\n### Blocks\n\nBlocks group statements using curly braces:\n\n```typescript\nif (true) {\n  let x: number = 10;\n  console.log(x);\n}\n```\n\n### Comments\n\n```typescript\n// Single-line comment\n\n/* Multi-line\n   comment */\n```\n\n> **Key Point:** TypeScript syntax extends JavaScript syntax with type annotations.",
+  "codeExample": "// Identifiers\nlet userName: string = \"Alice\";\nlet $count: number = 100;\nlet _temp: number = 25;\n\n// Block scope\nif (true) {\n  let blockScoped: string = \"Only inside this block\";\n  console.log(blockScoped);\n}\n\n// Case sensitivity\nlet price: number = 10;\nlet Price: number = 20; // Different variable",
+  "quiz": [
+    {
+      "question": "Which of the following is a valid TypeScript identifier?",
+      "options": ["2fast2Furious", "my-Variable", "_privateVar", "class"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Is TypeScript case-sensitive?",
+      "options": ["Yes", "No", "Only for classes", "Only for functions"],
+      "correctIndex": 0
+    }
+  ]
+}

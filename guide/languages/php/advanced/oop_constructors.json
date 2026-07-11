@@ -1,0 +1,22 @@
+{
+  "title": "PHP OOP - Constructors and Destructors",
+  "language": "php",
+  "topic": "oop_constructors",
+  "order": 60,
+  "nextTopic": "oop_inheritance",
+  "prevTopic": "oop_classes",
+  "content": "### PHP OOP - Constructors and Destructors\n\nConstructors are special methods that run when an object is created. Destructors run when an object is destroyed.\n\n### Constructor (PHP 5+)\n\n```php\n<?php\nclass Person {\n    public $name;\n    public $age;\n    \n    public function __construct($name, $age) {\n        $this->name = $name;\n        $this->age = $age;\n        echo \"Person created: $name<br>\";\n    }\n}\n\n$person = new Person(\"John\", 30);\n?>\n```\n\n### Constructor Property Promotion (PHP 8+)\n\n```php\n<?php\n// PHP 8 short syntax - no need to declare properties separately\nclass User {\n    public function __construct(\n        public string $name,\n        public string $email,\n        private int $id = 0\n    ) {}\n    \n    public function getInfo(): string {\n        return \"$this->name ($this->email)\";\n    }\n}\n\n$user = new User(\"Alice\", \"alice@example.com\");\necho $user->getInfo();\n?>\n```\n\n### Destructor\n\n```php\n<?php\nclass FileHandler {\n    private $file;\n    \n    public function __construct($filename) {\n        $this->file = fopen($filename, \"w\");\n    }\n    \n    public function __destruct() {\n        fclose($this->file);\n        echo \"File closed<br>\";\n    }\n    \n    public function write($data) {\n        fwrite($this->file, $data);\n    }\n}\n\n$handler = new FileHandler(\"test.txt\");\n$handler->write(\"Hello\");\n// Destructor called automatically at end\n?>\n```\n\n| Feature | `__construct()` | `__destruct()` |\n|---------|----------------|----------------|\n| Called | When object is created | When object is destroyed |\n| Purpose | Initialize properties | Cleanup resources |\n| Parameters | Yes | No |\n| Return value | None | None |\n\n> **Key Point:** Constructor property promotion (PHP 8+) reduces boilerplate by combining property declaration and constructor parameter initialization.",
+  "codeExample": "<?php\nclass DatabaseConnection {\n    private string $host;\n    private string $user;\n    private string $pass;\n    private ?PDO $connection = null;\n    \n    public function __construct(\n        string $host = \"localhost\",\n        string $user = \"root\",\n        string $pass = \"\"\n    ) {\n        $this->host = $host;\n        $this->user = $user;\n        $this->pass = $pass;\n        echo \"Database config initialized<br>\";\n    }\n    \n    public function connect(): void {\n        // Simulate connection\n        $this->connection = new PDO(\"mysql:host=$this->host\", $this->user, $this->pass);\n        echo \"Connected to database<br>\";\n    }\n    \n    public function __destruct() {\n        $this->connection = null;\n        echo \"Connection closed<br>\";\n    }\n}\n\n$db = new DatabaseConnection();\n$db->connect();\necho \"Working with database...<br>\";\n// Destructor runs automatically at script end\n?>",
+  "quiz": [
+    {
+      "question": "What is the constructor method name in PHP?",
+      "options": ["__init__()", "__construct()", "constructor()", "__create()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When is the destructor called?",
+      "options": ["When object is created", "When object is destroyed", "When method is called", "Never automatically"],
+      "correctIndex": 1
+    }
+  ]
+}

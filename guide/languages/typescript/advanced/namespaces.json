@@ -1,0 +1,22 @@
+{
+  "title": "Namespaces",
+  "language": "typescript",
+  "topic": "namespaces",
+  "order": 59,
+  "nextTopic": "declaration_files_dts",
+  "prevTopic": "modules",
+  "content": "Namespaces\n\nNamespaces (previously called internal modules) group related code under a single identifier.\n\n### Basic Namespace\n\n```typescript\nnamespace Geometry {\n  export function areaOfCircle(radius: number): number {\n    return Math.PI * radius * radius;\n  }\n\n  export function areaOfSquare(side: number): number {\n    return side * side;\n  }\n\n  export const PI = 3.14159;\n}\n\nconsole.log(Geometry.areaOfCircle(5));\nconsole.log(Geometry.PI);\n```\n\n### Nested Namespaces\n\n```typescript\nnamespace App {\n  export namespace Models {\n    export interface User {\n      id: number;\n      name: string;\n    }\n  }\n\n  export namespace Utils {\n    export function formatDate(date: Date): string {\n      return date.toISOString();\n    }\n  }\n}\n\nconst user: App.Models.User = { id: 1, name: \"Alice\" };\nconsole.log(App.Utils.formatDate(new Date()));\n```\n\n### Namespace vs Module\n\n| Feature | Namespace | Module |\n|---------|-----------|--------|\n| Scope | Global | File-based |\n| File merging | Yes (declaration merging) | No |\n| Dependency management | Manual | import/export |\n| Recommended | For legacy / global scripts | For modern projects |\n\n### Namespace Merging\n\n```typescript\nnamespace Validation {\n  export interface StringValidator {\n    isValid(s: string): boolean;\n  }\n}\n\nnamespace Validation {\n  export class LettersValidator implements StringValidator {\n    isValid(s: string): boolean {\n      return /^[A-Za-z]+$/.test(s);\n    }\n  }\n}\n\n// Validation now has both StringValidator and LettersValidator\n```\n\n> **Key Point:** For modern TypeScript, prefer ES modules over namespaces. Namespaces are mainly useful for ambient declarations.",
+  "codeExample": "namespace Shapes {\n  export interface Shape {\n    area(): number;\n  }\n\n  export class Circle implements Shape {\n    constructor(private radius: number) {}\n    area(): number {\n      return Math.PI * this.radius ** 2;\n    }\n  }\n\n  export class Square implements Shape {\n    constructor(private side: number) {}\n    area(): number {\n      return this.side ** 2;\n    }\n  }\n}\n\nconst circle = new Shapes.Circle(5);\nconst square = new Shapes.Square(4);\nconsole.log(circle.area());\nconsole.log(square.area());",
+  "quiz": [
+    {
+      "question": "What keyword creates a namespace?",
+      "options": ["module", "namespace", "package", "group"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are namespaces recommended for modern TypeScript projects?",
+      "options": ["Yes, always", "No, prefer ES modules", "Only for classes", "Only for interfaces"],
+      "correctIndex": 1
+    }
+  ]
+}

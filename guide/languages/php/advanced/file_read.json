@@ -1,0 +1,22 @@
+{
+  "title": "PHP File Read",
+  "language": "php",
+  "topic": "file_read",
+  "order": 53,
+  "nextTopic": "file_write",
+  "prevTopic": "file_handling",
+  "content": "### PHP File Read\n\nPHP offers multiple ways to read file contents.\n\n### Reading Methods\n\n| Method | Description | Use Case |\n|--------|-------------|----------|\n| `fread()` | Read raw bytes | Binary files |\n| `fgets()` | Read one line | Text files (line by line) |\n| `fgetc()` | Read one character | Character-by-character |\n| `file()` | Read into array (by lines) | Small files, array processing |\n| `file_get_contents()` | Read entire file into string | Small files, API responses |\n| `readfile()` | Read and output directly | Streaming to browser |\n\n### Examples\n\n```php\n<?php\n// Read entire file\n$content = file_get_contents(\"test.txt\");\necho $content;\n\n// Read into array (one line per element)\n$lines = file(\"test.txt\");\nforeach ($lines as $line_num => $line) {\n    echo \"Line $line_num: \" . htmlspecialchars($line) . \"<br>\";\n}\n\n// Read with fread\n$file = fopen(\"test.txt\", \"r\");\n$content = fread($file, filesize(\"test.txt\"));\nfclose($file);\n\n// Read line by line\n$file = fopen(\"test.txt\", \"r\");\nwhile (!feof($file)) {\n    $line = fgets($file);\n    echo $line . \"<br>\";\n}\nfclose($file);\n?>\n```\n\n> **Key Point:** `file_get_contents()` is the simplest way to read an entire file into a string, but use `fgets()` for large files to avoid memory issues.",
+  "codeExample": "<?php\n$filename = \"sample.txt\";\n\n// Create sample file\nfile_put_contents($filename, \"Line 1\\nLine 2\\nLine 3\\n\");\n\n// Method 1: file_get_contents\necho \"<h3>file_get_contents:</h3>\";\necho nl2br(file_get_contents($filename));\n\n// Method 2: file() function\necho \"<h3>file() function:</h3>\";\n$lines = file($filename);\nforeach ($lines as $i => $line) {\n    echo \"[$i] \" . htmlspecialchars($line) . \"<br>\";\n}\n\n// Method 3: stream\necho \"<h3>Stream (fgets):</h3>\";\n$handle = fopen($filename, \"r\");\nwhile (($line = fgets($handle)) !== false) {\n    echo htmlspecialchars($line) . \"<br>\";\n}\nfclose($handle);\n\n// Clean up\nunlink($filename);\n?>",
+  "quiz": [
+    {
+      "question": "Which function reads an entire file into a string?",
+      "options": ["file()", "file_get_contents()", "fread()", "readfile()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does file() return?",
+      "options": ["String", "Array of lines", "Resource", "Integer"],
+      "correctIndex": 1
+    }
+  ]
+}

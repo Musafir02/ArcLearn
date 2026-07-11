@@ -1,0 +1,22 @@
+{
+  "title": "PHP Error Handling",
+  "language": "php",
+  "topic": "error_handling",
+  "order": 56,
+  "nextTopic": "exception_handling",
+  "prevTopic": "file_upload",
+  "content": "### PHP Error Handling\n\nError handling is the process of catching and responding to errors in your PHP code.\n\n### Error Types in PHP\n\n| Type | Constant | Description |\n|------|----------|-------------|\n| 1 | `E_ERROR` | Fatal runtime error (script stops) |\n| 2 | `E_WARNING` | Non-fatal warning |\n| 4 | `E_PARSE` | Syntax error |\n| 8 | `E_NOTICE` | Runtime notice (minor) |\n| 256 | `E_USER_ERROR` | User-generated error |\n| 512 | `E_USER_WARNING` | User-generated warning |\n| 2048 | `E_STRICT` | PHP suggests code changes |\n| 8191 | `E_ALL` | All errors and warnings |\n\n### Custom Error Handler\n\n```php\n<?php\nfunction customError($errno, $errstr, $errfile, $errline) {\n    echo \"<b>Error:</b> [$errno] $errstr<br>\";\n    echo \"File: $errfile (Line: $errline)<br>\";\n}\n\nset_error_handler(\"customError\");\n\n// Trigger error\necho 10 / 0; // Division by zero warning\n?>\n```\n\n### Error Control Operator\n\n```php\n<?php\n// Suppress errors with @\n$value = @file_get_contents(\"nonexistent.txt\");\nif ($value === false) {\n    echo \"File not found (error suppressed)\";\n}\n?>\n```\n\n### Error Reporting Settings\n\n```php\n<?php\n// Report all errors except notices\nerror_reporting(E_ALL & ~E_NOTICE);\n\n// Display errors (development)\nini_set(\"display_errors\", 1);\n\n// Log errors (production)\nini_set(\"log_errors\", 1);\nini_set(\"error_log\", \"/path/to/error.log\");\n?>\n```\n\n> **Key Point:** In production, disable `display_errors` and enable `log_errors` to prevent sensitive information from being shown to users.",
+  "codeExample": "<?php\nfunction handleError($level, $message, $file, $line) {\n    $log = \"[$level] $message in $file:$line\\n\";\n    file_put_contents(\"errors.log\", $log, FILE_APPEND);\n    \n    if ($level == E_USER_ERROR) {\n        die(\"Fatal error occurred. Check log.\");\n    }\n    return true;\n}\n\nset_error_handler(\"handleError\");\n\n// Trigger some errors\ntrigger_error(\"Custom warning\", E_USER_WARNING);\n\n// Warning (not fatal)\n$result = 100 / 0;\necho \"Script continues after warning<br>\";\n\necho nl2br(file_get_contents(\"errors.log\"));\n?>",
+  "quiz": [
+    {
+      "question": "Which constant represents a fatal runtime error?",
+      "options": ["E_WARNING", "E_ERROR", "E_NOTICE", "E_PARSE"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What operator suppresses errors in PHP?",
+      "options": ["@", "$", "!", "#"],
+      "correctIndex": 0
+    }
+  ]
+}

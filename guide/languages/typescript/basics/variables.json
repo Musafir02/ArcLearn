@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Variables",
+  "language": "typescript",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Declaring Variables\n\nTypeScript supports `let`, `const`, and `var` for variable declarations.\n\n### let\n\nBlock-scoped variable that can be reassigned:\n\n```typescript\nlet count: number = 10;\ncount = 20; // OK\n```\n\n### const\n\nBlock-scoped constant that cannot be reassigned:\n\n```typescript\nconst PI: number = 3.14159;\n// PI = 3; // Error: Cannot assign to 'PI' because it is a constant\n```\n\n### var (Legacy)\n\nFunction-scoped variable (avoid in modern TypeScript):\n\n```typescript\nvar oldWay: string = \"Avoid this\";\n```\n\n### let vs const vs var\n\n| Feature | let | const | var |\n|---------|-----|-------|-----|\n| Scope | Block | Block | Function |\n| Reassignable | Yes | No | Yes |\n| Hoisting | Yes (TDZ) | Yes (TDZ) | Yes (undefined) |\n| Redeclarable | No | No | Yes |\n\n### Type Annotations with Variables\n\n```typescript\nlet name: string = \"Alice\";\nlet age: number = 30;\nlet isActive: boolean = true;\n```\n\n### Variable Naming Conventions\n\n- Use camelCase for variable names\n- Use UPPER_SNAKE_CASE for constants\n- Use descriptive names\n\n> **Key Point:** Prefer `const` by default, use `let` only when reassignment is needed. Never use `var` in modern TypeScript.",
+  "codeExample": "// Prefer const when possible\nconst MAX_USERS: number = 100;\nconst API_URL: string = \"https://api.example.com\";\n\n// Use let for mutable values\nlet counter: number = 0;\ncounter++;\n\n// TypeScript infers types\nlet message = \"Hello\"; // inferred as string\n// message = 42; // Error: Type 'number' not assignable to 'string'",
+  "quiz": [
+    {
+      "question": "Which keyword should you use for a variable that will not be reassigned?",
+      "options": ["let", "const", "var", "static"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the scope of a 'let' variable?",
+      "options": ["Function-scoped", "Global-scoped", "Block-scoped", "Module-scoped"],
+      "correctIndex": 2
+    }
+  ]
+}

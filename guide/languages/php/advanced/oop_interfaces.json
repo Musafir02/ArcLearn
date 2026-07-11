@@ -1,0 +1,22 @@
+{
+  "title": "PHP OOP - Interfaces",
+  "language": "php",
+  "topic": "oop_interfaces",
+  "order": 62,
+  "nextTopic": "oop_traits",
+  "prevTopic": "oop_inheritance",
+  "content": "### PHP OOP - Interfaces\n\nInterfaces define a contract that implementing classes must follow.\n\n### Defining an Interface\n\n```php\n<?php\ninterface Logger {\n    public function log(string $message): void;\n    public function getLogs(): array;\n}\n?>\n```\n\n### Implementing an Interface\n\n```php\n<?php\nclass FileLogger implements Logger {\n    private array $logs = [];\n    \n    public function log(string $message): void {\n        $this->logs[] = \"[\" . date(\"Y-m-d H:i:s\") . \"] $message\";\n    }\n    \n    public function getLogs(): array {\n        return $this->logs;\n    }\n}\n\n$logger = new FileLogger();\n$logger->log(\"User logged in\");\nprint_r($logger->getLogs());\n?>\n```\n\n### Multiple Interfaces\n\nPHP supports implementing multiple interfaces.\n\n```php\n<?php\ninterface JsonSerializable {\n    public function toJson(): string;\n}\n\ninterface Arrayable {\n    public function toArray(): array;\n}\n\nclass User implements JsonSerializable, Arrayable {\n    public function toJson(): string {\n        return json_encode($this->toArray());\n    }\n    \n    public function toArray(): array {\n        return [\"name\" => \"John\", \"age\" => 30];\n    }\n}\n?>\n```\n\n### Interface Rules\n\n| Rule | Description |\n|------|-------------|\n| Methods | Cannot have implementation |\n| Properties | Cannot have properties |\n| Visibility | Methods must be public |\n| Constants | Can have constants |\n| Multiple | A class can implement many interfaces |\n\n### Type Hinting with Interfaces\n\n```php\n<?php\nfunction processLogger(Logger $logger) {\n    $logger->log(\"Processing...\");\n}\n\n// Any class implementing Logger can be passed\nprocessLogger(new FileLogger());\n?>\n```\n\n> **Key Point:** Interfaces allow you to write code that works with any class that implements a given interface, enabling polymorphism and loose coupling.",
+  "codeExample": "<?php\ninterface PaymentGateway {\n    public function processPayment(float $amount): bool;\n    public function refund(string $transactionId): bool;\n}\n\nclass StripeGateway implements PaymentGateway {\n    public function processPayment(float $amount): bool {\n        echo \"Processing \\$$amount via Stripe...<br>\";\n        return true;\n    }\n    \n    public function refund(string $transactionId): bool {\n        echo \"Refunding transaction $transactionId via Stripe...<br>\";\n        return true;\n    }\n}\n\nclass PayPalGateway implements PaymentGateway {\n    public function processPayment(float $amount): bool {\n        echo \"Processing \\$$amount via PayPal...<br>\";\n        return true;\n    }\n    \n    public function refund(string $transactionId): bool {\n        echo \"Refunding transaction $transactionId via PayPal...<br>\";\n        return true;\n    }\n}\n\nfunction checkout(PaymentGateway $gateway, float $amount) {\n    if ($gateway->processPayment($amount)) {\n        echo \"Payment successful!<br>\";\n    }\n}\n\n// Both implementations work\ncheckout(new StripeGateway(), 99.99);\ncheckout(new PayPalGateway(), 49.99);\n?>",
+  "quiz": [
+    {
+      "question": "Can an interface contain method implementations?",
+      "options": ["Yes", "No", "In PHP 8+", "Only static methods"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many interfaces can a PHP class implement?",
+      "options": ["1", "2", "Unlimited", "Same as extends"],
+      "correctIndex": 2
+    }
+  ]
+}

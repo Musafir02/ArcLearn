@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Operators",
+  "language": "typescript",
+  "topic": "operators",
+  "order": 10,
+  "nextTopic": "booleans",
+  "prevTopic": "type_inference",
+  "content": "### Arithmetic Operators\n\n| Operator | Description | Example |\n|----------|------------|--------|\n| `+` | Addition | `5 + 3 = 8` |\n| `-` | Subtraction | `5 - 3 = 2` |\n| `*` | Multiplication | `5 * 3 = 15` |\n| `/` | Division | `10 / 3 = 3.33` |\n| `%` | Modulus | `10 % 3 = 1` |\n| `**` | Exponentiation | `2 ** 3 = 8` |\n| `++` | Increment | `x++` |\n| `--` | Decrement | `x--` |\n\n### Comparison Operators\n\n| Operator | Description |\n|----------|------------|\n| `==` | Loose equality |\n| `===` | Strict equality |\n| `!=` | Loose inequality |\n| `!==` | Strict inequality |\n| `>` | Greater than |\n| `<` | Less than |\n| `>=` | Greater than or equal |\n| `<=` | Less than or equal |\n\n### Logical Operators\n\n| Operator | Description |\n|----------|------------|\n| `&&` | AND |\n| `||` | OR |\n| `!` | NOT |\n| `??` | Nullish coalescing |\n| `?.` | Optional chaining |\n\n### Assignment Operators\n\n```typescript\nlet x = 10;\nx += 5; // x = 15\nx -= 3; // x = 12\nx *= 2; // x = 24\nx /= 4; // x = 6\nx %= 5; // x = 1\n```\n\n### Bitwise Operators\n\n`&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`\n\n### Nullish Coalescing (??)\n\nReturns right operand only if left is `null` or `undefined`:\n\n```typescript\nlet value = null ?? \"default\"; // \"default\"\n```\n\n> **Key Point:** Always use `===` and `!==` instead of `==` and `!=`.",
+  "codeExample": "// Arithmetic\nlet sum: number = 10 + 5;\nlet power: number = 2 ** 8;\n\n// Comparison - always use strict\nlet isEqual: boolean = 5 === \"5\"; // false\nlet isLoose: boolean = 5 == \"5\"; // true (avoid)\n\n// Nullish coalescing\nlet input: string | null = null;\nlet output: string = input ?? \"fallback\";\n\n// Optional chaining\nlet user: { address?: { city?: string } } = {};\nlet city: string | undefined = user?.address?.city;",
+  "quiz": [
+    {
+      "question": "Which operator should you always use for equality comparison?",
+      "options": ["==", "===", "=", "!=="],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the ?? operator do?",
+      "options": ["Logical OR", "Nullish coalescing", "Exponentiation", "Optional chaining"],
+      "correctIndex": 1
+    }
+  ]
+}

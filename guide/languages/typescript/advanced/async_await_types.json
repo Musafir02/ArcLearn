@@ -1,0 +1,22 @@
+{
+  "title": "Async/Await Types",
+  "language": "typescript",
+  "topic": "async_await_types",
+  "order": 67,
+  "nextTopic": "type_definitions_third_party",
+  "prevTopic": "satisfies_vs_as",
+  "content": "Async/Await Types\n\nTypeScript provides full type support for asynchronous operations with `async`/`await`.\n\n### Async Function Return Types\n\nAn `async` function always returns a `Promise`:\n\n```typescript\nasync function fetchData(): Promise<string> {\n  return \"data\"; // Wrapped in Promise automatically\n}\n\nasync function getNumber(): Promise<number> {\n  return 42;\n}\n\n// Return type is inferred as Promise<string>\nasync function getMessage() {\n  return \"Hello\";\n}\n```\n\n### Awaiting Promises\n\n```typescript\nasync function processData(): Promise<void> {\n  const data = await fetchData(); // type: string\n  console.log(data.toUpperCase());\n}\n```\n\n### Promise Type Helpers\n\n```typescript\ntype Unwrapped<T> = T extends Promise<infer U> ? U : T;\n\ntype PromiseString = Promise<string>;\ntype StringType = Unwrapped<PromiseString>; // string\n\n// Built-in: Awaited<T>\ntype Str2 = Awaited<Promise<string>>; // string\n```\n\n### Error Handling\n\n```typescript\nasync function safeFetch(url: string): Promise<{ data: unknown } | { error: string }> {\n  try {\n    const response = await fetch(url);\n    const data = await response.json();\n    return { data };\n  } catch (err) {\n    return { error: (err as Error).message };\n  }\n}\n\nconst result = await safeFetch(\"/api/data\");\nif (\"error\" in result) {\n  console.error(result.error);\n} else {\n  console.log(result.data);\n}\n```\n\n### Parallel Execution\n\n```typescript\nasync function fetchMultiple(): Promise<[string, number, boolean]> {\n  const [a, b, c] = await Promise.all([\n    fetchString(),\n    fetchNumber(),\n    fetchBoolean()\n  ]);\n  return [a, b, c];\n}\n```\n\n> **Key Point:** Always annotate async function return types as `Promise<T>` for clarity.",
+  "codeExample": "interface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\n// Typed async API call\nasync function getUser(id: number): Promise<User> {\n  const response = await fetch(`/api/users/${id}`);\n\n  if (!response.ok) {\n    throw new Error(`Failed to fetch user: ${response.statusText}`);\n  }\n\n  return response.json() as Promise<User>;\n}\n\n// Using the async function\nasync function displayUser(id: number): Promise<void> {\n  try {\n    const user = await getUser(id);\n    console.log(`${user.name} (${user.email})`);\n  } catch (error) {\n    console.error(\"Error:\", error);\n  }\n}\n\n// Awaited utility type\ntype UserPromise = ReturnType<typeof getUser>; // Promise<User>\ntype ResolvedUser = Awaited<UserPromise>; // User",
+  "quiz": [
+    {
+      "question": "What does an async function always return?",
+      "options": ["The value directly", "Promise<T>", "void", "any"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What built-in type unwraps a Promise type?",
+      "options": ["Unwrapped", "Awaited", "PromiseType", "Resolve"],
+      "correctIndex": 1
+    }
+  ]
+}

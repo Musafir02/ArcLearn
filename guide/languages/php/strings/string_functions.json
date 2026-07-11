@@ -1,0 +1,22 @@
+{
+  "title": "PHP String Functions",
+  "language": "php",
+  "topic": "string_functions",
+  "order": 39,
+  "nextTopic": "string_formatting",
+  "prevTopic": "global_static",
+  "content": "### PHP String Functions\n\nPHP provides extensive string manipulation functions.\n\n### Length and Position\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `strlen()` | Get string length | `strlen(\"Hello\")` => 5 |\n| `strpos()` | Find position of substring | `strpos(\"Hello\", \"ll\")` => 2 |\n| `strrpos()` | Find last occurrence | `strrpos(\"Hello lol\", \"l\")` => 7 |\n| `substr_count()` | Count occurrences | `substr_count(\"foo bar foo\", \"foo\")` => 2 |\n\n### Substring and Replace\n\n| Function | Description |\n|----------|-------------|\n| `substr($str, $start, $len)` | Extract substring |\n| `str_replace($search, $replace, $subject)` | Replace all occurrences |\n| `substr_replace($str, $repl, $start, $len)` | Replace substring |\n| `trim($str)` | Strip whitespace from both ends |\n| `ltrim()` / `rtrim()` | Strip from left / right |\n\n### Case Conversion\n\n```php\n<?php\n$str = \"Hello World\";\necho strtolower($str); // hello world\necho strtoupper($str); // HELLO WORLD\necho ucfirst($str);    // Hello World\necho lcfirst($str);    // hello World\necho ucwords($str);    // Hello World\n?>\n```\n\n### Padding and Formatting\n\n| Function | Description |\n|----------|-------------|\n| `str_pad($str, $len, $pad, $type)` | Pad string to length |\n| `str_repeat($str, $n)` | Repeat string N times |\n| `str_word_count($str)` | Count words |\n| `strrev($str)` | Reverse string |\n\n> **Key Point:** String positions in PHP start at 0. If `strpos()` returns `false`, use `!== false` to check (because 0 is a valid position).",
+  "codeExample": "<?php\n$text = \" The quick brown fox jumps over the lazy dog \";\n$text = trim($text);\n\necho \"Length: \" . strlen($text) . \"<br>\";\necho \"Position of 'fox': \" . strpos($text, \"fox\") . \"<br>\";\necho \"Replace: \" . str_replace(\"fox\", \"cat\", $text) . \"<br>\";\necho \"Substr: \" . substr($text, 4, 5) . \"<br>\";\necho \"Uppercase: \" . strtoupper($text) . \"<br>\";\necho \"Word count: \" . str_word_count($text) . \"<br>\";\n\n// Check strpos carefully\nif (strpos($text, \"The\") !== false) {\n    echo \"Found 'The' at the start\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "What is the return type of strlen()?",
+      "options": ["string", "int", "float", "bool"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why should you use !== false when checking strpos() result?",
+      "options": ["strpos returns 0 for false", "strpos returns 0 for match at start", "It returns null", "For performance"],
+      "correctIndex": 1
+    }
+  ]
+}

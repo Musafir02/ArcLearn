@@ -1,0 +1,22 @@
+{
+  "title": "PHP Arrays",
+  "language": "php",
+  "topic": "arrays",
+  "order": 26,
+  "nextTopic": "array_indexed",
+  "prevTopic": "foreach",
+  "content": "### PHP Arrays\n\nAn array is a data structure that stores multiple values in a single variable.\n\n### Array Types\n\n| Type | Description | Example |\n|------|-------------|---------|\n| Indexed | Numeric keys (0, 1, 2...) | `[\"a\", \"b\", \"c\"]` |\n| Associative | Named keys | `[\"name\" => \"John\"]` |\n| Multidimensional | Arrays within arrays | `[[1,2], [3,4]]` |\n\n### Creating Arrays\n\n```php\n<?php\n// Using array() function (older syntax)\n$colors = array(\"Red\", \"Green\", \"Blue\");\n\n// Using short syntax (PHP 5.4+)\n$colors = [\"Red\", \"Green\", \"Blue\"];\n\n// Mixed types\n$mixed = [1, \"hello\", true, 3.14];\n\n// Appending\n$colors[] = \"Yellow\"; // Adds at the end\n?>\n```\n\n### Array Functions\n\n| Function | Description |\n|----------|-------------|\n| `count()` | Number of elements |\n| `array_push()` | Add to end |\n| `array_pop()` | Remove from end |\n| `array_merge()` | Merge arrays |\n| `in_array()` | Check if value exists |\n| `sort()` | Sort array |\n\n> **Key Point:** Arrays in PHP are actually ordered maps. A map associates values to keys. This type is optimized for several uses.",
+  "codeExample": "<?php\n// Create arrays\n$fruits = [\"Apple\", \"Banana\", \"Orange\"];\n$person = [\n    \"name\" => \"John\",\n    \"age\" => 30,\n    \"city\" => \"New York\"\n];\n\n// Access elements\necho $fruits[0]; // Apple\necho $person[\"name\"]; // John\n\n// Check length\necho count($fruits); // 3\n\n// Add element\n$fruits[] = \"Mango\";\nprint_r($fruits);\n?>",
+  "quiz": [
+    {
+      "question": "What is the index of the first element in a PHP array?",
+      "options": ["1", "0", "-1", "Depends"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which function returns the number of elements in an array?",
+      "options": ["size()", "length()", "count()", "sizeof()"],
+      "correctIndex": 2
+    }
+  ]
+}

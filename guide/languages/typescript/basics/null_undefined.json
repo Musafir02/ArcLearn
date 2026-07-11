@@ -1,0 +1,22 @@
+{
+  "title": "Null and Undefined",
+  "language": "typescript",
+  "topic": "null_undefined",
+  "order": 14,
+  "nextTopic": "any_unknown_never",
+  "prevTopic": "numbers",
+  "content":"### Null and Undefined\n\nTypeScript has two types for the absence of a value: `null` and `undefined`.\n\n### undefined\n\nA variable that has been declared but not assigned a value:\n\n```typescript\nlet value: undefined = undefined;\nlet name: string;\nconsole.log(name); // undefined\n```\n\n### null\n\nAn intentional absence of a value:\n\n```typescript\nlet empty: null = null;\nlet user: string | null = null;\n```\n\n### Differences\n\n| Feature | undefined | null |\n|---------|-----------|------|\n| Meaning | Variable not assigned | Intentional empty value |\n| Type | `undefined` | `null` |\n| typeof | `\"undefined\"` | `\"object\"` |\n| JSON | Omitted | `\"null\"` |\n| Default | Default for uninitialized | Must be explicitly assigned |\n\n### Strict Null Checks\n\nWith `strictNullChecks` enabled (recommended):\n\n```typescript\n// Error: Type 'null' is not assignable to type 'string'\nlet name: string = null;\n\n// OK with union type\nlet name: string | null = null;\n```\n\n### Nullish Coalescing\n\n```typescript\nlet input: string | null = null;\nlet result: string = input ?? \"default\";\n```\n\n### Optional Chaining\n\n```typescript\nlet user: { address?: { city?: string } } = {};\nlet city: string | undefined = user?.address?.city;\n```\n\n> **Key Point:** Enable `strictNullChecks` to catch null/undefined errors at compile time.",
+  "codeExample": "let a: null = null;\nlet b: undefined = undefined;\n\n// Nullable types\nlet maybeString: string | null = null;\nmaybeString = \"hello\"; // OK\n\n// Nullish coalescing\nconsole.log(null ?? \"fallback\"); // \"fallback\"\nconsole.log(0 ?? \"fallback\"); // 0 (0 is not nullish)\nconsole.log(false ?? \"fallback\"); // false\n\n// Optional chaining\nconst data: { value?: { name?: string } } = {};\nconst name: string | undefined = data?.value?.name;",
+  "quiz": [
+    {
+      "question": "What is the type of an uninitialized variable in TypeScript?",
+      "options": ["null", "undefined", "void", "never"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the '??' operator do?",
+      "options": ["Logical OR", "Nullish coalescing", "Optional chaining", "Type assertion"],
+      "correctIndex": 1
+    }
+  ]
+}

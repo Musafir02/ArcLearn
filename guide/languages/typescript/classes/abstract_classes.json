@@ -1,0 +1,22 @@
+{
+  "title": "Abstract Classes",
+  "language": "typescript",
+  "topic": "abstract_classes",
+  "order": 42,
+  "nextTopic": "generics_classes",
+  "prevTopic": "static",
+  "content": "Abstract Classes\n\nAbstract classes serve as base classes that cannot be instantiated directly. They may contain abstract methods that subclasses must implement.\n\n### Abstract Class Syntax\n\n```typescript\nabstract class Animal {\n  constructor(public name: string) {}\n\n  // Abstract method (no implementation)\n  abstract makeSound(): void;\n\n  // Concrete method (has implementation)\n  move(distance: number): void {\n    console.log(`${this.name} moved ${distance}m`);\n  }\n}\n\n// Cannot instantiate abstract class\n// const animal = new Animal(\"Generic\"); // Error\n```\n\n### Subclass Implementation\n\n```typescript\nclass Dog extends Animal {\n  makeSound(): void {\n    console.log(\"Woof!\");\n  }\n}\n\nclass Cat extends Animal {\n  makeSound(): void {\n    console.log(\"Meow!\");\n  }\n}\n\nconst dog = new Dog(\"Buddy\");\ndog.makeSound(); // Woof!\ndog.move(10); // Buddy moved 10m\n```\n\n### Abstract Properties\n\n```typescript\nabstract class Shape {\n  abstract readonly name: string;\n  abstract getArea(): number;\n}\n\nclass Circle extends Shape {\n  readonly name = \"Circle\";\n\n  constructor(private radius: number) {\n    super();\n  }\n\n  getArea(): number {\n    return Math.PI * this.radius ** 2;\n  }\n}\n```\n\n### Abstract vs Interface\n\n| Feature | Abstract Class | Interface |\n|---------|---------------|-----------|\n| Instantiation | Cannot instantiate | Cannot instantiate |\n| Implementation | Can have concrete methods | No implementation |\n| Constructor | Yes | No |\n| Access modifiers | Yes | No |\n| Multiple inheritance | No (single extends) | Yes (multiple implements) |\n\n> **Key Point:** Use abstract classes when base classes share implementation logic; use interfaces for pure contracts.",
+  "codeExample": "abstract class Database {\n  abstract connect(): void;\n  abstract disconnect(): void;\n\n  executeQuery(sql: string): void {\n    this.connect();\n    console.log(`Executing: ${sql}`);\n    this.disconnect();\n  }\n}\n\nclass MySQLDatabase extends Database {\n  connect(): void {\n    console.log(\"Connected to MySQL\");\n  }\n\n  disconnect(): void {\n    console.log(\"Disconnected from MySQL\");\n  }\n}\n\nclass PostgreSQLDatabase extends Database {\n  connect(): void {\n    console.log(\"Connected to PostgreSQL\");\n  }\n\n  disconnect(): void {\n    console.log(\"Disconnected from PostgreSQL\");\n  }\n}\n\nconst db: Database = new MySQLDatabase();\ndb.executeQuery(\"SELECT * FROM users\");",
+  "quiz": [
+    {
+      "question": "Can abstract classes be instantiated directly?",
+      "options": ["Yes", "No", "Only with parameters", "Only in strict mode"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What must subclasses do with abstract methods?",
+      "options": ["Override them", "Ignore them", "Call super()", "Make them static"],
+      "correctIndex": 0
+    }
+  ]
+}

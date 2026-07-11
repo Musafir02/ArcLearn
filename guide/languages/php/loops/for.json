@@ -1,0 +1,22 @@
+{
+  "title": "PHP for Loop",
+  "language": "php",
+  "topic": "for",
+  "order": 22,
+  "nextTopic": "do_while",
+  "prevTopic": "while",
+  "content": "### PHP for Loop\n\nThe `for` loop is used when you know in advance how many times you want to execute a block of code.\n\n### Syntax\n\n```php\n<?php\nfor (init; condition; increment) {\n    // code to execute\n}\n?>\n```\n\n### Example\n\n```php\n<?php\nfor ($i = 0; $i < 5; $i++) {\n    echo \"Number: $i<br>\";\n}\n?>\n```\n\n### Parts of for Loop\n\n| Part | Description | Example |\n|------|-------------|---------|\n| Init | Execute once at start | `$i = 0` |\n| Condition | Checked before each iteration | `$i < 5` |\n| Increment | Execute after each iteration | `$i++` |\n\n### Variations\n\n```php\n<?php\n// Multiple init statements\nfor ($i = 0, $j = 10; $i < 5; $i++, $j--) {\n    echo \"$i - $j<br>\";\n}\n\n// Omitting parts\n$i = 0;\nfor (; $i < 5; $i++) {\n    echo \"$i<br>\";\n}\n?>\n```\n\n> **Key Point:** The `for` loop is ideal for iteration when the number of iterations is known, such as looping through array indices.",
+  "codeExample": "<?php\n// Print even numbers 2 to 10\nfor ($i = 2; $i <= 10; $i += 2) {\n    echo \"$i \";\n}\n\necho \"<br>\";\n\n// Countdown\nfor ($i = 10; $i > 0; $i--) {\n    echo \"$i... \";\n}\necho \"Blast off!\";\n?>",
+  "quiz": [
+    {
+      "question": "How many parts does a for loop have?",
+      "options": ["2", "3", "4", "5"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When is the increment expression executed?",
+      "options": ["Before each iteration", "After each iteration", "At the start", "Never"],
+      "correctIndex": 1
+    }
+  ]
+}

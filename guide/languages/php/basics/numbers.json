@@ -1,0 +1,22 @@
+{
+  "title": "PHP Numbers",
+  "language": "php",
+  "topic": "numbers",
+  "order": 12,
+  "nextTopic": "input",
+  "prevTopic": "strings",
+  "content": "### PHP Numbers\n\nPHP supports integers and floating-point numbers.\n\n### Integer\n\nAn integer is a whole number without decimals.\n\n| Property | Details |\n|----------|---------|\n| Range | Platform-dependent (typically 64-bit) |\n| Formats | Decimal, hexadecimal (`0x`), octal (`0o`), binary (`0b`) |\n| Check | `is_int()` |\n\n### Float\n\nA float (floating-point number) has decimal points or uses exponential form.\n\n```php\n<?php\n$x = 10;       // int\n$y = 10.5;     // float\n$z = 2.5e3;    // 2500 (float)\n$bin = 0b1010; // 10 (binary)\n$hex = 0xFF;   // 255 (hex)\n\necho is_int($x);   // true\necho is_float($y); // true\n?>\n```\n\n### Number Functions\n\n| Function | Description |\n|----------|-------------|\n| `abs()` | Absolute value |\n| `round()` | Rounds a float |\n| `ceil()` | Rounds up |\n| `floor()` | Rounds down |\n| `min()` | Minimum of values |\n| `max()` | Maximum of values |\n| `pow()` | Exponentiation |\n| `sqrt()` | Square root |\n\n> **Key Point:** PHP automatically converts between int and float as needed. Use `is_numeric()` to check if a value is a number or numeric string.",
+  "codeExample": "<?php\n$a = 15.7;\necho round($a);  // 16\necho ceil($a);   // 16\necho floor($a);  // 15\n\necho max(10, 20, 30); // 30\necho min(10, 20, 30); // 10\necho sqrt(25);        // 5\necho pow(2, 3);       // 8\n?>",
+  "quiz": [
+    {
+      "question": "Which function rounds a number UP to the nearest integer?",
+      "options": ["round()", "ceil()", "floor()", "abs()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is hexadecimal 255 written?",
+      "options": ["0xFF", "0b11111111", "0o377", "0xFF"],
+      "correctIndex": 0
+    }
+  ]
+}

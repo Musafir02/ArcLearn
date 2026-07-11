@@ -1,0 +1,22 @@
+{
+  "title": "PHP Namespaces",
+  "language": "php",
+  "topic": "namespaces",
+  "order": 64,
+  "nextTopic": "date_time",
+  "prevTopic": "oop_traits",
+  "content": "### PHP Namespaces\n\nNamespaces allow you to organize code and avoid name collisions with other developers' code.\n\n### Declaring a Namespace\n\n```php\n<?php\nnamespace App\\Models;\n\nclass User {\n    public function __construct() {\n        echo \"User model from App\\\\Models\";\n    }\n}\n?>\n```\n\n### Using Namespaces\n\n```php\n<?php\n// Import with use\nuse App\\Models\\User;\n\n$user = new User(); // App\\Models\\User\n\n// Fully qualified name\n$user = new \\App\\Models\\User();\n\n// With alias\nuse App\\Models\\User as UserModel;\n$user = new UserModel();\n?>\n```\n\n### Multiple Namespaces in One File\n\n```php\n<?php\nnamespace App\\Controllers {\n    class HomeController {\n        public function index() {\n            echo \"Home\";\n        }\n    }\n}\n\nnamespace App\\Models {\n    class User {\n        public function getName() {\n            return \"John\";\n        }\n    }\n}\n?>\n```\n\n### use Keyword\n\n| Statement | Description |\n|-----------|-------------|\n| `use \\Namespace\\Class;` | Import a class |\n| `use \\Namespace\\Class as Alias;` | Import with alias |\n| `use \\Namespace\\{ClassA, ClassB};` | Import multiple (PHP 7+) |\n| `use function \\Namespace\\func;` | Import a function (PHP 5.6+) |\n| `use const \\Namespace\\CONST;` | Import a constant (PHP 5.6+) |\n\n### Global Namespace\n\n```php\n<?php\n$date = new \\DateTime(); // Uses global class\necho \\strlen(\"Hello\");    // Global function\n?>\n```\n\n> **Key Point:** Namespaces are typically organized to match the directory structure (e.g., `App\\Models\\User` maps to `app/Models/User.php`).",
+  "codeExample": "<?php\n// File: App/Helpers/MathHelper.php\nnamespace App\\Helpers;\n\nclass MathHelper {\n    public static function add($a, $b) {\n        return $a + $b;\n    }\n}\n\n// File: index.php\nrequire_once \"App/Helpers/MathHelper.php\";\n\nuse App\\Helpers\\MathHelper;\nuse App\\Helpers\\MathHelper as Helper;\n\n// Using imported class\necho MathHelper::add(5, 3); // 8\n\n// Using alias\necho Helper::add(10, 20); // 30\n\n// Fully qualified\necho \\App\\Helpers\\MathHelper::add(1, 2); // 3\n\n// Global namespace\n$dt = new \\DateTime(\"now\");\necho $dt->format(\"Y-m-d\");\n?>",
+  "quiz": [
+    {
+      "question": "Which keyword declares a namespace?",
+      "options": ["namespace", "use", "package", "module"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which keyword imports a class from another namespace?",
+      "options": ["import", "use", "include", "require"],
+      "correctIndex": 1
+    }
+  ]
+}

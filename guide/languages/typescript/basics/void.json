@@ -1,0 +1,22 @@
+{
+  "title": "The Void Type",
+  "language": "typescript",
+  "topic": "void",
+  "order": 16,
+  "nextTopic": "functions",
+  "prevTopic": "any_unknown_never",
+  "content":"### Void Type\n\n`void` is the return type for functions that do not return a value.\n\n### Function Return Type\n\n```typescript\nfunction logMessage(message: string): void {\n  console.log(message);\n  // No return statement\n}\n\nfunction doNothing(): void {\n  return; // OK, returns undefined\n}\n```\n\n### void vs undefined\n\n`void` is similar to `undefined` but used in a different context:\n\n| Aspect | void | undefined |\n|--------|------|-----------|\n| Function return | Default for no return | Explicit return type |\n| Variable | Cannot use as variable type | Can use as variable type |\n| Meaning | No meaningful return | Absence of value |\n\n```typescript\n// These are different\nlet u: undefined = undefined;\nlet v: void = undefined; // OK, void accepts undefined\n// let w: void = null; // Error with strictNullChecks\n```\n\n### void in Callbacks\n\nWhen a callback return value is ignored, it can be typed as `void`:\n\n```typescript\nfunction forEach<T>(items: T[], callback: (item: T) => void): void {\n  for (const item of items) {\n    callback(item);\n  }\n}\n```\n\n### void in Generic Constraints\n\n```typescript\ntype ReturnVoid<T> = T extends (...args: any[]) => void ? T : never;\n```\n\n> **Key Point:** Use `void` for function return types that do not produce a meaningful value.",
+  "codeExample": "// Function with void return\nfunction greet(name: string): void {\n  console.log(`Hello, ${name}`);\n}\n\n// Return type can be omitted (inferred as void)\nfunction warn(message: string) {\n  console.warn(message);\n}\n\n// void vs undefined\nfunction returnsUndefined(): undefined {\n  return undefined;\n}\n\nfunction returnsVoid(): void {\n  return; // returns undefined but void is the return type\n}\n\n// void in callbacks\n[1, 2, 3].forEach((n: number): void => {\n  console.log(n);\n});",
+  "quiz": [
+    {
+      "question": "What does the void type represent?",
+      "options": ["No value at all", "A null value", "No meaningful return value", "An error state"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can undefined be assigned to a void variable?",
+      "options": ["Yes", "No", "Only with strict mode", "Only in functions"],
+      "correctIndex": 0
+    }
+  ]
+}

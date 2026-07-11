@@ -1,0 +1,22 @@
+{
+  "title": "Static Members",
+  "language": "typescript",
+  "topic": "static",
+  "order": 41,
+  "nextTopic": "abstract_classes",
+  "prevTopic": "readonly",
+  "content": "Static Members\n\nStatic members belong to the class itself, not to instances.\n\n### Static Properties\n\n```typescript\nclass MathUtils {\n  static PI: number = 3.14159;\n  static E: number = 2.71828;\n}\n\nconsole.log(MathUtils.PI); // 3.14159\n// Access via class, not instance\n```\n\n### Static Methods\n\n```typescript\nclass StringUtils {\n  static capitalize(str: string): string {\n    return str.charAt(0).toUpperCase() + str.slice(1);\n  }\n\n  static isNullOrEmpty(str: string | null | undefined): boolean {\n    return str === null || str === undefined || str === \"\";\n  }\n}\n\nconsole.log(StringUtils.capitalize(\"hello\")); // \"Hello\"\n```\n\n### Static Members in Inheritance\n\n```typescript\nclass Base {\n  static id: number = 1;\n  static getClassName(): string {\n    return \"Base\";\n  }\n}\n\nclass Derived extends Base {\n  static getClassName(): string {\n    return \"Derived\";\n  }\n}\n\nconsole.log(Derived.id); // 1 (inherited)\nconsole.log(Derived.getClassName()); // \"Derived\"\n```\n\n### Static vs Instance\n\n| Feature | Static | Instance |\n|---------|--------|----------|\n| Access | ClassName.member | instance.member |\n| Belongs to | Class | Instance |\n| Access to instance members | No | Yes |\n| Access to static members | Yes | Yes |\n| Memory | One copy shared | One per instance |\n\n### Static Blocks\n\nTypeScript supports static initialization blocks:\n\n```typescript\nclass Database {\n  static connection: string;\n\n  static {\n    // Static initialization block\n    this.connection = \"connected\";\n    console.log(\"Database initialized\");\n  }\n}\n```\n\n> **Key Point:** Static methods cannot access `this` for instance members — they have no instance context.",
+  "codeExample": "class Counter {\n  private static count: number = 0;\n\n  static increment(): number {\n    return ++Counter.count;\n  }\n\n  static getCount(): number {\n    return Counter.count;\n  }\n\n  static reset(): void {\n    Counter.count = 0;\n  }\n}\n\nconsole.log(Counter.increment()); // 1\nconsole.log(Counter.increment()); // 2\nconsole.log(Counter.getCount()); // 2\nCounter.reset();\nconsole.log(Counter.getCount()); // 0\n\n// Utility class with static members\nclass URLBuilder {\n  static create(base: string, path: string): string {\n    return `${base.replace(/\\/+$/, \"\")}/${path.replace(/^\\/+/, \"\")}`;\n  }\n}",
+  "quiz": [
+    {
+      "question": "How do you access a static member?",
+      "options": ["Through an instance", "Through the class name", "Through a method", "Through a property"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a static method access instance properties?",
+      "options": ["Yes", "No", "Only if passed as parameter", "Only in constructors"],
+      "correctIndex": 1
+    }
+  ]
+}

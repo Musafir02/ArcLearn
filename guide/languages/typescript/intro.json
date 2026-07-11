@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to TypeScript",
+  "language": "typescript",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is TypeScript?\n\nTypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. It adds optional static typing, classes, interfaces, and other modern features to JavaScript.\n\n### Why TypeScript?\n\n| Feature | Benefit |\n|---------|--------|\n| Static Typing | Catch errors at compile time instead of runtime |\n| Enhanced IDE Support | Better autocomplete, navigation, and refactoring |\n| Improved Readability | Types serve as documentation |\n| ECMAScript Features | Use latest JavaScript features compiled to older versions |\n| Gradual Adoption | Can be adopted incrementally in existing JS projects |\n\n### Who Uses TypeScript?\n\nTypeScript is developed by Microsoft and used by millions of developers. Major companies like Google, Airbnb, and Slack use TypeScript in production.\n\n> **Key Point:** TypeScript compiles to plain JavaScript, which means it runs anywhere JavaScript runs.\n\n### TypeScript vs JavaScript\n\n- TypeScript = JavaScript + a type system\n- TypeScript needs to be compiled; JavaScript does not\n- TypeScript catches type errors at compile time\n- All JavaScript is valid TypeScript (but not the other way around)",
+  "codeExample": "// TypeScript adds static types\nlet greeting: string = \"Hello, TypeScript!\";\nconsole.log(greeting);\n\n// TypeScript will catch this error at compile time\n// greeting = 42; // Error: Type 'number' is not assignable to type 'string'",
+  "quiz": [
+    {
+      "question": "What does TypeScript add on top of JavaScript?",
+      "options": ["A runtime environment", "A static type system", "A new database", "A CSS framework"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who developed TypeScript?",
+      "options": ["Google", "Facebook", "Microsoft", "Apple"],
+      "correctIndex": 2
+    }
+  ]
+}

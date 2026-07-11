@@ -1,0 +1,22 @@
+{
+  "title": "Arrow Functions",
+  "language": "typescript",
+  "topic": "arrow_functions",
+  "order": 23,
+  "nextTopic": "callbacks",
+  "prevTopic": "function_overloads",
+  "content":"### Arrow Functions\n\nArrow functions provide a concise syntax for writing functions and lexically bind the `this` value.\n\n### Syntax\n\n```typescript\n// Basic syntax\nconst add = (a: number, b: number): number => a + b;\n\n// Block body\nconst multiply = (a: number, b: number): number => {\n  const result = a * b;\n  return result;\n};\n\n// Single parameter (parentheses optional)\nconst square = (x: number): number => x * x;\n\n// No parameters\nconst greet = (): string => \"Hello!\";\n```\n\n### Arrow Function Types\n\n```typescript\ntype MathOp = (a: number, b: number) => number;\n\nconst divide: MathOp = (a, b) => a / b;\n```\n\n### Lexical this\n\nArrow functions do not have their own `this`; they capture it from the surrounding context:\n\n```typescript\nclass Counter {\n  count = 0;\n  \n  start() {\n    setInterval(() => {\n      this.count++; // 'this' refers to the Counter instance\n    }, 1000);\n  }\n}\n```\n\n### Differences from Regular Functions\n\n| Feature | Arrow Function | Regular Function |\n|---------|---------------|-----------------|\n| `this` binding | Lexical | Dynamic |\n| `arguments` object | Not available | Available |\n| `new` keyword | Cannot be used | Can be used |\n| `prototype` | None | Has prototype |\n| Concise syntax | Yes | No |\n\n> **Key Point:** Arrow functions are ideal for callbacks and functional programming patterns.",
+  "codeExample": "// Arrow function with inferred types\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map((n) => n * 2);\nconst evens = numbers.filter((n) => n % 2 === 0);\nconst sum = numbers.reduce((a, b) => a + b, 0);\n\n// Arrow with explicit return type\nconst createGreeting = (name: string): string => `Hello, ${name}!`;\n\n// Returning an object literal\nconst createUser = (name: string, age: number): { name: string; age: number } => ({\n  name,\n  age\n});",
+  "quiz": [
+    {
+      "question": "How does arrow function handle the 'this' keyword?",
+      "options": ["Creates new binding", "Lexical from surrounding scope", "Undefined", "Binds to global object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can arrow functions be used as constructors?",
+      "options": ["Yes", "No", "Only with new", "Only in classes"],
+      "correctIndex": 1
+    }
+  ]
+}

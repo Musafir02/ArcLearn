@@ -1,0 +1,22 @@
+{
+  "title": "PHP OOP - Inheritance",
+  "language": "php",
+  "topic": "oop_inheritance",
+  "order": 61,
+  "nextTopic": "oop_interfaces",
+  "prevTopic": "oop_constructors",
+  "content": "### PHP OOP - Inheritance\n\nInheritance allows a class to inherit properties and methods from another class.\n\n### extends Keyword\n\n```php\n<?php\nclass Animal {\n    public $name;\n    \n    public function __construct($name) {\n        $this->name = $name;\n    }\n    \n    public function makeSound() {\n        return \"Some sound\";\n    }\n}\n\nclass Dog extends Animal {\n    public function makeSound() {\n        return \"Woof!\";\n    }\n    \n    public function fetch() {\n        return \"$this->name is fetching\";\n    }\n}\n\n$dog = new Dog(\"Buddy\");\necho $dog->makeSound(); // Woof!\necho $dog->fetch();     // Buddy is fetching\n?>\n```\n\n### Overriding\n\nChild classes can override methods by redefining them.\n\n```php\n<?php\nclass ParentClass {\n    protected function greet() {\n        return \"Hello from parent\";\n    }\n}\n\nclass ChildClass extends ParentClass {\n    public function greet() {\n        return \"Hello from child\";\n    }\n}\n?>\n```\n\n### parent Keyword\n\n```php\n<?php\nclass Child extends Parent {\n    public function greet() {\n        return parent::greet() . \" and child\";\n    }\n}\n?>\n```\n\n### final Keyword\n\nPrevents a method from being overridden or a class from being extended.\n\n```php\n<?php\nfinal class MathUtils {\n    public static function add($a, $b) {\n        return $a + $b;\n    }\n}\n\n// This would cause an error:\n// class BetterMath extends MathUtils { }\n?>\n```\n\n> **Key Point:** PHP supports single inheritance (a class can only extend one parent). Use `parent::` to call the parent class's methods.",
+  "codeExample": "<?php\nclass Shape {\n    protected $color;\n    \n    public function __construct($color = \"black\") {\n        $this->color = $color;\n    }\n    \n    public function getColor() {\n        return $this->color;\n    }\n    \n    public function getArea() {\n        return 0;\n    }\n}\n\nclass Circle extends Shape {\n    private $radius;\n    \n    public function __construct($radius, $color = \"black\") {\n        parent::__construct($color);\n        $this->radius = $radius;\n    }\n    \n    public function getArea() {\n        return pi() * $this->radius ** 2;\n    }\n}\n\nclass Rectangle extends Shape {\n    private $width;\n    private $height;\n    \n    public function __construct($width, $height, $color = \"black\") {\n        parent::__construct($color);\n        $this->width = $width;\n        $this->height = $height;\n    }\n    \n    public function getArea() {\n        return $this->width * $this->height;\n    }\n}\n\n$shapes = [\n    new Circle(5, \"red\"),\n    new Rectangle(4, 6, \"blue\")\n];\n\nforeach ($shapes as $shape) {\n    echo get_class($shape) . \": \" . $shape->getColor() . \", Area: \" . $shape->getArea() . \"<br>\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "Which keyword is used for inheritance in PHP?",
+      "options": ["implements", "extends", "inherits", "parent"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many parent classes can a PHP class inherit from?",
+      "options": ["0", "1", "2", "Unlimited"],
+      "correctIndex": 1
+    }
+  ]
+}

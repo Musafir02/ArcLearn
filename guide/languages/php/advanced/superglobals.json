@@ -1,0 +1,22 @@
+{
+  "title": "PHP Superglobals",
+  "language": "php",
+  "topic": "superglobals",
+  "order": 49,
+  "nextTopic": "sessions",
+  "prevTopic": "form_url",
+  "content": "### PHP Superglobals\n\nSuperglobals are built-in variables that are always accessible, regardless of scope.\n\n### Available Superglobals\n\n| Variable | Description |\n|----------|-------------|\n| `$GLOBALS` | References all global variables |\n| `$_SERVER` | Server and execution environment info |\n| `$_GET` | HTTP GET variables |\n| `$_POST` | HTTP POST variables |\n| `$_FILES` | HTTP File Upload variables |\n| `$_COOKIE` | HTTP Cookies |\n| `$_SESSION` | Session variables |\n| `$_REQUEST` | GET, POST, and COOKIE combined |\n| `$_ENV` | Environment variables |\n\n### $_SERVER Examples\n\n```php\n<?php\necho $_SERVER[\"PHP_SELF\"];     // Current script path\necho $_SERVER[\"SERVER_NAME\"];  // Server hostname\necho $_SERVER[\"HTTP_HOST\"];    // HTTP Host header\necho $_SERVER[\"REMOTE_ADDR\"];  // Client IP address\necho $_SERVER[\"REQUEST_METHOD\"]; // GET, POST, etc.\necho $_SERVER[\"HTTP_USER_AGENT\"]; // Browser user agent\n?>\n```\n\n### Accessing Superglobals\n\n```php\n<?php\n// In any scope - no global keyword needed\nfunction test() {\n    echo $_SERVER[\"REQUEST_METHOD\"]; // Works\n    echo $_GET[\"id\"] ?? \"not set\";   // Works\n}\n?>\n```\n\n> **Key Point:** Superglobals are available in all scopes without using the `global` keyword. They are populated automatically by PHP.",
+  "codeExample": "<?php\necho \"<table border='1'>\";\necho \"<tr><th>Key</th><th>Value</th></tr>\";\n$keys = [\"PHP_SELF\", \"SERVER_NAME\", \"HTTP_HOST\", \"REMOTE_ADDR\", \"REQUEST_METHOD\", \"SCRIPT_NAME\"];\nforeach ($keys as $key) {\n    echo \"<tr><td>$key</td><td>\" . ($_SERVER[$key] ?? \"N/A\") . \"</td></tr>\";\n}\necho \"</table>\";\n\n// Check request method\nif ($_SERVER[\"REQUEST_METHOD\"] === \"POST\") {\n    echo \"Form was submitted via POST\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "How many superglobal variables are there in PHP?",
+      "options": ["6", "8", "9", "7"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Do superglobals require the global keyword to be accessed inside functions?",
+      "options": ["Yes", "No", "Only $_SESSION", "Depends on scope"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Strict Mode",
+  "language": "typescript",
+  "topic": "strict_mode",
+  "order": 62,
+  "nextTopic": "type_vs_interface",
+  "prevTopic": "tsconfig",
+  "content": "Strict Mode\n\nStrict mode enables a collection of strict type-checking options to catch more errors.\n\n### What strict: true Enables\n\n```json\n{\n  \"compilerOptions\": {\n    \"strict\": true\n  }\n}\n```\n\nThis enables all of the following:\n\n### strictNullChecks\n\nCatches null and undefined errors:\n\n```typescript\n// Without: null is assignable to any type\n// With: null is only assignable to T | null\n\nlet name: string = null; // Error with strictNullChecks\nlet name2: string | null = null; // OK\n```\n\n### strictFunctionTypes\n\nEnables stricter checking of function type compatibility:\n\n```typescript\n// Without: function types are bivariant\n// With: function parameters are contravariant\n```\n\n### strictBindCallApply\n\nChecks that `bind`, `call`, and `apply` have correct arguments:\n\n```typescript\nfunction fn(a: string, b: number): void {}\nfn.call(null, \"hello\", 42); // OK\n// fn.call(null, 42, \"hello\"); // Error with strictBindCallApply\n```\n\n### noImplicitAny\n\nRaises error when type cannot be inferred:\n\n```typescript\nfunction fn(param) { // Error: Parameter 'param' implicitly has 'any' type\n  return param;\n}\n```\n\n### Additional Strict Flags\n\n| Flag | Description |\n|------|------------|\n| `noImplicitReturns` | All paths must return a value |\n| `noUnusedLocals` | Error on unused local variables |\n| `noUnusedParameters` | Error on unused parameters |\n| `noFallthroughCasesInSwitch` | Error on fallthrough in switch |\n\n> **Key Point:** Always enable `strict: true` for new projects to catch common bugs at compile time.",
+  "codeExample": "// With strictNullChecks\nfunction getLength(value: string | null): number {\n  if (value === null) {\n    return 0;\n  }\n  return value.length; // TypeScript knows value is string here\n}\n\n// With noImplicitAny\nfunction multiply(a: number, b: number): number {\n  return a * b;\n}\n\n// With noUnusedLocals\nfunction process(): void {\n  const result = 42; // Error: 'result' is declared but never used\n}\n\n// With noImplicitReturns\nfunction isPositive(n: number): boolean {\n  if (n > 0) {\n    return true;\n  }\n  // Error: Not all code paths return a value\n}",
+  "quiz": [
+    {
+      "question": "What does strictNullChecks prevent?",
+      "options": ["Function errors", "Null/undefined assignment to non-nullable types", "Type inference", "Module errors"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does noImplicitAny do?",
+      "options": ["Allows any type", "Raises error when type cannot be inferred", "Disables type checking", "Enables strict mode"],
+      "correctIndex": 1
+    }
+  ]
+}

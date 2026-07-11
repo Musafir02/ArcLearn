@@ -1,0 +1,22 @@
+{
+  "title": "Third-Party Type Definitions",
+  "language": "typescript",
+  "topic": "type_definitions_third_party",
+  "order": 68,
+  "nextTopic": "",
+  "prevTopic": "async_await_types",
+  "content": "Third-Party Type Definitions\n\nTypeScript uses type definitions to understand the types of external JavaScript libraries.\n\n### DefinitelyTyped\n\nThe [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) repository hosts community-maintained type definitions for thousands of libraries.\n\n### Installing Type Definitions\n\n```bash\n# For libraries that ship with types (e.g., lodash has @types/lodash)\nnpm install --save-dev @types/lodash\n\n# Some libraries include types (e.g., React 18+)\nnpm install react  # types are included\n```\n\n### Checking for Types\n\n```bash\n# Check if a library has built-in types\nnpm info react types\n\n# Or check if @types package exists\nnpm view @types/react versions\n```\n\n### Using Typed Libraries\n\n```typescript\nimport _ from \"lodash\"; // Full type support with @types/lodash\n\nconst numbers: number[] = [1, 2, 3, 4, 5];\nconst shuffled: number[] = _.shuffle(numbers);\n\nimport express from \"express\";\nconst app = express(); // Express has built-in types\n```\n\n### Libraries Without Types\n\nWhen a library has no types, create an ambient declaration:\n\n```typescript\n// src/types/untyped-library.d.ts\ndeclare module \"untyped-library\" {\n  export function doSomething(): void;\n  export const VERSION: string;\n}\n```\n\n### skipLibCheck\n\nIn `tsconfig.json`, `skipLibCheck: true` skips type checking of `.d.ts` files for faster compilation:\n\n```json\n{\n  \"compilerOptions\": {\n    \"skipLibCheck\": true\n  }\n}\n```\n\n> **Key Point:** Install `@types/<package>` for libraries that don't include their own type definitions.",
+  "codeExample": "// With @types/express installed\nimport express, { Request, Response, NextFunction } from \"express\";\n\nconst app = express();\n\napp.get(\"/\", (req: Request, res: Response) => {\n  res.json({ message: \"Hello\" });\n});\n\n// Custom type augmentation\ndeclare module \"express-session\" {\n  interface SessionData {\n    userId?: number;\n    role?: \"admin\" | \"user\";\n  }\n}\n\n// Ambient module for untyped library\ndeclare module \"my-legacy-lib\" {\n  export function init(config: Record<string, unknown>): void;\n  export function getVersion(): string;\n  export class Client {\n    constructor(endpoint: string);\n    request(path: string): Promise<unknown>;\n  }\n}",
+  "quiz": [
+    {
+      "question": "Where are community-maintained type definitions hosted?",
+      "options": ["npm registry", "DefinitelyTyped", "TypeScript website", "GitHub packages"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you install type definitions for a library?",
+      "options": ["npm i --save-dev @types/library", "npm i --save types-library", "npm i type-library", "npm i --global types"],
+      "correctIndex": 0
+    }
+  ]
+}

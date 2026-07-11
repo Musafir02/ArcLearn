@@ -1,0 +1,22 @@
+{
+  "title": "Intersection Types",
+  "language": "typescript",
+  "topic": "intersection_types",
+  "order": 30,
+  "nextTopic": "union_types",
+  "prevTopic": "type_aliases",
+  "content":"### Intersection Types\n\nIntersection types combine multiple types into one. The resulting type has all properties of each constituent type.\n\n### Syntax\n\n```typescript\ntype A = { a: number };\ntype B = { b: string };\ntype C = A & B;\n// C has both a: number and b: string\n\nconst obj: C = { a: 1, b: \"hello\" };\n```\n\n### Multiple Intersections\n\n```typescript\ntype HasName = { name: string };\ntype HasAge = { age: number };\ntype HasEmail = { email: string };\n\ntype User = HasName & HasAge & HasEmail;\n\nconst user: User = {\n  name: \"Alice\",\n  age: 30,\n  email: \"alice@example.com\"\n};\n```\n\n### Intersection with Interfaces\n\n```typescript\ninterface Person {\n  name: string;\n  age: number;\n}\n\ninterface Employee {\n  employeeId: number;\n  department: string;\n}\n\ntype StaffMember = Person & Employee;\n\nconst staff: StaffMember = {\n  name: \"Bob\",\n  age: 25,\n  employeeId: 456,\n  department: \"Engineering\"\n};\n```\n\n### Conflicting Property Types\n\n```typescript\ntype A = { x: number };\ntype B = { x: string };\ntype C = A & B;\n// C['x'] is never (number & string)\n```\n\n### Intersection vs Interface Extension\n\n| Aspect | Intersection (&) | Interface extends |\n|--------|-----------------|-------------------|\n| Combining objects | Yes | Yes |\n| Primitives | Yes (creates never) | No |\n| Union types | Yes (distributes) | No |\n| Declaration merging | No | Yes |\n\n> **Key Point:** Intersection types merge all properties from all constituent types. Conflicting primitive types result in `never`.",
+  "codeExample": "type WithId = { id: number };\ntype WithTimestamp = { createdAt: Date; updatedAt: Date };\ntype WithMeta = { meta: Record<string, unknown> };\n\n// Combined type\ntype DatabaseEntity = WithId & WithTimestamp & WithMeta;\n\nconst entity: DatabaseEntity = {\n  id: 1,\n  createdAt: new Date(),\n  updatedAt: new Date(),\n  meta: { version: 2 }\n};\n\n// Intersection with generics\ntype WithLogging<T> = T & { log: (message: string) => void };\n\nfunction addLogging<T>(obj: T): WithLogging<T> {\n  return {\n    ...obj,\n    log: (message: string) => console.log(message)\n  };\n}",
+  "quiz": [
+    {
+      "question": "What operator creates an intersection type?",
+      "options": ["|", "&", "+", "extends"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when intersecting types have conflicting primitive properties?",
+      "options": ["Runtime error", "Compile error", "Type becomes never", "First type wins"],
+      "correctIndex": 2
+    }
+  ]
+}

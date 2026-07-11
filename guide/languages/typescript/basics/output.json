@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Output",
+  "language": "typescript",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Console Output\n\nTypeScript uses the same console methods as JavaScript for output.\n\n### console.log()\n\n```typescript\nconsole.log(\"Hello, World!\");\nconsole.log(42);\nconsole.log(true);\n```\n\n### console.table()\n\nDisplay tabular data:\n\n```typescript\nconst users = [\n  { name: \"Alice\", age: 30 },\n  { name: \"Bob\", age: 25 }\n];\nconsole.table(users);\n```\n\n### Template Literals\n\nUse backticks for string interpolation:\n\n```typescript\nlet name: string = \"TypeScript\";\nconsole.log(`Welcome to ${name}`);\n```\n\n### Format Specifiers\n\n| Specifier | Description |\n|-----------|------------|\n| %s | String |\n| %d | Number (integer) |\n| %i | Integer |\n| %f | Float |\n| %o | Object |\n| %c | CSS style |\n\n```typescript\nconsole.log(\"Name: %s, Age: %d\", \"Alice\", 30);\n```\n\n### Grouping and Styling\n\n```typescript\nconsole.group(\"User Details\");\nconsole.log(\"Name: Alice\");\nconsole.log(\"Age: 30\");\nconsole.groupEnd();\n\nconsole.log(\"%cStyled text\", \"color: blue; font-size: 20px\");\n```\n\n> **Key Point:** console methods work identically in TypeScript and JavaScript.",
+  "codeExample": "// Basic output\nconsole.log(\"Basic log message\");\n\n// Template literals\nconst app: string = \"TypeScript\";\nconst version: number = 5.6;\nconsole.log(`${app} version ${version}`);\n\n// Table output\nconsole.table([\n  { lang: \"TypeScript\", type: \"Statically typed\" },\n  { lang: \"JavaScript\", type: \"Dynamically typed\" }\n]);",
+  "quiz": [
+    {
+      "question": "Which console method displays data in a table format?",
+      "options": ["console.log()", "console.table()", "console.display()", "console.grid()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What character prefixes template literal interpolation?",
+      "options": ["#", "@", "$", "&"],
+      "correctIndex": 2
+    }
+  ]
+}

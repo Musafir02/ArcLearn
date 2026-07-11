@@ -1,0 +1,22 @@
+{
+  "title": "PHP Sessions",
+  "language": "php",
+  "topic": "sessions",
+  "order": 50,
+  "nextTopic": "cookies",
+  "prevTopic": "superglobals",
+  "content": "### PHP Sessions\n\nSessions allow you to store user information across multiple page requests.\n\n### Starting a Session\n\n```php\n<?php\nsession_start(); // Must be called before any HTML output\n\n// Set session variables\n$_SESSION[\"username\"] = \"John\";\n$_SESSION[\"role\"] = \"admin\";\n\necho \"Session started for \" . $_SESSION[\"username\"];\n?>\n```\n\n### Using Session Variables\n\n```php\n<?php\nsession_start();\n\n// Check if logged in\nif (isset($_SESSION[\"user_id\"])) {\n    echo \"Welcome back, \" . $_SESSION[\"username\"];\n} else {\n    echo \"Please log in\";\n}\n?>\n```\n\n### Session Functions\n\n| Function | Description |\n|----------|-------------|\n| `session_start()` | Start new or resume existing session |\n| `session_destroy()` | Destroy all session data |\n| `session_unset()` | Unset all session variables |\n| `session_id()` | Get or set the session ID |\n| `session_regenerate_id()` | Regenerate session ID (security) |\n| `session_status()` | Check if session is active |\n\n### Login / Logout Example\n\n```php\n<?php\nsession_start();\n\n// Login\n$_SESSION[\"user_id\"] = 123;\n$_SESSION[\"username\"] = \"john_doe\";\n\n// Logout\nsession_unset();\nsession_destroy();\n?>\n```\n\n> **Key Point:** Always call `session_start()` at the beginning of every page that uses sessions, before any HTML output.",
+  "codeExample": "<?php\nsession_start();\n\n// Login simulation\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\" && isset($_POST[\"login\"])) {\n    $_SESSION[\"user\"] = htmlspecialchars($_POST[\"username\"]);\n    $_SESSION[\"login_time\"] = time();\n}\n\n// Logout\nif (isset($_GET[\"logout\"])) {\n    session_unset();\n    session_destroy();\n    echo \"Logged out. <a href='?'>Back</a>\";\n    exit;\n}\n\n// Display session info\nif (isset($_SESSION[\"user\"])) {\n    echo \"Logged in as: \" . $_SESSION[\"user\"] . \"<br>\";\n    echo \"Login time: \" . date(\"Y-m-d H:i:s\", $_SESSION[\"login_time\"]) . \"<br>\";\n    echo \"<a href='?logout=1'>Logout</a>\";\n} else {\n?>\n    <form method=\"post\">\n        Username: <input type=\"text\" name=\"username\">\n        <input type=\"submit\" name=\"login\" value=\"Login\">\n    </form>\n<?php } ?>",
+  "quiz": [
+    {
+      "question": "Which function must be called before using $_SESSION?",
+      "options": ["session_create()", "session_start()", "session_init()", "session_begin()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What function destroys all session data?",
+      "options": ["session_unset()", "session_destroy()", "session_end()", "session_close()"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Type vs Interface",
+  "language": "typescript",
+  "topic": "type_vs_interface",
+  "order": 63,
+  "nextTopic": "decorators",
+  "prevTopic": "strict_mode",
+  "content": "Type vs Interface\n\nBoth `type` and `interface` can describe object shapes, but they have important differences.\n\n### Similarities\n\n```typescript\n// Both work for object types\ninterface UserInterface {\n  name: string;\n  age: number;\n}\n\ntype UserType = {\n  name: string;\n  age: number;\n};\n\n// Both support generics\ninterface Box<T> { content: T; }\ntype Box<T> = { content: T; };\n```\n\n### Key Differences\n\n| Feature | Interface | Type Alias |\n|---------|-----------|-----------|\n| Declaration merging | Yes | No |\n| Extends | `extends` | Intersection (`&`) |\n| Unions | No | Yes |\n| Tuples | No | Yes |\n| Primitives | No | Yes |\n| Mapped types | No | Yes |\n| Performance | Better for object types | Better for complex types |\n\n### Declaration Merging\n\nInterfaces can be merged across multiple declarations:\n\n```typescript\ninterface User {\n  name: string;\n}\n\ninterface User {\n  age: number;\n}\n\n// User now has both name and age\n\n// Type aliases cannot be merged\n// type User = { name: string }; // Error: Duplicate identifier\n```\n\n### When to Use What\n\n| Use Case | Recommendation |\n|----------|---------------|\n| Public API / Library | Interface |\n| Object shapes | Interface |\n| Union types | Type |\n| Primitive aliases | Type |\n| Tuple types | Type |\n| Mapped types | Type |\n| Utility types | Type |\n\n> **Key Point:** Prefer `interface` for public APIs and object shapes; use `type` for unions, primitives, and complex type transformations.",
+  "codeExample": "// Interface for public API\nexport interface ApiResponse<T> {\n  status: number;\n  data: T;\n  message: string;\n}\n\n// Type for unions\ntype Status = \"idle\" | \"loading\" | \"success\" | \"error\";\ntype Id = string | number;\n\n// Type for tuples\ntype Point = [x: number, y: number];\n\n// Interface can be extended\ninterface BaseEntity {\n  id: number;\n  createdAt: Date;\n}\n\ninterface User extends BaseEntity {\n  name: string;\n  email: string;\n}\n\n// Type for intersection\ntype AdminUser = User & { role: \"admin\"; permissions: string[] };",
+  "quiz": [
+    {
+      "question": "Which feature supports declaration merging?",
+      "options": ["Type alias", "Interface", "Both", "Neither"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which can represent union types?",
+      "options": ["Only Interface", "Only Type alias", "Both", "Neither"],
+      "correctIndex": 1
+    }
+  ]
+}

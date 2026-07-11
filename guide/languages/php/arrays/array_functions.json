@@ -1,0 +1,22 @@
+{
+  "title": "PHP Array Functions",
+  "language": "php",
+  "topic": "array_functions",
+  "order": 30,
+  "nextTopic": "array_sort",
+  "prevTopic": "array_multidimensional",
+  "content": "### PHP Array Functions\n\nPHP has a rich set of built-in functions for array manipulation.\n\n### Common Array Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `count()` | Count elements | `count($arr)` |\n| `array_push()` | Add to end | `array_push($arr, 4)` |\n| `array_pop()` | Remove from end | `$last = array_pop($arr)` |\n| `array_shift()` | Remove from start | `$first = array_shift($arr)` |\n| `array_unshift()` | Add to start | `array_unshift($arr, 0)` |\n| `array_merge()` | Merge arrays | `array_merge($a, $b)` |\n| `array_slice()` | Extract portion | `array_slice($arr, 1, 2)` |\n| `array_splice()` | Remove/replace portion | `array_splice($arr, 1, 1, $rep)` |\n| `array_reverse()` | Reverse order | `array_reverse($arr)` |\n| `in_array()` | Check if value exists | `in_array(\"val\", $arr)` |\n| `array_search()` | Search for value (returns key) | `array_search(\"val\", $arr)` |\n| `array_key_exists()` | Check if key exists | `array_key_exists(\"key\", $arr)` |\n\n```php\n<?php\n$arr = [1, 2, 3];\narray_push($arr, 4, 5);      // [1, 2, 3, 4, 5]\n$last = array_pop($arr);     // 5, arr => [1, 2, 3, 4]\n$first = array_shift($arr);  // 1, arr => [2, 3, 4]\narray_unshift($arr, 0);      // [0, 2, 3, 4]\n?>\n```\n\n> **Key Point:** Many array functions modify the original array. Use `array_slice()` to extract without modifying the original.",
+  "codeExample": "<?php\n$fruits = [\"Banana\", \"Apple\", \"Cherry\", \"Date\"];\n\n// Merge\n$more = [\"Elderberry\", \"Fig\"];\n$all = array_merge($fruits, $more);\nprint_r($all);\n\n// Slice (without modifying)\n$slice = array_slice($fruits, 1, 2);\nprint_r($slice);\n\n// Search\n$index = array_search(\"Cherry\", $fruits);\necho \"Cherry is at index: $index\";\n\n// Reverse\n$reversed = array_reverse($fruits);\nprint_r($reversed);\n?>",
+  "quiz": [
+    {
+      "question": "Which function removes the first element of an array?",
+      "options": ["array_pop()", "array_shift()", "array_unshift()", "array_splice()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does array_slice() modify the original array?",
+      "options": ["Yes", "No", "Depends on PHP version", "Only with reference"],
+      "correctIndex": 1
+    }
+  ]
+}

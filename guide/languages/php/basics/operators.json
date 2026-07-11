@@ -1,0 +1,22 @@
+{
+  "title": "PHP Operators",
+  "language": "php",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "booleans",
+  "prevTopic": "constants",
+  "content": "### PHP Operators\n\nOperators are used to perform operations on variables and values.\n\n### Arithmetic Operators\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `+` | Addition | `5 + 3` | `8` |\n| `-` | Subtraction | `5 - 3` | `2` |\n| `*` | Multiplication | `5 * 3` | `15` |\n| `/` | Division | `6 / 3` | `2` |\n| `%` | Modulo | `5 % 2` | `1` |\n| `**` | Exponentiation | `2 ** 3` | `8` |\n\n### Comparison Operators\n\n| Operator | Name |\n|----------|------|\n| `==` | Equal (value) |\n| `===` | Identical (value and type) |\n| `!=` | Not equal |\n| `<>` | Not equal |\n| `!==` | Not identical |\n| `<`, `>`, `<=`, `>=` | Less/Greater than |\n\n```php\n<?php\n$x = 10;\n$y = 3;\necho $x + $y; // 13\necho $x % $y; // 1\necho $x ** $y; // 1000\n\n// Loose vs strict comparison\nvar_dump(5 == \"5\");  // true (loose)\nvar_dump(5 === \"5\"); // false (strict)\n?>\n```\n\n> **Key Point:** Always use `===` and `!==` for comparisons to avoid type coercion issues.",
+  "codeExample": "<?php\n$a = 15;\n$b = 4;\necho \"Sum: \" . ($a + $b) . \"\\n\";\necho \"Product: \" . ($a * $b) . \"\\n\";\necho \"Power: \" . ($a ** $b) . \"\\n\";\nvar_dump($a == \"15\");  // true\nvar_dump($a === \"15\"); // false\n?>",
+  "quiz": [
+    {
+      "question": "Which operator checks value AND type equality?",
+      "options": ["==", "===", "=", "!="],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the result of 10 % 3?",
+      "options": ["3", "1", "0", "3.33"],
+      "correctIndex": 1
+    }
+  ]
+}

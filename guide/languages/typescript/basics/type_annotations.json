@@ -1,0 +1,22 @@
+{
+  "title": "Type Annotations",
+  "language": "typescript",
+  "topic": "type_annotations",
+  "order": 8,
+  "nextTopic": "type_inference",
+  "prevTopic": "datatypes",
+  "content": "### What are Type Annotations?\n\nType annotations explicitly specify the type of a variable, function parameter, or return value.\n\n### Variable Annotations\n\n```typescript\nlet name: string = \"Alice\";\nlet age: number = 30;\nlet isActive: boolean = true;\n```\n\n### Parameter Annotations\n\n```typescript\nfunction greet(name: string): void {\n  console.log(`Hello, ${name}`);\n}\n```\n\n### Return Type Annotations\n\n```typescript\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\n\n### Array Type Annotations\n\n```typescript\nlet numbers: number[] = [1, 2, 3];\nlet names: Array<string> = [\"Alice\", \"Bob\"];\n```\n\n### Union Type Annotations\n\n```typescript\nlet id: string | number;\nid = \"abc123\"; // OK\nid = 42; // OK\n// id = true; // Error\n```\n\n### Optional Property Annotations\n\n```typescript\nfunction greet(name?: string): void {\n  console.log(`Hello, ${name ?? \"Guest\"}`);\n}\n```\n\n### Syntax\n\n```\nvariableName: type\n```\n\n> **Key Point:** Type annotations are optional when TypeScript can infer the type from the value.",
+  "codeExample": "// Basic annotations\nlet message: string = \"Hello\";\nlet count: number = 42;\nlet completed: boolean = false;\n\n// Function annotations\nfunction multiply(x: number, y: number): number {\n  return x * y;\n}\n\n// Annotation with union type\nlet status: \"active\" | \"inactive\" = \"active\";\n\n// Array annotation\nlet items: string[] = [\"a\", \"b\", \"c\"];",
+  "quiz": [
+    {
+      "question": "What is the correct syntax for a type annotation?",
+      "options": ["variable: type", "variable :: type", "type: variable", "variable = type"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where do return type annotations go in a function?",
+      "options": ["Before the function keyword", "After the parameter list", "Inside the body", "Before the function name"],
+      "correctIndex": 1
+    }
+  ]
+}

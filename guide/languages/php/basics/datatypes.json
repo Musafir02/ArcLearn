@@ -1,0 +1,22 @@
+{
+  "title": "PHP Data Types",
+  "language": "php",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "constants",
+  "prevTopic": "variables",
+  "content": "### PHP Data Types\n\nPHP supports several data types that determine what kind of data a variable can hold.\n\n### Scalar Types\n\n| Type | Description | Example |\n|------|-------------|---------|\n| `string` | Sequence of characters | `\"Hello\"` |\n| `int` | Whole numbers | `42` |\n| `float` | Decimal numbers | `3.14` |\n| `bool` | True or false | `true` |\n\n### Compound Types\n\n| Type | Description | Example |\n|------|-------------|---------|\n| `array` | Ordered map | `[1, 2, 3]` |\n| `object` | Instance of a class | `new stdClass()` |\n| `callable` | Callable function | `function() {}` |\n| `iterable` | Iterable value | array or Traversable |\n\n### Special Types\n\n| Type | Description |\n|------|-------------|\n| `null` | Variable with no value |\n| `resource` | External resource (file handle) |\n\n```php\n<?php\n$str = \"Hello\";\n$int = 100;\n$float = 10.5;\n$bool = true;\n$arr = [1, 2, 3];\n$null = null;\necho gettype($int); // \"integer\"\n?>\n```\n\n> **Key Point:** Use `var_dump()` to see both the type and value of any variable.",
+  "codeExample": "<?php\n$a = \"Hello\";\n$b = 42;\n$c = 3.14;\n$d = true;\n$e = [1, 2, 3];\nvar_dump($a, $b, $c, $d, $e);\n?>",
+  "quiz": [
+    {
+      "question": "Which function returns the data type of a variable?",
+      "options": ["typeof()", "gettype()", "type()", "vartype()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the type of `null`?",
+      "options": ["string", "bool", "null", "undefined"],
+      "correctIndex": 2
+    }
+  ]
+}

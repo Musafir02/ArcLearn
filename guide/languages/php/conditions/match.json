@@ -1,0 +1,22 @@
+{
+  "title": "PHP match Expression (PHP 8)",
+  "language": "php",
+  "topic": "match",
+  "order": 19,
+  "nextTopic": "ternary",
+  "prevTopic": "switch",
+  "content": "### PHP match Expression\n\nIntroduced in PHP 8, `match` is an expression-based alternative to `switch` that returns a value.\n\n### Syntax\n\n```php\n<?php\n$result = match (expression) {\n    value1 => return1,\n    value2 => return2,\n    default => defaultValue,\n};\n?>\n```\n\n### Example\n\n```php\n<?php\n$statusCode = 404;\n\n$message = match ($statusCode) {\n    200 => \"OK\",\n    301, 302 => \"Redirect\",\n    404 => \"Not Found\",\n    500 => \"Server Error\",\n    default => \"Unknown status\",\n};\n\necho $message; // Not Found\n?>\n```\n\n### match vs switch\n\n| Feature | match | switch |\n|---------|-------|--------|\n| Returns value | Yes | No |\n| Strict comparison | Yes (`===`) | No (`==`) |\n| Break required | No | Yes |\n| Multiple values | Comma-separated | Fall-through |\n| Exhaustive | Throws on unmatched | Falls to default |\n\n> **Key Point:** `match` uses strict comparison (`===`), returns a value, and throws an `UnhandledMatchError` if no arm matches and no default is provided.",
+  "codeExample": "<?php\n$food = 'apple';\n\n$type = match ($food) {\n    'apple', 'banana', 'orange' => 'fruit',\n    'carrot', 'broccoli' => 'vegetable',\n    'chicken', 'fish' => 'meat',\n    default => 'unknown',\n};\n\necho \"$food is a $type\";\n?>",
+  "quiz": [
+    {
+      "question": "Does match require a break statement?",
+      "options": ["Yes", "No", "Only in PHP 8.0", "Only with multiple values"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of comparison does match use?",
+      "options": ["Loose (==)", "Strict (===)", "Both", "Custom"],
+      "correctIndex": 1
+    }
+  ]
+}

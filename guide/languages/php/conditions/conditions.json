@@ -1,0 +1,22 @@
+{
+  "title": "PHP Conditions",
+  "language": "php",
+  "topic": "conditions",
+  "order": 16,
+  "nextTopic": "if_else",
+  "prevTopic": "var_dump",
+  "content": "### PHP Conditions\n\nConditional statements allow you to execute different code based on different conditions.\n\n### Conditional Statements Overview\n\n| Statement | Description |\n|-----------|-------------|\n| `if` | Execute code if condition is true |\n| `if...else` | Execute one block if true, another if false |\n| `if...elseif...else` | Multiple conditions |\n| `switch` | Select among many blocks |\n| `match` (PHP 8) | Expression-based matching |\n| Ternary | Shorthand if-else |\n\n```php\n<?php\n$age = 18;\n\nif ($age >= 18) {\n    echo \"Adult\";\n}\n?>\n```\n\n### Comparison and Logical Operators in Conditions\n\n| Operator | Meaning |\n|----------|---------|\n| `==` | Equal |\n| `===` | Identical |\n| `!=` | Not equal |\n| `>` / `<` | Greater / Less than |\n| `&&` | AND |\n| `||` | OR |\n| `!` | NOT |\n\n> **Key Point:** Always use `===` for comparisons when you need to match both value and type.",
+  "codeExample": "<?php\n$score = 85;\n$passed = true;\n\nif ($score >= 75 && $passed) {\n    echo \"Congratulations, you passed with distinction!\";\n} elseif ($score >= 50) {\n    echo \"You passed.\";\n} else {\n    echo \"You failed. Try again.\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "Which statement type allows multiple condition branches?",
+      "options": ["if", "if...else", "if...elseif...else", "All of them"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does !true evaluate to?",
+      "options": ["true", "false", "null", "0"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP Function Parameters",
+  "language": "php",
+  "topic": "function_params",
+  "order": 33,
+  "nextTopic": "return_values",
+  "prevTopic": "functions",
+  "content": "### PHP Function Parameters\n\nParameters allow functions to accept input values when called.\n\n### Syntax\n\n```php\n<?php\nfunction functionName($param1, $param2) {\n    // use parameters\n}\n?>\n```\n\n### Parameter Types\n\n```php\n<?php\n// Required parameters\nfunction greet($name) {\n    echo \"Hello, $name\";\n}\n\n// Default parameters\nfunction greetWithTitle($name, $title = \"Mr.\") {\n    echo \"Hello, $title $name\";\n}\n\n// Type declarations (PHP 7+)\nfunction add(int $a, int $b): int {\n    return $a + $b;\n}\n\n// Nullable types\nfunction setAge(?int $age) {\n    echo \"Age: \" . ($age ?? \"not set\");\n}\n\n// Variadic parameters (PHP 5.6+)\nfunction sum(...$numbers) {\n    return array_sum($numbers);\n}\n\necho sum(1, 2, 3, 4); // 10\n?>\n```\n\n### Pass by Reference\n\n```php\n<?php\nfunction addExclamation(&$str) {\n    $str .= \"!\";\n}\n\n$text = \"Hello\";\naddExclamation($text);\necho $text; // Hello!\n?>\n```\n\n> **Key Point:** By default, parameters are passed by value. Use `&` to pass by reference so the function can modify the original variable.",
+  "codeExample": "<?php\nfunction createEmail($name, $domain = \"example.com\", $prefix = \"@\") {\n    return strtolower($name) . $prefix . $domain;\n}\n\necho createEmail(\"John\");        // john@example.com\necho createEmail(\"Jane\", \"gmail.com\"); // jane@gmail.com\necho \"<br>\";\n\n// Type declaration\nfunction multiply(float $a, float $b): float {\n    return $a * $b;\n}\necho multiply(2.5, 4); // 10\n?>",
+  "quiz": [
+    {
+      "question": "How do you make a parameter optional in PHP?",
+      "options": ["Using ? before type", "Using default value", "Using NULL", "Using optional keyword"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What symbol is used for pass-by-reference?",
+      "options": ["*", "&", "%", "$"],
+      "correctIndex": 1
+    }
+  ]
+}

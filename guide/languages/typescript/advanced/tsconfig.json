@@ -1,0 +1,32 @@
+{
+  "title": "tsconfig.json",
+  "language": "typescript",
+  "topic": "tsconfig",
+  "order": 61,
+  "nextTopic": "strict_mode",
+  "prevTopic": "declaration_files_dts",
+  "content": "tsconfig.json\n\nThe `tsconfig.json` file configures the TypeScript compiler options and project settings.\n\n### Basic Structure\n\n```json\n{\n  \"compilerOptions\": {\n    \"target\": \"ES2022\",\n    \"module\": \"commonjs\",\n    \"strict\": true,\n    \"outDir\": \"./dist\",\n    \"rootDir\": \"./src\"\n  },\n  \"include\": [\"src/**/*\"],\n  \"exclude\": [\"node_modules\", \"dist\"]\n}\n```\n\n### Key Compiler Options\n\n| Option | Purpose |\n|--------|---------|\n| `target` | ECMAScript target version |\n| `module` | Module system (commonjs, esnext) |\n| `strict` | Enable all strict checks |\n| `outDir` | Output directory |\n| `rootDir` | Source root directory |\n| `declaration` | Generate .d.ts files |\n| `sourceMap` | Generate source maps |\n| `lib` | Type definitions to include |\n| `paths` | Path mapping for imports |\n\n### Target Options\n\n| Target | Features |\n|--------|----------|\n| ES5 | Wide compatibility |\n| ES2020 | Modern features |\n| ES2022 | Class fields, top-level await |\n| ESNext | Latest proposals |\n\n### include and exclude\n\n```json\n{\n  \"include\": [\"src/**/*\", \"tests/**/*\"],\n  \"exclude\": [\"node_modules\", \"dist\", \"**/*.spec.ts\"]\n}\n```\n\n### extends\n\nInherit configuration from another file:\n\n```json\n{\n  \"extends\": \"@tsconfig/node20/tsconfig.json\",\n  \"compilerOptions\": {\n    \"outDir\": \"./dist\"\n  }\n}\n```\n\n> **Key Point:** Use `extends` to share common compiler configurations across projects.",
+  "codeExample": "{\n  \"compilerOptions\": {\n    \"target\": \"ES2022\",\n    \"module\": \"NodeNext\",\n    \"moduleResolution\": \"NodeNext\",\n    \"strict\": true,\n    \"esModuleInterop\": true,\n    \"skipLibCheck\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"outDir\": \"./dist\",\n    \"rootDir\": \"./src\",\n    \"declaration\": true,\n    \"sourceMap\": true,\n    \"resolveJsonModule\": true,\n    \"lib\": [\"ES2022\", \"DOM\"]\n  },\n  \"include\": [\"src\"],\n  \"exclude\": [\"node_modules\", \"dist\"]\n}",
+  "quiz": [
+    {
+      "question": "What does the 'target' option in tsconfig specify?",
+      "options": [
+        "Module system",
+        "ECMAScript target version",
+        "Output directory",
+        "Source directory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does setting 'strict: true' do?",
+      "options": [
+        "Enables some checks",
+        "Enables all strict type-checking options",
+        "Disables type checking",
+        "Only for classes"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP Constants",
+  "language": "php",
+  "topic": "constants",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### PHP Constants\n\nConstants are identifiers that hold a value that cannot change during script execution.\n\n### Defining Constants\n\n| Method | Syntax | Example |\n|--------|--------|---------|\n| `define()` | `define(name, value)` | `define(\"SITE\", \"example.com\");` |\n| `const` keyword | `const NAME = value` | `const VERSION = 1.0;` |\n\n```php\n<?php\ndefine(\"PI\", 3.14159);\ndefine(\"SITE_NAME\", \"MyWebsite\");\nconst MAX_USERS = 100;\n\necho PI;\necho SITE_NAME;\necho MAX_USERS;\n?>\n```\n\n### Constant vs Variable\n\n| Feature | Constant | Variable |\n|---------|----------|----------|\n| Prefix | None | `$` |\n| Changeable | No | Yes |\n| Global scope | Always | Depends on scope |\n| Runtime definition | `define()` | Assignment |\n\n> **Key Point:** Constants are automatically global across the entire script and do not use the `$` prefix.",
+  "codeExample": "<?php\ndefine(\"TAX_RATE\", 0.08);\nconst DISCOUNT = 0.1;\n$price = 200;\n$final = $price + ($price * TAX_RATE) - ($price * DISCOUNT);\necho \"Final price: $\" . $final;\n?>",
+  "quiz": [
+    {
+      "question": "Can a constant be changed after definition?",
+      "options": ["Yes", "No", "Only with define()", "Only with const"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Do constants use the $ prefix?",
+      "options": ["Yes", "No", "Only in functions", "Only in classes"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP MySQL Introduction",
+  "language": "php",
+  "topic": "mysql_intro",
+  "order": 68,
+  "nextTopic": "pdo_basics",
+  "prevTopic": "json_encode_decode",
+  "content": "### PHP MySQL Introduction\n\nMySQL is a popular database system that works well with PHP.\n\n### Connection Methods\n\n| Extension | Status | Description |\n|-----------|--------|-------------|\n| `mysqli` | Active | MySQL-specific, procedural and OOP |\n| `PDO` | Active | Database-agnostic, supports 12+ databases |\n\n### MySQLi Example\n\n```php\n<?php\n$servername = \"localhost\";\n$username = \"root\";\n$password = \"\";\n$dbname = \"test_db\";\n\n// Create connection\n$conn = new mysqli($servername, $username, $password, $dbname);\n\n// Check connection\nif ($conn->connect_error) {\n    die(\"Connection failed: \" . $conn->connect_error);\n}\necho \"Connected successfully\";\n?>\n```\n\n### Basic SQL Operations\n\n```php\n<?php\n// SELECT\n$sql = \"SELECT id, name, email FROM users\";\n$result = $conn->query($sql);\n\nif ($result->num_rows > 0) {\n    while ($row = $result->fetch_assoc()) {\n        echo $row[\"name\"] . \" - \" . $row[\"email\"] . \"<br>\";\n    }\n}\n\n// INSERT\n$sql = \"INSERT INTO users (name, email) VALUES ('John', 'john@example.com')\";\nif ($conn->query($sql) === true) {\n    echo \"New record created. ID: \" . $conn->insert_id;\n}\n\n$conn->close();\n?>\n```\n\n### Database Concepts\n\n| Term | Description |\n|------|-------------|\n| Database | Collection of related tables |\n| Table | Structured data with rows and columns |\n| Row / Record | Single data entry |\n| Column / Field | Data attribute |\n| Primary Key | Unique identifier for each row |\n| Foreign Key | Links tables together |\n| Index | Speeds up data retrieval |\n\n> **Key Point:** PDO is recommended over mysqli for new projects because it supports multiple database types and prepared statements with named parameters.",
+  "codeExample": "<?php\n$host = \"localhost\";\n$user = \"root\";\n$pass = \"\";\n$db = \"myapp\";\n\n// Connect via mysqli\n$conn = new mysqli($host, $user, $pass, $db);\n\nif ($conn->connect_error) {\n    die(\"Connection error: \" . $conn->connect_error);\n}\n\n// Create table\n$conn->query(\"CREATE TABLE IF NOT EXISTS users (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(100) NOT NULL,\n    email VARCHAR(100) UNIQUE NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n)\");\n\n// Insert sample data\n$conn->query(\"INSERT IGNORE INTO users (name, email) VALUES \n    ('Alice', 'alice@example.com'),\n    ('Bob', 'bob@example.com')\");\n\n// Query\n$result = $conn->query(\"SELECT id, name, email, created_at FROM users\");\n\necho \"<table border='1'>\";\necho \"<tr><th>ID</th><th>Name</th><th>Email</th><th>Created</th></tr>\";\nwhile ($row = $result->fetch_assoc()) {\n    echo \"<tr><td>{$row['id']}</td><td>{$row['name']}</td><td>{$row['email']}</td><td>{$row['created_at']}</td></tr>\";\n}\necho \"</table>\";\n\n$conn->close();\n?>",
+  "quiz": [
+    {
+      "question": "Which PHP extension is recommended for new database projects?",
+      "options": ["mysqli", "PDO", "mysql", "Both mysqli and PDO are fine"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the primary key in a database table?",
+      "options": ["A fast index", "Unique identifier for each row", "A foreign key reference", "The first column"],
+      "correctIndex": 1
+    }
+  ]
+}

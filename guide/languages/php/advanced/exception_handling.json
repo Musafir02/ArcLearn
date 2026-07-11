@@ -1,0 +1,22 @@
+{
+  "title": "PHP Exception Handling",
+  "language": "php",
+  "topic": "exception_handling",
+  "order": 57,
+  "nextTopic": "try_catch",
+  "prevTopic": "error_handling",
+  "content": "### PHP Exception Handling\n\nExceptions are an object-oriented way to handle errors in PHP.\n\n### Exception Class\n\n```php\n<?php\nthrow new Exception(\"Something went wrong\");\n?>\n```\n\n### The Exception Class\n\n| Method | Description |\n|--------|-------------|\n| `getMessage()` | Get error message |\n| `getCode()` | Get error code |\n| `getFile()` | Get filename where exception occurred |\n| `getLine()` | Get line number |\n| `getTrace()` | Get stack trace as array |\n| `getTraceAsString()` | Get stack trace as string |\n\n### Throwing Exceptions\n\n```php\n<?php\nfunction divide($a, $b) {\n    if ($b == 0) {\n        throw new Exception(\"Division by zero\");\n    }\n    return $a / $b;\n}\n\n// This will cause an uncaught exception\necho divide(10, 0);\n?>\n```\n\n### Custom Exception Class\n\n```php\n<?php\nclass MathException extends Exception {\n    public function errorMessage() {\n        return \"Math Error: \" . $this->getMessage();\n    }\n}\n\nthrow new MathException(\"Invalid operation\");\n?>\n```\n\n### Errors vs Exceptions\n\n| Feature | Error | Exception |\n|---------|-------|------------|\n| Handling | `set_error_handler()` | `try/catch` |\n| Control | Cannot be caught easily | Can be caught and handled |\n| OOP | Procedural | Object-oriented |\n| Stack trace | Limited | Full stack trace |\n\n> **Key Point:** Exceptions should be used for exceptional conditions that you want to handle gracefully, while traditional errors are for PHP-level issues.",
+  "codeExample": "<?php\nclass ValidationException extends Exception {\n    protected $field;\n    \n    public function __construct($message, $field = \"\") {\n        parent::__construct($message);\n        $this->field = $field;\n    }\n    \n    public function getField() {\n        return $this->field;\n    }\n}\n\nfunction validateAge($age) {\n    if ($age < 0) {\n        throw new ValidationException(\"Age cannot be negative\", \"age\");\n    }\n    if ($age > 150) {\n        throw new ValidationException(\"Age seems unrealistic\", \"age\");\n    }\n    return true;\n}\n\n// Trigger an exception\nvalidateAge(-5);\n?>",
+  "quiz": [
+    {
+      "question": "Which keyword is used to trigger an exception?",
+      "options": ["raise", "throw", "new", "exception"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method returns the error message from an exception?",
+      "options": ["getError()", "getMessage()", "getText()", "toString()"],
+      "correctIndex": 1
+    }
+  ]
+}

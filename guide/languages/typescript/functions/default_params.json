@@ -1,0 +1,22 @@
+{
+  "title": "Default Parameters",
+  "language": "typescript",
+  "topic": "default_params",
+  "order": 20,
+  "nextTopic": "rest_params",
+  "prevTopic": "optional_params",
+  "content":"### Default Parameters\n\nDefault parameters allow you to specify default values that are used when the argument is `undefined` or omitted.\n\n### Syntax\n\n```typescript\nfunction greet(name: string, greeting: string = \"Hello\"): string {\n  return `${greeting}, ${name}!`;\n}\n\ngreet(\"Alice\"); // \"Hello, Alice!\"\ngreet(\"Bob\", \"Hi\"); // \"Hi, Bob!\"\n```\n\n### How Defaults Work\n\nThe default value is used when the argument is `undefined` (or omitted):\n\n```typescript\nfunction multiply(a: number, b: number = 1): number {\n  return a * b;\n}\n\nconsole.log(multiply(5)); // 5 (5 * 1)\nconsole.log(multiply(5, 2)); // 10 (5 * 2)\nconsole.log(multiply(5, undefined)); // 5 (5 * 1)\n```\n\n### Default Parameters with Types\n\nTypeScript infers the type from the default value:\n\n```typescript\nfunction logMessage(message: string = \"Default message\"): void {\n  console.log(message);\n}\n```\n\n### Expressions as Defaults\n\n```typescript\nfunction getRandomId(prefix: string = `${Date.now()}_`): string {\n  return `${prefix}${Math.random().toString(36).slice(2)}`;\n}\n```\n\n### Default vs Optional\n\n| Feature | Default Parameter | Optional Parameter |\n|---------|------------------|-------------------|\n| Syntax | `param: type = value` | `param?: type` |\n| Default value | Explicit | `undefined` |\n| Type | `T` | `T | undefined` |\n| Use case | Need a fallback | Parameter may be absent |\n\n> **Key Point:** Default parameters implicitly make the parameter optional.",
+  "codeExample": "// Simple default\nfunction connect(host: string = \"localhost\", port: number = 5432): string {\n  return `Connected to ${host}:${port}`;\n}\n\nconsole.log(connect());\nconsole.log(connect(\"server.com\"));\nconsole.log(connect(\"db.com\", 3306));\n\n// Default with other params\nfunction formatDate(\n  date: Date = new Date(),\n  locale: string = \"en-US\"\n): string {\n  return date.toLocaleDateString(locale);\n}\n\n// Expression as default\nfunction createElement(tag: string = \"div\", text: string = \"\"): string {\n  return `<${tag}>${text}</${tag}>`;\n}",
+  "quiz": [
+    {
+      "question": "When is a default parameter value used?",
+      "options": ["When argument is null", "When argument is undefined", "When argument is 0", "When argument is false"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does a default parameter make the parameter optional?",
+      "options": ["Yes", "No", "Only with string types", "Only in strict mode"],
+      "correctIndex": 0
+    }
+  ]
+}

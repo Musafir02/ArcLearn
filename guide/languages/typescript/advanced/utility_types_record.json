@@ -1,0 +1,22 @@
+{
+  "title": "Utility Types: Record",
+  "language": "typescript",
+  "topic": "utility_types_record",
+  "order": 56,
+  "nextTopic": "utility_types_readonly",
+  "prevTopic": "utility_types_pick_omit",
+  "content": "Record<K, T>\n\n`Record<K, T>` constructs an object type with keys of type `K` and values of type `T`.\n\n### Basic Usage\n\n```typescript\ntype PageNames = \"home\" | \"about\" | \"contact\";\n\nconst pages: Record<PageNames, { title: string; url: string }> = {\n  home: { title: \"Home\", url: \"/\" },\n  about: { title: \"About\", url: \"/about\" },\n  contact: { title: \"Contact\", url: \"/contact\" }\n};\n```\n\n### Simple Key-Value Map\n\n```typescript\nconst scores: Record<string, number> = {\n  Alice: 95,\n  Bob: 87,\n  Charlie: 92\n};\n\nconst config: Record<string, string | number | boolean> = {\n  host: \"localhost\",\n  port: 3000,\n  secure: true\n};\n```\n\n### How Record Works\n\n```typescript\ntype Record<K extends keyof any, T> = {\n  [P in K]: T;\n};\n```\n\n### Enum Mapping Pattern\n\n```typescript\nenum Status {\n  Active = \"ACTIVE\",\n  Inactive = \"INACTIVE\",\n  Pending = \"PENDING\"\n}\n\nconst statusLabels: Record<Status, string> = {\n  [Status.Active]: \"User is active\",\n  [Status.Inactive]: \"User is inactive\",\n  [Status.Pending]: \"User is pending approval\"\n};\n\nconsole.log(statusLabels[Status.Active]); // \"User is active\"\n```\n\n### Record with Complex Values\n\n```typescript\ntype UserRole = \"admin\" | \"editor\" | \"viewer\";\n\ninterface RolePermissions {\n  canCreate: boolean;\n  canRead: boolean;\n  canUpdate: boolean;\n  canDelete: boolean;\n}\n\nconst rolePermissions: Record<UserRole, RolePermissions> = {\n  admin: { canCreate: true, canRead: true, canUpdate: true, canDelete: true },\n  editor: { canCreate: true, canRead: true, canUpdate: true, canDelete: false },\n  viewer: { canCreate: false, canRead: true, canUpdate: false, canDelete: false }\n};\n```\n\n> **Key Point:** `Record` is ideal for typed dictionaries and mapping enums to associated data.",
+  "codeExample": "// HTTP header map\ntype HttpHeaders = Record<string, string>;\n\nconst headers: HttpHeaders = {\n  \"Content-Type\": \"application/json\",\n  \"Authorization\": \"Bearer token123\"\n};\n\n// Event handler registry\ntype EventName = \"click\" | \"hover\" | \"focus\" | \"blur\";\ntype EventHandler = (event: Event) => void;\n\nconst handlers: Record<EventName, EventHandler[]> = {\n  click: [],\n  hover: [],\n  focus: [],\n  blur: []\n};\n\n// State machine\ntype State = \"idle\" | \"loading\" | \"success\" | \"error\";\nconst stateMessages: Record<State, string> = {\n  idle: \"Waiting for input\",\n  loading: \"Processing...\",\n  success: \"Operation completed\",\n  error: \"An error occurred\"\n};",
+  "quiz": [
+    {
+      "question": "What does Record<K, T> represent?",
+      "options": ["An array of T", "An object with keys K and values T", "A tuple", "A function type"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What constraint does K have in Record<K, T>?",
+      "options": ["Must be string", "Must be number", "Must be keyof any", "Must be symbol"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Function Types",
+  "language": "typescript",
+  "topic": "function_types",
+  "order": 18,
+  "nextTopic": "optional_params",
+  "prevTopic": "functions",
+  "content":"### Function Type Expressions\n\nFunction types describe the signature of a function: parameter types and return type.\n\n### Syntax\n\n```typescript\ntype GreetFn = (name: string) => string;\n\nlet greet: GreetFn = (name) => `Hello, ${name}`;\n```\n\n### Call Signatures\n\nYou can also use call signatures in object types:\n\n```typescript\ntype DescribableFunction = {\n  description: string;\n  (someArg: number): boolean;\n};\n\nfunction doSomething(fn: DescribableFunction) {\n  console.log(fn.description + \" returned \" + fn(6));\n}\n```\n\n### Construct Signatures\n\nFunctions that can be called with `new`:\n\n```typescript\ntype SomeConstructor = {\n  new (s: string): SomeObject;\n};\n\nfunction fn(ctor: SomeConstructor) {\n  return new ctor(\"hello\");\n}\n```\n\n### Parameter Destructuring\n\n```typescript\ntype User = { name: string; age: number };\n\nfunction printUser({ name, age }: User): void {\n  console.log(`${name} is ${age} years old`);\n}\n```\n\n### Rest Parameters Type\n\n```typescript\nfunction sum(...numbers: number[]): number {\n  return numbers.reduce((a, b) => a + b, 0);\n}\n```\n\n> **Key Point:** The arrow `=>` in function types separates parameters from return type, not the function body.",
+  "codeExample": "// Function type alias\ntype Calculator = (a: number, b: number) => number;\n\nconst add: Calculator = (x, y) => x + y;\nconst multiply: Calculator = (x, y) => x * y;\n\n// Call signature\ninterface Logger {\n  (message: string, level?: string): void;\n}\n\nconst log: Logger = (msg, level = \"info\") => {\n  console.log(`[${level}] ${msg}`);\n};\n\n// Parameter destructuring with types\nfunction sum({ a, b }: { a: number; b: number }): number {\n  return a + b;\n}",
+  "quiz": [
+    {
+      "question": "What separates parameter types from return type in a function type expression?",
+      "options": [":", "=>", "->", "|"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What syntax is used for callable objects with properties?",
+      "options": ["Type alias", "Call signature", "Interface", "Generic constraint"],
+      "correctIndex": 1
+    }
+  ]
+}

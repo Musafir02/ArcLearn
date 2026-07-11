@@ -1,0 +1,22 @@
+{
+  "title": "PHP PDO Basics",
+  "language": "php",
+  "topic": "pdo_basics",
+  "order": 69,
+  "nextTopic": "prepared_statements",
+  "prevTopic": "mysql_intro",
+  "content": "### PHP PDO Basics\n\nPDO (PHP Data Objects) provides a consistent interface for accessing multiple databases.\n\n### PDO Connection\n\n```php\n<?php\n$host = \"localhost\";\n$db = \"test_db\";\n$user = \"root\";\n$pass = \"\";\n\ntry {\n    $pdo = new PDO(\"mysql:host=$host;dbname=$db;charset=utf8mb4\", $user, $pass);\n    \n    // Set error mode to exceptions\n    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n    \n    // Set default fetch mode\n    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);\n    \n    echo \"Connected successfully\";\n} catch (PDOException $e) {\n    die(\"Connection failed: \" . $e->getMessage());\n}\n?>\n```\n\n### PDO Query\n\n```php\n<?php\n// Simple query (not for user input!)\n$stmt = $pdo->query(\"SELECT * FROM users\");\n$users = $stmt->fetchAll();\n\nforeach ($users as $user) {\n    echo $user[\"name\"] . \"<br>\";\n}\n?>\n```\n\n### Fetch Modes\n\n| Mode | Returns |\n|------|---------|\n| `PDO::FETCH_ASSOC` | Associative array |\n| `PDO::FETCH_NUM` | Numeric array |\n| `PDO::FETCH_BOTH` | Both (default) |\n| `PDO::FETCH_OBJ` | Object |\n| `PDO::FETCH_CLASS` | Into a class |\n\n### PDO Attributes\n\n```php\n<?php\n$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);\n$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);\n?>\n```\n\n### Advantages of PDO\n\n| Feature | PDO | mysqli |\n|---------|-----|--------|\n| Database support | 12+ databases | MySQL only |\n| Named parameters | Yes | No |\n| OOP interface | Yes | Both |\n| Error handling | Exceptions | Mixed |\n| Driver abstraction | Yes | No |\n\n> **Key Point:** Always set `PDO::ERRMODE_EXCEPTION` for proper error handling and `PDO::ATTR_DEFAULT_FETCH_MODE` for consistent result format.",
+  "codeExample": "<?php\ntry {\n    $pdo = new PDO(\"mysql:host=localhost;dbname=test;charset=utf8mb4\", \"root\", \"\");\n    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);\n    \n    // Create table\n    $pdo->exec(\"CREATE TABLE IF NOT EXISTS products (\n        id INT AUTO_INCREMENT PRIMARY KEY,\n        name VARCHAR(100) NOT NULL,\n        price DECIMAL(10,2) NOT NULL,\n        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n    )\");\n    \n    // Insert\n    $pdo->exec(\"INSERT INTO products (name, price) VALUES \n        ('Widget', 9.99),\n        ('Gadget', 24.99),\n        ('Doohickey', 5.99)\");\n    \n    // Query\n    $stmt = $pdo->query(\"SELECT * FROM products\");\n    $products = $stmt->fetchAll();\n    \n    echo \"<table border='1'>\";\n    echo \"<tr><th>ID</th><th>Name</th><th>Price</th></tr>\";\n    foreach ($products as $p) {\n        echo \"<tr><td>{$p['id']}</td><td>{$p['name']}</td><td>\\${$p['price']}</td></tr>\";\n    }\n    echo \"</table>\";\n    \n} catch (PDOException $e) {\n    echo \"Error: \" . $e->getMessage();\n}\n?>",
+  "quiz": [
+    {
+      "question": "What does PDO stand for?",
+      "options": ["PHP Database Object", "PHP Data Objects", "Personal Data Output", "Process Data Object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which PDO attribute enables exception-based error handling?",
+      "options": ["ATTR_EXCEPTION", "ERRMODE_EXCEPTION", "ATTR_ERRMODE with ERRMODE_EXCEPTION", "EXCEPTION_MODE"],
+      "correctIndex": 2
+    }
+  ]
+}

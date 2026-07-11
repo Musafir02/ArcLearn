@@ -1,0 +1,22 @@
+{
+  "title": "PHP GET and POST",
+  "language": "php",
+  "topic": "get_post",
+  "order": 44,
+  "nextTopic": "form_validation",
+  "prevTopic": "form_handling",
+  "content": "### PHP GET and POST\n\nPHP uses `$_GET` and `$_POST` superglobals to collect form data.\n\n### GET Method\n\nData is appended to the URL as query parameters.\n\n```php\n<?php\n// URL: welcome.php?name=John&age=25\nif (isset($_GET[\"name\"])) {\n    $name = $_GET[\"name\"];\n    echo \"Welcome, $name!\";\n}\n\nif (isset($_GET[\"age\"])) {\n    echo \"You are \" . $_GET[\"age\"] . \" years old.\";\n}\n?>\n```\n\n### POST Method\n\nData is sent in the HTTP request body, not visible in the URL.\n\n```php\n<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $username = $_POST[\"username\"];\n    $password = $_POST[\"password\"];\n    // Process login...\n}\n?>\n```\n\n### When to Use Each\n\n| Use GET when... | Use POST when... |\n|-----------------|------------------|\n| Retrieving data | Sending sensitive data |\n| Search queries | Updating databases |\n| Bookmarkable pages | File uploads |\n| Idempotent operations | Large data submissions |\n\n### Self-submitting Form\n\n```php\n<form method=\"post\" action=\"<?php echo htmlspecialchars($_SERVER[\"PHP_SELF\"]); ?>\">\n    <input type=\"text\" name=\"search\" placeholder=\"Search...\">\n    <input type=\"submit\">\n</form>\n```\n\n> **Key Point:** Always check `isset()` before accessing `$_GET` or `$_POST` to avoid undefined array key warnings.",
+  "codeExample": "<?php\n// POST handler\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $user = $_POST[\"username\"] ?? \"guest\";\n    echo \"POST received for user: $user\";\n}\n\n// GET handler (search example)\nif (isset($_GET[\"q\"])) {\n    $query = htmlspecialchars($_GET[\"q\"]);\n    echo \"Searching for: $query\";\n}\n?>\n\n<form method=\"get\">\n    <input type=\"text\" name=\"q\" placeholder=\"Search...\">\n    <input type=\"submit\" value=\"Search\">\n</form>",
+  "quiz": [
+    {
+      "question": "Where is GET data visible?",
+      "options": ["Request body", "URL", "Headers", "Cookies"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can POST data be bookmarked?",
+      "options": ["Yes", "No", "Only if specified", "With sessions"],
+      "correctIndex": 1
+    }
+  ]
+}

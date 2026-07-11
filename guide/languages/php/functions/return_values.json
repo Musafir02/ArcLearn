@@ -1,0 +1,22 @@
+{
+  "title": "PHP Return Values",
+  "language": "php",
+  "topic": "return_values",
+  "order": 34,
+  "nextTopic": "variable_functions",
+  "prevTopic": "function_params",
+  "content": "### PHP Return Values\n\nFunctions can return values using the `return` statement.\n\n### Basic Return\n\n```php\n<?php\nfunction add($a, $b) {\n    return $a + $b;\n}\n\n$result = add(5, 3);\necho $result; // 8\n?>\n```\n\n### Return Types (PHP 7+)\n\n```php\n<?php\n// Declare return type with : type\nfunction divide(float $a, float $b): float {\n    if ($b == 0) {\n        return 0.0;\n    }\n    return $a / $b;\n}\n\n// Void return type\nfunction logMessage(string $msg): void {\n    echo \"[LOG] $msg\";\n    // No return needed\n}\n\n// Nullable return type\nfunction findUser(int $id): ?array {\n    // Returns array or null\n    return $id > 0 ? [\"id\" => $id] : null;\n}\n?>\n```\n\n### Multiple Return Values\n\nPHP functions can only return one value, but you can return an array:\n\n```php\n<?php\nfunction getCoordinates() {\n    $x = 10;\n    $y = 20;\n    return [$x, $y];\n}\n\n[$x, $y] = getCoordinates(); // Destructuring\necho \"$x, $y\"; // 10, 20\n?>\n```\n\n> **Key Point:** A function stops executing as soon as it hits the first `return` statement.",
+  "codeExample": "<?php\nfunction calculate($a, $b, $op): int|float {\n    return match ($op) {\n        '+' => $a + $b,\n        '-' => $a - $b,\n        '*' => $a * $b,\n        '/' => $b != 0 ? $a / $b : 0,\n        default => 0\n    };\n}\n\necho calculate(10, 5, '+'); // 15\necho calculate(10, 5, '/'); // 2\n\n// Early return example\nfunction validate($value) {\n    if (empty($value)) {\n        return false;\n    }\n    return true;\n}\n?>",
+  "quiz": [
+    {
+      "question": "What keyword returns a value from a function?",
+      "options": ["return", "yield", "output", "send"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many values can a PHP function return?",
+      "options": ["One", "Multiple", "Unlimited", "Two"],
+      "correctIndex": 0
+    }
+  ]
+}

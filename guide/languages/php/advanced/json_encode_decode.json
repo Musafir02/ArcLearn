@@ -1,0 +1,22 @@
+{
+  "title": "PHP JSON Encoding and Decoding",
+  "language": "php",
+  "topic": "json_encode_decode",
+  "order": 67,
+  "nextTopic": "mysql_intro",
+  "prevTopic": "include_require",
+  "content": "### PHP JSON Encoding and Decoding\n\nPHP provides built-in functions for working with JSON data.\n\n### json_encode\n\nConverts PHP values to JSON format.\n\n```php\n<?php\n$data = [\n    \"name\" => \"John\",\n    \"age\" => 30,\n    \"city\" => \"New York\",\n    \"hobbies\" => [\"reading\", \"coding\"]\n];\n\n$json = json_encode($data);\necho $json;\n// {\"name\":\"John\",\"age\":30,\"city\":\"New York\",\"hobbies\":[\"reading\",\"coding\"]}\n?>\n```\n\n### json_decode\n\nConverts JSON string to PHP values.\n\n```php\n<?php\n$json = '{\"name\":\"John\",\"age\":30}';\n\n// Decode to object\n$obj = json_decode($json);\necho $obj->name; // John\n\n// Decode to array (second parameter true)\n$arr = json_decode($json, true);\necho $arr[\"name\"]; // John\n?>\n```\n\n### JSON Constants\n\n| Constant | Description |\n|----------|-------------|\n| `JSON_PRETTY_PRINT` | Format with whitespace |\n| `JSON_UNESCAPED_UNICODE` | Don't escape Unicode |\n| `JSON_UNESCAPED_SLASHES` | Don't escape `/` |\n| `JSON_NUMERIC_CHECK` | Convert numeric strings to numbers |\n| `JSON_FORCE_OBJECT` | Encode array as object |\n\n### Pretty Print Example\n\n```php\n<?php\n$data = [\"name\" => \"Alice\", \"scores\" => [95, 87, 92]];\necho json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);\n?>\n```\n\n### Error Handling\n\n```php\n<?php\n$json = '{\"invalid\": json}';\n$result = json_decode($json);\n\nif (json_last_error() !== JSON_ERROR_NONE) {\n    echo \"JSON Error: \" . json_last_error_msg();\n}\n?>\n```\n\n> **Key Point:** Use `json_decode($json, true)` to get an associative array instead of an object. Always check `json_last_error()` when decoding untrusted JSON.",
+  "codeExample": "<?php\n// JSON encode with options\n$user = [\n    \"id\" => 1,\n    \"name\" => \"Alice\",\n    \"email\" => \"alice@example.com\",\n    \"roles\" => [\"admin\", \"editor\"],\n    \"active\" => true,\n    \"metadata\" => [\n        \"last_login\" => \"2026-07-10\",\n        \"login_count\" => 42\n    ]\n];\n\n$json = json_encode($user, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);\necho \"<pre>$json</pre>\";\n\n// JSON decode\n$jsonString = '{\"products\":[{\"id\":1,\"name\":\"Laptop\",\"price\":999},{\"id\":2,\"name\":\"Phone\",\"price\":699}]}';\n$products = json_decode($jsonString, true);\n\nforeach ($products[\"products\"] as $product) {\n    echo $product[\"name\"] . \": $\" . $product[\"price\"] . \"<br>\";\n}\n\n// API response example\n$response = [\n    \"status\" => \"success\",\n    \"data\" => [\"user_id\" => 123, \"token\" => \"abc123\"],\n    \"timestamp\" => time()\n];\nheader(\"Content-Type: application/json\");\necho json_encode($response);\n?>",
+  "quiz": [
+    {
+      "question": "Which function converts a PHP array to JSON?",
+      "options": ["json_decode()", "json_encode()", "serialize()", "json_parse()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the second parameter true do in json_decode()?",
+      "options": ["Return object", "Return array", "Enable validation", "Pretty print"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP Regular Expressions (Regex)",
+  "language": "php",
+  "topic": "regex",
+  "order": 41,
+  "nextTopic": "explode_implode",
+  "prevTopic": "string_formatting",
+  "content": "### PHP Regular Expressions\n\nRegular expressions are patterns used to match character combinations in strings.\n\n### PCRE Functions\n\n| Function | Description |\n|----------|-------------|\n| `preg_match()` | Returns 1 if pattern matches |\n| `preg_match_all()` | Returns count of all matches |\n| `preg_replace()` | Search and replace |\n| `preg_split()` | Split string by pattern |\n| `preg_grep()` | Return array entries matching pattern |\n\n### Basic Syntax\n\n```php\n<?php\n$str = \"Hello, World!\";\n\n// Check if pattern exists\nif (preg_match(\"/World/\", $str)) {\n    echo \"Found World\";\n}\n\n// Case-insensitive\nif (preg_match(\"/hello/i\", $str)) {\n    echo \"Found hello (case-insensitive)\";\n}\n\n// Extract matches\npreg_match(\"/(\\d+)-(\\d+)-(\\d+)/\", \"Date: 2026-07-11\", $matches);\nprint_r($matches);\n?>\n```\n\n### Common Patterns\n\n| Pattern | Meaning |\n|---------|---------|\n| `/^pattern/` | Start of string |\n| `/pattern$/` | End of string |\n| `/\\d+/` | One or more digits |\n| `/\\w+/` | Word characters |\n| `/[a-z]+/` | Lowercase letters |\n| `/[A-Z]+/` | Uppercase letters |\n| `/.+/` | Any characters (one or more) |\n| `/\\s+/` | Whitespace |\n\n### preg_replace\n\n```php\n<?php\n$text = \"Hello 123 World 456\";\n$result = preg_replace(\"/\\d+/\", \"[NUMBER]\", $text);\necho $result; // Hello [NUMBER] World [NUMBER]\n?>\n```\n\n> **Key Point:** PCRE (Perl Compatible Regular Expressions) is the standard regex engine in PHP. Always use delimiters (usually `/`) around your pattern.",
+  "codeExample": "<?php\n$emails = \"Contact: john@example.com or jane@test.org\";\n\n// Extract all emails\n$pattern = \"/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}/u\";\npreg_match_all($pattern, $emails, $matches);\nprint_r($matches[0]);\n\n// Validate email\n$email = \"user@example.com\";\nif (preg_match(\"/^[\\w.-]+@[\\w.-]+\\.\\w{2,}$/\", $email)) {\n    echo \"Valid email\";\n}\n\n// Replace whitespace\n$messy = \"Too   many   spaces\";\n$clean = preg_replace(\"/\\s+/\", \" \", $messy);\necho $clean; // Too many spaces\n?>",
+  "quiz": [
+    {
+      "question": "Which function finds all regex matches in a string?",
+      "options": ["preg_match()", "preg_match_all()", "preg_grep()", "preg_find()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What delimiter is commonly used for PHP regex patterns?",
+      "options": ["/", "#", "~", "All of the above"],
+      "correctIndex": 3
+    }
+  ]
+}

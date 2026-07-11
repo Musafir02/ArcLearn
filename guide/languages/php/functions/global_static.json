@@ -1,0 +1,22 @@
+{
+  "title": "PHP Global and Static Keywords",
+  "language": "php",
+  "topic": "global_static",
+  "order": 38,
+  "nextTopic": "string_functions",
+  "prevTopic": "scope",
+  "content": "### PHP Global and Static Keywords\n\nBoth `global` and `static` modify how variables behave within functions.\n\n### Global Keyword\n\n```php\n<?php\n$x = 10;\n$y = 20;\n\nfunction sum() {\n    global $x, $y;\n    return $x + $y;\n}\n\necho sum(); // 30\n?>\n```\n\n### Static Variables\n\nA static variable retains its value between function calls but is only accessible within the function.\n\n```php\n<?php\nfunction counter() {\n    static $count = 0;\n    $count++;\n    echo $count;\n}\n\ncounter(); // 1\ncounter(); // 2\ncounter(); // 3\n?>\n```\n\n### Static vs Regular Local\n\n| Behavior | Local | Static |\n|----------|-------|--------|\n| Initial value | Set each call | Set once |\n| Value persistence | Lost after call | Retained |\n| Scope | Function only | Function only |\n| Memory | Reallocated each call | Persistent |\n\n```php\n<?php\nfunction regular() {\n    $count = 0;\n    $count++;\n    return $count;\n}\n\necho regular(); // 1\necho regular(); // 1 (always 1)\n?>\n```\n\n> **Key Point:** `static` is useful for caching values, counters, or lazy initialization within a function without using global scope.",
+  "codeExample": "<?php\nfunction getNextId() {\n    static $id = 0;\n    return ++$id;\n}\n\necho getNextId(); // 1\necho getNextId(); // 2\necho getNextId(); // 3\n\n// Global example\n$appName = \"MyApp\";\n\nfunction getAppName() {\n    global $appName;\n    return $appName;\n}\n\necho getAppName(); // MyApp\n?>",
+  "quiz": [
+    {
+      "question": "When is a static variable initialized?",
+      "options": ["Every function call", "Only on the first call", "Never", "At script start"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does a static variable retain its value between function calls?",
+      "options": ["Yes", "No", "Only for recursive calls", "Depends on scope"],
+      "correctIndex": 0
+    }
+  ]
+}

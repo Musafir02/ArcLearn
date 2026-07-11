@@ -1,0 +1,22 @@
+{
+  "title": "Type Guards",
+  "language": "typescript",
+  "topic": "type_guards",
+  "order": 33,
+  "nextTopic": "typeof_typeof",
+  "prevTopic": "literal_types",
+  "content":"### Type Guards\n\nType guards are expressions that perform runtime checks to guarantee the type of a value.\n\n### typeof Type Guard\n\n```typescript\nfunction process(value: string | number): void {\n  if (typeof value === \"string\") {\n    console.log(value.toUpperCase());\n  } else {\n    console.log(value.toFixed(2));\n  }\n}\n```\n\n### instanceof Type Guard\n\n```typescript\nclass Dog {\n  bark(): void { console.log(\"Woof!\"); }\n}\n\nclass Cat {\n  meow(): void { console.log(\"Meow!\"); }\n}\n\ntype Animal = Dog | Cat;\n\nfunction makeSound(animal: Animal): void {\n  if (animal instanceof Dog) {\n    animal.bark();\n  } else {\n    animal.meow();\n  }\n}\n```\n\n### in Type Guard\n\n```typescript\ninterface Bird {\n  fly(): void;\n}\n\ninterface Fish {\n  swim(): void;\n}\n\ntype Pet = Bird | Fish;\n\nfunction move(pet: Pet): void {\n  if (\"fly\" in pet) {\n    pet.fly();\n  } else {\n    pet.swim();\n  }\n}\n```\n\n### User-Defined Type Guards\n\n```typescript\ninterface Cat {\n  meow: () => void;\n}\n\nfunction isCat(pet: unknown): pet is Cat {\n  return (pet as Cat).meow !== undefined;\n}\n\nfunction handlePet(pet: unknown): void {\n  if (isCat(pet)) {\n    pet.meow(); // TypeScript knows pet is Cat here\n  }\n}\n```\n\n### Type Predicate Syntax\n\n```\nfunction functionName(arg: Type): arg is SpecificType {\n  return boolean;\n}\n```\n\n> **Key Point:** `typeof` works with primitives, `instanceof` with classes, and custom predicates for complex logic.",
+  "codeExample": "// typeof guard\nfunction double(value: string | number): string | number {\n  if (typeof value === \"number\") {\n    return value * 2;\n  }\n  return value + value;\n}\n\n// Custom type guard\ninterface Admin {\n  role: \"admin\";\n  permissions: string[];\n}\n\ninterface User {\n  role: \"user\";\n  name: string;\n}\n\ntype Account = Admin | User;\n\nfunction isAdmin(account: Account): account is Admin {\n  return account.role === \"admin\";\n}\n\nfunction getPermissions(account: Account): string[] {\n  if (isAdmin(account)) {\n    return account.permissions; // narrowed\n  }\n  return [];\n}",
+  "quiz": [
+    {
+      "question": "Which type guard works with primitive types like string and number?",
+      "options": ["instanceof", "typeof", "in", "is"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the return type of a user-defined type guard function?",
+      "options": ["boolean", "arg is Type", "void", "Type"],
+      "correctIndex": 1
+    }
+  ]
+}

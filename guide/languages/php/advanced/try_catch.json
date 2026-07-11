@@ -1,0 +1,22 @@
+{
+  "title": "PHP try-catch-finally",
+  "language": "php",
+  "topic": "try_catch",
+  "order": 58,
+  "nextTopic": "oop_classes",
+  "prevTopic": "exception_handling",
+  "content": "### PHP try-catch-finally\n\nThe `try-catch` block allows you to gracefully handle exceptions.\n\n### Basic try-catch\n\n```php\n<?php\ntry {\n    // Code that may throw an exception\n    $result = 10 / 0;\n    echo \"This will not execute\";\n} catch (DivisionByZeroError $e) {\n    echo \"Caught: \" . $e->getMessage();\n}\n\necho \"Script continues...\";\n?>\n```\n\n### Multiple Catch Blocks\n\n```php\n<?php\ntry {\n    $file = fopen(\"test.txt\", \"r\");\n    if (!$file) {\n        throw new Exception(\"File not found\");\n    }\n    // Process file...\n} catch (InvalidArgumentException $e) {\n    echo \"Invalid argument: \" . $e->getMessage();\n} catch (Exception $e) {\n    echo \"General error: \" . $e->getMessage();\n}\n?>\n```\n\n### finally Block\n\nThe `finally` block always executes, regardless of whether an exception was thrown.\n\n```php\n<?php\nfunction readFile($filename) {\n    $file = null;\n    try {\n        $file = fopen($filename, \"r\");\n        if (!$file) {\n            throw new Exception(\"Cannot open file\");\n        }\n        return fread($file, filesize($filename));\n    } catch (Exception $e) {\n        echo \"Error: \" . $e->getMessage();\n        return null;\n    } finally {\n        if ($file) {\n            fclose($file); // Always close\n        }\n    }\n}\n?>\n```\n\n### try-catch Flow\n\n| Block | Executes When |\n|-------|---------------|\n| `try` | Always (starts execution) |\n| `catch` | Exception is thrown in try |\n| `finally` | Always (after try or catch) |\n\n> **Key Point:** The `finally` block is ideal for cleanup operations like closing files or database connections that must run regardless of success or failure.",
+  "codeExample": "<?php\nfunction processPayment($amount, $balance) {\n    if ($amount <= 0) {\n        throw new InvalidArgumentException(\"Amount must be positive\");\n    }\n    if ($amount > $balance) {\n        throw new Exception(\"Insufficient funds\");\n    }\n    return $balance - $amount;\n}\n\n$transactions = [\n    [\"amount\" => 50, \"balance\" => 100],\n    [\"amount\" => -10, \"balance\" => 50],\n    [\"amount\" => 200, \"balance\" => 100]\n];\n\nforeach ($transactions as $txn) {\n    try {\n        $newBalance = processPayment($txn[\"amount\"], $txn[\"balance\"]);\n        echo \"Payment of \\${$txn[\"amount\"]} successful. New balance: \\$$newBalance<br>\";\n    } catch (InvalidArgumentException $e) {\n        echo \"Validation error: \" . $e->getMessage() . \"<br>\";\n    } catch (Exception $e) {\n        echo \"Payment failed: \" . $e->getMessage() . \"<br>\";\n    } finally {\n        echo \"Transaction attempted.<br><br>\";\n    }\n}\n?>",
+  "quiz": [
+    {
+      "question": "Does finally block always execute?",
+      "options": ["Yes", "No", "Only on success", "Only on failure"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happens when no exception is thrown in try block?",
+      "options": ["catch runs", "catch is skipped", "finally is skipped", "Error occurs"],
+      "correctIndex": 1
+    }
+  ]
+}

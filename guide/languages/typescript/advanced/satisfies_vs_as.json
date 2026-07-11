@@ -1,0 +1,22 @@
+{
+  "title": "Satisfies vs As",
+  "language": "typescript",
+  "topic": "satisfies_vs_as",
+  "order": 66,
+  "nextTopic": "async_await_types",
+  "prevTopic": "satisfies_operator",
+  "content": "Satisfies vs As\n\nBoth `satisfies` and `as` validate types, but they work very differently.\n\n### Type Assertion (as)\n\n`as` tells TypeScript to treat a value as a specific type, overriding inference:\n\n```typescript\nconst value = \"hello\" as string | number;\n// value is string | number\n// value.length; // Error: Property 'length' does not exist on type 'string | number'\n```\n\nWith `as`, you can assert anything:\n\n```typescript\nconst x = \"hello\" as unknown as number; // No error, but dangerous\n```\n\n### Satisfies\n\n`satisfies` checks that a value matches a type without changing its inferred type:\n\n```typescript\nconst value = \"hello\" satisfies string | number;\n// value is still \"hello\" (literal type)\n// value.length; // OK - TypeScript knows it's a string\n```\n\n### Key Differences\n\n| Aspect | `as` (assertion) | `satisfies` |\n|--------|-----------------|-------------|\n| Effect | Overrides type | Validates without changing type |\n| Safety | Can assert invalid casts | Only validates actual values |\n| Type narrowing | Widens to target type | Preserves narrowed type |\n| Runtime impact | None | None |\n| Use case | When you know more than TS | When you want validation + narrowing |\n\n### When to Use What\n\n```typescript\n// Use 'as' when:\n// 1. You have a specific subset type\nconst input = document.getElementById(\"myInput\") as HTMLInputElement;\n\n// 2. Parsing JSON (you know the shape)\nconst data = JSON.parse(jsonString) as User;\n\n// Use 'satisfies' when:\n// 1. Validating against a type but keeping narrow types\nconst colors = { r: 255, g: 0, b: 0 } satisfies Record<string, number>;\n\n// 2. Complex object validation\nconst config = { ... } satisfies AppConfig;\n```\n\n> **Key Point:** Prefer `satisfies` over `as` when you want type validation + narrow type preservation.",
+  "codeExample": "// as - type assertion\nconst el = document.querySelector(\".my-class\") as HTMLElement;\nel.style.color = \"red\";\n\n// satisfies - validation with narrow types\nconst sizes = {\n  sm: [8, 8],\n  md: [16, 16],\n  lg: [24, 24]\n} satisfies Record<string, [number, number]>;\n\n// sizes.sm is [number, number] - can use .push() etc\n// But each value is validated as [number, number]\n\n// Warning: as can be unsafe\nconst num = \"42\" as unknown as number; // Compiles but wrong at runtime\n\n// satisfies prevents this\n// const num2 = \"42\" satisfies number; // Error: Type 'string' does not satisfy 'number'",
+  "quiz": [
+    {
+      "question": "Does 'as' validate that the value matches the type?",
+      "options": ["Yes, always", "No, it overrides the type", "Only in strict mode", "Only for primitives"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does 'satisfies' change the inferred type of a value?",
+      "options": ["Yes, it widens it", "No, it preserves the narrow type", "Yes, it makes it any", "Only for objects"],
+      "correctIndex": 1
+    }
+  ]
+}

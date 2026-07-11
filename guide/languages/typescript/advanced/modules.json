@@ -1,0 +1,22 @@
+{
+  "title": "Modules",
+  "language": "typescript",
+  "topic": "modules",
+  "order": 58,
+  "nextTopic": "namespaces",
+  "prevTopic": "utility_types_readonly",
+  "content": "Modules\n\nTypeScript supports ES modules for organizing code into separate files with their own scope.\n\n### Exporting\n\n```typescript\n// math.ts\nexport function add(a: number, b: number): number {\n  return a + b;\n}\n\nexport const PI = 3.14159;\n\nexport interface MathOperation {\n  (a: number, b: number): number;\n}\n\nexport class Calculator {\n  add(a: number, b: number): number {\n    return a + b;\n  }\n}\n```\n\n### Default Export\n\n```typescript\n// logger.ts\nexport default function log(message: string): void {\n  console.log(message);\n}\n\n// Or export default class\nexport default class Logger {\n  log(message: string): void {\n    console.log(message);\n  }\n}\n```\n\n### Importing\n\n```typescript\n// Named imports\nimport { add, PI, Calculator } from \"./math\";\n\n// Default import\nimport log from \"./logger\";\n\n// Mixed import\nimport log, { Calculator } from \"./logger\";\n\n// Import all as namespace\nimport * as MathUtils from \"./math\";\nconsole.log(MathUtils.add(2, 3));\n\n// Import for side effects\nimport \"./polyfills\";\n```\n\n### Re-exporting\n\n```typescript\nexport { add, subtract } from \"./arithmetic\";\nexport * from \"./types\";\nexport { Calculator as Calc } from \"./calculator\";\n```\n\n### Module vs Script\n\n| Aspect | Module | Script |\n|--------|--------|--------|\n| Scope | File-level | Global |\n| export/import | Yes | No |\n| Strict mode | Always | Configurable |\n| File extension | .ts | .ts |\n\n> **Key Point:** Use ES module syntax (`import`/`export`) for all new TypeScript projects.",
+  "codeExample": "// user.ts\nexport interface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nexport function createUser(name: string, email: string): User {\n  return {\n    id: Date.now(),\n    name,\n    email\n  };\n}\n\n// app.ts\nimport { User, createUser } from \"./user\";\n\nconst alice = createUser(\"Alice\", \"alice@example.com\");\nconsole.log(alice);\n\n// Type-only import (avoids runtime import)\nimport type { User } from \"./user\";",
+  "quiz": [
+    {
+      "question": "What keyword exports a value from a module?",
+      "options": ["module.exports", "export", "public", "global"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you import all exports as a namespace?",
+      "options": ["import * as X from './x'", "import all from './x'", "import './x'", "import {*} from './x'"],
+      "correctIndex": 0
+    }
+  ]
+}

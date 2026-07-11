@@ -1,0 +1,22 @@
+{
+  "title": "PHP include and require",
+  "language": "php",
+  "topic": "include_require",
+  "order": 66,
+  "nextTopic": "json_encode_decode",
+  "prevTopic": "date_time",
+  "content": "### PHP include and require\n\nPHP allows you to include content from other PHP files into the current script.\n\n### include\n\n```php\n<?php\ninclude \"header.php\"; // Warning if file not found, script continues\ninclude \"footer.php\";\n?>\n```\n\n### require\n\n```php\n<?php\nrequire \"config.php\"; // Fatal error if file not found, script stops\nrequire \"database.php\";\n?>\n```\n\n### include_once and require_once\n\n```php\n<?php\n// Only includes once - prevents duplicate function/class definitions\ninclude_once \"functions.php\";\nrequire_once \"config.php\";\n?>\n```\n\n### Comparison\n\n| Statement | Error on Failure | Behavior |\n|-----------|-----------------|----------|\n| `include` | Warning | Script continues |\n| `require` | Fatal error | Script stops |\n| `include_once` | Warning | Script continues, only once |\n| `require_once` | Fatal error | Script stops, only once |\n\n### Return Value\n\n```php\n<?php\n// config.php returns an array\n$config = include \"config.php\";\n\n// Can use in conditional\nif (include \"theme.php\") {\n    echo \"Theme loaded\";\n}\n?>\n```\n\n### File Search Paths\n\nPHP searches in:\n1. The directory of the current script\n2. The current working directory\n3. Directories specified in `include_path` in `php.ini`\n\n> **Key Point:** Use `require_once` for critical dependencies (like database connections) and `include_once` for optional components (like sidebars).",
+  "codeExample": "<?php\n// config.php\n// return [\"host\" => \"localhost\", \"db\" => \"test\"];\n\n// header.php\n// <!DOCTYPE html><html><head><title>My Site</title></head><body>\n\n// footer.php\n// </body></html>\n\n// index.php\nrequire_once \"config.php\";       // Critical - script stops if missing\ninclude_once \"header.php\";       // Optional - continues if missing\n\n$config = include \"config.php\";\nif (is_array($config)) {\n    echo \"Connected to: \" . $config[\"host\"] . \"<br>\";\n}\n\ninclude_once \"footer.php\";\n\n// File that contains classes/functions (safe to include multiple times)\n// functions.php\n// function greet($name) { return \"Hello $name\"; }\n\nrequire_once \"functions.php\";\necho greet(\"John\");\n?>",
+  "quiz": [
+    {
+      "question": "Which statement causes a fatal error if the file is missing?",
+      "options": ["include", "require", "include_once", "Both include and include_once"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the difference between include and include_once?",
+      "options": ["include_once prevents duplicate inclusion", "include_once is faster", "include_once requires full path", "No difference"],
+      "correctIndex": 0
+    }
+  ]
+}

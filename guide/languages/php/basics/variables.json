@@ -1,0 +1,22 @@
+{
+  "title": "PHP Variables",
+  "language": "php",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### PHP Variables\n\nVariables in PHP start with a `$` sign followed by the variable name.\n\n### Rules\n\n- Variables start with `$`\n- Name must start with a letter or underscore\n- Names are case-sensitive\n- No spaces or special characters except underscore\n\n```php\n<?php\n$name = \"John\";\n$age = 25;\n$isStudent = true;\n$_private = \"underscore start\";\n// Invalid: $123name\n?>\n```\n\n### Variable Scope\n\n| Scope | Description |\n|-------|-------------|\n| Local | Inside a function |\n| Global | Outside functions |\n| Static | Retains value between calls |\n| Superglobal | Built-in arrays like `$_GET`, `$_POST` |\n\n> **Key Point:** PHP variables are loosely typed. You do not need to declare a variable's type before using it.",
+  "codeExample": "<?php\n$firstName = \"Jane\";\n$lastName = \"Doe\";\n$fullName = $firstName . \" \" . $lastName;\necho $fullName;\n$number = 42;\n$number = \"changed type\"; // No error\necho $number;\n?>",
+  "quiz": [
+    {
+      "question": "What character must a PHP variable start with?",
+      "options": ["@", "$", "&", "#"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Are PHP variable names case-sensitive?",
+      "options": ["Yes", "No", "Only for global", "Only for local"],
+      "correctIndex": 0
+    }
+  ]
+}

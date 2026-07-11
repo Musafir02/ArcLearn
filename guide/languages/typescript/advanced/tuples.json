@@ -1,0 +1,22 @@
+{
+  "title": "Tuples",
+  "language": "typescript",
+  "topic": "tuples",
+  "order": 45,
+  "nextTopic": "tuple_labels",
+  "prevTopic": "enums",
+  "content": "Tuples\n\nTuples are arrays with a fixed number of elements where each element has a specific type.\n\n### Basic Tuple\n\n```typescript\nlet person: [string, number] = [\"Alice\", 30];\n\nconst name: string = person[0]; // \"Alice\"\nconst age: number = person[1]; // 30\n```\n\n### Tuple with Multiple Types\n\n```typescript\nlet httpResponse: [number, string, boolean] = [200, \"OK\", true];\n\nconst statusCode: number = httpResponse[0];\nconst message: string = httpResponse[1];\nconst success: boolean = httpResponse[2];\n```\n\n### Optional Tuple Elements\n\n```typescript\ntype Coordinates = [number, number, number?];\n\nconst point2D: Coordinates = [10, 20];\nconst point3D: Coordinates = [10, 20, 30];\n```\n\n### Rest Elements in Tuples\n\n```typescript\ntype StringNumbers = [string, ...number[]];\n\nconst item: StringNumbers = [\"hello\", 1, 2, 3];\n```\n\n### Labeled Tuples\n\n```typescript\ntype HttpResponse = [status: number, message: string, data?: unknown];\n\nconst response: HttpResponse = [200, \"Success\", { id: 1 }];\n```\n\n### Readonly Tuples\n\n```typescript\nconst point: readonly [number, number] = [3, 4];\n// point[0] = 5; // Error: readonly\n```\n\n> **Key Point:** Tuples preserve the order and type of each element, unlike regular arrays.",
+  "codeExample": "// Key-value pair tuple\ntype KeyValue<K, V> = [key: K, value: V];\n\nconst entry: KeyValue<string, number> = [\"age\", 30];\n\n// Tuple destructuring\nconst [key, value] = entry;\nconsole.log(`${key}: ${value}`); // \"age: 30\"\n\n// CSV row as tuple\ntype CsvRow = [id: number, name: string, email: string, active: boolean];\n\nconst row: CsvRow = [1, \"Alice\", \"alice@example.com\", true];\n\n// Tuple with spread\nfunction merge<T extends any[]>(...args: T): T {\n  return args;\n}\n\nconst merged = merge([1, 2] as const, [\"a\", \"b\"] as const);",
+  "quiz": [
+    {
+      "question": "What distinguishes a tuple from a regular array?",
+      "options": ["Syntax", "Fixed length and typed positions", "Performance", "Memory usage"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you make a tuple readonly?",
+      "options": ["const keyword", "readonly keyword", "static keyword", "private keyword"],
+      "correctIndex": 1
+    }
+  ]
+}

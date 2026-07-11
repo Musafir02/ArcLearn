@@ -1,0 +1,22 @@
+{
+  "title": "Decorators",
+  "language": "typescript",
+  "topic": "decorators",
+  "order": 64,
+  "nextTopic": "satisfies_operator",
+  "prevTopic": "type_vs_interface",
+  "content": "Decorators\n\nDecorators are special declarations that can be attached to classes, methods, properties, and parameters to modify their behavior.\n\n### Enabling Decorators\n\nIn `tsconfig.json`:\n\n```json\n{\n  \"compilerOptions\": {\n    \"experimentalDecorators\": true\n  }\n}\n```\n\n### Class Decorator\n\n```typescript\nfunction sealed(constructor: Function): void {\n  Object.seal(constructor);\n  Object.seal(constructor.prototype);\n}\n\n@sealed\nclass BugReport {\n  title: string;\n\n  constructor(title: string) {\n    this.title = title;\n  }\n}\n```\n\n### Method Decorator\n\n```typescript\nfunction log(target: any, propertyKey: string, descriptor: PropertyDescriptor): void {\n  const original = descriptor.value;\n\n  descriptor.value = function (...args: any[]) {\n    console.log(`Calling ${propertyKey} with:`, args);\n    return original.apply(this, args);\n  };\n}\n\nclass Calculator {\n  @log\n  add(a: number, b: number): number {\n    return a + b;\n  }\n}\n```\n\n### Property Decorator\n\n```typescript\nfunction defaultValue(value: string) {\n  return (target: any, propertyKey: string): void => {\n    target[propertyKey] = value;\n  };\n}\n\nclass User {\n  @defaultValue(\"Guest\")\n  name: string;\n}\n```\n\n### Decorator Factories\n\n```typescript\nfunction logWith(prefix: string) {\n  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor): void {\n    const original = descriptor.value;\n    descriptor.value = function (...args: any[]) {\n      console.log(`${prefix}: ${propertyKey} called`);\n      return original.apply(this, args);\n    };\n  };\n}\n\nclass MyClass {\n  @logWith(\"DEBUG\")\n  doSomething(): void {}\n}\n```\n\n> **Key Point:** Decorators are a stage 3 proposal. Enable `experimentalDecorators` in tsconfig.",
+  "codeExample": "function readonly(target: any, propertyKey: string, descriptor: PropertyDescriptor): void {\n  descriptor.writable = false;\n}\n\nfunction enumerable(value: boolean) {\n  return (target: any, propertyKey: string, descriptor: PropertyDescriptor): void => {\n    descriptor.enumerable = value;\n  };\n}\n\nclass Product {\n  constructor(\n    public name: string,\n    private _price: number\n  ) {}\n\n  @readonly\n  getId(): string {\n    return `${this.name}_${Date.now()}`;\n  }\n\n  @enumerable(false)\n  get price(): number {\n    return this._price;\n  }\n}\n\nconst product = new Product(\"Laptop\", 999);",
+  "quiz": [
+    {
+      "question": "What are decorators used for?",
+      "options": ["Creating new types", "Modifying behavior of classes/methods/properties", "Defining interfaces", "Creating modules"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tsconfig option enables decorators?",
+      "options": ["strict", "experimentalDecorators", "decorators", "emitDecoratorMetadata"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Comments",
+  "language": "typescript",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Types of Comments\n\nTypeScript supports three types of comments.\n\n### Single-Line Comments\n\nUse `//` for single-line comments:\n\n```typescript\n// This is a single-line comment\nlet x: number = 5; // Inline comment\n```\n\n### Multi-Line Comments\n\nUse `/* */` for multi-line comments:\n\n```typescript\n/*\n * This is a multi-line comment\n * It can span multiple lines\n */\nlet y: number = 10;\n```\n\n### JSDoc Comments\n\nUse `/** */` for documentation comments that support type annotations:\n\n```typescript\n/**\n * Adds two numbers together\n * @param a - First number\n * @param b - Second number\n * @returns The sum of a and b\n */\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\n\n### JSDoc Tags\n\n| Tag | Purpose |\n|-----|--------|\n| @param | Document a parameter |\n| @returns | Document the return value |\n| @throws | Document thrown exceptions |\n| @example | Provide a usage example |\n| @deprecated | Mark as deprecated |\n\n> **Key Point:** JSDoc comments provide rich IntelliSense in editors like VS Code.",
+  "codeExample": "// Single line comment\n\n/* Multi-line\n   comment */\n\n/** JSDoc comment for documentation\n * @description Calculates area of a circle\n * @param radius - The radius value\n * @returns The calculated area\n */\nfunction area(radius: number): number {\n  return Math.PI * radius * radius;\n}",
+  "quiz": [
+    {
+      "question": "Which comment syntax is used for documentation in TypeScript?",
+      "options": ["//", "/* */", "/** */", "<!-- -->"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What JSDoc tag documents a function parameter?",
+      "options": ["@param", "@arg", "@input", "@parameter"],
+      "correctIndex": 0
+    }
+  ]
+}

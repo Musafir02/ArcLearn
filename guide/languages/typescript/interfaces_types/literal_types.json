@@ -1,0 +1,22 @@
+{
+  "title": "Literal Types",
+  "language": "typescript",
+  "topic": "literal_types",
+  "order": 32,
+  "nextTopic": "type_guards",
+  "prevTopic": "union_types",
+  "content":"### Literal Types\n\nLiteral types represent specific values rather than general types. They can be strings, numbers, or booleans.\n\n### String Literal Types\n\n```typescript\ntype Direction = \"north\" | \"south\" | \"east\" | \"west\";\ntype Status = \"active\" | \"inactive\" | \"pending\";\n\nlet dir: Direction = \"north\";\n// dir = \"up\"; // Error\n```\n\n### Numeric Literal Types\n\n```typescript\ntype DiceRoll = 1 | 2 | 3 | 4 | 5 | 6;\ntype Port = 3000 | 8080 | 443;\n\nlet roll: DiceRoll = 4;\n// roll = 7; // Error\n```\n\n### Boolean Literal Types\n\n```typescript\ntype True = true;\ntype False = false;\n\nlet isComplete: True = true;\n// isComplete = false; // Error\n```\n\n### Combining with Union Types\n\n```typescript\ntype Result = \"success\" | \"failure\" | 0 | 1;\n```\n\n### Template Literal Types (TypeScript 4.1+)\n\n```typescript\ntype EventName = `on${Capitalize<string>}`;\ntype Color = \"red\" | \"green\" | \"blue\";\ntype DarkColor = `dark${Capitalize<Color>}`;\n// \"darkRed\" | \"darkGreen\" | \"darkBlue\"\n```\n\n### const Assertions\n\n```typescript\nconst config = {\n  server: \"localhost\",\n  port: 3000\n} as const;\n// Type is: { readonly server: \"localhost\"; readonly port: 3000 }\n```\n\n> **Key Point:** Literal types enable precise type checking with specific values.",
+  "codeExample": "// String literal types\ntype HTTPMethod = \"GET\" | \"POST\" | \"PUT\" | \"DELETE\" | \"PATCH\";\ntype LogLevel = \"debug\" | \"info\" | \"warn\" | \"error\";\n\nfunction request(method: HTTPMethod, url: string): void {\n  console.log(`${method} ${url}`);\n}\n\nrequest(\"GET\", \"/api/users\");\n\n// Numeric literal\ntype Weekday = 0 | 1 | 2 | 3 | 4 | 5 | 6;\n\nfunction isWeekend(day: Weekday): boolean {\n  return day === 0 || day === 6;\n}\n\n// Const assertion for literal inference\nconst Colors = [\"red\", \"green\", \"blue\"] as const;\ntype Color = (typeof Colors)[number]; // \"red\" | \"green\" | \"blue\"",
+  "quiz": [
+    {
+      "question": "What is a literal type in TypeScript?",
+      "options": ["Any string type", "A type representing a specific value", "A type with many values", "A generic type"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does 'as const' do?",
+      "options": ["Makes a variable constant", "Infers literal types", "Creates a constant", "Disables type checking"],
+      "correctIndex": 1
+    }
+  ]
+}

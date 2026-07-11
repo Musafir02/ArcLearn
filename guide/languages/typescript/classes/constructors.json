@@ -1,0 +1,22 @@
+{
+  "title": "Class Constructors",
+  "language": "typescript",
+  "topic": "constructors",
+  "order": 36,
+  "nextTopic": "inheritance",
+  "prevTopic": "classes",
+  "content": "Class Constructors\n\nConstructors are special methods that run when a new instance is created with the `new` keyword.\n\n### Basic Constructor\n\n```typescript\nclass User {\n  name: string;\n  email: string;\n\n  constructor(name: string, email: string) {\n    this.name = name;\n    this.email = email;\n  }\n}\n```\n\n### Parameter Properties\n\nShorthand syntax that declares and initializes properties:\n\n```typescript\nclass User {\n  constructor(\n    public name: string,\n    public email: string,\n    private age?: number\n  ) {}\n  // The properties: name, email, age are auto-created\n}\n```\n\n### Overload Constructors\n\nTypeScript supports constructor overloads:\n\n```typescript\nclass Point {\n  x: number;\n  y: number;\n\n  constructor();\n  constructor(x: number, y: number);\n  constructor(x?: number, y?: number) {\n    this.x = x ?? 0;\n    this.y = y ?? 0;\n  }\n}\n\nconst origin = new Point();\nconst point = new Point(3, 4);\n```\n\n### Default Values in Constructors\n\n```typescript\nclass Config {\n  constructor(\n    public host: string = \"localhost\",\n    public port: number = 3000\n  ) {}\n}\n\nconst c1 = new Config();\nconst c2 = new Config(\"example.com\", 443);\n```\n\n### Calling Super in Derived Classes\n\n```typescript\nclass Animal {\n  constructor(public name: string) {}\n}\n\nclass Dog extends Animal {\n  constructor(name: string, public breed: string) {\n    super(name); // Must call super before using 'this'\n  }\n}\n```\n\n> **Key Point:** Parameter properties with access modifiers are the most concise way to define class properties.",
+  "codeExample": "class HttpRequest {\n  constructor(\n    public method: \"GET\" | \"POST\" | \"PUT\" | \"DELETE\",\n    public url: string,\n    public headers: Record<string, string> = {},\n    private body?: unknown\n  ) {}\n\n  send(): Promise<Response> {\n    return fetch(this.url, {\n      method: this.method,\n      headers: this.headers,\n      body: JSON.stringify(this.body)\n    });\n  }\n}\n\nconst req = new HttpRequest(\"GET\", \"/api/users\");",
+  "quiz": [
+    {
+      "question": "What must a derived class constructor call first?",
+      "options": ["this()", "super()", "base()", "parent()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does a parameter property with 'public' do?",
+      "options": ["Nothing special", "Creates a public property automatically", "Makes it static", "Makes it read-only"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP Syntax",
+  "language": "php",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "output",
+  "prevTopic": "getstarted",
+  "content": "### PHP Syntax\n\nPHP code is executed between `<?php` and `?>` tags.\n\n### Basic Syntax Rules\n\n- Statements end with a semicolon (`;`)\n- PHP is loosely typed (no type declarations required)\n- Variables start with `$`\n- Line breaks are ignored (like JavaScript)\n\n```php\n<?php\n// This is a comment\necho \"Hello\";\n$name = \"John\";\n?>\n```\n\n### PHP Tags\n\n| Tag Type | Syntax |\n|----------|--------|\n| Standard | `<?php ... ?>` |\n| Short (deprecated) | `<? ... ?>` |\n| Short-echo | `<?= ... ?>` |\n\n> **Key Point:** Always use `<?php` tags. Short tags are discouraged and may not be supported everywhere.",
+  "codeExample": "<?php\n$greeting = \"Welcome to PHP\";\necho $greeting;\n$year = 2026;\necho \"Year: \" . $year;\n?>",
+  "quiz": [
+    {
+      "question": "What character must every PHP statement end with?",
+      "options": ["Dot", "Semicolon", "Colon", "Comma"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What symbol is used for PHP variables?",
+      "options": ["@", "&", "$", "%"],
+      "correctIndex": 2
+    }
+  ]
+}

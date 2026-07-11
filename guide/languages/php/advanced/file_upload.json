@@ -1,0 +1,22 @@
+{
+  "title": "PHP File Upload",
+  "language": "php",
+  "topic": "file_upload",
+  "order": 55,
+  "nextTopic": "error_handling",
+  "prevTopic": "file_write",
+  "content": "### PHP File Upload\n\nPHP allows file uploads from HTML forms with `enctype=\"multipart/form-data\"`.\n\n### Upload Form\n\n```html\n<form action=\"upload.php\" method=\"post\" enctype=\"multipart/form-data\">\n    <input type=\"file\" name=\"fileToUpload\">\n    <input type=\"submit\" value=\"Upload\">\n</form>\n```\n\n### $_FILES Array\n\n| Key | Description |\n|-----|-------------|\n| `$_FILES[\"file\"][\"name\"]` | Original filename |\n| `$_FILES[\"file\"][\"type\"]` | MIME type |\n| `$_FILES[\"file\"][\"size\"]` | File size in bytes |\n| `$_FILES[\"file\"][\"tmp_name\"]` | Temporary path |\n| `$_FILES[\"file\"][\"error\"]` | Error code |\n\n### Upload Script\n\n```php\n<?php\n$targetDir = \"uploads/\";\n$targetFile = $targetDir . basename($_FILES[\"fileToUpload\"][\"name\"]);\n$uploadOk = true;\n$imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));\n\n// Check file size (5MB max)\nif ($_FILES[\"fileToUpload\"][\"size\"] > 5000000) {\n    echo \"File too large\";\n    $uploadOk = false;\n}\n\n// Allow certain formats\nif (!in_array($imageFileType, [\"jpg\", \"png\", \"jpeg\", \"gif\"])) {\n    echo \"Only JPG, PNG, GIF allowed\";\n    $uploadOk = false;\n}\n\nif ($uploadOk) {\n    if (move_uploaded_file($_FILES[\"fileToUpload\"][\"tmp_name\"], $targetFile)) {\n        echo \"Uploaded: \" . htmlspecialchars(basename($_FILES[\"fileToUpload\"][\"name\"]));\n    }\n}\n?>\n```\n\n> **Key Point:** Always validate file type, size, and use `move_uploaded_file()` (not `copy()` or `rename()`) for security.",
+  "codeExample": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\" && isset($_FILES[\"document\"])) {\n    $file = $_FILES[\"document\"];\n    \n    $allowed = [\"pdf\", \"doc\", \"docx\", \"txt\"];\n    $maxSize = 2 * 1024 * 1024; // 2MB\n    $ext = strtolower(pathinfo($file[\"name\"], PATHINFO_EXTENSION));\n    \n    $errors = [];\n    if ($file[\"error\"] !== 0) {\n        $errors[] = \"Upload error code: \" . $file[\"error\"];\n    }\n    if ($file[\"size\"] > $maxSize) {\n        $errors[] = \"File exceeds 2MB limit\";\n    }\n    if (!in_array($ext, $allowed)) {\n        $errors[] = \"File type not allowed\";\n    }\n    \n    if (empty($errors)) {\n        $dest = \"uploads/\" . uniqid() . \".\" . $ext;\n        if (move_uploaded_file($file[\"tmp_name\"], $dest)) {\n            echo \"File uploaded to: $dest\";\n        }\n    } else {\n        foreach ($errors as $err) {\n            echo \"<div style='color:red'>$err</div>\";\n        }\n    }\n}\n?>\n\n<form method=\"post\" enctype=\"multipart/form-data\">\n    <input type=\"file\" name=\"document\">\n    <input type=\"submit\" value=\"Upload Document\">\n</form>",
+  "quiz": [
+    {
+      "question": "What function moves an uploaded file to a new location?",
+      "options": ["copy()", "move_uploaded_file()", "rename()", "upload_file()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which form attribute is required for file uploads?",
+      "options": ["method=\"post\"", "enctype=\"multipart/form-data\"", "accept=\"file\"", "type=\"file\""],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Booleans",
+  "language": "typescript",
+  "topic": "booleans",
+  "order": 11,
+  "nextTopic": "strings",
+  "prevTopic": "operators",
+  "content":"### Boolean Type\n\nThe `boolean` type represents true/false values.\n\n### Declaration\n\n```typescript\nlet isComplete: boolean = true;\nlet isActive: boolean = false;\n```\n\n### Type Inference\n\n```typescript\nlet isDone = true; // inferred as boolean\n```\n\n### Boolean Expressions\n\n```typescript\nlet a: number = 10;\nlet b: number = 20;\n\nlet isGreater: boolean = a > b; // false\nlet isEqual: boolean = a === b; // false\nlet isNotEqual: boolean = a !== b; // true\n```\n\n### Logical Operations\n\n| Expression | Result |\n|-----------|--------|\n| `true && true` | `true` |\n| `true && false` | `false` |\n| `true || false` | `true` |\n| `false || false` | `false` |\n| `!true` | `false` |\n| `!false` | `true` |\n\n### Boolean Context\n\nValues that coerce to false: `0`, `\"\"`, `null`, `undefined`, `NaN`, `false`\n\n```typescript\nif (\"hello\") {\n  // This runs because non-empty strings are truthy\n}\n\nif (0) {\n  // This does NOT run\n}\n```\n\n### Boolean() Function\n\n```typescript\nlet boolValue: boolean = Boolean(\"hello\"); // true\nlet isEmpty: boolean = Boolean(\"\"); // false\n```\n\n> **Key Point:** Use `!!` to coerce a value to boolean: `!!\"hello\" // true`.",
+  "codeExample": "let isLoggedIn: boolean = false;\nlet hasAccess: boolean = true;\n\n// Boolean logic\nlet canEdit: boolean = isLoggedIn && hasAccess;\nlet canView: boolean = isLoggedIn || !hasAccess;\n\n// Truthy/falsy check\nconst name: string = \"Alice\";\nif (name) {\n  console.log(`${name} is truthy`);\n}\n\n// Coercion\nconsole.log(Boolean(0)); // false\nconsole.log(Boolean(1)); // true\nconsole.log(!!\"text\"); // true",
+  "quiz": [
+    {
+      "question": "Which of the following is a falsy value in TypeScript?",
+      "options": ["\"false\"", "1", "[]", "0"],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the result of 'true && false'?",
+      "options": ["true", "false", "undefined", "null"],
+      "correctIndex": 1
+    }
+  ]
+}

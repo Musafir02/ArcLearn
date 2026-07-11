@@ -1,0 +1,22 @@
+{
+  "title": "Generic Classes",
+  "language": "typescript",
+  "topic": "generics_classes",
+  "order": 43,
+  "nextTopic": "enums",
+  "prevTopic": "abstract_classes",
+  "content": "Generic Classes\n\nGeneric classes allow you to create classes that work with multiple types while maintaining type safety.\n\n### Basic Generic Class\n\n```typescript\nclass Box<T> {\n  private content: T;\n\n  constructor(content: T) {\n    this.content = content;\n  }\n\n  getValue(): T {\n    return this.content;\n  }\n\n  setValue(value: T): void {\n    this.content = value;\n  }\n}\n\nconst numberBox = new Box<number>(42);\nconsole.log(numberBox.getValue()); // 42\n\nconst stringBox = new Box<string>(\"hello\");\nconsole.log(stringBox.getValue()); // hello\n```\n\n### Multiple Type Parameters\n\n```typescript\nclass Pair<K, V> {\n  constructor(\n    private key: K,\n    private value: V\n  ) {}\n\n  getKey(): K { return this.key; }\n  getValue(): V { return this.value; }\n}\n\nconst pair = new Pair<string, number>(\"age\", 30);\n```\n\n### Generic Constraints\n\n```typescript\ninterface HasId {\n  id: number;\n}\n\nclass Repository<T extends HasId> {\n  private items: T[] = [];\n\n  add(item: T): void {\n    this.items.push(item);\n  }\n\n  findById(id: number): T | undefined {\n    return this.items.find(item => item.id === id);\n  }\n}\n\ninterface User extends HasId {\n  name: string;\n}\n\nconst userRepo = new Repository<User>();\nuserRepo.add({ id: 1, name: \"Alice\" });\n```\n\n### Static Members and Generics\n\n```typescript\nclass Factory<T> {\n  static create<T>(): T {\n    return {} as T;\n  }\n}\n```\n\n> **Key Point:** Generic type parameters are per-instance, not per-class. Different instances can have different types.",
+  "codeExample": "class Stack<T> {\n  private items: T[] = [];\n\n  push(item: T): void {\n    this.items.push(item);\n  }\n\n  pop(): T | undefined {\n    return this.items.pop();\n  }\n\n  peek(): T | undefined {\n    return this.items[this.items.length - 1];\n  }\n\n  get size(): number {\n    return this.items.length;\n  }\n}\n\nconst numberStack = new Stack<number>();\nnumberStack.push(1);\nnumberStack.push(2);\nconsole.log(numberStack.pop()); // 2\n\nconst stringStack = new Stack<string>();\nstringStack.push(\"a\");\nstringStack.push(\"b\");\nconsole.log(stringStack.peek()); // \"b\"",
+  "quiz": [
+    {
+      "question": "Where are generic type parameters specified for a generic class?",
+      "options": ["After the class name in angle brackets", "In the constructor", "After methods", "In the class body"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can different instances of a generic class have different type parameters?",
+      "options": ["Yes", "No", "Only for methods", "Only for properties"],
+      "correctIndex": 0
+    }
+  ]
+}

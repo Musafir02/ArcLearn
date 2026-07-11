@@ -1,0 +1,22 @@
+{
+  "title": "Rest Parameters",
+  "language": "typescript",
+  "topic": "rest_params",
+  "order": 21,
+  "nextTopic": "function_overloads",
+  "prevTopic": "default_params",
+  "content":"### Rest Parameters\n\nRest parameters allow a function to accept an indefinite number of arguments as an array.\n\n### Syntax\n\n```typescript\nfunction sum(...numbers: number[]): number {\n  return numbers.reduce((total, n) => total + n, 0);\n}\n\nconsole.log(sum(1, 2, 3)); // 6\nconsole.log(sum(1, 2, 3, 4, 5)); // 15\n```\n\n### Rules\n\n| Rule | Description |\n|------|------------|\n| Last parameter | Rest parameter must be the last parameter |\n| One rest parameter | Only one rest parameter per function |\n| Array type | The type must be an array type |\n\n### Type Annotation\n\nThe rest parameter type must be an array:\n\n```typescript\nfunction join(separator: string, ...parts: string[]): string {\n  return parts.join(separator);\n}\n\nfunction multiply(factor: number, ...values: number[]): number[] {\n  return values.map((v) => v * factor);\n}\n```\n\n### Tuple Rest Parameters\n\n```typescript\nfunction tuple<T extends any[]>(...args: T): T {\n  return args;\n}\n\nlet result = tuple(\"hello\", 42, true);\n// type: [string, number, boolean]\n```\n\n### Spread with Rest\n\n```typescript\nfunction sum(...numbers: number[]): number {\n  return numbers.reduce((a, b) => a + b, 0);\n}\n\nconst nums = [1, 2, 3, 4, 5];\nconsole.log(sum(...nums)); // Spread the array\n```\n\n> **Key Point:** Rest parameters collect multiple arguments into a single array parameter.",
+  "codeExample": "// Basic rest parameter\nfunction logAll(...items: string[]): void {\n  items.forEach((item) => console.log(item));\n}\nlogAll(\"a\", \"b\", \"c\");\n\n// Mixed parameters with rest\nfunction buildUrl(base: string, ...paths: string[]): string {\n  return [base, ...paths].join(\"/\");\n}\nconsole.log(buildUrl(\"api\", \"users\", \"123\", \"posts\"));\n\n// Generic tuple rest\nfunction first<T extends any[]>(...args: T): T[0] {\n  return args[0];\n}\nlet firstValue = first(1, \"two\", true); // type: number",
+  "quiz": [
+    {
+      "question": "What type must a rest parameter have?",
+      "options": ["Any array type", "Tuple type", "Object type", "String type"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many rest parameters can a function have?",
+      "options": ["Unlimited", "Two", "One", "None"],
+      "correctIndex": 2
+    }
+  ]
+}

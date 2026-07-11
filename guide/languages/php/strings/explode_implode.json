@@ -1,0 +1,22 @@
+{
+  "title": "PHP explode and implode",
+  "language": "php",
+  "topic": "explode_implode",
+  "order": 42,
+  "nextTopic": "form_handling",
+  "prevTopic": "regex",
+  "content": "### PHP explode and implode\n\n`explode()` splits a string into an array. `implode()` joins array elements into a string.\n\n### explode\n\n```php\n<?php\n$str = \"apple,banana,orange,grape\";\n$fruits = explode(\",\", $str);\nprint_r($fruits);\n// Array ( [0] => apple [1] => banana [2] => orange [3] => grape )\n\n// Limit parameter\n$limited = explode(\",\", $str, 2);\nprint_r($limited);\n// Array ( [0] => apple [1] => banana,orange,grape )\n?>\n```\n\n### implode (alias: join)\n\n```php\n<?php\n$fruits = [\"apple\", \"banana\", \"orange\"];\necho implode(\", \", $fruits);\n// apple, banana, orange\n\necho join(\" | \", $fruits);\n// apple | banana | orange\n\n// Join with empty string\n$chars = [\"H\", \"e\", \"l\", \"l\", \"o\"];\necho implode(\"\", $chars); // Hello\n?>\n```\n\n### Common Use Cases\n\n| Task | Code |\n|------|------|\n| CSV parsing | `explode(\",\", $line)` |\n| Path segments | `explode(\"/\", $path)` |\n| Query string | `explode(\"&\", $queryString)` |\n| SQL IN clause | `implode(\"','\", $items)` |\n| Tag list | `implode(\", \", $tags)` |\n\n> **Key Point:** `explode()` returns an array. `implode()` returns a string. The `join()` alias is interchangeable with `implode()`.",
+  "codeExample": "<?php\n// CSV parsing\n$csv = \"John,25,New York\\nJane,30,London\";\n$lines = explode(\"\\n\", $csv);\n\nforeach ($lines as $line) {\n    $fields = explode(\",\", $line);\n    echo \"Name: \" . $fields[0] . \", Age: \" . $fields[1] . \"<br>\";\n}\n\n// Build URL query\n$params = [\n    \"name\" => \"John\",\n    \"age\" => 25,\n    \"city\" => \"NYC\"\n];\n$query = implode(\"&\", array_map(\n    fn($k, $v) => \"$k=\" . urlencode($v),\n    array_keys($params),\n    $params\n));\necho $query;\n?>",
+  "quiz": [
+    {
+      "question": "What does explode() return?",
+      "options": ["String", "Array", "Integer", "Object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the alias for implode()?",
+      "options": ["merge()", "concat()", "join()", "combine()"],
+      "correctIndex": 2
+    }
+  ]
+}

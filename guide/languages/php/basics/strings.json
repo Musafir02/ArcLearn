@@ -1,0 +1,22 @@
+{
+  "title": "PHP Strings",
+  "language": "php",
+  "topic": "strings",
+  "order": 11,
+  "nextTopic": "numbers",
+  "prevTopic": "booleans",
+  "content": "### PHP Strings\n\nA string is a sequence of characters enclosed in quotes.\n\n### String Quotes\n\n| Type | Syntax | Variable Parsing |\n|------|--------|-----------------|\n| Single quotes | `'Hello'` | No |\n| Double quotes | `\"Hello\"` | Yes |\n| Heredoc | `<<<EOT ... EOT;` | Yes |\n| Nowdoc | `<<<'EOT' ... EOT;` | No |\n\n```php\n<?php\n$name = \"John\";\n\n// Single quotes - no variable parsing\necho 'Hello $name'; // Hello $name\n\n// Double quotes - parses variables\necho \"Hello $name\"; // Hello John\n\n// Heredoc\necho <<<EOT\nMultiline string\nwith $name\nEOT;\n?>\n```\n\n### String Concatenation\n\nUse the `.` operator to join strings:\n\n```php\n<?php\n$greeting = \"Hello\" . \" \" . \"World\";\n$greeting .= \"!\";\necho $greeting; // Hello World!\n?>\n```\n\n> **Key Point:** Double-quoted strings parse variables and escape sequences like `\\n` (newline) and `\\t` (tab).",
+  "codeExample": "<?php\n$firstName = \"Jane\";\n$lastName = \"Doe\";\n$full = \"$firstName $lastName\";\necho $full; // Jane Doe\necho strlen($full); // 8\necho strtoupper($full); // JANE DOE\n?>",
+  "quiz": [
+    {
+      "question": "Which quote type allows variable parsing?",
+      "options": ["Single quotes", "Double quotes", "Both", "Neither"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What operator is used for string concatenation?",
+      "options": ["+", ".", "&", ","],
+      "correctIndex": 1
+    }
+  ]
+}

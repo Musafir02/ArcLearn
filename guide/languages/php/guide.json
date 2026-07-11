@@ -1,0 +1,131 @@
+{
+  "title": "PHP Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group",
+      "title": "PHP Basics",
+      "folder": "basics",
+      "topics": [
+        "syntax",
+        "output",
+        "comments",
+        "variables",
+        "datatypes",
+        "constants",
+        "operators",
+        "booleans",
+        "strings",
+        "numbers",
+        "input",
+        "echo_print",
+        "var_dump"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Conditions",
+      "folder": "conditions",
+      "topics": [
+        "conditions",
+        "if_else",
+        "switch",
+        "match",
+        "ternary"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Loops",
+      "folder": "loops",
+      "topics": [
+        "while",
+        "for",
+        "do_while",
+        "break_continue",
+        "foreach"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Arrays",
+      "folder": "arrays",
+      "topics": [
+        "arrays",
+        "array_indexed",
+        "array_associative",
+        "array_multidimensional",
+        "array_functions",
+        "array_sort"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Functions",
+      "folder": "functions",
+      "topics": [
+        "functions",
+        "function_params",
+        "return_values",
+        "variable_functions",
+        "builtin_functions",
+        "scope",
+        "global_static"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Strings",
+      "folder": "strings",
+      "topics": [
+        "string_functions",
+        "string_formatting",
+        "regex",
+        "explode_implode"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Forms",
+      "folder": "forms",
+      "topics": [
+        "form_handling",
+        "get_post",
+        "form_validation",
+        "form_required",
+        "form_email",
+        "form_url"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "PHP Advanced",
+      "folder": "advanced",
+      "topics": [
+        "superglobals",
+        "sessions",
+        "cookies",
+        "file_handling",
+        "file_read",
+        "file_write",
+        "file_upload",
+        "error_handling",
+        "exception_handling",
+        "try_catch",
+        "oop_classes",
+        "oop_constructors",
+        "oop_inheritance",
+        "oop_interfaces",
+        "oop_traits",
+        "namespaces",
+        "date_time",
+        "include_require",
+        "json_encode_decode",
+        "mysql_intro",
+        "pdo_basics",
+        "prepared_statements"
+      ]
+    }
+  ]
+}

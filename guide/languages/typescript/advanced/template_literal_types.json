@@ -1,0 +1,22 @@
+{
+  "title": "Template Literal Types",
+  "language": "typescript",
+  "topic": "template_literal_types",
+  "order": 53,
+  "nextTopic": "utility_types_partial",
+  "prevTopic": "conditional_types",
+  "content": "Template Literal Types\n\nTemplate literal types (TypeScript 4.1+) allow manipulating string types at the type level, similar to JavaScript template literals.\n\n### Basic Syntax\n\n```typescript\ntype Greeting = `Hello, ${string}!`;\n// Matches any string starting with \"Hello, \" and ending with \"!\"\n\ntype EventName = `on${Capitalize<string>}`;\n// \"on\" + capitalized string\n```\n\n### Union Combinations\n\n```typescript\ntype Vertical = \"top\" | \"bottom\";\ntype Horizontal = \"left\" | \"right\";\n\ntype Position = `${Vertical}-${Horizontal}`;\n// \"top-left\" | \"top-right\" | \"bottom-left\" | \"bottom-right\"\n```\n\n### Intrinsic String Manipulation Types\n\n| Type | Description |\n|------|------------|\n| `Uppercase<S>` | Converts to uppercase |\n| `Lowercase<S>` | Converts to lowercase |\n| `Capitalize<S>` | Capitalizes first letter |\n| `Uncapitalize<S>` | Uncapitalizes first letter |\n\n```typescript\ntype Upper = Uppercase<\"hello\">; // \"HELLO\"\ntype Lower = Lowercase<\"WORLD\">; // \"world\"\ntype Cap = Capitalize<\"name\">; // \"Name\"\ntype Uncap = Uncapitalize<\"Name\">; // \"name\"\n```\n\n### Practical CSS Pattern\n\n```typescript\ntype CSSValue = string | number;\n\ntype CSSProperties = {\n  [K in keyof CSSStyleDeclaration as K extends `on${string}` ? never : K]: CSSStyleDeclaration[K];\n};\n```\n\n### API Endpoint Pattern\n\n```typescript\ntype Resource = \"users\" | \"posts\" | \"comments\";\ntype Method = \"GET\" | \"POST\" | \"PUT\" | \"DELETE\";\n\ntype ApiEndpoint = `${Method} /api/${Resource}`;\n// \"GET /api/users\" | \"GET /api/posts\" | ...\n```\n\n> **Key Point:** Template literal types generate all possible combinations of union constituents.",
+  "codeExample": "// CSS class builder\ntype Size = \"sm\" | \"md\" | \"lg\";\ntype Color = \"primary\" | \"secondary\" | \"danger\";\n\ntype ClassName = `btn-${Size}-${Color}`;\n// \"btn-sm-primary\" | \"btn-sm-secondary\" | \"btn-sm-danger\" | ...\n\n// Event handler type\ntype EventType = \"click\" | \"focus\" | \"blur\" | \"change\";\ntype EventHandler = `on${Capitalize<EventType>}`;\n// \"onClick\" | \"onFocus\" | \"onBlur\" | \"onChange\"\n\n// Constrained template\ntype HexColor = `#${string}`;\n\nfunction setColor(color: HexColor): void {\n  console.log(`Setting color to ${color}`);\n}\n\nsetColor(\"#FF0000\");\n// setColor(\"red\"); // Error",
+  "quiz": [
+    {
+      "question": "What TypeScript version introduced template literal types?",
+      "options": ["3.0", "3.8", "4.1", "5.0"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does 'Uppercase<T>' do?",
+      "options": ["Capitalizes first letter", "Converts to uppercase", "Converts to lowercase", "Uncapitalizes"],
+      "correctIndex": 1
+    }
+  ]
+}

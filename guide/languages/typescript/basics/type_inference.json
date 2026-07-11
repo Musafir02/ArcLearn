@@ -1,0 +1,22 @@
+{
+  "title": "Type Inference",
+  "language": "typescript",
+  "topic": "type_inference",
+  "order": 9,
+  "nextTopic": "operators",
+  "prevTopic": "type_annotations",
+  "content": "### What is Type Inference?\n\nTypeScript can automatically determine the type of a variable based on its value. This is called type inference.\n\n### Basic Inference\n\n```typescript\nlet name = \"Alice\"; // inferred as string\nlet age = 30; // inferred as number\nlet isActive = true; // inferred as boolean\n```\n\n### Function Return Inference\n\nTypeScript infers return types from the function body:\n\n```typescript\nfunction add(a: number, b: number) {\n  return a + b; // inferred return type: number\n}\n\nfunction getGreeting(name: string) {\n  return `Hello, ${name}`; // inferred return type: string\n}\n```\n\n### Contextual Typing\n\nTypeScript uses context to infer types:\n\n```typescript\nconst numbers = [1, 2, 3]; // inferred as number[]\n\nnumbers.forEach((num) => {\n  console.log(num.toFixed(2)); // num is inferred as number\n});\n```\n\n### Best Common Type\n\nWhen inferring from multiple values in an array, TypeScript finds the best common type:\n\n```typescript\nlet arr = [1, 2, \"three\"]; // inferred as (string | number)[]\n```\n\n### When to Use Explicit Annotations\n\n| Scenario | Recommendation |\n|----------|---------------|\n| Simple initialization | Let inference work |\n| Function parameters | Always annotate |\n| Function returns | Optional but good practice |\n| Complex or ambiguous types | Add explicit annotations |\n| When you need a specific type | Always annotate |\n\n> **Key Point:** Type inference reduces verbosity while maintaining type safety.",
+  "codeExample": "// TypeScript infers types from values\nlet city = \"New York\"; // string\nlet population = 8336817; // number\nlet isCapital = false; // boolean\n\n// Function return type is inferred\nfunction divide(a: number, b: number) {\n  return a / b; // inferred: number\n}\n\n// Contextual typing\nconst items = [1, 2, 3];\nitems.push(4); // OK, items is number[]\n// items.push(\"5\"); // Error",
+  "quiz": [
+    {
+      "question": "What type is inferred for 'let x = 42'?",
+      "options": ["string", "number", "any", "object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When should you use explicit type annotations?",
+      "options": ["Always", "Never", "For function parameters", "Only for numbers"],
+      "correctIndex": 2
+    }
+  ]
+}

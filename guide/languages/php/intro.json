@@ -1,0 +1,22 @@
+{
+  "title": "PHP Introduction",
+  "language": "php",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is PHP?\n\nPHP (Hypertext Preprocessor) is a widely-used open-source scripting language designed for web development. PHP scripts execute on the server and generate HTML sent to the client.\n\n### Key Features\n\n| Feature | Description |\n|---------|-------------|\n| Server-side | Code runs on the server, not in the browser |\n| Cross-platform | Runs on Windows, Linux, macOS |\n| Database support | Works with MySQL, PostgreSQL, SQLite, and more |\n| Embedded | Can be embedded directly into HTML |\n\n### What Can PHP Do?\n\n- Generate dynamic page content\n- Create, read, write, and delete server files\n- Collect form data\n- Send and receive cookies\n- Control user access\n- Encrypt data\n\n> **Key Point:** PHP is the backbone of many major CMS platforms like WordPress, Drupal, and Joomla.",
+  "codeExample": "<?php\necho \"Hello, World!\";\n?>",
+  "quiz": [
+    {
+      "question": "What does PHP stand for?",
+      "options": ["Personal Home Page", "Hypertext Preprocessor", "Private Hosting Protocol", "Preprocessed Hypertext"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where does PHP code execute?",
+      "options": ["In the browser", "On the server", "On the database", "On the client"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Union Types",
+  "language": "typescript",
+  "topic": "union_types",
+  "order": 31,
+  "nextTopic": "literal_types",
+  "prevTopic": "intersection_types",
+  "content":"### Union Types\n\nUnion types allow a value to be one of several types. They use the pipe (`|`) operator.\n\n### Basic Syntax\n\n```typescript\ntype StringOrNumber = string | number;\n\nlet value: StringOrNumber;\nvalue = \"hello\"; // OK\nvalue = 42; // OK\n// value = true; // Error\n```\n\n### Unions with Objects\n\n```typescript\ntype Circle = { kind: \"circle\"; radius: number };\ntype Square = { kind: \"square\"; side: number };\ntype Shape = Circle | Square;\n\nfunction area(shape: Shape): number {\n  if (shape.kind === \"circle\") {\n    return Math.PI * shape.radius ** 2;\n  }\n  return shape.side ** 2;\n}\n```\n\n### Discriminated Unions\n\nA common pattern using a literal type property to discriminate:\n\n```typescript\ntype Success<T> = { status: \"success\"; data: T };\ntype Error = { status: \"error\"; message: string };\ntype Loading = { status: \"loading\" };\n\ntype AsyncState<T> = Success<T> | Error | Loading;\n\nfunction handleState<T>(state: AsyncState<T>): string {\n  switch (state.status) {\n    case \"success\": return `Data: ${state.data}`;\n    case \"error\": return `Error: ${state.message}`;\n    case \"loading\": return \"Loading...\";\n  }\n}\n```\n\n### Narrowing Unions\n\n```typescript\nfunction process(value: string | number | boolean): void {\n  if (typeof value === \"string\") {\n    console.log(value.toUpperCase());\n  } else if (typeof value === \"number\") {\n    console.log(value.toFixed(2));\n  } else {\n    console.log(value ? \"true\" : \"false\");\n  }\n}\n```\n\n> **Key Point:** You must narrow union types before accessing type-specific properties.",
+  "codeExample": "// Basic union\nlet id: string | number;\nid = \"abc123\";\nid = 456;\n\n// Union with arrays\ntype Result = number[] | string[];\nconst nums: Result = [1, 2, 3];\nconst strs: Result = [\"a\", \"b\"];\n\n// Discriminated union\ntype ApiResult<T> =\n  | { ok: true; data: T }\n  | { ok: false; error: string };\n\nfunction handleResult<T>(result: ApiResult<T>): T | never {\n  if (result.ok) return result.data;\n  throw new Error(result.error);\n}",
+  "quiz": [
+    {
+      "question": "What operator creates a union type?",
+      "options": ["&", "|", ":", "?"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What must you do before accessing type-specific members of a union?",
+      "options": ["Cast the value", "Narrow the type", "Use as any", "Nothing"],
+      "correctIndex": 1
+    }
+  ]
+}

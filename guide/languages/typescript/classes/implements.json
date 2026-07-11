@@ -1,0 +1,22 @@
+{
+  "title": "Implements Keyword",
+  "language": "typescript",
+  "topic": "implements",
+  "order": 38,
+  "nextTopic": "access_modifiers",
+  "prevTopic": "inheritance",
+  "content": "The implements Keyword\n\nThe `implements` keyword allows a class to enforce that it conforms to a specific interface.\n\n### Basic Usage\n\n```typescript\ninterface Printable {\n  print(): void;\n}\n\ninterface Serializable {\n  toJSON(): string;\n}\n\nclass Report implements Printable, Serializable {\n  print(): void {\n    console.log(\"Printing report...\");\n  }\n\n  toJSON(): string {\n    return JSON.stringify({ report: \"data\" });\n  }\n}\n```\n\n### Multiple Interfaces\n\n```typescript\ninterface Identifiable {\n  id: number;\n}\n\ninterface Named {\n  name: string;\n}\n\nclass Entity implements Identifiable, Named {\n  constructor(\n    public id: number,\n    public name: string\n  ) {}\n}\n```\n\n### implements vs extends\n\n| Aspect | implements | extends |\n|--------|-----------|---------|\n| Purpose | Contract enforcement | Code reuse |\n| Source | Interface(s) | Class |\n| Implementation | Must implement all | Inherits implementation |\n| Count | Multiple | Single |\n\n### Class Type Checking\n\n```typescript\ninterface Checkable {\n  check(name: string): boolean;\n}\n\nclass NameChecker implements Checkable {\n  check(name: string): boolean {\n    return name.length > 0;\n  }\n  // Implicitly implements Checkable\n}\n```\n\n### Optional Members in Implements\n\n```typescript\ninterface Config {\n  host: string;\n  port?: number;\n}\n\nclass ServerConfig implements Config {\n  host: string;\n  // port is optional, can be omitted\n  constructor(host: string) {\n    this.host = host;\n  }\n}\n```\n\n> **Key Point:** `implements` is a pure type-level check. It does not affect runtime behavior.",
+  "codeExample": "interface Drawable {\n  draw(context: CanvasRenderingContext2D): void;\n}\n\ninterface Resizable {\n  resize(scale: number): void;\n}\n\ninterface Movable {\n  move(dx: number, dy: number): void;\n}\n\nclass Shape implements Drawable, Resizable, Movable {\n  constructor(\n    public x: number,\n    public y: number,\n    public size: number\n  ) {}\n\n  draw(ctx: CanvasRenderingContext2D): void {\n    // Drawing logic\n  }\n\n  resize(scale: number): void {\n    this.size *= scale;\n  }\n\n  move(dx: number, dy: number): void {\n    this.x += dx;\n    this.y += dy;\n  }\n}",
+  "quiz": [
+    {
+      "question": "What does 'implements' check in a class?",
+      "options": ["Runtime behavior", "Type-level contract conformance", "Performance", "Memory usage"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many interfaces can a class implement?",
+      "options": ["Only one", "Up to two", "Multiple", "None"],
+      "correctIndex": 2
+    }
+  ]
+}

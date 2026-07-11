@@ -1,0 +1,22 @@
+{
+  "title": "PHP OOP - Traits",
+  "language": "php",
+  "topic": "oop_traits",
+  "order": 63,
+  "nextTopic": "namespaces",
+  "prevTopic": "oop_interfaces",
+  "content": "### PHP OOP - Traits\n\nTraits allow you to reuse code across unrelated classes, solving PHP's single-inheritance limitation.\n\n### Defining a Trait\n\n```php\n<?php\ntrait Timestampable {\n    public $createdAt;\n    public $updatedAt;\n    \n    public function setTimestamps() {\n        $this->createdAt = date(\"Y-m-d H:i:s\");\n        $this->updatedAt = date(\"Y-m-d H:i:s\");\n    }\n    \n    public function touch() {\n        $this->updatedAt = date(\"Y-m-d H:i:s\");\n    }\n}\n?>\n```\n\n### Using a Trait\n\n```php\n<?php\nclass Post {\n    use Timestampable;\n    \n    public $title;\n    public $content;\n}\n\nclass Comment {\n    use Timestampable, Loggable; // Multiple traits\n    \n    public $text;\n}\n\n$post = new Post();\n$post->setTimestamps();\necho $post->createdAt;\n?>\n```\n\n### Trait Precedence\n\n| Priority | Source |\n|----------|--------|\n| 1 (highest) | Current class method |\n| 2 | Trait method |\n| 3 (lowest) | Parent class method |\n\n### Conflict Resolution\n\n```php\n<?php\ntrait A {\n    public function sayHello() {\n        return \"Hello from A\";\n    }\n}\n\ntrait B {\n    public function sayHello() {\n        return \"Hello from B\";\n    }\n}\n\nclass MyClass {\n    use A, B {\n        B::sayHello insteadof A;   // Use B's version\n        A::sayHello as sayHelloA;  // Alias A's version\n    }\n}\n?>\n```\n\n### Trait vs Interface vs Abstract\n\n| Feature | Trait | Interface | Abstract Class |\n|---------|-------|-----------|----------------|\n| Implementation | Yes | No | Both |\n| Multiple use | Yes | Yes (implement) | No (extend) |\n| Properties | Yes | No | Yes |\n| Instantiate | No | No | No |\n\n> **Key Point:** Traits are about horizontal code reuse. They solve the diamond problem and provide a way to share methods across unrelated classes.",
+  "codeExample": "<?php\ntrait JsonExportable {\n    public function toJson(): string {\n        return json_encode(get_object_vars($this), JSON_PRETTY_PRINT);\n    }\n}\n\ntrait Loggable {\n    public function log(string $message): void {\n        echo \"[LOG] [\" . date(\"H:i:s\") . \"] $message<br>\";\n    }\n}\n\nclass User {\n    use JsonExportable, Loggable;\n    \n    public function __construct(\n        public string $name,\n        public string $email,\n        public int $age\n    ) {}\n}\n\nclass Order {\n    use JsonExportable, Loggable;\n    \n    public function __construct(\n        public int $id,\n        public float $total,\n        public string $status\n    ) {}\n}\n\n$user = new User(\"Alice\", \"alice@example.com\", 30);\n$user->log(\"User created\");\necho $user->toJson() . \"<br>\";\n\n$order = new Order(1001, 299.99, \"pending\");\n$order->log(\"Order created\");\necho $order->toJson() . \"<br>\";\n?>",
+  "quiz": [
+    {
+      "question": "Which keyword is used to include a trait in a class?",
+      "options": ["use", "import", "include", "trait"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can a class use multiple traits?",
+      "options": ["Yes", "No", "Only 2", "Depends on PHP version"],
+      "correctIndex": 0
+    }
+  ]
+}

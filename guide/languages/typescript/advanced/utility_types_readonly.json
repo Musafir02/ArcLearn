@@ -1,0 +1,22 @@
+{
+  "title": "Utility Types: Readonly",
+  "language": "typescript",
+  "topic": "utility_types_readonly",
+  "order": 57,
+  "nextTopic": "modules",
+  "prevTopic": "utility_types_record",
+  "content": "Readonly<T>\n\n`Readonly<T>` constructs a type with all properties of `T` set to `readonly`, preventing reassignment.\n\n### Basic Usage\n\n```typescript\ninterface User {\n  name: string;\n  age: number;\n  email: string;\n}\n\ntype ReadonlyUser = Readonly<User>;\n// { readonly name: string; readonly age: number; readonly email: string }\n\nconst user: ReadonlyUser = {\n  name: \"Alice\",\n  age: 30,\n  email: \"alice@example.com\"\n};\n\n// user.name = \"Bob\"; // Error: Cannot assign to 'name' because it is a read-only property\n```\n\n### How It Works\n\n```typescript\ntype Readonly<T> = {\n  readonly [P in keyof T]: T[P];\n};\n```\n\n### Shallow vs Deep Readonly\n\n`Readonly<T>` is shallow — nested objects are not readonly:\n\n```typescript\ninterface Config {\n  server: { host: string; port: number };\n}\n\ntype ReadonlyConfig = Readonly<Config>;\n\nconst config: ReadonlyConfig = {\n  server: { host: \"localhost\", port: 3000 }\n};\n\n// config.server = { host: \"other\", port: 80 }; // Error\nconfig.server.host = \"other\"; // OK - nested not readonly\n```\n\n### Deep Readonly\n\n```typescript\ntype DeepReadonly<T> = {\n  readonly [P in keyof T]: T[P] extends object\n    ? T[P] extends Function\n      ? T[P]\n      : DeepReadonly<T[P]>\n    : T[P];\n};\n```\n\n### ReadonlyArray\n\n```typescript\nconst numbers: readonly number[] = [1, 2, 3];\n// numbers.push(4); // Error\n// numbers[0] = 10; // Error\nconsole.log(numbers[0]); // OK - reading is fine\n```\n\n> **Key Point:** `Readonly` is for compile-time immutability. Use it for configuration objects and DTOs.",
+  "codeExample": "// Immutable configuration\ninterface AppConfig {\n  apiUrl: string;\n  timeout: number;\n  retryAttempts: number;\n  features: {\n    darkMode: boolean;\n    analytics: boolean;\n  };\n}\n\nconst config: Readonly<AppConfig> = {\n  apiUrl: \"https://api.example.com\",\n  timeout: 5000,\n  retryAttempts: 3,\n  features: {\n    darkMode: true,\n    analytics: false\n  }\n};\n\n// Function parameter immutability\nfunction processData(data: Readonly<number[]>): number {\n  return data.reduce((sum, val) => sum + val, 0);\n}\n\nconst nums: readonly number[] = [1, 2, 3];\nprocessData(nums);",
+  "quiz": [
+    {
+      "question": "What does Readonly<T> do?",
+      "options": ["Makes properties mutable", "Makes all properties readonly", "Deletes properties", "Makes properties optional"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is Readonly<T> deep or shallow?",
+      "options": ["Deep", "Shallow", "Only for primitives", "Only for arrays"],
+      "correctIndex": 1
+    }
+  ]
+}

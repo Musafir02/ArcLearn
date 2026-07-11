@@ -1,0 +1,22 @@
+{
+  "title": "PHP Form Required Fields",
+  "language": "php",
+  "topic": "form_required",
+  "order": 46,
+  "nextTopic": "form_email",
+  "prevTopic": "form_validation",
+  "content": "### PHP Form Required Fields\n\nRequired fields ensure that users provide necessary information before form submission.\n\n### Checking Required Fields\n\n```php\n<?php\n$nameErr = $emailErr = $genderErr = \"\";\n$name = $email = $gender = \"\";\n$valid = true;\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    if (empty($_POST[\"name\"])) {\n        $nameErr = \"Name is required\";\n        $valid = false;\n    } else {\n        $name = htmlspecialchars(trim($_POST[\"name\"]));\n    }\n\n    if (empty($_POST[\"email\"])) {\n        $emailErr = \"Email is required\";\n        $valid = false;\n    } else {\n        $email = htmlspecialchars(trim($_POST[\"email\"]));\n    }\n\n    if (empty($_POST[\"gender\"])) {\n        $genderErr = \"Gender is required\";\n        $valid = false;\n    } else {\n        $gender = $_POST[\"gender\"];\n    }\n\n    if ($valid) {\n        echo \"Form submitted successfully!\";\n    }\n}\n?>\n```\n\n### HTML Required Attribute\n\n```html\n<input type=\"text\" name=\"name\" required>\n```\n\nNote: HTML5 `required` attribute provides client-side validation but can be bypassed. Always validate on the server.\n\n### Common Required Field Handling\n\n| Field Type | Validation |\n|------------|------------|\n| Text input | `empty(trim($value))` |\n| Checkbox | `!isset($_POST[\"agree\"])` |\n| Radio group | `empty($_POST[\"gender\"])` |\n| Select dropdown | `$_POST[\"country\"] === \"\"` |\n| File upload | `$_FILES[\"file\"][\"error\"] === 4` |\n\n> **Key Point:** Use a `$valid` flag to track overall form validity and only process the form when all validations pass.",
+  "codeExample": "<?php\n$nameErr = $countryErr = $agreeErr = \"\";\n$name = $country = $agree = \"\";\n$valid = true;\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    if (empty(trim($_POST[\"name\"] ?? \"\"))) {\n        $nameErr = \"Name is required\";\n        $valid = false;\n    } else {\n        $name = htmlspecialchars(trim($_POST[\"name\"]));\n    }\n\n    if (($_POST[\"country\"] ?? \"\") === \"\") {\n        $countryErr = \"Please select a country\";\n        $valid = false;\n    } else {\n        $country = $_POST[\"country\"];\n    }\n\n    if (!isset($_POST[\"agree\"])) {\n        $agreeErr = \"You must agree to terms\";\n        $valid = false;\n    }\n\n    if ($valid) {\n        echo \"Registration complete for $name from $country\";\n    }\n}\n?>\n\n<form method=\"post\">\n    Name: <input type=\"text\" name=\"name\"><span><?php echo $nameErr; ?></span><br>\n    Country: <select name=\"country\">\n        <option value=\"\">Select</option>\n        <option value=\"US\">US</option>\n        <option value=\"UK\">UK</option>\n    </select><span><?php echo $countryErr; ?></span><br>\n    Agree: <input type=\"checkbox\" name=\"agree\"><span><?php echo $agreeErr; ?></span><br>\n    <input type=\"submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Why is server-side validation still needed with HTML5 required attribute?",
+      "options": ["HTML5 validation can be bypassed", "HTML5 validation is slow", "Server validation looks professional", "It is not needed"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which function checks if a variable has no value?",
+      "options": ["isset()", "empty()", "is_null()", "defined()"],
+      "correctIndex": 1
+    }
+  ]
+}

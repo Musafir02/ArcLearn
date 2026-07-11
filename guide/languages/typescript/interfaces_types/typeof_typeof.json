@@ -1,0 +1,22 @@
+{
+  "title": "typeof Operator",
+  "language": "typescript",
+  "topic": "typeof_typeof",
+  "order": 34,
+  "nextTopic": "classes",
+  "prevTopic": "type_guards",
+  "content":"### The typeof Operator\n\nTypeScript's `typeof` operator (when used in a type context) captures the type of a value or variable.\n\n### Type Context typeof\n\n```typescript\nconst user = {\n  name: \"Alice\",\n  age: 30\n};\n\ntype UserType = typeof user;\n// { name: string; age: number }\n\nconst other: UserType = {\n  name: \"Bob\",\n  age: 25\n};\n```\n\n### Runtime typeof vs Type typeof\n\n| Context | Behavior |\n|---------|----------|\n| JavaScript runtime | Returns `\"string\"`, `\"number\"`, etc. |\n| TypeScript type context | Captures the static type of a value |\n\n```typescript\n// Runtime typeof\nconsole.log(typeof \"hello\"); // \"string\"\n\n// Type context typeof\ntype T = typeof \"hello\"; // \"hello\" (literal)\n```\n\n### typeof with Class\n\n```typescript\nclass Point {\n  constructor(public x: number, public y: number) {}\n}\n\ntype PointConstructor = typeof Point;\n// typeof Point is the constructor function type\n// new (x: number, y: number) => Point\n```\n\n### typeof with Arrays\n\n```typescript\nconst fruits = [\"apple\", \"banana\", \"cherry\"] as const;\ntype Fruit = (typeof fruits)[number];\n// \"apple\" | \"banana\" | \"cherry\"\n```\n\n### Keyof with typeof\n\n```typescript\nconst config = {\n  host: \"localhost\",\n  port: 3000,\n  secure: true\n} as const;\n\ntype ConfigKeys = keyof typeof config;\n// \"host\" | \"port\" | \"secure\"\n\ntype ConfigValues = (typeof config)[keyof typeof config];\n// \"localhost\" | 3000 | true\n```\n\n> **Key Point:** In type context, `typeof` extracts the type of a value, enabling type reuse from runtime code.",
+  "codeExample": "// Extract type from a value\nconst settings = {\n  theme: \"dark\",\n  fontSize: 14,\n  notifications: true\n};\n\ntype Settings = typeof settings;\n// { theme: string; fontSize: number; notifications: boolean }\n\n// Extract literal types with as const\nconst Colors = [\"red\", \"green\", \"blue\"] as const;\ntype ColorName = (typeof Colors)[number];\n\n// Use with keyof\ntype SettingKey = keyof typeof settings;\n\nfunction getSetting(key: SettingKey): typeof settings[SettingKey] {\n  return settings[key];\n}",
+  "quiz": [
+    {
+      "question": "What does 'typeof' do in a type context?",
+      "options": ["Returns a string description", "Captures the static type of a value", "Checks if a type exists", "Creates a new type"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you extract literal types from a const array with typeof?",
+      "options": ["typeof arr", "typeof arr[keyof typeof arr]", "arr[number]", "typeof arr[number]"],
+      "correctIndex": 3
+    }
+  ]
+}

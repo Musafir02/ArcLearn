@@ -1,0 +1,22 @@
+{
+  "title": "The Satisfies Operator",
+  "language": "typescript",
+  "topic": "satisfies_operator",
+  "order": 65,
+  "nextTopic": "satisfies_vs_as",
+  "prevTopic": "decorators",
+  "content": "The Satisfies Operator\n\nThe `satisfies` operator (TypeScript 4.9+) checks that a value's type matches a given type without widening the value's inferred type.\n\n### Basic Usage\n\n```typescript\nconst palette = {\n  red: [255, 0, 0],\n  green: \"#00ff00\",\n  blue: [0, 0, 255]\n} satisfies Record<string, string | number[]>;\n\n// Each property still has its specific type\npalette.red.map(Math.round); // OK - red is number[]\npalette.green.toUpperCase(); // OK - green is string\n```\n\n### Without Satisfies\n\n```typescript\n// Type annotation widens\nconst palette: Record<string, string | number[]> = {\n  red: [255, 0, 0],\n  green: \"#00ff00\",\n  blue: [0, 0, 255]\n};\n\n// palette.red.map(Math.round); // Error: 'string | number[]' has no 'map'\n```\n\n### With Type Assertion (as)\n\n```typescript\n// This works but allows invalid values\nconst palette = {\n  red: [255, 0, 0],\n  green: \"#00ff00\",\n  blue: [0, 0, 255]\n} as Record<string, string | number[]>;\n\n// No validation at all - anything is accepted\n```\n\n### Validating Complex Objects\n\n```typescript\ninterface Color {\n  hex: string;\n  rgb: [number, number, number];\n  name: string;\n}\n\nconst colors = {\n  primary: { hex: \"#ff0000\", rgb: [255, 0, 0], name: \"Red\" },\n  secondary: { hex: \"#00ff00\", rgb: [0, 255, 0], name: \"Green\" }\n} satisfies Record<string, Color>;\n\n// Each color is validated against Color, but retains its exact type\nconsole.log(colors.primary.hex.toUpperCase()); // OK\n```\n\n### Key Benefits\n\n| Feature | Description |\n|---------|------------|\n| Type validation | Ensures value conforms to a type |\n| Narrowed types | Retains the most specific inferred type |\n| Error messages | Clear errors when validation fails |\n\n> **Key Point:** `satisfies` validates without widening — the best of both worlds.",
+  "codeExample": "// API response validation\ninterface ApiConfig {\n  baseUrl: string;\n  headers: Record<string, string>;\n  timeout: number;\n}\n\nconst config = {\n  baseUrl: \"https://api.example.com\",\n  headers: {\n    \"Content-Type\": \"application/json\",\n    \"Authorization\": \"Bearer token\"\n  },\n  timeout: 5000\n} satisfies ApiConfig;\n\n// config.baseUrl retains string literal type\n// config.headers has specific key types\n\n// Nested validation\nconst routes = {\n  home: \"/\",\n  users: \"/users/:id\",\n  settings: \"/settings\"\n} satisfies Record<string, `/${string}`>;\n\n// All routes must start with /",
+  "quiz": [
+    {
+      "question": "What TypeScript version introduced the satisfies operator?",
+      "options": ["4.0", "4.9", "5.0", "5.2"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What advantage does satisfies have over a type annotation?",
+      "options": ["Faster compilation", "Does not widen the inferred type", "Runtime validation", "Better IDE support"],
+      "correctIndex": 1
+    }
+  ]
+}

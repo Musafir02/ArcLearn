@@ -1,0 +1,22 @@
+{
+  "title": "PHP User Input",
+  "language": "php",
+  "topic": "input",
+  "order": 13,
+  "nextTopic": "echo_print",
+  "prevTopic": "numbers",
+  "content": "### PHP User Input\n\nPHP collects user input from HTML forms or command-line arguments.\n\n### CLI Input\n\n```php\n<?php\necho \"Enter your name: \";\n$name = trim(fgets(STDIN));\necho \"Hello, $name\";\n?>\n```\n\n### Form Input (GET)\n\n```php\n<form method=\"get\" action=\"welcome.php\">\n  Name: <input type=\"text\" name=\"name\">\n  <input type=\"submit\">\n</form>\n\n// welcome.php\n<?php\necho \"Welcome, \" . $_GET[\"name\"];\n?>\n```\n\n### Form Input (POST)\n\n| Method | Usage | Visibility |\n|--------|-------|------------|\n| GET | `$_GET` | Data in URL |\n| POST | `$_POST` | Data in body |\n| REQUEST | `$_REQUEST` | Both GET and POST |\n\n> **Key Point:** Always validate and sanitize user input before using it to prevent security vulnerabilities like XSS and SQL injection.",
+  "codeExample": "<?php\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $name = htmlspecialchars($_POST[\"name\"]);\n    $email = htmlspecialchars($_POST[\"email\"]);\n    echo \"Name: $name<br>Email: $email\";\n}\n?>\n<form method=\"post\">\n  Name: <input type=\"text\" name=\"name\"><br>\n  Email: <input type=\"text\" name=\"email\"><br>\n  <input type=\"submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which superglobal collects form data from the URL?",
+      "options": ["$_POST", "$_GET", "$_FILE", "$_SESSION"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What function sanitizes output to prevent XSS?",
+      "options": ["strip_tags()", "htmlspecialchars()", "trim()", "escape()"],
+      "correctIndex": 1
+    }
+  ]
+}

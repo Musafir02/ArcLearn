@@ -1,0 +1,22 @@
+{
+  "title": "Enums",
+  "language": "typescript",
+  "topic": "enums",
+  "order": 44,
+  "nextTopic": "tuples",
+  "prevTopic": "generics_classes",
+  "content":"### Enums\n\nEnums allow you to define a set of named constants.\n\n### Numeric Enums\n\n```typescript\nenum Direction {\n  Up,    // 0\n  Down,  // 1\n  Left,  // 2\n  Right  // 3\n}\n\nconst dir: Direction = Direction.Up;\n```\n\n### Custom Numeric Values\n\n```typescript\nenum Status {\n  Active = 1,\n  Inactive = 2,\n  Pending = 3\n}\n\nconsole.log(Status.Active); // 1\nconsole.log(Status[1]); // \"Active\" (reverse mapping)\n```\n\n### String Enums\n\n```typescript\nenum Color {\n  Red = \"RED\",\n  Green = \"GREEN\",\n  Blue = \"BLUE\"\n}\n\nconst color: Color = Color.Red;\nconsole.log(color); // \"RED\"\n```\n\n### Heterogeneous Enums\n\n```typescript\nenum Mixed {\n  Yes = 1,\n  No = \"NO\"\n}\n```\n\n### Const Enums\n\n```typescript\nconst enum Size {\n  Small = \"S\",\n  Medium = \"M\",\n  Large = \"L\"\n}\n\nconst size = Size.Medium; // Inlined at compile time\n```\n\n### Enum Features\n\n| Feature | Numeric | String |\n|---------|---------|--------|\n| Reverse mapping | Yes | No |\n| Auto-increment | Yes | No |\n| Computed values | Yes | No |\n| Runtime object | Yes | Yes |\n\n> **Key Point:** String enums have no reverse mapping. Use `const enum` to avoid runtime overhead.",
+  "codeExample": "enum HttpStatus {\n  OK = 200,\n  Created = 201,\n  BadRequest = 400,\n  Unauthorized = 401,\n  NotFound = 404,\n  InternalServerError = 500\n}\n\nfunction handleResponse(status: HttpStatus): string {\n  switch (status) {\n    case HttpStatus.OK:\n      return \"Success\";\n    case HttpStatus.NotFound:\n      return \"Not Found\";\n    case HttpStatus.InternalServerError:\n      return \"Server Error\";\n    default:\n      return \"Unknown\";\n  }\n}\n\nconsole.log(handleResponse(HttpStatus.OK)); // Success\nconsole.log(HttpStatus[200]); // \"OK\" (reverse mapping)",
+  "quiz": [
+    {
+      "question": "What value does the first enum member get by default?",
+      "options": ["1", "0", "-1", "undefined"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which enums support reverse mapping?",
+      "options": ["String enums", "Numeric enums", "Const enums", "Heterogeneous enums"],
+      "correctIndex": 1
+    }
+  ]
+}

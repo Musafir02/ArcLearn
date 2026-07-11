@@ -1,0 +1,22 @@
+{
+  "title": "PHP echo and print",
+  "language": "php",
+  "topic": "echo_print",
+  "order": 14,
+  "nextTopic": "var_dump",
+  "prevTopic": "input",
+  "content": "### PHP echo and print\n\n`echo` and `print` are language constructs for outputting text.\n\n### echo\n\n`echo` can output one or more strings separated by commas. It has no return value.\n\n```php\n<?php\necho \"Hello World!\";\necho \"This \", \"is \", \"multiple \", \"params\";\necho \"Line 1\\nLine 2\";\n?>\n```\n\n### print\n\n`print` outputs a single string and always returns `1`.\n\n```php\n<?php\n$result = print \"Hello\";  // prints Hello\n// $result is 1\n?>\n```\n\n### Comparison\n\n| Feature | echo | print |\n|---------|------|-------|\n| Return value | None | 1 |\n| Multiple params | Yes | No |\n| Speed | Slightly faster | Slower |\n| Parentheses | Optional | Optional |\n| Used with expressions | No | Yes (returns value) |\n\n> **Key Point:** `echo` is the most commonly used output construct in PHP because it is faster and supports multiple parameters.",
+  "codeExample": "<?php\n// echo examples\necho \"Hello \", \"World!\";\n$name = \"PHP\";\necho \"<br>Learning $name\";\n\n// print example\nif (print \"<br>Success\") {\n    echo \"<br>Print returned 1\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "What does print return?",
+      "options": ["void", "0", "1", "the string itself"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Can echo take multiple string parameters?",
+      "options": ["Yes", "No", "Only with commas", "Only with dots"],
+      "correctIndex": 0
+    }
+  ]
+}

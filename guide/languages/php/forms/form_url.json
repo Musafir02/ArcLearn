@@ -1,0 +1,22 @@
+{
+  "title": "PHP Form URL Validation",
+  "language": "php",
+  "topic": "form_url",
+  "order": 48,
+  "nextTopic": "superglobals",
+  "prevTopic": "form_email",
+  "content": "### PHP Form URL Validation\n\nURL validation ensures user-provided URLs are properly formatted.\n\n### Using filter_var\n\n```php\n<?php\n$url = \"https://example.com\";\nif (filter_var($url, FILTER_VALIDATE_URL)) {\n    echo \"$url is a valid URL\";\n} else {\n    echo \"$url is not a valid URL\";\n}\n?>\n```\n\n### Complete URL Validation\n\n```php\n<?php\n$website = $websiteErr = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    if (empty($_POST[\"website\"])) {\n        $websiteErr = \"Website is required\";\n    } else {\n        $website = trim($_POST[\"website\"]);\n        if (!preg_match(\"/^https?:\\/\\//\", $website)) {\n            $website = \"https://\" . $website; // Add default scheme\n        }\n        if (!filter_var($website, FILTER_VALIDATE_URL)) {\n            $websiteErr = \"Invalid URL format\";\n        }\n    }\n}\n?>\n```\n\n### URL Validation Options\n\n| Filter/Option | Description |\n|---------------|-------------|\n| `FILTER_VALIDATE_URL` | Validates URL format |\n| `FILTER_FLAG_PATH_REQUIRED` | URL must have a path |\n| `FILTER_FLAG_QUERY_REQUIRED` | URL must have a query string |\n\n```php\n<?php\n$url = \"https://example.com/page?q=test\";\n\n// URL with path required\nif (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {\n    echo \"URL with path is valid\";\n}\n\n// URL with query required\nif (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED)) {\n    echo \"URL with query is valid\";\n}\n?>\n```\n\n### Sanitize URL\n\n```php\n<?php\n$url = \"javascript:alert('xss')\";\n$clean = filter_var($url, FILTER_SANITIZE_URL);\n// Removes invalid URL characters\necho $clean;\n?>\n```\n\n> **Key Point:** `FILTER_VALIDATE_URL` checks format only, not whether the URL actually exists. Use `get_headers()` to check if a URL is reachable.",
+  "codeExample": "<?php\n$website = $websiteErr = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    $website = trim($_POST[\"website\"] ?? \"\");\n\n    if (empty($website)) {\n        $websiteErr = \"Website URL is required\";\n    } else {\n        // Auto-add scheme if missing\n        if (!preg_match(\"/^[a-zA-Z]+:\\/\\//\", $website)) {\n            $website = \"https://\" . $website;\n        }\n\n        if (!filter_var($website, FILTER_VALIDATE_URL)) {\n            $websiteErr = \"Invalid URL\";\n        } else {\n            $parsed = parse_url($website);\n            echo \"Host: \" . ($parsed[\"host\"] ?? \"N/A\");\n        }\n    }\n}\n?>\n\n<form method=\"post\">\n    Website: <input type=\"text\" name=\"website\" value=\"<?php echo $website; ?>\">\n    <span><?php echo $websiteErr; ?></span><br>\n    <input type=\"submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which filter validates URLs in PHP?",
+      "options": ["FILTER_SANITIZE_URL", "FILTER_VALIDATE_URL", "FILTER_CHECK_URL", "FILTER_URL"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Does FILTER_VALIDATE_URL check if a URL is reachable?",
+      "options": ["Yes", "No", "Only with flags", "Depends on PHP version"],
+      "correctIndex": 1
+    }
+  ]
+}

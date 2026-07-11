@@ -1,0 +1,27 @@
+{
+  "title": "TypeScript Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "TypeScript Basics", "folder": "basics",
+      "topics": ["syntax", "output", "comments", "variables", "datatypes", "type_annotations", "type_inference", "operators", "booleans", "strings", "numbers", "null_undefined", "any_unknown_never", "void"]
+    },
+    {
+      "type": "group", "title": "Functions", "folder": "functions",
+      "topics": ["functions", "function_types", "optional_params", "default_params", "rest_params", "function_overloads", "arrow_functions", "callbacks", "generics_functions"]
+    },
+    {
+      "type": "group", "title": "Interfaces and Types", "folder": "interfaces_types",
+      "topics": ["interfaces", "interface_extends", "interface_optional", "type_aliases", "intersection_types", "union_types", "literal_types", "type_guards", "typeof_typeof"]
+    },
+    {
+      "type": "group", "title": "Classes", "folder": "classes",
+      "topics": ["classes", "constructors", "inheritance", "implements", "access_modifiers", "readonly", "static", "abstract_classes", "generics_classes"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["enums", "tuples", "tuple_labels", "generics", "generics_constraints", "keyof", "typeof", "mapped_types", "conditional_types", "template_literal_types", "utility_types_partial", "utility_types_pick_omit", "utility_types_record", "utility_types_readonly", "modules", "namespaces", "declaration_files_dts", "tsconfig", "strict_mode", "type_vs_interface", "decorators", "satisfies_operator", "satisfies_vs_as", "async_await_types", "type_definitions_third_party"]
+    }
+  ]
+}

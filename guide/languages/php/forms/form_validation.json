@@ -1,0 +1,22 @@
+{
+  "title": "PHP Form Validation",
+  "language": "php",
+  "topic": "form_validation",
+  "order": 45,
+  "nextTopic": "form_required",
+  "prevTopic": "get_post",
+  "content": "### PHP Form Validation\n\nForm validation ensures user input meets required criteria before processing.\n\n### Client-side vs Server-side\n\n| Type | Pros | Cons |\n|------|------|------|\n| Client-side (JavaScript) | Immediate feedback | Can be bypassed |\n| Server-side (PHP) | Secure, reliable | Requires page reload |\n\n> Always validate on the server side even if you validate on the client side.\n\n### Basic Validation Functions\n\n| Function | Description |\n|----------|-------------|\n| `empty()` | Check if variable is empty |\n| `isset()` | Check if variable is set |\n| `trim()` | Remove whitespace from both ends |\n| `strip_tags()` | Strip HTML tags |\n| `htmlspecialchars()` | Escape HTML entities |\n| `filter_var()` | Filter with built-in validation |\n\n### Example\n\n```php\n<?php\n$name = $email = $website = \"\";\n$nameErr = $emailErr = $websiteErr = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    if (empty($_POST[\"name\"])) {\n        $nameErr = \"Name is required\";\n    } else {\n        $name = htmlspecialchars(trim($_POST[\"name\"]));\n    }\n\n    if (empty($_POST[\"email\"])) {\n        $emailErr = \"Email is required\";\n    } else {\n        $email = filter_var(trim($_POST[\"email\"]), FILTER_VALIDATE_EMAIL);\n        if ($email === false) {\n            $emailErr = \"Invalid email format\";\n        }\n    }\n}\n?>\n```\n\n> **Key Point:** Use `filter_var()` with validation filters like `FILTER_VALIDATE_EMAIL`, `FILTER_VALIDATE_URL`, and `FILTER_VALIDATE_INT` for reliable input validation.",
+  "codeExample": "<?php\n$nameErr = $ageErr = \"\";\n$name = $age = \"\";\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    // Validate name\n    $name = trim($_POST[\"name\"] ?? \"\");\n    if (empty($name)) {\n        $nameErr = \"Name is required\";\n    } elseif (!preg_match(\"/^[a-zA-Z-' ]*$/\", $name)) {\n        $nameErr = \"Only letters and spaces allowed\";\n    }\n\n    // Validate age\n    $age = $_POST[\"age\"] ?? \"\";\n    $age = filter_var($age, FILTER_VALIDATE_INT, [\"options\" => [\"min_range\" => 1, \"max_range\" => 120]]);\n    if ($age === false) {\n        $ageErr = \"Enter a valid age (1-120)\";\n    }\n}\n?>\n\n<form method=\"post\">\n    Name: <input type=\"text\" name=\"name\" value=\"<?php echo $name; ?>\">\n    <span style=\"color:red;\"><?php echo $nameErr; ?></span><br>\n    Age: <input type=\"text\" name=\"age\" value=\"<?php echo $age; ?>\">\n    <span style=\"color:red;\"><?php echo $ageErr; ?></span><br>\n    <input type=\"submit\">\n</form>",
+  "quiz": [
+    {
+      "question": "Which PHP function provides built-in email validation?",
+      "options": ["validate_email()", "filter_var() with FILTER_VALIDATE_EMAIL", "check_email()", "is_email()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Should validation be done on client side, server side, or both?",
+      "options": ["Client only", "Server only", "Both client and server", "Either one is fine"],
+      "correctIndex": 2
+    }
+  ]
+}

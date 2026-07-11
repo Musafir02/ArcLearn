@@ -1,0 +1,22 @@
+{
+  "title": "PHP Getting Started",
+  "language": "php",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installing PHP\n\nPHP can be installed directly or using a package like XAMPP, WAMP, or MAMP that bundles Apache, MySQL, and PHP.\n\n### Your First PHP Script\n\nCreate a file named `index.php` with the following content:\n\n```php\n<!DOCTYPE html>\n<html>\n<body>\n\n<?php\necho \"My first PHP script!\";\n?>\n\n</body>\n</html>\n```\n\n### Running PHP\n\n| Method | Command |\n|--------|---------|\n| Built-in server | `php -S localhost:8000` |\n| Via Apache | Place files in htdocs or wwwroot |\n| CLI execution | `php script.php` |\n\n> **Key Point:** PHP files must be served through a web server or run via CLI to see the output.",
+  "codeExample": "<?php\n// Get PHP version\nphpinfo();\n?>",
+  "quiz": [
+    {
+      "question": "Which extension do PHP files use?",
+      "options": [".html", ".php", ".js", ".py"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can you run a PHP built-in server?",
+      "options": ["php serve localhost:8000", "php -S localhost:8000", "php start localhost:8000", "php run localhost:8000"],
+      "correctIndex": 1
+    }
+  ]
+}

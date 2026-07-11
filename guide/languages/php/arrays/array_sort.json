@@ -1,0 +1,22 @@
+{
+  "title": "PHP Array Sorting",
+  "language": "php",
+  "topic": "array_sort",
+  "order": 31,
+  "nextTopic": "functions",
+  "prevTopic": "array_functions",
+  "content": "### PHP Array Sorting\n\nPHP provides several sorting functions that work on arrays.\n\n### Sort Functions\n\n| Function | Sorts by | Maintains key association |\n|----------|----------|--------------------------|\n| `sort()` | Values | No (re-indexes) |\n| `rsort()` | Values (reverse) | No |\n| `asort()` | Values | Yes |\n| `arsort()` | Values (reverse) | Yes |\n| `ksort()` | Keys | Yes |\n| `krsort()` | Keys (reverse) | Yes |\n| `usort()` | Custom comparison | No |\n| `uasort()` | Custom comparison | Yes |\n| `uksort()` | Keys (custom) | Yes |\n| `natsort()` | Natural order | Yes |\n\n```php\n<?php\n$fruits = [\"Banana\", \"Apple\", \"Cherry\", \"Date\"];\nsort($fruits);  // [\"Apple\", \"Banana\", \"Cherry\", \"Date\"]\nrsort($fruits); // [\"Date\", \"Cherry\", \"Banana\", \"Apple\"]\n\n$ages = [\"Alice\" => 25, \"Bob\" => 30, \"Charlie\" => 22];\nasort($ages);  // Maintains key => value association\nksort($ages);  // Sorts by keys\n?>\n```\n\n### Sorting Flags\n\n| Flag | Description |\n|------|-------------|\n| `SORT_REGULAR` | Normal comparison |\n| `SORT_NUMERIC` | Numeric comparison |\n| `SORT_STRING` | String comparison |\n| `SORT_NATURAL` | Natural order (natsort) |\n| `SORT_FLAG_CASE` | Case-insensitive (with SORT_STRING or SORT_NATURAL) |\n\n> **Key Point:** `sort()` and `rsort()` re-index the array numerically. Use `asort()` and `arsort()` if you need to preserve key-value associations.",
+  "codeExample": "<?php\n$students = [\n    \"Alice\" => 85,\n    \"Bob\" => 92,\n    \"Charlie\" => 78,\n    \"Diana\" => 95\n];\n\n// Sort by value (descending), maintain keys\narsort($students);\necho \"Sorted by score (high to low):<br>\";\nforeach ($students as $name => $score) {\n    echo \"$name: $score<br>\";\n}\n\n// Sort by key\nksort($students);\necho \"<br>Sorted by name:<br>\";\nforeach ($students as $name => $score) {\n    echo \"$name: $score<br>\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "Which sort function maintains key-value association?",
+      "options": ["sort()", "rsort()", "asort()", "All of them"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which flag sorts numbers correctly as numbers?",
+      "options": ["SORT_STRING", "SORT_NUMERIC", "SORT_NATURAL", "SORT_REGULAR"],
+      "correctIndex": 1
+    }
+  ]
+}

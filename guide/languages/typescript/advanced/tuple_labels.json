@@ -1,0 +1,22 @@
+{
+  "title": "Labeled Tuples",
+  "language": "typescript",
+  "topic": "tuple_labels",
+  "order": 46,
+  "nextTopic": "generics",
+  "prevTopic": "tuples",
+  "content": "Labeled Tuples\n\nLabeled tuples (TypeScript 4.0+) allow naming each element position for better documentation and IntelliSense.\n\n### Syntax\n\n```typescript\ntype Range = [start: number, end: number];\ntype HttpResponse = [statusCode: number, body: string, headers?: Record<string, string>];\n\nconst response: HttpResponse = [200, \"{\\\"ok\\\": true}\"];\n```\n\n### Benefits\n\nLabels improve readability and provide meaningful names in editor tooltips:\n\n```typescript\ntype GraphPoint = [x: number, y: number, label?: string];\n\nfunction plotPoint(point: GraphPoint): void {\n  const [x, y, label] = point;\n  console.log(`Point at (${x}, ${y})${label ? `: ${label}` : \"\"}`);\n}\n```\n\n### Labeled Tuples in Functions\n\n```typescript\nfunction createUser(\n  ...args: [name: string, age: number, email?: string]\n): object {\n  const [name, age, email] = args;\n  return { name, age, email };\n}\n\ncreateUser(\"Alice\", 30);\ncreateUser(\"Bob\", 25, \"bob@example.com\");\n```\n\n### Mixed Labeled and Unlabeled\n\n```typescript\ntype CsvLine = [id: number, ...string[]];\n\nconst line: CsvLine = [1, \"Alice\", \"alice@example.com\", \"active\"];\n```\n\n### Destructuring with Labels\n\n```typescript\ntype Point = [x: number, y: number, z?: number];\n\nfunction move([x, y]: Point, dx: number, dy: number): Point {\n  return [x + dx, y + dy];\n}\n```\n\n> **Key Point:** Labels do not affect type compatibility — they exist purely for documentation.",
+  "codeExample": "// API response tuple with labels\ntype ApiResult<T> = [error: Error | null, data: T | null, status: number];\n\nfunction fetchUser(id: number): ApiResult<{ name: string }> {\n  try {\n    const user = { name: \"Alice\" };\n    return [null, user, 200];\n  } catch (err) {\n    return [err as Error, null, 500];\n  }\n}\n\nconst [err, user, status] = fetchUser(1);\nif (err) {\n  console.error(`Error ${status}:`, err);\n} else {\n  console.log(user?.name);\n}",
+  "quiz": [
+    {
+      "question": "What do tuple labels provide?",
+      "options": ["Runtime validation", "Documentation and IntelliSense", "Type safety", "Performance"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Do tuple labels affect type compatibility?",
+      "options": ["Yes", "No", "Only in strict mode", "Only for primitives"],
+      "correctIndex": 1
+    }
+  ]
+}

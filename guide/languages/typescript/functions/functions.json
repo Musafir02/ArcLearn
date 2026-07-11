@@ -1,0 +1,22 @@
+{
+  "title": "Functions in TypeScript",
+  "language": "typescript",
+  "topic": "functions",
+  "order": 17,
+  "nextTopic": "function_types",
+  "prevTopic": "void",
+  "content":"### Function Declarations\n\nTypeScript functions extend JavaScript functions with type annotations.\n\n### Named Functions\n\n```typescript\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n```\n\n### Anonymous Functions\n\n```typescript\nconst multiply = function(a: number, b: number): number {\n  return a * b;\n};\n```\n\n### Arrow Functions\n\n```typescript\nconst subtract = (a: number, b: number): number => a - b;\n```\n\n### Parameters and Return Types\n\n| Part | Syntax | Required |\n|------|--------|----------|\n| Parameter type | `param: type` | Optional (inferred) |\n| Return type | `): type {` | Optional (inferred) |\n\n### Function Type Signatures\n\n```typescript\ntype BinaryOp = (a: number, b: number) => number;\n\nlet operation: BinaryOp = (x, y) => x + y;\n```\n\n### Higher-Order Functions\n\nFunctions that take or return other functions:\n\n```typescript\nfunction createMultiplier(factor: number): (n: number) => number {\n  return (n: number) => n * factor;\n}\n\nconst double = createMultiplier(2);\nconsole.log(double(5)); // 10\n```\n\n> **Key Point:** TypeScript can infer parameter types from context in higher-order functions.",
+  "codeExample": "// Named function\nfunction greet(name: string): string {\n  return `Hello, ${name}!`;\n}\n\n// Anonymous function\nconst square = function(n: number): number {\n  return n * n;\n};\n\n// Arrow function\nconst cube = (n: number): number => n ** 3;\n\n// Higher-order function\nfunction withLog<T>(fn: (x: T) => T): (x: T) => T {\n  return (x: T) => {\n    console.log(`Input: ${x}`);\n    return fn(x);\n  };\n}\n\nconst loggedSquare = withLog(square);",
+  "quiz": [
+    {
+      "question": "What is the correct syntax for a function return type annotation?",
+      "options": ["function fn(): type {}", "function fn(): type => {}", "function fn(): type = {}", "function fn() -> type {}"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which function syntax uses the => token?",
+      "options": ["Named function", "Anonymous function", "Arrow function", "All of the above"],
+      "correctIndex": 2
+    }
+  ]
+}

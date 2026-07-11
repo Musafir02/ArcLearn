@@ -1,0 +1,22 @@
+{
+  "title": "Optional Interface Properties",
+  "language": "typescript",
+  "topic": "interface_optional",
+  "order": 28,
+  "nextTopic": "type_aliases",
+  "prevTopic": "interface_extends",
+  "content":"### Optional Properties\n\nOptional properties in interfaces may or may not be present on an object.\n\n### Syntax\n\n```typescript\ninterface User {\n  name: string;\n  email?: string;\n  phone?: string;\n}\n\n// OK - only required properties\nconst user1: User = { name: \"Alice\" };\n\n// OK - includes optional properties\nconst user2: User = {\n  name: \"Bob\",\n  email: \"bob@example.com\"\n};\n```\n\n### Accessing Optional Properties\n\nOptional properties have type `T | undefined` when accessed:\n\n```typescript\nfunction getEmail(user: User): string | undefined {\n  return user.email;\n}\n```\n\n### Narrowing Optional Properties\n\n```typescript\nfunction displayContact(user: User): string {\n  if (user.email) {\n    return `Email: ${user.email}`;\n  }\n  if (user.phone) {\n    return `Phone: ${user.phone}`;\n  }\n  return \"No contact info\";\n}\n```\n\n### Optional vs undefined\n\n```typescript\ninterface Config {\n  timeout?: number;\n}\n\n// Both are valid\nconst c1: Config = {};\nconst c2: Config = { timeout: undefined };\n```\n\n### Required with undefined\n\n```typescript\ninterface Config {\n  timeout: number | undefined; // Must be explicitly set\n}\n\nconst c: Config = {}; // Error: timeout is required\nconst c2: Config = { timeout: undefined }; // OK\n```\n\n> **Key Point:** Use `?` for properties that may be completely absent.",
+  "codeExample": "interface Profile {\n  username: string;\n  bio?: string;\n  avatar?: string;\n  socialLinks?: {\n    twitter?: string;\n    github?: string;\n  };\n}\n\nfunction renderProfile(profile: Profile): string {\n  const parts: string[] = [`Username: ${profile.username}`];\n\n  if (profile.bio) {\n    parts.push(`Bio: ${profile.bio}`);\n  }\n\n  const twitter = profile.socialLinks?.twitter;\n  if (twitter) {\n    parts.push(`Twitter: ${twitter}`);\n  }\n\n  return parts.join(\"\\n\");\n}",
+  "quiz": [
+    {
+      "question": "What is the type of an optional property when accessed?",
+      "options": ["T", "T | undefined", "T | null", "any"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What syntax marks a property as optional in an interface?",
+      "options": ["prop?: type", "prop!: type", "prop*: type", "prop:: type"],
+      "correctIndex": 0
+    }
+  ]
+}

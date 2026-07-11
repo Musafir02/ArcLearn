@@ -1,0 +1,22 @@
+{
+  "title": "PHP Ternary Operator",
+  "language": "php",
+  "topic": "ternary",
+  "order": 20,
+  "nextTopic": "while",
+  "prevTopic": "match",
+  "content": "### PHP Ternary Operator\n\nThe ternary operator is a shorthand for `if-else` statements.\n\n### Syntax\n\n```php\n<?php\n$result = (condition) ? value_if_true : value_if_false;\n?>\n```\n\n### Examples\n\n```php\n<?php\n$age = 20;\n$status = ($age >= 18) ? \"Adult\" : \"Minor\";\necho $status; // Adult\n\n// Shorthand (PHP 7+)\n$name = $input ?: \"default\"; // Returns $input if truthy, else \"default\"\n\n// Null coalescing (PHP 7+)\n$username = $_GET['user'] ?? 'guest'; // Returns $_GET['user'] if set, else 'guest'\n?>\n```\n\n### Comparison\n\n| Operator | Syntax | Description |\n|----------|--------|-------------|\n| Ternary | `? :` | If-else shorthand |\n| Elvis | `?:` | Returns left if truthy, else right |\n| Null coalescing | `??` | Returns left if set and not null, else right |\n| Null coalescing assignment | `??=` | Assigns if left is null |\n\n> **Key Point:** The null coalescing operator `??` is generally safer than the ternary or elvis operator because it checks for `isset()` rather than truthiness.",
+  "codeExample": "<?php\n$score = 75;\n$result = ($score >= 50) ? \"Pass\" : \"Fail\";\necho $result; // Pass\n\n// Null coalescing\necho $_POST['name'] ?? 'Anonymous';\n\n// Nested ternary (use parentheses for clarity)\n$grade = ($score >= 90) ? 'A' : (($score >= 80) ? 'B' : 'C');\necho $grade;\n?>",
+  "quiz": [
+    {
+      "question": "What does the null coalescing operator ?? do?",
+      "options": ["Checks truthiness", "Checks if set and not null", "Checks if empty", "Checks if exists"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the result of (false) ? 'yes' : 'no'?",
+      "options": ["yes", "no", "false", "null"],
+      "correctIndex": 1
+    }
+  ]
+}

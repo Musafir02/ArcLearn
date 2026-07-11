@@ -1,0 +1,22 @@
+{
+  "title": "PHP File Write",
+  "language": "php",
+  "topic": "file_write",
+  "order": 54,
+  "nextTopic": "file_upload",
+  "prevTopic": "file_read",
+  "content": "### PHP File Write\n\nPHP provides several functions for writing data to files.\n\n### Writing Methods\n\n| Method | Description |\n|--------|-------------|\n| `fwrite()` / `fputs()` | Write to an open file |\n| `file_put_contents()` | Write string to file (simplest) |\n| `fputcsv()` | Write a line as CSV |\n\n### Examples\n\n```php\n<?php\n// Simple write (overwrites)\nfile_put_contents(\"test.txt\", \"Hello, World!\\n\");\n\n// Append using FILE_APPEND flag\nfile_put_contents(\"test.txt\", \"More data\\n\", FILE_APPEND);\n\n// Using fwrite\n$file = fopen(\"test.txt\", \"a\"); // Append mode\nfwrite($file, \"Appended line\\n\");\nfputs($file, \"Another line\\n\"); // fputs is alias\nfclose($file);\n?>\n```\n\n### LOCK_EX for Safety\n\n```php\n<?php\n// Prevent concurrent writes\nfile_put_contents(\"log.txt\", $data, FILE_APPEND | LOCK_EX);\n?>\n```\n\n### Writing CSV\n\n```php\n<?php\n$file = fopen(\"data.csv\", \"w\");\n$headers = [\"Name\", \"Email\", \"Age\"];\nfputcsv($file, $headers);\n\n$rows = [\n    [\"John\", \"john@example.com\", 30],\n    [\"Jane\", \"jane@example.com\", 25]\n];\nforeach ($rows as $row) {\n    fputcsv($file, $row);\n}\nfclose($file);\n?>\n```\n\n> **Key Point:** `file_put_contents()` is the easiest way to write files. Use `FILE_APPEND` to add to existing content instead of overwriting.",
+  "codeExample": "<?php\n$logFile = \"app.log\";\n\n// Write initial content\nfile_put_contents($logFile, \"=== Application Log ===\\n\");\n\n// Append entries\n$entries = [\n    \"[2026-07-11 10:00] User logged in\",\n    \"[2026-07-11 10:05] Database query executed\",\n    \"[2026-07-11 10:10] Error: Invalid input\"\n];\n\nforeach ($entries as $entry) {\n    file_put_contents($logFile, $entry . \"\\n\", FILE_APPEND | LOCK_EX);\n}\n\n// Display the log\necho nl2br(file_get_contents($logFile));\n\n// Write CSV\n$csvFile = \"users.csv\";\n$handle = fopen($csvFile, \"w\");\nfputcsv($handle, [\"ID\", \"Name\", \"Email\"]);\nfputcsv($handle, [1, \"Alice\", \"alice@example.com\"]);\nfputcsv($handle, [2, \"Bob\", \"bob@example.com\"]);\nfclose($handle);\necho \"<br>CSV written: \" . file_get_contents($csvFile);\n\n// Cleanup\nunlink($logFile);\nunlink($csvFile);\n?>",
+  "quiz": [
+    {
+      "question": "Which constant makes file_put_contents append instead of overwrite?",
+      "options": ["FILE_OVERWRITE", "FILE_APPEND", "FILE_ADD", "LOCK_EX"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the alias for fwrite()?",
+      "options": ["fputs()", "fprint()", "fput()", "file_write()"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PHP String Formatting",
+  "language": "php",
+  "topic": "string_formatting",
+  "order": 40,
+  "nextTopic": "regex",
+  "prevTopic": "string_functions",
+  "content": "### PHP String Formatting\n\nPHP provides several ways to format strings with dynamic values.\n\n### printf / sprintf\n\n`printf()` outputs a formatted string. `sprintf()` returns it.\n\n```php\n<?php\nprintf(\"Hello, %s! You are %d years old.\", \"John\", 25);\n// Hello, John! You are 25 years old.\n\n$formatted = sprintf(\"Price: $%.2f\", 19.956);\necho $formatted; // Price: $19.96\n?>\n```\n\n### Format Specifiers\n\n| Specifier | Type | Example |\n|-----------|------|---------|\n| `%s` | String | `\"hello\"` |\n| `%d` | Integer (decimal) | `42` |\n| `%f` | Float | `3.14` |\n| `%b` | Binary | `1010` |\n| `%x` | Hex (lowercase) | `ff` |\n| `%X` | Hex (uppercase) | `FF` |\n| `%%` | Literal % | `%` |\n\n### Padding and Precision\n\n```php\n<?php\n// Padding\nprintf(\"'%10s'\\n\", \"right\");   // '     right'\nprintf(\"'%-10s'\\n\", \"left\");    // 'left      '\nprintf(\"'%'*10s'\\n\", \"stars\");  // '*****stars'\n\n// Precision\nprintf(\"%.2f\\n\", 3.14159);      // 3.14\nprintf(\"%.5s\\n\", \"Hello World\"); // Hello\n?>\n```\n\n### Number Formatting\n\n```php\n<?php\necho number_format(1234567.89, 2, '.', ',');\n// 1,234,567.89\n\necho number_format(1234567.89, 2, ',', ' ');\n// 1 234 567,89 (European style)\n?>\n```\n\n> **Key Point:** Use `sprintf()` when you need to store the formatted string in a variable instead of printing it directly.",
+  "codeExample": "<?php\n$product = \"Widget\";\n$price = 49.99;\n$qty = 3;\n\n$total = $price * $qty;\n$output = sprintf(\n    \"Product: %s | Qty: %d | Unit: $%.2f | Total: $%.2f\",\n    $product, $qty, $price, $total\n);\necho $output;\n\necho \"<br>\";\n\n// Number formatting\necho number_format(1234567.891, 2, '.', ',');\necho \"<br>\";\necho number_format(1234567.891, 3, '.', '');\n?>",
+  "quiz": [
+    {
+      "question": "What specifier formats an integer in printf?",
+      "options": ["%i", "%d", "%f", "%s"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the difference between printf and sprintf?",
+      "options": ["No difference", "printf returns a string, sprintf prints", "printf prints, sprintf returns", "printf is faster"],
+      "correctIndex": 2
+    }
+  ]
+}

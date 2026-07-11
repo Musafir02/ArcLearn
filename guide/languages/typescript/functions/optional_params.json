@@ -1,0 +1,22 @@
+{
+  "title": "Optional Parameters",
+  "language": "typescript",
+  "topic": "optional_params",
+  "order": 19,
+  "nextTopic": "default_params",
+  "prevTopic": "function_types",
+  "content":"### Optional Parameters\n\nParameters marked with `?` can be omitted when calling a function.\n\n### Syntax\n\n```typescript\nfunction greet(name: string, greeting?: string): string {\n  return `${greeting ?? \"Hello\"}, ${name}!`;\n}\n\ngreet(\"Alice\"); // \"Hello, Alice!\"\ngreet(\"Bob\", \"Hi\"); // \"Hi, Bob!\"\n```\n\n### Type of Optional Parameters\n\nAn optional parameter's type is `T | undefined`:\n\n```typescript\nfunction log(value?: string): void {\n  console.log(value); // type is string | undefined\n}\n```\n\n### Rules\n\n| Rule | Description |\n|------|------------|\n| Must come after required | Optional params must follow required params |\n| Default value | Can have default values (see default_params) |\n| undefined passable | Explicitly passing undefined is allowed |\n\n### Ordering\n\n```typescript\n// Correct\nfunction fn(a: string, b?: number, c?: boolean): void {}\n\n// Error: Optional params before required\n// function fn(a?: string, b: number): void {}\n```\n\n### Callback Optional Parameters\n\n```typescript\nfunction fetchData(\n  url: string,\n  onSuccess?: (data: unknown) => void,\n  onError?: (error: Error) => void\n): void {\n  // Implementation\n}\n```\n\n> **Key Point:** Optional parameters are `T | undefined` at runtime but exclude `undefined` at the type level.",
+  "codeExample": "// Optional parameter\nfunction createUser(name: string, age?: number, email?: string): object {\n  return {\n    name,\n    age: age ?? 0,\n    email: email ?? \"unknown@example.com\"\n  };\n}\n\nconsole.log(createUser(\"Alice\"));\nconsole.log(createUser(\"Bob\", 25));\nconsole.log(createUser(\"Charlie\", 30, \"charlie@example.com\"));\n\n// Optional parameters in callbacks\nfunction process(\n  data: number[],\n  onComplete?: () => void\n): void {\n  console.log(data);\n  onComplete?.(); // Safe call with optional chaining\n}",
+  "quiz": [
+    {
+      "question": "What symbol marks a parameter as optional?",
+      "options": ["!", "?", "*", "~"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can optional parameters appear before required parameters?",
+      "options": ["Yes", "No", "Only in arrow functions", "Only in interfaces"],
+      "correctIndex": 1
+    }
+  ]
+}

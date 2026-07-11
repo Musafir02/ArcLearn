@@ -1,0 +1,22 @@
+{
+  "title": "Generics",
+  "language": "typescript",
+  "topic": "generics",
+  "order": 47,
+  "nextTopic": "generics_constraints",
+  "prevTopic": "tuple_labels",
+  "content": "Generics\n\nGenerics enable creating reusable components that work with a variety of types rather than a single one.\n\n### Why Generics?\n\nWithout generics, you'd need to use `any` (losing type safety) or duplicate code for each type.\n\n```typescript\n// Without generics - any loses type safety\nfunction identity(arg: any): any {\n  return arg;\n}\n\n// With generics - type safe\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n```\n\n### Generic Functions\n\n```typescript\nfunction firstElement<T>(arr: T[]): T | undefined {\n  return arr[0];\n}\n\nconst first = firstElement([1, 2, 3]); // type: number | undefined\n```\n\n### Generic Interfaces\n\n```typescript\ninterface Repository<T> {\n  getById(id: number): T | undefined;\n  getAll(): T[];\n  create(item: T): void;\n  update(id: number, item: T): void;\n  delete(id: number): void;\n}\n\nclass UserRepo implements Repository<User> {\n  // Must implement all methods with User type\n}\n```\n\n### Generic Type Aliases\n\n```typescript\ntype Result<T> = {\n  success: true;\n  data: T;\n} | {\n  success: false;\n  error: string;\n};\n\ntype ApiResponse<T> = {\n  status: number;\n  data: T;\n  message: string;\n};\n```\n\n### Type Parameter Naming\n\n| Parameter | Convention |\n|-----------|-----------|\n| T | Type |\n| K | Key |\n| V | Value |\n| E | Element |\n| R | Return type |\n\n> **Key Point:** Generics provide compile-time type safety while allowing runtime flexibility.",
+  "codeExample": "// Generic identity function\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\n// Generic array wrapper\nfunction wrapInArray<T>(item: T): T[] {\n  return [item];\n}\n\nconst numArr = wrapInArray(42); // number[]\nconst strArr = wrapInArray(\"hello\"); // string[]\n\n// Generic interface\ninterface KeyValuePair<K, V> {\n  key: K;\n  value: V;\n}\n\nconst entry: KeyValuePair<string, number> = {\n  key: \"age\",\n  value: 30\n};\n\n// Generic with default type\nfunction createArray<T = string>(length: number, value: T): T[] {\n  return Array(length).fill(value);\n}\n\nconst arr = createArray(3, \"default\"); // string[]",
+  "quiz": [
+    {
+      "question": "What problem do generics solve?",
+      "options": ["Performance", "Type safety with reusable code", "Memory management", "File organization"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What letter is conventionally used for a type parameter?",
+      "options": ["A", "T", "X", "G"],
+      "correctIndex": 1
+    }
+  ]
+}

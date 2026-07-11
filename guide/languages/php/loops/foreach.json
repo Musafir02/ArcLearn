@@ -1,0 +1,22 @@
+{
+  "title": "PHP foreach Loop",
+  "language": "php",
+  "topic": "foreach",
+  "order": 25,
+  "nextTopic": "arrays",
+  "prevTopic": "break_continue",
+  "content": "### PHP foreach Loop\n\nThe `foreach` loop is designed specifically for iterating over arrays and objects.\n\n### Syntax\n\n```php\n<?php\n// For indexed arrays\nforeach ($array as $value) {\n    // code\n}\n\n// For associative arrays\nforeach ($array as $key => $value) {\n    // code\n}\n?>\n```\n\n### Examples\n\n```php\n<?php\n$colors = [\"Red\", \"Green\", \"Blue\"];\nforeach ($colors as $color) {\n    echo \"$color \";\n}\n// Output: Red Green Blue\n\n$person = [\"name\" => \"John\", \"age\" => 30];\nforeach ($person as $key => $value) {\n    echo \"$key: $value<br>\";\n}\n?>\n```\n\n### Modifying Array Values\n\nUse `&` reference to modify values directly:\n\n```php\n<?php\n$numbers = [1, 2, 3];\nforeach ($numbers as &$num) {\n    $num *= 2;\n}\nunset($num); // Break the reference\nprint_r($numbers); // [2, 4, 6]\n?>\n```\n\n> **Key Point:** Always `unset()` the reference variable after a foreach loop using `&` to avoid accidental modification on subsequent use.",
+  "codeExample": "<?php\n$students = [\n    \"Alice\" => 85,\n    \"Bob\" => 92,\n    \"Charlie\" => 78\n];\n\nforeach ($students as $name => $score) {\n    $grade = ($score >= 90) ? 'A' : (($score >= 80) ? 'B' : 'C');\n    echo \"$name: $score ($grade)<br>\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "Which keyword gives you both key and value in foreach?",
+      "options": ["as", "=>", "->", "key => value"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What symbol is used to modify array values by reference in foreach?",
+      "options": ["*", "&", "%", "$"],
+      "correctIndex": 1
+    }
+  ]
+}

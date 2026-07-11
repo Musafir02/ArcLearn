@@ -1,0 +1,22 @@
+{
+  "title": "PHP Output",
+  "language": "php",
+  "topic": "output",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### PHP Output\n\nPHP provides several ways to output data to the browser.\n\n### Output Methods\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `echo` | Output one or more strings | `echo \"Hello\";` |\n| `print` | Output a string (returns 1) | `print \"Hello\";` |\n| `printf` | Formatted output | `printf(\"%s is %d\", \"John\", 25);` |\n| `print_r` | Prints human-readable array info | `print_r($array);` |\n| `var_dump` | Dumps info about a variable | `var_dump($var);` |\n\n```php\n<?php\necho \"Line 1\";\necho \"Line 2\";\nprint \"Using print\";\nprintf(\"Number: %d\", 42);\n?>\n```\n\n> **Key Point:** `echo` is faster than `print` and can take multiple parameters.",
+  "codeExample": "<?php\necho \"Hello \", \"World \", \"!\";\nprint \"<br>\";\nprintf(\"Pi is %.2f\", 3.14159);\n?>",
+  "quiz": [
+    {
+      "question": "Which output function can take multiple parameters?",
+      "options": ["print", "echo", "printf", "print_r"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does print return?",
+      "options": ["void", "0", "1", "null"],
+      "correctIndex": 2
+    }
+  ]
+}

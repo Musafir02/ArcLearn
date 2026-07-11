@@ -1,0 +1,22 @@
+{
+  "title": "PHP var_dump",
+  "language": "php",
+  "topic": "var_dump",
+  "order": 15,
+  "nextTopic": "conditions",
+  "prevTopic": "echo_print",
+  "content": "### PHP var_dump\n\n`var_dump()` displays structured information about one or more expressions including type and value.\n\n### Basic Usage\n\n```php\n<?php\n$str = \"Hello\";\n$int = 42;\n$bool = true;\n$arr = [1, 2, 3];\n$null = null;\n\nvar_dump($str);  // string(5) \"Hello\"\nvar_dump($int);  // int(42)\nvar_dump($bool); // bool(true)\nvar_dump($arr);  // array(3) { [0]=> int(1) ... }\nvar_dump($null); // NULL\n?>\n```\n\n### Related Functions\n\n| Function | Description |\n|----------|-------------|\n| `var_dump()` | Detailed type and value output |\n| `var_export()` | Returns parsable PHP code |\n| `print_r()` | Human-readable array/object info |\n| `debug_zval_refs()` | Reference count information |\n\n> **Key Point:** `var_dump()` is the best tool for debugging because it shows both type and value, unlike `print_r()` which only shows value.",
+  "codeExample": "<?php\n$data = [\n    \"name\" => \"Alice\",\n    \"scores\" => [95, 87, 92],\n    \"active\" => true\n];\n\necho \"<pre>\";\nvar_dump($data);\necho \"</pre>\";\n\necho \"<pre>\";\nvar_export($data);\necho \"</pre>\";\n?>",
+  "quiz": [
+    {
+      "question": "What information does var_dump show?",
+      "options": ["Only value", "Only type", "Type and value", "Only length"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which function outputs parsable PHP code?",
+      "options": ["var_dump()", "print_r()", "var_export()", "debug()"],
+      "correctIndex": 2
+    }
+  ]
+}

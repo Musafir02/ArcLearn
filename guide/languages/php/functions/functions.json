@@ -1,0 +1,22 @@
+{
+  "title": "PHP Functions",
+  "language": "php",
+  "topic": "functions",
+  "order": 32,
+  "nextTopic": "function_params",
+  "prevTopic": "array_sort",
+  "content": "### PHP Functions\n\nA function is a block of reusable code that performs a specific task.\n\n### Defining a Function\n\n```php\n<?php\nfunction functionName() {\n    // code to execute\n}\n?>\n```\n\n### Example\n\n```php\n<?php\nfunction sayHello() {\n    echo \"Hello, World!\";\n}\n\nsayHello(); // Call the function\n?>\n```\n\n### Function Naming Rules\n\n| Rule | Details |\n|------|---------|\n| Start with letter or underscore | Must not start with a number |\n| Case-insensitive | But should be called as defined |\n| Unique names | No two functions with the same name |\n| Descriptive | Use meaningful names (camelCase or snake_case) |\n\n### Types of Functions\n\n| Type | Description |\n|------|-------------|\n| User-defined | Created by the developer |\n| Built-in | Provided by PHP (e.g., `strlen()`, `array_merge()`) |\n| Anonymous | Functions without a name (closures) |\n| Arrow (PHP 7.4+) | Shorthand anonymous functions |\n\n> **Key Point:** Functions must be defined before they are called, but PHP allows calling a function before its definition in the same file.",
+  "codeExample": "<?php\n// Simple function\nfunction greet() {\n    return \"Welcome!\";\n}\n\n// Call it\necho greet();\n\n// Function with logic\nfunction isEven($num) {\n    return $num % 2 == 0;\n}\n\nif (isEven(10)) {\n    echo \"10 is even\";\n}\n?>",
+  "quiz": [
+    {
+      "question": "What keyword is used to define a function in PHP?",
+      "options": ["function", "def", "func", "create"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can a function be called before its definition?",
+      "options": ["Yes", "No", "Only with include", "Depends on PHP version"],
+      "correctIndex": 0
+    }
+  ]
+}

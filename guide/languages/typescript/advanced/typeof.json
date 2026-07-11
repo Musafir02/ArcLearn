@@ -1,0 +1,22 @@
+{
+  "title": "Typeof Type Operator",
+  "language": "typescript",
+  "topic": "typeof",
+  "order": 50,
+  "nextTopic": "mapped_types",
+  "prevTopic": "keyof",
+  "content": "The Typeof Type Operator\n\nWhen used in a type context, `typeof` captures the type of a variable or expression.\n\n### Basic Type Extraction\n\n```typescript\nconst user = {\n  name: \"Alice\",\n  age: 30,\n  isActive: true\n};\n\ntype UserType = typeof user;\n// { name: string; age: number; isActive: boolean }\n\nconst newUser: UserType = {\n  name: \"Bob\",\n  age: 25,\n  isActive: false\n};\n```\n\n### typeof with Primitive Values\n\n```typescript\nconst greeting = \"Hello\";\ntype Greeting = typeof greeting; // \"Hello\" (literal type)\n\nconst count = 42;\ntype Count = typeof count; // number (widened)\n\nconst flag = true as const;\ntype Flag = typeof flag; // true (literal)\n```\n\n### typeof with Functions\n\n```typescript\nfunction add(a: number, b: number): number {\n  return a + b;\n}\n\ntype AddFn = typeof add;\n// (a: number, b: number) => number\n\nconst multiply: typeof add = (x, y) => x * y;\n// Works because signatures are compatible\n```\n\n### typeof with Class\n\n```typescript\nclass Point {\n  constructor(public x: number, public y: number) {}\n}\n\ntype PointClass = typeof Point;\n// new (x: number, y: number) => Point\n```\n\n### Combination Pattern\n\n```typescript\nconst config = {\n  api: { baseUrl: \"https://api.example.com\", version: \"v2\" },\n  auth: { tokenKey: \"access_token\", refreshInterval: 3600000 }\n} as const;\n\ntype Config = typeof config;\ntype ApiConfig = Config[\"api\"];\ntype AuthConfig = Config[\"auth\"];\n```\n\n> **Key Point:** Use `typeof` in type context to extract and reuse types from existing values.",
+  "codeExample": "// Extract type from API response shape\nconst apiResponse = {\n  status: 200 as const,\n  data: { id: 1, name: \"Alice\" },\n  meta: { page: 1, total: 10 }\n};\n\ntype ApiResponse = typeof apiResponse;\ntype ResponseData = ApiResponse[\"data\"];\n\n// Reuse type from a library function\nimport { createStore } from \"redux\";\nconst store = createStore((state: any) => state);\ntype Store = typeof store;\n// Extracts the full store type\n\n// Type from enum-like object\nconst HttpStatus = {\n  OK: 200,\n  NOT_FOUND: 404,\n  ERROR: 500\n} as const;\n\ntype HttpStatusValues = (typeof HttpStatus)[keyof typeof HttpStatus];\n// 200 | 404 | 500",
+  "quiz": [
+    {
+      "question": "What does 'typeof x' return in a type context?",
+      "options": ["A string like 'number'", "The static type of x", "The value of x", "A type guard"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does 'as const' do when used with typeof?",
+      "options": ["Widens types", "Preserves literal types", "Makes values mutable", "Removes readonly"],
+      "correctIndex": 1
+    }
+  ]
+}

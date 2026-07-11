@@ -1,0 +1,22 @@
+{
+  "title": "PHP Cookies",
+  "language": "php",
+  "topic": "cookies",
+  "order": 51,
+  "nextTopic": "file_handling",
+  "prevTopic": "sessions",
+  "content": "### PHP Cookies\n\nCookies are small text files stored on the client's browser that persist across page requests.\n\n### Setting a Cookie\n\n```php\n<?php\n// setcookie(name, value, expire, path, domain, secure, httponly)\nsetcookie(\"username\", \"John\", time() + 3600, \"/\"); // Expires in 1 hour\nsetcookie(\"theme\", \"dark\", time() + (86400 * 30), \"/\"); // 30 days\n?>\n```\n\n### Accessing Cookies\n\n```php\n<?php\nif (isset($_COOKIE[\"username\"])) {\n    echo \"Welcome back, \" . $_COOKIE[\"username\"];\n} else {\n    echo \"Welcome, guest\";\n}\n?>\n```\n\n### Deleting a Cookie\n\n```php\n<?php\n// Set expiration in the past\nsetcookie(\"username\", \"\", time() - 3600, \"/\");\n\n// Or simply\nsetcookie(\"theme\", \"\", time() - 1);\n?>\n```\n\n### Cookie Parameters\n\n| Parameter | Description |\n|-----------|-------------|\n| `name` | Cookie name |\n| `value` | Cookie value |\n| `expire` | Unix timestamp for expiration |\n| `path` | Server path (default: current) |\n| `domain` | Domain (default: current) |\n| `secure` | Only send over HTTPS |\n| `httponly` | Not accessible via JavaScript |\n\n> **Key Point:** `setcookie()` must be called before any HTML output. Cookies are stored on the client and should never store sensitive data like passwords.",
+  "codeExample": "<?php\n// Set cookie for language preference\n$lang = $_GET[\"lang\"] ?? $_COOKIE[\"lang\"] ?? \"en\";\n\nif (isset($_GET[\"lang\"])) {\n    setcookie(\"lang\", $_GET[\"lang\"], time() + (86400 * 365), \"/\");\n    $lang = $_GET[\"lang\"];\n}\n\n// Remember me feature\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\" && isset($_POST[\"remember\"])) {\n    setcookie(\"remembered_user\", $_POST[\"username\"], time() + 604800, \"/\", \"\", false, true);\n}\n\n// Display preferences\necho \"Current language: $lang<br>\";\necho \"Remembered user: \" . ($_COOKIE[\"remembered_user\"] ?? \"none\");\n?>\n\n<form method=\"post\">\n    Username: <input type=\"text\" name=\"username\">\n    <label><input type=\"checkbox\" name=\"remember\"> Remember me</label>\n    <input type=\"submit\">\n</form>\n<a href=\"?lang=en\">English</a> | <a href=\"?lang=fr\">French</a>",
+  "quiz": [
+    {
+      "question": "Where are cookies stored?",
+      "options": ["Server", "Client browser", "Database", "PHP config"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you delete a cookie in PHP?",
+      "options": ["deletecookie()", "Set expiration in the past", "unset($_COOKIE[\"name\"])", "cookie_delete()"],
+      "correctIndex": 1
+    }
+  ]
+}

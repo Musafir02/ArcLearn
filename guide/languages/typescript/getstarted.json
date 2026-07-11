@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started with TypeScript",
+  "language": "typescript",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installation\n\nYou can install TypeScript globally using npm:\n\n```bash\nnpm install -g typescript\n```\n\n### Verify Installation\n\n```bash\ntsc --version\n```\n\n### Your First TypeScript Program\n\nCreate a file called `hello.ts`:\n\n```typescript\nlet message: string = \"Hello, TypeScript!\";\nconsole.log(message);\n```\n\n### Compiling TypeScript\n\nRun the TypeScript compiler:\n\n```bash\ntsc hello.ts\n```\n\nThis generates a `hello.js` file that can run in Node.js or a browser.\n\n### Using a TypeScript Config File\n\nCreate a `tsconfig.json` to configure the compiler:\n\n```json\n{\n  \"compilerOptions\": {\n    \"target\": \"ES2022\",\n    \"module\": \"commonjs\",\n    \"strict\": true,\n    \"outDir\": \"./dist\"\n  },\n  \"include\": [\"src/**/*\"]\n}\n```\n\nThen compile with:\n\n```bash\ntsc\n```\n\n### Running TypeScript Directly\n\nUse `ts-node` or `tsx` to run TypeScript files without manual compilation:\n\n```bash\nnpx tsx hello.ts\n```\n\n> **Key Point:** Always enable strict mode in tsconfig.json for maximum type safety.",
+  "codeExample": "// Install: npm install -g typescript\n// Compile: tsc hello.ts\n// Run: node hello.js\n\nlet name: string = \"TypeScript\";\nlet year: number = 2026;\nconsole.log(`Welcome to ${name} in ${year}!`);",
+  "quiz": [
+    {
+      "question": "Which command compiles a TypeScript file?",
+      "options": ["node hello.ts", "tsc hello.ts", "npm hello.ts", "ts hello.ts"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What file configures the TypeScript compiler?",
+      "options": ["package.json", "tsconfig.json", "typescript.json", "config.json"],
+      "correctIndex": 1
+    }
+  ]
+}

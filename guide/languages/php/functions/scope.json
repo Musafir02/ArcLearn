@@ -1,0 +1,22 @@
+{
+  "title": "PHP Variable Scope",
+  "language": "php",
+  "topic": "scope",
+  "order": 37,
+  "nextTopic": "global_static",
+  "prevTopic": "builtin_functions",
+  "content": "### PHP Variable Scope\n\nScope refers to the visibility and accessibility of variables in different parts of a PHP script.\n\n### Local Scope\n\nVariables declared inside a function are local to that function.\n\n```php\n<?php\nfunction test() {\n    $localVar = \"I am local\";\n    echo $localVar; // Works\n}\n\ntest();\necho $localVar; // Error: undefined\n?>\n```\n\n### Global Scope\n\nVariables declared outside functions have global scope.\n\n```php\n<?php\n$globalVar = \"I am global\";\n\nfunction test() {\n    // Cannot access $globalVar here\n    echo $globalVar; // Warning: undefined\n}\n?>\n```\n\n### Accessing Global Variables\n\n```php\n<?php\n$name = \"John\";\n\nfunction greet() {\n    global $name; // Declare as global\n    echo \"Hello, $name\";\n}\n\ngreet(); // Hello, John\n\n// Alternative: $GLOBALS array\nfunction greet2() {\n    echo \"Hello, \" . $GLOBALS['name'];\n}\n?>\n```\n\n### Scope Summary\n\n| Scope | Defined In | Accessible |\n|-------|-----------|------------|\n| Global | Outside functions | Everywhere except inside functions (unless `global`) |\n| Local | Inside functions | Only within that function |\n| Static | Inside functions | Only within that function (but persists between calls) |\n| Superglobal | PHP built-in | Everywhere |\n\n> **Key Point:** Variables defined in the global scope are NOT accessible inside functions by default. Use the `global` keyword or `$GLOBALS` array.",
+  "codeExample": "<?php\n$counter = 0;\n\nfunction increment() {\n    global $counter;\n    $counter++;\n}\n\nincrement();\nincrement();\necho $counter; // 2\n\n// Using $GLOBALS\nfunction resetCounter() {\n    $GLOBALS['counter'] = 0;\n}\n\nresetCounter();\necho $counter; // 0\n?>",
+  "quiz": [
+    {
+      "question": "Can a function access a global variable by default?",
+      "options": ["Yes", "No", "Only if same name", "Depends on PHP version"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which array provides access to all global variables?",
+      "options": ["$_GLOBAL", "$GLOBALS", "$_SERVER", "$_ENV"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "TypeScript Data Types",
+  "language": "typescript",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "type_annotations",
+  "prevTopic": "variables",
+  "content": "### Primitive Types\n\nTypeScript has several primitive data types.\n\n| Type | Description | Example |\n|------|-------------|--------|\n| `string` | Textual data | `\"hello\"` |\n| `number` | Integers and floats | `42`, `3.14` |\n| `boolean` | True or false | `true`, `false` |\n| `null` | Null value | `null` |\n| `undefined` | Undefined value | `undefined` |\n| `symbol` | Unique symbols | `Symbol(\"id\")` |\n| `bigint` | Large integers | `9007199254740991n` |\n\n### Special Types\n\n| Type | Description |\n|------|------------|\n| `any` | Disables type checking |\n| `unknown` | Type-safe version of any |\n| `never` | Never occurs |\n| `void` | No return value |\n\n### Object Types\n\n```typescript\n// Object type\nlet person: { name: string; age: number } = {\n  name: \"Alice\",\n  age: 30\n};\n\n// Array type\nlet numbers: number[] = [1, 2, 3];\nlet names: Array<string> = [\"Alice\", \"Bob\"];\n\n// Tuple type\nlet pair: [string, number] = [\"Alice\", 30];\n```\n\n### Type Checking\n\n```typescript\nlet value: string = \"Hello\";\nconsole.log(typeof value); // \"string\"\n```\n\n> **Key Point:** TypeScript infers types from values, so explicit annotations are optional but recommended.",
+  "codeExample": "// Primitive types\nlet name: string = \"Alice\";\nlet age: number = 30;\nlet isStudent: boolean = false;\nlet large: bigint = 100n;\nlet id: symbol = Symbol(\"unique\");\n\n// Arrays\nlet fruits: string[] = [\"apple\", \"banana\", \"cherry\"];\nlet matrix: number[][] = [[1, 2], [3, 4]];\n\n// Objects\nlet user: { name: string; age: number } = {\n  name: \"Bob\",\n  age: 25\n};",
+  "quiz": [
+    {
+      "question": "Which TypeScript type represents a large integer beyond the safe integer range?",
+      "options": ["number", "bigint", "long", "double"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type should you use to disable type checking for a variable?",
+      "options": ["unknown", "never", "any", "void"],
+      "correctIndex": 2
+    }
+  ]
+}

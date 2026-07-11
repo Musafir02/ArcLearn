@@ -1,0 +1,22 @@
+{
+  "title": "Any, Unknown, and Never",
+  "language": "typescript",
+  "topic": "any_unknown_never",
+  "order": 15,
+  "nextTopic": "void",
+  "prevTopic": "null_undefined",
+  "content":"### The Any Type\n\n`any` disables type checking and allows any operation:\n\n```typescript\nlet value: any = 42;\nvalue = \"hello\"; // OK\nvalue = true; // OK\nvalue.toUpperCase(); // OK (no type checking)\n```\n\nAvoid `any` when possible as it defeats the purpose of TypeScript.\n\n### The Unknown Type\n\n`unknown` is the type-safe counterpart of `any`. You cannot perform operations on `unknown` without type narrowing:\n\n```typescript\nlet value: unknown = 42;\nvalue = \"hello\"; // OK\n// value.toUpperCase(); // Error: Object is of type 'unknown'\n\n// Must narrow type first\nif (typeof value === \"string\") {\n  console.log(value.toUpperCase()); // OK\n}\n```\n\n### The Never Type\n\n`never` represents values that never occur. It is the return type for functions that always throw or have infinite loops:\n\n```typescript\nfunction throwError(message: string): never {\n  throw new Error(message);\n}\n\nfunction infiniteLoop(): never {\n  while (true) {}\n}\n```\n\n### Comparison\n\n| Type | Assignable to anything? | Operations allowed? | Use case |\n|------|------------------------|-------------------|----------|\n| `any` | Yes | Yes | Migration from JS |\n| `unknown` | No | No (without narrowing) | Type-safe APIs |\n| `never` | Yes (to nothing) | N/A | Exhaustive checks |\n\n> **Key Point:** Prefer `unknown` over `any` when you don't know the type.",
+  "codeExample": "// any - avoid\nlet flexible: any = 10;\nflexible = \"text\";\nflexible = true;\n\n// unknown - preferred\nlet safe: unknown = \"hello\";\nif (typeof safe === \"string\") {\n  console.log(safe.length);\n}\n\n// never - exhaustive check\ntype Shape = \"circle\" | \"square\";\nfunction area(shape: Shape): number {\n  switch (shape) {\n    case \"circle\": return 1;\n    case \"square\": return 2;\n    default: throw new Error(\"Unreachable\"); // shape is never here\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which type provides type safety while accepting any value?",
+      "options": ["any", "unknown", "never", "void"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What return type does a function that always throws have?",
+      "options": ["void", "undefined", "never", "any"],
+      "correctIndex": 2
+    }
+  ]
+}
