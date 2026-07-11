@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ArcLearn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F2EA;
+    --surface: #FDFCF9;
+    --surface-2: #EFEBE1;
+    --border: #E3DDCE;
+    --text: #2B2A26;
+    --text-muted: #7A756A;
+    --accent: #C96A45;
+    --accent-soft: #F1E0D6;
+    --success: #4F7A5C;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    min-height: 100vh;
+  }
+  aside {
+    width: 260px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 24px 16px;
+    flex-shrink: 0;
+  }
+  .brand {
+    font-family: 'Source Serif 4', serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    padding-left: 8px;
+  }
+  .brand span { color: var(--accent); }
+  .path {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    padding: 0 8px 10px;
+    letter-spacing: 0.02em;
+  }
+  .lang-group { margin-bottom: 18px; }
+  .lang-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .topic {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 8px 8px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text);
+    cursor: pointer;
+  }
+  .topic:hover { background: var(--surface-2); }
+  .topic.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .dot.done { background: var(--success); }
+  .dot.progress { border: 1.5px solid var(--accent); background: transparent; }
+  .dot.todo { border: 1.5px solid var(--border); background: transparent; }
+
+  main {
+    flex: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 40px 100px;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    line-height: 1.15;
+  }
+  p.lead {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+  .codeblock {
+    background: #23221F;
+    color: #E8E6DF;
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin: 24px 0;
+    overflow-x: auto;
+  }
+  .codeblock .kw { color: #E8A87C; }
+  .codeblock .str { color: #B8CFA6; }
+  .code-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: -14px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+  }
+  .btn.primary { background: var(--accent); color: #fff; border: none; }
+  .btn.primary:hover { opacity: 0.92; }
+
+  .quiz {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-top: 36px;
+  }
+  .quiz-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .quiz-q { font-size: 15px; font-weight: 500; margin-bottom: 16px; }
+  .option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: var(--text);
+  }
+  .option:hover { border-color: var(--accent); }
+  .option.correct { border-color: var(--success); background: #EEF3EE; color: var(--success); font-weight: 500; }
+
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .nav-link {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .nav-link.next { color: var(--accent); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<aside>
+  <div class="brand">Arc<span>Learn</span></div>
+  <div class="path">guide / javascript / variables.json</div>
+
+  <div class="lang-group">
+    <div class="lang-label">javascript/</div>
+    <div class="topic active"><span class="dot progress"></span>Variables</div>
+    <div class="topic"><span class="dot todo"></span>Data types</div>
+    <div class="topic"><span class="dot todo"></span>Functions</div>
+    <div class="topic"><span class="dot done"></span>Arrays</div>
+  </div>
+
+  <div class="lang-group">
+    <div class="lang-label">python/</div>
+    <div class="topic"><span class="dot todo"></span>Variables</div>
+    <div class="topic"><span class="dot todo"></span>Data types</div>
+  </div>
+</aside>
+
+<main>
+  <div class="eyebrow">javascript — lesson 1 of 6</div>
+  <h1>Variables</h1>
+  <p class="lead">Variables store data that your program can use later. In JavaScript you declare them with <code>let</code>, <code>const</code>, or the old <code>var</code>.</p>
+  <p class="lead">Use <code>const</code> by default. Use <code>let</code> only when the value will change. Avoid <code>var</code> in new code — it has confusing scoping rules.</p>
+
+  <div class="codeblock">
+<span class="kw">const</span> name = <span class="str">"Ibrahim"</span>;<br>
+<span class="kw">let</span> score = 0;<br>
+score = score + 10;
+  </div>
+  <div class="code-actions">
+    <button class="btn">Copy</button>
+    <button class="btn primary">Run in playground</button>
+  </div>
+
+  <div class="quiz">
+    <div class="quiz-label">checkpoint</div>
+    <div class="quiz-q">Which keyword should you use by default for a value that never gets reassigned?</div>
+    <button class="option">var</button>
+    <button class="option">let</button>
+    <button class="option correct">const</button>
+    <button class="option">static</button>
+  </div>
+
+  <div class="footer-nav">
+    <span class="nav-link">← intro</span>
+    <span class="nav-link next">next: data types →</span>
+  </div>
+</main>
+
+</body>
+</html>
