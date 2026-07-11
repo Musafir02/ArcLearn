@@ -1,0 +1,19 @@
+{
+  "title": "Lifecycle Hooks",
+  "language": "vue",
+  "topic": "lifecycle",
+  "content": "### Lifecycle Diagram\n\nEvery Vue component goes through a series of lifecycle stages from creation to destruction:\n\n```\ncreateApp → beforeCreate → created → beforeMount → mounted → beforeUpdate → updated → beforeUnmount → unmounted\n```\n\n### beforeCreate\n\nCalled after the instance is initialized but before data observation and event setup.\n\n### created\n\nCalled after reactive data, computed properties, methods, and watchers are set up. DOM not yet available.\n\n```js\ncreated() {\n  console.log('Component created', this.someData)\n}\n```\n\n### beforeMount\n\nCalled right before the component is mounted to the DOM.\n\n### mounted\n\nCalled after the component is mounted to the DOM. Access to DOM elements and third-party libraries:\n\n```js\nmounted() {\n  this.$refs.canvas.getContext('2d')\n}\n```\n\n### beforeUpdate\n\nCalled when reactive data changes, before the DOM is re-rendered.\n\n### updated\n\nCalled after the DOM has been re-rendered due to a data change.\n\n### beforeUnmount\n\nCalled right before the component is unmounted. Clean up side effects:\n\n```js\nbeforeUnmount() {\n  clearInterval(this.timer)\n}\n```\n\n### unmounted\n\nCalled after the component is fully destroyed.\n\n### Composition API Equivalents\n\n| Options API | Composition API |\n|---|---|\n| beforeCreate | setup() |\n| created | setup() |\n| beforeMount | onBeforeMount |\n| mounted | onMounted |\n| beforeUpdate | onBeforeUpdate |\n| updated | onUpdated |\n| beforeUnmount | onBeforeUnmount |\n| unmounted | onUnmounted |",
+  "codeExample": "<template>\n  <div>\n    <p>{{ message }}</p>\n    <button @click=\"message = 'Updated'\">Update</button>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { message: 'Initial', timer: null }\n  },\n  created() {\n    console.log('Created:', this.message)\n  },\n  mounted() {\n    this.timer = setInterval(() => {\n      console.log('Tick')\n    }, 1000)\n  },\n  beforeUnmount() {\n    clearInterval(this.timer)\n    console.log('Cleaned up')\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "Which hook is called after the component is rendered to the DOM?",
+      "options": ["mounted", "created", "beforeMount", "beforeCreate"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Options API hooks map to setup() in Composition API?",
+      "options": ["beforeCreate and created", "mounted and unmounted", "beforeMount and mounted", "beforeUpdate and updated"],
+      "correctIndex": 0
+    }
+  ]
+}

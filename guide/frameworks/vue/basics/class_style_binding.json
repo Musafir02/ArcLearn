@@ -1,0 +1,19 @@
+{
+  "title": "Class and Style Binding",
+  "language": "vue",
+  "topic": "class_style_binding",
+  "content": "### Object Syntax for Classes\n\nDynamically toggle CSS classes with an object:\n\n```vue\n<div :class=\"{ active: isActive, 'text-danger': hasError }\">\n```\n\nKeys are class names, values are booleans. Multiple classes can be toggled independently.\n\n### Array Syntax for Classes\n\nApply an array of classes:\n\n```vue\n<div :class=\"[activeClass, errorClass]\">\n<div :class=\"[isActive ? activeClass : '', errorClass]\">\n<div :class=\"[{ active: isActive }, errorClass]\">\n```\n\n### Inline Styles with Objects\n\nCSS properties can be camelCase or kebab-case (in quotes):\n\n```vue\n<div :style=\"{ color: activeColor, fontSize: fontSize + 'px' }\">\n<div :style=\"{ 'font-size': fontSize + 'px' }\">\n```\n\n### Array Syntax for Styles\n\nApply multiple style objects:\n\n```vue\n<div :style=\"[baseStyles, accentStyles]\">\n```\n\n### Auto-Prefixing\n\nVue automatically adds vendor prefixes when a style property requires them.\n\n### Multiple Values\n\nProvide an array of values for a property. The last supported value is applied:\n\n```vue\n<div :style=\"{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }\">\n```",
+  "codeExample": "<template>\n  <div>\n    <div\n      :class=\"[\n        'box',\n        { highlighted: isHighlighted },\n        colorClass\n      ]\"\n      :style=\"{\n        width: size + 'px',\n        height: size + 'px',\n        backgroundColor: bgColor\n      }\"\n    >\n      Box\n    </div>\n    <button @click=\"isHighlighted = !isHighlighted\">Toggle Highlight</button>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      isHighlighted: false,\n      colorClass: 'rounded',\n      size: 100,\n      bgColor: '#42b883'\n    }\n  }\n}\n</script>\n\n<style>\n.box { display: flex; align-items: center; justify-content: center; }\n.highlighted { border: 3px solid gold; }\n.rounded { border-radius: 8px; }\n</style>",
+  "quiz": [
+    {
+      "question": "Which syntax toggles classes based on a boolean condition?",
+      "options": ["Object syntax: { active: isActive }", "Array syntax: [isActive]", "String syntax: 'active'", "Function syntax"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you apply multiple style objects?",
+      "options": ["Array syntax: [baseStyles, accentStyles]", "Spread operator: { ...base, ...accent }", "Mixin styles", "Style inheritance"],
+      "correctIndex": 0
+    }
+  ]
+}

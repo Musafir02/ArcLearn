@@ -1,0 +1,19 @@
+{
+  "title": "Client-Side Fetching with SWR",
+  "language": "nextjs",
+  "topic": "client_side_fetching",
+  "content": "### SWR Library\n\nSWR is a React Hooks library for data fetching created by Vercel. The name comes from **stale-while-revalidate**. It handles caching, revalidation, refetching, and error handling.\n\n### Installation\n\n```bash\nnpm install swr\n```\n\n### Basic Usage with useSWR\n\n```jsx\nimport useSWR from 'swr';\n\nconst fetcher = (url) => fetch(url).then((res) => res.json());\n\nexport default function Profile() {\n  const { data, error, isLoading } = useSWR('/api/user', fetcher);\n\n  if (error) return <div>Failed to load</div>;\n  if (isLoading) return <div>Loading...</div>;\n\n  return <div>Hello {data.name}!</div>;\n}\n```\n\n### Fetcher Function\n\nThe fetcher receives the key (URL) and returns a Promise. You can customize it:\n\n```jsx\nconst fetcher = async (url) => {\n  const res = await fetch(url);\n  if (!res.ok) {\n    const error = new Error('An error occurred');\n    error.info = await res.json();\n    error.status = res.status;\n    throw error;\n  }\n  return res.json();\n};\n```\n\n### Revalidation with Mutate\n\nManually refetch or update cache:\n\n```jsx\nimport useSWR, { mutate } from 'swr';\n\nexport default function Posts() {\n  const { data } = useSWR('/api/posts', fetcher);\n\n  const createPost = async (newPost) => {\n    await fetch('/api/posts', { method: 'POST', body: JSON.stringify(newPost) });\n    mutate('/api/posts'); // revalidate\n  };\n\n  // Optimistic update\n  const addOptimistic = (newPost) => {\n    mutate('/api/posts', [...data, newPost], false); // false = no revalidation\n  };\n\n  return <div>...</div>;\n}\n```\n\n### Pagination\n\n```jsx\nimport useSWR from 'swr';\n\nfunction PaginatedPosts() {\n  const [page, setPage] = useState(1);\n  const { data } = useSWR(`/api/posts?page=${page}`, fetcher);\n\n  return (\n    <div>\n      {data?.posts.map(post => <Post key={post.id} post={post} />)}\n      <button onClick={() => setPage(p => p - 1)}>Previous</button>\n      <button onClick={() => setPage(p => p + 1)}>Next</button>\n    </div>\n  );\n}\n```\n\n### Global Configuration\n\nWrap your app with `SWRConfig`:\n\n```jsx\nimport { SWRConfig } from 'swr';\n\nexport default function App({ Component, pageProps }) {\n  return (\n    <SWRConfig value={{ refreshInterval: 3000, fetcher }}>\n      <Component {...pageProps} />\n    </SWRConfig>\n  );\n}\n```",
+  "codeExample": "import useSWR from 'swr';\n\nconst fetcher = (url) => fetch(url).then(r => r.json());\n\nexport default function Dashboard() {\n  const { data: user, error: userError } = useSWR('/api/user', fetcher);\n  const { data: stats, error: statsError } = useSWR('/api/stats', fetcher, {\n    refreshInterval: 10000,\n  });\n\n  if (userError || statsError) return <div>Error loading data</div>;\n  if (!user || !stats) return <div>Loading...</div>;\n\n  return (\n    <div>\n      <h1>Welcome {user.name}</h1>\n      <p>Active users: {stats.activeUsers}</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does SWR stand for?",
+      "options": ["Stale-While-Revalidate", "Server-While-Render", "Static-Web-Render", "State-With-Redux"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you manually trigger a revalidation in SWR?",
+      "options": ["mutate(key)", "refetch(key)", "revalidate(key)", "refresh(key)"],
+      "correctIndex": 0
+    }
+  ]
+}

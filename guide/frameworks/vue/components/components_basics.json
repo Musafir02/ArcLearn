@@ -1,0 +1,19 @@
+{
+  "title": "Components Basics",
+  "language": "vue",
+  "topic": "components_basics",
+  "content": "### Defining Components\n\nUse `defineComponent` for type inference in Options API:\n\n```js\nimport { defineComponent } from 'vue'\n\nexport default defineComponent({\n  name: 'HelloWorld',\n  data() {\n    return { msg: 'Hello!' }\n  }\n})\n```\n\n### SFC Structure\n\nA Single-File Component has three sections:\n\n```vue\n<template>\n  <div class=\"example\">\n    <p>{{ greeting }}</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { greeting: 'Hello from SFC!' }\n  }\n}\n</script>\n\n<style scoped>\n.example p { color: blue; }\n</style>\n```\n\n### Scoped Styles\n\nWhen a `<style>` tag has the `scoped` attribute, its CSS applies only to the current component:\n\n```vue\n<style scoped>\n/* Only affects this component's elements */\n.title { font-size: 2em; }\n</style>\n```\n\nVue adds a unique attribute (like `data-v-xxxxx`) to elements and rewrites CSS selectors.\n\n### Component Registration\n\n**Global**: `app.component('MyComponent', MyComponent)` — available everywhere.\n\n**Local**: Import and register in the `components` option:\n\n```vue\n<script>\nimport ChildComponent from './ChildComponent.vue'\nexport default {\n  components: { ChildComponent }\n}\n</script>\n\n<template>\n  <ChildComponent />\n</template>\n```",
+  "codeExample": "<template>\n  <div class=\"card\">\n    <h2>{{ title }}</h2>\n    <p>{{ description }}</p>\n    <slot />\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'Card',\n  props: {\n    title: String,\n    description: String\n  }\n}\n</script>\n\n<style scoped>\n.card {\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  padding: 16px;\n}\n</style>",
+  "quiz": [
+    {
+      "question": "What file extension do Vue Single-File Components use?",
+      "options": [".vue", ".sfc", ".component", ".vuecomp"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the scoped attribute on a style tag do?",
+      "options": ["Restricts CSS to the current component", "Enables CSS variables", "Disables CSS globally", "Applies styles only on mobile"],
+      "correctIndex": 0
+    }
+  ]
+}

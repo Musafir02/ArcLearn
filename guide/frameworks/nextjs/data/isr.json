@@ -1,0 +1,19 @@
+{
+  "title": "Incremental Static Regeneration (ISR)",
+  "language": "nextjs",
+  "topic": "isr",
+  "content": "### What is ISR?\n\nIncremental Static Regeneration (ISR) combines the speed of static pages with the freshness of server-rendered pages. Pages are pre-built at build time but can be **regenerated in the background** after deployment.\n\n### How ISR Works\n\n1. Page is built statically at deployment\n2. User visits the page — gets the static version instantly\n3. After `revalidate` seconds, the next request triggers a background regeneration\n4. Old page stays visible until the new version is ready\n5. Subsequent visitors get the fresh page\n\n### Implementing ISR\n\n```jsx\nexport async function getStaticProps() {\n  const posts = await fetch('https://api.example.com/posts').then(r => r.json());\n\n  return {\n    props: { posts },\n    revalidate: 60, // seconds\n  };\n}\n\nexport default function Blog({ posts }) {\n  return (\n    <ul>\n      {posts.map(p => <li key={p.id}>{p.title}</li>)}\n    </ul>\n  );\n}\n```\n\n### On-Demand Revalidation\n\nTrigger revalidation programmatically via an API route:\n\n```jsx\n// pages/api/revalidate.js\nexport default async function handler(req, res) {\n  if (req.query.secret !== process.env.REVALIDATION_TOKEN) {\n    return res.status(401).json({ message: 'Invalid token' });\n  }\n\n  try {\n    await res.revalidate('/blog');\n    return res.json({ revalidated: true });\n  } catch (err) {\n    return res.status(500).json({ message: 'Error revalidating' });\n  }\n}\n```\n\nCall it via webhook:\n```\nhttps://your-site.com/api/revalidate?secret=my-token\n```\n\n### Stale-While-Revalidate\n\nISR uses the stale-while-revalidate caching strategy:\n\n- First visitor after `revalidate` seconds triggers regeneration\n- They still see the stale (old) page\n- Next visitor sees the fresh page\n- Use custom cache headers for finer control\n\n```jsx\nexport async function getServerSideProps({ res }) {\n  res.setHeader(\n    'Cache-Control',\n    'public, s-maxage=10, stale-while-revalidate=59'\n  );\n  return { props: { data } };\n}\n```\n\n### When to Use ISR\n\n- Content changes periodically (CMS, blog, e-commerce)\n- High traffic pages that need near-instant loads\n- Pages with many paths that would make full SSG impractical",
+  "codeExample": "// pages/products/[id].js\nexport async function getStaticProps({ params }) {\n  const product = await fetchProduct(params.id);\n\n  return {\n    props: { product },\n    revalidate: 300, // 5 minutes\n  };\n}\n\nexport async function getStaticPaths() {\n  const products = await fetchProducts();\n  const paths = products.map(p => ({ params: { id: p.id } }));\n  return { paths, fallback: 'blocking' };\n}\n\nexport default function Product({ product }) {\n  return (\n    <div>\n      <h1>{product.name}</h1>\n      <p>{product.description}</p>\n      <p>Price: ${product.price}</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What triggers a page regeneration in ISR?",
+      "options": ["A request after revalidate seconds have passed", "A timer set in next.config.js", "The server restarting", "A database change"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method is used for on-demand revalidation?",
+      "options": ["res.revalidate()", "res.regenerate()", "res.refresh()", "res.update()"],
+      "correctIndex": 0
+    }
+  ]
+}

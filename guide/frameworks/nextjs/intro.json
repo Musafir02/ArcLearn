@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Next.js",
+  "language": "nextjs",
+  "topic": "intro",
+  "content": "### What is Next.js?\n\nNext.js is a **React framework for production** built by Vercel. It extends React with powerful features to build full-stack web applications with minimal configuration.\n\n### Rendering Strategies\n\nNext.js supports multiple rendering strategies:\n\n- **SSR (Server-Side Rendering)**: Pages are rendered on each request at the server. Great for dynamic content and SEO.\n- **SSG (Static Site Generation)**: Pages are pre-built at build time. Fastest delivery, ideal for content that doesn't change often.\n- **ISR (Incremental Static Regeneration)**: Combines SSG with periodic revalidation. Static pages get fresh content without a full rebuild.\n\n### File-Based Routing\n\nNext.js uses the filesystem as the routing API. A file at `pages/about.js` automatically creates the `/about` route. This makes adding new pages as simple as creating a file.\n\n### Full-Stack Capabilities\n\nNext.js blurs the line between frontend and backend:\n\n- **API Routes**: Create backend endpoints inside `pages/api/`\n- **Server Components**: Run code on the server, reducing client-side JavaScript\n- **Middleware**: Run code before a request completes\n\n### Key Features\n\n- Automatic code splitting\n- Built-in CSS support (CSS Modules, Tailwind CSS)\n- Image optimization with `next/image`\n- Font optimization with `next/font`\n- Fast Refresh for instant feedback\n- TypeScript support out of the box",
+  "codeExample": "// Basic Next.js page component\n// pages/index.js\nexport default function Home() {\n  return (\n    <div>\n      <h1>Welcome to Next.js!</h1>\n      <p>A React framework for production.</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What rendering strategy pre-builds pages at build time?",
+      "options": ["SSG (Static Site Generation)", "SSR (Server-Side Rendering)", "ISR (Incremental Static Regeneration)", "CSR (Client-Side Rendering)"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Next.js handle routing?",
+      "options": ["File-based routing using the pages directory", "Programmatic routing with a routes config file", "JSON-based routing configuration", "Database-driven routing"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "HTTP Client",
+  "language": "angular",
+  "topic": "http_client",
+  "content": "### Setting Up HttpClient\n\nImport `HttpClientModule` in your app module (or use `provideHttpClient()` with standalone):\n\n```typescript\n// NgModule approach\nimport { HttpClientModule } from '@angular/common/http';\n\n@NgModule({\n  imports: [HttpClientModule]\n})\nexport class AppModule { }\n\n// Standalone approach\nimport { provideHttpClient } from '@angular/common/http';\n\nbootstrapApplication(AppComponent, {\n  providers: [provideHttpClient()]\n});\n```\n\n### Making HTTP Requests\n\nInject `HttpClient` into your service:\n\n```typescript\n@Injectable({ providedIn: 'root' })\nexport class ApiService {\n  constructor(private http: HttpClient) { }\n\n  // GET\n  getUsers(): Observable<User[]> {\n    return this.http.get<User[]>('https://api.example.com/users');\n  }\n\n  // POST\n  createUser(user: User): Observable<User> {\n    return this.http.post<User>('https://api.example.com/users', user);\n  }\n\n  // PUT\n  updateUser(id: number, user: User): Observable<User> {\n    return this.http.put<User>(`https://api.example.com/users/${id}`, user);\n  }\n\n  // DELETE\n  deleteUser(id: number): Observable<void> {\n    return this.http.delete<void>(`https://api.example.com/users/${id}`);\n  }\n}\n```\n\n### Typed Responses\n\nAngular HTTP methods are generic — pass the expected response type:\n```typescript\nthis.http.get<User[]>('/api/users')       // returns Observable<User[]>\nthis.http.get<User>('/api/users/1')        // returns Observable<User>\nthis.http.get('/api/users', { responseType: 'text' })  // returns Observable<string>\n```\n\n### Query Parameters and Headers\n\n```typescript\nimport { HttpParams, HttpHeaders } from '@angular/common/http';\n\nconst params = new HttpParams()\n  .set('page', '1')\n  .set('limit', '10');\n\nconst headers = new HttpHeaders()\n  .set('Authorization', `Bearer ${token}`)\n  .set('Content-Type', 'application/json');\n\nthis.http.get<User[]>('/api/users', { params, headers });\n```\n\n### Error Handling\n\nUse `catchError` from RxJS:\n\n```typescript\nimport { catchError, throwError } from 'rxjs';\n\ngetUsers(): Observable<User[]> {\n  return this.http.get<User[]>('/api/users').pipe(\n    catchError((error: HttpErrorResponse) => {\n      console.error('API error:', error.message);\n      return throwError(() => new Error('Failed to load users'));\n    })\n  );\n}\n```\n\n### Full Service Example\n\n```typescript\n@Injectable({ providedIn: 'root' })\nexport class UserService {\n  private apiUrl = 'https://api.example.com/users';\n\n  constructor(private http: HttpClient) { }\n\n  getAll(): Observable<User[]> {\n    return this.http.get<User[]>(this.apiUrl).pipe(\n      catchError(this.handleError)\n    );\n  }\n\n  private handleError(error: HttpErrorResponse) {\n    const msg = error.error instanceof ErrorEvent\n      ? `Client error: ${error.error.message}`\n      : `Server error: ${error.status}`;\n    return throwError(() => new Error(msg));\n  }\n}\n```",
+  "codeExample": "@Injectable({ providedIn: 'root' })\nexport class ProductService {\n  constructor(private http: HttpClient) {}\n\n  getProducts(): Observable<Product[]> {\n    return this.http.get<Product[]>('/api/products').pipe(\n      catchError((err) => throwError(() => new Error(err.message)))\n    );\n  }\n\n  createProduct(p: Product): Observable<Product> {\n    return this.http.post<Product>('/api/products', p);\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which module must be imported to use HttpClient?",
+      "options": ["HttpClientModule", "HttpModule", "HttpClientTestingModule", "BrowserModule"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which RxJS operator is used to handle HTTP errors?",
+      "options": ["catchError", "map", "filter", "tap"],
+      "correctIndex": 0
+    }
+  ]
+}

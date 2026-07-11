@@ -1,0 +1,23 @@
+{
+  "title": "Vue.js Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Vue.js Basics", "folder": "basics",
+      "topics": ["instance", "template_syntax", "data_binding", "events", "computed_watchers", "class_style_binding", "conditional_rendering"]
+    },
+    {
+      "type": "group", "title": "Components", "folder": "components",
+      "topics": ["components_basics", "props", "slots", "lifecycle", "transitions", "keepalive"]
+    },
+    {
+      "type": "group", "title": "Advanced Vue", "folder": "advanced",
+      "topics": ["composition_api", "router_intro", "pinia_state", "composables", "teleport_fragment", "mixin_directives"]
+    },
+    {
+      "type": "group", "title": "Nuxt.js", "folder": "nuxt",
+      "topics": ["nuxt_intro", "file_based_routing", "data_fetching", "server_side_rendering", "modules"]
+    }
+  ]
+}

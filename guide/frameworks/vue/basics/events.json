@@ -1,0 +1,19 @@
+{
+  "title": "Event Handling",
+  "language": "vue",
+  "topic": "events",
+  "content": "### v-on Directive\n\n`v-on` listens to DOM events and executes JavaScript when triggered.\n\n### Method Handlers\n\n```vue\n<button v-on:click=\"handleClick\">Click</button>\n```\n\n### Inline Handlers\n\n```vue\n<button @click=\"count += 1\">Add</button>\n```\n\n### @ Shorthand\n\n```vue\n<button @click=\"submitForm\">Submit</button>\n```\n\n### Event Modifiers\n\nModifiers are appended with a dot:\n\n```vue\n<!-- Prevent default -->\n<form @submit.prevent=\"onSubmit\">...</form>\n\n<!-- Stop propagation -->\n<a @click.stop=\"doThis\">Link</a>\n\n<!-- Only trigger once -->\n<button @click.once=\"doOnce\">Once</button>\n\n<!-- Self only -->\n<div @click.self=\"onDivClick\">...</div>\n\n<!-- Passive (improves scroll performance) -->\n<div @scroll.passive=\"onScroll\">...</div>\n```\n\n### Key Modifiers\n\n```vue\n<input @keyup.enter=\"submit\" />\n<input @keyup.ctrl.enter=\"submitCtrl\" />\n<input @keydown.esc=\"clear\" />\n\n<!-- Key aliases: .enter, .tab, .delete, .esc, .space, .up, .down, .left, .right -->\n```\n\n### Native Event Object\n\n```vue\n<template>\n  <button @click=\"handle($event, 'extra')\">Click</button>\n</template>\n\n<script>\nexport default {\n  methods: {\n    handle(event, extra) {\n      console.log(event.clientX, extra)\n    }\n  }\n}\n</script>\n```",
+  "codeExample": "<template>\n  <div>\n    <p>Count: {{ count }}</p>\n    <button @click=\"increment\">+</button>\n    <button @click=\"decrement\">-</button>\n    <form @submit.prevent=\"handleSubmit\">\n      <input v-model=\"name\" />\n      <button type=\"submit\">Submit</button>\n    </form>\n    <p>Press Enter on the input to submit</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      count: 0,\n      name: ''\n    }\n  },\n  methods: {\n    increment() { this.count++ },\n    decrement() { this.count-- },\n    handleSubmit() {\n      alert(`Submitted: ${this.name}`)\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "Which modifier prevents the default browser behavior?",
+      "options": [".prevent", ".stop", ".once", ".self"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the shorthand for v-on?",
+      "options": ["@", ":", "#", "&"],
+      "correctIndex": 0
+    }
+  ]
+}

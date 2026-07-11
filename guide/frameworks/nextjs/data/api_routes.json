@@ -1,0 +1,19 @@
+{
+  "title": "API Routes",
+  "language": "nextjs",
+  "topic": "api_routes",
+  "content": "### What are API Routes?\n\nAPI Routes let you build a backend API inside your Next.js application. Files in `pages/api/` are treated as API endpoints instead of pages.\n\n### Basic API Route\n\n```jsx\n// pages/api/hello.js\nexport default function handler(req, res) {\n  res.status(200).json({ message: 'Hello World' });\n}\n```\n\nAccess it at `http://localhost:3000/api/hello`.\n\n### Request and Response\n\nThe handler receives:\n- `req` — NextApiRequest (extends IncomingMessage)\n- `res` — NextApiResponse (extends ServerResponse)\n\n```jsx\nexport default function handler(req, res) {\n  const { method } = req;\n\n  switch (method) {\n    case 'GET':\n      // handle GET\n      break;\n    case 'POST':\n      // handle POST\n      break;\n    default:\n      res.setHeader('Allow', ['GET', 'POST']);\n      res.status(405).end(`Method ${method} Not Allowed`);\n  }\n}\n```\n\n### Dynamic API Routes\n\nSame file-based routing applies:\n\n```jsx\n// pages/api/posts/[id].js\nexport default function handler(req, res) {\n  const { id } = req.query;\n\n  if (req.method === 'GET') {\n    const post = getPostById(id);\n    if (!post) {\n      return res.status(404).json({ error: 'Post not found' });\n    }\n    res.status(200).json(post);\n  }\n\n  if (req.method === 'PUT') {\n    updatePost(id, req.body);\n    res.status(200).json({ message: 'Updated' });\n  }\n}\n```\n\n### Middleware Patterns\n\nApply middleware for common functionality:\n\n```jsx\n// middleware/auth.js\nexport function withAuth(handler) {\n  return async (req, res) => {\n    const token = req.headers.authorization;\n\n    if (!token) {\n      return res.status(401).json({ error: 'Unauthorized' });\n    }\n\n    const user = await verifyToken(token);\n    req.user = user;\n    return handler(req, res);\n  };\n}\n\n// pages/api/profile.js\nimport { withAuth } from '../../middleware/auth';\n\nasync function handler(req, res) {\n  res.status(200).json({ user: req.user });\n}\n\nexport default withAuth(handler);\n```\n\n### Database Connection\n\n```jsx\nimport { connectToDatabase } from '../../lib/db';\n\nexport default async function handler(req, res) {\n  const { db } = await connectToDatabase();\n\n  if (req.method === 'GET') {\n    const posts = await db.collection('posts').find({}).toArray();\n    return res.status(200).json(posts);\n  }\n\n  if (req.method === 'POST') {\n    const post = await db.collection('posts').insertOne(req.body);\n    return res.status(201).json(post);\n  }\n}\n```",
+  "codeExample": "// pages/api/posts/index.js — CRUD API\nexport default async function handler(req, res) {\n  switch (req.method) {\n    case 'GET':\n      const posts = await getPosts();\n      return res.status(200).json(posts);\n\n    case 'POST':\n      const newPost = await createPost(req.body);\n      return res.status(201).json(newPost);\n\n    default:\n      res.setHeader('Allow', ['GET', 'POST']);\n      return res.status(405).end(`Method ${req.method} Not Allowed`);\n  }\n}",
+  "quiz": [
+    {
+      "question": "Where are API routes defined in Next.js?",
+      "options": ["pages/api/ directory", "api/ directory", "routes/ directory", "handlers/ directory"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you access dynamic route parameters in an API route?",
+      "options": ["req.query", "req.params", "req.body", "req.dynamic"],
+      "correctIndex": 0
+    }
+  ]
+}

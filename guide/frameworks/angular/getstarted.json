@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with Angular",
+  "language": "angular",
+  "topic": "getstarted",
+  "content": "### Creating a New Angular Project\n\nUse the Angular CLI to scaffold a new project:\n\n```bash\nnpm install -g @angular/cli\nng new my-app --standalone false\ncd my-app\nng serve\n```\n\n### Project Structure\n\n```\nmy-app/\n├── src/\n│   ├── app/\n│   │   ├── app.component.ts       # Root component\n│   │   ├── app.component.html\n│   │   ├── app.component.css\n│   │   └── app.module.ts           # Root module\n│   ├── main.ts                     # Application entry point\n│   ├── index.html                  # Host HTML page\n│   └── styles.css                  # Global styles\n├── angular.json                    # CLI configuration\n├── package.json\n└── tsconfig.json\n```\n\n### Understanding app.module.ts\n\nThe `@NgModule` decorator defines the root module:\n\n```typescript\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n```\n\n- **declarations** — Components, directives, and pipes that belong to this module.\n- **imports** — Other modules used by this module (e.g., `BrowserModule`, `FormsModule`).\n- **providers** — Services registered with the root injector.\n- **bootstrap** — The root component Angular creates and inserts into `index.html`.\n\n### main.ts — The Entry Point\n\n```typescript\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\nimport { AppModule } from './app/app.module';\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n```\n\n### Key CLI Commands\n\n| Command | Purpose |\n|---------|---------|\n| `ng serve` | Dev server with live reload |\n| `ng generate component foo` | Scaffold a component |\n| `ng generate service foo` | Scaffold a service |\n| `ng generate module foo` | Scaffold a module |\n| `ng build` | Build for production |\n| `ng test` | Run unit tests with Karma |\n| `ng add` | Add library to project |",
+  "codeExample": "// main.ts - bootstrap the application\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\nimport { AppModule } from './app/app.module';\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));",
+  "quiz": [
+    {
+      "question": "Which decorator is used to define an Angular module?",
+      "options": ["@NgModule", "@Component", "@Injectable", "@Directive"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the purpose of the `bootstrap` array in NgModule?",
+      "options": ["Specifies the root component to bootstrap", "Imports external modules", "Declares pipes", "Registers services"],
+      "correctIndex": 0
+    }
+  ]
+}

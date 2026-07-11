@@ -1,0 +1,19 @@
+{
+  "title": "Composables",
+  "language": "vue",
+  "topic": "composables",
+  "content": "### Composable Functions\n\nA **composable** is a function that uses Vue's Composition API to encapsulate and reuse stateful logic:\n\n```js\n// useCounter.js\nimport { ref, computed } from 'vue'\n\nexport function useCounter(initialValue = 0) {\n  const count = ref(initialValue)\n  const double = computed(() => count.value * 2)\n\n  function increment() { count.value++ }\n  function decrement() { count.value-- }\n\n  return { count, double, increment, decrement }\n}\n```\n\n### useMouse Pattern\n\n```js\n// useMouse.js\nimport { ref, onMounted, onUnmounted } from 'vue'\n\nexport function useMouse() {\n  const x = ref(0)\n  const y = ref(0)\n\n  function update(event) {\n    x.value = event.pageX\n    y.value = event.pageY\n  }\n\n  onMounted(() => window.addEventListener('mousemove', update))\n  onUnmounted(() => window.removeEventListener('mousemove', update))\n\n  return { x, y }\n}\n```\n\nUsage:\n\n```vue\n<script>\nimport { useMouse } from './composables/useMouse'\nexport default {\n  setup() {\n    const { x, y } = useMouse()\n    return { x, y }\n  }\n}\n</script>\n\n<template>Mouse: {{ x }}, {{ y }}</template>\n```\n\n### Async Composables\n\n```js\nexport function useFetch(url) {\n  const data = ref(null)\n  const error = ref(null)\n  const loading = ref(true)\n\n  fetch(url)\n    .then(res => res.json())\n    .then(json => { data.value = json })\n    .catch(err => { error.value = err })\n    .finally(() => { loading.value = false })\n\n  return { data, error, loading }\n}\n```\n\n### Composable Composition\n\nComposables can call other composables:\n\n```js\nexport function useUser() {\n  const { data, loading } = useFetch('/api/user')\n  const { x, y } = useMouse()\n\n  return { user: data, loading, mouseX: x, mouseY: y }\n}\n```",
+  "codeExample": "// useLocalStorage.js\nimport { ref, watch } from 'vue'\n\nexport function useLocalStorage(key, initialValue) {\n  const stored = localStorage.getItem(key)\n  const data = ref(stored ? JSON.parse(stored) : initialValue)\n\n  watch(data, (newVal) => {\n    localStorage.setItem(key, JSON.stringify(newVal))\n  }, { deep: true })\n\n  return data\n}\n\n// Usage:\n// import { useLocalStorage } from './composables/useLocalStorage'\n// const theme = useLocalStorage('theme', 'light')\n// theme.value = 'dark' // auto-syncs to localStorage",
+  "quiz": [
+    {
+      "question": "What naming convention is recommended for composable functions?",
+      "options": ["useXxx (e.g. useMouse)", "composableXxx", "withXxx", "createXxx"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can composables call other composables?",
+      "options": ["Yes, they compose naturally", "No, composables must be isolated", "Only in setup()", "Only with provide/inject"],
+      "correctIndex": 0
+    }
+  ]
+}

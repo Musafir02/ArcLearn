@@ -1,0 +1,19 @@
+{
+  "title": "Image Optimization",
+  "language": "nextjs",
+  "topic": "image_optimization",
+  "content": "### The Image Component\n\nNext.js's `next/image` extends the HTML `<img>` element with automatic optimization:\n\n```jsx\nimport Image from 'next/image';\n\nexport default function Profile() {\n  return (\n    <Image\n      src=\"/profile.jpg\"\n      alt=\"Profile picture\"\n      width={400}\n      height={400}\n    />\n  );\n}\n```\n\n### Benefits\n\n- **Lazy Loading**: Images load only when they enter the viewport\n- **Responsive Images**: Serves multiple sizes based on device\n- **WebP/AVIF**: Modern formats are used automatically\n- **Stability**: Prevents layout shift with explicit dimensions\n\n### Placeholder and Blur\n\nUse a blur-up placeholder while the image loads:\n\n```jsx\nimport Image from 'next/image';\nimport myImage from '../public/photo.jpg';\n\nexport default function Photo() {\n  return (\n    <Image\n      src={myImage}\n      alt=\"Photo\"\n      placeholder=\"blur\"\n    />\n  );\n}\n```\n\nLocal images support blur automatically. For remote images, provide a `blurDataURL`:\n\n```jsx\n<Image\n  src=\"https://example.com/photo.jpg\"\n  alt=\"Remote\"\n  width={800}\n  height={600}\n  placeholder=\"blur\"\n  blurDataURL=\"data:image/webp;base64,...\"\n/>\n```\n\n### Remote Images\n\nFor external URLs, configure `next.config.js`:\n\n```js\n// next.config.js\nmodule.exports = {\n  images: {\n    remotePatterns: [\n      {\n        protocol: 'https',\n        hostname: 'images.unsplash.com',\n      },\n    ],\n  },\n};\n```\n\n### Priority and Loading\n\nUse `priority` for above-the-fold images to skip lazy loading:\n\n```jsx\n<Image src=\"/hero.jpg\" alt=\"Hero\" fill priority />\n```\n\n### The sizes Prop\n\nFor fill images, use `sizes` to inform the browser about expected widths:\n\n```jsx\n<Image\n  src=\"/grid-photo.jpg\"\n  alt=\"Grid\"\n  fill\n  sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\"\n/>\n```",
+  "codeExample": "import Image from 'next/image';\n\nexport default function Gallery() {\n  const images = [\n    { src: '/photo1.jpg', alt: 'Photo 1' },\n    { src: '/photo2.jpg', alt: 'Photo 2' },\n  ];\n\n  return (\n    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>\n      {images.map((img) => (\n        <Image\n          key={img.src}\n          src={img.src}\n          alt={img.alt}\n          width={600}\n          height={400}\n          placeholder=\"blur\"\n          blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRg==\"\n        />\n      ))}\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "How do you disable lazy loading for a hero image?",
+      "options": ["Add the priority prop", "Add the eager prop", "Set loading=\"eager\"", "Remove the Image component"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What must be configured in next.config.js for remote images?",
+      "options": ["remotePatterns", "externalImages", "allowedDomains", "imageSources"],
+      "correctIndex": 0
+    }
+  ]
+}

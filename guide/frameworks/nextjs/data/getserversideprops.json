@@ -1,0 +1,19 @@
+{
+  "title": "getServerSideProps",
+  "language": "nextjs",
+  "topic": "getserversideprops",
+  "content": "### getServerSideProps Overview\n\n`getServerSideProps` fetches data on **every request** at server runtime. The page is rendered server-side for each visit, ensuring fresh data every time.\n\n### Basic Usage\n\n```jsx\nexport async function getServerSideProps() {\n  const res = await fetch('https://api.example.com/user');\n  const user = await res.json();\n\n  return {\n    props: { user },\n  };\n}\n\nexport default function Dashboard({ user }) {\n  return <h1>Welcome, {user.name}</h1>;\n}\n```\n\n### Context Object\n\n`getServerSideProps` receives a richer context:\n\n```jsx\nexport async function getServerSideProps(context) {\n  const { params, req, res, query, preview, previewData, resolvedUrl, locale, locales, defaultLocale } = context;\n\n  // req — HTTP IncomingMessage\n  // res — HTTP Response\n  // query — query string parameters\n  // params — route parameters\n\n  return { props: {} };\n}\n```\n\nAccess request headers for authentication:\n\n```jsx\nexport async function getServerSideProps({ req }) {\n  const token = req.cookies.token;\n  const user = await verifyToken(token);\n\n  if (!user) {\n    return {\n      redirect: { destination: '/login', permanent: false },\n    };\n  }\n\n  return { props: { user } };\n}\n```\n\n### When to Use SSR\n\nUse `getServerSideProps` when:\n\n- Data changes on every request (dashboards, live data)\n- Request-specific data is needed (user auth, cookies)\n- SEO is required with dynamic data\n- You need access to `req` and `res` objects\n\n### Performance Considerations\n\n- SSR pages are **slower** than SSG because they render on every request\n- Pages cannot be served from CDN edge caches\n- Consider using ISR or client-side fetching as alternatives\n- Use caching headers (`res.setHeader('Cache-Control', ...)`) to improve performance\n\n```jsx\nexport async function getServerSideProps({ res }) {\n  res.setHeader(\n    'Cache-Control',\n    'public, s-maxage=10, stale-while-revalidate=59'\n  );\n\n  const data = await fetchData();\n  return { props: { data } };\n}\n```",
+  "codeExample": "export async function getServerSideProps({ req, params }) {\n  const authToken = req.cookies.auth;\n\n  if (!authToken) {\n    return {\n      redirect: { destination: '/login', permanent: false },\n    };\n  }\n\n  const user = await getUser(authToken);\n  const post = await getPost(params.id);\n\n  return {\n    props: { user, post },\n  };\n}\n\nexport default function Post({ user, post }) {\n  return (\n    <div>\n      <p>Logged in as {user.email}</p>\n      <h1>{post.title}</h1>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "When does getServerSideProps execute?",
+      "options": ["On every request at server runtime", "At build time only", "On the client after page load", "Once and then caches the result"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which context property gives access to cookies?",
+      "options": ["req.cookies", "res.cookies", "query.cookies", "params.cookies"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Linking and Navigation",
+  "language": "nextjs",
+  "topic": "linking_navigation",
+  "content": "### Link Component\n\nThe `Link` component from `next/link` enables client-side navigation between pages:\n\n```jsx\nimport Link from 'next/link';\n\nexport default function Nav() {\n  return (\n    <Link href=\"/about\">\n      About Us\n    </Link>\n  );\n}\n```\n\n### Prefetching\n\nBy default, `Link` prefetches pages in the background when they appear in the viewport. This makes navigation instant. Disable it with `prefetch={false}`.\n\n### Client-Side Transitions\n\nNavigation via `Link` does not trigger a full page reload. Next.js fetches the new page's JavaScript and renders it client-side, providing app-like speed.\n\n### useRouter Hook\n\nThe `useRouter` hook from `next/router` provides programmatic navigation:\n\n```jsx\nimport { useRouter } from 'next/router';\n\nexport default function LoginButton() {\n  const router = useRouter();\n\n  const handleLogin = () => {\n    // after login logic\n    router.push('/dashboard');\n  };\n\n  return <button onClick={handleLogin}>Login</button>;\n}\n```\n\nOther `useRouter` methods:\n- `router.push(url)` — navigate to a URL\n- `router.replace(url)` — navigate without adding to history\n- `router.back()` — go back\n- `router.reload()` — reload the current page\n- `router.query` — access query parameters\n\n### Shallow Routing\n\nChange the URL without running data fetching methods:\n\n```jsx\nrouter.push('/?page=2', undefined, { shallow: true });\n```\n\n### Scroll to Top Behavior\n\nBy default, Next.js scrolls to the top of the page on navigation. Disable it:\n\n```jsx\n<Link href=\"/about\" scroll={false}>About</Link>\n```",
+  "codeExample": "import Link from 'next/link';\nimport { useRouter } from 'next/router';\n\nexport default function Navbar() {\n  const router = useRouter();\n\n  return (\n    <nav>\n      <Link href=\"/\" className={router.pathname === '/' ? 'active' : ''}>\n        Home\n      </Link>\n      <Link href=\"/blog\">Blog</Link>\n      <button onClick={() => router.push('/contact')}>Contact</button>\n    </nav>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does the Link component do by default for visible links?",
+      "options": ["Prefetches the linked page", "Preloads all images", "Renders the page inline", "Opens a modal"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method navigates without adding to browser history?",
+      "options": ["router.replace()", "router.push()", "router.back()", "router.forward()"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Angular Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Angular Basics", "folder": "basics",
+      "topics": ["components_templates", "directives", "data_binding", "pipes", "services_di", "http_client", "routing"]
+    },
+    {
+      "type": "group", "title": "Forms & Pipes", "folder": "forms",
+      "topics": ["template_forms", "reactive_forms", "form_validation", "custom_pipes", "async_pipes"]
+    },
+    {
+      "type": "group", "title": "Advanced Angular", "folder": "advanced",
+      "topics": ["lifecycle_hooks", "signals", "guards_interceptors", "lazy_loading", "standalone_components", "content_projection", "change_detection"]
+    },
+    {
+      "type": "group", "title": "Testing & Deployment", "folder": "testing",
+      "topics": ["unit_testing", "integration_testing", "angular_cli", "deployment"]
+    }
+  ]
+}

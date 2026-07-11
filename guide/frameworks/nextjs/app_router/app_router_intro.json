@@ -1,0 +1,19 @@
+{
+  "title": "App Router Introduction",
+  "language": "nextjs",
+  "topic": "app_router_intro",
+  "content": "### App Router Overview\n\nIntroduced in Next.js 13, the App Router is a new paradigm built on **React Server Components** and streaming. It lives in the `app/` directory alongside (or replacing) the traditional `pages/` directory.\n\n### Special Files\n\nThe `app/` directory uses a convention of special files:\n\n| File | Purpose |\n|------|---------|\n| `page.js` | UI for a route |\n| `layout.js` | Shared wrapper for a segment |\n| `loading.js` | Loading UI (Suspense boundary) |\n| `error.js` | Error boundary UI |\n| `not-found.js` | 404 UI |\n| `route.js` | API endpoint |\n| `template.js` | Re-rendered layout wrapper |\n\n### Basic Structure\n\n```\napp/\n  layout.js        # Root layout (required)\n  page.js          # Home page (/)\n  about/\n    page.js        # /about\n  blog/\n    layout.js      # Blog section layout\n    page.js        # /blog\n    [slug]/\n      page.js      # /blog/my-post\n```\n\n### App vs Pages Router\n\n| Feature | Pages Router | App Router |\n|---------|-------------|------------|\n| Rendering | SSG, SSR | Server Components by default |\n| Data Fetching | getStaticProps, getServerSideProps | Direct async components, fetch() |\n| Layouts | Custom patterns | Built-in layout.js |\n| Streaming | Not supported | Supported via loading.js |\n| Mutations | Custom API routes | Server Actions |\n\n### Getting Started\n\nTo use the App Router, create an `app/` directory at your project root. Next.js will automatically prefer it over `pages/` for routes that exist in both.\n\n```jsx\n// app/page.js — Home page\nexport default function Home() {\n  return <h1>Hello, App Router!</h1>;\n}\n\n// app/layout.js — Root layout (required)\nexport default function RootLayout({ children }) {\n  return (\n    <html lang=\"en\">\n      <body>{children}</body>\n    </html>\n  );\n}\n```",
+  "codeExample": "// app/layout.js (required)\nexport default function RootLayout({ children }) {\n  return (\n    <html lang=\"en\">\n      <body>\n        <header>My App</header>\n        {children}\n        <footer>&copy; 2024</footer>\n      </body>\n    </html>\n  );\n}\n\n// app/page.js\nexport default function Home() {\n  return <h1>Welcome to App Router</h1>;\n}",
+  "quiz": [
+    {
+      "question": "Which file is required in every route segment of the App Router?",
+      "options": ["page.js", "layout.js", "index.js", "route.js"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What technology powers the App Router?",
+      "options": ["React Server Components", "Client Components only", "Web Components", "jQuery"],
+      "correctIndex": 0
+    }
+  ]
+}

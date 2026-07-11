@@ -1,0 +1,19 @@
+{
+  "title": "Vue Instance",
+  "language": "vue",
+  "topic": "instance",
+  "content": "### The Application Instance\n\nEvery Vue app starts with an application instance created by `createApp()`.\n\n```js\nimport { createApp } from 'vue'\nimport App from './App.vue'\n\nconst app = createApp(App)\n```\n\n### app.config\n\nThe app instance exposes a `config` object for global configuration:\n\n```js\napp.config.globalProperties.$version = '1.0.0'\napp.config.warnHandler = (msg, instance, trace) => {\n  console.warn(msg)\n}\napp.config.errorHandler = (err, instance, info) => {\n  console.error(err)\n}\n```\n\n### app.use() for Plugins\n\nPlugins are installed with `app.use()`. Common plugins include Vue Router and Pinia:\n\n```js\nimport { createRouter } from 'vue-router'\nimport { createPinia } from 'pinia'\n\napp.use(router)\napp.use(createPinia())\n```\n\n### Component Registration\n\n**Global registration** makes a component available everywhere:\n\n```js\nimport MyButton from './MyButton.vue'\napp.component('MyButton', MyButton)\n```\n\n**Local registration** scopes a component to a parent:\n\n```vue\n<script>\nimport MyButton from './MyButton.vue'\nexport default {\n  components: { MyButton }\n}\n</script>\n```",
+  "codeExample": "import { createApp } from 'vue'\nimport App from './App.vue'\nimport MyButton from './components/MyButton.vue'\n\nconst app = createApp(App)\n\napp.config.globalProperties.$appName = 'MyApp'\n\napp.component('MyButton', MyButton)\n\napp.mount('#app')",
+  "quiz": [
+    {
+      "question": "How do you register a component globally?",
+      "options": ["app.component()", "app.register()", "Vue.component()", "components: {}"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What method installs a plugin on the Vue app instance?",
+      "options": ["app.use()", "app.install()", "app.plugin()", "app.mount()"],
+      "correctIndex": 0
+    }
+  ]
+}

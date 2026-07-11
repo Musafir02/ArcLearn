@@ -1,0 +1,19 @@
+{
+  "title": "KeepAlive",
+  "language": "vue",
+  "topic": "keepalive",
+  "content": "### KeepAlive Component\n\n`<KeepAlive>` preserves a component's state when switching between dynamic components:\n\n```vue\n<KeepAlive>\n  <component :is=\"currentTab\" />\n</KeepAlive>\n```\n\nWithout KeepAlive, the component is destroyed when switched away. With KeepAlive, it stays alive in memory.\n\n### Include and Exclude\n\nControl which components are cached using `include` or `exclude` with component names:\n\n```vue\n<KeepAlive include=\"TabA,TabB\">\n  <component :is=\"currentTab\" />\n</KeepAlive>\n\n<!-- Regex or function -->\n<KeepAlive :include=\"/Tab|Panel/\">\n  <component :is=\"currentTab\" />\n</KeepAlive>\n```\n\n### Max\n\nLimit the number of cached instances:\n\n```vue\n<KeepAlive :max=\"10\">\n  <component :is=\"currentTab\" />\n</KeepAlive>\n```\n\nWhen the limit is exceeded, the least recently accessed instance is destroyed.\n\n### Lifecycle Hooks with KeepAlive\n\nCached components can use `activated` and `deactivated` hooks:\n\n```vue\n<script>\nexport default {\n  activated() {\n    console.log('Component was re-activated')\n  },\n  deactivated() {\n    console.log('Component was deactivated (cached)')\n  }\n}\n</script>\n```\n\nThese fire every time the component is switched to/from, unlike `mounted`/`unmounted` which fire only once.\n\n### Cache Invalidation\n\nTo manually invalidate a cache, change the `key` attribute on the inner component or use `include`/`exclude` dynamically.",
+  "codeExample": "<template>\n  <div>\n    <button v-for=\"tab in tabs\" :key=\"tab\" @click=\"currentTab = tab\">\n      {{ tab }}\n    </button>\n    <KeepAlive :max=\"3\">\n      <component :is=\"currentTabComponent\" />\n    </KeepAlive>\n  </div>\n</template>\n\n<script>\nimport TabA from './TabA.vue'\nimport TabB from './TabB.vue'\nimport TabC from './TabC.vue'\n\nexport default {\n  data() {\n    return {\n      tabs: ['A', 'B', 'C'],\n      currentTab: 'A'\n    }\n  },\n  computed: {\n    currentTabComponent() {\n      return this.currentTab === 'A' ? TabA : this.currentTab === 'B' ? TabB : TabC\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "What does the KeepAlive component do?",
+      "options": ["Preserves component state when switching away", "Destroys components on unmount", "Caches API responses", "Prevents component re-renders"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which lifecycle hooks are available for KeepAlive-cached components?",
+      "options": ["activated and deactivated", "mounted and unmounted", "cached and uncached", "born and died"],
+      "correctIndex": 0
+    }
+  ]
+}

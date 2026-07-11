@@ -1,0 +1,19 @@
+{
+  "title": "Layout Components",
+  "language": "nextjs",
+  "topic": "layout",
+  "content": "### Layout Component Pattern\n\nCreate reusable layouts to wrap pages. A layout is a React component that accepts `children`:\n\n```jsx\n// components/Layout.js\nexport default function Layout({ children }) {\n  return (\n    <div>\n      <header>\n        <nav>\n          <a href=\"/\">Home</a>\n          <a href=\"/blog\">Blog</a>\n        </nav>\n      </header>\n      <main>{children}</main>\n      <footer>&copy; 2024 My App</footer>\n    </div>\n  );\n}\n```\n\n### Using Layout in Pages\n\nWrap each page's content with the layout:\n\n```jsx\nimport Layout from '../components/Layout';\n\nexport default function Home() {\n  return (\n    <Layout>\n      <h1>Home Page</h1>\n    </Layout>\n  );\n}\n```\n\n### Custom App Component (_app.js)\n\nUse `_app.js` to persist the layout across all pages:\n\n```jsx\n// pages/_app.js\nimport Layout from '../components/Layout';\n\nexport default function App({ Component, pageProps }) {\n  return (\n    <Layout>\n      <Component {...pageProps} />\n    </Layout>\n  );\n}\n```\n\nThis avoids wrapping every page individually.\n\n### Nested Layouts\n\nFor different sections with their own layouts, create a page-level layout:\n\n```jsx\n// pages/dashboard.js\nexport default function Dashboard({ children }) {\n  return (\n    <div>\n      <aside>Dashboard sidebar</aside>\n      <main>{children}</main>\n    </div>\n  );\n}\n\n// In _app.js, check if page has its own layout\nfunction App({ Component, pageProps }) {\n  const getLayout = Component.getLayout || ((page) => <Layout>{page}</layout>);\n  return getLayout(<Component {...pageProps} />);\n}\n```",
+  "codeExample": "// pages/_app.js — Shared layout wrapper\nimport Layout from '../components/Layout';\n\nexport default function App({ Component, pageProps }) {\n  return (\n    <Layout>\n      <Component {...pageProps} />\n    </Layout>\n  );\n}\n\n// pages/contact.js\nexport default function Contact() {\n  return <h1>Contact Us</h1>;\n}",
+  "quiz": [
+    {
+      "question": "Which file wraps all pages with a shared layout?",
+      "options": ["pages/_app.js", "pages/_document.js", "pages/index.js", "pages/layout.js"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What prop does a Layout component receive to render page content?",
+      "options": ["children", "content", "page", "body"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Lazy Loading",
+  "language": "angular",
+  "topic": "lazy_loading",
+  "content": "### What is Lazy Loading?\n\nLazy loading loads feature modules **on demand** rather than at initial application load. This reduces the initial bundle size and improves startup time.\n\n### Lazy Loading with NgModules\n\nUse `loadChildren` in routing configuration:\n\n```typescript\nconst routes: Routes = [\n  { path: '', component: HomeComponent },\n  {\n    path: 'products',\n    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)\n  },\n  {\n    path: 'admin',\n    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)\n  }\n];\n```\n\nThe `ProductsModule` defines its own routes:\n\n```typescript\n@NgModule({\n  imports: [\n    RouterModule.forChild([\n      { path: '', component: ProductListComponent },\n      { path: ':id', component: ProductDetailComponent }\n    ])\n  ]\n})\nexport class ProductsModule { }\n```\n\n### Lazy Loading with Standalone Components\n\nAngular 14+ supports lazy loading standalone components directly without NgModules:\n\n```typescript\nconst routes: Routes = [\n  {\n    path: 'products',\n    loadComponent: () => import('./products/product-list.component').then(m => m.ProductListComponent)\n  },\n  {\n    path: 'products/:id',\n    loadComponent: () => import('./products/product-detail.component').then(m => m.ProductDetailComponent)\n  }\n];\n```\n\n### Preloading Strategies\n\nAfter the initial bundle loads, you can preload lazy modules in the background:\n\n```typescript\nimport { PreloadAllModules, NoPreloading } from '@angular/router';\n\n// Preload all lazy modules after initial load\n@NgModule({\n  imports: [RouterModule.forRoot(routes, {\n    preloadingStrategy: PreloadAllModules\n  })]\n})\n\n// No preloading (default)\n@NgModule({\n  imports: [RouterModule.forRoot(routes, {\n    preloadingStrategy: NoPreloading\n  })]\n})\n```\n\n### Custom Preloading Strategy\n\n```typescript\n@Injectable({ providedIn: 'root' })\nexport class CustomPreloader implements PreloadingStrategy {\n  preload(route: Route, load: () => Observable<any>): Observable<any> {\n    // Only preload routes with `data: { preload: true }`\n    return route.data?.['preload'] ? load() : of(null);\n  }\n}\n\n// Usage in routes\n{ path: 'dashboard', loadChildren: ..., data: { preload: true } }\n\n// Apply\nRouterModule.forRoot(routes, { preloadingStrategy: CustomPreloader })\n```\n\n### Build Output\n\nWith lazy loading, Angular CLI produces separate chunk files:\n```\ndist/\n├── main.js          # Main bundle\n├── polyfills.js     # Polyfills\n├── styles.css       # Global styles\n├── products-module.js  # Lazy chunk\n└── admin-module.js     # Lazy chunk\n```\n\n### Benefits\n\n- Faster initial load time\n- Smaller initial bundle\n- Code splitting without manual configuration\n- Better performance on slow networks",
+  "codeExample": "const routes: Routes = [\n  { path: '', component: HomeComponent },\n  {\n    path: 'admin',\n    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)\n  },\n  {\n    path: 'dashboard',\n    loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent)\n  }\n];\n\n// Enable preloading\nRouterModule.forRoot(routes, {\n  preloadingStrategy: PreloadAllModules\n})",
+  "quiz": [
+    {
+      "question": "Which route property is used to lazy load an NgModule?",
+      "options": ["loadChildren", "loadComponent", "component", "children"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does PreloadAllModules do?",
+      "options": ["Loads lazy modules in the background after initial load", "Loads all modules synchronously", "Prevents modules from loading", "Removes unused modules from the build"],
+      "correctIndex": 0
+    }
+  ]
+}

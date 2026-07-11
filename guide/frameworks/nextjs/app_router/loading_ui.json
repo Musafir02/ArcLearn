@@ -1,0 +1,19 @@
+{
+  "title": "Loading UI and Streaming",
+  "language": "nextjs",
+  "topic": "loading_ui",
+  "content": "### Instant Loading States\n\nThe `loading.js` file creates a Suspense boundary that shows a fallback UI while the page component loads:\n\n```jsx\n// app/dashboard/loading.js\nexport default function Loading() {\n  return (\n    <div className=\"spinner\">\n      <p>Loading dashboard...</p>\n    </div>\n  );\n}\n```\n\nThe page content streams in once it's ready, replacing the loading state automatically.\n\n### How It Works\n\nNext.js wraps `page.js` and nested children in a Suspense boundary. The `loading.js` component serves as the `fallback` prop:\n\n```jsx\n// Internally, Next.js does something like:\n<Layout>\n  <Suspense fallback={<Loading />}>\n    <Page />\n  </Suspense>\n</Layout>\n```\n\n### Streaming SSR\n\nWith streaming, the server sends HTML in chunks as it becomes available. Users see content sooner instead of waiting for the full page:\n\n```jsx\n// app/dashboard/page.js — Data-dependent component\nasync function getData() {\n  const res = await fetch('https://api.example.com/slow-data');\n  return res.json();\n}\n\nexport default async function Dashboard() {\n  const data = await getData(); // This causes the loading state\n\n  return (\n    <div>\n      <h1>Dashboard</h1>\n      <pre>{JSON.stringify(data, null, 2)}</pre>\n    </div>\n  );\n}\n```\n\n### Granular Suspense Boundaries\n\nFor more control, use Suspense directly:\n\n```jsx\nimport { Suspense } from 'react';\n\nasync function SlowComponent() {\n  const data = await fetch('https://api.example.com/slow').then(r => r.json());\n  return <div>{data.content}</div>;\n}\n\nfunction Fallback() {\n  return <div className=\"skeleton\">Loading...</div>;\n}\n\nexport default function Page() {\n  return (\n    <div>\n      <h1>Page Title</h1>\n      <Suspense fallback={<Fallback />}>\n        <SlowComponent />\n      </Suspense>\n    </div>\n  );\n}\n```\n\n### Route Group Loading\n\nPlace `loading.js` at any segment level to show loading UI for that route and its children.",
+  "codeExample": "// app/posts/loading.js\nexport default function PostsLoading() {\n  return (\n    <div className=\"grid gap-4\">\n      {[1, 2, 3].map((i) => (\n        <div key={i} className=\"animate-pulse h-24 bg-gray-200 rounded\"></div>\n      ))}\n    </div>\n  );\n}\n\n// app/posts/page.js\nasync function getPosts() {\n  return fetch('https://api.example.com/posts').then(r => r.json());\n}\n\nexport default async function PostsPage() {\n  const posts = await getPosts();\n  return (\n    <div>\n      {posts.map(p => (\n        <div key={p.id} className=\"p-4 border\">{p.title}</div>\n      ))}\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does loading.js provide in the App Router?",
+      "options": ["A Suspense fallback UI while the page loads", "A preloader for all images", "A database connection loader", "A webpack bundle optimizer"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the benefit of streaming SSR?",
+      "options": ["Users see content sooner as HTML chunks arrive", "Pages load faster by skipping JavaScript", "It reduces server costs", "It eliminates the need for loading states"],
+      "correctIndex": 0
+    }
+  ]
+}

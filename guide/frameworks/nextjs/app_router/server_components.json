@@ -1,0 +1,19 @@
+{
+  "title": "React Server Components",
+  "language": "nextjs",
+  "topic": "server_components",
+  "content": "### What are Server Components?\n\nReact Server Components (RSC) are components that run **exclusively on the server**. They never send JavaScript to the client, reducing bundle size and improving performance.\n\n### Benefits\n\n- **Zero Client JavaScript**: Server components don't add to the client bundle\n- **Direct Backend Access**: Query databases, read files, access APIs directly\n- **Automatic Code Splitting**: Only client components are bundled for the browser\n- **Improved SEO**: HTML is fully rendered on the server\n- **Security**: Sensitive logic stays server-side\n\n### Async Server Components\n\nServer components can be async functions:\n\n```jsx\n// app/posts/page.js\nexport default async function Posts() {\n  const posts = await fetch('https://api.example.com/posts').then(r => r.json());\n\n  return (\n    <ul>\n      {posts.map(post => (\n        <li key={post.id}>{post.title}</li>\n      ))}\n    </ul>\n  );\n}\n```\n\n### Direct Database Access\n\nNo need for API routes — connect directly:\n\n```jsx\nimport db from '@/lib/db';\n\nexport default async function Users() {\n  const users = await db.query('SELECT * FROM users');\n\n  return (\n    <ul>\n      {users.map(user => (\n        <li key={user.id}>{user.name}</li>\n      ))}\n    </ul>\n  );\n}\n```\n\n### Server-Only Code\n\nUse the `server-only` package to prevent client bundling:\n\n```bash\nnpm install server-only\n```\n\n```jsx\nimport 'server-only';\n\n// This code will error if imported by a client component\nexport const apiKey = process.env.SECRET_API_KEY;\nexport async function getData() {\n  // sensitive logic\n}\n```\n\n### What Server Components Cannot Do\n\n- Cannot use hooks (`useState`, `useEffect`, `useContext`)\n- Cannot use browser APIs\n- Cannot handle user interactions (onClick, onChange)\n- Cannot use event listeners\n\nFor interactivity, extract a Client Component.\n\n### Default in App Router\n\nAll components in the App Router are **Server Components by default**. To make a Client Component, add `'use client'` at the top of the file.",
+  "codeExample": "// app/page.js — Server Component (default)\nimport 'server-only';\n\nexport default async function Home() {\n  const data = await fetch('https://api.example.com/data', {\n    cache: 'no-store',\n  }).then(r => r.json());\n\n  return (\n    <div>\n      <h1>Server Rendered</h1>\n      <ul>\n        {data.items.map(item => (\n          <li key={item.id}>{item.name}</li>\n        ))}\n      </ul>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What is a key benefit of Server Components?",
+      "options": ["They reduce client-side JavaScript bundle size", "They are faster than client components", "They can use React hooks", "They run in the browser"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you prevent server-only code from being bundled client-side?",
+      "options": ["Use the 'server-only' package", "Use 'use server' directive", "Put code in .server.js files", "Set a config flag"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Composition API",
+  "language": "vue",
+  "topic": "composition_api",
+  "content": "### setup() Function\n\nIntroduced in Vue 3, the Composition API organizes component logic by feature, not by options:\n\n```vue\n<script>\nimport { ref, computed } from 'vue'\nexport default {\n  setup() {\n    const count = ref(0)\n    const double = computed(() => count.value * 2)\n\n    function increment() {\n      count.value++\n    }\n\n    return { count, double, increment }\n  }\n}\n</script>\n```\n\n### ref vs reactive\n\n- **`ref`**: Wraps a primitive (or object) in a reactive reference. Access via `.value`.\n- **`reactive`**: Wraps an object deeply. Direct property access, no `.value`.\n\n```js\nimport { ref, reactive } from 'vue'\n\nconst count = ref(0)\ncount.value++\n\nconst state = reactive({ count: 0, name: 'Vue' })\nstate.count++\n```\n\n### toRefs\n\nConverts a reactive object to plain refs, preserving reactivity when destructuring:\n\n```js\nimport { reactive, toRefs } from 'vue'\n\nconst state = reactive({ x: 0, y: 0 })\nconst { x, y } = toRefs(state)\n// x and y are refs, state.x changes will update x.value\n```\n\n### computed with Composition\n\n```js\nimport { ref, computed } from 'vue'\n\nconst firstName = ref('John')\nconst lastName = ref('Doe')\nconst fullName = computed(() => `${firstName.value} ${lastName.value}`)\n```\n\n### watch in Composition\n\n```js\nimport { ref, watch } from 'vue'\n\nconst count = ref(0)\nwatch(count, (newVal, oldVal) => {\n  console.log(`Count changed: ${oldVal} → ${newVal}`)\n})\n```\n\n### provide/inject\n\n```js\nimport { provide, inject } from 'vue'\n\n// Ancestor\nprovide('theme', 'dark')\n\n// Descendant\nconst theme = inject('theme', 'light') // default: light\n```",
+  "codeExample": "<script>\nimport { ref, reactive, computed, watch, toRefs } from 'vue'\n\nexport default {\n  setup() {\n    const count = ref(0)\n    const state = reactive({ firstName: 'Jane', lastName: 'Doe' })\n\n    const fullName = computed(() => `${state.firstName} ${state.lastName}`)\n\n    watch(count, (val) => {\n      document.title = `Count: ${val}`\n    })\n\n    function increment() {\n      count.value++\n    }\n\n    return { count, ...toRefs(state), fullName, increment }\n  }\n}\n</script>\n\n<template>\n  <div>\n    <p>{{ firstName }} {{ lastName }}</p>\n    <p>Count: {{ count }}</p>\n    <button @click=\"increment\">+</button>\n  </div>\n</template>",
+  "quiz": [
+    {
+      "question": "How do you access a ref's value in JavaScript?",
+      "options": [".value", "ref.value", "ref()", "getValue()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which function converts a reactive object's properties to individual refs?",
+      "options": ["toRefs", "toRef", "fromReactive", "refs"],
+      "correctIndex": 0
+    }
+  ]
+}

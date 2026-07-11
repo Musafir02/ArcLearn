@@ -1,0 +1,19 @@
+{
+  "title": "Pinia State Management",
+  "language": "vue",
+  "topic": "pinia_state",
+  "content": "### Pinia vs Vuex\n\nPinia is the official state management library for Vue 3, replacing Vuex:\n\n| Feature | Pinia | Vuex |\n|---|---|---|\n| API Design | Composition-first | Options-first |\n| TypeScript | Full support | Manual setup |\n| Mutations | Not needed (direct mutation) | Required |\n| Devtools | Full support | Full support |\n| Bundle size | ~1 KB | ~9 KB |\n\n### defineStore\n\n```js\nimport { defineStore } from 'pinia'\n\nexport const useCounterStore = defineStore('counter', {\n  state: () => ({ count: 0 }),\n  getters: {\n    double: (state) => state.count * 2\n  },\n  actions: {\n    increment() {\n      this.count++\n    }\n  }\n})\n```\n\n### Using a Store\n\n```vue\n<script>\nimport { useCounterStore } from '@/stores/counter'\nexport default {\n  setup() {\n    const store = useCounterStore()\n    return { store }\n  }\n}\n</script>\n\n<template>\n  <p>{{ store.count }}</p>\n  <p>Double: {{ store.double }}</p>\n  <button @click=\"store.increment()\">Add</button>\n</template>\n```\n\n### Setup Stores vs Options Stores\n\n**Options store** (declarative):\n\n```js\nexport const useStore = defineStore('id', {\n  state: () => ({ ... }),\n  getters: { ... },\n  actions: { ... }\n})\n```\n\n**Setup store** (composition-style):\n\n```js\nexport const useStore = defineStore('id', () => {\n  const count = ref(0)\n  const double = computed(() => count.value * 2)\n  function increment() { count.value++ }\n  return { count, double, increment }\n})\n```\n\n### Installing Pinia\n\n```js\nimport { createPinia } from 'pinia'\n\nconst app = createApp(App)\napp.use(createPinia())\napp.mount('#app')\n```",
+  "codeExample": "// stores/user.js\nimport { defineStore } from 'pinia'\n\nexport const useUserStore = defineStore('user', () => {\n  const name = ref('')\n  const isLoggedIn = computed(() => name.value !== '')\n\n  function login(username) {\n    name.value = username\n  }\n  function logout() {\n    name.value = ''\n  }\n\n  return { name, isLoggedIn, login, logout }\n})\n\n// Component\n// <script setup>\n// import { useUserStore } from '@/stores/user'\n// const user = useUserStore()\n// </script>\n//\n// <template>\n//   <p v-if=\"user.isLoggedIn\">Welcome, {{ user.name }}!</p>\n//   <button v-else @click=\"user.login('Guest')\">Login</button>\n// </template>",
+  "quiz": [
+    {
+      "question": "Does Pinia require mutations like Vuex?",
+      "options": ["No, you can mutate state directly", "Yes, mutations are mandatory", "Only for async actions", "Only in options stores"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What function creates a Pinia store?",
+      "options": ["defineStore", "createStore", "useStore", "definePinia"],
+      "correctIndex": 0
+    }
+  ]
+}

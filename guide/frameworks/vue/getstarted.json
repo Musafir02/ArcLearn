@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with Vue.js",
+  "language": "vue",
+  "topic": "getstarted",
+  "content": "### Vue CLI / create-vue\n\nVue 3 recommends using `create-vue` — the official project scaffolding tool built on Vite.\n\n### Creating a New Project\n\n```bash\nnpm create vue@latest\n```\n\nYou'll be prompted to select optional features like TypeScript, Vue Router, Pinia, and testing tools.\n\n### Project Structure\n\n```\nmy-vue-app/\n├── index.html          # Entry HTML file\n├── vite.config.js      # Vite configuration\n├── package.json\n├── public/\n└── src/\n    ├── main.js         # App entry point\n    ├── App.vue         # Root component\n    ├── components/     # Reusable components\n    ├── assets/         # Static assets\n    └── router/         # Router config (if installed)\n```\n\n### The Entry Point (main.js)\n\n```js\nimport { createApp } from 'vue'\nimport App from './App.vue'\nimport router from './router'\n\nconst app = createApp(App)\napp.use(router)\napp.mount('#app')\n```\n\n### Running the Dev Server\n\n```bash\nnpm run dev\n```\n\nThis starts Vite's dev server with hot module replacement (HMR). Changes to your components reflect instantly.\n\n### createApp and Mounting\n\n- `createApp(component)` creates the application instance\n- `app.mount(selector)` mounts the root component to the DOM\n- `app.use(plugin)` installs plugins like Vue Router or Pinia",
+  "codeExample": "<template>\n  <div>\n    <h2>Counter: {{ count }}</h2>\n    <button @click=\"increment\">+1</button>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { count: 0 }\n  },\n  methods: {\n    increment() {\n      this.count++\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "Which command scaffolds a new Vue 3 project?",
+      "options": ["npm create vue@latest", "npm init vue", "vue create my-app", "npm new vue"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What function is used to create a Vue application instance?",
+      "options": ["createApp()", "new Vue()", "Vue.create()", "initApp()"],
+      "correctIndex": 0
+    }
+  ]
+}

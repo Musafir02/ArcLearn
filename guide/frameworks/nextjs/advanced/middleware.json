@@ -1,0 +1,19 @@
+{
+  "title": "Middleware",
+  "language": "nextjs",
+  "topic": "middleware",
+  "content": "### What is Middleware?\n\nMiddleware runs code **before a request completes**. It executes at the edge, allowing you to modify the request/response before pages or API routes handle them.\n\n### Creating Middleware\n\nCreate `middleware.ts` (or `.js`) at the root of your project (same level as `app/` or `pages/`):\n\n```ts\n// middleware.ts\nimport { NextResponse } from 'next/server';\nimport type { NextRequest } from 'next/server';\n\nexport function middleware(request: NextRequest) {\n  console.log('Middleware running for:', request.url);\n  return NextResponse.next();\n}\n```\n\n### Matcher Config\n\nControl which paths trigger middleware:\n\n```ts\nexport const config = {\n  matcher: [\n    '/dashboard/:path*',\n    '/api/:path*',\n    '/((?!api|_next/static|_next/image|favicon.ico).*)',\n  ],\n};\n```\n\n### Request Rewriting\n\nRewrite URLs without changing the browser address:\n\n```ts\nimport { NextResponse } from 'next/server';\n\nexport function middleware(request: NextRequest) {\n  if (request.nextUrl.pathname === '/old-path') {\n    return NextResponse.rewrite(new URL('/new-path', request.url));\n  }\n}\n```\n\n### Redirects\n\nRedirect users:\n\n```ts\nexport function middleware(request: NextRequest) {\n  const country = request.geo?.country || 'US';\n\n  if (country === 'DE') {\n    return NextResponse.redirect(new URL('/de', request.url));\n  }\n}\n```\n\n### Headers Modification\n\nAdd or modify response headers:\n\n```ts\nexport function middleware(request: NextRequest) {\n  const requestHeaders = new Headers(request.headers);\n  requestHeaders.set('x-custom-header', 'hello');\n\n  const response = NextResponse.next({\n    request: { headers: requestHeaders },\n  });\n\n  response.headers.set('x-response-custom', 'from-middleware');\n  return response;\n}\n```\n\n### Authentication Checks\n\n```ts\nimport { NextResponse } from 'next/server';\n\nexport function middleware(request: NextRequest) {\n  const token = request.cookies.get('auth-token')?.value;\n  const isAuthPage = request.nextUrl.pathname.startsWith('/login');\n\n  if (!token && !isAuthPage) {\n    return NextResponse.redirect(new URL('/login', request.url));\n  }\n\n  if (token && isAuthPage) {\n    return NextResponse.redirect(new URL('/dashboard', request.url));\n  }\n\n  return NextResponse.next();\n}\n\nexport const config = {\n  matcher: ['/dashboard/:path*', '/profile/:path*', '/login'],\n};\n```",
+  "codeExample": "import { NextResponse } from 'next/server';\nimport type { NextRequest } from 'next/server';\n\nexport function middleware(request: NextRequest) {\n  const { pathname } = request.nextUrl;\n  const isAuthenticated = request.cookies.has('session');\n\n  const protectedPaths = ['/dashboard', '/profile', '/settings'];\n  const isProtected = protectedPaths.some(p => pathname.startsWith(p));\n\n  if (isProtected && !isAuthenticated) {\n    const loginUrl = new URL('/login', request.url);\n    loginUrl.searchParams.set('redirect', pathname);\n    return NextResponse.redirect(loginUrl);\n  }\n\n  return NextResponse.next();\n}\n\nexport const config = {\n  matcher: ['/dashboard/:path*', '/profile/:path*', '/settings/:path*', '/login'],\n};",
+  "quiz": [
+    {
+      "question": "Where should middleware.ts be placed?",
+      "options": ["Root of the project (same level as app/)", "Inside the pages/ directory", "Inside the app/ directory", "Inside the middleware/ directory"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which method rewrites a URL without changing the browser address?",
+      "options": ["NextResponse.rewrite()", "NextResponse.redirect()", "NextResponse.next()", "NextResponse.json()"],
+      "correctIndex": 0
+    }
+  ]
+}

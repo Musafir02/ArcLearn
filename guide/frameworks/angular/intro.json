@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Angular",
+  "language": "angular",
+  "topic": "intro",
+  "content": "### What is Angular?\n\nAngular is a **TypeScript-based open-source web application framework** developed and maintained by Google. It is a complete rewrite of AngularJS (1.x) and is designed for building dynamic, large-scale single-page applications (SPAs).\n\n### Key Features\n\n- **Component Architecture** — The UI is built from a tree of components, each with its own template, styles, and logic. Components are the fundamental building blocks.\n- **Modules (NgModules)** — Angular organizes code into modules using the `@NgModule` decorator. The root module (`AppModule`) bootstraps the application. Feature modules encapsulate related functionality.\n- **Dependency Injection (DI)** — Angular has a built-in DI system that makes services available across the application without manual instantiation.\n- **RxJS (Reactive Extensions)** — Angular uses RxJS Observables extensively for handling asynchronous operations like HTTP requests, form value changes, and event streams.\n- **CLI Tools** — The Angular CLI (`ng`) provides scaffolding, build optimization, testing, and deployment commands out of the box.\n\n### Angular vs React vs Vue\n\n| Feature | Angular | React | Vue |\n|---------|---------|-------|-----|\n| Type | Full framework | Library (UI) | Progressive framework |\n| Language | TypeScript | JavaScript/TSX | JavaScript/HTML |\n| Data Binding | Two-way (banana box) | One-way (unidirectional) | Two-way |\n| State Management | Services + RxJS | useState / Redux | Pinia / Vuex |\n| Routing | Built-in `@angular/router` | react-router (external) | vue-router (official) |\n| Forms | Template-driven & Reactive | Manual state | v-model |\n| DI | Built-in | Manual / Context | Provide / Inject |\n| Learning Curve | Steep | Moderate | Gentle |\n\nAngular provides a **batteries-included** experience with built-in routing, HTTP client, forms, and testing utilities — whereas React requires piecing together libraries from the ecosystem.",
+  "codeExample": "// Minimal Angular component\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-hello',\n  template: '<h1>Hello {{ name }}!</h1>',\n  standalone: true\n})\nexport class HelloComponent {\n  name = 'Angular';\n}",
+  "quiz": [
+    {
+      "question": "What language is Angular built with?",
+      "options": ["TypeScript", "JavaScript", "Dart", "Java"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following is a built-in Angular feature, not available in React?",
+      "options": ["Dependency Injection", "Component-based UI", "Virtual DOM", "JSX syntax"],
+      "correctIndex": 0
+    }
+  ]
+}

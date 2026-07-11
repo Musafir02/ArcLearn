@@ -1,0 +1,19 @@
+{
+  "title": "Error Handling",
+  "language": "nextjs",
+  "topic": "error_handling",
+  "content": "### Error Boundaries with error.js\n\nThe `error.js` file creates a React Error Boundary that catches errors in its segment:\n\n```jsx\n'use client'; // Error boundaries must be Client Components\n\nexport default function Error({ error, reset }) {\n  return (\n    <div>\n      <h2>Something went wrong!</h2>\n      <p>{error.message}</p>\n      <button onClick={() => reset()}>Try again</button>\n    </div>\n  );\n}\n```\n\n### Error Component Props\n\n- `error` — the Error object thrown\n- `reset` — function to re-render the segment\n\n### Nested Error Boundaries\n\n`error.js` files wrap their segment and all children. Place them at different levels:\n\n```\napp/\n  error.js            # Catches errors for the entire app\n  dashboard/\n    error.js          # Catches errors in /dashboard only\n    page.js\n  blog/\n    [slug]/\n      error.js        # Catches errors for individual blog posts\n      page.js\n```\n\n### Global Error Handling\n\n`global-error.js` is the fallback for the root layout:\n\n```jsx\n// app/global-error.js\n'use client';\n\nexport default function GlobalError({ error, reset }) {\n  return (\n    <html>\n      <body>\n        <h2>Fatal error</h2>\n        <button onClick={() => reset()}>Reload</button>\n      </body>\n    </html>\n  );\n}\n```\n\n### Not Found Pages\n\n`not-found.js` handles 404 errors:\n\n```jsx\n// app/not-found.js\nexport default function NotFound() {\n  return (\n    <div>\n      <h2>Page Not Found</h2>\n      <p>The page you're looking for does not exist.</p>\n      <a href=\"/\">Go home</a>\n    </div>\n  );\n}\n```\n\nTrigger 404 programmatically with `notFound()` from `next/navigation`:\n\n```jsx\nimport { notFound } from 'next/navigation';\n\nexport default async function Post({ params }) {\n  const post = await getPost(params.slug);\n\n  if (!post) {\n    notFound();\n  }\n\n  return <div>{post.title}</div>;\n}\n```\n\n### Recovering from Errors\n\nThe `reset()` function attempts to re-render the segment. If the error was transient (network timeout), the page might recover successfully.",
+  "codeExample": "'use client';\n\nexport default function Error({ error, reset }) {\n  return (\n    <div className=\"error-container\">\n      <h2>Error: {error.message}</h2>\n      <p>An unexpected error occurred. Please try again.</p>\n      <button\n        onClick={() => reset()}\n        className=\"retry-button\"\n      >\n        Try Again\n      </button>\n    </div>\n  );\n}\n\n// Usage in page:\n// app/dashboard/page.js\nexport default async function Dashboard() {\n  const data = await fetchData(); // Errors caught by error.js\n  return <div>{/* render data */}</div>;\n}",
+  "quiz": [
+    {
+      "question": "What directive must error.js use?",
+      "options": ["'use client'", "'use server'", "'use error'", "'use boundary'"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the reset function do in an error boundary?",
+      "options": ["Re-renders the error boundary's content", "Reloads the entire page", "Resets the server", "Clears browser cache"],
+      "correctIndex": 0
+    }
+  ]
+}

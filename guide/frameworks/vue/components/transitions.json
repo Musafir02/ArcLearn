@@ -1,0 +1,19 @@
+{
+  "title": "Transitions",
+  "language": "vue",
+  "topic": "transitions",
+  "content": "### Transition Component\n\nVue provides a `<Transition>` wrapper component for enter/leave animations:\n\n```vue\n<Transition>\n  <p v-if=\"show\">Animated text</p>\n</Transition>\n```\n\n### CSS Transition Classes\n\nVue automatically applies CSS classes during transitions:\n\n| Class | Description |\n|---|---|\n| `.v-enter-from` | Starting state for enter |\n| `.v-enter-active` | Active state for enter (duration, easing) |\n| `.v-enter-to` | Ending state for enter |\n| `.v-leave-from` | Starting state for leave |\n| `.v-leave-active` | Active state for leave |\n| `.v-leave-to` | Ending state for leave |\n\n```css\n.fade-enter-active, .fade-leave-active {\n  transition: opacity 0.3s ease;\n}\n.fade-enter-from, .fade-leave-to {\n  opacity: 0;\n}\n```\n\nUse the `name` prop to prefix classes: `<Transition name=\"fade\">` → `.fade-enter-active`.\n\n### JavaScript Hooks\n\n```vue\n<Transition\n  @before-enter=\"onBeforeEnter\"\n  @enter=\"onEnter\"\n  @after-enter=\"onAfterEnter\"\n  @before-leave=\"onBeforeLeave\"\n  @leave=\"onLeave\"\n  @after-leave=\"onAfterLeave\"\n>\n  <p v-if=\"show\">Content</p>\n</Transition>\n```\n\n### Transition Modes\n\n- `out-in`: Current element leaves first, new element enters after\n- `in-out`: New element enters first, current leaves after\n\n```vue\n<Transition mode=\"out-in\">\n  <p :key=\"currentView\">{{ currentView }}</p>\n</Transition>\n```\n\n### Group Transitions\n\n`<TransitionGroup>` animates multiple elements in a list:\n\n```vue\n<TransitionGroup name=\"list\" tag=\"ul\">\n  <li v-for=\"item in items\" :key=\"item.id\">\n    {{ item.text }}\n  </li>\n</TransitionGroup>\n```\n\n`<TransitionGroup>` adds `.v-move` class for smooth reordering animation.",
+  "codeExample": "<template>\n  <div>\n    <button @click=\"show = !show\">Toggle</button>\n    <Transition name=\"fade\" mode=\"out-in\">\n      <p v-if=\"show\" key=\"on\">Visible</p>\n      <p v-else key=\"off\">Hidden</p>\n    </Transition>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() { return { show: true } }\n}\n</script>\n\n<style>\n.fade-enter-active, .fade-leave-active {\n  transition: opacity 0.3s ease;\n}\n.fade-enter-from, .fade-leave-to {\n  opacity: 0;\n}\n</style>",
+  "quiz": [
+    {
+      "question": "Which Transition mode ensures the leaving element exits before the entering element appears?",
+      "options": ["out-in", "in-out", "default", "sequential"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which component is used for animating multiple elements in a list?",
+      "options": ["TransitionGroup", "Transition", "TransitionList", "AnimateList"],
+      "correctIndex": 0
+    }
+  ]
+}

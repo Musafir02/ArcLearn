@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Vue.js",
+  "language": "vue",
+  "topic": "intro",
+  "content": "### What is Vue.js?\n\nVue.js is a **progressive JavaScript framework** for building user interfaces. It is designed to be incrementally adoptable — you can use it for a small part of a page or scale it up to build full single-page applications (SPAs).\n\n### Progressive Framework\n\nUnlike monolithic frameworks, Vue is built from the ground up to be flexible:\n- **Library mode**: Drop Vue into any existing page via a CDN script tag\n- **Framework mode**: Use the full toolchain with build tools, routing, and state management\n\n### Virtual DOM\n\nVue uses a **Virtual DOM** to optimize rendering. Instead of directly manipulating the browser DOM on every change, Vue creates a lightweight JavaScript representation of the UI, computes the difference (diffing), and applies only the necessary updates to the real DOM.\n\n### Reactivity System\n\nVue's reactivity system tracks dependencies and automatically updates the DOM when data changes. In Vue 3, this is powered by JavaScript Proxies, which intercept property access and mutation.\n\n### Comparison with React and Angular\n\n| Feature | Vue | React | Angular |\n|---|---|---|---|\n| Type | Progressive framework | UI library | Full framework |\n| Template | HTML-based (.vue) | JSX | HTML-based (.html) |\n| Learning Curve | Low | Moderate | High |\n| State Management | Pinia/Vuex | Redux/Zustand | NgRx/Service |\n| Bundle Size | ~33 KB gzipped | ~42 KB gzipped | ~143 KB gzipped |\n\n### Single-File Components (SFC)\n\nVue components are written in `.vue` files, which encapsulate template, script, and styles in one file:\n\n```vue\n<template>\n  <div class=\"greeting\">{{ message }}</div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return { message: 'Hello Vue!' }\n  }\n}\n</script>\n\n<style scoped>\n.greeting { color: green; }\n</style>\n```",
+  "codeExample": "<template>\n  <div id=\"app\">\n    <h1>{{ message }}</h1>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      message: 'Welcome to Vue.js!'\n    }\n  }\n}\n</script>\n\n<style>\nbody { font-family: sans-serif; }\nh1 { color: #42b883; }\n</style>",
+  "quiz": [
+    {
+      "question": "What does Vue.js use to optimize DOM updates?",
+      "options": ["Virtual DOM", "Shadow DOM", "Real DOM", "DOM diffing only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What powers Vue 3's reactivity system?",
+      "options": ["JavaScript Proxies", "Object.defineProperty", "Web Workers", "Service Workers"],
+      "correctIndex": 0
+    }
+  ]
+}

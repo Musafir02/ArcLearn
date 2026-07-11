@@ -1,0 +1,19 @@
+{
+  "title": "Lifecycle Hooks",
+  "language": "angular",
+  "topic": "lifecycle_hooks",
+  "content": "### What are Lifecycle Hooks?\n\nAngular calls lifecycle hook methods on components and directives at specific moments — from creation to destruction. They allow you to tap into key events and execute custom logic.\n\n### Hook Execution Order\n\n```\nConstructor     → Component class instantiated\nngOnChanges     → @Input properties change (first call before ngOnInit)\nngOnInit        → After first ngOnChanges, component initialized\nngDoCheck       → During every change detection run\nngAfterContentInit  → Content projection (ng-content) initialized\nngAfterContentChecked → After every content check\nngAfterViewInit     → Component's view (and child views) initialized\nngAfterViewChecked  → After every view check\nngOnDestroy     → Component about to be destroyed\n```\n\n### Detailed Hooks\n\n**ngOnChanges** — Called whenever `@Input()` properties change. Receives a `SimpleChanges` object:\n```typescript\nngOnChanges(changes: SimpleChanges) {\n  console.log('Changed:', changes);\n  // changes['propertyName'].currentValue\n  // changes['propertyName'].previousValue\n  // changes['propertyName'].firstChange\n}\n```\n\n**ngOnInit** — Called once after the first `ngOnChanges`. Used for initialization logic:\n```typescript\nngOnInit() {\n  this.loadData();\n  this.initializeForm();\n}\n```\n\n**ngDoCheck** — Called on every change detection cycle. Use with caution — can cause performance issues:\n```typescript\nngDoCheck() {\n  // Custom change detection logic\n}\n```\n\n**ngAfterContentInit** — Called once after content projection (`<ng-content>`) is initialized.\n\n**ngAfterContentChecked** — Called after every check of projected content.\n\n**ngAfterViewInit** — Called once after the component's view and child views are initialized. Safe to access `@ViewChild` / `@ViewChildren` here:\n```typescript\n@ViewChild('myDiv') myDiv: ElementRef;\n\nngAfterViewInit() {\n  console.log('View initialized:', this.myDiv.nativeElement);\n}\n```\n\n**ngAfterViewChecked** — Called after every check of the component's view.\n\n**ngOnDestroy** — Called when the component is about to be destroyed. Clean up subscriptions, timers, and event listeners:\n```typescript\nprivate destroy$ = new Subject<void>();\n\nngOnInit() {\n  this.userService.getUsers().pipe(\n    takeUntil(this.destroy$)\n  ).subscribe();\n}\n\nngOnDestroy() {\n  this.destroy$.next();\n  this.destroy$.complete();\n}\n```\n\n### Change Detection Triggers\n\nThese hooks are closely tied to Angular's change detection:\n- `ngDoCheck`, `ngAfterContentChecked`, `ngAfterViewChecked` — called on every change detection cycle.\n- `ngOnChanges` — called when bound input properties change.\n- Using `ChangeDetectionStrategy.OnPush` reduces how often hooks are called.",
+  "codeExample": "export class LifecycleDemoComponent implements OnInit, OnChanges, OnDestroy {\n  @Input() data: string;\n\n  ngOnChanges(changes: SimpleChanges) {\n    console.log('Input changed:', changes);\n  }\n\n  ngOnInit() {\n    console.log('Component initialized');\n  }\n\n  ngAfterViewInit() {\n    console.log('View ready');\n  }\n\n  ngOnDestroy() {\n    console.log('Cleanup');\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which lifecycle hook is called when @Input() properties change?",
+      "options": ["ngOnChanges", "ngOnInit", "ngDoCheck", "ngAfterViewInit"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which hook should you use to clean up subscriptions and prevent memory leaks?",
+      "options": ["ngOnDestroy", "ngOnInit", "ngAfterViewInit", "ngDoCheck"],
+      "correctIndex": 0
+    }
+  ]
+}

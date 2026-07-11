@@ -1,0 +1,19 @@
+{
+  "title": "Data Fetching in Nuxt",
+  "language": "vue",
+  "topic": "data_fetching",
+  "content": "### useFetch\n\n`useFetch` is the simplest way to fetch data in Nuxt 3. It works on both server and client:\n\n```vue\n<script setup>\nconst { data, pending, error, refresh } = await useFetch('/api/posts')\n</script>\n\n<template>\n  <div v-if=\"pending\">Loading...</div>\n  <div v-else-if=\"error\">Error: {{ error.message }}</div>\n  <ul v-else>\n    <li v-for=\"post in data\" :key=\"post.id\">{{ post.title }}</li>\n  </ul>\n</template>\n```\n\n### useAsyncData\n\n`useAsyncData` gives more control for complex fetching logic:\n\n```vue\n<script setup>\nconst { data: posts } = await useAsyncData('posts', () => {\n  return $fetch('/api/posts')\n})\n</script>\n```\n\n### Server-Only Data\n\nData fetched with `useFetch`/`useAsyncData` is fetched on the server during SSR and serialized to the client. This means the client receives ready HTML without making extra API calls.\n\n### Key for Caching\n\nThe first argument to `useAsyncData` is a unique key for deduplication and caching:\n\n```vue\n<script setup>\nconst { data } = await useAsyncData(`post-${id}`, () => {\n  return $fetch(`/api/posts/${id}`)\n})\n</script>\n```\n\nKeys prevent duplicate requests when the same data is needed in multiple components.\n\n### Refresh and Pending\n\n```vue\n<script setup>\nconst { data, pending, refresh } = useFetch('/api/data')\n\nasync function reload() {\n  await refresh()\n}\n</script>\n\n<template>\n  <div v-if=\"pending\">Refreshing...</div>\n  <div v-else>\n    <pre>{{ data }}</pre>\n    <button @click=\"reload\">Refresh</button>\n  </div>\n</template>\n```",
+  "codeExample": "<script setup>\nconst { data: posts, pending, error, refresh } = await useFetch('/api/posts', {\n  // Auto-refresh every 10 seconds\n  // Or revalidate on focus\n})\n\nconst id = ref(1)\nconst { data: singlePost } = await useAsyncData(\n  `post-${id.value}`,\n  () => $fetch(`/api/posts/${id.value}`),\n  { watch: [id] }\n)\n</script>\n\n<template>\n  <div>\n    <div v-if=\"pending\">Loading posts...</div>\n    <div v-else>\n      <article v-for=\"post in posts\" :key=\"post.id\">\n        <h2>{{ post.title }}</h2>\n        <p>{{ post.body.slice(0, 100) }}...</p>\n      </article>\n      <button @click=\"refresh\">Reload</button>\n    </div>\n  </div>\n</template>",
+  "quiz": [
+    {
+      "question": "Which Nuxt composable is used for simple data fetching?",
+      "options": ["useFetch", "useData", "fetchData", "getData"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the purpose of the key in useAsyncData?",
+      "options": ["Deduplication and caching", "Encryption", "Sorting", "Type safety"],
+      "correctIndex": 0
+    }
+  ]
+}

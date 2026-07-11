@@ -1,0 +1,19 @@
+{
+  "title": "Conditional Rendering",
+  "language": "vue",
+  "topic": "conditional_rendering",
+  "content": "### v-if, v-else-if, v-else\n\nDirectives for conditionally rendering elements:\n\n```vue\n<div v-if=\"type === 'A'\">Type A</div>\n<div v-else-if=\"type === 'B'\">Type B</div>\n<div v-else>Other</div>\n```\n\nOnly the matching branch is rendered to the DOM.\n\n### v-show\n\n`v-show` toggles the `display` CSS property — the element is always rendered:\n\n```vue\n<div v-show=\"isVisible\">Always in DOM</div>\n```\n\n### v-if vs v-show\n\n| Aspect | v-if | v-show |\n|---|---|---|\n| Rendering | Lazy (renders only when true) | Eager (always rendered) |\n| Toggle cost | High (destroys/creates DOM) | Low (toggles display) |\n| Initial cost | Low if false | High (always renders) |\n| Use case | Rare toggles, conditional subtrees | Frequent toggles |\n| v-else support | Yes | No |\n\n### template v-if\n\nUse `<template>` as a wrapper to toggle multiple elements without adding a DOM node:\n\n```vue\n<template v-if=\"isLoggedIn\">\n  <h1>Welcome</h1>\n  <p>You are logged in.</p>\n</template>\n```\n\n### Caution: v-if and v-for\n\nWhen used together, `v-if` has higher priority than `v-for` in Vue 3. To conditionally render items in a loop, use a wrapper `<template>`:\n\n```vue\n<template v-for=\"item in items\" :key=\"item.id\">\n  <li v-if=\"item.visible\">{{ item.name }}</li>\n</template>\n```",
+  "codeExample": "<template>\n  <div>\n    <div v-if=\"status === 'loading'\">Loading...</div>\n    <div v-else-if=\"status === 'error'\">Error occurred</div>\n    <div v-else>\n      <p v-show=\"showDetails\">Details are visible</p>\n      <button @click=\"showDetails = !showDetails\">Toggle Details</button>\n    </div>\n    <button @click=\"cycleStatus\">Cycle Status</button>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      status: 'loading',\n      showDetails: false\n    }\n  },\n  methods: {\n    cycleStatus() {\n      const states = ['loading', 'error', 'success']\n      const idx = states.indexOf(this.status)\n      this.status = states[(idx + 1) % states.length]\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "What is the key difference between v-if and v-show?",
+      "options": ["v-if removes/adds DOM, v-show toggles display CSS", "v-if is faster for frequent toggles", "v-show supports v-else", "v-if uses CSS, v-show uses DOM"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which HTML element can be used with v-if to toggle multiple elements without adding a DOM node?",
+      "options": ["template", "div", "span", "fragment"],
+      "correctIndex": 0
+    }
+  ]
+}

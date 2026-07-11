@@ -1,0 +1,19 @@
+{
+  "title": "File-Based Routing in Nuxt",
+  "language": "vue",
+  "topic": "file_based_routing",
+  "content": "### pages/ Directory\n\nIn Nuxt, every `.vue` file in the `pages/` directory automatically becomes a route — no router configuration needed.\n\n### index.vue\n\n```\npages/\n  index.vue      → /\n  about.vue      → /about\n  contact.vue    → /contact\n```\n\n### Nested Directories\n\nCreate nested routes by nesting directories:\n\n```\npages/\n  blog/\n    index.vue    → /blog\n    [id].vue     → /blog/:id\n  dashboard/\n    settings.vue → /dashboard/settings\n    profile.vue  → /dashboard/profile\n```\n\n### Dynamic Routes \n\nUse square brackets for dynamic segments:\n\n```\npages/\n  users/\n    [id].vue          → /users/:id   (params.id)\n    [id]/edit.vue     → /users/:id/edit\n    [group]/[role].vue → /users/:group/:role\n```\n\nAccess params:\n\n```vue\n<script setup>\nconst route = useRoute()\nconsole.log(route.params.id)\n</script>\n\n<template>\n  <p>User ID: {{ $route.params.id }}</p>\n</template>\n```\n\n### Navigation\n\nUse `<NuxtLink>` instead of `<router-link>`:\n\n```vue\n<NuxtLink to=\"/about\">About</NuxtLink>\n<NuxtLink :to=\"{ name: 'users-id', params: { id: 42 } }\">User</NuxtLink>\n<NuxtLink to=\"/blog\" external>External Blog</NuxtLink>\n```\n\n### Route Middleware\n\nCreate middleware in `middleware/`:\n\n```js\n// middleware/auth.ts\nexport default defineNuxtRouteMiddleware((to, from) => {\n  const token = useCookie('token')\n  if (!token.value) {\n    return navigateTo('/login')\n  }\n})\n```\n\nApply it:\n\n```vue\n<script setup>\ndefinePageMeta({ middleware: 'auth' })\n</script>\n```",
+  "codeExample": "pages/\n├── index.vue           # /\n├── about.vue           # /about\n├── blog/\n│   ├── index.vue       # /blog\n│   └── [slug].vue      # /blog/:slug\n├── products/\n│   ├── index.vue       # /products\n│   └── [id].vue        # /products/:id\n└── dashboard/\n    ├── index.vue       # /dashboard\n    ├── settings.vue    # /dashboard/settings\n    └── [user].vue      # /dashboard/:user\n\n<!-- pages/blog/[slug].vue -->\n<script setup>\nconst route = useRoute()\nconst { data: post } = await useFetch(`/api/blog/${route.params.slug}`)\n</script>\n<template>\n  <article>\n    <h1>{{ post.title }}</h1>\n    <NuxtLink to=\"/blog\">Back to blog</NuxtLink>\n  </article>\n</template>",
+  "quiz": [
+    {
+      "question": "How are routes defined in Nuxt 3?",
+      "options": ["File structure in pages/", "router.js config", "Routes array", "YAML config file"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What syntax creates a dynamic route in Nuxt?",
+      "options": ["[id].vue", ":id.vue", "$id.vue", "{id}.vue"],
+      "correctIndex": 0
+    }
+  ]
+}

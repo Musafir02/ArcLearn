@@ -1,0 +1,19 @@
+{
+  "title": "Client Components",
+  "language": "nextjs",
+  "topic": "client_components",
+  "content": "### The 'use client' Directive\n\nAdd `'use client'` at the top of a file to mark it as a Client Component. This tells Next.js to send JavaScript to the browser:\n\n```jsx\n'use client';\n\nimport { useState } from 'react';\n\nexport default function Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(c => c + 1)}>Increment</button>\n    </div>\n  );\n}\n```\n\n### When to Use Client Components\n\nUse Client Components when you need:\n\n- **Interactivity**: onClick, onChange, onSubmit\n- **State**: useState, useReducer\n- **Effects**: useEffect, useLayoutEffect\n- **Browser APIs**: localStorage, window, document\n- **Custom hooks that use state/effects**\n- **Context**: React Context providers\n- **Event listeners**\n\n### What Client Components Can Do\n\n| Feature | Available |\n|---------|-----------|\n| useState, useEffect | Yes |\n| Browser APIs | Yes |\n| Event handlers | Yes |\n| Context | Yes |\n| Server-side data (props from server) | Yes |\n| Database access directly | No |\n| File system access | No |\n\n### Client Components Can Import Server Components\n\nPass Server Components as children to Client Components:\n\n```jsx\n'use client';\n\nexport default function ClientWrapper({ children }) {\n  const [show, setShow] = useState(false);\n\n  return (\n    <div>\n      <button onClick={() => setShow(!show)}>Toggle</button>\n      {show && children} {/* children can be Server Components */}\n    </div>\n  );\n}\n\n// Server Component using the client wrapper\n// app/page.js\nimport ClientWrapper from './ClientWrapper';\nimport ServerComponent from './ServerComponent';\n\nexport default function Home() {\n  return (\n    <ClientWrapper>\n      <ServerComponent /> {/* Stays on server */}\n    </ClientWrapper>\n  );\n}\n```\n\n### Hooks Compatibility\n\nClient Components support all React hooks:\n\n```jsx\n'use client';\n\nimport { useState, useEffect, useContext, useRef, useMemo, useCallback } from 'react';\nimport { useRouter } from 'next/navigation';\n\nexport default function SearchBar() {\n  const router = useRouter();\n  const inputRef = useRef(null);\n  const [query, setQuery] = useState('');\n\n  useEffect(() => {\n    inputRef.current?.focus();\n  }, []);\n\n  const handleSearch = useCallback((e) => {\n    e.preventDefault();\n    router.push(`/search?q=${query}`);\n  }, [query, router]);\n\n  return (\n    <form onSubmit={handleSearch}>\n      <input ref={inputRef} value={query} onChange={e => setQuery(e.target.value)} />\n      <button type=\"submit\">Search</button>\n    </form>\n  );\n}\n```",
+  "codeExample": "'use client';\n\nimport { useState, useEffect } from 'react';\n\nexport default function Clock() {\n  const [time, setTime] = useState(new Date());\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setTime(new Date());\n    }, 1000);\n    return () => clearInterval(interval);\n  }, []);\n\n  return (\n    <div>\n      <h2>Current Time</h2>\n      <p>{time.toLocaleTimeString()}</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What directive marks a component as a Client Component?",
+      "options": ["'use client'", "'use server'", "'use browser'", "'use interactive'"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following requires a Client Component?",
+      "options": ["useState hook", "fetching data on the server", "reading environment variables", "importing server-only code"],
+      "correctIndex": 0
+    }
+  ]
+}

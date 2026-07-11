@@ -1,0 +1,19 @@
+{
+  "title": "Components & Templates",
+  "language": "angular",
+  "topic": "components_templates",
+  "content": "### @Component Decorator\n\nEvery Angular component is a class decorated with `@Component`. The decorator provides metadata that tells Angular how to create and use the component.\n\n```typescript\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-user-profile',\n  templateUrl: './user-profile.component.html',\n  styleUrls: ['./user-profile.component.css']\n})\nexport class UserProfileComponent {\n  username = 'john_doe';\n}\n```\n\n### Key Metadata Properties\n\n- **`selector`** — The CSS selector that identifies this component in a template. Common formats: `'app-user-profile'` (element), `'[app-user-profile]'` (attribute), `'.app-user-profile'` (class).\n- **`templateUrl` / `template`** — External templateUrl or inline template string. Inline templates use backticks for multi-line.\n- **`styleUrls` / `styles`** — External stylesheet array or inline styles array.\n- **`standalone`** — When `true`, the component does not belong to an NgModule (Angular 14+).\n\n### Inline Template Example\n\n```typescript\n@Component({\n  selector: 'app-inline',\n  template: `\n    <div class=\"card\">\n      <h2>{{ title }}</h2>\n      <p>{{ description }}</p>\n    </div>\n  `,\n  styles: [`\n    .card { border: 1px solid #ccc; padding: 1rem; }\n    h2 { color: #333; }\n  `]\n})\nexport class InlineComponent {\n  title = 'Hello';\n  description = 'Inline template example';\n}\n```\n\n### Component Tree\n\nAngular applications form a **hierarchical component tree** rooted at `AppComponent`. Parent components nest child components via their selectors in the template:\n\n```html\n<!-- app.component.html -->\n<app-header></app-header>\n<app-sidebar></app-sidebar>\n<main>\n  <app-content></app-content>\n</main>\n<app-footer></app-footer>\n```\n\nData flows down the tree via property bindings and events bubble up. Angular's change detection traverses this tree to update the DOM when data changes.",
+  "codeExample": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-greeting',\n  template: `<h1>Hello, {{ name }}!</h1>`,\n  styles: [`h1 { color: blue; }`],\n  standalone: true\n})\nexport class GreetingComponent {\n  name = 'World';\n}",
+  "quiz": [
+    {
+      "question": "Which property of @Component defines the HTML tag name used to embed the component?",
+      "options": ["selector", "template", "styleUrls", "standalone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How can you provide an inline template to a component?",
+      "options": ["Using the `template` property with a string", "Using templateUrl", "Using styles", "Using the `standalone` property"],
+      "correctIndex": 0
+    }
+  ]
+}

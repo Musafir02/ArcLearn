@@ -1,0 +1,19 @@
+{
+  "title": "Nuxt Modules",
+  "language": "vue",
+  "topic": "modules",
+  "content": "### Nuxt Modules\n\nModules extend Nuxt's core functionality. They are npm packages that can add features, components, composables, or modify the build process.\n\n### Installing Modules\n\n```bash\nnpm install @nuxt/content\n```\n\nAdd to `nuxt.config.ts`:\n\n```ts\nexport default defineNuxtConfig({\n  modules: ['@nuxt/content']\n})\n```\n\n### @nuxt/content\n\nCreate a content-driven site with Markdown, JSON, or YAML files in the `content/` directory:\n\n```\ncontent/\n  index.md\n  blog/\n    post1.md\n    post2.md\n```\n\n```vue\n<script setup>\nconst { data } = await useAsyncData('home', () => queryContent('/').findOne())\n</script>\n\n<template>\n  <ContentDoc />\n</template>\n```\n\n### @nuxt/image\n\nOptimizes images with responsive formats and sizes:\n\n```vue\n<NuxtImg src=\"/hero.jpg\" width=\"800\" height=\"400\" />\n<NuxtPicture src=\"/photo.jpg\" sizes=\"sm:400px md:800px lg:1200px\" />\n```\n\n### @nuxtjs/tailwindcss\n\nIntegrates Tailwind CSS with Nuxt, including configuration and purging:\n\n```ts\nexport default defineNuxtConfig({\n  modules: ['@nuxtjs/tailwindcss'],\n  tailwindcss: {\n    config: {\n      theme: {\n        extend: {\n          colors: { primary: '#42b883' }\n        }\n      }\n    }\n  }\n})\n```\n\n### Module Configuration\n\nModules can accept options:\n\n```ts\nexport default defineNuxtConfig({\n  modules: [\n    ['@nuxtjs/google-fonts', {\n      families: { Roboto: true, Inter: [400, 700] }\n    }]\n  ]\n})\n```\n\n### Community Modules\n\nPopular community modules include:\n- `@nuxtjs/i18n` — Internationalization\n- `@nuxtjs/color-mode` — Dark/light mode\n- `@vueuse/nuxt` — VueUse composables\n- `nuxt-auth` — Authentication\n- `nuxt-icon` — Icon components",
+  "codeExample": "// nuxt.config.ts\nexport default defineNuxtConfig({\n  modules: [\n    '@nuxt/content',\n    '@nuxt/image',\n    '@nuxtjs/tailwindcss',\n    '@nuxtjs/color-mode',\n    ['@nuxtjs/google-fonts', {\n      families: { Inter: [400, 600, 700] }\n    }]\n  ],\n\n  // Module options\n  colorMode: {\n    preference: 'system',\n    fallback: 'light',\n    classSuffix: ''\n  },\n\n  content: {\n    highlight: {\n      theme: 'github-dark'\n    }\n  }\n})\n\n// Usage in components\n// <NuxtImg src=\"/logo.png\" />\n// <ContentDoc path=\"/about\" />\n// <div class=\"bg-primary text-white p-4\">Styled with Tailwind</div>",
+  "quiz": [
+    {
+      "question": "How do you add a module to a Nuxt project?",
+      "options": ["Add it to the modules array in nuxt.config.ts", "Import it in app.vue", "Add it to package.json manually", "Create a plugins/ file"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which module is used for content management with Markdown files?",
+      "options": ["@nuxt/content", "@nuxt/markdown", "@nuxt/blog", "@nuxtjs/content"],
+      "correctIndex": 0
+    }
+  ]
+}

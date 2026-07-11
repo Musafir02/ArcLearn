@@ -1,0 +1,19 @@
+{
+  "title": "Assets and Metadata",
+  "language": "nextjs",
+  "topic": "assets_metadata",
+  "content": "### Managing <head> with next/head\n\nThe `Head` component lets you modify the `<head>` of a page:\n\n```jsx\nimport Head from 'next/head';\n\nexport default function About() {\n  return (\n    <>\n      <Head>\n        <title>About Us | My Site</title>\n        <meta name=\"description\" content=\"Learn more about our company\" />\n        <meta property=\"og:title\" content=\"About Us\" />\n      </Head>\n      <h1>About Us</h1>\n    </>\n  );\n}\n```\n\n### Optimized Images with next/image\n\nThe `Image` component provides automatic image optimization:\n\n```jsx\nimport Image from 'next/image';\n\nexport default function Hero() {\n  return (\n    <Image\n      src=\"/hero.jpg\"\n      alt=\"Hero banner\"\n      width={1200}\n      height={600}\n      priority\n    />\n  );\n}\n```\n\nBenefits: lazy loading by default, responsive images, WebP format, proper sizing.\n\n### Static Assets in public/\n\nFiles in `public/` are served at the root URL:\n\n```\npublic/\n  favicon.ico    -> /favicon.ico\n  images/\n    logo.png     -> /images/logo.png\n  fonts/\n    custom.woff2 -> /fonts/custom.woff2\n```\n\nReference them with absolute paths: `/images/logo.png`.\n\n### Custom Fonts with next/font\n\n```jsx\nimport { Inter } from 'next/font/google';\n\nconst inter = Inter({ subsets: ['latin'] });\n\nexport default function Layout({ children }) {\n  return (\n    <html className={inter.className}>\n      <body>{children}</body>\n    </html>\n  );\n}\n```\n\nThis self-hosts fonts with zero layout shift.",
+  "codeExample": "import Head from 'next/head';\n\nexport default function Home() {\n  return (\n    <>\n      <Head>\n        <title>Home | My App</title>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n      </Head>\n      <h1>Welcome</h1>\n    </>\n  );\n}",
+  "quiz": [
+    {
+      "question": "Where should static files like favicon.ico be placed?",
+      "options": ["public/ directory", "assets/ directory", "static/ directory", "root of project"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which component is used to add meta tags to a page?",
+      "options": ["Head from next/head", "Meta from next/meta", "Seo from next/seo", "Helmet from react-helmet"],
+      "correctIndex": 0
+    }
+  ]
+}

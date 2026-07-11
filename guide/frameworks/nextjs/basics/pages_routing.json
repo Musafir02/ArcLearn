@@ -1,0 +1,19 @@
+{
+  "title": "Pages and Routing",
+  "language": "nextjs",
+  "topic": "pages_routing",
+  "content": "### File-Based Routing\n\nNext.js uses a **file-based routing system**. Files in the `pages/` directory automatically become routes.\n\n### Basic Routes\n\n| File Path | URL Route |\n|-----------|-----------|\n| `pages/index.js` | `/` |\n| `pages/about.js` | `/about` |\n| `pages/blog.js` | `/blog` |\n| `pages/contact.js` | `/contact` |\n\n### Nested Routes\n\nCreate folders to nest routes:\n\n| File Path | URL Route |\n|-----------|-----------|\n| `pages/blog/index.js` | `/blog` |\n| `pages/blog/first-post.js` | `/blog/first-post` |\n| `pages/dashboard/settings.js` | `/dashboard/settings` |\n\n### Dynamic Routes\n\nUse square brackets for dynamic segments:\n\n| File Path | URL Route |\n|-----------|-----------|\n| `pages/blog/[id].js` | `/blog/1`, `/blog/hello-world` |\n| `pages/[username]/profile.js` | `/john/profile` |\n\n### Linking Between Pages\n\nUse the `Link` component for client-side navigation:\n\n```jsx\nimport Link from 'next/link';\n\nexport default function Nav() {\n  return (\n    <nav>\n      <Link href=\"/\">Home</Link>\n      <Link href=\"/about\">About</Link>\n      <Link href={`/blog/${post.id}`}>Read More</Link>\n    </nav>\n  );\n}\n```\n\n### How It Works\n\nEach `.js` or `.tsx` file in `pages/` exports a React component. Next.js automatically maps the file path to a URL route and handles code splitting per page.",
+  "codeExample": "// pages/index.js — Root route\nexport default function Home() {\n  return <h1>Home Page</h1>;\n}\n\n// pages/blog/[id].js — Dynamic route\nexport default function BlogPost({ params }) {\n  return <h1>Post: {params.id}</h1>;\n}",
+  "quiz": [
+    {
+      "question": "What file creates the /about route?",
+      "options": ["pages/about.js", "pages/about/index.js", "pages/about.jsx", "All of the above are valid"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you create a dynamic route for blog posts?",
+      "options": ["pages/blog/[id].js", "pages/blog/:id.js", "pages/blog/_id.js", "pages/blog/<id>.js"],
+      "correctIndex": 0
+    }
+  ]
+}

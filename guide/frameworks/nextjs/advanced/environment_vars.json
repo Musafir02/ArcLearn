@@ -1,0 +1,19 @@
+{
+  "title": "Environment Variables",
+  "language": "nextjs",
+  "topic": "environment_vars",
+  "content": "### Environment Files\n\nNext.js loads environment variables from these files:\n\n| File | Purpose |\n|------|---------|\n| `.env.local` | Local overrides (never committed) |\n| `.env` | Default values |\n| `.env.development` | Development only |\n| `.env.production` | Production only |\n\nOrder of precedence (highest first):\n1. Already set environment variables\n2. `.env.local`\n3. `.env.development` / `.env.production`\n4. `.env`\n\n### NEXT_PUBLIC_ Prefix\n\nVariables without `NEXT_PUBLIC_` are only available on the server. Prefix with `NEXT_PUBLIC_` to expose them to the browser:\n\n```\n# .env.local\nSECRET_API_KEY=sk-1234           # Server only\nNEXT_PUBLIC_GA_ID=G-XXXXXXXX    # Available in browser\nNEXT_PUBLIC_API_URL=https://api.example.com\n```\n\n```jsx\n// Server-side (getStaticProps, API routes, Server Components)\nconst apiKey = process.env.SECRET_API_KEY;\n\n// Client-side (must use NEXT_PUBLIC_ prefix)\nconst gaId = process.env.NEXT_PUBLIC_GA_ID;\n```\n\n### Runtime vs Build-Time\n\nBy default, environment variables are evaluated at **build time** and inlined. To read them at runtime on the server, use `getServerSideProps` or API routes:\n\n```jsx\n// Runtime — evaluated on each request\nexport async function getServerSideProps() {\n  return {\n    props: {\n      apiUrl: process.env.API_URL, // Read at runtime\n    },\n  };\n}\n\n// Build-time — inlined during build\nexport async function getStaticProps() {\n  return {\n    props: {\n      siteUrl: process.env.NEXT_PUBLIC_SITE_URL, // Inlined at build\n    },\n  };\n}\n```\n\n### Using Environment Variables in next.config.js\n\n```js\n// next.config.js\nmodule.exports = {\n  env: {\n    CUSTOM_KEY: process.env.CUSTOM_KEY,\n  },\n  publicRuntimeConfig: {\n    API_URL: process.env.API_URL,\n  },\n};\n```\n\n### TypeScript Typings\n\nCreate a type declaration for better DX:\n\n```ts\n// env.d.ts\nnamespace NodeJS {\n  interface ProcessEnv {\n    NODE_ENV: 'development' | 'production' | 'test';\n    NEXT_PUBLIC_API_URL: string;\n    SECRET_API_KEY: string;\n    DATABASE_URL: string;\n  }\n}\n```\n\n### Best Practices\n\n- Never commit `.env.local` — add it to `.gitignore`\n- Use `.env.example` as a template (committed)\n- Validate required variables at startup\n- Use `server-only` package to prevent accidental client exposure\n\n```jsx\n// lib/env.js\nimport 'server-only';\n\nif (!process.env.DATABASE_URL) {\n  throw new Error('DATABASE_URL is not defined');\n}\n\nexport const dbUrl = process.env.DATABASE_URL;\n```",
+  "codeExample": "# .env.local\nNEXT_PUBLIC_API_URL=https://api.example.com\nNEXT_PUBLIC_GA_ID=G-MEASUREMENT_ID\nDATABASE_URL=postgresql://user:pass@localhost:5432/mydb\nSECRET_KEY=my-super-secret-key\n\n# .env.example (committed to repo)\nNEXT_PUBLIC_API_URL=\nDATABASE_URL=\nSECRET_KEY=",
+  "quiz": [
+    {
+      "question": "Which prefix exposes an env variable to the browser?",
+      "options": ["NEXT_PUBLIC_", "PUBLIC_", "CLIENT_", "BROWSER_"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which env file should never be committed to version control?",
+      "options": [".env.local", ".env", ".env.production", ".env.development"],
+      "correctIndex": 0
+    }
+  ]
+}

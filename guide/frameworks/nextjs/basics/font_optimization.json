@@ -1,0 +1,19 @@
+{
+  "title": "Font Optimization",
+  "language": "nextjs",
+  "topic": "font_optimization",
+  "content": "### next/font\n\nNext.js's `next/font` module automatically optimizes fonts by self-hosting them. This eliminates external network requests and reduces layout shift.\n\n### Google Fonts\n\n```jsx\nimport { Inter, Roboto_Mono } from 'next/font/google';\n\nconst inter = Inter({\n  subsets: ['latin'],\n  display: 'swap',\n});\n\nconst robotoMono = Roboto_Mono({\n  subsets: ['latin'],\n  display: 'swap',\n});\n\nexport default function Layout({ children }) {\n  return (\n    <html lang=\"en\" className={inter.className}>\n      <body>\n        <h1 className={robotoMono.className}>Monospace Heading</h1>\n        {children}\n      </body>\n    </html>\n  );\n}\n```\n\n### Local Fonts\n\nUse local font files with `next/font/local`:\n\n```jsx\nimport localFont from 'next/font/local';\n\nconst myFont = localFont({\n  src: './fonts/my-font.woff2',\n  display: 'swap',\n});\n\nexport default function Page() {\n  return (\n    <div className={myFont.className}>\n      <h1>Custom Local Font</h1>\n    </div>\n  );\n}\n```\n\nYou can also specify multiple src files for different formats or weights:\n\n```jsx\nconst myFont = localFont({\n  src: [\n    { path: './fonts/MyFont-Regular.woff2', weight: '400' },\n    { path: './fonts/MyFont-Bold.woff2', weight: '700' },\n  ],\n});\n```\n\n### Variable Fonts\n\nGoogle variable fonts are supported out of the box:\n\n```jsx\nconst inter = Inter({\n  subsets: ['latin'],\n  variable: '--font-inter',\n});\n\n// Use CSS variable\n<html className={inter.variable}>\n<body style={{ fontFamily: 'var(--font-inter)' }}>\n```\n\n### Performance Benefits\n\n- **Zero layout shift**: Fonts are loaded before rendering\n- **No external requests**: Self-hosted, no Google server round-trip\n- **Smaller payloads**: Subset loading (e.g., only latin characters)\n- **Automatic optimization**: Font files are optimized and hashed",
+  "codeExample": "import { Inter } from 'next/font/google';\n\nconst inter = Inter({\n  subsets: ['latin'],\n  weight: ['400', '700'],\n});\n\nexport default function Home() {\n  return (\n    <div className={inter.className}>\n      <h1>Optimized Font</h1>\n      <p>This text uses Inter font, self-hosted by Next.js.</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "How does next/font improve performance?",
+      "options": ["Self-hosts fonts eliminating external requests", "Compresses font files with gzip", "Caches fonts in localStorage", "Defers font loading to after paint"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which import is used for local font files?",
+      "options": ["next/font/local", "next/font/custom", "next/font/file", "next/font/self"],
+      "correctIndex": 0
+    }
+  ]
+}

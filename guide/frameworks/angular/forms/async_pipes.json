@@ -1,0 +1,19 @@
+{
+  "title": "Async Pipe",
+  "language": "angular",
+  "topic": "async_pipes",
+  "content": "### What is AsyncPipe?\n\n`AsyncPipe` automatically subscribes to an Observable or Promise in the template and returns the latest emitted value. It also handles **unsubscription** when the component is destroyed, preventing memory leaks.\n\n### Basic Usage with Observables\n\n```typescript\nimport { Observable, interval, map } from 'rxjs';\n\n@Component({\n  selector: 'app-clock',\n  template: `\n    <p>Current time: {{ time$ | async | date:'mediumTime' }}</p>\n  `,\n  standalone: true,\n  imports: [AsyncPipe, DatePipe]\n})\nexport class ClockComponent {\n  time$: Observable<Date> = interval(1000).pipe(\n    map(() => new Date())\n  );\n}\n```\n\n### Usage with Promises\n\n```typescript\n@Component({\n  template: `\n    <div>Data: {{ dataPromise | async }}</div>\n  `\n})\nexport class PromiseComponent {\n  dataPromise: Promise<string> = Promise.resolve('Hello from Promise');\n}\n```\n\n### Combining with *ngIf — The \"as\" Syntax\n\nA common pattern is to use `*ngIf` with `as` to bind the emitted value to a template variable:\n\n```typescript\n@Component({\n  template: `\n    <div *ngIf=\"users$ | async as users; else loading\">\n      <p *ngFor=\"let user of users\">{{ user.name }}</p>\n    </div>\n    <ng-template #loading>\n      <p>Loading users...</p>\n    </ng-template>\n  `\n})\nexport class UsersComponent {\n  users$ = this.userService.getUsers();\n\n  constructor(private userService: UserService) {}\n}\n```\n\nThis pattern handles:\n1. **Loading state** — The `else` template shows while waiting for data.\n2. **Null safety** — The `as` variable is only bound to when data arrives.\n3. **Automatic unsubscription** — No manual cleanup needed.\n\n### Benefits of AsyncPipe\n\n| Benefit | Description |\n|---------|-------------|\n| Automatic subscription | No explicit `.subscribe()` calls in the component |\n| Automatic unsubscription | Prevents memory leaks when component is destroyed |\n| OnPush change detection | AsyncPipe triggers change detection only when a new value is emitted |\n| Cleaner code | Reduces boilerplate in component classes |\n\n### Multiple Observables\n\n```html\n<div *ngIf=\"{\n  users: users$ | async,\n  posts: posts$ | async\n} as data\">\n  <p>Users: {{ data.users?.length }}</p>\n  <p>Posts: {{ data.posts?.length }}</p>\n</div>\n```\n\n### Manual Subscription vs AsyncPipe\n\n**Without AsyncPipe (error-prone):**\n```typescript\nngOnInit() {\n  this.userService.getUsers().subscribe(users => {\n    this.users = users;\n  });\n}\n\nngOnDestroy() {\n  this.subscription?.unsubscribe(); // Easy to forget\n}\n```\n\n**With AsyncPipe (clean):**\n```typescript\n// No subscription, no unsubscription, no stored state\ntemplate: `<div *ngIf=\"users$ | async as users\">...</div>`\n```",
+  "codeExample": "@Component({\n  template: `\n    <ul>\n      <li *ngFor=\"let user of users$ | async\">{{ user.name }}</li>\n    </ul>\n    <div *ngIf=\"userDetail$ | async as detail\">\n      {{ detail.name }} - {{ detail.email }}\n    </div>\n  `,\n  imports: [AsyncPipe, NgFor, NgIf],\n  standalone: true\n})\nexport class UserComponent {\n  users$ = this.userService.getUsers();\n  userDetail$ = this.userService.getUserDetail(1);\n  constructor(private userService: UserService) {}\n}",
+  "quiz": [
+    {
+      "question": "What problem does AsyncPipe solve?",
+      "options": ["Automatic subscription and unsubscription to Observables", "Improving HTTP request speed", "Styling components", "Routing between pages"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How can you bind the emitted value of an Observable to a template variable using AsyncPipe?",
+      "options": ["*ngIf=\"obs$ | async as value\"", "{{ obs$ | bind:value }}", "*ngFor=\"obs$ | async\"", "<ng-template [value]=\"obs$ | async\">"],
+      "correctIndex": 0
+    }
+  ]
+}

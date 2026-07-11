@@ -1,0 +1,19 @@
+{
+  "title": "getStaticProps",
+  "language": "nextjs",
+  "topic": "getstaticprops",
+  "content": "### getStaticProps Overview\n\n`getStaticProps` is a Next.js function that fetches data at **build time** and pre-renders the page as static HTML. It runs on the server and is never exposed to the client.\n\n### Basic Usage\n\n```jsx\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/posts');\n  const posts = await res.json();\n\n  return {\n    props: {\n      posts,\n    },\n  };\n}\n\nexport default function Blog({ posts }) {\n  return (\n    <ul>\n      {posts.map(post => (\n        <li key={post.id}>{post.title}</li>\n      ))}\n    </ul>\n  );\n}\n```\n\n### Context Parameter\n\n`getStaticProps` receives a context object with:\n\n- `params` — route parameters for dynamic routes\n- `preview` — preview mode flag\n- `previewData` — preview mode data\n- `locale` — active locale\n- `locales` — supported locales\n- `defaultLocale` — default locale\n\n### Revalidate (ISR)\n\nAdd `revalidate` to enable Incremental Static Regeneration:\n\n```jsx\nexport async function getStaticProps() {\n  const data = await fetchData();\n\n  return {\n    props: { data },\n    revalidate: 60, // Regenerate at most once every 60 seconds\n  };\n}\n```\n\n### When to Use SSG\n\nUse `getStaticProps` when:\n\n- Content is fetchable at build time\n- Data doesn't change frequently\n- SEO is important\n- Fast page load is critical\n- CMS, blog, marketing pages\n\n### notFound and redirect\n\nReturn `notFound: true` for 404 pages or `redirect` for redirects:\n\n```jsx\nexport async function getStaticProps({ params }) {\n  const post = await getPost(params.id);\n\n  if (!post) {\n    return { notFound: true };\n  }\n\n  if (post.external) {\n    return {\n      redirect: { destination: post.externalUrl, permanent: false },\n    };\n  }\n\n  return { props: { post } };\n}\n```",
+  "codeExample": "export async function getStaticProps({ params }) {\n  try {\n    const post = await fetch(`https://api.example.com/posts/${params.id}`).then(r => {\n      if (!r.ok) throw new Error('Not found');\n      return r.json();\n    });\n\n    return {\n      props: { post },\n      revalidate: 3600,\n    };\n  } catch {\n    return { notFound: true };\n  }\n}\n\nexport default function Post({ post }) {\n  return (\n    <article>\n      <h1>{post.title}</h1>\n      <div>{post.content}</div>\n    </article>\n  );\n}",
+  "quiz": [
+    {
+      "question": "When does getStaticProps run?",
+      "options": ["At build time", "On every request", "On the client side", "When a user clicks a link"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you enable ISR in getStaticProps?",
+      "options": ["Add revalidate to the return object", "Add isr: true to the return object", "Set next.config.js isr: true", "Use getServerSideProps instead"],
+      "correctIndex": 0
+    }
+  ]
+}

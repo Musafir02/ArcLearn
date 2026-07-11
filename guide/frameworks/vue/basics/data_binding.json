@@ -1,0 +1,19 @@
+{
+  "title": "Data Binding",
+  "language": "vue",
+  "topic": "data_binding",
+  "content": "### v-bind\n\n`v-bind` dynamically binds an attribute to an expression:\n\n```vue\n<img v-bind:src=\"imageSrc\" />\n<a v-bind:href=\"url\">Link</a>\n```\n\n### Shorthand (:)\n\n```vue\n<img :src=\"imageSrc\" />\n<a :href=\"url\">Link</a>\n<div :id=\"dynamicId\"></div>\n```\n\n### Binding Classes and Styles\n\nObject syntax:\n\n```vue\n<div :class=\"{ active: isActive, 'text-danger': hasError }\"></div>\n<div :style=\"{ color: activeColor, fontSize: fontSize + 'px' }\"></div>\n```\n\nArray syntax:\n\n```vue\n<div :class=\"[activeClass, errorClass]\"></div>\n<div :style=\"[baseStyles, overridingStyles]\"></div>\n```\n\n### One-Way vs Two-Way Binding\n\n**One-way** (parent → child): `:value=\"data\"`\n\n**Two-way** with `v-model`:\n\n```vue\n<input v-model=\"username\" />\n<textarea v-model=\"bio\"></textarea>\n<select v-model=\"selected\">\n  <option v-for=\"opt in options\" :value=\"opt\">{{ opt }}</option>\n</select>\n```\n\n`v-model` on custom components:\n\n```vue\n<CustomInput v-model=\"search\" />\n```\n\nThis is equivalent to `:modelValue=\"search\" @update:modelValue=\"search = $event\"`.",
+  "codeExample": "<template>\n  <div>\n    <img :src=\"avatar\" :alt=\"username\" />\n    <div :class=\"{ highlighted: isActive }\">Content</div>\n    <input v-model=\"username\" placeholder=\"Enter name\" />\n    <p>Hello, {{ username }}!</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      avatar: 'https://example.com/avatar.png',\n      username: 'VueDev',\n      isActive: true\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "What is the shorthand for v-bind?",
+      "options": [":", "@", "#", "&"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which directive creates two-way data binding?",
+      "options": ["v-model", "v-bind", "v-on", "v-data"],
+      "correctIndex": 0
+    }
+  ]
+}

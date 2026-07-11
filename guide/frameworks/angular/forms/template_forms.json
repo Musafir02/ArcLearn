@@ -1,0 +1,19 @@
+{
+  "title": "Template-Driven Forms",
+  "language": "angular",
+  "topic": "template_forms",
+  "content": "### What are Template-Driven Forms?\n\nTemplate-driven forms rely on directives in the template to build and manage forms. Angular infers the form model from the DOM structure. They are simpler but less scalable than reactive forms.\n\n### Setup\n\nImport `FormsModule`:\n\n```typescript\nimport { FormsModule } from '@angular/forms';\n\n@NgModule({\n  imports: [FormsModule]\n})\nexport class AppModule { }\n```\n\n### Basic Form\n\n```html\n<form #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit(loginForm)\">\n  <div>\n    <label>Email:</label>\n    <input type=\"email\" name=\"email\" ngModel required>\n  </div>\n  <div>\n    <label>Password:</label>\n    <input type=\"password\" name=\"password\" ngModel required minlength=\"6\">\n  </div>\n  <button type=\"submit\" [disabled]=\"loginForm.invalid\">Login</button>\n</form>\n```\n\n- **`ngForm`** — Angular automatically creates a `FormGroup` on `<form>` elements. The `#loginForm=\"ngForm\"` template reference gives access to the form state.\n- **`ngModel`** — Creates a `FormControl` for the input. Must have a `name` attribute.\n- **`ngSubmit`** — Event fired on form submission.\n\n### Two-Way Binding with ngModel\n\n```html\n<input [(ngModel)]=\"user.name\" name=\"name\" required>\n```\n\nThis binds the input value directly to the component property.\n\n### ngModelGroup\n\nGroup related controls:\n\n```html\n<form #form=\"ngForm\">\n  <div ngModelGroup=\"address\">\n    <input name=\"street\" ngModel required>\n    <input name=\"city\" ngModel required>\n    <input name=\"zip\" ngModel required>\n  </div>\n</form>\n```\n\n### Form State Classes\n\nAngular automatically applies CSS classes based on control state:\n\n| Class | Description |\n|-------|-------------|\n| `ng-valid` / `ng-invalid` | Validation status |\n| `ng-touched` / `ng-untouched` | Whether the control has been blurred |\n| `ng-dirty` / `ng-pristine` | Whether the control value has changed |\n| `ng-pending` | Async validation in progress |\n\n```html\n<input name=\"email\" ngModel required #email=\"ngModel\">\n<div *ngIf=\"email.invalid && email.touched\">\n  <p *ngIf=\"email.errors?.['required']\">Email is required.</p>\n</div>\n```\n\n### Accessing Form State\n\n```html\n<form #form=\"ngForm\">\n  ...\n</form>\n\n<p>Form valid: {{ form.valid }}</p>\n<p>Form submitted: {{ form.submitted }}</p>\n<p>Form touched: {{ form.touched }}</p>\n<p>Form dirty: {{ form.dirty }}</p>\n<button [disabled]=\"form.invalid\">Submit</button>\n```",
+  "codeExample": "<form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f)\">\n  <input name=\"name\" ngModel required #name=\"ngModel\">\n  <div *ngIf=\"name.invalid && name.touched\">\n    Name is required\n  </div>\n  <input name=\"email\" ngModel required email #email=\"ngModel\">\n  <div *ngIf=\"email.invalid && email.touched\">\n    Valid email required\n  </div>\n  <button type=\"submit\" [disabled]=\"f.invalid\">Submit</button>\n</form>",
+  "quiz": [
+    {
+      "question": "Which module must be imported for template-driven forms?",
+      "options": ["FormsModule", "ReactiveFormsModule", "HttpClientModule", "BrowserModule"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the `ngForm` directive do on a `<form>` element?",
+      "options": ["Creates a FormGroup and tracks form state", "Submits the form", "Validates all inputs", "Binds the form to a service"],
+      "correctIndex": 0
+    }
+  ]
+}

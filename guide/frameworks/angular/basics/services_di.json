@@ -1,0 +1,19 @@
+{
+  "title": "Services & Dependency Injection",
+  "language": "angular",
+  "topic": "services_di",
+  "content": "### What are Services?\n\nServices are singleton objects that encapsulate reusable business logic, data access, or cross-cutting concerns (logging, caching, authentication).\n\n### @Injectable Decorator\n\nUse `@Injectable` to make a class available for dependency injection:\n\n```typescript\nimport { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class DataService {\n  private data: string[] = [];\n\n  getData(): string[] {\n    return this.data;\n  }\n\n  addData(item: string): void {\n    this.data.push(item);\n  }\n}\n```\n\n`providedIn: 'root'` registers the service with the **root injector**, making it available application-wide as a singleton.\n\n### Providing Services\n\nYou can register services at different levels:\n\n```typescript\n// 1. Root level (singleton across the app)\n@Injectable({ providedIn: 'root' })\n\n// 2. Module level (available within a module)\n@NgModule({\n  providers: [UserService]\n})\n\n// 3. Component level (new instance per component)\n@Component({\n  providers: [LoggerService]\n})\n```\n\n### Provider Configurations\n\nAngular's DI supports multiple provider types:\n\n```typescript\n// Class provider (default)\n{ provide: LoggerService, useClass: LoggerService }\n\n// Alternative class\n{ provide: LoggerService, useClass: AdvancedLoggerService }\n\n// Value provider\n{ provide: 'API_URL', useValue: 'https://api.example.com' }\n\n// Factory provider\n{ provide: 'LOGGER', useFactory: (config) => {\n  return config.debug ? new DebugLogger() : new LoggerService();\n}, deps: [AppConfig] }\n```\n\n### Using Services in Components\n\nInject services via constructor:\n\n```typescript\n@Component({...})\nexport class UserComponent {\n  constructor(private dataService: DataService) { }\n\n  loadData() {\n    this.items = this.dataService.getData();\n  }\n}\n```\n\n### Hierarchical Injectors\n\nAngular has a **hierarchical DI system**. When a component requests a service, Angular looks up the injector tree:\n\n1. Component's own injector\n2. Parent component's injector\n3. Module injector\n4. Root injector\n\nServices provided at a lower level **shadow** those from higher levels. This allows scoped service instances (e.g., a new instance for each component).",
+  "codeExample": "@Injectable({ providedIn: 'root' })\nexport class UserService {\n  private users: User[] = [];\n\n  getUsers(): Observable<User[]> {\n    return of(this.users);\n  }\n\n  addUser(user: User): void {\n    this.users.push(user);\n  }\n}\n\n// Inject in component\n@Component({...})\nexport class UsersComponent {\n  constructor(private userService: UserService) {}\n}",
+  "quiz": [
+    {
+      "question": "What does `providedIn: 'root'` do?",
+      "options": ["Registers the service as a singleton at the root injector", "Creates a new instance per component", "Restricts the service to only the root component", "Makes the service available only in lazy-loaded modules"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provider type creates a service instance using a function?",
+      "options": ["useFactory", "useClass", "useValue", "useExisting"],
+      "correctIndex": 0
+    }
+  ]
+}

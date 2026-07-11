@@ -1,0 +1,19 @@
+{
+  "title": "Custom Pipes",
+  "language": "angular",
+  "topic": "custom_pipes",
+  "content": "### Creating Custom Pipes\n\nUse the `@Pipe` decorator and implement the `PipeTransform` interface:\n\n```typescript\nimport { Pipe, PipeTransform } from '@angular/core';\n\n@Pipe({\n  name: 'truncate',\n  standalone: true\n})\nexport class TruncatePipe implements PipeTransform {\n  transform(value: string, maxLength: number = 50, ellipsis: string = '...'): string {\n    if (!value) return '';\n    return value.length > maxLength\n      ? value.substring(0, maxLength) + ellipsis\n      : value;\n  }\n}\n```\n\n### Usage\n\n```html\n<p>{{ longText | truncate:100:'...' }}</p>\n<p>{{ longText | truncate:50 }}</p>\n<p>{{ longText | truncate }}</p>\n```\n\n### Pipe with Multiple Parameters\n\n```typescript\n@Pipe({ name: 'sort', standalone: true })\nexport class SortPipe implements PipeTransform {\n  transform<T>(array: T[], field: keyof T, order: 'asc' | 'desc' = 'asc'): T[] {\n    if (!array || !array.length) return [];\n    return [...array].sort((a, b) => {\n      const aVal = a[field];\n      const bVal = b[field];\n      if (aVal < bVal) return order === 'asc' ? -1 : 1;\n      if (aVal > bVal) return order === 'asc' ? 1 : -1;\n      return 0;\n    });\n  }\n}\n```\n\n### Pure vs Impure Pipes\n\n**Pure pipes (default)** — Only re-evaluated when the input value changes by reference. Angular uses a pure function approach for performance.\n\n**Impure pipes** — Re-evaluated on every change detection cycle. Set `pure: false`:\n\n```typescript\n@Pipe({\n  name: 'filter',\n  pure: false  // Impure — runs on every change detection\n})\nexport class FilterPipe implements PipeTransform {\n  transform(items: any[], searchText: string): any[] {\n    if (!items) return [];\n    if (!searchText) return items;\n    return items.filter(item =>\n      JSON.stringify(item).toLowerCase().includes(searchText.toLowerCase())\n    );\n  }\n}\n```\n\n**Warning:** Impure pipes can cause performance issues because they execute frequently. Use them sparingly or consider alternative approaches like computed properties.\n\n### Registering Custom Pipes\n\n```typescript\n// With NgModule\n@NgModule({\n  declarations: [TruncatePipe],\n  exports: [TruncatePipe]\n})\n\n// Standalone\n@Component({\n  imports: [TruncatePipe]\n})\n```",
+  "codeExample": "@Pipe({ name: 'exponentialStrength', standalone: true })\nexport class ExponentialStrengthPipe implements PipeTransform {\n  transform(value: number, exponent: number = 1): number {\n    return Math.pow(value, exponent);\n  }\n}\n\n// Usage: {{ 2 | exponentialStrength:10 }} => 1024",
+  "quiz": [
+    {
+      "question": "Which interface must a custom pipe implement?",
+      "options": ["PipeTransform", "PipeInterface", "Transform", "OnInit"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the default purity setting of an Angular pipe?",
+      "options": ["Pure (pure: true)", "Impure (pure: false)", "It depends on the pipe type", "Pipes cannot be pure or impure"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Next.js Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Next.js Basics", "folder": "basics",
+      "topics": ["pages_routing", "linking_navigation", "assets_metadata", "dynamic_routes", "layout", "image_optimization", "font_optimization"]
+    },
+    {
+      "type": "group", "title": "Data Fetching", "folder": "data",
+      "topics": ["getstaticprops", "getserversideprops", "isr", "client_side_fetching", "api_routes"]
+    },
+    {
+      "type": "group", "title": "App Router", "folder": "app_router",
+      "topics": ["app_router_intro", "layout_segment", "loading_ui", "error_handling", "route_handlers", "server_components", "client_components"]
+    },
+    {
+      "type": "group", "title": "Advanced Next.js", "folder": "advanced",
+      "topics": ["middleware", "authentication", "static_export", "environment_vars", "deployment", "seo", "analytics"]
+    }
+  ]
+}

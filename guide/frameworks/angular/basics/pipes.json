@@ -1,0 +1,19 @@
+{
+  "title": "Pipes",
+  "language": "angular",
+  "topic": "pipes",
+  "content": "### What are Pipes?\n\nPipes transform data in templates. They accept input values and return formatted output without modifying the source data. Angular provides many built-in pipes and allows custom pipes.\n\n### Syntax\n\n```html\n{{ expression | pipeName[:param1[:param2...]] }}\n```\n\n### Built-in Pipes\n\n**DatePipe** — Formats dates:\n```html\n{{ today | date:'fullDate' }}\n<!-- Output: Wednesday, January 12, 2025 -->\n\n{{ today | date:'short' }}\n<!-- Output: 1/12/25, 12:00 PM -->\n\n{{ today | date:'yyyy-MM-dd' }}\n<!-- Output: 2025-01-12 -->\n```\n\n**UpperCasePipe / LowerCasePipe** — Transform text case:\n```html\n{{ 'hello world' | uppercase }}\n<!-- Output: HELLO WORLD -->\n\n{{ 'HELLO WORLD' | lowercase }}\n<!-- Output: hello world -->\n\n{{ 'hello' | titlecase }}\n<!-- Output: Hello -->\n```\n\n**CurrencyPipe** — Formats numbers as currency:\n```html\n{{ 42.99 | currency:'USD':'symbol':'1.2-2' }}\n<!-- Output: $42.99 -->\n\n{{ 42.99 | currency:'EUR':'symbol':'1.2-2' }}\n<!-- Output: €42.99 -->\n```\n\n**PercentPipe** — Formats as percentage:\n```html\n{{ 0.25 | percent }}\n<!-- Output: 25% -->\n\n{{ 0.1234 | percent:'1.1-2' }}\n<!-- Output: 12.3% -->\n```\n\n**JsonPipe** — Outputs object as JSON string (useful for debugging):\n```html\n<pre>{{ user | json }}</pre>\n```\n\n### Chaining Pipes\n\nPipes can be combined by chaining:\n```html\n{{ birthday | date:'fullDate' | uppercase }}\n```\n\n### Locale Formatting\n\nAngular uses the `LOCALE_ID` token for locale-specific formatting:\n```typescript\n// app.module.ts\nimport { LOCALE_ID } from '@angular/core';\nimport localeFr from '@angular/common/locales/fr';\nimport { registerLocaleData } from '@angular/common';\n\nregisterLocaleData(localeFr);\n\n@NgModule({\n  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }]\n})\n```\n\nNow `{{ 42.99 | currency:'EUR' }}` outputs `42,99 €`.",
+  "codeExample": "{{ today | date:'fullDate' }}\n{{ price | currency:'USD':'symbol':'1.2-2' }}\n{{ rate | percent }}\n{{ 'hello' | uppercase }}\n{{ user | json }}",
+  "quiz": [
+    {
+      "question": "Which pipe would you use to format a number as currency?",
+      "options": ["CurrencyPipe", "PercentPipe", "DecimalPipe", "JsonPipe"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you chain multiple pipes in Angular?",
+      "options": ["{{ value | pipe1 | pipe2 }}", "{{ value | pipe1, pipe2 }}", "{{ value | pipe1(pipe2) }}", "{{ value.pipe1().pipe2() }}"],
+      "correctIndex": 0
+    }
+  ]
+}

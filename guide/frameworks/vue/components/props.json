@@ -1,0 +1,19 @@
+{
+  "title": "Props",
+  "language": "vue",
+  "topic": "props",
+  "content": "### Props Declaration\n\nProps are custom attributes a component can receive from its parent. Declare them in the `props` option:\n\n```vue\n<script>\nexport default {\n  props: ['title', 'likes']\n}\n</script>\n```\n\n### Prop Types\n\nFor better validation, declare props with types:\n\n```vue\n<script>\nexport default {\n  props: {\n    title: String,\n    likes: Number,\n    isPublished: Boolean,\n    commentIds: Array,\n    author: Object,\n    callback: Function\n  }\n}\n</script>\n```\n\n### Static vs Dynamic Props\n\n**Static**: `<BlogPost title=\"My Journey\" />`\n\n**Dynamic**: `<BlogPost :title=\"post.title\" />`\n\n### One-Way Data Flow\n\nProps follow a **one-way data flow**: parent → child. The child should NEVER directly mutate a prop. To modify, emit an event:\n\n```vue\n<script>\nexport default {\n  props: ['modelValue'],\n  emits: ['update:modelValue'],\n  methods: {\n    update() {\n      this.$emit('update:modelValue', this.modelValue + 1)\n    }\n  }\n}\n</script>\n```\n\n### Prop Validation\n\n```vue\n<script>\nexport default {\n  props: {\n    title: {\n      type: String,\n      required: true,\n      default: 'Default title',\n      validator(value) {\n        return value.length > 0\n      }\n    },\n    count: {\n      type: Number,\n      default: 0\n    }\n  }\n}\n</script>\n```\n\n### Non-Prop Attributes\n\nWhen a parent passes an attribute not declared as a prop, it falls through to the root element:\n\n```vue\n<!-- Parent -->\n<MyButton class=\"large\" />\n\n<!-- Rendered child root -->\n<button class=\"large\">Click me</button>\n```",
+  "codeExample": "<template>\n  <div :class=\"['alert', type]\">\n    <strong>{{ title }}</strong>\n    <p>{{ message }}</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  props: {\n    title: { type: String, required: true },\n    message: { type: String, default: '' },\n    type: {\n      type: String,\n      default: 'info',\n      validator: (val) => ['info', 'success', 'warning', 'error'].includes(val)\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "What direction does Vue's prop data flow follow?",
+      "options": ["One-way: parent to child", "Two-way: bidirectional", "One-way: child to parent", "Unrestricted"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happens when a parent passes an undeclared attribute to a child component?",
+      "options": ["It falls through to the root element", "Vue throws a warning and ignores it", "It is stored in $attrs only", "The component fails to render"],
+      "correctIndex": 0
+    }
+  ]
+}

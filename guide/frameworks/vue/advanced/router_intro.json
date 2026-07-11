@@ -1,0 +1,19 @@
+{
+  "title": "Vue Router",
+  "language": "vue",
+  "topic": "router_intro",
+  "content": "### vue-router\n\nVue Router is the official routing library for Vue.js. It enables navigation between pages in a single-page application (SPA).\n\n### Installation\n\n```bash\nnpm install vue-router\n```\n\n### createRouter and createWebHistory\n\n```js\nimport { createRouter, createWebHistory } from 'vue-router'\nimport Home from './views/Home.vue'\nimport About from './views/About.vue'\n\nconst routes = [\n  { path: '/', name: 'Home', component: Home },\n  { path: '/about', name: 'About', component: About }\n]\n\nconst router = createRouter({\n  history: createWebHistory(),\n  routes\n})\n\nexport default router\n```\n\n### router-view\n\n`<router-view>` renders the matched component for the current route:\n\n```vue\n<template>\n  <div id=\"app\">\n    <router-view />\n  </div>\n</template>\n```\n\n### router-link\n\n`<router-link>` creates navigation links without page reloads:\n\n```vue\n<nav>\n  <router-link to=\"/\">Home</router-link>\n  <router-link to=\"/about\">About</router-link>\n  <router-link :to=\"{ name: 'Home' }\">Home (named)</router-link>\n</nav>\n```\n\nIt automatically gets an `active` class when the route matches.\n\n### Dynamic Route Matching\n\n```js\nconst routes = [\n  { path: '/users/:id', name: 'User', component: User }\n]\n```\n\nAccess params in the component:\n\n```vue\n<template>\n  <p>User ID: {{ $route.params.id }}</p>\n</template>\n```\n\n### Using the Router\n\n```js\nimport router from './router'\nconst app = createApp(App)\napp.use(router)\napp.mount('#app')\n```",
+  "codeExample": "// router.js\nimport { createRouter, createWebHistory } from 'vue-router'\nimport Home from './views/Home.vue'\nimport User from './views/User.vue'\nimport NotFound from './views/NotFound.vue'\n\nconst routes = [\n  { path: '/', name: 'Home', component: Home },\n  { path: '/users/:id', name: 'User', component: User, props: true },\n  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }\n]\n\nconst router = createRouter({\n  history: createWebHistory(),\n  routes\n})\n\nexport default router\n\n// In App.vue\n// <router-link to=\"/\">Home</router-link>\n// <router-link :to=\"{ name: 'User', params: { id: 42 } }\">User 42</router-link>\n// <router-view />",
+  "quiz": [
+    {
+      "question": "Which component renders the matched route component?",
+      "options": ["router-view", "router-link", "router-outlet", "router-component"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you access route parameters in a component?",
+      "options": ["$route.params", "$router.params", "$route.query", "$router.query"],
+      "correctIndex": 0
+    }
+  ]
+}

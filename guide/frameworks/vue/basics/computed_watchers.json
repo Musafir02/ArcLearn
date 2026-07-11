@@ -1,0 +1,19 @@
+{
+  "title": "Computed Properties and Watchers",
+  "language": "vue",
+  "topic": "computed_watchers",
+  "content": "### Computed Properties\n\nComputed properties are reactive values derived from other data. They are cached based on their dependencies and only re-evaluate when dependencies change.\n\n```vue\n<script>\nexport default {\n  data() {\n    return {\n      firstName: 'John',\n      lastName: 'Doe'\n    }\n  },\n  computed: {\n    fullName() {\n      return `${this.firstName} ${this.lastName}`\n    }\n  }\n}\n</script>\n<template>\n  <p>{{ fullName }}</p>\n</template>\n```\n\n### Computed vs Methods\n\n- **Computed**: Cached, only re-evaluated when dependencies change\n- **Methods**: Re-executed on every render\n\n### Computed Setter\n\nComputed properties are read-only by default. You can define a setter:\n\n```js\ncomputed: {\n  fullName: {\n    get() {\n      return `${this.firstName} ${this.lastName}`\n    },\n    set(newValue) {\n      [this.firstName, this.lastName] = newValue.split(' ')\n    }\n  }\n}\n```\n\n### Watchers\n\nWatchers observe a reactive value and perform side effects when it changes:\n\n```vue\n<script>\nexport default {\n  data() {\n    return { question: '', answer: '' }\n  },\n  watch: {\n    question(newVal, oldVal) {\n      if (newVal.includes('?')) {\n        this.answer = 'Thinking...'\n      }\n    }\n  }\n}\n</script>\n```\n\n### Deep and Immediate Watchers\n\n```js\nwatch: {\n  user: {\n    handler(newVal) {\n      console.log('User changed', newVal)\n    },\n    deep: true,\n    immediate: true\n  }\n}\n```\n\n### watchEffect\n\n`watchEffect` automatically tracks any reactive dependencies accessed inside it:\n\n```js\nimport { watchEffect } from 'vue'\n\nwatchEffect(() => {\n  localStorage.setItem('count', this.count)\n})\n```",
+  "codeExample": "<template>\n  <div>\n    <input v-model=\"firstName\" placeholder=\"First\" />\n    <input v-model=\"lastName\" placeholder=\"Last\" />>\n    <p>Full name: {{ fullName }}</p>\n    <input v-model=\"question\" placeholder=\"Ask a question\" />\n    <p>Answer: {{ answer }}</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      firstName: 'Jane',\n      lastName: 'Doe',\n      question: '',\n      answer: ''\n    }\n  },\n  computed: {\n    fullName() {\n      return `${this.firstName} ${this.lastName}`\n    }\n  },\n  watch: {\n    question(newVal) {\n      if (newVal.includes('?')) {\n        this.answer = 'Good question!'\n      }\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "What advantage do computed properties have over methods?",
+      "options": ["Caching based on dependencies", "Faster execution", "Async support", "Access to the DOM"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which watch option triggers the handler immediately on creation?",
+      "options": ["immediate", "deep", "flush", "once"],
+      "correctIndex": 0
+    }
+  ]
+}

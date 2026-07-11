@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with Next.js",
+  "language": "nextjs",
+  "topic": "getstarted",
+  "content": "### Creating a Next.js App\n\nThe quickest way to start is with `create-next-app`:\n\n```bash\nnpx create-next-app@latest my-app\ncd my-app\nnpm run dev\n```\n\nYou will be prompted to configure TypeScript, ESLint, Tailwind CSS, and more.\n\n### Project Structure\n\nA fresh Next.js project has this structure:\n\n```\nmy-app/\n  app/          # App Router (Next.js 13+)\n  pages/        # Pages Router (traditional)\n  public/       # Static assets (images, fonts)\n  styles/       # CSS files\n  next.config.js\n  package.json\n```\n\nThe `public/` folder serves static files at the root URL. Place `public/logo.png` and access it at `/logo.png`.\n\n### Package Scripts\n\nYour `package.json` includes these scripts:\n\n```json\n{\n  \"scripts\": {\n    \"dev\": \"next dev\",        // Start development server on port 3000\n    \"build\": \"next build\",     // Build for production\n    \"start\": \"next start\",     // Start production server\n    \"lint\": \"next lint\"        // Run ESLint\n  }\n}\n```\n\n- `npm run dev` — starts the dev server with Fast Refresh\n- `npm run build` — creates an optimized production build\n- `npm run start` — runs the production server after building\n\n### Running the Development Server\n\nNavigate to `http://localhost:3000`. Edit any file and see instant updates via Fast Refresh. The dev server automatically compiles your code, bundles it, and refreshes the browser.",
+  "codeExample": "// package.json scripts section\n{\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  }\n}",
+  "quiz": [
+    {
+      "question": "What command starts the Next.js development server?",
+      "options": ["npm run dev", "npm run start", "npm run build", "npm run server"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where should static assets like images be placed?",
+      "options": ["public/ directory", "assets/ directory", "static/ directory", "images/ directory"],
+      "correctIndex": 0
+    }
+  ]
+}

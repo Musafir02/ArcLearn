@@ -1,0 +1,19 @@
+{
+  "title": "Server-Side Rendering in Nuxt",
+  "language": "vue",
+  "topic": "server_side_rendering",
+  "content": "### SSR Benefits\n\nServer-Side Rendering (SSR) renders Vue components on the server and sends fully rendered HTML to the client:\n\n- **SEO**: Search engines can crawl fully rendered content\n- **Performance**: Users see content faster (no JS download required for first paint)\n- **Social sharing**: Social media previews (OG tags) work properly\n- **Accessibility**: Content is available even if JavaScript fails\n\n### useHead for SEO\n\nNuxt provides `useHead` to manage meta tags for each page:\n\n```vue\n<script setup>\nuseHead({\n  title: 'About Us - My Site',\n  meta: [\n    { name: 'description', content: 'Learn about our company' },\n    { property: 'og:title', content: 'About Us' },\n    { property: 'og:image', content: '/og-image.png' }\n  ]\n})\n</script>\n```\n\n### Server vs Client Code\n\nNuxt runs code on both server and client. Use these patterns to distinguish:\n\n```vue\n<script setup>\n// Runs on server then client (hydration)\nconst { data } = await useFetch('/api/data')\n\n// Client-only\nif (process.client) {\n  console.log('Running in browser')\n  localStorage.setItem('visited', 'true')\n}\n\n// Server-only\nif (process.server) {\n  console.log('Running on server')\n  // Access filesystem, database, etc.\n}\n</script>\n```\n\n### Hybrid Rendering\n\nNuxt 3 supports hybrid rendering — different routes can use different modes:\n\n```ts\n// nuxt.config.ts\nexport default defineNuxtConfig({\n  routeRules: {\n    '/': { prerender: true },                    // SSG\n    '/blog/**': { ssr: true },                   // SSR\n    '/dashboard/**': { ssr: false },             // SPA\n    '/api/**': { cors: true }                    // API routes\n  }\n})\n```\n\nThis allows you to optimize each route for its specific needs.",
+  "codeExample": "<script setup>\nuseHead({\n  title: 'Blog Post',\n  meta: [\n    { name: 'description', content: 'A great blog post' },\n    { property: 'og:type', content: 'article' }\n  ],\n  link: [\n    { rel: 'canonical', href: 'https://example.com/blog/post-1' }\n  ]\n})\n\n// Server-only logic\nif (process.server) {\n  console.log('Fetching from database...')\n}\n\n// Client-only logic\nif (process.client) {\n  console.log('Adding client-side event listeners...')\n  window.addEventListener('scroll', () => {})\n}\n\nconst { data: post } = await useFetch('/api/post/1')\n</script>\n\n<template>\n  <article>\n    <h1>{{ post.title }}</h1>\n    <div v-html=\"post.content\" />\n  </article>\n</template>",
+  "quiz": [
+    {
+      "question": "Which composable manages meta tags for SEO in Nuxt?",
+      "options": ["useHead", "useMeta", "useSEO", "useTitle"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you check if code is running on the server in Nuxt?",
+      "options": ["process.server", "process.ssr", "process.node", "typeof window === 'undefined'"],
+      "correctIndex": 0
+    }
+  ]
+}

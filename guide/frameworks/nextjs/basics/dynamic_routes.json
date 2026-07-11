@@ -1,0 +1,19 @@
+{
+  "title": "Dynamic Routes",
+  "language": "nextjs",
+  "topic": "dynamic_routes",
+  "content": "### Dynamic Route Files\n\nUse square brackets `[param]` to create dynamic routes:\n\n```\npages/\n  blog/\n    [id].js        -> /blog/1, /blog/hello-world\n    [year]/[month].js -> /blog/2024/01\n  products/\n    [...slug].js   -> /products/a/b/c (catch-all)\n```\n\n### getStaticPaths + getStaticProps\n\nFor SSG with dynamic routes, export both functions:\n\n```jsx\nexport async function getStaticPaths() {\n  const posts = await fetch('https://api.example.com/posts').then(r => r.json());\n\n  const paths = posts.map(post => ({\n    params: { id: post.id.toString() },\n  }));\n\n  return { paths, fallback: false };\n}\n\nexport async function getStaticProps({ params }) {\n  const post = await fetch(`https://api.example.com/posts/${params.id}`).then(r => r.json());\n\n  return { props: { post } };\n}\n\nexport default function Post({ post }) {\n  return <h1>{post.title}</h1>;\n}\n```\n\n### Fallback Behavior\n\n- `fallback: false` — unknown paths return 404\n- `fallback: true` — show fallback UI, generate page on first request\n- `fallback: 'blocking'` — wait for page generation (no flash)\n\n### Catch-All Routes\n\nUse `[...param]` for catch-all routes:\n\n- `pages/docs/[...slug].js` matches `/docs/a`, `/docs/a/b`, `/docs/a/b/c`\n- The `params.slug` will be an array: `['a', 'b', 'c']`\n\n### Optional Catch-All\n\nUse `[[...param]]` to also match the root path:\n\n- `pages/docs/[[...slug]].js` matches `/docs` and `/docs/a/b`",
+  "codeExample": "// pages/products/[id].js\nexport async function getStaticPaths() {\n  const products = await fetch('https://fakestoreapi.com/products').then(r => r.json());\n  const paths = products.map(p => ({ params: { id: p.id.toString() } }));\n  return { paths, fallback: 'blocking' };\n}\n\nexport async function getStaticProps({ params }) {\n  const product = await fetch(`https://fakestoreapi.com/products/${params.id}`).then(r => r.json());\n  return { props: { product } };\n}\n\nexport default function Product({ product }) {\n  return (\n    <div>\n      <h1>{product.title}</h1>\n      <p>${product.price}</p>\n    </div>\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does fallback: 'blocking' do in getStaticPaths?",
+      "options": ["Generates the page on first request without showing a fallback UI", "Shows a loading spinner", "Returns 404 for unknown paths", "Redirects to the home page"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you create a catch-all dynamic route?",
+      "options": ["[...param].js", "[param].js", "[[param]].js", "*.js"],
+      "correctIndex": 0
+    }
+  ]
+}

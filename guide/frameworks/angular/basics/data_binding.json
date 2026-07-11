@@ -1,0 +1,19 @@
+{
+  "title": "Data Binding",
+  "language": "angular",
+  "topic": "data_binding",
+  "content": "### What is Data Binding?\n\nData binding synchronizes data between the component class (model) and the template (view). Angular provides four forms of data binding with a consistent syntax.\n\n### 1. Interpolation — `{{ }}`\n\nDisplays component property values in the template:\n```html\n<h1>{{ title }}</h1>\n<p>{{ user.name }} is {{ user.age }} years old.</p>\n<p>{{ 2 + 2 }}</p>\n<p>{{ greet() }}</p>\n```\n\nInterpolation evaluates expressions and converts the result to a string.\n\n### 2. Property Binding — `[ ]`\n\nSets an element property or directive input to a component expression:\n```html\n<img [src]=\"user.avatarUrl\" />\n<button [disabled]=\"isSubmitting\">Submit</button>\n<div [class.active]=\"isActive\">Active div</div>\n<div [style.color]=\"textColor\">Colored text</div>\n```\n\nProperty binding flows **from component → template**.\n\n### 3. Event Binding — `( )`\n\nListens to DOM events and calls component methods:\n```html\n<button (click)=\"handleClick($event)\">Click me</button>\n<input (input)=\"onInput($event)\" />\n<form (ngSubmit)=\"onSubmit()\">...</form>\n```\n\nEvent binding flows **from template → component**.\n\n### 4. Two-Way Binding — `[( )]`\n\nThe **banana-in-a-box** syntax combines property and event binding:\n```html\n<input [(ngModel)]=\"username\" />\n\n<!-- Desugars to: -->\n<input [ngModel]=\"username\" (ngModelChange)=\"username = $event\" />\n```\n\nTwo-way binding flows **both ways** — component ↔ template.\n\n### @Input() and @Output()\n\n**`@Input()`** — Allows parent components to pass data to a child:\n```typescript\n// child.component.ts\n@Input() user: User;\n@Input({ required: true }) title: string;\n```\n```html\n<!-- parent template -->\n<app-child [user]=\"currentUser\" title=\"Welcome\"></app-child>\n```\n\n**`@Output()`** — Allows child components to emit events to parents:\n```typescript\n// child.component.ts\n@Output() userSaved = new EventEmitter<User>();\n\nsave() {\n  this.userSaved.emit(this.user);\n}\n```\n```html\n<!-- parent template -->\n<app-child (userSaved)=\"onUserSaved($event)\"></app-child>\n```",
+  "codeExample": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-counter',\n  template: `\n    <p>Count: {{ count }}</p>\n    <button (click)=\"increment()\">+</button>\n    <button (click)=\"decrement()\">-</button>\n  `,\n  standalone: true\n})\nexport class CounterComponent {\n  @Input() count = 0;\n  @Output() countChange = new EventEmitter<number>();\n\n  increment() { this.countChange.emit(this.count + 1); }\n  decrement() { this.countChange.emit(this.count - 1); }\n}",
+  "quiz": [
+    {
+      "question": "What syntax does Angular use for two-way data binding?",
+      "options": ["[( )]", "{{ }}", "[ ]", "( )"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which decorator allows a parent component to pass data to a child component?",
+      "options": ["@Input", "@Output", "@ViewChild", "@Injectable"],
+      "correctIndex": 0
+    }
+  ]
+}

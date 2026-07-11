@@ -1,0 +1,19 @@
+{
+  "title": "Teleport and Fragments",
+  "language": "vue",
+  "topic": "teleport_fragment",
+  "content": "### Teleport Component\n\n`<Teleport>` renders its content to a different DOM node outside the component's template tree:\n\n```vue\n<template>\n  <div class=\"app\">\n    <Teleport to=\"body\">\n      <div class=\"modal\">\n        This modal renders in the body element\n      </div>\n    </Teleport>\n  </div>\n</template>\n```\n\n### to Prop\n\nThe `to` prop accepts a CSS selector string or DOM element:\n\n```vue\n<Teleport to=\"#modals-container\">\n  <p>Teleported content</p>\n</Teleport>\n<Teleport :to=\"customElement\">\n  <p>Teleported to an element ref</p>\n</Teleport>\n```\n\n### Multiple Teleports\n\nMultiple `<Teleport>` components can share the same target:\n\n```vue\n<Teleport to=\"#modals-container\">\n  <ModalA />\n</Teleport>\n<Teleport to=\"#modals-container\">\n  <ModalB />\n</Teleport>\n<!-- Both append to #modals-container in order -->\n```\n\n### Disabled Teleport\n\nUse the `disabled` prop to conditionally disable teleportation:\n\n```vue\n<Teleport to=\"body\" :disabled=\"isMobile\">\n  <Modal />\n</Teleport>\n```\n\n### Fragments in Vue 3\n\nVue 3 supports **multi-root components** (fragments). A component can have multiple root elements:\n\n```vue\n<template>\n  <header>Header</header>\n  <main>Content</main>\n  <footer>Footer</footer>\n</template>\n```\n\nThis is not possible in Vue 2 (single root element required). Fragments reduce unnecessary wrapper `<div>` nesting.\n\n### Attribute Inheritance with Fragments\n\nWhen a component has multiple roots and receives non-prop attributes, you must explicitly bind them:\n\n```vue\n<header :class=\"$attrs.class\">Header</header>\n<main>Content</main>\n<footer>Footer</footer>\n```",
+  "codeExample": "<template>\n  <div>\n    <button @click=\"showModal = true\">Open Modal</button>\n\n    <Teleport to=\"body\">\n      <div v-if=\"showModal\" class=\"modal-overlay\" @click.self=\"showModal = false\">\n        <div class=\"modal-content\">\n          <h2>Modal Title</h2>\n          <p>This is rendered inside the body tag.</p>\n          <button @click=\"showModal = false\">Close</button>\n        </div>\n      </div>\n    </Teleport>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() { return { showModal: false } }\n}\n</script>\n\n<style>\n.modal-overlay {\n  position: fixed; inset: 0; background: rgba(0,0,0,0.5);\n  display: flex; align-items: center; justify-content: center;\n}\n.modal-content { background: white; padding: 2rem; border-radius: 8px; }\n</style>",
+  "quiz": [
+    {
+      "question": "What does Teleport do?",
+      "options": ["Renders content to a different DOM node", "Moves data between components", "Transports styles globally", "Transfers props asynchronously"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is a Fragment in Vue 3?",
+      "options": ["A component with multiple root elements", "A piece of template code", "A broken component", "A type of slot"],
+      "correctIndex": 0
+    }
+  ]
+}

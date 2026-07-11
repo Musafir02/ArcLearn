@@ -1,0 +1,19 @@
+{
+  "title": "Deployment",
+  "language": "nextjs",
+  "topic": "deployment",
+  "content": "### Vercel Deployment\n\nVercel is the platform built by the creators of Next.js, offering the best deployment experience:\n\n1. Push your code to GitHub, GitLab, or Bitbucket\n2. Import the repository on [vercel.com](https://vercel.com)\n3. Vercel detects Next.js automatically and configures the build\n4. Deploy with `git push`\n\n**Benefits**: Automatic ISR, Edge Functions, Analytics, Preview Deployments\n\n### Other Platforms\n\n#### Netlify\n\n```bash\nnpm install @netlify/plugin-nextjs\n```\n\nCreate `netlify.toml`:\n```toml\n[build]\n  command = \"npm run build\"\n  publish = \".next\"\n\n[[plugins]]\n  package = \"@netlify/plugin-nextjs\"\n```\n\n#### AWS (Serverless)\n\nDeploy using Serverless Framework or SST:\n```bash\nnpm install serverless-nextjs\nnpx serverless\n```\n\n#### Docker\n\n```dockerfile\nFROM node:18-alpine AS base\n\nFROM base AS deps\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci\n\nFROM base AS builder\nWORKDIR /app\nCOPY --from=deps /app/node_modules ./node_modules\nCOPY . .\nRUN npm run build\n\nFROM base AS runner\nWORKDIR /app\nENV NODE_ENV=production\n\nCOPY --from=builder /app/public ./public\nCOPY --from=builder /app/.next/standalone ./\nCOPY --from=builder /app/.next/static ./.next/static\n\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]\n```\n\nEnable standalone output:\n```js\n// next.config.js\nmodule.exports = {\n  output: 'standalone',\n};\n```\n\n### Build Configuration\n\n```js\n// next.config.js\nmodule.exports = {\n  compress: true,\n  poweredByHeader: false,\n  generateEtags: true,\n};\n```\n\n### Environment Configuration\n\nSet environment variables in your deployment platform:\n\n- Vercel: Project Settings > Environment Variables\n- Netlify: Site Settings > Build & Deploy > Environment\n- AWS: Parameter Store or Secrets Manager\n\n### Post-Deployment Checks\n\n- Verify custom domain SSL certificate\n- Check CDN caching behavior\n- Monitor error rates\n- Set up analytics\n- Configure preview deployments for PRs",
+  "codeExample": "# Dockerfile for Next.js\nFROM node:18-alpine AS runner\nWORKDIR /app\n\nENV NODE_ENV=production\n\nCOPY public ./public\nCOPY .next/standalone ./\nCOPY .next/static ./.next/static\n\nEXPOSE 3000\n\nENV PORT=3000\nENV HOSTNAME=\"0.0.0.0\"\n\nCMD [\"node\", \"server.js\"]",
+  "quiz": [
+    {
+      "question": "Which deployment platform is created by the same team behind Next.js?",
+      "options": ["Vercel", "Netlify", "AWS Amplify", "Cloudflare Pages"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What config enables Docker-optimized standalone output?",
+      "options": ["output: 'standalone'", "output: 'docker'", "output: 'server'", "output: 'node'"],
+      "correctIndex": 0
+    }
+  ]
+}

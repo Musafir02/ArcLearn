@@ -1,0 +1,19 @@
+{
+  "title": "Route Handlers",
+  "language": "nextjs",
+  "topic": "route_handlers",
+  "content": "### Route Handlers in App Router\n\nRoute Handlers replace API Routes in the App Router. Files named `route.js` or `route.ts` export HTTP method handlers:\n\n```jsx\n// app/api/items/route.js\nexport async function GET() {\n  const items = await getItems();\n  return Response.json(items);\n}\n\nexport async function POST(request) {\n  const item = await request.json();\n  const newItem = await createItem(item);\n  return Response.json(newItem, { status: 201 });\n}\n```\n\n### HTTP Methods\n\nExport named functions for each method:\n\n- `GET`\n- `POST`\n- `PUT`\n- `PATCH`\n- `DELETE`\n- `HEAD`\n- `OPTIONS`\n\n### Request and Response\n\nRoute Handlers use standard Web APIs:\n\n- `Request` — the standard Fetch API Request object\n- `Response` — the standard Fetch API Response object\n\n```jsx\nexport async function PUT(request, { params }) {\n  const body = await request.json();\n  const { id } = params;\n\n  const updated = await updateItem(id, body);\n  return Response.json(updated);\n}\n\nexport async function DELETE(request, { params }) {\n  const { id } = params;\n  await deleteItem(id);\n  return new Response(null, { status: 204 });\n}\n```\n\n### Dynamic Route Handlers\n\n```jsx\n// app/api/items/[id]/route.js\nexport async function GET(request, { params }) {\n  const item = await getItem(params.id);\n\n  if (!item) {\n    return Response.json({ error: 'Not found' }, { status: 404 });\n  }\n\n  return Response.json(item);\n}\n```\n\n### Revalidating with NextResponse\n\nUse `NextResponse` for advanced features:\n\n```jsx\nimport { NextResponse } from 'next/server';\n\nexport async function GET() {\n  const data = await fetchData();\n\n  return NextResponse.json(data, {\n    headers: {\n      'Cache-Control': 'public, s-maxage=60',\n    },\n  });\n}\n```\n\n### CORS and Headers\n\n```jsx\nexport async function GET() {\n  return new Response(JSON.stringify({ message: 'CORS enabled' }), {\n    status: 200,\n    headers: {\n      'Access-Control-Allow-Origin': '*',\n      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',\n      'Access-Control-Allow-Headers': 'Content-Type',\n    },\n  });\n}\n\nexport async function OPTIONS() {\n  return new Response(null, {\n    status: 204,\n    headers: {\n      'Access-Control-Allow-Origin': '*',\n      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',\n      'Access-Control-Allow-Headers': 'Content-Type',\n    },\n  });\n}\n```",
+  "codeExample": "// app/api/posts/route.js\nexport async function GET() {\n  const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then(r => r.json());\n  return Response.json(posts);\n}\n\nexport async function POST(request) {\n  const body = await request.json();\n  const newPost = { id: Date.now(), ...body };\n  return Response.json(newPost, { status: 201 });\n}\n\n// app/api/posts/[id]/route.js\nexport async function GET(request, { params }) {\n  const post = await getPost(params.id);\n  return post\n    ? Response.json(post)\n    : Response.json({ error: 'Not found' }, { status: 404 });\n}",
+  "quiz": [
+    {
+      "question": "What file name is used for API endpoints in the App Router?",
+      "options": ["route.js", "api.js", "handler.js", "endpoint.js"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What Web API does Next.js Route Handlers use?",
+      "options": ["Request/Response (Fetch API)", "Express req/res", "Koa ctx", "Fastify request/reply"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Directives",
+  "language": "angular",
+  "topic": "directives",
+  "content": "### What are Directives?\n\nDirectives are classes that add behavior to elements in your Angular templates. There are three kinds:\n\n1. **Components** — Directives with a template (the most common).\n2. **Structural directives** — Change the DOM layout by adding/removing elements (`*ngIf`, `*ngFor`, `*ngSwitch`).\n3. **Attribute directives** — Change the appearance or behavior of an existing element (`ngClass`, `ngStyle`, `ngModel`).\n\n### Structural Directives\n\nThey begin with an asterisk (`*`) which is syntactic sugar for `<ng-template>`.\n\n**`*ngIf`** — Conditionally renders an element:\n```html\n<div *ngIf=\"isLoggedIn; else loginPrompt\">\n  Welcome back!\n</div>\n<ng-template #loginPrompt>\n  <p>Please log in.</p>\n</ng-template>\n```\n\n**`*ngFor`** — Iterates over a collection:\n```html\n<ul>\n  <li *ngFor=\"let item of items; index as i; trackBy: trackByFn\">\n    {{ i }}: {{ item.name }}\n  </li>\n</ul>\n```\n\n**`*ngSwitch`** — Similar to JavaScript switch:\n```html\n<div [ngSwitch]=\"role\">\n  <p *ngSwitchCase=\"'admin'\">Admin Panel</p>\n  <p *ngSwitchCase=\"'user'\">User Dashboard</p>\n  <p *ngSwitchDefault>Guest View</p>\n</div>\n```\n\n### Attribute Directives\n\n**`ngClass`** — Dynamically add/remove CSS classes:\n```html\n<div [ngClass]=\"{ active: isActive, disabled: isDisabled }\">Content</div>\n```\n\n**`ngStyle`** — Inline styles:\n```html\n<div [ngStyle]=\"{ 'background-color': color, 'font-size': fontSize + 'px' }\">Styled</div>\n```\n\n**`ngModel`** — Two-way data binding (requires `FormsModule`):\n```html\n<input [(ngModel)]=\"username\" />\n```\n\n### Custom Directive\n\n```typescript\nimport { Directive, ElementRef, HostListener, HostBinding } from '@angular/core';\n\n@Directive({\n  selector: '[appHighlight]',\n  standalone: true\n})\nexport class HighlightDirective {\n  @HostBinding('style.backgroundColor') bgColor = 'transparent';\n\n  @HostListener('mouseenter') onMouseEnter() {\n    this.bgColor = 'yellow';\n  }\n\n  @HostListener('mouseleave') onMouseLeave() {\n    this.bgColor = 'transparent';\n  }\n}\n```\n\nUsage: `<p appHighlight>Hover to highlight</p>`\n\n- **`@HostListener`** — Listens to events on the host element.\n- **`@HostBinding`** — Binds a class/property/attribute on the host element.",
+  "codeExample": "import { Directive, ElementRef, HostListener, HostBinding } from '@angular/core';\n\n@Directive({ selector: '[appHighlight]', standalone: true })\nexport class HighlightDirective {\n  @HostBinding('style.backgroundColor') bgColor = 'transparent';\n\n  @HostListener('mouseenter') onMouseEnter() {\n    this.bgColor = 'yellow';\n  }\n\n  @HostListener('mouseleave') onMouseLeave() {\n    this.bgColor = 'transparent';\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which directive is used to conditionally render an element in Angular?",
+      "options": ["*ngIf", "*ngFor", "*ngSwitch", "ngClass"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What decorator listens to events on the host element of a custom directive?",
+      "options": ["@HostListener", "@HostBinding", "@Output", "@Input"],
+      "correctIndex": 0
+    }
+  ]
+}

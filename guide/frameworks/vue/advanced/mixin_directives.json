@@ -1,0 +1,19 @@
+{
+  "title": "Mixins and Custom Directives",
+  "language": "vue",
+  "topic": "mixin_directives",
+  "content": "### Mixins (Options API)\n\nMixins are a way to distribute reusable functionality in the Options API:\n\n```js\n// mixins/logger.js\nexport const loggerMixin = {\n  created() {\n    console.log(`${this.$options.name} created`)\n  },\n  methods: {\n    log(msg) {\n      console.log(`[Log] ${msg}`)\n    }\n  }\n}\n```\n\nUsage:\n\n```vue\n<script>\nimport { loggerMixin } from './mixins/logger'\nexport default {\n  mixins: [loggerMixin],\n  created() {\n    this.log('Component mounted')\n  }\n}\n</script>\n```\n\n### Mixin Merging\n\n- **Data**: Deep merged, component data takes precedence\n- **Lifecycle hooks**: Both called (mixin hooks run before component hooks)\n- **Methods/Computed**: Component takes precedence if same key exists\n\n### Custom Directives\n\nCustom directives allow low-level DOM access:\n\n```js\n// directives/focus.js\nexport default {\n  mounted(el) {\n    el.focus()\n  }\n}\n```\n\nGlobal registration:\n\n```js\napp.directive('focus', { mounted: (el) => el.focus() })\n```\n\nLocal registration:\n\n```vue\n<script>\nexport default {\n  directives: {\n    focus: { mounted: (el) => el.focus() }\n  }\n}\n</script>\n\n<template>\n  <input v-focus />\n</template>\n```\n\n### Directive Hooks\n\n| Hook | Description |\n|---|---|\n| `created` | Called before element's attributes applied |\n| `mounted` | Element is mounted to the DOM |\n| `beforeUpdate` | Called before element updates |\n| `updated` | Element's children have updated |\n| `beforeUnmount` | Called before element is unmounted |\n| `unmounted` | Element has been unmounted |\n\n### Passing Values to Directives\n\n```vue\n<div v-highlight=\"{ color: 'yellow', duration: 300 }\"></div>\n\n<script>\napp.directive('highlight', {\n  mounted(el, binding) {\n    el.style.backgroundColor = binding.value.color\n  }\n})\n</script>\n```",
+  "codeExample": "// v-tooltip directive\napp.directive('tooltip', {\n  mounted(el, binding) {\n    el.style.position = 'relative'\n    const tooltip = document.createElement('span')\n    tooltip.textContent = binding.value\n    tooltip.className = 'tooltip-text'\n    tooltip.style.cssText = 'display:none;position:absolute;bottom:100%;left:0;background:#333;color:#fff;padding:4px 8px;border-radius:4px;font-size:12px;white-space:nowrap'\n    el.appendChild(tooltip)\n\n    el.addEventListener('mouseenter', () => { tooltip.style.display = 'block' })\n    el.addEventListener('mouseleave', () => { tooltip.style.display = 'none' })\n  },\n  updated(el, binding) {\n    const tooltip = el.querySelector('.tooltip-text')\n    if (tooltip) tooltip.textContent = binding.value\n  },\n  unmounted(el) {\n    const tooltip = el.querySelector('.tooltip-text')\n    if (tooltip) tooltip.remove()\n  }\n})\n\n// Usage: <button v-tooltip=\"'Save changes'\">Save</button>",
+  "quiz": [
+    {
+      "question": "When a component and mixin define the same lifecycle hook, what happens?",
+      "options": ["Both are called (mixin first)", "Component hook overrides mixin", "Mixin hook overrides component", "Only the mixin runs"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which directive hook is called when the element is inserted into the DOM?",
+      "options": ["mounted", "created", "inserted", "bound"],
+      "correctIndex": 0
+    }
+  ]
+}

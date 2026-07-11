@@ -1,0 +1,19 @@
+{
+  "title": "Slots",
+  "language": "vue",
+  "topic": "slots",
+  "content": "### Slot Content\n\nSlots allow parent components to inject content into a child component's template:\n\n```vue\n<!-- Child: BaseButton.vue -->\n<button class=\"btn\">\n  <slot />\n</button>\n\n<!-- Parent -->\n<BaseButton>Click me</BaseButton>\n```\n\n### Fallback Slots\n\nProvide default content that renders when no slot content is provided:\n\n```vue\n<button class=\"btn\">\n  <slot>Submit</slot>\n</button>\n```\n\n### Named Slots\n\nUse named slots to distribute content to multiple locations:\n\n```vue\n<!-- Child -->\n<div class=\"card\">\n  <header><slot name=\"header\" /></header>\n  <main><slot /></main>\n  <footer><slot name=\"footer\" /></footer>\n</div>\n\n<!-- Parent -->\n<BaseCard>\n  <template v-slot:header>\n    <h2>Title</h2>\n  </template>\n  <p>Main content</p>\n  <template #footer>\n    <small>Footer</small>\n  </template>\n</BaseCard>\n```\n\nShorthand: `#header` instead of `v-slot:header`.\n\n### Scoped Slots\n\nScoped slots pass data from child to parent slot content:\n\n```vue\n<!-- Child -->\n<ul>\n  <li v-for=\"item in items\" :key=\"item.id\">\n    <slot :item=\"item\" :index=\"item.id\">\n      {{ item.name }}  <!-- fallback -->\n    </slot>\n  </li>\n</ul>\n\n<!-- Parent -->\n<List :items=\"products\">\n  <template #default=\"{ item, index }\">\n    <strong>{{ index }}:</strong> {{ item.name }} - ${{ item.price }}\n  </template>\n</List>\n```\n\n### Dynamic Slots\n\n```vue\n<template #[dynamicSlotName]>\n  Dynamic slot content\n</template>\n```",
+  "codeExample": "<template>\n  <div class=\"panel\">\n    <div class=\"panel-header\">\n      <slot name=\"header\">Default Header</slot>\n    </div>\n    <div class=\"panel-body\">\n      <slot :data=\"sharedData\">Default Body</slot>\n    </div>\n    <div class=\"panel-footer\">\n      <slot name=\"footer\" />\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      sharedData: { user: 'VueDev', role: 'Admin' }\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "What is the shorthand for v-slot?",
+      "options": ["#", ":", "@", "&"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which slot feature allows child data to be exposed to parent slot content?",
+      "options": ["Scoped slots", "Named slots", "Fallback slots", "Dynamic slots"],
+      "correctIndex": 0
+    }
+  ]
+}

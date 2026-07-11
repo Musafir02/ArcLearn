@@ -1,0 +1,19 @@
+{
+  "title": "Static Export",
+  "language": "nextjs",
+  "topic": "static_export",
+  "content": "### Static HTML Export\n\nNext.js can export your app as a fully static site — HTML, CSS, and JS files — that can be served from any static hosting.\n\n### Configuration\n\n```js\n// next.config.js\nmodule.exports = {\n  output: 'export',\n};\n```\n\nThen run:\n```bash\nnpm run build\n```\n\nThis generates an `out/` directory with the static export.\n\n### How It Works\n\n- All pages are pre-rendered as static HTML\n- Each page gets its own HTML file\n- Client-side JavaScript handles navigation\n- CSS and assets are bundled and optimized\n\n### Limitations\n\n- **No SSR**: `getServerSideProps` will throw an error during export\n- **No API Routes**: API routes are not included in the export\n- **No ISR**: `revalidate` is ignored\n- **No Middleware**: Edge middleware doesn't run\n- **No on-demand revalidation**: Not supported\n- **No Image Optimization**: `next/image` default loader requires a server\n\nFor Image Optimization during static export, use a custom image loader:\n\n```js\n// next.config.js\nmodule.exports = {\n  output: 'export',\n  images: {\n    loader: 'custom',\n    loaderFile: './lib/image-loader.js',\n  },\n};\n```\n\n### Dynamic Routes in Static Export\n\nAll dynamic routes must be provided via `getStaticPaths`:\n\n```jsx\nexport async function getStaticPaths() {\n  const posts = await fetch('https://api.example.com/posts').then(r => r.json());\n\n  const paths = posts.map(post => ({\n    params: { id: post.id.toString() },\n  }));\n\n  return { paths, fallback: false }; // fallback must be false\n}\n\nexport async function getStaticProps({ params }) {\n  const post = await fetch(`https://api.example.com/posts/${params.id}`).then(r => r.json());\n  return { props: { post } };\n}\n```\n\n### Deployment to Static Hosting\n\nServe the `out/` directory on:\n\n- **Vercel**: Automatic (detects Next.js), but `output: 'export'` is mainly for other hosts\n- **Netlify**: Drag-and-drop `out/` folder\n- **GitHub Pages**: Deploy `out/` to the `gh-pages` branch\n- **S3/CloudFront**: Upload `out/` to an S3 bucket\n- **Any static server**: Nginx, Apache, etc.\n\n### When to Use Static Export\n\n- Documentation sites\n- Landing pages\n- Blogs (with SSG)\n- Portfolio sites\n- Any site that can be fully pre-rendered\n\n### Travis/Redirect Config for SPA\n\nOn static hosts, configure trailing slash redirects or use `exportTrailingSlash`:\n\n```js\nmodule.exports = {\n  output: 'export',\n  trailingSlash: true,\n};\n```",
+  "codeExample": "// next.config.js\n/** @type {import('next').NextConfig} */\nconst nextConfig = {\n  output: 'export',\n  images: {\n    unoptimized: true,\n  },\n  trailingSlash: true,\n};\n\nmodule.exports = nextConfig;\n\n// Build command:\n// npm run build\n// Output in ./out/ directory",
+  "quiz": [
+    {
+      "question": "Which Next.js feature is NOT available with static export?",
+      "options": ["getServerSideProps", "getStaticProps", "getStaticPaths", "Image Component with local images"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What config enables static export?",
+      "options": ["output: 'export'", "staticExport: true", "exportMode: 'static'", "renderMode: 'static'"],
+      "correctIndex": 0
+    }
+  ]
+}

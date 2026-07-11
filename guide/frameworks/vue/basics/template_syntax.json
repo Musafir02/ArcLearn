@@ -1,0 +1,19 @@
+{
+  "title": "Template Syntax",
+  "language": "vue",
+  "topic": "template_syntax",
+  "content": "### Mustache Syntax\n\nVue uses double curly braces for text interpolation:\n\n```vue\n<template>\n  <p>{{ message }}</p>\n  <p>{{ number + 1 }}</p>\n  <p>{{ ok ? 'YES' : 'NO' }}</p>\n</template>\n```\n\n### v-text and v-html\n\n- `v-text` sets `textContent` (equivalent to `{{ }}`)\n- `v-html` sets `innerHTML` — use with caution to avoid XSS\n\n```vue\n<span v-text=\"msg\"></span>\n<span v-html=\"rawHtml\"></span>\n```\n\n### JavaScript Expressions\n\nTemplates support single JavaScript expressions:\n\n```vue\n<p>{{ message.split('').reverse().join('') }}</p>\n<p v-if=\"items.length > 0\">Items available</p>\n```\n\nStatements and control flow are NOT allowed in templates.\n\n### Filters (Vue 2 — Deprecated in Vue 3)\n\nIn Vue 2, filters were used to format text:\n\n```vue\n{{ date | formatDate }}\n```\n\nVue 3 removed filters. Use computed properties or methods instead:\n\n```vue\n<p>{{ formattedDate }}</p>\n```",
+  "codeExample": "<template>\n  <div>\n    <h1>{{ title }}</h1>\n    <p v-text=\"description\"></p>\n    <p v-html=\"htmlContent\"></p>\n    <p>Total: {{ price * quantity }}</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      title: 'Template Syntax',\n      description: 'Text via v-text',\n      htmlContent: '<strong>Bold HTML</strong>',\n      price: 10,\n      quantity: 3\n    }\n  }\n}\n</script>",
+  "quiz": [
+    {
+      "question": "Which directive renders raw HTML?",
+      "options": ["v-html", "v-text", "v-bind", "v-model"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What replaced filters in Vue 3?",
+      "options": ["Computed properties or methods", "Custom directives", "Mixins", "Watchers"],
+      "correctIndex": 0
+    }
+  ]
+}

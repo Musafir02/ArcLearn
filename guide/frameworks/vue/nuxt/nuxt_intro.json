@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Nuxt.js",
+  "language": "vue",
+  "topic": "nuxt_intro",
+  "content": "### What is Nuxt.js?\n\nNuxt.js is a **meta-framework** built on top of Vue.js that provides powerful features like server-side rendering (SSR), static site generation (SSG), file-based routing, and auto-imports out of the box.\n\n### SSR / SSG / SPA Modes\n\nNuxt 3 supports three rendering modes:\n\n| Mode | Description | Use Case |\n|---|---|---|\n| **SSR** (Universal) | Renders on the server, hydrates on the client | SEO-critical, dynamic content |\n| **SSG** (Static) | Pre-renders all pages at build time | Blogs, marketing sites |\n| **SPA** | Client-side only, no server | Internal dashboards, apps |\n\n### Nuxt 3 Key Features\n\n- **File-based routing**: Pages automatically map to routes based on the `pages/` directory\n- **Auto-imports**: Components, composables, and utilities are auto-imported — no manual imports needed\n- **Server engine**: Nitro — a cross-platform server engine for Node.js, serverless, and edge\n- **Hybrid rendering**: Mix SSR, SSG, and SPA per route in the same project\n- **TypeScript**: First-class TypeScript support\n\n### Creating a Nuxt 3 Project\n\n```bash\nnpx nuxi@latest init my-nuxt-app\ncd my-nuxt-app\nnpm run dev\n```\n\n### Project Structure\n\n```\nmy-nuxt-app/\n├── app.vue            # Root component\n├── pages/             # File-based routing\n├── components/        # Auto-imported components\n├── composables/       # Auto-imported composables\n├── layouts/           # Layout components\n├── middleware/        # Route middleware\n├── server/            # Server routes and API\n├── nuxt.config.ts     # Nuxt configuration\n└── package.json\n```",
+  "codeExample": "// nuxt.config.ts\nexport default defineNuxtConfig({\n  // Rendering mode: 'universal' (SSR), 'static' (SSG), or 'spa'\n  ssr: true,\n\n  // Modules\n  modules: [\n    '@nuxt/content',\n    '@nuxt/image',\n    '@nuxtjs/tailwindcss'\n  ],\n\n  // App configuration\n  app: {\n    head: {\n      title: 'My Nuxt App',\n      meta: [\n        { name: 'description', content: 'Built with Nuxt 3' }\n      ]\n    }\n  }\n})",
+  "quiz": [
+    {
+      "question": "What is Nuxt.js?",
+      "options": ["A Vue meta-framework for SSR/SSG/SPA", "A Vue UI component library", "A state management library for Vue", "A Vue testing framework"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Nuxt 3 feature auto-imports components and composables?",
+      "options": ["Auto-imports", "Dynamic imports", "Lazy loading", "Tree shaking"],
+      "correctIndex": 0
+    }
+  ]
+}
