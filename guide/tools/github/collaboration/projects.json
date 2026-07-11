@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Projects",
+  "language": "github",
+  "topic": "projects",
+  "content": "### GitHub Projects (Beta)\n\nProjects provide a flexible Kanban-style view for planning and tracking work across repositories. Access from the **Projects** tab.\n\n### Project Views\n\n- **Table view** — Spreadsheet-style with custom fields, sorting, and filtering\n- **Board view** — Kanban columns (To do, In progress, Done)\n- **Timeline view** — Gantt-chart style for scheduling\n- **Roadmap view** — High-level timeline of items\n\n### Custom Fields\n\nAdd fields like text, number, date, single select, and iteration to track metadata directly on project items.\n\n### Automation\n\nUse built-in workflows: automatically move issues to \"In Progress\" when assigned, or to \"Done\" when closed. You can also trigger GitHub Actions from project updates.\n\n### Linking Issues and PRs\n\nDrag and drop issues/PRs into project views. Items stay synced — closing an issue updates the project card automatically.",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "Which project view provides a Kanban column layout?",
+      "options": ["Board view", "Table view", "Timeline view", "Roadmap view"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What are custom metadata fields in GitHub Projects called?",
+      "options": ["Custom fields", "Labels", "Milestones", "Tags"],
+      "correctIndex": 0
+    }
+  ]
+}

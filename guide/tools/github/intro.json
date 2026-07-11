@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to GitHub",
+  "language": "github",
+  "topic": "intro",
+  "content": "### What is GitHub?\n\nGitHub is a cloud-based hosting service for Git repositories. It adds collaboration features on top of Git, including pull requests, code review, issue tracking, and CI/CD via GitHub Actions.\n\n### Social Coding\n\nGitHub is often called a \"social coding\" platform because it makes it easy for developers to discover, fork, contribute to, and discuss projects. Each user has a profile showing their contributions, repositories, and activity.\n\n### GitHub vs GitLab vs Bitbucket\n\n| Feature | GitHub | GitLab | Bitbucket |\n|---------|--------|--------|-----------|\n| CI/CD | GitHub Actions | Built-in | Pipelines |\n| Self-hosted | No (GHES) | Yes | Yes |\n| Free private repos | Yes | Yes | Limited |\n| Pages hosting | GitHub Pages | GitLab Pages | None |\n\n### Key Features\n\n- **Pull Requests** — Propose and review code changes before merging\n- **GitHub Actions** — Automate workflows, tests, and deployments\n- **GitHub Pages** — Host static websites directly from repos\n- **Issues** — Track bugs, features, and tasks\n- **Discussions** — Community conversations and Q&A",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "What version control system does GitHub host?",
+      "options": ["Git", "SVN", "Mercurial", "CVS"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which GitHub feature is used for automated CI/CD pipelines?",
+      "options": ["GitHub Pages", "GitHub Actions", "GitHub Issues", "GitHub Wiki"],
+      "correctIndex": 1
+    }
+  ]
+}

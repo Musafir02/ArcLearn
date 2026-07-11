@@ -1,0 +1,19 @@
+{
+  "title": "Tags",
+  "language": "git",
+  "topic": "tags",
+  "content": "### What Are Tags?\n\nTags mark specific points in Git history, typically used for release versions.\n\n### Lightweight vs Annotated Tags\n\n| Lightweight | Annotated |\n|---|---|\n| Just a pointer to a commit | Full object in Git DB |\n| No metadata | Has author, date, message |\n| `git tag v1.0` | `git tag -a v1.0 -m \"v1.0\"` |\n\n### Creating Tags\n\n```bash\ngit tag v1.0.0                     # Lightweight tag\ngit tag -a v1.0.0 -m \"Release v1.0.0\"  # Annotated tag\ngit tag -a v1.0.0 <commit-hash>    # Tag a specific commit\n```\n\n### Listing and Viewing Tags\n\n```bash\ngit tag                            # List all tags\ngit tag -l \"v1.*\"                 # Filter by pattern\ngit show v1.0.0                    # Show tag details\n```\n\n### Pushing Tags to Remote\n\nTags are not pushed by default with `git push`:\n\n```bash\ngit push origin v1.0.0             # Push a specific tag\ngit push --tags                    # Push all tags\ngit push origin --delete v1.0.0    # Delete remote tag\n```\n\n### Semantic Versioning Tags\n\nCommon convention: `v<major>.<minor>.<patch>`\n- `v1.0.0` — first stable release\n- `v1.2.0` — new features (minor)\n- `v1.2.1` — bug fixes (patch)\n- `v2.0.0` — breaking changes (major)\n\n### Checking Out Tags\n\n```bash\ngit checkout v1.0.0                # Detached HEAD state\n```\n\nYou're in \"detached HEAD\" — create a branch if you need to make changes:\n\n```bash\ngit switch -c hotfix-v1.0.0\n```",
+  "codeExample": "git tag -a v1.0.0 -m \"Initial release\"\ngit push origin v1.0.0\ngit tag -l \"v1.*\"",
+  "quiz": [
+    {
+      "question": "What is the difference between lightweight and annotated tags?",
+      "options": ["Lightweight has a message", "Annotated stores full metadata (author, date, message)", "Lightweight cannot be pushed", "Annotated can't be deleted"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you push a tag to a remote repository?",
+      "options": ["git push --all", "git push origin <tagname>", "Tags push automatically with git push", "git push --tags-only"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "git init and git clone",
+  "language": "git",
+  "topic": "init_clone",
+  "content": "### git init — Create a New Repository\n\nInitializes a new Git repository in the current directory:\n\n```bash\ngit init\n```\n\nTo create a repo in a specific directory:\n\n```bash\ngit init my-project\n```\n\n### git clone — Copy an Existing Repository\n\nDownloads a remote repository to your local machine:\n\n```bash\ngit clone https://github.com/user/repo.git\n```\n\n### Cloning Specific Branches\n\nClone only a particular branch (saves bandwidth):\n\n```bash\ngit clone --branch main --single-branch https://github.com/user/repo.git\n```\n\n### Shallow Clone\n\nClone with limited history using `--depth`:\n\n```bash\ngit clone --depth 1 https://github.com/user/repo.git\n```\n\nUseful for large repos where full history isn't needed (e.g., CI/CD).\n\n### Bare Repositories\n\nA bare repo has no working tree — only Git data. Used as a central hub:\n\n```bash\ngit init --bare repo.git\n```\n\nBare repos are standard for remote \"origin\" servers (GitHub, GitLab).",
+  "codeExample": "# Create new repo\ngit init my-app\ncd my-app\necho \"# My App\" > README.md\ngit add README.md\ngit commit -m \"initial commit\"\n\n# Clone existing repo\ngit clone https://github.com/user/existing-project.git\n\n# Shallow clone\ngit clone --depth 1 https://github.com/user/large-repo.git",
+  "quiz": [
+    {
+      "question": "Which flag limits clone history to a specific depth?",
+      "options": ["--shallow", "--depth", "--limit", "--single-branch"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a bare repository used for?",
+      "options": ["Local development", "Central remote server", "Storing large files", "Code review"],
+      "correctIndex": 1
+    }
+  ]
+}

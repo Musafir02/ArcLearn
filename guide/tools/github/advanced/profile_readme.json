@@ -1,0 +1,19 @@
+{
+  "title": "Profile README",
+  "language": "github",
+  "topic": "profile_readme",
+  "content": "### Special Repository\n\nCreate a repository named exactly `username/username` (e.g., `octocat/octocat`) with a `README.md`. GitHub displays this README on your profile page above the repository grid.\n\n### Profile README Markdown\n\nShowcase your skills, projects, and activity. Include:\n- Bio and current role\n- Skills and technologies\n- Pinned repository links\n- GitHub stats and contribution graphs\n\n### GitHub Stats Widgets\n\nUse external services to display dynamic badges:\n\n```markdown\n![GitHub stats](https://github-readme-stats.vercel.app/api?username=octocat&show_icons=true)\n\n![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=octocat)\n```\n\nPopular widgets: [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [gh-profile-badge](https://github.com/schneefux/gh-profile-badge).\n\n### Visitor Badges\n\n```markdown\n![Profile views](https://komarev.com/ghpvc/?username=octocat)\n```\n\n### GitHub Activity Graph\n\n```markdown\n![Activity graph](https://github-readme-activity-graph.vercel.app/graph?username=octocat)\n```",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "What name must a special repository have for a profile README?",
+      "options": ["username/username", "profile/username", "username/profile", ".github/profile"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which external service provides the popular GitHub Stats card?",
+      "options": ["github-readme-stats", "GitHub badges", "Shields.io", "GitHub API"],
+      "correctIndex": 0
+    }
+  ]
+}

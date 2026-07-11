@@ -1,0 +1,19 @@
+{
+  "title": "Merging",
+  "language": "git",
+  "topic": "merging",
+  "content": "### git merge\n\nMerging integrates changes from one branch into another. You merge **into** your current branch.\n\n```bash\ngit switch main\ngit merge feature\n```\n\n### Fast-Forward Merge\n\nIf the target branch has not diverged, Git simply moves the pointer forward — no merge commit:\n\n```\nmain  o---o---o\n                   \\\nfeature             o---o\n\nAfter `git merge feature`:\nmain  o---o---o---o---o\n```\n\n### 3-Way Merge\n\nWhen branches have diverged, Git creates a **merge commit** with two parents:\n\n```bash\ngit merge feature\n```\n\nThis uses the common ancestor and both branch tips to create a new snapshot.\n\n### No-Fast-Forward Merge\n\nForce a merge commit even when fast-forward is possible:\n\n```bash\ngit merge --no-ff feature\n```\n\nUseful for preserving feature branch history.\n\n### Merge Strategies\n\n- **recursive** (default) — for merging two branches\n- **ours** — auto-resolve using our version (discards theirs)\n- **octopus** — for merging multiple branches\n\n```bash\ngit merge -s ours feature\ngit merge feature1 feature2  # octopus auto-selected\n```",
+  "codeExample": "git switch main\ngit merge new-feature\n# Conflict? Resolve manually, then:\ngit add .\ngit commit -m \"Merge new-feature into main\"",
+  "quiz": [
+    {
+      "question": "What is a fast-forward merge?",
+      "options": ["A merge with 3 parents", "Pointer moves forward without merge commit", "Merge skipped entirely", "Forces conflict resolution"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which flag forces a merge commit even when fast-forward is possible?",
+      "options": ["git merge --no-commit", "git merge --no-ff", "git merge --ff-only", "git merge --squash"],
+      "correctIndex": 1
+    }
+  ]
+}

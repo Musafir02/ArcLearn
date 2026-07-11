@@ -1,0 +1,19 @@
+{
+  "title": "Wiki",
+  "language": "github",
+  "topic": "wiki",
+  "content": "### Enabling the Wiki\n\nGo to **Settings → Features** and check **Wikis**. Wiki is enabled by default for public repos.\n\n### Wiki Pages\n\nEach wiki is a separate Git repository cloned from `https://github.com/user/repo.wiki.git`. Pages use Markdown and are organized hierarchically.\n\n### Sidebar & Footer\n\n- **_Sidebar.md** — Custom navigation sidebar\n- **_Footer.md** — Custom footer shown on all pages\n\nCreate these files in the wiki repository to customize the layout.\n\n### Editing Wiki Locally\n\n```bash\n# Clone the wiki repository\ngit clone https://github.com/username/repo.wiki.git\n\n# Add or edit pages\n# Commit and push to update the wiki\ngit add .\ngit commit -m \"Update wiki pages\"\ngit push\n```\n\n### Wiki as Documentation\n\nUse the wiki for extended documentation, FAQs, design docs, API references, and onboarding guides — separate from the README's quick-start focus. Wikis support revision history and can be reverted if needed.",
+  "codeExample": "git clone https://github.com/username/repo.wiki.git\ncd repo.wiki\necho \"# My Page\" > Home.md\ngit add Home.md\ngit commit -m \"Add Home page\"\ngit push",
+  "quiz": [
+    {
+      "question": "What is the URL suffix to clone a repo's wiki?",
+      "options": [".wiki.git", ".git/wiki", "/wiki.git", ".wikis.git"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which file controls the wiki sidebar navigation?",
+      "options": ["_Sidebar.md", "_Footer.md", "Home.md", "Nav.md"],
+      "correctIndex": 0
+    }
+  ]
+}

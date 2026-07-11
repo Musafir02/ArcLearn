@@ -1,0 +1,19 @@
+{
+  "title": "Forking Workflow",
+  "language": "git",
+  "topic": "forking",
+  "content": "### Fork vs Branch Workflow\n\n| Branch Workflow | Fork Workflow |\n|---|---|\n| Contributors have write access | Contributors fork the repo |\n| Branches in the same repo | Changes in personal fork |\n| Used in teams | Used in open source |\n| Simple setup | More steps but more control |\n\n### Forking for Open Source\n\n1. Fork the repository on GitHub (click \"Fork\")\n2. Clone your fork locally:\n\n```bash\ngit clone https://github.com/YOUR-USERNAME/repo.git\n```\n\n3. Add the original repo as an upstream remote:\n\n```bash\ngit remote add upstream https://github.com/original-owner/repo.git\ngit remote -v\n```\n\n### Syncing a Fork with Upstream\n\nKeep your fork up to date with the original repo:\n\n```bash\ngit fetch upstream\ngit switch main\ngit merge upstream/main\ngit push origin main\n```\n\n### Contributing\n\n1. Create a feature branch in your fork\n2. Make changes and commit\n3. Push to your fork: `git push -u origin feature`\n4. Open a PR from your fork's branch to the upstream repo\n\n### Fork Etiquette\n\n- Keep your fork synced before starting new work\n- Use descriptive branch names\n- Squash commits before PR if requested\n- Be responsive to reviewer feedback\n- Respect the project's contributing guidelines",
+  "codeExample": "# Clone your fork\ngit clone https://github.com/myuser/awesome-project.git\ncd awesome-project\ngit remote add upstream https://github.com/original/awesome-project.git\n\n# Sync your fork\ngit fetch upstream\ngit checkout main\ngit merge upstream/main\ngit push origin main",
+  "quiz": [
+    {
+      "question": "In a fork workflow, what is the conventional name for the original repository remote?",
+      "options": ["origin", "upstream", "main", "fork"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the first step to sync a fork with the upstream repository?",
+      "options": ["git pull upstream", "git fetch upstream", "git merge upstream/main", "git push origin main"],
+      "correctIndex": 1
+    }
+  ]
+}

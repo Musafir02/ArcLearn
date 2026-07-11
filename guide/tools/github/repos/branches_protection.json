@@ -1,0 +1,19 @@
+{
+  "title": "Branch Protection",
+  "language": "github",
+  "topic": "branches_protection",
+  "content": "### Branch Protection Rules\n\nProtect important branches (like `main`) from force pushes, deletions, and unapproved merges. Go to **Settings → Branches → Add branch protection rule**.\n\n### Key Settings\n\n- **Require pull request reviews** — Block direct pushes, require at least one approval\n- **Dismiss stale reviews** — New commits dismiss existing approvals\n- **Require status checks** — All CI checks must pass before merging\n- **Require linear history** — Only fast-forward merges (no merge commits)\n- **Include administrators** — Apply rules even to repo admins\n- **Lock branch** — Make branch read-only\n\n### Rulesets (Modern Alternative)\n\nRulesets (introduced in 2023) provide more flexible targeting by branch pattern, tag pattern, or even by actor (user/team). They support bypass permissions and finer-grained control compared to legacy branch protection.\n\n```bash\n# Example: create a branch protection rule via gh CLI\ngh api repos/:owner/:repo/branches/main/protection --method PUT --input -\n```",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "Which setting requires CI checks to pass before merging?",
+      "options": ["Require status checks", "Require pull request reviews", "Require linear history", "Dismiss stale reviews"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the newer, more flexible alternative to branch protection rules?",
+      "options": ["Rulesets", "Branch policies", "Commit rules", "Access controls"],
+      "correctIndex": 0
+    }
+  ]
+}

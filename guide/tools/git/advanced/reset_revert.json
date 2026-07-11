@@ -1,0 +1,19 @@
+{
+  "title": "Reset, Revert, and Undoing Changes",
+  "language": "git",
+  "topic": "reset_revert",
+  "content": "### git reset — Move the HEAD Pointer\n\n`git reset` moves the current branch pointer backward, optionally modifying the staging area and working directory.\n\n```bash\ngit reset --soft HEAD~1    # Move HEAD, keep changes staged\ngit reset --mixed HEAD~1   # Move HEAD, unstage changes (default)\ngit reset --hard HEAD~1    # Move HEAD, discard all changes\n```\n\n| Mode | HEAD | Staging | Working Dir |\n|---|---|---|---|\n| `--soft` | Moves | Kept | Kept |\n| `--mixed` | Moves | Reset | Kept |\n| `--hard` | Moves | Reset | Reset |\n\n### git revert — Safe Undo\n\nRevert creates a **new commit** that undoes the changes of a previous commit. Safe for public branches:\n\n```bash\ngit revert HEAD                    # Undo last commit\ngit revert HEAD~3..HEAD            # Undo last 3 commits\ngit revert --no-commit <commit>    # Stage reversal without committing\n```\n\n### Reset vs Revert\n\n| `git reset` | `git revert` |\n|---|---|\n| Rewrites history | Preserves history |\n| Unsafe for public branches | Safe for public branches |\n| Removes commits | Adds new undo commit |\n\n### git restore\n\nModern alternative to checkout for restoring files:\n\n```bash\ngit restore file.txt               # Discard unstaged changes\ngit restore --staged file.txt      # Unstage a file\ngit restore --source=HEAD~1 file   # Restore from a specific commit\n```\n\n### git clean\n\nRemove untracked files from the working directory:\n\n```bash\ngit clean -n                       # Dry run (show what would be removed)\ngit clean -f                       # Force remove\ngit clean -fd                      # Remove files and directories\n```",
+  "codeExample": "# Undo last commit but keep changes\ngit reset --soft HEAD~1\n\n# Undo last commit and discard changes\ngit reset --hard HEAD~1\n\n# Safe undo for shared branches\ngit revert HEAD\n\n# Unstage a file\ngit restore --staged file.txt",
+  "quiz": [
+    {
+      "question": "Which reset mode discards all changes in both staging and working directory?",
+      "options": ["--soft", "--mixed", "--hard", "--keep"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is git revert preferred over git reset for public branches?",
+      "options": ["It is faster", "It preserves history with a new commit", "It doesn't require network", "It keeps the staging area clean"],
+      "correctIndex": 1
+    }
+  ]
+}

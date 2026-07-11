@@ -1,0 +1,19 @@
+{
+  "title": "Staging and Committing",
+  "language": "git",
+  "topic": "staging_committing",
+  "content": "### Staging Changes with git add\n\nThe staging area is where you prepare changes before committing.\n\n```bash\ngit add file.txt              # Stage a specific file\ngit add .                     # Stage all changes in current dir\ngit add -A                    # Stage all changes in repo\ngit add -p                    # Stage interactively (hunk by hunk)\n```\n\n### Committing with git commit\n\n```bash\ngit commit -m \"Add login feature\"\ngit commit -am \"Fix typo\"     # Stage tracked files + commit\ngit commit --amend            # Edit last commit message or add changes\n```\n\n**Commit message conventions:** Use present tense, imperative mood (\"Add feature\" not \"Added feature\").\n\n### Viewing History with git log\n\n```bash\ngit log                        # Full history\ngit log --oneline              # One line per commit\ngit log --graph                # ASCII branch graph\ngit log --oneline --graph --all  # Complete picture\ngit log --pretty=format:\"%h %s\" # Custom format\n```\n\n### .gitignore Basics\n\nCreate a `.gitignore` file to prevent tracking certain files:\n\n```\n# Ignore compiled files\n*.o\n*.exe\n\n# Ignore environment files\n.env\nnode_modules/\n```\n\nPlace `.gitignore` in the repo root and commit it.",
+  "codeExample": "echo \"console.log('hello')\" > app.js\ngit add app.js\ngit commit -m \"Add app.js entry point\"\ngit log --oneline --graph",
+  "quiz": [
+    {
+      "question": "Which flag stages changes interactively by hunk?",
+      "options": ["git add -a", "git add -p", "git add -i", "git add -f"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does git commit --amend do?",
+      "options": ["Creates a new branch", "Merges two commits", "Modifies the most recent commit", "Deletes the last commit"],
+      "correctIndex": 2
+    }
+  ]
+}

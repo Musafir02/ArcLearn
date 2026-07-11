@@ -1,0 +1,19 @@
+{
+  "title": "Stashing",
+  "language": "git",
+  "topic": "stashing",
+  "content": "### What is Stashing?\n\nStashing temporarily shelves changes so you can work on something else, then reapply them later.\n\n### Basic Stash Operations\n\n```bash\ngit stash                          # Stash tracked changes\ngit stash pop                      # Apply + drop from stash\ngit stash apply                    # Apply but keep in stash\ngit stash drop                     # Remove a stash entry\ngit stash list                     # View all stashes\n```\n\n### Stashing Untracked Files\n\nBy default, `git stash` only stashes tracked files. Include untracked files with:\n\n```bash\ngit stash -u                       # Include untracked files\ngit stash --include-untracked      # Long form\ngit stash -a                       # Include all (including ignored)\n```\n\n### Named Stashes\n\nGive stashes a descriptive message:\n\n```bash\ngit stash push -m \"WIP: login form validation\"\n```\n\nStashes appear in the list as `stash@{0}: On main: WIP: login form validation`.\n\n### Applying a Specific Stash\n\n```bash\ngit stash list                     # Shows: stash@{0}, stash@{1}, ...\ngit stash apply stash@{1}          # Apply a specific stash\ngit stash drop stash@{1}           # Remove a specific stash\ngit stash pop stash@{1}            # Apply + remove specific stash\n```\n\n### Use Cases\n\n- Switching branches mid-task\n- Pulling urgent fixes without committing WIP\n- Experimenting with different approaches",
+  "codeExample": "echo \"work in progress\" > feature.txt\ngit add feature.txt\ngit stash push -m \"WIP: feature\"\n# Do urgent work, then:\ngit stash pop\n# feature.txt is back",
+  "quiz": [
+    {
+      "question": "Which flag includes untracked files when stashing?",
+      "options": ["git stash -a", "git stash -u", "git stash -t", "git stash --all"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does git stash pop do compared to git stash apply?",
+      "options": ["Pop also drops the stash", "Pop applies to a different branch", "Pop preserves the stash", "They are identical"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with Git",
+  "language": "git",
+  "topic": "getstarted",
+  "content": "### Checking Git Version\n\nVerify Git is installed and see the version:\n\n```bash\ngit --version\n```\n\n### Configuring Git\n\nSet your identity — every commit uses this info:\n\n```bash\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n```\n\nConfiguration levels:\n- `--system` — all users on the machine\n- `--global` — all repos for your user\n- `--local` — current repo only (default)\n\n### Creating a Repository\n\n```bash\ngit init\n```\n\nThis creates a new Git repo in the current directory. The default branch name is `main` (configurable with `init.defaultBranch`).\n\n### Checking Status\n\n```bash\ngit status\n```\n\nShows which files are modified, staged, or untracked. Use `-s` for a short format.\n\n### The .git Folder\n\nWhen you run `git init`, Git creates a `.git` subdirectory containing all repo metadata:\n- `HEAD` — points to current branch\n- `config` — repo-specific config\n- `objects/` — all data (commits, trees, blobs)\n- `refs/` — pointers to commits (branches, tags)\n- `hooks/` — client-side scripts",
+  "codeExample": "git --version\ngit config --global user.name \"Ada Lovelace\"\ngit config --global user.email \"ada@example.com\"\nmkdir my-project && cd my-project\ngit init\ngit status",
+  "quiz": [
+    {
+      "question": "Which command configures Git identity for all repos on your machine?",
+      "options": ["git config --system", "git config --global", "git config --local", "git config --user"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does git init do?",
+      "options": ["Downloads a remote repo", "Creates a new local repository", "Deletes the current repo", "Shows commit history"],
+      "correctIndex": 1
+    }
+  ]
+}

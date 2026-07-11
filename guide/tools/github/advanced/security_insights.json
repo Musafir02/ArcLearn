@@ -1,0 +1,19 @@
+{
+  "title": "Security & Insights",
+  "language": "github",
+  "topic": "security_insights",
+  "content": "### Dependabot Alerts\n\nDependabot scans your dependencies (npm, pip, Maven, etc.) for known vulnerabilities. Alerts appear in the **Security** tab and are sent via notifications.\n\n### Dependabot Version Updates\n\nConfigure automated pull requests for dependency updates with `.github/dependabot.yml`:\n\n```yaml\nversion: 2\nupdates:\n  - package-ecosystem: \"npm\"\n    directory: \"/\"\n    schedule:\n      interval: \"weekly\"\n```\n\n### Secret Scanning\n\nGitHub automatically scans repos for known secret patterns (API keys, tokens, credentials). Alerts are sent to repo admins.\n\n### Code Scanning (CodeQL)\n\nCodeQL performs semantic code analysis to find security vulnerabilities and code quality issues. Run via GitHub Actions:\n\n```yaml\n- uses: github/codeql-action/analyze@v3\n```\n\n### Security Advisories\n\nPrivately report and discuss security vulnerabilities. Use **Security → Advisories → New advisory**. You can collaborate on a fix before publicly disclosing.",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "Which tool automatically opens PRs to update outdated dependencies?",
+      "options": ["Dependabot version updates", "Dependabot alerts", "Renovate", "Greenkeeper"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What analysis engine does GitHub's code scanning use?",
+      "options": ["CodeQL", "SonarQube", "ESLint", "Semgrep"],
+      "correctIndex": 0
+    }
+  ]
+}

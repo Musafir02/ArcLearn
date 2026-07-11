@@ -1,0 +1,19 @@
+{
+  "title": "READMEs and Licenses",
+  "language": "github",
+  "topic": "readme_licenses",
+  "content": "### README.md Best Practices\n\nA README is the first thing visitors see. Include:\n- Project name and description\n- Installation/setup instructions\n- Usage examples\n- Badges (CI status, coverage, version)\n- Contributing guidelines\n- License information\n\nGitHub renders Markdown files (`.md`) with rich formatting, tables, code blocks, and images.\n\n### License Files\n\nLicenses tell others what they can and cannot do with your code:\n\n- **MIT** — Permissive, allows commercial use, attribution required\n- **GPLv3** — Copyleft, derivative works must be GPL\n- **Apache 2.0** — Permissive with patent protection\n\nGitHub shows a license badge at the top of your repo when you include a `LICENSE` file.\n\n### Additional Community Files\n\n- **CONTRIBUTING.md** — How to contribute, code style, PR process\n- **CODE_OF_CONDUCT.md** — Expected behavior standards\n- **ISSUE_TEMPLATE/** and **PULL_REQUEST_TEMPLATE.md** — Standardized forms for contributions",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "Which license is the most permissive (allows commercial use with attribution)?",
+      "options": ["MIT", "GPLv3", "Apache 2.0", "AGPLv3"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What file should you create to tell contributors how to submit changes?",
+      "options": ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "CHANGELOG.md", "README.md"],
+      "correctIndex": 0
+    }
+  ]
+}

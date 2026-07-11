@@ -1,0 +1,19 @@
+{
+  "title": "Issues",
+  "language": "github",
+  "topic": "issues",
+  "content": "### Creating Issues\n\nIssues track bugs, feature requests, and tasks. Open from the **Issues** tab → **New issue**. Add a title, description, labels, assignees, milestone, and project.\n\n### Labels\n\nLabels categorize issues (e.g., `bug`, `enhancement`, `good first issue`, `help wanted`). Custom labels can be created in **Issues → Labels**.\n\n### Milestones\n\nMilestones group issues and PRs toward a specific goal or release. Track progress by percentage of closed items.\n\n### Issue Templates & Forms\n\nConfigure templates in `.github/ISSUE_TEMPLATE/`. Use YAML form schemas for structured inputs:\n\n```yaml\nname: Bug Report\ndescription: Report a bug\nbody:\n  - type: textarea\n    id: description\n    attributes:\n      label: Description\n      placeholder: What happened?\n```\n\n### Search Syntax\n\n- `is:issue is:open label:bug` — Open bugs\n- `author:username` — Created by specific user\n- `linked:pr` — Issues linked to a PR\n- `no:assignee` — Unassigned issues\n\n### Linking PRs to Issues\n\nUse keywords in PR descriptions: `Closes #123`, `Fixes #123`, `Resolves #123`. GitHub automatically closes the issue when the PR merges.",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "What keyword links a PR to an issue and auto-closes it on merge?",
+      "options": ["Closes", "References", "Relates to", "See also"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where do you place issue template files?",
+      "options": [".github/ISSUE_TEMPLATE/", "templates/", ".github/", ".gitlab/issue_templates/"],
+      "correctIndex": 0
+    }
+  ]
+}

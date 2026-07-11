@@ -1,0 +1,19 @@
+{
+  "title": "Branching",
+  "language": "git",
+  "topic": "branching",
+  "content": "### What Are Branches?\n\nA branch is a movable pointer to a commit. Branching lets you diverge from the main line of development and work independently.\n\n### Managing Branches\n\n```bash\ngit branch                          # List local branches (* = current)\ngit branch feature                  # Create a new branch\ngit branch -m feature feat-auth     # Rename a branch\ngit branch -d feature               # Delete a branch (safe)\ngit branch -D feature               # Force delete unmerged branch\n```\n\n### Switching Branches\n\n```bash\ngit checkout feature                # Switch to branch\ngit switch feature                  # Modern alternative (Git 2.23+)\ngit checkout -b new-feature         # Create + switch\ngit switch -c new-feature           # Same with switch\n```\n\n### Branch Naming Conventions\n\n- Use kebab-case: `feature/user-auth`, `bugfix/login-error`\n- Group by type: `feature/`, `bugfix/`, `hotfix/`, `chore/`\n- Avoid special characters and trailing dots\n\n### Tracking Branches\n\nA local branch can track a remote branch:\n\n```bash\ngit checkout --track origin/feature\ngit push -u origin feature          # Set upstream\n```\n\nTracking branches let you use `git push` and `git pull` without specifying the remote.",
+  "codeExample": "git branch feature-login\ngit switch feature-login\necho \"new feature\" > feature.txt\ngit add feature.txt\ngit commit -m \"Add login feature\"\ngit switch main\ngit branch -d feature-login",
+  "quiz": [
+    {
+      "question": "Which command creates a new branch and switches to it?",
+      "options": ["git branch new", "git checkout -b new", "git switch new", "git branch -m new"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What flag force-deletes an unmerged branch?",
+      "options": ["git branch -d", "git branch -D", "git branch -f", "git branch --force"],
+      "correctIndex": 1
+    }
+  ]
+}

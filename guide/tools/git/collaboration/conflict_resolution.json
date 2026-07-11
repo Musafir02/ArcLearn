@@ -1,0 +1,19 @@
+{
+  "title": "Conflict Resolution",
+  "language": "git",
+  "topic": "conflict_resolution",
+  "content": "### What Are Merge Conflicts?\n\nConflicts occur when two branches modify the same part of the same file, and Git cannot automatically decide which version to keep.\n\n### Conflict Markers\n\nWhen a conflict happens, Git marks the file:\n\n```\n<<<<<<< HEAD\nThis is the current branch's version\n=======\nThis is the incoming branch's version\n>>>>>>> feature-branch\n```\n\n- `<<<<<<< HEAD` — start of our version\n- `=======` — divider between versions\n- `>>>>>>> feature-branch` — end of their version\n\n### Resolving Conflicts Manually\n\n1. Open the conflicted file in your editor\n2. Choose which version to keep, or edit to combine both\n3. Remove the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)\n4. Stage the resolved file: `git add <file>`\n5. Complete the merge: `git commit`\n\n### Using git mergetool\n\nLaunch a visual merge tool:\n\n```bash\ngit mergetool\n```\n\nSupported tools: VS Code, Beyond Compare, Kaleidoscope, Meld, vimdiff.\n\n### Aborting a Merge\n\nIf a conflict is too complex, bail out:\n\n```bash\ngit merge --abort                  # Cancel the merge\n# or\ngit reset --hard HEAD              # Alternative: reset entirely\n```\n\n### Preventing Conflicts\n\n- Pull frequently to stay up to date\n- Communicate with team about shared files\n- Keep feature branches short-lived\n- Use rebase to incorporate upstream changes before merging",
+  "codeExample": "# Conflict occurs during merge\n# Edit file: keep both versions, remove markers\ngit add resolved-file.txt\ngit commit -m \"Merge feature: resolve conflicts\"",
+  "quiz": [
+    {
+      "question": "What do the ======= markers indicate in a conflicted file?",
+      "options": ["Start of the conflict", "Division between our version and their version", "End of the conflict", "A syntax error"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which command cancels the current merge operation?",
+      "options": ["git cancel", "git merge --abort", "git merge --stop", "git reset HEAD"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Pages",
+  "language": "git",
+  "topic": "github_pages",
+  "content": "### What is GitHub Pages?\n\nGitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files directly from a GitHub repository and publishes them as a website.\n\n### Deployment Options\n\nGitHub Pages can deploy from:\n1. **Branch**: `main` (root or `/docs` folder)\n2. **Branch**: `gh-pages` branch\n3. **GitHub Actions**: custom build and deploy workflow\n\n### Basic Setup\n\n1. Go to repo Settings > Pages\n2. Under \"Branch\", select `main` and `/ (root)` or `/docs`\n3. Your site is published at `https://<username>.github.io/<repo>/`\n\n### Deploying with a Custom Domain\n\n```\n1. Buy a domain from a registrar\n2. Add a CNAME record pointing to <username>.github.io\n3. In Settings > Pages > Custom domain, enter your domain\n4. (Optional) Enable HTTPS enforcement\n```\n\n### Jekyll Integration\n\nGitHub Pages natively supports Jekyll for building static sites:\n\n```\n_config.yml  # Jekyll configuration\ntheme: minima\n```\n\nCreate a `_config.yml` at the root and Jekyll builds the site automatically. For non-Jekyll sites, add a `.nojekyll` file in the root.\n\n### Project vs User/Org Sites\n\n- **User/Org site**: `username.github.io` — special repo named `<username>.github.io`\n- **Project site**: `username.github.io/repo` — any repo with Pages enabled\n\nUser sites can only deploy from `main` branch; project sites have more flexibility.",
+  "codeExample": "# Deploy from main branch /docs folder\necho \"# My Site\" > docs/index.html\ngit add docs/\ngit commit -m \"Add GitHub Pages site\"\ngit push origin main\n# Go to: https://username.github.io/repo/",
+  "quiz": [
+    {
+      "question": "Which branch is commonly used for GitHub Pages deployments?",
+      "options": ["main", "gh-pages", "develop", "Both main and gh-pages"],
+      "correctIndex": 3
+    },
+    {
+      "question": "What file should you create to disable Jekyll processing on GitHub Pages?",
+      "options": [".nojekyll", ".jekyll-off", "no-jekyll.txt", "config/no-jekyll.yml"],
+      "correctIndex": 0
+    }
+  ]
+}

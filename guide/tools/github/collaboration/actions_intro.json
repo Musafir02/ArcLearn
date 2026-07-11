@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Actions",
+  "language": "github",
+  "topic": "actions_intro",
+  "content": "### GitHub Actions Overview\n\nGitHub Actions automates software workflows directly in your repository. Build, test, and deploy right from GitHub.\n\n### Workflow YAML\n\nWorkflows are defined in `.github/workflows/*.yml`:\n\n```yaml\nname: CI\non:\n  push:\n    branches: [main]\n  pull_request:\n    branches: [main]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: '20'\n      - run: npm ci\n      - run: npm test\n```\n\n### Triggers\n\n- `push` — Runs when code is pushed\n- `pull_request` — Runs on PR events\n- `schedule` — Cron-based scheduling\n- `workflow_dispatch` — Manual trigger\n\n### Jobs and Steps\n\n- **Jobs** — Independent units that can run in parallel or sequentially (`needs:`)\n- **Steps** — Individual commands or actions within a job\n\n### Runners\n\n- **GitHub-hosted** — Ubuntu, Windows, macOS (updated regularly)\n- **Self-hosted** — Your own infrastructure\n\n### Marketplace Actions\n\nCommunity-contributed actions available on the [GitHub Marketplace](https://github.com/marketplace/actions) — checkout, setup languages, deploy, and more.",
+  "codeExample": "name: CI\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm test",
+  "quiz": [
+    {
+      "question": "Where are GitHub Actions workflow files stored?",
+      "options": [".github/workflows/", ".github/actions/", "workflows/", ".github/"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which event triggers a workflow on a scheduled basis?",
+      "options": ["schedule", "push", "pull_request", "workflow_dispatch"],
+      "correctIndex": 0
+    }
+  ]
+}

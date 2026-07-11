@@ -1,0 +1,19 @@
+{
+  "title": ".gitignore",
+  "language": "git",
+  "topic": "gitignore",
+  "content": "### What is .gitignore?\n\nA `.gitignore` file tells Git which files or directories to ignore — they won't be tracked or shown as untracked.\n\n### Basic Patterns\n\n```gitignore\n# Comments start with #\n\nnode_modules/          # Ignore entire directory\n*.log                  # Ignore all .log files\nbuild/                 # Ignore build output\n.env                   # Ignore a specific file\n.DS_Store              # macOS metadata\n\n# Negation — don't ignore even if pattern matches\n!important.log\n\n# Ignore files in any directory\ndist/\n\n# Ignore only at root\n/config.json\n```\n\n### Global .gitignore\n\nCreate a global ignore file for your machine (applies to all repos):\n\n```bash\ngit config --global core.excludesFile ~/.gitignore_global\n```\n\nCommon global ignores: `.DS_Store`, `Thumbs.db`, editor swap files.\n\n### Ignoring Already Tracked Files\n\nIf a file is already tracked, `.gitignore` won't affect it. Stop tracking it:\n\n```bash\ngit rm --cached file.txt           # Remove from tracking but keep on disk\ngit rm --cached -r build/          # Remove directory from tracking\n```\n\nThen add it to `.gitignore`.\n\n### .gitignore Templates\n\nGitHub provides templates for various languages and frameworks:\n- https://github.com/github/gitignore\n\n```bash\n# Download a template\ncurl -O https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore\n```",
+  "codeExample": "# .gitignore\nnode_modules/\ndist/\n.env\n*.log\n.DS_Store\n\n# Stop tracking an already tracked file\ngit rm --cached .env\necho \".env\" >> .gitignore\ngit add .gitignore\ngit commit -m \"Stop tracking .env\"",
+  "quiz": [
+    {
+      "question": "What does git rm --cached do?",
+      "options": ["Deletes the file from disk", "Removes file from tracking without deleting it", "Moves file to trash", "Renames the file"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you set a global .gitignore?",
+      "options": ["git config --global core.excludesFile ~/.gitignore_global", "git config --global ignore.file ~/.gitignore_global", "Create ~/.gitignore and Git auto-detects it", "git config --system excludesFile"],
+      "correctIndex": 0
+    }
+  ]
+}

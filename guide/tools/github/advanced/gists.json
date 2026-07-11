@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Gists",
+  "language": "github",
+  "topic": "gists",
+  "content": "### What are Gists?\n\nGitHub Gists are simple, shareable code snippets. They can be single files or multi-file mini-repositories.\n\n### Creating Gists\n\n- **Public gists** — Visible to anyone, searchable, appear in your profile\n- **Secret gists** — Not searchable, but accessible by anyone with the URL\n\nCreate via [gist.github.com](https://gist.github.com) or using `gh`:\n\n```bash\ngh gist create file.js --public\ngit gist create file.js --secret\n```\n\n### Embedding Gists\n\nPaste the embed URL (`<script src=\"https://gist.github.com/user/gist_id.js\"></script>`) into any HTML page. Gists automatically show syntax-highlighted code.\n\n### Cloning Gists\n\n```bash\ngit clone https://gist.github.com/username/gist_id.git\n```\n\nGists are full Git repositories — you can commit, push, and pull changes.\n\n### Gist Forks\n\nUsers can fork public gists to create their own copies. The fork chain is tracked, and original authors see notifications when their gist is forked.",
+  "codeExample": "gh gist create script.py --public",
+  "quiz": [
+    {
+      "question": "What is the difference between a public gist and a secret gist?",
+      "options": ["Secret gists are not searchable", "Secret gists require authentication", "Secret gists can include binary files", "Secret gists have no URL"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can gists be cloned as Git repositories?",
+      "options": ["Yes, gists are full Git repos", "No, gists are read-only", "Only secret gists can be cloned", "Only public gists can be cloned"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Git Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Git Basics", "folder": "basics",
+      "topics": ["init_clone", "staging_committing", "branching", "merging", "remotes"]
+    },
+    {
+      "type": "group", "title": "Advanced Git", "folder": "advanced",
+      "topics": ["rebasing", "stashing", "reset_revert", "tags", "hooks"]
+    },
+    {
+      "type": "group", "title": "Collaboration", "folder": "collaboration",
+      "topics": ["pull_requests", "forking", "conflict_resolution", "gitignore", "github_pages"]
+    }
+  ]
+}

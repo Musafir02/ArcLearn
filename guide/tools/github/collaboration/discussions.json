@@ -1,0 +1,19 @@
+{
+  "title": "Discussions",
+  "language": "github",
+  "topic": "discussions",
+  "content": "### Discussions vs Issues\n\nDiscussions are for open-ended conversations, ideas, and community engagement. Issues are for tracking specific work items (bugs, features, tasks).\n\n### Categories\n\n- **Q&A** — Questions and answers with a solved/unsolved system\n- **Ideas** — Feature suggestions and feedback\n- **Show and tell** — Share what you've built\n- **General** — Anything else\n\n### Announcements\n\nRepository admins can make **Announcement** posts that appear pinned and are locked (no replies). Useful for release notes and policy changes.\n\n### Polls\n\nCreate polls within discussions to gather community votes. Useful for deciding on features or direction.\n\n### Converting Issues to Discussions\n\nYou can convert an issue to a discussion when a topic is better suited for conversation. Use the **Convert to discussion** option in the issue sidebar.",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "What discussion category is best for community questions and answers?",
+      "options": ["Q&A", "Ideas", "Show and tell", "General"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which type of discussion post is locked and cannot receive replies?",
+      "options": ["Announcements", "Polls", "Q&A", "Ideas"],
+      "correctIndex": 0
+    }
+  ]
+}

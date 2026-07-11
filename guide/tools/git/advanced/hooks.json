@@ -1,0 +1,19 @@
+{
+  "title": "Git Hooks",
+  "language": "git",
+  "topic": "hooks",
+  "content": "### What Are Git Hooks?\n\nGit hooks are scripts that run automatically at certain points in Git's workflow. They live in `.git/hooks/`.\n\n### Hook Types\n\n**Client-side hooks:**\n- `pre-commit` — runs before commit message is created\n- `commit-msg` — validates commit message\n- `post-commit` — runs after commit completes\n- `pre-push` — runs before pushing\n- `pre-rebase` — runs before rebasing\n\n**Server-side hooks:**\n- `pre-receive` — runs when push is received\n- `update` — runs for each updated ref\n- `post-receive` — runs after push is accepted\n\n### Pre-Commit Hook Example\n\n```bash\n#!/bin/sh\n# .git/hooks/pre-commit — prevent commits to main branch\nbranch=\"$(git rev-parse --abbrev-ref HEAD)\"\nif [ \"$branch\" = \"main\" ]; then\n  echo \"Direct commits to main are not allowed\"\n  exit 1\nfi\n```\n\nMake it executable: `chmod +x .git/hooks/pre-commit`\n\n### Using Husky\n\n[Husky](https://typicode.github.io/husky/) simplifies hook management with npm:\n\n```bash\nnpx husky-init\nnpm install\nnpx husky add .husky/pre-commit \"npm test\"\n```\n\nHusky stores hooks in a `.husky/` directory that can be committed and shared.\n\n### Common Hook Uses\n\n- **pre-commit** — linting, formatting, running tests\n- **commit-msg** — enforcing Conventional Commits format\n- **pre-push** — running full test suite, type checking\n- **post-commit** — sending notifications, updating issues",
+  "codeExample": "#!/bin/sh\n# .husky/pre-commit\nnpm run lint\nnpm run typecheck",
+  "quiz": [
+    {
+      "question": "Where are Git hooks stored locally?",
+      "options": [".git/hooks/", ".hooks/", "hooks/", "config/hooks/"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which hook runs before a commit message is created?",
+      "options": ["post-commit", "commit-msg", "pre-commit", "pre-push"],
+      "correctIndex": 2
+    }
+  ]
+}

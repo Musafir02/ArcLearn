@@ -1,0 +1,19 @@
+{
+  "title": "Pull Requests",
+  "language": "git",
+  "topic": "pull_requests",
+  "content": "### Pull Request Workflow\n\nA pull request (PR) is a proposal to merge changes from one branch into another. It's the foundation of collaborative development on GitHub, GitLab, and Bitbucket.\n\n### Basic Workflow\n\n1. Create a feature branch: `git switch -c feature-xyz`\n2. Make changes and commit\n3. Push the branch: `git push -u origin feature-xyz`\n4. Open a PR on GitHub/GitLab\n5. Request reviews from teammates\n6. Address feedback with additional commits\n7. Merge the PR once approved\n\n### PR Templates\n\nTeams can create PR templates to standardize descriptions:\n\n```markdown\n# .github/PULL_REQUEST_TEMPLATE.md\n## Description\n<!-- What does this PR do? -->\n\n## Type of Change\n- [ ] Bug fix\n- [ ] New feature\n- [ ] Breaking change\n\n## Testing\n<!-- How was this tested? -->\n```\n\n### Draft PRs\n\nDraft PRs signal work in progress and prevent accidental merging:\n\n```bash\n# On GitHub, select \"Create Draft Pull Request\" instead of \"Create Pull Request\"\n```\n\nDraft PRs are useful for early feedback and CI previews before the PR is ready.\n\n### Code Review Process\n\n- Reviewers leave inline comments on specific lines\n- Author addresses feedback with new commits (push to the same branch)\n- Approved PRs are merged via merge commit, squash, or rebase\n- Some repos require approvals and passing CI before merging",
+  "codeExample": "# Feature branch workflow\ngit switch -c feature-user-auth\ngit commit -am \"Add user authentication\"\ngit push -u origin feature-user-auth\n# Then open PR on GitHub.com",
+  "quiz": [
+    {
+      "question": "What is the purpose of a draft PR?",
+      "options": ["To delete a pull request", "To signal work in progress and prevent accidental merging", "To automatically merge changes", "To skip code review"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where should PR templates be placed in a GitHub repository?",
+      "options": [".github/PULL_REQUEST_TEMPLATE.md", "docs/pr-template.md", "templates/pr.md", "root of the repo"],
+      "correctIndex": 0
+    }
+  ]
+}

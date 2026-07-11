@@ -1,0 +1,19 @@
+{
+  "title": "Code Review",
+  "language": "github",
+  "topic": "code_review",
+  "content": "### Review Process\n\nWhen a PR is opened, collaborators can review the changes line-by-line. Leave comments, ask questions, and suggest improvements before the PR is merged.\n\n### Commenting\n\nClick the **+** icon next to any line in the **Files changed** tab to add a comment. Use the **Review changes** button to submit a summary review.\n\n### Suggesting Changes\n\nUse the suggestion syntax to propose exact code edits:\n\n```suggestion\nconsole.log('hello world');\n```\n\nAccepted suggestions are committed automatically.\n\n### Review States\n\n- **Comment** — General feedback without blocking\n- **Approve** — Changes are ready to merge\n- **Request changes** — Must be addressed before merging\n\n### Team Reviews & Code Owners\n\n- **Team reviews** — Assign an entire team as reviewer, one member's approval counts\n- **CODEOWNERS file** — Automatically request review from specific users/teams when certain files are modified\n\nPlace `.github/CODEOWNERS`:\n```\n# Lines matching patterns will request review\n*.js    @js-team\n/docs/  @docs-team\n```",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "Which review state blocks a PR from being merged?",
+      "options": ["Request changes", "Comment", "Approve", "Dismiss"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What file automatically assigns reviewers based on file paths?",
+      "options": ["CODEOWNERS", "REVIEWERS", "MAINTAINERS", ".github/assignees"],
+      "correctIndex": 0
+    }
+  ]
+}

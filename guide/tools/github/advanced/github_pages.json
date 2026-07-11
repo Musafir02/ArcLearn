@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Pages",
+  "language": "github",
+  "topic": "github_pages",
+  "content": "### GitHub Pages for Hosting\n\nGitHub Pages hosts static websites directly from a repository. Ideal for project docs, portfolios, and personal sites. Hosted at `username.github.io/repo`.\n\n### Deployment Sources\n\n- **From a branch** — Deploy from the root of `main` or `gh-pages` branch\n- **From GitHub Actions** — Use actions like `actions/upload-pages-artifact` and `actions/deploy-pages` for full control over the build process\n\n### Jekyll Themes\n\nGitHub Pages natively supports Jekyll. Add a `_config.yml` with:\n\n```yaml\ntheme: jekyll-theme-cayman\n```\n\nChoose from built-in themes: Cayman, Minimal, Hacker, etc.\n\n### Custom Domains\n\nIn **Settings → Pages**, enter your custom domain. Add a `CNAME` record at your DNS provider pointing to `username.github.io`. GitHub issues an HTTPS certificate automatically via Let's Encrypt.\n\n### HTTPS Enforcement\n\nEnforce HTTPS in Pages settings. GitHub auto-renews certificates and redirects HTTP traffic.",
+  "codeExample": "",
+  "quiz": [
+    {
+      "question": "What static site generator does GitHub Pages support natively?",
+      "options": ["Jekyll", "Hugo", "Next.js", "Gatsby"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which DNS record points a custom domain to GitHub Pages?",
+      "options": ["CNAME", "A record", "MX record", "TXT record"],
+      "correctIndex": 0
+    }
+  ]
+}

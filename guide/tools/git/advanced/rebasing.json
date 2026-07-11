@@ -1,0 +1,19 @@
+{
+  "title": "Rebasing",
+  "language": "git",
+  "topic": "rebasing",
+  "content": "### What is Rebasing?\n\nRebasing rewrites commit history by moving a branch's commits to a new base. It creates a linear history:\n\n```bash\ngit switch feature\ngit rebase main\n```\n\n### Rebase vs Merge\n\n| Merge | Rebase |\n|---|---|\n| Preserves full history | Linear, clean history |\n| Creates merge commits | No extra commits |\n| Safe for public branches | Rewrites commits (new hashes) |\n| Easier to understand intent | Easier to follow timeline |\n\n### Interactive Rebase\n\nPowerful for cleaning up commits before sharing:\n\n```bash\ngit rebase -i HEAD~3               # Rebase last 3 commits\n```\n\nInteractive mode offers these commands:\n- `pick` — use commit as-is\n- `reword` — change commit message\n- `squash` — combine with previous commit\n- `fixup` — combine, discard message\n- `drop` — remove commit\n- `edit` — stop to amend\n\n### Squashing Commits\n\nCombine multiple commits into one for a cleaner history:\n\n```bash\ngit rebase -i HEAD~3\n# Change 'pick' to 'squash' on the commits to merge\n```\n\n### The Golden Rule\n\n**Never rebase commits that have been pushed to a shared/public repository.** Rebasing rewrites history, causing issues for collaborators who have based work on the original commits.",
+  "codeExample": "git switch feature\ngit rebase main\n# Interactive:\ngit rebase -i HEAD~3\n# In editor: pick, squash, squash",
+  "quiz": [
+    {
+      "question": "What is the golden rule of rebasing?",
+      "options": ["Always rebase before pulling", "Never rebase public/shared commits", "Rebase only on Fridays", "Always use interactive mode"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which interactive rebase command combines a commit into the previous one and discards its message?",
+      "options": ["squash", "fixup", "reword", "drop"],
+      "correctIndex": 1
+    }
+  ]
+}

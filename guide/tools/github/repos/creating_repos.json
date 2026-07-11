@@ -1,0 +1,19 @@
+{
+  "title": "Creating Repositories",
+  "language": "github",
+  "topic": "creating_repos",
+  "content": "### New Repo via Web UI\n\nClick the **+** icon in the top-right corner → **New repository**. Enter a name, optional description, choose visibility, and optionally initialize with a README.\n\n### Pushing an Existing Repository\n\n```bash\n# Add remote origin\ngit remote add origin https://github.com/username/repo.git\n\n# Push existing code\ngit branch -M main\ngit push -u origin main\n```\n\n### Repo Visibility\n\n- **Public** — Anyone on the internet can see it\n- **Private** — Only you and invited collaborators can see it\n\n### Repository Templates\n\nYou can create a template repository (Settings → **Template repository**) so others can generate new repos with the same structure, files, and branch settings.",
+  "codeExample": "git remote add origin https://github.com/username/repo.git\ngit branch -M main\ngit push -u origin main",
+  "quiz": [
+    {
+      "question": "What command adds a GitHub remote to an existing local repo?",
+      "options": ["git remote add origin <url>", "git clone <url>", "git push origin main", "git init"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do you make a repo usable as a template for future projects?",
+      "options": ["Enable 'Template repository' in Settings", "Create a GitHub Action", "Add a .gitignore file", "Fork the repository"],
+      "correctIndex": 0
+    }
+  ]
+}

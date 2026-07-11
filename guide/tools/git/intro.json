@@ -1,0 +1,19 @@
+{
+  "title": "Introduction to Git",
+  "language": "git",
+  "topic": "intro",
+  "content": "### What is Git?\n\nGit is a **distributed version control system (DVCS)** created by Linus Torvalds in 2005. It tracks changes in source code during software development, enabling multiple developers to work on the same project without conflict.\n\n### Version Control Concepts\n\nVersion control records changes to files over time so you can recall specific versions later. It allows you to:\n- Revert files to a previous state\n- Compare changes over time\n- See who last modified something\n- Collaborate without overwriting others' work\n\n### Distributed vs Centralized\n\n| Centralized (SVN, CVS) | Distributed (Git, Mercurial) |\n|------------------------|-------------------------------|\n| Single central server | Every dev has a full copy |\n| Needs network to commit | Can commit offline |\n| Single point of failure | No single point of failure |\n| Slower for large teams | Fast branching/merging |\n\n### The Three States\n\nGit files reside in one of three states:\n1. **Modified** — changed but not staged\n2. **Staged** — marked for commit in next snapshot\n3. **Committed** — safely stored in local repo\n\n### Git vs Other VCS\n\nGit differs from older VCS by:\n- **Snapshots** (not diffs) — stores file state as a snapshot\n- **Local operations** — most operations need no network\n- **Integrity** — everything is checksummed (SHA-1)\n- **Branching** — lightweight and cheap branches",
+  "codeExample": "git init\ngit add README.md\ngit commit -m \"first commit\"",
+  "quiz": [
+    {
+      "question": "What are the three states of a file in Git?",
+      "options": ["Modified, Staged, Committed", "Open, Closed, Saved", "Draft, Review, Final", "Local, Remote, Branch"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What type of version control system is Git?",
+      "options": ["Centralized", "Distributed", "Local-only", "Peer-to-peer"],
+      "correctIndex": 1
+    }
+  ]
+}

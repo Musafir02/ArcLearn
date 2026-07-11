@@ -1,0 +1,19 @@
+{
+  "title": "Working with Remotes",
+  "language": "git",
+  "topic": "remotes",
+  "content": "### Adding a Remote\n\nA remote is a URL to another copy of the repo:\n\n```bash\ngit remote add origin https://github.com/user/repo.git\ngit remote -v                      # List remotes\n```\n\n### Pushing to a Remote\n\n```bash\ngit push origin main               # Push main to origin\ngit push -u origin feature         # Push + set upstream tracking\ngit push --all                     # Push all branches\ngit push origin --delete feature   # Delete remote branch\n```\n\nThe `-u` flag sets the upstream, so future `git push` / `git pull` works without arguments.\n\n### Pulling from a Remote\n\n`git pull` is `git fetch` + `git merge`:\n\n```bash\ngit pull                           # Fetch + merge upstream changes\ngit pull origin main               # Pull specific branch\ngit pull --rebase                  # Fetch + rebase instead of merge\n```\n\n### git fetch vs git pull\n\n| `git fetch` | `git pull` |\n|---|---|\n| Downloads objects/refs only | Downloads + integrates |\n| Does not update working tree | Updates working tree |\n| Safe to inspect changes first | Directly merges changes |\n\n### Remote Tracking Branches\n\nTrack branches like `origin/main` show where remotes stand:\n\n```bash\ngit branch -r                      # List remote branches\ngit remote show origin             # Detailed remote info\n```\n\n### Multiple Remotes\n\nYou can have several remotes (e.g., origin + upstream):\n\n```bash\ngit remote add upstream https://github.com/other/repo.git\ngit fetch upstream\n```",
+  "codeExample": "git remote add origin https://github.com/user/my-project.git\ngit push -u origin main\n# Later:\ngit pull\ngit fetch origin\ngit log --oneline origin/main",
+  "quiz": [
+    {
+      "question": "What is the difference between git fetch and git pull?",
+      "options": ["They are the same", "fetch downloads without merging, pull merges automatically", "pull downloads without merging, fetch merges", "fetch is for local only"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the -u flag do in git push -u origin main?",
+      "options": ["Force pushes", "Sets upstream tracking branch", "Pushes all branches", "Dry run"],
+      "correctIndex": 1
+    }
+  ]
+}

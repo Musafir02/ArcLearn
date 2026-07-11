@@ -1,0 +1,19 @@
+{
+  "title": "Pull Requests",
+  "language": "github",
+  "topic": "pull_requests",
+  "content": "### Pull Request Workflow\n\n1. Create a feature branch: `git checkout -b feature-xyz`\n2. Make changes, commit, and push: `git push -u origin feature-xyz`\n3. Open a PR on GitHub from your branch to `main`\n4. Reviewers provide feedback and approve\n5. Merge into the target branch\n\n### PR Templates\n\nPlace `.github/PULL_REQUEST_TEMPLATE.md` in your repo to auto-populate new PR descriptions with sections for summary, checklist, and testing steps.\n\n### Draft PRs\n\nDraft PRs signal work-in-progress. They cannot be merged until marked **Ready for review**. Useful for early feedback.\n\n### Comparing Branches\n\nWhen creating a PR, choose the **base branch** (target) and **compare branch** (source). You can also compare across forks.\n\n### Linked Issues\n\nReference issues with `Closes #123` in the PR description to auto-close them on merge.\n\n### Merge Queue\n\nMerge queues (beta) automatically queue PRs, rebase them on latest base, run required checks, and merge once all pass — ensuring the base branch never breaks.",
+  "codeExample": "git checkout -b feature-xyz\ngit add .\ngit commit -m \"Add feature XYZ\"\ngit push -u origin feature-xyz",
+  "quiz": [
+    {
+      "question": "What is a Draft PR used for?",
+      "options": ["Work-in-progress that cannot be merged", "Final review before release", "Emergency hotfix", "Archived pull request"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which feature automatically queues PRs and rebases before merging?",
+      "options": ["Merge queue", "Auto-merge", "Rebase and merge", "Squash and merge"],
+      "correctIndex": 0
+    }
+  ]
+}

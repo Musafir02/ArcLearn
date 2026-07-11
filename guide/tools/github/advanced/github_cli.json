@@ -1,0 +1,19 @@
+{
+  "title": "GitHub CLI",
+  "language": "github",
+  "topic": "github_cli",
+  "content": "### gh CLI Tool\n\nThe [GitHub CLI](https://cli.github.com) (`gh`) brings GitHub actions to your terminal. Install via package manager or direct download.\n\n### Authentication\n\n```bash\ngh auth login\n# Follow the prompts to authenticate via browser or token\n```\n\n### Common Commands\n\n```bash\n# Create a new repository\ngh repo create my-repo --public --clone\n\n# Create a pull request\ngh pr create --title \"My PR\" --body \"Description\" --base main\n\n# List issues\ngit issue list --label bug\n\n# Run a workflow\ngit workflow run build.yml --ref main\n\n# View PR status\ngh pr status\n```\n\n### Working with Multiple Hosts\n\n`gh` supports multiple GitHub hosts (e.g., GHES). Use `--hostname` flag or set different profiles.\n\n### Aliases\n\n```bash\ngh alias set bugs 'issue list --label=\"bug\"'\ngh bugs  # Equivalent to the above\n```",
+  "codeExample": "gh repo create my-repo --public --clone\ngh pr create --title \"New feature\" --body \"Adds feature X\"\ngh issue list --label bug\ngh workflow run build.yml",
+  "quiz": [
+    {
+      "question": "What command authenticates the GitHub CLI?",
+      "options": ["gh auth login", "gh login", "gh auth setup", "gh auth init"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which command creates a new pull request via the CLI?",
+      "options": ["gh pr create", "gh pull-request", "gh pr new", "gh pr open"],
+      "correctIndex": 0
+    }
+  ]
+}

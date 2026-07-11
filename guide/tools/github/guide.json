@@ -1,0 +1,19 @@
+{
+  "title": "GitHub Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "Repositories", "folder": "repos",
+      "topics": ["creating_repos", "readme_licenses", "branches_protection", "issues", "wiki"]
+    },
+    {
+      "type": "group", "title": "Collaboration", "folder": "collaboration",
+      "topics": ["pull_requests", "code_review", "actions_intro", "projects", "discussions"]
+    },
+    {
+      "type": "group", "title": "Advanced GitHub", "folder": "advanced",
+      "topics": ["github_pages", "security_insights", "github_cli", "gists", "profile_readme"]
+    }
+  ]
+}

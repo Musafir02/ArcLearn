@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started with GitHub",
+  "language": "github",
+  "topic": "getstarted",
+  "content": "### Creating an Account\n\nGo to [github.com](https://github.com) and sign up. Choose a username, provide your email, and set a strong password. Verify your email address to unlock all features.\n\n### SSH Keys Setup\n\nSSH keys let you authenticate to GitHub without typing your password each time.\n\n```bash\n# Generate a new SSH key\nssh-keygen -t ed25519 -C \"your_email@example.com\"\n\n# Start the ssh-agent in the background\neval \"$(ssh-agent -s)\"\n\n# Add your key to the agent\nssh-add ~/.ssh/id_ed25519\n\n# Copy the public key\ncat ~/.ssh/id_ed25519.pub\n```\n\nGo to **Settings → SSH and GPG keys → New SSH key**, paste your public key, and save.\n\n### Personal Access Tokens\n\nFor HTTPS access or API usage, create a personal access token (PAT): **Settings → Developer settings → Personal access tokens → Tokens (classic)**. Select scopes like `repo` and `workflow`, then copy the token immediately.\n\n### GitHub Desktop\n\n[GitHub Desktop](https://desktop.github.com) provides a visual interface for Git operations. It supports cloning, committing, branching, syncing, and opening pull requests without touching the command line.",
+  "codeExample": "ssh-keygen -t ed25519 -C \"your_email@example.com\"",
+  "quiz": [
+    {
+      "question": "What command generates a new SSH key for GitHub?",
+      "options": ["ssh-keygen -t rsa -b 4096", "ssh-keygen -t ed25519", "ssh-add ~/.ssh/id_ed25519", "cat ~/.ssh/id_ed25519.pub"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where do you add an SSH public key in GitHub?",
+      "options": ["Settings → SSH and GPG Keys", "Settings → Developer settings", "Repository → Deploy Keys", "Profile → Keys"],
+      "correctIndex": 0
+    }
+  ]
+}
