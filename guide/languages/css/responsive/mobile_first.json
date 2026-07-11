@@ -1,0 +1,22 @@
+{
+  "title": "Mobile First",
+  "language": "css",
+  "topic": "mobile_first",
+  "order": 57,
+  "nextTopic": "viewport_units",
+  "prevTopic": "container_queries",
+  "content": "### Mobile First Approach\n\n**Mobile-first** means designing for small screens first, then enhancing for larger screens.\n\n---\n\n### The Principle\n\n1. Start with **smallest screen** base styles\n2. Add **min-width media queries** to enhance for larger screens\n3. Every device gets the base experience\n4. Larger devices get progressively more layout\n\n---\n\n### Mobile-First vs Desktop-First\n\n```css\n/* Mobile-first: uses min-width */\n.column { width: 100%; }  /* Mobile default */\n\n@media (min-width: 768px) {\n  .column { width: 50%; }  /* Tablet */\n}\n\n@media (min-width: 1024px) {\n  .column { width: 33.33%; }  /* Desktop */\n}\n\n/* Desktop-first: uses max-width */\n.column { width: 33.33%; }  /* Desktop default */\n\n@media (max-width: 1023px) {\n  .column { width: 50%; }  /* Tablet */\n}\n\n@media (max-width: 767px) {\n  .column { width: 100%; }  /* Mobile */\n}\n```\n\n---\n\n### Why Mobile-First?\n\n| Benefit | Reason |\n|---------|--------|\n| Performance | Mobile gets less CSS to parse |\n| Simpler | Base styles are simpler |\n| Future-proof | New large sizes work automatically |\n| SEO | Google prioritizes mobile |\n| Accessibility | Forces good defaults |\n\n---\n\n### Mobile-First Example\n\n```css\n/* BASE: Mobile (all screens) */\nbody {\n  font-size: 16px;\n  line-height: 1.6;\n}\n\n.nav {\n  display: flex;\n  flex-direction: column;  /* Stack on mobile */\n}\n\n/* TABLET: 768px+ */\n@media (min-width: 768px) {\n  .nav {\n    flex-direction: row;\n    justify-content: space-between;\n  }\n  \n  .container {\n    max-width: 720px;\n    margin: 0 auto;\n  }\n}\n\n/* DESKTOP: 1024px+ */\n@media (min-width: 1024px) {\n  .container {\n    max-width: 960px;\n  }\n  \n  .content {\n    display: grid;\n    grid-template-columns: 200px 1fr;\n  }\n}\n\n/* LARGE: 1280px+ */\n@media (min-width: 1280px) {\n  .container {\n    max-width: 1200px;\n  }\n}\n```\n\n---\n\n### Viewport Meta Tag\n\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n```\n\nRequired for proper mobile rendering.\n\n---\n\n### Testing Mobile-First\n\n1. Start with narrow viewport (320px)\n2. Gradually widen to see enhancements\n3. Each breakpoint should add, not override\n\n> **Best Practice:** Always write base styles for mobile first, then add `min-width` queries. Your CSS will be cleaner and more maintainable.",
+  "codeExample": "<style>\n  * { box-sizing: border-box; }\n  \n  .grid { display: flex; flex-wrap: wrap; gap: 15px; }\n  .item {\n    flex: 1 1 100%;\n    background: #3498db;\n    color: white;\n    padding: 30px;\n    text-align: center;\n    border-radius: 8px;\n  }\n  \n  @media (min-width: 600px) {\n    .item { flex: 1 1 calc(50% - 15px); }\n  }\n  \n  @media (min-width: 900px) {\n    .item { flex: 1 1 calc(33.33% - 15px); }\n  }\n  \n  @media (min-width: 1200px) {\n    .item { flex: 1 1 calc(25% - 15px); }\n  }\n</style>\n\n<div class=\"grid\">\n  <div class=\"item\">Mobile: 1 col</div>\n  <div class=\"item\">Tablet: 2 cols</div>\n  <div class=\"item\">Desktop: 3 cols</div>\n  <div class=\"item\">Large: 4 cols</div>\n</div>\n<p>Resize from narrow to wide - note how layout adds columns.</p>",
+  "quiz": [
+    {
+      "question": "What type of media query does mobile-first use?",
+      "options": [
+        "max-width",
+        "min-width",
+        "max-device-width",
+        "orientation"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

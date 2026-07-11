@@ -1,0 +1,22 @@
+{
+  "title": "Multi-Column Layout",
+  "language": "css",
+  "topic": "multi_column",
+  "order": 78,
+  "nextTopic": "nesting",
+  "prevTopic": "layer",
+  "content": "### Multi-Column Layout\n\n**CSS Multi-Column** flows content into multiple columns, like a newspaper.\n\n---\n\n### Column Properties\n\n| Property | Description |\n|----------|-------------|\n| `column-count` | Number of columns |\n| `column-width` | Minimum width of each column |\n| `columns` | Shorthand for count and width |\n| `column-gap` | Gap between columns |\n| `column-rule` | Line between columns |\n| `column-span` | Element spans all columns |\n| `column-fill` | How columns are filled |\n\n---\n\n### Column Count\n\n```css\n.container {\n  column-count: 3; /* Always 3 columns */\n}\n```\n\n---\n\n### Column Width\n\n```css\n.container {\n  column-width: 300px; /* Columns at least 300px wide */\n  /* Browser creates as many 300px columns as fit */\n}\n```\n\n---\n\n### Columns Shorthand\n\n```css\n.container {\n  columns: 3;           /* column-count: 3 */\n  columns: 300px;       /* column-width: 300px */\n  columns: 3 300px;     /* 3 columns, each 300px */\n}\n```\n\n---\n\n### Column Gap and Rule\n\n```css\n.container {\n  column-count: 3;\n  column-gap: 40px;\n  column-rule: 2px solid #ddd;  /* Line between columns */\n}\n```\n\n---\n\n### Column Span\n\n```css\n.title {\n  column-span: all;  /* Spans across all columns */\n}\n\n.paragraph {\n  column-span: none; /* Default - stays in column flow */\n}\n```\n\n---\n\n### Column Fill\n\n```css\n.container {\n  column-fill: auto;     /* Columns filled sequentially */\n  column-fill: balance;  /* Equal height columns (default) */\n}\n```\n\n---\n\n### When to Use Multi-Column\n\n```css\n/* Long reading content */\n.article {\n  columns: 300px;\n  column-gap: 40px;\n  column-rule: 1px solid #eee;\n}\n\n/* Card layout (better to use Grid) - prefer Grid for cards */\n```\n\n> **Best Practice:** Use multi-column for **text content** (like articles). Use CSS Grid for **component layouts** (cards, galleries).",
+  "codeExample": "<style>\n  .newspaper {\n    columns: 3 250px;\n    column-gap: 40px;\n    column-rule: 2px solid #ddd;\n    padding: 20px;\n    background: #fafafa;\n  }\n  \n  .newspaper h2 {\n    column-span: all;\n    text-align: center;\n    margin-bottom: 20px;\n    color: #333;\n  }\n  \n  .newspaper p {\n    margin: 0 0 15px 0;\n    line-height: 1.6;\n    text-align: justify;\n  }\n</style>\n\n<div class=\"newspaper\">\n  <h2>Multi-Column Layout Example</h2>\n  <p>CSS multi-column layout allows content to flow into multiple columns, similar to a newspaper or magazine. This is ideal for long-form reading content.</p>\n  <p>The browser automatically balances the content across columns. You can control the number of columns, gap between them, and even add rules (lines) between columns.</p>\n  <p>Use column-span: all to make headings or images span across all columns. Multi-column layout is great for articles, blogs, and text-heavy content.</p>\n  <p>For card layouts or more complex designs, consider using CSS Grid or Flexbox instead. Multi-column is specifically designed for text flow.</p>\n</div>",
+  "quiz": [
+    {
+      "question": "Which property makes an element span all columns?",
+      "options": [
+        "column-fill: all",
+        "column-span: all",
+        "column-width: 100%",
+        "span: all"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

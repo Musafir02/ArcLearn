@@ -1,0 +1,22 @@
+{
+  "title": "CSS Overflow",
+  "language": "css",
+  "topic": "overflow",
+  "order": 32,
+  "nextTopic": "box_shadow",
+  "prevTopic": "box_sizing",
+  "content": "### CSS Overflow\n\n**overflow** controls what happens when content is too big for its container.\n\n---\n\n### Values\n\n| Value | Description |\n|-------|-------------|\n| `visible` | Content overflows box (default) |\n| `hidden` | Content is clipped |\n| `scroll` | Scrollbars always shown |\n| `auto` | Scrollbars only when needed |\n| `clip` | Like hidden, no scrolling |\n\n---\n\n### Overflow X and Y\n\n```css\noverflow-x: hidden;  /* Horizontal */\noverflow-y: scroll;  /* Vertical */\noverflow: hidden scroll; /* x | y shorthand */\n```\n\n---\n\n### Overflow: Visible (Default)\n\n```css\n.container {\n  width: 200px;\n  height: 100px;\n  overflow: visible; /* Content spills out */\n}\n```\n\n---\n\n### Overflow: Hidden\n\n```css\n.container {\n  width: 200px;\n  height: 100px;\n  overflow: hidden; /* Extra content hidden */\n}\n```\n\nUse with `border-radius` and `white-space: nowrap`.\n\n---\n\n### Overflow: Scroll\n\n```css\n.container {\n  width: 200px;\n  height: 100px;\n  overflow: scroll; /* Always show scrollbars */\n}\n```\n\n---\n\n### Overflow: Auto\n\n```css\n.container {\n  width: 200px;\n  height: 100px;\n  overflow: auto; /* Scrollbars only when needed */\n}\n```\n\n---\n\n### Text Overflow\n\n```css\n.text {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; /* Shows ... */\n}\n```\n\n---\n\n### Layout Applications\n\n```css\n/* Truncate text */\n.truncate {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n/* Prevent horizontal scroll */\nbody {\n  overflow-x: hidden;\n}\n\n/* Scrollable sidebar */\n.sidebar {\n  height: 100vh;\n  overflow-y: auto;\n}\n\n/* Clip image to rounded corners */\n.card img {\n  border-radius: 12px;\n  overflow: hidden;\n}\n```\n\n> **Key Point:** `overflow: hidden` clips child content to parent boundaries, which is required for `border-radius` to clip corners properly.",
+  "codeExample": "<style>\n  .box {\n    width: 150px;\n    height: 80px;\n    background: #f0f0f0;\n    display: inline-block;\n    vertical-align: top;\n    margin: 10px;\n    padding: 10px;\n  }\n  \n  .visible { overflow: visible; }\n  .hidden { overflow: hidden; }\n  .scroll { overflow: scroll; }\n  .auto { overflow: auto; }\n  .ellipsis {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n</style>\n\n<div class=\"box visible\"><b>Visible:</b> Long content that overflows the container boundaries</div>\n<div class=\"box hidden\"><b>Hidden:</b> Long content that gets clipped at the edges</div>\n<div class=\"box scroll\"><b>Scroll:</b> Content with scrollbars</div>\n<div class=\"box ellipsis\"><b>Ellipsis:</b> Very long text truncated...</div>",
+  "quiz": [
+    {
+      "question": "Which overflow value shows scrollbars only when needed?",
+      "options": [
+        "scroll",
+        "auto",
+        "hidden",
+        "visible"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

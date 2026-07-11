@@ -1,0 +1,22 @@
+{
+  "title": "CSS Padding",
+  "language": "css",
+  "topic": "padding",
+  "order": 27,
+  "nextTopic": "margin",
+  "prevTopic": "width_height",
+  "content": "### CSS Padding\n\n**Padding** creates space between content and border.\n\n---\n\n### Individual Sides\n\n```css\npadding-top: 10px;\npadding-right: 20px;\npadding-bottom: 10px;\npadding-left: 20px;\n```\n\n---\n\n### Shorthand (1-4 Values)\n\n```css\n/* All sides */\npadding: 20px;\n\n/* Vertical | Horizontal */\npadding: 10px 20px;\n\n/* Top | Horizontal | Bottom */\npadding: 10px 15px 20px;\n\n/* Top | Right | Bottom | Left */\npadding: 10px 15px 20px 25px;\n```\n\n**Memory trick:** Clockwise from top (Top, Right, Bottom, Left - TRBL).\n\n---\n\n### Values\n\n```css\npadding: 20px;       /* Fixed pixels */\npadding: 1em;        /* Relative to font size */\npadding: 5%;         /* Percentage of parent WIDTH */\npadding: 1rem;       /* Relative to root font size */\n```\n\n**Important:** Percentage padding is based on **parent width**, not height.\n\n---\n\n### Padding Examples\n\n```css\n.button {\n  padding: 12px 24px;  /* Comfortable button */\n}\n\n.card {\n  padding: 20px;        /* Inner spacing */\n}\n\n.avatar {\n  padding: 5px;         /* Tight spacing */\n  border: 2px solid gray;\n}\n```\n\n---\n\n### Padding vs Margin\n\n| Padding | Margin |\n|---------|--------|\n| Inside the border | Outside the border |\n| Shows background color | Transparent |\n| Cannot be negative | Can be negative |\n| No collapsing | Collapses vertically |\n| Part of clickable area | Not clickable |\n\n---\n\n### Accessibility with Padding\n\n```css\n/* Make links easier to click */\na {\n  padding: 10px;  /* Larger click target */\n}\n\n/* Input padding for usability */\ninput {\n  padding: 12px 16px;\n}\n```\n\n> **Best Practice:** Use `padding` inside containers/cards/buttons. Don't use padding to create space between elements - use margin instead.",
+  "codeExample": "<style>\n  .box {\n    background: lightblue;\n    margin: 10px;\n  }\n  \n  .all { padding: 30px; }\n  .two { padding: 10px 40px; }\n  .three { padding: 5px 20px 30px; }\n  .four { padding: 5px 10px 15px 20px; }\n</style>\n\n<div class=\"box all\">padding: 30px (all sides)</div>\n<div class=\"box two\">padding: 10px 40px (v | h)</div>\n<div class=\"box three\">padding: 5px 20px 30px (t | h | b)</div>\n<div class=\"box four\">padding: 5px 10px 15px 20px (TRBL)</div>",
+  "quiz": [
+    {
+      "question": "What does percentage padding base on?",
+      "options": [
+        "Parent height",
+        "Parent width",
+        "Element's own width",
+        "Viewport width"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

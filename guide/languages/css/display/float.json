@@ -1,0 +1,22 @@
+{
+  "title": "CSS Float",
+  "language": "css",
+  "topic": "float",
+  "order": 38,
+  "nextTopic": "clear",
+  "prevTopic": "z_index",
+  "content": "### CSS Float\n\n**float** pushes an element to one side, letting content wrap around it.\n\n---\n\n### Float Values\n\n| Value | Description |\n|-------|-------------|\n| `none` | Default - no floating |\n| `left` | Floats to the left |\n| `right` | Floats to the right |\n| `inline-start` | Floats to start of text direction |\n| `inline-end` | Floats to end of text direction |\n\n---\n\n### Basic Usage\n\n```css\nimg {\n  float: left;\n  margin-right: 15px;\n}\n```\n\nText wraps around the floated image.\n\n---\n\n### How Float Works\n\n- Element is **removed from normal flow**\n- Shifts to left or right edge\n- **Following content** wraps around it\n- Other block elements ignore it\n- **Inline content** (text) wraps around\n\n---\n\n### Float for Layout (Legacy)\n\nBefore Flexbox and Grid, float was used for layouts:\n\n```css\n.sidebar {\n  float: left;\n  width: 25%;\n}\n\n.main {\n  float: left;\n  width: 75%;\n}\n```\n\n**Note:** Modern CSS uses `flexbox` or `grid` instead.\n\n---\n\n### Float with Images\n\n```css\n.article img {\n  float: left;\n  margin: 0 20px 10px 0;\n  max-width: 50%;\n}\n\n.article img.right {\n  float: right;\n  margin: 0 0 10px 20px;\n}\n```\n\n---\n\n### Float Problems\n\nFloat can cause **parent collapse** (parent has zero height):\n\n```css\n.parent {\n  border: 1px solid black;\n  /* Parent collapses because children are floated */\n}\n\n.child {\n  float: left;\n  height: 100px;\n}\n```\n\n**Solution:** Use clearfix (see `clear` file).\n\n> **Modern Take:** Use `flexbox` or `grid` for layout. `float` is only for wrapping text around images.",
+  "codeExample": "<style>\n  .container {\n    width: 400px;\n    background: #f0f0f0;\n    padding: 15px;\n  }\n  \n  img {\n    float: left;\n    margin: 0 15px 10px 0;\n    width: 120px;\n    height: 100px;\n    background: #3498db;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n</style>\n\n<div class=\"container\">\n  <img src=\"https://via.placeholder.com/120x100\" alt=\"Float image\">\n  <p>This text wraps around the floated image. Floats are useful when you want text to flow around an element, like in magazine layouts. The image is floated to the left, so text fills the space on the right and continues below the image.</p>\n</div>",
+  "quiz": [
+    {
+      "question": "What is float mainly used for in modern CSS?",
+      "options": [
+        "Page layouts",
+        "Wrapping text around images",
+        "Centering elements",
+        "Creating columns"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

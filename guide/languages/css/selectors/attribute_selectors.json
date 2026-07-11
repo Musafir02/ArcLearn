@@ -1,0 +1,22 @@
+{
+  "title": "Attribute Selectors",
+  "language": "css",
+  "topic": "attribute_selectors",
+  "order": 12,
+  "nextTopic": "colors",
+  "prevTopic": "pseudo_elements",
+  "content": "### CSS Attribute Selectors\n\nStyle elements based on their **attributes** and attribute **values**.\n\n---\n\n### Basic Attribute Selectors\n\n| Selector | Example | Targets |\n|----------|---------|---------|\n| `[attr]` | `[target]` | Elements with the attribute |\n| `[attr=\"value\"]` | `[type=\"text\"]` | Exact value match |\n| `[attr~=\"value\"]` | `[class~=\"logo\"]` | Word in space-separated list |\n| `[attr|=\"value\"]` | `[lang|=\"en\"]` | Value or value- (with dash) |\n\n---\n\n### Substring Attribute Selectors\n\n| Selector | Meaning | Example |\n|----------|---------|---------|\n| `[attr^=\"val\"]` | Starts with | `[href^=\"https\"]` |\n| `[attr$=\"val\"]` | Ends with | `[src$=\".jpg\"]` |\n| `[attr*=\"val\"]` | Contains | `[class*=\"btn\"]` |\n\n---\n\n### Examples\n\n```css\n/* Exact match */\ninput[type=\"text\"] {\n  border: 1px solid blue;\n}\n\n/* Starts with */\na[href^=\"https\"] {\n  color: green;\n}\n\n/* Ends with */\nimg[src$=\".png\"] {\n  border: 2px solid gray;\n}\n\n/* Contains */\n[class*=\"icon\"] {\n  width: 24px;\n  height: 24px;\n}\n\n/* Attribute present */\n[disabled] {\n  opacity: 0.5;\n}\n```\n\n---\n\n### Case-Insensitive\n\n```css\n/* Add i at end for case-insensitive */\n[type=\"submit\" i] {\n  background: blue;\n}\n```\n\nMatches `submit`, `SUBMIT`, `Submit`, etc.\n\n---\n\n> **Best Practice:** Use attribute selectors to style form inputs by type or links by protocol.",
+  "codeExample": "<style>\n  a[target] { color: red; }\n  a[href^=\"https\"]::after { content: \" \\ud83d\\udd12\"; }\n  input[type=\"email\"] { border-color: green; }\n  [required] { border-left: 3px solid orange; }\n</style>\n\n<a href=\"https://example.com\" target=\"_blank\">Secure Link</a><br>\n<a href=\"http://example.com\">Insecure Link</a><br>\n<input type=\"email\" required placeholder=\"Email\">",
+  "quiz": [
+    {
+      "question": "Which selector matches attributes starting with a value?",
+      "options": [
+        "[attr$=val]",
+        "[attr^=val]",
+        "[attr*=val]",
+        "[attr|=val]"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

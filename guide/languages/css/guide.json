@@ -1,0 +1,59 @@
+{
+  "title": "CSS Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    { "type": "flat", "topic": "getstarted" },
+    {
+      "type": "group", "title": "CSS Basics", "folder": "basics",
+      "topics": ["syntax", "how_to_add", "comments", "units", "specificity"]
+    },
+    {
+      "type": "group", "title": "CSS Selectors", "folder": "selectors",
+      "topics": ["selectors", "combinator_selectors", "pseudo_classes", "pseudo_elements", "attribute_selectors"]
+    },
+    {
+      "type": "group", "title": "CSS Colors", "folder": "colors",
+      "topics": ["colors", "backgrounds", "gradients", "opacity"]
+    },
+    {
+      "type": "group", "title": "CSS Text & Fonts", "folder": "text",
+      "topics": ["text", "font", "text_align", "text_decoration", "text_transform", "text_spacing", "text_shadow", "web_fonts"]
+    },
+    {
+      "type": "group", "title": "CSS Box Model", "folder": "box_model",
+      "topics": ["box_model", "width_height", "padding", "margin", "border", "border_radius", "box_sizing", "overflow", "box_shadow", "outline"]
+    },
+    {
+      "type": "group", "title": "CSS Display & Position", "folder": "display",
+      "topics": ["display", "position", "z_index", "float", "clear", "visibility"]
+    },
+    {
+      "type": "group", "title": "CSS Flexbox", "folder": "flexbox",
+      "topics": ["flexbox", "flex_container", "flex_items", "flex_direction", "flex_wrap", "flex_align", "flex_responsive"]
+    },
+    {
+      "type": "group", "title": "CSS Grid", "folder": "grid",
+      "topics": ["grid", "grid_container", "grid_items", "grid_template", "grid_gap", "grid_areas", "grid_auto"]
+    },
+    {
+      "type": "group", "title": "CSS Responsive", "folder": "responsive",
+      "topics": ["media_queries", "container_queries", "mobile_first", "viewport_units"]
+    },
+    {
+      "type": "group", "title": "CSS Transitions & Animations", "folder": "animations",
+      "topics": ["transitions", "transforms_2d", "transforms_3d", "animations", "keyframes"]
+    },
+    {
+      "type": "group", "title": "CSS Functions & Variables", "folder": "functions",
+      "topics": ["css_variables", "math_functions", "filters"]
+    },
+    {
+      "type": "group", "title": "CSS Styling", "folder": "styling",
+      "topics": ["lists", "tables", "links", "buttons", "forms", "images"]
+    },
+    {
+      "type": "group", "title": "CSS Advanced", "folder": "advanced",
+      "topics": ["at_rules", "font_face", "supports", "import", "layer", "multi_column", "nesting", "image_gallery", "advanced_effects"]
+    }
+  ]
+}

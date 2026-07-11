@@ -1,0 +1,22 @@
+{
+  "title": "CSS Fonts",
+  "language": "css",
+  "topic": "font",
+  "order": 18,
+  "nextTopic": "text_align",
+  "prevTopic": "text",
+  "content": "### CSS Fonts\n\nFont properties control the appearance of text characters.\n\n---\n\n### Font Family\n\n```css\np {\n  font-family: Arial, Helvetica, sans-serif;\n}\n```\n\nList fallback fonts; browser uses the first available.\n\n---\n\n### Generic Font Families\n\n| Family | Looks Like | Example |\n|--------|-----------|---------|\n| `serif` | Small lines at ends | Times New Roman |\n| `sans-serif` | Clean, no lines | Arial, Helvetica |\n| `monospace` | Equal width letters | Courier New |\n| `cursive` | Handwriting style | Brush Script MT |\n| `fantasy` | Decorative | Impact |\n\nAlways end `font-family` with a generic family as fallback:\n\n```css\nfont-family: \"Times New Roman\", Times, serif;\n```\n\n---\n\n### Font Size\n\n```css\nfont-size: 16px;       /* Fixed pixels */\nfont-size: 1.5rem;     /* Relative to root */\nfont-size: 1.2em;      /* Relative to parent */\nfont-size: 80%;        /* Percentage */\nfont-size: large;      /* Keyword */\nfont-size: 100vw;      /* Viewport width */\n```\n\n---\n\n### Font Weight\n\n```css\nfont-weight: normal;    /* 400 */\nfont-weight: bold;      /* 700 */\nfont-weight: 100;       /* Thin */\nfont-weight: 300;       /* Light */\nfont-weight: 600;       /* Semi-bold */\nfont-weight: 900;       /* Black */\n```\n\n---\n\n### Font Style\n\n```css\nfont-style: normal;\nfont-style: italic;\nfont-style: oblique;\n```\n\n---\n\n### Font Variant\n\n```css\nfont-variant: normal;\nfont-variant: small-caps; /* Lowercase becomes small caps */\n```\n\n---\n\n### Font Shorthand\n\n```css\n/* style weight size/line-height family */\nfont: italic bold 16px/1.5 Arial, sans-serif;\n```\n\n**Required:** `size` and `family`. Order matters.\n\n---\n\n> **Best Practice:** Use `rem` for font sizes to respect user's browser settings.",
+  "codeExample": "<style>\n  .serif { font-family: Georgia, serif; }\n  .sans { font-family: Arial, sans-serif; }\n  .mono { font-family: \"Courier New\", monospace; }\n  \n  .bold { font-weight: bold; }\n  .light { font-weight: 300; }\n  .italic { font-style: italic; }\n  \n  .small-caps { font-variant: small-caps; }\n  \n  .shorthand {\n    font: italic 600 20px/1.8 Georgia, serif;\n  }\n</style>\n\n<p class=\"serif\">Serif font (Georgia)</p>\n<p class=\"sans\">Sans-serif font (Arial)</p>\n<p class=\"mono\">Monospace font (Courier New)</p>\n<p class=\"bold\">Bold text</p>\n<p class=\"italic\">Italic text</p>\n<p class=\"small-caps\">Small Caps Text</p>\n<p class=\"shorthand\">Using font shorthand</p>",
+  "quiz": [
+    {
+      "question": "Which generic font family should always be last in font-family?",
+      "options": [
+        "serif",
+        "sans-serif",
+        "monospace",
+        "Any generic family as fallback"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

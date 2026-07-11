@@ -1,0 +1,22 @@
+{
+  "title": "@font-face",
+  "language": "css",
+  "topic": "font_face",
+  "order": 74,
+  "nextTopic": "supports",
+  "prevTopic": "at_rules",
+  "content": "### @font-face\n\n**@font-face** loads custom fonts from your server or URL.\n\n---\n\n### Basic Syntax\n\n```css\n@font-face {\n  font-family: 'MyFont';\n  src: url('myfont.woff2') format('woff2');\n}\n```\n\n---\n\n### Multiple Formats (Fallback)\n\n```css\n@font-face {\n  font-family: 'MyFont';\n  src: \n    url('myfont.woff2') format('woff2'),\n    url('myfont.woff') format('woff');\n  font-weight: normal;\n  font-style: normal;\n  font-display: swap;\n}\n```\n\n---\n\n### Font Face Properties\n\n| Property | Description |\n|----------|-------------|\n| `font-family` | Name to use in CSS (required) |\n| `src` | URL(s) to font files (required) |\n| `font-weight` | Which weight this file represents |\n| `font-style` | Which style this file represents |\n| `font-display` | How font loads |\n| `unicode-range` | Specify character ranges |\n| `font-stretch` | Condensed/expanded variants |\n\n---\n\n### Font Display Options\n\n```css\n@font-face {\n  font-display: auto;      /* Browser default */\n  font-display: block;     /* Hide text briefly, then swap */\n  font-display: swap;      /* Show fallback, swap when loaded */\n  font-display: fallback;  /* Short swap period */\n  font-display: optional;  /* Only use if already cached */\n}\n```\n\n`font-display: swap` is recommended for most sites - users see text immediately.\n\n---\n\n### Multiple Weights\n\n```css\n@font-face {\n  font-family: 'Open Sans';\n  src: url('OpenSans-Regular.woff2') format('woff2');\n  font-weight: 400;\n}\n\n@font-face {\n  font-family: 'Open Sans';\n  src: url('OpenSans-Bold.woff2') format('woff2');\n  font-weight: 700;\n}\n\n@font-face {\n  font-family: 'Open Sans';\n  src: url('OpenSans-Italic.woff2') format('woff2');\n  font-style: italic;\n  font-weight: 400;\n}\n\n/* Usage */\nbody { font-family: 'Open Sans', sans-serif; }\nh1 { font-weight: 700; }\nem { font-style: italic; }\n```\n\n---\n\n### Unicode Range\n\n```css\n@font-face {\n  font-family: 'IconFont';\n  src: url('icons.woff2') format('woff2');\n  unicode-range: U+0025-00FF; /* Basic Latin chars only */\n}\n```\n\n---\n\n### Variable Fonts\n\n```css\n@font-face {\n  font-family: 'Inter Variable';\n  src: url('Inter-Variable.woff2') format('woff2-variations');\n  font-weight: 100 900;\n  font-stretch: 75% 125%;\n}\n```\n\n> **Best Practice:** Provide WOFF2 as primary with WOFF fallback. Always use `font-display: swap`.",
+  "codeExample": "<style>\n  @font-face {\n    font-family: 'LocalCustom';\n    src: url('https://fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVQ.woff2') format('woff2');\n    font-weight: 400;\n    font-display: swap;\n  }\n  \n  @font-face {\n    font-family: 'LocalCustom';\n    src: url('https://fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVQ.woff2') format('woff2');\n    font-weight: 700;\n    font-display: swap;\n  }\n  \n  h1 {\n    font-family: 'LocalCustom', Arial, sans-serif;\n    font-weight: 700;\n  }\n  \n  p {\n    font-family: 'LocalCustom', Arial, sans-serif;\n  }\n</style>\n\n<h1>Custom Font via @font-face</h1>\n<p>This text uses the loaded font with regular weight. The browser will fall back to Arial if the font fails to load.</p>",
+  "quiz": [
+    {
+      "question": "Which two properties are REQUIRED in @font-face?",
+      "options": [
+        "font-family and font-weight",
+        "font-family and src",
+        "src and font-display",
+        "src and font-weight"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

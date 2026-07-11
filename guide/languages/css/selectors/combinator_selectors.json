@@ -1,0 +1,22 @@
+{
+  "title": "Combinator Selectors",
+  "language": "css",
+  "topic": "combinator_selectors",
+  "order": 9,
+  "nextTopic": "pseudo_classes",
+  "prevTopic": "selectors",
+  "content": "### CSS Combinators\n\n**Combinators** explain the relationship between two selectors.\n\n---\n\n### Types of Combinators\n\n| Combinator | Symbol | Example | Selects |\n|-----------|--------|---------|---------|\n| Descendant | space | `div p` | All `<p>` inside `<div>` |\n| Child | `>` | `div > p` | Direct children only |\n| Adjacent sibling | `+` | `h2 + p` | First `<p>` after `<h2>` |\n| General sibling | `~` | `h2 ~ p` | All `<p>` after `<h2>` |\n\n---\n\n### Descendant Selector (Space)\n\n```css\n/* All paragraphs inside any div */\ndiv p {\n  color: blue;\n}\n```\n\nTargets **all** nested levels.\n\n---\n\n### Child Selector (`>`)\n\n```css\n/* Direct children only (not nested deeper) */\ndiv > p {\n  color: green;\n}\n```\n\n---\n\n### Adjacent Sibling (`+`)\n\n```css\n/* First p immediately after h2 */\nh2 + p {\n  font-weight: bold;\n}\n```\n\n---\n\n### General Sibling (`~`)\n\n```css\n/* All p elements after h2 (same parent) */\nh2 ~ p {\n  color: gray;\n}\n```\n\n---\n\n> **Key Point:** Combinators chain relationships. `div > p` is more specific than `div p`. Use child selector when you want only direct children.",
+  "codeExample": "<div>\n  <p>Descendant (div p) - selected</p>\n  <section>\n    <p>Descendant but NOT child (div > p)</p>\n  </section>\n</div>\n\n<h2>Heading</h2>\n<p>Adjacent sibling (h2 + p)</p>\n<p>General sibling (h2 ~ p)</p>\n\n<style>\n  div p { color: blue; }\n  div > p { color: green; }\n  h2 + p { font-weight: bold; }\n  h2 ~ p { font-style: italic; }\n</style>",
+  "quiz": [
+    {
+      "question": "Which combinator selects direct children only?",
+      "options": [
+        "Space (descendant)",
+        "> (child)",
+        "+ (adjacent sibling)",
+        "~ (general sibling)"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

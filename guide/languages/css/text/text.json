@@ -1,0 +1,22 @@
+{
+  "title": "CSS Text Styling",
+  "language": "css",
+  "topic": "text",
+  "order": 17,
+  "nextTopic": "font",
+  "prevTopic": "opacity",
+  "content": "### CSS Text Styling\n\nCSS provides extensive properties to style text.\n\n---\n\n### Text Color\n\n```css\np {\n  color: #333;\n}\n```\n\n---\n\n### Text Alignment\n\n```css\ntext-align: left;      /* Default */\ntext-align: right;\ntext-align: center;\ntext-align: justify;   /* Spaced to both edges */\ntext-align-last: center; /* Last line alignment */\n```\n\n---\n\n### Text Direction\n\n```css\ndirection: ltr;   /* Left to right (default) */\ndirection: rtl;   /* Right to left */\nunicode-bidi: bidi-override;\n```\n\n---\n\n### Vertical Alignment\n\n```css\nvertical-align: baseline;  /* Default */\nvertical-align: top;\nvertical-align: middle;\nvertical-align: bottom;\nvertical-align: sub;       /* Subscript */\nvertical-align: super;     /* Superscript */\n```\n\n---\n\n### Text Decoration\n\n```css\ntext-decoration: underline;\ntext-decoration: overline;\ntext-decoration: line-through;\ntext-decoration: none;      /* Remove link underline */\n\ntext-decoration-color: red;\ntext-decoration-style: wavy;\ntext-decoration-thickness: 2px;\n\n/* Shorthand */\ntext-decoration: underline wavy red 2px;\n```\n\n---\n\n### Text Transform\n\n```css\ntext-transform: uppercase;     /* ALL CAPS */\ntext-transform: lowercase;     /* all lowercase */\ntext-transform: capitalize;    /* First Letter Capital */\ntext-transform: none;          /* Default */\n```\n\n---\n\n### Text Spacing\n\n```css\nletter-spacing: 2px;      /* Space between characters */\nword-spacing: 5px;        /* Space between words */\nline-height: 1.6;         /* Line spacing (unitless is best) */\nwhite-space: nowrap;      /* No line breaks */\ntext-indent: 30px;        /* First line indent */\n```\n\n> **Best Practice:** Use `line-height` without units (e.g., `1.6`) so it scales with font size.",
+  "codeExample": "<style>\n  h1 {\n    color: #2c3e50;\n    text-align: center;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    text-decoration: underline wavy blue 2px;\n  }\n  \n  p {\n    font-size: 16px;\n    line-height: 1.8;\n    text-indent: 30px;\n  }\n  \n  a {\n    text-decoration: none;\n  }\n  \n  a:hover {\n    text-decoration: underline;\n  }\n</style>\n\n<h1>Styled Heading</h1>\n<p>This paragraph has indented first line, generous line spacing, and justified alignment for a clean reading experience.</p>\n<a href=\"#\">Link without underline (appears on hover)</a>",
+  "quiz": [
+    {
+      "question": "Which property removes underline from links?",
+      "options": [
+        "text-transform: none",
+        "text-decoration: none",
+        "text-style: none",
+        "link-style: none"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

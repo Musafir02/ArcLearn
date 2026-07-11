@@ -1,0 +1,22 @@
+{
+  "title": "CSS Display",
+  "language": "css",
+  "topic": "display",
+  "order": 35,
+  "nextTopic": "position",
+  "prevTopic": "outline",
+  "content": "### CSS Display\n\n**display** controls how an element behaves in the layout.\n\n---\n\n### Basic Display Values\n\n| Value | Behavior |\n|-------|----------|\n| `block` | Takes full width, starts new line |\n| `inline` | Takes only content width, in line |\n| `inline-block` | Inline but can set width/height |\n| `none` | Removed from layout (invisible) |\n| `flex` | Block-level flex container |\n| `inline-flex` | Inline-level flex container |\n| `grid` | Block-level grid container |\n| `inline-grid` | Inline-level grid container |\n| `table` | Behaves like `<table>` |\n| `list-item` | Behaves like `<li>` |\n| `contents` | Removes box (children take its place) |\n\n---\n\n### Block Elements\n\n```css\n/* Default: div, p, h1-h6, section, article */\ndisplay: block;\n```\n\n- Stretch full width of parent\n- Start on new line\n- Respect width, height, margin, padding\n\n---\n\n### Inline Elements\n\n```css\n/* Default: span, a, strong, em, img */\ndisplay: inline;\n```\n\n- Only as wide as content\n- No new line\n- **Ignore width/height**\n- Only horizontal margin/padding\n\n---\n\n### Inline-Block\n\n```css\ndisplay: inline-block;\n```\n\nBest of both:\n- Stays inline (no line break)\n- Respects width/height/margin/padding\n\n---\n\n### Display: None vs Visibility: Hidden\n\n```css\n.hidden {\n  display: none;       /* Removed from flow */\n  visibility: hidden;  /* Invisible but takes space */\n}\n```\n\n---\n\n### Common Patterns\n\n```css\n/* Hide element */\n.hide { display: none; }\n\n/* Horizontal navigation */\nnav li {\n  display: inline-block;\n}\n\n/* Center inline-block */\n.center-inline {\n  text-align: center;\n}\n.center-inline > * {\n  display: inline-block;\n}\n```\n\n> **Key Point:** `display` values like `flex` and `grid` change how **children** behave. `display: none` removes element from layout entirely.",
+  "codeExample": "<style>\n  .block {\n    display: block;\n    background: #ffcccc;\n    padding: 10px;\n    margin: 5px;\n  }\n  \n  .inline {\n    display: inline;\n    background: #ccffcc;\n    padding: 5px;\n    margin: 5px;\n    width: 200px; /* Ignored! */\n  }\n  \n  .inline-block {\n    display: inline-block;\n    background: #ccccff;\n    padding: 10px;\n    margin: 5px;\n    width: 150px; /* Works! */\n  }\n</style>\n\n<div class=\"block\">Block - takes full width</div>\n<div class=\"block\">Another block</div>\n\n<span class=\"inline\">Inline 1</span>\n<span class=\"inline\">Inline 2 (width ignored)</span>\n\n<div class=\"inline-block\">Inline-block 1</div>\n<div class=\"inline-block\">Inline-block 2</div>",
+  "quiz": [
+    {
+      "question": "Which display value hides an element WITHOUT removing its space?",
+      "options": [
+        "display: none",
+        "display: hidden",
+        "visibility: hidden",
+        "opacity: none"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

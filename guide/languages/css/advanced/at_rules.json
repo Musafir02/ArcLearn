@@ -1,0 +1,22 @@
+{
+  "title": "At-Rules",
+  "language": "css",
+  "topic": "at_rules",
+  "order": 73,
+  "nextTopic": "font_face",
+  "prevTopic": "images",
+  "content": "### CSS At-Rules\n\n**At-rules** are CSS statements starting with `@` that control behavior.\n\n---\n\n### Common At-Rules\n\n| At-Rule | Purpose |\n|---------|---------|\n| `@media` | Apply styles based on media conditions |\n| `@keyframes` | Define animation steps |\n| `@font-face` | Load custom fonts |\n| `@import` | Import another stylesheet |\n| `@supports` | Apply styles based on browser support |\n| `@layer` | Organize CSS into layers |\n| `@container` | Apply styles based on container size |\n| `@scope` | Limit styles to a subtree |\n| `@starting-style` | Styles for first-time rendering |\n| `@property` | Define custom properties with types |\n\n---\n\n### @media\n\n```css\n@media (min-width: 768px) {\n  .container { max-width: 720px; }\n}\n\n@media (prefers-color-scheme: dark) {\n  body { background: #111; color: #eee; }\n}\n```\n\n---\n\n### @keyframes\n\n```css\n@keyframes slideIn {\n  from { transform: translateX(-100%); }\n  to { transform: translateX(0); }\n}\n```\n\n---\n\n### @font-face\n\n```css\n@font-face {\n  font-family: 'CustomFont';\n  src: url('font.woff2') format('woff2');\n  font-display: swap;\n}\n```\n\n---\n\n### @import\n\n```css\n@import url('reset.css');\n@import url('theme.css') screen and (min-width: 768px);\n```\n\n---\n\n### @supports\n\n```css\n@supports (display: grid) {\n  .container { display: grid; }\n}\n\n@supports not (display: grid) {\n  .container { display: flex; }\n}\n```\n\n---\n\n### @layer\n\n```css\n@layer base, components, utilities;\n\n@layer base {\n  body { margin: 0; padding: 0; }\n}\n\n@layer components {\n  .card { padding: 20px; }\n}\n\n@layer utilities {\n  .m-0 { margin: 0; }\n}\n```\n\n---\n\n### Nesting @rules\n\n```css\n@media (min-width: 768px) {\n  @layer content {\n    .card {\n      display: grid;\n      gap: 20px;\n    }\n  }\n}\n```\n\n> **Key Point:** Only `@import` must be at the top of the file. All other at-rules can be placed anywhere.",
+  "codeExample": "<style>\n  /* Import must be at top */\n  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\n  \n  /* Fallback for older browsers */\n  .grid-layout {\n    display: flex;\n    gap: 15px;\n    padding: 20px;\n  }\n  \n  @supports (display: grid) {\n    .grid-layout {\n      display: grid;\n      grid-template-columns: repeat(3, 1fr);\n    }\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 30px;\n    text-align: center;\n  }\n</style>\n\n<div class=\"grid-layout\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which at-rule must be placed at the top of a CSS file?",
+      "options": [
+        "@media",
+        "@keyframes",
+        "@import",
+        "@supports"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

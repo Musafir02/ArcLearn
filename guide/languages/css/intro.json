@@ -1,0 +1,22 @@
+{
+  "title": "CSS Introduction",
+  "language": "css",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is CSS?\n\n**CSS** stands for **Cascading Style Sheets**. It describes how HTML elements should be displayed on screen, paper, or other media.\n\n---\n\n### What Can CSS Do?\n\n| Capability | Example |\n|-----------|---------|\n| **Colors** | Text, backgrounds, borders |\n| **Layout** | Flexbox, Grid, positioning |\n| **Typography** | Fonts, sizes, spacing, shadows |\n| **Animations** | Transitions, keyframes |\n| **Responsive** | Media queries, flexible layouts |\n\n---\n\n### CSS Saves Work\n\nInstead of styling every HTML element individually, CSS defines styles **once** and applies them across multiple pages.\n\n```css\nh1 {\n  color: blue;\n  font-size: 32px;\n}\n```\n\n---\n\n### CSS Timeline\n\n| Version | Year | Key Features |\n|---------|------|-------------|\n| CSS1 | 1996 | Fonts, colors, margins |\n| CSS2 | 1998 | Positioning, z-index |\n| CSS3 | 2012+ | Flexbox, Grid, animations, media queries |\n\n---\n\n> **Key Point:** CSS is a **style sheet language** that controls the presentation of HTML documents. It is not a programming language.",
+  "codeExample": "body {\n  background-color: #f0f0f0;\n  font-family: Arial, sans-serif;\n}\n\nh1 {\n  color: #333;\n  text-align: center;\n}\n\np {\n  font-size: 16px;\n  line-height: 1.5;\n}",
+  "quiz": [
+    {
+      "question": "What does CSS stand for?",
+      "options": [
+        "Colorful Style Sheets",
+        "Cascading Style Sheets",
+        "Computer Style Sheets",
+        "Creative Style Sheets"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

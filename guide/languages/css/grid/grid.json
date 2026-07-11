@@ -1,0 +1,22 @@
+{
+  "title": "CSS Grid",
+  "language": "css",
+  "topic": "grid",
+  "order": 48,
+  "nextTopic": "grid_container",
+  "prevTopic": "flex_responsive",
+  "content": "### CSS Grid\n\n**CSS Grid** is a two-dimensional layout system for rows and columns simultaneously.\n\n---\n\n### What is CSS Grid?\n\n```css\n.container {\n  display: grid;\n}\n```\n\nGrid creates a **two-dimensional** layout (rows AND columns) unlike flexbox (one dimension).\n\n---\n\n### Grid Terminology\n\n```\n+-------+-------+-------+\n|       |       |       |  <- Grid Row\n+-------+-------+-------+\n|       |       |       |\n+-------+-------+-------+\n|       |       |       |\n+-------+-------+-------+\n    ^               ^\n    |               |\n Grid Column    Grid Cell\n```\n\n| Term | Description |\n|------|-------------|\n| **Grid Container** | Parent with `display: grid` |\n| **Grid Item** | Direct child of container |\n| **Grid Line** | Lines dividing the grid |\n| **Grid Cell** | Single unit of the grid |\n| **Grid Area** | Rectangular group of cells |\n| **Gap** | Space between rows/columns |\n\n---\n\n### Grid vs Flexbox\n\n| Grid | Flexbox |\n|------|---------|\n| Two-dimensional | One-dimensional |\n| Row AND column control | Row OR column control |\n| Best for page layouts | Best for component layouts |\n| Explicit placement | Content-based flow |\n| Overlap support | No overlap |\n\n---\n\n### Basic Grid Example\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr;\n  gap: 20px;\n}\n```\n\nCreates 3 equal columns with 20px gaps.\n\n---\n\n> **Key Point:** Use Grid for 2D layouts (entire pages, complex columns+rows). Use Flexbox for 1D layouts (nav bars, card rows).",
+  "codeExample": "<style>\n  .grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    gap: 15px;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 30px;\n    text-align: center;\n    font-size: 1.2rem;\n  }\n</style>\n\n<div class=\"grid\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n  <div class=\"item\">6</div>\n</div>\n<p>Three equal columns using grid-template-columns: 1fr 1fr 1fr</p>",
+  "quiz": [
+    {
+      "question": "How many dimensions does CSS Grid handle?",
+      "options": [
+        "One dimension only",
+        "Two dimensions (rows + columns)",
+        "Three dimensions",
+        "One dimension but with wrapping"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

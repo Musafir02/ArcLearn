@@ -1,0 +1,22 @@
+{
+  "title": "CSS Outline",
+  "language": "css",
+  "topic": "outline",
+  "order": 34,
+  "nextTopic": "display",
+  "prevTopic": "box_shadow",
+  "content": "### CSS Outline\n\n**Outline** is a line drawn **outside** the border, but **inside** the margin.\n\n---\n\n### Key Differences from Border\n\n| Feature | Border | Outline |\n|---------|--------|---------|\n| Part of box model | Yes | No |\n| Affects layout | Yes (adds to size) | No |\n| Per-side styling | Yes | No (always all sides) |\n| Border-radius | Affected | Not affected |\n| Use case | Decorative lines | Focus indicators |\n\n---\n\n### Outline Properties\n\n```css\n/* Width */\noutline-width: 2px;\noutline-width: thin | medium | thick;\n\n/* Style */\noutline-style: solid | dashed | dotted | double | none;\n\n/* Color */\noutline-color: red;\noutline-color: invert; /* Inverts background */\n\n/* Shorthand */\noutline: 2px solid blue;\n```\n\n---\n\n### Outline Offset\n\n```css\n/* Gap between border and outline */\noutline-offset: 3px;\noutline-offset: -2px; /* Inside the border */\n```\n\n---\n\n### Focus Outline\n\n```css\n/* Default focus outline */\ninput:focus {\n  outline: 2px solid blue;\n  outline-offset: 2px;\n}\n\n/* Custom focus ring */\nbutton:focus-visible {\n  outline: 3px solid #4299e1;\n  outline-offset: 2px;\n}\n\n/* Remove default outline (DO with custom focus style) */\nbutton:focus {\n  outline: none;\n  /* Always provide alternative focus style */\n  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);\n}\n```\n\n---\n\n### Outline vs Box Shadow for Focus\n\n```css\n/* Outline focus - works in high contrast mode */\n.focus-outline:focus {\n  outline: 3px solid blue;\n}\n\n/* Box shadow focus - more visually appealing */\n.focus-shadow:focus {\n  outline: none;\n  box-shadow: 0 0 0 3px blue;\n}\n\n/* Combined approach */\n.focus-combined:focus-visible {\n  outline: 2px solid blue;\n  outline-offset: 2px;\n}\n```\n\n---\n\n### Accessibility Note\n\nNever remove `outline` without providing a visible focus indicator. Keyboard users rely on focus outlines to navigate.\n\n> **Best Practice:** Use outline for focus indicators. Use `outline: none` ONLY when replacing with a visible alternative like `box-shadow` or a custom focus ring.",
+  "codeExample": "<style>\n  .box {\n    width: 150px;\n    padding: 20px;\n    margin: 30px;\n    background: #f0f0f0;\n    display: inline-block;\n    text-align: center;\n  }\n  \n  .outline {\n    outline: 3px solid blue;\n    outline-offset: 5px;\n    border: 2px solid #333;\n  }\n  \n  .focus-custom:focus {\n    outline: none;\n    box-shadow: 0 0 0 3px #4299e1;\n  }\n  \n  .focus-inner:focus {\n    outline: 2px solid green;\n    outline-offset: -5px;\n  }\n</style>\n\n<div class=\"box outline\">Outline (offset 5px)</div>\n<br>\n<input class=\"focus-custom\" placeholder=\"Focus me (custom)\">\n<br><br>\n<button class=\"focus-inner\">Focus me (inner)</button>",
+  "quiz": [
+    {
+      "question": "Does outline affect element size?",
+      "options": [
+        "Yes, it adds to the width",
+        "No, it does not affect size",
+        "Only horizontally",
+        "Only vertically"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

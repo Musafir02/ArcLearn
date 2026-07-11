@@ -1,0 +1,22 @@
+{
+  "title": "CSS Syntax",
+  "language": "css",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "how_to_add",
+  "prevTopic": "getstarted",
+  "content": "### CSS Syntax\n\nA CSS rule consists of a **selector** and a **declaration block**.\n\n---\n\n### Basic Structure\n\n```css\nselector {\n  property: value;\n}\n```\n\n**Example:**\n\n```css\nh1 {\n  color: blue;\n  font-size: 32px;\n}\n```\n\n- `h1` is the **selector** (what to style)\n- `color` and `font-size` are **properties**\n- `blue` and `32px` are **values**\n\n---\n\n### Multiple Declarations\n\n```css\np {\n  color: red;\n  text-align: center;\n  font-size: 18px;\n  font-family: Arial;\n}\n```\n\nEach declaration ends with a semicolon `;`.\n\n---\n\n### Multiple Selectors\n\nSeparate selectors with commas:\n\n```css\nh1, h2, h3 {\n  color: navy;\n  font-weight: bold;\n}\n```\n\n---\n\n### Comments\n\n```css\n/* This is a CSS comment */\np {\n  color: gray;\n}\n```\n\n> **Key Point:** Always end declarations with a semicolon. Use lowercase for property names.",
+  "codeExample": "/* This styles all paragraphs */\np {\n  color: #333;\n  font-size: 16px;\n  line-height: 1.6;\n}\n\n/* Multiple selectors */\nh1, h2, h3 {\n  font-family: Arial, sans-serif;\n  color: navy;\n}",
+  "quiz": [
+    {
+      "question": "What separates property from value?",
+      "options": [
+        "A colon :",
+        "A semicolon ;",
+        "Curly braces {}",
+        "An equals sign ="
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

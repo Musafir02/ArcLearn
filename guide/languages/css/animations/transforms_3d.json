@@ -1,0 +1,22 @@
+{
+  "title": "3D Transforms",
+  "language": "css",
+  "topic": "transforms_3d",
+  "order": 61,
+  "nextTopic": "animations",
+  "prevTopic": "transforms_2d",
+  "content": "### CSS 3D Transforms\n\n**3D transforms** move elements in three-dimensional space.\n\n---\n\n### 3D Functions\n\n| Function | Description |\n|----------|-------------|\n| `translateZ(z)` | Move toward/away from viewer |\n| `translate3d(x,y,z)` | Move in 3D space |\n| `rotateX(angle)` | Rotate around X axis (horizontal) |\n| `rotateY(angle)` | Rotate around Y axis (vertical) |\n| `rotateZ(angle)` | Rotate around Z axis (same as 2D rotate) |\n| `rotate3d(x,y,z,angle)` | Rotate around custom vector |\n| `scaleZ(z)` | Scale along Z axis |\n| `scale3d(x,y,z)` | Scale in 3D space |\n| `perspective(n)` | Depth of 3D space |\n\n---\n\n### Perspective\n\n**perspective** creates a 3D space. It determines how strong the 3D effect is:\n\n```css\n/* On parent (all children share perspective) */\n.parent {\n  perspective: 600px;\n}\n\n/* On individual element */\n.element {\n  transform: perspective(600px) rotateY(30deg);\n}\n```\n\nSmaller `perspective` = more dramatic 3D effect.\n\n---\n\n### RotateX / RotateY / RotateZ\n\n```css\n.card:hover {\n  transform: rotateX(30deg);  /* Tilt forward */\n  transform: rotateY(30deg);  /* Turn to side */\n  transform: rotateZ(30deg);  /* Spin (2D rotate) */\n}\n```\n\n---\n\n### TranslateZ\n\n```css\n.element {\n  transform: translateZ(100px);  /* Closer to viewer */\n  transform: translateZ(-100px); /* Further from viewer */\n}\n```\n\n---\n\n### Preserve 3D\n\n```css\n.parent {\n  perspective: 800px;\n  transform-style: preserve-3d; /* Children exist in 3D space */\n}\n\n.child {\n  transform: rotateY(45deg);\n}\n```\n\nWithout `preserve-3d`, children are flattened.\n\n---\n\n### Backface Visibility\n\n```css\n.card-back {\n  backface-visibility: hidden;   /* Hide when facing away */\n  backface-visibility: visible;  /* Show (default) */\n}\n```\n\nUseful for card flip effects.\n\n---\n\n### Card Flip Example\n\n```css\n.card {\n  perspective: 1000px;\n}\n\n.card-inner {\n  transform-style: preserve-3d;\n  transition: transform 0.6s;\n}\n\n.card:hover .card-inner {\n  transform: rotateY(180deg);\n}\n\n.card-front, .card-back {\n  backface-visibility: hidden;\n}\n\n.card-back {\n  transform: rotateY(180deg);\n}\n```\n\n> **Key Point:** Always set `perspective` on the parent and `transform-style: preserve-3d` for children to be in 3D space.",
+  "codeExample": "<style>\n  .scene {\n    perspective: 800px;\n    width: 200px;\n    height: 200px;\n    margin: 40px;\n  }\n  \n  .cube {\n    width: 200px;\n    height: 200px;\n    background: #3498db;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transform-style: preserve-3d;\n    transition: transform 0.5s ease;\n    cursor: pointer;\n  }\n  \n  .cube:hover {\n    transform: rotateX(30deg) rotateY(45deg);\n  }\n  \n  .tilt {\n    display: inline-block;\n    margin: 20px;\n    padding: 20px 40px;\n    background: #e74c3c;\n    color: white;\n    transition: transform 0.3s;\n  }\n  \n  .tilt:hover {\n    transform: perspective(800px) rotateY(15deg);\n  }\n</style>\n\n<div class=\"scene\">\n  <div class=\"cube\">3D Box</div>\n</div>\n<div class=\"tilt\">Card Tilt</div>",
+  "quiz": [
+    {
+      "question": "Which property makes children exist in 3D space?",
+      "options": [
+        "perspective",
+        "transform-style: preserve-3d",
+        "backface-visibility",
+        "translateZ"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

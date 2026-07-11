@@ -1,0 +1,22 @@
+{
+  "title": "Flex Responsive",
+  "language": "css",
+  "topic": "flex_responsive",
+  "order": 47,
+  "nextTopic": "grid",
+  "prevTopic": "flex_align",
+  "content": "### Responsive Flexbox\n\nCreate layouts that adapt to screen size using flexbox.\n\n---\n\n### 1. Fluid Grid with Flex-Wrap\n\n```css\n.card-grid {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n}\n\n.card {\n  flex: 1 1 300px;\n  /* Grows, shrinks, starts at 300px */\n}\n```\n\nWhen container is wide: multiple cards per row.\nWhen narrow: cards stack vertically.\n\n---\n\n### 2. Sidebar + Content Layout\n\n```css\n.layout {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.sidebar {\n  flex: 1 1 250px;  /* Min 250px */\n}\n\n.main {\n  flex: 3 1 500px;  /* 3x the space, min 500px */\n}\n```\n\n---\n\n### 3. Navigation Bar\n\n```css\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n\n.nav-links {\n  display: flex;\n  gap: 20px;\n}\n\n@media (max-width: 600px) {\n  .nav-links {\n    flex-direction: column;\n    width: 100%;\n  }\n}\n```\n\n---\n\n### 4. Holy Grail Layout\n\n```css\nbody {\n  display: flex;\n  flex-direction: column;\n  min-height: 100vh;\n}\n\n.content {\n  display: flex;\n  flex: 1;\n  flex-wrap: wrap;\n}\n\n.content main {\n  flex: 1 1 300px;\n}\n\n.content aside {\n  flex: 0 0 200px;\n}\n```\n\n---\n\n### 5. Media Queries with Flex\n\n```css\n.gallery {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 15px;\n}\n\n.gallery img {\n  flex: 1 1 200px;\n  object-fit: cover;\n}\n\n@media (max-width: 768px) {\n  .gallery img {\n    flex: 1 1 150px;\n  }\n}\n\n@media (max-width: 480px) {\n  .gallery img {\n    flex: 1 1 100%;\n  }\n}\n```\n\n> **Key Pattern:** `flex: 1 1 minSize` with `flex-wrap: wrap` creates responsive layouts without media queries.",
+  "codeExample": "<style>\n  .grid {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 15px;\n  }\n  \n  .card {\n    flex: 1 1 250px;\n    background: #f0f0f0;\n    padding: 20px;\n    border-radius: 8px;\n    text-align: center;\n  }\n  \n  .sidebar-layout {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 20px;\n    margin-top: 20px;\n  }\n  \n  .sidebar {\n    flex: 1 1 200px;\n    background: #ddd;\n    padding: 15px;\n  }\n  \n  .main {\n    flex: 3 1 400px;\n    background: #eee;\n    padding: 15px;\n  }\n</style>\n\n<div class=\"grid\">\n  <div class=\"card\">Card 1</div>\n  <div class=\"card\">Card 2</div>\n  <div class=\"card\">Card 3</div>\n  <div class=\"card\">Card 4</div>\n</div>\n\n<div class=\"sidebar-layout\">\n  <aside class=\"sidebar\">Sidebar</aside>\n  <main class=\"main\">Main Content</main>\n</div>",
+  "quiz": [
+    {
+      "question": "Which flex properties create responsive layouts without media queries?",
+      "options": [
+        "flex: 0 0 200px + nowrap",
+        "flex: 1 1 300px + wrap",
+        "flex: 1 0 auto + nowrap",
+        "flex: none + wrap"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

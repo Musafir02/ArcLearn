@@ -1,0 +1,22 @@
+{
+  "title": "Flex Align",
+  "language": "css",
+  "topic": "flex_align",
+  "order": 46,
+  "nextTopic": "flex_responsive",
+  "prevTopic": "flex_wrap",
+  "content": "### Flex Alignment\n\nFlexbox provides powerful alignment controls for both axes.\n\n---\n\n### Main Axis (justify-content)\n\n```css\n.container {\n  display: flex;\n  justify-content: flex-start;    /* Start (default) */\n  justify-content: flex-end;      /* End */\n  justify-content: center;        /* Center */\n  justify-content: space-between; /* Even gap between */\n  justify-content: space-around;  /* Gap around each */\n  justify-content: space-evenly;  /* Equal gaps */\n}\n```\n\n---\n\n### Cross Axis (align-items)\n\n```css\n.container {\n  display: flex;\n  align-items: stretch;     /* Fill height (default) */\n  align-items: flex-start;  /* Top */\n  align-items: flex-end;    /* Bottom */\n  align-items: center;      /* Middle */\n  align-items: baseline;    /* Text baseline */\n}\n```\n\n---\n\n### Align Self (Individual Item)\n\n```css\n.item {\n  align-self: auto;          /* Inherits from container */\n  align-self: flex-start;    /* Top of cross axis */\n  align-self: flex-end;      /* Bottom of cross axis */\n  align-self: center;        /* Center of cross axis */\n  align-self: stretch;       /* Stretch to fill */\n  align-self: baseline;      /* Baseline alignment */\n}\n```\n\n---\n\n### Centering Everything\n\n```css\n.container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n```\n\nThe classic \"perfect centering\" — centers content both ways.\n\n---\n\n### Align Content (Multi-line)\n\nWhen `flex-wrap: wrap` creates multiple lines:\n\n```css\n.container {\n  display: flex;\n  flex-wrap: wrap;\n  align-content: flex-start;    /* Lines at top */\n  align-content: flex-end;      /* Lines at bottom */\n  align-content: center;        /* Lines centered */\n  align-content: space-between; /* Lines spaced */\n  align-content: space-around;  /* Space around lines */\n  align-content: stretch;       /* Lines stretch (default) */\n}\n```\n\n---\n\n### Alignment Cheatsheet\n\n```css\n/* Center everything */\n.center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n/* Right align */\n.right {\n  display: flex;\n  justify-content: flex-end;\n}\n\n/* Bottom center */\n.bottom {\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n}\n\n/* Spread apart, top */\n.spread {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n```\n\n> **Key Point:** `justify-content` = main axis. `align-items` = cross axis. `align-content` = cross axis for multi-line.",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    background: #f0f0f0;\n    padding: 20px;\n    height: 150px;\n    gap: 10px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 15px;\n  }\n  \n  .center-me {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 150px;\n    background: #ddd;\n    margin-top: 10px;\n  }\n</style>\n\n<div class=\"container\" style=\"justify-content: center; align-items: center;\">\n  <div class=\"item\">Centered box</div>\n</div>\n\n<div class=\"center-me\">\n  <span>Perfectly centered text</span>\n</div>",
+  "quiz": [
+    {
+      "question": "Which combination perfectly centers content both ways?",
+      "options": [
+        "justify-content: center; align-items: center;",
+        "justify-content: center; align-content: center;",
+        "justify-content: space-around; align-items: center;",
+        "justify-content: stretch; align-items: stretch;"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

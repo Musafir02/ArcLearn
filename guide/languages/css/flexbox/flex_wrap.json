@@ -1,0 +1,22 @@
+{
+  "title": "Flex Wrap",
+  "language": "css",
+  "topic": "flex_wrap",
+  "order": 45,
+  "nextTopic": "flex_align",
+  "prevTopic": "flex_direction",
+  "content": "### Flex Wrap\n\n**flex-wrap** controls whether flex items wrap to a new line.\n\n---\n\n### Values\n\n| Value | Effect |\n|-------|--------|\n| `nowrap` | All items on one line (default) |\n| `wrap` | Items wrap to new lines |\n| `wrap-reverse` | Items wrap in reverse direction |\n\n---\n\n### Nowrap (Default)\n\n```css\n.container {\n  display: flex;\n  flex-wrap: nowrap;\n}\n```\n\nItems stay on one line. Items may shrink or overflow.\n\n---\n\n### Wrap\n\n```css\n.container {\n  display: flex;\n  flex-wrap: wrap;\n}\n```\n\nItems wrap to next line when they don't fit.\n\n---\n\n### Wrap-Reverse\n\n```css\n.container {\n  display: flex;\n  flex-wrap: wrap-reverse;\n}\n```\n\nItems wrap upwards (reverse order).\n\n---\n\n### With Flex Basis\n\n```css\n.container {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n}\n\n.item {\n  flex: 0 0 200px; /* Fixed width items that wrap */\n}\n```\n\nItems with `flex-basis: 200px` wrap when container is narrow.\n\n---\n\n### Align Content (with Wrap)\n\nWhen items wrap into multiple lines, `align-content` controls line spacing:\n\n```css\n.container {\n  display: flex;\n  flex-wrap: wrap;\n  align-content: center;     /* Lines centered */\n  align-content: space-between; /* Even space between lines */\n  align-content: stretch;    /* Lines stretch (default) */\n}\n```\n\n---\n\n### Responsive Cards Example\n\n```css\n.card-grid {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;\n}\n\n.card {\n  flex: 1 1 300px; /* Grow, shrink, basis 300px */\n  /* 3 cards on desktop, 2 on tablet, 1 on mobile */\n}\n```\n\n---\n\n> **Best Practice:** Always use `flex-wrap: wrap` for responsive layouts. Use `gap` for spacing instead of margins.",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 15px;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 20px;\n    text-align: center;\n    flex: 0 0 150px;\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"item\">150px</div>\n  <div class=\"item\">150px</div>\n  <div class=\"item\">150px</div>\n  <div class=\"item\">150px</div>\n  <div class=\"item\">150px</div>\n  <div class=\"item\">150px</div>\n</div>\n<p>Resize window - items wrap to next line when they don't fit.</p>",
+  "quiz": [
+    {
+      "question": "Which flex-wrap value makes items wrap to new lines?",
+      "options": [
+        "nowrap",
+        "wrap",
+        "wrap-reverse",
+        "Both wrap and wrap-reverse"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

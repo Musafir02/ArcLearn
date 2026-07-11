@@ -1,0 +1,22 @@
+{
+  "title": "CSS Specificity",
+  "language": "css",
+  "topic": "specificity",
+  "order": 7,
+  "nextTopic": "selectors",
+  "prevTopic": "units",
+  "content": "### CSS Specificity\n\n**Specificity** determines which CSS rule wins when multiple rules target the same element.\n\n---\n\n### Specificity Hierarchy\n\n| Level | Selector Type | Example |\n|-------|--------------|---------|\n| 1 (lowest) | Element selectors | `p`, `h1`, `div` |\n| 2 | Class, attribute, pseudo-class | `.class`, `[type]`, `:hover` |\n| 3 | ID selectors | `#header` |\n| 4 | Inline styles | `style=\"...\"` |\n| 5 (highest) | `!important` | `color: red !important;` |\n\n---\n\n### Specificity Calculation\n\nCount each selector type as a score `(inline, ID, class, element)`:\n\n```css\np              /* (0, 0, 0, 1) */\n.text          /* (0, 0, 1, 0) */\n#header        /* (0, 1, 0, 0) */\np.text         /* (0, 0, 1, 1) */\n#nav a.active  /* (0, 1, 1, 1) */\n```\n\nHigher score wins.\n\n---\n\n### Example\n\n```html\n<p id=\"intro\" class=\"highlight\" style=\"color: green;\">Text</p>\n```\n\n```css\np { color: gray; }                    /* Loses to class */\n.highlight { color: blue; }          /* Loses to ID */\n#intro { color: orange; }            /* Loses to inline */\n/* inline style: green */             /* Loses to !important */\n#intro { color: red !important; }    /* Wins! */\n```\n\n---\n\n### The `!important` Rule\n\n```css\np {\n  color: red !important;\n}\n```\n\nOverrides all other rules. Use **sparingly**.\n\n> **Best Practice:** Avoid `!important` when possible. Use specific selectors instead. It makes debugging harder.",
+  "codeExample": "<p id=\"message\" class=\"alert\">Hello</p>\n\n<style>\n  p { color: gray; }              /* element - lowest */\n  .alert { color: blue; }         /* class */\n  #message { color: red; }        /* ID - wins here */\n  #message { color: green !important; }  /* !important - wins all */\n</style>",
+  "quiz": [
+    {
+      "question": "Which has the highest specificity?",
+      "options": [
+        "Element selector (p)",
+        "Class selector (.box)",
+        "ID selector (#main)",
+        "Universal selector (*)"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

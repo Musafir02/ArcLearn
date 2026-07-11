@@ -1,0 +1,22 @@
+{
+  "title": "CSS Forms",
+  "language": "css",
+  "topic": "forms",
+  "order": 71,
+  "nextTopic": "images",
+  "prevTopic": "buttons",
+  "content": "### CSS Forms\n\nStyle form elements for better usability and appearance.\n\n---\n\n### Input Fields\n\n```css\ninput[type=\"text\"],\ninput[type=\"email\"],\ninput[type=\"password\"],\ntextarea,\nselect {\n  width: 100%;\n  padding: 12px 16px;\n  border: 1px solid #ddd;\n  border-radius: 6px;\n  font-size: 16px;\n  font-family: inherit;\n  transition: border-color 0.2s, box-shadow 0.2s;\n}\n\ninput:focus,\ntextarea:focus,\nselect:focus {\n  outline: none;\n  border-color: #3498db;\n  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);\n}\n```\n\n---\n\n### Labels\n\n```css\nlabel {\n  display: block;\n  font-weight: 600;\n  margin-bottom: 8px;\n  font-size: 14px;\n  color: #333;\n}\n```\n\n---\n\n### Input States\n\n```css\n/* Valid */\ninput:valid {\n  border-color: #2ecc71;\n}\n\n/* Invalid */\ninput:invalid {\n  border-color: #e74c3c;\n}\n\n/* Required */\ninput:required {\n  border-left: 3px solid #f39c12;\n}\n\n/* Disabled */\ninput:disabled {\n  background: #f5f5f5;\n  cursor: not-allowed;\n}\n\n/* Placeholder */\ninput::placeholder {\n  color: #999;\n}\n```\n\n---\n\n### Textarea\n\n```css\ntextarea {\n  min-height: 120px;\n  resize: vertical;  /* Allow vertical resize only */\n}\n```\n\n---\n\n### Select Dropdown\n\n```css\nselect {\n  appearance: none;         /* Remove default arrow */\n  background-image: url(\"data:image/svg+xml,...\");\n  background-repeat: no-repeat;\n  background-position: right 12px center;\n  background-size: 16px;\n  padding-right: 40px;\n}\n```\n\n---\n\n### Checkboxes & Radios\n\n```css\n/* Custom checkbox */\ninput[type=\"checkbox\"] {\n  width: 20px;\n  height: 20px;\n  accent-color: #3498db;\n}\n\n/* Custom radio */\ninput[type=\"radio\"] {\n  accent-color: #3498db;\n}\n```\n\n---\n\n### Form Layout\n\n```css\n.form-group {\n  margin-bottom: 20px;\n}\n\n.form-row {\n  display: flex;\n  gap: 20px;\n}\n\n.form-error {\n  color: #e74c3c;\n  font-size: 13px;\n  margin-top: 5px;\n}\n```\n\n> **Best Practice:** Use `font-size: 16px` on inputs to prevent iOS zoom on focus. Always style `:focus` state.",
+  "codeExample": "<style>\n  .form-group {\n    margin-bottom: 20px;\n  }\n  \n  label {\n    display: block;\n    font-weight: 600;\n    margin-bottom: 6px;\n    font-size: 14px;\n  }\n  \n  input, textarea, select {\n    width: 100%;\n    padding: 10px 14px;\n    border: 1px solid #ddd;\n    border-radius: 6px;\n    font-size: 16px;\n    font-family: inherit;\n    transition: border-color 0.2s, box-shadow 0.2s;\n  }\n  \n  input:focus, textarea:focus, select:focus {\n    outline: none;\n    border-color: #3498db;\n    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);\n  }\n  \n  input:invalid { border-color: #e74c3c; }\n  \n  .form-hint {\n    font-size: 13px;\n    color: #999;\n    margin-top: 4px;\n  }\n</style>\n\n<form>\n  <div class=\"form-group\">\n    <label for=\"name\">Full Name</label>\n    <input type=\"text\" id=\"name\" placeholder=\"Enter your name\" required>\n  </div>\n  \n  <div class=\"form-group\">\n    <label for=\"email\">Email Address</label>\n    <input type=\"email\" id=\"email\" placeholder=\"you@example.com\">\n    <div class=\"form-hint\">We'll never share your email</div>\n  </div>\n  \n  <div class=\"form-group\">\n    <label for=\"message\">Message</label>\n    <textarea id=\"message\" placeholder=\"Your message...\"></textarea>\n  </div>\n</form>",
+  "quiz": [
+    {
+      "question": "Why use font-size: 16px on input fields?",
+      "options": [
+        "Better readability",
+        "Prevents iOS auto-zoom on focus",
+        "Looks bigger",
+        "Required by browsers"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

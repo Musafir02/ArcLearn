@@ -1,0 +1,22 @@
+{
+  "title": "Pseudo-Classes",
+  "language": "css",
+  "topic": "pseudo_classes",
+  "order": 10,
+  "nextTopic": "pseudo_elements",
+  "prevTopic": "combinator_selectors",
+  "content": "### CSS Pseudo-Classes\n\nA **pseudo-class** defines a special state of an element.\n\n---\n\n### Syntax\n\n```css\nselector:pseudo-class {\n  property: value;\n}\n```\n\n---\n\n### Interactive Pseudo-Classes\n\n| Pseudo-Class | When It Applies |\n|-------------|----------------|\n| `:hover` | Mouse is over the element |\n| `:active` | Element is being clicked |\n| `:focus` | Element has keyboard focus |\n| `:visited` | Link has been visited |\n| `:link` | Unvisited link |\n| `:target` | Element is the URL target |\n\n```css\na:hover {\n  color: red;\n}\n\ninput:focus {\n  border-color: blue;\n  outline: none;\n}\n\nbutton:active {\n  transform: scale(0.98);\n}\n```\n\n---\n\n### Structural Pseudo-Classes\n\n| Pseudo-Class | Selects |\n|-------------|---------|\n| `:first-child` | First child of parent |\n| `:last-child` | Last child of parent |\n| `:nth-child(n)` | Nth child (1-indexed) |\n| `:nth-last-child(n)` | Nth from end |\n| `:first-of-type` | First of its type |\n| `:last-of-type` | Last of its type |\n| `:only-child` | Only child of parent |\n| `:empty` | Elements with no children |\n\n```css\n/* Odd rows */\ntr:nth-child(odd) {\n  background: #f0f0f0;\n}\n\n/* Every 3rd element */\nli:nth-child(3n) {\n  color: red;\n}\n```\n\n---\n\n### Input Pseudo-Classes\n\n```css\ninput:checked { outline: 2px solid blue; }\ninput:disabled { opacity: 0.5; }\ninput:required { border-color: orange; }\ninput:valid { border-color: green; }\ninput:invalid { border-color: red; }\n```\n\n---\n\n> **Pro Tip:** Use `:nth-child(odd)` and `:nth-child(even)` for alternating row colors in tables.",
+  "codeExample": "<style>\n  a:hover { color: red; }\n  \n  li:first-child { font-weight: bold; }\n  li:last-child { color: gray; }\n  li:nth-child(even) { background: #f0f0f0; }\n  \n  input:focus {\n    border: 2px solid blue;\n    outline: none;\n  }\n</style>\n\n<a href=\"#\">Hover over me</a>\n\n<ul>\n  <li>First (bold)</li>\n  <li>Second (gray bg)</li>\n  <li>Third (gray bg)</li>\n  <li>Last (gray)</li>\n</ul>\n\n<input type=\"text\" placeholder=\"Focus me\">",
+  "quiz": [
+    {
+      "question": "Which pseudo-class targets mouse hover?",
+      "options": [
+        ":click",
+        ":hover",
+        ":over",
+        ":mouse"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

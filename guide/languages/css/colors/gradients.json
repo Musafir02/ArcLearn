@@ -1,0 +1,22 @@
+{
+  "title": "CSS Gradients",
+  "language": "css",
+  "topic": "gradients",
+  "order": 15,
+  "nextTopic": "opacity",
+  "prevTopic": "backgrounds",
+  "content": "### CSS Gradients\n\n**Gradients** create smooth transitions between two or more colors.\n\n---\n\n### Linear Gradient\n\n```css\nbackground: linear-gradient(direction, color1, color2, ...);\n```\n\n**Examples:**\n\n```css\n/* Top to bottom (default) */\nbackground: linear-gradient(red, blue);\n\n/* Left to right */\nbackground: linear-gradient(to right, red, blue);\n\n/* Diagonal */\nbackground: linear-gradient(to bottom right, red, blue);\n\n/* Angle */\nbackground: linear-gradient(45deg, red, blue);\n```\n\n---\n\n### Multiple Colors (Color Stops)\n\n```css\nbackground: linear-gradient(\n  to right,\n  red 0%,\n  orange 25%,\n  yellow 50%,\n  green 75%,\n  blue 100%\n);\n```\n\n---\n\n### Radial Gradient\n\n```css\n/* Circular from center */\nbackground: radial-gradient(red, blue);\n\n/* Shape */\nbackground: radial-gradient(circle, red, blue);\nbackground: radial-gradient(ellipse, red, blue);\n\n/* Position */\nbackground: radial-gradient(circle at top left, red, blue);\n```\n\n---\n\n### Conic Gradient\n\n```css\nbackground: conic-gradient(red, yellow, green, blue, red);\n```\n\n---\n\n### Repeating Gradients\n\n```css\nbackground: repeating-linear-gradient(\n  45deg,\n  red 0px,\n  red 10px,\n  blue 10px,\n  blue 20px\n);\n```\n\n---\n\n### Gradient Tools\n\n- **Stop positions**: `linear-gradient(red 20%, blue 80%)`\n- **Transparency**: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1))`\n- **Hard stops**: `linear-gradient(red 50%, blue 50%)` (no blend)\n\n> **Best Practice:** Use gradients to replace image files for simpler, scalable visual effects.",
+  "codeExample": "<style>\n  .linear {\n    height: 100px;\n    background: linear-gradient(to right, #ff6b6b, #4ecdc4);\n  }\n  \n  .radial {\n    height: 100px;\n    background: radial-gradient(circle, #f093fb, #f5576c);\n  }\n  \n  .conic {\n    height: 100px;\n    border-radius: 50%;\n    background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);\n  }\n  \n  .rainbow {\n    height: 100px;\n    background: linear-gradient(\n      to right,\n      red, orange, yellow, green, blue, indigo, violet\n    );\n  }\n</style>\n\n<div class=\"linear\">Linear Gradient</div><br>\n<div class=\"radial\">Radial Gradient</div><br>\n<div class=\"rainbow\">Rainbow</div>",
+  "quiz": [
+    {
+      "question": "What is the default direction for linear-gradient?",
+      "options": [
+        "To right",
+        "To top",
+        "Top to bottom (180deg)",
+        "45 degrees"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

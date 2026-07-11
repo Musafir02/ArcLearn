@@ -1,0 +1,22 @@
+{
+  "title": "Text Spacing",
+  "language": "css",
+  "topic": "text_spacing",
+  "order": 22,
+  "nextTopic": "text_shadow",
+  "prevTopic": "text_transform",
+  "content": "### CSS Text Spacing\n\nText spacing properties control gaps between characters, words, lines, and indentation.\n\n---\n\n### Letter Spacing\n\nControls space **between characters**:\n\n```css\nletter-spacing: normal;     /* Default */\nletter-spacing: 2px;        /* Expanded */\nletter-spacing: -1px;       /* Condensed */\nletter-spacing: 0.1em;      /* Relative to font size */\n```\n\n---\n\n### Word Spacing\n\nControls space **between words**:\n\n```css\nword-spacing: normal;     /* Default */\nword-spacing: 5px;        /* More space between words */\nword-spacing: -2px;       /* Less space */\n```\n\n---\n\n### Line Height\n\nControls space **between lines**:\n\n```css\nline-height: normal;    /* Default (~1.2) */\nline-height: 1.6;      /* Recommended for readability */\nline-height: 24px;     /* Fixed height */\nline-height: 150%;     /* Percentage of font size */\nline-height: 2;        /* Double spacing */\n```\n\n**Best:** Use unitless values (`1.5`) so line-height scales with font-size.\n\n---\n\n### Text Indent\n\nIndents the **first line** of a block:\n\n```css\ntext-indent: 30px;        /* Indent first line */\ntext-indent: -20px;       /* Hanging indent (outdent) */\ntext-indent: 10%;         /* Percentage of parent width */\ntext-indent: 2em;         /* Two character widths */\n```\n\n---\n\n### White Space\n\nControls how whitespace is handled:\n\n| Value | Effect |\n|-------|--------|\n| `normal` | Collapses whitespace, wraps text |\n| `nowrap` | Collapses whitespace, no wrapping |\n| `pre` | Preserves whitespace (like `<pre>`) |\n| `pre-wrap` | Preserves whitespace, wraps text |\n| `pre-line` | Preserves newlines, collapses spaces |\n| `break-spaces` | Like `pre-wrap`, breaks at spaces |\n\n```css\n.pre {\n  white-space: pre;\n}\n\n.no-wrap {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n```\n\n---\n\n> **Readability Tip:** Use `line-height: 1.6` for body text and `letter-spacing: 1px` for uppercase headings.",
+  "codeExample": "<style>\n  .tight { letter-spacing: -1px; }\n  .spaced { letter-spacing: 3px; }\n  .wide-words { word-spacing: 10px; }\n  .line-height-example { line-height: 2; }\n  .indent { text-indent: 2em; }\n  .ellipsis {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 200px;\n  }\n</style>\n\n<p class=\"tight\">Tight letter spacing (condensed)</p>\n<p class=\"spaced\">Wide letter spacing</p>\n<p class=\"wide-words\">Wide word spacing here</p>\n<p class=\"line-height-example\">Double line spacing makes paragraphs easier to read on screens.</p>\n<p class=\"indent\">This paragraph has an indented first line using text-indent property.</p>\n<p class=\"ellipsis\">This is a very long text that will be truncated with ellipsis...</p>",
+  "quiz": [
+    {
+      "question": "What is the best unit for line-height?",
+      "options": [
+        "px",
+        "%",
+        "em",
+        "Unitless (no unit)"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

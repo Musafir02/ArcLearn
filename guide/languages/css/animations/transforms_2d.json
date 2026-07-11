@@ -1,0 +1,22 @@
+{
+  "title": "2D Transforms",
+  "language": "css",
+  "topic": "transforms_2d",
+  "order": 60,
+  "nextTopic": "transforms_3d",
+  "prevTopic": "transitions",
+  "content": "### CSS 2D Transforms\n\n**Transform** modifies an element's position, size, and rotation in 2D space.\n\n---\n\n### Transform Functions\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `translate(x, y)` | Move element | `translate(50px, 100px)` |\n| `translateX(n)` | Move horizontally | `translateX(30px)` |\n| `translateY(n)` | Move vertically | `translateY(-20px)` |\n| `rotate(angle)` | Rotate | `rotate(45deg)` |\n| `scale(x, y)` | Resize | `scale(1.5)` |\n| `scaleX(n)` | Scale horizontally | `scaleX(2)` |\n| `scaleY(n)` | Scale vertically | `scaleY(2)` |\n| `skew(angleX, angleY)` | Skew | `skew(10deg, 5deg)` |\n| `matrix(a,b,c,d,e,f)` | All in one | `matrix(1,0,0,1,50,50)` |\n\n---\n\n### Translate\n\n```css\n.element {\n  transform: translate(50px, 100px);\n  /* Moves 50px right, 100px down */\n}\n\n/* Perfect centering trick */\n.center {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n```\n\n---\n\n### Rotate\n\n```css\n.element {\n  transform: rotate(45deg);  /* Clockwise */\n  transform: rotate(-90deg); /* Anti-clockwise */\n  transform: rotate(1turn);  /* Full rotation */\n}\n```\n\n---\n\n### Scale\n\n```css\n.element {\n  transform: scale(1.5);       /* 150% size */\n  transform: scale(0.5);       /* 50% size */\n  transform: scale(2, 0.5);    /* 2x wide, 0.5x tall */\n}\n```\n\n---\n\n### Skew\n\n```css\n.element {\n  transform: skew(10deg);     /* 10deg horizontal tilt */\n  transform: skew(-10deg, 5deg); /* X and Y skew */\n}\n```\n\n---\n\n### Multiple Transforms\n\n```css\n.element {\n  transform: translate(50px, 20px) rotate(45deg) scale(1.2);\n}\n```\n\nOrder matters! Rightmost applies first.\n\n---\n\n### Transform Origin\n\n```css\n.element {\n  transform-origin: center;        /* Default */\n  transform-origin: top left;       /* From top-left corner */\n  transform-origin: 20% 80%;       /* Custom position */\n  transform-origin: 0 0;           /* Top-left in pixels */\n}\n```\n\n---\n\n### Performance Note\n\n`transform` is **GPU-accelerated**. It's more performant than animating `margin`, `top`, `left`, or `width`.\n\n```css\n/* GOOD - GPU accelerated */\n.element {\n  transition: transform 0.3s ease;\n}\n.element:hover {\n  transform: translateX(100px);\n}\n\n/* BAD - causes layout recalc */\n.element {\n  transition: margin-left 0.3s ease;\n}\n.element:hover {\n  margin-left: 100px;\n}\n```\n\n> **Best Practice:** Use `transform` for animations, not `margin`, `top`, `left` etc. It's smoother and GPU-accelerated.",
+  "codeExample": "<style>\n  .box {\n    width: 80px;\n    height: 80px;\n    background: #3498db;\n    color: white;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    margin: 30px;\n    transition: transform 0.3s ease;\n  }\n  \n  .translate:hover { transform: translate(20px, 20px); }\n  .rotate:hover { transform: rotate(45deg); }\n  .scale:hover { transform: scale(1.5); }\n  .skew:hover { transform: skew(15deg); }\n  .multi:hover { transform: translate(10px) rotate(20deg) scale(1.2); }\n</style>\n\n<div class=\"box translate\">T</div>\n<div class=\"box rotate\">R</div>\n<div class=\"box scale\">S</div>\n<div class=\"box skew\">Sk</div>\n<div class=\"box multi\">M</div>\n<p>Hover each box to see the transform effect.</p>",
+  "quiz": [
+    {
+      "question": "Which transform function moves an element?",
+      "options": [
+        "rotate()",
+        "scale()",
+        "translate()",
+        "skew()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

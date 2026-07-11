@@ -1,0 +1,22 @@
+{
+  "title": "Box Shadow",
+  "language": "css",
+  "topic": "box_shadow",
+  "order": 33,
+  "nextTopic": "outline",
+  "prevTopic": "overflow",
+  "content": "### CSS Box Shadow\n\n**box-shadow** adds shadow effects around an element.\n\n---\n\n### Syntax\n\n```css\nbox-shadow: offset-x offset-y blur spread color inset;\n```\n\n| Value | Required | Description |\n|-------|----------|-------------|\n| `offset-x` | Yes | Horizontal shift (+ = right) |\n| `offset-y` | Yes | Vertical shift (+ = down) |\n| `blur` | No | Blur radius (default 0) |\n| `spread` | No | Shadow size expansion |\n| `color` | No | Shadow color (default = text) |\n| `inset` | No | Inner shadow instead of outer |\n\n---\n\n### Basic Examples\n\n```css\n/* Simple drop shadow */\nbox-shadow: 2px 2px 5px rgba(0,0,0,0.3);\n\n/* No offset, soft shadow */\nbox-shadow: 0 4px 10px rgba(0,0,0,0.2);\n\n/* Spread */\nbox-shadow: 0 0 0 5px blue; /* Like a border */\n\n/* Inset (inner shadow) */\nbox-shadow: inset 0 2px 5px rgba(0,0,0,0.3);\n```\n\n---\n\n### Multiple Shadows\n\n```css\nbox-shadow:\n  0 4px 6px rgba(0,0,0,0.1),\n  0 1px 3px rgba(0,0,0,0.06);\n```\n\n---\n\n### Common Shadow Patterns\n\n```css\n/* Card shadow (subtle) */\n.card {\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n\n/* Elevated card */\n.card-elevated {\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);\n}\n\n/* Button shadow */\n.btn {\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n}\n.btn:hover {\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);\n}\n\n/* Inset for pressed effect */\n.btn:active {\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\n}\n\n/* Outline/border effect */\n.focus-ring:focus {\n  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);\n}\n```\n\n---\n\n### Box Shadow vs Filter: Drop Shadow\n\n```css\n/* Box shadow - follows box shape */\nbox-shadow: 5px 5px 10px black;\n\n/* Filter drop shadow - follows element outline (including transparency) */\nfilter: drop-shadow(5px 5px 10px black);\n```\n\n`drop-shadow()` respects `border-radius` and clipped content; `box-shadow` always follows the box model.\n\n> **Best Practice:** Use multiple subtle shadows layered together for realistic depth.",
+  "codeExample": "<style>\n  .card {\n    width: 200px;\n    padding: 20px;\n    margin: 20px;\n    background: white;\n    display: inline-block;\n    vertical-align: top;\n  }\n  \n  .subtle { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }\n  .medium { box-shadow: 0 8px 30px rgba(0,0,0,0.15); }\n  .heavy { box-shadow: 0 20px 60px rgba(0,0,0,0.3); }\n  .inner { box-shadow: inset 0 2px 10px rgba(0,0,0,0.2); }\n  .glow { box-shadow: 0 0 20px rgba(52, 152, 219, 0.6); }\n</style>\n\n<div class=\"card subtle\">Subtle shadow</div>\n<div class=\"card medium\">Medium shadow</div>\n<div class=\"card heavy\">Heavy shadow</div>\n<div class=\"card inner\">Inset shadow</div>\n<div class=\"card glow\">Glow effect</div>",
+  "quiz": [
+    {
+      "question": "What keyword makes a box-shadow inner?",
+      "options": [
+        "inside",
+        "inset",
+        "inner",
+        "internal"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

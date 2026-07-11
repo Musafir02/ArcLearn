@@ -1,0 +1,22 @@
+{
+  "title": "Pseudo-Elements",
+  "language": "css",
+  "topic": "pseudo_elements",
+  "order": 11,
+  "nextTopic": "attribute_selectors",
+  "prevTopic": "pseudo_classes",
+  "content": "### CSS Pseudo-Elements\n\nA **pseudo-element** styles a specific **part** of an element.\n\n---\n\n### Syntax (Double Colon)\n\n```css\nselector::pseudo-element {\n  property: value;\n}\n```\n\nCSS3 uses `::` (double colon) for pseudo-elements. Single `:` also works for backward compatibility.\n\n---\n\n### Pseudo-Elements List\n\n| Pseudo-Element | Purpose |\n|---------------|---------|\n| `::first-letter` | First letter of text |\n| `::first-line` | First line of text |\n| `::before` | Content before element |\n| `::after` | Content after element |\n| `::selection` | Selected/highlighted text |\n| `::marker` | List item marker |\n| `::placeholder` | Input placeholder text |\n| `::backdrop` | Full-screen element background |\n\n---\n\n### `::first-letter` and `::first-line`\n\n```css\np::first-letter {\n  font-size: 2em;\n  color: red;\n  font-weight: bold;\n}\n\np::first-line {\n  font-variant: small-caps;\n}\n```\n\n---\n\n### `::before` and `::after`\n\nInsert content before/after an element:\n\n```css\na::after {\n  content: \" \\u2197\";  /* Arrow icon */\n}\n\n.quote::before {\n  content: \"\\201C\";  /* Opening quote */\n  font-size: 2em;\n  color: gray;\n}\n\n.clearfix::after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n```\n\n---\n\n### `::selection`\n\n```css\n::selection {\n  background-color: yellow;\n  color: black;\n}\n```\n\n---\n\n### `::placeholder`\n\n```css\ninput::placeholder {\n  color: gray;\n  font-style: italic;\n}\n```\n\n> **Key Point:** `::before` and `::after` require `content` property. They are inline by default.",
+  "codeExample": "<style>\n  p::first-letter {\n    font-size: 2em;\n    color: red;\n  }\n  \n  a.external::after {\n    content: \" \\u2197\";\n  }\n  \n  ::selection {\n    background: yellow;\n  }\n  \n  input::placeholder {\n    color: #999;\n    font-style: italic;\n  }\n</style>\n\n<p>This paragraph has a drop cap on the first letter.</p>\n\n<a href=\"#\" class=\"external\">External Link</a><br>\n<input type=\"text\" placeholder=\"Type here...\">",
+  "quiz": [
+    {
+      "question": "Which pseudo-elements require the content property?",
+      "options": [
+        "::first-letter and ::first-line",
+        "::before and ::after",
+        "::selection and ::placeholder",
+        "::marker and ::backdrop"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

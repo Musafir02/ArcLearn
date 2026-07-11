@@ -1,0 +1,22 @@
+{
+  "title": "Text Align",
+  "language": "css",
+  "topic": "text_align",
+  "order": 19,
+  "nextTopic": "text_decoration",
+  "prevTopic": "font",
+  "content": "### CSS Text Align\n\n**text-align** controls horizontal alignment of inline content.\n\n---\n\n### Alignment Values\n\n```css\ntext-align: left;      /* Default for LTR languages */\ntext-align: right;     /* Default for RTL languages */\ntext-align: center;    /* Centered */\ntext-align: justify;   /* Stretched to both margins */\n```\n\n---\n\n### text-align-left\n\n```css\np {\n  text-align: left;\n}\n```\n\nAligns text to the left edge. This is the browser default.\n\n---\n\n### text-align-right\n\n```css\np {\n  text-align: right;\n}\n```\n\nAligns text to the right edge. Useful for menus, quotes, or RTL content.\n\n---\n\n### text-align-center\n\n```css\nh1 {\n  text-align: center;\n}\n```\n\nCenters text horizontally. Commonly used for headings.\n\n---\n\n### text-align-justify\n\n```css\np {\n  text-align: justify;\n}\n```\n\nSpreads words so each line has equal width. Creates clean edges on both sides.\n\n---\n\n### text-align-last\n\nControls alignment of the **last line** when text-align is justify:\n\n```css\ntext-align: justify;\ntext-align-last: center; /* Last line centered */\n```\n\n| Value | Effect |\n|-------|--------|\n| `auto` | Default |\n| `left` | Aligned left |\n| `right` | Aligned right |\n| `center` | Centered |\n| `justify` | Justified |\n\n---\n\n### Centering Block Elements\n\n`text-align: center` only centers **inline** content. For block elements:\n\n```css\n/* Center a div */\ndiv {\n  width: 50%;\n  margin: 0 auto; /* Auto margins */\n}\n\n/* Center inline-block */\n.parent {\n  text-align: center;\n}\n.child {\n  display: inline-block;\n}\n```\n\n> **Key Point:** `text-align` affects inline content inside a block. Use `margin: auto` to center blocks.",
+  "codeExample": "<style>\n  .left { text-align: left; background: #f0f0f0; }\n  .center { text-align: center; background: #e0e0e0; }\n  .right { text-align: right; background: #f0f0f0; }\n  .justify { text-align: justify; background: #e0e0e0; }\n</style>\n\n<p class=\"left\">Left aligned text. The quick brown fox jumps over the lazy dog.</p>\n<p class=\"center\">Center aligned text.</p>\n<p class=\"right\">Right aligned text.</p>\n<p class=\"justify\">Justified text stretches each line to fill the width. The quick brown fox jumps over the lazy dog near the riverbank.</p>",
+  "quiz": [
+    {
+      "question": "Which text-align value creates clean edges on both sides?",
+      "options": [
+        "left",
+        "right",
+        "center",
+        "justify"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

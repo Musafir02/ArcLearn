@@ -1,0 +1,22 @@
+{
+  "title": "Web Fonts",
+  "language": "css",
+  "topic": "web_fonts",
+  "order": 24,
+  "nextTopic": "box_model",
+  "prevTopic": "text_shadow",
+  "content": "### Web Fonts\n\n**Web fonts** let you use custom fonts not installed on the user's computer.\n\n---\n\n### Google Fonts\n\nThe easiest way to add custom fonts:\n\n```html\n<!-- Add in <head> -->\n<link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap\" rel=\"stylesheet\">\n```\n\n```css\nbody {\n  font-family: 'Roboto', sans-serif;\n}\n```\n\n---\n\n### @font-face\n\nHost your own font files:\n\n```css\n@font-face {\n  font-family: 'MyFont';\n  src: url('myfont.woff2') format('woff2'),\n       url('myfont.woff') format('woff');\n  font-weight: normal;\n  font-style: normal;\n  font-display: swap;\n}\n\nbody {\n  font-family: 'MyFont', sans-serif;\n}\n```\n\n---\n\n### Font Formats\n\n| Format | Extension | Browser Support |\n|--------|-----------|----------------|\n| **WOFF2** | `.woff2` | Best modern format |\n| **WOFF** | `.woff` | Wide support |\n| TTF/OTF | `.ttf` / `.otf` | Legacy |\n| EOT | `.eot` | Old IE only |\n| SVG | `.svg` | Old Safari |\n\n**Best Practice:** Use WOFF2 with WOFF fallback.\n\n---\n\n### Font Display\n\nControls how font loads:\n\n```css\n@font-face {\n  font-display: swap;     /* Show fallback, swap when loaded */\n  font-display: block;    /* Invisible until loaded */\n  font-display: fallback; /* Short swap period */\n  font-display: optional; /* Only use if already loaded */\n}\n```\n\n`font-display: swap` is recommended for most sites.\n\n---\n\n### Variable Fonts\n\nOne file contains multiple weights/styles:\n\n```css\n@font-face {\n  font-family: 'Inter';\n  src: url('Inter-Variable.woff2') format('woff2-variations');\n  font-weight: 100 900;\n}\n\nh1 {\n  font-family: 'Inter', sans-serif;\n  font-weight: 700; /* Any weight 100-900 */\n}\n```\n\n> **Best Practice:** Use Google Fonts for simplicity. Use `@font-face` + WOFF2 for custom fonts. Always include a fallback generic family.",
+  "codeExample": "<head>\n  <!-- Google Fonts -->\n  <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap\" rel=\"stylesheet\">\n  <style>\n    body {\n      font-family: 'Source Sans Pro', Arial, sans-serif;\n    }\n    h1 {\n      font-family: 'Playfair Display', Georgia, serif;\n    }\n    \n    /* @font-face example */\n    @font-face {\n      font-family: 'LocalCustom';\n      src: url('/fonts/custom.woff2') format('woff2');\n      font-display: swap;\n    }\n  </style>\n</head>\n<body>\n  <h1>Styled with Google Fonts</h1>\n  <p>Body text in Source Sans Pro.</p>\n</body>",
+  "quiz": [
+    {
+      "question": "Which font format is best for modern browsers?",
+      "options": [
+        "TTF",
+        "EOT",
+        "WOFF2",
+        "SVG"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

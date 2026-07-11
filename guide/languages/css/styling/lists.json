@@ -1,0 +1,22 @@
+{
+  "title": "CSS Lists",
+  "language": "css",
+  "topic": "lists",
+  "order": 67,
+  "nextTopic": "tables",
+  "prevTopic": "filters",
+  "content": "### CSS Lists\n\nStyle ordered (`<ol>`) and unordered (`<ul>`) lists.\n\n---\n\n### List Style Type\n\n```css\n/* Unordered list markers */\nlist-style-type: disc;     /* Default filled circle */\nlist-style-type: circle;   /* Empty circle */\nlist-style-type: square;   /* Square */\nlist-style-type: none;     /* No marker */\n\n/* Ordered list markers */\nlist-style-type: decimal;           /* 1, 2, 3... */\nlist-style-type: decimal-leading-zero; /* 01, 02... */\nlist-style-type: lower-roman;       /* i, ii, iii... */\nlist-style-type: upper-roman;       /* I, II, III... */\nlist-style-type: lower-alpha;       /* a, b, c... */\nlist-style-type: upper-alpha;       /* A, B, C... */\n\n/* Emoji markers */\nlist-style-type: \"\\2713\"; /* Custom string marker */\n```\n\n---\n\n### List Style Position\n\n```css\nlist-style-position: outside; /* Marker outside the content (default) */\nlist-style-position: inside;  /* Marker inside with content */\n```\n\n---\n\n### List Style Image\n\n```css\nul {\n  list-style-image: url('bullet.png');\n}\n```\n\n---\n\n### Shorthand\n\n```css\n/* type position image */\nlist-style: square inside;\nlist-style: none;            /* Remove all markers */\nlist-style: url('bullet.png') circle inside;\n```\n\n---\n\n### Removing Default Styles\n\n```css\nnav ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n```\n\n---\n\n### Custom Bullet Colors\n\nCSS doesn't have direct bullet color. Use `::before` instead:\n\n```css\n.custom-list {\n  list-style: none;\n  padding: 0;\n}\n\n.custom-list li::before {\n  content: \"\\2022\";   /* Bullet character */\n  color: red;\n  font-weight: bold;\n  display: inline-block;\n  width: 1em;\n  margin-left: -1em;\n}\n```\n\n---\n\n### Horizontal Navigation (Display: Inline)\n\n```css\nnav ul {\n  list-style: none;\n  padding: 0;\n}\n\nnav li {\n  display: inline-block;\n  margin-right: 20px;\n}\n```\n\n---\n\n> **Best Practice:** Always set `list-style: none` with `padding: 0` for navigation menus.",
+  "codeExample": "<style>\n  .disc { list-style-type: disc; }\n  .square { list-style-type: square; }\n  .roman { list-style-type: lower-roman; }\n  .none { list-style: none; padding: 0; }\n  \n  .custom li::before {\n    content: \"\\2713 \";\n    color: #2ecc71;\n    font-weight: bold;\n  }\n  .custom { list-style: none; padding: 0; }\n  \n  .inline-list li {\n    display: inline-block;\n    margin-right: 15px;\n  }\n  .inline-list { list-style: none; padding: 0; }\n</style>\n\n<ul class=\"disc\">\n  <li>Disc (default)</li>\n  <li>Item 2</li>\n</ul>\n\n<ol class=\"roman\">\n  <li>Lower roman</li>\n  <li>Item 2</li>\n</ol>\n\n<ul class=\"custom\">\n  <li>Custom checkmark</li>\n  <li>Colored marker</li>\n</ul>\n\n<ul class=\"inline-list\">\n  <li>Home</li>\n  <li>About</li>\n  <li>Contact</li>\n</ul>",
+  "quiz": [
+    {
+      "question": "Which list-style-type removes list markers?",
+      "options": [
+        "disc",
+        "none",
+        "hidden",
+        "remove"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

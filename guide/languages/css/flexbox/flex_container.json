@@ -1,0 +1,22 @@
+{
+  "title": "Flex Container",
+  "language": "css",
+  "topic": "flex_container",
+  "order": 42,
+  "nextTopic": "flex_items",
+  "prevTopic": "flexbox",
+  "content": "### Flex Container\n\nThe **flex container** is the parent element with `display: flex`.\n\n---\n\n### Creating a Flex Container\n\n```css\n.parent {\n  display: flex;        /* Block-level */\n  display: inline-flex; /* Inline-level */\n}\n```\n\n---\n\n### Container Properties\n\n| Property | Purpose | Values |\n|----------|---------|--------|\n| `flex-direction` | Main axis direction | `row` (default), `row-reverse`, `column`, `column-reverse` |\n| `flex-wrap` | Multi-line behavior | `nowrap` (default), `wrap`, `wrap-reverse` |\n| `justify-content` | Main axis alignment | `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly` |\n| `align-items` | Cross axis alignment | `stretch` (default), `flex-start`, `flex-end`, `center`, `baseline` |\n| `align-content` | Multi-line cross axis | `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `stretch` |\n| `gap` | Space between items | `gap: 10px`, `gap: 20px 10px` (row column) |\n\n---\n\n### Justify Content (Main Axis)\n\n```css\njustify-content: flex-start;    /* Start (default) */\njustify-content: flex-end;      /* End */\njustify-content: center;        /* Center */\njustify-content: space-between; /* Even space between */\njustify-content: space-around;  /* Space around each */\njustify-content: space-evenly;  /* Equal space everywhere */\n```\n\n---\n\n### Align Items (Cross Axis)\n\n```css\nalign-items: stretch;     /* Fill height (default) */\nalign-items: flex-start;  /* Top */\nalign-items: flex-end;    /* Bottom */\nalign-items: center;      /* Middle */\nalign-items: baseline;    /* Text baseline */\n```\n\n---\n\n### Gap\n\n```css\n.container {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 20px;       /* Both row and column gap */\n  row-gap: 10px;   /* Row gap only */\n  column-gap: 20px; /* Column gap only */\n}\n```\n\n---\n\n### Complete Example\n\n```css\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 20px;\n  gap: 15px;\n}\n```\n\n> **Best Practice:** Always set `gap` for spacing between flex items instead of margins.",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    gap: 15px;\n    background: #f0f0f0;\n    padding: 20px;\n    height: 120px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 15px;\n    text-align: center;\n  }\n  \n  .tall { height: 80px; line-height: 80px; }\n  .short { height: 40px; line-height: 40px; }\n</style>\n\n<div class=\"container\">\n  <div class=\"item\">Item 1</div>\n  <div class=\"item tall\">Tall</div>\n  <div class=\"item short\">Short</div>\n  <div class=\"item\">Item 4</div>\n</div>\n<p>Items are centered vertically (align-items: center) and spaced evenly (justify-content: space-around).</p>",
+  "quiz": [
+    {
+      "question": "Which property distributes space between items on the main axis?",
+      "options": [
+        "align-items",
+        "justify-content",
+        "align-content",
+        "flex-wrap"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

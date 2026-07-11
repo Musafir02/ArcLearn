@@ -1,0 +1,22 @@
+{
+  "title": "Grid Items",
+  "language": "css",
+  "topic": "grid_items",
+  "order": 50,
+  "nextTopic": "grid_template",
+  "prevTopic": "grid_container",
+  "content": "### Grid Items\n\nProperties that control **individual grid items** placement.\n\n---\n\n### Item Properties\n\n| Property | Description |\n|----------|-------------|\n| `grid-column` | Shorthand for column start/end |\n| `grid-row` | Shorthand for row start/end |\n| `grid-area` | Assign to named area or shorthand for all lines |\n| `justify-self` | Horizontal alignment within cell |\n| `align-self` | Vertical alignment within cell |\n| `place-self` | Shorthand for justify-self + align-self |\n| `order` | Reorder items (default 0) |\n\n---\n\n### Grid Lines\n\nEach grid has numbered lines:\n\n```\n1      2      3      4   (column lines)\n+------+------+------+\n|      |      |      | 1  (row lines)\n+------+------+------+\n|      |      |      | 2\n+------+------+------+\n|      |      |      | 3\n+------+------+------+\n                     4\n```\n\n---\n\n### Placing Items by Lines\n\n```css\n.item {\n  grid-column: 1 / 3;  /* Start at line 1, end at line 3 */\n  grid-row: 1 / 2;     /* Start at line 1, end at line 2 */\n}\n```\n\n---\n\n### Span Syntax\n\n```css\n.item {\n  grid-column: 1 / span 2;  /* Start at 1, span 2 columns */\n  grid-row: span 2;         /* Span 2 rows from auto-placement */\n}\n```\n\n---\n\n### Shorthand grid-column / grid-row\n\n```css\n.item {\n  grid-column: 1 / 3;     /* Column 1 to 3 */\n  grid-column: 1 / -1;    /* From first to last line */\n  grid-row: 2 / 4;        /* Row 2 to 4 */\n}\n```\n\n---\n\n### Align Self / Justify Self\n\n```css\n.item {\n  justify-self: start;    /* Left of cell */\n  justify-self: center;   /* Center horizontally */\n  justify-self: end;      /* Right of cell */\n  justify-self: stretch;  /* Fill cell width (default) */\n  \n  align-self: start;      /* Top of cell */\n  align-self: center;     /* Center vertically */\n  align-self: end;        /* Bottom of cell */\n  align-self: stretch;    /* Fill cell height (default) */\n}\n```\n\n---\n\n### Place Self (Shorthand)\n\n```css\n/* align-self justify-self */\nplace-self: center stretch;\nplace-self: center;  /* Both center */\n```\n\n---\n\n### Overlapping Items\n\n```css\n.item-a {\n  grid-column: 1 / 3;\n  grid-row: 1 / 3;\n}\n\n.item-b {\n  grid-column: 2 / 4;\n  grid-row: 2 / 4;\n  /* Overlaps with item-a */\n  z-index: 1;\n}\n```\n\n> **Key Point:** Grid lines start at 1, not 0. `-1` refers to the last line.",
+  "codeExample": "<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 10px;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 20px;\n    text-align: center;\n  }\n  \n  .wide {\n    grid-column: 1 / 3;\n    background: #e74c3c;\n  }\n  \n  .full {\n    grid-column: 1 / -1;\n    background: #2ecc71;\n  }\n</style>\n\n<div class=\"grid\">\n  <div class=\"item wide\">Spans columns 1-3</div>\n  <div class=\"item\">Normal</div>\n  <div class=\"item\">Normal</div>\n  <div class=\"item full\">Full width</div>\n  <div class=\"item\">Normal</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What does grid-column: 1 / -1 do?",
+      "options": [
+        "Spans first column only",
+        "Spans from first to last column",
+        "Spans negative columns",
+        "Hides the item"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

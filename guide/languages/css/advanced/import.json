@@ -1,0 +1,22 @@
+{
+  "title": "@import",
+  "language": "css",
+  "topic": "import",
+  "order": 76,
+  "nextTopic": "layer",
+  "prevTopic": "supports",
+  "content": "### @import\n\n**@import** includes styles from another CSS file.\n\n---\n\n### Basic Syntax\n\n```css\n@import url('reset.css');\n@import url('style.css');\n```\n\n---\n\n### With Media Queries\n\n```css\n@import url('mobile.css') screen and (max-width: 767px);\n@import url('print.css') print;\n@import url('dark.css') (prefers-color-scheme: dark);\n```\n\n---\n\n### With Supports\n\n```css\n@import url('grid.css') supports(display: grid);\n@import url('flexbox.css') supports(not (display: grid));\n```\n\n---\n\n### With Layers\n\n```css\n@import url('reset.css') layer(reset);\n@import url('components.css') layer(components);\n@import url('utilities.css') layer(utilities);\n```\n\n---\n\n### Important Rules\n\n1. **Must be at the top** of your CSS file (before any other rules)\n2. Multiple `@import` statements are allowed\n3. Each `@import` creates an **additional HTTP request**\n4. Order matters - later imports override earlier ones\n\n```css\n/* CORRECT - at the top */\n@import url('reset.css');\n@import url('theme.css');\n\nbody { /* Styles come after */ }\n\n/* WRONG - imports must come first */\nbody { margin: 0; }\n@import url('reset.css'); /* This will fail */\n```\n\n---\n\n### @import vs <link>\n\n```html\n<!-- LINK - preferred for production -->\n<link rel=\"stylesheet\" href=\"styles.css\">\n```\n\n| Feature | @import | <link> |\n|---------|---------|--------|\n| HTTP requests | Additional | Included |\n| Parallel loading | No | Yes |\n| Performance | Slower | Faster |\n| Modern usage | Rare | Common |\n\n---\n\n> **Best Practice:** Use `<link>` in HTML for production. `@import` can be useful for CSS organization but is slower. Use CSS layers instead for dependency management.",
+  "codeExample": "<style>\n  /* In practice, @import goes at the very top */\n  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\n  \n  /* Conditional import */\n  @import url('print.css') print;\n  \n  /* With layer */\n  @import url('reset.css') layer(reset);\n  \n  /* Rest of styles */\n  body {\n    font-family: 'Roboto', Arial, sans-serif;\n    padding: 20px;\n  }\n  \n  .note {\n    background: #fff3cd;\n    border: 1px solid #ffc107;\n    padding: 15px;\n    border-radius: 6px;\n  }\n</style>\n\n<div class=\"note\">\n  <strong>Note:</strong> @import statements must be at the top of the stylesheet, before any other CSS rules. For production, prefer &lt;link&gt; in HTML for better performance.\n</div>",
+  "quiz": [
+    {
+      "question": "Where must @import appear in a CSS file?",
+      "options": [
+        "At the bottom",
+        "At the top (before other rules)",
+        "Anywhere",
+        "Inside a selector"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

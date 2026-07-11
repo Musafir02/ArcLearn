@@ -1,0 +1,22 @@
+{
+  "title": "@layer",
+  "language": "css",
+  "topic": "layer",
+  "order": 77,
+  "nextTopic": "multi_column",
+  "prevTopic": "import",
+  "content": "### @layer\n\n**@layer** controls the cascade order by grouping styles into layers.\n\n---\n\n### Why Use Layers?\n\nWithout layers, **specificity** determines which style wins. Layers let you define **priority order**:\n\n```css\n/* Order: reset < components < utilities */\n@layer reset, components, utilities;\n```\n\nLater layers win over earlier layers, regardless of specificity.\n\n---\n\n### Defining Layers\n\n```css\n/* Declare layer order first */\n@layer reset, base, components, utilities;\n\n/* Add styles to layers */\n@layer reset {\n  * { margin: 0; padding: 0; }\n}\n\n@layer base {\n  body { font-family: Arial, sans-serif; }\n}\n\n@layer components {\n  .card { padding: 20px; border-radius: 8px; }\n}\n\n@layer utilities {\n  .text-center { text-align: center; }\n}\n```\n\n---\n\n### Layer Order\n\n```css\n@layer reset, base, components, utilities;\n\n/* Later = higher priority */\n/* utilities > components > base > reset */\n/* Any style in 'utilities' beats 'components' regardless of specificity */\n```\n\n---\n\n### Anonymous Layers\n\n```css\n@layer {\n  /* Styles added to an unnamed layer */\n  /* These come after named layers */\n  .fallback { color: red; }\n}\n```\n\n---\n\n### Nesting in Layers\n\n```css\n@layer components {\n  @layer forms {\n    input { border: 1px solid #ddd; }\n  }\n  \n  @layer cards {\n    .card { background: white; }\n  }\n}\n\n/* Nested layers are joined: components.forms, components.cards */\n```\n\n---\n\n### Layer with @import\n\n```css\n@import url('reset.css') layer(reset);\n@import url('bootstrap.css') layer(framework);\n@import url('custom.css') layer(overrides);\n```\n\n---\n\n### !important in Layers\n\n`!important` still works but within layers:\n\n```css\n@layer base {\n  p { color: blue !important; }\n}\n\n@layer components {\n  p { color: red !important; } /* Wins - later layer */\n}\n```\n\n---\n\n> **Best Practice:** Use layers to organize CSS and control override priority. This is especially useful with third-party CSS.",
+  "codeExample": "<style>\n  @layer reset, base, components, utilities;\n  \n  @layer reset {\n    * { margin: 0; padding: 0; box-sizing: border-box; }\n    body { font-family: Arial, sans-serif; padding: 20px; }\n  }\n  \n  @layer components {\n    .card {\n      padding: 25px;\n      background: #f9f9f9;\n      border-radius: 8px;\n      border: 1px solid #ddd;\n    }\n    \n    .btn {\n      padding: 10px 20px;\n      background: #3498db;\n      color: white;\n      border: none;\n      border-radius: 4px;\n      cursor: pointer;\n    }\n  }\n  \n  @layer utilities {\n    .mt-20 { margin-top: 20px; }\n    .text-center { text-align: center; }\n    .shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }\n  }\n</style>\n\n<div class=\"card shadow text-center\">\n  <h3>CSS Layers Demo</h3>\n  <p>This card uses utility classes (shadow, text-center) which override component styles.</p>\n  <button class=\"btn mt-20\">Click Me</button>\n</div>",
+  "quiz": [
+    {
+      "question": "In @layer, which layer wins in a conflict?",
+      "options": [
+        "The first declared layer",
+        "The last declared layer",
+        "The most specific selector",
+        "All layers are equal"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

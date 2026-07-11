@@ -1,0 +1,22 @@
+{
+  "title": "Keyframes",
+  "language": "css",
+  "topic": "keyframes",
+  "order": 63,
+  "nextTopic": "css_variables",
+  "prevTopic": "animations",
+  "content": "### CSS Keyframes\n\n**@keyframes** defines the intermediate steps of an animation.\n\n---\n\n### Syntax\n\n```css\n@keyframes animationName {\n  from { /* Start state */ }\n  to   { /* End state */ }\n}\n\n/* Or with percentage stops */\n@keyframes animationName {\n  0%   { /* Start */ }\n  50%  { /* Middle */ }\n  100% { /* End */ }\n}\n```\n\n---\n\n### From/To Syntax\n\nSimple two-step animation:\n\n```css\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n```\n\n---\n\n### Percentage Syntax\n\nMulti-step animation:\n\n```css\n@keyframes pulse {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(1.1);\n    opacity: 0.8;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n```\n\n---\n\n### Common Keyframe Animations\n\n```css\n/* Slide in from left */\n@keyframes slideInLeft {\n  from { transform: translateX(-100%); opacity: 0; }\n  to { transform: translateX(0); opacity: 1; }\n}\n\n/* Spin */\n@keyframes spin {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n\n/* Shake */\n@keyframes shake {\n  0%, 100% { transform: translateX(0); }\n  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }\n  20%, 40%, 60%, 80% { transform: translateX(5px); }\n}\n\n/* Color change */\n@keyframes colorCycle {\n  0% { background: red; }\n  33% { background: blue; }\n  66% { background: green; }\n  100% { background: red; }\n}\n```\n\n---\n\n### Using Keyframes\n\n```css\n.element {\n  animation: slideInLeft 0.5s ease forwards;\n}\n\n.loader {\n  animation: spin 1s linear infinite;\n}\n\n.error {\n  animation: shake 0.5s ease;\n}\n```\n\n---\n\n### Multiple Animations\n\n```css\n@keyframes slideIn {\n  from { transform: translateX(-100%); }\n  to { transform: translateX(0); }\n}\n\n@keyframes fadeIn {\n  from { opacity: 0; }\n  to { opacity: 1; }\n}\n\n.element {\n  animation: slideIn 0.5s ease, fadeIn 0.3s ease;\n}\n```\n\n> **Key Point:** Animation names are case-sensitive. Use descriptive names like `fadeIn`, `slideUp`, `spin`.",
+  "codeExample": "<style>\n  @keyframes slideInRight {\n    from {\n      transform: translateX(100px);\n      opacity: 0;\n    }\n    to {\n      transform: translateX(0);\n      opacity: 1;\n    }\n  }\n  \n  @keyframes bounce {\n    0%, 100% { transform: translateY(0); }\n    40% { transform: translateY(-30px); }\n    60% { transform: translateY(-15px); }\n  }\n  \n  @keyframes colorCycle {\n    0% { background: #3498db; }\n    50% { background: #e74c3c; }\n    100% { background: #2ecc71; }\n  }\n  \n  .box {\n    width: 120px;\n    height: 80px;\n    color: white;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    margin: 20px;\n  }\n  \n  .slide { animation: slideInRight 0.5s ease forwards; }\n  .bounce { animation: bounce 0.8s ease infinite; background: #3498db; }\n  .cycle { animation: colorCycle 3s ease infinite; }\n</style>\n\n<div class=\"box slide\" style=\"background: #3498db;\">Slide In</div>\n<div class=\"box bounce\">Bounce</div>\n<div class=\"box cycle\">Color Cycle</div>",
+  "quiz": [
+    {
+      "question": "What percentage represents the start in @keyframes?",
+      "options": [
+        "100%",
+        "50%",
+        "0%",
+        "Start depends on from{}"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

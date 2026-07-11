@@ -1,0 +1,22 @@
+{
+  "title": "Z-Index",
+  "language": "css",
+  "topic": "z_index",
+  "order": 37,
+  "nextTopic": "float",
+  "prevTopic": "position",
+  "content": "### CSS Z-Index\n\n**z-index** controls the stacking order of overlapping elements.\n\n---\n\n### How It Works\n\n```css\n.element {\n  position: relative;\n  z-index: 10;  /* Higher value = on top */\n}\n```\n\nElements with higher `z-index` appear in front of those with lower values.\n\n---\n\n### Only Works on Positioned Elements\n\n`z-index` only affects elements with a `position` value other than `static`:\n\n```css\n/* Works */\nz-index: 10; /* position: relative/absolute/fixed/sticky required */\n\n/* Does NOT work */\nposition: static;\nz-index: 10; /* Ignored! */\n```\n\n---\n\n### Stacking Context\n\nA **stacking context** is a group of elements that stack together:\n\n| Creates Stacking Context | Example |\n|-------------------------|---------|\n| Root element | `<html>` |\n| Positioned + z-index | `position: relative; z-index: 1` |\n| Opacity < 1 | `opacity: 0.9` |\n| Transform | `transform: scale(1)` |\n| Filter | `filter: blur(0)` |\n| Will-change | `will-change: transform` |\n| Container queries | `container-type: inline-size` |\n\nElements in one stacking context cannot interleave with another.\n\n---\n\n### Default Values\n\n| Value | Stack Level |\n|-------|-------------|\n| `auto` | Same as parent (default) |\n| `0` | Base layer in stacking context |\n| `1` | Above base |\n| `-1` | Below base |\n| `9999` | Very high (use sparingly) |\n\n---\n\n### Common Patterns\n\n```css\n/* Overlay */\n.overlay {\n  position: fixed;\n  inset: 0;\n  background: rgba(0,0,0,0.5);\n  z-index: 100;\n}\n\n/* Modal on top of overlay */\n.modal {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 200;\n}\n\n/* Dropdown above content */\n.dropdown {\n  position: absolute;\n  top: 100%;\n  z-index: 50;\n}\n```\n\n---\n\n### Z-Index Best Practices\n\n- Use small increments (1, 10, 100)\n- Avoid values above 100 except for overlays/modals\n- Group related elements:\n  ```css\n  /* Content: 1-9 */\n  /* Header: 10 */\n  /* Dropdowns: 50 */\n  /* Overlay: 100 */\n  /* Modal: 200 */\n  /* Toast: 300 */\n  ```\n\n> **Key Point:** `z-index` is relative to its stacking context. A child with `z-index: 9999` inside a parent with `z-index: 1` will still be behind a sibling with `z-index: 2`.",
+  "codeExample": "<style>\n  .container {\n    position: relative;\n    height: 150px;\n    margin: 20px;\n  }\n  \n  .box {\n    position: absolute;\n    width: 120px;\n    height: 80px;\n    padding: 10px;\n    color: white;\n  }\n  \n  .box1 { background: red; top: 0; left: 0; z-index: 1; }\n  .box2 { background: blue; top: 20px; left: 30px; z-index: 2; }\n  .box3 { background: green; top: 40px; left: 60px; z-index: 3; }\n</style>\n\n<div class=\"container\">\n  <div class=\"box box1\">z-index: 1</div>\n  <div class=\"box box2\">z-index: 2</div>\n  <div class=\"box box3\">z-index: 3</div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which position values allow z-index to work?",
+      "options": [
+        "Static only",
+        "All position values",
+        "All except static",
+        "Relative only"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

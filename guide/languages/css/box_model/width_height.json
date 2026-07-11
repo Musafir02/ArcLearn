@@ -1,0 +1,22 @@
+{
+  "title": "Width & Height",
+  "language": "css",
+  "topic": "width_height",
+  "order": 26,
+  "nextTopic": "padding",
+  "prevTopic": "box_model",
+  "content": "### CSS Width & Height\n\nSet dimensions of elements.\n\n---\n\n### Basic Properties\n\n```css\n.box {\n  width: 300px;\n  height: 200px;\n}\n```\n\n---\n\n### Values\n\n| Value | Description |\n|-------|-------------|\n| `auto` | Browser calculates (default) |\n| `px` | Fixed pixels |\n| `%` | Percentage of parent |\n| `em` / `rem` | Relative to font |\n| `vw` / `vh` | Relative to viewport |\n| `min-content` | Width of smallest content |\n| `max-content` | Width of largest content |\n| `fit-content` | Shrinks to content, max at parent |\n\n---\n\n### Min & Max Limits\n\n```css\n.box {\n  min-width: 200px;\n  max-width: 800px;\n  min-height: 100px;\n  max-height: 500px;\n}\n```\n\nElement **stays within these bounds** even if content changes.\n\n---\n\n### Common Patterns\n\n```css\n/* Full-width container */\n.container {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n\n/* Full viewport hero */\n.hero {\n  width: 100vw;\n  height: 100vh;\n}\n\n/* Responsive image */\nimg {\n  max-width: 100%;\n  height: auto;\n}\n\n/* Square using aspect-ratio */\n.square {\n  width: 200px;\n  aspect-ratio: 1 / 1;\n}\n```\n\n---\n\n### height: 100% Problem\n\nFor `height: 100%` to work, the **parent** must have a defined height:\n\n```css\nhtml, body {\n  height: 100%;\n}\n\n.full-height {\n  height: 100%; /* Works because parent has height */\n}\n```\n\n---\n\n> **Best Practice:** Use `max-width` instead of `width` for responsive elements. Use `min-height` instead of `height` for content that might grow.",
+  "codeExample": "<style>\n  .card {\n    width: 80%;\n    max-width: 400px;\n    min-height: 150px;\n    padding: 20px;\n    background: #f0f0f0;\n    margin: 10px auto;\n  }\n  \n  img {\n    max-width: 100%;\n    height: auto;\n  }\n  \n  .container {\n    max-width: 960px;\n    margin: 0 auto;\n    background: #e0e0e0;\n    padding: 20px;\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"card\">\n    <p>This card has max-width: 400px and min-height: 150px</p>\n    <p>It shrinks on small screens but stops at 400px wide</p>\n  </div>\n  <img src=\"https://via.placeholder.com/800x200\" alt=\"Responsive image\">\n</div>",
+  "quiz": [
+    {
+      "question": "Which property makes an image shrink on small screens?",
+      "options": [
+        "width: 100%",
+        "max-width: 100%",
+        "min-width: 100%",
+        "width: auto"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

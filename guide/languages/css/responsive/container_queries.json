@@ -1,0 +1,22 @@
+{
+  "title": "Container Queries",
+  "language": "css",
+  "topic": "container_queries",
+  "order": 56,
+  "nextTopic": "mobile_first",
+  "prevTopic": "media_queries",
+  "content": "### Container Queries\n\n**Container queries** style elements based on their **parent container's** size, not the viewport.\n\n---\n\n### Why Container Queries?\n\nMedia queries use viewport size. Container queries use **container** size. This enables truly reusable components.\n\n```css\n/* Media query - based on screen */\n@media (max-width: 600px) { }\n\n/* Container query - based on parent */\n@container (max-width: 400px) { }\n```\n\n---\n\n### Define a Container\n\n```css\n.card-wrapper {\n  container-type: inline-size;\n  /* or */\n  container: sidebar / inline-size;\n}\n```\n\n| `container-type` | Description |\n|-----------------|-------------|\n| `inline-size` | Query by container width |\n| `size` | Query by both width and height |\n| `normal` | Not a query container |\n\n---\n\n### Container Name\n\n```css\n.sidebar {\n  container: sidebar / inline-size;\n  container-name: sidebar;\n  container-type: inline-size;\n}\n\n/* Query specific container */\n@container sidebar (max-width: 300px) {\n  .card { flex-direction: column; }\n}\n```\n\n---\n\n### Basic Example\n\n```css\n.card-container {\n  container-type: inline-size;\n}\n\n@container (min-width: 400px) {\n  .card {\n    display: flex;\n    gap: 20px;\n  }\n}\n\n@container (max-width: 399px) {\n  .card {\n    display: flex;\n    flex-direction: column;\n  }\n}\n```\n\n---\n\n### Container Query vs Media Query\n\n| Media Query | Container Query |\n|-------------|----------------|\n| Based on viewport | Based on container |\n| Same for all elements | Different per container |\n| Global | Local |\n| Good for page layout | Good for components |\n| Older, wider support | Newer, narrowing support |\n\n---\n\n### Container Query Length Units\n\nContainer queries introduce new units:\n\n| Unit | Relative To |\n|------|-------------|\n| `cqw` | 1% of container width |\n| `cqh` | 1% of container height |\n| `cqi` | 1% of container inline size |\n| `cqb` | 1% of container block size |\n| `cqmin` | Smaller of cqi/cqb |\n| `cqmax` | Larger of cqi/cqb |\n\n```css\n.card {\n  font-size: 5cqi; /* 5% of container inline size */\n}\n```\n\n> **Key Point:** Container queries make components truly reusable. A component can adapt whether it's in a sidebar (narrow) or main content (wide).",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    gap: 20px;\n  }\n  \n  .sidebar, .main {\n    container-type: inline-size;\n  }\n  \n  .sidebar { width: 200px; }\n  .main { flex: 1; }\n  \n  .card {\n    background: #f0f0f0;\n    padding: 15px;\n    border-radius: 8px;\n  }\n  \n  .card h3 { margin: 0 0 8px 0; }\n  \n  @container (max-width: 300px) {\n    .card {\n      background: #e0e0e0;\n      font-size: 14px;\n    }\n  }\n  \n  @container (min-width: 500px) {\n    .card {\n      display: flex;\n      gap: 15px;\n      background: #d0e0ff;\n    }\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"sidebar\">\n    <div class=\"card\">\n      <h3>Narrow Card</h3>\n      <p>Adapts to container width</p>\n    </div>\n  </div>\n  <div class=\"main\">\n    <div class=\"card\">\n      <h3>Wide Card</h3>\n      <p>Same component, different layout based on container size</p>\n    </div>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "What does a container query respond to?",
+      "options": [
+        "Viewport width",
+        "Parent container size",
+        "Device screen size",
+        "Browser window size"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

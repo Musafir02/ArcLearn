@@ -1,0 +1,22 @@
+{
+  "title": "CSS Buttons",
+  "language": "css",
+  "topic": "buttons",
+  "order": 70,
+  "nextTopic": "forms",
+  "prevTopic": "links",
+  "content": "### CSS Buttons\n\nStyle `<button>` and `<a>` elements as interactive buttons.\n\n---\n\n### Basic Button Reset\n\n```css\nbutton {\n  border: none;\n  background: none;\n  cursor: pointer;\n  font: inherit;\n  padding: 0;\n}\n```\n\n---\n\n### Button Variants\n\n```css\n.btn {\n  display: inline-block;\n  padding: 12px 28px;\n  font-size: 16px;\n  font-weight: 600;\n  border: none;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: all 0.2s;\n  text-align: center;\n}\n\n/* Solid */\n.btn-primary {\n  background: #3498db;\n  color: white;\n}\n.btn-primary:hover {\n  background: #2980b9;\n}\n\n/* Outline */\n.btn-outline {\n  background: transparent;\n  color: #3498db;\n  border: 2px solid #3498db;\n}\n.btn-outline:hover {\n  background: #3498db;\n  color: white;\n}\n\n/* Ghost */\n.btn-ghost {\n  background: transparent;\n  color: #3498db;\n}\n.btn-ghost:hover {\n  background: rgba(52, 152, 219, 0.1);\n}\n```\n\n---\n\n### Sizes\n\n```css\n.btn-sm { padding: 8px 16px; font-size: 14px; }\n.btn-md { padding: 12px 28px; font-size: 16px; }\n.btn-lg { padding: 16px 36px; font-size: 18px; }\n.btn-full { width: 100%; }\n```\n\n---\n\n### Button States\n\n```css\n.btn:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n\n.btn:active {\n  transform: scale(0.97);\n}\n\n.btn-loading {\n  pointer-events: none;\n  opacity: 0.7;\n}\n\n.btn-loading::after {\n  content: \"\";\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border: 2px solid white;\n  border-top-color: transparent;\n  border-radius: 50%;\n  animation: spin 0.6s linear infinite;\n  margin-left: 8px;\n  vertical-align: middle;\n}\n```\n\n---\n\n### With Icons\n\n```css\n.btn-icon svg {\n  width: 18px;\n  height: 18px;\n  margin-right: 8px;\n  vertical-align: middle;\n}\n```\n\n---\n\n> **Best Practice:** Use `<button>` for actions and `<a>` for navigation. Always include `cursor: pointer`.",
+  "codeExample": "<style>\n  .btn {\n    display: inline-block;\n    padding: 12px 28px;\n    font-size: 16px;\n    font-weight: 600;\n    border: none;\n    border-radius: 6px;\n    cursor: pointer;\n    transition: all 0.2s;\n    margin: 5px;\n    text-decoration: none;\n  }\n  \n  .btn-primary { background: #3498db; color: white; }\n  .btn-primary:hover { background: #2980b9; transform: translateY(-2px); }\n  \n  .btn-success { background: #2ecc71; color: white; }\n  .btn-success:hover { background: #27ae60; }\n  \n  .btn-danger { background: #e74c3c; color: white; }\n  .btn-danger:hover { background: #c0392b; }\n  \n  .btn-outline {\n    background: transparent;\n    color: #3498db;\n    border: 2px solid #3498db;\n  }\n  .btn-outline:hover { background: #3498db; color: white; }\n  \n  .btn:disabled {\n    opacity: 0.5;\n    cursor: not-allowed;\n    transform: none !important;\n  }\n</style>\n\n<button class=\"btn btn-primary\">Primary</button>\n<button class=\"btn btn-success\">Success</button>\n<button class=\"btn btn-danger\">Danger</button>\n<button class=\"btn btn-outline\">Outline</button>\n<button class=\"btn btn-primary\" disabled>Disabled</button>",
+  "quiz": [
+    {
+      "question": "Which property should be set on all buttons?",
+      "options": [
+        "cursor: hand",
+        "cursor: pointer",
+        "cursor: button",
+        "cursor: click"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

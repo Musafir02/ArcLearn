@@ -1,0 +1,22 @@
+{
+  "title": "CSS Comments",
+  "language": "css",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "units",
+  "prevTopic": "how_to_add",
+  "content": "### CSS Comments\n\nComments explain your code and are ignored by the browser.\n\n---\n\n### Syntax\n\n```css\n/* This is a comment */\n```\n\nEverything between `/*` and `*/` is ignored.\n\n---\n\n### Single Line Comments\n\n```css\n/* Set background color */\nbody {\n  background-color: lightblue;\n}\n\n/* Center headings */\nh1 {\n  text-align: center;\n}\n```\n\n---\n\n### Multi-Line Comments\n\n```css\n/*\n  This is a multi-line comment.\n  It can span multiple lines.\n  Useful for documenting sections.\n*/\n\n/* Header Styles */\nheader {\n  background: #333;\n  padding: 20px;\n}\n\n/* Main Content */\nmain {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n```\n\n---\n\n### Commenting Out Code\n\nTemporarily disable CSS rules:\n\n```css\nh1 {\n  color: blue;\n  /* font-size: 24px; */  /* Disabled */\n  text-align: center;\n}\n```\n\n---\n\n> **Best Practice:** Use comments to explain **why** something is styled a certain way, not **what** the code does. The code itself shows the what.",
+  "codeExample": "/* === Typography === */\n\nbody {\n  font-family: Arial, sans-serif;\n  line-height: 1.6;\n}\n\nh1 {\n  color: navy;\n  font-size: 2em;\n  /* text-decoration: underline; */ /* Disabled */\n}\n\n/* === Layout === */\n\n.container {\n  max-width: 960px;\n  margin: 0 auto;\n}",
+  "quiz": [
+    {
+      "question": "What is the syntax for a CSS comment?",
+      "options": [
+        "// comment",
+        "/* comment */",
+        "<!-- comment -->",
+        "# comment"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "CSS Variables",
+  "language": "css",
+  "topic": "css_variables",
+  "order": 64,
+  "nextTopic": "math_functions",
+  "prevTopic": "keyframes",
+  "content": "### CSS Variables (Custom Properties)\n\n**CSS Variables** store reusable values through your stylesheet.\n\n---\n\n### Defining Variables\n\n```css\n:root {\n  --primary-color: #3498db;\n  --text-size: 16px;\n  --spacing: 20px;\n}\n```\n\nUse `--` prefix followed by the variable name.\n\n---\n\n### Using Variables\n\n```css\n.element {\n  color: var(--primary-color);\n  font-size: var(--text-size);\n  padding: var(--spacing);\n}\n```\n\n---\n\n### Fallback Values\n\n```css\n.element {\n  color: var(--primary-color, blue);\n  /* Uses --primary-color if defined, otherwise 'blue' */\n}\n```\n\n---\n\n### Scope\n\nVariables respect the cascade. Define globally in `:root` or locally in any selector.\n\n```css\n/* Global */\n:root {\n  --color: blue;\n}\n\n/* Local to .card */\n.card {\n  --color: red;\n}\n\n/* Local to .dark-section */\n.dark-section {\n  --bg: #333;\n  --text: #fff;\n}\n```\n\n---\n\n### Changing Variables with Media Queries\n\n```css\n:root {\n  --gap: 10px;\n  --columns: 1fr;\n}\n\n@media (min-width: 768px) {\n  :root {\n    --gap: 20px;\n    --columns: 1fr 1fr;\n  }\n}\n\n@media (min-width: 1024px) {\n  :root {\n    --columns: 1fr 1fr 1fr;\n  }\n}\n\n.grid {\n  display: grid;\n  grid-template-columns: var(--columns);\n  gap: var(--gap);\n}\n```\n\n---\n\n### Theming with Variables\n\n```css\n:root {\n  --bg: white;\n  --text: black;\n  --primary: blue;\n}\n\n[data-theme=\"dark\"] {\n  --bg: #1a1a1a;\n  --text: #f0f0f0;\n  --primary: #66b3ff;\n}\n\nbody {\n  background: var(--bg);\n  color: var(--text);\n}\n```\n\n---\n\n### Variables in calc()\n\n```css\n:root {\n  --base-size: 16px;\n}\n\n.element {\n  font-size: calc(var(--base-size) * 1.5);\n  padding: calc(var(--spacing, 20px) * 2);\n}\n```\n\n---\n\n### Inspecting Variables\n\n- Chrome DevTools -> Styles panel -> `:root` section\n- Shows all defined CSS variables and their values\n- You can edit them live\n\n> **Best Practice:** Use CSS variables for colors, spacing, fonts, and breakpoints. They make theme changes and maintenance much easier.",
+  "codeExample": "<style>\n  :root {\n    --primary: #3498db;\n    --secondary: #2ecc71;\n    --danger: #e74c3c;\n    --radius: 8px;\n    --shadow: 0 4px 6px rgba(0,0,0,0.1);\n  }\n  \n  .btn {\n    padding: 12px 24px;\n    border: none;\n    border-radius: var(--radius);\n    box-shadow: var(--shadow);\n    cursor: pointer;\n    font-size: 16px;\n    transition: transform 0.2s;\n  }\n  \n  .btn:hover { transform: scale(1.05); }\n  \n  .btn-primary {\n    background: var(--primary);\n    color: white;\n  }\n  \n  .btn-secondary {\n    background: var(--secondary);\n    color: white;\n  }\n  \n  .btn-danger {\n    background: var(--danger);\n    color: white;\n  }\n</style>\n\n<button class=\"btn btn-primary\">Primary</button>\n<button class=\"btn btn-secondary\">Secondary</button>\n<button class=\"btn btn-danger\">Danger</button>",
+  "quiz": [
+    {
+      "question": "What prefix is used for CSS variable names?",
+      "options": [
+        "$",
+        "@",
+        "--",
+        "var-"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

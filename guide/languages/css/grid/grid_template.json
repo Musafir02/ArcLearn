@@ -1,0 +1,22 @@
+{
+  "title": "Grid Template",
+  "language": "css",
+  "topic": "grid_template",
+  "order": 51,
+  "nextTopic": "grid_gap",
+  "prevTopic": "grid_items",
+  "content": "### Grid Template\n\n**grid-template** defines the structure of rows, columns, and areas.\n\n---\n\n### Grid Template Columns\n\n```css\n.container {\n  grid-template-columns: 200px 1fr 200px;\n}\n```\n\n---\n\n### Grid Template Rows\n\n```css\n.container {\n  grid-template-rows: 100px 1fr 100px;\n}\n```\n\n---\n\n### Grid Template Areas\n\n```css\n.container {\n  grid-template-areas:\n    \"header header header\"\n    \"sidebar main aside\"\n    \"footer footer footer\";\n}\n\n.header { grid-area: header; }\n.sidebar { grid-area: sidebar; }\n.main { grid-area: main; }\n.aside { grid-area: aside; }\n.footer { grid-area: footer; }\n```\n\nEach row in quotes represents one row.\n`.` (dot) creates an empty cell.\n\n---\n\n### Grid Template Shorthand\n\n```css\n/* grid-template: rows / columns */\n.container {\n  grid-template: 100px 1fr 100px / 200px 1fr 200px;\n}\n\n/* With areas */\n.container {\n  grid-template:\n    \"header header header\" 100px\n    \"sidebar main aside\" 1fr\n    \"footer footer footer\" 100px\n    / 200px 1fr 200px;  /* Column widths */\n}\n```\n\n---\n\n### The Repeat() Function\n\n```css\ngrid-template-columns: repeat(3, 1fr);          /* 3 equal columns */\ngrid-template-columns: repeat(4, 100px);        /* 4 fixed columns */\ngrid-template-columns: repeat(2, 1fr 200px);    /* 1fr, 200px, 1fr, 200px */\n```\n\n---\n\n### Autofit with Minmax\n\n```css\n.container {\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n}\n```\n\nCreates as many 300px columns as fit, then stretches evenly.\n\n---\n\n### Implicit Rows\n\nRows created by content beyond the template:\n\n```css\n.container {\n  grid-template-rows: 100px 100px;\n  grid-auto-rows: 200px;  /* Extra rows are 200px */\n}\n```\n\n> **Best Practice:** Use `grid-template-areas` for page layouts - it makes the structure visually clear in CSS.",
+  "codeExample": "<style>\n  .layout {\n    display: grid;\n    grid-template-areas:\n      \"header header header\"\n      \"sidebar main aside\"\n      \"footer footer footer\";\n    grid-template-columns: 200px 1fr 200px;\n    grid-template-rows: 80px 1fr 60px;\n    gap: 10px;\n    height: 400px;\n    background: #f0f0f0;\n    padding: 10px;\n  }\n  \n  .layout > * {\n    padding: 20px;\n    text-align: center;\n    color: white;\n  }\n  \n  .header { grid-area: header; background: #2c3e50; }\n  .sidebar { grid-area: sidebar; background: #3498db; }\n  .main { grid-area: main; background: #2ecc71; }\n  .aside { grid-area: aside; background: #e74c3c; }\n  .footer { grid-area: footer; background: #34495e; }\n</style>\n\n<div class=\"layout\">\n  <header class=\"header\">Header</header>\n  <aside class=\"sidebar\">Sidebar</aside>\n  <main class=\"main\">Main Content</main>\n  <aside class=\"aside\">Aside</aside>\n  <footer class=\"footer\">Footer</footer>\n</div>",
+  "quiz": [
+    {
+      "question": "What symbol represents an empty cell in grid-template-areas?",
+      "options": [
+        "-",
+        "_",
+        ".",
+        "*"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

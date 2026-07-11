@@ -1,0 +1,22 @@
+{
+  "title": "Viewport Units",
+  "language": "css",
+  "topic": "viewport_units",
+  "order": 58,
+  "nextTopic": "transitions",
+  "prevTopic": "mobile_first",
+  "content": "### Viewport Units\n\n**Viewport units** size elements relative to the browser viewport.\n\n---\n\n### The Units\n\n| Unit | Relative To | Example |\n|------|-------------|---------|\n| `vw` | 1% of viewport width | `100vw` = full width |\n| `vh` | 1% of viewport height | `100vh` = full height |\n| `vmin` | 1% of the SMALLER dimension | Useful for mobile |\n| `vmax` | 1% of the LARGER dimension | Avoid on mobile |\n| `svh` | Small viewport height (no URL bar) | `100svh` |\n| `lvh` | Large viewport height (with URL bar) | `100lvh` |\n| `dvh` | Dynamic viewport height (changes with UI) | `100dvh` |\n| `vi` | 1% of viewport inline size | Text direction aware |\n| `vb` | 1% of viewport block size | Text direction aware |\n\n---\n\n### Full Screen Sections\n\n```css\n.hero {\n  width: 100vw;\n  height: 100vh;\n  /* Full viewport hero section */\n}\n```\n\n---\n\n### Mobile Viewport Units\n\nOn mobile, `100vh` includes the browser UI (URL bar):\n\n```css\n/* Old way - may be too tall on mobile */\nheight: 100vh;\n\n/* Modern mobile-safe approach */\nheight: 100dvh;  /* Dynamic - adjusts when URL bar hides */\n/* Or */\nheight: 100svh;  /* Small - always without URL bar */\n```\n\n---\n\n### Typography with Viewport Units\n\n```css\n/* Responsive font size */\nh1 {\n  font-size: 5vw;  /* 5% of viewport width */\n}\n```\n\n**Caution:** `5vw` on a 320px phone = 16px (OK), but on a 2560px monitor = 128px (too big!).\n\n---\n\n### Clamp with Viewport Units\n\n```css\n/* Min, preferred, max */\nh1 {\n  font-size: clamp(1.5rem, 4vw, 3rem);\n}\n```\n\n---\n\n### Practical Uses\n\n```css\n/* Full viewport hero */\n.hero {\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n/* Half width sidebar */\n.sidebar {\n  width: 30vw;\n  min-width: 200px;\n}\n\n/* Responsive square */\n.square {\n  width: 50vmin;\n  height: 50vmin;\n  /* Always square, fits screen */\n}\n\n/* Fixed bottom bar */\n.bottom-bar {\n  height: 60px;\n  bottom: 0;\n  width: 100vw;\n}\n```\n\n> **Best Practice:** Avoid `100vw` when scrollbar may cause horizontal overflow. Use `100%` for most widths. Use `dvh` for mobile height.",
+  "codeExample": "<style>\n  .hero {\n    height: 50vh;\n    background: linear-gradient(to right, #3498db, #2ecc71);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: white;\n    font-size: clamp(1.5rem, 4vw, 3rem);\n  }\n  \n  .demo {\n    display: flex;\n    gap: 20px;\n    margin-top: 20px;\n  }\n  \n  .box {\n    background: #3498db;\n    color: white;\n    padding: 10px;\n    text-align: center;\n  }\n  \n  .vw25 { width: 25vw; }\n  .vh25 { height: 15vh; }\n  .vmin { width: 30vmin; height: 30vmin; line-height: 30vmin; }\n</style>\n\n<div class=\"hero\">50vh Hero Section</div>\n\n<div class=\"demo\">\n  <div class=\"box vw25\">25vw</div>\n  <div class=\"box vh25\">15vh</div>\n  <div class=\"box vmin\">30vmin</div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which viewport unit is best for full-height mobile sections?",
+      "options": [
+        "vh",
+        "svh",
+        "dvh",
+        "Both svh and dvh"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Box Sizing",
+  "language": "css",
+  "topic": "box_sizing",
+  "order": 31,
+  "nextTopic": "overflow",
+  "prevTopic": "border_radius",
+  "content": "### CSS Box Sizing\n\n**box-sizing** controls how width and height are calculated.\n\n---\n\n### Content Box (Default)\n\n```css\nbox-sizing: content-box;\n```\n\nThe `width` and `height` apply only to **content**. Padding and border add to total size.\n\n```css\n.box {\n  width: 300px;\n  padding: 20px;\n  border: 5px solid black;\n}\n/* Total width = 300 + 40 + 10 = 350px */\n```\n\n---\n\n### Border Box\n\n```css\nbox-sizing: border-box;\n```\n\nThe `width` and `height` **include** padding and border.\n\n```css\n.box {\n  width: 300px;\n  padding: 20px;\n  border: 5px solid black;\n}\n/* Total width = 300px */\n/* Content = 300 - 40 - 10 = 250px */\n```\n\n---\n\n### Visual Comparison\n\n```\ncontent-box:                     border-box:\n[content 300px]                  [padding|content 250px|padding]\n[padding 20px both sides]        [border 5px both sides]\n[border 5px both sides]          Total: 300px\nTotal: 350px\n```\n\n---\n\n### Global Reset (Recommended)\n\n```css\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n```\n\nThis makes sizing predictable across all elements.\n\n---\n\n### Why Use border-box?\n\n1. **Predictable** - declared width is the actual width\n2. **Easier math** - no need to calculate padding/border additions\n3. **Responsive** - percentage widths work intuitively\n4. **Consistency** - all major frameworks use it\n\n---\n\n### Without Border Box\n\n```css\n/* You'd have to do this: */\n.box {\n  width: calc(100% - 40px); /* Subtract padding manually */\n  padding: 20px;\n}\n```\n\n---\n\n> **Best Practice:** Always set `box-sizing: border-box` globally. It's the single most impactful CSS reset.",
+  "codeExample": "<style>\n  * {\n    box-sizing: border-box;\n  }\n  \n  .container {\n    display: flex;\n    gap: 20px;\n  }\n  \n  .box {\n    width: 200px;\n    padding: 20px;\n    border: 5px solid #333;\n  }\n  \n  .content-box {\n    box-sizing: content-box;\n    background: #ffcccc;\n  }\n  \n  .border-box {\n    box-sizing: border-box;\n    background: #ccffcc;\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"box content-box\">\n    content-box<br>\n    Width: 200px declared<br>\n    Actual: 250px\n  </div>\n  <div class=\"box border-box\">\n    border-box<br>\n    Width: 200px declared<br>\n    Actual: 200px\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which box-sizing value includes padding and border in the width?",
+      "options": [
+        "content-box",
+        "border-box",
+        "padding-box",
+        "margin-box"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

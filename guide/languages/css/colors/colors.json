@@ -1,0 +1,22 @@
+{
+  "title": "CSS Colors",
+  "language": "css",
+  "topic": "colors",
+  "order": 13,
+  "nextTopic": "backgrounds",
+  "prevTopic": "attribute_selectors",
+  "content": "### CSS Colors\n\nCSS supports multiple ways to specify colors.\n\n---\n\n### Color Formats\n\n| Format | Example | Description |\n|--------|---------|-------------|\n| **Named** | `red`, `blue`, `tomato` | 140+ predefined color names |\n| **Hex** | `#FF0000`, `#f00` | 6 or 3 digit hexadecimal |\n| **RGB** | `rgb(255, 0, 0)` | Red, Green, Blue (0-255) |\n| **RGBA** | `rgba(255, 0, 0, 0.5)` | RGB with alpha (transparency) |\n| **HSL** | `hsl(0, 100%, 50%)` | Hue, Saturation, Lightness |\n| **HSLA** | `hsla(0, 100%, 50%, 0.5)` | HSL with alpha |\n| **HEX Alpha** | `#FF000080` | Hex with alpha (modern) |\n\n---\n\n### Named Colors\n\n```css\ncolor: red;\ncolor: blue;\ncolor: tomato;\ncolor: dodgerblue;\ncolor: rebeccapurple;\n```\n\n---\n\n### Hexadecimal\n\n```css\n/* Format: #RRGGBB or #RGB */\ncolor: #ff0000;  /* Red */\ncolor: #00ff00;  /* Green */\ncolor: #0000ff;  /* Blue */\ncolor: #333;     /* Dark gray */\ncolor: #ff000080; /* Red at 50% opacity */\n```\n\n---\n\n### RGB / RGBA\n\n```css\ncolor: rgb(255, 0, 0);       /* Red */\ncolor: rgba(255, 0, 0, 0.5); /* Red, 50% transparent */\ncolor: rgb(0 255 0);         /* Modern syntax, no commas */\ncolor: rgb(0 255 0 / 0.5);   /* With alpha */\n```\n\n---\n\n### HSL / HSLA\n\n```css\n/* Hue: 0-360, Saturation: 0-100%, Lightness: 0-100% */\ncolor: hsl(0, 100%, 50%);        /* Red */\ncolor: hsl(120, 100%, 50%);      /* Green */\ncolor: hsl(240, 100%, 50%);      /* Blue */\ncolor: hsla(0, 100%, 50%, 0.5);  /* Red, 50% transparent */\n```\n\n---\n\n### Current Color\n\n```css\n.box {\n  color: blue;\n  border: 1px solid currentColor; /* Matches text color */\n}\n```\n\n> **Best Practice:** Use hex for simple colors, HSL for intuitive adjustments, RGBA for transparency.",
+  "codeExample": "<style>\n  .named { color: tomato; }\n  .hex { color: #1a73e8; }\n  .rgba { color: rgba(255, 0, 0, 0.7); }\n  .hsla { color: hsla(200, 80%, 50%, 0.8); }\n  .hex-alpha { background: #1a73e880; padding: 5px; }\n</style>\n\n<p class=\"named\">Named: tomato</p>\n<p class=\"hex\">Hex: #1a73e8</p>\n<p class=\"rgba\">RGBA: red at 70%</p>\n<p class=\"hsla\">HSLA: blue at 80%</p>",
+  "quiz": [
+    {
+      "question": "What does 'a' stand for in RGBA?",
+      "options": [
+        "Alpha (transparency)",
+        "Average",
+        "Absolute",
+        "Alternate"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

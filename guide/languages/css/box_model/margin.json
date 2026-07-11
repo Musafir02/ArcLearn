@@ -1,0 +1,22 @@
+{
+  "title": "CSS Margin",
+  "language": "css",
+  "topic": "margin",
+  "order": 28,
+  "nextTopic": "border",
+  "prevTopic": "padding",
+  "content": "### CSS Margin\n\n**Margin** creates space **outside** the border.\n\n---\n\n### Individual Sides\n\n```css\nmargin-top: 10px;\nmargin-right: 20px;\nmargin-bottom: 10px;\nmargin-left: 20px;\n```\n\n---\n\n### Shorthand (1-4 Values)\n\n```css\n/* All sides */\nmargin: 20px;\n\n/* Vertical | Horizontal */\nmargin: 10px 20px;\n\n/* Top | Horizontal | Bottom */\nmargin: 10px 15px 20px;\n\n/* Top | Right | Bottom | Left */\nmargin: 10px 15px 20px 25px;\n```\n\n---\n\n### Margin Auto (Centering)\n\n```css\n.block {\n  width: 300px;\n  margin: 0 auto;  /* Horizontally center block */\n}\n```\n\n`auto` takes available space equally on both sides.\n\n---\n\n### Negative Margins\n\n```css\n.box {\n  margin-top: -20px;  /* Pulls element up */\n  margin-left: -10px; /* Pulls element left */\n}\n```\n\nUseful for overlapping elements or aligning.\n\n---\n\n### Margin Collapsing\n\n**Vertical margins** of adjacent elements collapse (combine) into one:\n\n```html\n<div style=\"margin-bottom: 30px;\">Box A</div>\n<div style=\"margin-top: 20px;\">Box B</div>\n<!-- Gap = 30px (the larger value wins) -->\n```\n\n**Rules:**\n- Only vertical margins collapse (top and bottom)\n- Horizontal margins never collapse\n- The larger margin wins\n- Margins of floated/positioned elements don't collapse\n\n---\n\n### Margin Values\n\n```css\n/* Positive values */\nmargin: 10px;\nmargin: 1rem;\nmargin: 5%;     /* Percentage of parent WIDTH */\n\n/* Auto for centering */\nmargin: 0 auto;\n\n/* Negative for overlap */\nmargin-top: -10px;\n```\n\n---\n\n> **Best Practice:** Use `margin` for space **between** elements. Use `padding` for space **inside** elements.",
+  "codeExample": "<style>\n  .container {\n    max-width: 600px;\n    margin: 0 auto;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .box {\n    background: lightblue;\n    padding: 10px;\n    margin-bottom: 10px;\n  }\n  \n  .center {\n    width: 200px;\n    margin: 0 auto;\n    background: #ddd;\n    text-align: center;\n    padding: 10px;\n  }\n  \n  .negative {\n    margin-top: -5px;\n    background: lightcoral;\n    padding: 10px;\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"box\">Box with margin-bottom: 10px</div>\n  <div class=\"box\">Another box</div>\n  <div class=\"center\">Centered with margin: 0 auto</div>\n  <div class=\"box\">Normal box</div>\n  <div class=\"negative\">Negative margin pulls this up</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What happens when two vertical margins meet?",
+      "options": [
+        "They add together",
+        "They collapse (larger wins)",
+        "The first one is ignored",
+        "The second one is ignored"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

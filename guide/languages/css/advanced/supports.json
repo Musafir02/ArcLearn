@@ -1,0 +1,22 @@
+{
+  "title": "@supports",
+  "language": "css",
+  "topic": "supports",
+  "order": 75,
+  "nextTopic": "import",
+  "prevTopic": "font_face",
+  "content": "### @supports\n\n**@supports** applies styles only if the browser supports a specific CSS feature.\n\n---\n\n### Basic Syntax\n\n```css\n@supports (display: grid) {\n  .container {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n```\n\n---\n\n### Feature Detection\n\nTest for any CSS property+value combination:\n\n```css\n/* Grid */\n@supports (display: grid) { }\n\n/* Container queries */\n@supports (container-type: inline-size) { }\n\n/* Subgrid */\n@supports (grid-template-columns: subgrid) { }\n\n/* CSS nesting */\n@supports (selector(& > *)) { }\n\n/* New color spaces */\n@supports (color: oklch(0% 0 0)) { }\n\n/* Scroll-driven animations */\n@supports (animation-timeline: scroll()) { }\n```\n\n---\n\n### Not Support\n\n```css\n@supports not (display: grid) {\n  .container {\n    display: flex;\n    flex-wrap: wrap;\n  }\n}\n```\n\n---\n\n### Logical Operators\n\n```css\n/* AND */\n@supports (display: grid) and (gap: 10px) {\n  .container {\n    display: grid;\n    gap: 20px;\n  }\n}\n\n/* OR */\n@supports (display: grid) or (display: -ms-grid) {\n  .container {\n    display: grid;\n  }\n}\n\n/* Complex */\n@supports ((display: grid) and (gap: 10px)) or (display: flex) {\n  .container { display: grid; }\n}\n```\n\n---\n\n### Selector Support\n\n```css\n@supports selector(:has(*)) {\n  .card:has(.active) {\n    border-color: blue;\n  }\n}\n\n@supports not selector(:focus-visible) {\n  a:focus {\n    outline: 3px solid blue;\n  }\n}\n```\n\n---\n\n### Progressive Enhancement Pattern\n\n```css\n/* Base: works everywhere */\n.hero {\n  display: flex;\n  align-items: center;\n  gap: 20px;\n}\n\n/* Enhancement: only modern browsers */\n@supports (aspect-ratio: 1) {\n  .hero-image {\n    aspect-ratio: 16 / 9;\n    object-fit: cover;\n  }\n}\n```\n\n> **Best Practice:** Write base styles for everyone, then use @supports to add enhanced styles. This is called **progressive enhancement**.",
+  "codeExample": "<style>\n  .card {\n    background: #f0f0f0;\n    padding: 20px;\n    margin: 10px;\n    border-radius: 8px;\n  }\n  \n  /* Base: available in all browsers */\n  .card-grid {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 15px;\n  }\n  \n  /* Enhancement: only browsers that support grid */\n  @supports (display: grid) {\n    .card-grid {\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n      gap: 20px;\n    }\n  }\n  \n  @supports (selector(& > *)) {\n    .card-grid {\n      & .card {\n        background: white;\n        box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n      }\n    }\n  }\n</style>\n\n<div class=\"card-grid\">\n  <div class=\"card\">Browser gets the best layout supported</div>\n  <div class=\"card\">Grid if available, flexbox fallback</div>\n  <div class=\"card\">Works in all browsers</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What does @supports check for?",
+      "options": [
+        "Browser vendor",
+        "Feature support",
+        "Screen size",
+        "Network speed"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

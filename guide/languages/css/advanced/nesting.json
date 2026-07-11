@@ -1,0 +1,22 @@
+{
+  "title": "CSS Nesting",
+  "language": "css",
+  "topic": "nesting",
+  "order": 79,
+  "nextTopic": "image_gallery",
+  "prevTopic": "multi_column",
+  "content": "### CSS Nesting\n\n**CSS Nesting** lets you write nested selectors inside parent rules (like Sass).\n\n---\n\n### Basic Nesting\n\n```css\n.card {\n  background: white;\n  padding: 20px;\n  \n  & .title {\n    font-size: 1.5em;\n  }\n  \n  & .body {\n    color: #666;\n  }\n}\n```\n\nWithout nesting:\n```css\n.card { background: white; padding: 20px; }\n.card .title { font-size: 1.5em; }\n.card .body { color: #666; }\n```\n\n---\n\n### The `&` (Nesting Selector)\n\n`&` represents the parent selector:\n\n```css\n.btn {\n  background: blue;\n  color: white;\n  \n  &:hover {\n    background: darkblue;\n  }\n  \n  &.active {\n    background: green;\n  }\n  \n  & .icon {\n    margin-right: 8px;\n  }\n}\n```\n\n---\n\n### Nesting Pseudo-Classes\n\n```css\na {\n  color: blue;\n  \n  &:hover { color: red; }\n  &:focus { outline: 2px solid blue; }\n  &:visited { color: purple; }\n}\n```\n\n---\n\n### Nesting Media Queries\n\n```css\n.card {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 20px;\n  \n  @media (min-width: 768px) {\n    grid-template-columns: 1fr 1fr;\n  }\n  \n  @media (min-width: 1024px) {\n    grid-template-columns: 1fr 1fr 1fr;\n  }\n}\n```\n\n---\n\n### Nesting Combinators\n\n```css\n.card {\n  & > .header { /* Direct child */ }\n  & + .card { /* Adjacent sibling */ }\n  & ~ .card { /* General sibling */ }\n}\n```\n\n---\n\n### @supports Nesting\n\n```css\n.card {\n  display: flex;\n  \n  @supports (display: grid) {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n```\n\n---\n\n### Browser Support\n\nCSS nesting is supported in:\n- Chrome 120+\n- Firefox 117+\n- Safari 17.2+\n- Edge 120+\n\n---\n\n> **Best Practice:** CSS Nesting reduces repetition and keeps related styles together. Don't nest too deeply (max 3 levels).",
+  "codeExample": "<style>\n  .card {\n    background: white;\n    border-radius: 12px;\n    padding: 25px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n    transition: transform 0.3s, box-shadow 0.3s;\n    \n    &:hover {\n      transform: translateY(-4px);\n      box-shadow: 0 8px 30px rgba(0,0,0,0.15);\n    }\n    \n    & .title {\n      font-size: 1.5rem;\n      margin: 0 0 10px 0;\n      color: #333;\n    }\n    \n    & .text {\n      color: #666;\n      line-height: 1.6;\n      margin: 0;\n    }\n    \n    & .badge {\n      display: inline-block;\n      padding: 4px 12px;\n      background: #e8f4ff;\n      color: #3498db;\n      border-radius: 999px;\n      font-size: 0.85rem;\n      margin-top: 15px;\n    }\n  }\n</style>\n\n<div class=\"card\">\n  <h3 class=\"title\">CSS Nesting</h3>\n  <p class=\"text\">This card uses CSS nesting to organize styles. All related styles are grouped inside the .card rule.</p>\n  <span class=\"badge\">Modern CSS</span>\n</div>",
+  "quiz": [
+    {
+      "question": "What symbol represents the parent selector in CSS nesting?",
+      "options": [
+        "$",
+        "@",
+        "&",
+        "#"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Grid Auto",
+  "language": "css",
+  "topic": "grid_auto",
+  "order": 54,
+  "nextTopic": "media_queries",
+  "prevTopic": "grid_areas",
+  "content": "### Grid Auto\n\nControls how the browser automatically places items that aren't explicitly positioned.\n\n---\n\n### Grid Auto Flow\n\n```css\n.container {\n  grid-auto-flow: row;    /* Default - fill rows */\n  grid-auto-flow: column; /* Fill columns */\n  grid-auto-flow: dense;  /* Fill gaps aggressively */\n}\n```\n\n---\n\n### Grid Auto Rows / Columns\n\nControls size of **implicit** tracks (those not defined by `grid-template-*`):\n\n```css\n.container {\n  grid-template-columns: repeat(3, 1fr);\n  grid-auto-rows: 200px;  /* Any auto-created row = 200px */\n  grid-auto-columns: 150px; /* Any auto-created column = 150px */\n}\n```\n\n---\n\n### Auto Flow: Row (Default)\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-auto-flow: row;\n}\n```\n\nItems fill row by row, left to right, top to bottom.\n\n---\n\n### Auto Flow: Column\n\n```css\n.container {\n  display: grid;\n  grid-auto-flow: column;\n  grid-template-rows: repeat(3, 1fr);\n}\n```\n\nItems fill column by column, top to bottom, left to right.\n\n---\n\n### Auto Flow: Dense\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-auto-flow: dense;\n}\n```\n\nFills empty gaps left by larger items. Items may not be in DOM order.\n\n---\n\n### Auto Placement Example\n\n```css\n/* 4 items in 3 column grid */\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-auto-rows: 100px;\n  gap: 10px;\n}\n```\n\nItems 1-3 go in row 1. Item 4 goes in row 2 (implicit, 100px tall).\n\n---\n\n### Explicit vs Implicit Grid\n\n| Grid Type | Defined By |\n|-----------|-----------|\n| **Explicit** | `grid-template-columns`, `grid-template-rows` |\n| **Implicit** | Created automatically for items beyond the template |\n| **Size** | `grid-auto-rows`, `grid-auto-columns` |\n\n---\n\n> **Key Point:** `grid-auto-flow: dense` can reduce whitespace but reorders items visually. Use with caution for content where order matters.",
+  "codeExample": "<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 10px;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 20px;\n    text-align: center;\n  }\n  \n  .wide { grid-column: span 2; }\n  \n  .auto-rows {\n    grid-auto-rows: 80px;\n  }\n  \n  .dense {\n    grid-auto-flow: dense;\n  }\n</style>\n\n<h4>grid-auto-rows: 80px</h4>\n<div class=\"grid auto-rows\">\n  <div class=\"item wide\">Span 2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n  <div class=\"item\">6</div>\n</div>\n\n<h4>grid-auto-flow: dense (fills gaps)</h4>\n<div class=\"grid auto-rows dense\">\n  <div class=\"item wide\">Span 2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n  <div class=\"item\">6</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What does grid-auto-flow: dense do?",
+      "options": [
+        "Makes items larger",
+        "Fills empty gaps aggressively",
+        "Slows down rendering",
+        "Adds more rows"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

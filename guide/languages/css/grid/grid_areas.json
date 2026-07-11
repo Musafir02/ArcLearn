@@ -1,0 +1,22 @@
+{
+  "title": "Grid Areas",
+  "language": "css",
+  "topic": "grid_areas",
+  "order": 53,
+  "nextTopic": "grid_auto",
+  "prevTopic": "grid_gap",
+  "content": "### CSS Grid Areas\n\n**grid-template-areas** creates named areas for visual layout structure.\n\n---\n\n### Define Areas\n\n```css\n.container {\n  display: grid;\n  grid-template-areas:\n    \"header header header\"\n    \"nav    main   aside\"\n    \"footer footer footer\";\n}\n```\n\nEach string = one row. Each word = one column cell.\n\n---\n\n### Assign Items to Areas\n\n```css\nheader { grid-area: header; }\nnav { grid-area: nav; }\nmain { grid-area: main; }\naside { grid-area: aside; }\nfooter { grid-area: footer; }\n```\n\n---\n\n### Empty Cells with Dot\n\n```css\n.container {\n  grid-template-areas:\n    \"header header header\"\n    \".      main   aside\"    /* Dot = empty cell */\n    \"footer footer footer\";\n}\n```\n\nUse `.` for cells you want to leave empty.\n\n---\n\n### Responsive Areas\n\n```css\n/* Mobile: single column */\n@media (max-width: 600px) {\n  .container {\n    grid-template-areas:\n      \"header\"\n      \"nav\"\n      \"main\"\n      \"aside\"\n      \"footer\";\n    grid-template-columns: 1fr;\n  }\n}\n\n/* Desktop: sidebar + main */\n@media (min-width: 601px) {\n  .container {\n    grid-template-areas:\n      \"header header\"\n      \"nav    main\"\n      \"aside  main\"\n      \"footer footer\";\n    grid-template-columns: 200px 1fr;\n  }\n}\n```\n\n---\n\n### Key Rules\n\n- Each area name represents a **rectangle**\n- Area must form a **contiguous rectangle** (no L-shapes)\n- Same name = merged cells\n- `.` = empty cell\n- All rows must have same number of columns\n\n---\n\n### Invalid Examples\n\n```css\n/* INVALID - L-shape not allowed */\ngrid-template-areas:\n  \"a a b\"\n  \"a c b\";  /* 'a' is L-shaped */\n\n/* INVALID - inconsistent columns */\ngrid-template-areas:\n  \"a b\"\n  \"c d e\";  /* Row 1 has 2 cols, row 2 has 3 */\n```\n\n---\n\n> **Best Practice:** Use `grid-template-areas` for page-level layouts. It makes the visual structure immediately readable.",
+  "codeExample": "<style>\n  .page {\n    display: grid;\n    grid-template-areas:\n      \"header header header\"\n      \"sidebar main main\"\n      \"footer footer footer\";\n    grid-template-columns: 200px 1fr 1fr;\n    gap: 10px;\n    height: 350px;\n    background: #f0f0f0;\n    padding: 10px;\n  }\n  \n  .page > * {\n    padding: 20px;\n    color: white;\n    text-align: center;\n  }\n  \n  .header { grid-area: header; background: #2c3e50; }\n  .sidebar { grid-area: sidebar; background: #3498db; }\n  .main { grid-area: main; background: #2ecc71; }\n  .footer { grid-area: footer; background: #34495e; }\n</style>\n\n<div class=\"page\">\n  <div class=\"header\">Header (spans 3 cols)</div>\n  <div class=\"sidebar\">Sidebar</div>\n  <div class=\"main\">Main Content (spans 2 cols)</div>\n  <div class=\"footer\">Footer (spans 3 cols)</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What shape must a grid area be?",
+      "options": [
+        "L-shape",
+        "Any shape",
+        "Contiguous rectangle",
+        "Square only"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

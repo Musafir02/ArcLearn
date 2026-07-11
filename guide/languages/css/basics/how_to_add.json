@@ -1,0 +1,22 @@
+{
+  "title": "How to Add CSS",
+  "language": "css",
+  "topic": "how_to_add",
+  "order": 4,
+  "nextTopic": "comments",
+  "prevTopic": "syntax",
+  "content": "### Three Ways to Add CSS\n\n---\n\n### 1. External CSS\n\nLink a separate `.css` file in `<head>`:\n\n```html\n<head>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n```\n\n**Pros:** Reusable across pages, cached by browser.\n\n---\n\n### 2. Internal CSS\n\nUse `<style>` inside `<head>`:\n\n```html\n<head>\n  <style>\n    body { background: #f0f0f0; }\n    h1 { color: navy; }\n  </style>\n</head>\n```\n\n**Pros:** No extra file, good for single pages.\n\n---\n\n### 3. Inline CSS\n\nAdd `style` attribute directly:\n\n```html\n<p style=\"color: red; font-size: 20px;\">Hello</p>\n```\n\n**Cons:** Hard to maintain, not reusable.\n\n---\n\n### Priority (When They Conflict)\n\n| Priority | Method |\n|----------|--------|\n| 1 (highest) | Inline CSS |\n| 2 | Internal CSS |\n| 3 | External CSS |\n| 4 (lowest) | Browser default |\n\n---\n\n> **Best Practice:** Use external CSS for production. Internal for single pages. Inline only for quick tests.",
+  "codeExample": "<!-- External CSS (recommended) -->\n<link rel=\"stylesheet\" href=\"style.css\">\n\n<!-- Internal CSS -->\n<style>\n  body { font-family: Arial; }\n</style>\n\n<!-- Inline CSS (avoid when possible) -->\n<p style=\"color: red;\">Alert</p>",
+  "quiz": [
+    {
+      "question": "What is the best method for production websites?",
+      "options": [
+        "Inline CSS",
+        "Internal CSS",
+        "External CSS",
+        "JavaScript CSS"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

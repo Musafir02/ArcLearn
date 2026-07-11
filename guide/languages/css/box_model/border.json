@@ -1,0 +1,22 @@
+{
+  "title": "CSS Borders",
+  "language": "css",
+  "topic": "border",
+  "order": 29,
+  "nextTopic": "border_radius",
+  "prevTopic": "margin",
+  "content": "### CSS Borders\n\n**Border** draws a line around an element, between padding and margin.\n\n---\n\n### Border Width\n\n```css\nborder-width: 2px;\nborder-width: thin;   /* 1px */\nborder-width: medium; /* 3px */\nborder-width: thick;  /* 5px */\nborder-width: 2px 5px; /* Per side shorthand */\n```\n\n---\n\n### Border Style\n\n**Required** for border to show:\n\n```css\nborder-style: solid;    /* Solid line */\nborder-style: dashed;   /* Dashed line */\nborder-style: dotted;   /* Dotted line */\nborder-style: double;   /* Double line */\nborder-style: groove;   /* 3D groove */\nborder-style: ridge;    /* 3D ridge */\nborder-style: inset;    /* 3D inset */\nborder-style: outset;   /* 3D outset */\nborder-style: none;     /* No border */\nborder-style: hidden;   /* Same as none for tables */\n```\n\n---\n\n### Border Color\n\n```css\nborder-color: red;\nborder-color: #333;\nborder-color: transparent;\n```\n\n---\n\n### Individual Sides\n\n```css\nborder-top: 2px solid red;\nborder-right: 3px dashed blue;\nborder-bottom: 4px dotted green;\nborder-left: 5px double orange;\n```\n\n---\n\n### Shorthand\n\n```css\n/* width style color */\nborder: 2px solid #333;\n\n/* Side-specific shorthand */\nborder-top: 1px solid black;\n```\n\n---\n\n### Collapse (Tables)\n\n```css\ntable {\n  border-collapse: collapse; /* Single borders */\n  border-collapse: separate; /* Default */\n}\n```\n\n---\n\n### Border vs Outline\n\n| Border | Outline |\n|--------|---------|\n| Part of box model | Not part of box model |\n| Affects element size | Does not affect size |\n| Can set per side | Always all sides |\n| Can be styled individually | Uniform style |\n| Renders inside margin | Renders outside border |\n\n> **Key Point:** `border-style` is required. Without it, border won't render regardless of width and color.",
+  "codeExample": "<style>\n  .solid { border: 3px solid #333; padding: 10px; margin: 5px; }\n  .dashed { border: 3px dashed blue; padding: 10px; margin: 5px; }\n  .dotted { border: 3px dotted red; padding: 10px; margin: 5px; }\n  .double { border: 5px double green; padding: 10px; margin: 5px; }\n  .left-only { border-left: 5px solid orange; padding: 10px; margin: 5px; }\n</style>\n\n<div class=\"solid\">Solid border</div>\n<div class=\"dashed\">Dashed border</div>\n<div class=\"dotted\">Dotted border</div>\n<div class=\"double\">Double border</div>\n<div class=\"left-only\">Left border only</div>",
+  "quiz": [
+    {
+      "question": "Which border property is REQUIRED for a border to show?",
+      "options": [
+        "border-width",
+        "border-style",
+        "border-color",
+        "All three are required"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

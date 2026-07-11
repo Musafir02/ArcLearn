@@ -1,0 +1,22 @@
+{
+  "title": "Math Functions",
+  "language": "css",
+  "topic": "math_functions",
+  "order": 65,
+  "nextTopic": "filters",
+  "prevTopic": "css_variables",
+  "content": "### CSS Math Functions\n\nCSS provides math functions for calculations directly in stylesheets.\n\n---\n\n### Calc()\n\n```css\n.element {\n  width: calc(100% - 40px);\n  height: calc(100vh - 80px);\n  padding: calc(1rem + 10px);\n}\n```\n\n**Rules:**\n- Spaces around `+` and `-` are **required**\n- Spaces around `*` and `/` are optional\n- Can mix different units: `calc(100% - 200px)`\n- Can nest: `calc(100% - calc(40px + 2em))`\n\n---\n\n### Min()\n\n```css\n.element {\n  width: min(100%, 800px);\n  /* Uses the SMALLER value */\n  /* On mobile: 100%. On desktop: 800px */\n}\n\n/* Responsive font */\nfont-size: min(5vw, 48px);\n```\n\n---\n\n### Max()\n\n```css\n.element {\n  width: max(300px, 50%);\n  /* Uses the LARGER value */\n  /* Minimum 300px, but grows if 50% is larger */\n}\n\n/* Minimum padding */\npadding: max(20px, 5%);\n```\n\n---\n\n### Clamp()\n\n```css\n.element {\n  font-size: clamp(1rem, 2.5vw, 2rem);\n  /*    MIN    PREFERRED     MAX    */\n  /* Never smaller than 1rem */\n  /* Preferred: 2.5vw */\n  /* Never larger than 2rem */\n}\n\n/* Responsive width */\nwidth: clamp(300px, 80%, 1200px);\n```\n\n---\n\n### Practical Examples\n\n```css\n/* Fluid typography */\nh1 {\n  font-size: clamp(1.5rem, 4vw, 3rem);\n}\n\np {\n  font-size: clamp(1rem, 1.5vw, 1.25rem);\n}\n\n/* Sidebar with min width */\n.sidebar {\n  width: clamp(200px, 20%, 300px);\n}\n\n/* Full width container with max */\n.container {\n  width: min(100% - 40px, 1200px);\n  margin: 0 auto;\n}\n\n/* Card grid */\n.card {\n  flex: 1 1 clamp(200px, 30%, 400px);\n}\n\n/* Padding that scales */\nsection {\n  padding: clamp(20px, 5vw, 80px);\n}\n```\n\n---\n\n### Round, Mod, Rem\n\n```css\n/* Newer CSS math functions */\nround(2.5)       /* 3 - rounds to nearest integer */\nmod(18, 5)       /* 3 - remainder */\nrem(18, 5)       /* 3 - remainder (same sign as dividend) */\n```\n\n> **Best Practice:** Use `clamp()` for fluid typography. Use `min()` for max-width constraints. Use `calc()` for combining units.",
+  "codeExample": "<style>\n  * { box-sizing: border-box; }\n  \n  .container {\n    width: min(100% - 40px, 960px);\n    margin: 0 auto;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  h1 {\n    font-size: clamp(1.5rem, 4vw, 3rem);\n    margin: 0 0 20px 0;\n  }\n  \n  .card {\n    width: clamp(250px, 30%, 400px);\n    background: white;\n    padding: clamp(15px, 3vw, 30px);\n    border-radius: 8px;\n    box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n    margin: 10px;\n  }\n  \n  .grid {\n    display: flex;\n    flex-wrap: wrap;\n  }\n</style>\n\n<div class=\"container\">\n  <h1>Fluid Typography (clamp)</h1>\n  <div class=\"grid\">\n    <div class=\"card\">Responsive card using clamp()</div>\n    <div class=\"card\">Min 250px, grows, max 400px</div>\n    <div class=\"card\">Resize browser to test</div>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which function sets min, preferred, and max values?",
+      "options": [
+        "calc()",
+        "min()",
+        "max()",
+        "clamp()"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

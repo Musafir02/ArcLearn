@@ -1,0 +1,22 @@
+{
+  "title": "CSS Box Model",
+  "language": "css",
+  "topic": "box_model",
+  "order": 25,
+  "nextTopic": "width_height",
+  "prevTopic": "web_fonts",
+  "content": "### CSS Box Model\n\nEvery HTML element is a **box** with four layers.\n\n---\n\n### The Four Layers\n\n```\n+---------------------------+\n|        MARGIN             |\n|  +---------------------+  |\n|  |      BORDER         |  |\n|  |  +---------------+  |  |\n|  |  |   PADDING     |  |  |\n|  |  |  +---------+  |  |  |\n|  |  |  | CONTENT |  |  |  |\n|  |  |  +---------+  |  |  |\n|  |  +---------------+  |  |\n|  +---------------------+  |\n+---------------------------+\n```\n\n---\n\n### Layer Breakdown\n\n| Layer | Description |\n|-------|-------------|\n| **Content** | The actual text or image |\n| **Padding** | Space between content and border |\n| **Border** | Line around padding |\n| **Margin** | Space outside border (transparent) |\n\n---\n\n### Total Width Calculation\n\nWith default `box-sizing: content-box`:\n\n```css\n/* Element with: */\nwidth: 300px;\npadding: 20px;\nborder: 5px solid black;\nmargin: 10px;\n\n/* Total width = 300 + 20*2 + 5*2 + 10*2 = 370px */\n/* Content = 300px */\n```\n\n---\n\n### Box Sizing (Recommended)\n\n```css\n* {\n  box-sizing: border-box;\n}\n```\n\nWith `border-box`, padding and border are **included** in the width:\n\n```css\n/* Same element with border-box: */\nwidth: 300px;\npadding: 20px;\nborder: 5px solid black;\n\n/* Content = 300 - 40 - 10 = 250px */\n/* Total width = 300px */\n```\n\n---\n\n### Inspecting in DevTools\n\n- Open browser DevTools (F12)\n- Click the **Computed** tab\n- See the full box model visualization\n- Blue = content, Green = padding, Yellow = border, Orange = margin\n\n> **Key Point:** Always use `box-sizing: border-box` globally. It makes sizing predictable.",
+  "codeExample": "<style>\n  * {\n    box-sizing: border-box;\n  }\n  \n  .box {\n    width: 300px;\n    padding: 20px;\n    border: 5px solid #333;\n    margin: 15px;\n    background: lightblue;\n  }\n  \n  .inner {\n    background: white;\n    padding: 10px;\n    text-align: center;\n  }\n</style>\n\n<div class=\"box\">\n  <div class=\"inner\">\n    Content area<br>\n    Width: 250px (300 - 40 padding - 10 border)\n  </div>\n</div>\n<p>Total box width: 300px (including padding and border)</p>",
+  "quiz": [
+    {
+      "question": "What does box-sizing: border-box include in the width?",
+      "options": [
+        "Content only",
+        "Content + padding + border",
+        "Content + padding + border + margin",
+        "Content + margin only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

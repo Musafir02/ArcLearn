@@ -1,0 +1,22 @@
+{
+  "title": "CSS Filters",
+  "language": "css",
+  "topic": "filters",
+  "order": 66,
+  "nextTopic": "lists",
+  "prevTopic": "math_functions",
+  "content": "### CSS Filters\n\n**Filters** apply graphical effects like blur and color shifts to elements.\n\n---\n\n### Filter Functions\n\n| Function | Example | Effect |\n|----------|---------|--------|\n| `blur()` | `blur(5px)` | Gaussian blur |\n| `brightness()` | `brightness(1.5)` | Adjust brightness (0-1 = dark, 1+ = bright) |\n| `contrast()` | `contrast(2)` | Adjust contrast |\n| `drop-shadow()` | `drop-shadow(2px 2px 5px black)` | Shadow following element shape |\n| `grayscale()` | `grayscale(100%)` | Convert to grayscale |\n| `hue-rotate()` | `hue-rotate(90deg)` | Shift colors |\n| `invert()` | `invert(100%)` | Invert colors |\n| `opacity()` | `opacity(50%)` | Transparency |\n| `saturate()` | `saturate(2)` | Increase saturation |\n| `sepia()` | `sepia(100%)` | Sepia tone |\n| `url()` | `url(\"filter.svg#filter\")` | SVG filter reference |\n\n---\n\n### Blur\n\n```css\n.element {\n  filter: blur(4px);\n  filter: blur(0);   /* Sharp */\n}\n```\n\n---\n\n### Brightness & Contrast\n\n```css\n/* Darken image */\nimg.dark {\n  filter: brightness(0.7);\n}\n\n/* Brighten */\nimg.light {\n  filter: brightness(1.3);\n}\n\n/* High contrast */\nimg.high-contrast {\n  filter: contrast(1.5);\n}\n\n/* Both */\nimg.filtered {\n  filter: brightness(1.1) contrast(1.2);\n}\n```\n\n---\n\n### Grayscale & Sepia\n\n```css\n/* Black and white */\nimg.bw {\n  filter: grayscale(100%);\n}\n\n/* Vintage */\nimg.vintage {\n  filter: sepia(60%);\n}\n\n/* Hover to colorize */\nimg.desaturate {\n  filter: grayscale(100%);\n  transition: filter 0.3s;\n}\n\nimg.desaturate:hover {\n  filter: grayscale(0);\n}\n```\n\n---\n\n### Drop Shadow (vs Box Shadow)\n\n```css\n/* Box shadow - follows box shape */\nbox-shadow: 5px 5px 10px black;\n\n/* Drop shadow - follows element outline (alpha-aware) */\nfilter: drop-shadow(5px 5px 10px black);\n```\n\n`drop-shadow()` respects `border-radius`, clipped content, and text outlines.\n\n---\n\n### Hue Rotate\n\n```css\n.filtered {\n  filter: hue-rotate(180deg);  /* Shift all colors by 180 degrees */\n}\n```\n\n---\n\n### Multiple Filters\n\n```css\n.element {\n  filter: brightness(1.2) contrast(1.3) saturate(1.5);\n}\n```\n\n---\n\n### Backdrop Filter\n\n```css\n.element {\n  backdrop-filter: blur(10px);\n  /* Blurs content BEHIND the element */\n  /* Creates glass-morphism effect */\n  background: rgba(255, 255, 255, 0.1);\n}\n```\n\n> **Best Practice:** Use `filter` for image effects and hover states. Use `backdrop-filter` for glass-morphism UI effects.",
+  "codeExample": "<style>\n  img {\n    width: 150px;\n    height: 100px;\n    object-fit: cover;\n    margin: 10px;\n    transition: filter 0.3s;\n  }\n  \n  .blur { filter: blur(3px); }\n  .grayscale { filter: grayscale(100%); }\n  .bright { filter: brightness(1.5); }\n  .sepia { filter: sepia(80%); }\n  .hover-effect { filter: grayscale(100%); }\n  .hover-effect:hover { filter: grayscale(0); }\n  \n  .glass {\n    backdrop-filter: blur(10px);\n    background: rgba(255, 255, 255, 0.2);\n    padding: 30px;\n    border-radius: 12px;\n    color: white;\n    margin: 20px;\n  }\n</style>\n\n<div style=\"background: url('https://via.placeholder.com/800x200') center/cover; padding: 20px;\">\n  <img src=\"https://via.placeholder.com/150x100\" alt=\"Original\">\n  <img class=\"blur\" src=\"https://via.placeholder.com/150x100\" alt=\"Blur\">\n  <img class=\"grayscale\" src=\"https://via.placeholder.com/150x100\" alt=\"BW\">\n  <img class=\"bright\" src=\"https://via.placeholder.com/150x100\" alt=\"Bright\">\n  <img class=\"sepia\" src=\"https://via.placeholder.com/150x100\" alt=\"Sepia\">\n  <img class=\"hover-effect\" src=\"https://via.placeholder.com/150x100\" alt=\"Hover\">\n  <div class=\"glass\">Glassmorphism with backdrop-filter</div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which filter creates a glass-like blur effect on background?",
+      "options": [
+        "blur()",
+        "drop-shadow()",
+        "backdrop-filter: blur()",
+        "opacity()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Text Transform",
+  "language": "css",
+  "topic": "text_transform",
+  "order": 21,
+  "nextTopic": "text_spacing",
+  "prevTopic": "text_decoration",
+  "content": "### CSS Text Transform\n\n**text-transform** controls the capitalization of text.\n\n---\n\n### Values\n\n| Value | Effect | Example |\n|-------|--------|---------|\n| `none` | No change (default) | \"Hello World\" |\n| `uppercase` | ALL CAPS | \"HELLO WORLD\" |\n| `lowercase` | all lowercase | \"hello world\" |\n| `capitalize` | First Letter Of Each Word | \"Hello World\" |\n| `full-width` | Full-width characters | \"Ｈｅｌｌｏ\" |\n| `full-size-kana` | Katakana conversion | |\n\n---\n\n### Uppercase\n\n```css\nh1 {\n  text-transform: uppercase;\n}\n/* Input: \"Welcome to our site\" */\n/* Output: \"WELCOME TO OUR SITE\" */\n```\n\n---\n\n### Lowercase\n\n```css\n.email {\n  text-transform: lowercase;\n}\n/* Input: \"User@Example.COM\" */\n/* Output: \"user@example.com\" */\n```\n\n---\n\n### Capitalize\n\n```css\n.title {\n  text-transform: capitalize;\n}\n/* Input: \"this is a title\" */\n/* Output: \"This Is A Title\" */\n```\n\n---\n\n### Common Use Cases\n\n```css\n/* Force headings to uppercase */\nh2 {\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n/* Normalize email inputs */\ninput[type=\"email\"] {\n  text-transform: lowercase;\n}\n\n/* Style navigation */\n.nav a {\n  text-transform: uppercase;\n  font-size: 0.9rem;\n  font-weight: 600;\n}\n\n/* Keep code lowercase */\ncode {\n  text-transform: none;\n}\n```\n\n---\n\n### Important Notes\n\n- `capitalize` capitalizes **every** word, even short words like \"the\" or \"and\"\n- Text transform does **not** change the actual DOM content\n- The original text remains in the source; only the display changes\n- Screen readers read the original text, not the transformed version\n\n> **Best Practice:** Use `text-transform` for presentational capitalization. Don't rely on it for data - the original value stays unchanged.",
+  "codeExample": "<style>\n  .upper { text-transform: uppercase; }\n  .lower { text-transform: lowercase; }\n  .capitalize { text-transform: capitalize; }\n  .none { text-transform: none; }\n</style>\n\n<p class=\"upper\">This is uppercase</p>\n<p class=\"lower\">THIS IS LOWERCASE</p>\n<p class=\"capitalize\">this is capitalized</p>\n<p class=\"none\">This stays as typed</p>",
+  "quiz": [
+    {
+      "question": "What does text-transform: capitalize do?",
+      "options": [
+        "All letters become capital",
+        "First letter of each word is capitalized",
+        "Only the first word is capitalized",
+        "All letters become lowercase"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

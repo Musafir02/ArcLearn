@@ -1,0 +1,22 @@
+{
+  "title": "CSS Links",
+  "language": "css",
+  "topic": "links",
+  "order": 69,
+  "nextTopic": "buttons",
+  "prevTopic": "tables",
+  "content": "### CSS Links\n\nStyle `<a>` elements in different states.\n\n---\n\n### Link States (Pseudo-Classes)\n\n| State | Pseudo-Class | Description |\n|-------|-------------|-------------|\n| `:link` | Default | Unvisited link |\n| `:visited` | Visited | Already clicked |\n| `:hover` | Hover | Mouse over link |\n| `:active` | Active | Being clicked |\n\n**Order matters - LVHA:** `:link`, `:visited`, `:hover`, `:active`\n\n---\n\n### Basic Link Styling\n\n```css\na {\n  color: #3498db;\n  text-decoration: none;\n  transition: color 0.2s;\n}\n\na:visited {\n  color: #8e44ad;\n}\n\na:hover {\n  color: #2980b9;\n  text-decoration: underline;\n}\n\na:active {\n  color: #1a5276;\n}\n```\n\n---\n\n### Link Underline Styles\n\n```css\na {\n  text-decoration: none;\n  position: relative;\n}\n\na::after {\n  content: \"\";\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 0;\n  height: 2px;\n  background: currentColor;\n  transition: width 0.3s;\n}\n\na:hover::after {\n  width: 100%;\n}\n```\n\n---\n\n### Link Button Style\n\n```css\na.button {\n  display: inline-block;\n  padding: 12px 24px;\n  background: #3498db;\n  color: white;\n  text-decoration: none;\n  border-radius: 6px;\n  transition: background 0.2s, transform 0.2s;\n}\n\na.button:hover {\n  background: #2980b9;\n  transform: translateY(-2px);\n}\n```\n\n---\n\n### External Link Indicator\n\n```css\na[target=\"_blank\"]::after {\n  content: \" \\u2197\";\n  font-size: 0.8em;\n}\n\na[href^=\"http\"]:not([href*=\"mysite.com\"])::after {\n  content: \" \\u2197\";\n}\n```\n\n---\n\n### Accessibility\n\n```css\na:focus-visible {\n  outline: 2px solid #3498db;\n  outline-offset: 2px;\n}\n```\n\n---\n\n> **Best Practice:** Follow LVHA order. Always remove default underline with `text-decoration: none` and add custom hover styles.",
+  "codeExample": "<style>\n  .nav-links a {\n    color: #555;\n    text-decoration: none;\n    padding: 5px 0;\n    margin-right: 20px;\n    position: relative;\n    transition: color 0.2s;\n  }\n  \n  .nav-links a::after {\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 0;\n    height: 2px;\n    background: #3498db;\n    transition: width 0.3s;\n  }\n  \n  .nav-links a:hover {\n    color: #3498db;\n  }\n  \n  .nav-links a:hover::after {\n    width: 100%;\n  }\n  \n  .btn-link {\n    display: inline-block;\n    padding: 10px 24px;\n    background: #3498db;\n    color: white;\n    text-decoration: none;\n    border-radius: 6px;\n    transition: all 0.2s;\n  }\n  \n  .btn-link:hover {\n    background: #2980b9;\n    transform: translateY(-2px);\n    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);\n  }\n</style>\n\n<nav class=\"nav-links\">\n  <a href=\"#\">Home</a>\n  <a href=\"#\">About</a>\n  <a href=\"#\">Services</a>\n  <a href=\"#\">Contact</a>\n</nav>\n<br><br>\n<a href=\"#\" class=\"btn-link\">Button Link</a>",
+  "quiz": [
+    {
+      "question": "What is the correct order for link pseudo-classes?",
+      "options": [
+        ":hover, :link, :visited, :active",
+        ":link, :visited, :hover, :active",
+        ":link, :hover, :visited, :active",
+        ":active, :link, :visited, :hover"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

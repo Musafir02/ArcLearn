@@ -1,0 +1,22 @@
+{
+  "title": "Visibility",
+  "language": "css",
+  "topic": "visibility",
+  "order": 40,
+  "nextTopic": "flexbox",
+  "prevTopic": "clear",
+  "content": "### CSS Visibility\n\n**visibility** controls whether an element is visible but still occupies space.\n\n---\n\n### Values\n\n| Value | Effect |\n|-------|--------|\n| `visible` | Default - element is shown |\n| `hidden` | Element is invisible but **still takes space** |\n| `collapse` | Hides element (mainly for table rows/columns) |\n\n---\n\n### Visibility vs Display\n\n```css\n.hidden {\n  visibility: hidden;  /* Invisible but keeps its space */\n}\n\n.removed {\n  display: none;       /* Completely removed from layout */\n}\n```\n\n**Space difference:**\n- `visibility: hidden` - box is invisible, but space remains\n- `display: none` - box is removed, space is reclaimed\n\n---\n\n### Visibility Hidden\n\n```css\n.element {\n  visibility: hidden;\n}\n/* Element border/background still shows in layout */\n/* Content area is empty but takes space */\n```\n\n---\n\n### Visibility on Children\n\nSetting `visibility: hidden` on a parent hides all children.\nBut a child can override to `visible`:\n\n```css\n.parent {\n  visibility: hidden;\n}\n.child {\n  visibility: visible; /* Shows despite hidden parent */\n}\n```\n\nThis is **not** possible with `display: none`.\n\n---\n\n### Visibility Collapse\n\n```css\n/* For table rows/columns */\ntr.collapsed {\n  visibility: collapse;  /* Row removed, layout adjusts */\n}\n\n/* For non-table elements, behaves like hidden */\ndiv.collapsed {\n  visibility: collapse;  /* Same as hidden */\n}\n```\n\n---\n\n### Practical Applications\n\n```css\n/* Keep spacing while invisible (loading state) */\n.skeleton-loader {\n  visibility: hidden;\n}\n\n/* Show/hide with transition */\n.tooltip {\n  visibility: hidden;\n  opacity: 0;\n  transition: opacity 0.3s;\n}\n\n.tooltip:hover {\n  visibility: visible;\n  opacity: 1;\n}\n\n/* Hidden content that affects layout */\n.hidden-text {\n  visibility: hidden;\n  /* Useful for maintaining layout during loading */\n}\n```\n\n---\n\n> **Key Point:** Use `visibility: hidden` when the space should remain (skeleton loading, placeholders). Use `display: none` when the element should be completely gone.",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    gap: 20px;\n    align-items: flex-start;\n  }\n  \n  .box {\n    width: 100px;\n    height: 100px;\n    background: #3498db;\n    color: white;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n  }\n  \n  .visible-box { visibility: visible; }\n  .hidden-box { visibility: hidden; }\n  .none-box { display: none; }\n</style>\n\n<div class=\"container\">\n  <div class=\"box visible-box\">Visible</div>\n  <div class=\"box hidden-box\">Hidden<br>(space kept)</div>\n  <div class=\"box none-box\">display: none</div>\n  <div class=\"box visible-box\">Next element</div>\n</div>\n<p>Notice: \"Hidden\" box still takes space. \"display: none\" box is gone completely.</p>",
+  "quiz": [
+    {
+      "question": "How does visibility: hidden differ from display: none?",
+      "options": [
+        "No difference",
+        "Hidden keeps space, none removes it",
+        "None keeps space, hidden removes it",
+        "Hidden works on tables only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

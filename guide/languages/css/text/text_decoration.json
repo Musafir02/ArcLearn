@@ -1,0 +1,22 @@
+{
+  "title": "Text Decoration",
+  "language": "css",
+  "topic": "text_decoration",
+  "order": 20,
+  "nextTopic": "text_transform",
+  "prevTopic": "text_align",
+  "content": "### CSS Text Decoration\n\n**text-decoration** adds decorative lines to text.\n\n---\n\n### Decoration Line\n\n```css\ntext-decoration-line: underline;      /* Line below */\ntext-decoration-line: overline;       /* Line above */\ntext-decoration-line: line-through;   /* Line through middle */\ntext-decoration-line: underline overline; /* Multiple */\ntext-decoration-line: none;           /* Remove decoration */\n```\n\n---\n\n### Decoration Style\n\n```css\ntext-decoration-style: solid;    /* Default */\ntext-decoration-style: double;\ntext-decoration-style: dotted;\ntext-decoration-style: dashed;\ntext-decoration-style: wavy;\n```\n\n---\n\n### Decoration Color\n\n```css\ntext-decoration-color: red;\ntext-decoration-color: currentColor; /* Same as text color */\n```\n\n---\n\n### Decoration Thickness\n\n```css\ntext-decoration-thickness: 2px;\ntext-decoration-thickness: 0.1em;\ntext-decoration-thickness: auto;  /* Default */\n```\n\n---\n\n### Shorthand\n\n```css\n/* line style color thickness */\ntext-decoration: underline wavy red 2px;\ntext-decoration: underline;\ntext-decoration: line-through dotted blue;\n```\n\n---\n\n### Common Uses\n\n```css\n/* Remove link underline */\na {\n  text-decoration: none;\n}\n\n/* Show underline on hover */\na:hover {\n  text-decoration: underline;\n}\n\n/* Strikethrough for deleted text */\ndel {\n  text-decoration: line-through;\n}\n\n/* Fancy heading */\nh1 {\n  text-decoration: overline underline double #333 3px;\n}\n```\n\n---\n\n### text-underline-offset\n\nControls the gap between text and underline:\n\n```css\na {\n  text-underline-offset: 4px;\n}\n```\n\n---\n\n### text-underline-position\n\n```css\ntext-underline-position: under;  /* Below descenders */\ntext-underline-position: auto;   /* Browser default */\n```\n\n> **Best Practice:** Use `text-decoration: none` on links, then add underline on `:hover` for interactive feedback.",
+  "codeExample": "<style>\n  a { text-decoration: none; color: blue; }\n  a:hover { text-decoration: underline wavy blue; }\n  \n  .strike { text-decoration: line-through; }\n  .fancy { text-decoration: overline underline double red 2px; }\n  .wavy-underline { text-decoration: underline wavy green; }\n  \n  del { text-decoration: line-through; }\n  ins { text-decoration: none; /* already none */ }\n</style>\n\n<a href=\"#\">Link with hover underline</a><br>\n<span class=\"strike\">Strikethrough text</span><br>\n<span class=\"fancy\">Double overline underline</span><br>\n<span class=\"wavy-underline\">Wavy underline</span>",
+  "quiz": [
+    {
+      "question": "Which value removes decoration from links?",
+      "options": [
+        "text-decoration: remove",
+        "text-decoration: none",
+        "text-decoration: hide",
+        "text-decoration: off"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

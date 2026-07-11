@@ -1,0 +1,22 @@
+{
+  "title": "Image Gallery",
+  "language": "css",
+  "topic": "image_gallery",
+  "order": 80,
+  "nextTopic": "advanced_effects",
+  "prevTopic": "nesting",
+  "content": "### Image Gallery\n\nBuild responsive image galleries with CSS.\n\n---\n\n### Grid Gallery\n\n```css\n.gallery {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  gap: 15px;\n}\n\n.gallery img {\n  width: 100%;\n  height: 250px;\n  object-fit: cover;\n  border-radius: 8px;\n}\n```\n\n---\n\n### Masonry Gallery with Columns\n\n```css\n.masonry {\n  columns: 3 250px;\n  column-gap: 15px;\n}\n\n.masonry img {\n  width: 100%;\n  margin-bottom: 15px;\n  border-radius: 8px;\n  break-inside: avoid;\n}\n```\n\n---\n\n### Flexbox Gallery\n\n```css\n.flex-gallery {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n}\n\n.flex-gallery img {\n  flex: 1 1 200px;\n  height: 200px;\n  object-fit: cover;\n}\n```\n\n---\n\n### Gallery with Hover Overlay\n\n```css\n.gallery-item {\n  position: relative;\n  overflow: hidden;\n  border-radius: 8px;\n}\n\n.gallery-item img {\n  width: 100%;\n  height: 250px;\n  object-fit: cover;\n  transition: transform 0.3s;\n}\n\n.gallery-item:hover img {\n  transform: scale(1.1);\n}\n\n.gallery-item .overlay {\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  opacity: 0;\n  transition: opacity 0.3s;\n  color: white;\n  font-size: 1.2rem;\n}\n\n.gallery-item:hover .overlay {\n  opacity: 1;\n}\n```\n\n---\n\n### Aspect Ratio Gallery\n\n```css\n.gallery {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 10px;\n}\n\n.gallery img {\n  width: 100%;\n  aspect-ratio: 4 / 3;\n  object-fit: cover;\n  border-radius: 8px;\n}\n\n/* Featured image spans 2 columns */\n.gallery img.featured {\n  grid-column: span 2;\n  grid-row: span 2;\n}\n```\n\n---\n\n> **Best Practice:** Use `object-fit: cover` for consistent image sizes. Use `aspect-ratio` for predictable dimensions.",
+  "codeExample": "<style>\n  .gallery {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 12px;\n  }\n  \n  .gallery-item {\n    position: relative;\n    overflow: hidden;\n    border-radius: 8px;\n    cursor: pointer;\n  }\n  \n  .gallery-item img {\n    width: 100%;\n    height: 200px;\n    object-fit: cover;\n    display: block;\n    transition: transform 0.4s;\n  }\n  \n  .gallery-item:hover img {\n    transform: scale(1.1);\n  }\n  \n  .gallery-item .overlay {\n    position: absolute;\n    inset: 0;\n    background: rgba(0, 0, 0, 0.4);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0;\n    transition: opacity 0.3s;\n    color: white;\n    font-size: 1.5rem;\n    font-weight: bold;\n  }\n  \n  .gallery-item:hover .overlay {\n    opacity: 1;\n  }\n  \n  .gallery-item.featured {\n    grid-column: span 2;\n    grid-row: span 2;\n  }\n  \n  .gallery-item.featured img {\n    height: 412px;\n  }\n</style>\n\n<div class=\"gallery\">\n  <div class=\"gallery-item featured\">\n    <img src=\"https://via.placeholder.com/400x400\" alt=\"Featured\">\n    <div class=\"overlay\">Featured</div>\n  </div>\n  <div class=\"gallery-item\">\n    <img src=\"https://via.placeholder.com/300x200\" alt=\"Image 1\">\n    <div class=\"overlay\">View</div>\n  </div>\n  <div class=\"gallery-item\">\n    <img src=\"https://via.placeholder.com/300x200\" alt=\"Image 2\">\n    <div class=\"overlay\">View</div>\n  </div>\n  <div class=\"gallery-item\">\n    <img src=\"https://via.placeholder.com/300x200\" alt=\"Image 3\">\n    <div class=\"overlay\">View</div>\n  </div>\n  <div class=\"gallery-item\">\n    <img src=\"https://via.placeholder.com/300x200\" alt=\"Image 4\">\n    <div class=\"overlay\">View</div>\n  </div>\n</div>",
+  "quiz": [
+    {
+      "question": "Which property makes images fill consistently sized areas?",
+      "options": [
+        "object-fit: fill",
+        "object-fit: cover",
+        "object-fit: contain",
+        "object-fit: scale-down"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

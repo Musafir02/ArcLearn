@@ -1,0 +1,22 @@
+{
+  "title": "Flex Items",
+  "language": "css",
+  "topic": "flex_items",
+  "order": 43,
+  "nextTopic": "flex_direction",
+  "prevTopic": "flex_container",
+  "content": "### Flex Items\n\nProperties that apply to **children** of a flex container.\n\n---\n\n### Item Properties\n\n| Property | Purpose |\n|----------|---------|\n| `flex` | Shorthand for grow, shrink, basis |\n| `flex-grow` | How much to grow relative to siblings |\n| `flex-shrink` | How much to shrink when space is tight |\n| `flex-basis` | Initial size before growing/shrinking |\n| `align-self` | Override `align-items` for this item |\n| `order` | Reorder items (default 0) |\n\n---\n\n### Flex Grow\n\n```css\n.item {\n  flex-grow: 0;  /* Default - won't grow */\n  flex-grow: 1;  /* Takes remaining space */\n  flex-grow: 2;  /* Takes twice the space */\n}\n```\n\nItems with `flex-grow: 1` share remaining space equally.\n\n---\n\n### Flex Shrink\n\n```css\n.item {\n  flex-shrink: 1;  /* Default - can shrink */\n  flex-shrink: 0;  /* Won't shrink */\n}\n```\n\n---\n\n### Flex Basis\n\n```css\n.item {\n  flex-basis: 200px;  /* Starting size */\n  flex-basis: 50%;    /* Percentage */\n  flex-basis: auto;   /* Default - based on content */\n}\n```\n\n---\n\n### Flex Shorthand\n\n```css\n/* grow shrink basis */\nflex: 1;              /* flex: 1 1 0% */\nflex: none;           /* flex: 0 0 auto */\nflex: 0 0 200px;      /* Fixed 200px */\nflex: 1 1 300px;      /* Grow, shrink, start at 300px */\nflex: 0 1 auto;       /* Default */\n```\n\n---\n\n### Align Self\n\n```css\n.container {\n  align-items: flex-start; /* All items at top */\n}\n\n.item-special {\n  align-self: center; /* This one in middle */\n}\n```\n\nOverrides the container's `align-items`.\n\n---\n\n### Order\n\n```css\n.item:nth-child(1) { order: 3; }\n.item:nth-child(2) { order: 1; } /* First visually */\n.item:nth-child(3) { order: 2; }\n```\n\nDoes not affect DOM order, only visual order.\n\n> **Best Practice:** Use `flex: 1` for equal-width items. Use `flex: none` for fixed-size items.",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    background: #f0f0f0;\n    padding: 20px;\n    gap: 10px;\n  }\n  \n  .item { padding: 15px; text-align: center; color: white; }\n  \n  .grow-1 { flex: 1; background: #3498db; }\n  .grow-2 { flex: 2; background: #e74c3c; }\n  .fixed { flex: 0 0 150px; background: #2ecc71; }\n  .centered { align-self: center; background: #f39c12; }\n</style>\n\n<div class=\"container\">\n  <div class=\"item grow-1\">flex: 1</div>\n  <div class=\"item grow-2\">flex: 2</div>\n  <div class=\"item fixed\">flex: 0 0 150px</div>\n  <div class=\"item centered\">align-self: center</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What does flex: 1 mean?",
+      "options": [
+        "Width: 1px",
+        "flex-grow: 1, all other defaults",
+        "flex: 1 1 0%",
+        "flex: 1 0 auto"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started",
+  "language": "css",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Three Ways to Add CSS\n\n---\n\n### 1. External CSS (Best Practice)\n\nCreate a `.css` file and link it in `<head>`:\n\n```html\n<head>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n```\n\n`styles.css`:\n```css\nbody {\n  background-color: lightblue;\n}\n```\n\n---\n\n### 2. Internal CSS (Single Page)\n\n```html\n<head>\n  <style>\n    body { background-color: lightblue; }\n  </style>\n</head>\n```\n\n---\n\n### 3. Inline CSS (Specific Element)\n\n```html\n<p style=\"color: red;\">Red text</p>\n```\n\n---\n\n### Cascading Order\n\nWhen multiple styles conflict, this order wins:\n\n1. Inline styles (highest priority)\n2. Internal styles\n3. External styles\n4. Browser defaults (lowest priority)\n\n---\n\n> **Best Practice:** Use **external CSS** for real projects. Keep style separate from content.",
+  "codeExample": "<!-- external styles.css -->\n<head>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>Styled with external CSS</h1>\n  <p style=\"color: red;\">Inline style overrides</p>\n</body>",
+  "quiz": [
+    {
+      "question": "Which method has the highest priority?",
+      "options": [
+        "External CSS",
+        "Internal CSS",
+        "Inline CSS",
+        "Browser default"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

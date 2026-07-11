@@ -1,0 +1,22 @@
+{
+  "title": "CSS Tables",
+  "language": "css",
+  "topic": "tables",
+  "order": 68,
+  "nextTopic": "links",
+  "prevTopic": "lists",
+  "content": "### CSS Tables\n\nStyle HTML tables with borders, spacing, and striping.\n\n---\n\n### Table Properties\n\n| Property | Purpose |\n|----------|---------|\n| `border-collapse` | Single or separate borders |\n| `border-spacing` | Distance between cell borders |\n| `caption-side` | Caption position (top/bottom) |\n| `empty-cells` | Show/hide empty cell borders |\n| `table-layout` | Algorithm for table width |\n\n---\n\n### Border Collapse\n\n```css\ntable {\n  border-collapse: collapse;  /* Single borders (recommended) */\n  border-collapse: separate; /* Default - double borders */\n}\n```\n\n---\n\n### Basic Table Styling\n\n```css\ntable {\n  width: 100%;\n  border-collapse: collapse;\n}\n\nth, td {\n  padding: 12px 16px;\n  text-align: left;\n  border-bottom: 1px solid #ddd;\n}\n\nth {\n  background: #f5f5f5;\n  font-weight: bold;\n}\n```\n\n---\n\n### Striped Rows\n\n```css\ntr:nth-child(even) {\n  background: #f9f9f9;\n}\n\ntr:hover {\n  background: #f0f0f0;\n}\n```\n\n---\n\n### Table Layout\n\n```css\ntable {\n  table-layout: auto;   /* Default - size based on content */\n  table-layout: fixed;  /* Equal columns, faster rendering */\n}\n```\n\n`table-layout: fixed` gives more predictable widths, especially for large tables.\n\n---\n\n### Responsive Tables\n\n```css\n.table-container {\n  overflow-x: auto;  /* Horizontal scroll on small screens */\n}\n```\n\nWrap table in `<div class=\"table-container\">`.\n\n---\n\n### Complete Example\n\n```css\ntable {\n  width: 100%;\n  border-collapse: collapse;\n  font-size: 15px;\n}\n\nth {\n  background: #2c3e50;\n  color: white;\n  padding: 12px 15px;\n  text-align: left;\n}\n\ntd {\n  padding: 10px 15px;\n  border-bottom: 1px solid #ddd;\n}\n\ntr:nth-child(even) {\n  background: #f8f8f8;\n}\n\ntr:hover {\n  background: #e8f4ff;\n}\n```\n\n> **Best Practice:** Always use `border-collapse: collapse`. Use `overflow-x: auto` for responsive tables.",
+  "codeExample": "<style>\n  .styled-table {\n    width: 100%;\n    border-collapse: collapse;\n    font-family: Arial, sans-serif;\n  }\n  \n  .styled-table th {\n    background: #2c3e50;\n    color: white;\n    padding: 12px 15px;\n    text-align: left;\n  }\n  \n  .styled-table td {\n    padding: 10px 15px;\n    border-bottom: 1px solid #ddd;\n  }\n  \n  .styled-table tr:nth-child(even) {\n    background: #f9f9f9;\n  }\n  \n  .styled-table tr:hover {\n    background: #e8f4ff;\n  }\n</style>\n\n<table class=\"styled-table\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Email</th>\n      <th>Status</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>John Doe</td>\n      <td>john@example.com</td>\n      <td>Active</td>\n    </tr>\n    <tr>\n      <td>Jane Smith</td>\n      <td>jane@example.com</td>\n      <td>Inactive</td>\n    </tr>\n    <tr>\n      <td>Bob Wilson</td>\n      <td>bob@example.com</td>\n      <td>Active</td>\n    </tr>\n  </tbody>\n</table>",
+  "quiz": [
+    {
+      "question": "Which property merges table borders into single lines?",
+      "options": [
+        "border-collapse: merge",
+        "border-collapse: collapse",
+        "border-spacing: 0",
+        "border: none"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

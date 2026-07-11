@@ -1,0 +1,22 @@
+{
+  "title": "CSS Opacity",
+  "language": "css",
+  "topic": "opacity",
+  "order": 16,
+  "nextTopic": "text",
+  "prevTopic": "gradients",
+  "content": "### CSS Opacity & Transparency\n\n**Opacity** controls how transparent an element is.\n\n---\n\n### The `opacity` Property\n\n```css\ndiv {\n  opacity: 0.5; /* 0.0 (invisible) to 1.0 (fully visible) */\n}\n```\n\n| Value | Effect |\n|-------|--------|\n| `1` | Fully opaque (default) |\n| `0.8` | Slightly transparent |\n| `0.5` | Half transparent |\n| `0.2` | Very transparent |\n| `0` | Fully invisible |\n\n---\n\n### Important: Children Inherit Opacity\n\nWhen you set `opacity` on a parent, **all children** become transparent too.\n\n```css\n.parent {\n  opacity: 0.5; /* Children also 50% transparent */\n}\n```\n\n---\n\n### Solution: Use RGBA/HSLA Instead\n\nTo make only the **background** transparent without affecting children:\n\n```css\n.parent {\n  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */\n  /* Children stay fully opaque */\n}\n\n/* Or with hex alpha */\n.parent {\n  background: #00000080;\n}\n```\n\n---\n\n### Hover Effects with Opacity\n\n```css\nimg {\n  opacity: 1;\n  transition: opacity 0.3s;\n}\n\nimg:hover {\n  opacity: 0.7;\n}\n```\n\n---\n\n### Image Transparency\n\n```css\nimg {\n  opacity: 0.5;\n  filter: alpha(opacity=50); /* IE8 and earlier */\n}\n```\n\n---\n\n### Text Transparency\n\n```css\np {\n  color: rgba(0, 0, 0, 0.6); /* Text at 60% opacity */\n}\n```\n\n> **Tip:** Use `rgba()` for backgrounds to avoid inheriting transparency to children. Use `opacity` when you want the whole element (including children) to fade.",
+  "codeExample": "<style>\n  .box {\n    width: 200px;\n    padding: 20px;\n    text-align: center;\n    margin: 10px;\n  }\n  \n  .opacity-50 {\n    background: blue;\n    color: white;\n    opacity: 0.5;\n  }\n  \n  .rgba-bg {\n    background: rgba(0, 0, 255, 0.5);\n    color: black;\n  }\n  \n  .hover-fade {\n    background: #333;\n    color: white;\n    opacity: 1;\n    transition: opacity 0.3s;\n  }\n  \n  .hover-fade:hover {\n    opacity: 0.6;\n  }\n</style>\n\n<div class=\"box opacity-50\">Opacity 0.5 (children fade too)</div>\n<div class=\"box rgba-bg\">RGBA background (text stays solid)</div>\n<div class=\"box hover-fade\">Hover to fade</div>",
+  "quiz": [
+    {
+      "question": "What happens to children when parent has opacity: 0.5?",
+      "options": [
+        "Children stay fully opaque",
+        "Children become 50% transparent too",
+        "Children become invisible",
+        "Children get double opacity"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

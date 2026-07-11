@@ -1,0 +1,22 @@
+{
+  "title": "CSS Position",
+  "language": "css",
+  "topic": "position",
+  "order": 36,
+  "nextTopic": "z_index",
+  "prevTopic": "display",
+  "content": "### CSS Position\n\n**position** controls how an element is placed in the document.\n\n---\n\n### Position Values\n\n| Value | Description |\n|-------|-------------|\n| `static` | Default - normal document flow |\n| `relative` | Offset from normal position |\n| `absolute` | Positioned relative to nearest positioned ancestor |\n| `fixed` | Positioned relative to viewport |\n| `sticky` | Toggles between relative and fixed |\n\n---\n\n### Positioning Properties\n\n```css\n/* Used with non-static positioning */\ntop: 10px;\nright: 20px;\nbottom: 30px;\nleft: 40px;\n```\n\n---\n\n### Static (Default)\n\n```css\nposition: static;\n/* top/left/right/bottom have NO effect */\n```\n\n---\n\n### Relative\n\n```css\nposition: relative;\ntop: 20px;\nleft: 20px;\n/* Shifted from normal position, original space preserved */\n```\n\n---\n\n### Absolute\n\n```css\nposition: absolute;\ntop: 0;\nleft: 0;\n/* Removed from flow, positioned relative to nearest positioned ancestor */\n```\n\nIf no ancestor has `position: relative/absolute/fixed/sticky`, it positions relative to `<html>`.\n\n---\n\n### Fixed\n\n```css\nposition: fixed;\ntop: 0;\nwidth: 100%;\n/* Stays in place even when scrolling */\n```\n\n---\n\n### Sticky\n\n```css\nposition: sticky;\ntop: 0;\n/* Behaves as relative until scroll reaches top:0, then becomes fixed */\n```\n\n---\n\n### Common Patterns\n\n```css\n/* Badge on card */\n.card {\n  position: relative;\n}\n.badge {\n  position: absolute;\n  top: -10px;\n  right: -10px;\n}\n\n/* Fixed navbar */\n.navbar {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 100;\n}\n\n/* Sticky header */\n.section-header {\n  position: sticky;\n  top: 0;\n  background: white;\n  z-index: 10;\n}\n```\n\n> **Key Point:** `absolute` positions relative to the **nearest positioned ancestor** (not the parent!). Set `position: relative` on parent containers to create a positioning context.",
+  "codeExample": "<style>\n  .container {\n    position: relative;\n    width: 300px;\n    height: 200px;\n    background: #f0f0f0;\n    margin: 40px;\n  }\n  \n  .absolute {\n    position: absolute;\n    bottom: 10px;\n    right: 10px;\n    background: #ff6b6b;\n    padding: 10px;\n  }\n  \n  .relative {\n    position: relative;\n    top: 20px;\n    left: 20px;\n    background: #4ecdc4;\n    padding: 10px;\n  }\n  \n  .fixed-demo {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    background: #333;\n    color: white;\n    padding: 10px;\n  }\n</style>\n\n<div class=\"container\">\n  Container (relative)\n  <div class=\"absolute\">Absolute</div>\n</div>\n<div class=\"relative\">Relative (shifted 20px)</div>\n<div class=\"fixed-demo\">Fixed position</div>",
+  "quiz": [
+    {
+      "question": "Which value positions relative to the nearest positioned ancestor?",
+      "options": [
+        "relative",
+        "absolute",
+        "fixed",
+        "sticky"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

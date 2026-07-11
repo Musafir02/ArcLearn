@@ -1,0 +1,22 @@
+{
+  "title": "Flex Direction",
+  "language": "css",
+  "topic": "flex_direction",
+  "order": 44,
+  "nextTopic": "flex_wrap",
+  "prevTopic": "flex_items",
+  "content": "### Flex Direction\n\n**flex-direction** defines the main axis direction.\n\n---\n\n### Values\n\n| Value | Direction | Main Axis |\n|-------|-----------|-----------|\n| `row` | Left to right (default) | Horizontal |\n| `row-reverse` | Right to left | Horizontal (reversed) |\n| `column` | Top to bottom | Vertical |\n| `column-reverse` | Bottom to top | Vertical (reversed) |\n\n---\n\n### Row (Default)\n\n```css\n.container {\n  display: flex;\n  flex-direction: row;\n}\n```\n\nItems flow horizontally from left to right.\n`justify-content` controls horizontal alignment.\n`align-items` controls vertical alignment.\n\n---\n\n### Row-Reverse\n\n```css\n.container {\n  display: flex;\n  flex-direction: row-reverse;\n}\n```\n\nItems flow right to left. Visual order is reversed.\n\n---\n\n### Column\n\n```css\n.container {\n  display: flex;\n  flex-direction: column;\n}\n```\n\nItems stack top to bottom.\n`justify-content` controls **vertical** alignment.\n`align-items` controls **horizontal** alignment.\n\n---\n\n### Column-Reverse\n\n```css\n.container {\n  display: flex;\n  flex-direction: column-reverse;\n}\n```\n\nItems stack bottom to top. Visual order reversed.\n\n---\n\n### When to Use Each\n\n| Direction | Best For |\n|-----------|----------|\n| `row` | Navigation bars, button groups, cards in a row |\n| `column` | Vertical lists, stacked cards, sidebars |\n| `row-reverse` | RTL layouts, back-to-front ordering |\n| `column-reverse` | Latest-first lists (timelines) |\n\n---\n\n### Impact on Properties\n\n| In `row` | In `column` |\n|----------|-------------|\n| `justify-content` = horizontal | `justify-content` = vertical |\n| `align-items` = vertical | `align-items` = horizontal |\n| `width` matters | `height` matters |\n| `flex-basis` = width | `flex-basis` = height |\n\n> **Key Point:** Changing `flex-direction` swaps which axis is main vs cross. `justify-content` always works on the main axis.",
+  "codeExample": "<style>\n  .container {\n    display: flex;\n    background: #f0f0f0;\n    padding: 20px;\n    gap: 10px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 15px;\n    text-align: center;\n  }\n  \n  .row { flex-direction: row; }\n  .column {\n    flex-direction: column;\n    height: 300px;\n    width: 150px;\n  }\n</style>\n\n<h4>flex-direction: row</h4>\n<div class=\"container row\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n\n<h4>flex-direction: column</h4>\n<div class=\"container column\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>",
+  "quiz": [
+    {
+      "question": "In flex-direction: column, what does justify-content control?",
+      "options": [
+        "Horizontal alignment",
+        "Vertical alignment",
+        "Diagonal alignment",
+        "It has no effect"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

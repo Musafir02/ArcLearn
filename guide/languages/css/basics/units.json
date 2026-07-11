@@ -1,0 +1,22 @@
+{
+  "title": "CSS Units",
+  "language": "css",
+  "topic": "units",
+  "order": 6,
+  "nextTopic": "specificity",
+  "prevTopic": "comments",
+  "content": "### CSS Units\n\nCSS has several units for specifying sizes, spacing, and lengths.\n\n---\n\n### Absolute Units (Fixed Size)\n\n| Unit | Name | Equivalent |\n|------|------|------------|\n| `px` | Pixels | 1px = 1/96th inch |\n| `pt` | Points | 1pt = 1/72nd inch |\n| `cm` | Centimeters | |\n| `mm` | Millimeters | |\n| `in` | Inches | 1in = 96px |\n| `pc` | Picas | 1pc = 12pt |\n\n**Use `px` for screen. Avoid `pt`, `cm`, `in` for web.**\n\n---\n\n### Relative Units (Recommended)\n\n| Unit | Relative To |\n|------|-------------|\n| `em` | Font size of parent element |\n| `rem` | Font size of root element (`html`) |\n| `%` | Parent element's size |\n| `vw` | 1% of viewport width |\n| `vh` | 1% of viewport height |\n| `vmin` | 1% of smaller viewport dimension |\n| `vmax` | 1% of larger viewport dimension |\n| `ch` | Width of character \"0\" |\n| `ex` | Height of character \"x\" |\n\n---\n\n### em vs rem\n\n```css\nhtml { font-size: 16px; }\n\n.parent {\n  font-size: 2em;   /* 32px (2 * 16px) */\n}\n\n.child-em {\n  font-size: 2em;   /* 64px (2 * 32px from parent) */\n}\n\n.child-rem {\n  font-size: 2rem;  /* 32px (2 * 16px from root) */\n}\n```\n\n---\n\n### Viewport Units\n\n```css\n.fullscreen {\n  width: 100vw;    /* Full viewport width */\n  height: 100vh;   /* Full viewport height */\n}\n\n.half {\n  width: 50vw;     /* Half the viewport */\n}\n```\n\n---\n\n> **Best Practice:** Use `rem` for font sizes, `%` for widths, `px` for borders/shadows, `em` for padding/margin relative to font size.",
+  "codeExample": "html {\n  font-size: 16px; /* 1rem = 16px */\n}\n\n.box-px {\n  width: 200px;\n  padding: 10px;\n  border: 1px solid black;\n}\n\n.box-rem {\n  width: 20rem;  /* 320px */\n  padding: 1rem; /* 16px */\n}\n\n.box-vw {\n  width: 50vw;   /* Half the screen */\n  height: 50vh;  /* Half the screen height */\n}\n\n.box-percent {\n  width: 80%;    /* 80% of parent */\n}",
+  "quiz": [
+    {
+      "question": "What does 1rem equal by default?",
+      "options": [
+        "12px",
+        "16px",
+        "10px",
+        "14px"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Media Queries",
+  "language": "css",
+  "topic": "media_queries",
+  "order": 55,
+  "nextTopic": "container_queries",
+  "prevTopic": "grid_auto",
+  "content": "### Media Queries\n\n**Media queries** apply CSS based on device characteristics (screen size, orientation, etc.).\n\n---\n\n### Syntax\n\n```css\n@media media-type and (condition) {\n  /* CSS rules */\n}\n```\n\n---\n\n### Media Types\n\n```css\n@media screen { /* For screens (default) */ }\n@media print { /* For printers */ }\n@media all { /* All devices */ }\n@media speech { /* Screen readers */ }\n```\n\n---\n\n### Common Breakpoints\n\n```css\n/* Mobile-first approach */\n\n/* Default styles (mobile) */\n\n/* Tablet */\n@media (min-width: 768px) { }\n\n/* Desktop */\n@media (min-width: 1024px) { }\n\n/* Large desktop */\n@media (min-width: 1280px) { }\n```\n\n---\n\n### Logical Operators\n\n```css\n/* AND */\n@media (min-width: 600px) and (max-width: 1024px) { }\n\n/* OR (comma separated) */\n@media (max-width: 600px), (orientation: landscape) { }\n\n/* NOT */\n@media not print { }\n\n/* Only (for older browsers) */\n@media only screen and (min-width: 768px) { }\n```\n\n---\n\n### Media Features\n\n| Feature | Example |\n|---------|---------|\n| `width` | `(min-width: 768px)` |\n| `height` | `(max-height: 600px)` |\n| `orientation` | `(orientation: portrait)` |\n| `aspect-ratio` | `(aspect-ratio: 16/9)` |\n| `resolution` | `(min-resolution: 2dppx)` |\n| `hover` | `(hover: hover)` |\n| `prefers-color-scheme` | `(prefers-color-scheme: dark)` |\n| `prefers-reduced-motion` | `(prefers-reduced-motion: reduce)` |\n\n---\n\n### Dark Mode\n\n```css\n@media (prefers-color-scheme: dark) {\n  body {\n    background: #1a1a1a;\n    color: #f0f0f0;\n  }\n}\n```\n\n---\n\n### Print Styles\n\n```css\n@media print {\n  nav, footer { display: none; }\n  body { font-size: 12pt; }\n  a[href]::after { content: \" (\" attr(href) \")\"; }\n}\n```\n\n> **Best Practice:** Use **mobile-first** (`min-width`) queries for cleaner, simpler CSS.",
+  "codeExample": "<style>\n  body { font-family: Arial, sans-serif; }\n  \n  .container {\n    display: grid;\n    gap: 15px;\n    padding: 20px;\n  }\n  \n  .card {\n    background: #3498db;\n    color: white;\n    padding: 30px;\n    text-align: center;\n    border-radius: 8px;\n  }\n  \n  /* Mobile: 1 column */\n  .container { grid-template-columns: 1fr; }\n  \n  /* Tablet: 2 columns */\n  @media (min-width: 768px) {\n    .container { grid-template-columns: repeat(2, 1fr); }\n  }\n  \n  /* Desktop: 3 columns */\n  @media (min-width: 1024px) {\n    .container { grid-template-columns: repeat(3, 1fr); }\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"card\">Card 1</div>\n  <div class=\"card\">Card 2</div>\n  <div class=\"card\">Card 3</div>\n</div>\n<p>Resize browser - cards go from 1 to 2 to 3 columns.</p>",
+  "quiz": [
+    {
+      "question": "What approach uses min-width media queries?",
+      "options": [
+        "Desktop-first",
+        "Mobile-first",
+        "Print-first",
+        "Tablet-first"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

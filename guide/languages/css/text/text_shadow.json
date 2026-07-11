@@ -1,0 +1,22 @@
+{
+  "title": "Text Shadow",
+  "language": "css",
+  "topic": "text_shadow",
+  "order": 23,
+  "nextTopic": "web_fonts",
+  "prevTopic": "text_spacing",
+  "content": "### CSS Text Shadow\n\n**text-shadow** adds shadow effects to text.\n\n---\n\n### Syntax\n\n```css\ntext-shadow: offset-x offset-y blur-radius color;\n```\n\n| Value | Required | Description |\n|-------|----------|-------------|\n| `offset-x` | Yes | Horizontal offset (positive = right) |\n| `offset-y` | Yes | Vertical offset (positive = down) |\n| `blur-radius` | No | Blur amount (default 0 = sharp) |\n| `color` | No | Shadow color (default = text color) |\n\n---\n\n### Basic Examples\n\n```css\n/* Simple shadow */\ntext-shadow: 2px 2px gray;\n\n/* Blurred shadow */\ntext-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);\n\n/* No offset, just blur (glow) */\ntext-shadow: 0 0 10px blue;\n```\n\n---\n\n### Multiple Shadows\n\nSeparate with commas:\n\n```css\ntext-shadow: \n  1px 1px 2px black,\n  0 0 25px blue,\n  0 0 5px darkblue;\n```\n\n---\n\n### Common Effects\n\n```css\n/* Clean emboss effect */\ntext-shadow: 1px 1px 0 white, -1px -1px 0 #333;\n\n/* Glow effect */\ntext-shadow: 0 0 10px #0ff, 0 0 20px #0ff;\n\n/* 3D text */\ntext-shadow: \n  1px 1px 0 #ccc,\n  2px 2px 0 #999,\n  3px 3px 0 #666,\n  4px 4px 0 #333;\n\n/* Subtle shadow for readability */\ntext-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);\n\n/* Letterpress effect */\ntext-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);\n```\n\n---\n\n### Neon Glow\n\n```css\n.neon {\n  color: #fff;\n  text-shadow:\n    0 0 7px #fff,\n    0 0 10px #fff,\n    0 0 21px #fff,\n    0 0 42px #0fa,\n    0 0 82px #0fa,\n    0 0 92px #0fa,\n    0 0 102px #0fa,\n    0 0 151px #0fa;\n}\n```\n\n> **Best Practice:** Use subtle shadows for better readability on images. Overuse of text-shadow can hurt performance and readability.",
+  "codeExample": "<style>\n  h1 {\n    font-size: 3rem;\n  }\n  .simple { text-shadow: 2px 2px 4px gray; }\n  .glow { text-shadow: 0 0 15px #0ff, 0 0 30px #0ff; }\n  .neon {\n    color: #fff;\n    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09, 0 0 82px #f09, 0 0 92px #f09;\n  }\n</style>\n\n<h1 class=\"simple\">Simple Shadow</h1>\n<h1 class=\"glow\" style=\"color: cyan;\">Glow Effect</h1>\n<h1 class=\"neon\" style=\"background: #111; padding: 20px;\">NEON TEXT</h1>",
+  "quiz": [
+    {
+      "question": "Which parameter is OPTIONAL in text-shadow?",
+      "options": [
+        "X offset",
+        "Y offset",
+        "Color",
+        "Both blur-radius and color"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

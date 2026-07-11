@@ -1,0 +1,22 @@
+{
+  "title": "Grid Gap",
+  "language": "css",
+  "topic": "grid_gap",
+  "order": 52,
+  "nextTopic": "grid_areas",
+  "prevTopic": "grid_template",
+  "content": "### CSS Grid Gap\n\n**gap** controls spacing between grid cells.\n\n---\n\n### Gap Properties\n\n```css\n.container {\n  display: grid;\n  gap: 20px;              /* Both row and column */\n  row-gap: 10px;          /* Row spacing only */\n  column-gap: 20px;       /* Column spacing only */\n}\n```\n\n---\n\n### Row Gap\n\n```css\n.container {\n  grid-template-rows: 1fr 1fr 1fr;\n  row-gap: 30px;\n}\n/* 30px vertical space between rows */\n```\n\n---\n\n### Column Gap\n\n```css\n.container {\n  grid-template-columns: repeat(3, 1fr);\n  column-gap: 20px;\n}\n/* 20px horizontal space between columns */\n```\n\n---\n\n### Gap Shorthand\n\n```css\n/* One value - same for rows and columns */\ngap: 20px;\n\n/* Two values - row column */\ngap: 10px 30px;\n```\n\n---\n\n### Gap vs Margin\n\n| Gap | Margin |\n|-----|--------|\n| Applied to container | Applied to items |\n| Only between items | Also on outer edges |\n| Cleaner syntax | Can be negative |\n| No collapsing | Collapses vertically |\n\n```css\n/* Using gap */\n.container { display: grid; gap: 20px; }\n\n/* Same with margin */\n.item { margin: 10px; }\n/* But adds 10px on outer edges too */\n```\n\n---\n\n### Gap and Grid Functions\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 15px;\n  padding: 20px;\n}\n```\n\n---\n\n### Old vs Modern Syntax\n\n| Old (deprecated) | Modern |\n|-----------------|--------|\n| `grid-gap` | `gap` |\n| `grid-row-gap` | `row-gap` |\n| `grid-column-gap` | `column-gap` |\n\n---\n\n> **Best Practice:** Always use `gap` instead of margins on grid items. It's cleaner and doesn't create edge spacing issues.",
+  "codeExample": "<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 30px;\n    text-align: center;\n  }\n  \n  .no-gap { gap: 0; }\n  .with-gap { gap: 20px; }\n  .uneven {\n    gap: 5px 25px;\n    margin-top: 20px;\n  }\n</style>\n\n<h4>gap: 20px</h4>\n<div class=\"grid with-gap\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n  <div class=\"item\">6</div>\n</div>\n\n<h4>gap: 5px 25px (row column)</h4>\n<div class=\"grid uneven\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n  <div class=\"item\">6</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What is the modern property name for grid-gap?",
+      "options": [
+        "grid-gap",
+        "gridgap",
+        "gap",
+        "cell-gap"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Grid Container",
+  "language": "css",
+  "topic": "grid_container",
+  "order": 49,
+  "nextTopic": "grid_items",
+  "prevTopic": "grid",
+  "content": "### Grid Container\n\nThe **grid container** defines the grid structure for its children.\n\n---\n\n### Creating a Grid Container\n\n```css\n.container {\n  display: grid;        /* Block-level grid */\n  display: inline-grid; /* Inline-level grid */\n}\n```\n\n---\n\n### Container Properties\n\n| Property | Purpose |\n|----------|---------|\n| `grid-template-columns` | Define column sizes |\n| `grid-template-rows` | Define row sizes |\n| `grid-template-areas` | Named grid areas |\n| `grid-template` | Shorthand for columns, rows, areas |\n| `gap` | Spacing between cells |\n| `column-gap` | Column spacing only |\n| `row-gap` | Row spacing only |\n| `justify-items` | Horizontal item alignment within cells |\n| `align-items` | Vertical item alignment within cells |\n| `justify-content` | Horizontal alignment of entire grid |\n| `align-content` | Vertical alignment of entire grid |\n| `grid-auto-flow` | How auto-placed items are inserted |\n\n---\n\n### Grid Template Columns\n\n```css\n/* Fixed sizes */\ngrid-template-columns: 200px 300px 200px;\n\n/* Fractional units */\ngrid-template-columns: 1fr 2fr 1fr;\n\n/* Mix */\ngrid-template-columns: 200px 1fr 200px;\n\n/* Repeat function */\ngrid-template-columns: repeat(3, 1fr);\n\n/* Auto sizing */\ngrid-template-columns: auto 1fr auto;\n\n/* Minmax */\ngrid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n```\n\n---\n\n### The `fr` Unit\n\n`fr` = fraction of available space. Like `flex-grow` for grid.\n\n```css\ngrid-template-columns: 1fr 2fr 1fr;\n/* 1 + 2 + 1 = 4 parts. 25%, 50%, 25% */\n```\n\n---\n\n### Repeat Function\n\n```css\n/* Without repeat */\ngrid-template-columns: 1fr 1fr 1fr 1fr;\n\n/* With repeat */\ngrid-template-columns: repeat(4, 1fr);\n\n/* Repeat multiple patterns */\ngrid-template-columns: repeat(2, 200px 1fr);\n```\n\n---\n\n### Minmax Function\n\n```css\ngrid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n/* Each column at least 250px, grows equally if space */\n```\n\n---\n\n### Auto-Fit vs Auto-Fill\n\n```css\n/* Auto-fill: creates empty tracks */\ngrid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n\n/* Auto-fit: collapses empty tracks */\ngrid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n```\n\n> **Best Practice:** Use `repeat(auto-fit, minmax(minSize, 1fr))` for fully responsive grids without media queries.",
+  "codeExample": "<style>\n  .grid {\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    gap: 15px;\n    background: #f0f0f0;\n    padding: 20px;\n  }\n  \n  .item {\n    background: #3498db;\n    color: white;\n    padding: 30px;\n    text-align: center;\n  }\n  \n  .responsive-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));\n    gap: 10px;\n    margin-top: 20px;\n    background: #e0e0e0;\n    padding: 20px;\n  }\n</style>\n\n<div class=\"grid\">\n  <div class=\"item\">1fr</div>\n  <div class=\"item\">2fr</div>\n  <div class=\"item\">1fr</div>\n</div>\n\n<div class=\"responsive-grid\">\n  <div class=\"item\">Auto</div>\n  <div class=\"item\">Responsive</div>\n  <div class=\"item\">Grid</div>\n  <div class=\"item\">Items</div>\n</div>",
+  "quiz": [
+    {
+      "question": "What does the fr unit represent in Grid?",
+      "options": [
+        "Fixed size",
+        "Fraction of available space",
+        "Font relative",
+        "Frame size"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

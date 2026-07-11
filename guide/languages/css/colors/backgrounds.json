@@ -1,0 +1,22 @@
+{
+  "title": "CSS Backgrounds",
+  "language": "css",
+  "topic": "backgrounds",
+  "order": 14,
+  "nextTopic": "gradients",
+  "prevTopic": "colors",
+  "content": "### CSS Backgrounds\n\nBackground properties add colors, images, and effects behind elements.\n\n---\n\n### Background Properties\n\n| Property | Description |\n|----------|-------------|\n| `background-color` | Solid background color |\n| `background-image` | Background image(s) |\n| `background-repeat` | How image repeats |\n| `background-position` | Image position |\n| `background-size` | Image size |\n| `background-attachment` | Scroll behavior |\n| `background-clip` | Area the background covers |\n| `background-origin` | Positioning area |\n| `background` | Shorthand for all |\n\n---\n\n### Background Color\n\n```css\ndiv {\n  background-color: lightblue;\n}\n```\n\n---\n\n### Background Image\n\n```css\ndiv {\n  background-image: url(\"image.jpg\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n}\n```\n\n---\n\n### Background Repeat\n\n```css\nbackground-repeat: repeat;      /* Default - tiles */\nbackground-repeat: no-repeat;   /* No tiling */\nbackground-repeat: repeat-x;    /* Horizontal only */\nbackground-repeat: repeat-y;    /* Vertical only */\n```\n\n---\n\n### Background Size\n\n```css\nbackground-size: cover;      /* Covers entire area (crops) */\nbackground-size: contain;    /* Fits inside area (no crop) */\nbackground-size: 200px 100px; /* Exact dimensions */\nbackground-size: 50%;       /* Percentage of element */\n```\n\n---\n\n### Background Shorthand\n\n```css\ndiv {\n  background: #333 url(\"img.jpg\") no-repeat center/cover;\n}\n\n/* Order: color image repeat position/size */\n```\n\n---\n\n### Multiple Backgrounds\n\n```css\ndiv {\n  background: \n    url(\"overlay.png\") no-repeat center,\n    url(\"pattern.jpg\") repeat,\n    linear-gradient(to bottom, #000, #fff);\n}\n```\n\n> **Best Practice:** Always set `background-color` as fallback when using background images.",
+  "codeExample": "<style>\n  .card {\n    width: 300px;\n    height: 200px;\n    color: white;\n    padding: 20px;\n    background: #1a1a2e url(\"https://via.placeholder.com/300x200\") no-repeat center/cover;\n  }\n  \n  .pattern {\n    background-color: #f0f0f0;\n    background-image: radial-gradient(circle, #ccc 1px, transparent 1px);\n    background-size: 20px 20px;\n  }\n</style>\n\n<div class=\"card\">\n  <h3>Card with background</h3>\n</div>\n<div class=\"pattern\" style=\"height: 100px;\">\n  Pattern background\n</div>",
+  "quiz": [
+    {
+      "question": "Which value makes a background image cover the entire area?",
+      "options": [
+        "contain",
+        "cover",
+        "fill",
+        "auto"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "CSS Selectors",
+  "language": "css",
+  "topic": "selectors",
+  "order": 8,
+  "nextTopic": "combinator_selectors",
+  "prevTopic": "specificity",
+  "content": "### CSS Selectors\n\n**Selectors** target HTML elements to apply styles.\n\n---\n\n### Basic Selectors\n\n| Selector | Example | Targets |\n|----------|---------|---------|\n| **Element** | `p` | All `<p>` elements |\n| **Class** | `.intro` | Elements with `class=\"intro\"` |\n| **ID** | `#logo` | Element with `id=\"logo\"` |\n| **Universal** | `*` | All elements |\n| **Group** | `h1, h2` | Multiple selectors |\n\n---\n\n### Examples\n\n```css\n/* Element selector */\np {\n  color: blue;\n}\n\n/* Class selector */\n.highlight {\n  background-color: yellow;\n}\n\n/* ID selector */\n#header {\n  font-size: 24px;\n}\n\n/* Universal selector */\n* {\n  margin: 0;\n  padding: 0;\n}\n\n/* Group selector */\nh1, h2, h3 {\n  font-weight: bold;\n}\n```\n\n---\n\n### Combining Selectors\n\n```css\n/* Element with class */\np.important {\n  color: red;\n}\n\n/* Multiple classes */\n.box.dark {\n  background: #333;\n  color: white;\n}\n\n/* Descendant */\ndiv p {\n  margin: 10px;\n}\n```\n\n---\n\n### Nesting (Modern CSS)\n\n```css\n.card {\n  background: white;\n  \n  & .title {\n    font-size: 1.5em;\n  }\n  \n  & .body {\n    padding: 1rem;\n  }\n}\n```\n\n> **Best Practice:** Use classes (`.name`) for reusable styles. Use IDs (`#name`) for unique elements only.",
+  "codeExample": "<style>\n  /* Element */\n  h1 { color: navy; }\n  \n  /* Class */\n  .card {\n    border: 1px solid #ddd;\n    padding: 20px;\n  }\n  \n  /* ID */\n  #main-title {\n    text-align: center;\n  }\n  \n  /* Combined */\n  p.warning {\n    color: red;\n    font-weight: bold;\n  }\n</style>\n\n<h1 id=\"main-title\">Welcome</h1>\n<div class=\"card\">\n  <p class=\"warning\">This is a warning</p>\n</div>",
+  "quiz": [
+    {
+      "question": "Which selector targets elements by class?",
+      "options": [
+        "#name",
+        ".name",
+        "*",
+        "name"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

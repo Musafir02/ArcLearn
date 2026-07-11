@@ -1,0 +1,22 @@
+{
+  "title": "CSS Clear",
+  "language": "css",
+  "topic": "clear",
+  "order": 39,
+  "nextTopic": "visibility",
+  "prevTopic": "float",
+  "content": "### CSS Clear\n\n**clear** controls whether an element can sit next to floated elements.\n\n---\n\n### Clear Values\n\n| Value | Description |\n|-------|-------------|\n| `none` | Default - allows float on both sides |\n| `left` | Cleared below left floats |\n| `right` | Cleared below right floats |\n| `both` | Cleared below both left and right floats |\n| `inline-start` | Cleared below start floats |\n| `inline-end` | Cleared below end floats |\n\n---\n\n### Basic Example\n\n```css\n.box {\n  clear: both;  /* Moves below any floated elements */\n}\n```\n\n---\n\n### Clear: Left\n\n```css\n.element {\n  clear: left;\n  /* Element goes below left-floated elements */\n}\n```\n\n---\n\n### Clear: Right\n\n```css\n.element {\n  clear: right;\n  /* Element goes below right-floated elements */\n}\n```\n\n---\n\n### Clear: Both\n\n```css\n.footer {\n  clear: both;\n  /* Always below all floated elements */\n}\n```\n\n---\n\n### The Clearfix Hack\n\nTo fix parent collapse from floated children:\n\n```css\n.clearfix::after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n```\n\nUsage:\n```html\n<div class=\"clearfix\">\n  <div style=\"float: left;\">Left</div>\n  <div style=\"float: right;\">Right</div>\n</div>\n<!-- Parent now has height! -->\n```\n\n---\n\n### Modern Alternative\n\n```css\n.parent {\n  display: flow-root;  /* Creates block formatting context */\n}\n```\n\n`display: flow-root` is the modern way to contain floats without clearfix.\n\n---\n\n### When to Use Clear\n\n| Scenario | Use |\n|----------|-----|\n| Footer after floated content | `clear: both` |\n| Next section after image float | `clear: both` |\n| Fix collapsed parent | `.clearfix::after` or `display: flow-root` |\n| Specific side clearance | `clear: left` or `clear: right` |\n\n> **Note:** With modern Flexbox/Grid layouts, float and clear are rarely needed except for text wrapping around images.",
+  "codeExample": "<style>\n  .container {\n    width: 400px;\n    background: #f0f0f0;\n    padding: 15px;\n  }\n  \n  .float-left {\n    float: left;\n    width: 100px;\n    height: 60px;\n    background: #ff6b6b;\n    margin: 5px;\n    text-align: center;\n    line-height: 60px;\n    color: white;\n  }\n  \n  .float-right {\n    float: right;\n    width: 100px;\n    height: 60px;\n    background: #4ecdc4;\n    margin: 5px;\n    text-align: center;\n    line-height: 60px;\n    color: white;\n  }\n  \n  .cleared {\n    clear: both;\n    background: #333;\n    color: white;\n    padding: 10px;\n    margin-top: 10px;\n  }\n  \n  .clearfix::after {\n    content: \"\";\n    display: table;\n    clear: both;\n  }\n</style>\n\n<div class=\"container clearfix\">\n  <div class=\"float-left\">Float L</div>\n  <div class=\"float-left\">Float L</div>\n  <div class=\"float-right\">Float R</div>\n</div>\n<div class=\"cleared\">This div has clear:both - below all floats</div>",
+  "quiz": [
+    {
+      "question": "Which clear value moves element below all floats?",
+      "options": [
+        "clear: left",
+        "clear: right",
+        "clear: both",
+        "clear: all"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

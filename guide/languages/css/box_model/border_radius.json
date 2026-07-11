@@ -1,0 +1,22 @@
+{
+  "title": "Border Radius",
+  "language": "css",
+  "topic": "border_radius",
+  "order": 30,
+  "nextTopic": "box_sizing",
+  "prevTopic": "border",
+  "content": "### CSS Border Radius\n\n**border-radius** rounds the corners of an element.\n\n---\n\n### Basic Usage\n\n```css\n.box {\n  border-radius: 10px;  /* All corners same */\n}\n```\n\n---\n\n### Individual Corners\n\n```css\nborder-top-left-radius: 10px;\nborder-top-right-radius: 20px;\nborder-bottom-right-radius: 10px;\nborder-bottom-left-radius: 20px;\n```\n\n---\n\n### Shorthand (1-4 Values)\n\n```css\n/* All four corners */\nborder-radius: 10px;\n\n/* Top-left & bottom-right | Top-right & bottom-left */\nborder-radius: 10px 30px;\n\n/* Top-left | Top-right & bottom-left | Bottom-right */\nborder-radius: 10px 30px 50px;\n\n/* Top-left | Top-right | Bottom-right | Bottom-left */\nborder-radius: 10px 20px 30px 40px;\n```\n\n---\n\n### Circles and Ovals\n\n```css\n/* Perfect circle (needs equal width/height) */\n.circle {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n}\n\n/* Pill shape */\n.pill {\n  border-radius: 9999px;  /* Large value = pill */\n}\n\n/* Elliptical corners */\n.ellipse {\n  border-radius: 30px / 15px;  /* horizontal / vertical */\n}\n```\n\n---\n\n### Percentage vs Pixels\n\n| Unit | Behavior |\n|------|----------|\n| `px` | Fixed radius, independent of size |\n| `%` | Based on element dimensions |\n| `50%` | Creates circle/ellipse |\n| `9999px` | Large value = pill shape |\n\n---\n\n### Common Patterns\n\n```css\n/* Circular avatar */\n.avatar {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n}\n\n/* Rounded card */\n.card {\n  border-radius: 12px;\n  overflow: hidden;\n}\n\n/* Button with pill shape */\n.btn {\n  border-radius: 9999px;\n  padding: 10px 24px;\n}\n\n/* Squircle (Apple-style) */\n.squircle {\n  border-radius: 20% / 25%;\n}\n```\n\n---\n\n> **Note:** `overflow: hidden` is needed with `border-radius` to clip child elements and images.",
+  "codeExample": "<style>\n  .box {\n    width: 100px;\n    height: 100px;\n    background: #3498db;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    color: white;\n    margin: 10px;\n  }\n  \n  .r10 { border-radius: 10px; }\n  .circle { border-radius: 50%; }\n  .pill { border-radius: 9999px; width: 150px; }\n  .tl-only { border-top-left-radius: 30px; }\n</style>\n\n<div class=\"box r10\">10px</div>\n<div class=\"box circle\">50%</div>\n<div class=\"box pill\">Pill</div>\n<div class=\"box tl-only\">Top Left</div>",
+  "quiz": [
+    {
+      "question": "Which value creates a perfect circle?",
+      "options": [
+        "border-radius: 100%",
+        "border-radius: 50%",
+        "border-radius: 100px",
+        "border-radius: round"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
