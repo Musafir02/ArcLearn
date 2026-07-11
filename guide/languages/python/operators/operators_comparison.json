@@ -1,0 +1,22 @@
+{
+  "title": "Comparison Operators",
+  "language": "python",
+  "topic": "operators_comparison",
+  "order": 22,
+  "nextTopic": "operators_logical",
+  "prevTopic": "ternary_operator",
+  "content": "### Comparison Operators\n\nComparison operators compare values and return a **boolean** (`True` or `False`).\n\n---\n\n### Operator Table\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `==` | Equal | `5 == 5` | `True` |\n| `!=` | Not equal | `5 != 5` | `False` |\n| `>` | Greater than | `5 > 3` | `True` |\n| `<` | Less than | `5 < 3` | `False` |\n| `>=` | Greater than or equal | `5 >= 5` | `True` |\n| `<=` | Less than or equal | `5 <= 3` | `False` |\n\n---\n\n### Common Mistakes\n\n```python\nx = 10\n\nif x = 5:   # WRONG! = is assignment, not comparison\n    print(\"This causes an error\")\n\nif x == 5:  # CORRECT\n    print(\"This checks equality\")\n```\n\n> **Remember:** `=` assigns, `==` compares.\n\n---\n\n### String Comparisons\n\nStrings compare **lexicographically** (alphabetical order):\n\n```python\nprint(\"apple\" < \"banana\")  # True (a comes before b)\nprint(\"A\" < \"a\")            # True (uppercase A has lower ASCII)\n```\n\n---\n\n### Chained Comparisons\n\nPython allows chaining comparisons:\n\n```python\nx = 5\nprint(1 < x < 10)   # True\nprint(1 < x < 4)    # False\n```\n\nThis is cleaner than `x > 1 and x < 10`.\n\n---\n\n> **Key Point:** Comparison operators always return a `bool` (`True` or `False`).",
+  "codeExample": "x = 10\ny = 5\n\nprint(f\"{x} == {y}: {x == y}\")\nprint(f\"{x} != {y}: {x != y}\")\nprint(f\"{x} > {y}: {x > y}\")\nprint(f\"{x} < {y}: {x < y}\")\nprint(f\"{x} >= {y}: {x >= y}\")\nprint(f\"{x} <= {y}: {x <= y}\")",
+  "quiz": [
+    {
+      "question": "Which operator checks if two values are equal?",
+      "options": [
+        "=",
+        "==",
+        "!=",
+        "equal"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Statements",
+  "language": "python",
+  "topic": "statements",
+  "order": 4,
+  "nextTopic": "output",
+  "prevTopic": "syntax",
+  "content": "### What are Statements?\n\nA **statement** is a single instruction that Python can execute.\n\n---\n\n### Simple Statements\n\n```python\nprint(\"Hello\")      # Print statement\nx = 5               # Assignment statement\ny = x + 3           # Expression statement\n```\n\nStatements usually end when the **line ends**. No semicolon needed!\n\n---\n\n### Multiple Statements on One Line\n\nYou can use `;` to put multiple statements on one line:\n\n```python\nx = 5; y = 10; print(x + y)\n```\n\n> **Not recommended** -- it hurts readability.\n\n---\n\n### Statement Continuation\n\nFor long statements, use `\\` or parentheses:\n\n```python\n# Using backslash\ntotal = 1 + 2 + 3 + \\\n        4 + 5 + 6\n\n# Using parentheses (preferred)\ntotal = (1 + 2 + 3 +\n         4 + 5 + 6)\n```\n\n---\n\n### Execution Order\n\nStatements execute **one by one, top to bottom**:\n\n```python\nprint(\"First\")\nprint(\"Second\")\nprint(\"Third\")\n# Output: First, Second, Third\n```\n\nThis is called **sequential execution**.\n\n---\n\n> **Key Point:** Python does not require semicolons at the end of statements. The line break is enough.",
+  "codeExample": "x = 5\ny = 10\nz = x + y\nprint(z)\n\n# Multi-line statement\nmessage = (\"This is a very long string \"\n           \"that spans multiple lines\")\nprint(message)",
+  "quiz": [
+    {
+      "question": "How does Python know when a statement ends?",
+      "options": [
+        "With a semicolon (;)",
+        "When the line ends",
+        "With a period (.)",
+        "With a colon (:)"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

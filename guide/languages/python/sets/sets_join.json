@@ -1,0 +1,22 @@
+{
+  "title": "Join Sets",
+  "language": "python",
+  "topic": "sets_join",
+  "order": 59,
+  "nextTopic": "frozenset",
+  "prevTopic": "sets_loop",
+  "content": "### Joining Sets\n\n---\n\n### Union (`|` or `.union()`)\n\nAll elements from both sets:\n\n```python\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\nprint(set1 | set2)         # {1, 2, 3, 4, 5}\nprint(set1.union(set2))    # {1, 2, 3, 4, 5}\n```\n\n---\n\n### Intersection (`&` or `.intersection()`)\n\nElements in **both** sets:\n\n```python\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\nprint(set1 & set2)              # {3}\nprint(set1.intersection(set2))  # {3}\n```\n\n---\n\n### Difference (`-` or `.difference()`)\n\nElements in first set but **not** in second:\n\n```python\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\nprint(set1 - set2)             # {1, 2}\nprint(set1.difference(set2))   # {1, 2}\n```\n\n---\n\n### Symmetric Difference (`^` or `.symmetric_difference()`)\n\nElements in **either** set, but **not both**:\n\n```python\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\nprint(set1 ^ set2)                       # {1, 2, 4, 5}\nprint(set1.symmetric_difference(set2))   # {1, 2, 4, 5}\n```\n\n---\n\n### Venn Diagram Summary\n\n| Operation | Result | Symbol |\n|-----------|--------|--------|\n| Union | All items | `|` |\n| Intersection | Items in both | `&` |\n| Difference | Items in A not in B | `-` |\n| Symmetric | Items in either, not both | `^` |\n\n> **Key Point:** Set operations are very fast (O(len(smaller_set))) and are a powerful tool for data processing.",
+  "codeExample": "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\n\nprint(\"Union:\", set1 | set2)\nprint(\"Intersection:\", set1 & set2)\nprint(\"Difference (set1 - set2):\", set1 - set2)\nprint(\"Symmetric diff:\", set1 ^ set2)\n\n# In-place update\nset1 |= {6, 7}\nprint(\"After |= update:\", set1)",
+  "quiz": [
+    {
+      "question": "Which operator gives elements present in either set but not both?",
+      "options": [
+        "| (union)",
+        "& (intersection)",
+        "- (difference)",
+        "^ (symmetric difference)"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

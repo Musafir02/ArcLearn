@@ -1,0 +1,22 @@
+{
+  "title": "Class Methods",
+  "language": "python",
+  "topic": "class_methods",
+  "order": 95,
+  "nextTopic": "inheritance",
+  "prevTopic": "class_properties",
+  "content": "### Types of Methods\n\nPython has three types of methods:\n\n---\n\n### Instance Methods\n\nRegular methods that work on an instance (have `self`):\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n    \n    def greet(self):  # Instance method\n        return f\"Hello, {self.name}\"\n```\n\n---\n\n### Class Methods (`@classmethod`)\n\nWork on the class itself (have `cls`):\n\n```python\nclass Person:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Person.count += 1\n    \n    @classmethod\n    def total_people(cls):\n        return f\"Total: {cls.count}\"\n\nprint(Person.total_people())  # Total: 0\np1 = Person(\"Alice\")\nprint(Person.total_people())  # Total: 1\n```\n\n---\n\n### Static Methods (`@staticmethod`)\n\nDo not have access to instance or class:\n\n```python\nclass Calculator:\n    @staticmethod\n    def add(a, b):\n        return a + b\n    \n    @staticmethod\n    def multiply(a, b):\n        return a * b\n\nprint(Calculator.add(5, 3))       # 8\nprint(Calculator.multiply(5, 3))  # 15\n```\n\n---\n\n### Comparison\n\n| Method Type | First Param | Access |\n|-------------|-------------|--------|\n| Instance | `self` | Instance + class |\n| Class | `cls` | Class only |\n| Static | None | Nothing (utility) |\n\n---\n\n### Class Method as Alternative Constructor\n\n```python\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    @classmethod\n    def from_birth_year(cls, name, year):\n        return cls(name, 2024 - year)\n\np = Person.from_birth_year(\"Alice\", 1999)\nprint(p.age)  # 25\n```\n\n> **Best Practice:** Use instance methods for normal behavior, class methods for factory methods, static methods for utility functions related to the class.",
+  "codeExample": "class MyClass:\n    class_var = 0\n    \n    def __init__(self, value):\n        self.value = value\n        MyClass.class_var += 1\n    \n    def instance_method(self):\n        return f\"Instance: {self.value}\"\n    \n    @classmethod\n    def class_method(cls):\n        return f\"Class var: {cls.class_var}\"\n    \n    @staticmethod\n    def static_method(x):\n        return x * 2\n\na = MyClass(10)\nb = MyClass(20)\n\nprint(a.instance_method())\nprint(MyClass.class_method())\nprint(MyClass.static_method(5))",
+  "quiz": [
+    {
+      "question": "What decorator defines a class method?",
+      "options": [
+        "@staticmethod",
+        "@classmethod",
+        "@instancemethod",
+        "@method"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

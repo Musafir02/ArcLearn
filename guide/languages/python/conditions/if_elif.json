@@ -1,0 +1,22 @@
+{
+  "title": "Elif",
+  "language": "python",
+  "topic": "if_elif",
+  "order": 72,
+  "nextTopic": "if_else",
+  "prevTopic": "conditions",
+  "content": "### The `elif` Keyword\n\n**`elif`** is short for \"else if\" -- it checks another condition if the previous ones were `False`.\n\n---\n\n### Multiple Conditions\n\n```python\ntemperature = 25\n\nif temperature > 30:\n    print(\"Hot day\")\nelif temperature > 20:\n    print(\"Nice day\")\nelif temperature > 10:\n    print(\"Cool day\")\n```\n\n---\n\n### How It Works\n\n- First `if` is checked\n- If `False`, first `elif` is checked\n- If still `False`, next `elif` is checked\n- Stops at the **first** condition that is `True`\n\n```python\nscore = 85\n\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")  # This runs\nelif score >= 70:\n    print(\"C\")  # Skipped (already matched)\n```\n\n---\n\n### You Can Have Many `elif`\n\n```python\nif condition1:\n    # code\nelif condition2:\n    # code\nelif condition3:\n    # code\nelif condition4:\n    # code\n```\n\n---\n\n> **Remember:** `elif` is Python's version of `else if` in other languages. There is no `elseif` or `elsif`.",
+  "codeExample": "temperature = 25\n\nif temperature > 30:\n    print(\"Hot day\")\nelif temperature > 20:\n    print(\"Nice day\")\nelif temperature > 10:\n    print(\"Cool day\")\n\nscore = 85\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelif score >= 70:\n    print(\"C\")",
+  "quiz": [
+    {
+      "question": "What does elif stand for?",
+      "options": [
+        "else if",
+        "element if",
+        "elevation if",
+        "elide if"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

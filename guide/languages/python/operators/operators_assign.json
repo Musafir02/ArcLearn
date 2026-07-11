@@ -1,0 +1,22 @@
+{
+  "title": "Assignment Operators",
+  "language": "python",
+  "topic": "operators_assign",
+  "order": 20,
+  "nextTopic": "ternary_operator",
+  "prevTopic": "operators_arithmetic",
+  "content": "### Assignment Operators\n\nAssignment operators **assign values** to variables.\n\n---\n\n### Basic Assignment\n\n| Operator | Example | Equivalent To |\n|----------|---------|---------------|\n| `=` | `x = 5` | `x = 5` |\n| `+=` | `x += 3` | `x = x + 3` |\n| `-=` | `x -= 3` | `x = x - 3` |\n| `*=` | `x *= 3` | `x = x * 3` |\n| `/=` | `x /= 3` | `x = x / 3` |\n| `%=` | `x %= 3` | `x = x % 3` |\n| `//=` | `x //= 3` | `x = x // 3` |\n| `**=` | `x **= 3` | `x = x ** 3` |\n| `&=` | `x &= 3` | `x = x & 3` |\n| `|=` | `x |= 3` | `x = x | 3` |\n| `^=` | `x ^= 3` | `x = x ^ 3` |\n| `>>=` | `x >>= 3` | `x = x >> 3` |\n| `<<=` | `x <<= 3` | `x = x << 3` |\n\n---\n\n### Shorthand in Action\n\n```python\nx = 10\nx += 5   # x is now 15\nx -= 3   # x is now 12\nx *= 2   # x is now 24\nx /= 4   # x is now 6.0\nx //= 2  # x is now 3.0\n```\n\n---\n\n### Augmented Assignment\n\nThese are called **augmented assignment** operators. They combine an operation with assignment.\n\n```python\ncount = 0\ncount += 1  # Increment by 1\ncount += 1  # Now 2\nprint(count)  # 2\n```\n\n---\n\n> **Best Practice:** Compound assignment operators make code more concise and are preferred over `x = x + 1`.",
+  "codeExample": "x = 10\nprint(\"Initial:\", x)\n\nx += 5\nprint(\"After += 5:\", x)\n\nx -= 3\nprint(\"After -= 3:\", x)\n\nx *= 2\nprint(\"After *= 2:\", x)\n\nx /= 4\nprint(\"After /= 4:\", x)",
+  "quiz": [
+    {
+      "question": "What does x += 5 do?",
+      "options": [
+        "Sets x to 5",
+        "Adds 5 to x",
+        "Multiplies x by 5",
+        "Subtracts 5 from x"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

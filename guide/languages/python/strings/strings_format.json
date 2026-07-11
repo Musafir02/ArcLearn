@@ -1,0 +1,22 @@
+{
+  "title": "String Format",
+  "language": "python",
+  "topic": "strings_format",
+  "order": 32,
+  "nextTopic": "string_formatting",
+  "prevTopic": "strings_concatenate",
+  "content": "### String Formatting\n\nFormatting embeds variables into strings in a clean way.\n\n---\n\n### f-Strings (Python 3.6+)\n\nThe modern, preferred way:\n\n```python\nname = \"Alice\"\nage = 25\nprint(f\"My name is {name} and I am {age} years old.\")\n```\n\nPrefix the string with `f` and use `{}` for variables.\n\n---\n\n### Expressions in f-Strings\n\n```python\nx = 10\ny = 5\nprint(f\"{x} + {y} = {x + y}\")  # \"10 + 5 = 15\"\n```\n\nYou can include any valid Python expression inside `{}`.\n\n---\n\n### Format Specifiers\n\n```python\nprice = 49.995\nprint(f\"Price: ${price:.2f}\")     # \"Price: $50.00\"\nprint(f\"Percent: {0.25:.1%}\")    # \"Percent: 25.0%\"\n```\n\n| Specifier | Meaning |\n|-----------|---------|\n| `:.2f` | 2 decimal places |\n| `:.1%` | Percentage, 1 decimal |\n| `:>10` | Right-align in 10 chars |\n| `:<10` | Left-align in 10 chars |\n| `:^10` | Center in 10 chars |\n| `:,` | Thousands separator |\n\n---\n\n### Older Methods\n\n```python\n# format() method\nprint(\"My name is {} and I am {} years old.\".format(name, age))\n\n# %-formatting (old style)\nprint(\"My name is %s and I am %d years old.\" % (name, age))\n```\n\n---\n\n> **Best Practice:** Use f-strings whenever possible. They are the most readable, fastest, and most modern approach.",
+  "codeExample": "name = \"Alice\"\nage = 25\nprint(f\"My name is {name} and I am {age} years old.\")\n\nprice = 49.995\nprint(f\"Price: ${price:.2f}\")\nprint(f\"Percent: {0.25:.1%}\")\n\n# Expressions\nprint(f\"{10} + {5} = {10 + 5}\")",
+  "quiz": [
+    {
+      "question": "What prefix is used for f-strings?",
+      "options": [
+        "s",
+        "f",
+        "fmt",
+        "str"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

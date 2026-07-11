@@ -1,0 +1,22 @@
+{
+  "title": "Functions",
+  "language": "python",
+  "topic": "functions",
+  "order": 82,
+  "nextTopic": "arguments",
+  "prevTopic": "range",
+  "content": "### What are Functions?\n\nA **function** is a reusable block of code that performs a specific task.\n\n---\n\n### Defining a Function\n\nUse the `def` keyword:\n\n```python\ndef my_function():\n    print(\"Hello from a function!\")\n```\n\n---\n\n### Calling a Function\n\n```python\ndef greet():\n    print(\"Hello!\")\n\ngreet()  # Call the function\n```\n\n---\n\n### Function with Parameters\n\n```python\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")  # Hello, Alice!\ngreet(\"Bob\")    # Hello, Bob!\n```\n\n---\n\n### Return Values\n\n```python\ndef add(a, b):\n    return a + b\n\nresult = add(5, 3)\nprint(result)  # 8\n```\n\nFunctions **return** a value using `return`. If no `return`, the function returns `None`.\n\n---\n\n### Why Use Functions?\n\n| Reason | Without Functions | With Functions |\n|--------|------------------|----------------|\n| **Reusability** | Copy-paste code | Call function once |\n| **Organization** | Spaghetti code | Logical blocks |\n| **Testing** | Test everything | Test each function |\n| **Readability** | Hard to follow | Clear intent |\n\n---\n\n> **Best Practice:** Functions should do **one thing** well. Name them with verbs like `calculate_total()`, `get_user()`, `save_file()`.",
+  "codeExample": "def greet(name):\n    return f\"Hello, {name}!\"\n\ndef add(a, b):\n    return a + b\n\nprint(greet(\"Alice\"))\nprint(add(5, 3))\n\n# Function without return\ndef show_message():\n    print(\"This function returns None\")\n\nresult = show_message()\nprint(result)  # None",
+  "quiz": [
+    {
+      "question": "What keyword is used to define a function?",
+      "options": [
+        "function",
+        "def",
+        "func",
+        "define"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

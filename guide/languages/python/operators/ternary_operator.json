@@ -1,0 +1,22 @@
+{
+  "title": "Ternary Operator",
+  "language": "python",
+  "topic": "ternary_operator",
+  "order": 21,
+  "nextTopic": "operators_comparison",
+  "prevTopic": "operators_assign",
+  "content": "### The Ternary Operator\n\nThe **ternary operator** (also called conditional expression) is a shorthand for `if-else` in a single line.\n\n---\n\n### Syntax\n\n```python\nvalue_if_true if condition else value_if_false\n```\n\n---\n\n### Basic Example\n\n```python\na = 10\nb = 20\n\nmax_value = a if a > b else b\nprint(max_value)  # 20\n```\n\nThis is equivalent to:\n\n```python\nif a > b:\n    max_value = a\nelse:\n    max_value = b\n```\n\n---\n\n### Multiple Ternary Operators\n\nYou can **chain** ternary operators:\n\n```python\nresult = \"A\" if score >= 90 else \"B\" if score >= 80 else \"C\"\n```\n\nBut this can get hard to read. Use `elif` for complex conditions.\n\n---\n\n### Using with Functions\n\n```python\nprint(\"Even\" if x % 2 == 0 else \"Odd\")\n```\n\n---\n\n> **Best Practice:** Use ternary for simple conditions only. For anything complex, use a regular `if-elif-else` block for readability.",
+  "codeExample": "a = 10\nb = 20\n\nmax_value = a if a > b else b\nprint(\"Max:\", max_value)\n\nx = 7\nparity = \"Even\" if x % 2 == 0 else \"Odd\"\nprint(f\"{x} is {parity}\")",
+  "quiz": [
+    {
+      "question": "What is the correct syntax for Python's ternary operator?",
+      "options": [
+        "condition ? value_if_true : value_if_false",
+        "value_if_true if condition else value_if_false",
+        "if condition then value_if_true else value_if_false",
+        "condition ?: value_if_true, value_if_false"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

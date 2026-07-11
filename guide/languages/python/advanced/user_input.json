@@ -1,0 +1,22 @@
+{
+  "title": "User Input",
+  "language": "python",
+  "topic": "user_input",
+  "order": 109,
+  "nextTopic": "virtualenv",
+  "prevTopic": "try_except",
+  "content": "### Getting User Input\n\nUse `input()` to get input from the user.\n\n---\n\n### Basic Input\n\n```python\nname = input(\"Enter your name: \")\nprint(f\"Hello, {name}!\")\n```\n\n---\n\n### Input is Always a String\n\n```python\nage = input(\"Enter your age: \")\nprint(type(age))  # <class 'str'>\n\n# Convert to int for math\nage = int(age)\nnext_year = age + 1\nprint(f\"Next year you will be {next_year}\")\n```\n\n---\n\n### Handling Invalid Input\n\n```python\nwhile True:\n    try:\n        age = int(input(\"Enter your age: \"))\n        break\n    except ValueError:\n        print(\"Please enter a valid number!\")\n\nprint(f\"You are {age} years old\")\n```\n\n---\n\n### Input with Default\n\n```python\ndef prompt_with_default(prompt, default=\"\"):\n    value = input(f\"{prompt} [{default}]: \")\n    return value if value else default\n\nname = prompt_with_default(\"Enter name\", \"Guest\")\nprint(f\"Hello, {name}!\")\n```\n\n---\n\n### Multiple Inputs\n\n```python\n# Collect multiple values\nvalues = input(\"Enter numbers separated by space: \").split()\nnumbers = [int(x) for x in values]\nprint(f\"Sum: {sum(numbers)}\")\n```\n\n---\n\n> **Key Point:** Always convert `input()` results to the type you need. Remember that `input()` always returns a string!",
+  "codeExample": "# Basic input\nname = input(\"What is your name? \")\nprint(f\"Hello {name}!\")\n\n# Numeric input with conversion\nage = int(input(\"How old are you? \"))\nprint(f\"Next year you will be {age + 1}\")\n\n# Multiple inputs\nnumbers = input(\"Enter two numbers: \").split()\na, b = int(numbers[0]), int(numbers[1])\nprint(f\"Sum: {a + b}\")\n\n# Error handling\ntry:\n    num = int(input(\"Enter a number: \"))\n    print(f\"You entered {num}\")\nexcept ValueError:\n    print(\"That was not a number!\")",
+  "quiz": [
+    {
+      "question": "What type does input() always return?",
+      "options": [
+        "int",
+        "float",
+        "str",
+        "Depends on input"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

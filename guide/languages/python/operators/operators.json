@@ -1,0 +1,22 @@
+{
+  "title": "Operators",
+  "language": "python",
+  "topic": "operators",
+  "order": 18,
+  "nextTopic": "operators_arithmetic",
+  "prevTopic": "none",
+  "content": "### What are Operators?\n\n**Operators** are symbols that perform operations on variables and values.\n\n---\n\n### Types of Operators\n\n| Operator Type | Purpose |\n|---------------|---------|\n| **Arithmetic** | Math operations (`+`, `-`, `*`, `/`) |\n| **Assignment** | Assign values (`=`, `+=`, `-=`) |\n| **Comparison** | Compare values (`==`, `!=`, `<`, `>`) |\n| **Logical** | Combine conditions (`and`, `or`, `not`) |\n| **Identity** | Check object identity (`is`, `is not`) |\n| **Membership** | Check membership (`in`, `not in`) |\n| **Bitwise** | Binary operations (`&`, `|`, `^`) |\n\n---\n\n### Operands\n\nOperators work on **operands**:\n\n```python\nx = 10 + 5\n#    ^   ^\n#  left  right operand\n#     operator\n```\n\n---\n\n> **Note:** Python supports both operator symbols (`+`, `-`) and keyword operators (`and`, `or`, `is`, `in`).",
+  "codeExample": "x = 10\ny = 3\n\nprint(x + y)   # 13  (addition)\nprint(x - y)   # 7   (subtraction)\nprint(x * y)   # 30  (multiplication)\nprint(x / y)   # 3.33 (division)\nprint(x % y)   # 1   (modulus)\nprint(x ** y)  # 1000 (exponentiation)",
+  "quiz": [
+    {
+      "question": "Which operator performs exponentiation in Python?",
+      "options": [
+        "^",
+        "**",
+        "^^",
+        "pow"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

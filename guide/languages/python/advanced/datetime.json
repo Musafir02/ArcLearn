@@ -1,0 +1,22 @@
+{
+  "title": "Datetime",
+  "language": "python",
+  "topic": "datetime",
+  "order": 103,
+  "nextTopic": "math",
+  "prevTopic": "modules",
+  "content": "### The `datetime` Module\n\n`datetime` provides classes for working with dates and times.\n\n---\n\n### Getting Current Date/Time\n\n```python\nfrom datetime import datetime\n\nnow = datetime.now()\nprint(now)  # 2024-01-15 14:30:25.123456\n```\n\n---\n\n### Creating Specific Dates\n\n```python\nfrom datetime import datetime\n\n# Year, month, day\ndate1 = datetime(2024, 1, 15)\nprint(date1)  # 2024-01-15 00:00:00\n\n# With time\ndate2 = datetime(2024, 1, 15, 14, 30, 25)\nprint(date2)  # 2024-01-15 14:30:25\n```\n\n---\n\n### Formatting Dates\n\n```python\nnow = datetime.now()\n\nprint(now.strftime(\"%Y-%m-%d\"))       # 2024-01-15\nprint(now.strftime(\"%d/%m/%Y\"))       # 15/01/2024\nprint(now.strftime(\"%A, %B %d\"))      # Monday, January 15\nprint(now.strftime(\"%H:%M:%S\"))       # 14:30:25\n```\n\n| Code | Meaning |\n|------|---------|\n| `%Y` | Year (4-digit) |\n| `%m` | Month (01-12) |\n| `%d` | Day (01-31) |\n| `%H` | Hour (00-23) |\n| `%M` | Minute (00-59) |\n| `%S` | Second (00-59) |\n| `%A` | Weekday name |\n| `%B` | Month name |\n\n---\n\n### Parsing Strings\n\n```python\nfrom datetime import datetime\n\ndate_str = \"2024-01-15\"\ndate_obj = datetime.strptime(date_str, \"%Y-%m-%d\")\nprint(date_obj)  # 2024-01-15 00:00:00\n```\n\n---\n\n### Date Arithmetic\n\n```python\nfrom datetime import timedelta\n\nnow = datetime.now()\ntomorrow = now + timedelta(days=1)\nlast_week = now - timedelta(weeks=1)\n\nprint(tomorrow)\nprint(last_week)\n```\n\n---\n\n> **Use Case:** `datetime` is essential for logging timestamps, scheduling, date calculations, and data analysis with time series.",
+  "codeExample": "from datetime import datetime, timedelta\n\nnow = datetime.now()\nprint(\"Now:\", now)\n\n# Formatting\nprint(\"Date:\", now.strftime(\"%Y-%m-%d\"))\nprint(\"Time:\", now.strftime(\"%H:%M:%S\"))\n\n# Arithmetic\ntomorrow = now + timedelta(days=1)\nprint(\"Tomorrow:\", tomorrow)\n\n# Parsing\ndate_str = \"2024-12-25\"\nparsed = datetime.strptime(date_str, \"%Y-%m-%d\")\nprint(\"Parsed:\", parsed)",
+  "quiz": [
+    {
+      "question": "What does datetime.now() return?",
+      "options": [
+        "A string with current time",
+        "A datetime object with current date/time",
+        "A timestamp integer",
+        "A date object only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "List Comprehension",
+  "language": "python",
+  "topic": "lists_comprehension",
+  "order": 42,
+  "nextTopic": "lists_sort",
+  "prevTopic": "lists_loop",
+  "content": "### List Comprehension\n\n**List comprehension** offers a concise way to create lists.\n\n---\n\n### Basic Syntax\n\n```python\n[expression for item in iterable if condition]\n```\n\n---\n\n### Without Comprehension (Long Way)\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nsquares = []\nfor x in numbers:\n    squares.append(x ** 2)\nprint(squares)  # [1, 4, 9, 16, 25]\n```\n\n### With Comprehension (Short Way)\n\n```python\nnumbers = [1, 2, 3, 4, 5]\nsquares = [x ** 2 for x in numbers]\nprint(squares)  # [1, 4, 9, 16, 25]\n```\n\n---\n\n### With Condition\n\n```python\nnumbers = [1, 2, 3, 4, 5, 6]\nevens = [x for x in numbers if x % 2 == 0]\nprint(evens)  # [2, 4, 6]\n```\n\n---\n\n### Advanced Examples\n\n```python\n# Transform and filter\nresult = [x * 2 for x in range(10) if x > 5]\nprint(result)  # [12, 14, 16, 18]\n\n# Nested comprehension\nmatrix = [[1, 2], [3, 4], [5, 6]]\nflattened = [num for row in matrix for num in row]\nprint(flattened)  # [1, 2, 3, 4, 5, 6]\n\n# String operations\nnames = [\"Alice\", \"Bob\", \"Charlie\"]\nupper = [name.upper() for name in names]\nprint(upper)  # [\"ALICE\", \"BOB\", \"CHARLIE\"]\n\n# With if-else\nresult = [\"Even\" if x % 2 == 0 else \"Odd\" for x in range(5)]\nprint(result)  # [\"Even\", \"Odd\", \"Even\", \"Odd\", \"Even\"]\n```\n\n---\n\n> **Best Practice:** List comprehensions are great for simple transformations. For complex logic, use a regular loop for readability.",
+  "codeExample": "numbers = [1, 2, 3, 4, 5]\nsquares = [x ** 2 for x in numbers]\nprint(\"Squares:\", squares)\n\nevens = [x for x in range(10) if x % 2 == 0]\nprint(\"Evens:\", evens)\n\nfruits = [\"apple\", \"banana\", \"cherry\"]\nshort = [f for f in fruits if len(f) <= 5]\nprint(\"Short names:\", short)",
+  "quiz": [
+    {
+      "question": "What does [x*2 for x in [1, 2, 3]] return?",
+      "options": [
+        "[1, 2, 3, 1, 2, 3]",
+        "[2, 4, 6]",
+        "[1, 4, 9]",
+        "[2, 3, 4]"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

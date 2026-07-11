@@ -1,0 +1,22 @@
+{
+  "title": "Comments",
+  "language": "python",
+  "topic": "comments",
+  "order": 7,
+  "nextTopic": "variables",
+  "prevTopic": "output_numbers",
+  "content": "### Why Use Comments?\n\nComments are **notes** in your code that Python ignores. They help you and others understand what the code does.\n\n---\n\n### Single-Line Comments\n\nUse `#` for a single-line comment:\n\n```python\n# This is a comment\nprint(\"Hello\")  # This is an inline comment\n```\n\nEverything after `#` on that line is ignored.\n\n---\n\n### Multi-Line Comments\n\nPython does not have a dedicated multi-line comment syntax, but you can use **triple quotes**:\n\n```python\n'''\nThis is a multi-line comment.\nEverything here is ignored.\nUseful for long explanations.\n'''\n\n\"\"\"\nOr use double triple quotes.\nBoth work the same way.\n\"\"\"\n```\n\n> **Note:** Triple-quoted strings are technically string literals, not comments. But if they are not assigned to a variable, they are ignored.\n\n---\n\n### When to Comment\n\n| Use Case | Example |\n|----------|---------|\n| **Explain complex logic** | Why this algorithm works |\n| **Document functions** | What parameters are expected |\n| **Todo reminders** | `# TODO: optimize this later` |\n| **Disable code temporarily** | Add `#` before a line to skip it |\n\n---\n\n> **Good Practice:** Explain the **why**, not the **what**. The code itself shows what happens. Comment the reasoning behind it.\n\n  **Bad:** `x = x + 1  # Add 1 to x`\n  **Good:** `x = x + 1  # Compensate for zero-based indexing`",
+  "codeExample": "# This is a comment\nname = \"John\"  # Inline comment\n\n'''\nMulti-line comment\nfor documentation\n'''\n\nprint(name)",
+  "quiz": [
+    {
+      "question": "Which symbol starts a single-line comment in Python?",
+      "options": [
+        "//",
+        "#",
+        "/*",
+        "--"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

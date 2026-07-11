@@ -1,0 +1,22 @@
+{
+  "title": "String Slicing",
+  "language": "python",
+  "topic": "strings_slicing",
+  "order": 29,
+  "nextTopic": "strings_modify",
+  "prevTopic": "strings",
+  "content": "### String Slicing\n\n**Slicing** extracts a portion of a string.\n\n---\n\n### Basic Syntax\n\n```python\nstring[start:end:step]\n```\n\n- `start` -- starting index (inclusive, default 0)\n- `end` -- ending index (exclusive, default end)\n- `step` -- step size (default 1)\n\n---\n\n### Examples\n\n```python\ntext = \"Hello, World!\"\n\nprint(text[0:5])    # \"Hello\" (indices 0 to 4)\nprint(text[7:12])   # \"World\"\nprint(text[:5])     # \"Hello\" (start default 0)\nprint(text[7:])     # \"World!\" (goes to end)\n```\n\n### Negative Indexing\n\n```python\ntext = \"Hello, World!\"\n\nprint(text[-6:-1])  # \"World\"\nprint(text[-5:])    # \"orld!\"\n```\n\n---\n\n### Step\n\n```python\ntext = \"Hello, World!\"\n\nprint(text[::2])    # \"Hlo ol!\" (every 2nd char)\nprint(text[::-1])   # \"!dlroW ,olleH\" (reverse!)\n```\n\n---\n\n### Slicing Rules\n\n| Slice | Result | Explanation |\n|-------|--------|-------------|\n| `s[0:5]` | `Hello` | First 5 characters |\n| `s[6:]` | `World!` | From index 6 to end |\n| `s[-5:]` | `orld!` | Last 5 characters |\n| `s[::-1]` | Reversed | Reverse the string |\n| `s[::2]` | Alternating | Every 2nd character |\n\n---\n\n> **Key Point:** Slice indices are `[start, end)` -- includes start, excludes end. Think of the end index as \"up to but not including\".",
+  "codeExample": "text = \"Hello, World!\"\n\nprint(\"Full:\", text)\nprint(\"First 5:\", text[:5])\nprint(\"World:\", text[7:12])\nprint(\"Reversed:\", text[::-1])\nprint(\"Every 2nd:\", text[::2])\nprint(\"Last 3:\", text[-3:])",
+  "quiz": [
+    {
+      "question": "What does \"Python\"[::-1] return?",
+      "options": [
+        "\"Pytho\"",
+        "\"Python\"",
+        "\"nohtyP\"",
+        "\"thon\""
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Virtual Environments",
+  "language": "python",
+  "topic": "virtualenv",
+  "order": 110,
+  "nextTopic": "file_handling",
+  "prevTopic": "user_input",
+  "content": "### Virtual Environments\n\nA **virtual environment** is an isolated Python environment for a specific project.\n\n---\n\n### Why Use Virtual Environments?\n\n- **Isolation** -- project A can use Flask 2.x, project B uses Flask 1.x\n- **No conflicts** -- prevents dependency clashes\n- **Clean dependencies** -- only install what your project needs\n- **Reproducibility** -- share `requirements.txt` with team\n\n---\n\n### Creating a Virtual Environment\n\n```bash\n# Create environment\npython -m venv myenv\n\n# Activate (Windows)\nmyenv\\Scripts\\activate\n\n# Activate (Mac/Linux)\nsource myenv/bin/activate\n```\n\n---\n\n### Working in an Environment\n\n```bash\n# After activation, prompt changes to (myenv)\n(myenv) $ pip install flask requests\n(myenv) $ python myapp.py\n\n# Deactivate when done\n(myenv) $ deactivate\n```\n\n---\n\n### Workflow\n\n```bash\n# Create project directory\nmkdir myproject\ncd myproject\n\n# Create virtual environment\npython -m venv .venv\n\n# Activate it\n.venv\\Scripts\\activate  # Windows\nsource .venv/bin/activate  # Mac/Linux\n\n# Install packages\npip install flask\n\n# Save dependencies\npip freeze > requirements.txt\n```\n\n---\n\n### .gitignore\n\nAlways add `.venv/` to `.gitignore` -- do not commit your virtual environment.\n\n```\n# .gitignore\n.venv/\n__pycache__/\n*.pyc\n```\n\n---\n\n> **Best Practice:** Always use a virtual environment for every Python project. It is the standard practice for professional Python development.",
+  "codeExample": "# Virtual environment commands (run in terminal, not Python)\n\n'''\n# Create\npython -m venv myenv\n\n# Activate (Windows)\nmyenv\\Scripts\\activate\n\n# Activate (Mac/Linux)\nsource myenv/bin/activate\n\n# Install\npip install requests\n\n# Save dependencies\npip freeze > requirements.txt\n\n# Exit\ndeactivate\n'''",
+  "quiz": [
+    {
+      "question": "What is the main purpose of a virtual environment?",
+      "options": [
+        "Speed up Python",
+        "Isolate project dependencies",
+        "Create backups",
+        "Run multiple Python versions"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

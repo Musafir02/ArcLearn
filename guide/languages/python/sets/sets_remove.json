@@ -1,0 +1,22 @@
+{
+  "title": "Remove Set Items",
+  "language": "python",
+  "topic": "sets_remove",
+  "order": 57,
+  "nextTopic": "sets_loop",
+  "prevTopic": "sets_add",
+  "content": "### Removing Items from a Set\n\n---\n\n### `.remove()` -- Remove by Value\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfruits.remove(\"banana\")\nprint(fruits)  # {\"apple\", \"cherry\"}\n```\n\n> **Error:** Raises `KeyError` if item does not exist.\n\n---\n\n### `.discard()` -- Remove by Value (Safe)\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfruits.discard(\"banana\")   # Removes it\nfruits.discard(\"grape\")    # No error! (silent no-op)\nprint(fruits)  # {\"apple\", \"cherry\"}\n```\n\n---\n\n### `.pop()` -- Remove Random Item\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nremoved = fruits.pop()  # Removes and returns a random item\nprint(removed)\nprint(fruits)\n```\n\n> Sets are unordered, so `.pop()` removes an **arbitrary** item.\n\n---\n\n### `.clear()` -- Empty the Set\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfruits.clear()\nprint(fruits)  # set()\n```\n\n---\n\n### Difference `-` Operator\n\n```python\nset1 = {1, 2, 3, 4}\nset2 = {3, 4, 5}\nresult = set1 - set2  # Elements in set1 but not in set2\nprint(result)  # {1, 2}\n```\n\n> **Best Practice:** Use `.discard()` when you are not sure if the item exists. Use `.remove()` when you expect it to be there.",
+  "codeExample": "fruits = {\"apple\", \"banana\", \"cherry\"}\n\nfruits.discard(\"banana\")\nfruits.discard(\"grape\")  # No error\nprint(\"After discards:\", fruits)\n\nfruits.add(\"kiwi\")\nremoved = fruits.pop()\nprint(\"Popped:\", removed)\nprint(\"Remaining:\", fruits)\n\n# Difference\nset1 = {1, 2, 3, 4}\nset2 = {3, 4, 5}\nprint(\"Difference:\", set1 - set2)",
+  "quiz": [
+    {
+      "question": "Which method removes an item but does NOT raise an error if it doesn't exist?",
+      "options": [
+        "remove()",
+        "delete()",
+        "discard()",
+        "pop()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

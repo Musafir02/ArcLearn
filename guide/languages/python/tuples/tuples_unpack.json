@@ -1,0 +1,22 @@
+{
+  "title": "Unpack Tuples",
+  "language": "python",
+  "topic": "tuples_unpack",
+  "order": 50,
+  "nextTopic": "tuples_loop",
+  "prevTopic": "tuples_update",
+  "content": "### Unpacking Tuples\n\nWhen you create a tuple, values are **packed** into it. You can **unpack** them back into variables.\n\n---\n\n### Packing\n\n```python\nfruits = \"apple\", \"banana\", \"cherry\"  # Packing\nprint(fruits)  # (\"apple\", \"banana\", \"cherry\")\n```\n\n---\n\n### Unpacking\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\n(green, yellow, red) = fruits\n\nprint(green)   # \"apple\"\nprint(yellow)  # \"banana\"\nprint(red)     # \"cherry\"\n```\n\n---\n\n### Using Asterisk `*`\n\nIf the number of variables does not match, use `*`:\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\")\n(green, yellow, *red) = fruits\n\nprint(green)   # \"apple\"\nprint(yellow)  # \"banana\"\nprint(red)     # [\"cherry\", \"orange\", \"kiwi\"]\n```\n\nThe `*red` variable becomes a **list** of remaining items.\n\n---\n\n### Asterisk in the Middle\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\")\n(green, *tropical, red) = fruits\n\nprint(green)     # \"apple\"\nprint(tropical)  # [\"banana\", \"cherry\", \"orange\"]\nprint(red)       # \"kiwi\"\n```\n\n---\n\n### Swapping with Tuple Unpacking\n\n```python\na = 10\nb = 20\na, b = b, a  # Swap!\nprint(a, b)  # 20, 10\n```\n\n> **Use Case:** Unpacking is great when a function returns multiple values (as a tuple) and you want to assign each to a separate variable.",
+  "codeExample": "fruits = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\")\n\n# Basic unpacking\n(green, yellow, *red) = fruits\nprint(\"Green:\", green)\nprint(\"Yellow:\", yellow)\nprint(\"Red:\", red)\n\n# Asterisk in middle\n(first, *middle, last) = fruits\nprint(\"First:\", first)\nprint(\"Middle:\", middle)\nprint(\"Last:\", last)",
+  "quiz": [
+    {
+      "question": "What does the * prefix do during unpacking?",
+      "options": [
+        "Creates a list of remaining items",
+        "Multiplies the values",
+        "Throws an error",
+        "Skips those items"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

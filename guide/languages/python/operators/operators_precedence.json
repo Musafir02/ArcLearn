@@ -1,0 +1,22 @@
+{
+  "title": "Operator Precedence",
+  "language": "python",
+  "topic": "operators_precedence",
+  "order": 27,
+  "nextTopic": "strings",
+  "prevTopic": "operators_bitwise",
+  "content": "### Operator Precedence\n\nOperator precedence determines the **order** operations are evaluated. Higher precedence operators are evaluated first.\n\n---\n\n### Precedence Table (Highest to Lowest)\n\n| Level | Operators | Description |\n|-------|-----------|-------------|\n| 1 | `(...)` | Parentheses |\n| 2 | `**` | Exponentiation |\n| 3 | `+x`, `-x`, `~x` | Unary plus/minus/bitwise NOT |\n| 4 | `*`, `/`, `//`, `%` | Multiplication, division, floor, modulus |\n| 5 | `+`, `-` | Addition, subtraction |\n| 6 | `<<`, `>>` | Bitwise shifts |\n| 7 | `&` | Bitwise AND |\n| 8 | `^` | Bitwise XOR |\n| 9 | `|` | Bitwise OR |\n| 10 | `in`, `not in`, `is`, `is not`, `<`, `<=`, `>`, `>=`, `==`, `!=` | Comparisons, membership, identity |\n| 11 | `not` | Logical NOT |\n| 12 | `and` | Logical AND |\n| 13 | `or` | Logical OR |\n\n---\n\n### Examples\n\n```python\n# Multiplication before addition\nprint(5 + 3 * 2)    # 11 (not 16)\n\n# Parentheses override\nprint((5 + 3) * 2)  # 16\n\n# Exponentiation before negation\nprint(-3 ** 2)      # -9 (not 9)\nprint((-3) ** 2)    # 9\n```\n\n---\n\n### Associativity\n\nMost operators are **left-to-right**, except `**` which is **right-to-left**:\n\n```python\nprint(2 ** 3 ** 2)  # 512 (2^(3^2) = 2^9)\nprint((2 ** 3) ** 2)  # 64\n```\n\n---\n\n> **Best Practice:** Use parentheses `()` to make your intent clear, even when you know the precedence rules. It improves readability.",
+  "codeExample": "# Multiplication before addition\nprint(\"5 + 3 * 2 =\", 5 + 3 * 2)\n\n# Parentheses change order\nprint(\"(5 + 3) * 2 =\", (5 + 3) * 2)\n\n# Exponentiation before unary minus\nprint(\"-3**2 =\", -3**2)\n\n# Right-to-left exponentiation\nprint(\"2**3**2 =\", 2**3**2)\nprint(\"(2**3)**2 =\", (2**3)**2)",
+  "quiz": [
+    {
+      "question": "What does 5 + 3 * 2 evaluate to?",
+      "options": [
+        "16",
+        "11",
+        "13",
+        "10"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

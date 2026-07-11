@@ -1,0 +1,22 @@
+{
+  "title": "Booleans",
+  "language": "python",
+  "topic": "booleans",
+  "order": 16,
+  "nextTopic": "none",
+  "prevTopic": "casting",
+  "content": "### Boolean Values\n\nBooleans represent **True** or **False** -- like a light switch being on or off.\n\n---\n\n### Boolean Values\n\n```python\nprint(10 > 9)    # True\nprint(10 == 9)   # False\nprint(10 < 9)    # False\n```\n\n---\n\n### Truthy and Falsy Values\n\nIn Python, values are considered **truthy** or **falsy**:\n\n| Falsy Values | Truthy Values |\n|-------------|---------------|\n| `False` | `True` |\n| `0`, `0.0` | Any non-zero number |\n| `\"\"` (empty string) | Any non-empty string |\n| `[]`, `()`, `{}` | Non-empty collections |\n| `None` | Any object |\n\n---\n\n### The `bool()` Function\n\n```python\nprint(bool(0))       # False\nprint(bool(1))       # True\nprint(bool(\"\"))      # False\nprint(bool(\"Hello\")) # True\nprint(bool([]))      # False\nprint(bool([1, 2]))  # True\n```\n\n---\n\n### Using Booleans in Conditions\n\n```python\nx = 5\nif x > 3:\n    print(\"x is greater than 3\")  # Runs because x > 3 is True\n```\n\n---\n\n> **Note:** Booleans are actually a subclass of integers. `True == 1` and `False == 0`.\n\n  ```python\n  print(True + True)   # 2\n  print(False * 5)     # 0\n  ```",
+  "codeExample": "a = 10\nb = 5\n\nprint(a > b)   # True\nprint(a == b)  # False\nprint(a < b)   # False\n\nprint(bool(0))\nprint(bool(\"text\"))\nprint(bool([]))",
+  "quiz": [
+    {
+      "question": "Which of these values is Falsy in Python?",
+      "options": [
+        "1",
+        "\"text\"",
+        "0",
+        "[1, 2, 3]"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

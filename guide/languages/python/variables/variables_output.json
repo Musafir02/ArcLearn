@@ -1,0 +1,22 @@
+{
+  "title": "Variable Output",
+  "language": "python",
+  "topic": "variables_output",
+  "order": 10,
+  "nextTopic": "variables_global",
+  "prevTopic": "variables_multiple",
+  "content": "### Outputting Variables\n\nThe `print()` function is used to output variable values.\n\n---\n\n### Printing Text and Variables Together\n\nUse the `+` operator to concatenate strings:\n\n```python\nx = \"awesome\"\nprint(\"Python is \" + x)  # Python is awesome\n```\n\n---\n\n### Multiple Variables in Print\n\nUse commas to print multiple variables:\n\n```python\nname = \"John\"\nage = 36\nprint(\"Name:\", name, \"Age:\", age)\n# Output: Name: John Age: 36\n```\n\n---\n\n### Numbers in Print\n\nFor numbers, `+` works as arithmetic:\n\n```python\nx = 5\ny = 10\nprint(x + y)  # 15 (addition)\n```\n\nBut mixing string and number with `+` causes an error:\n\n```python\nx = 5\nprint(\"Number: \" + x)  # TypeError!\n```\n\nFix by converting with `str()`:\n\n```python\nprint(\"Number: \" + str(x))  # Number: 5\n```\n\n---\n\n### f-Strings (Modern Way)\n\n```python\nname = \"Alice\"\nage = 25\nprint(f\"My name is {name} and I am {age} years old.\")\n```\n\nf-strings are **cleaner** and **faster**.\n\n---\n\n> **Best Practice:** Use f-strings for combining text and variables. They are the modern, Python 3.6+ way.",
+  "codeExample": "name = \"John\"\nage = 36\nprint(\"Name:\", name, \"Age:\", age)\n\nx = 5\nprint(\"Number: \" + str(x))\n\n# f-string (Python 3.6+)\nprint(f\"My name is {name}, I am {age}\")",
+  "quiz": [
+    {
+      "question": "What is the best way to combine a string and a variable in modern Python?",
+      "options": [
+        "print(\"Value: \" + x)",
+        "print(\"Value:\", x)",
+        "print(f\"Value: {x}\")",
+        "print(\"Value: %x\")"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

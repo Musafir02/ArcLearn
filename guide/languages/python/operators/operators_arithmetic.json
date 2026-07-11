@@ -1,0 +1,22 @@
+{
+  "title": "Arithmetic Operators",
+  "language": "python",
+  "topic": "operators_arithmetic",
+  "order": 19,
+  "nextTopic": "operators_assign",
+  "prevTopic": "operators",
+  "content": "### Arithmetic Operators\n\nArithmetic operators perform mathematical operations.\n\n---\n\n### Operator Table\n\n| Operator | Name | Example | Result |\n|----------|------|---------|--------|\n| `+` | Addition | `5 + 3` | `8` |\n| `-` | Subtraction | `5 - 3` | `2` |\n| `*` | Multiplication | `5 * 3` | `15` |\n| `/` | Division | `5 / 3` | `1.666` |\n| `%` | Modulus | `5 % 3` | `2` |\n| `**` | Exponentiation | `5 ** 3` | `125` |\n| `//` | Floor Division | `5 // 3` | `1` |\n\n---\n\n### Division vs Floor Division\n\n```python\nprint(10 / 3)    # 3.333... (float division)\nprint(10 // 3)   # 3 (rounds down)\nprint(10 // -3)  # -4 (rounds down, not toward zero)\n```\n\n---\n\n### Modulus (Remainder)\n\n```python\nprint(10 % 3)    # 1\nprint(10 % 5)    # 0\nprint(7 % 2)     # 1\n```\n\nUseful for checking if a number is **even** or **odd**.\n\n---\n\n### Exponentiation\n\n```python\nprint(2 ** 3)    # 8\nprint(3 ** 4)    # 81\nprint(9 ** 0.5)  # 3.0 (square root)\n```\n\n---\n\n> **Remember:** Division `/` always returns a `float`. Floor division `//` returns an `int` if both operands are `int`.",
+  "codeExample": "x = 10\ny = 3\n\nprint(\"Addition:\", x + y)\nprint(\"Subtraction:\", x - y)\nprint(\"Multiplication:\", x * y)\nprint(\"Division:\", x / y)\nprint(\"Floor Division:\", x // y)\nprint(\"Modulus:\", x % y)\nprint(\"Exponentiation:\", x ** y)",
+  "quiz": [
+    {
+      "question": "What does the // operator do?",
+      "options": [
+        "Regular division",
+        "Floor division (rounds down)",
+        "Modulus (remainder)",
+        "Exponentiation"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

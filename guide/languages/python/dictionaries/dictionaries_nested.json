@@ -1,0 +1,22 @@
+{
+  "title": "Nested Dictionaries",
+  "language": "python",
+  "topic": "dictionaries_nested",
+  "order": 69,
+  "nextTopic": "dictionaries_methods",
+  "prevTopic": "dictionaries_copy",
+  "content": "### Nested Dictionaries\n\nA dictionary can contain other dictionaries as values -- creating a **nested** structure.\n\n---\n\n### Creating Nested Dictionaries\n\n```python\nstudents = {\n    \"alice\": {\"age\": 25, \"grade\": \"A\"},\n    \"bob\": {\"age\": 22, \"grade\": \"B\"},\n    \"charlie\": {\"age\": 23, \"grade\": \"A\"}\n}\n```\n\n---\n\n### Accessing Nested Items\n\n```python\nprint(students[\"alice\"])           # {\"age\": 25, \"grade\": \"A\"}\nprint(students[\"alice\"][\"age\"])    # 25\nprint(students[\"bob\"][\"grade\"])    # \"B\"\n```\n\n---\n\n### Multiple Levels of Nesting\n\n```python\nschool = {\n    \"class_1\": {\n        \"students\": {\n            \"alice\": {\"age\": 25, \"grades\": {\"math\": 90, \"science\": 85}},\n            \"bob\": {\"age\": 22, \"grades\": {\"math\": 80, \"science\": 88}}\n        },\n        \"teacher\": \"Mr. Smith\"\n    }\n}\n\nprint(school[\"class_1\"][\"students\"][\"alice\"][\"grades\"][\"math\"])  # 90\n```\n\n---\n\n### Adding to Nested Dictionaries\n\n```python\nstudents = {\"alice\": {\"age\": 25}}\nstudents[\"bob\"] = {\"age\": 22}  # Add new student\nstudents[\"alice\"][\"grade\"] = \"A\"  # Add to nested\nprint(students)\n```\n\n---\n\n### Looping Through Nested Dictionaries\n\n```python\nfor name, info in students.items():\n    print(f\"Student: {name}\")\n    for key, value in info.items():\n        print(f\"  {key}: {value}\")\n```\n\n---\n\n> **Use Case:** Nested dictionaries are great for representing structured data like JSON objects, configuration files, or hierarchical data.",
+  "codeExample": "students = {\n    \"alice\": {\"age\": 25, \"grade\": \"A\"},\n    \"bob\": {\"age\": 22, \"grade\": \"B\"}\n}\n\nprint(\"Alice's grade:\", students[\"alice\"][\"grade\"])\n\n# Loop through\nfor name, info in students.items():\n    print(f\"\\n{name}:\")\n    for key, value in info.items():\n        print(f\"  {key}: {value}\")",
+  "quiz": [
+    {
+      "question": "How do you access a value in a nested dictionary?",
+      "options": [
+        "dict[key1][key2]",
+        "dict[key1, key2]",
+        "dict.get(key1, key2)",
+        "dict(key1)(key2)"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

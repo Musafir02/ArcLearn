@@ -1,0 +1,22 @@
+{
+  "title": "Multiple Variables",
+  "language": "python",
+  "topic": "variables_multiple",
+  "order": 9,
+  "nextTopic": "variables_output",
+  "prevTopic": "variables_names",
+  "content": "### Multiple Assignment\n\nPython allows assigning values to **multiple variables in one line**:\n\n```python\nx, y, z = \"Orange\", \"Banana\", \"Cherry\"\nprint(x)  # Orange\nprint(y)  # Banana\nprint(z)  # Cherry\n```\n\n---\n\n### One Value to Multiple Variables\n\nAssign the **same value** to multiple variables:\n\n```python\nx = y = z = \"Orange\"\nprint(x)  # Orange\nprint(y)  # Orange\nprint(z)  # Orange\n```\n\n---\n\n### Unpacking a Collection\n\nIf you have a collection (list, tuple), extract values into variables:\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nx, y, z = fruits\nprint(x)  # apple\nprint(y)  # banana\nprint(z)  # cherry\n```\n\nThis is called **unpacking**.\n\n---\n\n### Swapping Variables\n\nPython makes swapping easy:\n\n```python\na = 10\nb = 20\n\na, b = b, a\n\nprint(a)  # 20\nprint(b)  # 10\n```\n\nNo need for a temporary variable!\n\n---\n\n> **Key Point:** The number of variables on the left must match the number of values on the right.",
+  "codeExample": "# Multiple assignment\nx, y, z = \"Orange\", \"Banana\", \"Cherry\"\nprint(x, y, z)\n\n# Same value\nx = y = z = \"Orange\"\nprint(x, y, z)\n\n# Unpacking\nfruits = [\"apple\", \"banana\", \"cherry\"]\nx, y, z = fruits\nprint(x, y, z)",
+  "quiz": [
+    {
+      "question": "What does x, y = 10, 20 do?",
+      "options": [
+        "Sets x=10, y=20",
+        "Sets x=10, creates a tuple",
+        "Creates a list [10, 20]",
+        "Error"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

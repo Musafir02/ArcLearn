@@ -1,0 +1,22 @@
+{
+  "title": "The __init__ Method",
+  "language": "python",
+  "topic": "class_init",
+  "order": 92,
+  "nextTopic": "class_self",
+  "prevTopic": "classes",
+  "content": "### The `__init__()` Method\n\n`__init__()` is the **constructor** -- it runs automatically when a new object is created.\n\n---\n\n### Purpose\n\nInitialize object attributes (set initial state):\n\n```python\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\np = Person(\"Alice\", 25)\n# __init__ runs here\n```\n\n---\n\n### Always Called Automatically\n\n```python\nclass Person:\n    def __init__(self):\n        print(\"Person created!\")\n\np = Person()  # Prints \"Person created!\"\n```\n\n---\n\n### Parameters\n\nYou can pass arguments to `__init__`:\n\n```python\nclass Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n        self.area = width * height\n\nrect = Rectangle(5, 3)\nprint(rect.area)  # 15\n```\n\n---\n\n### Default Values\n\n```python\nclass Person:\n    def __init__(self, name=\"Unknown\", age=0):\n        self.name = name\n        self.age = age\n\np1 = Person()\np2 = Person(\"Bob\", 30)\n```\n\n---\n\n> **Note:** The name `__init__` has double underscores on both sides. These are called **dunder** (double underscore) methods. They have special meaning in Python.",
+  "codeExample": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n        print(f\"Created {self.name}, age {self.age}\")\n\np1 = Person(\"Alice\", 25)\np2 = Person(\"Bob\", 30)\n\nprint(p1.name)\nprint(p2.age)",
+  "quiz": [
+    {
+      "question": "When does __init__ run?",
+      "options": [
+        "When the class is defined",
+        "When an object is created",
+        "When a method is called",
+        "When the program ends"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

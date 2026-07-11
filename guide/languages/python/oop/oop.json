@@ -1,0 +1,22 @@
+{
+  "title": "OOP (Object-Oriented Programming)",
+  "language": "python",
+  "topic": "oop",
+  "order": 90,
+  "nextTopic": "classes",
+  "prevTopic": "generators",
+  "content": "### What is OOP?\n\n**Object-Oriented Programming (OOP)** is a programming paradigm that organizes code around **objects** (data + behavior) rather than functions.\n\n---\n\n### Key Concepts\n\n| Concept | Description |\n|---------|-------------|\n| **Class** | Blueprint for creating objects |\n| **Object** | Instance of a class |\n| **Attributes** | Data stored in an object |\n| **Methods** | Functions stored in an object |\n| **Inheritance** | One class inherits from another |\n| **Encapsulation** | Hiding internal state |\n| **Polymorphism** | Same interface, different behavior |\n\n---\n\n### Procedural vs OOP\n\n```python\n# Procedural approach\nname = \"Alice\"\nage = 25\ndef greet(person_name):\n    return f\"Hello, {person_name}!\"\n\n# OOP approach\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def greet(self):\n        return f\"Hello, {self.name}!\"\n\nalice = Person(\"Alice\", 25)\nprint(alice.greet())\n```\n\n---\n\n### Why Use OOP?\n\n- **Organization** -- bundles data and behavior together\n- **Reusability** -- classes can be reused across projects\n- **Inheritance** -- avoid repeating code\n- **Abstraction** -- hide complex implementation\n\n---\n\n> **Analogy:** A class is like a **blueprint** for a house. The object is the actual **house** built from that blueprint. You can build many houses from the same blueprint.",
+  "codeExample": "class Dog:\n    def __init__(self, name):\n        self.name = name\n    \n    def bark(self):\n        return f\"{self.name} says Woof!\"\n\nmy_dog = Dog(\"Rex\")\nprint(my_dog.bark())\n\nanother_dog = Dog(\"Buddy\")\nprint(another_dog.bark())",
+  "quiz": [
+    {
+      "question": "What is a class?",
+      "options": [
+        "An instance of an object",
+        "A blueprint for creating objects",
+        "A function",
+        "A variable"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

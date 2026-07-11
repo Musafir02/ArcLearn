@@ -1,0 +1,22 @@
+{
+  "title": "Sort Lists",
+  "language": "python",
+  "topic": "lists_sort",
+  "order": 43,
+  "nextTopic": "lists_copy",
+  "prevTopic": "lists_comprehension",
+  "content": "### Sorting Lists\n\n---\n\n### `.sort()` -- Ascending Order\n\n```python\nnumbers = [3, 1, 4, 1, 5, 9, 2]\nnumbers.sort()\nprint(numbers)  # [1, 1, 2, 3, 4, 5, 9]\n\nfruits = [\"banana\", \"apple\", \"cherry\"]\nfruits.sort()\nprint(fruits)  # [\"apple\", \"banana\", \"cherry\"]\n```\n\n---\n\n### `.sort(reverse=True)` -- Descending Order\n\n```python\nnumbers = [3, 1, 4, 1, 5, 9, 2]\nnumbers.sort(reverse=True)\nprint(numbers)  # [9, 5, 4, 3, 2, 1, 1]\n```\n\n---\n\n### Custom Sort with `key`\n\n```python\n# Sort by length\nfruits = [\"banana\", \"apple\", \"cherry\", \"kiwi\"]\nfruits.sort(key=len)\nprint(fruits)  # [\"kiwi\", \"apple\", \"banana\", \"cherry\"]\n\n# Sort by last character\nfruits.sort(key=lambda x: x[-1])\nprint(fruits)  # [\"banana\", \"apple\", \"cherry\", \"kiwi\"]\n```\n\n---\n\n### Case-Insensitive Sort\n\n```python\nfruits = [\"Banana\", \"apple\", \"Cherry\"]\nfruits.sort(key=str.lower)\nprint(fruits)  # [\"apple\", \"Banana\", \"Cherry\"]\n```\n\n---\n\n### `sorted()` -- Returns New List\n\nUnlike `.sort()`, `sorted()` creates a **new** list without changing the original:\n\n```python\nnumbers = [3, 1, 4, 1, 5]\nsorted_numbers = sorted(numbers)\nprint(sorted_numbers)  # [1, 1, 3, 4, 5]\nprint(numbers)         # [3, 1, 4, 1, 5] (unchanged)\n```\n\n---\n\n> **Difference:** `.sort()` modifies the list in place (returns `None`). `sorted()` returns a new sorted list.",
+  "codeExample": "numbers = [3, 1, 4, 1, 5, 9, 2]\nnumbers.sort()\nprint(\"Sorted:\", numbers)\n\nfruits = [\"banana\", \"apple\", \"cherry\", \"kiwi\"]\nfruits.sort(reverse=True)\nprint(\"Reverse:\", fruits)\n\n# Custom key\nfruits.sort(key=len)\nprint(\"By length:\", fruits)\n\n# sorted() returns new list\noriginal = [3, 1, 4]\nnew = sorted(original)\nprint(\"Original:\", original)\nprint(\"New:\", new)",
+  "quiz": [
+    {
+      "question": "What is the difference between sort() and sorted()?",
+      "options": [
+        "sort() is faster",
+        "sort() modifies the list, sorted() returns a new list",
+        "sorted() modifies the list, sort() returns a new list",
+        "There is no difference"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

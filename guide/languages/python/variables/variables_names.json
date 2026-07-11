@@ -1,0 +1,22 @@
+{
+  "title": "Variable Names",
+  "language": "python",
+  "topic": "variables_names",
+  "order": 8,
+  "nextTopic": "variables_multiple",
+  "prevTopic": "variables",
+  "content": "### Rules for Variable Names\n\nVariable names must follow certain rules:\n\n| Rule | Valid Example | Invalid Example |\n|------|---------------|-----------------|\n| Letters, digits, underscores only | `my_var` | `my-var` |\n| Cannot start with a digit | `var1` | `1var` |\n| Case-sensitive | `Name` vs `name` | `Name` vs `NAME` |\n| Cannot be a keyword | `my_class` | `class` |\n\n---\n\n### Legal Names\n\n```python\nmyvar = \"John\"       # OK\nmy_var = \"John\"      # OK\n_my_var = \"John\"     # OK\nmyVar = \"John\"       # OK (camelCase)\nMYVAR = \"John\"       # OK (UPPERCASE)\nmyvar2 = \"John\"      # OK\n```\n\n### Illegal Names\n\n```python\n2myvar = \"John\"      # NO - starts with digit\nmy-var = \"John\"      # NO - hyphens not allowed\nmy var = \"John\"      # NO - spaces not allowed\n```\n\n---\n\n### Python Keywords (Reserved Words)\n\nThese **cannot** be used as variable names:\n\n```\nFalse, class, finally, is, return,\nTrue, continue, for, lambda, try,\nNone, def, from, nonlocal, while,\nand, del, global, not, with,\nas, elif, if, or, yield,\nassert, else, import, pass,\nbreak, except, in, raise\n```\n\n---\n\n### Naming Conventions\n\n| Style | Example | Use For |\n|-------|---------|---------|\n| **snake_case** | `my_variable` | Variables, functions (recommended) |\n| **UPPERCASE** | `MAX_VALUE` | Constants |\n| **PascalCase** | `MyClass` | Classes |\n| `_leading` | `_internal` | Internal/private by convention |\n\n> **Python Convention:** Use `snake_case` for variable names (lowercase with underscores between words).",
+  "codeExample": "# Valid names\nmyvar = \"John\"\nmy_var = \"John\"\n_my_var = \"John\"\nmyVar = \"John\"\nMYVAR = \"John\"\nmyvar2 = \"John\"\n\nprint(myvar, my_var, myVar)",
+  "quiz": [
+    {
+      "question": "Which is a valid Python variable name?",
+      "options": [
+        "2nd_place",
+        "my-var",
+        "my_var",
+        "my var"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

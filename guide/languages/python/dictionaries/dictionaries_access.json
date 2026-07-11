@@ -1,0 +1,22 @@
+{
+  "title": "Access Dictionary Items",
+  "language": "python",
+  "topic": "dictionaries_access",
+  "order": 63,
+  "nextTopic": "dictionaries_add",
+  "prevTopic": "dictionaries",
+  "content": "### Accessing Dictionary Items\n\n---\n\n### Square Bracket Notation\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nprint(student[\"name\"])  # \"Alice\"\nprint(student[\"age\"])   # 25\n```\n\n> **Error:** Raises `KeyError` if key does not exist.\n\n---\n\n### `.get()` -- Safe Access\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nprint(student.get(\"name\"))         # \"Alice\"\nprint(student.get(\"grade\"))        # None (no error!)\nprint(student.get(\"grade\", \"N/A\")) # \"N/A\" (default value)\n```\n\n---\n\n### Get All Keys, Values, Items\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\n\nprint(student.keys())    # dict_keys([\"name\", \"age\", \"grade\"])\nprint(student.values())  # dict_values([\"Alice\", 25, \"A\"])\nprint(student.items())   # dict_items([(\"name\", \"Alice\"), (\"age\", 25), (\"grade\", \"A\")])\n```\n\n---\n\n### Check if Key Exists\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\n\nprint(\"name\" in student)    # True\nprint(\"grade\" in student)   # False\nprint(\"grade\" not in student)  # True\n```\n\n---\n\n### Loop Through Dictionary\n\n```python\nfor key in student:\n    print(key, student[key])\n\nfor key, value in student.items():\n    print(f\"{key}: {value}\")\n```\n\n> **Best Practice:** Use `.get()` instead of `[]` when you are not sure a key exists. It avoids `KeyError`.",
+  "codeExample": "student = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\n\nprint(\"Name:\", student[\"name\"])\nprint(\"Grade:\", student.get(\"grade\"))\nprint(\"Missing:\", student.get(\"missing\", \"not found\"))\n\nprint(\"Keys:\", list(student.keys()))\nprint(\"Values:\", list(student.values()))\nprint(\"Items:\", list(student.items()))\n\nprint(\"name\" in student)",
+  "quiz": [
+    {
+      "question": "Which method safely accesses a dictionary key without raising an error?",
+      "options": [
+        ".get()",
+        ".fetch()",
+        ".retrieve()",
+        "[] notation"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

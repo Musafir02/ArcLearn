@@ -1,0 +1,22 @@
+{
+  "title": "Dictionary Methods",
+  "language": "python",
+  "topic": "dictionaries_methods",
+  "order": 70,
+  "nextTopic": "conditions",
+  "prevTopic": "dictionaries_nested",
+  "content": "### Dictionary Methods Reference\n\n---\n\n### Access Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `.get(key, default)` | Safe access with default | `d.get(\"x\", 0)` |\n| `.keys()` | View of all keys | `d.keys()` |\n| `.values()` | View of all values | `d.values()` |\n| `.items()` | View of all (key, value) pairs | `d.items()` |\n| `.setdefault(key, default)` | Set if key missing, return value | `d.setdefault(\"x\", 0)` |\n\n---\n\n### Modify Methods\n\n| Method | Description |\n|--------|-------------|\n| `.update(dict2)` | Merge another dict |\n| `.pop(key, default)` | Remove key, return value |\n| `.popitem()` | Remove and return last inserted |\n| `.clear()` | Remove all items |\n\n---\n\n### Copy Method\n\n| Method | Description |\n|--------|-------------|\n| `.copy()` | Shallow copy of dictionary |\n\n---\n\n### `fromkeys()` -- Create from Keys\n\n```python\nkeys = [\"a\", \"b\", \"c\"]\nnew_dict = dict.fromkeys(keys, 0)\nprint(new_dict)  # {\"a\": 0, \"b\": 0, \"c\": 0}\n```\n\n---\n\n### Built-in Functions\n\n```python\nd = {\"a\": 1, \"b\": 2, \"c\": 3}\n\nprint(len(d))       # 3\nprint(sorted(d))    # [\"a\", \"b\", \"c\"] (sorts keys)\nprint(any(d))       # True (checks if any key is truthy)\nprint(all(d))       # True (checks if all keys are truthy)\n```\n\n---\n\n### Operator Support\n\n```python\nd1 = {\"a\": 1, \"b\": 2}\nd2 = {\"b\": 3, \"c\": 4}\n\nprint(d1 | d2)     # Merge (Python 3.9+)\nprint(len(d1))     # 2\nprint(\"a\" in d1)   # True\nprint(\"z\" not in d1)  # True\n```\n\n> **Key Point:** `.keys()`, `.values()`, and `.items()` return **view objects** that reflect changes to the dictionary. Use `list()` to capture a static snapshot.",
+  "codeExample": "student = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\n\nprint(\"Keys:\", list(student.keys()))\nprint(\"Values:\", list(student.values()))\nprint(\"Items:\", list(student.items()))\n\n# fromkeys\nkeys = [\"x\", \"y\", \"z\"]\nresult = dict.fromkeys(keys, 0)\nprint(\"fromkeys:\", result)\n\n# setdefault\nstudent.setdefault(\"city\", \"Boston\")\nprint(\"setdefault:\", student)",
+  "quiz": [
+    {
+      "question": "What does .items() return?",
+      "options": [
+        "Just the keys",
+        "Just the values",
+        "Key-value pairs as tuples",
+        "A list of dictionaries"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

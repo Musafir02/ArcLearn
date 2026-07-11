@@ -1,0 +1,22 @@
+{
+  "title": "Update Tuples",
+  "language": "python",
+  "topic": "tuples_update",
+  "order": 49,
+  "nextTopic": "tuples_unpack",
+  "prevTopic": "tuples_access",
+  "content": "### Updating Tuples\n\nTuples are **immutable** -- you cannot change them directly. But you can work around this by converting to a list.\n\n---\n\n### Convert to List, Modify, Convert Back\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\n\n# Convert to list\nlist_fruits = list(fruits)\n\n# Modify the list\nlist_fruits[1] = \"blackberry\"\nlist_fruits.append(\"orange\")\n\n# Convert back to tuple\nfruits = tuple(list_fruits)\nprint(fruits)  # (\"apple\", \"blackberry\", \"cherry\", \"orange\")\n```\n\n---\n\n### Add Items (Via Concatenation)\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\nfruits = fruits + (\"orange\",)\nprint(fruits)  # (\"apple\", \"banana\", \"cherry\", \"orange\")\n```\n\nNote the **comma** after `\"orange\"` -- needed for single-item tuples.\n\n---\n\n### Remove Items\n\nConvert to list, remove, convert back:\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\nlist_fruits = list(fruits)\nlist_fruits.remove(\"banana\")\nfruits = tuple(list_fruits)\nprint(fruits)  # (\"apple\", \"cherry\")\n```\n\n---\n\n### Deleting Entire Tuple\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\ndel fruits\n# print(fruits)  # NameError: tuple no longer exists\n```\n\n> You cannot delete individual items -- only the entire tuple.\n\n---\n\n> **Remember:** These workarounds create a **new** tuple. The original tuple is never modified. This reinforces immutability.",
+  "codeExample": "fruits = (\"apple\", \"banana\", \"cherry\")\n\n# Change by converting to list\nlst = list(fruits)\nlst[1] = \"blackberry\"\nlst.append(\"orange\")\nfruits = tuple(lst)\nprint(\"Modified:\", fruits)\n\n# Add via concatenation\nfruits = fruits + (\"kiwi\",)\nprint(\"Extended:\", fruits)\n\n# Delete entire tuple\ndel fruits",
+  "quiz": [
+    {
+      "question": "How do you add an item to a tuple?",
+      "options": [
+        "tuple.append(item)",
+        "tuple.add(item)",
+        "Convert to list, add, convert back",
+        "tuple.insert(item)"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

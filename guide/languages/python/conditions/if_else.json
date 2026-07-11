@@ -1,0 +1,22 @@
+{
+  "title": "Else",
+  "language": "python",
+  "topic": "if_else",
+  "order": 73,
+  "nextTopic": "if_shorthand",
+  "prevTopic": "if_elif",
+  "content": "### The `else` Keyword\n\n**`else`** catches everything that was not caught by `if` or `elif`.\n\n---\n\n### Basic `if-else`\n\n```python\nage = 16\n\nif age >= 18:\n    print(\"You can vote\")\nelse:\n    print(\"You cannot vote yet\")\n```\n\n---\n\n### Complete `if-elif-else` Chain\n\n```python\nscore = 75\n\nif score >= 90:\n    grade = \"A\"\nelif score >= 80:\n    grade = \"B\"\nelif score >= 70:\n    grade = \"C\"\nelif score >= 60:\n    grade = \"D\"\nelse:\n    grade = \"F\"\n\nprint(f\"Grade: {grade}\")  # Grade: C\n```\n\nThe `else` block catches **all remaining cases** (score < 60).\n\n---\n\n### `else` is Optional\n\nYou can have an `if` without `else`:\n\n```python\nif error:\n    print(\"Something went wrong\")\n# No else needed\n```\n\n---\n\n### Only One Runs\n\nIn an `if-elif-else` chain, **only one** block executes:\n\n```python\nif True:\n    print(\"First\")\nelif True:\n    print(\"Second\")  # Never runs\nelse:\n    print(\"Third\")   # Never runs\n```\n\n---\n\n> **Key Point:** `else` must come **last**, after all `elif` statements. It has no condition of its own.",
+  "codeExample": "age = 16\n\nif age >= 18:\n    print(\"You can vote\")\nelse:\n    print(\"You cannot vote yet\")\n\nscore = 75\nif score >= 90:\n    grade = \"A\"\nelif score >= 80:\n    grade = \"B\"\nelif score >= 70:\n    grade = \"C\"\nelse:\n    grade = \"F\"\nprint(f\"Grade: {grade}\")",
+  "quiz": [
+    {
+      "question": "When does the else block execute?",
+      "options": [
+        "When the if condition is True",
+        "When all previous conditions are False",
+        "Always",
+        "When the elif is True"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

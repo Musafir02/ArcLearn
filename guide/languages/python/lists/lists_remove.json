@@ -1,0 +1,22 @@
+{
+  "title": "Remove List Items",
+  "language": "python",
+  "topic": "lists_remove",
+  "order": 40,
+  "nextTopic": "lists_loop",
+  "prevTopic": "lists_add",
+  "content": "### Removing Items\n\n---\n\n### `.remove()` -- Remove by Value\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.remove(\"banana\")\nprint(fruits)  # [\"apple\", \"cherry\"]\n```\n\nRemoves only the **first occurrence**.\n\n> **Error:** Raises `ValueError` if the item does not exist.\n\n---\n\n### `.pop()` -- Remove by Index\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nremoved = fruits.pop(1)\nprint(removed)  # \"banana\"\nprint(fruits)   # [\"apple\", \"cherry\"]\n\n# Without index, removes last item\nlast = fruits.pop()\nprint(last)  # \"cherry\"\n```\n\n`.pop()` **returns** the removed item.\n\n---\n\n### `del` Keyword -- Remove by Index or Slice\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\ndel fruits[0]\nprint(fruits)  # [\"banana\", \"cherry\"]\n\n# Delete entire list\ndel fruits\n# print(fruits)  # NameError!\n```\n\n---\n\n### `.clear()` -- Empty the List\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.clear()\nprint(fruits)  # []\n```\n\n---\n\n> **Difference:** `remove()` deletes by value, `pop()` deletes by index (and returns it), `del` deletes by index or variable, `clear()` empties the list.",
+  "codeExample": "fruits = [\"apple\", \"banana\", \"cherry\", \"banana\"]\n\nfruits.remove(\"banana\")  # Removes first banana\nprint(\"After remove:\", fruits)\n\nremoved = fruits.pop(0)\nprint(\"Popped:\", removed)\nprint(\"After pop:\", fruits)\n\nlast = fruits.pop()\nprint(\"Last popped:\", last)\n\nfruits.clear()\nprint(\"After clear:\", fruits)",
+  "quiz": [
+    {
+      "question": "Which method removes an item by its value?",
+      "options": [
+        "pop()",
+        "del",
+        "remove()",
+        "clear()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

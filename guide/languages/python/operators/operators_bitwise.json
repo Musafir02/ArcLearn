@@ -1,0 +1,22 @@
+{
+  "title": "Bitwise Operators",
+  "language": "python",
+  "topic": "operators_bitwise",
+  "order": 26,
+  "nextTopic": "operators_precedence",
+  "prevTopic": "operators_membership",
+  "content": "### Bitwise Operators\n\nBitwise operators work on **binary representations** of numbers. They operate bit by bit.\n\n---\n\n### Operator Table\n\n| Operator | Name | Example |\n|----------|------|---------|\n| `&` | AND | `5 & 3` (101 & 011 = 001 = 1) |\n| `|` | OR | `5 | 3` (101 | 011 = 111 = 7) |\n| `^` | XOR | `5 ^ 3` (101 ^ 011 = 110 = 6) |\n| `~` | NOT | `~5` (inverts all bits = -6) |\n| `<<` | Left shift | `5 << 1` (1010 = 10) |\n| `>>` | Right shift | `5 >> 1` (10 = 2) |\n\n---\n\n### Bitwise AND (`&`)\n\n```python\n# 5 = 101 (binary)\n# 3 = 011 (binary)\n# ---------------\n# 1 = 001 (result)\nprint(5 & 3)  # 1\n```\n\n### Bitwise OR (`|`)\n\n```python\nprint(5 | 3)  # 7\n```\n\n### Bitwise XOR (`^`)\n\n```python\nprint(5 ^ 3)  # 6\n```\n\n### Bitwise NOT (`~`)\n\n```python\nprint(~5)  # -6 (inverts all bits)\n```\n\n### Shift Operators\n\n```python\nprint(5 << 1)  # 10 (multiply by 2)\nprint(5 >> 1)  # 2 (divide by 2, floor)\n```\n\n---\n\n### Common Uses\n\n| Use | Technique |\n|-----|-----------|\n| **Check if bit is set** | `x & (1 << n)` |\n| **Set a bit** | `x | (1 << n)` |\n| **Clear a bit** | `x & ~(1 << n)` |\n| **Toggle a bit** | `x ^ (1 << n)` |\n| **Check even/odd** | `x & 1` (1 = odd) |\n| **Multiply/divide by 2** | `x << 1`, `x >> 1` |\n\n---\n\n> **Note:** Bitwise operators are useful in low-level programming, cryptography, and performance optimization. Most Python code rarely needs them.",
+  "codeExample": "x = 5   # 101\ny = 3   # 011\n\nprint(f\"{x} & {y} = {x & y}\")   # 1\nprint(f\"{x} | {y} = {x | y}\")   # 7\nprint(f\"{x} ^ {y} = {x ^ y}\")   # 6\nprint(f\"~{x} = {~x}\")          # -6\nprint(f\"{x} << 1 = {x << 1}\")   # 10\nprint(f\"{x} >> 1 = {x >> 1}\")   # 2",
+  "quiz": [
+    {
+      "question": "What does 5 << 1 evaluate to?",
+      "options": [
+        "5",
+        "10",
+        "2.5",
+        "3"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

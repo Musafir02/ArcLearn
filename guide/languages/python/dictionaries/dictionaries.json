@@ -1,0 +1,22 @@
+{
+  "title": "Dictionaries",
+  "language": "python",
+  "topic": "dictionaries",
+  "order": 62,
+  "nextTopic": "dictionaries_access",
+  "prevTopic": "sets_methods",
+  "content": "### What are Dictionaries?\n\nA **dictionary** stores data in **key-value** pairs, enclosed in `{}`.\n\n---\n\n### Creating Dictionaries\n\n```python\nstudent = {\n    \"name\": \"Alice\",\n    \"age\": 25,\n    \"grade\": \"A\"\n}\n\n# Empty dictionary\nempty = {}\n```\n\n---\n\n### Dictionary Characteristics\n\n- **Key-value pairs** -- each key maps to a value\n- **Keys must be unique** -- duplicate keys overwrite\n- **Keys must be hashable** -- strings, numbers, tuples (not lists)\n- **Mutable** -- can add, change, remove pairs\n- **Ordered** -- Python 3.7+ maintains insertion order\n\n---\n\n### The `dict()` Constructor\n\n```python\nstudent = dict(name=\"Alice\", age=25)\nprint(student)  # {\"name\": \"Alice\", \"age\": 25}\n\n# From list of tuples\npairs = [(\"name\", \"Alice\"), (\"age\", 25)]\nstudent = dict(pairs)\n```\n\n---\n\n### Key Types\n\n```python\n# String keys (most common)\ndata = {\"name\": \"Alice\"}\n\n# Integer keys\ndata = {1: \"one\", 2: \"two\"}\n\n# Tuple keys (hashable)\ndata = {(1, 2): \"point\"}\n\n# BUT list keys do NOT work\n# data = {[1, 2]: \"point\"}  # TypeError!\n```\n\n---\n\n> **Analogy:** A dictionary is like a real dictionary -- you look up a word (key) to find its definition (value).",
+  "codeExample": "student = {\n    \"name\": \"Alice\",\n    \"age\": 25,\n    \"grade\": \"A\"\n}\n\nprint(student)\nprint(type(student))\nprint(len(student))\n\n# dict() constructor\ndata = dict(name=\"Bob\", age=30)\nprint(data)",
+  "quiz": [
+    {
+      "question": "What is the main structure of a dictionary?",
+      "options": [
+        "Indexed elements",
+        "Key-value pairs",
+        "Unique unordered values",
+        "Ordered immutable items"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

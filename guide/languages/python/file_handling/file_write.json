@@ -1,0 +1,22 @@
+{
+  "title": "File Write",
+  "language": "python",
+  "topic": "file_write",
+  "order": 113,
+  "nextTopic": "file_remove",
+  "prevTopic": "file_open",
+  "content": "### Writing to Files\n\n---\n\n### Write Mode (`\"w\"`)\n\nOverwrites the file if it exists, creates it if not:\n\n```python\nwith open(\"output.txt\", \"w\") as f:\n    f.write(\"Hello, World!\")\n```\n\n---\n\n### Append Mode (`\"a\"`)\n\nAdds to the end of the file:\n\n```python\nwith open(\"output.txt\", \"a\") as f:\n    f.write(\"\\nNew line appended!\")\n```\n\n---\n\n### Create Mode (`\"x\"`)\n\nCreates a new file. Fails if the file exists:\n\n```python\ntry:\n    with open(\"newfile.txt\", \"x\") as f:\n        f.write(\"Brand new file\")\nexcept FileExistsError:\n    print(\"File already exists!\")\n```\n\n---\n\n### Writing Multiple Lines\n\n```python\nlines = [\"Line 1\", \"Line 2\", \"Line 3\"]\n\nwith open(\"output.txt\", \"w\") as f:\n    for line in lines:\n        f.write(line + \"\\n\")  # Add newline manually\n    \n    # Or use writelines\n    f.writelines(line + \"\\n\" for line in lines)\n```\n\n---\n\n### Writing Binary Data\n\n```python\nwith open(\"image.jpg\", \"wb\") as f:\n    f.write(binary_data)\n```\n\n---\n\n### Important Differences\n\n| Mode | File Exists | File Does Not Exist |\n|------|-------------|-------------------|\n| `\"w\"` | Overwrites | Creates |\n| `\"a\"` | Appends | Creates |\n| `\"x\"` | Error | Creates |\n\n> **Warning:** `\"w\"` mode **overwrites** the file without asking. There is no undo!",
+  "codeExample": "# Write\nwith open(\"test.txt\", \"w\") as f:\n    f.write(\"Hello, World!\\n\")\n    f.write(\"Second line\")\n\n# Read back\nwith open(\"test.txt\", \"r\") as f:\n    print(f.read())\n\n# Append\nwith open(\"test.txt\", \"a\") as f:\n    f.write(\"\\nAppended line\")\n\n# Read again\nwith open(\"test.txt\", \"r\") as f:\n    print(f.read())\n\n# Create mode\ntry:\n    with open(\"new_file.txt\", \"x\") as f:\n        f.write(\"Created!\")\nexcept FileExistsError:\n    print(\"File already exists\")",
+  "quiz": [
+    {
+      "question": "What does write mode (\"w\") do if the file already exists?",
+      "options": [
+        "Appends to the file",
+        "Overwrites the file",
+        "Raises an error",
+        "Creates a backup then overwrites"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

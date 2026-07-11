@@ -1,0 +1,22 @@
+{
+  "title": "None",
+  "language": "python",
+  "topic": "none",
+  "order": 17,
+  "nextTopic": "variables",
+  "prevTopic": "booleans",
+  "content": "### The `None` Value\n\n`None` represents the **absence of a value** -- similar to `null` in other languages.\n\n---\n\n### When to Use None\n\n- A function that does not return anything returns `None`\n- A variable that has not been assigned a meaningful value\n- Placeholder for optional values\n\n```python\nx = None\nprint(x)  # None\nprint(type(x))  # <class 'NoneType'>\n```\n\n---\n\n### Functions Returning None\n\n```python\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\nresult = greet(\"Alice\")\nprint(result)  # None\n```\n\nThe function prints but does not return a value, so `result` is `None`.\n\n---\n\n### Checking for None\n\nUse `is` (not `==`):\n\n```python\nif x is None:\n    print(\"x has no value\")\n\nif x is not None:\n    print(\"x has a value\")\n```\n\n---\n\n### None is Falsy\n\n```python\nif None:\n    print(\"Never runs\")\nelse:\n    print(\"None is falsy\")\n```\n\n---\n\n> **Good Practice:** Use `is None` instead of `== None`. The `is` operator checks identity, which is more precise for the singleton `None`.",
+  "codeExample": "x = None\nprint(x)\nprint(type(x))\n\nif x is None:\n    print(\"x is None\")\n\ndef no_return():\n    pass\n\nresult = no_return()\nprint(result)  # None",
+  "quiz": [
+    {
+      "question": "What type does None have?",
+      "options": [
+        "NoneType",
+        "None",
+        "null",
+        "undefined"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

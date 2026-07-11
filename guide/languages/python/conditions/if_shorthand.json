@@ -1,0 +1,22 @@
+{
+  "title": "Shorthand If",
+  "language": "python",
+  "topic": "if_shorthand",
+  "order": 74,
+  "nextTopic": "if_logical",
+  "prevTopic": "if_else",
+  "content": "### Shorthand If\n\nPython offers shorter ways to write simple conditions.\n\n---\n\n### Single Statement on One Line\n\n```python\nif 5 > 2: print(\"Five is greater than two\")\n```\n\nThis works when the `if` body is **only one line**.\n\n---\n\n### Single Statement If-Else (Ternary)\n\n```python\na = 10\nb = 20\n\nmax_value = a if a > b else b\nprint(max_value)  # 20\n```\n\nThis is called the **ternary operator**.\n\n---\n\n### Using `and` and `or` for Shorthand\n\n```python\n# Instead of:\nif x > 0:\n    print(\"Positive\")\n\n# You can write:\nx > 0 and print(\"Positive\")  # Short-circuits if False\n\n# Instead of:\nif not x:\n    x = 5\n\n# You can write:\nx = x or 5  # Uses 5 if x is falsy\n```\n\n---\n\n### Nested Ternary (Avoid)\n\n```python\nresult = \"A\" if score >= 90 else \"B\" if score >= 80 else \"C\"\n```\n\nWhile valid, nested ternaries are **hard to read**. Use regular `if-elif-else` for complex logic.\n\n---\n\n> **Best Practice:** Use shorthand for **simple**, obvious conditions. Use full `if-elif-else` blocks for anything complex. Readability matters more than brevity.",
+  "codeExample": "# Single line if\nif 5 > 2: print(\"Five is greater\")\n\n# Ternary\na, b = 10, 20\nprint(\"a is greater\" if a > b else \"b is greater\")\n\n# Short-circuit\nx = 0\nx > 0 and print(\"Positive\")  # Won't print\n\nx = 10\nx > 0 and print(\"Positive\")  # Will print",
+  "quiz": [
+    {
+      "question": "What is the ternary operator syntax?",
+      "options": [
+        "condition ? val1 : val2",
+        "val1 if condition else val2",
+        "if condition: val1 else: val2",
+        "val1 else condition val2"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

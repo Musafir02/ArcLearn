@@ -1,0 +1,22 @@
+{
+  "title": "Membership Operators",
+  "language": "python",
+  "topic": "operators_membership",
+  "order": 25,
+  "nextTopic": "operators_bitwise",
+  "prevTopic": "operators_identity",
+  "content": "### Membership Operators\n\nMembership operators check if a value **exists** in a sequence (string, list, tuple, set, dictionary).\n\n---\n\n### `in` and `not in`\n\n| Operator | Example | Returns True When |\n|----------|---------|------------------|\n| `in` | `x in y` | `x` is found in `y` |\n| `not in` | `x not in y` | `x` is NOT found in `y` |\n\n---\n\n### Checking in Lists\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nprint(\"banana\" in fruits)    # True\nprint(\"grape\" in fruits)     # False\nprint(\"grape\" not in fruits) # True\n```\n\n### Checking in Strings\n\n```python\ntext = \"Hello, World!\"\nprint(\"Hello\" in text)      # True\nprint(\"hello\" in text)      # False (case-sensitive)\n```\n\n### Checking in Dictionaries\n\n`in` checks **keys** by default:\n\n```python\ndata = {\"name\": \"Alice\", \"age\": 25}\nprint(\"name\" in data)       # True\nprint(\"Alice\" in data)      # False (checks keys, not values)\n```\n\n---\n\n### Checking in Tuples and Sets\n\n```python\nt = (1, 2, 3)\nprint(2 in t)  # True\n\ns = {1, 2, 3}\nprint(4 in s)  # False\n```\n\n---\n\n> **Performance Note:** For large collections, `in` is **fast** on sets and dictionaries (O(1)) but **slower** on lists and tuples (O(n)).",
+  "codeExample": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(\"banana\" in fruits)\nprint(\"grape\" not in fruits)\n\ntext = \"Hello, World!\"\nprint(\"World\" in text)\n\nuser = {\"name\": \"Alice\", \"age\": 25}\nprint(\"age\" in user)",
+  "quiz": [
+    {
+      "question": "What does \"apple\" in [\"banana\", \"cherry\"] return?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "None"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

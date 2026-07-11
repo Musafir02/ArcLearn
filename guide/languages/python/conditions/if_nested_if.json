@@ -1,0 +1,22 @@
+{
+  "title": "Nested If",
+  "language": "python",
+  "topic": "if_nested_if",
+  "order": 76,
+  "nextTopic": "if_pass",
+  "prevTopic": "if_logical",
+  "content": "### Nested If Statements\n\nYou can place `if` statements **inside** other `if` statements.\n\n---\n\n### Basic Nesting\n\n```python\nage = 25\nhas_license = True\n\nif age >= 18:\n    print(\"You are old enough\")\n    \n    if has_license:\n        print(\"You can drive\")\n    else:\n        print(\"But you need a license\")\nelse:\n    print(\"You are too young\")\n```\n\n---\n\n### Multiple Levels\n\n```python\nx = 41\n\nif x > 10:\n    print(\"Above ten\")\n    if x > 20:\n        print(\"And also above twenty\")\n        if x > 30:\n            print(\"And also above thirty\")\n```\n\n---\n\n### Indentation Shows Nesting\n\n```python\nif condition1:\n    if condition2:\n        if condition3:\n            print(\"All conditions met\")\n        else:\n            print(\"1 and 2 met, not 3\")\n    else:\n        print(\"1 met, not 2\")\nelse:\n    print(\"1 not met\")\n```\n\n---\n\n### Alternatives to Deep Nesting\n\nDeep nesting can be hard to read. Use `and` to flatten:\n\n```python\n# Instead of this:\nif x > 0:\n    if y > 0:\n        print(\"Both positive\")\n\n# Do this:\nif x > 0 and y > 0:\n    print(\"Both positive\")\n```\n\n---\n\n> **Best Practice:** Avoid nesting more than **2-3 levels deep**. Use `and`, `or`, or early returns to keep code flat.",
+  "codeExample": "x = 41\n\nif x > 10:\n    print(\"Above ten\")\n    if x > 20:\n        print(\"Also above twenty\")\n        if x > 30:\n            print(\"Also above thirty\")\n\n# Using and (flatter)\nage = 25\nhas_id = True\nif age >= 18 and has_id:\n    print(\"You can enter\")",
+  "quiz": [
+    {
+      "question": "What is a nested if?",
+      "options": [
+        "An if with elif",
+        "An if inside another if",
+        "An if with multiple conditions",
+        "An if on one line"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

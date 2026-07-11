@@ -1,0 +1,22 @@
+{
+  "title": "Inheritance",
+  "language": "python",
+  "topic": "inheritance",
+  "order": 96,
+  "nextTopic": "polymorphism",
+  "prevTopic": "class_methods",
+  "content": "### Inheritance\n\n**Inheritance** allows a class to inherit attributes and methods from another class.\n\n---\n\n### Parent and Child Classes\n\n```python\nclass Animal:  # Parent class\n    def __init__(self, name):\n        self.name = name\n    \n    def speak(self):\n        return \"...\"\n\nclass Dog(Animal):  # Child class\n    def speak(self):\n        return \"Woof!\"\n\nclass Cat(Animal):  # Child class\n    def speak(self):\n        return \"Meow!\"\n\ndog = Dog(\"Rex\")\ncat = Cat(\"Whiskers\")\nprint(dog.name, dog.speak())  # Rex Woof!\nprint(cat.name, cat.speak())  # Whiskers Meow!\n```\n\n---\n\n### The `super()` Function\n\nCall the parent class's methods:\n\n```python\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        super().__init__(name)  # Call parent's __init__\n        self.breed = breed\n```\n\n---\n\n### Overriding Methods\n\nChild classes can **override** parent methods:\n\n```python\nclass Animal:\n    def speak(self):\n        return \"Generic animal sound\"\n\nclass Dog(Animal):\n    def speak(self):  # Override\n        return \"Woof!\"\n```\n\n---\n\n### Multiple Inheritance\n\n```python\nclass Flyer:\n    def fly(self):\n        return \"Flying!\"\n\nclass Swimmer:\n    def swim(self):\n        return \"Swimming!\"\n\nclass Duck(Flyer, Swimmer):\n    pass\n\nd = Duck()\nprint(d.fly())   # Flying!\nprint(d.swim())  # Swimming!\n```\n\n---\n\n### The MRO (Method Resolution Order)\n\nPython checks parent classes left-to-right:\n\n```python\nclass A: pass\nclass B(A): pass\nclass C(A): pass\nclass D(B, C): pass\n\nprint(D.__mro__)  # D -> B -> C -> A -> object\n```\n\n> **Key Point:** Inheritance creates an **is-a** relationship. A `Dog` **is an** `Animal`. Use composition for **has-a** relationships (a `Car` **has an** `Engine`).",
+  "codeExample": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    \n    def speak(self):\n        return \"...\"\n\nclass Dog(Animal):\n    def speak(self):\n        return f\"{self.name} says Woof!\"\n\nclass Cat(Animal):\n    def speak(self):\n        return f\"{self.name} says Meow!\"\n\ndog = Dog(\"Rex\")\ncat = Cat(\"Whiskers\")\nprint(dog.speak())\nprint(cat.speak())\nprint(\"Is dog Animal?\", isinstance(dog, Animal))",
+  "quiz": [
+    {
+      "question": "How does a child class inherit from a parent?",
+      "options": [
+        "class Child extends Parent:",
+        "class Child(Parent):",
+        "class Child inherits Parent:",
+        "class Child : Parent"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

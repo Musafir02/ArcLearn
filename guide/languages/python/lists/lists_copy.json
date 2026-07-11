@@ -1,0 +1,22 @@
+{
+  "title": "Copy Lists",
+  "language": "python",
+  "topic": "lists_copy",
+  "order": 44,
+  "nextTopic": "lists_join",
+  "prevTopic": "lists_sort",
+  "content": "### Copying Lists\n\nSimply assigning a list to another variable does **not** create a copy -- it creates a reference.\n\n---\n\n### The Assignment Trap\n\n```python\noriginal = [1, 2, 3]\ncopy = original  # This is NOT a copy!\ncopy[0] = 99\nprint(original)  # [99, 2, 3] -- original changed too!\n```\n\n`copy` is just another name for the **same list**. Changes affect both.\n\n---\n\n### Methods to Copy\n\n#### `.copy()` Method\n\n```python\noriginal = [1, 2, 3]\ncopy = original.copy()\ncopy[0] = 99\nprint(original)  # [1, 2, 3]\nprint(copy)      # [99, 2, 3]\n```\n\n#### `list()` Constructor\n\n```python\noriginal = [1, 2, 3]\ncopy = list(original)\n```\n\n#### Slice Copy\n\n```python\noriginal = [1, 2, 3]\ncopy = original[:]\n```\n\n---\n\n### Shallow vs Deep Copy\n\nNested lists need `deepcopy`:\n\n```python\nimport copy\n\noriginal = [[1, 2], [3, 4]]\nshallow = original.copy()  # Inner lists are still shared\nshallow[0][0] = 99\nprint(original)  # [[99, 2], [3, 4]] -- changed!\n\ndeep = copy.deepcopy(original)\ndeep[0][0] = 100\nprint(original)  # [[99, 2], [3, 4]] -- unchanged\n```\n\n---\n\n> **Key Point:** Use `.copy()`, `list()`, or `[:]` for simple lists. Use `copy.deepcopy()` for nested structures.",
+  "codeExample": "# The wrong way\nlist1 = [1, 2, 3]\nlist2 = list1\nlist2[0] = 99\nprint(\"list1:\", list1)  # Changed!\n\n# The right way\nlist1 = [1, 2, 3]\nlist2 = list1.copy()\nlist2[0] = 99\nprint(\"list1:\", list1)  # Unchanged\nprint(\"list2:\", list2)\n\n# Other methods\nlist3 = list(list1)\nlist4 = list1[:]",
+  "quiz": [
+    {
+      "question": "How do you properly copy a simple list?",
+      "options": [
+        "copy = original",
+        "copy = original.copy()",
+        "copy = copy(original)",
+        "copy = original.duplicate()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

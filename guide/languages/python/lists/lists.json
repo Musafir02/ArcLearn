@@ -1,0 +1,22 @@
+{
+  "title": "Lists",
+  "language": "python",
+  "topic": "lists",
+  "order": 36,
+  "nextTopic": "lists_access",
+  "prevTopic": "strings_methods",
+  "content": "### What are Lists?\n\nA **list** is an ordered, mutable collection of items enclosed in `[]`.\n\n---\n\n### Creating Lists\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nnumbers = [1, 2, 3, 4, 5]\nmixed = [\"apple\", 42, True, 3.14]\nempty = []\n```\n\n---\n\n### List Characteristics\n\n- **Ordered** -- items maintain their position\n- **Mutable** -- can change, add, remove items\n- **Indexed** -- access by position (starts at 0)\n- **Heterogeneous** -- can hold different data types\n- **Duplicates allowed** -- same value can appear multiple times\n\n---\n\n### List Length\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nprint(len(fruits))  # 3\n```\n\n---\n\n### The `list()` Constructor\n\n```python\nnumbers = list((1, 2, 3, 4, 5))  # From tuple\nprint(list(\"hello\"))  # [\"h\", \"e\", \"l\", \"l\", \"o\"]\n```\n\n---\n\n> **Lists vs Arrays:** Python lists are more flexible than arrays in other languages. They can hold mixed types and grow dynamically.",
+  "codeExample": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits)\nprint(len(fruits))\nprint(type(fruits))\n\nmixed = [\"apple\", 42, True, 3.14]\nprint(mixed)\n\nempty = []\nprint(empty)",
+  "quiz": [
+    {
+      "question": "Which symbol is used to create a list?",
+      "options": [
+        "()",
+        "[]",
+        "{}",
+        "<>"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

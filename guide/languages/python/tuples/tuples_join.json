@@ -1,0 +1,22 @@
+{
+  "title": "Join Tuples",
+  "language": "python",
+  "topic": "tuples_join",
+  "order": 52,
+  "nextTopic": "tuples_methods",
+  "prevTopic": "tuples_loop",
+  "content": "### Joining Tuples\n\n---\n\n### Using the `+` Operator\n\n```python\ntuple1 = (1, 2, 3)\ntuple2 = (4, 5, 6)\njoined = tuple1 + tuple2\nprint(joined)  # (1, 2, 3, 4, 5, 6)\n```\n\nCreates a **new** tuple.\n\n---\n\n### Multiplying Tuples\n\n```python\nfruits = (\"apple\", \"banana\")\nresult = fruits * 2\nprint(result)  # (\"apple\", \"banana\", \"apple\", \"banana\")\n```\n\n---\n\n### Using `*` Unpacking\n\n```python\ntuple1 = (1, 2, 3)\ntuple2 = (4, 5, 6)\njoined = (*tuple1, *tuple2)\nprint(joined)  # (1, 2, 3, 4, 5, 6)\n```\n\n---\n\n### Nested Tuples\n\n```python\ntuple1 = (1, 2)\ntuple2 = (3, 4)\nnested = (tuple1, tuple2)\nprint(nested)  # ((1, 2), (3, 4))\nprint(nested[0][1])  # 2\n```\n\n---\n\n> **Remember:** All these methods create a **new** tuple. The original tuples remain unchanged (immutability).",
+  "codeExample": "tuple1 = (1, 2, 3)\ntuple2 = (4, 5, 6)\n\njoined = tuple1 + tuple2\nprint(\"Joined:\", joined)\n\nmultiplied = tuple1 * 2\nprint(\"Multiplied:\", multiplied)\n\nunpacked = (*tuple1, *tuple2)\nprint(\"Unpacked:\", unpacked)\n\nnested = (tuple1, tuple2)\nprint(\"Nested:\", nested)\nprint(\"Access nested:\", nested[0][1])",
+  "quiz": [
+    {
+      "question": "What does (1, 2) * 3 produce?",
+      "options": [
+        "(3, 6)",
+        "(1, 2, 1, 2, 1, 2)",
+        "(1, 2, 3)",
+        "Error"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

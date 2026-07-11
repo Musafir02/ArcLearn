@@ -1,0 +1,22 @@
+{
+  "title": "JSON",
+  "language": "python",
+  "topic": "json",
+  "order": 105,
+  "nextTopic": "regex",
+  "prevTopic": "math",
+  "content": "### Working with JSON\n\n**JSON** (JavaScript Object Notation) is a lightweight data format for data exchange.\n\n---\n\n### Converting to JSON (`json.dumps()`)\n\n```python\nimport json\n\ndata = {\n    \"name\": \"Alice\",\n    \"age\": 25,\n    \"city\": \"Boston\",\n    \"hobbies\": [\"reading\", \"coding\"],\n    \"married\": False\n}\n\njson_string = json.dumps(data, indent=2)\nprint(json_string)\n```\n\n---\n\n### Python to JSON Type Mapping\n\n| Python | JSON |\n|--------|------|\n| `dict` | Object |\n| `list` | Array |\n| `str` | String |\n| `int`, `float` | Number |\n| `True` / `False` | `true` / `false` |\n| `None` | `null` |\n\n---\n\n### Parsing JSON (`json.loads()`)\n\n```python\nimport json\n\njson_string = '{\"name\": \"Alice\", \"age\": 25}'\ndata = json.loads(json_string)\n\nprint(data[\"name\"])  # Alice\nprint(type(data))    # <class 'dict'>\n```\n\n---\n\n### Working with Files\n\n```python\nimport json\n\n# Writing JSON to file\ndata = {\"name\": \"Alice\", \"age\": 25}\nwith open(\"data.json\", \"w\") as f:\n    json.dump(data, f, indent=2)\n\n# Reading JSON from file\nwith open(\"data.json\", \"r\") as f:\n    loaded = json.load(f)\n\nprint(loaded[\"name\"])  # Alice\n```\n\n---\n\n### Formatting Options\n\n```python\njson.dumps(data, indent=4)           # Pretty print\njson.dumps(data, separators=(\",\", \":\"))  # Compact\njson.dumps(data, sort_keys=True)     # Sort keys\n```\n\n---\n\n> **Use Case:** JSON is the standard format for web APIs, configuration files, and data storage. It is **the** most common data interchange format on the web.",
+  "codeExample": "import json\n\n# Python to JSON\ndata = {\n    \"name\": \"Alice\",\n    \"age\": 25,\n    \"skills\": [\"Python\", \"JavaScript\"],\n    \"active\": True\n}\n\njson_str = json.dumps(data, indent=2)\nprint(\"JSON output:\")\nprint(json_str)\n\n# JSON to Python\nparsed = json.loads(json_str)\nprint(\"\\nParsed back:\")\nprint(f\"Name: {parsed['name']}, Age: {parsed['age']}\")\nprint(f\"Type: {type(parsed)}\")",
+  "quiz": [
+    {
+      "question": "Which method converts Python to JSON string?",
+      "options": [
+        "json.loads()",
+        "json.dumps()",
+        "json.parse()",
+        "json.stringify()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

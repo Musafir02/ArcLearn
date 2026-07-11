@@ -1,0 +1,22 @@
+{
+  "title": "Lambda Functions",
+  "language": "python",
+  "topic": "lambda",
+  "order": 87,
+  "nextTopic": "recursion",
+  "prevTopic": "decorators",
+  "content": "### Lambda Functions\n\nA **lambda** is a small, anonymous function defined in one line.\n\n---\n\n### Syntax\n\n```python\nlambda arguments: expression\n```\n\n---\n\n### Regular vs Lambda\n\n```python\n# Regular function\ndef add(x, y):\n    return x + y\n\n# Lambda\nadd = lambda x, y: x + y\n\nprint(add(3, 5))  # 8\n```\n\n---\n\n### Lambda with `map()`\n\n```python\nnumbers = [1, 2, 3, 4]\nsquared = list(map(lambda x: x ** 2, numbers))\nprint(squared)  # [1, 4, 9, 16]\n```\n\n---\n\n### Lambda with `filter()`\n\n```python\nnumbers = [1, 2, 3, 4, 5, 6]\nevens = list(filter(lambda x: x % 2 == 0, numbers))\nprint(evens)  # [2, 4, 6]\n```\n\n---\n\n### Lambda with `sort()`\n\n```python\nstudents = [(\"Alice\", 25), (\"Bob\", 20), (\"Charlie\", 30)]\nstudents.sort(key=lambda s: s[1])  # Sort by age\nprint(students)  # [(\"Bob\", 20), (\"Alice\", 25), (\"Charlie\", 30)]\n```\n\n---\n\n### When to Use Lambda\n\n| Use Case | Example |\n|----------|---------|\n| Simple operations | `lambda x: x * 2` |\n| One-time use | Inside `map()`, `filter()` |\n| Sorting keys | `key=lambda x: x[1]` |\n\n> **Best Practice:** Use lambda for **simple** operations. If the logic is complex, use a regular `def` function with a name -- it is more readable.",
+  "codeExample": "# Basic lambda\nadd = lambda a, b: a + b\nprint(\"Add:\", add(3, 5))\n\n# With map\nnums = [1, 2, 3, 4]\ndoubled = list(map(lambda x: x * 2, nums))\nprint(\"Doubled:\", doubled)\n\n# With filter\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(\"Evens:\", evens)\n\n# With sort\npairs = [(\"b\", 2), (\"a\", 1), (\"c\", 3)]\npairs.sort(key=lambda p: p[1])\nprint(\"Sorted:\", pairs)",
+  "quiz": [
+    {
+      "question": "What keyword creates an anonymous function?",
+      "options": [
+        "anon",
+        "lambda",
+        "fn",
+        "function"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

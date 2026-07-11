@@ -1,0 +1,22 @@
+{
+  "title": "Regular Expressions (RegEx)",
+  "language": "python",
+  "topic": "regex",
+  "order": 106,
+  "nextTopic": "pip",
+  "prevTopic": "json",
+  "content": "### Regular Expressions\n\n**RegEx** is a sequence of characters that defines a search pattern.\n\n---\n\n### The `re` Module\n\n```python\nimport re\n```\n\n---\n\n### `re.findall()` -- Find All Matches\n\n```python\nimport re\n\ntext = \"The rain in Spain\"\nresult = re.findall(\"ai\", text)\nprint(result)  # [\"ai\", \"ai\"]\n```\n\n---\n\n### `re.search()` -- First Match\n\n```python\nimport re\n\ntext = \"The rain in Spain\"\nresult = re.search(\"\\\\s\", text)  # First whitespace\n\nif result:\n    print(result.start())  # 3 (position)\n```\n\n---\n\n### `re.split()` -- Split by Pattern\n\n```python\nimport re\n\ntext = \"The rain in Spain\"\nresult = re.split(\"\\\\s\", text)\nprint(result)  # [\"The\", \"rain\", \"in\", \"Spain\"]\n```\n\n---\n\n### `re.sub()` -- Replace\n\n```python\nimport re\n\ntext = \"The rain in Spain\"\nresult = re.sub(\"\\\\s\", \"-\", text)\nprint(result)  # \"The-rain-in-Spain\"\n```\n\n---\n\n### Common Patterns\n\n| Pattern | Matches |\n|---------|---------|\n| `\\\\d` | Digit (0-9) |\n| `\\\\w` | Word character (a-z, A-Z, 0-9, _) |\n| `\\\\s` | Whitespace (space, tab, newline) |\n| `[abc]` | Any character in brackets |\n| `[^abc]` | Any character NOT in brackets |\n| `^` | Start of string |\n| `$` | End of string |\n| `.` | Any character (except newline) |\n| `*` | Zero or more |\n| `+` | One or more |\n| `?` | Zero or one |\n| `{n}` | Exactly n times |\n| `{n,}` | n or more times |\n\n---\n\n### Email Validation Example\n\n```python\nimport re\n\ndef is_valid_email(email):\n    pattern = r\"^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$\"\n    return bool(re.match(pattern, email))\n\nprint(is_valid_email(\"test@example.com\"))  # True\nprint(is_valid_email(\"test@com\"))          # False\n```\n\n> **Tip:** Use raw strings `r\"...\"` for regex patterns to avoid escaping backslashes.",
+  "codeExample": "import re\n\ntext = \"Call 555-1234 or 555-5678\"\n\n# Find all phone numbers\nnumbers = re.findall(r\"\\d{3}-\\d{4}\", text)\nprint(\"Phone numbers:\", numbers)\n\n# Replace\nexpanded = re.sub(r\"\\d{3}-\\d{4}\", \"[NUMBER]\", text)\nprint(\"Masked:\", expanded)\n\n# Check pattern\nemail = \"user@example.com\"\npattern = r\"^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$\"\nif re.match(pattern, email):\n    print(f\"{email} is valid\")",
+  "quiz": [
+    {
+      "question": "Which function finds all matches of a pattern?",
+      "options": [
+        "re.search()",
+        "re.findall()",
+        "re.match()",
+        "re.find()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

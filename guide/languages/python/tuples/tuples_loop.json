@@ -1,0 +1,22 @@
+{
+  "title": "Loop Through Tuples",
+  "language": "python",
+  "topic": "tuples_loop",
+  "order": 51,
+  "nextTopic": "tuples_join",
+  "prevTopic": "tuples_unpack",
+  "content": "### Looping Through Tuples\n\n---\n\n### For Loop\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\nfor fruit in fruits:\n    print(fruit)\n```\n\n---\n\n### Loop by Index\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\nfor i in range(len(fruits)):\n    print(fruits[i])\n```\n\n---\n\n### Using `enumerate()`\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\nfor i, fruit in enumerate(fruits):\n    print(f\"{i}: {fruit}\")\n```\n\n---\n\n### While Loop\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\ni = 0\nwhile i < len(fruits):\n    print(fruits[i])\n    i += 1\n```\n\n---\n\n> **Note:** Looping through tuples works exactly the same as looping through lists. The syntax and methods are identical.",
+  "codeExample": "fruits = (\"apple\", \"banana\", \"cherry\")\n\n# Simple for loop\nfor fruit in fruits:\n    print(fruit)\n\n# With enumerate\nfor i, fruit in enumerate(fruits):\n    print(f\"{i}: {fruit}\")\n\n# While loop\ni = 0\nwhile i < len(fruits):\n    print(fruits[i])\n    i += 1",
+  "quiz": [
+    {
+      "question": "How do you get both index and value when looping a tuple?",
+      "options": [
+        "for i, v in tuple:",
+        "for i in range(len(t)): t[i]",
+        "for i, v in enumerate(tuple):",
+        "Both A and C"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

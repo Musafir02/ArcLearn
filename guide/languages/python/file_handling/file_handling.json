@@ -1,0 +1,22 @@
+{
+  "title": "File Handling",
+  "language": "python",
+  "topic": "file_handling",
+  "order": 111,
+  "nextTopic": "file_open",
+  "prevTopic": "virtualenv",
+  "content": "### File Handling\n\nFile handling lets you work with files on your system -- read, write, create, and delete.\n\n---\n\n### The `open()` Function\n\nThe key function for file operations:\n\n```python\nfile = open(\"filename.txt\", \"mode\")\n```\n\n---\n\n### File Modes\n\n| Mode | Description |\n|------|-------------|\n| `\"r\"` | Read (default) |\n| `\"w\"` | Write (overwrites) |\n| `\"a\"` | Append (add to end) |\n| `\"x\"` | Create (fails if exists) |\n| `\"r+\"` | Read and write |\n| `\"t\"` | Text mode (default) |\n| `\"b\"` | Binary mode |\n\n---\n\n### Always Close Files\n\n```python\nfile = open(\"example.txt\", \"r\")\n# Work with file\nfile.close()  # Important!\n```\n\nFailing to close can cause data loss or resource leaks.\n\n---\n\n### The `with` Statement (Best Practice)\n\n```python\nwith open(\"example.txt\", \"r\") as file:\n    content = file.read()\n    print(content)\n# File is automatically closed\n```\n\n---\n\n### File Modes Combined\n\n```python\nwith open(\"data.txt\", \"r\") as f:   # Read text\nwith open(\"data.txt\", \"w\") as f:   # Write text\nwith open(\"data.txt\", \"a\") as f:   # Append text\nwith open(\"image.jpg\", \"rb\") as f:  # Read binary\n```\n\n> **Best Practice:** Always use the `with` statement. It automatically closes the file even if an error occurs.",
+  "codeExample": "# Using with statement (recommended)\nwith open(\"sample.txt\", \"w\") as f:\n    f.write(\"Hello, World!\")\n\n# Reading\nwith open(\"sample.txt\", \"r\") as f:\n    content = f.read()\n    print(content)",
+  "quiz": [
+    {
+      "question": "What is the best way to ensure a file is closed?",
+      "options": [
+        "Call .close() manually",
+        "Use the with statement",
+        "Use try/finally",
+        "Both B and C"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

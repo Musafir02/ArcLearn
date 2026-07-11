@@ -1,0 +1,22 @@
+{
+  "title": "Match Statement",
+  "language": "python",
+  "topic": "match",
+  "order": 78,
+  "nextTopic": "while_loops",
+  "prevTopic": "if_pass",
+  "content": "### The `match` Statement\n\nIntroduced in **Python 3.10**, `match` is like a `switch-case` from other languages.\n\n---\n\n### Basic Syntax\n\n```python\nvalue = 2\n\nmatch value:\n    case 1:\n        print(\"One\")\n    case 2:\n        print(\"Two\")\n    case 3:\n        print(\"Three\")\n    case _:\n        print(\"Other\")  # Default case\n```\n\n---\n\n### Matching Multiple Values\n\n```python\nmatch value:\n    case 1 | 2 | 3:\n        print(\"Small number\")\n    case 4 | 5:\n        print(\"Medium number\")\n    case _:\n        print(\"Large number\")\n```\n\n---\n\n### Matching with Conditions\n\n```python\nmatch value:\n    case x if x > 0:\n        print(f\"Positive: {x}\")\n    case x if x == 0:\n        print(\"Zero\")\n    case x:\n        print(f\"Negative: {x}\")\n```\n\n---\n\n### Pattern Matching with Data Structures\n\n```python\npoint = (5, 0)\n\nmatch point:\n    case (0, 0):\n        print(\"Origin\")\n    case (x, 0):\n        print(f\"On x-axis at {x}\")\n    case (0, y):\n        print(f\"On y-axis at {y}\")\n    case (x, y):\n        print(f\"At ({x}, {y})\")\n```\n\n---\n\n### Matching with Classes\n\n```python\nclass Color:\n    def __init__(self, r, g, b):\n        self.r, self.g, self.b = r, g, b\n\nc = Color(255, 0, 0)\n\nmatch c:\n    case Color(r=255, g=0, b=0):\n        print(\"Red\")\n    case Color(r=0, g=255, b=0):\n        print(\"Green\")\n    case _:\n        print(\"Unknown\")\n```\n\n> **Key Point:** `match` is more powerful than a simple `switch`. It supports **structural pattern matching** -- matching against data structures, not just values.",
+  "codeExample": "day = 3\n\nmatch day:\n    case 1:\n        print(\"Monday\")\n    case 2:\n        print(\"Tuesday\")\n    case 3:\n        print(\"Wednesday\")\n    case _:\n        print(\"Weekend\")\n\n# With OR pattern\nmatch day:\n    case 1 | 2 | 3 | 4 | 5:\n        print(\"Weekday\")\n    case 6 | 7:\n        print(\"Weekend\")",
+  "quiz": [
+    {
+      "question": "What Python version introduced match?",
+      "options": [
+        "3.8",
+        "3.9",
+        "3.10",
+        "3.11"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

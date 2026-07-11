@@ -1,0 +1,22 @@
+{
+  "title": "Data Types",
+  "language": "python",
+  "topic": "datatypes",
+  "order": 13,
+  "nextTopic": "numbers",
+  "prevTopic": "variables_global",
+  "content": "### What are Data Types?\n\n**Data types** define what kind of value a variable holds. Python is **dynamically typed** -- the type is determined automatically.\n\n---\n\n### Built-in Data Types\n\n| Category | Types |\n|----------|-------|\n| **Text** | `str` |\n| **Numeric** | `int`, `float`, `complex` |\n| **Sequence** | `list`, `tuple`, `range` |\n| **Mapping** | `dict` |\n| **Set** | `set`, `frozenset` |\n| **Boolean** | `bool` |\n| **Binary** | `bytes`, `bytearray`, `memoryview` |\n| **None** | `NoneType` |\n\n---\n\n### Checking Types\n\nUse the `type()` function:\n\n```python\nx = 5\nprint(type(x))      # <class 'int'>\n\ny = \"Hello\"\nprint(type(y))      # <class 'str'>\n\nz = 3.14\nprint(type(z))      # <class 'float'>\n```\n\n---\n\n### Type Setting\n\nTypes are set **automatically** when you assign a value:\n\n```python\nx = 5         # int\nx = \"Hello\"   # Now str -- types can change!\n```\n\nYou can also specify types using constructor functions:\n\n```python\nx = int(5)      # 5\nx = str(5)      # \"5\"\nx = float(5)    # 5.0\n```\n\n---\n\n> **Dynamic Typing:** Python figures out the type at runtime. You don't need to declare types like in Java or C++.",
+  "codeExample": "x = 5\nprint(type(x))\n\ny = \"Hello\"\nprint(type(y))\n\nz = 3.14\nprint(type(z))\n\nprint(type(True))",
+  "quiz": [
+    {
+      "question": "How do you check the data type of a variable in Python?",
+      "options": [
+        "typeof(x)",
+        "x.type()",
+        "type(x)",
+        "x.datatype()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Function Scope",
+  "language": "python",
+  "topic": "scope",
+  "order": 85,
+  "nextTopic": "decorators",
+  "prevTopic": "args_kwargs",
+  "content": "### Variable Scope\n\n**Scope** determines where a variable can be accessed.\n\n---\n\n### Local Scope\n\nVariables created **inside** a function are local:\n\n```python\ndef my_func():\n    x = 10  # Local variable\n    print(x)  # OK\n\nmy_func()\n# print(x)  # NameError!\n```\n\n---\n\n### Function Inside Function\n\n```python\ndef outer():\n    x = \"outer\"\n    \n    def inner():\n        y = \"inner\"\n        print(x)  # Can access outer's variables\n        print(y)\n    \n    inner()\n    # print(y)  # NameError!\n\nouter()\n```\n\n---\n\n### Global Scope\n\nVariables created **outside** any function are global:\n\n```python\nx = 100  # Global variable\n\ndef my_func():\n    print(x)  # Can read global\n\nmy_func()     # 100\nprint(x)      # 100\n```\n\n---\n\n### Modifying Globals\n\nUse `global` keyword to modify a global inside a function:\n\n```python\nx = 10\n\ndef change():\n    global x\n    x = 20\n\nchange()\nprint(x)  # 20\n```\n\n---\n\n### Nonlocal Scope\n\nFor nested functions, use `nonlocal`:\n\n```python\ndef outer():\n    x = \"outer\"\n    \n    def inner():\n        nonlocal x\n        x = \"inner\"\n    \n    inner()\n    print(x)  # \"inner\"\n\nouter()\n```\n\n---\n\n### The LEGB Rule\n\nPython looks up variables in this order:\n\n1. **L**ocal -- inside the current function\n2. **E**nclosing -- outer functions (for nested functions)\n3. **G**lobal -- top-level of module\n4. **B**uilt-in -- Python built-in names (`print`, `len`, etc.)\n\n> **Best Practice:** Avoid modifying global variables inside functions. It makes code hard to debug.",
+  "codeExample": "x = 10  # Global\n\ndef my_func():\n    y = 5  # Local\n    print(\"Inside:\", x, y)\n\nmy_func()\nprint(\"Outside:\", x)\n# print(y)  # Error!\n\n# Global modification\ncounter = 0\ndef increment():\n    global counter\n    counter += 1\n\nincrement()\nprint(\"Counter:\", counter)",
+  "quiz": [
+    {
+      "question": "What keyword modifies a global variable inside a function?",
+      "options": [
+        "global",
+        "nonlocal",
+        "world",
+        "public"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Recursion",
+  "language": "python",
+  "topic": "recursion",
+  "order": 88,
+  "nextTopic": "generators",
+  "prevTopic": "lambda",
+  "content": "### Recursion\n\n**Recursion** is when a function calls itself.\n\n---\n\n### Basic Recursion\n\n```python\ndef countdown(n):\n    if n <= 0:\n        print(\"Go!\")\n    else:\n        print(n)\n        countdown(n - 1)  # Function calls itself\n\ncountdown(3)\n# 3, 2, 1, Go!\n```\n\n---\n\n### The Two Parts of Recursion\n\n1. **Base case** -- stops the recursion\n2. **Recursive case** -- calls itself, moving toward base case\n\n```python\ndef factorial(n):\n    # Base case\n    if n <= 1:\n        return 1\n    # Recursive case\n    return n * factorial(n - 1)\n```\n\n---\n\n### Recursive vs Iterative\n\n```python\n# Iterative (loop)\ndef factorial_iter(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n\n# Recursive\ndef factorial_rec(n):\n    if n <= 1:\n        return 1\n    return n * factorial_rec(n - 1)\n```\n\n---\n\n### Recursion Limit\n\nPython has a **recursion limit** (default 1000):\n\n```python\nimport sys\nprint(sys.getrecursionlimit())  # 1000\nsys.setrecursionlimit(2000)     # Increase if needed\n```\n\n---\n\n### Good Uses for Recursion\n\n| Problem | Recursive Solution |\n|---------|-------------------|\n| **Tree traversal** | Walk file system |\n| **Factorial** | `n * factorial(n-1)` |\n| **Fibonacci** | `f(n-1) + f(n-2)` |\n| **Binary search** | Divide and conquer |\n\n---\n\n> **Warning:** Recursion uses more memory than loops. Each call adds to the call stack. Use recursion when the problem is naturally recursive (trees, fractals). Use loops for simple repetition.",
+  "codeExample": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)\n\nprint(\"Factorial 5:\", factorial(5))\n\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\nprint(\"Fibonacci 7:\", fibonacci(7))\n\ndef countdown(n):\n    if n <= 0:\n        print(\"Liftoff!\")\n        return\n    print(n)\n    countdown(n - 1)\n\ncountdown(3)",
+  "quiz": [
+    {
+      "question": "What must every recursive function have?",
+      "options": [
+        "A loop",
+        "A base case to stop recursion",
+        "A list parameter",
+        "A global variable"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

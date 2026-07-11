@@ -1,0 +1,22 @@
+{
+  "title": "Add Set Items",
+  "language": "python",
+  "topic": "sets_add",
+  "order": 56,
+  "nextTopic": "sets_remove",
+  "prevTopic": "sets_access",
+  "content": "### Adding Items to a Set\n\n---\n\n### `.add()` -- Add Single Item\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfruits.add(\"orange\")\nprint(fruits)  # {\"apple\", \"banana\", \"cherry\", \"orange\"}\n\n# Adding a duplicate has no effect\nfruits.add(\"apple\")\nprint(fruits)  # Unchanged\n```\n\n---\n\n### `.update()` -- Add Multiple Items\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfruits.update([\"orange\", \"kiwi\", \"grape\"])\nprint(fruits)\n```\n\n`.update()` accepts any iterable (list, tuple, set, etc.).\n\n---\n\n### Union Operator `|`\n\n```python\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\nresult = set1 | set2\nprint(result)  # {1, 2, 3, 4, 5}\n```\n\nCreates a **new** set with elements from both.\n\n---\n\n### In-Place Update\n\n```python\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\nset1 |= set2  # Same as set1.update(set2)\nprint(set1)  # {1, 2, 3, 4, 5}\n```\n\n---\n\n> **Difference:** `.add()` takes a single element. `.update()` takes an iterable and adds each element. `|` creates a new set.",
+  "codeExample": "fruits = {\"apple\", \"banana\"}\n\nfruits.add(\"orange\")\nprint(\"After add:\", fruits)\n\nfruits.update([\"kiwi\", \"grape\"])\nprint(\"After update:\", fruits)\n\n# Union creates new set\nset1 = {1, 2, 3}\nset2 = {3, 4, 5}\ncombined = set1 | set2\nprint(\"Union:\", combined)",
+  "quiz": [
+    {
+      "question": "Which method adds a single element to a set?",
+      "options": [
+        "append()",
+        "add()",
+        "insert()",
+        "extend()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

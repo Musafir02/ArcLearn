@@ -1,0 +1,22 @@
+{
+  "title": "Encapsulation",
+  "language": "python",
+  "topic": "encapsulation",
+  "order": 98,
+  "nextTopic": "class_inner",
+  "prevTopic": "polymorphism",
+  "content": "### Encapsulation\n\n**Encapsulation** bundles data and methods together, and restricts direct access to internal state.\n\n---\n\n### Protected Attributes (Single Underscore `_`)\n\nConvention for \"internal use\":\n\n```python\nclass Person:\n    def __init__(self, name):\n        self._name = name  # Protected by convention\n\np = Person(\"Alice\")\nprint(p._name)  # Works but discouraged\n```\n\n---\n\n### Private Attributes (Double Underscore `__`)\n\nName mangling makes it harder to access:\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.__name = name  # Name mangling\n    \n    def get_name(self):\n        return self.__name\n\np = Person(\"Alice\")\n# print(p.__name)  # AttributeError!\nprint(p.get_name())  # Alice\nprint(p._Person__name)  # Alice (name mangled to this)\n```\n\n---\n\n### Private Methods\n\n```python\nclass BankAccount:\n    def __init__(self, balance):\n        self.__balance = balance\n    \n    def __apply_fees(self):\n        self.__balance -= 10\n    \n    def withdraw(self, amount):\n        if amount <= self.__balance:\n            self.__balance -= amount\n            self.__apply_fees()\n        else:\n            print(\"Insufficient funds\")\n    \n    def get_balance(self):\n        return self.__balance\n```\n\n---\n\n### Getters and Setters with `@property`\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.__name = name\n    \n    @property\n    def name(self):\n        return self.__name\n    \n    @name.setter\n    def name(self, value):\n        if not isinstance(value, str):\n            raise ValueError(\"Name must be string\")\n        self.__name = value\n```\n\n---\n\n> **Key Point:** Python does not have true private access. Single `_` is a convention. Double `__` triggers name mangling. The real encapsulation is achieved through **properties** and **agreement** (programmers respect the convention).",
+  "codeExample": "class BankAccount:\n    def __init__(self, initial):\n        self.__balance = initial\n    \n    def deposit(self, amount):\n        if amount > 0:\n            self.__balance += amount\n    \n    def withdraw(self, amount):\n        if 0 < amount <= self.__balance:\n            self.__balance -= amount\n            return amount\n        return 0\n    \n    @property\n    def balance(self):\n        return self.__balance\n\naccount = BankAccount(1000)\naccount.deposit(500)\nprint(f\"Balance: {account.balance}\")\naccount.withdraw(200)\nprint(f\"Balance: {account.balance}\")",
+  "quiz": [
+    {
+      "question": "What does a double underscore prefix (__name) do?",
+      "options": [
+        "Makes it truly private",
+        "Triggers name mangling",
+        "Deletes the attribute",
+        "Makes it a class attribute"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

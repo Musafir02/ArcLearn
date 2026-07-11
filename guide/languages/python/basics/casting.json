@@ -1,0 +1,22 @@
+{
+  "title": "Casting",
+  "language": "python",
+  "topic": "casting",
+  "order": 15,
+  "nextTopic": "booleans",
+  "prevTopic": "numbers",
+  "content": "### Type Casting\n\n**Casting** converts a variable from one type to another.\n\n---\n\n### Constructor Functions\n\nUse these functions to cast:\n\n| Function | Converts To |\n|----------|-------------|\n| `int()` | Integer |\n| `float()` | Float |\n| `str()` | String |\n| `bool()` | Boolean |\n| `list()` | List |\n| `tuple()` | Tuple |\n| `set()` | Set |\n| `dict()` | Dictionary |\n\n---\n\n### Integer Casting\n\n```python\nx = int(3.14)      # 3 (truncates decimal)\ny = int(\"10\")      # 10 (string to int)\nz = int(True)      # 1\n```\n\n> **Error:** `int(\"10.5\")` is invalid. Convert to float first: `int(float(\"10.5\"))`.\n\n---\n\n### Float Casting\n\n```python\nx = float(10)      # 10.0\ny = float(\"3.14\")  # 3.14\nz = float(True)    # 1.0\n```\n\n---\n\n### String Casting\n\n```python\nx = str(123)       # \"123\"\ny = str(3.14)      # \"3.14\"\nz = str(True)      # \"True\"\n```\n\n---\n\n> **Best Practice:** Cast explicitly when you need a specific type, especially when working with user input (which is always a string).",
+  "codeExample": "x = int(3.14)\nprint(x)  # 3\n\ny = float(\"3.14\")\nprint(y)  # 3.14\n\nz = str(100)\nprint(z * 2)  # \"100100\"\n\nw = bool(1)\nprint(w)  # True",
+  "quiz": [
+    {
+      "question": "What does int(3.99) return?",
+      "options": [
+        "4",
+        "3",
+        "3.99",
+        "4.0"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

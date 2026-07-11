@@ -1,0 +1,22 @@
+{
+  "title": "String Methods",
+  "language": "python",
+  "topic": "strings_methods",
+  "order": 35,
+  "nextTopic": "lists",
+  "prevTopic": "strings_escape",
+  "content": "### String Methods\n\nPython strings have many built-in methods.\n\n---\n\n### Case Methods\n\n| Method | Example | Result |\n|--------|---------|--------|\n| `.upper()` | `\"hello\".upper()` | `\"HELLO\"` |\n| `.lower()` | `\"HELLO\".lower()` | `\"hello\"` |\n| `.title()` | `\"hello world\".title()` | `\"Hello World\"` |\n| `.capitalize()` | `\"hello\".capitalize()` | `\"Hello\"` |\n| `.swapcase()` | `\"Hello\".swapcase()` | `\"hELLO\"` |\n\n---\n\n### Check Methods\n\n| Method | Example | Result |\n|--------|---------|--------|\n| `.isalpha()` | `\"abc\".isalpha()` | `True` |\n| `.isdigit()` | `\"123\".isdigit()` | `True` |\n| `.isalnum()` | `\"abc123\".isalnum()` | `True` |\n| `.isspace()` | `\"   \".isspace()` | `True` |\n| `.startswith(\"H\")` | `\"Hello\".startswith(\"H\")` | `True` |\n| `.endswith(\"!\")` | `\"Hello!\".endswith(\"!\")` | `True` |\n\n---\n\n### Find and Replace\n\n| Method | Description |\n|--------|-------------|\n| `.find(\"lo\")` | Returns index of first occurrence (-1 if not found) |\n| `.index(\"lo\")` | Like find but raises error if not found |\n| `.count(\"l\")` | Counts occurrences |\n| `.replace(\"old\", \"new\")` | Replaces all occurrences |\n\n---\n\n### Trim Methods\n\n| Method | Description |\n|--------|-------------|\n| `.strip()` | Remove whitespace from both ends |\n| `.lstrip()` | Remove from left |\n| `.rstrip()` | Remove from right |\n| `.strip(\".,!\")` | Remove specific characters |\n\n---\n\n### Split and Join\n\n| Method | Description |\n|--------|-------------|\n| `.split(\",\")` | Split into list by delimiter |\n| `.rsplit()` | Split from right |\n| `.splitlines()` | Split by newlines |\n| `\" \".join(list)` | Join list into string |\n\n---\n\n> **Remember:** Methods return **new** strings -- the original string is never modified.",
+  "codeExample": "text = \"  Hello, World!  \"\n\nprint(text.strip())\nprint(text.upper())\nprint(text.replace(\"World\", \"Python\"))\nprint(text.split(\", \"))\nprint(text.count(\"l\"))\nprint(text.find(\"World\"))\nprint(text.isalpha())\nprint(\"123\".isdigit())\nprint(text.startswith(\"  He\"))",
+  "quiz": [
+    {
+      "question": "Which method checks if a string contains only digits?",
+      "options": [
+        "isnumeric()",
+        "isdigit()",
+        "isdecimal()",
+        "isnumber()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

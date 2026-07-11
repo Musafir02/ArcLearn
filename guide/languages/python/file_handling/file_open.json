@@ -1,0 +1,22 @@
+{
+  "title": "File Open",
+  "language": "python",
+  "topic": "file_open",
+  "order": 112,
+  "nextTopic": "file_write",
+  "prevTopic": "file_handling",
+  "content": "### Opening and Reading Files\n\n---\n\n### Opening a File\n\n```python\nwith open(\"filename.txt\", \"r\") as f:\n    content = f.read()\n```\n\n---\n\n### Reading Methods\n\n| Method | Description |\n|--------|-------------|\n| `.read()` | Read entire file as string |\n| `.read(n)` | Read first `n` characters |\n| `.readline()` | Read one line |\n| `.readlines()` | Read all lines into a list |\n\n```python\nwith open(\"data.txt\", \"r\") as f:\n    # Read all at once\n    content = f.read()\n    \n    # Read line by line\n    for line in f:\n        print(line.strip())  # .strip() removes \\n\n```\n\n---\n\n### Handling File Not Found\n\n```python\ntry:\n    with open(\"missing.txt\", \"r\") as f:\n        content = f.read()\nexcept FileNotFoundError:\n    print(\"File does not exist!\")\n```\n\n---\n\n### File Doesn't Exist Errors\n\n`\"r\"` mode raises `FileNotFoundError` if the file does not exist. The `\"w\"` and `\"a\"` modes **create** the file if it does not exist.\n\n---\n\n### Check if File Exists\n\n```python\nimport os\n\nif os.path.exists(\"filename.txt\"):\n    print(\"File exists\")\nelse:\n    print(\"File does not exist\")\n```\n\n---\n\n> **Remember:** Always handle the case where the file might not exist when using `\"r\"` mode.",
+  "codeExample": "# Create a sample file first\nwith open(\"sample.txt\", \"w\") as f:\n    f.write(\"Line 1\\nLine 2\\nLine 3\")\n\n# Read entire file\nwith open(\"sample.txt\", \"r\") as f:\n    print(\"All content:\")\n    print(f.read())\n\n# Read line by line\nwith open(\"sample.txt\", \"r\") as f:\n    print(\"\\nLine by line:\")\n    for line in f:\n        print(f\"  {line.strip()}\")\n\n# Check if exists\nimport os\nif os.path.exists(\"sample.txt\"):\n    print(\"\\nsample.txt exists\")",
+  "quiz": [
+    {
+      "question": "What happens if you open a non-existent file in read mode?",
+      "options": [
+        "File is created automatically",
+        "FileNotFoundError is raised",
+        "Empty string is returned",
+        "None is returned"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

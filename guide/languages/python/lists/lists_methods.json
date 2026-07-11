@@ -1,0 +1,22 @@
+{
+  "title": "List Methods",
+  "language": "python",
+  "topic": "lists_methods",
+  "order": 46,
+  "nextTopic": "tuples",
+  "prevTopic": "lists_join",
+  "content": "### List Methods Reference\n\n---\n\n### Adding Items\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `.append(x)` | Adds `x` at the end | `list.append(5)` |\n| `.insert(i, x)` | Inserts `x` at index `i` | `list.insert(1, 5)` |\n| `.extend(iter)` | Adds all items from iterable | `list.extend([5,6])` |\n\n---\n\n### Removing Items\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `.remove(x)` | Removes first occurrence of `x` | `list.remove(5)` |\n| `.pop(i)` | Removes and returns item at `i` | `list.pop(1)` |\n| `.clear()` | Removes all items | `list.clear()` |\n\n---\n\n### Finding Items\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `.index(x)` | Returns index of first `x` | `list.index(5)` |\n| `.count(x)` | Counts occurrences of `x` | `list.count(5)` |\n\n---\n\n### Reordering\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `.sort()` | Sort in place | `list.sort()` |\n| `.reverse()` | Reverse in place | `list.reverse()` |\n\n---\n\n### Built-in Functions for Lists\n\n| Function | Description | Example |\n|----------|-------------|---------|\n| `len(list)` | Returns length | `len([1,2,3])` |\n| `max(list)` | Returns max value | `max([1,2,3])` |\n| `min(list)` | Returns min value | `min([1,2,3])` |\n| `sum(list)` | Returns sum | `sum([1,2,3])` |\n| `sorted(list)` | Returns new sorted list | `sorted([3,1,2])` |\n| `any(list)` | True if any item is truthy | `any([0, 1, 0])` |\n| `all(list)` | True if all items are truthy | `all([1, 2, 3])` |\n\n---\n\n> **Note:** `.sort()`, `.reverse()`, `.append()`, `.extend()`, `.insert()`, `.remove()`, `.pop()`, and `.clear()` modify the list **in place** and return `None`.",
+  "codeExample": "nums = [3, 1, 4, 1, 5, 9, 2]\n\nprint(\"Count of 1:\", nums.count(1))\nprint(\"Index of 5:\", nums.index(5))\nprint(\"Max:\", max(nums))\nprint(\"Min:\", min(nums))\nprint(\"Sum:\", sum(nums))\n\nnums.reverse()\nprint(\"Reversed:\", nums)\n\nnums.sort()\nprint(\"Sorted:\", nums)",
+  "quiz": [
+    {
+      "question": "Which method returns the number of times a value appears in a list?",
+      "options": [
+        "index()",
+        "count()",
+        "len()",
+        "total()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

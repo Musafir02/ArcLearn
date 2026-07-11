@@ -1,0 +1,22 @@
+{
+  "title": "Getting Started",
+  "language": "python",
+  "topic": "getstarted",
+  "order": 2,
+  "nextTopic": "syntax",
+  "prevTopic": "intro",
+  "content": "### Installing Python\n\nMost systems come with Python pre-installed. To check:\n\n```bash\npython --version\n```\n\n> If not installed, download from **python.org** (latest version recommended).\n\n---\n\n### Running Python Code\n\nThere are **two ways** to run Python:\n\n#### 1. Interactive Mode\n\nType `python` in terminal and write code line by line:\n\n```python\n>>> print(\"Hello\")\nHello\n```\n\n#### 2. File Mode\n\nSave code in a `.py` file and run it:\n\n```bash\npython myprogram.py\n```\n\n---\n\n### Your First Program\n\nCreate a file called `hello.py`:\n\n```python\nprint(\"Hello, World!\")\n```\n\nRun it:\n\n```bash\npython hello.py\n```\n\n---\n\n### Online Editor\n\nYou can also try Python online without installing anything -- browsers support Python execution through various online platforms.\n\n---\n\n### Tools You Will Need\n\n| Tool | Purpose |\n|------|---------|\n| **VS Code** | Best code editor for Python |\n| **Terminal** | Run Python scripts |\n| **Python** | The interpreter itself |\n\n> **Pro Tip:** VS Code with Python extension gives you syntax highlighting, auto-completion, and debugging.",
+  "codeExample": "print(\"Hello, World!\")",
+  "quiz": [
+    {
+      "question": "What extension do Python files use?",
+      "options": [
+        ".pyt",
+        ".py",
+        ".pyth",
+        ".pt"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

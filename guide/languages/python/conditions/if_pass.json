@@ -1,0 +1,22 @@
+{
+  "title": "The Pass Statement",
+  "language": "python",
+  "topic": "if_pass",
+  "order": 77,
+  "nextTopic": "match",
+  "prevTopic": "if_nested_if",
+  "content": "### The `pass` Statement\n\n**`pass`** is a placeholder that does nothing. It is used where Python expects a statement but you do not want to write any code.\n\n---\n\n### Using `pass` in If\n\n```python\na = 33\nb = 200\n\nif b > a:\n    pass  # TODO: add logic later\n```\n\nWithout `pass`, this would cause an `IndentationError`.\n\n---\n\n### Other Uses of `pass`\n\n```python\n# Empty function\ndef my_function():\n    pass\n\n# Empty class\nclass MyClass:\n    pass\n\n# Empty loop\nfor x in [1, 2, 3]:\n    pass\n```\n\n---\n\n### Why Not Just Omit the Body?\n\nPython requires **at least one statement** after a colon. `pass` satisfies this without doing anything.\n\n```python\nif x > 5:\n    # This is just a comment -- error!\n    # IndentationError: expected an indented block\n\nif x > 5:\n    pass  # OK - valid statement\n```\n\n---\n\n### Common Use Cases\n\n- Writing a **skeleton** for future code\n- **TODO** placeholders\n- Handling exceptions without action\n- Defining abstract base classes\n\n```python\ntry:\n    risky_operation()\nexcept ValueError:\n    pass  # Silently ignore ValueError\n```\n\n---\n\n> **Best Practice:** Use `pass` as a temporary placeholder. Replace it with actual code before production. Comment why it is empty so others understand the intent.",
+  "codeExample": "a = 33\nb = 200\n\nif b > a:\n    pass  # Placeholder\n\n# Empty function\ndef future_function():\n    pass\n\n# Empty class\nclass FutureClass:\n    pass\n\n# In loop\nfor i in range(5):\n    if i == 3:\n        pass  # Skip 3 for now\n    else:\n        print(i)",
+  "quiz": [
+    {
+      "question": "What does the pass statement do?",
+      "options": [
+        "Stops the program",
+        "Does nothing (placeholder)",
+        "Restarts the loop",
+        "Skips to the next condition"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Loop Through Dictionaries",
+  "language": "python",
+  "topic": "dictionaries_loop",
+  "order": 67,
+  "nextTopic": "dictionaries_copy",
+  "prevTopic": "dictionaries_remove",
+  "content": "### Looping Through Dictionaries\n\n---\n\n### Loop Through Keys (Default)\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\n\nfor key in student:\n    print(key)         # name, age, grade\n    print(student[key]) # Alice, 25, A\n```\n\n---\n\n### Loop Through Values\n\n```python\nfor value in student.values():\n    print(value)\n```\n\n---\n\n### Loop Through Both Keys and Values\n\n```python\nfor key, value in student.items():\n    print(f\"{key}: {value}\")\n```\n\nThis is the **most common** way to iterate a dictionary.\n\n---\n\n### Loop Through Keys Explicitly\n\n```python\nfor key in student.keys():\n    print(key)\n```\n\n---\n\n### Dictionary Comprehension\n\n```python\nnumbers = {1: \"one\", 2: \"two\", 3: \"three\"}\nswapped = {value: key for key, value in numbers.items()}\nprint(swapped)  # {\"one\": 1, \"two\": 2, \"three\": 3}\n```\n\n---\n\n> **Best Practice:** Use `.items()` when you need both key and value. Use `.values()` when you only need values. Use `.keys()` implicitly (default loop) when you only need keys.",
+  "codeExample": "student = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\n\n# Keys and values\nfor key, value in student.items():\n    print(f\"{key}: {value}\")\n\n# Just values\nprint(\"\\nValues only:\")\nfor v in student.values():\n    print(v)\n\n# Dictionary comprehension\nsquares = {x: x**2 for x in range(5)}\nprint(\"\\nSquares:\", squares)",
+  "quiz": [
+    {
+      "question": "Which method returns key-value pairs for looping?",
+      "options": [
+        ".keys()",
+        ".values()",
+        ".items()",
+        ".pairs()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

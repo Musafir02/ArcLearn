@@ -1,0 +1,22 @@
+{
+  "title": "Class Properties",
+  "language": "python",
+  "topic": "class_properties",
+  "order": 94,
+  "nextTopic": "class_methods",
+  "prevTopic": "class_self",
+  "content": "### Properties\n\n**Properties** control access to attributes using getter/setter methods.\n\n---\n\n### Without Properties (Direct Access)\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n\np = Person(\"Alice\")\np.name = 123  # No validation!\n```\n\n---\n\n### Using Getter/Setter Methods\n\n```python\nclass Person:\n    def __init__(self, name):\n        self._name = name\n    \n    def get_name(self):\n        return self._name\n    \n    def set_name(self, value):\n        if not isinstance(value, str):\n            raise ValueError(\"Name must be a string\")\n        self._name = value\n```\n\n---\n\n### The `@property` Decorator\n\nPythonic way to create properties:\n\n```python\nclass Person:\n    def __init__(self, name):\n        self._name = name\n    \n    @property\n    def name(self):\n        return self._name\n    \n    @name.setter\n    def name(self, value):\n        if not isinstance(value, str):\n            raise ValueError(\"Name must be a string\")\n        self._name = value\n\np = Person(\"Alice\")\nprint(p.name)    # Getter called automatically\np.name = \"Bob\"   # Setter called automatically\n```\n\n---\n\n### Read-Only Property\n\n```python\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    \n    @property\n    def area(self):\n        return 3.14159 * self.radius ** 2\n\nc = Circle(5)\nprint(c.area)   # 78.53975\n# c.area = 10  # AttributeError (no setter)\n```\n\n---\n\n> **Best Practice:** Use `@property` to add validation or computed values to attributes without breaking existing code that uses `obj.attribute`.",
+  "codeExample": "class Person:\n    def __init__(self, name):\n        self._name = name\n    \n    @property\n    def name(self):\n        return self._name\n    \n    @name.setter\n    def name(self, value):\n        if not isinstance(value, str):\n            raise ValueError(\"Must be string\")\n        self._name = value\n\np = Person(\"Alice\")\nprint(p.name)\np.name = \"Bob\"\nprint(p.name)",
+  "quiz": [
+    {
+      "question": "What decorator creates a getter property?",
+      "options": [
+        "@getter",
+        "@property",
+        "@attribute",
+        "@access"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

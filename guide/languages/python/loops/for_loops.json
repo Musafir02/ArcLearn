@@ -1,0 +1,22 @@
+{
+  "title": "For Loops",
+  "language": "python",
+  "topic": "for_loops",
+  "order": 80,
+  "nextTopic": "range",
+  "prevTopic": "while_loops",
+  "content": "### For Loops\n\nA **for loop** iterates over a sequence (list, tuple, string, etc.).\n\n---\n\n### Basic For Loop\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(fruit)\n```\n\n---\n\n### Looping Through a String\n\n```python\nfor char in \"Hello\":\n    print(char)\n# H, e, l, l, o\n```\n\n---\n\n### `break` in For Loops\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    if fruit == \"banana\":\n        break\n    print(fruit)  # Only prints \"apple\"\n```\n\n---\n\n### `continue` in For Loops\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    if fruit == \"banana\":\n        continue\n    print(fruit)  # apple, cherry (skips banana)\n```\n\n---\n\n### `else` with For\n\n```python\nfor fruit in fruits:\n    print(fruit)\nelse:\n    print(\"Done!\")  # Runs after loop completes\n```\n\nThe `else` does **not** run if the loop was exited with `break`.\n\n---\n\n### Nested For Loops\n\n```python\nfor x in [1, 2]:\n    for y in [\"a\", \"b\"]:\n        print(x, y)\n# 1 a, 1 b, 2 a, 2 b\n```\n\n---\n\n> **Key Point:** Python's `for` loop is a **for-each** loop. It iterates over items in a sequence, not over a range of numbers (unless you use `range()`).",
+  "codeExample": "fruits = [\"apple\", \"banana\", \"cherry\"]\n\nfor fruit in fruits:\n    print(fruit)\n\nprint(\"With break:\")\nfor fruit in fruits:\n    if fruit == \"banana\":\n        break\n    print(fruit)\n\nprint(\"Nested:\")\nfor x in [1, 2]:\n    for y in [\"a\", \"b\"]:\n        print(x, y)",
+  "quiz": [
+    {
+      "question": "What does a for loop iterate over?",
+      "options": [
+        "A range of numbers only",
+        "Items in a sequence",
+        "Indexes only",
+        "While loops"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

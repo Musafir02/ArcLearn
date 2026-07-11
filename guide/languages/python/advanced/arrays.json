@@ -1,0 +1,22 @@
+{
+  "title": "Python Arrays",
+  "language": "python",
+  "topic": "arrays",
+  "order": 100,
+  "nextTopic": "iterators",
+  "prevTopic": "class_inner",
+  "content": "### Arrays (Lists as Arrays)\n\nPython does not have built-in arrays like other languages. **Lists** are used as arrays.\n\n---\n\n### List as Array\n\n```python\ncars = [\"Ford\", \"Volvo\", \"BMW\"]\nprint(cars[0])  # Ford\n```\n\n---\n\n### Array Methods\n\n| Method | Description |\n|--------|-------------|\n| `len(list)` | Number of elements |\n| `list.append(x)` | Add at end |\n| `list.pop(i)` | Remove at index |\n| `list.remove(x)` | Remove by value |\n| `list.clear()` | Empty the list |\n| `list.copy()` | Return a copy |\n| `list.count(x)` | Count occurrences |\n| `list.extend(x)` | Add all from iterable |\n| `list.index(x)` | Find first index |\n| `list.insert(i, x)` | Insert at position |\n| `list.reverse()` | Reverse order |\n| `list.sort()` | Sort the list |\n\n---\n\n### The `array` Module\n\nFor **typed** arrays (more memory efficient):\n\n```python\nimport array\n\nnumbers = array.array(\"i\", [1, 2, 3, 4, 5])  # \"i\" = signed int\nprint(numbers[0])  # 1\n```\n\nType codes: `i` (int), `f` (float), `d` (double), `u` (unicode char).\n\n---\n\n### NumPy Arrays (External)\n\nFor scientific computing:\n\n```python\nimport numpy as np\narr = np.array([1, 2, 3, 4, 5])\nprint(arr.mean())  # 3.0\n```\n\n---\n\n> **Recommendation:** Use regular Python **lists** for general array work. Use the `array` module for memory efficiency with large uniform data. Use **NumPy** for scientific computing.",
+  "codeExample": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\n\nprint(cars[0])\ncars.append(\"Tesla\")\nprint(cars)\n\nprint(len(cars))\n\nfor car in cars:\n    print(car)\n\n# array module\nimport array\narr = array.array(\"i\", [10, 20, 30])\nprint(arr[1])",
+  "quiz": [
+    {
+      "question": "What does Python use as arrays by default?",
+      "options": [
+        "Lists",
+        "Tuples",
+        "Sets",
+        "Dictionaries"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

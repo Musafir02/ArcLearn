@@ -1,0 +1,22 @@
+{
+  "title": "Frozenset",
+  "language": "python",
+  "topic": "frozenset",
+  "order": 60,
+  "nextTopic": "sets_methods",
+  "prevTopic": "sets_join",
+  "content": "### Frozenset\n\n**Frozenset** is an **immutable** version of a set. Once created, you cannot add or remove items.\n\n---\n\n### Creating a Frozenset\n\n```python\nfruits = frozenset([\"apple\", \"banana\", \"cherry\"])\nprint(fruits)  # frozenset({'apple', 'banana', 'cherry'})\n\n# From a set\nnumbers = frozenset({1, 2, 3})\n```\n\n---\n\n### Frozenset vs Set\n\n| Feature | Set | Frozenset |\n|---------|-----|-----------|\n| Mutable | Yes | No |\n| Hashable | No | Yes |\n| Can be dict key | No | Yes |\n| Can be set element | No | Yes |\n\n---\n\n### Frozenset as Dictionary Key\n\n```python\n# set cannot be a key\ndata = {frozenset({1, 2}): \"value\"}  # OK\n# data = {{1, 2}: \"value\"}  # TypeError!\n```\n\n---\n\n### Frozenset Operations\n\nFrozensets support **non-modifying** set operations:\n\n```python\na = frozenset([1, 2, 3])\nb = frozenset([3, 4, 5])\n\nprint(a | b)    # Union: frozenset({1, 2, 3, 4, 5})\nprint(a & b)    # Intersection: frozenset({3})\nprint(a - b)    # Difference: frozenset({1, 2})\nprint(a ^ b)    # Symmetric diff: frozenset({1, 2, 4, 5})\n```\n\nBut `.add()`, `.remove()`, `.discard()`, `.pop()`, `.clear()` are **not available**.\n\n---\n\n> **Use Case:** Frozensets are useful when you need a set that must remain constant, or when you need to use a set as a dictionary key.",
+  "codeExample": "fruits = frozenset([\"apple\", \"banana\", \"cherry\"])\nprint(fruits)\nprint(type(fruits))\n\n# Frozenset as dict key\nlookup = {frozenset({1, 2}): \"pair\"}\nprint(lookup)\n\n# Set operations work\na = frozenset([1, 2, 3])\nb = frozenset([3, 4, 5])\nprint(\"Union:\", a | b)\nprint(\"Intersection:\", a & b)",
+  "quiz": [
+    {
+      "question": "What makes frozenset different from set?",
+      "options": [
+        "It is faster",
+        "It is immutable (cannot be changed)",
+        "It allows duplicates",
+        "It is ordered"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

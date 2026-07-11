@@ -1,0 +1,223 @@
+{
+  "title": "Python Tutorial",
+  "outline": [
+    {
+      "type": "flat",
+      "topic": "intro"
+    },
+    {
+      "type": "flat",
+      "topic": "getstarted"
+    },
+    {
+      "type": "group",
+      "title": "Python Syntax",
+      "folder": "basics",
+      "topics": [
+        "syntax",
+        "statements",
+        "output",
+        "output_numbers",
+        "comments",
+        "datatypes",
+        "numbers",
+        "casting",
+        "booleans",
+        "none"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Variables",
+      "folder": "variables",
+      "topics": [
+        "variables",
+        "variables_names",
+        "variables_multiple",
+        "variables_output",
+        "variables_global"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Operators",
+      "folder": "operators",
+      "topics": [
+        "operators",
+        "operators_arithmetic",
+        "operators_assign",
+        "ternary_operator",
+        "operators_comparison",
+        "operators_logical",
+        "operators_identity",
+        "operators_membership",
+        "operators_bitwise",
+        "operators_precedence"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Strings",
+      "folder": "strings",
+      "topics": [
+        "strings",
+        "strings_slicing",
+        "strings_modify",
+        "strings_concatenate",
+        "strings_format",
+        "string_formatting",
+        "strings_escape",
+        "strings_methods"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Lists",
+      "folder": "lists",
+      "topics": [
+        "lists",
+        "lists_access",
+        "lists_change",
+        "lists_add",
+        "lists_remove",
+        "lists_loop",
+        "lists_comprehension",
+        "lists_sort",
+        "lists_copy",
+        "lists_join",
+        "lists_methods"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Tuples",
+      "folder": "tuples",
+      "topics": [
+        "tuples",
+        "tuples_access",
+        "tuples_update",
+        "tuples_unpack",
+        "tuples_loop",
+        "tuples_join",
+        "tuples_methods"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Sets",
+      "folder": "sets",
+      "topics": [
+        "sets",
+        "sets_access",
+        "sets_add",
+        "sets_remove",
+        "sets_loop",
+        "sets_join",
+        "frozenset",
+        "sets_methods"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Dictionaries",
+      "folder": "dictionaries",
+      "topics": [
+        "dictionaries",
+        "dictionaries_access",
+        "dictionaries_add",
+        "dictionaries_change",
+        "dictionaries_remove",
+        "dictionaries_loop",
+        "dictionaries_copy",
+        "dictionaries_nested",
+        "dictionaries_methods"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Conditions",
+      "folder": "conditions",
+      "topics": [
+        "conditions",
+        "if_elif",
+        "if_else",
+        "if_shorthand",
+        "if_logical",
+        "if_nested_if",
+        "if_pass",
+        "match"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Loops",
+      "folder": "loops",
+      "topics": [
+        "while_loops",
+        "for_loops",
+        "range"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Functions",
+      "folder": "functions",
+      "topics": [
+        "functions",
+        "arguments",
+        "args_kwargs",
+        "scope",
+        "decorators",
+        "lambda",
+        "recursion",
+        "generators"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python OOP",
+      "folder": "oop",
+      "topics": [
+        "oop",
+        "classes",
+        "class_init",
+        "class_self",
+        "class_properties",
+        "class_methods",
+        "inheritance",
+        "polymorphism",
+        "encapsulation",
+        "class_inner"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python Advanced",
+      "folder": "advanced",
+      "topics": [
+        "arrays",
+        "iterators",
+        "modules",
+        "datetime",
+        "math",
+        "json",
+        "regex",
+        "pip",
+        "try_except",
+        "user_input",
+        "virtualenv"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Python File Handling",
+      "folder": "file_handling",
+      "topics": [
+        "file_handling",
+        "file_open",
+        "file_write",
+        "file_remove"
+      ]
+    }
+  ]
+}

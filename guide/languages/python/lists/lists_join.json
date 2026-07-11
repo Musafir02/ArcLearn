@@ -1,0 +1,22 @@
+{
+  "title": "Join Lists",
+  "language": "python",
+  "topic": "lists_join",
+  "order": 45,
+  "nextTopic": "lists_methods",
+  "prevTopic": "lists_copy",
+  "content": "### Joining Lists\n\n---\n\n### Using the `+` Operator\n\n```python\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\njoined = list1 + list2\nprint(joined)  # [1, 2, 3, 4, 5, 6]\n```\n\nCreates a **new** list. Original lists are unchanged.\n\n---\n\n### Using `.extend()`\n\n```python\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nlist1.extend(list2)\nprint(list1)  # [1, 2, 3, 4, 5, 6] -- list1 is modified\n```\n\nModifies the **original** list in place.\n\n---\n\n### Append in a Loop\n\n```python\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nfor item in list2:\n    list1.append(item)\n```\n\n---\n\n### Using `*` Operator (Unpacking)\n\n```python\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\njoined = [*list1, *list2]\nprint(joined)  # [1, 2, 3, 4, 5, 6]\n```\n\nThis unpacking syntax is concise and creates a new list.\n\n---\n\n| Method | New List? | Speed |\n|--------|-----------|-------|\n| `+` | Yes | Fast |\n| `.extend()` | No (modifies) | Fast |\n| `*` unpack | Yes | Fast |\n| Loop + append | No | Slow |\n\n---\n\n> **Best Practice:** Use `list1 + list2` when you want a new combined list. Use `list1.extend(list2)` when you want to add to an existing list.",
+  "codeExample": "list1 = [1, 2, 3]\nlist2 = [4, 5, 6]\n\n# Using +\njoined = list1 + list2\nprint(\"Using +:\", joined)\n\n# Using extend\nlist1 = [1, 2, 3]\nlist1.extend(list2)\nprint(\"Using extend:\", list1)\n\n# Using * unpacking\nlist1 = [1, 2, 3]\njoined = [*list1, *list2]\nprint(\"Using unpack:\", joined)",
+  "quiz": [
+    {
+      "question": "Which method adds all elements of one list to another (modifying the original)?",
+      "options": [
+        "append()",
+        "extend()",
+        "join()",
+        "concat()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

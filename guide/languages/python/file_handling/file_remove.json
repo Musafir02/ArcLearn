@@ -1,0 +1,22 @@
+{
+  "title": "File Remove",
+  "language": "python",
+  "topic": "file_remove",
+  "order": 114,
+  "nextTopic": "",
+  "prevTopic": "file_write",
+  "content": "### Deleting Files\n\n---\n### Delete a File\n\n```python\nimport os\n\nif os.path.exists(\"file.txt\"):\n    os.remove(\"file.txt\")\n    print(\"File deleted\")\nelse:\n    print(\"File does not exist\")\n```\n\n---\n\n### Delete a Folder\n\n```python\nimport os\n\nos.rmdir(\"empty_folder\")  # Folder must be empty\n```\n\n---\n\n### Delete a Folder (with contents)\n\n```python\nimport shutil\n\nshutil.rmtree(\"folder_with_contents\")  # Removes everything!\n```\n\n---\n\n### Check Before Deleting\n\nAlways check if the file/folder exists before attempting deletion:\n\n```python\nimport os\n\nif os.path.exists(\"myfile.txt\"):\n    os.remove(\"myfile.txt\")\nelse:\n    print(\"File not found\")\n```\n\n---\n\n### Rename Files\n\n```python\nimport os\n\nos.rename(\"old_name.txt\", \"new_name.txt\")\n```\n\n---\n\n> **Warning:** Deleted files cannot be recovered (they do not go to the Recycle Bin). Be careful with `shutil.rmtree()` -- it deletes everything inside a folder recursively.",
+  "codeExample": "import os\n\n# Create a file to delete\nwith open(\"temp.txt\", \"w\") as f:\n    f.write(\"Temporary file\")\n\n# Check and delete\nif os.path.exists(\"temp.txt\"):\n    os.remove(\"temp.txt\")\n    print(\"File deleted\")\nelse:\n    print(\"File not found\")\n\n# Rename\nwith open(\"original.txt\", \"w\") as f:\n    f.write(\"Original\")\n\nif os.path.exists(\"original.txt\"):\n    os.rename(\"original.txt\", \"renamed.txt\")\n    print(\"File renamed\")",
+  "quiz": [
+    {
+      "question": "Which function deletes a file?",
+      "options": [
+        "os.delete()",
+        "os.remove()",
+        "os.erase()",
+        "os.unlink()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

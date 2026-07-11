@@ -1,0 +1,22 @@
+{
+  "title": "Generators",
+  "language": "python",
+  "topic": "generators",
+  "order": 89,
+  "nextTopic": "oop",
+  "prevTopic": "recursion",
+  "content": "### Generators\n\nA **generator** is a function that yields values one at a time, pausing between each.\n\n---\n\n### Generator vs Regular Function\n\n```python\n# Regular function (creates list in memory)\ndef squares_list(n):\n    result = []\n    for i in range(n):\n        result.append(i ** 2)\n    return result\n\n# Generator (yields one at a time)\ndef squares_gen(n):\n    for i in range(n):\n        yield i ** 2\n```\n\n---\n\n### Using `yield`\n\n```python\ndef countdown(n):\n    while n > 0:\n        yield n\n        n -= 1\n    yield \"Go!\"\n\nfor value in countdown(3):\n    print(value)\n# 3, 2, 1, \"Go!\"\n```\n\n---\n\n### Generator Expressions\n\nLike list comprehensions but with `()`:\n\n```python\n# List comprehension (eager)\nsquares_list = [x ** 2 for x in range(10)]\n\n# Generator expression (lazy)\nsquares_gen = (x ** 2 for x in range(10))\n\nprint(type(squares_gen))  # <class 'generator'>\n\nfor s in squares_gen:\n    print(s)\n```\n\n---\n\n### Why Use Generators?\n\n| Factor | List | Generator |\n|--------|------|-----------|\n| **Memory** | Stores all items | One item at a time |\n| **Speed** | Slower to start | Instant start |\n| **Reusable** | Yes | No (consumed once) |\n| **Use case** | Small data | Large/infinite data |\n\n---\n\n### Infinite Generator\n\n```python\ndef fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci()\nfor _ in range(10):\n    print(next(fib))  # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34\n```\n\n---\n\n> **Key Point:** Generators are **memory efficient** for large sequences. They compute values on-demand instead of storing them all in memory at once.",
+  "codeExample": "def count_to(n):\n    i = 1\n    while i <= n:\n        yield i\n        i += 1\n\n# Using generator\nfor num in count_to(5):\n    print(num)\n\n# Generator expression\nsquares = (x ** 2 for x in range(5))\nprint(list(squares))  # [0, 1, 4, 9, 16]\n\n# Generator vs list memory\nimport sys\nlist_sq = [x ** 2 for x in range(1000)]\ngen_sq = (x ** 2 for x in range(1000))\nprint(f\"List size: {sys.getsizeof(list_sq)}\")\nprint(f\"Gen size: {sys.getsizeof(gen_sq)}\")",
+  "quiz": [
+    {
+      "question": "What keyword makes a function a generator?",
+      "options": [
+        "return",
+        "generate",
+        "yield",
+        "await"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

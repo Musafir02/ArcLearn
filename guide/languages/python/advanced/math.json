@@ -1,0 +1,22 @@
+{
+  "title": "Math Module",
+  "language": "python",
+  "topic": "math",
+  "order": 104,
+  "nextTopic": "json",
+  "prevTopic": "datetime",
+  "content": "### The `math` Module\n\n`math` provides mathematical functions and constants.\n\n---\n\n### Constants\n\n```python\nimport math\n\nprint(math.pi)     # 3.141592653589793\nprint(math.e)      # 2.718281828459045\nprint(math.inf)    # Infinity\nprint(math.nan)    # Not a Number\n```\n\n---\n\n### Common Functions\n\n| Function | Description | Example | Result |\n|----------|-------------|---------|--------|\n| `sqrt(x)` | Square root | `math.sqrt(16)` | `4.0` |\n| `ceil(x)` | Round up | `math.ceil(3.2)` | `4` |\n| `floor(x)` | Round down | `math.floor(3.8)` | `3` |\n| `trunc(x)` | Truncate decimal | `math.trunc(3.8)` | `3` |\n| `round(x)` | Built-in round | `round(3.5)` | `4` |\n| `abs(x)` | Absolute value | `abs(-5)` | `5` |\n| `pow(x, y)` | Power | `math.pow(2, 3)` | `8.0` |\n\n---\n\n### Trigonometry\n\n```python\nimport math\n\nprint(math.sin(math.pi / 2))  # 1.0\nprint(math.cos(0))            # 1.0\nprint(math.tan(0))            # 0.0\nprint(math.degrees(math.pi))  # 180.0\nprint(math.radians(180))      # 3.14159...\n```\n\n---\n\n### Logarithms and Exponentials\n\n```python\nimport math\n\nprint(math.log(100))       # Natural log: 4.605...\nprint(math.log10(100))     # Base 10 log: 2.0\nprint(math.log2(8))        # Base 2 log: 3.0\nprint(math.exp(2))         # e^2: 7.389...\nprint(math.e ** 2)         # Same: 7.389...\n```\n\n---\n\n### Other Useful Functions\n\n```python\nimport math\n\nprint(math.factorial(5))   # 120\nprint(math.gcd(12, 18))    # 6 (greatest common divisor)\nprint(math.fabs(-5.5))     # 5.5 (float absolute)\nprint(math.isclose(0.1 + 0.2, 0.3))  # True (float comparison)\n```\n\n---\n\n> **Note:** Use `math.isclose()` for comparing floats instead of `==` to avoid precision issues.",
+  "codeExample": "import math\n\nprint(\"PI:\", math.pi)\nprint(\"sqrt(16):\", math.sqrt(16))\nprint(\"ceil(3.2):\", math.ceil(3.2))\nprint(\"floor(3.8):\", math.floor(3.8))\nprint(\"factorial(5):\", math.factorial(5))\nprint(\"gcd(12, 18):\", math.gcd(12, 18))\nprint(\"sin(pi/2):\", math.sin(math.pi / 2))\nprint(\"log10(100):\", math.log10(100))\nprint(\"isclose(0.1+0.2, 0.3):\", math.isclose(0.1 + 0.2, 0.3))",
+  "quiz": [
+    {
+      "question": "Which function returns the square root?",
+      "options": [
+        "math.pow()",
+        "math.sqrt()",
+        "math.square()",
+        "math.root()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

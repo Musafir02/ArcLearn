@@ -1,0 +1,22 @@
+{
+  "title": "Decorators",
+  "language": "python",
+  "topic": "decorators",
+  "order": 86,
+  "nextTopic": "lambda",
+  "prevTopic": "scope",
+  "content": "### Decorators\n\nA **decorator** is a function that takes another function and extends its behavior without modifying it.\n\n---\n\n### Basic Decorator\n\n```python\ndef my_decorator(func):\n    def wrapper():\n        print(\"Something before the function\")\n        func()\n        print(\"Something after the function\")\n    return wrapper\n\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello = my_decorator(say_hello)\nsay_hello()\n```\n\n---\n\n### The `@` Syntax\n\n```python\ndef my_decorator(func):\n    def wrapper():\n        print(\"Before\")\n        func()\n        print(\"After\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()\n```\n\n---\n\n### Decorator with Parameters\n\n```python\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef greet(name):\n    print(f\"Hello, {name}!\")\n\ngreet(\"Alice\")\n```\n\n---\n\n### Common Use Cases\n\n| Use Case | Example |\n|----------|---------|\n| **Logging** | Log function calls |\n| **Timing** | Measure execution time |\n| **Authentication** | Check user permissions |\n| **Caching** | Cache function results |\n| **Validation** | Validate arguments |\n\n---\n\n### Timing Decorator Example\n\n```python\nimport time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"{func.__name__} took {end-start:.4f}s\")\n        return result\n    return wrapper\n\n@timer\ndef slow_function():\n    time.sleep(1)\n    return \"Done\"\n```\n\n> **Key Point:** Decorators are a powerful feature. They implement the **decorator pattern** -- adding functionality to existing functions without changing their code.",
+  "codeExample": "def timer(func):\n    def wrapper(*args, **kwargs):\n        import time\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f\"Took {end-start:.4f}s\")\n        return result\n    return wrapper\n\n@timer\ndef slow_add(a, b):\n    import time\n    time.sleep(0.5)\n    return a + b\n\nprint(slow_add(3, 5))",
+  "quiz": [
+    {
+      "question": "What does a decorator do?",
+      "options": [
+        "Removes a function",
+        "Extends function behavior without changing it",
+        "Creates a new class",
+        "Repeats a function"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

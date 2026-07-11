@@ -1,0 +1,22 @@
+{
+  "title": "PIP (Package Manager)",
+  "language": "python",
+  "topic": "pip",
+  "order": 107,
+  "nextTopic": "try_except",
+  "prevTopic": "regex",
+  "content": "### What is PIP?\n\n**PIP** is the standard package manager for Python. It installs packages from the **Python Package Index (PyPI)**.\n\n---\n\n### Common Commands\n\n| Command | Description |\n|---------|-------------|\n| `pip install package` | Install a package |\n| `pip install package==1.2.3` | Install specific version |\n| `pip uninstall package` | Remove a package |\n| `pip list` | List installed packages |\n| `pip show package` | Show package details |\n| `pip freeze` | List installed (requirements format) |\n| `pip search query` | Search for packages |\n| `pip install -r requirements.txt` | Install from file |\n\n---\n\n### Installing Packages\n\n```bash\npip install requests\npip install numpy pandas matplotlib\npip install flask==2.3.0  # Specific version\n```\n\n---\n\n### Using an Installed Package\n\n```python\nimport requests\n\nresponse = requests.get(\"https://api.github.com\")\nprint(response.status_code)  # 200\n```\n\n---\n\n### Requirements File\n\n`requirements.txt`:\n\n```\nflask==2.3.0\nrequests>=2.28.0\nnumpy\n```\n\nInstall all at once:\n\n```bash\npip install -r requirements.txt\n```\n\n---\n\n### Creating requirements.txt\n\n```bash\npip freeze > requirements.txt\n```\n\nThis generates a complete list of all installed packages with versions.\n\n---\n\n> **Best Practice:** Always use a virtual environment (`venv`) when installing packages with pip. This keeps dependencies isolated per project.",
+  "codeExample": "# This is just a reference file\n# Commands are run in terminal, not Python\n\n'''\n# Install a package\npip install requests\n\n# Use it\nimport requests\nresponse = requests.get(\"https://jsonplaceholder.typicode.com/todos/1\")\nprint(response.json())\n'''",
+  "quiz": [
+    {
+      "question": "What does PIP stand for?",
+      "options": [
+        "Python Install Program",
+        "Pip Installs Packages",
+        "Python Index Provider",
+        "Primary Installer for Python"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Escape Characters",
+  "language": "python",
+  "topic": "strings_escape",
+  "order": 34,
+  "nextTopic": "strings_methods",
+  "prevTopic": "string_formatting",
+  "content": "### Escape Characters\n\n**Escape characters** let you insert special characters into strings using a backslash `\\`.\n\n---\n\n### Common Escape Sequences\n\n| Sequence | Name | Example | Result |\n|----------|------|---------|--------|\n| `\\'` | Single quote | `'It\\'s fine'` | `It's fine` |\n| `\\\"` | Double quote | `\"He said \\\"Hi\\\"\"` | `He said \"Hi\"` |\n| `\\\\` | Backslash | `\"path\\\\file\"` | `path\\file` |\n| `\\n` | New line | `\"Line1\\nLine2\"` | Line1, new line, Line2 |\n| `\\t` | Tab | `\"Col1\\tCol2\"` | Col1 (tab) Col2 |\n| `\\r` | Carriage return | `\"Hello\\rWorld\"` | `World` |\n| `\\b` | Backspace | `\"Hello\\b!\"` | `Hell!` |\n| `\\f` | Form feed | Used in printers | Page break |\n| `\\ooo` | Octal value | `\"\\110\\145\"` | `He` |\n| `\\xhh` | Hex value | `\"\\x48\\x65\"` | `He` |\n\n---\n\n### New Line and Tab\n\n```python\nprint(\"Line 1\\nLine 2\")\nprint(\"Column 1\\tColumn 2\")\n```\n\n---\n\n### Raw Strings\n\nPrefix with `r` to treat backslashes as literal:\n\n```python\nprint(\"C:\\\\Users\\\\Name\")       # Requires escaping\nprint(r\"C:\\Users\\Name\")       # Raw string - no escaping!\n```\n\n---\n\n> **Use Case:** Raw strings are especially useful for regex patterns and file paths on Windows.",
+  "codeExample": "# Escape examples\nprint(\"Line 1\\nLine 2\")\nprint(\"Column 1\\tColumn 2\")\nprint(\"She said \\\"Hello!\\\"\")\nprint(\"It\\'s a nice day\")\n\n# Raw string\npath = r\"C:\\Users\\Name\"\nprint(path)",
+  "quiz": [
+    {
+      "question": "What escape sequence creates a new line?",
+      "options": [
+        "\\t",
+        "\\n",
+        "\\r",
+        "\\b"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

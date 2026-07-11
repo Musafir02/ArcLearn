@@ -1,0 +1,22 @@
+{
+  "title": "The Self Parameter",
+  "language": "python",
+  "topic": "class_self",
+  "order": 93,
+  "nextTopic": "class_properties",
+  "prevTopic": "class_init",
+  "content": "### The `self` Parameter\n\n`self` is a reference to the **current instance** of the class.\n\n---\n\n### Accessing Attributes\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name  # self.name is an instance attribute\n    \n    def greet(self):\n        return f\"Hello, {self.name}!\"  # Access via self\n```\n\n---\n\n### `self` is Just a Convention\n\nYou can name it anything, but **never do this**:\n\n```python\nclass Person:\n    def __init__(this, name):  # Works but confusing\n        this.name = name\n```\n\nAlways use `self` by convention.\n\n---\n\n### Self is Automatic\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n    \n    def greet(self):\n        return f\"Hi, {self.name}\"\n\np = Person(\"Alice\")\nprint(p.greet())  # Python passes self automatically\n```\n\n---\n\n### Modify Attributes via Self\n\n```python\nclass Counter:\n    def __init__(self):\n        self.count = 0\n    \n    def increment(self):\n        self.count += 1  # Modify via self\n    \n    def get_count(self):\n        return self.count\n\nc = Counter()\nc.increment()\nc.increment()\nprint(c.get_count())  # 2\n```\n\n---\n\n> **Key Point:** Every method must have `self` as the first parameter. You never pass it explicitly -- Python does. Think of `self` as \"this object\" or \"myself\".",
+  "codeExample": "class Person:\n    def __init__(self, name):\n        self.name = name\n    \n    def greet(self):\n        return f\"Hello, my name is {self.name}\"\n    \n    def rename(self, new_name):\n        self.name = new_name\n\np = Person(\"Alice\")\nprint(p.greet())\n\np.rename(\"Bob\")\nprint(p.greet())",
+  "quiz": [
+    {
+      "question": "What does self refer to inside a class?",
+      "options": [
+        "The class itself",
+        "The current instance (object)",
+        "A special variable",
+        "The parent class"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

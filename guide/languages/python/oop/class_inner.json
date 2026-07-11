@@ -1,0 +1,22 @@
+{
+  "title": "Inner Classes",
+  "language": "python",
+  "topic": "class_inner",
+  "order": 99,
+  "nextTopic": "arrays",
+  "prevTopic": "encapsulation",
+  "content": "### Inner (Nested) Classes\n\nA class defined **inside** another class.\n\n---\n\n### Basic Inner Class\n\n```python\nclass Outer:\n    def __init__(self):\n        self.name = \"Outer\"\n    \n    class Inner:\n        def __init__(self):\n            self.name = \"Inner\"\n        \n        def show(self):\n            return f\"Inner class: {self.name}\"\n    \n    def create_inner(self):\n        return self.Inner()\n\nouter = Outer()\ninner = outer.Inner()  # Or Outer.Inner()\nprint(inner.show())  # Inner class: Inner\n```\n\n---\n\n### Accessing Outer from Inner\n\n```python\nclass Outer:\n    def __init__(self):\n        self.value = \"Outer value\"\n    \n    class Inner:\n        def __init__(self, outer_instance):\n            self.outer = outer_instance\n        \n        def show_outer(self):\n            return f\"Outer value: {self.outer.value}\"\n\nouter = Outer()\ninner = outer.Inner(outer)\nprint(inner.show_outer())\n```\n\n---\n\n### Why Use Inner Classes?\n\n| Reason | Example |\n|--------|---------|\n| **Grouping** | Related classes together |\n| **Encapsulation** | Hide implementation details |\n| **Readability** | Show logical grouping |\n\n---\n\n### Multiple Levels\n\n```python\nclass Car:\n    class Engine:\n        def start(self):\n            return \"Engine started\"\n    \n    class Transmission:\n        def shift(self, gear):\n            return f\"Shifted to {gear}\"\n    \n    def __init__(self):\n        self.engine = self.Engine()\n        self.transmission = self.Transmission()\n```\n\n---\n\n> **Best Practice:** Use inner classes when the inner class is **tightly coupled** to the outer class and does not make sense on its own. Otherwise, keep them separate for simplicity.",
+  "codeExample": "class Car:\n    def __init__(self, make):\n        self.make = make\n        self.engine = self.Engine()\n    \n    class Engine:\n        def start(self):\n            return \"Vroom!\"\n    \n    def drive(self):\n        return f\"{self.make} goes {self.engine.start()}\"\n\nmy_car = Car(\"Toyota\")\nprint(my_car.drive())\n\n# Create engine independently\nengine = Car.Engine()\nprint(engine.start())",
+  "quiz": [
+    {
+      "question": "What is an inner class?",
+      "options": [
+        "A class that inherits from another",
+        "A class defined inside another class",
+        "A private class",
+        "A subclass"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

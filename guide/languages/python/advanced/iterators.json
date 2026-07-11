@@ -1,0 +1,22 @@
+{
+  "title": "Iterators",
+  "language": "python",
+  "topic": "iterators",
+  "order": 101,
+  "nextTopic": "modules",
+  "prevTopic": "arrays",
+  "content": "### Iterators\n\nAn **iterator** is an object that contains a countable number of values that can be iterated upon.\n\n---\n\n### Iterable vs Iterator\n\n- **Iterable** -- can be looped over (list, tuple, string, dict, set)\n- **Iterator** -- object with `__next__()` method\n\n```python\nmy_list = [1, 2, 3]\niterator = iter(my_list)  # Get iterator\n\nprint(next(iterator))  # 1\nprint(next(iterator))  # 2\nprint(next(iterator))  # 3\n# print(next(iterator))  # StopIteration!\n```\n\n---\n\n### The `iter()` and `next()` Functions\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nit = iter(fruits)\n\nprint(next(it))  # apple\nprint(next(it))  # banana\nprint(next(it))  # cherry\n```\n\n---\n\n### Creating a Custom Iterator\n\n```python\nclass CountUp:\n    def __init__(self, max_count):\n        self.max = max_count\n        self.current = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current >= self.max:\n            raise StopIteration\n        self.current += 1\n        return self.current\n\ncounter = CountUp(5)\nfor num in counter:\n    print(num)  # 1, 2, 3, 4, 5\n```\n\n---\n\n### `__iter__()` and `__next__()`\n\n| Method | Purpose |\n|--------|---------|\n| `__iter__()` | Returns the iterator object (usually `self`) |\n| `__next__()` | Returns next value, raises `StopIteration` when done |\n\n---\n\n> **Key Point:** All the loops you have been using (`for`, list comprehensions) use iterators internally. Iterators are the foundation of Python's iteration protocol.",
+  "codeExample": "my_list = [1, 2, 3]\nmy_iter = iter(my_list)\n\nprint(next(my_iter))\nprint(next(my_iter))\nprint(next(my_iter))\n\n# For loop internally does the same\nfor x in my_list:\n    print(x)\n\n# Custom iterator\nclass Squares:\n    def __init__(self, n):\n        self.n = n\n        self.i = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.i >= self.n:\n            raise StopIteration\n        result = self.i ** 2\n        self.i += 1\n        return result\n\nfor s in Squares(5):\n    print(s)",
+  "quiz": [
+    {
+      "question": "What exception signals the end of an iterator?",
+      "options": [
+        "StopIteration",
+        "EndOfIteration",
+        "IndexError",
+        "ValueError"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

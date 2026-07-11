@@ -1,0 +1,22 @@
+{
+  "title": "Numbers",
+  "language": "python",
+  "topic": "numbers",
+  "order": 14,
+  "nextTopic": "casting",
+  "prevTopic": "datatypes",
+  "content": "### Numeric Types in Python\n\nPython has **three** numeric types:\n\n---\n\n### 1. `int` -- Integers\n\nWhole numbers, positive or negative, with **unlimited** length:\n\n```python\nx = 10\ny = -5\nz = 9999999999999999999999  # No limit!\n```\n\n### 2. `float` -- Floating Point\n\nNumbers with a decimal point:\n\n```python\nx = 3.14\ny = -0.5\nz = 1.5e4  # Scientific notation = 15000.0\n```\n\n### 3. `complex` -- Complex Numbers\n\nNumbers with an imaginary part (`j` suffix):\n\n```python\nx = 3 + 4j\ny = 1j\n```\n\n---\n\n### Type Conversion Between Numerics\n\n```python\nx = float(10)     # 10.0 (int to float)\ny = int(3.14)     # 3 (float to int -- truncates!)\nz = complex(3, 4) # (3+4j)\n```\n\n---\n\n### Random Numbers\n\nPython has a built-in `random` module:\n\n```python\nimport random\n\nprint(random.randrange(1, 10))  # Random int between 1-9\n```\n\n---\n\n> **Precision:** Floats are approximations. For precise decimal math, use the `decimal` module.",
+  "codeExample": "x = 1    # int\ny = 2.8  # float\nz = 1j   # complex\n\nprint(type(x))\nprint(type(y))\nprint(type(z))\n\nprint(float(10))\nprint(int(3.14))",
+  "quiz": [
+    {
+      "question": "Which Python type handles decimal numbers?",
+      "options": [
+        "int",
+        "float",
+        "decimal",
+        "number"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Tuples",
+  "language": "python",
+  "topic": "tuples",
+  "order": 47,
+  "nextTopic": "tuples_access",
+  "prevTopic": "lists_methods",
+  "content": "### What are Tuples?\n\nA **tuple** is an ordered, **immutable** collection of items, enclosed in `()`.\n\n---\n\n### Creating Tuples\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\nnumbers = (1, 2, 3, 4, 5)\nmixed = (\"apple\", 42, True)\nsingle = (\"apple\",)  # Comma required!\nempty = ()\n```\n\n---\n\n### Tuple vs List\n\n| Feature | Tuple | List |\n|---------|-------|------|\n| Syntax | `()` | `[]` |\n| Mutable | No | Yes |\n| Speed | Faster | Slower |\n| Use for | Fixed data | Changing data |\n| Methods | 2 (count, index) | Many |\n\n---\n\n### Tuple Without Parentheses\n\n```python\nfruits = \"apple\", \"banana\", \"cherry\"\nprint(type(fruits))  # <class 'tuple'>\n```\n\nThis is called **tuple packing**.\n\n---\n\n### Why Use Tuples?\n\n- **Data integrity** -- cannot accidentally modify\n- **Dictionary keys** -- tuples are hashable, lists are not\n- **Performance** -- tuples are faster than lists\n- **Multiple return values** -- functions return tuples\n\n---\n\n> **Key Point:** Tuples are immutable -- once created, you cannot add, remove, or change items. Use a list if you need mutability.",
+  "codeExample": "fruits = (\"apple\", \"banana\", \"cherry\")\nprint(fruits)\nprint(type(fruits))\nprint(len(fruits))\n\n# tuple() constructor\nnumbers = tuple([1, 2, 3])\nprint(numbers)\n\n# Single item tuple\nsingle = (\"apple\",)\nprint(type(single))\n\n# Without parentheses\npacked = 1, 2, 3\nprint(type(packed))",
+  "quiz": [
+    {
+      "question": "What makes tuples different from lists?",
+      "options": [
+        "Tuples are faster",
+        "Tuples are immutable (cannot be changed)",
+        "Tuples use parentheses",
+        "All of the above"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

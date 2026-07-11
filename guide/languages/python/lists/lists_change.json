@@ -1,0 +1,22 @@
+{
+  "title": "Change List Items",
+  "language": "python",
+  "topic": "lists_change",
+  "order": 38,
+  "nextTopic": "lists_add",
+  "prevTopic": "lists_access",
+  "content": "### Changing Items\n\nLists are **mutable** -- you can change individual items by index.\n\n---\n\n### Change a Single Item\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits[1] = \"blackberry\"\nprint(fruits)  # [\"apple\", \"blackberry\", \"cherry\"]\n```\n\n---\n\n### Change a Range of Items\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\"]\n\n# Replace items at index 1 and 2\nfruits[1:3] = [\"blackberry\", \"watermelon\"]\nprint(fruits)  # [\"apple\", \"blackberry\", \"watermelon\", \"orange\", \"kiwi\"]\n\n# Replace with more items than the range\nfruits[1:2] = [\"blueberry\", \"raspberry\"]\nprint(fruits)  # [\"apple\", \"blueberry\", \"raspberry\", \"watermelon\", \"orange\", \"kiwi\"]\n\n# Replace with fewer items\nfruits[1:4] = [\"grape\"]\nprint(fruits)  # [\"apple\", \"grape\", \"orange\", \"kiwi\"]\n```\n\n---\n\n### Insert Without Replacing\n\nUse `.insert()` to add at a specific position:\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.insert(1, \"blueberry\")\nprint(fruits)  # [\"apple\", \"blueberry\", \"banana\", \"cherry\"]\n```\n\n---\n\n> **Key Point:** When you assign a slice, the replacement list can be a different size. Items shift to accommodate.",
+  "codeExample": "fruits = [\"apple\", \"banana\", \"cherry\"]\nfruits[1] = \"blackberry\"\nprint(\"Changed:\", fruits)\n\nfruits = [\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\"]\nfruits[1:3] = [\"grape\", \"melon\"]\nprint(\"Range changed:\", fruits)\n\nfruits.insert(0, \"mango\")\nprint(\"Inserted:\", fruits)",
+  "quiz": [
+    {
+      "question": "How do you change the second item in a list?",
+      "options": [
+        "list[2] = new_value",
+        "list[1] = new_value",
+        "list.change(1, new_value)",
+        "list[0] = new_value"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

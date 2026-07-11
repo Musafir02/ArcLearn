@@ -1,0 +1,22 @@
+{
+  "title": "Sets",
+  "language": "python",
+  "topic": "sets",
+  "order": 54,
+  "nextTopic": "sets_access",
+  "prevTopic": "tuples_methods",
+  "content": "### What are Sets?\n\nA **set** is an unordered, unindexed collection of **unique** items, enclosed in `{}`.\n\n---\n\n### Creating Sets\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nnumbers = {1, 2, 3, 4, 5}\nmixed = {\"apple\", 42, True}\nempty = set()  # NOT {} (that is a dict!)\n```\n\n---\n\n### Set Characteristics\n\n- **Unordered** -- items have no defined position\n- **Unchangeable** -- cannot change items (can add/remove)\n- **No duplicates** -- each item appears only once\n- **Hashable items only** -- lists and dicts cannot be set items\n\n---\n\n### Duplicates Are Removed\n\n```python\nnumbers = {1, 2, 3, 2, 1, 4}\nprint(numbers)  # {1, 2, 3, 4} (duplicates gone)\n```\n\n---\n\n### The `set()` Constructor\n\n```python\nnumbers = set([1, 2, 3, 2, 1])  # From list\nprint(numbers)  # {1, 2, 3}\nprint(set(\"hello\"))  # {\"h\", \"e\", \"l\", \"o\"} (l appears once)\n```\n\n---\n\n### Common Uses\n\n| Use Case | Example |\n|----------|---------|\n| **Remove duplicates** | `list(set(items))` |\n| **Membership testing** | `if x in large_set:` (fast!) |\n| **Math operations** | Union, intersection, difference |\n\n> **Key Point:** Sets are optimized for membership testing. Checking `x in set` is O(1) vs O(n) for lists.",
+  "codeExample": "fruits = {\"apple\", \"banana\", \"cherry\"}\nprint(fruits)\nprint(type(fruits))\n\nnumbers = {1, 2, 3, 2, 1}\nprint(\"Duplicates removed:\", numbers)\n\n# set() constructor\nchars = set(\"hello\")\nprint(\"Unique chars:\", chars)\n\n# Empty set\nempty = set()\nprint(\"Empty set:\", empty)",
+  "quiz": [
+    {
+      "question": "How do you create an empty set?",
+      "options": [
+        "{}",
+        "set()",
+        "[]",
+        "empty()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

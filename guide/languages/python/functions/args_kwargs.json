@@ -1,0 +1,22 @@
+{
+  "title": "*args and **kwargs",
+  "language": "python",
+  "topic": "args_kwargs",
+  "order": 84,
+  "nextTopic": "scope",
+  "prevTopic": "arguments",
+  "content": "### *args and **kwargs\n\nAllow functions to accept a **variable number** of arguments.\n\n---\n\n### `*args` -- Variable Positional Arguments\n\n```python\ndef add_all(*args):\n    return sum(args)\n\nprint(add_all(1, 2, 3))       # 6\nprint(add_all(1, 2, 3, 4, 5)) # 15\n```\n\n`args` becomes a **tuple** of all extra positional arguments.\n\n---\n\n### `**kwargs` -- Variable Keyword Arguments\n\n```python\ndef show_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f\"{key}: {value}\")\n\nshow_info(name=\"Alice\", age=25, city=\"Boston\")\n# name: Alice\n# age: 25\n# city: Boston\n```\n\n`kwargs` becomes a **dictionary** of all extra keyword arguments.\n\n---\n\n### Using Both Together\n\n```python\ndef func(a, b, *args, **kwargs):\n    print(f\"Required: {a}, {b}\")\n    print(f\"Extra positional: {args}\")\n    print(f\"Extra keyword: {kwargs}\")\n\nfunc(1, 2, 3, 4, x=5, y=6)\n```\n\n---\n\n### Unpacking with `*` and `**`\n\n```python\ndef add(a, b, c):\n    return a + b + c\n\n# Unpack list into positional\nnums = [1, 2, 3]\nprint(add(*nums))  # 6\n\n# Unpack dict into keyword\nparams = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(add(**params))  # 6\n```\n\n---\n\n> **Naming Convention:** The names `args` and `kwargs` are conventional but not required. The special parts are `*` and `**`.",
+  "codeExample": "# *args\ndef add_all(*numbers):\n    return sum(numbers)\n\nprint(add_all(1, 2, 3, 4, 5))\n\n# **kwargs\ndef show_info(**data):\n    for key, value in data.items():\n        print(f\"  {key}: {value}\")\n\nshow_info(name=\"Alice\", age=25)\n\n# Unpacking\nnums = [1, 2, 3]\ndef add(a, b, c):\n    return a + b + c\nprint(add(*nums))\n\nparams = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(add(**params))",
+  "quiz": [
+    {
+      "question": "What type is *args inside a function?",
+      "options": [
+        "List",
+        "Tuple",
+        "Set",
+        "Dictionary"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

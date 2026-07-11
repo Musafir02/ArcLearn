@@ -1,0 +1,22 @@
+{
+  "title": "Identity Operators",
+  "language": "python",
+  "topic": "operators_identity",
+  "order": 24,
+  "nextTopic": "operators_membership",
+  "prevTopic": "operators_logical",
+  "content": "### Identity Operators\n\nIdentity operators compare **object identity** -- whether two variables point to the **same object in memory**.\n\n---\n\n### `is` vs `==`\n\n- `==` checks if values are **equal**\n- `is` checks if they are the **same object**\n\n```python\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n\nprint(a == b)  # True (same values)\nprint(a is b)  # False (different objects)\nprint(a is c)  # True (same object)\n```\n\n---\n\n### `is` and `is not`\n\n| Operator | Example | Meaning |\n|----------|---------|---------|\n| `is` | `x is y` | Same object identity |\n| `is not` | `x is not y` | Different objects |\n\n---\n\n### Using `is` with None\n\n```python\nx = None\nif x is None:\n    print(\"x has no value\")\n```\n\nThis is the **idiomatic** way to check for `None` in Python.\n\n---\n\n### Beware of Small Integers\n\nPython **caches** small integers (-5 to 256):\n\n```python\na = 256\nb = 256\nprint(a is b)  # True (cached)\n\na = 257\nb = 257\nprint(a is b)  # False (not cached)\n```\n\n> **Don't rely on this.** Always use `==` for value comparison.\n\n---\n\n> **Rule of Thumb:** Use `is` only for `None`, `True`, `False`, and singletons. Use `==` for everything else.",
+  "codeExample": "a = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n\nprint(\"a == b:\", a == b)   # True\nprint(\"a is b:\", a is b)   # False\nprint(\"a is c:\", a is c)   # True\n\n# With None\nx = None\nprint(\"x is None:\", x is None)  # True",
+  "quiz": [
+    {
+      "question": "What does the `is` operator check?",
+      "options": [
+        "If values are equal",
+        "If both are the same object in memory",
+        "If both are the same type",
+        "If both are truthy"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

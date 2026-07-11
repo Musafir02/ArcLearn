@@ -1,0 +1,22 @@
+{
+  "title": "Output / Print",
+  "language": "python",
+  "topic": "output",
+  "order": 5,
+  "nextTopic": "output_numbers",
+  "prevTopic": "statements",
+  "content": "### The `print()` Function\n\nThe `print()` function outputs text or values to the console.\n\n---\n\n### Printing Text\n\n```python\nprint(\"Hello World!\")\nprint('Hello World!')  # Single quotes also work\n```\n\nYou can use either **single** or **double** quotes -- just be consistent.\n\n---\n\n### Multiple Items\n\n```python\nprint(\"Hello\", \"World\", 123)  # Hello World 123\n```\n\nItems are separated by a **space** by default.\n\n---\n\n### Printing on Multiple Lines\n\nEach `print()` call adds a **new line** at the end:\n\n```python\nprint(\"Line 1\")\nprint(\"Line 2\")\n# Output:\n# Line 1\n# Line 2\n```\n\nTo print on the **same line**, use `end`:\n\n```python\nprint(\"Hello\", end=\" \")\nprint(\"World\")\n# Output: Hello World\n```\n\n---\n\n### The Separator\n\nChange the separator between items:\n\n```python\nprint(\"apple\", \"banana\", \"cherry\", sep=\", \")\n# Output: apple, banana, cherry\n```\n\n---\n\n> **Common Mistake:** Forgetting quotes around text -- `print(Hello)` causes a `NameError`.",
+  "codeExample": "print(\"Hello World!\")\nprint(\"Python\", \"is\", \"fun\", sep=\"-\")\nprint(\"First line\", end=\"... \")\nprint(\"Second line\")",
+  "quiz": [
+    {
+      "question": "What is the correct way to print text in Python?",
+      "options": [
+        "echo(\"hello\")",
+        "print(\"hello\")",
+        "write(\"hello\")",
+        "console.log(\"hello\")"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

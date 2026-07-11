@@ -1,0 +1,22 @@
+{
+  "title": "Introduction",
+  "language": "python",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is Python?\n\n**Python** is a popular, high-level programming language created by **Guido van Rossum** and released in **1991**. It is known for its **simple, readable syntax** that resembles plain English.\n\n---\n\n### What Can Python Do?\n\n| Domain | Examples |\n|--------|----------|\n| **Web Development** | Django, Flask backends |\n| **Data Science** | Pandas, NumPy, Matplotlib |\n| **Machine Learning** | TensorFlow, PyTorch, Scikit-learn |\n| **Automation** | Scripting, web scraping |\n| **Desktop Apps** | Tkinter, PyQt |\n| **Game Development** | Pygame |\n\n---\n\n### Why Learn Python?\n\n- **Beginner Friendly** -- reads like English\n- **Versatile** -- web, data, AI, automation\n- **Huge Community** -- millions of developers\n- **Rich Libraries** -- thousands of packages\n- **High Demand** -- top programming job market\n\n---\n\n### Python Philosophy\n\nPython follows the **Zen of Python**:\n\n- **Beautiful** is better than ugly\n- **Explicit** is better than implicit\n- **Simple** is better than complex\n- **Readability** counts\n\n> **Fun Fact:** Python was named after the comedy show \"Monty Python's Flying Circus\", not the snake!",
+  "codeExample": "print(\"Hello, World!\")",
+  "quiz": [
+    {
+      "question": "Who created Python?",
+      "options": [
+        "Dennis Ritchie",
+        "Guido van Rossum",
+        "Brendan Eich",
+        "James Gosling"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Strings",
+  "language": "python",
+  "topic": "strings",
+  "order": 28,
+  "nextTopic": "strings_slicing",
+  "prevTopic": "operators_precedence",
+  "content": "### What are Strings?\n\n**Strings** in Python are sequences of characters enclosed in quotes.\n\n---\n\n### Creating Strings\n\n```python\n# Single quotes\nname = 'John'\n\n# Double quotes\nname = \"John\"\n\n# Triple quotes (multi-line)\nmessage = \"\"\"This is a\nmulti-line string\"\"\"\n```\n\n---\n\n### String Properties\n\n- Strings are **ordered** -- characters have positions\n- Strings are **immutable** -- cannot be changed after creation\n- Strings are **iterable** -- can loop through characters\n\n---\n\n### Quotes Inside Strings\n\n```python\nprint(\"It's alright\")     # Single quote inside double\nprint('He said \"Hello\"')  # Double quote inside single\nprint('It\\'s fine')        # Escape character\n```\n\n---\n\n### String Length\n\n```python\ntext = \"Hello, World!\"\nprint(len(text))  # 13\n```\n\n`len()` returns the number of characters.\n\n---\n\n### Accessing Characters\n\n```python\ntext = \"Hello\"\nprint(text[0])  # H (first character)\nprint(text[1])  # e\nprint(text[-1]) # o (last character)\n```\n\n> **Indexing:** Python uses **zero-based indexing**. `text[0]` is the first character.",
+  "codeExample": "name = \"John\"\nprint(name)\n\nmessage = \"\"\"This is a\nmulti-line string\"\"\"\nprint(message)\n\nprint(len(\"Hello\"))  # 5\nprint(\"Hello\"[0])    # H\nprint(\"Hello\"[-1])   # o",
+  "quiz": [
+    {
+      "question": "How do you access the first character of a string s?",
+      "options": [
+        "s[1]",
+        "s[0]",
+        "s.first()",
+        "s.character(0)"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

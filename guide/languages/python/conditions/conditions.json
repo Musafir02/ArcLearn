@@ -1,0 +1,22 @@
+{
+  "title": "Conditions",
+  "language": "python",
+  "topic": "conditions",
+  "order": 71,
+  "nextTopic": "if_elif",
+  "prevTopic": "dictionaries_methods",
+  "content": "### Conditional Statements\n\n**Conditions** let your code make decisions and run different code based on them.\n\n---\n\n### The `if` Statement\n\nThe most basic conditional:\n\n```python\nage = 18\nif age >= 18:\n    print(\"You are an adult\")\n```\n\n---\n\n### Indentation is Critical\n\n```python\nif 5 > 2:\n    print(\"Five is greater than two\")  # Runs\nprint(\"This runs always\")  # Not part of if\n```\n\nThe indented block after `if` runs **only** if the condition is `True`.\n\n---\n\n### Comparison Operators in Conditions\n\n| Operator | Meaning |\n|----------|---------|\n| `==` | Equal to |\n| `!=` | Not equal to |\n| `>` | Greater than |\n| `<` | Less than |\n| `>=` | Greater than or equal |\n| `<=` | Less than or equal |\n\n---\n\n### Boolean Values\n\nConditions evaluate to `True` or `False`:\n\n```python\nif True:\n    print(\"Always runs\")\n\nif False:\n    print(\"Never runs\")\n```\n\n---\n\n> **Key Point:** The condition must evaluate to a boolean. Everything after the colon (`:`) must be indented.",
+  "codeExample": "age = 18\nif age >= 18:\n    print(\"You are an adult\")\n\nx = 10\nif x > 5:\n    print(\"x is greater than 5\")\n\nif True:\n    print(\"This always runs\")",
+  "quiz": [
+    {
+      "question": "What keyword starts a conditional statement?",
+      "options": [
+        "when",
+        "if",
+        "do",
+        "for"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

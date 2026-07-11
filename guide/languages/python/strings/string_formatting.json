@@ -1,0 +1,22 @@
+{
+  "title": "String Formatting (Style Guide)",
+  "language": "python",
+  "topic": "string_formatting",
+  "order": 33,
+  "nextTopic": "strings_escape",
+  "prevTopic": "strings_format",
+  "content": "### Comparing Formatting Styles\n\nPython offers **multiple ways** to format strings. This guide helps you choose.\n\n---\n\n### Style Comparison\n\n| Method | Syntax | When to Use |\n|--------|--------|-------------|\n| **f-strings** | `f\"Hello {name}\"` | Python 3.6+ (preferred) |\n| **`.format()`** | `\"Hello {}\".format(name)` | Dynamic format strings |\n| **`%`-formatting** | `\"Hello %s\" % name` | Legacy code only |\n| **`+` concatenation** | `\"Hello \" + name` | Simple cases |\n| **`Template`** | `Template(\"$name\")` | User-provided templates |\n\n---\n\n### f-Strings (Best Choice)\n\n```python\nname = \"Alice\"\nage = 25\nprint(f\"{name} is {age}\")  # Clean and fast\n```\n\n### .format() (When Dynamic)\n\n```python\ntemplate = \"My name is {name}\"\nresult = template.format(name=\"Bob\")\n```\n\n### %-Formatting (Legacy)\n\n```python\nprint(\"Name: %s, Age: %d\" % (name, age))\n```\n\n---\n\n### Performance Comparison\n\n| Method | Speed | Readability | Modern |\n|--------|-------|-------------|--------|\n| f-strings | Fastest | Best | Yes |\n| `.format()` | Medium | Good | Yes |\n| `%` | Fast | Poor | No |\n| `+` | Slow | Poor | N/A |\n\n---\n\n> **Recommendation:** Use f-strings by default. Only use `.format()` when you need dynamic templates. Avoid `%`-formatting in new code.",
+  "codeExample": "name = \"Alice\"\nage = 25\n\n# f-strings (preferred)\nprint(f\"{name} is {age} years old\")\n\n# .format()\nprint(\"{} is {} years old\".format(name, age))\n\n# %-formatting\nprint(\"%s is %d years old\" % (name, age))",
+  "quiz": [
+    {
+      "question": "Which is the recommended string formatting method for new Python code?",
+      "options": [
+        "%s placeholders",
+        "f-strings",
+        "str.format()",
+        "Template strings"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Copy Dictionaries",
+  "language": "python",
+  "topic": "dictionaries_copy",
+  "order": 68,
+  "nextTopic": "dictionaries_nested",
+  "prevTopic": "dictionaries_loop",
+  "content": "### Copying Dictionaries\n\nLike lists, simple assignment creates a **reference**, not a copy.\n\n---\n\n### The Assignment Trap\n\n```python\noriginal = {\"name\": \"Alice\", \"age\": 25}\ncopy = original  # Not a copy!\ncopy[\"age\"] = 30\nprint(original)  # {\"name\": \"Alice\", \"age\": 30} -- changed!\n```\n\n---\n\n### `.copy()` Method\n\n```python\noriginal = {\"name\": \"Alice\", \"age\": 25}\ncopy = original.copy()\ncopy[\"age\"] = 30\nprint(original)  # {\"name\": \"Alice\", \"age\": 25}\nprint(copy)      # {\"name\": \"Alice\", \"age\": 30}\n```\n\n---\n\n### `dict()` Constructor\n\n```python\noriginal = {\"name\": \"Alice\", \"age\": 25}\ncopy = dict(original)\n```\n\n---\n\n### Dictionary Unpacking\n\n```python\noriginal = {\"name\": \"Alice\", \"age\": 25}\ncopy = {**original}\n```\n\n---\n\n### Shallow Copy vs Deep Copy\n\n```python\nimport copy\n\noriginal = {\"data\": [1, 2, 3]}\nshallow = original.copy()\nshallow[\"data\"][0] = 99\nprint(original)  # {\"data\": [99, 2, 3]} -- changed!\n\ndeep = copy.deepcopy(original)\ndeep[\"data\"][0] = 100\nprint(original)  # {\"data\": [99, 2, 3]} -- unchanged\n```\n\n---\n\n> **Key Point:** Use `.copy()`, `dict()`, or `{**dict}` for simple dictionaries. Use `copy.deepcopy()` for dictionaries with nested mutable objects.",
+  "codeExample": "# The wrong way\norig = {\"name\": \"Alice\"}\ncopy = orig\ncopy[\"name\"] = \"Bob\"\nprint(\"Original:\", orig)  # Changed!\n\n# The right way\norig = {\"name\": \"Alice\"}\ncopy = orig.copy()\ncopy[\"name\"] = \"Bob\"\nprint(\"Original:\", orig)  # Unchanged\nprint(\"Copy:\", copy)\n\n# Deep copy\nimport copy\norig = {\"items\": [1, 2, 3]}\ndeep = copy.deepcopy(orig)\ndeep[\"items\"][0] = 99\nprint(\"Deep copy:\", orig)\nprint(\"Original unchanged?\")",
+  "quiz": [
+    {
+      "question": "Which creates a true copy of a dictionary?",
+      "options": [
+        "copy = original",
+        "copy = original.copy()",
+        "copy = copy(original)",
+        "Both B and C"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

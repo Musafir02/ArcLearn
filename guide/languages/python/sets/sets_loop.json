@@ -1,0 +1,22 @@
+{
+  "title": "Loop Through Sets",
+  "language": "python",
+  "topic": "sets_loop",
+  "order": 58,
+  "nextTopic": "sets_join",
+  "prevTopic": "sets_remove",
+  "content": "### Looping Through Sets\n\n---\n\n### For Loop\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfor fruit in fruits:\n    print(fruit)\n```\n\nRemember, the **order is not guaranteed**.\n\n---\n\n### Loop with Index (Workaround)\n\nSince sets have no index, use `enumerate()` on a **sorted** copy:\n\n```python\nfruits = {\"banana\", \"apple\", \"cherry\"}\nfor i, fruit in enumerate(sorted(fruits)):\n    print(f\"{i}: {fruit}\")\n```\n\n---\n\n### While Loop (Workaround)\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nsorted_fruits = list(fruits)\ni = 0\nwhile i < len(sorted_fruits):\n    print(sorted_fruits[i])\n    i += 1\n```\n\n---\n\n### List Comprehension on Set\n\n```python\nnumbers = {1, 2, 3, 4, 5, 6}\nevens = [x for x in numbers if x % 2 == 0]\nprint(evens)  # [2, 4, 6] (returns list)\n```\n\n---\n\n> **Note:** Since sets are unordered, the iteration order may differ between runs. Use `sorted()` if you need consistent ordering.",
+  "codeExample": "fruits = {\"apple\", \"banana\", \"cherry\"}\n\n# Simple loop\nprint(\"Items:\")\nfor fruit in fruits:\n    print(fruit)\n\n# Sorted loop\nprint(\"\\nSorted:\")\nfor fruit in sorted(fruits):\n    print(fruit)\n\n# List comprehension\nnumbers = {1, 2, 3, 4, 5}\nsquares = [x**2 for x in numbers]\nprint(\"\\nSquares:\", squares)",
+  "quiz": [
+    {
+      "question": "Can you rely on the order when looping through a set?",
+      "options": [
+        "Yes, always alphabetical",
+        "Yes, insertion order",
+        "No, sets are unordered",
+        "Only if created with {}"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

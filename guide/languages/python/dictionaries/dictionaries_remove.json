@@ -1,0 +1,22 @@
+{
+  "title": "Remove Dictionary Items",
+  "language": "python",
+  "topic": "dictionaries_remove",
+  "order": 66,
+  "nextTopic": "dictionaries_loop",
+  "prevTopic": "dictionaries_change",
+  "content": "### Removing Items\n\n---\n\n### `.pop()` -- Remove by Key\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\nage = student.pop(\"age\")\nprint(age)       # 25 (returns the value)\nprint(student)   # {\"name\": \"Alice\", \"grade\": \"A\"}\n```\n\n> **Error:** Raises `KeyError` if key does not exist.\n\nProvide a **default** to avoid errors:\n\n```python\nstudent.pop(\"missing\", \"not found\")  # Returns \"not found\"\n```\n\n---\n\n### `.popitem()` -- Remove Last Inserted\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nitem = student.popitem()\nprint(item)      # (\"age\", 25) (returns tuple)\nprint(student)   # {\"name\": \"Alice\"}\n```\n\n---\n\n### `del` Keyword\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\ndel student[\"grade\"]  # Remove specific key\ndel student            # Delete entire dictionary!\n```\n\n---\n\n### `.clear()` -- Empty the Dictionary\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nstudent.clear()\nprint(student)  # {}\n```\n\n---\n\n### Summary\n\n| Method | Description | Returns | Error if Missing |\n|--------|-------------|---------|------------------|\n| `.pop(key)` | Remove by key | Value | Yes |\n| `.pop(key, default)` | Remove by key | Value or default | No |\n| `.popitem()` | Remove last item | (key, value) tuple | Yes (if empty) |\n| `del dict[key]` | Remove by key | Nothing | Yes |\n| `.clear()` | Remove all | Nothing | No |\n\n> **Best Practice:** Use `.pop()` when you need the removed value. Use `del` when you just want to remove. Use `.pop()` with a default when the key might not exist.",
+  "codeExample": "student = {\"name\": \"Alice\", \"age\": 25, \"grade\": \"A\"}\n\n# pop\nage = student.pop(\"age\")\nprint(\"Popped age:\", age)\nprint(\"Remaining:\", student)\n\n# popitem\nitem = student.popitem()\nprint(\"Popped item:\", item)\n\n# clear\nstudent.clear()\nprint(\"After clear:\", student)",
+  "quiz": [
+    {
+      "question": "Which method removes a key and returns its value?",
+      "options": [
+        "pop()",
+        "remove()",
+        "delete()",
+        "popitem()"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

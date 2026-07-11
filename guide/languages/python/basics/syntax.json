@@ -1,0 +1,22 @@
+{
+  "title": "Python Syntax",
+  "language": "python",
+  "topic": "syntax",
+  "order": 3,
+  "nextTopic": "statements",
+  "prevTopic": "getstarted",
+  "content": "### Python Syntax Basics\n\nPython syntax is designed to be **clean and readable**. Unlike many languages, Python uses **indentation** instead of curly braces.\n\n---\n\n### Key Rules\n\n| Rule | Example |\n|------|---------|\n| **No semicolons** needed | `print(\"Hello\")` |\n| **Indentation** defines blocks | 4 spaces or 1 tab |\n| **Case-sensitive** | `Name` vs `name` are different |\n| **Comments** start with `#` | `# This is a comment` |\n\n---\n\n### Indentation Matters!\n\nPython uses indentation to mark blocks of code:\n\n```python\nif 5 > 2:\n    print(\"Five is greater than two\")  # This is indented\n```\n\nThe indentation tells Python that the `print` statement belongs to the `if` block.\n\n> **Common Error:** `IndentationError: expected an indented block`\n\n---\n\n### Line Structure\n\n- Each line is usually one **statement**\n- Long statements can span multiple lines using `\\` or parentheses\n- Blank lines are ignored (they improve readability)\n\n```python\n# Long line continuation\ntotal = 1 + 2 + 3 + \\\n        4 + 5 + 6\n```\n\n---\n\n> **Best Practice:** Always use **4 spaces** for indentation (not tabs, or mix of both). Configure your editor to convert tabs to spaces.",
+  "codeExample": "# This is a comment\nprint(\"Hello, World!\")  # Inline comment\n\nif 5 > 2:\n    print(\"Five is greater than two\")",
+  "quiz": [
+    {
+      "question": "What does Python use to define code blocks?",
+      "options": [
+        "Curly braces {}",
+        "Indentation (spaces/tabs)",
+        "Square brackets []",
+        "Parentheses ()"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

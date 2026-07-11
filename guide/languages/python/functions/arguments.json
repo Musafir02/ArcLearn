@@ -1,0 +1,22 @@
+{
+  "title": "Function Arguments",
+  "language": "python",
+  "topic": "arguments",
+  "order": 83,
+  "nextTopic": "args_kwargs",
+  "prevTopic": "functions",
+  "content": "### Function Arguments\n\n---\n\n### Positional Arguments\n\n```python\ndef greet(name, greeting):\n    return f\"{greeting}, {name}!\"\n\nprint(greet(\"Alice\", \"Hello\"))  # Hello, Alice!\n```\n\nOrder matters.\n\n---\n\n### Keyword Arguments\n\n```python\nprint(greet(greeting=\"Hi\", name=\"Bob\"))  # Hi, Bob!\n```\n\nOrder does **not** matter with keyword arguments.\n\n---\n\n### Default Parameters\n\n```python\ndef greet(name, greeting=\"Hello\"):\n    return f\"{greeting}, {name}!\"\n\nprint(greet(\"Alice\"))      # Hello, Alice!\nprint(greet(\"Bob\", \"Hi\"))  # Hi, Bob!\n```\n\n---\n\n### Default Parameter Rules\n\n```python\n# Correct: defaults after required\ndef func(a, b, c=3):\n    pass\n\n# WRONG! defaults before required\ndef func(a=1, b):  # SyntaxError!\n    pass\n```\n\n---\n\n### Mutable Defaults (Common Gotcha)\n\n```python\ndef add_item(item, target=[]):\n    target.append(item)\n    return target\n\nprint(add_item(\"a\"))  # [\"a\"]\nprint(add_item(\"b\"))  # [\"a\", \"b\"] -- shared list!\n```\n\nUse `None` instead:\n\n```python\ndef add_item(item, target=None):\n    if target is None:\n        target = []\n    target.append(item)\n    return target\n```\n\n---\n\n> **Key Point:** Positional arguments come first, keyword arguments after. Default parameters must come after required parameters.",
+  "codeExample": "def describe_pet(name, animal_type=\"dog\"):\n    return f\"I have a {animal_type} named {name}\"\n\nprint(describe_pet(\"Max\"))\nprint(describe_pet(\"Whiskers\", \"cat\"))\nprint(describe_pet(animal_type=\"hamster\", name=\"Squeaky\"))\n\n# Default parameter safety\ndef add_item(item, target=None):\n    if target is None:\n        target = []\n    target.append(item)\n    return target",
+  "quiz": [
+    {
+      "question": "What is the correct order of parameters?",
+      "options": [
+        "Defaults first, then required",
+        "Required first, then defaults",
+        "Any order is fine",
+        "Defaults only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

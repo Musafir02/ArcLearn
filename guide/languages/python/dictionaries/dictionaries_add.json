@@ -1,0 +1,22 @@
+{
+  "title": "Add Dictionary Items",
+  "language": "python",
+  "topic": "dictionaries_add",
+  "order": 64,
+  "nextTopic": "dictionaries_change",
+  "prevTopic": "dictionaries_access",
+  "content": "### Adding Items to a Dictionary\n\n---\n\n### Using Assignment\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nstudent[\"grade\"] = \"A\"  # Adds new key-value pair\nprint(student)\n```\n\nIf the key already exists, it **updates** the value.\n\n---\n\n### `.update()` -- Add Multiple Items\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nstudent.update({\"grade\": \"A\", \"city\": \"New York\"})\nprint(student)\n```\n\n`.update()` accepts a dictionary or key=value pairs:\n\n```python\nstudent.update(city=\"New York\", grade=\"A\")\n```\n\n---\n\n### `.setdefault()` -- Add if Missing\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\n\n# Only sets if key does not exist\nstudent.setdefault(\"grade\", \"B\")\nprint(student)  # {\"name\": \"Alice\", \"age\": 25, \"grade\": \"B\"}\n\n# Key exists, no change\nstudent.setdefault(\"name\", \"Bob\")\nprint(student[\"name\"])  # \"Alice\" (unchanged)\n```\n\n---\n\n### Merge with `|` Operator (Python 3.9+)\n\n```python\nstudent = {\"name\": \"Alice\", \"age\": 25}\nextra = {\"grade\": \"A\", \"city\": \"Boston\"}\nmerged = student | extra  # Creates new dict\nprint(merged)\n```\n\n---\n\n> **Key Point:** Assignment `dict[key] = value` is the most common way to add or update items. Use `.update()` for adding multiple items at once.",
+  "codeExample": "student = {\"name\": \"Alice\", \"age\": 25}\n\n# Add single item\nstudent[\"grade\"] = \"A\"\nprint(\"After add:\", student)\n\n# Add multiple items\nstudent.update({\"city\": \"Boston\", \"major\": \"CS\"})\nprint(\"After update:\", student)\n\n# setdefault\nstudent.setdefault(\"minors\", [])\nstudent[\"minors\"].append(\"Math\")\nprint(student)",
+  "quiz": [
+    {
+      "question": "How do you add a new key-value pair to a dictionary?",
+      "options": [
+        "dict.add(key, value)",
+        "dict.append(key=value)",
+        "dict[key] = value",
+        "dict.insert(key, value)"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Polymorphism",
+  "language": "python",
+  "topic": "polymorphism",
+  "order": 97,
+  "nextTopic": "encapsulation",
+  "prevTopic": "inheritance",
+  "content": "### Polymorphism\n\n**Polymorphism** means \"many forms\" -- the same method name can behave differently on different classes.\n\n---\n\n### Same Method, Different Behavior\n\n```python\nclass Dog:\n    def speak(self):\n        return \"Woof!\"\n\nclass Cat:\n    def speak(self):\n        return \"Meow!\"\n\nclass Duck:\n    def speak(self):\n        return \"Quack!\"\n\n# Polymorphic function\ndef make_sound(animal):\n    print(animal.speak())\n\nmake_sound(Dog())   # Woof!\nmake_sound(Cat())   # Meow!\nmake_sound(Duck())  # Quack!\n```\n\n---\n\n### Duck Typing\n\n\"If it walks like a duck and quacks like a duck, it is a duck\":\n\n```python\nclass Person:\n    def speak(self):\n        return \"Hello!\"\n\nmake_sound(Person())  # Hello! -- works too!\n```\n\nPython does not care about the type -- only that the method exists.\n\n---\n\n### Polymorphism with Inheritance\n\n```python\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n    \n    def speak(self):\n        raise NotImplementedError\n\nclass Dog(Animal):\n    def speak(self):\n        return f\"{self.name} says Woof!\"\n\nclass Cat(Animal):\n    def speak(self):\n        return f\"{self.name} says Meow!\"\n\nanimals = [Dog(\"Rex\"), Cat(\"Whiskers\")]\nfor animal in animals:\n    print(animal.speak())\n```\n\n---\n\n### Polymorphism with Functions\n\n```python\nlen(\"Hello\")      # 5 (string)\nlen([1, 2, 3])     # 3 (list)\nlen({1, 2, 3, 4})  # 4 (set)\n```\n\nSame function `len()` works on different types.\n\n---\n\n> **Key Point:** Polymorphism allows writing flexible code that works with any object that supports the expected interface, without caring about its exact type.",
+  "codeExample": "class Car:\n    def move(self):\n        return \"Driving\"\n\nclass Plane:\n    def move(self):\n        return \"Flying\"\n\nclass Boat:\n    def move(self):\n        return \"Sailing\"\n\ndef travel(vehicle):\n    print(vehicle.move())\n\nvehicles = [Car(), Plane(), Boat()]\nfor v in vehicles:\n    travel(v)",
+  "quiz": [
+    {
+      "question": "What does polymorphism allow?",
+      "options": [
+        "Same method name, different behavior",
+        "Creating multiple classes",
+        "Inheriting from multiple parents",
+        "Hiding data"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

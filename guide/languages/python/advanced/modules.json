@@ -1,0 +1,22 @@
+{
+  "title": "Modules",
+  "language": "python",
+  "topic": "modules",
+  "order": 102,
+  "nextTopic": "datetime",
+  "prevTopic": "iterators",
+  "content": "### Modules\n\nA **module** is a file containing Python definitions and statements. It helps organize code.\n\n---\n\n### Importing Entire Module\n\n```python\nimport math\n\nprint(math.sqrt(25))  # 5.0\nprint(math.pi)        # 3.14159...\n```\n\n---\n\n### Import Specific Items\n\n```python\nfrom math import sqrt, pi\n\nprint(sqrt(25))  # 5.0\nprint(pi)        # 3.14159...\n```\n\n---\n\n### Import with Alias\n\n```python\nimport math as m\n\nprint(m.sqrt(25))\n\nfrom math import sqrt as square_root\nprint(square_root(25))\n```\n\n---\n\n### Import All (Not Recommended)\n\n```python\nfrom math import *  # Imports everything\nprint(sqrt(25))\n```\n\n> **Avoid this.** It pollutes your namespace and can cause naming conflicts.\n\n---\n\n### Creating Your Own Module\n\nSave as `mymodule.py`:\n\n```python\n# mymodule.py\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nPI = 3.14159\n```\n\nThen import:\n\n```python\nimport mymodule\nprint(mymodule.greet(\"Alice\"))\nprint(mymodule.PI)\n```\n\n---\n\n### Commonly Used Built-in Modules\n\n| Module | Purpose |\n|--------|---------|\n| `math` | Mathematical functions |\n| `random` | Random number generation |\n| `datetime` | Date and time handling |\n| `os` | Operating system interface |\n| `sys` | System-specific parameters |\n| `json` | JSON parsing |\n| `re` | Regular expressions |\n| `collections` | Additional data structures |\n\n> **Best Practice:** Put related functions and classes in a module. Modules should have a single, clear purpose.",
+  "codeExample": "import math\nprint(\"Square root:\", math.sqrt(16))\nprint(\"PI:\", math.pi)\n\nimport random\nprint(\"Random 1-10:\", random.randint(1, 10))\n\nfrom datetime import datetime\nprint(\"Now:\", datetime.now())\n\n# See all functions in a module\nprint(dir(math))",
+  "quiz": [
+    {
+      "question": "Which keyword imports a module?",
+      "options": [
+        "include",
+        "import",
+        "require",
+        "use"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

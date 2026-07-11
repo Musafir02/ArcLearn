@@ -1,0 +1,22 @@
+{
+  "title": "Global Variables",
+  "language": "python",
+  "topic": "variables_global",
+  "order": 11,
+  "nextTopic": "datatypes",
+  "prevTopic": "variables_output",
+  "content": "### Global vs Local Variables\n\nVariables created **outside** a function are **global**. Variables created **inside** a function are **local**.\n\n---\n\n### Global Variables\n\n```python\nx = \"global\"  # This is a global variable\n\ndef myfunc():\n    print(x)  # Can access global inside function\n\nmyfunc()  # \"global\"\n```\n\n---\n\n### Local Variables\n\n```python\nx = \"global\"\n\ndef myfunc():\n    x = \"local\"  # This creates a NEW local variable\n    print(x)      # \"local\"\n\nmyfunc()\nprint(x)          # \"global\" -- unchanged!\n```\n\n---\n\n### The `global` Keyword\n\nTo **modify** a global variable inside a function:\n\n```python\ndef myfunc():\n    global x\n    x = \"changed\"\n\nx = \"original\"\nmyfunc()\nprint(x)  # \"changed\"\n```\n\n---\n\n### The `nonlocal` Keyword\n\nFor nested functions, `nonlocal` allows modifying variables in the **enclosing** scope:\n\n```python\ndef outer():\n    x = \"outer\"\n    \n    def inner():\n        nonlocal x\n        x = \"inner\"\n    \n    inner()\n    print(x)  # \"inner\"\n\nouter()\n```\n\n---\n\n> **Best Practice:** Avoid global variables when possible. They make code harder to debug and understand.",
+  "codeExample": "x = \"global\"\n\ndef myfunc():\n    print(\"Inside:\", x)\n\nmyfunc()\nprint(\"Outside:\", x)\n\n# Modifying global\ndef change():\n    global x\n    x = \"changed\"\n\nchange()\nprint(\"After change:\", x)",
+  "quiz": [
+    {
+      "question": "What keyword is used to modify a global variable inside a function?",
+      "options": [
+        "global",
+        "nonlocal",
+        "outer",
+        "public"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

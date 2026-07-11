@@ -1,0 +1,22 @@
+{
+  "title": "Add List Items",
+  "language": "python",
+  "topic": "lists_add",
+  "order": 39,
+  "nextTopic": "lists_remove",
+  "prevTopic": "lists_change",
+  "content": "### Adding Items to a List\n\n---\n\n### `.append()` -- Add at End\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.append(\"orange\")\nprint(fruits)  # [\"apple\", \"banana\", \"cherry\", \"orange\"]\n```\n\n---\n\n### `.insert()` -- Add at Specific Position\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.insert(1, \"blueberry\")\nprint(fruits)  # [\"apple\", \"blueberry\", \"banana\", \"cherry\"]\n```\n\nThe first argument is the index, the second is the value.\n\n---\n\n### `.extend()` -- Add Multiple Items\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nmore_fruits = [\"orange\", \"kiwi\"]\nfruits.extend(more_fruits)\nprint(fruits)  # [\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\"]\n```\n\n`.extend()` can add any iterable:\n\n```python\nfruits.extend((\"grape\", \"melon\"))  # Tuple\nfruits.extend(\"Hi\")  # String becomes [\"H\", \"i\"]\n```\n\n---\n\n### The `+` Operator\n\n```python\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\ncombined = list1 + list2\nprint(combined)  # [1, 2, 3, 4, 5, 6]\n```\n\n---\n\n> **Difference:** `append()` adds **one** element. `extend()` adds **each element** of an iterable individually. `+` creates a new list (does not modify either).",
+  "codeExample": "fruits = [\"apple\", \"banana\"]\n\nfruits.append(\"orange\")\nprint(\"After append:\", fruits)\n\nfruits.insert(1, \"blueberry\")\nprint(\"After insert:\", fruits)\n\nfruits.extend([\"kiwi\", \"grape\"])\nprint(\"After extend:\", fruits)\n\nnew_list = [1, 2] + [3, 4]\nprint(\"Combined:\", new_list)",
+  "quiz": [
+    {
+      "question": "Which method adds a single item to the end of a list?",
+      "options": [
+        "add()",
+        "insert()",
+        "append()",
+        "extend()"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

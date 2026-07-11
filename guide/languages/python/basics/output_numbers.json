@@ -1,0 +1,22 @@
+{
+  "title": "Output Numbers",
+  "language": "python",
+  "topic": "output_numbers",
+  "order": 6,
+  "nextTopic": "comments",
+  "prevTopic": "output",
+  "content": "### Printing Numbers\n\nYou can print numbers **without** quotes:\n\n```python\nprint(3)\nprint(358)\nprint(50000)\n```\n\n---\n\n### Math Inside Print\n\n```python\nprint(3 + 5)    # 8\nprint(10 - 4)   # 6\nprint(3 * 7)    # 21\nprint(10 / 2)   # 5.0\n```\n\n---\n\n### Combining Text and Numbers\n\nUse a **comma** to combine text and numbers:\n\n```python\nprint(\"Total:\", 150)\nprint(\"Score:\", 95, \"out of\", 100)\n```\n\nEach comma adds a space between items.\n\n---\n\n### Formatting with f-Strings\n\nFor cleaner output, use **f-strings** (more on this later):\n\n```python\nscore = 95\nprint(f\"Score: {score} out of 100\")\n```\n\n---\n\n> **Note:** When adding text and numbers with the `+` operator, you must convert numbers to strings first: `\"Age: \" + str(25)`.",
+  "codeExample": "print(3)\nprint(358)\nprint(50000)\nprint(3 + 5)\nprint(\"Total:\", 150)",
+  "quiz": [
+    {
+      "question": "How do you print a number in Python?",
+      "options": [
+        "print(\"number\")",
+        "print(number)",
+        "print(42)",
+        "Both print(42) and print(number) if number is a variable"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

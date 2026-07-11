@@ -1,0 +1,22 @@
+{
+  "title": "Classes",
+  "language": "python",
+  "topic": "classes",
+  "order": 91,
+  "nextTopic": "class_init",
+  "prevTopic": "oop",
+  "content": "### Creating a Class\n\nUse the `class` keyword to define a new class.\n\n---\n\n### Basic Class Definition\n\n```python\nclass MyClass:\n    x = 5  # Class attribute\n```\n\n---\n\n### Creating Objects\n\n```python\nclass MyClass:\n    x = 5\n\nobj1 = MyClass()  # Create an instance\nprint(obj1.x)     # 5\n```\n\n---\n\n### The `__init__()` Method\n\nThe constructor -- runs when an object is created:\n\n```python\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\np1 = Person(\"Alice\", 25)\nprint(p1.name)  # Alice\nprint(p1.age)   # 25\n```\n\n---\n\n### The `self` Parameter\n\n`self` refers to the **current instance** of the class:\n\n```python\nclass Person:\n    def __init__(self, name):\n        self.name = name\n    \n    def greet(self):\n        return f\"Hello, I am {self.name}\"\n```\n\n---\n\n### Object Methods\n\n```python\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def myfunc(self):\n        print(f\"Hello my name is {self.name}\")\n\np1 = Person(\"John\", 36)\np1.myfunc()\n```\n\n---\n\n> **Key Point:** The `self` parameter must be the **first** parameter of any method in the class. You do **not** pass it when calling the method -- Python does it automatically.",
+  "codeExample": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def greet(self):\n        return f\"Hello, I am {self.name}, age {self.age}\"\n\np1 = Person(\"Alice\", 25)\np2 = Person(\"Bob\", 30)\n\nprint(p1.greet())\nprint(p2.greet())\nprint(p1.name)  # Alice",
+  "quiz": [
+    {
+      "question": "What is the first parameter of any method in a class?",
+      "options": [
+        "self",
+        "this",
+        "me",
+        "cls"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

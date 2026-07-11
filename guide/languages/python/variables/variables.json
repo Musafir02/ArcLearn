@@ -1,0 +1,22 @@
+{
+  "title": "Variables",
+  "language": "python",
+  "topic": "variables",
+  "order": 7,
+  "nextTopic": "variables_names",
+  "prevTopic": "comments",
+  "content": "### What is a Variable?\n\nA **variable** is a container for storing data values. Think of it as a labeled box where you can put things.\n\n---\n\n### Creating Variables\n\nPython has **no command** for declaring variables. A variable is created the moment you assign a value:\n\n```python\nx = 5\ny = \"Hello\"\nname = \"John\"\nage = 25\n```\n\n---\n\n### Dynamic Typing\n\nVariables can change type after they are set:\n\n```python\nx = 5       # x is an int\nx = \"John\"  # x is now a str\nprint(x)    # John\n```\n\n---\n\n### Variable Types Are Inferred\n\nYou don't need to declare what type a variable holds:\n\n| Assignment | Type |\n|------------|------|\n| `x = 10` | `int` |\n| `y = 3.14` | `float` |\n| `z = \"Hi\"` | `str` |\n| `w = True` | `bool` |\n| `v = [1, 2]` | `list` |\n\n---\n\n### The `print()` Function with Variables\n\n```python\nname = \"Alice\"\nage = 30\nprint(name, age)  # Alice 30\n```\n\n---\n\n> **Key Idea:** Python variables are just **references** to objects in memory. They point to data, not contain it.",
+  "codeExample": "x = 5\ny = \"John\"\nprint(x)\nprint(y)\n\nx = \"Now I'm a string\"\nprint(x)\nprint(type(x))",
+  "quiz": [
+    {
+      "question": "How do you create a variable in Python?",
+      "options": [
+        "var x = 5",
+        "x = 5",
+        "let x = 5",
+        "create x = 5"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

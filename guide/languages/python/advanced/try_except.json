@@ -1,0 +1,22 @@
+{
+  "title": "Try Except",
+  "language": "python",
+  "topic": "try_except",
+  "order": 108,
+  "nextTopic": "user_input",
+  "prevTopic": "pip",
+  "content": "### Error Handling\n\n**Try-except** blocks let you handle errors gracefully instead of crashing.\n\n---\n\n### Basic Try-Except\n\n```python\ntry:\n    x = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero!\")\n```\n\n---\n\n### Catching Multiple Exceptions\n\n```python\ntry:\n    num = int(input(\"Enter a number: \"))\n    result = 10 / num\n    print(result)\nexcept ValueError:\n    print(\"That is not a valid number!\")\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero!\")\n```\n\n---\n\n### Catch All Exceptions\n\n```python\ntry:\n    risky_operation()\nexcept Exception as e:\n    print(f\"Something went wrong: {e}\")\n```\n\n---\n\n### `else` and `finally`\n\n```python\ntry:\n    file = open(\"data.txt\", \"r\")\n    content = file.read()\nexcept FileNotFoundError:\n    print(\"File not found!\")\nelse:\n    print(\"File read successfully\")  # Runs if no error\nfinally:\n    file.close()  # Always runs\n```\n\n---\n\n### Common Exception Types\n\n| Exception | When It Occurs |\n|-----------|---------------|\n| `ValueError` | Invalid value for operation |\n| `TypeError` | Incompatible types |\n| `ZeroDivisionError` | Division by zero |\n| `FileNotFoundError` | File does not exist |\n| `IndexError` | List index out of range |\n| `KeyError` | Dictionary key missing |\n| `NameError` | Variable not defined |\n| `ImportError` | Module not found |\n\n---\n\n### Raising Exceptions\n\n```python\ndef withdraw(amount, balance):\n    if amount > balance:\n        raise ValueError(\"Insufficient funds\")\n    return balance - amount\n\ntry:\n    withdraw(100, 50)\nexcept ValueError as e:\n    print(e)\n```\n\n---\n\n> **Best Practice:** Catch **specific** exceptions rather than using bare `except:`. This prevents hiding unexpected bugs.",
+  "codeExample": "def divide(a, b):\n    try:\n        result = a / b\n    except ZeroDivisionError:\n        return \"Cannot divide by zero\"\n    except TypeError:\n        return \"Both arguments must be numbers\"\n    else:\n        return f\"Result: {result}\"\n    finally:\n        print(\"Division attempted\")\n\nprint(divide(10, 2))\nprint(divide(10, 0))\nprint(divide(10, \"a\"))",
+  "quiz": [
+    {
+      "question": "What runs after try/except regardless of whether there was an error?",
+      "options": [
+        "else block",
+        "finally block",
+        "catch block",
+        "end block"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

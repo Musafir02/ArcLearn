@@ -1,0 +1,22 @@
+{
+  "title": "Set Methods",
+  "language": "python",
+  "topic": "sets_methods",
+  "order": 61,
+  "nextTopic": "dictionaries",
+  "prevTopic": "frozenset",
+  "content": "### Set Methods Reference\n\n---\n\n### Adding/Removing\n\n| Method | Description |\n|--------|-------------|\n| `.add(x)` | Add element `x` |\n| `.remove(x)` | Remove `x` (KeyError if missing) |\n| `.discard(x)` | Remove `x` (no error if missing) |\n| `.pop()` | Remove and return arbitrary item |\n| `.clear()` | Remove all items |\n\n---\n\n### Set Operations\n\n| Method | Operator | Description |\n|--------|----------|-------------|\n| `.union(s)` | `|` | All elements from both sets |\n| `.intersection(s)` | `&` | Elements in both |\n| `.difference(s)` | `-` | Elements in first not in second |\n| `.symmetric_difference(s)` | `^` | Elements in either, not both |\n| `.update(s)` | `|=` | Add all from `s` |\n| `.intersection_update(s)` | `&=` | Keep only elements in both |\n| `.difference_update(s)` | `-=` | Remove elements in `s` |\n| `.symmetric_difference_update(s)` | `^=` | Keep elements not in both |\n\n---\n\n### Comparison Methods\n\n| Method | Description |\n|--------|-------------|\n| `.issubset(s)` | True if all items are in `s` |\n| `.issuperset(s)` | True if `s` has all items |\n| `.isdisjoint(s)` | True if no common items |\n\n```python\na = {1, 2, 3}\nb = {1, 2}\n\nprint(b.issubset(a))   # True (b is subset of a)\nprint(a.issuperset(b)) # True (a is superset of b)\nprint({1, 2}.isdisjoint({3, 4}))  # True\nprint(a.isdisjoint(b)) # False (share 1, 2)\n```\n\n---\n\n### Operator Equivalents\n\n```python\na = {1, 2, 3}\nb = {1, 2}\n\nprint(b <= a)  # True (subset)\nprint(a >= b)  # True (superset)\nprint(a > b)   # True (proper superset -- a has more items)\n```\n\n> **Best Practice:** Use operators (`|`, `&`, `-`, `^`, `<=`, `>=`) for readability. Use methods for dynamic behavior (method references).",
+  "codeExample": "a = {1, 2, 3, 4}\nb = {3, 4, 5, 6}\n\nprint(\"Union:\", a | b)\nprint(\"Intersection:\", a & b)\nprint(\"Difference:\", a - b)\nprint(\"Symmetric:\", a ^ b)\n\nprint(\"Is {1,2} subset of a?\", {1, 2}.issubset(a))\nprint(\"Are they disjoint?\", a.isdisjoint({7, 8}))\n\n# In-place\nc = {1, 2, 3}\nc.update([4, 5])\nprint(\"After update:\", c)",
+  "quiz": [
+    {
+      "question": "Which method checks if two sets have no common elements?",
+      "options": [
+        "isdisjoint()",
+        "issubset()",
+        "issuperset()",
+        "isempty()"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

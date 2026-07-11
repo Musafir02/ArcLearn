@@ -1,0 +1,22 @@
+{
+  "title": "String Concatenation",
+  "language": "python",
+  "topic": "strings_concatenate",
+  "order": 31,
+  "nextTopic": "strings_format",
+  "prevTopic": "strings_modify",
+  "content": "### String Concatenation\n\n**Concatenation** means joining strings together.\n\n---\n\n### Using the `+` Operator\n\n```python\nfirst = \"Hello\"\nsecond = \"World\"\nprint(first + second)  # \"HelloWorld\" (no space!)\nprint(first + \" \" + second)  # \"Hello World\"\n```\n\n---\n\n### Repeating Strings with `*`\n\n```python\nprint(\"Ha\" * 3)    # \"HaHaHa\"\nprint(\"-\" * 20)    # \"--------------------\"\n```\n\n---\n\n### Concatenate Different Types\n\nMixing types with `+` causes an error:\n\n```python\nx = \"The number is \" + 5  # TypeError!\n```\n\nFix with `str()`:\n\n```python\nx = \"The number is \" + str(5)  # \"The number is 5\"\n```\n\n---\n\n### Concatenating Lists of Strings\n\n```python\nparts = [\"Hello\", \"World\", \"from\", \"Python\"]\nresult = \" \".join(parts)\nprint(result)  # \"Hello World from Python\"\n```\n\n---\n\n> **Performance Tip:** For many strings, using `\"\".join()` is faster than hundreds of `+` operations. For a few strings, `+` is perfectly fine.",
+  "codeExample": "first = \"Hello\"\nsecond = \"World\"\n\nprint(first + second)\nprint(first + \" \" + second)\nprint(\"Ha\" * 3)\nprint(\"-\" * 15)\n\n# f-string (better way)\nprint(f\"{first} {second}\")",
+  "quiz": [
+    {
+      "question": "What does \"Py\" + \"thon\" produce?",
+      "options": [
+        "\"Py thon\"",
+        "\"Py-thon\"",
+        "\"Python\"",
+        "Error"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

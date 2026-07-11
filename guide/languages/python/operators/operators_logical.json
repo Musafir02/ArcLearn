@@ -1,0 +1,22 @@
+{
+  "title": "Logical Operators",
+  "language": "python",
+  "topic": "operators_logical",
+  "order": 23,
+  "nextTopic": "operators_identity",
+  "prevTopic": "operators_comparison",
+  "content": "### Logical Operators\n\nLogical operators combine conditional statements.\n\n---\n\n### Operator Table\n\n| Operator | Description | Example | Result |\n|----------|-------------|---------|--------|\n| `and` | True if **both** are true | `True and False` | `False` |\n| `or` | True if **at least one** is true | `True or False` | `True` |\n| `not` | Inverts the result | `not True` | `False` |\n\n---\n\n### `and` Operator\n\n```python\nx = 5\nprint(x > 3 and x < 10)  # True (both are true)\nprint(x > 3 and x > 10)  # False (second is false)\n```\n\n### `or` Operator\n\n```python\nx = 5\nprint(x > 3 or x > 10)   # True (first is true)\nprint(x > 10 or x < 0)   # False (both false)\n```\n\n### `not` Operator\n\n```python\nx = 5\nprint(not(x > 3))        # False (inverts True)\nprint(not(x > 10))       # True (inverts False)\n```\n\n---\n\n### Truth Table\n\n| A | B | A and B | A or B | not A |\n|---|---|---------|--------|-------|\n| T | T | T | T | F |\n| T | F | F | T | F |\n| F | T | F | T | T |\n| F | F | F | F | T |\n\n---\n\n### Short-Circuit Evaluation\n\nPython stops evaluating when the result is determined:\n\n```python\nFalse and x()  # x() never called (False short-circuits)\nTrue or x()    # x() never called (True short-circuits)\n```\n\n---\n\n> **Best Practice:** Use `and`/`or`/`not` (words) instead of `&&`/`||`/`!` (not valid in Python).",
+  "codeExample": "x = 5\n\nprint(x > 3 and x < 10)   # True\nprint(x > 3 or x > 10)    # True\nprint(not(x > 3))         # False\n\n# Short-circuit\ndef greet():\n    print(\"called!\")\n    return True\n\nFalse and greet()  # greet() never called",
+  "quiz": [
+    {
+      "question": "What does False and True evaluate to?",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "None"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

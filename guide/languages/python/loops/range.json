@@ -1,0 +1,22 @@
+{
+  "title": "The Range Function",
+  "language": "python",
+  "topic": "range",
+  "order": 81,
+  "nextTopic": "functions",
+  "prevTopic": "for_loops",
+  "content": "### The `range()` Function\n\n`range()` generates a sequence of numbers. It is commonly used with `for` loops.\n\n---\n\n### Range Syntax\n\n```python\nrange(start, stop, step)\n```\n\n- `start` -- starting number (default 0, included)\n- `stop` -- stopping number (**excluded**)\n- `step` -- step size (default 1)\n\n---\n\n### `range(stop)` -- One Argument\n\n```python\nfor i in range(5):\n    print(i)  # 0, 1, 2, 3, 4\n```\n\n---\n\n### `range(start, stop)` -- Two Arguments\n\n```python\nfor i in range(2, 6):\n    print(i)  # 2, 3, 4, 5\n```\n\n---\n\n### `range(start, stop, step)` -- Three Arguments\n\n```python\nfor i in range(0, 10, 2):\n    print(i)  # 0, 2, 4, 6, 8\n\n# Negative step (counting down)\nfor i in range(10, 0, -2):\n    print(i)  # 10, 8, 6, 4, 2\n```\n\n---\n\n### Converting to List\n\n```python\nnumbers = list(range(5))\nprint(numbers)  # [0, 1, 2, 3, 4]\n\nprint(list(range(0, 10, 2)))  # [0, 2, 4, 6, 8]\n```\n\n---\n\n### Common Patterns\n\n```python\n# Loop with index\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor i in range(len(fruits)):\n    print(f\"{i}: {fruits[i]}\")\n\n# Sum of numbers\ntotal = sum(range(1, 101))  # 5050\n```\n\n---\n\n> **Memory Note:** In Python 3, `range()` returns a **range object** (lazy), not a list. It only stores the start, stop, step -- not all values. Use `list(range(...))` to create an actual list.",
+  "codeExample": "print(\"One argument (0 to 4):\")\nfor i in range(5):\n    print(i)\n\nprint(\"\\nTwo arguments (2 to 5):\")\nfor i in range(2, 6):\n    print(i)\n\nprint(\"\\nThree arguments (evens):\")\nfor i in range(0, 10, 2):\n    print(i)\n\nprint(\"\\nCountdown:\")\nfor i in range(5, 0, -1):\n    print(i)",
+  "quiz": [
+    {
+      "question": "What does range(3) generate?",
+      "options": [
+        "[1, 2, 3]",
+        "[0, 1, 2]",
+        "[0, 1, 2, 3]",
+        "[1, 2]"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

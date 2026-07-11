@@ -1,0 +1,22 @@
+{
+  "title": "Access Set Items",
+  "language": "python",
+  "topic": "sets_access",
+  "order": 55,
+  "nextTopic": "sets_add",
+  "prevTopic": "sets",
+  "content": "### Accessing Set Items\n\nSets are **unordered** -- you cannot access items by index or position.\n\n---\n\n### Loop Through a Set\n\nYou can **iterate** over all items:\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nfor fruit in fruits:\n    print(fruit)\n```\n\nThe order is **not guaranteed**.\n\n---\n\n### Check if Item Exists\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\nprint(\"banana\" in fruits)   # True\nprint(\"grape\" in fruits)    # False\nprint(\"grape\" not in fruits) # True\n```\n\nThis is the **main way** to access set items -- check membership.\n\n---\n\n### Indexing Does Not Work\n\n```python\nfruits = {\"apple\", \"banana\", \"cherry\"}\n# print(fruits[0])  # TypeError!\n```\n\nCauses `TypeError: 'set' object is not subscriptable`.\n\n---\n\n### Converting to List\n\nIf you need indexing, convert to a **sorted** list:\n\n```python\nfruits = {\"banana\", \"apple\", \"cherry\"}\nfruit_list = sorted(fruits)\nprint(fruit_list[0])  # \"apple\" (alphabetical first)\n```\n\n> **Remember:** Sets have no order. Each time you run the code, the iteration order may differ. Use `sorted()` for consistent results.",
+  "codeExample": "fruits = {\"apple\", \"banana\", \"cherry\"}\n\n# Loop through\nfor fruit in fruits:\n    print(fruit)\n\n# Membership test\nprint(\"banana\" in fruits)\n\n# Convert to sorted list for indexing\nsorted_fruits = sorted(fruits)\nprint(\"First (sorted):\", sorted_fruits[0])",
+  "quiz": [
+    {
+      "question": "Can you access a set item by index?",
+      "options": [
+        "Yes, with [index]",
+        "No, sets are unordered",
+        "Yes, with .get(index)",
+        "Only after sorting"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

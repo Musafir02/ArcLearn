@@ -1,0 +1,22 @@
+{
+  "title": "If with Logical Operators",
+  "language": "python",
+  "topic": "if_logical",
+  "order": 75,
+  "nextTopic": "if_nested_if",
+  "prevTopic": "if_shorthand",
+  "content": "### Combining Conditions\n\nUse `and`, `or`, and `not` to build complex conditions.\n\n---\n\n### Using `and`\n\nBoth conditions must be `True`:\n\n```python\nage = 25\nhas_license = True\n\nif age >= 18 and has_license:\n    print(\"You can drive\")\n```\n\n---\n\n### Using `or`\n\nAt least one condition must be `True`:\n\n```python\nis_weekend = True\nis_holiday = False\n\nif is_weekend or is_holiday:\n    print(\"No work today!\")\n```\n\n---\n\n### Using `not`\n\nInverts a condition:\n\n```python\nlogged_in = False\n\nif not logged_in:\n    print(\"Please log in\")\n```\n\n---\n\n### Combined Conditions\n\n```python\nage = 20\nhas_id = True\nhas_ticket = True\n\nif age >= 18 and has_id and has_ticket:\n    print(\"Welcome to the event\")\nelif age >= 18 and has_ticket:\n    print(\"You need an ID\")\nelse:\n    print(\"Cannot enter\")\n```\n\n---\n\n### Precedence with Parentheses\n\n```python\n# Without parens (may be confusing)\nif age >= 18 and has_id or has_ticket:\n    pass\n\n# With parens (clear intent)\nif (age >= 18 and has_id) or has_ticket:\n    pass\n```\n\n---\n\n> **Best Practice:** Use parentheses to clarify complex conditions, even if they are not strictly required.",
+  "codeExample": "age = 25\nhas_license = True\n\nif age >= 18 and has_license:\n    print(\"You can drive\")\n\nis_weekend = True\nif is_weekend or not has_license:\n    print(\"You can relax\")\n\n# Combined\nx = 10\nif x > 5 and x < 20 or x == 0:\n    print(\"x meets criteria\")",
+  "quiz": [
+    {
+      "question": "What operator requires both conditions to be True?",
+      "options": [
+        "or",
+        "not",
+        "and",
+        "maybe"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

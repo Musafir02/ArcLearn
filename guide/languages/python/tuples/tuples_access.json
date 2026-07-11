@@ -1,0 +1,22 @@
+{
+  "title": "Access Tuple Items",
+  "language": "python",
+  "topic": "tuples_access",
+  "order": 48,
+  "nextTopic": "tuples_update",
+  "prevTopic": "tuples",
+  "content": "### Accessing Tuples\n\nAccessing tuple items works the **same** as lists.\n\n---\n\n### Indexing\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\")\n\nprint(fruits[0])     # \"apple\"\nprint(fruits[2])     # \"cherry\"\nprint(fruits[-1])    # \"kiwi\" (last item)\nprint(fruits[-2])    # \"orange\"\n```\n\n---\n\n### Slicing\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\")\n\nprint(fruits[1:3])   # (\"banana\", \"cherry\")\nprint(fruits[:3])    # (\"apple\", \"banana\", \"cherry\")\nprint(fruits[2:])    # (\"cherry\", \"orange\", \"kiwi\")\nprint(fruits[-3:-1]) # (\"cherry\", \"orange\")\n```\n\n---\n\n### Check if Item Exists\n\n```python\nfruits = (\"apple\", \"banana\", \"cherry\")\n\nif \"banana\" in fruits:\n    print(\"Yes, banana is in the tuple\")\n```\n\n---\n\n> **Note:** Since tuples are immutable, you cannot change items after creation. Access methods work the same as lists.",
+  "codeExample": "fruits = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\")\n\nprint(\"First:\", fruits[0])\nprint(\"Last:\", fruits[-1])\nprint(\"Slice:\", fruits[1:4])\n\nif \"cherry\" in fruits:\n    print(\"cherry is in the tuple\")\n\n# Loop through\nfor fruit in fruits:\n    print(fruit)",
+  "quiz": [
+    {
+      "question": "Can you change an item in a tuple after it is created?",
+      "options": [
+        "Yes",
+        "No, tuples are immutable",
+        "Only with .change()",
+        "Only if you convert to list first"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

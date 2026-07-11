@@ -1,0 +1,22 @@
+{
+  "title": "While Loops",
+  "language": "python",
+  "topic": "while_loops",
+  "order": 79,
+  "nextTopic": "for_loops",
+  "prevTopic": "match",
+  "content": "### While Loops\n\nA **while loop** runs a block of code **as long as** a condition is `True`.\n\n---\n\n### Basic While Loop\n\n```python\ni = 1\nwhile i < 6:\n    print(i)\n    i += 1\n```\n\nPrints 1, 2, 3, 4, 5.\n\n---\n\n### Infinite Loop (Be Careful!)\n\n```python\n# This runs forever!\nwhile True:\n    print(\"Hello!\")\n```\n\nPress `Ctrl+C` to stop an infinite loop.\n\n---\n\n### `break` -- Exit Loop Early\n\n```python\ni = 0\nwhile i < 10:\n    i += 1\n    if i == 5:\n        break  # Stop when i is 5\n    print(i)   # Prints 1, 2, 3, 4\n```\n\n---\n\n### `continue` -- Skip Current Iteration\n\n```python\ni = 0\nwhile i < 6:\n    i += 1\n    if i == 3:\n        continue  # Skip 3\n    print(i)  # 1, 2, 4, 5, 6\n```\n\n---\n\n### `else` with While\n\nRuns after the loop ends **normally** (not via `break`):\n\n```python\ni = 1\nwhile i < 5:\n    print(i)\n    i += 1\nelse:\n    print(\"Loop completed!\")\n# Prints 1, 2, 3, 4, \"Loop completed!\"\n```\n\n---\n\n> **Warning:** Always make sure the condition can become `False`. Otherwise you create an infinite loop.",
+  "codeExample": "# Basic while loop\ni = 1\nwhile i < 6:\n    print(i)\n    i += 1\n\n# Break\nprint(\"\\nWith break:\")\ni = 0\nwhile i < 10:\n    i += 1\n    if i == 5:\n        break\n    print(i)\n\n# Continue\nprint(\"\\nWith continue:\")\ni = 0\nwhile i < 6:\n    i += 1\n    if i == 3:\n        continue\n    print(i)",
+  "quiz": [
+    {
+      "question": "How does a while loop stop?",
+      "options": [
+        "After a fixed number of iterations",
+        "When the condition becomes False",
+        "When it reaches 100 iterations",
+        "It never stops"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

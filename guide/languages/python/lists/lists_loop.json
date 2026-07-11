@@ -1,0 +1,22 @@
+{
+  "title": "Loop Through Lists",
+  "language": "python",
+  "topic": "lists_loop",
+  "order": 41,
+  "nextTopic": "lists_comprehension",
+  "prevTopic": "lists_remove",
+  "content": "### Looping Through Lists\n\n---\n\n### For Loop (Simplest)\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(fruit)\n```\n\n---\n\n### Loop by Index\n\nUse `range()` and `len()`:\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor i in range(len(fruits)):\n    print(f\"Index {i}: {fruits[i]}\")\n```\n\n---\n\n### Use `enumerate()`\n\nGet both index and value cleanly:\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor i, fruit in enumerate(fruits):\n    print(f\"{i}: {fruit}\")\n```\n\n---\n\n### While Loop\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\"]\ni = 0\nwhile i < len(fruits):\n    print(fruits[i])\n    i += 1\n```\n\n---\n\n### List Comprehension Loop\n\nPrint each item with a condition:\n\n```python\nfruits = [\"apple\", \"banana\", \"cherry\", \"avocado\"]\n[print(f) for f in fruits if f.startswith(\"a\")]\n# apple\n# avocado\n```\n\n---\n\n> **Best Practice:** Use a simple `for` loop unless you specifically need the index. It is the most Pythonic way.",
+  "codeExample": "fruits = [\"apple\", \"banana\", \"cherry\"]\n\n# Simple for loop\nfor fruit in fruits:\n    print(fruit)\n\n# With index\nfor i, fruit in enumerate(fruits):\n    print(f\"{i}: {fruit}\")",
+  "quiz": [
+    {
+      "question": "Which loop is best for iterating through a list?",
+      "options": [
+        "for item in list:",
+        "for (i=0; i<len; i++):",
+        "do while:",
+        "switch:"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

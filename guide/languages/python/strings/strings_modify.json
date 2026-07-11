@@ -1,0 +1,22 @@
+{
+  "title": "Modify Strings",
+  "language": "python",
+  "topic": "strings_modify",
+  "order": 30,
+  "nextTopic": "strings_concatenate",
+  "prevTopic": "strings_slicing",
+  "content": "### Modifying Strings\n\nStrings are **immutable** -- you cannot change them directly. But you can create **modified copies**.\n\n---\n\n### Upper and Lower Case\n\n```python\ntext = \"Hello, World!\"\nprint(text.upper())  # \"HELLO, WORLD!\"\nprint(text.lower())  # \"hello, world!\"\nprint(text.title())  # \"Hello, World!\"\nprint(text.capitalize())  # \"Hello, world!\"\n```\n\n---\n\n### Removing Whitespace\n\n```python\ntext = \"  Hello, World!  \"\nprint(text.strip())       # \"Hello, World!\" (both sides)\nprint(text.lstrip())      # \"Hello, World!  \" (left only)\nprint(text.rstrip())      # \"  Hello, World!\" (right only)\n```\n\n---\n\n### Replace and Split\n\n```python\ntext = \"Hello, World!\"\nprint(text.replace(\"World\", \"Python\"))  # \"Hello, Python!\"\nprint(text.split(\",\"))  # [\"Hello\", \" World!\"]\n```\n\n---\n\n### Joining Strings\n\n```python\nwords = [\"Hello\", \"World\"]\nprint(\" \".join(words))   # \"Hello World\"\nprint(\", \".join(words))  # \"Hello, World\"\n```\n\n---\n\n### Checking String Content\n\n```python\ntext = \"Hello123\"\nprint(text.isalpha())    # False (contains digits)\nprint(text.isdigit())    # False (contains letters)\nprint(\"123\".isdigit())   # True\nprint(\"Hello\".isalpha()) # True\n```\n\n---\n\n> **Remember:** Strings are immutable. Methods like `.upper()` return a **new** string -- they don't change the original.",
+  "codeExample": "text = \"  Hello, World!  \"\n\nprint(text.strip())\nprint(text.upper())\nprint(text.replace(\"World\", \"Python\"))\n\nwords = text.strip().split(\", \")\nprint(\" \".join(words))\n\nprint(\"123\".isdigit())\nprint(\"Hello\".isalpha())",
+  "quiz": [
+    {
+      "question": "What does \" hello \".strip() return?",
+      "options": [
+        "\" hello\"",
+        "\"hello \"",
+        "\"hello\"",
+        "\" hello \""
+      ],
+      "correctIndex": 2
+    }
+  ]
+}
