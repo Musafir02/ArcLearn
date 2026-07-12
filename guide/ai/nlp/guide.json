@@ -1,0 +1,26 @@
+{
+  "title": "Natural Language Processing",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Text Processing", "folder": "basics",
+      "topics": ["text_preprocessing", "tokenization"]
+    },
+    {
+      "type": "group", "title": "Classical NLP", "folder": "classical",
+      "topics": ["bag_of_words", "tfidf", "word_embeddings"]
+    },
+    {
+      "type": "group", "title": "Core NLP Tasks", "folder": "tasks",
+      "topics": ["text_classification", "ner_pos", "sentiment_analysis", "machine_translation", "question_answering", "text_summarization"]
+    },
+    {
+      "type": "group", "title": "Modern NLP", "folder": "modern",
+      "topics": ["transformers_nlp", "prompt_engineering", "rag", "fine_tuning_llm"]
+    },
+    {
+      "type": "group", "title": "Advanced", "folder": "advanced",
+      "topics": ["llm_agents", "evaluation_metrics"]
+    }
+  ]
+}

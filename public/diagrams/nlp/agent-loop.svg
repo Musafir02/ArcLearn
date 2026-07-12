@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .observe { fill: #D4E8D4; stroke: #4F7A5C; }
+      .think { fill: #D6DCE8; stroke: #5A6A8A; }
+      .act { fill: #F1E0D6; stroke: #C96A45; }
+      .memory { fill: #E8E4D4; stroke: #8A7A5A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .txt-sm { fill: #2B2A26; font-size: 9px; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#b5); }
+    </style>
+    <marker id="b5" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="220" y="18">LLM Agent Loop</text>
+
+  <rect class="box observe" x="15" y="50" width="70" height="35"/>
+  <text class="txt" x="50" y="63">User</text>
+  <text class="txt-sm" x="50" y="76">Request</text>
+
+  <line class="line" x1="85" y1="67" x2="105" y2="67"/>
+
+  <rect class="box observe" x="105" y="45" width="70" height="45"/>
+  <text class="txt" x="140" y="60">Observe</text>
+  <text class="txt-sm" x="140" y="75">Parse input</text>
+  <text class="txt-sm" x="140" y="85">+ context</text>
+
+  <line class="line" x1="175" y1="67" x2="195" y2="67"/>
+
+  <rect class="box think" x="195" y="45" width="70" height="45"/>
+  <text class="txt" x="230" y="60">Think</text>
+  <text class="txt-sm" x="230" y="75">Reason + Plan</text>
+  <text class="txt-sm" x="230" y="85">+ Chain-of-Thought</text>
+
+  <line class="line" x1="265" y1="67" x2="285" y2="67"/>
+
+  <rect class="box act" x="285" y="45" width="70" height="45"/>
+  <text class="txt" x="320" y="60">Act</text>
+  <text class="txt-sm" x="320" y="75">Call Tool /</text>
+  <text class="txt-sm" x="320" y="85">Take Action</text>
+
+  <line class="line" x1="355" y1="67" x2="375" y2="67"/>
+
+  <rect class="box observe" x="375" y="50" width="50" height="35"/>
+  <text class="txt" x="400" y="63">Result</text>
+  <text class="txt-sm" x="400" y="76">→ User</text>
+
+  <path d="M 320,90 L 320,110 L 140,110 L 140,90" fill="none" stroke="#C96A45" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text class="sub" x="230" y="125" fill="#C96A45">loop until task complete</text>
+
+  <text class="label" x="340" y="140">Available Tools</text>
+  <g transform="translate(305,148)">
+    <rect class="box act" x="0" y="0" width="70" height="18"/>
+    <text class="txt-sm" x="35" y="9">Web Search</text>
+    <rect class="box act" x="0" y="22" width="70" height="18"/>
+    <text class="txt-sm" x="35" y="31">Code Execute</text>
+    <rect class="box act" x="0" y="44" width="70" height="18"/>
+    <text class="txt-sm" x="35" y="53">File Read/Write</text>
+    <rect class="box act" x="0" y="66" width="70" height="18"/>
+    <text class="txt-sm" x="35" y="75">API Calls</text>
+  </g>
+
+  <text class="label" x="65" y="140">Memory</text>
+  <g transform="translate(15,148)">
+    <rect class="box memory" x="0" y="0" width="100" height="82"/>
+    <text class="txt-sm" x="50" y="15" fill="#2B2A26" font-weight="700">Short-term</text>
+    <text class="txt-sm" x="50" y="30">conversation history</text>
+    <line x1="10" y1="38" x2="90" y2="38" stroke="#8A7A5A" stroke-width="0.5"/>
+    <text class="txt-sm" x="50" y="50" fill="#2B2A26" font-weight="700">Long-term</text>
+    <text class="txt-sm" x="50" y="65">vector store</text>
+    <text class="txt-sm" x="50" y="78">previous tasks</text>
+  </g>
+
+  <line class="line" x1="115" y1="170" x2="195" y2="80" stroke-dasharray="4,2"/>
+</svg>

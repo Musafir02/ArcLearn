@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 235" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .input { fill: #D4E8D4; stroke: #4F7A5C; }
+      .hidden { fill: #D6DCE8; stroke: #5A6A8A; }
+      .output { fill: #F1E0D6; stroke: #C96A45; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .txt-sm { fill: #2B2A26; font-size: 9px; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #C9C4B8; stroke-width: 1; }
+      .arrow { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#b2); }
+    </style>
+    <marker id="b2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="210" y="18">Word2Vec Skip-gram</text>
+
+  <text class="label" x="55" y="42">Input Word</text>
+  <rect class="box input" x="25" y="52" width="60" height="35"/>
+  <text class="txt" x="55" y="64">"king"</text>
+  <text class="txt-sm" x="55" y="76">one-hot</text>
+
+  <line class="arrow" x1="85" y1="69" x2="115" y2="69"/>
+
+  <text class="label" x="155" y="42">Embedding Layer</text>
+  <rect class="box hidden" x="115" y="48" width="80" height="42"/>
+  <text class="txt" x="155" y="63">W (V×d)</text>
+  <text class="txt-sm" x="155" y="78">lookup</text>
+
+  <line class="arrow" x1="195" y1="69" x2="225" y2="69"/>
+
+  <text class="label" x="265" y="42">Embedding Vector</text>
+  <rect class="box hidden" x="225" y="50" width="80" height="38"/>
+  <text class="txt" x="265" y="63">[0.2, -0.5,</text>
+  <text class="txt-sm" x="265" y="78">0.8, ...]</text>
+
+  <path class="arrow" d="M 305,69 L 320,69 L 320,61 L 340,61"/>
+  <path class="arrow" d="M 305,69 L 320,69 L 320,87 L 340,87"/>
+
+  <text class="label" x="375" y="42">Predict Context</text>
+  <rect class="box output" x="340" y="50" width="55" height="22"/>
+  <text class="txt-sm" x="367" y="61">"queen"</text>
+  <rect class="box output" x="340" y="76" width="55" height="22"/>
+  <text class="txt-sm" x="367" y="87">"man"</text>
+
+  <g transform="translate(15,115)">
+    <rect x="0" y="0" width="390" height="85" fill="#F8F7F4" stroke="#C9C4B8" stroke-width="1" rx="6"/>
+    <text class="sub" x="195" y="15" fill="#2B2A26" font-weight="700">Skip-gram Training Pairs</text>
+    <text class="txt-sm" x="195" y="32" fill="#555047">Sentence: "the king sat on the throne"</text>
+    <text class="txt-sm" x="20" y="50" fill="#4F7A5C" style="text-anchor: start;">Input: king → Context: the, sat, on, throne</text>
+    <text class="txt-sm" x="20" y="65" fill="#4F7A5C" style="text-anchor: start;">Input: sat → Context: king, on, the</text>
+    <text class="txt-sm" x="20" y="80" fill="#4F7A5C" style="text-anchor: start;">Goal: words with similar contexts get similar vectors</text>
+  </g>
+
+  <text class="sub" x="210" y="222" fill="#C96A45">Analogy: king − man + woman ≈ queen</text>
+</svg>

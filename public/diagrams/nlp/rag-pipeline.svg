@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 240" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .query { fill: #D4E8D4; stroke: #4F7A5C; }
+      .retriever { fill: #D6DCE8; stroke: #5A6A8A; }
+      .docs { fill: #E8E4D4; stroke: #8A7A5A; }
+      .generator { fill: #F1E0D6; stroke: #C96A45; }
+      .output { fill: #E8D4E8; stroke: #8A5A8A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .txt-sm { fill: #2B2A26; font-size: 9px; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#b4); }
+    </style>
+    <marker id="b4" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="225" y="18">RAG Pipeline</text>
+
+  <rect class="box query" x="15" y="45" width="80" height="40"/>
+  <text class="txt" x="55" y="60">User Query</text>
+  <text class="txt-sm" x="55" y="75">"What is LoRA?"</text>
+
+  <line class="line" x1="95" y1="65" x2="125" y2="65"/>
+
+  <rect class="box retriever" x="125" y="40" width="80" height="50"/>
+  <text class="txt" x="165" y="57">Retriever</text>
+  <text class="txt-sm" x="165" y="72">Embed + Search</text>
+
+  <path class="line" d="M 205,65 L 220,65 L 220,50 L 235,50"/>
+
+  <rect class="box docs" x="235" y="35" width="70" height="30"/>
+  <text class="txt-sm" x="270" y="48">Vector DB</text>
+  <text class="txt-sm" x="270" y="60">FAISS/Pinecone</text>
+
+  <line class="line" x1="270" y1="65" x2="270" y2="75"/>
+
+  <rect class="box docs" x="235" y="75" width="70" height="45"/>
+  <text class="txt-sm" x="270" y="88">Retrieved</text>
+  <text class="txt-sm" x="270" y="100">Documents</text>
+  <text class="txt-sm" x="270" y="112">(top-k)</text>
+
+  <line class="line" x1="270" y1="120" x2="270" y2="145"/>
+
+  <rect class="box generator" x="235" y="145" width="70" height="45"/>
+  <text class="txt" x="270" y="160">Generator</text>
+  <text class="txt-sm" x="270" y="175">(LLM)</text>
+
+  <line class="line" x1="305" y1="167" x2="340" y2="167"/>
+
+  <rect class="box output" x="340" y="145" width="95" height="45"/>
+  <text class="txt" x="387" y="160">Generated Answer</text>
+  <text class="txt-sm" x="387" y="175">"LoRA fine-tunes by...</text>
+  <text class="txt-sm" x="387" y="185">adding low-rank matrices"</text>
+
+  <text class="label" x="60" y="125">Document Store</text>
+  <g transform="translate(15,135)">
+    <rect class="box docs" x="0" y="0" width="90" height="95"/>
+    <text class="txt-sm" x="45" y="15" fill="#2B2A26" font-weight="700">Chunks</text>
+    <line x1="10" y1="25" x2="80" y2="25" stroke="#8A7A5A" stroke-width="0.5"/>
+    <text class="txt-sm" x="45" y="38">doc1: "LoRA is a..."</text>
+    <text class="txt-sm" x="45" y="52">doc2: "Fine-tuning..."</text>
+    <text class="txt-sm" x="45" y="66">doc3: "PEFT methods..."</text>
+    <text class="txt-sm" x="45" y="80">doc4: "Low-rank..."</text>
+  </g>
+
+  <line class="line" x1="60" y1="135" x2="125" y2="80" stroke-dasharray="4,2"/>
+
+  <text class="sub" x="165" y="105" fill="#5A6A8A">Encode query →</text>
+  <text class="sub" x="165" y="115" fill="#5A6A8A">find similar docs</text>
+
+  <text class="sub" x="315" y="130" fill="#8A7A5A" style="text-anchor: start;">docs + query →</text>
+  <text class="sub" x="315" y="140" fill="#8A7A5A" style="text-anchor: start;">LLM generates answer</text>
+</svg>

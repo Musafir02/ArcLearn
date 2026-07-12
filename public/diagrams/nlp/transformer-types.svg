@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .enc { fill: #D4E8D4; stroke: #4F7A5C; }
+      .dec { fill: #F1E0D6; stroke: #C96A45; }
+      .cross { fill: #E8D4E8; stroke: #8A5A8A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .txt-sm { fill: #2B2A26; font-size: 9px; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#b3); }
+    </style>
+    <marker id="b3" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="220" y="18">3 Transformer Types for NLP</text>
+
+  <text class="label" x="80" y="42">Encoder-Only (BERT)</text>
+  <rect class="box enc" x="35" y="50" width="90" height="35"/>
+  <text class="txt" x="80" y="63">Self-Attention</text>
+  <text class="txt-sm" x="80" y="76">bidirectional</text>
+  <rect class="box enc" x="35" y="92" width="90" height="25"/>
+  <text class="txt-sm" x="80" y="104">Feed Forward</text>
+  <rect class="box enc" x="35" y="124" width="90" height="25"/>
+  <text class="txt-sm" x="80" y="136">FFN (×N layers)</text>
+  <text class="sub" x="80" y="165" fill="#4F7A5C">Best for: classification,</text>
+  <text class="sub" x="80" y="177" fill="#4F7A5C">NER, understanding</text>
+
+  <text class="label" x="220" y="42">Decoder-Only (GPT)</text>
+  <rect class="box dec" x="175" y="50" width="90" height="35"/>
+  <text class="txt" x="220" y="63">Masked Attention</text>
+  <text class="txt-sm" x="220" y="76">causal (left→right)</text>
+  <rect class="box dec" x="175" y="92" width="90" height="25"/>
+  <text class="txt-sm" x="220" y="104">Feed Forward</text>
+  <rect class="box dec" x="175" y="124" width="90" height="25"/>
+  <text class="txt-sm" x="220" y="136">FFN (×N layers)</text>
+  <text class="sub" x="220" y="165" fill="#C96A45">Best for: generation,</text>
+  <text class="sub" x="220" y="177" fill="#C96A45">code, chatbots</text>
+
+  <text class="label" x="360" y="42">Enc-Dec (T5, BART)</text>
+  <rect class="box enc" x="315" y="50" width="90" height="30"/>
+  <text class="txt-sm" x="360" y="62">Encoder (BERT)</text>
+  <rect class="box cross" x="315" y="87" width="90" height="25"/>
+  <text class="txt-sm" x="360" y="99">Cross-Attention</text>
+  <rect class="box dec" x="315" y="119" width="90" height="30"/>
+  <text class="txt-sm" x="360" y="131">Decoder (GPT)</text>
+  <rect class="box dec" x="315" y="156" width="90" height="25"/>
+  <text class="txt-sm" x="360" y="168">FFN (×N layers)</text>
+  <text class="sub" x="360" y="195" fill="#8A5A8A">Best for: translation,</text>
+  <text class="sub" x="360" y="207" fill="#8A5A8A">summarization, T2T</text>
+
+  <rect x="15" y="225" width="410" height="28" fill="#F8F7F4" stroke="#C9C4B8" stroke-width="1" rx="6"/>
+  <text class="sub" x="220" y="242" fill="#2B2A26">Decoder-only: dominant for LLMs | Enc-Dec: best for Seq2Seq (translation)</text>
+</svg>
