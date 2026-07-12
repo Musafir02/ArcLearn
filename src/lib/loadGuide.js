@@ -118,9 +118,4 @@ const searchIndex = Object.values(guides).flat().map((t) => ({
   displayLanguage: displayName(t.language),
 }));
 
-const guideTitles = {};
-for (const lang in schemas) {
-  guideTitles[lang] = schemas[lang]?.title || lang;
-}
-
-export { guides, guidesOutline, searchIndex, guideTitles };
+export { guides, guidesOutline, searchIndex };
