@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 9px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .input { fill: #D6DCE8; stroke: #5A6A8A; }
+      .conv { fill: #D4E8D4; stroke: #4F7A5C; }
+      .pool { fill: #E8E4D4; stroke: #8A7A5A; }
+      .fc { fill: #F1E0D6; stroke: #C96A45; }
+      .output { fill: #E8D4E8; stroke: #8A5A8A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .dim { fill: #7A756A; font-size: 8px; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="210" y="18">CNN Classification Pipeline</text>
+
+  <rect class="box input" x="10" y="65" width="42" height="42"/>
+  <text class="txt" x="31" y="80" font-size="8">Input</text>
+  <text class="dim" x="31" y="95">3×32×32</text>
+  <text class="label" x="31" y="130">Image</text>
+
+  <line class="line" x1="52" y1="86" x2="68" y2="86"/>
+
+  <rect class="box conv" x="68" y="58" width="40" height="55"/>
+  <text class="txt" x="88" y="78" font-size="8">Conv</text>
+  <text class="txt" x="88" y="92" font-size="8">+ReLU</text>
+  <text class="dim" x="88" y="106">32×32×6</text>
+  <text class="label" x="88" y="130">Block 1</text>
+
+  <line class="line" x1="108" y1="86" x2="120" y2="86"/>
+
+  <rect class="box pool" x="120" y="60" width="36" height="50"/>
+  <text class="txt" x="138" y="80" font-size="8">MaxPool</text>
+  <text class="dim" x="138" y="97">16×16×6</text>
+  <text class="label" x="138" y="130">Pool</text>
+
+  <line class="line" x1="156" y1="86" x2="168" y2="86"/>
+
+  <rect class="box conv" x="168" y="55" width="40" height="60"/>
+  <text class="txt" x="188" y="75" font-size="8">Conv</text>
+  <text class="txt" x="188" y="89" font-size="8">+ReLU</text>
+  <text class="dim" x="188" y="106">16×16×16</text>
+  <text class="label" x="188" y="130">Block 2</text>
+
+  <line class="line" x1="208" y1="86" x2="220" y2="86"/>
+
+  <rect class="box pool" x="220" y="60" width="36" height="50"/>
+  <text class="txt" x="238" y="80" font-size="8">MaxPool</text>
+  <text class="dim" x="238" y="97">8×8×16</text>
+  <text class="label" x="238" y="130">Pool</text>
+
+  <line class="line" x1="256" y1="86" x2="268" y2="86"/>
+
+  <rect class="box conv" x="268" y="65" width="36" height="42" rx="10"/>
+  <text class="txt" x="286" y="80" font-size="8">Flatten</text>
+  <text class="dim" x="286" y="97">1024</text>
+  <text class="label" x="286" y="130">Reshape</text>
+
+  <line class="line" x1="304" y1="86" x2="316" y2="86"/>
+
+  <rect class="box fc" x="316" y="62" width="38" height="48"/>
+  <text class="txt" x="335" y="80" font-size="8">FC</text>
+  <text class="dim" x="335" y="97">128</text>
+  <text class="label" x="335" y="130">FC Layer</text>
+
+  <line class="line" x1="354" y1="86" x2="366" y2="86"/>
+
+  <rect class="box output" x="366" y="62" width="44" height="48"/>
+  <text class="txt" x="388" y="80" font-size="8">FC</text>
+  <text class="dim" x="388" y="97">10</text>
+  <text class="label" x="388" y="130">Classes</text>
+
+  <text class="label" x="115" y="165">Class Probabilities</text>
+  <g transform="translate(68,170)">
+    <rect x="0" y="43" width="15" height="2" fill="#E8D4E8" rx="1"/><text class="dim" x="7.5" y="54">0.02</text>
+    <rect x="20" y="43" width="15" height="2" fill="#E8D4E8" rx="1"/><text class="dim" x="27.5" y="54">0.03</text>
+    <rect x="40" y="42" width="15" height="3" fill="#E8D4E8" rx="1"/><text class="dim" x="47.5" y="54">0.05</text>
+    <rect x="60" y="44" width="15" height="1" fill="#E8D4E8" rx="1"/><text class="dim" x="67.5" y="54">0.01</text>
+    <rect x="80" y="40" width="15" height="5" fill="#E8D4E8" rx="1"/><text class="dim" x="87.5" y="54">0.07</text>
+    <rect x="100" y="0" width="15" height="45" fill="#8A5A8A" rx="1"/>
+    <text fill="#fff" font-size="8" font-weight="700" text-anchor="middle" x="107.5" y="22.5">0.68</text>
+    <text class="dim" x="107.5" y="54">cat</text>
+    <rect x="120" y="42" width="15" height="3" fill="#E8D4E8" rx="1"/><text class="dim" x="127.5" y="54">0.04</text>
+    <rect x="140" y="41" width="15" height="4" fill="#E8D4E8" rx="1"/><text class="dim" x="147.5" y="54">0.06</text>
+    <rect x="160" y="43" width="15" height="2" fill="#E8D4E8" rx="1"/><text class="dim" x="167.5" y="54">0.03</text>
+    <rect x="180" y="44" width="15" height="1" fill="#E8D4E8" rx="1"/><text class="dim" x="187.5" y="54">0.01</text>
+  </g>
+
+  <text class="sub" x="310" y="165">Softmax → Argmax = Prediction</text>
+</svg>

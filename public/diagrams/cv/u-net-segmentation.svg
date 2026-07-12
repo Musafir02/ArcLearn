@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 290" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 9px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 8px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .enc { fill: #D4E8D4; stroke: #4F7A5C; }
+      .dec { fill: #F1E0D6; stroke: #C96A45; }
+      .bottleneck { fill: #E8D4E8; stroke: #8A5A8A; }
+      .skip { stroke: #5A6A8A; stroke-width: 1.2; fill: none; stroke-dasharray: 4,2; marker-end: url(#askip); }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a); }
+      .txt { fill: #2B2A26; font-size: 9px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .dim { fill: #7A756A; font-size: 8px; text-anchor: middle; dominant-baseline: central; }
+    </style>
+    <marker id="a" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+    <marker id="askip" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+      <polygon fill="#5A6A8A" points="0,0 6,2 0,4"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="210" y="18">U-Net Segmentation</text>
+
+  <text class="label" x="55" y="38">Encoder (Downsampling)</text>
+
+  <rect class="box enc" x="30" y="45" width="50" height="30"/>
+  <text class="txt" x="55" y="55" font-size="8">Conv×2</text>
+  <text class="dim" x="55" y="70">64ch</text>
+  <line class="line" x1="55" y1="75" x2="55" y2="93"/>
+
+  <rect class="box enc" x="30" y="93" width="50" height="30"/>
+  <text class="txt" x="55" y="103" font-size="8">Conv×2</text>
+  <text class="dim" x="55" y="118">128ch</text>
+  <line class="line" x1="55" y1="123" x2="55" y2="143"/>
+
+  <rect class="box enc" x="30" y="143" width="50" height="30"/>
+  <text class="txt" x="55" y="153" font-size="8">Conv×2</text>
+  <text class="dim" x="55" y="168">256ch</text>
+  <line class="line" x1="55" y1="173" x2="55" y2="193"/>
+
+  <rect class="box enc" x="30" y="193" width="50" height="30"/>
+  <text class="txt" x="55" y="203" font-size="8">Conv×2</text>
+  <text class="dim" x="55" y="218">512ch</text>
+
+  <path class="line" d="M 55,223 L 55,245 L 98,245"/>
+
+  <rect class="box bottleneck" x="98" y="230" width="50" height="30"/>
+  <text class="txt" x="123" y="240" font-size="8">Conv×2</text>
+  <text class="dim" x="123" y="255">1024ch</text>
+
+  <text class="label" x="190" y="38">Decoder (Upsampling)</text>
+
+  <path class="line" d="M 148,245 L 191,245 L 191,223"/>
+
+  <rect class="box dec" x="166" y="193" width="50" height="30"/>
+  <text class="txt" x="191" y="203" font-size="8">UpConv</text>
+  <text class="dim" x="191" y="218">512ch</text>
+  <line class="line" x1="191" y1="193" x2="191" y2="177"/>
+
+  <rect class="box dec" x="166" y="143" width="50" height="30"/>
+  <text class="txt" x="191" y="153" font-size="8">UpConv</text>
+  <text class="dim" x="191" y="168">256ch</text>
+  <line class="line" x1="191" y1="143" x2="191" y2="127"/>
+
+  <rect class="box dec" x="166" y="93" width="50" height="30"/>
+  <text class="txt" x="191" y="103" font-size="8">UpConv</text>
+  <text class="dim" x="191" y="118">128ch</text>
+  <line class="line" x1="191" y1="93" x2="191" y2="77"/>
+
+  <rect class="box dec" x="166" y="45" width="50" height="30"/>
+  <text class="txt" x="191" y="55" font-size="8">UpConv</text>
+  <text class="dim" x="191" y="70">64ch</text>
+
+  <line class="skip" x1="80" y1="60" x2="166" y2="60"/>
+  <line class="skip" x1="80" y1="108" x2="166" y2="108"/>
+  <line class="skip" x1="80" y1="158" x2="166" y2="158"/>
+  <line class="skip" x1="80" y1="208" x2="166" y2="208"/>
+  <text class="sub" x="123" y="130">skip connection</text>
+
+  <line class="line" x1="216" y1="60" x2="234" y2="60"/>
+  <rect class="box dec" x="234" y="48" width="40" height="24"/>
+  <text class="txt" x="254" y="56" font-size="8">1×1</text>
+  <text class="dim" x="254" y="68">2ch</text>
+
+  <line class="line" x1="274" y1="60" x2="290" y2="60"/>
+
+  <rect class="box bottleneck" x="290" y="40" width="50" height="40" rx="3"/>
+  <text class="txt" x="315" y="55" font-size="8">Softmax</text>
+  <text class="dim" x="315" y="72">per pixel</text>
+
+  <text class="label" x="315" y="96">Segmentation Mask</text>
+
+  <text class="label" x="340" y="130">Input → Mask</text>
+  <g transform="translate(310,138)">
+    <rect x="0" y="0" width="28" height="28" fill="#D6DCE8" rx="2"/>
+    <rect x="3" y="4" width="10" height="16" fill="#A8BCD0" rx="1"/>
+    <rect x="16" y="2" width="10" height="22" fill="#A8BCD0" rx="1"/>
+    <text class="dim" x="14" y="38">Image</text>
+
+    <line x1="33" y1="14" x2="42" y2="14" stroke="#7A756A" stroke-width="1" marker-end="url(#a)"/>
+
+    <rect x="46" y="0" width="28" height="28" fill="#fff" rx="2" stroke="#C96A45" stroke-width="1.5"/>
+    <rect x="49" y="4" width="10" height="16" fill="#C96A45" opacity="0.5" rx="1"/>
+    <rect x="62" y="2" width="10" height="22" fill="#8A5A8A" opacity="0.5" rx="1"/>
+    <text class="dim" x="60" y="38">Mask</text>
+  </g>
+
+  <path d="M 55,42 Q 55,28 123,28 Q 191,28 191,42" fill="none" stroke="#C96A45" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text fill="#C96A45" font-size="8" font-weight="600" text-anchor="middle" x="123" y="25">U-Shape</text>
+</svg>

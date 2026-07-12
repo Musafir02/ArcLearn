@@ -1,0 +1,30 @@
+{
+  "title": "Computer Vision",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Image Fundamentals", "folder": "basics",
+      "topics": ["image_processing", "edge_detection"]
+    },
+    {
+      "type": "group", "title": "Image Classification", "folder": "classification",
+      "topics": ["cnn_classification", "transfer_learning_cv", "data_augmentation"]
+    },
+    {
+      "type": "group", "title": "Object Detection", "folder": "detection",
+      "topics": ["object_detection_basics", "yolo_family", "two_stage_detectors"]
+    },
+    {
+      "type": "group", "title": "Segmentation", "folder": "segmentation",
+      "topics": ["semantic_segmentation", "instance_segmentation", "panoptic_segmentation"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["pose_estimation", "video_understanding", "vision_transformers", "generative_ai_cv"]
+    },
+    {
+      "type": "group", "title": "Production", "folder": "production",
+      "topics": ["cv_deployment", "dataset_creation"]
+    }
+  ]
+}
