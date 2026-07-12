@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 380" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .enc { fill: #D4E8D4; stroke: #4F7A5C; }
+      .dec { fill: #F1E0D6; stroke: #C96A45; }
+      .attn { fill: #E8D4E8; stroke: #8A5A8A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a2); }
+    </style>
+    <marker id="a2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="225" y="25">Transformer Architecture</text>
+
+  <text class="label" x="330" y="38">Output Probabilities</text>
+  <line class="line" x1="330" y1="75" x2="330" y2="45"/>
+
+  <text class="label" x="140" y="62">Encoder (×N)</text>
+  <rect class="box enc" x="85" y="75" width="110" height="35"/>
+  <text class="txt" x="140" y="92.5">Add &amp; Norm</text>
+
+  <rect class="box enc" x="85" y="120" width="110" height="35"/>
+  <text class="txt" x="140" y="137.5">Feed Forward</text>
+
+  <rect class="box enc" x="85" y="165" width="110" height="35"/>
+  <text class="txt" x="140" y="182.5">Add &amp; Norm</text>
+
+  <rect class="box enc" x="85" y="210" width="110" height="35"/>
+  <text class="txt" x="140" y="227.5">Multi-Head Attention</text>
+
+  <text class="label" x="330" y="62">Decoder (×N)</text>
+  <rect class="box dec" x="275" y="75" width="110" height="35"/>
+  <text class="txt" x="330" y="92.5">Feed Forward</text>
+
+  <rect class="box dec" x="275" y="120" width="110" height="35"/>
+  <text class="txt" x="330" y="137.5">Add &amp; Norm</text>
+
+  <rect class="box attn" x="275" y="165" width="110" height="35"/>
+  <text class="txt" x="330" y="182.5">Cross Attention</text>
+
+  <rect class="box dec" x="275" y="210" width="110" height="35"/>
+  <text class="txt" x="330" y="227.5">Add &amp; Norm</text>
+
+  <rect class="box dec" x="275" y="255" width="110" height="35"/>
+  <text class="txt" x="330" y="272.5">Masked Attention</text>
+
+  <path class="line" d="M 195,92.5 L 225,92.5 L 225,182.5 L 275,182.5"/>
+
+  <text class="label" x="140" y="320">Input Tokens</text>
+  <line class="line" x1="140" y1="310" x2="140" y2="285"/>
+
+  <rect class="box enc" x="115" y="265" width="50" height="20" rx="3"/>
+  <text class="txt" x="140" y="275">Emb</text>
+
+  <line class="line" x1="140" y1="265" x2="140" y2="245"/>
+
+  <text class="sub" x="195" y="258" style="text-anchor: start;">+ Positional Encoding</text>
+  <line x1="190" y1="255" x2="145" y2="255" stroke="#7A756A" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <text class="label" x="330" y="365">Output Tokens (shifted right)</text>
+  <line class="line" x1="330" y1="355" x2="330" y2="330"/>
+
+  <rect class="box dec" x="305" y="310" width="50" height="20" rx="3"/>
+  <text class="txt" x="330" y="320">Emb</text>
+
+  <line class="line" x1="330" y1="310" x2="330" y2="290"/>
+
+  <text class="sub" x="385" y="303" style="text-anchor: start;">+ Positional Encoding</text>
+  <line x1="380" y1="300" x2="335" y2="300" stroke="#7A756A" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>

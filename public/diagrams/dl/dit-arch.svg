@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 280" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .patch { fill: #D4E8D4; stroke: #4F7A5C; }
+      .attn { fill: #E8D4E8; stroke: #8A5A8A; }
+      .ffn { fill: #F1E0D6; stroke: #C96A45; }
+      .cond { fill: #D6DCE8; stroke: #5A6A8A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .txt-sm { fill: #2B2A26; font-size: 8px; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a6); }
+    </style>
+    <marker id="a6" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="225" y="18">Diffusion Transformer (DiT)</text>
+
+  <rect class="box" x="15" y="45" width="60" height="60" fill="#E8E4D4" stroke="#8A7A5A"/>
+  <text class="txt" x="45" y="68">Image</text>
+  <text class="txt-sm" x="45" y="82">256×256</text>
+
+  <line class="line" x1="75" y1="75" x2="100" y2="75"/>
+  <rect class="box patch" x="100" y="48" width="55" height="55"/>
+  <text class="txt" x="127" y="65">Patchify</text>
+  <text class="txt-sm" x="127" y="78">16×16</text>
+  <text class="txt-sm" x="127" y="88">patches</text>
+
+  <line class="line" x1="155" y1="75" x2="175" y2="75"/>
+  <g transform="translate(175,55)">
+    <rect class="box patch" x="0" y="0" width="22" height="22"/>
+    <text class="txt-sm" x="11" y="11">p₁</text>
+    <rect class="box patch" x="24" y="0" width="22" height="22"/>
+    <text class="txt-sm" x="35" y="11">p₂</text>
+    <rect class="box patch" x="48" y="0" width="22" height="22"/>
+    <text class="txt-sm" x="59" y="11">p₃</text>
+    <text class="txt-sm" x="35" y="35">... 256 tokens</text>
+  </g>
+
+  <line class="line" x1="255" y1="75" x2="280" y2="75"/>
+  <rect class="box" x="280" y="38" width="100" height="85" fill="#E8E4D4" stroke="#8A7A5A" stroke-dasharray="4,2"/>
+  <text class="label" x="330" y="28">DiT Block (×N)</text>
+
+  <rect class="box attn" x="288" y="48" width="84" height="22"/>
+  <text class="txt-sm" x="330" y="59">adaLN + Self-Attention</text>
+  <rect class="box ffn" x="288" y="76" width="84" height="22"/>
+  <text class="txt-sm" x="330" y="87">adaLN + FFN</text>
+  <rect class="box" x="288" y="104" width="84" height="14" fill="#D6DCE8" stroke="#5A6A8A"/>
+  <text class="txt-sm" x="330" y="111">+ residual</text>
+
+  <line class="line" x1="330" y1="155" x2="330" y2="123"/>
+  <text class="label" x="336" y="143" style="text-anchor: start;">modulates via adaLN</text>
+
+  <rect class="box cond" x="270" y="155" width="120" height="35"/>
+  <text class="txt" x="330" y="168">Conditioning</text>
+  <text class="txt-sm" x="330" y="180">timestep + text</text>
+
+  <line class="line" x1="380" y1="75" x2="405" y2="75"/>
+  <rect class="box" x="405" y="55" width="40" height="40" fill="#F1E0D6" stroke="#C96A45"/>
+  <text class="txt" x="425" y="70">Predict</text>
+  <text class="txt-sm" x="425" y="83">noise ε</text>
+
+  <text class="label" x="45" y="122">Noisy Image x<tspan baseline-shift="sub" font-size="7">t</tspan></text>
+
+  <g transform="translate(15,225)">
+    <rect x="0" y="0" width="420" height="45" fill="#F8F7F4" stroke="#C9C4B8" stroke-width="1" rx="6"/>
+    <text class="sub" x="210" y="15" fill="#2B2A26">U-Net vs DiT</text>
+    <text class="sub" x="210" y="30">U-Net: CNN-based, fixed receptive field, hard to scale</text>
+    <text class="sub" x="210" y="42">DiT: Transformer, global context, scales to billions of params</text>
+  </g>
+</svg>

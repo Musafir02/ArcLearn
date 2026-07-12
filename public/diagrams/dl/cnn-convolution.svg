@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 10px; font-weight: 600; text-anchor: middle; }
+      .box { stroke-width: 2; rx: 3; }
+      .cell-in { fill: #D6DCE8; stroke: #5A6A8A; }
+      .cell-kern { fill: #D4E8D4; stroke: #4F7A5C; }
+      .cell-out { fill: #F1E0D6; stroke: #C96A45; }
+      .num { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .num-k { fill: #2B2A26; font-size: 12px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+      .num-o { fill: #2B2A26; font-size: 13px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+      .arrow { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#arr); }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon fill="#7A756A" points="0,0 8,3 0,6"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="210" y="18">CNN Convolution</text>
+
+  <text class="label" x="80" y="42">Input (5×5)</text>
+  <g transform="translate(20,50)">
+    <rect class="box cell-in" x="0" y="0" width="24" height="24"/><text class="num" x="12" y="12">1</text>
+    <rect class="box cell-in" x="26" y="0" width="24" height="24"/><text class="num" x="38" y="12">0</text>
+    <rect class="box cell-in" x="52" y="0" width="24" height="24"/><text class="num" x="64" y="12">1</text>
+    <rect class="box cell-in" x="78" y="0" width="24" height="24"/><text class="num" x="90" y="12">0</text>
+    <rect class="box cell-in" x="104" y="0" width="24" height="24"/><text class="num" x="116" y="12">1</text>
+
+    <rect class="box cell-in" x="0" y="26" width="24" height="24"/><text class="num" x="12" y="38">0</text>
+    <rect class="box cell-in" x="26" y="26" width="24" height="24"/><text class="num" x="38" y="38">1</text>
+    <rect class="box cell-in" x="52" y="26" width="24" height="24"/><text class="num" x="64" y="38">1</text>
+    <rect class="box cell-in" x="78" y="26" width="24" height="24"/><text class="num" x="90" y="38">0</text>
+    <rect class="box cell-in" x="104" y="26" width="24" height="24"/><text class="num" x="116" y="38">1</text>
+
+    <rect class="box cell-in" x="0" y="52" width="24" height="24"/><text class="num" x="12" y="64">1</text>
+    <rect class="box cell-in" x="26" y="52" width="24" height="24"/><text class="num" x="38" y="64">1</text>
+    <rect class="box cell-in" x="52" y="52" width="24" height="24"/><text class="num" x="64" y="64">0</text>
+    <rect class="box cell-in" x="78" y="52" width="24" height="24"/><text class="num" x="90" y="64">1</text>
+    <rect class="box cell-in" x="104" y="52" width="24" height="24"/><text class="num" x="116" y="64">0</text>
+
+    <rect class="box cell-in" x="0" y="78" width="24" height="24"/><text class="num" x="12" y="90">0</text>
+    <rect class="box cell-in" x="26" y="78" width="24" height="24"/><text class="num" x="38" y="90">0</text>
+    <rect class="box cell-in" x="52" y="78" width="24" height="24"/><text class="num" x="64" y="90">1</text>
+    <rect class="box cell-in" x="78" y="78" width="24" height="24"/><text class="num" x="90" y="90">1</text>
+    <rect class="box cell-in" x="104" y="78" width="24" height="24"/><text class="num" x="116" y="90">0</text>
+
+    <rect class="box cell-in" x="0" y="104" width="24" height="24"/><text class="num" x="12" y="116">1</text>
+    <rect class="box cell-in" x="26" y="104" width="24" height="24"/><text class="num" x="38" y="116">0</text>
+    <rect class="box cell-in" x="52" y="104" width="24" height="24"/><text class="num" x="64" y="116">0</text>
+    <rect class="box cell-in" x="78" y="104" width="24" height="24"/><text class="num" x="90" y="116">1</text>
+    <rect class="box cell-in" x="104" y="104" width="24" height="24"/><text class="num" x="116" y="116">1</text>
+
+    <rect x="-2" y="-2" width="82" height="82" fill="none" stroke="#C96A45" stroke-width="2.5" stroke-dasharray="4,2" rx="3"/>
+  </g>
+
+  <line class="arrow" x1="150" y1="105" x2="175" y2="105"/>
+  <text class="sub" x="162" y="125">⊗</text>
+
+  <text class="label" x="225" y="42">Filter (3×3)</text>
+  <g transform="translate(188,50)">
+    <rect class="box cell-kern" x="0" y="0" width="26" height="26"/><text class="num-k" x="13" y="13">1</text>
+    <rect class="box cell-kern" x="28" y="0" width="26" height="26"/><text class="num-k" x="41" y="13">0</text>
+    <rect class="box cell-kern" x="56" y="0" width="26" height="26"/><text class="num-k" x="69" y="13">1</text>
+
+    <rect class="box cell-kern" x="0" y="28" width="26" height="26"/><text class="num-k" x="13" y="41">0</text>
+    <rect class="box cell-kern" x="28" y="28" width="26" height="26"/><text class="num-k" x="41" y="41">1</text>
+    <rect class="box cell-kern" x="56" y="28" width="26" height="26"/><text class="num-k" x="69" y="41">0</text>
+
+    <rect class="box cell-kern" x="0" y="56" width="26" height="26"/><text class="num-k" x="13" y="69">1</text>
+    <rect class="box cell-kern" x="28" y="56" width="26" height="26"/><text class="num-k" x="41" y="69">0</text>
+    <rect class="box cell-kern" x="56" y="56" width="26" height="26"/><text class="num-k" x="69" y="69">1</text>
+  </g>
+
+  <line class="arrow" x1="280" y1="105" x2="305" y2="105"/>
+
+  <text class="label" x="355" y="42">Feature Map (3×3)</text>
+  <g transform="translate(310,50)">
+    <rect class="box cell-out" x="0" y="0" width="30" height="30"/><text class="num-o" x="15" y="15">4</text>
+    <rect class="box cell-out" x="32" y="0" width="30" height="30"/><text class="num-o" x="47" y="15">3</text>
+    <rect class="box cell-out" x="64" y="0" width="30" height="30"/><text class="num-o" x="79" y="15">4</text>
+
+    <rect class="box cell-out" x="0" y="32" width="30" height="30"/><text class="num-o" x="15" y="47">2</text>
+    <rect class="box cell-out" x="32" y="32" width="30" height="30"/><text class="num-o" x="47" y="47">4</text>
+    <rect class="box cell-out" x="64" y="32" width="30" height="30"/><text class="num-o" x="79" y="47">3</text>
+
+    <rect class="box cell-out" x="0" y="64" width="30" height="30"/><text class="num-o" x="15" y="79">3</text>
+    <rect class="box cell-out" x="32" y="64" width="30" height="30"/><text class="num-o" x="47" y="79">2</text>
+    <rect class="box cell-out" x="64" y="64" width="30" height="30"/><text class="num-o" x="79" y="79">4</text>
+  </g>
+
+  <text class="label" x="357.5" y="195">↓ Max Pool 2×2</text>
+  <g transform="translate(325,205)">
+    <rect class="box cell-out" x="0" y="0" width="30" height="30"/><text class="num-o" x="15" y="15">4</text>
+    <rect class="box cell-out" x="35" y="0" width="30" height="30"/><text class="num-o" x="50" y="15">4</text>
+    <rect class="box cell-out" x="0" y="35" width="30" height="30"/><text class="num-o" x="15" y="50">4</text>
+    <rect class="box cell-out" x="35" y="35" width="30" height="30"/><text class="num-o" x="50" y="50">4</text>
+  </g>
+
+  <text class="sub" x="160" y="225" fill="#555047">Output = (Input − Filter) / Stride + 1</text>
+</svg>

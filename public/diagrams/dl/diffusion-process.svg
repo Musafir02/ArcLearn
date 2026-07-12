@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 210" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .clean { fill: #D4E8D4; stroke: #4F7A5C; }
+      .noisy { fill: #D6DCE8; stroke: #5A6A8A; }
+      .denoise { fill: #F1E0D6; stroke: #C96A45; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a5); }
+    </style>
+    <marker id="a5" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="220" y="18">Diffusion Model</text>
+
+  <text class="label" x="220" y="42">Forward Process: Add Noise</text>
+
+  <rect class="box clean" x="15" y="55" width="55" height="40"/>
+  <text class="txt" x="42" y="70">Clean</text>
+  <text class="txt" x="42" y="83" font-size="8">x<tspan baseline-shift="sub" font-size="6">0</tspan></text>
+
+  <line class="line" x1="70" y1="75" x2="95" y2="75"/>
+  <text class="sub" x="82" y="65">+ε₁</text>
+
+  <rect class="box noisy" x="95" y="55" width="55" height="40"/>
+  <text class="txt" x="122" y="70">Slightly</text>
+  <text class="txt" x="122" y="83" font-size="8">x<tspan baseline-shift="sub" font-size="6">1</tspan></text>
+
+  <line class="line" x1="150" y1="75" x2="175" y2="75"/>
+  <text class="sub" x="162" y="65">+ε₂</text>
+
+  <rect class="box noisy" x="175" y="55" width="55" height="40" style="fill:#C6C8D4"/>
+  <text class="txt" x="202" y="70">Noisy</text>
+  <text class="txt" x="202" y="83" font-size="8">x<tspan baseline-shift="sub" font-size="6">2</tspan></text>
+
+  <line class="line" x1="230" y1="75" x2="255" y2="75"/>
+  <text class="sub" x="242" y="65">...</text>
+
+  <rect class="box noisy" x="255" y="55" width="55" height="40" style="fill:#A8AAB8; stroke:#6A6A8A"/>
+  <text class="txt" x="282" y="70">Pure</text>
+  <text class="txt" x="282" y="83" font-size="8">x<tspan baseline-shift="sub" font-size="6">T</tspan> ≈ N(0,1)</text>
+
+  <text class="label" x="220" y="118">Reverse Process: Remove Noise</text>
+
+  <rect class="box noisy" x="255" y="130" width="55" height="40" style="fill:#A8AAB8; stroke:#6A6A8A"/>
+  <text class="txt" x="282" y="145">Noise</text>
+  <text class="txt" x="282" y="158" font-size="8">x<tspan baseline-shift="sub" font-size="6">T</tspan></text>
+
+  <line x1="255" y1="150" x2="230" y2="150" stroke="#7A756A" stroke-width="1.5" marker-end="url(#a5)"/>
+  <text class="sub" x="242" y="140">denoise</text>
+
+  <rect class="box denoise" x="175" y="130" width="55" height="40"/>
+  <text class="txt" x="202" y="145">Less</text>
+  <text class="txt" x="202" y="158" font-size="8">x<tspan baseline-shift="sub" font-size="6">2</tspan></text>
+
+  <line x1="175" y1="150" x2="150" y2="150" stroke="#7A756A" stroke-width="1.5" marker-end="url(#a5)"/>
+  <text class="sub" x="162" y="140">denoise</text>
+
+  <rect class="box denoise" x="95" y="130" width="55" height="40"/>
+  <text class="txt" x="122" y="145">Cleaner</text>
+  <text class="txt" x="122" y="158" font-size="8">x<tspan baseline-shift="sub" font-size="6">1</tspan></text>
+
+  <line x1="95" y1="150" x2="70" y2="150" stroke="#7A756A" stroke-width="1.5" marker-end="url(#a5)"/>
+
+  <rect class="box clean" x="15" y="130" width="55" height="40"/>
+  <text class="txt" x="42" y="145">Clean!</text>
+  <text class="txt" x="42" y="158" font-size="8">x<tspan baseline-shift="sub" font-size="6">0</tspan></text>
+
+  <text class="sub" x="370" y="75">Each step uses</text>
+  <text class="sub" x="370" y="88">U-Net to predict</text>
+  <text class="sub" x="370" y="101">noise ε<tspan baseline-shift="sub" font-size="7">θ</tspan></text>
+
+  <rect class="box" x="330" y="130" width="75" height="35" fill="#E8E4D4" stroke="#8A7A5A"/>
+  <text class="txt" x="367" y="144" font-size="9">Trained to</text>
+  <text class="txt" x="367" y="156" font-size="9">predict noise</text>
+
+  <text class="label" x="220" y="195">Training: learn to reverse the noise addition process</text>
+</svg>

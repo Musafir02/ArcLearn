@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 320" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 10px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .cell { fill: #D6DCE8; stroke: #5A6A8A; }
+      .gate-f { fill: #F1E0D6; stroke: #C96A45; }
+      .gate-i { fill: #D4E8D4; stroke: #4F7A5C; }
+      .gate-o { fill: #E8D4E8; stroke: #8A5A8A; }
+      .cell-state { fill: #E8E4D4; stroke: #8A7A5A; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .txt-gate { fill: #2B2A26; font-size: 11px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a1); }
+    </style>
+    <marker id="a1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="220" y="18">LSTM Cell</text>
+
+  <line x1="15" y1="60" x2="88" y2="60" stroke="#8A7A5A" stroke-width="2.5"/>
+  <line x1="112" y1="60" x2="200.5" y2="60" stroke="#8A7A5A" stroke-width="2.5"/>
+  <line x1="224.5" y1="60" x2="425" y2="60" stroke="#8A7A5A" stroke-width="2.5"/>
+
+  <circle cx="100" cy="60" r="12" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text class="txt" x="100" y="60">×</text>
+
+  <circle cx="212.5" cy="60" r="12" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text class="txt" x="212.5" y="60">+</text>
+
+  <rect class="box gate-f" x="75" y="140" width="50" height="40"/>
+  <text class="txt-gate" x="100" y="160">σ</text>
+
+  <rect class="box gate-i" x="150" y="140" width="50" height="40"/>
+  <text class="txt-gate" x="175" y="160">σ</text>
+
+  <rect class="box cell" x="225" y="140" width="50" height="40"/>
+  <text class="txt-gate" x="250" y="160">tanh</text>
+
+  <rect class="box gate-o" x="335" y="140" width="50" height="40"/>
+  <text class="txt-gate" x="360" y="160">σ</text>
+
+  <line class="line" x1="100" y1="140" x2="100" y2="72"/>
+
+  <circle cx="212.5" cy="100" r="12" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text class="txt" x="212.5" y="100">×</text>
+
+  <path class="line" d="M 175,140 L 175,100 L 200.5,100"/>
+  <path class="line" d="M 250,140 L 250,100 L 224.5,100"/>
+  <line class="line" x1="212.5" y1="88" x2="212.5" y2="72"/>
+
+  <rect class="box cell" x="280" y="80" width="40" height="25"/>
+  <text class="txt-gate" x="300" y="92.5">tanh</text>
+
+  <line x1="300" y1="60" x2="300" y2="80" stroke="#7A756A" stroke-width="1.5"/>
+  <path class="line" d="M 300,105 L 300,100 L 348,100"/>
+
+  <circle cx="360" cy="100" r="12" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text class="txt" x="360" y="100">×</text>
+
+  <line class="line" x1="360" y1="140" x2="360" y2="112"/>
+  <line class="line" x1="372" y1="100" x2="425" y2="100"/>
+
+  <path d="M 400,100 L 400,260" stroke="#7A756A" stroke-width="1.5" fill="none"/>
+  <line class="line" x1="400" y1="260" x2="400" y2="265"/>
+
+  <path d="M 15,220 L 360,220" stroke="#7A756A" stroke-width="1.5" fill="none"/>
+  <path d="M 120,290 L 120,220" stroke="#7A756A" stroke-width="1.5" fill="none"/>
+
+  <line class="line" x1="100" y1="220" x2="100" y2="180"/>
+  <line class="line" x1="175" y1="220" x2="175" y2="180"/>
+  <line class="line" x1="250" y1="220" x2="250" y2="180"/>
+  <line class="line" x1="360" y1="220" x2="360" y2="180"/>
+
+  <text class="label" x="15" y="48" style="text-anchor: start;">Cell State C<tspan baseline-shift="sub" font-size="7">t−1</tspan></text>
+  <text class="label" x="425" y="48" style="text-anchor: end;">Cell State C<tspan baseline-shift="sub" font-size="7">t</tspan></text>
+  <text class="label" x="15" y="208" style="text-anchor: start;">Hidden State h<tspan baseline-shift="sub" font-size="7">t−1</tspan></text>
+  <text class="label" x="425" y="88" style="text-anchor: end;">Hidden State h<tspan baseline-shift="sub" font-size="7">t</tspan></text>
+  <text class="label" x="400" y="278" style="text-anchor: middle;">h<tspan baseline-shift="sub" font-size="7">t</tspan></text>
+  <text class="label" x="120" y="305" style="text-anchor: middle;">Input x<tspan baseline-shift="sub" font-size="7">t</tspan></text>
+
+  <text class="label" x="100" y="130">Forget Gate</text>
+  <text class="label" x="175" y="130">Input Gate</text>
+  <text class="label" x="250" y="130">Candidate</text>
+  <text class="label" x="360" y="130">Output Gate</text>
+
+  <text class="sub" x="220" y="295">f<tspan baseline-shift="sub" font-size="7">t</tspan> = σ(W<tspan baseline-shift="sub" font-size="7">f</tspan> · [h<tspan baseline-shift="sub" font-size="7">t−1</tspan>, x<tspan baseline-shift="sub" font-size="7">t</tspan>] + b<tspan baseline-shift="sub" font-size="7">f</tspan>)</text>
+  <text class="sub" x="220" y="312">C<tspan baseline-shift="sub" font-size="7">t</tspan> = f<tspan baseline-shift="sub" font-size="7">t</tspan> * C<tspan baseline-shift="sub" font-size="7">t−1</tspan> + i<tspan baseline-shift="sub" font-size="7">t</tspan> * tanh(C̃<tspan baseline-shift="sub" font-size="7">t</tspan>)</text>
+</svg>

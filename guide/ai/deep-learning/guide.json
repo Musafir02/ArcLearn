@@ -1,0 +1,30 @@
+{
+  "title": "Deep Learning",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Foundations", "folder": "basics",
+      "topics": ["neural_networks", "activation_loss", "backprop_optimization"]
+    },
+    {
+      "type": "group", "title": "Training & Regularization", "folder": "basics",
+      "topics": ["regularization", "transfer_learning", "hyperparameter_tuning"]
+    },
+    {
+      "type": "group", "title": "Computer Vision", "folder": "cv",
+      "topics": ["cnn_fundamentals", "cnn_architectures", "object_detection"]
+    },
+    {
+      "type": "group", "title": "Sequence Models", "folder": "sequence",
+      "topics": ["rnn_lstm", "transformers", "bert_gpt"]
+    },
+    {
+      "type": "group", "title": "Generative Models", "folder": "generative",
+      "topics": ["autoencoders", "gans", "diffusion", "dit"]
+    },
+    {
+      "type": "group", "title": "Production", "folder": "advanced",
+      "topics": ["optimization", "deployment"]
+    }
+  ]
+}

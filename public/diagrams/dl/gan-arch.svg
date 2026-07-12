@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485 220" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .title { fill: #2B2A26; font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .sub { fill: #555047; font-size: 9px; font-weight: 600; text-anchor: middle; }
+      .box { rx: 4; stroke-width: 2; }
+      .gen { fill: #D4E8D4; stroke: #4F7A5C; }
+      .disc { fill: #F1E0D6; stroke: #C96A45; }
+      .txt { fill: #2B2A26; font-size: 10px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .line { stroke: #7A756A; stroke-width: 1.5; fill: none; marker-end: url(#a4); }
+    </style>
+    <marker id="a4" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon fill="#7A756A" points="0,0 7,2.5 0,5"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="242.5" y="18">GAN Architecture</text>
+
+  <rect class="box" x="15" y="77.5" width="60" height="45" fill="#D6DCE8" stroke="#5A6A8A"/>
+  <text class="txt" x="45" y="94.5">Random</text>
+  <text class="txt" x="45" y="107.5" font-size="8">Noise z</text>
+
+  <line class="line" x1="75" y1="100" x2="110" y2="100"/>
+  <rect class="box gen" x="110" y="75" width="90" height="50"/>
+  <text class="txt" x="155" y="93">Generator</text>
+  <text class="txt" x="155" y="107" font-size="8">(Neural Net)</text>
+
+  <path class="line" d="M 200,100 L 220,100 L 220,65 L 240,65"/>
+  <rect class="box" x="240" y="45" width="60" height="40" fill="#E8E4D4" stroke="#8A7A5A"/>
+  <text class="txt" x="270" y="58">Fake</text>
+  <text class="txt" x="270" y="70" font-size="8">Sample</text>
+
+  <rect class="box" x="240" y="115" width="60" height="40" fill="#D6DCE8" stroke="#5A6A8A"/>
+  <text class="txt" x="270" y="128">Real Data</text>
+  <text class="txt" x="270" y="140" font-size="8">(Training)</text>
+
+  <path class="line" d="M 300,65 L 320,65 L 320,90 L 335,90"/>
+  <path class="line" d="M 300,135 L 320,135 L 320,110 L 335,110"/>
+
+  <rect class="box disc" x="335" y="75" width="70" height="50"/>
+  <text class="txt" x="370" y="93">Discrim.</text>
+  <text class="txt" x="370" y="107" font-size="8">(Classifier)</text>
+
+  <line class="line" x1="405" y1="100" x2="425" y2="100"/>
+  <rect class="box" x="425" y="80" width="45" height="40" fill="#F1E0D6" stroke="#C96A45"/>
+  <text class="txt" x="447.5" y="93">Real</text>
+  <text class="txt" x="447.5" y="107" font-size="8">or Fake</text>
+
+  <path d="M 370,125 L 370,195 L 155,195 L 155,125" fill="none" stroke="#C96A45" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text class="sub" x="262.5" y="208">Update G: fool the Discriminator</text>
+
+  <text class="label" x="155" y="55">G: Generate fakes</text>
+  <text class="label" x="370" y="55">D: Real or Fake?</text>
+</svg>
