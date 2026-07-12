@@ -95,6 +95,12 @@ const displayName = (key) => {
     django: 'Django', flask: 'Flask', fastapi: 'FastAPI', springboot: 'Spring Boot',
     tailwind: 'Tailwind CSS', git: 'Git', github: 'GitHub', docker: 'Docker',
     linux: 'Linux & Bash CLI', cicd: 'CI/CD',
+    'machine-learning': 'Machine Learning',
+    'deep-learning': 'Deep Learning',
+    'nlp': 'Natural Language Processing',
+    'computer-vision': 'Computer Vision',
+    'agentic-ai': 'Agentic AI',
+    'generative-ai': 'Generative AI',
   };
   return map[key] || key;
 };

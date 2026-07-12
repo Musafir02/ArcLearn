@@ -6,6 +6,7 @@ import { useProgressStore } from '../store/progress';
 const langKeys = ['python', 'javascript', 'java', 'c', 'cpp', 'rust', 'go', 'csharp', 'php', 'typescript', 'kotlin', 'dart', 'swift', 'html', 'css', 'sql', 'react'];
 const frameworkKeys = ['nextjs', 'vue', 'angular', 'express', 'django', 'flask', 'fastapi', 'springboot', 'tailwind'];
 const toolKeys = ['git', 'github', 'docker', 'linux', 'cicd'];
+const aiKeys = ['machine-learning', 'deep-learning', 'nlp', 'computer-vision', 'agentic-ai', 'generative-ai'];
 
 const displayName = (key) => {
   const map = {
@@ -40,6 +41,12 @@ const displayName = (key) => {
     docker: 'Docker',
     linux: 'Linux & Bash CLI',
     cicd: 'CI/CD',
+    'machine-learning': 'Machine Learning',
+    'deep-learning': 'Deep Learning',
+    'nlp': 'Natural Language Processing',
+    'computer-vision': 'Computer Vision',
+    'agentic-ai': 'Agentic AI',
+    'generative-ai': 'Generative AI',
   };
   return map[key] || key;
 };
@@ -71,6 +78,7 @@ function Home() {
     if (activeTab === 'languages') return langKeys;
     if (activeTab === 'frameworks') return frameworkKeys;
     if (activeTab === 'tools') return toolKeys;
+    if (activeTab === 'ai') return aiKeys;
     return [];
   };
 
@@ -102,6 +110,7 @@ function Home() {
         <button className={`home-tab ${activeTab === 'languages' ? 'active' : ''}`} onClick={() => { setActiveTab('languages'); setSearchQuery(''); }}>Languages</button>
         <button className={`home-tab ${activeTab === 'frameworks' ? 'active' : ''}`} onClick={() => { setActiveTab('frameworks'); setSearchQuery(''); }}>Frameworks</button>
         <button className={`home-tab ${activeTab === 'tools' ? 'active' : ''}`} onClick={() => { setActiveTab('tools'); setSearchQuery(''); }}>Tools</button>
+        <button className={`home-tab ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => { setActiveTab('ai'); setSearchQuery(''); }}>AI</button>
       </div>
 
       <div className="languages-grid">
