@@ -1,0 +1,39 @@
+{
+  "title": "Gradient Boosting",
+  "language": "machine-learning",
+  "topic": "gradient_boosting",
+  "content": "### What is Gradient Boosting?\n\nGradient Boosting builds trees **sequentially** — each new tree corrects the errors of the previous ones. It's the **king of tabular data** and dominates Kaggle competitions.\n\n### How It Works\n\n![Gradient Boosting Steps](/diagrams/ml/gradient-boosting-steps.svg)\n\n![Bagging vs Boosting](/diagrams/ml/bagging-vs-boosting.svg)\n\n### The Gradient Descent Connection\n\nIn Gradient Boosting, we minimize the overall loss function sequentially using gradient descent. Instead of updating parameters like weights directly, we train each new tree $h_m(x)$ to predict the **pseudo-residuals** (negative gradients of the loss function) of the previous prediction:\n\n  $$r_{im} = - \\\\left[ \\\\frac{\\\\partial L(y_i, f(x_i))}{\\\\partial f(x_i)} \\\\right]_{f(x) = f_{m-1}(x)}$$\n\nFor Mean Squared Error (MSE), the pseudo-residual simplifies directly to the standard residual ($y_i - f_{m-1}(x_i)$). The model then updates sequentially:\n\n  $$f_m(x) = f_{m-1}(x) + \\\\alpha \\\\gamma_m(x)$$\n\nWhere $\\alpha$ is the learning rate (step size or shrinkage parameter).\n\n### XGBoost, LightGBM, CatBoost\n\n| Algorithm | Key Feature | Speed | Best For |\n|-----------|------------|-------|----------|\n| **XGBoost** | Regularization, missing values | Fast | General purpose, Kaggle |\n| **LightGBM** | Leaf-wise growth, histogram binning | Fastest | Large datasets |\n| **CatBoost** | Native categorical support, ordered boosting | Medium | Categorical-heavy data |\n\n### XGBoost Hyperparameters\n\n| Parameter | What It Controls | Typical Range |\n|-----------|-----------------|---------------|\n| n_estimators | Number of boosting rounds | 100-1000 |\n| learning_rate | Shrinkage (step size) | 0.01-0.3 |\n| max_depth | Tree depth | 3-10 |\n| subsample | Row sampling ratio | 0.5-1.0 |\n| colsample_bytree | Feature sampling ratio | 0.5-1.0 |\n| min_child_weight | Min sum of weights in leaf | 1-10 |\n| reg_alpha (L1) | L1 regularization | 0-1 |\n| reg_lambda (L2) | L2 regularization | 1-10 |\n\n### Python Code — XGBoost\n\n```python\nimport xgboost as xgb\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score, classification_report\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\n# Train XGBoost\nmodel = xgb.XGBClassifier(\n    n_estimators=200,\n    learning_rate=0.1,\n    max_depth=6,\n    subsample=0.8,\n    colsample_bytree=0.8,\n    eval_metric='logloss',\n    early_stopping_rounds=10,\n    random_state=42\n)\n\n# Fit with early stopping\nmodel.fit(\n    X_train, y_train,\n    eval_set=[(X_test, y_test)],\n    verbose=10\n)\n\n# Predict\ny_pred = model.predict(X_test)\nprint(classification_report(y_test, y_pred))\n```\n\n### Python Code — LightGBM\n\n```python\nimport lightgbm as lgb\n\ntrain_data = lgb.Dataset(X_train, label=y_train)\ntest_data = lgb.Dataset(X_test, label=y_test)\n\nparams = {\n    'objective': 'binary',\n    'metric': 'binary_logloss',\n    'num_leaves': 31,\n    'learning_rate': 0.1,\n    'feature_fraction': 0.8,\n    'bagging_fraction': 0.8,\n    'verbose': -1\n}\n\nmodel = lgb.train(\n    params,\n    train_data,\n    num_boost_round=200,\n    valid_sets=[test_data],\n    callbacks=[lgb.early_stopping(10)]\n)\n\ny_pred = (model.predict(X_test) > 0.5).astype(int)\n```\n\n### When to Use\n\n| Use Gradient Boosting When | Avoid When |\n|--------------------------|------------|\n| Tabular/structured data | Image/text data (use deep learning) |\n| Kaggle competitions | Need very fast training |\n| Need high accuracy | Small datasets (overfit risk) |\n| Mixed feature types | Need interpretability (use trees) |\n| Feature importance analysis | Real-time prediction (too slow) |",
+  "codeExample": "# Early stopping to prevent overfitting\nmodel = xgb.XGBClassifier(\n    n_estimators=1000,  # Set high, early stopping will find optimal\n    learning_rate=0.05,\n    max_depth=6,\n    early_stopping_rounds=20\n)\nmodel.fit(\n    X_train, y_train,\n    eval_set=[(X_val, y_val)],\n    verbose=50\n)\nprint(f\"Best iteration: {model.best_iteration}\")",
+  "quiz": [
+    {
+      "question": "How does Gradient Boosting differ from Random Forest?",
+      "options": [
+        "Uses more trees",
+        "Trees are sequential — each corrects previous errors",
+        "Uses different features",
+        "Trees are deeper"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does 'learning_rate' control in XGBoost?",
+      "options": [
+        "Number of trees",
+        "How much each tree contributes to the final prediction",
+        "Tree depth",
+        "Number of features"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which gradient boosting library is fastest for large datasets?",
+      "options": [
+        "XGBoost",
+        "LightGBM",
+        "CatBoost",
+        "scikit-learn GradientBoosting"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

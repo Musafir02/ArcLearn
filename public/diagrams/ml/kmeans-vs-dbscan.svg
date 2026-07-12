@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .cluster-a { fill: #C96A45; }
+      .cluster-b { fill: #4F7A5C; }
+      .noise { fill: #D3D3D3; }
+      .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- K-Means -->
+  <text class="text" x="150" y="20">K-Means - Spherical Only</text>
+  
+  <circle class="cluster-a" cx="130" cy="70" r="6"/>
+  <circle class="cluster-a" cx="150" cy="80" r="6"/>
+  <circle class="cluster-a" cx="170" cy="70" r="6"/>
+  <circle class="cluster-a" cx="140" cy="90" r="6"/>
+  <circle class="cluster-a" cx="160" cy="90" r="6"/>
+  
+  <circle class="cluster-b" cx="130" cy="120" r="6"/>
+  <circle class="cluster-b" cx="150" cy="130" r="6"/>
+  <circle class="cluster-b" cx="170" cy="120" r="6"/>
+  <circle class="cluster-b" cx="140" cy="140" r="6"/>
+  <circle class="cluster-b" cx="160" cy="140" r="6"/>
+  
+  <text class="label" x="150" y="170">Works with round clusters</text>
+  
+  <!-- DBSCAN -->
+  <text class="text" x="450" y="20">DBSCAN - Arbitrary Shapes</text>
+  
+  <!-- Crescent shape -->
+  <circle class="cluster-a" cx="400" cy="60" r="6"/>
+  <circle class="cluster-a" cx="420" cy="50" r="6"/>
+  <circle class="cluster-a" cx="440" cy="55" r="6"/>
+  <circle class="cluster-a" cx="460" cy="65" r="6"/>
+  <circle class="cluster-a" cx="480" cy="80" r="6"/>
+  <circle class="cluster-a" cx="490" cy="100" r="6"/>
+  <circle class="cluster-a" cx="480" cy="120" r="6"/>
+  <circle class="cluster-a" cx="460" cy="130" r="6"/>
+  
+  <circle class="cluster-b" cx="440" cy="90" r="6"/>
+  <circle class="cluster-b" cx="450" cy="100" r="6"/>
+  <circle class="cluster-b" cx="460" cy="110" r="6"/>
+  
+  <text class="label" x="450" y="170">Handles crescent/ring shapes</text>
+</svg>

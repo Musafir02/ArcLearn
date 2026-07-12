@@ -1,0 +1,39 @@
+{
+  "title": "Decision Trees",
+  "language": "machine-learning",
+  "topic": "decision_trees",
+  "content": "### What is a Decision Tree?\n\nA Decision Tree splits data into branches using **if-then rules**, creating a tree-like structure. It's one of the most **interpretable** ML algorithms — you can literally trace the path from root to leaf.\n\n### Tree Structure\n\n![Decision Tree](/diagrams/ml/decision-tree.svg)\n\n### How Splits Are Chosen\n\n**Gini Impurity** — probability of misclassification:\n```\nGini = 1 - Σpᵢ²\n\nExample: 10 samples (7 yes, 3 no)\nGini = 1 - (0.7² + 0.3²) = 1 - (0.49 + 0.09) = 0.42\n\n0 = Pure (all same class)\n0.5 = Maximum impurity (50/50 split)\n```\n\n**Entropy** — measure of disorder:\n```\nEntropy = -Σpᵢ log₂(pᵢ)\n\nExample: 7 yes, 3 no\nEntropy = -(0.7 × log₂(0.7) + 0.3 × log₂(0.3))\n       = -(0.7 × (-0.515) + 0.3 × (-1.737))\n       = 0.881\n\n0 = Pure (all same class)\n1 = Maximum disorder\n```\n\n**Information Gain** — reduction in entropy after split:\n```\nInformation Gain = Parent Entropy - Weighted Avg Child Entropy\n\nPick the split with HIGHEST information gain\n```\n\n### Pruning — Preventing Overfitting\n\n![Pruning Comparison](/diagrams/ml/pruning-comparison.svg)\n\n### Key Hyperparameters\n\n| Parameter | What It Controls | Typical Range |\n|-----------|-----------------|---------------|\n| max_depth | Maximum tree depth | 3-10 |\n| min_samples_split | Min samples to split node | 2-20 |\n| min_samples_leaf | Min samples in leaf | 1-10 |\n| max_features | Features considered per split | sqrt(n) or log(n) |\n| criterion | Gini or Entropy | 'gini' or 'entropy' |\n\n### Python Code\n\n```python\nfrom sklearn.tree import DecisionTreeClassifier, export_text\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score\n\n# Sample: Predict if customer will buy\nX_train, X_test, y_train, y_test = train_test_split(\n    features, labels, test_size=0.2, random_state=42\n)\n\n# Train decision tree\ntree = DecisionTreeClassifier(\n    max_depth=5,\n    min_samples_split=10,\n    criterion='gini',\n    random_state=42\n)\ntree.fit(X_train, y_train)\n\n# Print tree rules\nprint(export_text(tree, feature_names=feature_names))\n\n# Evaluate\ny_pred = tree.predict(X_test)\nprint(f\"Accuracy: {accuracy_score(y_test, y_pred):.3f}\")\n\n# Feature importance\nimportance = dict(zip(feature_names, tree.feature_importances_))\nfor name, imp in sorted(importance.items(), key=lambda x: x[1], reverse=True):\n    print(f\"{name}: {imp:.3f}\")\n```\n\n### Pros and Cons\n\n| Pros | Cons |\n|------|------|\n| Highly interpretable | Prone to overfitting |\n| No feature scaling needed | Unstable (small data change → different tree) |\n| Handles non-linear relationships | Biased toward dominant classes |\n| Works with categorical + numerical | Greedy algorithm (no global optimum) |\n| Fast training and prediction | Not the most accurate alone |\n\n### When to Use\n\n| Use Decision Trees When | Avoid When |\n|------------------------|------------|\n| Need interpretability | Need maximum accuracy |\n| Quick baseline model | Very complex patterns |\n| Mixed feature types | High-dimensional sparse data |\n| As part of ensemble (Random Forest) | As standalone model for production |",
+  "codeExample": "# Visualize the tree\nfrom sklearn.tree import plot_tree\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(20, 10))\nplot_tree(tree, feature_names=feature_names, class_names=['No', 'Yes'],\n          filled=True, rounded=True, fontsize=10)\nplt.title('Decision Tree Visualized')\nplt.tight_layout()\nplt.savefig('decision_tree.png', dpi=150)\nplt.show()",
+  "quiz": [
+    {
+      "question": "What does Gini Impurity of 0 mean?",
+      "options": [
+        "Maximum impurity",
+        "All samples belong to one class",
+        "50/50 split",
+        "Tree is overfitting"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the main problem with single decision trees?",
+      "options": [
+        "Too slow",
+        "Prone to overfitting",
+        "Can't handle categorical data",
+        "Requires scaling"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which hyperparameter limits tree depth to prevent overfitting?",
+      "options": [
+        "min_samples_split",
+        "max_features",
+        "max_depth",
+        "criterion"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

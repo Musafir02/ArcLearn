@@ -1,0 +1,39 @@
+{
+  "title": "K-Nearest Neighbors (KNN)",
+  "language": "machine-learning",
+  "topic": "knn",
+  "content": "### What is KNN?\n\nK-Nearest Neighbors is the simplest ML algorithm. It classifies a new point by looking at the **K closest training examples** and taking a **majority vote**. No training phase — it's a lazy learner.\n\n### How KNN Works\n\n![KNN Voting](/diagrams/ml/knn-voting.svg)\n\n### Choosing K\n\n![Choosing K](/diagrams/ml/knn-choosing-k.svg)\n\nChoosing the right $K$ is critical:\n- **Low K (e.g., K=1)**: Highly sensitive to noise and outliers (High variance, Low bias). Model is complex and prone to overfitting.\n- **High K (e.g., K=20)**: Smoother decision boundary, but may ignore local patterns (Low variance, High bias). Model is too simple and prone to underfitting.\n\nA common heuristic is $K = \\sqrt{n}$ where $n$ is the number of training samples, or finding the optimal value dynamically using cross-validation.\n\n### Distance Metrics\n\n```\nEuclidean Distance (most common):\n  d = √Σ(xᵢ - yᵢ)²\n\nManhattan Distance:\n  d = Σ|xᵢ - yᵢ|\n\nMinkowski Distance (generalized):\n  d = (Σ|xᵢ - yᵢ|ᵖ)^(1/p)\n  p=1 → Manhattan\n  p=2 → Euclidean\n\nCosine Similarity:\n  cos(θ) = (x · y) / (||x|| × ||y||)\n  → Used for text data\n```\n\n\n\n### Feature Scaling — Critical for KNN\n\nKNN relies entirely on distance metrics (like Euclidean distance) to identify neighbors. If one feature has a scale of 0 to 1 (e.g. customer rating) and another has a scale of 0 to 100,000 (e.g. annual salary), the distance calculation will be completely dominated by the larger range feature. Scaling (using `StandardScaler` or `MinMaxScaler`) maps all features onto a similar scale, making their weight in the distance calculations equal.\n\n### Python Code\n\n```python\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.model_selection import cross_val_score\nimport numpy as np\n\n# Scale features (CRITICAL for KNN)\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\n# Find optimal K using cross-validation\nk_range = range(1, 31)\nk_scores = []\n\nfor k in k_range:\n    knn = KNeighborsClassifier(n_neighbors=k)\n    scores = cross_val_score(knn, X_train_scaled, y_train, cv=5, scoring='accuracy')\n    k_scores.append(scores.mean())\n\noptimal_k = k_range[np.argmax(k_scores)]\nprint(f\"Optimal K: {optimal_k}\")\n\n# Train with optimal K\nknn = KNeighborsClassifier(n_neighbors=optimal_k, metric='euclidean')\nknn.fit(X_train_scaled, y_train)\nprint(f\"Accuracy: {knn.score(X_test_scaled, y_test):.3f}\")\n```\n\n### KNN Regressor\n\n```\nFor regression, instead of majority vote:\n  → Take AVERAGE of K nearest neighbors\n\nPrediction = (1/K) Σ yᵢ for K nearest neighbors\n```\n\n```python\nfrom sklearn.neighbors import KNeighborsRegressor\n\nknn_reg = KNeighborsRegressor(n_neighbors=5)\nknn_reg.fit(X_train_scaled, y_train)\npredictions = knn_reg.predict(X_test_scaled)\n```\n\n### Pros and Cons\n\n| Pros | Cons |\n|------|------|\n| Simple to understand | Slow prediction (scans all data) |\n| No training phase | Memory intensive (stores all data) |\n| Naturally handles multi-class | Curse of dimensionality |\n| Non-parametric | Requires feature scaling |\n| Works with any distance metric | Sensitive to irrelevant features |\n\n### Curse of Dimensionality\n\n```\nAs dimensions increase:\n→ Distance between ALL points becomes similar\n→ KNN loses discrimination power\n\nDimensions:  2    5    10   20   50\nMax/Min:    1.5  2.5  3.5  4.5  6.0\nRatio:      Low  Med  High Very Very\n                          High  High\n\nFix: Use PCA to reduce dimensions before KNN\n```\n\n### When to Use\n\n| Use KNN When | Avoid When |\n|-------------|------------|\n| Small datasets (< 10K) | Very large datasets (slow) |\n| Quick baseline | High-dimensional data |\n| Non-parametric approach needed | Need fast prediction |\n| Anomaly detection (K=1) | Need interpretable model |",
+  "codeExample": "# KNN with grid search for optimal K and distance metric\nfrom sklearn.model_selection import GridSearchCV\n\nparam_grid = {\n    'n_neighbors': [3, 5, 7, 9, 11, 15],\n    'weights': ['uniform', 'distance'],\n    'metric': ['euclidean', 'manhattan', 'minkowski']\n}\n\ngrid = GridSearchCV(KNeighborsClassifier(), param_grid, cv=5, scoring='accuracy')\ngrid.fit(X_train_scaled, y_train)\n\nprint(f\"Best params: {grid.best_params_}\")\nprint(f\"Best accuracy: {grid.best_score_:.3f}\")",
+  "quiz": [
+    {
+      "question": "Why is feature scaling critical for KNN?",
+      "options": [
+        "It makes training faster",
+        "KNN uses distance calculations — unscaled features dominate",
+        "It reduces memory usage",
+        "It's optional but recommended"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happens when K=1?",
+      "options": [
+        "Most general model",
+        "Most specific model — may overfit",
+        "No prediction possible",
+        "All classes are equal"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the 'curse of dimensionality'?",
+      "options": [
+        "Model is too slow",
+        "Distance metrics become less meaningful in high dimensions",
+        "Too many features to store",
+        "Training takes too long"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

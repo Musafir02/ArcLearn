@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .class-pos { fill: #4F7A5C; }
+      .class-neg { fill: #C96A45; }
+      .boundary { stroke: #2B2A26; stroke-width: 3; fill: none; }
+      .margin { stroke: #7A756A; stroke-width: 1.5; stroke-dasharray: 5,3; fill: none; }
+      .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Class -1 -->
+  <circle class="class-neg" cx="80" cy="80" r="8"/>
+  <circle class="class-neg" cx="100" cy="100" r="8"/>
+  <circle class="class-neg" cx="70" cy="120" r="8"/>
+  <circle class="class-neg" cx="90" cy="140" r="8"/>
+  <circle class="class-neg" cx="110" cy="130" r="8"/>
+  <circle class="class-neg" cx="60" cy="100" r="8"/>
+  <circle class="class-neg" cx="120" cy="110" r="8"/>
+  
+  <!-- Class +1 -->
+  <rect class="class-pos" x="272" y="72" width="16" height="16"/>
+  <rect class="class-pos" x="292" y="92" width="16" height="16"/>
+  <rect class="class-pos" x="312" y="112" width="16" height="16"/>
+  <rect class="class-pos" x="282" y="132" width="16" height="16"/>
+  <rect class="class-pos" x="302" y="152" width="16" height="16"/>
+  <rect class="class-pos" x="322" y="92" width="16" height="16"/>
+  <rect class="class-pos" x="262" y="112" width="16" height="16"/>
+  
+  <!-- Margin lines -->
+  <line class="margin" x1="180" y1="40" x2="180" y2="200"/>
+  <line class="boundary" x1="200" y1="40" x2="200" y2="200"/>
+  <line class="margin" x1="220" y1="40" x2="220" y2="200"/>
+  
+  <!-- Labels -->
+  <text class="text" x="100" y="50">Class -1</text>
+  <text class="text" x="300" y="50">Class +1</text>
+  <text class="label" x="200" y="240">Decision Boundary</text>
+  <text class="label" x="150" y="220">Margin</text>
+  <text class="label" x="250" y="220">Margin</text>
+  
+  <!-- Support vectors -->
+  <circle cx="120" cy="110" r="12" fill="none" stroke="#C96A45" stroke-width="2" stroke-dasharray="3,2"/>
+  <circle cx="270" cy="120" r="12" fill="none" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
+  <text class="label" x="200" y="15" font-size="9">Support Vectors = points closest to boundary</text>
+</svg>

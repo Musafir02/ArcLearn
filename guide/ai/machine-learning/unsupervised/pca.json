@@ -1,0 +1,39 @@
+{
+  "title": "Principal Component Analysis (PCA)",
+  "language": "machine-learning",
+  "topic": "pca",
+  "content": "### What is PCA?\n\nPrincipal Component Analysis reduces the number of features while **preserving as much variance as possible**. It transforms data into a new coordinate system where the most important directions (principal components) come first.\n\n### Visual Intuition\n\n![PCA 2D to 1D](/diagrams/ml/pca-2d-to-1d.svg)\n\n### How PCA Works\n\n```\nStep 1: Standardize data (mean=0, std=1)\n\nStep 2: Compute Covariance Matrix\n\n  Cov(X) = (1/n) XᵀX\n\n  Shows how features vary together\n\nStep 3: Calculate Eigenvectors and Eigenvalues\n\n  Cov(X) v = λv\n\n  Eigenvectors = directions of maximum variance\n  Eigenvalues = amount of variance explained\n\nStep 4: Sort by eigenvalue (largest first)\n\n  PC1: λ₁ = 7.5  (75% variance)\n  PC2: λ₂ = 1.5  (15% variance)\n  PC3: λ₃ = 0.8  (8% variance)\n  PC4: λ₄ = 0.2  (2% variance)\n\nStep 5: Select top K components\n\n  Keep enough to explain ~95% variance\n```\n\n### Scree Plot — Choosing Number of Components\n\nA **Scree Plot** shows the eigenvalues or the **Cumulative Explained Variance Ratio** as a function of the number of components.\n\n![Scree Plot](/diagrams/ml/pca-scree-plot.svg)\n\nWe choose the number of principal components where the curve starts leveling off (the elbow point), or where the cumulative variance explained exceeds a target threshold (typically **95%**).\n\n### PCA Formula\n\n```\nTransform data to new basis:\n\n  Z = X × W\n\n  X = original data (n samples × d features)\n  W = eigenvectors matrix (d × K components)\n  Z = transformed data (n samples × K components)\n\n  Each column of Z is a principal component\n```\n\n### Python Code\n\n```python\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\n\n# Standardize features (CRITICAL for PCA)\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# Fit PCA\npca = PCA(n_components=2) # Project to 2D\nX_pca = pca.fit_transform(X_scaled)\n\nprint(f\"Explained Variance Ratio: {pca.explained_variance_ratio_}\")\nprint(f\"Total Explained Variance: {pca.explained_variance_ratio_.sum():.3f}\")\n```\n\n### When to Use\n\n| Use PCA When | Avoid When |\n|-------------|------------|\n| High-dimensional data | Need interpretability (PCs lose meaning) |\n| Visualization (reduce to 2D/3D) | All features are important |\n| Preprocessing for other models | Features are already few |\n| Remove multicollinearity | Non-linear relationships (use t-SNE/UMAP) |",
+  "codeExample": "# PCA for noise reduction\nfrom sklearn.decomposition import PCA\n\n# Keep only components with significant variance\npca = PCA(n_components=0.99)  # Keep 99% variance\nX_denoised = pca.fit_transform(X_scaled)\nX_reconstructed = pca.inverse_transform(X_denoised)\n\n# Reconstruction error as anomaly score\nreconstruction_error = np.mean((X_scaled - X_reconstructed) ** 2, axis=1)\nanomalies = reconstruction_error > threshold",
+  "quiz": [
+    {
+      "question": "What does PCA maximize?",
+      "options": [
+        "Number of features",
+        "Variance explained by each component",
+        "Accuracy",
+        "Number of clusters"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why must you scale data before PCA?",
+      "options": [
+        "PCA doesn't work without scaling",
+        "Features with larger ranges would dominate the principal components",
+        "It's a requirement of scikit-learn",
+        "Scaling increases variance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If PC1 explains 80% of variance and PC2 explains 15%, what do we learn?",
+      "options": [
+        "Both components are equally important",
+        "PC1 captures most of the data's structure",
+        "We need more components",
+        "The data has no patterns"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

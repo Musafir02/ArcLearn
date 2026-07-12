@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .bar { fill: #C96A45; rx: 3; }
+      .text-title { fill: #2B2A26; font-size: 13px; font-weight: 700; text-anchor: middle; }
+      .text-label { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: end; }
+      .text-val { fill: #7A756A; font-size: 11px; font-weight: 600; text-anchor: start; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text class="text-title" x="200" y="20">Random Forest Feature Importance</text>
+
+  <!-- Income -->
+  <text class="text-label" x="80" y="47">Income</text>
+  <rect class="bar" x="90" y="35" width="230" height="16"/>
+  <text class="text-val" x="325" y="47">0.35</text>
+
+  <!-- Age -->
+  <text class="text-label" x="80" y="77">Age</text>
+  <rect class="bar" x="90" y="65" width="165" height="16"/>
+  <text class="text-val" x="260" y="77">0.25</text>
+
+  <!-- Education -->
+  <text class="text-label" x="80" y="107">Education</text>
+  <rect class="bar" x="90" y="95" width="130" height="16"/>
+  <text class="text-val" x="225" y="107">0.20</text>
+
+  <!-- Credit Score -->
+  <text class="text-label" x="80" y="137">Credit Score</text>
+  <rect class="bar" x="90" y="125" width="100" height="16"/>
+  <text class="text-val" x="195" y="137">0.15</text>
+
+  <!-- City -->
+  <text class="text-label" x="80" y="167">City</text>
+  <rect class="bar" x="90" y="155" width="33" height="16"/>
+  <text class="text-val" x="128" y="167">0.05</text>
+</svg>

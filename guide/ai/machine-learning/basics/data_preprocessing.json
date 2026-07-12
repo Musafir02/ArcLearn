@@ -1,0 +1,39 @@
+{
+  "title": "Data Preprocessing",
+  "language": "machine-learning",
+  "topic": "data_preprocessing",
+  "content": "### Why Preprocessing Matters\n\n> \"Garbage In, Garbage Out\" — Raw data is messy. Preprocessing cleans it for ML.\n\n### The Preprocessing Pipeline\n\n![Preprocessing Pipeline](/diagrams/ml/preprocessing-pipeline.svg)\n\n### 1. Handling Missing Values\n\n| Method | When to Use | Code |\n|--------|-------------|------|\n| Drop rows | Few missing values | `df.dropna()` |\n| Mean/Median | Numerical features | `df.fillna(df.mean())` |\n| Mode | Categorical features | `df.fillna(df.mode().iloc[0])` |\n| Forward fill | Time series | `df.fillna(method='ffill')` |\n| KNN Imputer | Complex patterns | `KNNImputer().fit_transform(X)` |\n\n### 2. Feature Encoding\n\n**Label Encoding** — Convert categories to numbers\n```\nColor:  Red=0, Blue=1, Green=2\n\nSample  Color  Encoded\n  1     Red      0\n  2     Blue     1\n  3     Green    2\n  4     Red      0\n```\n\n**One-Hot Encoding** — Create binary column per category\n```\nColor:  Red, Blue, Green\n\nSample  Color_Red  Color_Blue  Color_Green\n  1        1          0           0\n  2        0          1           0\n  3        0          0           1\n  4        1          0           0\n```\n\n### 3. Feature Scaling\n\n**StandardScaler** (Z-score normalization)\n```\nz = (x - mean) / std_deviation\n\nResult: mean=0, std=1\n```\n\n**MinMaxScaler** (Normalization)\n```\nx_normalized = (x - x_min) / (x_max - x_min)\n\nResult: values between 0 and 1\n```\n\n| Algorithm | Scaling Required? |\n|-----------|-------------------|\n| KNN | ✅ Yes (distance-based) |\n| SVM | ✅ Yes (distance-based) |\n| Neural Networks | ✅ Yes |\n| Decision Trees | ❌ No |\n| Random Forest | ❌ No |\n| Linear Regression | Recommended |\n\n### 4. Train-Test Split\n\nTo evaluate model performance, we split our data into a **training set** (~80%) to train the model, and a **testing set** (~20%) to test it. This prevents the model from overfitting and gives an unbiased evaluation score.\n\n```python\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n```\n\n> **Data Leakage Warning:** Fit the imputer/scaler *only* on training data (using `fit_transform`), and then apply it to transform the test data (using `transform`) to prevent information from leaking.\n\n### Python Code\n\n```python\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.pipeline import Pipeline\n\n# Load data\ndf = pd.read_csv('data.csv')\n\n# Separate features and target\nX = df.drop('target', axis=1)\ny = df['target']\n\n# Define preprocessing for numerical and categorical\nnumerical_features = ['age', 'income', 'score']\ncategorical_features = ['gender', 'city']\n\n# Numerical pipeline\nnumerical_pipeline = Pipeline([\n    ('imputer', SimpleImputer(strategy='median')),\n    ('scaler', StandardScaler())\n])\n\n# Categorical pipeline\ncategorical_pipeline = Pipeline([\n    ('imputer', SimpleImputer(strategy='most_frequent')),\n    ('encoder', OneHotEncoder(handle_unknown='ignore'))\n])\n\n# Combine pipelines\npreprocessor = ColumnTransformer([\n    ('num', numerical_pipeline, numerical_features),\n    ('cat', categorical_pipeline, categorical_features)\n])\n\n# Split data\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\n# Fit and transform\nX_train_processed = preprocessor.fit_transform(X_train)\nX_test_processed = preprocessor.transform(X_test)  # Note: only transform!\n```\n\n### Common Pitfalls\n\n| Mistake | Why It's Bad | Fix |\n|---------|-------------|-----|\n| Fitting scaler on test data | Data leakage — inflated metrics | `fit_transform` on train, `transform` on test |\n| Ignoring missing values | Most models crash with NaN | Always handle before training |\n| One-hot encoding ordinal data | Loses order information | Use Label Encoding for ordered categories |\n| Not scaling distance-based models | Features with large ranges dominate | Always scale for KNN, SVM, NN |",
+  "codeExample": "# Quick Preprocessing Checklist\nimport pandas as pd\nfrom sklearn.preprocessing import StandardScaler\n\n# 1. Check for missing values\nprint(df.isnull().sum())\n\n# 2. Check data types\nprint(df.dtypes)\n\n# 3. Handle missing values\ndf['age'].fillna(df['age'].median(), inplace=True)\n\n# 4. Encode categoricals\ndf = pd.get_dummies(df, columns=['city', 'gender'])\n\n# 5. Scale numerical features\nscaler = StandardScaler()\ndf[['age', 'income']] = scaler.fit_transform(df[['age', 'income']])",
+  "quiz": [
+    {
+      "question": "What is data leakage?",
+      "options": [
+        "When data is corrupted",
+        "When test data info leaks into training",
+        "When features are missing",
+        "When the model is too slow"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which scaler should you use for KNN?",
+      "options": [
+        "No scaling needed",
+        "MinMaxScaler",
+        "StandardScaler",
+        "Any scaler works"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "When should you split your data — before or after preprocessing?",
+      "options": [
+        "Before splitting",
+        "After preprocessing",
+        "Before any fitting, after splitting",
+        "It doesn't matter"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Machine Learning Tutorial",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "ML Basics", "folder": "basics",
+      "topics": ["data_preprocessing", "linear_regression", "logistic_regression", "evaluation_metrics"]
+    },
+    {
+      "type": "group", "title": "Supervised Learning", "folder": "supervised",
+      "topics": ["decision_trees", "random_forest", "svm", "knn", "gradient_boosting"]
+    },
+    {
+      "type": "group", "title": "Unsupervised Learning", "folder": "unsupervised",
+      "topics": ["kmeans", "pca", "dbscan"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["ensemble_methods", "hyperparameter_tuning", "ml_pipeline"]
+    }
+  ]
+}
+

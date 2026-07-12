@@ -1,0 +1,39 @@
+{
+  "title": "Support Vector Machine (SVM)",
+  "language": "machine-learning",
+  "topic": "svm",
+  "content": "### What is SVM?\n\nSupport Vector Machine finds the **best hyperplane** that separates classes with the **maximum margin**. It's especially powerful in high-dimensional spaces.\n\n### Maximum Margin Classifier\n\n![SVM Margin](/diagrams/ml/svm-margin.svg)\n\n### The Margin Equation\n\n```\nFor a hyperplane: w·x + b = 0\n\nMargin = 2 / ||w||\n\nTo maximize margin → minimize ||w||²\n\nSubject to: yᵢ(w·xᵢ + b) ≥ 1 for all i\n```\n\n### Kernel Trick — Handling Non-Linear Data\n\nWhen classes are not linearly separable in the input space, the **Kernel Trick** maps the data to a higher-dimensional feature space where a linear decision boundary (hyperplane) can separate them. This is done without ever computing the coordinates in that high-dimensional space, saving massive computation resources.\n\n![Kernel Trick](/diagrams/ml/kernel-trick.svg)\n\n### Kernel Types\n\n```\n1. Linear:     K(x, y) = x · y\n               → Use when features > samples\n\n2. Polynomial: K(x, y) = (x · y + c)ᵈ\n               → Use for structured data\n\n3. RBF (Gaussian): K(x, y) = exp(-γ ||x - y||²)\n               → Most common, handles non-linearity\n               → γ controls how far each point's influence reaches\n\n4. Sigmoid:    K(x, y) = tanh(α x · y + c)\n               → Similar to neural network activation\n```\n\n### Key Hyperparameters\n\n| Parameter | What It Controls | Effect |\n|-----------|-----------------|--------|\n| C | Regularization | High C = less regularization (may overfit) |\n| γ (gamma) | RBF kernel width | High γ = complex boundary (may overfit) |\n| kernel | Kernel type | linear, poly, rbf, sigmoid |\n\n\n\n### SVM for Regression (SVR)\n\nSVM can also be used for continuous prediction. Support Vector Regression (SVR) tries to fit the best line within a threshold margin ($\\\\epsilon$). SVR minimizes coefficients while keeping predictions within the $\\\\epsilon$-tube around actual values:\\n\\n  $$\\\\min \\\\frac{1}{2} ||w||^2$$\\n\\n  Subject to: $|y_i - (w \\\\cdot x_i + b)| \\\\le \\\\epsilon$\n\n### Python Code\n\n```python\nfrom sklearn.svm import SVC, SVR\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import classification_report\n\n# IMPORTANT: SVM requires feature scaling!\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\n# SVM Classifier with RBF kernel\nsvm = SVC(\n    kernel='rbf',\n    C=1.0,\n    gamma='scale',\n    random_state=42\n)\nsvm.fit(X_train_scaled, y_train)\n\ny_pred = svm.predict(X_test_scaled)\nprint(classification_report(y_test, y_pred))\n\n# SVM for Regression\nsvr = SVR(kernel='rbf', C=1.0, epsilon=0.1)\nsvr.fit(X_train_scaled, y_train)\n```\n\n### When to Use\n\n| Use SVM When | Avoid When |\n|-------------|------------|\n| High-dimensional data (text, genomics) | Very large datasets (slow training) |\n| Clear margin of separation | Noisy data with overlapping classes |\n| Small-to-medium datasets | Need probability estimates |\n| Binary classification | Need fast prediction |",
+  "codeExample": "# SVM with different kernels\nfrom sklearn.svm import SVC\nfrom sklearn.model_selection import GridSearchCV\n\nparam_grid = {\n    'C': [0.1, 1, 10, 100],\n    'gamma': ['scale', 0.01, 0.1, 1],\n    'kernel': ['rbf', 'linear']\n}\n\ngrid = GridSearchCV(SVC(), param_grid, cv=5, scoring='f1', n_jobs=-1)\ngrid.fit(X_train_scaled, y_train)\n\nprint(f\"Best params: {grid.best_params_}\")\nprint(f\"Best F1: {grid.best_score_:.3f}\")",
+  "quiz": [
+    {
+      "question": "What is the 'margin' in SVM?",
+      "options": [
+        "The number of support vectors",
+        "Distance between the decision boundary and nearest points",
+        "The accuracy of the model",
+        "The kernel width"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the kernel trick do?",
+      "options": [
+        "Speeds up training",
+        "Transforms data to higher dimension where it's linearly separable",
+        "Reduces overfitting",
+        "Selects features"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why must you scale features before using SVM?",
+      "options": [
+        "SVM uses distance calculations — features with larger ranges dominate",
+        "It's a requirement of scikit-learn",
+        "Scaling improves accuracy by 50%",
+        "It makes training faster"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
+      .box-boost { fill: #4A6FA5; stroke: #2D4A7A; stroke-width: 2; rx: 8; }
+      .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .text-white { fill: #fff; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .line { stroke: #C96A45; stroke-width: 2; fill: none; }
+      .arrow { fill: #C96A45; }
+    </style>
+    <marker id="ab" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon class="arrow" points="0 0, 10 3.5, 0 7"/>
+    </marker>
+  </defs>
+  
+  <!-- Bagging (Left) -->
+  <text class="text" x="150" y="20" font-size="13">Bagging (Random Forest)</text>
+  
+  <rect class="box" x="80" y="35" width="140" height="30"/>
+  <text class="text" x="150" y="55">Original Data</text>
+  
+  <line class="line" x1="150" y1="65" x2="65" y2="90"/>
+  <line class="line" x1="150" y1="65" x2="150" y2="90"/>
+  <line class="line" x1="150" y1="65" x2="235" y2="90"/>
+  
+  <rect class="box" x="30" y="90" width="70" height="25"/>
+  <text class="text" x="65" y="107">Tree 1</text>
+  
+  <rect class="box" x="115" y="90" width="70" height="25"/>
+  <text class="text" x="150" y="107">Tree 2</text>
+  
+  <rect class="box" x="200" y="90" width="70" height="25"/>
+  <text class="text" x="235" y="107">Tree N</text>
+  
+  <line class="line" x1="65" y1="115" x2="150" y2="140"/>
+  <line class="line" x1="150" y1="115" x2="150" y2="140"/>
+  <line class="line" x1="235" y1="115" x2="150" y2="140"/>
+  
+  <rect class="box" x="100" y="140" width="100" height="30"/>
+  <text class="text" x="150" y="160">Average</text>
+  
+  <text class="text" x="150" y="195" font-size="10" fill="#7A756A">PARALLEL training</text>
+  
+  <!-- Boosting (Right) -->
+  <text class="text" x="450" y="20" font-size="13">Boosting (Gradient Boost)</text>
+  
+  <rect class="box-boost" x="380" y="35" width="140" height="30"/>
+  <text class="text-white" x="450" y="55">Data</text>
+  
+  <line class="line" x1="450" y1="65" x2="450" y2="85" marker-end="url(#ab)"/>
+  
+  <rect class="box" x="380" y="90" width="140" height="25"/>
+  <text class="text" x="450" y="107">Tree 1</text>
+  
+  <line class="line" x1="450" y1="115" x2="450" y2="135" marker-end="url(#ab)"/>
+  <text class="text" x="475" y="128" font-size="9" fill="#7A756A">residuals</text>
+  
+  <rect class="box" x="380" y="140" width="140" height="25"/>
+  <text class="text" x="450" y="157">Tree 2</text>
+  
+  <line class="line" x1="450" y1="165" x2="450" y2="185" marker-end="url(#ab)"/>
+  <text class="text" x="475" y="178" font-size="9" fill="#7A756A">residuals</text>
+  
+  <rect class="box" x="380" y="190" width="140" height="25"/>
+  <text class="text" x="450" y="207">Tree N</text>
+  
+  <text class="text" x="450" y="240" font-size="10" fill="#7A756A">SEQUENTIAL training</text>
+</svg>

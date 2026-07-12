@@ -1,0 +1,39 @@
+{
+  "title": "ML Pipeline & Deployment",
+  "language": "machine-learning",
+  "topic": "ml_pipeline",
+  "content": "### What is an ML Pipeline?\n\nAn ML Pipeline automates the entire lifecycle — from raw data to deployed model. In 2026, production ML is about **reproducibility, monitoring, and automation**.\n\n### Production ML Architecture (2026)\n\n![Production Pipeline](/diagrams/ml/production-pipeline.svg)\n\n### Pipeline Stages\n\n```\n1. Data Ingestion      → Collect, validate, version data\n2. Feature Engineering → Transform raw data into features\n3. Model Training      → Train with experiment tracking\n4. Evaluation          → Test against metrics, fairness checks\n5. Model Registry      → Version and store model artifacts\n6. Deployment          → API endpoint, container, serverless\n7. Monitoring          → Track drift, performance, alerts\n8. Retraining Loop     → Trigger retrain when drift detected\n```\n\n### MLOps Tools (2026)\n\n| Stage | Tools |\n|-------|-------|\n| Data Versioning | DVC, Delta Lake, LakeFS |\n| Feature Store | Feast, Tecton, Hopsworks |\n| Experiment Tracking | MLflow, Weights & Biases, Optuna |\n| Model Registry | MLflow Model Registry, SageMaker |\n| Deployment | Docker, Kubernetes, FastAPI, TorchServe |\n| Monitoring | Evidently AI, Arize, WhyLabs |\n| CI/CD | GitHub Actions, Jenkins, GitLab CI |\n\n### Simple ML Pipeline Code\n\n```python\n# sklearn Pipeline — all preprocessing + model in one object\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.decomposition import PCA\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import cross_val_score\n\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('pca', PCA(n_components=0.95)),\n    ('classifier', RandomForestClassifier(n_estimators=100))\n])\n\n# Cross-validation (preprocessing happens INSIDE each fold)\nscores = cross_val_score(pipeline, X, y, cv=5, scoring='f1_macro')\nprint(f\"F1: {scores.mean():.3f} (+/- {scores.std():.3f})\")\n\n# Fit and save entire pipeline\npipeline.fit(X_train, y_train)\nimport joblib\njoblib.dump(pipeline, 'model_pipeline.pkl')\n\n# Load and predict\nloaded_pipeline = joblib.load('model_pipeline.pkl')\npredictions = loaded_pipeline.predict(X_new)\n```\n\n### Docker Deployment\n\n```dockerfile\n# Dockerfile\nFROM python:3.11-slim\n\nWORKDIR /app\nCOPY requirements.txt .\nRUN pip install -r requirements.txt\n\nCOPY model_pipeline.pkl .\nCOPY app.py .\n\nEXPOSE 8000\nCMD [\"uvicorn\", \"app:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8000\"]\n```\n\n```python\n# FastAPI app for model serving\nfrom fastapi import FastAPI\nimport joblib\nimport numpy as np\n\napp = FastAPI()\nmodel = joblib.load('model_pipeline.pkl')\n\n@app.post(\"/predict\")\ndef predict(features: list[float]):\n    X = np.array(features).reshape(1, -1)\n    prediction = model.predict(X)\n    probability = model.predict_proba(X)\n    return {\n        \"prediction\": int(prediction[0]),\n        \"confidence\": float(max(probability[0]))\n    }\n\n@app.get(\"/health\")\ndef health():\n    return {\"status\": \"healthy\"}\n```\n\n### Model Monitoring — Drift Detection\n\n![Data Drift](/diagrams/ml/data-drift.svg)\n\nData drift occurs when the statistical properties of input features change over time, indicating that the baseline training distribution no longer matches live production data. This shift leads to model performance decay and requires a retraining loop.\n\n### Production Checklist\n\n| Item | Status |\n|------|--------|\n| Model serialized (pickle/joblib) | ✅ |\n| API endpoint with health check | ✅ |\n| Docker container built | ✅ |\n| Input validation (Pydantic) | ✅ |\n| Logging and monitoring | ✅ |\n| CI/CD pipeline | ✅ |\n| Drift detection configured | ✅ |\n| Rollback strategy | ✅ |\n| Load testing completed | ✅ |\n| Documentation updated | ✅ |",
+  "codeExample": "# MLflow experiment tracking\nimport mlflow\nimport mlflow.sklearn\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import cross_val_score\n\nwith mlflow.start_run():\n    # Train model\n    model = RandomForestClassifier(n_estimators=100, max_depth=10)\n    scores = cross_val_score(model, X_train, y_train, cv=5)\n    \n    # Log parameters and metrics\n    mlflow.log_param(\"n_estimators\", 100)\n    mlflow.log_param(\"max_depth\", 10)\n    mlflow.log_metric(\"cv_f1_mean\", scores.mean())\n    mlflow.log_metric(\"cv_f1_std\", scores.std())\n    \n    # Log model\n    model.fit(X_train, y_train)\n    mlflow.sklearn.log_model(model, \"model\")\n    \n    print(f\"Run ID: {mlflow.active_run().info.run_id}\")\n    print(f\"F1: {scores.mean():.3f}\")",
+  "quiz": [
+    {
+      "question": "What is the purpose of an ML pipeline?",
+      "options": [
+        "To train a single model",
+        "To automate the entire ML lifecycle from data to deployment",
+        "To visualize data",
+        "To store datasets"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is 'data drift'?",
+      "options": [
+        "Data getting corrupted",
+        "Production data distribution changing from training data",
+        "Features being deleted",
+        "Model accuracy improving"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why use sklearn Pipeline instead of separate preprocessing steps?",
+      "options": [
+        "It's faster",
+        "Preprocessing happens inside cross-validation, preventing data leakage",
+        "It uses less memory",
+        "It's required by scikit-learn"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .axis { stroke: #2B2A26; stroke-width: 2; }
+      .bar { fill: #C96A45; }
+      .line { fill: none; stroke: #4F7A5C; stroke-width: 2; }
+      .text { fill: #2B2A26; font-size: 11px; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+      .title { fill: #2B2A26; font-size: 13px; font-weight: 600; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <text class="title" x="200" y="20">Scree Plot - Variance Explained</text>
+  
+  <!-- Axes -->
+  <line class="axis" x1="50" y1="200" x2="370" y2="200"/>
+  <line class="axis" x1="50" y1="200" x2="50" y2="30"/>
+  
+  <!-- Labels -->
+  <text class="text" x="210" y="230">Principal Component</text>
+  <text class="label" x="30" y="115" transform="rotate(-90, 30, 115)">Variance %</text>
+  
+  <!-- Bars -->
+  <rect class="bar" x="70" y="50" width="40" height="150"/>
+  <rect class="bar" x="120" y="90" width="40" height="110"/>
+  <rect class="bar" x="170" y="130" width="40" height="70"/>
+  <rect class="bar" x="220" y="155" width="40" height="45"/>
+  <rect class="bar" x="270" y="170" width="40" height="30"/>
+  <rect class="bar" x="320" y="178" width="40" height="22"/>
+  
+  <!-- Cumulative line -->
+  <path class="line" d="M 90,50 L 140,90 L 190,130 L 240,155 L 290,170 L 340,178"/>
+  
+  <!-- Values -->
+  <text class="label" x="90" y="45" text-anchor="middle">35%</text>
+  <text class="label" x="140" y="85" text-anchor="middle">25%</text>
+  <text class="label" x="190" y="125" text-anchor="middle">15%</text>
+  <text class="label" x="240" y="150" text-anchor="middle">10%</text>
+  <text class="label" x="290" y="165" text-anchor="middle">6%</text>
+  <text class="label" x="340" y="173" text-anchor="middle">4%</text>
+  
+  <!-- PC labels -->
+  <text class="label" x="90" y="215">PC1</text>
+  <text class="label" x="140" y="215">PC2</text>
+  <text class="label" x="190" y="215">PC3</text>
+  <text class="label" x="240" y="215">PC4</text>
+  <text class="label" x="290" y="215">PC5</text>
+  <text class="label" x="340" y="215">PC6</text>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "title": "Linear Regression",
+  "language": "machine-learning",
+  "topic": "linear_regression",
+  "content": "### What is Linear Regression?\n\nLinear Regression finds the **best straight line** (or hyperplane) that fits your data. It predicts a **continuous number** by learning the relationship between features and target.\n\n### The Equation\n\n```\nSimple Linear Regression:\n\n  y = β₀ + β₁x + ε\n\n  y     = predicted value (target)\n  β₀    = intercept (y-axis crossing point)\n  β₁    = slope (how much y changes when x increases by 1)\n  x     = input feature\n  ε     = error term (noise)\n```\n\n**Multiple Linear Regression** (more than one feature):\n```\ny = β₀ + β₁x₁ + β₂x₂ + β₃x₃ + ... + βₙxₙ + ε\n```\n\n### Visual Intuition\n\n![House Price vs Size](/diagrams/ml/scatter-plot.svg)\n\n### How Model Learns — Gradient Descent\n\n```\nLoss Function (Mean Squared Error):\n\n  MSE = (1/n) Σ(yᵢ - ŷᵢ)²\n\n  Goal: Find β values that MINIMIZE MSE\n\n  Gradient Descent Update Rule:\n\n  β_new = β_old - α × (∂MSE/∂β)\n\n  α = learning rate (step size)\n```\n\n![Gradient Descent](/diagrams/ml/loss-curve.svg)\n\n### Assumptions of Linear Regression\n\n| Assumption | Meaning | How to Check |\n|------------|---------|-------------|\n| Linearity | Relationship between X and y is linear | Scatter plots |\n| Independence | Observations are independent | Durbin-Watson test |\n| Homoscedasticity | Constant variance of residuals | Residual plot |\n| Normality | Residuals are normally distributed | Q-Q plot |\n| No multicollinearity | Features aren't highly correlated | VIF (Variance Inflation Factor) |\n\n### Regularization — Preventing Overfitting\n\n```\nLinear Regression:   Loss = Σ(y - ŷ)²\n\nRidge (L2):          Loss = Σ(y - ŷ)² + α Σβ²\n                     → Shrinks coefficients toward zero\n                     → Keeps all features\n\nLasso (L1):          Loss = Σ(y - ŷ)² + α Σ|β|\n                     → Can set coefficients to exactly zero\n                     → Performs feature selection\n\nElasticNet:          Loss = Σ(y - ŷ)² + α₁ Σ|β| + α₂ Σβ²\n                     → Combines L1 + L2\n```\n\n### Metrics for Regression\n\n| Metric | Formula | Interpretation |\n|--------|---------|---------------|\n| MAE | (1/n) Σ|yᵢ - ŷᵢ| | Average absolute error |\n| MSE | (1/n) Σ(yᵢ - ŷᵢ)² | Penalizes large errors |\n| RMSE | √MSE | Same units as target |\n| R² | 1 - (SS_res / SS_tot) | Variance explained (0 to 1) |\n\n### Python Code\n\n```python\nfrom sklearn.linear_model import LinearRegression, Ridge, Lasso\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import mean_squared_error, r2_score\nimport numpy as np\n\n# Sample data: Square footage vs Price\nX = np.array([[1500], [1800], [2400], [3000], [3500], [4000]])\ny = np.array([300000, 350000, 450000, 550000, 650000, 750000])\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\n\n# Linear Regression\nlr = LinearRegression()\nlr.fit(X_train, y_train)\nprint(f\"Coefficients: {lr.coef_}\")\nprint(f\"Intercept: {lr.intercept_}\")\nprint(f\"R² Score: {r2_score(y_test, lr.predict(X_test)):.3f}\")\n\n# Ridge Regression (L2)\nridge = Ridge(alpha=1.0)\nridge.fit(X_train, y_train)\nprint(f\"Ridge R²: {r2_score(y_test, ridge.predict(X_test)):.3f}\")\n\n# Lasso Regression (L1)\nlasso = Lasso(alpha=1.0)\nlasso.fit(X_train, y_train)\nprint(f\"Lasso R²: {r2_score(y_test, lasso.predict(X_test)):.3f}\")\n```\n\n### When to Use\n\n| Use Linear Regression When | Avoid When |\n|---------------------------|------------|\n| Relationship is roughly linear | Data has complex non-linear patterns |\n| You need interpretability | You need maximum accuracy |\n| Predicting continuous values | Predicting categories (use Logistic) |\n| Few features relative to samples | Many correlated features (use Ridge) |",
+  "codeExample": "# Advanced: Polynomial Regression for non-linear data\nfrom sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.pipeline import make_pipeline\n\n# Polynomial regression (degree 2)\npoly_model = make_pipeline(\n    PolynomialFeatures(degree=2),\n    LinearRegression()\n)\npoly_model.fit(X_train, y_train)\nprint(f\"Poly R²: {r2_score(y_test, poly_model.predict(X_test)):.3f}\")",
+  "quiz": [
+    {
+      "question": "What does the slope (β₁) represent in linear regression?",
+      "options": [
+        "The intercept",
+        "How much y changes when x increases by 1",
+        "The error rate",
+        "The number of features"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which regularization technique can set coefficients to exactly zero?",
+      "options": [
+        "Ridge (L2)",
+        "Lasso (L1)",
+        "Both",
+        "Neither"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is R² score?",
+      "options": [
+        "The number of features",
+        "Mean squared error",
+        "Proportion of variance explained by the model",
+        "The learning rate"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

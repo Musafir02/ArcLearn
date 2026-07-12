@@ -1,0 +1,39 @@
+{
+  "title": "Evaluation Metrics",
+  "language": "machine-learning",
+  "topic": "evaluation_metrics",
+  "content": "### Why Evaluation Matters\\n\\nA model is only as good as how well it **generalizes** to unseen data. Evaluation metrics tell you if your model is actually learning or just memorizing.\\n\\n### Classification Metrics\\n\\n![Confusion Matrix](/diagrams/ml/confusion-matrix.svg)\\n\\n- **True Positive (TP)**: Correctly predicted positive.\\n- **True Negative (TN)**: Correctly predicted negative.\\n- **False Positive (FP)**: Predicted positive, actually negative (Type I Error).\\n- **False Negative (FN)**: Predicted negative, actually positive (Type II Error).\\n\\n### Metric Formulas\\n\\n```\\nAccuracy  = (TP + TN) / (TP + TN + FP + FN)\\n           \\\"Overall correct predictions\\\"\\n\\nPrecision = TP / (TP + FP)\\n           \\\"Of all predicted positives, how many are correct?\\\"\\n           Use when: False positives are costly (spam detection)\\n\\nRecall    = TP / (TP + FN)\\n           \\\"Of all actual positives, how many did we find?\\\"\\n           Use when: False negatives are costly (cancer detection)\\n\\nF1-Score  = 2 × (Precision × Recall) / (Precision + Recall)\\n           Harmonic mean of Precision and Recall\\n           Use when: Need balance, imbalanced classes\\n\\nROC-AUC   = Area Under the ROC Curve\\n           Measures ranking quality (0.5 = random, 1.0 = perfect)\\n```\\n\\n### ROC Curve\\n\\n![ROC Curve](/diagrams/ml/roc-curve.svg)\\n\\n### Regression Metrics\\n\\n```\\nMAE  = (1/n) Σ|yᵢ - ŷᵢ|\\n       Average absolute error\\n       → Easy to interpret, same units as target\\n\\nMSE  = (1/n) Σ(yᵢ - ŷᵢ)²\\n       Mean squared error\\n       → Penalizes large errors more\\n\\nRMSE = √MSE\\n       Root mean squared error\\n       → Same units as target, most popular\\n\\nR²   = 1 - (SS_res / SS_tot)\\n       Coefficient of determination\\n       → 1.0 = perfect, 0.0 = baseline, <0 = worse than mean\\n\\nMAPE = (100/n) Σ|yᵢ - ŷᵢ| / |yᵢ|\\n       Mean Absolute Percentage Error\\n       → Scale-independent, good for reports\\n```\\n\\n### Clustering Metrics\\n\\n```\\nSilhouette Score = (b - a) / max(a, b)\\n  a = average distance to same cluster\\n  b = average distance to nearest other cluster\\n  Range: -1 to 1 (higher = better)\\n\\nDavies-Bouldin Index:\\n  Lower = better (clusters are compact and separated)\\n```\\n\\n### Metrics Cheat Sheet\\n\\n| Task | Primary Metric | Secondary | When to Use What |\\n|------|---------------|-----------|------------------|\\n| Classification (balanced) | Accuracy | F1-Score | Classes roughly equal |\\n| Classification (imbalanced) | F1-Score or PR-AUC | Precision/Recall | Rare class matters |\\n| Regression | RMSE | R², MAE | Most common |\\n| Ranking | AUC-ROC | MAP | Search/recommendation |\\n| Clustering | Silhouette | Davies-Bouldin | No ground truth |\\n\\n### When Accuracy Misleads\\n\\n```\\nExample: Fraud Detection (1% fraud, 99% legit)\\n\\nModel A: Always predicts \\\"legit\\\" → 99% accuracy!\\nModel B: Actually detects fraud → 95% accuracy\\n\\nModel A looks better but is USELESS.\\n\\n→ Use F1-Score, Precision-Recall AUC for imbalanced data\\n```\\n\\n### Python Code\\n\\n```python\\nfrom sklearn.metrics import (\\n    accuracy_score, precision_score, recall_score, f1_score,\\n    roc_auc_score, confusion_matrix, classification_report,\\n    mean_squared_error, mean_absolute_error, r2_score\\n)\\nimport numpy as np\\n\\n# Classification metrics\\ny_true = [1, 0, 1, 1, 0, 1, 0, 0, 1, 0]\\ny_pred = [1, 0, 1, 0, 0, 1, 1, 0, 1, 0]\\n\\nprint(f\\\"Accuracy:  {accuracy_score(y_true, y_pred):.3f}\\\")\\nprint(f\\\"Precision: {precision_score(y_true, y_pred):.3f}\\\")\\nprint(f\\\"Recall:    {recall_score(y_true, y_pred):.3f}\\\")\\nprint(f\\\"F1-Score:  {f1_score(y_true, y_pred):.3f}\\\")\\nprint(f\\\"AUC-ROC:   {roc_auc_score(y_true, y_pred):.3f}\\\")\\nprint()\\nprint(classification_report(y_true, y_pred))\\n\\n# Regression metrics\\ny_true_reg = [100, 200, 300, 400, 500]\\ny_pred_reg = [110, 190, 310, 380, 520]\\n\\nprint(f\\\"MAE:  {mean_absolute_error(y_true_reg, y_pred_reg):.2f}\\\")\\nprint(f\\\"RMSE: {mean_squared_error(y_true_reg, y_pred_reg, squared=False):.2f}\\\")\\nprint(f\\\"R²:   {r2_score(y_true_reg, y_pred_reg):.3f}\\\")\\n```\\n\\n### Cross-Validation — Better Than Single Split\\n\\n![5-Fold Cross-Validation](/diagrams/ml/cross-validation.svg)\\n\\n```python\\nfrom sklearn.model_selection import cross_val_score\\nfrom sklearn.ensemble import RandomForestClassifier\\n\\nmodel = RandomForestClassifier(n_estimators=100)\\nscores = cross_val_score(model, X, y, cv=5, scoring='f1_macro')\\nprint(f\\\"CV F1: {scores.mean():.3f} (+/- {scores.std():.3f})\\\")\\n```",
+  "codeExample": "# Complete evaluation function\ndef evaluate_model(model, X_train, X_test, y_train, y_test):\n    \"\"\"Print all key metrics for a classifier.\"\"\"\n    model.fit(X_train, y_train)\n    y_pred = model.predict(X_test)\n    y_prob = model.predict_proba(X_test)[:, 1] if hasattr(model, 'predict_proba') else None\n    \n    print(\"=\" * 50)\n    print(f\"Accuracy:  {accuracy_score(y_test, y_pred):.3f}\")\n    print(f\"Precision: {precision_score(y_test, y_pred):.3f}\")\n    print(f\"Recall:    {recall_score(y_test, y_pred):.3f}\")\n    print(f\"F1-Score:  {f1_score(y_test, y_pred):.3f}\")\n    if y_prob is not None:\n        print(f\"AUC-ROC:   {roc_auc_score(y_test, y_prob):.3f}\")\n    print(\"=\" * 50)\n    print(classification_report(y_test, y_pred))",
+  "quiz": [
+    {
+      "question": "When is accuracy misleading?",
+      "options": [
+        "When data is clean",
+        "When classes are imbalanced",
+        "When features are scaled",
+        "When using linear models"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which metric is the harmonic mean of precision and recall?",
+      "options": [
+        "Accuracy",
+        "AUC-ROC",
+        "F1-Score",
+        "R²"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does an R² score of 0.85 mean?",
+      "options": [
+        "85% accuracy",
+        "85% of variance is explained by the model",
+        "85% of data is correct",
+        "The model has 85 features"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

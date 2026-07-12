@@ -1,0 +1,39 @@
+{
+  "title": "Random Forest",
+  "language": "machine-learning",
+  "topic": "random_forest",
+  "content": "### What is Random Forest?\n\nRandom Forest is an **ensemble** of many Decision Trees. It trains each tree on a **random subset** of data and features, then combines their predictions. This reduces overfitting and improves accuracy.\n\n### How It Works — Bagging\n\n![Random Forest Bagging](/diagrams/ml/random-forest-bagging.svg)\n\n### Two Sources of Randomness\n\n```\n1. Data Randomness:  Each tree trained on bootstrap sample\n                     (random sampling with replacement)\n\n2. Feature Randomness: At each split, only consider\n                       sqrt(n_features) random features\n\nResult: Trees are diverse → Errors cancel out → Better predictions\n```\n\n### Feature Importance\n\n```\nRandom Forest calculates feature importance by:\n\n1. For each tree, measure how much each feature\n   decreases impurity (Gini/Entropy) when used for splitting\n\n2. Average across all trees\n\nFeature Importance = (Total impurity decrease by feature) / (Total impurity decrease)\n\n![Feature Importance](/diagrams/ml/feature-importance.svg)\n```\n\n### Out-of-Bag (OOB) Score\n\n```\nEach bootstrap sample uses ~63% of data\nRemaining ~37% = Out-of-Bag (OOB) samples\n\nOOB Score = Use these unused samples as validation\n            → Free validation set! No need for train/test split\n\nmodel = RandomForestClassifier(oob_score=True)\nmodel.fit(X_train, y_train)\nprint(f\"OOB Score: {model.oob_score_:.3f}\")\n```\n\n### Key Hyperparameters\n\n| Parameter | What It Controls | Typical Value |\n|-----------|-----------------|---------------|\n| n_estimators | Number of trees | 100-500 |\n| max_depth | Tree depth | 10-30 or None |\n| max_features | Features per split | sqrt(n) for classification, n/3 for regression |\n| min_samples_split | Min samples to split | 2-10 |\n| bootstrap | Use bootstrap sampling | True (default) |\n\n### Python Code\n\n```python\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split, cross_val_score\nfrom sklearn.metrics import classification_report\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\n# Train Random Forest\nrf = RandomForestClassifier(\n    n_estimators=200,\n    max_depth=15,\n    max_features='sqrt',\n    min_samples_split=5,\n    oob_score=True,\n    random_state=42,\n    n_jobs=-1  # Use all CPU cores\n)\nrf.fit(X_train, y_train)\n\n# Evaluate\ny_pred = rf.predict(X_test)\nprint(classification_report(y_test, y_pred))\nprint(f\"OOB Score: {rf.oob_score_:.3f}\")\n\n# Feature importance\nimport pandas as pd\nimportance = pd.Series(rf.feature_importances_, index=feature_names)\nimportance.sort_values(ascending=False).head(10).plot(kind='barh')\n```\n\n### Random Forest vs Decision Tree\n\n| Aspect | Decision Tree | Random Forest |\n|--------|--------------|---------------|\n| Overfitting | High | Low (averaging helps) |\n| Accuracy | Lower | Higher |\n| Interpretability | High (see tree) | Lower (many trees) |\n| Training speed | Fast | Slower (many trees) |\n| Feature importance | Less reliable | More reliable |\n\n### When to Use\n\n| Use Random Forest When | Avoid When |\n|----------------------|------------|\n| Need high accuracy | Need extreme interpretability |\n| High-dimensional data | Real-time prediction (too slow) |\n| Feature importance analysis | Very small datasets |\n| Tabular data (most common use) | Image/text data (use deep learning) |",
+  "codeExample": "# Compare Random Forest vs single Decision Tree\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\n\n# Single tree\ntree = DecisionTreeClassifier(random_state=42)\ntree.fit(X_train, y_train)\nprint(f\"Decision Tree: {accuracy_score(y_test, tree.predict(X_test)):.3f}\")\n\n# Random Forest (100 trees)\nrf = RandomForestClassifier(n_estimators=100, random_state=42)\nrf.fit(X_train, y_train)\nprint(f\"Random Forest: {accuracy_score(y_test, rf.predict(X_test)):.3f}\")",
+  "quiz": [
+    {
+      "question": "What does 'bagging' mean in Random Forest?",
+      "options": [
+        "Bagging features together",
+        "Bootstrap Aggregating — sampling with replacement and averaging",
+        "Combining predictions with weights",
+        "Selecting the best tree"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Random Forest reduce overfitting compared to a single tree?",
+      "options": [
+        "Uses deeper trees",
+        "Averages many diverse trees trained on random subsets",
+        "Uses fewer features",
+        "Applies regularization"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the OOB score?",
+      "options": [
+        "Score on test data",
+        "Score using unused bootstrap samples as validation",
+        "Score after tuning",
+        "Score on training data"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

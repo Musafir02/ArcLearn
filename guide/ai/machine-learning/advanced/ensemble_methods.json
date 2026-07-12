@@ -1,0 +1,39 @@
+{
+  "title": "Ensemble Methods",
+  "language": "machine-learning",
+  "topic": "ensemble_methods",
+  "content": "### What are Ensemble Methods?\n\nEnsemble methods combine **multiple models** to produce better predictions than any single model. The key idea: **many weak learners → one strong learner**.\n\n### Types of Ensembles\n\n![Ensemble Methods](/diagrams/ml/ensemble-methods.svg)\n\n### Bagging (Bootstrap Aggregating)\n\nBagging reduces prediction variance by training multiple base estimators (typically deep decision trees) in parallel on different **bootstrap samples** (random subsets of training data sampled with replacement). The final prediction is calculated by taking the average (for regression) or majority vote (for classification) of all model outputs.\n\nExample: Random Forest is Bagging + Random Feature Subspacing at each split.\n\n### Boosting\n\n```\nWeak Learner 1 → errors → Weak Learner 2 → errors → ... → Final\n\n  Prediction₁ + α×Prediction₂ + α×Prediction₃ + ... = Final\n\n  Each learner focuses on PREVIOUS mistakes\n  Learning rate (α) controls contribution of each learner\n\n  XGBoost: Gradient boosting + regularization\n  LightGBM: Gradient boosting + leaf-wise growth\n  CatBoost: Gradient boosting + ordered boosting\n```\n\n### Stacking\n\n![Stacking](/diagrams/ml/stacking.svg)\n\n### Voting (Classification)\n\n```\nHard Voting (Majority):\n  Model A → Cat\n  Model B → Dog    → Majority: Cat\n  Model C → Cat\n\nSoft Voting (Average Probability):\n  Model A → [Cat: 0.9, Dog: 0.1]\n  Model B → [Cat: 0.4, Dog: 0.6]\n  Model C → [Cat: 0.8, Dog: 0.2]\n\n  Average: [Cat: 0.70, Dog: 0.30] → Cat\n```\n\n### Python Code\n\n```python\nfrom sklearn.ensemble import (\n    VotingClassifier, StackingClassifier,\n    RandomForestClassifier, GradientBoostingClassifier\n)\nfrom sklearn.svm import SVC\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.model_selection import cross_val_score\n\n# ---- Voting Classifier ----\nvoting = VotingClassifier(\n    estimators=[\n        ('svm', SVC(probability=True)),\n        ('rf', RandomForestClassifier(n_estimators=100)),\n        ('gb', GradientBoostingClassifier(n_estimators=100))\n    ],\n    voting='soft'  # Use probability averaging\n)\n\nscores = cross_val_score(voting, X, y, cv=5, scoring='accuracy')\nprint(f\"Voting: {scores.mean():.3f} (+/- {scores.std():.3f})\")\n\n# ---- Stacking Classifier ----\nstacking = StackingClassifier(\n    estimators=[\n        ('svm', SVC(probability=True)),\n        ('rf', RandomForestClassifier(n_estimators=100)),\n        ('knn', KNeighborsClassifier())\n    ],\n    final_estimator=LogisticRegression(),\n    cv=5\n)\n\nscores = cross_val_score(stacking, X, y, cv=5, scoring='accuracy')\nprint(f\"Stacking: {scores.mean():.3f} (+/- {scores.std():.3f})\")\n```\n\n### Bagging vs Boosting vs Stacking\n\n| Aspect | Bagging | Boosting | Stacking |\n|--------|---------|----------|----------|\n| Training | Parallel | Sequential | Multi-level |\n| Focus | Reduce variance | Reduce bias | Combine strengths |\n| Overfitting | Less prone | More prone | Moderate |\n| Speed | Fast (parallel) | Slower (sequential) | Slowest |\n| Example | Random Forest | XGBoost | StackingClassifier |",
+  "codeExample": "# Complete ensemble comparison\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier\nfrom sklearn.svm import SVC\n\nmodels = {\n    'Random Forest': RandomForestClassifier(n_estimators=100),\n    'Gradient Boosting': GradientBoostingClassifier(n_estimators=100),\n    'SVM': SVC(probability=True),\n}\n\nfor name, model in models.items():\n    scores = cross_val_score(model, X, y, cv=5, scoring='f1_macro')\n    print(f\"{name}: {scores.mean():.3f} (+/- {scores.std():.3f})\")",
+  "quiz": [
+    {
+      "question": "How does Bagging reduce overfitting?",
+      "options": [
+        "Uses deeper trees",
+        "Averages predictions from trees trained on different bootstrap samples",
+        "Uses fewer features",
+        "Applies regularization"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the key difference between Bagging and Boosting?",
+      "options": [
+        "Bagging is faster",
+        "Bagging trains in parallel, Boosting trains sequentially",
+        "Bagging uses trees, Boosting uses linear models",
+        "There is no difference"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In stacking, what does the meta-learner use as input?",
+      "options": [
+        "Original features",
+        "Predictions of base models",
+        "Residuals of base models",
+        "Random features"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

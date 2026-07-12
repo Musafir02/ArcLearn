@@ -1,0 +1,39 @@
+{
+  "title": "DBSCAN",
+  "language": "machine-learning",
+  "topic": "dbscan",
+  "content": "### What is DBSCAN?\n\nDBSCAN (Density-Based Spatial Clustering of Applications with Noise) finds clusters of **arbitrary shape** based on density. Unlike K-Means, it doesn't need K and can detect outliers.\n\n### How DBSCAN Works\n\n![DBSCAN Points](/diagrams/ml/dbscan-points.svg)\n\n### DBSCAN Steps\n\n```\n1. For each unvisited point P:\n   a. Mark P as visited\n   b. Find all points within ε of P (neighbors)\n   c. If |neighbors| < MinPts → mark as Noise\n   d. If |neighbors| ≥ MinPts → start new cluster\n\n2. For cluster creation:\n   a. Add P to cluster\n   b. For each neighbor Q:\n      - If Q unvisited: mark visited, find Q's neighbors\n      - If Q's neighbors ≥ MinPts: merge into cluster\n      - If Q not yet in any cluster: add to cluster\n\n3. Repeat until all points visited\n```\n\n### K-Means vs DBSCAN\n\n![K-Means vs DBSCAN](/diagrams/ml/kmeans-vs-dbscan.svg)\n\n### Choosing ε and MinPts\n\nSelecting appropriate values for these parameters is critical to cluster quality:\n- **MinPts**: A common heuristic is $MinPts \\\\ge D + 1$ (where $D$ is the dataset dimension). For noisy data, higher values are preferred (typically $2 \\\\times D$).\n- **$\\\\epsilon$ (eps)**: To choose $\\\\epsilon$, we calculate the distance to the $k$-nearest neighbors for all points. When plotted in sorted order, the optimal $\\\\epsilon$ is found at the **elbow point** (the point of maximum curvature) where the curve rises sharply, indicating a transition from dense regions to noise.\n\n### Python Code\n\n```python\nfrom sklearn.cluster import DBSCAN\nfrom sklearn.preprocessing import StandardScaler\nimport numpy as np\n\n# Scale features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# DBSCAN\ndbscan = DBSCAN(eps=0.5, min_samples=5)\nclusters = dbscan.fit_predict(X_scaled)\n\n# Results\nn_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)\nn_noise = list(clusters).count(-1)\nprint(f\"Clusters found: {n_clusters}\")\nprint(f\"Noise points: {n_noise}\")\n\n# Core samples\nprint(f\"Core samples: {len(dbscan.core_sample_indices_)}\")\n\n# Find optimal eps using k-distance graph\nfrom sklearn.neighbors import NearestNeighbors\n\nneighbors = NearestNeighbors(n_neighbors=5)\nneighbors.fit(X_scaled)\ndistances, indices = neighbors.kneighbors(X_scaled)\n\n# Sort distances to 5th nearest neighbor\ndistances = np.sort(distances[:, 4])\nplt.plot(distances)\nplt.xlabel('Points')\nplt.ylabel('5th Nearest Neighbor Distance')\nplt.title('K-Distance Graph — Find the Elbow for ε')\nplt.show()\n```\n\n### When to Use\n\n| Use DBSCAN When | Avoid When |\n|----------------|------------|\n| Arbitrarily shaped clusters | Varying density clusters |\n| Need to detect outliers/noise | Need exact number of clusters |\n| Don't know number of clusters | High-dimensional data (use HDBSCAN) |\n| Spatial/temporal data | Very large datasets (slow) |",
+  "codeExample": "# HDBSCAN — improved DBSCAN\nimport hdbscan\n\nclusterer = hdbscan.HDBSCAN(\n    min_cluster_size=15,\n    min_samples=5,\n    metric='euclidean'\n)\nclusters = clusterer.fit_predict(X_scaled)\n\n# Probabilistic cluster assignments\nprint(f\"Clusters: {len(set(clusters)) - 1}\")\nprint(f\"Outliers: {list(clusters).count(-1)}\")\nprint(f\"Cluster probabilities: {clusterer.probabilities_[:5]}\")",
+  "quiz": [
+    {
+      "question": "What is a 'core point' in DBSCAN?",
+      "options": [
+        "A point at the center of the cluster",
+        "A point with at least MinPts neighbors within ε",
+        "The first point processed",
+        "A point that is not noise"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the advantage of DBSCAN over K-Means?",
+      "options": [
+        "Faster training",
+        "Can find arbitrarily shaped clusters",
+        "Needs fewer parameters",
+        "Works better with scaling"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you choose ε in DBSCAN?",
+      "options": [
+        "Random value",
+        "Use the elbow point in a k-distance graph",
+        "Set it to 1",
+        "Use cross-validation"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

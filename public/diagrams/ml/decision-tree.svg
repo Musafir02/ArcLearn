@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .node { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
+      .leaf { fill: #4F7A5C; stroke: #2D5A3A; stroke-width: 2; rx: 8; }
+      .text { fill: #2B2A26; font-size: 12px; font-weight: 600; text-anchor: middle; }
+      .text-leaf { fill: #fff; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .line { stroke: #C96A45; stroke-width: 2; fill: none; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Root -->
+  <rect class="node" x="175" y="10" width="150" height="40"/>
+  <text class="text" x="250" y="35">Income > 50K?</text>
+  <text class="label" x="250" y="8" fill="#C96A45" font-size="9">Root Node</text>
+  
+  <!-- Lines from root -->
+  <line class="line" x1="210" y1="50" x2="120" y2="100"/>
+  <line class="line" x1="290" y1="50" x2="380" y2="100"/>
+  
+  <!-- Yes label -->
+  <text class="label" x="155" y="70">Yes</text>
+  <text class="label" x="345" y="70">No</text>
+  
+  <!-- Level 1 -->
+  <rect class="node" x="55" y="100" width="130" height="40"/>
+  <text class="text" x="120" y="125">Age > 30?</text>
+  
+  <rect class="node" x="315" y="100" width="130" height="40"/>
+  <text class="text" x="380" y="125">Student?</text>
+  
+  <!-- Lines Level 1 to 2 -->
+  <line class="line" x1="90" y1="140" x2="55" y2="190"/>
+  <line class="line" x1="150" y1="140" x2="185" y2="190"/>
+  <line class="line" x1="350" y1="140" x2="315" y2="190"/>
+  <line class="line" x1="410" y1="140" x2="445" y2="190"/>
+  
+  <text class="label" x="60" y="165">Yes</text>
+  <text class="label" x="190" y="165">No</text>
+  <text class="label" x="320" y="165">Yes</text>
+  <text class="label" x="440" y="165">No</text>
+  
+  <!-- Leaf nodes -->
+  <rect class="leaf" x="10" y="190" width="90" height="35"/>
+  <text class="text-leaf" x="55" y="212">Approve</text>
+  
+  <rect class="leaf" x="140" y="190" width="90" height="35"/>
+  <text class="text-leaf" x="185" y="212">Review</text>
+  
+  <rect class="leaf" x="270" y="190" width="90" height="35"/>
+  <text class="text-leaf" x="315" y="212">Approve</text>
+  
+  <rect class="leaf" x="400" y="190" width="90" height="35"/>
+  <text class="text-leaf" x="445" y="212">Deny</text>
+  
+  <text class="label" x="250" y="260" font-size="11">Internal Nodes</text>
+  <text class="label" x="250" y="280" font-size="11" fill="#4F7A5C">Leaf Nodes = Final Decisions</text>
+</svg>

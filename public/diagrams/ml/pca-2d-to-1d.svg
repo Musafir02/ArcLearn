@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .point { fill: #C96A45; }
+      .axis { stroke: #2B2A26; stroke-width: 2; }
+      .line { stroke: #4F7A5C; stroke-width: 2; }
+      .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Original 2D -->
+  <text class="text" x="150" y="20">Original Data (2D)</text>
+  
+  <line class="axis" x1="50" y1="180" x2="250" y2="180"/>
+  <line class="axis" x1="50" y1="180" x2="50" y2="40"/>
+  
+  <text class="label" x="150" y="200">x</text>
+  <text class="label" x="35" y="110">y</text>
+  
+  <circle class="point" cx="100" cy="100" r="5"/>
+  <circle class="point" cx="120" cy="90" r="5"/>
+  <circle class="point" cx="140" cy="85" r="5"/>
+  <circle class="point" cx="110" cy="110" r="5"/>
+  <circle class="point" cx="130" cy="95" r="5"/>
+  <circle class="point" cx="150" cy="80" r="5"/>
+  <circle class="point" cx="160" cy="75" r="5"/>
+  <circle class="point" cx="125" cy="100" r="5"/>
+  
+  <!-- Arrow -->
+  <text class="text" x="300" y="110" font-size="24">→</text>
+  <text class="label" x="300" y="140">PCA</text>
+  <text class="label" x="300" y="155">75% variance</text>
+  
+  <!-- After PCA 1D -->
+  <text class="text" x="470" y="20">After PCA (1D)</text>
+  
+  <line class="axis" x1="370" y1="120" x2="580" y2="120"/>
+  
+  <text class="label" x="475" y="145">PC1</text>
+  
+  <circle class="point" cx="400" cy="120" r="5"/>
+  <circle class="point" cx="420" cy="120" r="5"/>
+  <circle class="point" cx="440" cy="120" r="5"/>
+  <circle class="point" cx="460" cy="120" r="5"/>
+  <circle class="point" cx="480" cy="120" r="5"/>
+  <circle class="point" cx="500" cy="120" r="5"/>
+  <circle class="point" cx="520" cy="120" r="5"/>
+  <circle class="point" cx="540" cy="120" r="5"/>
+  
+  <text class="label" x="475" y="170" font-size="10">2 features → 1 component</text>
+</svg>

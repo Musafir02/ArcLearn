@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
+      .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .text-sub { fill: #7A756A; font-size: 9px; text-anchor: middle; }
+      .line { stroke: #C96A45; stroke-width: 2; fill: none; }
+      .feedback { stroke: #C96A45; stroke-width: 1.5; fill: none; stroke-dasharray: 4,2; }
+      .arrow { fill: #C96A45; }
+    </style>
+    <marker id="ap" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon class="arrow" points="0 0, 8 3, 0 6"/>
+    </marker>
+  </defs>
+  
+  <!-- Pipeline -->
+  <rect class="box" x="10" y="50" width="90" height="50"/>
+  <text class="text" x="55" y="72">Data</text>
+  <text class="text-sub" x="55" y="88">Sources</text>
+  
+  <rect class="box" x="120" y="50" width="90" height="50"/>
+  <text class="text" x="165" y="72">Feature</text>
+  <text class="text-sub" x="165" y="88">Store</text>
+  
+  <rect class="box" x="230" y="50" width="90" height="50"/>
+  <text class="text" x="275" y="72">Training</text>
+  <text class="text-sub" x="275" y="88">Compute</text>
+  
+  <rect class="box" x="340" y="50" width="90" height="50"/>
+  <text class="text" x="385" y="72">Model</text>
+  <text class="text-sub" x="385" y="88">Registry</text>
+  
+  <rect class="box" x="450" y="50" width="90" height="50"/>
+  <text class="text" x="495" y="72">Model</text>
+  <text class="text-sub" x="495" y="88">Serving</text>
+  
+  <!-- Arrows -->
+  <line class="line" x1="100" y1="75" x2="115" y2="75" marker-end="url(#ap)"/>
+  <line class="line" x1="210" y1="75" x2="225" y2="75" marker-end="url(#ap)"/>
+  <line class="line" x1="320" y1="75" x2="335" y2="75" marker-end="url(#ap)"/>
+  <line class="line" x1="430" y1="75" x2="445" y2="75" marker-end="url(#ap)"/>
+  
+  <!-- Tools -->
+  <text class="text-sub" x="55" y="120">Kafka / S3</text>
+  <text class="text-sub" x="165" y="120">Feast / Tecton</text>
+  <text class="text-sub" x="275" y="120">GPU / SageMaker</text>
+  <text class="text-sub" x="385" y="120">MLflow / DVC</text>
+  <text class="text-sub" x="495" y="120">FastAPI / Triton</text>
+  
+  <!-- Monitoring -->
+  <rect class="box" x="230" y="150" width="120" height="40"/>
+  <text class="text" x="290" y="175">ML Monitoring</text>
+  
+  <!-- Feedback -->
+  <path class="feedback" d="M 495 100 L 495 170 L 355 170" marker-end="url(#ap)"/>
+  <text class="text-sub" x="430" y="145">Drift Alert</text>
+  
+  <path class="feedback" d="M 230 170 L 165 170 L 165 105" marker-end="url(#ap)"/>
+</svg>

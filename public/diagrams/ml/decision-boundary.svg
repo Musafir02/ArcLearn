@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Inter, sans-serif">
+  <defs>
+    <style>
+      .class-a { fill: #C96A45; }
+      .class-b { fill: #4F7A5C; }
+      .boundary { stroke: #2B2A26; stroke-width: 2; stroke-dasharray: 5,3; }
+      .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <text class="text" x="200" y="20">Decision Boundary (Logistic Regression)</text>
+  
+  <!-- Axes -->
+  <line stroke="#2B2A26" stroke-width="2" x1="50" y1="210" x2="370" y2="210"/>
+  <line stroke="#2B2A26" stroke-width="2" x1="50" y1="210" x2="50" y2="30"/>
+  
+  <text class="label" x="210" y="235">Feature 1</text>
+  <text class="label" x="30" y="120" transform="rotate(-90, 30, 120)">Feature 2</text>
+  
+  <!-- Class A (circles) -->
+  <circle class="class-a" cx="100" cy="80" r="8"/>
+  <circle class="class-a" cx="130" cy="100" r="8"/>
+  <circle class="class-a" cx="110" cy="120" r="8"/>
+  <circle class="class-a" cx="140" cy="140" r="8"/>
+  <circle class="class-a" cx="120" cy="160" r="8"/>
+  <circle class="class-a" cx="90" cy="140" r="8"/>
+  
+  <!-- Class B (squares) -->
+  <rect class="class-b" x="230" y="70" width="16" height="16"/>
+  <rect class="class-b" x="260" y="90" width="16" height="16"/>
+  <rect class="class-b" x="240" y="110" width="16" height="16"/>
+  <rect class="class-b" x="270" y="130" width="16" height="16"/>
+  <rect class="class-b" x="250" y="150" width="16" height="16"/>
+  <rect class="class-b" x="280" y="110" width="16" height="16"/>
+  
+  <!-- Decision boundary -->
+  <line class="boundary" x1="190" y1="40" x2="190" y2="200"/>
+  
+  <text class="label" x="190" y="35">Decision Boundary</text>
+  
+  <!-- Legend -->
+  <circle class="class-a" cx="80" cy="200" r="6"/>
+  <text class="label" x="95" y="204" style="text-anchor: start;">Class A (σ(z) &lt; 0.5)</text>
+  
+  <rect class="class-b" x="220" y="196" width="12" height="12"/>
+  <text class="label" x="240" y="204" style="text-anchor: start;">Class B (σ(z) ≥ 0.5)</text>
+</svg>

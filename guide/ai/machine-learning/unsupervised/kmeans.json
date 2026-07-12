@@ -1,0 +1,39 @@
+{
+  "title": "K-Means Clustering",
+  "language": "machine-learning",
+  "topic": "kmeans",
+  "content": "### What is K-Means?\n\nK-Means groups data into **K clusters** by minimizing the distance between points and their cluster center (centroid). It's the most popular clustering algorithm.\n\n### How K-Means Works\n\n![K-Means Steps](/diagrams/ml/kmeans-steps.svg)\n\n### Choosing K — Elbow Method\n\n![Elbow Method](/diagrams/ml/elbow-method.svg)\n\nTo find the optimal number of clusters, we use the **Elbow Method** by plotting the **Within-Cluster Sum of Squares (WCSS)** or inertia against different values of $K$. As $K$ increases, WCSS always decreases because clusters become smaller and tighter. The optimal $K$ is the **elbow point**—the point where the rate of decrease shifts from rapid to slow, representing the best trade-off between cluster tightness and model complexity.\n\n### Silhouette Score\n\n```\nFor each point:\n  a = avg distance to same cluster\n  b = avg distance to nearest other cluster\n\n  Silhouette = (b - a) / max(a, b)\n\n  Range: -1 to 1\n  +1 = well-matched to own cluster\n   0 = on cluster boundary\n  -1 = probably in wrong cluster\n```\n\n### K-Means Variants\n\n- **K-Means++**: Improves standard initialization by selecting the first centroid at random, then choosing subsequent centroids with a probability proportional to their squared distance from nearest existing centroids. This ensures centroids are spread far apart, improving convergence speed.\n- **Mini-Batch K-Means**: Fits centroids using random mini-batches of data, speeding up clustering on massive datasets.\n\n### Python Code\n\n```python\nfrom sklearn.cluster import KMeans\nfrom sklearn.preprocessing import StandardScaler\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Scale features\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# Elbow method\nwcss = []\nfor k in range(1, 11):\n    kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)\n    kmeans.fit(X_scaled)\n    wcss.append(kmeans.inertia_)\n\nplt.plot(range(1, 11), wcss, 'bo-')\nplt.xlabel('Number of Clusters (K)')\nplt.ylabel('WCSS')\nplt.title('Elbow Method')\nplt.show()\n\n# Train with optimal K\nkmeans = KMeans(n_clusters=3, random_state=42, n_init=10)\nclusters = kmeans.fit_predict(X_scaled)\n\n# Results\nprint(f\"Cluster centers:\\n{kmeans.cluster_centers_}\")\nprint(f\"Inertia: {kmeans.inertia_:.2f}\")\nprint(f\"Labels: {np.unique(clusters)}\")\n```\n\n### When to Use\n\n| Use K-Means When | Avoid When |\n|-----------------|------------|\n| Spherical clusters | Arbitrarily shaped clusters |\n| Large datasets | Need cluster probabilities |\n| Simple grouping needed | Varying cluster densities |\n| Preprocessing for other models | Number of clusters unknown |",
+  "codeExample": "# K-Means for customer segmentation\nimport pandas as pd\nfrom sklearn.cluster import KMeans\nfrom sklearn.preprocessing import StandardScaler\n\n# Customer data: age, income, spending_score\ndata = pd.read_csv('customers.csv')\nscaler = StandardScaler()\nX = scaler.fit_transform(data[['age', 'income', 'spending_score']])\n\n# Find optimal K\nfor k in range(2, 8):\n    km = KMeans(n_clusters=k, random_state=42)\n    km.fit(X)\n    print(f\"K={k}: Inertia={km.inertia_:.0f}, Silhouette={silhouette_score(X, km.labels_):.3f}\")",
+  "quiz": [
+    {
+      "question": "What is the 'elbow method'?",
+      "options": [
+        "A way to initialize centroids",
+        "Plotting WCSS vs K to find optimal number of clusters",
+        "A clustering algorithm",
+        "A way to evaluate individual points"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does K-Means++ improve?",
+      "options": [
+        "Speed of training",
+        "Centroid initialization — spreads them far apart",
+        "Number of clusters",
+        "Distance metric"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What shape of clusters does K-Means work best with?",
+      "options": [
+        "Elongated clusters",
+        "Spherical (round) clusters",
+        "Any shape",
+        "Only 2D clusters"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
