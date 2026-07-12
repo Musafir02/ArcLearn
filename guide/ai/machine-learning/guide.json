@@ -15,9 +15,12 @@
       "topics": ["kmeans", "pca", "dbscan"]
     },
     {
-      "type": "group", "title": "Advanced Topics", "folder": "advanced",
-      "topics": ["ensemble_methods", "hyperparameter_tuning", "ml_pipeline"]
+      "type": "group", "title": "Advanced ML", "folder": "advanced",
+      "topics": ["ensemble_methods", "hyperparameter_tuning", "ml_pipeline", "mlops", "model_deployment", "automl", "xai"]
+    },
+    {
+      "type": "group", "title": "Specialized ML", "folder": "specialized",
+      "topics": ["reinforcement_learning", "time_series", "graph_ml", "bayesian_ml", "self_supervised", "federated_learning", "edge_ml", "feature_engineering", "imbalanced_learning", "anomaly_detection", "llm_finetuning"]
     }
   ]
 }
-
