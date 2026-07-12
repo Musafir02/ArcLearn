@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { guides } from '../lib/loadGuide';
 import { useProgressStore } from '../store/progress';
 
-const langKeys = ['python', 'javascript', 'java', 'c', 'cpp', 'rust', 'go', 'csharp', 'php', 'typescript', 'kotlin', 'dart', 'swift', 'html', 'css', 'sql', 'react'];
+const langKeys = ['python', 'javascript', 'java', 'c', 'cpp', 'rust', 'go', 'csharp', 'php', 'typescript', 'html', 'css', 'sql', 'react'];
 const frameworkKeys = ['nextjs', 'vue', 'angular', 'express', 'django', 'flask', 'fastapi', 'springboot', 'tailwind'];
+const mobileKeys = ['kotlin', 'dart', 'swift'];
 const toolKeys = ['git', 'github', 'docker', 'linux', 'cicd'];
 const aiKeys = ['machine-learning', 'deep-learning', 'nlp', 'computer-vision', 'agentic-ai', 'generative-ai'];
 
@@ -77,6 +78,7 @@ function Home() {
   const getKeys = () => {
     if (activeTab === 'languages') return langKeys;
     if (activeTab === 'frameworks') return frameworkKeys;
+    if (activeTab === 'mobile') return mobileKeys;
     if (activeTab === 'tools') return toolKeys;
     if (activeTab === 'ai') return aiKeys;
     return [];
@@ -109,6 +111,7 @@ function Home() {
       <div className="home-tabs">
         <button className={`home-tab ${activeTab === 'languages' ? 'active' : ''}`} onClick={() => { setActiveTab('languages'); setSearchQuery(''); }}>Languages</button>
         <button className={`home-tab ${activeTab === 'frameworks' ? 'active' : ''}`} onClick={() => { setActiveTab('frameworks'); setSearchQuery(''); }}>Frameworks</button>
+        <button className={`home-tab ${activeTab === 'mobile' ? 'active' : ''}`} onClick={() => { setActiveTab('mobile'); setSearchQuery(''); }}>Mobile</button>
         <button className={`home-tab ${activeTab === 'tools' ? 'active' : ''}`} onClick={() => { setActiveTab('tools'); setSearchQuery(''); }}>Tools</button>
         <button className={`home-tab ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => { setActiveTab('ai'); setSearchQuery(''); }}>AI</button>
       </div>
