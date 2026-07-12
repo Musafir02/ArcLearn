@@ -1,0 +1,31 @@
+{
+  "title": "Ethical Hacking",
+  "language": "ethicalhacking",
+  "icon": "🕵️",
+  "outline": [
+    {
+      "type": "group",
+      "name": "Foundations",
+      "folder": "foundations",
+      "topics": ["intro", "methodology", "legal_ethics"]
+    },
+    {
+      "type": "group",
+      "name": "Reconnaissance",
+      "folder": "recon",
+      "topics": ["osint", "passive_recon", "active_recon"]
+    },
+    {
+      "type": "group",
+      "name": "Scanning & Enumeration",
+      "folder": "scanning",
+      "topics": ["network_scanning", "vulnerability_scanning", "service_enum"]
+    },
+    {
+      "type": "group",
+      "name": "Exploitation & Post-Exploitation",
+      "folder": "exploitation",
+      "topics": ["exploitation_basics", "privilege_escalation", "post_exploitation"]
+    }
+  ]
+}

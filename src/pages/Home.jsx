@@ -9,6 +9,7 @@ const mobileKeys = ['kotlin', 'dart', 'swift'];
 const toolKeys = ['git', 'github', 'docker', 'linux', 'cicd'];
 const aiKeys = ['machine-learning', 'deep-learning', 'nlp', 'computer-vision', 'agentic-ai', 'generative-ai'];
 const sysdesignKeys = ['dsa', 'sysdesign', 'api', 'database'];
+const securityKeys = ['cybersec', 'ethicalhacking', 'owasp', 'crypto'];
 
 const displayName = (key) => {
   const map = {
@@ -53,6 +54,10 @@ const displayName = (key) => {
     'sysdesign': 'System Design',
     'api': 'API Design',
     'database': 'Database Design',
+    'cybersec': 'Cybersecurity',
+    'ethicalhacking': 'Ethical Hacking',
+    'owasp': 'OWASP Top 10',
+    'crypto': 'Cryptography',
   };
   return map[key] || key;
 };
@@ -87,6 +92,7 @@ function Home() {
     if (activeTab === 'tools') return toolKeys;
     if (activeTab === 'ai') return aiKeys;
     if (activeTab === 'sysdesign') return sysdesignKeys;
+    if (activeTab === 'security') return securityKeys;
     return [];
   };
 
@@ -121,6 +127,7 @@ function Home() {
         <button className={`home-tab ${activeTab === 'tools' ? 'active' : ''}`} onClick={() => { setActiveTab('tools'); setSearchQuery(''); }}>Tools</button>
         <button className={`home-tab ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => { setActiveTab('ai'); setSearchQuery(''); }}>AI</button>
         <button className={`home-tab ${activeTab === 'sysdesign' ? 'active' : ''}`} onClick={() => { setActiveTab('sysdesign'); setSearchQuery(''); }}>System Design</button>
+        <button className={`home-tab ${activeTab === 'security' ? 'active' : ''}`} onClick={() => { setActiveTab('security'); setSearchQuery(''); }}>Security</button>
       </div>
 
       <div className="languages-grid">

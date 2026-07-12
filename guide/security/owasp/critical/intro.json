@@ -1,0 +1,42 @@
+{
+  "title": "Introduction to OWASP Top 10",
+  "language": "owasp",
+  "topic": "intro",
+  "codeExample": "",
+  "content": "## What is OWASP?\n\nThe Open Worldwide Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software. Through community-led open-source projects, hundreds of chapters worldwide, and educational conferences, OWASP provides a trusted standard for web application security.\n\nOWASP is best known for the **Top 10**, an awareness document representing a broad consensus about the most critical security risks to web applications. It is globally recognized and referenced by standards, regulations, and compliance frameworks.\n\n## OWASP Top 10 2021 Overview\n\nThe 2021 edition introduced significant changes from the 2017 version:\n\n| Rank | Category | Change |\n|------|----------|--------|\n| A01 | Broken Access Control | Moved up from #5 |\n| A02 | Cryptographic Failures | Renamed from Sensitive Data Exposure |\n| A03 | Injection | Dropped to #3 (was #1) |\n| A04 | Insecure Design | New category |\n| A05 | Security Misconfiguration | Moved up from #6 |\n| A06 | Vulnerable and Outdated Components | Moved up from #9 |\n| A07 | Identification and Authentication Failures | Renamed from Broken Auth |\n| A08 | Software and Data Integrity Failures | New category |\n| A09 | Security Logging and Monitoring Failures | Moved up from #10 |\n| A10 | Server-Side Request Forgery (SSRF) | New category |\n\n## How Vulnerabilities Are Categorized\n\nOWASP categorizes vulnerabilities based on:\n\n- **Exploitability** - How easy is it to exploit the vulnerability?\n- **Impact** - What is the potential damage if exploited?\n- **Prevalence** - How common is this vulnerability in real-world applications?\n- **Detectability** - How easy is it to detect the vulnerability through testing?\n\nEach category in the Top 10 represents a class of vulnerabilities, not a single specific flaw. For example, A03: Injection covers SQL injection, NoSQL injection, OS command injection, and more.\n\n## CVSS Scoring System\n\nThe Common Vulnerability Scoring System (CVSS) provides a numerical score from 0 to 10 representing the severity of a vulnerability:\n\n- **0.0** - Not exploitable\n- **0.1-3.9** - Low severity\n- **4.0-6.9** - Medium severity\n- **7.0-8.9** - High severity\n- **9.0-10.0** - Critical severity\n\nCVSS calculates scores based on metrics:\n\n- **Base Score** - Intrinsic qualities of the vulnerability\n- **Temporal Score** - Factors that change over time\n- **Environmental Score** - Organization-specific factors\n\n```json\n{\n  \"cvss_v3\": {\n    \"baseScore\": 9.8,\n    \"vectorString\": \"CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H\",\n    \"baseMetrics\": {\n      \"attackVector\": \"Network\",\n      \"attackComplexity\": \"Low\",\n      \"privilegesRequired\": \"None\",\n      \"userInteraction\": \"None\",\n      \"scope\": \"Unchanged\",\n      \"confidentialityImpact\": \"High\",\n      \"integrityImpact\": \"High\",\n      \"availabilityImpact\": \"High\"\n    }\n  }\n}\n```\n\n## Testing Methodology\n\nOWASP recommends a layered approach to application security testing:\n\n### 1. Static Application Security Testing (SAST)\n\nAnalyzes source code without executing the program. Finds vulnerabilities early in the development lifecycle.\n\n### 2. Dynamic Application Security Testing (DAST)\n\nTests the running application from the outside. Simulates real-world attacks.\n\n### 3. Interactive Application Security Testing (IAST)\n\nCombines SAST and DAST by instrumenting the application during runtime.\n\n### 4. Software Composition Analysis (SCA)\n\nScans for known vulnerabilities in third-party libraries and dependencies.\n\n### 5. Manual Penetration Testing\n\nExpert testers attempt to exploit vulnerabilities that automated tools may miss.\n\n## Secure Development Lifecycle\n\nSecurity should be integrated throughout the entire Software Development Lifecycle (SDLC):\n\n- **Planning** - Threat modeling, security requirements\n- **Development** - Secure coding standards, code review\n- **Testing** - Security testing, vulnerability scanning\n- **Deployment** - Hardening, configuration management\n- **Maintenance** - Patch management, incident response\n\n## Key Takeaways\n\n- The OWASP Top 10 is a starting point, not a complete security program\n- Security must be built in, not bolted on\n- Defense in depth provides multiple layers of protection\n- Regular testing and updates are essential\n- Everyone in the development team shares responsibility for security\n\n## Resources\n\n- OWASP Top 10: https://owasp.org/www-project-top-ten/\n- OWASP ASVS (Application Security Verification Standard)\n- OWASP Proactive Controls\n- OWASP Cheat Sheet Series\n- NIST Cybersecurity Framework",
+  "quiz": [
+    {
+      "question": "What is the ranking of Broken Access Control in the OWASP Top 10 2021?",
+      "options": [
+        "A) #3",
+        "B) #5",
+        "C) #1",
+        "D) #7"
+      ],
+      "answer": "C) #1",
+      "explanation": "Broken Access Control moved to #1 in OWASP Top 10 2021, making it the most critical web application security risk."
+    },
+    {
+      "question": "Which CVSS score range indicates a Critical severity vulnerability?",
+      "options": [
+        "A) 0.0-3.9",
+        "B) 4.0-6.9",
+        "C) 7.0-8.9",
+        "D) 9.0-10.0"
+      ],
+      "answer": "D) 9.0-10.0",
+      "explanation": "CVSS scores from 9.0 to 10.0 are classified as Critical severity, representing the highest risk vulnerabilities."
+    },
+    {
+      "question": "Which testing approach analyzes source code without executing the program?",
+      "options": [
+        "A) DAST",
+        "B) SAST",
+        "C) IAST",
+        "D) Penetration Testing"
+      ],
+      "answer": "B) SAST",
+      "explanation": "Static Application Security Testing (SAST) analyzes source code without executing the program, finding vulnerabilities early in development."
+    }
+  ]
+}

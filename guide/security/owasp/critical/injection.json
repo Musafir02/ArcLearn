@@ -1,0 +1,42 @@
+{
+  "title": "Injection Attacks",
+  "language": "owasp",
+  "topic": "injection",
+  "codeExample": "# SQL Injection Example (Vulnerable)\nusername = request.form['username']\nquery = f\"SELECT * FROM users WHERE username = '{username}'\"  # DANGEROUS\n\ndef login(username, password):\n    sql = f\"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'\"\n    cursor.execute(sql)\n    return cursor.fetchone()\n\n# Secure: Parameterized Query\ndef login_secure(username, password):\n    sql = \"SELECT * FROM users WHERE username = %s AND password = %s\"\n    cursor.execute(sql, (username, password))\n    return cursor.fetchone()",
+  "content": "## Understanding Injection Attacks\n\nInjection attacks occur when untrusted data is sent to an interpreter as part of a command or query. The attacker's hostile data can trick the interpreter into executing unintended commands.\n\nInjection vulnerabilities ranked as #3 in the OWASP Top 10 2021, but remain one of the most impactful and widespread vulnerability classes.\n\n## SQL Injection\n\nSQL injection is the most common type of injection attack. It occurs when user input is directly concatenated into SQL queries.\n\n### Types of SQL Injection\n\n#### 1. Union-Based SQL Injection\n\nUses the UNION SQL operator to combine results from the original query with results from injected queries:\n\n```sql\n-- Vulnerable Query\nSELECT id, name, price FROM products WHERE id = 1\n\n-- Attacker Input: 1 UNION SELECT username, password, NULL FROM users\n-- Resulting Query\nSELECT id, name, price FROM products WHERE id = 1\nUNION SELECT username, password, NULL FROM users\n```\n\n#### 2. Blind SQL Injection\n\nThe application does not return data directly but allows inference based on behavior:\n\n```sql\n-- Boolean-based blind\nSELECT * FROM users WHERE username = 'admin' AND SUBSTRING(password,1,1) = 'a'\n-- Returns different results based on TRUE/FALSE\n\n-- Time-based blind\nSELECT * FROM users WHERE username = 'admin' AND SLEEP(5)\n-- Response delay indicates TRUE condition\n```\n\n#### 3. Error-Based SQL Injection\n\nForces the database to generate error messages revealing database structure:\n\n```sql\nSELECT * FROM users WHERE id = 1 AND 1=CONVERT(int, (SELECT TOP 1 table_name FROM information_schema.tables))\n```\n\n### Vulnerable Code Examples\n\n**Python (SQLAlchemy raw query):**\n```python\n# VULNERABLE - Direct string interpolation\ndef get_user_vulnerable(user_id):\n    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n    return db.execute(query)\n\n# VULNERABLE - String concatenation\ndef search_users_vulnerable(name):\n    query = \"SELECT * FROM users WHERE name LIKE '%\" + name + \"%'\"\n    return db.execute(query)\n```\n\n**JavaScript (Node.js):**\n```javascript\n// VULNERABLE\ndef getUser(userId) {\n  const query = `SELECT * FROM users WHERE id = ${userId}`;\n  return db.query(query);\n}\n\n// VULNERABLE\ndef searchUsers(name) {\n  const query = \"SELECT * FROM users WHERE name LIKE '%\" + name + \"%'\";\n  return db.query(query);\n}\n```\n\n### Secure Code Examples\n\n**Python:**\n```python\n# SECURE - Parameterized query\ndef get_user_secure(user_id):\n    query = \"SELECT * FROM users WHERE id = %s\"\n    return db.execute(query, (user_id,))\n\n# SECURE - Using ORM\ndef search_users_secure(name):\n    return User.query.filter(User.name.like(f'%{name}%')).all()\n\n# SECURE - Using SQLAlchemy text with bound parameters\ndef get_user_sqlalchemy(user_id):\n    query = text(\"SELECT * FROM users WHERE id = :id\")\n    return db.session.execute(query, {'id': user_id}).fetchone()\n```\n\n**JavaScript:**\n```javascript\n// SECURE - Prepared statement\nasync function getUser(userId) {\n  const query = 'SELECT * FROM users WHERE id = ?';\n  return db.query(query, [userId]);\n}\n\n// SECURE - Using ORM (Sequelize)\nasync function searchUsers(name) {\n  return User.findAll({\n    where: {\n      name: { [Op.like]: `%${name}%` }\n    }\n  });\n}\n```\n\n## NoSQL Injection\n\nNoSQL databases are also vulnerable to injection attacks:\n\n**MongoDB JavaScript Injection:**\n```javascript\n// VULNERABLE\ndef get_user(username):\n    return db.users.find_one({'username': username})\n\n# Attacker sends: {\"$gt\": \"\"}\n# Becomes: db.users.find_one({'username': {'$gt': \"\"}})\n# Returns first user in collection\n\n# SECURE - Validate input type\ndef get_user_secure(username):\n    if not isinstance(username, str):\n        raise ValueError('Invalid username')\n    return db.users.find_one({'username': username})\n```\n\n## OS Command Injection\n\nOccurs when user input is passed to system commands:\n\n```python\n# VULNERABLE\nimport os\ndef ping_host(hostname):\n    os.system(f'ping -c 4 {hostname}')\n    # Attacker: ; cat /etc/passwd\n\n# SECURE - Use subprocess with argument list\ndef ping_host_secure(hostname):\n    import subprocess\n    import re\n    if not re.match(r'^[a-zA-Z0-9.-]+$', hostname):\n        raise ValueError('Invalid hostname')\n    subprocess.run(['ping', '-c', '4', hostname], check=True)\n```\n\n## LDAP Injection\n\nSimilar to SQL injection but targets LDAP directories:\n\n```java\n// VULNERABLE\nString filter = \"(&(uid=\" + userId + \")(userPassword=\" + pwd + \"))\";\nLdapContext ctx = new InitialLdapContext();\nctx.searchriends(\"\", filter, null);\n\n// SECURE - Escape special characters\nString safeUserId = userId.replaceAll(\"[*()\\\\\\\\]\", \"\\\\\\\\$0\");\nString safePwd = pwd.replaceAll(\"[*()\\\\\\\\]\", \"\\\\\\\\$0\");\nString filter = \"(&(uid=\" + safeUserId + \")(userPassword=\" + safePwd + \"))\";\n```\n\n## Prevention Strategies\n\n### 1. Use Parameterized Queries\n\nAlways use parameterized queries or prepared statements. Never concatenate user input into queries.\n\n### 2. Use ORM Frameworks\n\nObject-Relational Mapping frameworks automatically parameterize queries.\n\n### 3. Input Validation\n\n- Whitelist allowed characters and patterns\n- Validate data types, length, and range\n- Reject unexpected input\n\n### 4. Least Privilege\n\nDatabase accounts should have minimal necessary permissions:\n```sql\n-- Application should not use root/admin\nCREATE USER 'app_user'@'localhost' IDENTIFIED BY 'password';\nGRANT SELECT, INSERT, UPDATE ON app_database.* TO 'app_user'@'localhost';\n```\n\n### 5. Stored Procedures\n\nUse stored procedures with parameterized inputs:\n```sql\nCREATE PROCEDURE GetUser(IN userId INT)\nBEGIN\n    SELECT * FROM users WHERE id = userId;\nEND\n```\n\n### 6. Web Application Firewall (WAF)\n\nWAFs can detect and block common injection patterns as a defense-in-depth measure.\n\n## Key Takeaways\n\n- Never trust user input\n- Always use parameterized queries or ORM\n- Apply input validation as defense-in-depth\n- Use least privilege database accounts\n- Test with SAST and DAST tools\n- Review code for injection vulnerabilities regularly",
+  "quiz": [
+    {
+      "question": "What is the most effective way to prevent SQL injection?",
+      "options": [
+        "A) Input validation only",
+        "B) Web Application Firewall (WAF)",
+        "C) Parameterized queries or prepared statements",
+        "D) Using stored procedures only"
+      ],
+      "answer": "C) Parameterized queries or prepared statements",
+      "explanation": "Parameterized queries ensure user input is treated as data, not executable code, providing the strongest protection against SQL injection."
+    },
+    {
+      "question": "Which type of SQL injection relies on timing differences to infer data?",
+      "options": [
+        "A) Union-based",
+        "B) Error-based",
+        "C) Boolean-based blind",
+        "D) Time-based blind"
+      ],
+      "answer": "D) Time-based blind",
+      "explanation": "Time-based blind SQL injection uses database functions like SLEEP() or WAITFOR DELAY to infer data based on response time differences."
+    },
+    {
+      "question": "Which Python library safely handles XML parsing by blocking external entities?",
+      "options": [
+        "A) xml.etree.ElementTree",
+        "B) lxml",
+        "C) defusedxml",
+        "D) BeautifulSoup"
+      ],
+      "answer": "C) defusedxml",
+      "explanation": "defusedxml is a Python library specifically designed to prevent XXE and other XML attacks by blocking external entity processing."
+    }
+  ]
+}

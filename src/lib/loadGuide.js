@@ -105,6 +105,10 @@ const displayName = (key) => {
     'sysdesign': 'System Design',
     'api': 'API Design',
     'database': 'Database Design',
+    'cybersec': 'Cybersecurity',
+    'ethicalhacking': 'Ethical Hacking',
+    'owasp': 'OWASP Top 10',
+    'crypto': 'Cryptography',
   };
   return map[key] || key;
 };

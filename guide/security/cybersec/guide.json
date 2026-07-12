@@ -1,0 +1,31 @@
+{
+  "title": "Cybersecurity",
+  "language": "cybersec",
+  "icon": "🔒",
+  "outline": [
+    {
+      "type": "group",
+      "name": "Fundamentals",
+      "folder": "fundamentals",
+      "topics": ["intro", "cia_triad", "threat_landscape"]
+    },
+    {
+      "type": "group",
+      "name": "Network & System Security",
+      "folder": "network_security",
+      "topics": ["firewall_ids", "vpn_zero_trust", "os_hardening"]
+    },
+    {
+      "type": "group",
+      "name": "Application & Cloud Security",
+      "folder": "app_cloud_security",
+      "topics": ["secure_coding", "cloud_security", "container_security"]
+    },
+    {
+      "type": "group",
+      "name": "Advanced & Emerging",
+      "folder": "advanced",
+      "topics": ["iot_security", "ai_cybersecurity", "incident_response", "business_continuity", "compliance_governance"]
+    }
+  ]
+}
