@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 250">
+  <defs>
+    <marker id="darr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#7A756A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <style>text { font-family: Inter, sans-serif; }</style>
+  <rect width="450" height="250" fill="#F8F7F4" rx="8"/>
+
+  <text x="225" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#2B2A26">Diffusion Model Pipeline</text>
+
+  <rect x="15" y="80" width="70" height="40" rx="6" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1.5"/>
+  <text x="50" y="97" text-anchor="middle" font-size="9" font-weight="600" fill="#5A6A8A">Text</text>
+  <text x="50" y="110" text-anchor="middle" font-size="9" font-weight="600" fill="#5A6A8A">Prompt</text>
+
+  <line x1="90" y1="100" x2="112" y2="100" stroke="#7A756A" stroke-width="1.5" marker-end="url(#darr)"/>
+
+  <rect x="116" y="75" width="70" height="50" rx="6" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="1.5"/>
+  <text x="151" y="96" text-anchor="middle" font-size="9" font-weight="600" fill="#8A5A8A">CLIP</text>
+  <text x="151" y="110" text-anchor="middle" font-size="8" fill="#7A756A">Encoder</text>
+
+  <line x1="191" y1="100" x2="213" y2="100" stroke="#7A756A" stroke-width="1.5" marker-end="url(#darr)"/>
+
+  <rect x="217" y="70" width="75" height="60" rx="6" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text x="254" y="90" text-anchor="middle" font-size="8" font-weight="600" fill="#8A7A5A">Noise +</text>
+  <text x="254" y="102" text-anchor="middle" font-size="8" font-weight="600" fill="#8A7A5A">Timesteps</text>
+  <text x="254" y="118" text-anchor="middle" font-size="7" fill="#7A756A">t = 1000 → 0</text>
+
+  <line x1="297" y1="100" x2="315" y2="100" stroke="#7A756A" stroke-width="1.5" marker-end="url(#darr)"/>
+
+  <rect x="319" y="60" width="80" height="80" rx="8" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="2"/>
+  <text x="359" y="85" text-anchor="middle" font-size="10" font-weight="700" fill="#4F7A5C">U-Net</text>
+  <text x="359" y="100" text-anchor="middle" font-size="8" fill="#7A756A">/ DiT</text>
+  <text x="359" y="115" text-anchor="middle" font-size="8" fill="#7A756A">Denoiser</text>
+  <text x="359" y="128" text-anchor="middle" font-size="7" fill="#4F7A5C">loop N steps</text>
+
+  <path d="M359,145 L359,160 Q359,168 351,168 L260,168 Q252,168 252,160 L252,138" fill="none" stroke="#C96A45" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#darr)"/>
+  <text x="300" y="178" text-anchor="middle" font-size="7" fill="#C96A45">iterative denoising</text>
+
+  <line x1="359" y1="140" x2="359" y2="183" stroke="#7A756A" stroke-width="1.5" marker-end="url(#darr)"/>
+
+  <rect x="320" y="185" width="80" height="40" rx="6" fill="#F1E0D6" stroke="#C96A45" stroke-width="1.5"/>
+  <text x="360" y="202" text-anchor="middle" font-size="9" font-weight="600" fill="#C96A45">VAE Decoder</text>
+  <text x="360" y="216" text-anchor="middle" font-size="7" fill="#7A756A">Latent → Pixel</text>
+
+  <line x1="318" y1="210" x2="303" y2="210" stroke="#7A756A" stroke-width="1.5" marker-end="url(#darr)"/>
+
+  <rect x="215" y="195" width="85" height="40" rx="6" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="2"/>
+  <text x="257" y="212" text-anchor="middle" font-size="9" font-weight="600" fill="#4F7A5C">Generated</text>
+  <text x="257" y="225" text-anchor="middle" font-size="9" font-weight="600" fill="#4F7A5C">Image</text>
+
+  <text x="225" y="246" text-anchor="middle" font-size="8" fill="#7A756A">Iterative denoising: noise → clear image</text>
+</svg>

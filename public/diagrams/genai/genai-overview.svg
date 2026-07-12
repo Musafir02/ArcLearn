@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
+  <style>text { font-family: Inter, sans-serif; }</style>
+  <rect width="440" height="280" fill="#F8F7F4" rx="8"/>
+
+  <text x="220" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#2B2A26">Generative AI Ecosystem</text>
+
+  <circle cx="220" cy="148" r="38" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="2"/>
+  <text x="220" y="145" text-anchor="middle" font-size="13" font-weight="700" fill="#4F7A5C">GenAI</text>
+  <text x="220" y="158" text-anchor="middle" font-size="9" fill="#7A756A">Hub</text>
+
+  <line x1="195" y1="118" x2="105" y2="58" stroke="#5A6A8A" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="55" y="38" width="100" height="40" rx="6" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1.5"/>
+  <text x="105" y="55" text-anchor="middle" font-size="11" font-weight="600" fill="#5A6A8A">Text</text>
+  <text x="105" y="68" text-anchor="middle" font-size="8" fill="#7A756A">GPT, Claude, Llama</text>
+
+  <line x1="245" y1="118" x2="335" y2="58" stroke="#8A5A8A" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="285" y="38" width="100" height="40" rx="6" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="1.5"/>
+  <text x="335" y="55" text-anchor="middle" font-size="11" font-weight="600" fill="#8A5A8A">Image</text>
+  <text x="335" y="68" text-anchor="middle" font-size="8" fill="#7A756A">DALL·E, Midjourney</text>
+
+  <line x1="258" y1="148" x2="338" y2="148" stroke="#C96A45" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="338" y="128" width="90" height="40" rx="6" fill="#F1E0D6" stroke="#C96A45" stroke-width="1.5"/>
+  <text x="383" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#C96A45">Video</text>
+  <text x="383" y="158" text-anchor="middle" font-size="8" fill="#7A756A">Sora, Runway</text>
+
+  <line x1="245" y1="178" x2="335" y2="238" stroke="#8A7A5A" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="285" y="220" width="100" height="40" rx="6" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text x="335" y="237" text-anchor="middle" font-size="11" font-weight="600" fill="#8A7A5A">Audio</text>
+  <text x="335" y="250" text-anchor="middle" font-size="8" fill="#7A756A">Whisper, Suno</text>
+
+  <line x1="195" y1="178" x2="105" y2="238" stroke="#4F7A5C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="55" y="220" width="100" height="40" rx="6" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1.5"/>
+  <text x="105" y="237" text-anchor="middle" font-size="11" font-weight="600" fill="#4F7A5C">Code</text>
+  <text x="105" y="250" text-anchor="middle" font-size="8" fill="#7A756A">Copilot, Cursor</text>
+
+  <line x1="182" y1="148" x2="102" y2="148" stroke="#5A6A8A" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="12" y="128" width="90" height="40" rx="6" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1.5"/>
+  <text x="57" y="145" text-anchor="middle" font-size="11" font-weight="600" fill="#5A6A8A">3D</text>
+  <text x="57" y="158" text-anchor="middle" font-size="8" fill="#7A756A">Point-E, Shap-E</text>
+
+  <text x="220" y="274" text-anchor="middle" font-size="8" fill="#7A756A">Text · Image · Video · Audio · Code · 3D</text>
+</svg>

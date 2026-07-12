@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230">
+  <defs>
+    <marker id="parr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#7A756A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <style>text { font-family: Inter, sans-serif; }</style>
+  <rect width="440" height="230" fill="#F8F7F4" rx="8"/>
+
+  <text x="220" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#2B2A26">GenAI Application Pipeline</text>
+
+  <text x="45" y="86" text-anchor="middle" font-size="7" fill="#5A6A8A">&#x2460;</text>
+  <rect x="15" y="90" width="60" height="44" rx="6" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1.5"/>
+  <text x="45" y="110" text-anchor="middle" font-size="9" font-weight="600" fill="#5A6A8A">User</text>
+  <text x="45" y="124" text-anchor="middle" font-size="7" fill="#7A756A">Request</text>
+
+  <line x1="78" y1="112" x2="100" y2="112" stroke="#7A756A" stroke-width="1.5" marker-end="url(#parr)"/>
+
+  <text x="144" y="76" text-anchor="middle" font-size="7" fill="#8A7A5A">&#x2461;</text>
+  <rect x="104" y="80" width="80" height="64" rx="6" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.5"/>
+  <text x="144" y="100" text-anchor="middle" font-size="9" font-weight="600" fill="#8A7A5A">API</text>
+  <text x="144" y="113" text-anchor="middle" font-size="9" font-weight="600" fill="#8A7A5A">Gateway</text>
+  <text x="144" y="128" text-anchor="middle" font-size="7" fill="#7A756A">Auth, Rate limit</text>
+  <text x="144" y="138" text-anchor="middle" font-size="7" fill="#7A756A">Logging</text>
+
+  <line x1="186" y1="112" x2="206" y2="112" stroke="#7A756A" stroke-width="1.5" marker-end="url(#parr)"/>
+
+  <text x="247" y="76" text-anchor="middle" font-size="7" fill="#C96A45">&#x2462;</text>
+  <rect x="210" y="80" width="75" height="64" rx="6" fill="#F1E0D6" stroke="#C96A45" stroke-width="1.5"/>
+  <text x="247" y="100" text-anchor="middle" font-size="9" font-weight="600" fill="#C96A45">Router</text>
+  <text x="247" y="115" text-anchor="middle" font-size="7" fill="#7A756A">Choose model</text>
+  <text x="247" y="127" text-anchor="middle" font-size="7" fill="#7A756A">by task / cost</text>
+  <text x="247" y="139" text-anchor="middle" font-size="7" fill="#7A756A">Load balance</text>
+
+  <line x1="287" y1="112" x2="307" y2="112" stroke="#7A756A" stroke-width="1.5" marker-end="url(#parr)"/>
+
+  <text x="353" y="68" text-anchor="middle" font-size="7" fill="#8A5A8A">&#x2463;</text>
+  <rect x="311" y="72" width="85" height="55" rx="6" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="2"/>
+  <text x="353" y="92" text-anchor="middle" font-size="9" font-weight="600" fill="#8A5A8A">LLM Provider</text>
+  <text x="353" y="107" text-anchor="middle" font-size="7" fill="#7A756A">GPT-4 / Claude</text>
+  <text x="353" y="118" text-anchor="middle" font-size="7" fill="#7A756A">Llama / Gemini</text>
+
+  <line x1="353" y1="130" x2="353" y2="152" stroke="#7A756A" stroke-width="1.5" marker-end="url(#parr)"/>
+
+  <text x="352" y="150" text-anchor="middle" font-size="7" fill="#4F7A5C">&#x2464;</text>
+  <rect x="290" y="155" width="125" height="35" rx="6" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1.5"/>
+  <text x="352" y="172" text-anchor="middle" font-size="9" font-weight="600" fill="#4F7A5C">Content Safety</text>
+  <text x="352" y="185" text-anchor="middle" font-size="7" fill="#7A756A">Filter, guardrails, PII removal</text>
+
+  <path d="M288,172 L200,172 Q192,172 192,164 L192,148" fill="none" stroke="#7A756A" stroke-width="1.5" marker-end="url(#parr)"/>
+  <text x="240" y="168" text-anchor="middle" font-size="7" fill="#7A756A">Response</text>
+
+  <path d="M102,148 L102,172 Q102,178 94,178 L52,178 Q45,178 45,172 L45,136" fill="none" stroke="#7A756A" stroke-width="1.5" marker-end="url(#parr)"/>
+  <text x="60" y="192" text-anchor="middle" font-size="7" fill="#7A756A">Reply</text>
+
+  <text x="220" y="220" text-anchor="middle" font-size="8" fill="#7A756A">Production GenAI apps need routing, safety, and monitoring</text>
+</svg>

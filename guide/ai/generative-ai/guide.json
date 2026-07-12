@@ -1,0 +1,30 @@
+{
+  "title": "Generative AI",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Text Generation", "folder": "text",
+      "topics": ["llm_basics", "prompt_engineering_deep", "tokenization_genai", "text_to_text"]
+    },
+    {
+      "type": "group", "title": "Image Generation", "folder": "image",
+      "topics": ["diffusion_models_deep", "text_to_image", "image_editing"]
+    },
+    {
+      "type": "group", "title": "Video & Audio", "folder": "media",
+      "topics": ["video_generation", "speech_synthesis", "music_generation"]
+    },
+    {
+      "type": "group", "title": "Code Generation", "folder": "code",
+      "topics": ["code_llms", "ai_coding_tools"]
+    },
+    {
+      "type": "group", "title": "Multimodal & Advanced", "folder": "advanced",
+      "topics": ["multimodal_ai", "ai_safety_ethics", "evaluating_genai"]
+    },
+    {
+      "type": "group", "title": "Applications", "folder": "applications",
+      "topics": ["genai_applications", "building_with_genai"]
+    }
+  ]
+}

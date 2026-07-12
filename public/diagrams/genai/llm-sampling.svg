@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#7A756A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <style>text { font-family: Inter, sans-serif; }</style>
+  <rect width="440" height="240" fill="#F8F7F4" rx="8"/>
+
+  <text x="220" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#2B2A26">LLM Token Sampling</text>
+
+  <rect x="20" y="40" width="120" height="140" rx="4" fill="white" stroke="#D6DCE8" stroke-width="1"/>
+  <text x="80" y="55" text-anchor="middle" font-size="9" font-weight="600" fill="#5A6A8A">Token Probabilities</text>
+
+  <rect x="32" y="140" width="14" height="30" rx="2" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1"/>
+  <text x="39" y="178" text-anchor="middle" font-size="7" fill="#7A756A">the</text>
+  <text x="39" y="137" text-anchor="middle" font-size="7" fill="#4F7A5C">35%</text>
+
+  <rect x="52" y="155" width="14" height="15" rx="2" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1"/>
+  <text x="59" y="178" text-anchor="middle" font-size="7" fill="#7A756A">a</text>
+  <text x="59" y="152" text-anchor="middle" font-size="7" fill="#5A6A8A">18%</text>
+
+  <rect x="72" y="160" width="14" height="10" rx="2" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="1"/>
+  <text x="79" y="178" text-anchor="middle" font-size="7" fill="#7A756A">an</text>
+  <text x="79" y="157" text-anchor="middle" font-size="7" fill="#8A5A8A">12%</text>
+
+  <rect x="92" y="163" width="14" height="7" rx="2" fill="#F1E0D6" stroke="#C96A45" stroke-width="1"/>
+  <text x="99" y="178" text-anchor="middle" font-size="7" fill="#7A756A">my</text>
+  <text x="99" y="160" text-anchor="middle" font-size="7" fill="#C96A45">9%</text>
+
+  <rect x="112" y="166" width="14" height="4" rx="2" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1"/>
+  <text x="119" y="178" text-anchor="middle" font-size="7" fill="#7A756A">...</text>
+  <text x="119" y="163" text-anchor="middle" font-size="7" fill="#8A7A5A">26%</text>
+
+  <line x1="145" y1="110" x2="168" y2="110" stroke="#7A756A" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="172" y="55" width="100" height="110" rx="6" fill="#F8F7F4" stroke="#D6DCE8" stroke-width="1.5"/>
+  <text x="222" y="72" text-anchor="middle" font-size="10" font-weight="600" fill="#5A6A8A">Filtering</text>
+
+  <rect x="182" y="80" width="80" height="22" rx="4" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1"/>
+  <text x="222" y="95" text-anchor="middle" font-size="8" fill="#5A6A8A">Temperature: 0.8</text>
+
+  <rect x="182" y="106" width="80" height="22" rx="4" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="1"/>
+  <text x="222" y="121" text-anchor="middle" font-size="8" fill="#8A5A8A">Top-p: 0.9</text>
+
+  <rect x="182" y="132" width="80" height="22" rx="4" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1"/>
+  <text x="222" y="147" text-anchor="middle" font-size="8" fill="#8A7A5A">Top-k: 50</text>
+
+  <line x1="277" y1="110" x2="300" y2="110" stroke="#7A756A" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="304" y="80" width="90" height="60" rx="6" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="2"/>
+  <text x="349" y="105" text-anchor="middle" font-size="10" font-weight="600" fill="#4F7A5C">Selected</text>
+  <text x="349" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#2B2A26">"the"</text>
+
+  <line x1="349" y1="145" x2="349" y2="185" stroke="#7A756A" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="295" y="188" width="108" height="26" rx="4" fill="#F1E0D6" stroke="#C96A45" stroke-width="1"/>
+  <text x="349" y="205" text-anchor="middle" font-size="9" fill="#C96A45">Next prediction step</text>
+
+  <text x="220" y="234" text-anchor="middle" font-size="8" fill="#7A756A">Sampling controls randomness vs. quality tradeoff</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 230">
+  <defs>
+    <marker id="rarr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#7A756A" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <style>text { font-family: Inter, sans-serif; }</style>
+  <rect width="440" height="230" fill="#F8F7F4" rx="8"/>
+
+  <text x="220" y="22" text-anchor="middle" font-size="13" font-weight="600" fill="#2B2A26">RLHF Training Process</text>
+
+  <rect x="20" y="45" width="115" height="110" rx="8" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="2"/>
+  <text x="77" y="65" text-anchor="middle" font-size="10" font-weight="700" fill="#5A6A8A">Stage 1</text>
+  <text x="77" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#2B2A26">SFT</text>
+  <text x="77" y="98" text-anchor="middle" font-size="7" fill="#7A756A">Supervised Fine-Tuning</text>
+  <text x="35" y="118" font-size="7" fill="#7A756A">• Human-written</text>
+  <text x="35" y="128" font-size="7" fill="#7A756A">  Q&amp;A pairs</text>
+  <text x="35" y="138" font-size="7" fill="#7A756A">• Base model →</text>
+  <text x="35" y="148" font-size="7" fill="#7A756A">  aligned model</text>
+
+  <line x1="138" y1="100" x2="162" y2="100" stroke="#7A756A" stroke-width="1.5" marker-end="url(#rarr)"/>
+
+  <rect x="166" y="45" width="115" height="110" rx="8" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="2"/>
+  <text x="223" y="65" text-anchor="middle" font-size="10" font-weight="700" fill="#8A5A8A">Stage 2</text>
+  <text x="223" y="82" text-anchor="middle" font-size="10" font-weight="700" fill="#2B2A26">Reward Model</text>
+  <text x="223" y="98" text-anchor="middle" font-size="7" fill="#7A756A">Learn human preferences</text>
+  <text x="181" y="118" font-size="7" fill="#7A756A">• Ranked responses</text>
+  <text x="181" y="128" font-size="7" fill="#7A756A">• Score: good vs bad</text>
+  <text x="181" y="138" font-size="7" fill="#7A756A">• Bradley-Terry</text>
+  <text x="181" y="148" font-size="7" fill="#7A756A">  model</text>
+
+  <line x1="284" y1="100" x2="308" y2="100" stroke="#7A756A" stroke-width="1.5" marker-end="url(#rarr)"/>
+
+  <rect x="312" y="45" width="115" height="110" rx="8" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="2"/>
+  <text x="369" y="65" text-anchor="middle" font-size="10" font-weight="700" fill="#4F7A5C">Stage 3</text>
+  <text x="369" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#2B2A26">PPO / DPO</text>
+  <text x="369" y="98" text-anchor="middle" font-size="7" fill="#7A756A">Optimize with RL</text>
+  <text x="327" y="118" font-size="7" fill="#7A756A">• PPO: policy</text>
+  <text x="327" y="128" font-size="7" fill="#7A756A">  gradient + reward</text>
+  <text x="327" y="138" font-size="7" fill="#7A756A">• DPO: direct</text>
+  <text x="327" y="148" font-size="7" fill="#7A756A">  preference optimize</text>
+
+  <path d="M369,158 L369,178 Q369,186 361,186 L85,186 Q77,186 77,178 L77,158" fill="none" stroke="#C96A45" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#rarr)"/>
+  <text x="220" y="198" text-anchor="middle" font-size="7" fill="#C96A45">Iterative improvement loop</text>
+
+  <text x="150" y="92" text-anchor="middle" font-size="7" fill="#7A756A">data</text>
+  <text x="296" y="92" text-anchor="middle" font-size="7" fill="#7A756A">model</text>
+
+  <text x="220" y="222" text-anchor="middle" font-size="8" fill="#7A756A">RLHF aligns models with human intent and safety</text>
+</svg>
