@@ -1,3 +1,5 @@
+import { displayName } from './displayName';
+
 const modules = import.meta.glob('../../guide/**/*.json', { eager: true });
 const outlines = import.meta.glob('../../guide/*/*/guide.json', { eager: true });
 
@@ -84,34 +86,6 @@ for (const lang in schemas) {
   guides[lang] = flatGuides;
   guidesOutline[lang] = outlineList;
 }
-
-const displayName = (key) => {
-  const map = {
-    javascript: 'JavaScript', python: 'Python', csharp: 'C#', cpp: 'C++',
-    typescript: 'TypeScript', sql: 'SQL', html: 'HTML', css: 'CSS',
-    react: 'React', java: 'Java', c: 'C', rust: 'Rust', go: 'Go',
-    kotlin: 'Kotlin', dart: 'Dart', swift: 'Swift', php: 'PHP',
-    nextjs: 'Next.js', vue: 'Vue.js', angular: 'Angular', express: 'Express.js',
-    django: 'Django', flask: 'Flask', fastapi: 'FastAPI', springboot: 'Spring Boot',
-    tailwind: 'Tailwind CSS', git: 'Git', github: 'GitHub', docker: 'Docker',
-    linux: 'Linux & Bash CLI', cicd: 'CI/CD',
-    'machine-learning': 'Machine Learning',
-    'deep-learning': 'Deep Learning',
-    'nlp': 'Natural Language Processing',
-    'computer-vision': 'Computer Vision',
-    'agentic-ai': 'Agentic AI',
-    'generative-ai': 'Generative AI',
-    'dsa': 'Data Structures & Algorithms',
-    'sysdesign': 'System Design',
-    'api': 'API Design',
-    'database': 'Database Design',
-    'cybersec': 'Cybersecurity',
-    'ethicalhacking': 'Ethical Hacking',
-    'owasp': 'OWASP Top 10',
-    'crypto': 'Cryptography',
-  };
-  return map[key] || key;
-};
 
 const searchIndex = Object.values(guides).flat().map((t) => ({
   ...t,

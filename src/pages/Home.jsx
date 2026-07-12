@@ -1,66 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { guides } from '../lib/loadGuide';
 import { useProgressStore } from '../store/progress';
-
-const langKeys = ['python', 'javascript', 'java', 'c', 'cpp', 'rust', 'go', 'csharp', 'php', 'typescript', 'html', 'css', 'sql', 'react'];
-const frameworkKeys = ['nextjs', 'vue', 'angular', 'express', 'django', 'flask', 'fastapi', 'springboot', 'tailwind'];
-const mobileKeys = ['kotlin', 'dart', 'swift'];
-const toolKeys = ['git', 'github', 'docker', 'linux', 'cicd'];
-const aiKeys = ['machine-learning', 'deep-learning', 'nlp', 'computer-vision', 'agentic-ai', 'generative-ai'];
-const sysdesignKeys = ['dsa', 'sysdesign', 'api', 'database'];
-const securityKeys = ['cybersec', 'ethicalhacking', 'owasp', 'crypto'];
-
-const displayName = (key) => {
-  const map = {
-    javascript: 'JavaScript',
-    python: 'Python',
-    csharp: 'C#',
-    cpp: 'C++',
-    typescript: 'TypeScript',
-    sql: 'SQL',
-    html: 'HTML',
-    css: 'CSS',
-    react: 'React',
-    java: 'Java',
-    c: 'C',
-    rust: 'Rust',
-    go: 'Go',
-    kotlin: 'Kotlin',
-    dart: 'Dart',
-    swift: 'Swift',
-    php: 'PHP',
-    nextjs: 'Next.js',
-    vue: 'Vue.js',
-    angular: 'Angular',
-    express: 'Express.js',
-    django: 'Django',
-    flask: 'Flask',
-    fastapi: 'FastAPI',
-    springboot: 'Spring Boot',
-    tailwind: 'Tailwind CSS',
-    git: 'Git',
-    github: 'GitHub',
-    docker: 'Docker',
-    linux: 'Linux & Bash CLI',
-    cicd: 'CI/CD',
-    'machine-learning': 'Machine Learning',
-    'deep-learning': 'Deep Learning',
-    'nlp': 'Natural Language Processing',
-    'computer-vision': 'Computer Vision',
-    'agentic-ai': 'Agentic AI',
-    'generative-ai': 'Generative AI',
-    'dsa': 'Data Structures & Algorithms',
-    'sysdesign': 'System Design',
-    'api': 'API Design',
-    'database': 'Database Design',
-    'cybersec': 'Cybersecurity',
-    'ethicalhacking': 'Ethical Hacking',
-    'owasp': 'OWASP Top 10',
-    'crypto': 'Cryptography',
-  };
-  return map[key] || key;
-};
+import { TOPICS, TABS, displayName, topicDesc } from '../lib/displayName';
 
 function Home() {
   const navigate = useNavigate();
@@ -85,20 +27,15 @@ function Home() {
     }
   };
 
-  const getKeys = () => {
-    if (activeTab === 'languages') return langKeys;
-    if (activeTab === 'frameworks') return frameworkKeys;
-    if (activeTab === 'mobile') return mobileKeys;
-    if (activeTab === 'tools') return toolKeys;
-    if (activeTab === 'ai') return aiKeys;
-    if (activeTab === 'sysdesign') return sysdesignKeys;
-    if (activeTab === 'security') return securityKeys;
-    return [];
-  };
-
-  const filteredKeys = getKeys().filter((key) => {
-    return displayName(key).toLowerCase().includes(searchQuery.toLowerCase());
-  });
+  const tabKeys = useMemo(() => {
+    const allKeys = Object.entries(TOPICS)
+      .filter(([, v]) => v.tab === activeTab)
+      .map(([k]) => k);
+    if (!searchQuery.trim()) return allKeys;
+    return allKeys.filter((key) =>
+      displayName(key).toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [activeTab, searchQuery]);
 
   return (
     <div className="home-container">
@@ -121,17 +58,19 @@ function Home() {
       </div>
 
       <div className="home-tabs">
-        <button className={`home-tab ${activeTab === 'languages' ? 'active' : ''}`} onClick={() => { setActiveTab('languages'); setSearchQuery(''); }}>Languages</button>
-        <button className={`home-tab ${activeTab === 'frameworks' ? 'active' : ''}`} onClick={() => { setActiveTab('frameworks'); setSearchQuery(''); }}>Frameworks</button>
-        <button className={`home-tab ${activeTab === 'mobile' ? 'active' : ''}`} onClick={() => { setActiveTab('mobile'); setSearchQuery(''); }}>Mobile</button>
-        <button className={`home-tab ${activeTab === 'tools' ? 'active' : ''}`} onClick={() => { setActiveTab('tools'); setSearchQuery(''); }}>Tools</button>
-        <button className={`home-tab ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => { setActiveTab('ai'); setSearchQuery(''); }}>AI</button>
-        <button className={`home-tab ${activeTab === 'sysdesign' ? 'active' : ''}`} onClick={() => { setActiveTab('sysdesign'); setSearchQuery(''); }}>System Design</button>
-        <button className={`home-tab ${activeTab === 'security' ? 'active' : ''}`} onClick={() => { setActiveTab('security'); setSearchQuery(''); }}>Security</button>
+        {TABS.map((tab) => (
+          <button
+            key={tab.key}
+            className={`home-tab ${activeTab === tab.key ? 'active' : ''}`}
+            onClick={() => { setActiveTab(tab.key); setSearchQuery(''); }}
+          >
+            {tab.label}
+          </button>
+        ))}
       </div>
 
       <div className="languages-grid">
-        {filteredKeys.map((key) => {
+        {tabKeys.map((key) => {
           const { total, completed, percentage } = getStats(key);
           return (
             <div key={key} className="lang-card" onClick={() => handleStart(key)}>
@@ -140,7 +79,7 @@ function Home() {
                 <span>→</span>
               </div>
               <div className="lang-card-desc">
-                Learn core syntax, dynamic execution flow, standard data structures, and functions in {displayName(key)}.
+                {topicDesc(key)}
               </div>
               <div className="progress-bar-container">
                 <div className="progress-bar-fill" style={{ width: `${percentage}%` }}></div>
@@ -154,9 +93,9 @@ function Home() {
         })}
       </div>
 
-      {filteredKeys.length === 0 && (
+      {tabKeys.length === 0 && (
         <div style={{ textAlign: 'center', color: 'var(--text-muted)', marginTop: '24px' }}>
-          No {activeTab} found matching "{searchQuery}"
+          No {activeTab} found matching &quot;{searchQuery}&quot;
         </div>
       )}
     </div>

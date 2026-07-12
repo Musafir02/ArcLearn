@@ -57,7 +57,8 @@ function Search() {
     <div className="home-container">
       <div className="hero" style={{ marginBottom: 40 }}>
         <h1 onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-          Arc<span>Learn</span> <span style={{ fontSize: '0.6em', color: 'var(--text-muted)' }}>Search</span>
+          Arc<span>Learn</span>{' '}
+          <span style={{ fontSize: '0.6em', color: 'var(--text-muted)' }}>Search</span>
         </h1>
         <p>Search across all topics, guides, and code examples.</p>
       </div>
@@ -75,47 +76,29 @@ function Search() {
 
       {query.trim() && results.length === 0 && (
         <div style={{ textAlign: 'center', color: 'var(--text-muted)', marginTop: 40 }}>
-          No results found for "{query}"
+          No results found for &quot;{query}&quot;
         </div>
       )}
 
       {Object.entries(grouped).map(([guideName, topics]) => (
-        <div key={guideName} style={{ marginTop: 32 }}>
-          <h2 style={{ fontFamily: 'Source Serif 4, serif', fontSize: 22, marginBottom: 12 }}>{guideName}</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div key={guideName} className="search-results-group">
+          <h2 className="search-group-title">{guideName}</h2>
+          <div className="search-results-list">
             {topics.map((t) => (
               <div
                 key={`${t.language}/${t.topic}`}
                 className="search-result-card"
                 onClick={() => navigate(`/learn/${t.language}/${t.topic}`)}
               >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-                  <span style={{ fontWeight: 600, fontSize: 15 }}>{t.title}</span>
-                  <span style={{
-                    fontSize: 11,
-                    fontFamily: 'JetBrains Mono, monospace',
-                    color: 'var(--text-muted)',
-                    background: 'var(--surface-2)',
-                    padding: '2px 8px',
-                    borderRadius: 4,
-                    textTransform: 'lowercase'
-                  }}>
-                    {t.category}
-                  </span>
+                <div className="search-result-header">
+                  <span className="search-result-title">{t.title}</span>
+                  <span className="search-result-tag">{t.category}</span>
                 </div>
-                <div style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.6 }}>
+                <div className="search-result-snippet">
                   {getSnippet(t.content)}
                 </div>
                 {completedTopics[`${t.language}/${t.topic}`] && (
-                  <span style={{
-                    fontSize: 11,
-                    color: 'var(--success)',
-                    fontFamily: 'JetBrains Mono, monospace',
-                    marginTop: 4,
-                    display: 'inline-block'
-                  }}>
-                    ✓ completed
-                  </span>
+                  <span className="search-result-completed">✓ completed</span>
                 )}
               </div>
             ))}

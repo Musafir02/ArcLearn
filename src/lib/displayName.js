@@ -1,0 +1,63 @@
+const TOPICS = {
+  python:             { name: 'Python',                      tab: 'languages',  desc: 'General-purpose language powering web, data science, and automation.' },
+  javascript:         { name: 'JavaScript',                  tab: 'languages',  desc: 'The language of the web — dynamic, event-driven, and runs everywhere.' },
+  java:               { name: 'Java',                        tab: 'languages',  desc: 'Statically-typed, object-oriented language built for enterprise scale.' },
+  c:                  { name: 'C',                           tab: 'languages',  desc: 'Low-level systems language that underpins operating systems and hardware.' },
+  cpp:                { name: 'C++',                         tab: 'languages',  desc: 'Systems programming with high performance and object-oriented design.' },
+  rust:               { name: 'Rust',                        tab: 'languages',  desc: 'Memory-safe systems language built for performance and reliability.' },
+  go:                 { name: 'Go',                          tab: 'languages',  desc: 'Compiled, concurrent language built for modern cloud infrastructure.' },
+  csharp:             { name: 'C#',                          tab: 'languages',  desc: "Microsoft's modern language for .NET apps, games, and enterprise software." },
+  php:                { name: 'PHP',                         tab: 'languages',  desc: 'Server-side scripting language powering a huge chunk of the web.' },
+  typescript:         { name: 'TypeScript',                  tab: 'languages',  desc: 'Typed superset of JavaScript that catches errors before they reach production.' },
+  html:               { name: 'HTML',                        tab: 'languages',  desc: 'The structural backbone of every webpage on the internet.' },
+  css:                { name: 'CSS',                         tab: 'languages',  desc: 'Style and animate everything from layouts to complex visual effects.' },
+  sql:                { name: 'SQL',                         tab: 'languages',  desc: 'Query, analyze, and manage relational databases with structured syntax.' },
+  react:              { name: 'React',                       tab: 'languages',  desc: 'Declarative UI library for building fast, component-based interfaces.' },
+  nextjs:             { name: 'Next.js',                     tab: 'frameworks', desc: 'Full-stack React framework with SSR, routing, and edge deployment.' },
+  vue:                { name: 'Vue.js',                      tab: 'frameworks', desc: 'Progressive frontend framework with a gentle learning curve.' },
+  angular:            { name: 'Angular',                     tab: 'frameworks', desc: 'Full-featured TypeScript framework for large-scale enterprise apps.' },
+  express:            { name: 'Express.js',                  tab: 'frameworks', desc: 'Minimal Node.js framework for building APIs and web servers fast.' },
+  django:             { name: 'Django',                      tab: 'frameworks', desc: 'Batteries-included Python framework for rapid web application development.' },
+  flask:              { name: 'Flask',                       tab: 'frameworks', desc: 'Lightweight Python microframework — minimal core, maximum flexibility.' },
+  fastapi:            { name: 'FastAPI',                     tab: 'frameworks', desc: 'High-performance Python API framework with automatic OpenAPI docs.' },
+  springboot:         { name: 'Spring Boot',                 tab: 'frameworks', desc: 'Production-ready Java framework for microservices and enterprise APIs.' },
+  tailwind:           { name: 'Tailwind CSS',                tab: 'frameworks', desc: 'Utility-first CSS framework for rapidly building custom designs.' },
+  kotlin:             { name: 'Kotlin',                      tab: 'mobile',     desc: 'Modern Android development language with concise, expressive syntax.' },
+  dart:               { name: 'Dart',                        tab: 'mobile',     desc: 'Language behind Flutter for building cross-platform native apps.' },
+  swift:              { name: 'Swift',                       tab: 'mobile',     desc: "Apple's powerful language for building iOS, macOS, and watchOS apps." },
+  git:                { name: 'Git',                         tab: 'tools',      desc: 'Distributed version control for tracking changes and collaborating on code.' },
+  github:             { name: 'GitHub',                      tab: 'tools',      desc: 'Code hosting, pull requests, Actions CI/CD, and open-source collaboration.' },
+  docker:             { name: 'Docker',                      tab: 'tools',      desc: 'Containerize applications for consistent, portable deployment anywhere.' },
+  linux:              { name: 'Linux & Bash CLI',            tab: 'tools',      desc: 'Master the command line — the essential skill for every developer.' },
+  cicd:               { name: 'CI/CD',                       tab: 'tools',      desc: 'Automate testing, building, and deployment with continuous integration pipelines.' },
+  'machine-learning': { name: 'Machine Learning',            tab: 'ai',         desc: 'Train models to learn patterns and make predictions from data.' },
+  'deep-learning':    { name: 'Deep Learning',               tab: 'ai',         desc: 'Neural networks, backpropagation, CNNs, RNNs, and Transformers.' },
+  nlp:                { name: 'Natural Language Processing', tab: 'ai',         desc: 'Teach machines to read, understand, and generate human language.' },
+  'computer-vision':  { name: 'Computer Vision',             tab: 'ai',         desc: 'Enable machines to interpret and understand images and video.' },
+  'agentic-ai':       { name: 'Agentic AI',                  tab: 'ai',         desc: 'Build autonomous AI agents that plan, use tools, and execute complex tasks.' },
+  'generative-ai':    { name: 'Generative AI',               tab: 'ai',         desc: 'LLMs, diffusion models, and systems that create text, images, and code.' },
+  dsa:                { name: 'Data Structures & Algorithms',tab: 'sysdesign',  desc: 'Master the building blocks of efficient software — arrays to graphs.' },
+  sysdesign:          { name: 'System Design',               tab: 'sysdesign',  desc: 'Design scalable, reliable distributed systems used by millions.' },
+  api:                { name: 'API Design',                  tab: 'sysdesign',  desc: 'REST, GraphQL, gRPC — build clean, versioned, and secure APIs.' },
+  database:           { name: 'Database Design',             tab: 'sysdesign',  desc: 'Schema design, normalization, indexing, and query optimization.' },
+  cybersec:           { name: 'Cybersecurity',               tab: 'security',   desc: 'Defend against threats, understand attack vectors, and secure systems.' },
+  ethicalhacking:     { name: 'Ethical Hacking',             tab: 'security',   desc: 'Legally test systems for vulnerabilities using real hacker techniques.' },
+  owasp:              { name: 'OWASP Top 10',                tab: 'security',   desc: 'The ten most critical web application security risks — explained and solved.' },
+  crypto:             { name: 'Cryptography',                tab: 'security',   desc: 'Encryption, hashing, PKI, and the math securing digital communications.' },
+};
+
+const TABS = [
+  { key: 'languages',  label: 'Languages' },
+  { key: 'frameworks', label: 'Frameworks' },
+  { key: 'mobile',     label: 'Mobile' },
+  { key: 'tools',      label: 'Tools' },
+  { key: 'ai',         label: 'AI' },
+  { key: 'sysdesign',  label: 'System Design' },
+  { key: 'security',   label: 'Security' },
+];
+
+const displayName = (key) => TOPICS[key]?.name || key;
+const topicDesc = (key) => TOPICS[key]?.desc || '';
+const topicTab = (key) => TOPICS[key]?.tab || 'languages';
+
+export { TOPICS, TABS, displayName, topicDesc, topicTab };

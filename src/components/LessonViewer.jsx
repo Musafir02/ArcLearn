@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import Quiz from './Quiz';
 import { useProgressStore } from '../store/progress';
 import { guides } from '../lib/loadGuide';
+import { displayName } from '../lib/displayName';
 
 function LessonViewer({ topicData }) {
   const navigate = useNavigate();
@@ -12,7 +13,13 @@ function LessonViewer({ topicData }) {
   const [copied, setCopied] = useState(false);
 
   if (!topicData) {
-    return null;
+    return (
+      <main>
+        <div className="eyebrow">404</div>
+        <h1>Topic not found</h1>
+        <p className="lead">This topic doesn&apos;t exist or hasn&apos;t been created yet.</p>
+      </main>
+    );
   }
 
   const { title, language, topic, order, content, codeExample, quiz, nextTopic, prevTopic } = topicData;
@@ -36,7 +43,7 @@ function LessonViewer({ topicData }) {
   return (
     <main key={topic}>
       <div className="eyebrow">
-        {language} — lesson {order} of {totalTopics}
+        {displayName(language)} — lesson {order} of {totalTopics}
       </div>
       <h1>{title}</h1>
       <div className="markdown-content">

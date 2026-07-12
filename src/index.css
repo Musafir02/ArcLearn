@@ -59,6 +59,25 @@ button, input, select, textarea {
   font-family: inherit;
 }
 
+/* Prevent text selection and browser popups on interactive elements when clicked */
+a, button, select,
+.nav-link,
+.section-header,
+.lang-card,
+.search-result-card,
+.home-tab,
+.option,
+.brand,
+.mobile-brand,
+.arrow,
+.mobile-menu-btn,
+.mobile-sidebar-close {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+
 .app-container {
   display: flex;
   height: 100vh;
@@ -638,7 +657,11 @@ h1 {
   justify-content: center;
   gap: 8px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
+
+
+
 
 .home-tab {
   font-family: 'Inter', sans-serif;
@@ -815,7 +838,7 @@ h1 {
   }
 
   .mobile-sidebar-drawer {
-    width: 280px;
+    width: min(280px, 85vw);
     height: 100%;
     background: var(--surface);
     display: flex;
@@ -864,10 +887,105 @@ h1 {
     margin-bottom: 14px;
   }
 
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero {
+    margin-bottom: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .home-container {
+    padding: 0 16px 60px;
+  }
+
+
+
+
   .markdown-content pre,
   .codeblock {
     padding: 12px 14px !important;
     font-size: 12.5px !important;
     border-radius: 8px !important;
   }
+}
+
+/* ─── Tablet breakpoint ───────────────────────────────── */
+@media (max-width: 1100px) and (min-width: 769px) {
+  aside {
+    width: 220px;
+  }
+
+  main {
+    padding: 40px 28px 80px;
+    max-width: 680px;
+  }
+}
+
+/* ─── Search page classes ─────────────────────────────── */
+.search-results-group {
+  margin-top: 32px;
+}
+
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-group-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.search-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.search-result-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.search-result-tag {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: lowercase;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.search-result-snippet {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.search-result-completed {
+  font-size: 11px;
+  color: var(--success);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* ─── Quiz option disabled states ─────────────────────── */
+.option:disabled {
+  cursor: not-allowed;
+}
+
+.option:disabled:not(.correct):not(.incorrect) {
+  opacity: 0.4;
 }

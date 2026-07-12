@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { guidesOutline } from '../lib/loadGuide';
 import { useProgressStore } from '../store/progress';
+import { displayName } from '../lib/displayName';
 
 function Sidebar({ activeLanguage, activeTopic }) {
   const completedTopics = useProgressStore((state) => state.completedTopics);
@@ -50,7 +51,7 @@ function Sidebar({ activeLanguage, activeTopic }) {
       </Link>
 
       <div className="sidebar-header">
-        {activeLanguage ? `${activeLanguage.toUpperCase()} TUTORIAL` : 'TUTORIAL'}
+        {activeLanguage ? `${displayName(activeLanguage)} Tutorial` : 'Tutorial'}
       </div>
 
       {activeOutline.map((entry) => {
