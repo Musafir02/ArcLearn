@@ -1,29 +1,27 @@
 {
   "title": "Cryptography",
-  "language": "crypto",
-  "icon": "\uD83D\uDD10",
   "outline": [
     {
       "type": "group",
-      "name": "Foundations",
+      "title": "Foundations",
       "folder": "foundations",
       "topics": ["intro", "classical_crypto", "math_foundations"]
     },
     {
       "type": "group",
-      "name": "Symmetric Cryptography",
+      "title": "Symmetric Cryptography",
       "folder": "symmetric",
       "topics": ["block_ciphers", "stream_ciphers", "hash_functions"]
     },
     {
       "type": "group",
-      "name": "Asymmetric Cryptography",
+      "title": "Asymmetric Cryptography",
       "folder": "asymmetric",
       "topics": ["rsa_ecc", "key_exchange", "digital_signatures"]
     },
     {
       "type": "group",
-      "name": "Applied Cryptography",
+      "title": "Applied Cryptography",
       "folder": "applied",
       "topics": ["pki_tls", "post_quantum_crypto", "crypto_misuse"]
     }

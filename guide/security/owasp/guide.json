@@ -1,29 +1,27 @@
 {
   "title": "OWASP Top 10 & Secure Coding",
-  "language": "owasp",
-  "icon": "🛡️",
   "outline": [
     {
       "type": "group",
-      "name": "Critical Risks",
+      "title": "Critical Risks",
       "folder": "critical",
       "topics": ["intro", "injection", "broken_auth"]
     },
     {
       "type": "group",
-      "name": "High Risks",
+      "title": "High Risks",
       "folder": "high",
       "topics": ["sensitive_data_exposure", "xxe", "broken_access_control"]
     },
     {
       "type": "group",
-      "name": "Medium Risks",
+      "title": "Medium Risks",
       "folder": "medium",
       "topics": ["security_misconfiguration", "xss", "insecure_deserialization"]
     },
     {
       "type": "group",
-      "name": "Supply Chain & Beyond",
+      "title": "Supply Chain & Beyond",
       "folder": "beyond",
       "topics": ["supply_chain", "secure_coding_practices"]
     }
