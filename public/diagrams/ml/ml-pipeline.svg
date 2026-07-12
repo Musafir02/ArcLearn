@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 13px; font-weight: 600; text-anchor: middle; }
       .text-sub { fill: #7A756A; font-size: 10px; text-anchor: middle; }
       .arrow { fill: #C96A45; }
@@ -11,46 +11,39 @@
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon class="arrow" points="0 0, 10 3.5, 0 7"/>
     </marker>
-    <marker id="arrowhead-back" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon class="arrow" points="0 0, 10 3.5, 0 7"/>
-    </marker>
   </defs>
-  
-  <!-- Pipeline boxes -->
-  <rect class="box" x="10" y="50" width="120" height="60"/>
+
+  <rect class="box" x="10" y="50" width="120" height="60" rx="8"/>
   <text class="text" x="70" y="75">Data Sources</text>
   <text class="text-sub" x="70" y="92">Kafka / S3</text>
-  
-  <rect class="box" x="170" y="50" width="120" height="60"/>
+
+  <rect class="box" x="170" y="50" width="120" height="60" rx="8"/>
   <text class="text" x="230" y="75">Feature Store</text>
   <text class="text-sub" x="230" y="92">Feast / Tecton</text>
-  
-  <rect class="box" x="330" y="50" width="120" height="60"/>
+
+  <rect class="box" x="330" y="50" width="120" height="60" rx="8"/>
   <text class="text" x="390" y="75">Training</text>
   <text class="text-sub" x="390" y="92">GPU / SageMaker</text>
-  
-  <rect class="box" x="490" y="50" width="120" height="60"/>
+
+  <rect class="box" x="490" y="50" width="120" height="60" rx="8"/>
   <text class="text" x="550" y="75">Model Registry</text>
   <text class="text-sub" x="550" y="92">MLflow / DVC</text>
-  
-  <rect class="box" x="650" y="50" width="120" height="60"/>
+
+  <rect class="box" x="650" y="50" width="120" height="60" rx="8"/>
   <text class="text" x="710" y="75">Serving</text>
   <text class="text-sub" x="710" y="92">FastAPI / Triton</text>
-  
-  <!-- Arrows -->
+
   <line class="line" x1="130" y1="80" x2="165" y2="80" marker-end="url(#arrowhead)"/>
   <line class="line" x1="290" y1="80" x2="325" y2="80" marker-end="url(#arrowhead)"/>
   <line class="line" x1="450" y1="80" x2="485" y2="80" marker-end="url(#arrowhead)"/>
   <line class="line" x1="610" y1="80" x2="645" y2="80" marker-end="url(#arrowhead)"/>
-  
-  <!-- Monitoring -->
-  <rect class="box" x="330" y="150" width="140" height="40"/>
+
+  <rect class="box" x="330" y="150" width="140" height="40" rx="8"/>
   <text class="text" x="400" y="175">ML Monitoring</text>
-  
-  <!-- Feedback loop -->
-  <path class="feedback" d="M 710 110 L 710 170 L 475 170" marker-end="url(#arrowhead-back)"/>
+
+  <path class="feedback" d="M 710 110 L 710 170 L 475 170" marker-end="url(#arrowhead)"/>
   <text class="text-sub" x="600" y="165">Drift Alert</text>
-  
+
   <line class="feedback" x1="330" y1="170" x2="230" y2="170"/>
-  <path class="feedback" d="M 230 170 L 230 115" marker-end="url(#arrowhead-back)"/>
+  <path class="feedback" d="M 230 170 L 230 115" marker-end="url(#arrowhead)"/>
 </svg>

@@ -1,38 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
-      .box-warn { fill: #E8D4B8; stroke: #C96A45; stroke-width: 2; rx: 8; }
-      .box-good { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
+      .box-warn { fill: #E8D4B8; stroke: #C96A45; stroke-width: 2; }
+      .box-good { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
       .text-sub { fill: #7A756A; font-size: 10px; text-anchor: middle; }
       .text-green { fill: #2D5A3A; font-size: 11px; font-weight: 600; text-anchor: middle; }
     </style>
   </defs>
-  
-  <!-- K too small -->
-  <rect class="box-warn" x="10" y="30" width="170" height="140"/>
+
+  <rect class="box-warn" x="10" y="30" width="170" height="140" rx="8"/>
   <text class="text" x="95" y="55">K = 1 (Too Small)</text>
   <text class="text-sub" x="95" y="80">Overfitting</text>
   <text class="text-sub" x="95" y="100">Noisy votes</text>
   <text class="text-sub" x="95" y="120">Complex boundaries</text>
   <text class="text-sub" x="95" y="140">High variance</text>
-  
-  <!-- K too large -->
-  <rect class="box-warn" x="215" y="30" width="170" height="140"/>
+
+  <rect class="box-warn" x="215" y="30" width="170" height="140" rx="8"/>
   <text class="text" x="300" y="55">K = N (Too Large)</text>
   <text class="text-sub" x="300" y="80">Underfitting</text>
   <text class="text-sub" x="300" y="100">Predicts majority class</text>
   <text class="text-sub" x="300" y="120">Everywhere same</text>
   <text class="text-sub" x="300" y="140">High bias</text>
-  
-  <!-- Sweet spot -->
-  <rect class="box-good" x="420" y="30" width="170" height="140"/>
+
+  <rect class="box-good" x="420" y="30" width="170" height="140" rx="8"/>
   <text class="text-green" x="505" y="55">K = Sweet Spot</text>
   <text class="text-green" x="505" y="80">Balanced</text>
   <text class="text-green" x="505" y="100">Good generalization</text>
   <text class="text-green" x="505" y="120">Optimal bias-variance</text>
   <text class="text-green" x="505" y="140">Best performance</text>
-  
+
   <text class="text" x="300" y="195" font-size="12">Choose K using cross-validation</text>
 </svg>

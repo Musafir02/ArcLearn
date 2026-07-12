@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box-good { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; rx: 4; }
-      .box-bad { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 4; }
+      .box-good { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; }
+      .box-bad { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
       .text-main { fill: #2B2A26; font-size: 13px; font-weight: 700; text-anchor: middle; }
       .text-label { fill: #7A756A; font-size: 11px; font-weight: 600; text-anchor: middle; }
       .text-bold { fill: #2B2A26; font-size: 12px; font-weight: 700; text-anchor: middle; }
@@ -10,37 +10,29 @@
     </style>
   </defs>
 
-  <!-- Title -->
   <text class="text-main" x="200" y="20">Confusion Matrix</text>
 
-  <!-- Headers -->
   <text class="text-label" x="250" y="42">Predicted</text>
   <text class="text-label" x="190" y="56">Positive (1)</text>
   <text class="text-label" x="310" y="56">Negative (0)</text>
 
-  <!-- Side Headers -->
   <text class="text-label" x="20" y="130" transform="rotate(-90, 20, 130)">Actual</text>
   <text class="text-label" x="65" y="95">Positive (1)</text>
   <text class="text-label" x="65" y="165">Negative (0)</text>
 
-  <!-- Grid Boxes -->
-  <!-- TP -->
-  <rect class="box-good" x="130" y="65" width="120" height="70"/>
+  <rect class="box-good" x="130" y="65" width="120" height="70" rx="4"/>
   <text class="text-bold" x="190" y="95">TP</text>
   <text class="text-desc" x="190" y="112">True Positive</text>
 
-  <!-- FN -->
-  <rect class="box-bad" x="250" y="65" width="120" height="70"/>
+  <rect class="box-bad" x="250" y="65" width="120" height="70" rx="4"/>
   <text class="text-bold" x="310" y="95">FN</text>
   <text class="text-desc" x="310" y="112">False Negative</text>
 
-  <!-- FP -->
-  <rect class="box-bad" x="130" y="135" width="120" height="70"/>
+  <rect class="box-bad" x="130" y="135" width="120" height="70" rx="4"/>
   <text class="text-bold" x="190" y="165">FP</text>
   <text class="text-desc" x="190" y="182">False Positive</text>
 
-  <!-- TN -->
-  <rect class="box-good" x="250" y="135" width="120" height="70"/>
+  <rect class="box-good" x="250" y="135" width="120" height="70" rx="4"/>
   <text class="text-bold" x="310" y="165">TN</text>
   <text class="text-desc" x="310" y="182">True Negative</text>
 </svg>

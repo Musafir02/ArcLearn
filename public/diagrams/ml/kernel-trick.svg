@@ -12,43 +12,40 @@
       <polygon class="arrow" points="0 0, 10 3.5, 0 7"/>
     </marker>
   </defs>
-  
-  <!-- Original Space -->
+
   <text class="text" x="150" y="20">Original Space (2D)</text>
-  
+
   <circle class="class-neg" cx="80" cy="80" r="8"/>
   <circle class="class-neg" cx="100" cy="100" r="8"/>
   <circle class="class-neg" cx="120" cy="80" r="8"/>
   <circle class="class-neg" cx="80" cy="120" r="8"/>
   <circle class="class-neg" cx="100" cy="140" r="8"/>
-  
+
   <rect class="class-pos" x="140" y="72" width="14" height="14"/>
   <rect class="class-pos" x="160" y="92" width="14" height="14"/>
   <rect class="class-pos" x="140" y="112" width="14" height="14"/>
   <rect class="class-pos" x="180" y="112" width="14" height="14"/>
   <rect class="class-pos" x="160" y="132" width="14" height="14"/>
-  
+
   <text class="label" x="150" y="170">Not separable by line</text>
-  
-  <!-- Arrow -->
-  <text class="text" x="300" y="100" font-size="20">→</text>
+
+  <text class="text" x="300" y="100" font-size="20">&#x2192;</text>
   <text class="label" x="300" y="130">Kernel Trick</text>
-  
-  <!-- Transformed Space -->
+
   <text class="text" x="450" y="20">Transformed Space (3D)</text>
-  
+
   <circle class="class-neg" cx="420" cy="60" r="8"/>
   <circle class="class-neg" cx="440" cy="80" r="8"/>
   <circle class="class-neg" cx="460" cy="60" r="8"/>
   <circle class="class-neg" cx="420" cy="100" r="8"/>
   <circle class="class-neg" cx="440" cy="120" r="8"/>
-  
+
   <rect class="class-pos" x="480" y="100" width="14" height="14"/>
   <rect class="class-pos" x="500" y="120" width="14" height="14"/>
   <rect class="class-pos" x="480" y="140" width="14" height="14"/>
   <rect class="class-pos" x="520" y="140" width="14" height="14"/>
   <rect class="class-pos" x="500" y="150" width="14" height="14"/>
-  
+
   <line class="plane" x1="460" y1="140" x2="540" y2="80"/>
   <text class="label" x="500" y="185">Separable by plane!</text>
 </svg>

@@ -1,55 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
-      .box-blue { fill: #4A6FA5; stroke: #2D4A7A; stroke-width: 2; rx: 8; }
-      .box-green { fill: #4F7A5C; stroke: #2D5A3A; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
+      .box-blue { fill: #4A6FA5; stroke: #2D4A7A; stroke-width: 2; }
+      .box-green { fill: #4F7A5C; stroke: #2D5A3A; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
       .text-white { fill: #fff; font-size: 11px; font-weight: 600; text-anchor: middle; }
       .text-sub { fill: #7A756A; font-size: 10px; text-anchor: middle; }
     </style>
   </defs>
-  
-  <!-- Grid Search -->
-  <rect class="box" x="10" y="30" width="170" height="140"/>
+
+  <rect class="box" x="10" y="30" width="170" height="140" rx="8"/>
   <text class="text" x="95" y="55">Grid Search</text>
   <text class="text-sub" x="95" y="75">Exhaustive</text>
-  
-  <!-- Grid visualization -->
+
   <rect x="30" y="85" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
   <rect x="65" y="85" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
   <rect x="100" y="85" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
   <rect x="135" y="85" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
-  
+
   <rect x="30" y="110" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
   <rect x="65" y="110" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
   <rect x="100" y="110" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
   <rect x="135" y="110" width="30" height="20" fill="#E8D4B8" stroke="#C96A45" stroke-width="1"/>
-  
+
   <text class="text-sub" x="95" y="155">Try ALL combinations</text>
-  
-  <!-- Random Search -->
-  <rect class="box" x="215" y="30" width="170" height="140"/>
+
+  <rect class="box" x="215" y="30" width="170" height="140" rx="8"/>
   <text class="text" x="300" y="55">Random Search</text>
   <text class="text-sub" x="300" y="75">Faster</text>
-  
-  <!-- Random dots -->
+
   <circle cx="240" cy="100" r="5" fill="#C96A45"/>
   <circle cx="280" cy="120" r="5" fill="#C96A45"/>
   <circle cx="320" cy="90" r="5" fill="#C96A45"/>
   <circle cx="350" cy="130" r="5" fill="#C96A45"/>
   <circle cx="260" cy="140" r="5" fill="#C96A45"/>
-  
+
   <text class="text-sub" x="300" y="155">Random combinations</text>
-  
-  <!-- Bayesian -->
-  <rect class="box-green" x="420" y="30" width="170" height="140"/>
+
+  <rect class="box-green" x="420" y="30" width="170" height="140" rx="8"/>
   <text class="text-white" x="505" y="55">Bayesian (Optuna)</text>
   <text class="text-white" x="505" y="75">Most Efficient</text>
-  
+
   <text class="text-sub" x="505" y="100" style="fill: #E8F5E9;">Trial 1: 0.82</text>
   <text class="text-sub" x="505" y="120" style="fill: #E8F5E9;">Trial 2: 0.85</text>
   <text class="text-sub" x="505" y="140" style="fill: #E8F5E9;">Trial 3: 0.89</text>
-  
+
   <text class="text-sub" x="505" y="160" style="fill: #fff;">Learns from past</text>
 </svg>

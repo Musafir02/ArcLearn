@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" font-family="Inter, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 215" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
       .text-sub { fill: #7A756A; font-size: 10px; text-anchor: middle; }
       .label { fill: #7A756A; font-size: 10px; text-anchor: middle; }
@@ -12,24 +12,24 @@
       <polygon class="arrow" points="0 0, 10 3.5, 0 7"/>
     </marker>
   </defs>
-  
-  <rect class="box" x="125" y="10" width="150" height="35"/>
+
+  <rect class="box" x="125" y="10" width="150" height="35" rx="8"/>
   <text class="text" x="200" y="32">Data</text>
-  
+
   <line class="line" x1="200" y1="45" x2="200" y2="65" marker-end="url(#as)"/>
-  
-  <rect class="box" x="125" y="70" width="150" height="35"/>
+
+  <rect class="box" x="125" y="70" width="150" height="45" rx="8"/>
   <text class="text" x="200" y="90">Tree 1</text>
-  <text class="text-sub" x="200" y="102">Compute residuals</text>
-  
-  <line class="line" x1="200" y1="105" x2="200" y2="125" marker-end="url(#as)"/>
-  <text class="label" x="230" y="115">+α</text>
-  
-  <rect class="box" x="125" y="130" width="150" height="35"/>
-  <text class="text" x="200" y="150">Tree 2</text>
-  <text class="text-sub" x="200" y="162">Fit to residuals</text>
-  
-  <line class="line" x1="200" y1="165" x2="200" y2="185" marker-end="url(#as)"/>
-  
-  <text class="text" x="200" y="198" font-size="10">Final = initial + α×tree₁ + α×tree₂ + ...</text>
+  <text class="text-sub" x="200" y="108">Compute residuals</text>
+
+  <line class="line" x1="200" y1="115" x2="200" y2="135" marker-end="url(#as)"/>
+  <text class="label" x="230" y="128">+&#x3B1;</text>
+
+  <rect class="box" x="125" y="140" width="150" height="45" rx="8"/>
+  <text class="text" x="200" y="160">Tree 2</text>
+  <text class="text-sub" x="200" y="178">Fit to residuals</text>
+
+  <line class="line" x1="200" y1="185" x2="200" y2="202" marker-end="url(#as)"/>
+
+  <text class="text" x="200" y="213" font-size="10">Final = initial + &#x3B1;&#xD7;tree&#x2081; + &#x3B1;&#xD7;tree&#x2082; + ...</text>
 </svg>

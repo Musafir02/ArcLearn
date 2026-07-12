@@ -10,41 +10,34 @@
       .title { fill: #2B2A26; font-size: 13px; font-weight: 600; text-anchor: middle; }
     </style>
   </defs>
-  
+
   <text class="title" x="200" y="20">ROC Curve</text>
-  
-  <!-- Axes -->
+
   <line class="axis" x1="50" y1="250" x2="370" y2="250"/>
   <line class="axis" x1="50" y1="250" x2="50" y2="30"/>
-  
-  <!-- Labels -->
+
   <text class="text" x="210" y="280">False Positive Rate (FPR)</text>
   <text class="label" x="30" y="140" transform="rotate(-90, 30, 140)">True Positive Rate (TPR)</text>
-  
-  <!-- Tick marks -->
+
   <text class="label" x="50" y="265" style="text-anchor: middle;">0.0</text>
   <text class="label" x="210" y="265" style="text-anchor: middle;">0.5</text>
   <text class="label" x="370" y="265" style="text-anchor: middle;">1.0</text>
   <text class="label" x="42" y="254" style="text-anchor: end;">0.0</text>
   <text class="label" x="42" y="144" style="text-anchor: end;">0.5</text>
   <text class="label" x="42" y="34" style="text-anchor: end;">1.0</text>
-  
-  <!-- Random line -->
+
   <line class="random" x1="50" y1="250" x2="370" y2="30"/>
-  
-  <!-- Good model curve -->
+
   <path class="good" d="M 50,250 Q 100,250 150,180 Q 200,100 250,60 Q 300,40 370,30"/>
-  
-  <!-- Bad model curve -->
+
   <path class="bad" d="M 50,250 Q 100,250 150,220 Q 200,200 250,180 Q 300,150 370,120"/>
-  
-  <!-- Legend -->
-  <line class="good" x1="200" y1="50" x2="230" y2="50"/>
-  <text class="label" x="235" y="54">Good model (AUC ≈ 0.9)</text>
-  
-  <line class="random" x1="200" y1="70" x2="230" y2="70"/>
-  <text class="label" x="235" y="74">Random (AUC = 0.5)</text>
-  
-  <line class="bad" x1="200" y1="90" x2="230" y2="90"/>
-  <text class="label" x="235" y="94">Bad model (AUC < 0.5)</text>
+
+  <line class="good" x1="50" y1="50" x2="80" y2="50"/>
+  <text class="label" x="85" y="54">Good model (AUC &#x2248; 0.9)</text>
+
+  <line class="random" x1="50" y1="70" x2="80" y2="70"/>
+  <text class="label" x="85" y="74">Random (AUC = 0.5)</text>
+
+  <line class="bad" x1="50" y1="90" x2="80" y2="90"/>
+  <text class="label" x="85" y="94">Bad model (AUC &lt; 0.5)</text>
 </svg>

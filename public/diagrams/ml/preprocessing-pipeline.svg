@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 120" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 12px; font-weight: 600; text-anchor: middle; }
       .line { stroke: #C96A45; stroke-width: 2; fill: none; }
       .arrow { fill: #C96A45; }
@@ -10,25 +10,25 @@
       <polygon class="arrow" points="0 0, 10 3.5, 0 7"/>
     </marker>
   </defs>
-  
-  <rect class="box" x="5" y="30" width="110" height="50"/>
+
+  <rect class="box" x="5" y="30" width="110" height="50" rx="8"/>
   <text class="text" x="60" y="60">Raw Data</text>
-  
-  <rect class="box" x="150" y="30" width="110" height="50"/>
+
+  <rect class="box" x="150" y="30" width="110" height="50" rx="8"/>
   <text class="text" x="205" y="55">Handle Missing</text>
   <text class="text" x="205" y="70">Values</text>
-  
-  <rect class="box" x="295" y="30" width="110" height="50"/>
+
+  <rect class="box" x="295" y="30" width="110" height="50" rx="8"/>
   <text class="text" x="350" y="55">Encode</text>
   <text class="text" x="350" y="70">Categorical</text>
-  
-  <rect class="box" x="440" y="30" width="110" height="50"/>
+
+  <rect class="box" x="440" y="30" width="110" height="50" rx="8"/>
   <text class="text" x="495" y="55">Feature</text>
   <text class="text" x="495" y="70">Scaling</text>
-  
-  <rect class="box" x="585" y="30" width="110" height="50"/>
+
+  <rect class="box" x="585" y="30" width="110" height="50" rx="8"/>
   <text class="text" x="640" y="60">Split Data</text>
-  
+
   <line class="line" x1="115" y1="55" x2="145" y2="55" marker-end="url(#arr)"/>
   <line class="line" x1="260" y1="55" x2="290" y2="55" marker-end="url(#arr)"/>
   <line class="line" x1="405" y1="55" x2="435" y2="55" marker-end="url(#arr)"/>

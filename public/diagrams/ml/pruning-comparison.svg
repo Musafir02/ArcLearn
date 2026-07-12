@@ -1,64 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
-      .box-pruned { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
+      .box-pruned { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 11px; font-weight: 600; text-anchor: middle; }
       .text-sub { fill: #7A756A; font-size: 10px; text-anchor: middle; }
       .line { stroke: #C96A45; stroke-width: 2; fill: none; }
       .line-green { stroke: #4F7A5C; stroke-width: 2; fill: none; }
     </style>
   </defs>
-  
-  <!-- Full Tree -->
+
   <text class="text" x="150" y="20" font-size="12">Full Tree (Overfit)</text>
-  
-  <rect class="box" x="120" y="30" width="60" height="25"/>
+
+  <rect class="box" x="120" y="30" width="60" height="25" rx="8"/>
   <text class="text" x="150" y="47">Root</text>
-  
+
   <line class="line" x1="135" y1="55" x2="90" y2="75"/>
   <line class="line" x1="165" y1="55" x2="210" y2="75"/>
-  
-  <rect class="box" x="60" y="75" width="60" height="25"/>
+
+  <rect class="box" x="60" y="75" width="60" height="25" rx="8"/>
   <text class="text" x="90" y="92">L1</text>
-  
-  <rect class="box" x="180" y="75" width="60" height="25"/>
+
+  <rect class="box" x="180" y="75" width="60" height="25" rx="8"/>
   <text class="text" x="210" y="92">L2</text>
-  
+
   <line class="line" x1="75" y1="100" x2="50" y2="120"/>
   <line class="line" x1="105" y1="100" x2="130" y2="120"/>
   <line class="line" x1="195" y1="100" x2="170" y2="120"/>
   <line class="line" x1="225" y1="100" x2="250" y2="120"/>
-  
+
   <circle cx="50" cy="130" r="10" fill="#E8D4B8" stroke="#C96A45" stroke-width="1.5"/>
   <circle cx="130" cy="130" r="10" fill="#E8D4B8" stroke="#C96A45" stroke-width="1.5"/>
   <circle cx="170" cy="130" r="10" fill="#E8D4B8" stroke="#C96A45" stroke-width="1.5"/>
   <circle cx="250" cy="130" r="10" fill="#E8D4B8" stroke="#C96A45" stroke-width="1.5"/>
-  
-  <text class="text-sub" x="150" y="170">Captures every point</text>
-  <text class="text-sub" x="150" y="185">High variance</text>
-  
-  <!-- Pruned Tree -->
+
+  <text class="text-sub" x="150" y="165">Captures every point</text>
+  <text class="text-sub" x="150" y="182">High variance</text>
+
   <text class="text" x="450" y="20" font-size="12">Pruned Tree (Generalizes)</text>
-  
-  <rect class="box-pruned" x="420" y="30" width="60" height="25"/>
+
+  <rect class="box-pruned" x="420" y="30" width="60" height="25" rx="8"/>
   <text class="text" x="450" y="47">Root</text>
-  
+
   <line class="line-green" x1="435" y1="55" x2="400" y2="75"/>
   <line class="line-green" x1="465" y1="55" x2="500" y2="75"/>
-  
-  <rect class="box-pruned" x="370" y="75" width="60" height="25"/>
+
+  <rect class="box-pruned" x="370" y="75" width="60" height="25" rx="8"/>
   <text class="text" x="400" y="92">L1</text>
-  
-  <rect class="box-pruned" x="470" y="75" width="60" height="25"/>
+
+  <rect class="box-pruned" x="470" y="75" width="60" height="25" rx="8"/>
   <text class="text" x="500" y="92">L2</text>
-  
+
   <line class="line-green" x1="400" y1="100" x2="400" y2="120"/>
   <line class="line-green" x1="500" y1="100" x2="500" y2="120"/>
-  
+
   <circle cx="400" cy="130" r="10" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1.5"/>
   <circle cx="500" cy="130" r="10" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1.5"/>
-  
-  <text class="text-sub" x="450" y="170">Captures general patterns</text>
-  <text class="text-sub" x="450" y="185" style="fill: #4F7A5C;">Low variance, good fit</text>
+
+  <text class="text-sub" x="450" y="165">Captures general patterns</text>
+  <text class="text-sub" x="450" y="182" style="fill: #4F7A5C;">Low variance, good fit</text>
 </svg>

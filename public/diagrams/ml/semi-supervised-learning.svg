@@ -1,97 +1,84 @@
-<svg width="420" height="250" viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    text { font-family: 'Inter', sans-serif; }
-  </style>
-  
-  <!-- Background -->
-  <rect width="420" height="250" fill="#F8F7F4"/>
-  
-  <!-- Title -->
-  <text x="210" y="25" text-anchor="middle" font-size="16" font-weight="600" fill="#2D3748">Semi-Supervised Learning</text>
-  
-  <!-- Labeled Data Section -->
-  <rect x="20" y="50" width="100" height="180" rx="8" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1"/>
-  <text x="70" y="70" text-anchor="middle" font-size="11" font-weight="500" fill="#4F7A5C">Labeled Data</text>
-  
-  <!-- Labeled Points (Green) -->
-  <circle cx="50" cy="100" r="10" fill="#4F7A5C"/>
-  <text x="50" y="104" text-anchor="middle" font-size="8" fill="white">A</text>
-  
-  <circle cx="90" cy="100" r="10" fill="#4F7A5C"/>
-  <text x="90" y="104" text-anchor="middle" font-size="8" fill="white">B</text>
-  
-  <circle cx="70" cy="140" r="10" fill="#C96A45"/>
-  <text x="70" y="144" text-anchor="middle" font-size="8" fill="white">C</text>
-  
-  <circle cx="50" cy="180" r="10" fill="#4F7A5C"/>
-  <text x="50" y="184" text-anchor="middle" font-size="8" fill="white">D</text>
-  
-  <circle cx="90" cy="180" r="10" fill="#C96A45"/>
-  <text x="90" y="184" text-anchor="middle" font-size="8" fill="white">E</text>
-  
-  <!-- Arrow showing propagation direction -->
-  <line x1="130" y1="130" x2="170" y2="130" stroke="#5A6A8A" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="150" y="150" text-anchor="middle" font-size="9" fill="#5A6A8A">Propagate</text>
-  
-  <!-- Unlabeled Data Section -->
-  <rect x="180" y="50" width="100" height="180" rx="8" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1"/>
-  <text x="230" y="70" text-anchor="middle" font-size="11" font-weight="500" fill="#5A6A8A">Unlabeled Data</text>
-  
-  <!-- Unlabeled Points (Gray) -->
-  <circle cx="210" cy="100" r="10" fill="#9CA3AF"/>
-  <text x="210" y="104" text-anchor="middle" font-size="8" fill="white">?</text>
-  
-  <circle cx="250" cy="100" r="10" fill="#9CA3AF"/>
-  <text x="250" y="104" text-anchor="middle" font-size="8" fill="white">?</text>
-  
-  <circle cx="230" cy="140" r="10" fill="#9CA3AF"/>
-  <text x="230" y="144" text-anchor="middle" font-size="8" fill="white">?</text>
-  
-  <circle cx="210" cy="180" r="10" fill="#9CA3AF"/>
-  <text x="210" y="184" text-anchor="middle" font-size="8" fill="white">?</text>
-  
-  <circle cx="250" cy="180" r="10" fill="#9CA3AF"/>
-  <text x="250" y="184" text-anchor="middle" font-size="8" fill="white">?</text>
-  
-  <!-- Arrow to Pseudo-Labels -->
-  <line x1="290" y1="130" x2="330" y2="130" stroke="#5A6A8A" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="310" y="150" text-anchor="middle" font-size="9" fill="#5A6A8A">Assign</text>
-  
-  <!-- Pseudo-Labels Section -->
-  <rect x="340" y="50" width="70" height="180" rx="8" fill="#F1E0D6" stroke="#C96A45" stroke-width="1"/>
-  <text x="375" y="70" text-anchor="middle" font-size="11" font-weight="500" fill="#C96A45">Pseudo-Labels</text>
-  
-  <!-- Pseudo-Labeled Points -->
-  <circle cx="365" cy="100" r="10" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
-  <text x="365" y="104" text-anchor="middle" font-size="8" fill="white">A</text>
-  
-  <circle cx="395" cy="100" r="10" fill="#C96A45" stroke="#C96A45" stroke-width="2" stroke-dasharray="3,2"/>
-  <text x="395" y="104" text-anchor="middle" font-size="8" fill="white">C</text>
-  
-  <circle cx="365" cy="140" r="10" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
-  <text x="365" y="144" text-anchor="middle" font-size="8" fill="white">B</text>
-  
-  <circle cx="395" cy="140" r="10" fill="#C96A45" stroke="#C96A45" stroke-width="2" stroke-dasharray="3,2"/>
-  <text x="395" y="144" text-anchor="middle" font-size="8" fill="white">A</text>
-  
-  <circle cx="365" cy="180" r="10" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
-  <text x="365" y="184" text-anchor="middle" font-size="8" fill="white">B</text>
-  
-  <!-- Legend -->
-  <rect x="20" y="235" width="380" height="12" fill="none"/>
-  <circle cx="30" cy="241" r="5" fill="#4F7A5C"/>
-  <text x="40" y="244" font-size="8" fill="#2D3748">Class A</text>
-  <circle cx="80" cy="241" r="5" fill="#C96A45"/>
-  <text x="90" y="244" font-size="8" fill="#2D3748">Class B</text>
-  <circle cx="130" cy="241" r="5" fill="#9CA3AF"/>
-  <text x="140" y="244" font-size="8" fill="#2D3748">Unlabeled</text>
-  <circle cx="200" cy="241" r="5" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="1" stroke-dasharray="2,1"/>
-  <text x="210" y="244" font-size="8" fill="#2D3748">Pseudo-Label</text>
-  
-  <!-- Arrowhead marker -->
+<svg width="420" height="260" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#5A6A8A"/>
     </marker>
   </defs>
+  <style>
+    text { font-family: 'Inter', sans-serif; }
+  </style>
+
+  <rect width="420" height="260" fill="#F8F7F4"/>
+
+  <text x="210" y="25" text-anchor="middle" font-size="16" font-weight="600" fill="#2D3748">Semi-Supervised Learning</text>
+
+  <rect x="20" y="50" width="100" height="180" rx="8" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1"/>
+  <text x="70" y="70" text-anchor="middle" font-size="11" font-weight="500" fill="#4F7A5C">Labeled Data</text>
+
+  <circle cx="50" cy="100" r="10" fill="#4F7A5C"/>
+  <text x="50" y="104" text-anchor="middle" font-size="8" fill="white">A</text>
+
+  <circle cx="90" cy="100" r="10" fill="#4F7A5C"/>
+  <text x="90" y="104" text-anchor="middle" font-size="8" fill="white">B</text>
+
+  <circle cx="70" cy="140" r="10" fill="#C96A45"/>
+  <text x="70" y="144" text-anchor="middle" font-size="8" fill="white">C</text>
+
+  <circle cx="50" cy="180" r="10" fill="#4F7A5C"/>
+  <text x="50" y="184" text-anchor="middle" font-size="8" fill="white">D</text>
+
+  <circle cx="90" cy="180" r="10" fill="#C96A45"/>
+  <text x="90" y="184" text-anchor="middle" font-size="8" fill="white">E</text>
+
+  <line x1="130" y1="130" x2="170" y2="130" stroke="#5A6A8A" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="150" y="150" text-anchor="middle" font-size="9" fill="#5A6A8A">Propagate</text>
+
+  <rect x="180" y="50" width="100" height="180" rx="8" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1"/>
+  <text x="230" y="70" text-anchor="middle" font-size="11" font-weight="500" fill="#5A6A8A">Unlabeled Data</text>
+
+  <circle cx="210" cy="100" r="10" fill="#9CA3AF"/>
+  <text x="210" y="104" text-anchor="middle" font-size="8" fill="white">?</text>
+
+  <circle cx="250" cy="100" r="10" fill="#9CA3AF"/>
+  <text x="250" y="104" text-anchor="middle" font-size="8" fill="white">?</text>
+
+  <circle cx="230" cy="140" r="10" fill="#9CA3AF"/>
+  <text x="230" y="144" text-anchor="middle" font-size="8" fill="white">?</text>
+
+  <circle cx="210" cy="180" r="10" fill="#9CA3AF"/>
+  <text x="210" y="184" text-anchor="middle" font-size="8" fill="white">?</text>
+
+  <circle cx="250" cy="180" r="10" fill="#9CA3AF"/>
+  <text x="250" y="184" text-anchor="middle" font-size="8" fill="white">?</text>
+
+  <line x1="290" y1="130" x2="330" y2="130" stroke="#5A6A8A" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="310" y="150" text-anchor="middle" font-size="9" fill="#5A6A8A">Assign</text>
+
+  <rect x="340" y="50" width="70" height="180" rx="8" fill="#F1E0D6" stroke="#C96A45" stroke-width="1"/>
+  <text x="375" y="70" text-anchor="middle" font-size="11" font-weight="500" fill="#C96A45">Pseudo-Labels</text>
+
+  <circle cx="365" cy="100" r="10" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="365" y="104" text-anchor="middle" font-size="8" fill="white">A</text>
+
+  <circle cx="395" cy="100" r="10" fill="#C96A45" stroke="#C96A45" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="395" y="104" text-anchor="middle" font-size="8" fill="white">C</text>
+
+  <circle cx="365" cy="140" r="10" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="365" y="144" text-anchor="middle" font-size="8" fill="white">B</text>
+
+  <circle cx="395" cy="140" r="10" fill="#C96A45" stroke="#C96A45" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="395" y="144" text-anchor="middle" font-size="8" fill="white">A</text>
+
+  <circle cx="365" cy="180" r="10" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="365" y="184" text-anchor="middle" font-size="8" fill="white">B</text>
+
+  <rect x="20" y="242" width="380" height="14" fill="none"/>
+  <circle cx="30" cy="249" r="5" fill="#4F7A5C"/>
+  <text x="40" y="252" font-size="8" fill="#2D3748">Class A</text>
+  <circle cx="80" cy="249" r="5" fill="#C96A45"/>
+  <text x="90" y="252" font-size="8" fill="#2D3748">Class B</text>
+  <circle cx="130" cy="249" r="5" fill="#9CA3AF"/>
+  <text x="140" y="252" font-size="8" fill="#2D3748">Unlabeled</text>
+  <circle cx="200" cy="249" r="5" fill="#4F7A5C" stroke="#4F7A5C" stroke-width="1" stroke-dasharray="2,1"/>
+  <text x="210" y="252" font-size="8" fill="#2D3748">Pseudo-Label</text>
 </svg>

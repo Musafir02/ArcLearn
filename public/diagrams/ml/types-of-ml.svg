@@ -1,23 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Inter, sans-serif">
   <defs>
     <style>
-      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; rx: 8; }
-      .box-main { fill: #C96A45; stroke: #8B4513; stroke-width: 2; rx: 8; }
-      .box-green { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; rx: 8; }
-      .box-blue { fill: #D6DCE8; stroke: #5A6A8A; stroke-width: 2; rx: 8; }
-      .box-purple { fill: #E8D4E8; stroke: #8A5A8A; stroke-width: 2; rx: 8; }
+      .box { fill: #F1E0D6; stroke: #C96A45; stroke-width: 2; }
+      .box-main { fill: #C96A45; stroke: #8B4513; stroke-width: 2; }
+      .box-green { fill: #D4E8D4; stroke: #4F7A5C; stroke-width: 2; }
+      .box-blue { fill: #D6DCE8; stroke: #5A6A8A; stroke-width: 2; }
+      .box-purple { fill: #E8D4E8; stroke: #8A5A8A; stroke-width: 2; }
       .text { fill: #2B2A26; font-size: 13px; font-weight: 600; text-anchor: middle; }
       .text-main { fill: #fff; font-size: 16px; font-weight: 700; text-anchor: middle; }
       .text-sub { fill: #7A756A; font-size: 11px; text-anchor: middle; }
       .line { stroke: #C96A45; stroke-width: 2; fill: none; }
     </style>
   </defs>
-  
-  <!-- Main Box -->
-  <rect class="box-main" x="350" y="10" width="200" height="50"/>
+
+  <rect class="box-main" x="350" y="10" width="200" height="50" rx="8"/>
   <text class="text-main" x="450" y="42">Machine Learning</text>
-  
-  <!-- Lines from main -->
+
   <line class="line" x1="450" y1="60" x2="450" y2="85"/>
   <line class="line" x1="90" y1="85" x2="810" y2="85"/>
   <line class="line" x1="90" y1="85" x2="90" y2="105"/>
@@ -25,76 +23,67 @@
   <line class="line" x1="450" y1="85" x2="450" y2="105"/>
   <line class="line" x1="630" y1="85" x2="630" y2="105"/>
   <line class="line" x1="810" y1="85" x2="810" y2="105"/>
-  
-  <!-- Level 1 - 5 Types -->
-  <rect class="box" x="0" y="105" width="180" height="45"/>
+
+  <rect class="box" x="0" y="105" width="180" height="45" rx="8"/>
   <text class="text" x="90" y="133">Supervised</text>
-  
-  <rect class="box-green" x="185" y="105" width="180" height="45"/>
+
+  <rect class="box-green" x="185" y="105" width="180" height="45" rx="8"/>
   <text class="text" x="275" y="133">Semi-Supervised</text>
-  
-  <rect class="box" x="370" y="105" width="180" height="45"/>
+
+  <rect class="box" x="370" y="105" width="180" height="45" rx="8"/>
   <text class="text" x="460" y="133">Unsupervised</text>
-  
-  <rect class="box-blue" x="555" y="105" width="160" height="45"/>
+
+  <rect class="box-blue" x="555" y="105" width="160" height="45" rx="8"/>
   <text class="text" x="635" y="133">Reinforcement</text>
-  
-  <rect class="box-purple" x="720" y="105" width="170" height="45"/>
+
+  <rect class="box-purple" x="720" y="105" width="170" height="45" rx="8"/>
   <text class="text" x="805" y="133">Self-Supervised</text>
-  
-  <!-- Lines Level 1 to 2 -->
+
   <line class="line" x1="55" y1="150" x2="55" y2="175"/>
   <line class="line" x1="145" y1="150" x2="145" y2="175"/>
   <line class="line" x1="275" y1="150" x2="275" y2="175"/>
   <line class="line" x1="460" y1="150" x2="460" y2="175"/>
   <line class="line" x1="635" y1="150" x2="635" y2="175"/>
   <line class="line" x1="805" y1="150" x2="805" y2="175"/>
-  
-  <!-- Level 2 - Supervised -->
-  <rect class="box" x="0" y="175" width="100" height="40"/>
+
+  <rect class="box" x="0" y="175" width="100" height="40" rx="8"/>
   <text class="text" x="50" y="200">Classification</text>
-  <text class="text-sub" x="50" y="235">Spam Detection</text>
-  
-  <rect class="box" x="105" y="175" width="90" height="40"/>
+  <text class="text-sub" x="50" y="232">Spam Detection</text>
+
+  <rect class="box" x="105" y="175" width="90" height="40" rx="8"/>
   <text class="text" x="150" y="200">Regression</text>
-  <text class="text-sub" x="150" y="235">House Price</text>
-  
-  <!-- Level 2 - Semi-Supervised -->
-  <rect class="box-green" x="220" y="175" width="110" height="40"/>
+  <text class="text-sub" x="150" y="232">House Price</text>
+
+  <rect class="box-green" x="220" y="175" width="110" height="40" rx="8"/>
   <text class="text" x="275" y="200">Pseudo-Label</text>
-  <text class="text-sub" x="275" y="235">Semi-Supervised</text>
-  
-  <!-- Level 2 - Unsupervised -->
-  <rect class="box" x="400" y="175" width="120" height="40"/>
+  <text class="text-sub" x="275" y="232">Semi-Supervised</text>
+
+  <rect class="box" x="400" y="175" width="120" height="40" rx="8"/>
   <text class="text" x="460" y="200">Clustering</text>
-  <text class="text-sub" x="460" y="235">Customer Segments</text>
-  
-  <!-- Level 2 - Reinforcement -->
-  <rect class="box-blue" x="575" y="175" width="120" height="40"/>
+  <text class="text-sub" x="460" y="232">Customer Segments</text>
+
+  <rect class="box-blue" x="575" y="175" width="120" height="40" rx="8"/>
   <text class="text" x="635" y="200">Q-Learning</text>
-  <text class="text-sub" x="635" y="235">Game AI</text>
-  
-  <!-- Level 2 - Self-Supervised -->
-  <rect class="box-purple" x="745" y="175" width="120" height="40"/>
+  <text class="text-sub" x="635" y="232">Game AI</text>
+
+  <rect class="box-purple" x="745" y="175" width="120" height="40" rx="8"/>
   <text class="text" x="805" y="200">Pretext Tasks</text>
-  <text class="text-sub" x="805" y="235">LLMs / MAE</text>
-  
-  <!-- Labels -->
-  <text class="text-sub" x="450" y="280" font-size="12" fill="#999">Labeled data → | Unlabeled +少量 labels → | Unlabeled only → | Agent + Reward → | Auto-labels →</text>
-  
-  <!-- Legend -->
-  <rect x="100" y="310" width="700" height="70" rx="8" fill="#F8F7F4" stroke="#ddd" stroke-width="1"/>
-  <text x="450" y="335" class="text" font-size="12" fill="#7A756A">2026 ML Landscape</text>
-  
-  <rect x="130" y="350" width="12" height="12" rx="2" fill="#F1E0D6" stroke="#C96A45"/>
-  <text x="150" y="361" class="text-sub" font-size="10">Classic</text>
-  
-  <rect x="250" y="350" width="12" height="12" rx="2" fill="#D4E8D4" stroke="#4F7A5C"/>
-  <text x="270" y="361" class="text-sub" font-size="10">Hybrid</text>
-  
-  <rect x="370" y="350" width="12" height="12" rx="2" fill="#D6DCE8" stroke="#5A6A8A"/>
-  <text x="390" y="361" class="text-sub" font-size="10">Agent-based</text>
-  
-  <rect x="520" y="350" width="12" height="12" rx="2" fill="#E8D4E8" stroke="#8A5A8A"/>
-  <text x="540" y="361" class="text-sub" font-size="10">Foundation Models</text>
+  <text class="text-sub" x="805" y="232">LLMs / MAE</text>
+
+  <text class="text-sub" x="450" y="270" font-size="11" fill="#999">Labeled &#x2192; | Unlabeled + few labels &#x2192; | Unlabeled only &#x2192; | Agent + Reward &#x2192; | Auto-labels &#x2192;</text>
+
+  <rect x="100" y="295" width="700" height="70" rx="8" fill="#F8F7F4" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="320" class="text" font-size="12" fill="#7A756A">2026 ML Landscape</text>
+
+  <rect x="130" y="335" width="12" height="12" rx="2" fill="#F1E0D6" stroke="#C96A45"/>
+  <text x="148" y="345" class="text-sub" style="text-anchor: start; font-size: 10px;">Classic</text>
+
+  <rect x="250" y="335" width="12" height="12" rx="2" fill="#D4E8D4" stroke="#4F7A5C"/>
+  <text x="268" y="345" class="text-sub" style="text-anchor: start; font-size: 10px;">Hybrid</text>
+
+  <rect x="370" y="335" width="12" height="12" rx="2" fill="#D6DCE8" stroke="#5A6A8A"/>
+  <text x="388" y="345" class="text-sub" style="text-anchor: start; font-size: 10px;">Agent-based</text>
+
+  <rect x="520" y="335" width="12" height="12" rx="2" fill="#E8D4E8" stroke="#8A5A8A"/>
+  <text x="538" y="345" class="text-sub" style="text-anchor: start; font-size: 10px;">Foundation Models</text>
 </svg>

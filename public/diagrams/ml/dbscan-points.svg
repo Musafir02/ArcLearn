@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Inter, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="Inter, sans-serif">
   <defs>
     <style>
       .core { fill: #C96A45; }
@@ -8,34 +8,29 @@
       .label { fill: #7A756A; font-size: 10px; text-anchor: start; }
     </style>
   </defs>
-  
-  <!-- Title -->
+
   <text class="text" x="200" y="20" font-size="12">DBSCAN Point Types</text>
-  
-  <!-- Core points -->
+
   <circle class="core" cx="80" cy="80" r="10"/>
   <circle class="core" cx="100" cy="100" r="10"/>
   <circle class="core" cx="120" cy="80" r="10"/>
   <circle class="core" cx="100" cy="120" r="10"/>
   <circle class="core" cx="80" cy="100" r="10"/>
   <circle class="core" cx="120" cy="100" r="10"/>
-  
-  <!-- Border points -->
+
   <circle class="border" cx="160" cy="90" r="8"/>
   <circle class="border" cx="60" cy="140" r="8"/>
-  
-  <!-- Noise points -->
+
   <circle class="noise" cx="250" cy="70" r="8"/>
   <circle class="noise" cx="280" cy="120" r="8"/>
   <circle class="noise" cx="320" cy="90" r="8"/>
-  
-  <!-- Legend -->
+
   <circle class="core" cx="50" cy="190" r="8"/>
-  <text class="label" x="70" y="194">Core Point (≥ MinPts within ε)</text>
-  
+  <text class="label" x="70" y="194">Core Point (&#x2265; MinPts within &#x3B5;)</text>
+
   <circle class="border" cx="50" cy="215" r="8"/>
-  <text class="label" x="70" y="219">Border Point (within ε of core)</text>
-  
+  <text class="label" x="70" y="219">Border Point (within &#x3B5; of core)</text>
+
   <circle class="noise" cx="50" cy="240" r="8"/>
   <text class="label" x="70" y="244">Noise Point (neither core nor border)</text>
 </svg>

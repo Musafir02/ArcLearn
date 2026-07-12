@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" font-family="Inter, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 210" font-family="Inter, sans-serif">
   <defs>
     <style>
       .axis { stroke: #2B2A26; stroke-width: 2; }
@@ -16,26 +16,19 @@
     </marker>
   </defs>
 
-  <!-- Title -->
   <text class="text-title" x="250" y="20">Data Drift Detection (Distribution Shift)</text>
 
-  <!-- Legend -->
   <circle cx="80" cy="40" r="5" fill="#4F7A5C"/>
   <text class="text-label" style="text-anchor: start;" x="90" y="44">Training Data (Baseline)</text>
 
   <circle cx="320" cy="40" r="5" fill="#C96A45"/>
   <text class="text-label" style="text-anchor: start;" x="330" y="44">Production Data (Shifted)</text>
 
-  <!-- Axis -->
   <line class="axis" x1="30" y1="160" x2="470" y2="160"/>
 
-  <!-- Curves -->
-  <!-- Train Curve -->
   <path class="curve-train" d="M 50,160 C 110,160 120,60 170,60 C 220,60 230,160 290,160"/>
-  <!-- Production Curve -->
   <path class="curve-prod" d="M 150,160 C 210,160 230,90 290,90 C 350,90 370,160 430,160"/>
 
-  <!-- Means -->
   <line class="mean-line" x1="170" y1="60" x2="170" y2="160"/>
   <text class="text-sub" x="170" y="175">Mean = 50</text>
   <text class="text-sub" x="170" y="187">(Std = 10)</text>
@@ -44,7 +37,6 @@
   <text class="text-sub" x="290" y="175">Mean = 55</text>
   <text class="text-sub" x="290" y="187">(Std = 15)</text>
 
-  <!-- Drift Arrow -->
   <path class="drift-arrow" d="M 180,75 Q 235,70 280,85" marker-end="url(#arr)"/>
   <text class="text-label" style="fill: #4A6FA5;" x="235" y="65">Data Drift</text>
 </svg>
