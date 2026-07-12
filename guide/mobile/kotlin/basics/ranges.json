@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Ranges",
+  "language": "kotlin",
+  "topic": "ranges",
+  "order": 15,
+  "nextTopic": "functions",
+  "prevTopic": "when_expression",
+  "content": "### Ranges in Kotlin\n\nRanges are a built-in concept in Kotlin for representing intervals of values. They are commonly used with loops and conditions.\n\n---\n\n### Creating Ranges\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| `..` | Creates an inclusive range | `1..5` creates range 1,2,3,4,5 |\n| `..<` | Creates an exclusive range | `1..<5` creates range 1,2,3,4 |\n| `downTo` | Creates a descending range | `5 downTo 1` creates 5,4,3,2,1 |\n| `step` | Defines step value | `1..10 step 2` creates 1,3,5,7,9 |\n\n---\n\n### Range Types\n\n| Type | Example |\n|------|---------|\n| `IntRange` | `1..10` |\n| `LongRange` | `1L..10L` |\n| `CharRange` | `'a'..'z'` |\n\n---\n\n### Iterating Over Ranges\n\n```kotlin\nfor (i in 1..5) {\n    print(\"$i \")  // 1 2 3 4 5\n}\n\nfor (i in 1 until 5) {\n    print(\"$i \")  // 1 2 3 4\n}\n\nfor (i in 10 downTo 1 step 2) {\n    print(\"$i \")  // 10 8 6 4 2\n}\n```\n\n---\n\n### Checking Membership with `in`\n\n```kotlin\nval number = 7\nval isInRange = number in 1..10  // true\nval isNotInRange = number !in 1..5  // true\n\nval letter = 'c'\nif (letter in 'a'..'z') {\n    println(\"Lowercase letter\")\n}\n```\n\n---\n\n### Ranges in When Expressions\n\n```kotlin\nval score = 85\nval grade = when (score) {\n    in 90..100 -> \"A\"\n    in 80..89 -> \"B\"\n    in 70..79 -> \"C\"\n    in 60..69 -> \"D\"\n    else -> \"F\"\n}\n```\n\n---\n\n### Range Utility Functions\n\n```kotlin\nval range = 1..10\nprintln(range.first)    // 1\nprintln(range.last)     // 10\nprintln(range.step)     // 1\nprintln(range.count())  // 10\nprintln(range.contains(5))  // true\nprintln(range.isEmpty())  // false\n```\n\n> **Key Point:** Ranges are inclusive by default (`..`). Use `until` or `..<` for exclusive ranges.",
+  "codeExample": "fun main() {\n    println(\"Forward range:\")\n    for (i in 1..5) print(\"$i \")\n    println()\n    \n    println(\"With step:\")\n    for (i in 1..10 step 2) print(\"$i \")\n    println()\n    \n    println(\"Downward:\")\n    for (i in 5 downTo 1) print(\"$i \")\n    println()\n    \n    val x = 7\n    println(\"$x in 1..10: ${x in 1..10}\")\n    println(\"'c' in 'a'..'z': ${'c' in 'a'..'z'}\")\n}",
+  "quiz": [
+    {
+      "question": "What does the range 1..5 include?",
+      "options": ["1,2,3,4,5", "1,2,3,4", "0,1,2,3,4,5", "1,2,3"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which operator creates an exclusive range?",
+      "options": ["..", "..<", "until", "Both ..< and until"],
+      "correctIndex": 3
+    }
+  ]
+}

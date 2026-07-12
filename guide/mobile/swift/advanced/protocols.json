@@ -1,0 +1,22 @@
+{
+  "title": "Swift Protocols",
+  "language": "swift",
+  "topic": "protocols",
+  "order": 62,
+  "nextTopic": "protocol_inheritance",
+  "prevTopic": "enum_raw",
+  "content": "### Swift Protocols\n\nProtocols define a blueprint of methods, properties, and requirements that conforming types must implement. They are fundamental to Swift's protocol-oriented programming paradigm.\n\n**Protocol Syntax:**\n\n```swift\nprotocol ProtocolName {\n    // Property requirements\n    var readable: String { get }\n    var readwrite: Int { get set }\n    \n    // Method requirements\n    func method() -> ReturnType\n    mutating func mutatingMethod()\n    \n    // Initializer requirements\n    init(parameter: Type)\n}\n```\n\n**Conforming to a Protocol:**\n\n```swift\nprotocol Vehicle {\n    var speed: Double { get set }\n    func move() -> String\n}\n\nstruct Car: Vehicle {\n    var speed: Double = 0.0\n    \n    func move() -> String {\n        return \"Car moves at \\(speed) km/h\"\n    }\n}\n\nstruct Bicycle: Vehicle {\n    var speed: Double = 0.0\n    \n    func move() -> String {\n        return \"Bicycle moves at \\(speed) km/h\"\n    }\n}\n```\n\n**Property Requirements:**\n\n| Declaration | Meaning |\n|-------------|---------|\n| `{ get }` | At least readable (constant or variable) |\n| `{ get set }` | Both readable and writable |\n| `static var` | Type property requirement |\n\n```swift\nprotocol Named {\n    var name: String { get }\n}\n\nstruct Person: Named {\n    let name: String  // Satisfies { get }\n}\n\nstruct MutablePerson: Named {\n    var name: String  // Also satisfies { get }\n}\n```\n\n**Protocol as Type:**\n\n```swift\n// Protocol used as a type\nlet vehicles: [Vehicle] = [Car(speed: 120), Bicycle(speed: 25)]\n\n// Protocol as parameter\nfunc race(vehicles: [Vehicle]) {\n    for v in vehicles {\n        print(v.move())\n    }\n}\n\n// Protocol as return type\nfunc createVehicle() -> Vehicle {\n    return Car(speed: 100)\n}\n```\n\n> **Key Point:** Protocols are types. You can use them as parameter types, return types, and in collections. This enables polymorphism without inheritance.\n\nClasses, structs, and enums can all conform to protocols. A type can conform to multiple protocols:\n\n```swift\nstruct MyType: ProtocolOne, ProtocolTwo {\n    // Must implement all requirements\n}\n```",
+  "codeExample": "import Foundation\n\nprotocol Describable {\n    var description: String { get }\n    func describe() -> String\n}\n\nprotocol Resettable {\n    mutating func reset()\n}\n\nstruct User: Describable, Resettable {\n    var name: String\n    var age: Int\n    \n    var description: String {\n        \"\\(name), \\(age) years old\"\n    }\n    \n    func describe() -> String {\n        \"User: \\(description)\"\n    }\n    \n    mutating func reset() {\n        name = \"\"\n        age = 0\n    }\n}\n\nvar user = User(name: \"Alice\", age: 30)\nprint(user.describe())\nuser.reset()\nprint(user.describe())\n\n// Protocol as type\nfunc printDescriptions(_ items: [Describable]) {\n    for item in items {\n        print(item.describe())\n    }\n}\n\nlet items: [Describable] = [\n    User(name: \"Bob\", age: 25),\n    User(name: \"Charlie\", age: 35)\n]\nprintDescriptions(items)",
+  "quiz": [
+    {
+      "question": "Can structs conform to protocols?",
+      "options": ["Yes", "No, only classes", "Only if they are mutable", "Only for specific protocols"],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many protocols can a type conform to?",
+      "options": ["One", "Two", "Multiple", "Up to 5"],
+      "correctIndex": 2
+    }
+  ]
+}

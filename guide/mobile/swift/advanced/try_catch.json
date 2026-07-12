@@ -1,0 +1,22 @@
+{
+  "title": "Swift Do-Catch and Try",
+  "language": "swift",
+  "topic": "try_catch",
+  "order": 72,
+  "nextTopic": "throws",
+  "prevTopic": "error_handling",
+  "content": "### Swift Do-Catch and Try\n\nThe `do-catch` statement handles errors thrown by functions. Combined with `try`, `try?`, and `try!`, it provides flexible error handling patterns.\n\n**Do-Catch Syntax:**\n\n```swift\ndo {\n    let result = try throwingFunction()\n    // Use result\n} catch pattern1 {\n    // Handle specific error\n} catch pattern2 where condition {\n    // Handle with condition\n} catch {\n    // Catch-all handler\n}\n```\n\n**Catching Specific Errors:**\n\n```swift\nenum MathError: Error {\n    case divisionByZero\n    case negativeSquareRoot\n    case outOfRange(value: Int)\n}\n\nfunc safeDivide(_ a: Int, by b: Int) throws -> Int {\n    guard b != 0 else { throw MathError.divisionByZero }\n    return a / b\n}\n\ndo {\n    let result = try safeDivide(10, by: 0)\n    print(\"Result: \\(result)\")\n} catch MathError.divisionByZero {\n    print(\"Cannot divide by zero!\")\n} catch {\n    print(\"Other error: \\(error)\")\n}\n```\n\n**Try Variants:**\n\n| Variant | Behavior | When to Use |\n|---------|----------|-------------|\n| `try` | Must be in do-catch or throwing function | Normal handling |\n| `try?` | Returns nil on error | Ignore error details |\n| `try!` | Crashes on error | Guaranteed no error |\n\n```swift\n// try? - convert error to optional\nlet optionalResult = try? safeDivide(10, by: 2)\nprint(optionalResult ?? 0)  // 5\n\nlet failedResult = try? safeDivide(10, by: 0)\nprint(failedResult ?? 0)  // 0 (nil returned, no crash)\n\n// try! - force unwrap (use only when certain)\nlet guaranteedResult = try! safeDivide(10, by: 2)\nprint(guaranteedResult)  // 5\n```\n\n**Catching Multiple Error Types:**\n\n```swift\ndo {\n    let data = try loadData()\n    let parsed = try parse(data)\n    try save(parsed)\n} catch is NetworkError {\n    print(\"Network issue\")\n} catch let error as FileError {\n    print(\"File problem: \\(error)\")\n} catch let error where error.localizedDescription.contains(\"timeout\") {\n    print(\"Operation timed out\")\n} catch {\n    print(\"Unknown: \\(error)\")\n}\n```\n\n**Cleanup with Defer:**\n\n```swift\nfunc processFile() throws {\n    let file = open()\n    defer { close(file) }  // Always executes on exit\n    \n    try write(file, data: \"Hello\")\n    try process(file)\n    // defer runs here even if above throws\n}\n```\n\n> **Key Point:** Use `try?` when you don't care about the specific error. Use `try!` only when you are absolutely certain the operation won't fail (e.g., loading bundled resources).\n\nDefer statements execute in reverse order of declaration when the current scope is exited, regardless of how the scope exits (success, error, or return).",
+  "codeExample": "import Foundation\n\nenum FileSystemError: Error {\n    case fileNotFound(path: String)\n    case permissionDenied\n    case diskFull(spaceRequired: Int)\n}\n\nfunc readConfiguration(path: String) throws -> String {\n    guard path.hasSuffix(\".json\") else {\n        throw FileSystemError.fileNotFound(path: path)\n    }\n    return \"{\\\"setting\\\": \\\"value\\\"}\"\n}\n\n// Multiple catch patterns\nfunc loadConfig(from path: String) {\n    do {\n        let content = try readConfiguration(path: path)\n        print(\"Loaded config: \\(content)\")\n    } catch FileSystemError.fileNotFound(let path) {\n        print(\"Config file not found at \\(path)\")\n    } catch FileSystemError.permissionDenied {\n        print(\"Permission denied\")\n    } catch FileSystemError.diskFull(let required) {\n        print(\"Need \\(required)MB free space\")\n    } catch {\n        print(\"Unknown error: \\(error)\")\n    }\n}\n\n// try? usage\nif let config = try? readConfiguration(path: \"settings.json\") {\n    print(\"Config: \\(config)\")\n} else {\n    print(\"Could not load config\")\n}\n\nloadConfig(from: \"config.json\")\nloadConfig(from: \"data.txt\")",
+  "quiz": [
+    {
+      "question": "What happens if 'try!' encounters an error?",
+      "options": ["Returns nil", "Throws error to caller", "Runtime crash", "Catches in default handler"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What statement ensures cleanup code runs regardless of errors?",
+      "options": ["cleanup", "finally", "defer", "ensure"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Swift Argument Labels",
+  "language": "swift",
+  "topic": "argument_labels",
+  "order": 38,
+  "nextTopic": "variadic",
+  "prevTopic": "return_values",
+  "content": "### Swift Argument Labels\n\nSwift functions use both internal parameter names (used inside the function) and external argument labels (used when calling). This allows for expressive, readable function calls.\n\n**Argument Label Syntax:**\n\n```swift\nfunc functionName(external internal: Type) {\n    // internal is used inside\n}\n\nfunc greet(to person: String, with message: String) {\n    print(\"\\(message), \\(person)!\")\n}\n\ngreet(to: \"Alice\", with: \"Hello\")\n// Reads like a natural sentence\n```\n\n**Label Variations:**\n\n| Pattern | Declaration | Call Example |\n|---------|-------------|--------------|\n| Same label | `func greet(name: String)` | `greet(name: \"Alice\")` |\n| Different label | `func greet(to name: String)` | `greet(to: \"Alice\")` |\n| No label | `func greet(_ name: String)` | `greet(\"Alice\")` |\n| Default label | `func greet(person: String = \"Guest\")` | `greet()` or `greet(person: \"Alice\")` |\n\n```swift\n// Same internal and external\nfunc sayHello(name: String) {\n    print(\"Hello, \\(name)\")\n}\n\n// Different external and internal\nfunc sendMessage(to recipient: String, withBody body: String) {\n    print(\"To: \\(recipient)\")\n    print(\"Body: \\(body)\")\n}\n\n// No external label\nfunc double(_ number: Int) -> Int {\n    return number * 2\n}\n\nsayHello(name: \"Bob\")\nsendMessage(to: \"Alice\", withBody: \"See you later!\")\nprint(double(5))  // 10\n```\n\n> **Key Point:** Argument labels improve readability by making function calls read like natural language. Swift convention is to omit the first label when it matches the function name semantically.\n\nMethods on types follow different conventions: the first parameter often omits its label, and subsequent parameters typically include labels.",
+  "codeExample": "import Foundation\n\n// Different internal/external labels\nfunc configureSession(name: String, durationInMinutes duration: Int, from startTime: String) -> String {\n    return \"Session '\\(name)' will run for \\(duration) minutes starting at \\(startTime)\"\n}\n\nprint(configureSession(name: \"Swift Basics\", durationInMinutes: 60, from: \"10:00 AM\"))\n\n// Omitting labels with underscore\nfunc add(_ a: Int, _ b: Int) -> Int {\n    a + b\n}\n\nfunc subtract(from a: Int, _ b: Int) -> Int {\n    a - b\n}\n\nprint(add(10, 5))\nprint(subtract(from: 10, 5))\n\n// Mixed labels\nfunc createUser(_ username: String, email: String, age: Int = 0) -> String {\n    return \"User: \\(username), Email: \\(email), Age: \\(age)\"\n}\n\nprint(createUser(\"john_doe\", email: \"john@example.com\", age: 25))",
+  "quiz": [
+    {
+      "question": "What does an underscore `_` as an argument label do?",
+      "options": ["Makes parameter optional", "Omits the external label", "Sets default value", "Makes parameter variadic"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can the external and internal parameter names differ?",
+      "options": ["Yes", "No, must be same", "Only for optional parameters", "Only for the first parameter"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Swift Guard",
+  "language": "swift",
+  "topic": "guard",
+  "order": 18,
+  "nextTopic": "conditions",
+  "prevTopic": "optional_chaining",
+  "content": "### Swift Guard\n\nThe `guard` statement is used for early exit from a scope when a condition fails. It improves code readability by reducing nested `if-let` blocks and keeping the happy path unindented.\n\n**Guard Syntax:**\n\n```swift\nfunc processUser(name: String?) {\n    guard let validName = name else {\n        print(\"Name is required\")\n        return\n    }\n    // validName is available here (non-optional)\n    print(\"Hello, \\(validName)!\")\n}\n```\n\n**Guard vs If-Let:**\n\n| Aspect | `guard let` | `if let` |\n|--------|-------------|----------|\n| Scope | Variable available in outer scope | Variable only inside block |\n| Purpose | Early exit for invalid conditions | Handle both branches |\n| Required | Must exit scope (return, break, throw) | Optional else block |\n| Readability | Reduces nesting | Can create deep nesting |\n\n```swift\n// With guard - flat\nfunc divide(_ a: Int, by b: Int) -> Int? {\n    guard b != 0 else { return nil }\n    return a / b\n}\n\n// Without guard - nested\nfunc divideNested(_ a: Int, by b: Int) -> Int? {\n    if b != 0 {\n        return a / b\n    } else {\n        return nil\n    }\n}\n```\n\n> **Key Point:** The `guard` statement must exit the current scope using `return`, `break`, `continue`, `throw`, or call a `never` function like `fatalError()`.\n\nGuard can also check boolean conditions with `guard condition else { }` syntax.",
+  "codeExample": "import Foundation\n\nfunc login(username: String?, password: String?) {\n    guard let user = username, !user.isEmpty else {\n        print(\"Username is required\")\n        return\n    }\n    \n    guard let pass = password, pass.count >= 6 else {\n        print(\"Password must be at least 6 characters\")\n        return\n    }\n    \n    // Both values are safely unwrapped and validated\n    print(\"Logging in \\(user) with password hash \\(pass.hashValue)\")\n}\n\nlogin(username: \"alice\", password: nil)\nlogin(username: \"bob\", password: \"secret123\")\n\n// Guard with multiple conditions\nfunc process(age: Int?) {\n    guard let age = age, age >= 18 else {\n        print(\"Must be 18 or older\")\n        return\n    }\n    print(\"Age \\(age) is valid\")\n}",
+  "quiz": [
+    {
+      "question": "What must a guard else block do?",
+      "options": ["Assign a default value", "Exit the current scope", "Print an error", "Return nil"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is the unwrapped variable from guard let available outside the else block?",
+      "options": ["Yes", "No", "Only in the same function", "Only if non-optional"],
+      "correctIndex": 0
+    }
+  ]
+}

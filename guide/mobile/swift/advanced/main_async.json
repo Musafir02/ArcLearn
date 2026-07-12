@@ -1,0 +1,22 @@
+{
+  "title": "Swift MainActor and @main",
+  "language": "swift",
+  "topic": "main_async",
+  "order": 77,
+  "nextTopic": "swiftui_intro",
+  "prevTopic": "sendable",
+  "content": "### Swift MainActor and @main\n\n`@MainActor` ensures that code runs on the main thread, which is essential for UI updates. `@main` designates the entry point of a Swift program.\n\n**@MainActor:**\n\n```swift\nimport SwiftUI\n\n@MainActor\nclass ViewModel: ObservableObject {\n    @Published var name = \"\"\n    \n    func loadData() async {\n        // Runs on main actor automatically\n        name = await fetchFromServer()\n    }\n}\n\n// Mark specific methods\nclass DataManager {\n    @MainActor\n    func updateUI() {\n        // Must be called on main thread\n    }\n}\n```\n\n**MainActor Usage:**\n\n| Pattern | Syntax | Effect |\n|---------|--------|--------|\n| Type annotation | `@MainActor class` | All methods on main |\n| Method annotation | `@MainActor func` | Specific method on main |\n| Closure | `MainActor.run { }` | Run block on main |\n| Property | `@MainActor var` | Property access on main |\n\n```swift\n// Switching to main actor\nTask {\n    // On background\n    let data = await fetchData()\n    \n    // Switch to main\n    await MainActor.run {\n        self.textLabel.text = data\n    }\n}\n```\n\n**@main Entry Point:**\n\n```swift\n// Command-line tool entry point\n@main\nstruct MyApp {\n    static func main() {\n        print(\"Hello, World!\")\n    }\n}\n\n// SwiftUI app entry point\n@main\nstruct MyApp: App {\n    var body: some Scene {\n        WindowGroup {\n            ContentView()\n        }\n    }\n}\n```\n\n**Global Actors:**\n\n```swift\n@globalActor actor DataActor {\n    static let shared = DataActor()\n}\n\n@DataActor\nclass DataRepository {\n    // All access goes through DataActor\n    private var cache: [String: Any] = [:]\n}\n```\n\n**Checking if on Main Thread:**\n\n```swift\nif Thread.isMainThread {\n    print(\"On main thread\")\n} else {\n    DispatchQueue.main.async {\n        // Get to main thread\n    }\n}\n```\n\n> **Key Point:** The `@MainActor` annotation is checked at compile time. It eliminates the need for `DispatchQueue.main.async` in most cases, as the compiler ensures main-thread execution.\n\nSwiftUI views automatically run on `@MainActor` because the `View` protocol is annotated with `@MainActor`.",
+  "codeExample": "import Foundation\n\n// @main entry point for command-line tool\n@main\nstruct SwiftGuideApp {\n    static func main() async {\n        print(\"Swift Guide - Async Examples\")\n        \n        let viewModel = await MyViewModel()\n        await viewModel.loadData()\n        \n        print(\"Done\")\n    }\n}\n\n@MainActor\nclass MyViewModel {\n    var items: [String] = []\n    \n    func loadData() async {\n        print(\"Loading data on main actor...\")\n        \n        // Fetch on background\n        let fetched = await fetchItems()\n        \n        // Update on main (automatically)\n        items = fetched\n        print(\"Items: \\(items)\")\n    }\n    \n    private func fetchItems() async -> [String] {\n        // Simulate network call\n        try? await Task.sleep(nanoseconds: 1_000_000_000)\n        return [\"Item 1\", \"Item 2\", \"Item 3\"]\n    }\n}\n\n// This program runs from @main",
+  "quiz": [
+    {
+      "question": "What does @MainActor ensure?",
+      "options": ["Async execution", "Main thread execution", "Background execution", "Thread safety"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword marks the program entry point?",
+      "options": ["@entry", "@main", "@start", "@begin"],
+      "correctIndex": 1
+    }
+  ]
+}

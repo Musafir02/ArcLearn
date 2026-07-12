@@ -1,0 +1,22 @@
+{
+  "title": "Metadata and Annotations in Dart",
+  "language": "dart",
+  "topic": "metadata_annotations",
+  "order": 48,
+  "nextTopic": "json_serialization",
+  "prevTopic": "extensions",
+  "content": "### Annotations Basics\n\nAnnotations (metadata) start with `@` and provide additional information about code elements.\n\n```dart\n@Deprecated('Use newMethod instead')\nvoid oldMethod() {\n  // ...\n}\n\n@override\nvoid someMethod() {\n  // ...\n}\n\nvoid main() {\n  oldMethod(); // Shows deprecation warning\n}\n```\n\n### Built-in Annotations\n\n| Annotation | Purpose |\n|------------|---------|\n| `@override` | Indicates method override |\n| `@Deprecated('message')` | Marks as deprecated with message |\n| `@deprecated` | Marks as deprecated (no message) |\n| `@pragma('...')` | Compiler directives |\n| `@immutable` | Class should be immutable |\n| `@required` | (Dart 2) Named param required |\n\n### Custom Annotations\n\n```dart\nclass Todo {\n  final String who;\n  final String what;\n  final DateTime when;\n\n  const Todo(this.who, this.what, this.when);\n}\n\n@Todo('Alice', 'Implement error handling', DateTime(2025, 12, 31))\nvoid processData() {\n  // TODO: Implement\n}\n\nvoid main() {\n  // Annotations can be retrieved at runtime\n}\n```\n\n### Retrieving Annotations with Reflection\n\n```dart\nimport 'dart:mirrors';\n\nclass Important {\n  final String reason;\n  const Important(this.reason);\n}\n\n@Important('Core business logic')\nclass BusinessRule {\n  void execute() {}\n}\n\nvoid main() {\n  // Using dart:mirrors (not available in Flutter)\n  // In Flutter, use code generation instead\n  print('Annotations can be read with dart:mirrors');\n}\n```\n\n### Annotation Targets\n\n```dart\n// Annotations can be applied to:\n@Deprecated('Use X')\nclass MyClass {}\n\n@Deprecated('Use Y')\ntypedef MyFunction = void Function();\n\n@Deprecated('Use Z')\nvoid myFunction() {}\n\n@Deprecated('Use W')\nint myField = 0;\n\n// Target-specific\nclass Target {\n  @Deprecated('Use other')\n  final int value;\n\n  const Target(this.value);\n}\n```\n\n### Pragma Annotations\n\n```dart\nvoid main() {\n  // Common pragma directives\n  @pragma('vm:entry-point')\n  void entryPoint() {}\n\n  // Inline/inlining control\n  @pragma('vm:prefer-inline')\n  int smallFunction() => 42;\n}\n```\n\n> **Key Point:** Use `@override` and `@Deprecated` frequently. For custom metadata in Flutter, prefer code generation (json_serializable, freezed) over runtime reflection since `dart:mirrors` is not available in Flutter.",
+  "codeExample": "class Author {\n  final String name;\n  final String email;\n  const Author(this.name, this.email);\n}\n\nclass Version {\n  final String version;\n  final String date;\n  const Version(this.version, this.date);\n}\n\n@Author('Alice Johnson', 'alice@example.com')\n@Version('2.0.0', '2026-01-15')\nclass ApiService {\n  @Deprecated('Use fetchUsers instead')\n  void getUsers() {\n    // Old implementation\n  }\n\n  void fetchUsers() {\n    print('Fetching users...');\n  }\n}\n\nvoid main() {\n  var api = ApiService();\n  api.fetchUsers();\n}",
+  "quiz": [
+    {
+      "question": "What symbol starts an annotation in Dart?",
+      "options": ["#", "@", "$", "&"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is dart:mirrors available in Flutter?",
+      "options": ["Yes", "No", "Only in debug mode", "Only on Android"],
+      "correctIndex": 1
+    }
+  ]
+}

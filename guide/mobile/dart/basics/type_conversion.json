@@ -1,0 +1,22 @@
+{
+  "title": "Type Conversion in Dart",
+  "language": "dart",
+  "topic": "type_conversion",
+  "order": 8,
+  "nextTopic": "operators",
+  "prevTopic": "datatypes",
+  "content": "### Type Conversion Methods\n\nDart provides methods to convert between different data types.\n\n### String to Number\n\n```dart\nvoid main() {\n  // String to int\n  int a = int.parse('42');\n\n  // String to double\n  double b = double.parse('3.14');\n\n  // Using tryParse to avoid exceptions\n  int? c = int.tryParse('not_a_number'); // Returns null\n\n  print('$a, $b, $c');\n}\n```\n\n### Number to String\n\n```dart\nvoid main() {\n  int value = 42;\n  String str1 = value.toString();\n  String str2 = 3.14159.toStringAsFixed(2); // '3.14'\n\n  print('$str1, $str2');\n}\n```\n\n### Type Checking and Casting\n\n```dart\nvoid main() {\n  dynamic value = 'Hello';\n\n  // Type check with 'is'\n  if (value is String) {\n    print('Length: ${value.length}'); // value is promoted to String\n  }\n\n  // Explicit cast with 'as'\n  String text = value as String;\n  print(text);\n}\n```\n\n| Method | From | To |\n|--------|------|----|\n| `int.parse()` | String | int |\n| `double.parse()` | String | double |\n| `.toString()` | Any | String |\n| `.toStringAsFixed(n)` | double | String (fixed decimals) |\n| `.toInt()` | double | int |\n| `.toDouble()` | int | double |\n\n> **Key Point:** Always use `tryParse()` instead of `parse()` when you are not certain the string is a valid number. It returns `null` instead of throwing an exception.",
+  "codeExample": "void main() {\n  // String to number\n  String ageStr = '25';\n  int age = int.parse(ageStr);\n\n  // Number to string\n  double pi = 3.14159;\n  String piStr = pi.toStringAsFixed(2);\n\n  // Type check\n  dynamic data = 'Hello, Dart!';\n  if (data is String) {\n    print('String length: ${data.length}');\n  }\n\n  print('Age: $age, Pi: $piStr');\n}",
+  "quiz": [
+    {
+      "question": "Which method safely converts a String to int without throwing an exception?",
+      "options": ["int.parse()", "int.tryParse()", "int.convert()", "int.fromString()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What operator checks if a value has a specific type?",
+      "options": ["as", "is", "typeof", "instanceof"],
+      "correctIndex": 1
+    }
+  ]
+}

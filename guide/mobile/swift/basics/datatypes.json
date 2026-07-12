@@ -1,0 +1,22 @@
+{
+  "title": "Swift Data Types",
+  "language": "swift",
+  "topic": "datatypes",
+  "order": 7,
+  "nextTopic": "type_inference",
+  "prevTopic": "variables",
+  "content": "### Swift Data Types\n\nSwift is a type-safe language with a rich set of built-in data types. Every variable and constant must have a type, either explicitly or inferred.\n\n**Basic Data Types:**\n\n| Type | Description | Example |\n|------|-------------|---------|\n| `Int` | Integer (signed) | `let age: Int = 25` |\n| `Double` | 64-bit floating point | `let pi: Double = 3.14` |\n| `Float` | 32-bit floating point | `let price: Float = 9.99` |\n| `Bool` | Boolean (true/false) | `let flag: Bool = true` |\n| `String` | Text | `let name: String = \"Alice\"` |\n| `Character` | Single character | `let letter: Character = \"A\"` |\n\n**Integer Variants:**\n\n| Type | Range |\n|------|-------|\n| `Int8` | -128 to 127 |\n| `Int16` | -32768 to 32767 |\n| `Int32` | -2147483648 to 2147483647 |\n| `Int64` | -9223372036854775808 to 9223372036854775807 |\n| `UInt8` | 0 to 255 |\n\n> **Key Point:** Use `Int` for most integers unless you specifically need a fixed-size type. `Int` matches the platform's native word size.\n\n```swift\nlet defaultInt: Int = 42\nlet explicitDouble: Double = 3.14159265358979\nlet isComplete: Bool = false\nlet firstLetter: Character = \"Z\"\n```\n\nSwift also offers `UInt`, `Int`, `Double`, and `Float` as the most commonly used numeric types.",
+  "codeExample": "import Foundation\n\n// Type annotation examples\nlet name: String = \"Swift\"\nlet year: Int = 2014\nlet version: Double = 5.9\nlet isAwesome: Bool = true\n\n// Fixed-size integers\nlet smallValue: Int8 = 127\nlet unsignedValue: UInt8 = 255\n\n// Check size\nprint(\"Int size: \\(MemoryLayout<Int>.size) bytes\")\nprint(\"Bool size: \\(MemoryLayout<Bool>.size) byte\")\nprint(\"Double size: \\(MemoryLayout<Double>.size) bytes\")",
+  "quiz": [
+    {
+      "question": "Which type should you use for a 64-bit floating point number?",
+      "options": ["Float", "Double", "CGFloat", "NSNumber"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the range of UInt8?",
+      "options": ["-128 to 127", "0 to 255", "0 to 65535", "-32768 to 32767"],
+      "correctIndex": 1
+    }
+  ]
+}

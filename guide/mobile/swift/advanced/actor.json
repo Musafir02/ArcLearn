@@ -1,0 +1,22 @@
+{
+  "title": "Swift Actors",
+  "language": "swift",
+  "topic": "actor",
+  "order": 75,
+  "nextTopic": "sendable",
+  "prevTopic": "async_await",
+  "content": "### Swift Actors\n\nActors (introduced in Swift 5.5) protect mutable state in concurrent programs. They ensure that only one task can access their isolated data at a time, preventing data races.\n\n**Actor Syntax:**\n\n```swift\nactor Counter {\n    private var value = 0\n    \n    func increment() {\n        value += 1\n    }\n    \n    func getValue() -> Int {\n        value\n    }\n}\n\nlet counter = Counter()\nTask {\n    await counter.increment()\n    let current = await counter.getValue()\n    print(current)\n}\n```\n\n**Actor Isolation:**\n\n| Feature | Description |\n|---------|-------------|\n| Actor isolation | All properties and methods are isolated |\n| `await` required | Call actor methods with `await` |\n| Reentrancy | Actors can suspend and allow other calls |\n| Non-isolated | Mark methods as `nonisolated` if safe |\n\n```swift\nactor BankAccount {\n    private var balance: Double\n    private let accountHolder: String\n    \n    init(holder: String, initialBalance: Double) {\n        self.accountHolder = holder\n        self.balance = initialBalance\n    }\n    \n    // Isolated method - requires await\n    func deposit(amount: Double) {\n        balance += amount\n        print(\"Deposited \\(amount). New balance: \\(balance)\")\n    }\n    \n    // Read-only property\n    var currentBalance: Double {\n        balance\n    }\n    \n    // Non-isolated - no await needed\n    nonisolated var description: String {\n        \"Account of \\(accountHolder)\"\n    }\n}\n```\n\n**Actor Reentrancy:**\n\n```swift\nactor DataFetcher {\n    private var cache: [String: Data] = [:]\n    \n    func fetch(_ url: String) async throws -> Data {\n        if let cached = cache[url] { return cached }\n        \n        // Suspension point - other calls can enter\n        let data = try await URLSession.shared.data(from: URL(string: url)!).0\n        \n        cache[url] = data  // Re-check needed!\n        return data\n    }\n}\n```\n\n**Main Actor:**\n\n```swift\n@MainActor\nclass ViewModel: ObservableObject {\n    @Published var name = \"\"\n    \n    func updateName(_ new: String) {\n        // Automatically on main thread\n        name = new\n    }\n}\n```\n\n> **Key Point:** Actors guarantee that only one task can access their mutable state at a time, eliminating data races. All mutable properties and methods are actor-isolated by default.\n\nUse `@MainActor` for types whose methods must run on the main thread (e.g., UI updates). This is enforced at compile time.",
+  "codeExample": "import Foundation\n\nactor ScoreManager {\n    private var scores: [String: Int] = [:]\n    private var updateCount = 0\n    \n    func setScore(_ score: Int, for player: String) {\n        scores[player] = score\n        updateCount += 1\n        print(\"Updated \\(player) to \\(score) (update #\\(updateCount))\")\n    }\n    \n    func getScore(for player: String) -> Int? {\n        scores[player]\n    }\n    \n    func averageScore() -> Double {\n        guard !scores.isEmpty else { return 0 }\n        let total = scores.values.reduce(0, +)\n        return Double(total) / Double(scores.count)\n    }\n    \n    nonisolated var managerName: String {\n        \"ScoreManager\"\n    }\n}\n\nlet manager = ScoreManager()\n\nTask {\n    await manager.setScore(100, for: \"Alice\")\n    await manager.setScore(85, for: \"Bob\")\n    let avg = await manager.averageScore()\n    print(\"Average: \\(avg)\")\n    print(\"Name: \\(manager.managerName)\")  // No await needed\n}\n\nThread.sleep(forTimeInterval: 1)",
+  "quiz": [
+    {
+      "question": "What problem do actors solve?",
+      "options": ["Memory leaks", "Data races", "Deadlocks", "Performance"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Do you need 'await' when calling actor methods?",
+      "options": ["Yes, for isolated methods", "No, never", "Only for setters", "Only for nonisolated methods"],
+      "correctIndex": 0
+    }
+  ]
+}

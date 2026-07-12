@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Visibility Modifiers",
+  "language": "kotlin",
+  "topic": "visibility_modifiers",
+  "order": 35,
+  "nextTopic": "list",
+  "prevTopic": "companion_object",
+  "content": "### Visibility Modifiers in Kotlin\n\nVisibility modifiers control access to classes, objects, interfaces, constructors, functions, properties, and their setters.\n\n---\n\n### The Four Modifiers\n\n| Modifier | Visibility |\n|----------|------------|\n| `public` (default) | Visible everywhere |\n| `internal` | Visible within the same module |\n| `protected` | Visible in the class and subclasses |\n| `private` | Visible within the file or class |\n\n---\n\n### Top-Level Visibility\n\nAt the file level (top-level declarations):\n\n```kotlin\npublic val publicVal = \"Visible everywhere\"\ninternal val internalVal = \"Visible in module\"\nprivate val privateVal = \"Visible in this file\"\n// protected not allowed at top level\n```\n\n---\n\n### Class Member Visibility\n\n```kotlin\nopen class MyClass {\n    public val a = \"Public\"     // Visible everywhere\n    internal val b = \"Internal\"  // Visible in module\n    protected val c = \"Protected\"  // Visible in class and subclasses\n    private val d = \"Private\"     // Visible only in this class\n    \n    fun test() {\n        println(a)  // OK\n        println(b)  // OK\n        println(c)  // OK\n        println(d)  // OK\n    }\n}\n\nclass SubClass : MyClass() {\n    fun test() {\n        println(a)  // OK\n        println(b)  // OK\n        println(c)  // OK (protected accessible)\n        // println(d)  // Error: Private\n    }\n}\n```\n\n---\n\n### Constructor Visibility\n\nMake constructors private to control instantiation.\n\n```kotlin\nclass Singleton private constructor() {\n    companion object {\n        val instance: Singleton by lazy { Singleton() }\n    }\n}\n```\n\n---\n\n### Setter Visibility\n\n```kotlin\nclass Person {\n    var name: String = \"\"\n        private set  // Can read publicly, set only internally\n    \n    fun updateName(newName: String) {\n        name = newName  // OK from within the class\n    }\n}\n\nfun main() {\n    val p = Person()\n    // p.name = \"Alice\"  // Error: Setter is private\n    println(p.name)  // OK: Getter is public\n}\n```\n\n---\n\n### Module Scope\n\n`internal` visibility means accessible within the same module (a set of Kotlin files compiled together).\n\n```kotlin\n// File in module A\ninternal class InternalClass\n\n// File in module B -- cannot access InternalClass\n```\n\n> **Key Point:** The default visibility in Kotlin is `public`, not `private` (unlike some languages). Use `internal` for module-internal APIs.",
+  "codeExample": "open class Vehicle {\n    public val brand = \"Generic\"\n    internal val engineCode = \"V8\"\n    protected val vin = \"ABC123\"\n    private val secret = \"hidden\"\n    \n    fun getInfo(): String {\n        return \"$brand $vin $secret\"  // All accessible here\n    }\n}\n\nclass Car : Vehicle() {\n    fun carInfo(): String {\n        return \"$brand - $engineCode - $vin\"  // secret not accessible\n    }\n}\n\nfun main() {\n    val car = Car()\n    println(car.brand)      // OK\n    // println(car.vin)     // Error: protected\n    // println(car.secret)  // Error: private\n    println(car.getInfo())\n}",
+  "quiz": [
+    {
+      "question": "What is the default visibility modifier in Kotlin?",
+      "options": ["private", "internal", "protected", "public"],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does 'internal' mean in Kotlin?",
+      "options": ["Visible within the same file", "Visible within the same class", "Visible within the same module", "Visible within the same package"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Iterators",
+  "language": "kotlin",
+  "topic": "iterators",
+  "order": 40,
+  "nextTopic": "sequences",
+  "prevTopic": "mutable_vs_immutable",
+  "content": "### Iterators in Kotlin\n\nIterators allow traversing through collections sequentially. Kotlin provides `Iterator` and `MutableIterator` interfaces.\n\n---\n\n### Basic Iterator Usage\n\n```kotlin\nval list = listOf(\"A\", \"B\", \"C\")\nval iterator = list.iterator()\n\nwhile (iterator.hasNext()) {\n    val item = iterator.next()\n    println(item)\n}\n```\n\n---\n\n### For-Each Loop\n\nThe `for` loop internally uses iterators.\n\n```kotlin\nval list = listOf(1, 2, 3)\n\n// These are equivalent:\nfor (item in list) {\n    println(item)\n}\n\nlist.forEach { println(it) }\n```\n\n---\n\n### ListIterator\n\n`ListIterator` supports bidirectional traversal.\n\n```kotlin\nval list = listOf(\"a\", \"b\", \"c\", \"d\")\nval iter = list.listIterator()\n\n// Forward\nprintln(iter.next())     // a\nprintln(iter.nextIndex()) // 1\n\n// Backward\nprintln(iter.previous())  // a\nprintln(iter.previousIndex()) // -1 (before start)\n```\n\n---\n\n### MutableIterator\n\n`MutableIterator` allows removing elements during iteration.\n\n```kotlin\nval numbers = mutableListOf(1, 2, 3, 4, 5, 6)\nval iter = numbers.iterator()\n\nwhile (iter.hasNext()) {\n    val num = iter.next()\n    if (num % 2 == 0) {\n        iter.remove()  // Safe removal during iteration\n    }\n}\n\nprintln(numbers)  // [1, 3, 5]\n```\n\n---\n\n### Custom Iterator\n\n```kotlin\nclass FibonacciIterator : Iterator<Int> {\n    private var a = 0\n    private var b = 1\n    private var count = 0\n    \n    override fun hasNext() = count < 10\n    \n    override fun next(): Int {\n        val result = a + b\n        a = b\n        b = result\n        count++\n        return if (count == 1) 1 else result\n    }\n}\n\nfun main() {\n    val fib = FibonacciIterator()\n    for (num in fib) {\n        print(\"$num \")  // 1 1 2 3 5 8 13 21 34 55\n    }\n}\n```\n\n---\n\n### Iterating with Index\n\n```kotlin\nval list = listOf(\"a\", \"b\", \"c\")\n\nfor ((index, value) in list.withIndex()) {\n    println(\"$index: $value\")\n}\n\nlist.forEachIndexed { index, value ->\n    println(\"$index -> $value\")\n}\n```\n\n> **Key Point:** Use `MutableIterator.remove()` for safe element removal during iteration. Avoid modifying a collection directly while iterating over it.",
+  "codeExample": "fun main() {\n    val colors = listOf(\"Red\", \"Green\", \"Blue\", \"Yellow\")\n    \n    // Manual iterator\n    val iter = colors.iterator()\n    while (iter.hasNext()) {\n        println(\"Color: ${iter.next()}\")\n    }\n    \n    // Mutable iterator with removal\n    val numbers = mutableListOf(10, 20, 30, 40, 50)\n    val mutIter = numbers.iterator()\n    while (mutIter.hasNext()) {\n        if (mutIter.next() > 30) {\n            mutIter.remove()\n        }\n    }\n    println(\"After removal: $numbers\")\n}",
+  "quiz": [
+    {
+      "question": "What two methods must an Iterator implement?",
+      "options": ["start() and next()", "hasNext() and next()", "begin() and end()", "first() and last()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which iterator type allows removal during iteration?",
+      "options": ["Iterator", "MutableIterator", "ListIterator", "Both MutableIterator and ListIterator"],
+      "correctIndex": 1
+    }
+  ]
+}

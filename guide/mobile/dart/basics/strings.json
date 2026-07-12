@@ -1,0 +1,22 @@
+{
+  "title": "Strings in Dart",
+  "language": "dart",
+  "topic": "strings",
+  "order": 10,
+  "nextTopic": "booleans",
+  "prevTopic": "operators",
+  "content": "### String Basics\n\nStrings in Dart are sequences of UTF-16 code units. They can be created with single or double quotes.\n\n```dart\nvoid main() {\n  String s1 = 'Single quotes';\n  String s2 = \"Double quotes\";\n  String s3 = 'It\\'s easy to escape';\n  String s4 = \"It's also easy with double quotes\";\n}\n```\n\n### String Interpolation\n\n```dart\nvoid main() {\n  String name = 'Dart';\n  int version = 3;\n  print('Language: $name');\n  print('${name.toUpperCase()} v$version');\n}\n```\n\n### Multi-line Strings\n\n```dart\nvoid main() {\n  String multiLine = '''\n    This is a\n    multi-line string\n    using triple quotes.\n  ''';\n\n  String another = \"\"\"\n    This also works\n    with double quotes.\n  \"\"\";\n}\n```\n\n### Raw Strings\n\n```dart\nvoid main() {\n  String raw = r'This is a raw string \\n no escape happens';\n  print(raw);\n}\n```\n\n### Common String Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `toUpperCase()` | Converts to uppercase | `'dart'.toUpperCase()` |\n| `toLowerCase()` | Converts to lowercase | `'DART'.toLowerCase()` |\n| `trim()` | Removes whitespace | `' hello '.trim()` |\n| `split()` | Splits by delimiter | `'a,b,c'.split(',')` |\n| `substring()` | Extracts substring | `'Hello'.substring(1, 3)` |\n| `contains()` | Checks if contains | `'Hello'.contains('ell')` |\n| `replaceAll()` | Replaces occurrences | `'a-a-a'.replaceAll('-', '+')` |\n| `length` | Returns character count | `'Dart'.length` |\n| `isEmpty` | Checks if empty | `''.isEmpty` |\n| `startsWith()` | Checks prefix | `'Dart'.startsWith('Da')` |\n\n> **Key Point:** Strings in Dart are immutable. Methods like `toUpperCase()` return new strings rather than modifying the original.",
+  "codeExample": "void main() {\n  String greeting = 'Hello, Dart!';\n\n  print(greeting.toUpperCase());\n  print(greeting.toLowerCase());\n  print('Length: ${greeting.length}');\n  print('Contains Dart: ${greeting.contains('Dart')}');\n\n  List<String> words = greeting.split(' ');\n  print('Words: $words');\n\n  String replaced = greeting.replaceAll('Dart', 'Flutter');\n  print(replaced);\n}",
+  "quiz": [
+    {
+      "question": "How do you create a raw string in Dart?",
+      "options": ["r'string'", "raw'string'", "R'string'", "'string'.raw()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which property returns the number of characters in a string?",
+      "options": [".count", ".size", ".length", ".characters"],
+      "correctIndex": 2
+    }
+  ]
+}

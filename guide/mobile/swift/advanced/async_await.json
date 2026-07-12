@@ -1,0 +1,22 @@
+{
+  "title": "Swift Async Await",
+  "language": "swift",
+  "topic": "async_await",
+  "order": 74,
+  "nextTopic": "actor",
+  "prevTopic": "throws",
+  "content": "### Swift Async Await\n\nSwift's async/await (introduced in Swift 5.5) provides a structured way to write asynchronous code that looks like synchronous code. It makes concurrent programming safer and more readable.\n\n**Async Function Syntax:**\n\n```swift\nfunc fetchData(from url: String) async throws -> Data {\n    let url = URL(string: url)!\n    let (data, _) = try await URLSession.shared.data(from: url)\n    return data\n}\n\n// Calling an async function\nTask {\n    do {\n        let data = try await fetchData(from: \"https://api.example.com\")\n        print(\"Received \\(data.count) bytes\")\n    } catch {\n        print(\"Error: \\(error)\")\n    }\n}\n```\n\n**Key Concepts:**\n\n| Concept | Description |\n|---------|-------------|\n| `async` | Marks a function as asynchronous |\n| `await` | Suspends execution until result is available |\n| `Task` | Creates a new asynchronous context |\n| `Task.sleep()` | Suspends for a duration |\n| Continuation | Underlying mechanism (not usually needed) |\n\n**Sequential Async Calls:**\n\n```swift\nfunc loadUserProfile(userId: Int) async throws -> UserProfile {\n    let user = try await fetchUser(id: userId)\n    let posts = try await fetchPosts(for: user.id)\n    let friends = try await fetchFriends(for: user.id)\n    \n    return UserProfile(user: user, posts: posts, friends: friends)\n}\n```\n\n**Concurrent Async Calls:**\n\n```swift\nfunc loadDashboard() async throws -> Dashboard {\n    async let user = fetchUser(id: 1)\n    async let stats = fetchStats()\n    async let notifications = fetchNotifications()\n    \n    // All three run concurrently\n    return try await Dashboard(\n        user: user,\n        stats: stats,\n        notifications: notifications\n    )\n}\n```\n\n**Async Sequences:**\n\n```swift\nfor try await line in url.lines {\n    print(line)\n}\n```\n\n> **Key Point:** Async/await does not automatically make code run on a background thread. It provides suspension points where the current task can yield control while waiting for results.\n\nUse `Task { }` to create an asynchronous context from synchronous code. Use `async let` for concurrent execution of multiple independent async operations.",
+  "codeExample": "import Foundation\n\n// Simulated async functions\nfunc simulateNetworkRequest(name: String) async -> String {\n    print(\"Starting \\(name)...\")\n    try? await Task.sleep(nanoseconds: 2_000_000_000)  // 2 seconds\n    print(\"Finished \\(name)\")\n    return \"\\(name) result\"\n}\n\n// Sequential execution\nfunc processSequentially() async {\n    print(\"\\nSequential execution:\")\n    let result1 = await simulateNetworkRequest(name: \"Request 1\")\n    let result2 = await simulateNetworkRequest(name: \"Request 2\")\n    let result3 = await simulateNetworkRequest(name: \"Request 3\")\n    print(\"All sequential results: \\(result1), \\(result2), \\(result3)\")\n}\n\n// Concurrent execution\nfunc processConcurrently() async {\n    print(\"\\nConcurrent execution:\")\n    async let request1 = simulateNetworkRequest(name: \"Request A\")\n    async let request2 = simulateNetworkRequest(name: \"Request B\")\n    async let request3 = simulateNetworkRequest(name: \"Request C\")\n    \n    let results = await [request1, request2, request3]\n    print(\"All concurrent results: \\(results)\")\n}\n\n// Run from synchronous context\nTask {\n    await processSequentially()\n    await processConcurrently()\n}\n\n// Keep the program alive\nThread.sleep(forTimeInterval: 10)\nprint(\"Done\")",
+  "quiz": [
+    {
+      "question": "What keyword marks a function as asynchronous?",
+      "options": ["async", "await", "async throws", "async->"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What keyword creates concurrent async tasks?",
+      "options": ["concurrent let", "async let", "parallel let", "group let"],
+      "correctIndex": 1
+    }
+  ]
+}

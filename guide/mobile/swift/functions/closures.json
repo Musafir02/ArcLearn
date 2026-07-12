@@ -1,0 +1,22 @@
+{
+  "title": "Swift Closures",
+  "language": "swift",
+  "topic": "closures",
+  "order": 42,
+  "nextTopic": "trailing_closures",
+  "prevTopic": "nested",
+  "content": "### Swift Closures\n\nClosures are self-contained blocks of functionality that can be passed around and used in code. They are similar to lambdas in other languages and can capture and store references to variables from their surrounding context.\n\n**Closure Syntax:**\n\n```swift\n{ (parameters) -> ReturnType in\n    // Code\n    return value\n}\n\n// Full form\nlet multiply = { (a: Int, b: Int) -> Int in\n    return a * b\n}\n\n// Shorthand (type inference)\nlet add: (Int, Int) -> Int = { $0 + $1 }\n```\n\n**Closure Types:**\n\n| Type | Description | Example |\n|------|-------------|---------|\n| Global function | Named closure that doesn't capture | `func add(a: Int, b: Int) -> Int` |\n| Nested function | Named closure that captures | `func outer() { func inner() {} }` |\n| Closure expression | Unnamed closure | `{ $0 + $1 }` |\n\n**Shorthand Syntax Levels:**\n\n```swift\nlet numbers = [1, 5, 2, 8, 3]\n\n// Full\nnumbers.sorted(by: { (a: Int, b: Int) -> Bool in return a < b })\n\n// Type inference\nnumbers.sorted(by: { a, b in return a < b })\n\n// Implicit return\nnumbers.sorted(by: { a, b in a < b })\n\n// Shorthand argument names\nnumbers.sorted(by: { $0 < $1 })\n\n// Operator method\nnumbers.sorted(by: <)\n```\n\n**Capturing Values:**\n\n```swift\nfunc makeIncrementer(amount: Int) -> () -> Int {\n    var total = 0\n    let incrementer: () -> Int = {\n        total += amount\n        return total\n    }\n    return incrementer\n}\n\nlet incrementByTen = makeIncrementer(amount: 10)\nprint(incrementByTen())  // 10\nprint(incrementByTen())  // 20\n```\n\n> **Key Point:** Closures are reference types. When assigned to a variable, they share the same captured values.\n\nClosures can be `@escaping` if they outlive the function they were passed to (stored for later execution).",
+  "codeExample": "import Foundation\n\n// Closure as variable\nlet greet: (String) -> String = { name in\n    return \"Hello, \\(name)!\"\n}\nprint(greet(\"Alice\"))\n\n// Closure as parameter\nfunc performOperation(_ a: Int, _ b: Int, operation: (Int, Int) -> Int) -> Int {\n    return operation(a, b)\n}\n\nlet sum = performOperation(10, 5) { $0 + $1 }\nlet product = performOperation(10, 5) { $0 * $1 }\nprint(\"Sum: \\(sum), Product: \\(product)\")\n\n// Sorting with closure\nlet names = [\"Charlie\", \"Alice\", \"Bob\"]\nlet sorted = names.sorted { $0 < $1 }\nprint(\"Sorted: \\(sorted)\")\n\n// Custom filter\nlet numbers = [1, 2, 3, 4, 5, 6]\nlet evens = numbers.filter { $0.isMultiple(of: 2) }\nprint(\"Evens: \\(evens)\")",
+  "quiz": [
+    {
+      "question": "What keyword separates closure parameters from body?",
+      "options": ["in", "do", "then", "->"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does $0 refer to in a closure?",
+      "options": ["First captured value", "First parameter", "The closure itself", "Return value"],
+      "correctIndex": 1
+    }
+  ]
+}

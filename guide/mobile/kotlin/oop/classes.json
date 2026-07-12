@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Classes",
+  "language": "kotlin",
+  "topic": "classes",
+  "order": 24,
+  "nextTopic": "constructors",
+  "prevTopic": "infix",
+  "content": "### Classes in Kotlin\n\nClasses in Kotlin are declared with the `class` keyword. They can contain properties, methods, and constructors.\n\n---\n\n### Basic Class Declaration\n\n```kotlin\nclass Person {\n    var name: String = \"\"\n    var age: Int = 0\n    \n    fun greet() {\n        println(\"Hello, my name is $name\")\n    }\n}\n\nfun main() {\n    val person = Person()\n    person.name = \"Alice\"\n    person.age = 30\n    person.greet()\n}\n```\n\n---\n\n### Class with Properties in Constructor\n\nKotlin allows declaring properties directly in the primary constructor.\n\n```kotlin\nclass Person(val name: String, var age: Int)\n\nfun main() {\n    val person = Person(\"Alice\", 30)\n    println(person.name)  // Alice\n    person.age = 31\n}\n```\n\n---\n\n### Class Members\n\n| Member | Description |\n|--------|-------------|\n| Properties | Variables declared in the class |\n| Methods | Functions declared in the class |\n| Constructors | Primary and secondary constructors |\n| Initializer blocks | Code executed during initialization |\n| Nested classes | Classes defined inside another class |\n\n---\n\n### Getters and Setters\n\nProperties automatically have getters and setters.\n\n```kotlin\nclass Rectangle {\n    var width: Int = 0\n    var height: Int = 0\n    \n    val area: Int\n        get() = width * height  // Custom getter\n    \n    var name: String = \"\"\n        set(value) {\n            field = value.uppercase()  // Custom setter\n        }\n}\n```\n\n---\n\n### Property Access Syntax\n\n```kotlin\nval rectangle = Rectangle()\nrectangle.width = 10\nrectangle.height = 5\nprintln(rectangle.area)  // 50\n```\n\n---\n\n### Type Aliases for Classes\n\n```kotlin\ntypealias Employee = Person\nval emp = Employee(\"Bob\", 25)\n```\n\n> **Key Point:** Kotlin classes use the primary constructor syntax to concisely declare properties. Custom getters and setters use the `get()` and `set(value)` syntax.",
+  "codeExample": "class Car(val make: String, val model: String, var year: Int) {\n    val age: Int\n        get() = 2026 - year\n    \n    fun displayInfo() {\n        println(\"$year $make $model (Age: $age years)\")\n    }\n}\n\nfun main() {\n    val car = Car(\"Toyota\", \"Camry\", 2020)\n    car.displayInfo()  // 2020 Toyota Camry (Age: 6 years)\n    println(\"Make: ${car.make}\")\n}",
+  "quiz": [
+    {
+      "question": "Where can class properties be declared in Kotlin?",
+      "options": ["Only in the class body", "In the primary constructor and class body", "Only in the constructor", "In external files"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What keyword is used to refer to the backing field in a custom setter?",
+      "options": ["this", "value", "field", "backing"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin DSL Basics",
+  "language": "kotlin",
+  "topic": "dsl_basics",
+  "order": 52,
+  "nextTopic": "java_interop",
+  "prevTopic": "scope_functions",
+  "content": "### DSL Basics in Kotlin\n\nKotlin's language features -- lambdas with receivers, extension functions, infix notation, and operator overloading -- make it ideal for building type-safe Domain-Specific Languages (DSLs).\n\n---\n\n### What is a DSL?\n\nA DSL is a specialized mini-language designed for a specific task. Kotlin enables internal DSLs that leverage the host language syntax.\n\n---\n\n### Building a Simple HTML DSL\n\n```kotlin\nfun html(init: HTML.() -> Unit): HTML {\n    val html = HTML()\n    html.init()\n    return html\n}\n\nclass HTML {\n    private val children = mutableListOf<Element>()\n    \n    fun body(init: Body.() -> Unit) {\n        val body = Body()\n        body.init()\n        children.add(body)\n    }\n    \n    override fun toString() = children.joinToString(\"\")\n}\n\nclass Body {\n    private val elements = mutableListOf<String>()\n    \n    fun h1(text: String) {\n        elements.add(\"<h1>$text</h1>\")\n    }\n    \n    fun p(text: String) {\n        elements.add(\"<p>$text</p>\")\n    }\n    \n    override fun toString() = \"<body>${elements.joinToString(\"\")}</body>\"\n}\n```\n\n---\n\n### Using the DSL\n\n```kotlin\nfun main() {\n    val page = html {\n        body {\n            h1(\"Welcome\")\n            p(\"This is a DSL example\")\n        }\n    }\n    println(page)\n    // <body><h1>Welcome</h1><p>This is a DSL example</p></body>\n}\n```\n\n---\n\n### DSL with Infix Functions\n\n```kotlin\ninfix fun String.should(be: String) {\n    println(\"Assert: $this should be $be\")\n}\n\nfun main() {\n    \"Kotlin\" should \"awesome\"\n}\n```\n\n---\n\n### Type-Safe Builders\n\nKotlin's `@DslMarker` annotation prevents accidental scope leakage.\n\n```kotlin\n@DslMarker\nannotation class HtmlDsl\n\n@HtmlDsl\nclass Table {\n    fun tr(init: Tr.() -> Unit) { /* ... */ }\n}\n\n@HtmlDsl\nclass Tr {\n    fun td(init: Td.() -> Unit) { /* ... */ }\n}\n```\n\n---\n\n### Popular Kotlin DSL Examples\n\n| DSL | Purpose |\n|-----|---------|\n| Ktor | HTTP client/routes |\n| kotlinx.html | HTML generation |\n| Gradle Kotlin DSL | Build configuration |\n| Exposed | SQL queries |\n| Anko | Android layouts |\n\n> **Key Point:** DSLs in Kotlin use lambda with receiver (`T.() -> Unit`) to create a context scope. Extension functions and infix notation make DSLs feel natural.",
+  "codeExample": "class Greeter {\n    private val greetings = mutableListOf<String>()\n    \n    infix fun String.says(message: String) {\n        greetings.add(\"$this says: $message\")\n    }\n    \n    override fun toString() = greetings.joinToString(\"\\n\")\n}\n\nfun greet(init: Greeter.() -> Unit): Greeter {\n    val greeter = Greeter()\n    greeter.init()\n    return greeter\n}\n\nfun main() {\n    val result = greet {\n        \"Alice\" says \"Hello\"\n        \"Bob\" says \"Hi\"\n    }\n    println(result)\n}",
+  "quiz": [
+    {
+      "question": "What Kotlin feature is essential for building DSLs?",
+      "options": ["Data classes", "Lambda with receiver", "Sealed classes", "Companion objects"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What annotation prevents scope leakage in nested DSL builders?",
+      "options": ["@DslMarker", "@ScopeLimit", "@HtmlDsl", "@NoScope"],
+      "correctIndex": 0
+    }
+  ]
+}

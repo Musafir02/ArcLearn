@@ -1,0 +1,22 @@
+{
+  "title": "Swift Initializers",
+  "language": "swift",
+  "topic": "initializers",
+  "order": 54,
+  "nextTopic": "convenience_init",
+  "prevTopic": "polymorphism",
+  "content": "### Swift Initializers\n\nInitializers prepare instances of a type for use. They ensure all stored properties have initial values before the instance is ready. Swift provides multiple initializer options.\n\n**Designated Initializers:**\n\nDesignated initializers are the primary initializers for a class. They must ensure all properties have values and must call a designated superclass initializer.\n\n```swift\nclass Person {\n    var name: String\n    var age: Int\n    \n    // Designated initializer\n    init(name: String, age: Int) {\n        self.name = name\n        self.age = age\n    }\n}\n\nlet person = Person(name: \"Alice\", age: 30)\n```\n\n**Initialization Rules:**\n\n| Rule | Description |\n|------|-------------|\n| All stored properties | Must have initial values before init completes |\n| Optional properties | Automatically initialized to nil |\n| Constant properties | Can be set during initialization |\n| Superclass init | Must be called after local properties are set |\n\n```swift\n// Optional properties default to nil\nclass User {\n    let id: Int\n    var name: String\n    var email: String?\n    \n    init(id: Int, name: String, email: String? = nil) {\n        self.id = id      // Set 'let' property here\n        self.name = name\n        self.email = email  // Optional, can set or leave nil\n    }\n}\n```\n\n**Required Initializers:**\n\n```swift\nclass SomeClass {\n    required init() {\n        // Every subclass must implement this\n    }\n}\n\nclass Subclass: SomeClass {\n    required init() {\n        // Must provide implementation\n    }\n}\n```\n\n**Initializer Delegation (Value Types):**\n\n```swift\nstruct Size {\n    var width: Double\n    var height: Double\n    \n    init(width: Double, height: Double) {\n        self.width = width\n        self.height = height\n    }\n    \n    // Delegating initializer\n    init(side: Double) {\n        self.init(width: side, height: side)\n    }\n}\n```\n\n> **Key Point:** Classes have designated and convenience initializers. Structs get a memberwise initializer automatically unless you define custom initializers.\n\nAll properties must be initialized. Optionals get `nil` automatically. Constants can be assigned only during initialization.",
+  "codeExample": "import Foundation\n\nclass Product {\n    let name: String\n    var price: Double\n    var category: String?\n    var inStock: Bool\n    \n    // Designated initializer\n    init(name: String, price: Double, category: String? = nil, inStock: Bool = true) {\n        self.name = name\n        self.price = price\n        self.category = category\n        self.inStock = inStock\n    }\n    \n    // Convenience initializer for on-sale items\n    convenience init(name: String, originalPrice: Double, discountPercent: Double) {\n        let discountedPrice = originalPrice * (1 - discountPercent / 100)\n        self.init(name: name, price: discountedPrice)\n    }\n}\n\nlet laptop = Product(name: \"MacBook Pro\", price: 2499.00, category: \"Electronics\")\nlet saleItem = Product(name: \"Headphones\", originalPrice: 199.99, discountPercent: 20)\n\nprint(\"\\(laptop.name): $\\(laptop.price) (\\(laptop.category ?? \"General\"))\")\nprint(\"\\(saleItem.name): $\\(String(format: \"%.2f\", saleItem.price)) (on sale!)\")",
+  "quiz": [
+    {
+      "question": "What happens to optional properties during initialization?",
+      "options": ["Must have explicit value", "Automatically nil", "Cause compile error", "Must have a default in init"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can 'let' properties be set during initialization?",
+      "options": ["Yes", "No, must be var", "Only for optionals", "Only in the initializer body"],
+      "correctIndex": 0
+    }
+  ]
+}

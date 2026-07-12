@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Constructors",
+  "language": "kotlin",
+  "topic": "constructors",
+  "order": 25,
+  "nextTopic": "init",
+  "prevTopic": "classes",
+  "content": "### Constructors in Kotlin\n\nKotlin has two types of constructors: primary and secondary. The primary constructor is part of the class header.\n\n---\n\n### Primary Constructor\n\nThe primary constructor is declared in the class header.\n\n```kotlin\nclass Person(val name: String, var age: Int)\n```\n\nConstructor parameters with `val` or `var` become class properties. Without them, they are only constructor parameters.\n\n```kotlin\nclass Person(name: String, age: Int) {\n    val nameUpper = name.uppercase()  // name is just a parameter\n}\n```\n\n---\n\n### Constructor with Default Values\n\n```kotlin\nclass Person(\n    val name: String = \"Unknown\",\n    val age: Int = 0,\n    val email: String = \"\"\n)\n\nfun main() {\n    val p1 = Person(\"Alice\", 30)\n    val p2 = Person()  // Uses defaults\n    val p3 = Person(name = \"Bob\")\n}\n```\n\n---\n\n### Secondary Constructors\n\nUse secondary constructors for additional initialization options.\n\n```kotlin\nclass Person {\n    var name: String\n    var age: Int\n    \n    constructor(name: String) {\n        this.name = name\n        this.age = 0\n    }\n    \n    constructor(name: String, age: Int) {\n        this.name = name\n        this.age = age\n    }\n}\n```\n\n---\n\n### Delegating to Primary Constructor\n\nSecondary constructors must delegate to the primary constructor.\n\n```kotlin\nclass Person(val name: String, val age: Int) {\n    \n    constructor(name: String) : this(name, 0)\n    \n    constructor() : this(\"Unknown\", 0)\n}\n```\n\n---\n\n### Private Constructors\n\nHide constructors to prevent direct instantiation.\n\n```kotlin\nclass Singleton private constructor() {\n    companion object {\n        val instance = Singleton()\n    }\n}\n```\n\n> **Key Point:** Prefer the primary constructor with default values over multiple secondary constructors. Use `val` or `var` in the primary constructor to automatically create properties.",
+  "codeExample": "class User(\n    val username: String,\n    val email: String = \"\",\n    val isActive: Boolean = true\n) {\n    // Secondary constructor\n    constructor(username: String) : this(username, \"$username@default.com\")\n    \n    fun display() {\n        println(\"$username ($email) Active: $isActive\")\n    }\n}\n\nfun main() {\n    val u1 = User(\"alice\", \"alice@test.com\")\n    val u2 = User(\"bob\")  // Uses secondary constructor\n    u1.display()\n    u2.display()\n}",
+  "quiz": [
+    {
+      "question": "Where is the primary constructor declared?",
+      "options": ["Inside the class body", "In the class header", "In a separate file", "In the companion object"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Must a secondary constructor delegate to the primary constructor?",
+      "options": ["Yes", "No", "Only if the primary constructor has parameters", "Only if the class is abstract"],
+      "correctIndex": 0
+    }
+  ]
+}

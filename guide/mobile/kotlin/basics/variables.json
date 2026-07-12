@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Variables",
+  "language": "kotlin",
+  "topic": "variables",
+  "order": 6,
+  "nextTopic": "datatypes",
+  "prevTopic": "comments",
+  "content": "### Variables in Kotlin\n\nKotlin provides two keywords for declaring variables: `val` (immutable) and `var` (mutable).\n\n---\n\n### val vs var\n\n| Keyword | Mutability | When to Use |\n|---------|------------|-------------|\n| `val` | Read-only (immutable) | When value never changes |\n| `var` | Read-write (mutable) | When value needs reassignment |\n\n```kotlin\nval name = \"Alice\"  // Cannot be reassigned\nvar age = 25        // Can be reassigned\nage = 26            // OK\n// name = \"Bob\"     // Error: Val cannot be reassigned\n```\n\n---\n\n### Type Inference\n\nKotlin infers the type from the assigned value.\n\n```kotlin\nval message = \"Hello\"   // Inferred as String\nval count = 42          // Inferred as Int\nval pi = 3.14159        // Inferred as Double\n```\n\n---\n\n### Explicit Type Declaration\n\nYou can explicitly specify the type after a colon.\n\n```kotlin\nval name: String = \"Alice\"\nvar age: Int = 25\nval price: Double = 19.99\n```\n\n---\n\n### Late Initialization\n\nUse `lateinit` for variables that are initialized later.\n\n```kotlin\nlateinit var name: String\n\nfun init() {\n    name = \"Alice\"\n}\n```\n\n> **Key Point:** `lateinit` can only be used with `var` and non-nullable types. Accessing before initialization throws an exception.\n\n---\n\n### Lazy Initialization\n\n```kotlin\nval result: String by lazy {\n    println(\"Computing...\")\n    \"Expensive Value\"\n}\n```\n\nThe value is computed only on first access.\n\n---\n\n### Constants\n\nUse `const` for compile-time constants at the top level or inside an `object`.\n\n```kotlin\nconst val APP_NAME = \"MyApp\"\nconst val MAX_COUNT = 100\n```\n\n> **Tip:** Prefer `val` over `var` by default to make code safer and more predictable.",
+  "codeExample": "fun main() {\n    val name: String = \"Kotlin\"\n    var version = 1.9\n    println(\"Language: $name\")\n    \n    version = 2.0\n    println(\"New version: $version\")\n    \n    const val YEAR = 2016\n    println(\"Created in: $YEAR\")\n}",
+  "quiz": [
+    {
+      "question": "What keyword declares an immutable variable in Kotlin?",
+      "options": ["var", "val", "let", "const"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can lateinit be used with val?",
+      "options": ["Yes", "No, only with var", "Only with const", "Only with primitive types"],
+      "correctIndex": 1
+    }
+  ]
+}

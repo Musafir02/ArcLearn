@@ -1,0 +1,22 @@
+{
+  "title": "Swift Type Safety",
+  "language": "swift",
+  "topic": "type_safety",
+  "order": 9,
+  "nextTopic": "operators",
+  "prevTopic": "type_inference",
+  "content": "### Swift Type Safety\n\nSwift is a type-safe language, which means it catches type mismatches at compile time. You cannot accidentally assign a value of one type to a variable of another type without explicit conversion.\n\n**Type Safety in Action:**\n\n```swift\nlet name = \"Alice\"   // String\n// name = 42        // Compile error: Cannot assign Int to String\n\nvar score = 100      // Int\n// score = 99.5     // Compile error: Cannot assign Double to Int\n\nlet price: Double = 9.99\n// let total = price + score  // Compile error: Cannot add Double and Int\n```\n\n**Explicit Type Conversion:**\n\n| Conversion | Syntax |\n|------------|--------|\n| Int to Double | `Double(intValue)` |\n| Double to Int | `Int(doubleValue)` (truncates) |\n| String to Int | `Int(stringValue)` (optional) |\n| Number to String | `String(numberValue)` |\n\n```swift\nlet x = 10\nlet y = 3.5\nlet sum = Double(x) + y  // Explicit conversion\nprint(sum)  // 13.5\n```\n\n> **Key Point:** Swift does not do implicit type conversion. All type conversions must be explicit, making code safer and more predictable.\n\nType safety prevents many common programming errors, especially in large codebases.",
+  "codeExample": "import Foundation\n\n// Type safety prevents implicit conversions\nlet apples = 5\nlet pricePerApple = 0.75\n\n// Must convert explicitly\nlet totalCost = Double(apples) * pricePerApple\nprint(\"Total: $\\(totalCost)\")\n\n// String conversion\nlet count = 42\nlet message = \"The answer is \" + String(count)\nprint(message)\n\n// Truncation when converting Double to Int\nlet pi = 3.14159\nlet truncatedPi = Int(pi)\nprint(\"Truncated pi: \\(truncatedPi)\")  // 3",
+  "quiz": [
+    {
+      "question": "Does Swift allow implicit type conversion?",
+      "options": ["Yes, always", "Yes, for numeric types", "No, never", "Only for strings"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happens when you convert 3.99 to Int?",
+      "options": ["4", "3", "3.99", "Compiler error"],
+      "correctIndex": 1
+    }
+  ]
+}

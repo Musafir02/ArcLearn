@@ -1,0 +1,22 @@
+{
+  "title": "Swift Opaque Types (some)",
+  "language": "swift",
+  "topic": "opaque_types_some",
+  "order": 70,
+  "nextTopic": "error_handling",
+  "prevTopic": "associated_types",
+  "content": "### Swift Opaque Types (some)\n\nOpaque types (using the `some` keyword) describe a return value in terms of the protocols it conforms to, while hiding the specific concrete type. They provide type abstraction while preserving type identity.\n\n**Opaque Type Syntax:**\n\n```swift\nfunc functionName() -> some Protocol {\n    // Returns a type that conforms to Protocol\n}\n```\n\n**Basic Example:**\n\n```swift\nprotocol Shape {\n    func describe() -> String\n}\n\nstruct Circle: Shape {\n    let radius: Double\n    func describe() -> String {\n        \"Circle with radius \\(radius)\"\n    }\n}\n\nstruct Rectangle: Shape {\n    let width: Double\n    let height: Double\n    func describe() -> String {\n        \"Rectangle \\(width)x\\(height)\"\n    }\n}\n\nfunc makeShape() -> some Shape {\n    return Circle(radius: 5)\n}\n\nlet shape = makeShape()\nprint(shape.describe())\n```\n\n**Opaque Types vs Protocols:**\n\n| Aspect | `some Protocol` | `Protocol` (Existential) |\n|--------|-----------------|-------------------------|\n| Type identity | Preserves concrete type | Erases concrete type |\n| Memory size | Known at compile time | Uses boxed container |\n| Performance | Static dispatch | Dynamic dispatch |\n| Generic context | Works with generics | Limited |\n| Same type guarantee | Guarantees same type | No guarantee |\n\n```swift\n// Protocol existential - can return any conforming type\nfunc makeRandomShape() -> Shape {\n    if Bool.random() {\n        return Circle(radius: 5)\n    } else {\n        return Rectangle(width: 3, height: 4)\n    }\n}\n\n// Opaque type - must always return the same type\nfunc makeCircle() -> some Shape {\n    return Circle(radius: 5)\n    // return Rectangle(width: 3, height: 4)  // Error\n}\n```\n\n**Opaque Types in SwiftUI:**\n\n```swift\nstruct ContentView: View {\n    var body: some View {\n        Text(\"Hello, World!\")\n    }\n}\n```\n\n> **Key Point:** Use `some` when you want to return a specific type that conforms to a protocol, but you don't want to expose which type it is. This is especially common in SwiftUI.\n\n**Returning Opaque Types with Generics:**\n\n```swift\nfunc reversed<T: Sequence>(_ sequence: T) -> some Sequence where T.Element: Equatable {\n    return sequence.reversed()\n}\n```\n\nThe function must always return the same concrete type for the same input types. Multiple calls using different generic parameters may return different types.",
+  "codeExample": "import Foundation\n\nprotocol Animal {\n    func speak() -> String\n}\n\nstruct Dog: Animal {\n    let name: String\n    func speak() -> String { \"\\(name) says Woof!\" }\n}\n\nstruct Cat: Animal {\n    let name: String\n    func speak() -> String { \"\\(name) says Meow!\" }\n}\n\n// Opaque type - always returns Dog\nfunc createPet() -> some Animal {\n    return Dog(name: \"Buddy\")\n}\n\n// Generic with opaque return\nfunc createAnimal<T: Animal>(_ animal: T) -> some Animal {\n    return animal\n}\n\nlet pet = createPet()\nprint(pet.speak())\n\nlet animal1 = createAnimal(Dog(name: \"Rex\"))\nlet animal2 = createAnimal(Cat(name: \"Whiskers\"))\nprint(animal1.speak())\nprint(animal2.speak())\n\n// Comparable example\nfunc makeComparable() -> some Comparable {\n    return 42\n}\n\nlet value = makeComparable()\nprint(value < 100)  // true\n\n// SwiftUI-like pattern\nprotocol View {\n    associatedtype Body: View\n    var body: Body { get }\n}\n\nstruct Text: View {\n    let content: String\n    var body: some View {\n        return self\n    }\n}\n\nstruct Button: View {\n    let label: String\n    var body: some View {\n        Text(content: label)\n    }\n}",
+  "quiz": [
+    {
+      "question": "What keyword is used for opaque types?",
+      "options": ["some", "any", "opaque", "abstract"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Can an opaque type return different concrete types in different calls?",
+      "options": ["Yes", "No, must be consistent", "Only if generic parameter differs", "Only in SwiftUI"],
+      "correctIndex": 1
+    }
+  ]
+}

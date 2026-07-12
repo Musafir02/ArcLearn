@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Operators",
+  "language": "kotlin",
+  "topic": "operators",
+  "order": 9,
+  "nextTopic": "strings",
+  "prevTopic": "typecasting",
+  "content": "### Operators in Kotlin\n\nKotlin provides a rich set of operators for arithmetic, comparison, and logical operations.\n\n---\n\n### Arithmetic Operators\n\n| Operator | Description | Example |\n|----------|-------------|---------|\n| `+` | Addition | `a + b` |\n| `-` | Subtraction | `a - b` |\n| `*` | Multiplication | `a * b` |\n| `/` | Division | `a / b` |\n| `%` | Modulus | `a % b` |\n\n```kotlin\nval sum = 10 + 5      // 15\nval diff = 10 - 5     // 5\nval product = 10 * 5  // 50\nval quotient = 10 / 3 // 3 (integer division)\nval remainder = 10 % 3 // 1\n```\n\n---\n\n### Comparison Operators\n\n| Operator | Description |\n|----------|-------------|\n| `==` | Structural equality (like Java equals) |\n| `===` | Referential equality |\n| `!=` | Structural inequality |\n| `!==` | Referential inequality |\n| `<`, `>`, `<=`, `>=` | Comparison |\n\n```kotlin\nval a = 5\nval b = 5\na == b   // true\n\na === b  // true (for primitives, same as ==)\n```\n\n---\n\n### Logical Operators\n\n| Operator | Description |\n|----------|-------------|\n| `&&` | Logical AND |\n| `||` | Logical OR |\n| `!` | Logical NOT |\n\n```kotlin\nval isAdult = age >= 18 && age <= 65\nval canProceed = isAdmin || hasPermission\nval isNotReady = !isReady\n```\n\n---\n\n### Assignment Operators\n\n```kotlin\nvar x = 10\nx += 5   // x = 15\nx -= 3   // x = 12\nx *= 2   // x = 24\nx /= 4   // x = 6\nx %= 3   // x = 0\n```\n\n---\n\n### Increment and Decrement\n\n```kotlin\nvar i = 5\ni++  // Post-increment: i becomes 6\n++i  // Pre-increment: i becomes 7\ni--  // Post-decrement\ni--  // Pre-decrement\n```\n\n---\n\n### Bitwise Operators\n\nKotlin uses named functions instead of symbols.\n\n| Function | Description |\n|----------|-------------|\n| `shl` | Shift left |\n| `shr` | Shift right |\n| `ushr` | Unsigned shift right |\n| `and` | Bitwise AND |\n| `or` | Bitwise OR |\n| `xor` | Bitwise XOR |\n| `inv` | Bitwise inversion |\n\n```kotlin\nval flags = 0b1010\nval shifted = flags shl 2  // 0b101000\nval masked = flags and 0b0011\n```\n\n---\n\n### Operator Overloading\n\nKotlin allows operator overloading with the `operator` keyword.\n\n```kotlin\ndata class Point(val x: Int, val y: Int) {\n    operator fun plus(other: Point) = Point(x + other.x, y + other.y)\n}\n\nval p1 = Point(1, 2)\nval p2 = Point(3, 4)\nval p3 = p1 + p2  // Point(4, 6)\n```\n\n> **Key Point:** Use `==` for structural equality and `===` for referential equality.",
+  "codeExample": "fun main() {\n    val a = 10\n    val b = 3\n    \n    println(\"a + b = ${a + b}\")\n    println(\"a - b = ${a - b}\")\n    println(\"a * b = ${a * b}\")\n    println(\"a / b = ${a / b}\")\n    println(\"a % b = ${a % b}\")\n    \n    println(\"a == 10: ${a == 10}\")\n    println(\"a > b: ${a > b}\")\n    \n    var x = 5\n    x += 3\n    println(\"x after += 3: $x\")\n}",
+  "quiz": [
+    {
+      "question": "Which operator checks structural equality in Kotlin?",
+      "options": ["=", "==", "===", "equals"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the result of 10 / 3 in Kotlin?",
+      "options": ["3.33", "3", "3.0", "4"],
+      "correctIndex": 1
+    }
+  ]
+}

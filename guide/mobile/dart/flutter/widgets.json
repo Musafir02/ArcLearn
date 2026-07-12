@@ -1,0 +1,22 @@
+{
+  "title": "Widgets in Flutter",
+  "language": "dart",
+  "topic": "widgets",
+  "order": 51,
+  "nextTopic": "stateless_widget",
+  "prevTopic": "flutter_intro",
+  "content": "### What are Widgets?\n\nIn Flutter, everything is a widget. Widgets are the basic building blocks of the UI. They describe the visual elements and their configuration.\n\n```dart\nWidget build(BuildContext context) {\n  return Container(\n    padding: EdgeInsets.all(16),\n    child: Text('Hello Flutter'),\n  );\n}\n```\n\n### Widget Types\n\n| Category | Examples | Purpose |\n|----------|----------|---------|\n| Layout | Row, Column, Stack, Container | Position and arrange widgets |\n| Painting | Text, Image, Icon | Display visual content |\n| Interactive | GestureDetector, InkWell | Handle user input |\n| Styling | Padding, Align, DecoratedBox | Modify appearance |\n| Navigation | Navigator, Hero | Screen transitions |\n\n### Composition over Inheritance\n\nFlutter uses composition - small widgets are combined to create complex UIs.\n\n```dart\nWidget build(BuildContext context) {\n  return Center(\n    child: Column(\n      mainAxisAlignment: MainAxisAlignment.center,\n      children: [\n        const Icon(Icons.star, size: 48),\n        const SizedBox(height: 16),\n        const Text('Welcome!'),\n        ElevatedButton(\n          onPressed: () {},\n          child: const Text('Start'),\n        ),\n      ],\n    ),\n  );\n}\n```\n\n### Widget Tree\n\n```\nMyApp\n  └── MaterialApp\n       └── Scaffold\n            ├── AppBar\n            └── Body (Center)\n                 └── Column\n                      ├── Text\n                      └── ElevatedButton\n```\n\n### Key Properties\n\nAll widgets share common properties:\n\n| Property | Type | Description |\n|----------|------|-------------|\n| `key` | `Key?` | Controls widget identity |\n| `child` | `Widget?` | Single child widget |\n| `children` | `List<Widget>` | Multiple children |\n\n> **Key Point:** Widgets are immutable descriptions of UI. When a widget's configuration changes, Flutter rebuilds the widget tree efficiently using its diffing mechanism.",
+  "codeExample": "import 'package:flutter/material.dart';\n\nvoid main() => runApp(const MyApp());\n\nclass MyApp extends StatelessWidget {\n  const MyApp({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        body: Center(\n          child: Column(\n            mainAxisAlignment: MainAxisAlignment.center,\n            children: [\n              Container(\n                padding: const EdgeInsets.all(16),\n                decoration: BoxDecoration(\n                  color: Colors.blue,\n                  borderRadius: BorderRadius.circular(8),\n                ),\n                child: const Text(\n                  'Widgets are everywhere',\n                  style: TextStyle(color: Colors.white, fontSize: 18),\n                ),\n              ),\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n}",
+  "quiz": [
+    {
+      "question": "What is the basic building block of Flutter UIs?",
+      "options": ["Components", "Views", "Widgets", "Elements"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Are Flutter widgets mutable or immutable?",
+      "options": ["Mutable", "Immutable", "Both", "Depends on type"],
+      "correctIndex": 1
+    }
+  ]
+}

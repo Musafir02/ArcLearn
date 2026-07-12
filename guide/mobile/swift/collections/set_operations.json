@@ -1,0 +1,22 @@
+{
+  "title": "Swift Set Operations",
+  "language": "swift",
+  "topic": "set_operations",
+  "order": 31,
+  "nextTopic": "dictionaries",
+  "prevTopic": "sets",
+  "content": "### Swift Set Operations\n\nSwift sets support mathematical set operations like union, intersection, subtraction, and symmetric difference. These operations are efficient and create new sets.\n\n**Set Operations:**\n\n| Operation | Method | Description |\n|-----------|--------|-------------|\n| Union | `setA.union(setB)` | All elements from both sets |\n| Intersection | `setA.intersection(setB)` | Elements common to both |\n| Subtracting | `setA.subtracting(setB)` | Elements in A but not in B |\n| Symmetric Diff | `setA.symmetricDifference(setB)` | Elements in either, not both |\n\n```swift\nlet a: Set = [1, 2, 3, 4, 5]\nlet b: Set = [3, 4, 5, 6, 7]\n\na.union(b)               // {1, 2, 3, 4, 5, 6, 7}\na.intersection(b)        // {3, 4, 5}\na.subtracting(b)         // {1, 2}\na.symmetricDifference(b) // {1, 2, 6, 7}\n```\n\n**Membership and Comparison:**\n\n| Operation | Method | Description |\n|-----------|--------|-------------|\n| Equal | `==` | Same elements |\n| Subset | `isSubset(of:)` | All elements in B |\n| Superset | `isSuperset(of:)` | Contains all of B |\n| Disjoint | `isDisjoint(with:)` | No common elements |\n| Strict subset | `isStrictSubset(of:)` | Subset but not equal |\n\n```swift\nlet x: Set = [1, 2, 3]\nlet y: Set = [1, 2, 3, 4, 5]\n\nx.isSubset(of: y)     // true\nx.isStrictSubset(of: y)  // true (x != y)\ny.isSuperset(of: x)   // true\nx.isDisjoint(with: [4, 5])  // true (no common)\n```\n\n> **Key Point:** Set operations create new sets and do not modify the original sets. Use mutating versions like `formUnion()`, `formIntersection()` to modify in place.\n\n```swift\nvar mutableSet: Set = [1, 2, 3]\nmutableSet.formUnion([4, 5])  // Now {1, 2, 3, 4, 5}\n```",
+  "codeExample": "import Foundation\n\nlet swiftDevelopers: Set = [\"Alice\", \"Bob\", \"Charlie\", \"Diana\"]\nlet iOSDevelopers: Set = [\"Charlie\", \"Diana\", \"Eve\", \"Frank\"]\n\n// Set operations\nlet allDevelopers = swiftDevelopers.union(iOSDevelopers)\nlet fullStackDevelopers = swiftDevelopers.intersection(iOSDevelopers)\nlet swiftOnly = swiftDevelopers.subtracting(iOSDevelopers)\nlet eitherNotBoth = swiftDevelopers.symmetricDifference(iOSDevelopers)\n\nprint(\"All developers: \\(allDevelopers.sorted())\")\nprint(\"Full-stack: \\(fullStackDevelopers.sorted())\")\nprint(\"Swift only: \\(swiftOnly.sorted())\")\nprint(\"Either not both: \\(eitherNotBoth.sorted())\")\n\n// Membership\nlet aliceOnly: Set = [\"Alice\"]\nprint(\"Alice is subset: \\(aliceOnly.isSubset(of: swiftDevelopers))\")\nprint(\"Disjoint: \\(swiftDevelopers.isDisjoint(with: [\"Zoe\"]))\")",
+  "quiz": [
+    {
+      "question": "Which method returns elements common to both sets?",
+      "options": ["union()", "intersection()", "subtracting()", "symmetricDifference()"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does it mean if two sets are disjoint?",
+      "options": ["They are equal", "They have no common elements", "One is subset of the other", "They have all elements in common"],
+      "correctIndex": 1
+    }
+  ]
+}

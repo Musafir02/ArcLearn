@@ -1,0 +1,22 @@
+{
+  "title": "Images and Icons in Flutter",
+  "language": "dart",
+  "topic": "images_icons",
+  "order": 61,
+  "nextTopic": "buttons",
+  "prevTopic": "text_styles",
+  "content": "### Image Widget\n\nThe `Image` widget displays images from various sources.\n\n```dart\n// Network image\nImage.network('https://example.com/image.jpg')\n\n// Asset image (from pubspec.yaml)\nImage.asset('assets/image.png')\n\n// File image\nImage.file(File('/path/to/image.jpg'))\n\n// Memory image\nImage.memory(bytes)\n```\n\n### Image Properties\n\n| Property | Type | Description |\n|----------|------|-------------|\n| `fit` | `BoxFit` | How to fit the image |\n| `width`/`height` | `double?` | Dimensions |\n| `alignment` | `Alignment` | Image alignment |\n| `color` | `Color?` | Color overlay |\n| `colorBlendMode` | `BlendMode` | Blend mode |\n| `repeat` | `ImageRepeat` | Image repeat |\n| `filterQuality` | `FilterQuality` | Quality vs performance |\n\n### BoxFit Values\n\n| Value | Description |\n|-------|-------------|\n| `cover` | Fill container, crop excess (center) |\n| `contain` | Fit entire image inside |\n| `fill` | Stretch to fill (may distort) |\n| `fitWidth` | Fit to width, crop height |\n| `fitHeight` | Fit to height, crop width |\n| `none` | Original size |\n\n```dart\nImage.network(\n  'https://example.com/photo.jpg',\n  width: 200,\n  height: 150,\n  fit: BoxFit.cover,\n)\n```\n\n### Icon Widget\n\nIcons from Material Design are built-in:\n\n```dart\nconst Icon(Icons.home, size: 32, color: Colors.blue)\nconst Icon(Icons.favorite, size: 24, color: Colors.red)\nconst Icon(Icons.settings, size: 28)\n```\n\n### IconButton\n\n```dart\nIconButton(\n  icon: const Icon(Icons.volume_up),\n  onPressed: () => print('Volume up'),\n  iconSize: 32,\n  color: Colors.blue,\n  tooltip: 'Increase volume',\n  splashRadius: 24,\n)\n```\n\n### CircleAvatar\n\n```dart\nCircleAvatar(\n  radius: 32,\n  backgroundImage: NetworkImage('https://example.com/avatar.jpg'),\n  child: const Text('AB'), // Fallback initials\n)\n```\n\n### Asset Images\n\nRegister assets in `pubspec.yaml`:\n\n```yaml\nflutter:\n  assets:\n    - assets/\n    - assets/images/logo.png\n```\n\n> **Key Point:** Use `BoxFit.cover` for thumbnails, `BoxFit.contain` for product images. Register asset paths in `pubspec.yaml`. Use `Icon` for Material icons and `CircleAvatar` for profile pictures.",
+  "codeExample": "import 'package:flutter/material.dart';\n\nclass ImageIconsDemo extends StatelessWidget {\n  const ImageIconsDemo({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: const Text('Images & Icons')),\n      body: Column(\n        children: [\n          // Image with placeholder\n          Container(\n            width: 200,\n            height: 150,\n            decoration: BoxDecoration(\n              color: Colors.grey[200],\n              borderRadius: BorderRadius.circular(8),\n            ),\n            child: const Icon(Icons.image, size: 48, color: Colors.grey),\n          ),\n          const SizedBox(height: 20),\n          // Icon row\n          const Row(\n            mainAxisAlignment: MainAxisAlignment.spaceEvenly,\n            children: [\n              Icon(Icons.star, size: 32, color: Colors.amber),\n              Icon(Icons.favorite, size: 32, color: Colors.red),\n              Icon(Icons.thumb_up, size: 32, color: Colors.blue),\n              Icon(Icons.share, size: 32, color: Colors.green),\n            ],\n          ),\n          const SizedBox(height: 20),\n          // Circle avatars\n          const Row(\n            mainAxisAlignment: MainAxisAlignment.spaceEvenly,\n            children: [\n              CircleAvatar(child: Text('AB')),\n              CircleAvatar(child: Icon(Icons.person)),\n              CircleAvatar(\n                radius: 28,\n                backgroundColor: Colors.amber,\n                child: Text('CD', style: TextStyle(color: Colors.white)),\n              ),\n            ],\n          ),\n        ],\n      ),\n    );\n  }\n}",
+  "quiz": [
+    {
+      "question": "Which BoxFit value fills the container and crops excess?",
+      "options": ["contain", "fill", "cover", "fitWidth"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which widget displays a Material Design icon?",
+      "options": ["Icon", "IconData", "IconWidget", "MaterialIcon"],
+      "correctIndex": 0
+    }
+  ]
+}

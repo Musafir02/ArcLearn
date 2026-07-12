@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Init Block",
+  "language": "kotlin",
+  "topic": "init",
+  "order": 26,
+  "nextTopic": "inheritance",
+  "prevTopic": "constructors",
+  "content": "### Init Blocks in Kotlin\n\nInitialization blocks (`init`) are executed when an instance of a class is created, after the primary constructor but before secondary constructors.\n\n---\n\n### Basic Init Block\n\n```kotlin\nclass Person(val name: String, val age: Int) {\n    init {\n        println(\"Person initialized: $name, $age\")\n        require(age >= 0) { \"Age cannot be negative\" }\n    }\n}\n```\n\n---\n\n### Multiple Init Blocks\n\nInit blocks execute in the order they appear in the class body.\n\n```kotlin\nclass Person(val name: String) {\n    init {\n        println(\"First init block\")\n    }\n    \n    val upperName = name.uppercase()\n    \n    init {\n        println(\"Second init block\")\n        println(\"Upper name: $upperName\")\n    }\n}\n\nfun main() {\n    val p = Person(\"Alice\")\n}\n// Output:\n// First init block\n// Second init block\n// Upper name: ALICE\n```\n\n---\n\n### Validation in Init Blocks\n\n```kotlin\nclass BankAccount(val owner: String, var balance: Double) {\n    init {\n        require(owner.isNotBlank()) { \"Owner name must not be blank\" }\n        require(balance >= 0.0) { \"Initial balance cannot be negative\" }\n    }\n    \n    fun deposit(amount: Double) {\n        require(amount > 0) { \"Deposit amount must be positive\" }\n        balance += amount\n    }\n}\n```\n\n---\n\n### Init Block with Secondary Constructor\n\nInit blocks run before any secondary constructor body.\n\n```kotlin\nclass Person(val name: String, val age: Int) {\n    init {\n        println(\"Init block: $name\")\n    }\n    \n    constructor(name: String) : this(name, 0) {\n        println(\"Secondary constructor: $name\")\n    }\n}\n\nfun main() {\n    val p = Person(\"Bob\")\n}\n// Output:\n// Init block: Bob\n// Secondary constructor: Bob\n```\n\n---\n\n### Configuration in Init Blocks\n\n```kotlin\nclass DatabaseConfig(host: String, port: Int) {\n    val url: String\n    \n    init {\n        url = \"jdbc:mysql://$host:$port\"\n        println(\"Database URL configured: $url\")\n    }\n}\n```\n\n> **Key Point:** Init blocks run during object creation and are ideal for validation, logging, and complex initialization logic.",
+  "codeExample": "class Rectangle(val width: Double, val height: Double) {\n    init {\n        require(width > 0) { \"Width must be positive\" }\n        require(height > 0) { \"Height must be positive\" }\n    }\n    \n    val area: Double\n        get() = width * height\n}\n\nfun main() {\n    val rect = Rectangle(5.0, 3.0)\n    println(\"Area: ${rect.area}\")\n    \n    // Will throw IllegalArgumentException\n    // val bad = Rectangle(-1.0, 5.0)\n}",
+  "quiz": [
+    {
+      "question": "When do init blocks execute?",
+      "options": ["Before the constructor", "After the primary constructor runs", "After secondary constructors", "At compile time"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What order do multiple init blocks execute in?",
+      "options": ["Reverse order", "In the order they appear", "Alphabetically", "Random order"],
+      "correctIndex": 1
+    }
+  ]
+}

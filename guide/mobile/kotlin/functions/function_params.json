@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Function Parameters",
+  "language": "kotlin",
+  "topic": "function_params",
+  "order": 17,
+  "nextTopic": "default_args",
+  "prevTopic": "functions",
+  "content": "### Function Parameters in Kotlin\n\nKotlin functions can have various types of parameters, including required, optional, and variable-length parameters.\n\n---\n\n### Required Parameters\n\nParameters must be typed and are required by default.\n\n```kotlin\nfun greet(name: String, age: Int) {\n    println(\"$name is $age years old\")\n}\n\ngreet(\"Alice\", 30)  // OK\n// greet(\"Alice\")  // Error: Missing argument\n```\n\n---\n\n### Default Parameter Values\n\nParameters can have default values, making them optional.\n\n```kotlin\nfun greet(name: String, greeting: String = \"Hello\") {\n    println(\"$greeting, $name!\")\n}\n\ngreet(\"Alice\")           // Hello, Alice!\ngreet(\"Alice\", \"Hi\")     // Hi, Alice!\n```\n\n---\n\n### Named Arguments\n\nCall functions with named arguments for better readability.\n\n```kotlin\nfun createUser(username: String, email: String, isAdmin: Boolean = false) {\n    // ...\n}\n\ncreateUser(\n    username = \"alice\",\n    email = \"alice@example.com\",\n    isAdmin = true\n)\n```\n\n---\n\n### Variable Number of Arguments (vararg)\n\nUse `vararg` to pass a variable number of arguments.\n\n```kotlin\nfun sum(vararg numbers: Int): Int {\n    return numbers.sum()\n}\n\nprintln(sum(1, 2, 3))       // 6\nprintln(sum(1, 2, 3, 4, 5)) // 15\n```\n\n---\n\n### Spread Operator\n\nUse `*` to spread an array into vararg.\n\n```kotlin\nval values = intArrayOf(1, 2, 3, 4, 5)\nval result = sum(*values)  // Pass array as vararg\nprintln(result)  // 15\n```\n\n---\n\n### Parameter Modifiers\n\n| Modifier | Description |\n|----------|-------------|\n| `val` | Immutable parameter (default) |\n| `var` | Mutable parameter (can be reassigned in function) |\n\n```kotlin\nfun modifyParam(var x: Int) {\n    x = x + 1  // OK: var parameter\n}\n```\n\n> **Key Point:** All function parameters are `val` by default. Use `var` to make them mutable inside the function body.",
+  "codeExample": "fun display(name: String, age: Int = 0, city: String = \"Unknown\") {\n    println(\"$name, $age, $city\")\n}\n\nfun main() {\n    display(\"Alice\", 30, \"New York\")\n    display(\"Bob\", 25)\n    display(name = \"Charlie\", city = \"London\")\n    \n    fun join(vararg words: String) = words.joinToString(\" \")\n    println(join(\"Kotlin\", \"is\", \"fun\"))\n}",
+  "quiz": [
+    {
+      "question": "What keyword allows a function to accept variable arguments?",
+      "options": ["varargs", "vararg", "anyargs", "multiple"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you spread an array into a vararg parameter?",
+      "options": ["&array", "*array", "@array", "%array"],
+      "correctIndex": 1
+    }
+  ]
+}

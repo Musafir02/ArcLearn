@@ -1,0 +1,22 @@
+{
+  "title": "Method Overriding in Dart",
+  "language": "dart",
+  "topic": "overriding",
+  "order": 25,
+  "nextTopic": "abstract",
+  "prevTopic": "inheritance",
+  "content": "### Method Overriding\n\nMethod overriding allows a subclass to provide a specific implementation of a method defined in its parent class.\n\n```dart\nclass Animal {\n  void makeSound() {\n    print('Animal makes a sound');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Dog barks');\n  }\n}\n\nvoid main() {\n  var animal = Animal();\n  var dog = Dog();\n\n  animal.makeSound(); // Animal makes a sound\n  dog.makeSound();    // Dog barks\n}\n```\n\n### The @Override Annotation\n\nUse the `@override` annotation to indicate you are intentionally overriding a method. This is optional but recommended.\n\n```dart\nclass Shape {\n  double area() => 0;\n  String describe() => 'Shape';\n}\n\nclass Circle extends Shape {\n  double radius;\n\n  Circle(this.radius);\n\n  @override\n  double area() => 3.14159 * radius * radius;\n\n  @override\n  String describe() => 'Circle with radius $radius';\n}\n```\n\n### Overriding Operators\n\nDart allows overriding operators like `+`, `-`, `==`, etc.\n\n```dart\nclass Vector {\n  final int x, y;\n\n  Vector(this.x, this.y);\n\n  @override\n  Vector operator +(Vector other) => Vector(x + other.x, y + other.y);\n\n  @override\n  bool operator ==(Object other) =>\n      other is Vector && x == other.x && y == other.y;\n\n  @override\n  int get hashCode => Object.hash(x, y);\n\n  @override\n  String toString() => 'Vector($x, $y)';\n}\n\nvoid main() {\n  var v1 = Vector(2, 3);\n  var v2 = Vector(4, 5);\n\n  print(v1 + v2); // Vector(6, 8)\n  print(v1 == Vector(2, 3)); // true\n}\n```\n\n### Overridable Operators\n\n| Operator | Method |\n|----------|--------|\n| `+` | `operator +` |\n| `-` | `operator -` |\n| `*` | `operator *` |\n| `/` | `operator /` |\n| `~/` | `operator ~/` |\n| `%` | `operator %` |\n| `[]` | `operator []` |\n| `[]=` | `operator []=` |\n| `==` | `operator ==` |\n| `<` | `operator <` |\n| `>` | `operator >` |\n\n> **Key Point:** Always use `@override` when overriding methods. When overriding `==`, you must also override `hashCode` to maintain consistency.",
+  "codeExample": "class Point {\n  final int x, y;\n\n  Point(this.x, this.y);\n\n  @override\n  Point operator +(Point other) => Point(x + other.x, y + other.y);\n\n  @override\n  bool operator ==(Object other) =>\n      other is Point && x == other.x && y == other.y;\n\n  @override\n  int get hashCode => Object.hash(x, y);\n\n  @override\n  String toString() => '($x, $y)';\n}\n\nvoid main() {\n  var p1 = Point(1, 2);\n  var p2 = Point(3, 4);\n  var p3 = Point(1, 2);\n\n  print(p1 + p2);  // (4, 6)\n  print(p1 == p3); // true\n  print(p1);       // (1, 2)\n}",
+  "quiz": [
+    {
+      "question": "Which annotation indicates intentional method overriding?",
+      "options": ["@override", "@overwrite", "@replace", "@extend"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What must you override alongside the == operator?",
+      "options": ["toString", "hashCode", "runtimeType", "compareTo"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Swift Comments",
+  "language": "swift",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Swift Comments\n\nComments are non-executable text in source code used for documentation and explanation. Swift supports single-line, multi-line, and nested comments.\n\n**Comment Types:**\n\n| Type | Syntax | Example |\n|------|--------|--------|\n| Single-line | `//` | `// This is a comment` |\n| Multi-line | `/* */` | `/* Block comment */` |\n| Nested | `/* /* */ */` | Allows nesting block comments |\n| Documentation | `///` or `/** */` | `/// Document this function` |\n\n```swift\n// Single-line comment\nlet x = 10 // Inline comment\n\n/*\nMulti-line comment\nspanning multiple lines\n*/\n\n/* Nested /* comments */ are supported */\n\n/// Documentation comment for a function\n/// - Parameter name: The person's name\n/// - Returns: A greeting string\nfunc greet(name: String) -> String {\n    return \"Hello, \\(name)!\"\n}\n```\n\n> **Key Point:** Nested block comments are unique to Swift and a few other languages. They let you comment out code that already contains block comments.\n\nDocumentation comments (`///` or `/** */`) are used with Swift's documentation generator to produce formatted reference documentation.",
+  "codeExample": "import Foundation\n\n/// Calculates the area of a rectangle\n/// - Parameters:\n///   - width: The width of the rectangle\n///   - height: The height of the rectangle\n/// - Returns: The area as a Double\nfunc rectangleArea(width: Double, height: Double) -> Double {\n    // width * height gives the area\n    return width * height\n}\n\n/* Testing the function */\nlet area = rectangleArea(width: 5.0, height: 3.0)\nprint(\"Area: \\(area)\") // Output: Area: 15.0",
+  "quiz": [
+    {
+      "question": "Which comment syntax is unique to Swift among popular languages?",
+      "options": ["//", "/* */", "Nested /* /* */ */", "///"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What prefix is used for documentation comments?",
+      "options": ["///", "//-", "//!", "##"],
+      "correctIndex": 0
+    }
+  ]
+}

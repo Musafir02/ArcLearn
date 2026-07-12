@@ -1,0 +1,22 @@
+{
+  "title": "Typedef in Dart",
+  "language": "dart",
+  "topic": "typedef",
+  "order": 46,
+  "nextTopic": "extensions",
+  "prevTopic": "try_catch",
+  "content": "### Typedef Basics\n\nTypedefs create aliases for function types, improving code readability and reusability.\n\n```dart\n// Define a function type alias\ntypedef IntOperation = int Function(int a, int b);\n\nint add(int a, int b) => a + b;\nint multiply(int a, int b) => a * b;\n\nvoid execute(IntOperation op, int x, int y) {\n  print('Result: ${op(x, y)}');\n}\n\nvoid main() {\n  execute(add, 5, 3);      // Result: 8\n  execute(multiply, 5, 3); // Result: 15\n}\n```\n\n### Typedef with Parameters\n\n```dart\ntypedef Filter = bool Function(String item);\ntypedef Transformer = String Function(String item);\ntypedef Callback = void Function(String message);\n\nList<String> filterList(List<String> items, Filter filter) {\n  return items.where(filter).toList();\n}\n\nList<String> transformList(List<String> items, Transformer transform) {\n  return items.map(transform).toList();\n}\n\nvoid main() {\n  var names = ['Alice', 'Bob', 'Charlie', 'Dave'];\n\n  var longNames = filterList(names, (name) => name.length > 3);\n  print(longNames); // [Alice, Charlie, Dave]\n\n  var upperNames = transformList(names, (name) => name.toUpperCase());\n  print(upperNames); // [ALICE, BOB, CHARLIE, DAVE]\n}\n```\n\n### Typedef in Classes\n\n```dart\ntypedef EventHandler = void Function(Map<String, dynamic> event);\n\nclass EventBus {\n  final List<EventHandler> _handlers = [];\n\n  void addHandler(EventHandler handler) {\n    _handlers.add(handler);\n  }\n\n  void emit(Map<String, dynamic> event) {\n    for (var handler in _handlers) {\n      handler(event);\n    }\n  }\n}\n\nvoid main() {\n  var bus = EventBus();\n  bus.addHandler((event) => print('Received: $event'));\n  bus.emit({'type': 'login', 'user': 'alice'});\n}\n```\n\n### Typedef for Generic Functions\n\n```dart\ntypedef Comparator<T> = int Function(T a, T b);\ntypedef Mapper<T, R> = R Function(T input);\n\nvoid sortWithComparator<T>(List<T> items, Comparator<T> compare) {\n  items.sort(compare);\n}\n\nList<R> mapList<T, R>(List<T> items, Mapper<T, R> mapper) {\n  return items.map(mapper).toList();\n}\n\nvoid main() {\n  var numbers = [3, 1, 4, 1, 5, 9];\n  sortWithComparator<int>(numbers, (a, b) => a - b);\n  print(numbers); // [1, 1, 3, 4, 5, 9]\n\n  var doubled = mapList<int, int>(numbers, (n) => n * 2);\n  print(doubled);\n}\n```\n\n### Benefits of Typedef\n\n| Benefit | Description |\n|---------|-------------|\n| Readability | Descriptive names for complex types |\n| Reusability | Single definition used everywhere |\n| Maintainability | Change one place, update all |\n| Documentation | Self-documenting intent |\n\n> **Key Point:** Use typedef to give meaningful names to function types. This makes your code more self-documenting and reduces duplication of complex type signatures.",
+  "codeExample": "typedef ProgressCallback = void Function(double progress);\ntypedef ErrorCallback = void Function(String error);\ntypedef SuccessCallback<T> = void Function(T result);\n\nFuture<void> downloadFile(\n  String url, {\n  required ProgressCallback onProgress,\n  required SuccessCallback<String> onSuccess,\n  required ErrorCallback onError,\n}) async {\n  try {\n    for (var i = 0; i <= 100; i += 10) {\n      await Future.delayed(Duration(milliseconds: 200));\n      onProgress(i / 100);\n    }\n    onSuccess('Downloaded: $url');\n  } catch (e) {\n    onError(e.toString());\n  }\n}\n\nvoid main() async {\n  await downloadFile(\n    'https://example.com/file.zip',\n    onProgress: (p) => print('Progress: ${(p * 100).toInt()}%'),\n    onSuccess: (msg) => print('Success: $msg'),\n    onError: (err) => print('Error: $err'),\n  );\n}",
+  "quiz": [
+    {
+      "question": "What does typedef create?",
+      "options": ["A new type", "An alias for a type", "A function", "A class"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can typedef be generic (use type parameters)?",
+      "options": ["No", "Yes", "Only in Dart 3", "Only with classes"],
+      "correctIndex": 1
+    }
+  ]
+}

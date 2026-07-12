@@ -1,0 +1,22 @@
+{
+  "title": "Maps in Dart",
+  "language": "dart",
+  "topic": "map",
+  "order": 33,
+  "nextTopic": "iterables",
+  "prevTopic": "set",
+  "content": "### Map Basics\n\nA Map is an unordered collection of key-value pairs. Keys must be unique.\n\n```dart\nvoid main() {\n  // Creating maps\n  Map<String, int> ages = {\n    'Alice': 30,\n    'Bob': 25,\n    'Charlie': 35,\n  };\n\n  var empty = <String, int>{};\n\n  // Accessing values\n  print(ages['Alice']); // 30\n  print(ages['David']); // null (key not found)\n\n  // Adding and updating\n  ages['David'] = 28;  // Add new\n  ages['Alice'] = 31;  // Update existing\n\n  print(ages.length); // 4\n}\n```\n\n### Map Methods\n\n| Method | Description | Example |\n|--------|-------------|---------|\n| `containsKey(key)` | Checks for key | `map.containsKey('a')` |\n| `containsValue(val)` | Checks for value | `map.containsValue(10)` |\n| `putIfAbsent(key, fn)` | Adds if absent | `map.putIfAbsent('a', () => 1)` |\n| `remove(key)` | Removes entry | `map.remove('a')` |\n| `clear()` | Removes all | `map.clear()` |\n| `addAll(otherMap)` | Adds all pairs | `map.addAll({'b': 2})` |\n| `update(key, fn)` | Updates existing | `map.update('a', (v) => v + 1)` |\n\n### Iterating Over Maps\n\n```dart\nvoid main() {\n  var scores = {'Alice': 95, 'Bob': 87, 'Charlie': 92};\n\n  // Iterate over entries\n  for (var entry in scores.entries) {\n    print('${entry.key}: ${entry.value}');\n  }\n\n  // Iterate over keys\n  for (var name in scores.keys) {\n    print('Name: $name');\n  }\n\n  // Iterate over values\n  for (var score in scores.values) {\n    print('Score: $score');\n  }\n\n  // Using forEach\n  scores.forEach((name, score) {\n    print('$name scored $score');\n  });\n}\n```\n\n### Map Properties\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n\n  print(map.length);    // 3\n  print(map.isEmpty);   // false\n  print(map.isNotEmpty); // true\n  print(map.keys);      // (a, b, c)\n  print(map.values);    // (1, 2, 3)\n  print(map.entries);   // (MapEntry(a: 1), ...)\n}\n```\n\n### Nested Maps\n\n```dart\nvoid main() {\n  var users = {\n    'alice': {'age': 30, 'email': 'alice@example.com'},\n    'bob': {'age': 25, 'email': 'bob@example.com'},\n  };\n\n  print(users['alice']?['email']); // alice@example.com\n}\n```\n\n> **Key Point:** Accessing a non-existent key returns `null`. Use `putIfAbsent()` to lazily add missing entries. Use `entries` property for iteration.",
+  "codeExample": "void main() {\n  var capitals = <String, String>{\n    'USA': 'Washington, DC',\n    'France': 'Paris',\n    'Japan': 'Tokyo',\n    'India': 'New Delhi',\n  };\n\n  capitals['UK'] = 'London';\n  capitals['France'] = 'Lyon'; // Update\n\n  print('Capital of Japan: ${capitals['Japan']}');\n  print('Has Germany: ${capitals.containsKey('Germany')}');\n\n  capitals.forEach((country, capital) {\n    print('$country -> $capital');\n  });\n\n  var upperKeys = capitals.keys.map((k) => k.toUpperCase()).toList();\n  print('Countries: $upperKeys');\n}",
+  "quiz": [
+    {
+      "question": "What does map['nonExistentKey'] return?",
+      "options": ["Error", "null", "false", "empty string"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which method adds a key-value pair only if the key is absent?",
+      "options": ["addIfAbsent", "putIfAbsent", "setIfAbsent", "insertIfAbsent"],
+      "correctIndex": 1
+    }
+  ]
+}

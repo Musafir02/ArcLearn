@@ -1,0 +1,23 @@
+{
+  "title": "Kotlin Flow",
+  "language": "kotlin",
+  "topic": "flow",
+  "order": 45,
+  "nextTopic": "channels",
+  "prevTopic": "launch_async",
+  "content": "### Flow in Kotlin\n\nFlow is a cold asynchronous data stream that emits values sequentially. It is part of `kotlinx.coroutines.flow`.\n\n---\n\n### Creating Flows\n\n```kotlin\nimport kotlinx.coroutines.flow.*\n\n// Flow builder\nval numberFlow = flow {\n    for (i in 1..5) {\n        delay(500)\n        emit(i)\n    }\n}\n\n// From fixed values\nval fixed = flowOf(1, 2, 3)\n\n// From collections\nval fromList = listOf(1, 2, 3).asFlow()\n```\n\n---\n\n### Collecting Flows\n\n```kotlin\nfun main() = runBlocking {\n    val flow = flowOf(\"A\", \"B\", \"C\")\n    \n    flow.collect { value ->\n        println(value)\n    }\n    \n    // Or: flow.collect { println(it) }\n}\n```\n\n---\n\n### Flow Characteristics\n\n| Characteristic | Description |\n|---------------|-------------|\n| Cold stream | Starts emitting only when collected |\n| Sequential | Values emitted one by one |\n| Cancellable | Cooperative cancellation |\n| Structured | Respects coroutine scope |\n\n---\n\n### Flow Operators\n\n```kotlin\nflowOf(1, 2, 3, 4, 5)\n    .filter { it % 2 == 0 }\n    .map { it * 10 }\n    .take(2)\n    .collect { println(it) }  // 20, 40\n```\n\n---\n\n### Terminal Operators\n\n| Operator | Description |\n|----------|-------------|\n| `collect` | Collects all values |\n| `first()` | Gets first value |\n| `single()` | Expects exactly one value |\n| `toList()` | Collects to list |\n| `count()` | Counts values |\n| `reduce()` | Accumulates values |\n\n---\n\n### Flow Exception Handling\n\n```kotlin\nfun main() = runBlocking {\n    flow {\n        emit(1)\n        emit(2)\n        throw RuntimeException(\"Error!\")\n    }\n    .catch { e ->\n        println(\"Caught: ${e.message}\")\n        emit(-1)  // Emit fallback value\n    }\n    .collect { println(it) }\n}\n// Output: 1, 2, Caught: Error!, -1\n```\n\n---\n\n### Flow Completion\n\n```kotlin\nfun main() = runBlocking {\n    flowOf(\"A\", \"B\", \"C\")\n        .onCompletion { cause ->\n            if (cause == null)\n                println(\"Completed successfully\")\n            else\n                println(\"Failed: ${cause.message}\")\n        }\n        .collect { println(it) }\n}\n```\n\n> **Key Point:** Flow is a cold, asynchronous stream. Each `collect` triggers a new stream emission. Use `catch` for error recovery and `onCompletion` for cleanup.",
+  "codeExample": "import kotlinx.coroutines.*\nimport kotlinx.coroutines.flow.*\n\nfun main() = runBlocking {\n    val numbers = (1..10).asFlow()\n    \n    numbers\n        .filter { it % 2 == 0 }\n        .map { \"Even: $it\" }\n        .catch { println(\"Error: $it\") }\n        .collect { println(it) }\n}",
+  "quiz": [
+    {
+      "question": "Is Flow a hot or cold stream?",
+      "options": ["Hot", "Cold", "Both", "Neither"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When does a Flow start emitting values?",
+      "question": "When does a Flow start emitting values?",
+      "options": ["When created", "When collected", "When it has subscribers", "At compile time"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Error Handling in Dart",
+  "language": "dart",
+  "topic": "error_handling",
+  "order": 44,
+  "nextTopic": "try_catch",
+  "prevTopic": "isolates",
+  "content": "### Error Handling Overview\n\nDart distinguishes between errors (programming mistakes) and exceptions (runtime problems).\n\n| Type | Description | Examples |\n|------|-------------|----------|\n| `Error` | Programming bug | `RangeError`, `TypeError` |\n| `Exception` | Runtime problem | `FormatException`, `IOException` |\n\n### The Exception Class\n\n```dart\nvoid main() {\n  // Built-in exceptions\n  try {\n    int.parse('not_a_number');\n  } on FormatException catch (e) {\n    print('Bad format: $e');\n  }\n\n  // Custom exception\n  try {\n    throw AgeException('Age must be 18+');\n  } on AgeException catch (e) {\n    print('Age error: ${e.message}');\n  }\n}\n\nclass AgeException implements Exception {\n  final String message;\n  AgeException(this.message);\n\n  @override\n  String toString() => 'AgeException: $message';\n}\n```\n\n### Throwing Exceptions\n\n```dart\nvoid validateAge(int age) {\n  if (age < 0) {\n    throw ArgumentError('Age cannot be negative');\n  }\n  if (age < 18) {\n    throw Exception('Must be 18 or older');\n  }\n}\n\nvoid main() {\n  try {\n    validateAge(-5);\n  } catch (e) {\n    print('Validation failed: $e');\n  }\n}\n```\n\n### Custom Exceptions\n\n```dart\nclass NetworkException implements Exception {\n  final String message;\n  final int statusCode;\n\n  NetworkException(this.message, this.statusCode);\n\n  @override\n  String toString() => 'NetworkException($statusCode): $message';\n}\n\nvoid makeRequest(String url) {\n  throw NetworkException('Not found', 404);\n}\n\nvoid main() {\n  try {\n    makeRequest('/api/data');\n  } on NetworkException catch (e) {\n    print('Network error ${e.statusCode}: ${e.message}');\n  }\n}\n```\n\n### Error vs Exception Distinction\n\n```dart\nvoid main() {\n  // Error - should not be caught, fix the code\n  // throw RangeError('Index out of bounds');\n\n  // Exception - can be caught and handled\n  try {\n    throw Exception('Something went wrong');\n  } catch (e) {\n    print('Handled: $e');\n  }\n}\n```\n\n> **Key Point:** Implement the `Exception` interface for custom exceptions. Use `Error` subclasses for programming mistakes (bugs to fix), and `Exception` for runtime conditions to handle.",
+  "codeExample": "class ValidationException implements Exception {\n  final String field;\n  final String message;\n\n  ValidationException(this.field, this.message);\n\n  @override\n  String toString() => 'Validation failed for $field: $message';\n}\n\nvoid validateUser(String name, int age) {\n  if (name.isEmpty) {\n    throw ValidationException('name', 'Name is required');\n  }\n  if (age < 0 || age > 150) {\n    throw ValidationException('age', 'Invalid age');\n  }\n}\n\nvoid main() {\n  try {\n    validateUser('', 200);\n  } on ValidationException catch (e) {\n    print('${e.field}: ${e.message}');\n  } catch (e) {\n    print('Unexpected error: $e');\n  }\n}",
+  "quiz": [
+    {
+      "question": "What should Error be used for?",
+      "options": ["Runtime exceptions", "Programming bugs", "Network errors", "User input errors"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What interface should custom exception classes implement?",
+      "options": ["Error", "Exception", "Throwable", "Catchable"],
+      "correctIndex": 1
+    }
+  ]
+}

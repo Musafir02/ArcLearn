@@ -1,0 +1,22 @@
+{
+  "title": "Swift Access Control",
+  "language": "swift",
+  "topic": "access_control",
+  "order": 57,
+  "nextTopic": "static_type",
+  "prevTopic": "deinit",
+  "content": "### Swift Access Control\n\nAccess control restricts access to parts of your code from other source files and modules. Swift provides five access levels to enforce encapsulation.\n\n**Access Levels:**\n\n| Level | Keyword | Accessibility |\n|-------|---------|---------------|\n| Open | `open` | Any module (subclassable outside module) |\n| Public | `public` | Any module (not subclassable outside) |\n| Internal | `internal` | Current module only (default) |\n| File-private | `fileprivate` | Current file only |\n| Private | `private` | Current declaration only |\n\n**Access Level Comparison:**\n\n```swift\nopen class OpenClass {\n    open func overridableOutside() { }\n    public func accessibleOutside() { }\n}\n\npublic struct PublicStruct {\n    public var name: String\n    internal var internalID: Int\n    fileprivate var helperValue = 0\n    private var secretKey = \"abc123\"\n}\n\n// Default is internal\nclass InternalClass { }  // Same as: internal class\n```\n\n**Access Control Rules:**\n\n| Rule | Description |\n|------|-------------|\n| Default | `internal` if not specified |\n| No entity less restrictive than its context | A method cannot be `public` if its parameter type is `private` |\n| Class restrictions | `open` is only for classes and class members |\n| Tuple types | Access level is the most restrictive element |\n\n**Private vs FilePrivate:**\n\n```swift\nclass MyClass {\n    private var privateProperty = \"Only accessible within this declaration\"\n    fileprivate var filePrivateProperty = \"Accessible within this file\"\n    \n    private func privateMethod() { }\n    fileprivate func filePrivateMethod() { }\n}\n\nextension MyClass {\n    // Can access fileprivate but NOT private\n    func test() {\n        // privateProperty  // Error\n        filePrivateProperty  // OK\n    }\n}\n```\n\n> **Key Point:** Since Swift 4, `private` is scoped to the enclosing declaration, while `fileprivate` is scoped to the entire file. In practice, prefer `private` over `fileprivate`.\n\n**Getters and Setters:**\n\n```swift\nstruct TrackedValue {\n    private(set) var value: Int = 0  // Public getter, private setter\n    \n    mutating func increment() {\n        value += 1\n    }\n}\n```\n\nGetters and setters can have different access levels. Use `private(set)` to allow reading but restrict writing.",
+  "codeExample": "import Foundation\n\npublic struct BankAccount {\n    public let accountHolder: String\n    public private(set) var balance: Double\n    private var transactionHistory: [String] = []\n    \n    public init(accountHolder: String, initialBalance: Double) {\n        self.accountHolder = accountHolder\n        self.balance = initialBalance\n        logTransaction(\"Account opened with $\\(initialBalance)\")\n    }\n    \n    public mutating func deposit(amount: Double) {\n        balance += amount\n        logTransaction(\"Deposited $\\(amount)\")\n    }\n    \n    public mutating func withdraw(amount: Double) -> Bool {\n        guard amount <= balance else {\n            logTransaction(\"Failed withdrawal of $\\(amount)\")\n            return false\n        }\n        balance -= amount\n        logTransaction(\"Withdrew $\\(amount)\")\n        return true\n    }\n    \n    // Private helper\n    private mutating func logTransaction(_ description: String) {\n        transactionHistory.append(description)\n    }\n    \n    // Fileprivate for internal use\n    fileprivate var transactionCount: Int {\n        transactionHistory.count\n    }\n}\n\nvar account = BankAccount(accountHolder: \"Alice\", initialBalance: 1000)\nprint(\"Balance: $\\(account.balance)\")\n// account.balance = 500  // Error: setter is private\naccount.deposit(amount: 500)\nprint(\"New balance: $\\(account.balance)\")",
+  "quiz": [
+    {
+      "question": "What is the default access level in Swift?",
+      "options": ["open", "public", "internal", "private"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does private(set) do?",
+      "options": ["Makes both getter and setter private", "Makes getter public, setter private", "Makes getter private, setter public", "Removes the setter entirely"],
+      "correctIndex": 1
+    }
+  ]
+}

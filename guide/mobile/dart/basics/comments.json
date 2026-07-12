@@ -1,0 +1,22 @@
+{
+  "title": "Comments in Dart",
+  "language": "dart",
+  "topic": "comments",
+  "order": 5,
+  "nextTopic": "variables",
+  "prevTopic": "output",
+  "content": "### Types of Comments\n\nDart supports three types of comments: single-line, multi-line, and documentation comments.\n\n| Type | Syntax | Usage |\n|------|--------|-------|\n| Single-line | `//` | Brief explanations |\n| Multi-line | `/* ... */` | Longer descriptions |\n| Documentation | `///` or `/** ... */` | API documentation |\n\n### Single-line Comments\n\n```dart\nvoid main() {\n  // This is a single-line comment\n  print('Hello'); // Inline comment\n}\n```\n\n### Multi-line Comments\n\n```dart\nvoid main() {\n  /*\n   * This is a multi-line comment.\n   * It can span multiple lines.\n   */\n  print('Hello');\n}\n```\n\n### Documentation Comments\n\nDocumentation comments are used with Dart's documentation generator (`dart doc`).\n\n```dart\n/// Calculates the sum of two numbers.\n///\n/// The [a] and [b] parameters must be integers.\nint add(int a, int b) {\n  return a + b;\n}\n\n/**\n * Multi-line documentation comment.\n * Uses [brackets] to reference parameters.\n */\nint multiply(int a, int b) => a * b;\n```\n\n### Generating Documentation\n\n```bash\ndart doc\n```\n\n> **Key Point:** Use `///` for documentation comments. They are parsed by `dart doc` to generate API reference pages. Single-line comments with `//` are ignored by the documentation generator.",
+  "codeExample": "/// Represents a person with a name and age.\nclass Person {\n  final String name;\n  final int age;\n\n  /// Creates a new [Person] instance.\n  Person(this.name, this.age);\n\n  // Returns a greeting string\n  String greet() => 'Hello, I am $name';\n}\n\nvoid main() {\n  var p = Person('Alice', 30);\n  print(p.greet());\n}",
+  "quiz": [
+    {
+      "question": "Which comment syntax is used for documentation in Dart?",
+      "options": ["//", "/* */", "///", "#"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What command generates documentation from Dart source code?",
+      "options": ["dart doc", "dart docs", "dart document", "dart generate"],
+      "correctIndex": 0
+    }
+  ]
+}

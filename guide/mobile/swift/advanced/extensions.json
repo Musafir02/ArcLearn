@@ -1,0 +1,22 @@
+{
+  "title": "Swift Extensions",
+  "language": "swift",
+  "topic": "extensions",
+  "order": 65,
+  "nextTopic": "protocol_extensions",
+  "prevTopic": "protocol_delegation",
+  "content": "### Swift Extensions\n\nExtensions add new functionality to existing types, including types from the standard library or third-party frameworks. They can add computed properties, methods, initializers, subscripts, and protocol conformance.\n\n**Extension Syntax:**\n\n```swift\nextension SomeType {\n    // New functionality here\n}\n```\n\n**What Extensions Can Add:**\n\n| Feature | Can Add? | Notes |\n|---------|----------|-------|\n| Computed properties | Yes | No stored properties |\n| Instance methods | Yes | |\n| Type methods | Yes | Using `static` |\n| Initializers | Yes | Convenience only for classes |\n| Subscripts | Yes | |\n| Nested types | Yes | |\n| Protocol conformance | Yes | |\n| Stored properties | No | Use associated objects (ObjC) |\n\n```swift\nextension Double {\n    // Computed property\n    var asCurrency: String {\n        return String(format: \"$%.2f\", self)\n    }\n    \n    // Computed property\n    var squared: Double {\n        return self * self\n    }\n    \n    // Instance method\n    func rounded(to places: Int) -> Double {\n        let divisor = pow(10.0, Double(places))\n        return (self * divisor).rounded() / divisor\n    }\n}\n\nlet price = 19.99\nprint(price.asCurrency)  // $19.99\nprint(price.squared)     // 399.6001\nprint((123.4567).rounded(to: 2))  // 123.46\n```\n\n**Extensions on Standard Types:**\n\n```swift\nextension String {\n    var isEmail: Bool {\n        return contains(\"@\") && contains(\".\")\n    }\n    \n    func truncate(to length: Int) -> String {\n        guard count > length else { return self }\n        return prefix(length) + \"...\"\n    }\n}\n\nprint(\"test@example.com\".isEmail)  // true\nprint(\"Hello World\".truncate(to: 5))  // Hello...\n```\n\n**Adding Protocol Conformance:**\n\n```swift\nstruct Point {\n    var x: Double, y: Double\n}\n\n// Conform to Equatable via extension\nextension Point: Equatable {\n    static func == (lhs: Point, rhs: Point) -> Bool {\n        return lhs.x == rhs.x && lhs.y == rhs.y\n    }\n}\n\nextension Point: CustomStringConvertible {\n    var description: String {\n        return \"(\\(x), \\(y))\"\n    }\n}\n```\n\n> **Key Point:** Extensions cannot override existing functionality. They add new capabilities. Use them to organize code by feature, conform to protocols, or add utilities to existing types.\n\nUse extensions to organize your code into logical sections:\n\n```swift\nclass MyViewController {\n    // Main implementation\n}\n\nextension MyViewController: UITableViewDataSource {\n    // Table view data source methods\n}\n\nextension MyViewController: UITableViewDelegate {\n    // Table view delegate methods\n}\n```",
+  "codeExample": "import Foundation\n\n// Extending built-in types\nextension Int {\n    var isEven: Bool { self % 2 == 0 }\n    var isOdd: Bool { !isEven }\n    \n    func times(_ action: () -> Void) {\n        for _ in 0..<self {\n            action()\n        }\n    }\n}\n\nextension Array where Element: Numeric {\n    var sum: Element {\n        reduce(0, +)\n    }\n    \n    var average: Double {\n        guard !isEmpty else { return 0 }\n        return Double(sum as! Int) / Double(count)\n    }\n}\n\nprint(\"Is 7 even? \\(7.isEven)\")\nprint(\"Is 8 even? \\(8.isEven)\")\n\n3.times { print(\"Hello!\") }\n\nlet numbers = [1, 2, 3, 4, 5]\nprint(\"Sum: \\(numbers.sum)\")\n\n// Extending with Equatable\nextension String {\n    func isValidPassword() -> Bool {\n        count >= 8 && contains { $0.isNumber } && contains { $0.isUppercase }\n    }\n}\n\nprint(\"Password valid: \\(Swift1234\".isValidPassword())\")",
+  "quiz": [
+    {
+      "question": "Can extensions add stored properties?",
+      "options": ["Yes", "No", "Only computed properties", "Only if the type is a class"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can extensions override existing methods?",
+      "options": ["Yes", "No, they add new functionality", "Only for computed properties", "Only if marked @objc"],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Method Overriding",
+  "language": "kotlin",
+  "topic": "overriding",
+  "order": 28,
+  "nextTopic": "abstract",
+  "prevTopic": "inheritance",
+  "content": "### Method Overriding in Kotlin\n\nOverriding allows a subclass to provide a specific implementation of a function or property defined in its superclass.\n\n---\n\n### Override Keyword\n\nUse `override` to replace a superclass member.\n\n```kotlin\nopen class Animal {\n    open fun makeSound() = println(\"Animal sound\")\n}\n\nclass Dog : Animal() {\n    override fun makeSound() = println(\"Bark!\")\n}\n```\n\n---\n\n### Overriding Properties\n\nProperties can also be overridden.\n\n```kotlin\nopen class Shape {\n    open val area: Double get() = 0.0\n}\n\nclass Circle(val radius: Double) : Shape() {\n    override val area: Double get() = Math.PI * radius * radius\n}\n\nclass Square(val side: Double) : Shape() {\n    override val area: Double get() = side * side\n}\n```\n\n---\n\n### Override Rules\n\n| Rule | Description |\n|------|-------------|\n| Member must be `open` | Cannot override a `final` member |\n| Signature must match | Same name and parameters |\n| Return type must be covariant | Subtype of original return type |\n| Visibility cannot be reduced | e.g., `protected` cannot become `private` |\n\n---\n\n### Calling Super Implementation\n\n```kotlin\nopen class Parent {\n    open fun greet() = println(\"Hello from parent\")\n}\n\nclass Child : Parent() {\n    override fun greet() {\n        super.greet()  // Call parent implementation\n        println(\"Hello from child\")\n    }\n}\n```\n\n---\n\n### Multiple Inheritance of Implementation\n\nKotlin supports multiple interface inheritance. Use `super<Interface>` to specify which implementation to call.\n\n```kotlin\ninterface A {\n    fun doSomething() = println(\"A\")\n}\n\ninterface B {\n    fun doSomething() = println(\"B\")\n}\n\nclass C : A, B {\n    override fun doSomething() {\n        super<A>.doSomething()\n        super<B>.doSomething()\n    }\n}\n```\n\n---\n\n### Preventing Further Override\n\nMark overridden members as `final` to stop further overriding.\n\n```kotlin\nopen class Parent {\n    open fun method() {}\n}\n\nopen class Child : Parent() {\n    final override fun method() {}  // Cannot be overridden further\n}\n\nclass GrandChild : Child() {\n    // override fun method() {}  // Error: final\n}\n```\n\n> **Key Point:** Always use the `override` modifier. It is required (not optional) in Kotlin, preventing accidental overrides.",
+  "codeExample": "open class Employee(val name: String) {\n    open fun calculateBonus(): Double = 0.0\n    open fun work() = println(\"$name is working\")\n}\n\nclass Manager(name: String, val teamSize: Int) : Employee(name) {\n    override fun calculateBonus(): Double = 5000.0 * teamSize\n    override fun work() {\n        super.work()\n        println(\"$name manages $teamSize people\")\n    }\n}\n\nfun main() {\n    val emp = Employee(\"Alice\")\n    val mgr = Manager(\"Bob\", 5)\n    \n    println(\"${emp.name} bonus: ${emp.calculateBonus()}\")\n    println(\"${mgr.name} bonus: ${mgr.calculateBonus()}\")\n    mgr.work()\n}",
+  "quiz": [
+    {
+      "question": "Is the 'override' keyword optional or required in Kotlin?",
+      "options": ["Optional", "Required", "Optional only for abstract methods", "Not needed"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can the visibility of an overridden method be reduced?",
+      "options": ["Yes", "No", "Only from public to protected", "Only from protected to private"],
+      "correctIndex": 1
+    }
+  ]
+}

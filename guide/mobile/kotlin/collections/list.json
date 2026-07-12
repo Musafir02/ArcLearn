@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin List",
+  "language": "kotlin",
+  "topic": "list",
+  "order": 36,
+  "nextTopic": "set",
+  "prevTopic": "visibility_modifiers",
+  "content": "### Lists in Kotlin\n\nA `List` is an ordered collection of elements. Kotlin provides both immutable (`List`) and mutable (`MutableList`) lists.\n\n---\n\n### Creating Lists\n\n```kotlin\n// Immutable lists\nval numbers = listOf(1, 2, 3, 4, 5)\nval empty = emptyList<String>()\nval mixed = listOf(1, \"Hello\", true)  // List<Any>\n\n// Mutable lists\nval mutable = mutableListOf(1, 2, 3)\nval arrayList = arrayListOf(1, 2, 3)\nval buildList = buildList<String> { add(\"A\"); add(\"B\") }\n```\n\n---\n\n### Accessing Elements\n\n```kotlin\nval list = listOf(\"a\", \"b\", \"c\", \"d\", \"e\")\n\nprintln(list[0])         // a\nprintln(list.first())    // a\nprintln(list.last())     // e\nprintln(list.getOrNull(10))  // null (safe access)\nprintln(list.elementAtOrElse(10) { \"default\" })  // default\n```\n\n---\n\n### Common List Operations\n\n| Method | Description |\n|--------|-------------|\n| `size` | Number of elements |\n| `isEmpty()` | Returns true if empty |\n| `contains(element)` | Checks if element exists |\n| `indexOf(element)` | First index of element |\n| `subList(from, to)` | Returns sublist |\n| `reversed()` | Reversed list |\n| `sorted()` | Sorted list |\n\n```kotlin\nval list = listOf(3, 1, 4, 1, 5, 9)\nprintln(list.size)           // 6\nprintln(list.contains(4))    // true\nprintln(list.sorted())       // [1, 1, 3, 4, 5, 9]\nprintln(list.reversed())     // [9, 5, 1, 4, 1, 3]\n```\n\n---\n\n### Iterating Over Lists\n\n```kotlin\nval items = listOf(\"A\", \"B\", \"C\")\n\nfor (item in items) {\n    println(item)\n}\n\nitems.forEach { println(it) }\n\n// With index\nfor ((index, value) in items.withIndex()) {\n    println(\"$index: $value\")\n}\n```\n\n---\n\n### Filtering and Transforming\n\n```kotlin\nval numbers = listOf(1, 2, 3, 4, 5, 6)\n\nval evens = numbers.filter { it % 2 == 0 }       // [2, 4, 6]\nval doubled = numbers.map { it * 2 }              // [2, 4, 6, 8, 10, 12]\nval sum = numbers.sum()                            // 21\nval firstEven = numbers.first { it % 2 == 0 }      // 2\n```\n\n> **Key Point:** Prefer `listOf()` for read-only lists and `mutableListOf()` when modification is needed. Use `getOrNull()` to safely access elements by index.",
+  "codeExample": "fun main() {\n    val fruits = listOf(\"Apple\", \"Banana\", \"Cherry\", \"Date\")\n    \n    println(\"First: ${fruits.first()}\")\n    println(\"Last: ${fruits.last()}\")\n    println(\"Contains 'Banana': ${fruits.contains(\"Banana\")}\")\n    \n    // Transform\n    val upper = fruits.map { it.uppercase() }\n    println(\"Uppercase: $upper\")\n    \n    // Filter\n    val short = fruits.filter { it.length <= 5 }\n    println(\"Short names: $short\")\n    \n    // Mutable\n    val mutable = mutableListOf(\"X\", \"Y\")\n    mutable.add(\"Z\")\n    mutable.remove(\"X\")\n    println(\"Mutable: $mutable\")\n}",
+  "quiz": [
+    {
+      "question": "How do you create an immutable list in Kotlin?",
+      "options": ["listOf()", "mutableListOf()", "arrayListOf()", "newList()"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does getOrNull() return if the index is out of bounds?",
+      "options": ["Throws exception", "null", "Default value", "Empty string"],
+      "correctIndex": 1
+    }
+  ]
+}

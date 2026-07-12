@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Functions",
+  "language": "kotlin",
+  "topic": "functions",
+  "order": 16,
+  "nextTopic": "function_params",
+  "prevTopic": "ranges",
+  "content": "### Functions in Kotlin\n\nFunctions are declared with the `fun` keyword. They can have parameters, return values, and can be defined at the top level or inside classes.\n\n---\n\n### Basic Function Syntax\n\n```kotlin\nfun functionName(param1: Type, param2: Type): ReturnType {\n    // body\n    return value\n}\n```\n\n---\n\n### Simple Function\n\n```kotlin\nfun greet(): String {\n    return \"Hello, Kotlin!\"\n}\n\nfun main() {\n    println(greet())\n}\n```\n\n---\n\n### Function with Parameters\n\n```kotlin\nfun add(a: Int, b: Int): Int {\n    return a + b\n}\n\nfun main() {\n    val result = add(5, 3)\n    println(result)  // 8\n}\n```\n\n---\n\n### Single-Expression Functions\n\nWhen a function returns a single expression, use the shorthand syntax.\n\n```kotlin\nfun add(a: Int, b: Int): Int = a + b\nfun square(x: Int) = x * x  // Return type inferred\n```\n\n---\n\n### Unit Return Type\n\nFunctions that do not return a meaningful value return `Unit`.\n\n```kotlin\nfun printMessage(msg: String): Unit {\n    println(msg)\n}\n\n// Unit can be omitted\nfun printMessage(msg: String) {\n    println(msg)\n}\n```\n\n---\n\n### Local Functions\n\nKotlin supports defining functions inside other functions.\n\n```kotlin\nfun outerFunction() {\n    fun innerFunction() {\n        println(\"Inside inner function\")\n    }\n    \n    innerFunction()\n}\n```\n\n---\n\n### Infix Functions\n\nFunctions marked with `infix` can be called without the dot and parentheses.\n\n```kotlin\ninfix fun Int.times(str: String) = str.repeat(this)\n\nprintln(3 times \"Hi \")  // Hi Hi Hi\n```\n\n> **Key Point:** Functions in Kotlin are first-class citizens -- they can be stored in variables, passed as arguments, and returned from other functions.",
+  "codeExample": "fun add(a: Int, b: Int): Int {\n    return a + b\n}\n\nfun multiply(x: Int, y: Int) = x * y\n\nfun main() {\n    val sum = add(10, 5)\n    val product = multiply(4, 3)\n    println(\"Sum: $sum\")\n    println(\"Product: $product\")\n    \n    fun localFunc() {\n        println(\"This is a local function\")\n    }\n    localFunc()\n}",
+  "quiz": [
+    {
+      "question": "What keyword declares a function in Kotlin?",
+      "options": ["func", "function", "def", "fun"],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the return type of a function that returns nothing meaningful?",
+      "options": ["void", "Nothing", "Unit", "null"],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Inheritance in Dart",
+  "language": "dart",
+  "topic": "inheritance",
+  "order": 24,
+  "nextTopic": "overriding",
+  "prevTopic": "named_constructors",
+  "content": "### Inheritance Basics\n\nInheritance allows a class to inherit properties and methods from another class using the `extends` keyword.\n\n```dart\nclass Animal {\n  String name;\n\n  Animal(this.name);\n\n  void eat() {\n    print('$name is eating');\n  }\n\n  void sleep() {\n    print('$name is sleeping');\n  }\n}\n\nclass Dog extends Animal {\n  Dog(String name) : super(name);\n\n  void bark() {\n    print('$name says Woof!');\n  }\n}\n\nvoid main() {\n  var dog = Dog('Buddy');\n  dog.eat();  // Inherited from Animal\n  dog.bark(); // Defined in Dog\n}\n```\n\n### Using super\n\nUse `super` to call parent class methods or constructors.\n\n```dart\nclass Vehicle {\n  String brand;\n\n  Vehicle(this.brand);\n\n  void start() => print('$brand engine started');\n}\n\nclass Car extends Vehicle {\n  String model;\n\n  Car(String brand, this.model) : super(brand);\n\n  @override\n  void start() {\n    super.start(); // Call parent method\n    print('$model is ready to drive');\n  }\n}\n```\n\n### Multi-level Inheritance\n\n```dart\nclass LivingThing {\n  void breathe() => print('Breathing');\n}\n\nclass Animal extends LivingThing {\n  void move() => print('Moving');\n}\n\nclass Bird extends Animal {\n  void fly() => print('Flying');\n}\n```\n\n### Inheritance and Constructors\n\n```dart\nclass Parent {\n  String name;\n  Parent(this.name);\n}\n\nclass Child extends Parent {\n  int age;\n\n  Child(String name, this.age) : super(name);\n\n  void display() {\n    print('Name: $name, Age: $age');\n  }\n}\n```\n\n### Type Checking\n\n```dart\nvoid main() {\n  var dog = Dog('Buddy');\n\n  print(dog is Dog);    // true\n  print(dog is Animal);  // true\n  print(dog is Object);  // true (everything is an Object)\n\n  Animal animal = dog;\n  var anotherDog = animal as Dog; // Downcast\n}\n```\n\n| Modifier | Allows Inheritance | Allows Subtypes | Notes |\n|----------|-------------------|-----------------|-------|\n| (none) | Yes | Yes | Default |\n| `base` | Yes | No | Same library only |\n| `final` | No | Yes | Can be instantiated |\n| `sealed` | No | No (restricted) | Exhaustive checking |\n| `interface` | No | Yes | For interface only |\n\n> **Key Point:** Dart supports single inheritance (one parent class). Use `super` to access parent members. The `extends` keyword establishes an \"is-a\" relationship.",
+  "codeExample": "class Employee {\n  String name;\n  double salary;\n\n  Employee(this.name, this.salary);\n\n  void work() => print('$name is working');\n\n  double getAnnualBonus() => salary * 0.05;\n}\n\nclass Manager extends Employee {\n  int teamSize;\n\n  Manager(String name, double salary, this.teamSize) : super(name, salary);\n\n  @override\n  double getAnnualBonus() => salary * 0.15;\n\n  void manage() => print('$name is managing $teamSize people');\n}\n\nvoid main() {\n  var emp = Employee('John', 50000);\n  var mgr = Manager('Alice', 80000, 10);\n\n  print('${emp.name} bonus: \\$${emp.getAnnualBonus()}');\n  print('${mgr.name} bonus: \\$${mgr.getAnnualBonus()}');\n  mgr.work();\n  mgr.manage();\n}",
+  "quiz": [
+    {
+      "question": "Which keyword is used for inheritance in Dart?",
+      "options": ["implements", "extends", "inherits", "derives"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can a Dart class extend multiple classes?",
+      "options": ["Yes", "No, single inheritance", "Up to 2 classes", "Unlimited"],
+      "correctIndex": 1
+    }
+  ]
+}

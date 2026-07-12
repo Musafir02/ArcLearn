@@ -1,0 +1,22 @@
+{
+  "title": "Swift Dictionaries",
+  "language": "swift",
+  "topic": "dictionaries",
+  "order": 32,
+  "nextTopic": "dictionary_methods",
+  "prevTopic": "set_operations",
+  "content": "### Swift Dictionaries\n\nDictionaries are unordered collections that store key-value pairs. Each key is unique and maps to a value. Both keys and values must have consistent types.\n\n**Creating Dictionaries:**\n\n```swift\n// Dictionary literal\nvar scores: [String: Int] = [\"Alice\": 95, \"Bob\": 87, \"Charlie\": 72]\n\n// Empty dictionary\nvar emptyDict: [String: Int] = [:]\nvar anotherEmpty = [String: Int]()\n\n// Dictionary from arrays\nlet keys = [\"a\", \"b\", \"c\"]\nlet values = [1, 2, 3]\nlet dict = Dictionary(uniqueKeysWithValues: zip(keys, values))\n```\n\n**Accessing and Modifying:**\n\n| Operation | Syntax | Description |\n|-----------|--------|-------------|\n| Get value | `dict[\"key\"]` | Returns optional `Value?` |\n| Set value | `dict[\"key\"] = value` | Adds or updates |\n| Remove | `dict[\"key\"] = nil` | Removes key-value |\n| Remove all | `dict.removeAll()` | Clears dictionary |\n| Count | `dict.count` | Number of pairs |\n\n```swift\nvar capitals = [\"USA\": \"Washington\", \"UK\": \"London\"]\n\n// Access (returns optional)\nif let capital = capitals[\"USA\"] {\n    print(\"Capital: \\(capital)\")\n}\n\n// Update\ncapitals[\"Japan\"] = \"Tokyo\"     // Add new\ncapitals[\"UK\"] = \"London\"       // Update existing\ncapitals[\"France\"] = \"Paris\"\n\n// Remove\ncapitals[\"UK\"] = nil\n\n// Default value\nlet canadaCapital = capitals[\"Canada\", default: \"Unknown\"]\n```\n\n> **Key Point:** Dictionary access always returns an optional because the key might not exist. Use `default` parameter or optional binding.\n\n```swift\n// Iteration\nfor (country, capital) in capitals {\n    print(\"\\(country): \\(capital)\")\n}\n\n// Keys and values collections\nlet countries = Array(capitals.keys)\nlet cityList = Array(capitals.values)\n```",
+  "codeExample": "import Foundation\n\n// Creating and populating\nvar userAges: [String: Int] = [:]\nuserAges[\"Alice\"] = 30\nuserAges[\"Bob\"] = 25\nuserAges[\"Charlie\"] = 35\n\n// Accessing with default\nprint(\"Alice: \\(userAges[\"Alice\", default: 0])\")\nprint(\"David: \\(userAges[\"David\", default: 0])\")\n\n// Updating\nif let oldAge = userAges.updateValue(31, forKey: \"Alice\") {\n    print(\"Updated Alice from \\(oldAge) to 31\")\n}\n\n// Iteration\nprint(\"\\nAll users:\")\nfor (name, age) in userAges.sorted(by: { $0.key < $1.key }) {\n    print(\"\\(name): \\(age) years old\")\n}\n\n// Keys and values\nprint(\"\\nNames: \\(userAges.keys.sorted())\")\nprint(\"Average age: \\(Double(userAges.values.reduce(0, +)) / Double(userAges.count))\")",
+  "quiz": [
+    {
+      "question": "What type does a dictionary subscript return?",
+      "options": ["Value", "Value?", "Key", "Bool"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you remove a key-value pair from a dictionary?",
+      "options": ["dict.remove(key)", "dict[key] = nil", "dict.delete(key)", "dict.pop(key)"],
+      "correctIndex": 1
+    }
+  ]
+}

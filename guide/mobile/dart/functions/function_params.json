@@ -1,0 +1,22 @@
+{
+  "title": "Function Parameters in Dart",
+  "language": "dart",
+  "topic": "function_params",
+  "order": 16,
+  "nextTopic": "optional_params",
+  "prevTopic": "functions",
+  "content": "### Types of Parameters\n\nDart supports three kinds of function parameters:\n\n| Type | Syntax | Example |\n|------|--------|---------|\n| Required positional | `Type name` | `void add(int a, int b)` |\n| Optional positional | `[Type? name]` | `void greet(String name, [String? title])` |\n| Named parameters | `{Type? name}` or `required Type name` | `void createUser({required String name, int? age})` |\n\n### Required Parameters\n\n```dart\nvoid main() {\n  printFullName('Alice', 'Smith');\n}\n\nvoid printFullName(String first, String last) {\n  print('$first $last');\n}\n```\n\n### Named Parameters\n\nNamed parameters are enclosed in curly braces `{}`. They can be optional or required.\n\n```dart\nvoid main() {\n  // Named parameters can be passed in any order\n  createProfile(\n    name: 'Alice',\n    age: 30,\n    email: 'alice@example.com',\n  );\n}\n\nvoid createProfile({\n  required String name,\n  required int age,\n  String? email,\n  String? phone,\n}) {\n  print('Name: $name, Age: $age');\n}\n```\n\n### Default Values\n\nNamed and optional positional parameters can have default values.\n\n```dart\nvoid main() {\n  showMessage('Hello');\n  showMessage('Hello', prefix: 'INFO');\n}\n\nvoid showMessage(String message, {String prefix = 'LOG', bool bold = false}) {\n  if (bold) {\n    print('**$prefix: $message**');\n  } else {\n    print('$prefix: $message');\n  }\n}\n```\n\n> **Key Point:** Use `required` keyword for named parameters that must be provided. Use default values for optional named parameters to avoid null checks.",
+  "codeExample": "void createUser({\n  required String username,\n  required String email,\n  int age = 18,\n  String? phone,\n  bool isActive = true,\n}) {\n  print('Creating user: $username');\n  print('Email: $email');\n  print('Age: $age');\n  print('Phone: ${phone ?? 'Not provided'}');\n  print('Active: $isActive');\n}\n\nvoid main() {\n  createUser(\n    username: 'alice99',\n    email: 'alice@example.com',\n    age: 25,\n    isActive: true,\n  );\n}",
+  "quiz": [
+    {
+      "question": "Which syntax is used for named parameters in Dart?",
+      "options": ["[params]", "{params}", "(params)", "<params>"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do you make a named parameter required?",
+      "options": ["final", "required", "mandatory", "needed"],
+      "correctIndex": 1
+    }
+  ]
+}

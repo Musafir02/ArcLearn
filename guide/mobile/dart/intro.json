@@ -1,0 +1,22 @@
+{
+  "title": "Introduction to Dart and Flutter",
+  "language": "dart",
+  "topic": "intro",
+  "order": 1,
+  "nextTopic": "getstarted",
+  "prevTopic": "",
+  "content": "### What is Dart?\n\nDart is an open-source, general-purpose programming language developed by Google. It is designed for building web, server, desktop, and mobile applications. Dart is a client-optimized language with a C-style syntax that is familiar to developers coming from Java, C#, or JavaScript.\n\nKey features of Dart:\n\n| Feature | Description |\n|---------|-------------|\n| Type Safety | Dart is statically typed with a sound type system |\n| Null Safety | Null references are handled at compile time |\n| Garbage Collection | Automatic memory management |\n| JIT and AOT Compilation | Fast development with JIT, fast execution with AOT |\n| Concurrent | Supports isolates for parallel execution |\n\n### What is Flutter?\n\nFlutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. Flutter uses Dart as its programming language.\n\n| Platform | Support |\n|----------|---------|\n| Android | Full support |\n| iOS | Full support |\n| Web | Full support |\n| Windows | Full support |\n| macOS | Full support |\n| Linux | Full support |\n\n### Why Learn Dart?\n\nDart is the language behind Flutter, one of the most popular cross-platform frameworks. Learning Dart gives you access to building beautiful, high-performance applications for all major platforms.\n\n> **Key Point:** Dart 3.x introduced record types, pattern matching, and improved class modifiers. It continues to evolve with strong backward compatibility.",
+  "codeExample": "void main() {\n  print('Welcome to Dart!');\n}",
+  "quiz": [
+    {
+      "question": "Which company developed Dart?",
+      "options": ["Microsoft", "Apple", "Google", "Facebook"],
+      "correctIndex": 2
+    },
+    {
+      "question": "What UI toolkit uses Dart as its programming language?",
+      "options": ["React Native", "Xamarin", "Flutter", "Ionic"],
+      "correctIndex": 2
+    }
+  ]
+}

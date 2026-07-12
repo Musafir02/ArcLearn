@@ -1,0 +1,22 @@
+{
+  "title": "Swift Return Values",
+  "language": "swift",
+  "topic": "return_values",
+  "order": 37,
+  "nextTopic": "argument_labels",
+  "prevTopic": "function_params",
+  "content": "### Swift Return Values\n\nFunctions can return single values, multiple values using tuples, optionals, or nothing at all. Swift also supports implicit returns for single-expression functions.\n\n**Return Types:**\n\n| Return Type | Syntax | Description |\n|-------------|--------|-------------|\n| Single value | `-> Type` | Returns one value |\n| Tuple | `-> (Type1, Type2)` | Returns multiple values |\n| Optional | `-> Type?` | May return nil |\n| Void | (omitted) | Returns nothing |\n| Never | `-> Never` | Function never returns |\n\n```swift\n// Single return\nfunc square(_ x: Int) -> Int {\n    return x * x\n}\n\n// Multiple returns with named tuple\nfunc minMax(array: [Int]) -> (min: Int, max: Int)? {\n    guard let min = array.min(), let max = array.max() else {\n        return nil\n    }\n    return (min, max)\n}\n\n// Optional return\nfunc findItem(_ id: Int) -> String? {\n    let items = [1: \"Apple\", 2: \"Banana\"]\n    return items[id]\n}\n```\n\n**Implicit Return:**\n\n```swift\n// Single expression functions can omit 'return'\nfunc add(_ a: Int, _ b: Int) -> Int {\n    a + b  // Implicit return\n}\n\n// Also works with closures\nlet doubled = [1, 2, 3].map { $0 * 2 }  // Implicit return\n```\n\n**Never Return Type:**\n\n```swift\nfunc fatalError(_ message: String) -> Never {\n    // Function that never returns\n}\n\nfunc abortProcess() -> Never {\n    fatalError(\"Process aborted\")\n}\n```\n\n> **Key Point:** Functions with single expressions can omit the `return` keyword. This is called implicit return and is commonly used in closures and computed properties.\n\nAll paths in a function must return a value if a return type is specified (or the compiler must prove unreachable code).",
+  "codeExample": "import Foundation\n\n// Implicit return\nfunc greet(name: String) -> String {\n    \"Hello, \\(name)!\"\n}\n\n// Multiple returns with tuple\nfunc divideWithRemainder(_ a: Int, _ b: Int) -> (quotient: Int, remainder: Int) {\n    (a / b, a % b)\n}\n\n// Optional return\nfunc getGrade(score: Int) -> String? {\n    guard score >= 0 && score <= 100 else { return nil }\n    switch score {\n    case 90...: return \"A\"\n    case 80..<90: return \"B\"\n    case 70..<80: return \"C\"\n    case 60..<70: return \"D\"\n    default: return \"F\"\n    }\n}\n\nprint(greet(name: \"Alice\"))\nlet result = divideWithRemainder(17, 5)\nprint(\"17 / 5 = \\(result.quotient) remainder \\(result.remainder)\")\n\nif let grade = getGrade(score: 85) {\n    print(\"Grade: \\(grade)\")\n}",
+  "quiz": [
+    {
+      "question": "What is required for implicit return in a function?",
+      "options": ["Multiple statements", "Single expression body", "Optional return type", "A function must be a closure"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which return type indicates a function never returns?",
+      "options": ["Void", "Never", "Optional", "None"],
+      "correctIndex": 1
+    }
+  ]
+}

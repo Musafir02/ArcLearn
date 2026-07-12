@@ -1,0 +1,22 @@
+{
+  "title": "Extensions in Dart",
+  "language": "dart",
+  "topic": "extensions",
+  "order": 47,
+  "nextTopic": "metadata_annotations",
+  "prevTopic": "typedef",
+  "content": "### Extension Basics\n\nExtensions add new functionality to existing types without modifying them or using inheritance.\n\n```dart\nextension StringExtensions on String {\n  String get reversed => split('').reversed.join();\n\n  String capitalize() {\n    if (isEmpty) return this;\n    return this[0].toUpperCase() + substring(1);\n  }\n\n  int parseInt() => int.parse(this);\n}\n\nvoid main() {\n  print('hello'.reversed);    // olleh\n  print('hello'.capitalize()); // Hello\n  print('42'.parseInt());      // 42\n}\n```\n\n### Extension Methods\n\n```dart\nextension ListExtensions<T> on List<T> {\n  T? get firstOrNull => isEmpty ? null : first;\n\n  T? get lastOrNull => isEmpty ? null : last;\n\n  List<T> shuffled() {\n    var copy = [...this];\n    copy.shuffle();\n    return copy;\n  }\n\n  Map<int, T> toMap() {\n    var map = <int, T>{};\n    for (var i = 0; i < length; i++) {\n      map[i] = this[i];\n    }\n    return map;\n  }\n}\n\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n  print(numbers.firstOrNull); // 1\n  print([].firstOrNull);      // null\n  print(numbers.shuffled());\n}\n```\n\n### Extensions on Generics\n\n```dart\nextension MapExtensions<K, V> on Map<K, V> {\n  Map<K, V> merge(Map<K, V> other) {\n    return {...this, ...other};\n  }\n\n  Map<V, K> swapKeysAndValues() {\n    return entries.fold({}, (map, entry) {\n      map[entry.value] = entry.key;\n      return map;\n    });\n  }\n}\n\nvoid main() {\n  var map1 = {'a': 1, 'b': 2};\n  var map2 = {'c': 3};\n\n  print(map1.merge(map2)); // {a: 1, b: 2, c: 3}\n  print(map1.swapKeysAndValues()); // {1: a, 2: b}\n}\n```\n\n### Extension on Enums\n\n```dart\nenum Status { pending, active, completed }\n\nextension StatusExtension on Status {\n  String get label {\n    switch (this) {\n      case Status.pending:\n        return 'Pending';\n      case Status.active:\n        return 'Active';\n      case Status.completed:\n        return 'Completed';\n    }\n  }\n\n  bool get isActive => this == Status.active;\n}\n\nvoid main() {\n  print(Status.active.label);    // Active\n  print(Status.pending.isActive); // false\n}\n```\n\n### Extension vs Static Helper\n\n| Aspect | Extension | Static Helper |\n|--------|-----------|---------------|\n| Syntax | `obj.method()` | `Helper.method(obj)` |\n| Readability | More natural | Less natural |\n| Namespace | On the type | In a class |\n| Discovery | IDE suggests | Must import |\n\n> **Key Point:** Extensions add methods to existing types with natural calling syntax. They are resolved statically at compile time based on the static type.",
+  "codeExample": "extension NumberParsing on String {\n  int toInt() => int.parse(this);\n  double toDouble() => double.parse(this);\n  bool isNumeric() => double.tryParse(this) != null;\n}\n\nextension DurationExtensions on int {\n  Duration get seconds => Duration(seconds: this);\n  Duration get minutes => Duration(minutes: this);\n  Duration get hours => Duration(hours: this);\n}\n\nvoid main() {\n  print('42'.toInt() + 8); // 50\n  print('3.14'.toDouble()); // 3.14\n  print('abc'.isNumeric()); // false\n\n  // Using duration extensions\n  Future.delayed(2.seconds, () => print('2 seconds passed'));\n  print('Sleep for ${5.minutes.inSeconds} seconds');\n}",
+  "quiz": [
+    {
+      "question": "Do extensions modify the original class?",
+      "options": ["Yes", "No, they are purely syntactic", "Only for primitive types", "Only for Dart SDK types"],
+      "correctIndex": 1
+    },
+    {
+      "question": "When are extension methods resolved?",
+      "options": ["At runtime", "At compile time", "At JIT time", "At AOT time"],
+      "correctIndex": 1
+    }
+  ]
+}

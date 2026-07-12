@@ -1,0 +1,22 @@
+{
+  "title": "Swift Nested Functions",
+  "language": "swift",
+  "topic": "nested",
+  "order": 41,
+  "nextTopic": "closures",
+  "prevTopic": "inout",
+  "content": "### Swift Nested Functions\n\nNested functions are functions defined inside the body of another function. They are hidden from the outside scope but can be called, returned, or passed as arguments by the enclosing function.\n\n**Nested Function Syntax:**\n\n```swift\nfunc outerFunction() {\n    // Nested function\n    func innerFunction() {\n        print(\"Inside inner function\")\n    }\n    \n    innerFunction()  // Can call from outer scope\n}\n\nouterFunction()\n// innerFunction()  // Error: not in scope\n```\n\n**Capturing Values:**\n\nNested functions can capture variables from the enclosing scope:\n\n```swift\nfunc makeCounter() -> () -> Int {\n    var count = 0\n    \n    func increment() -> Int {\n        count += 1  // Captures count\n        return count\n    }\n    \n    return increment\n}\n\nlet counter = makeCounter()\nprint(counter())  // 1\nprint(counter())  // 2\nprint(counter())  // 3\n```\n\n**Use Cases:**\n\n| Use Case | Description |\n|----------|-------------|\n| Encapsulation | Hide helper functions from external scope |\n| Closure factories | Return specialized functions |\n| Recursive helpers | Organize recursive logic |\n| Scoped utilities | Short-lived helper functions |\n\n```swift\n// Nested functions for organization\nfunc processNumbers(_ numbers: [Int]) -> [Int] {\n    func isPrime(_ n: Int) -> Bool {\n        guard n > 1 else { return false }\n        for i in 2..<n {\n            if n % i == 0 { return false }\n        }\n        return true\n    }\n    \n    func square(_ n: Int) -> Int {\n        return n * n\n    }\n    \n    return numbers.filter(isPrime).map(square)\n}\n```\n\n> **Key Point:** Nested functions capture and store references to variables from their enclosing scope. This is similar to closures and can create function factories.\n\n```swift\n// Returning a nested function\nfunc makeMultiplier(_ factor: Int) -> (Int) -> Int {\n    func multiplier(_ input: Int) -> Int {\n        return input * factor\n    }\n    return multiplier\n}\n\nlet double = makeMultiplier(2)\nprint(double(5))  // 10\n```",
+  "codeExample": "import Foundation\n\n// Nested functions for validation\nfunc validateUser(name: String, age: Int, email: String) -> Bool {\n    func isValidName(_ name: String) -> Bool {\n        !name.trimmingCharacters(in: .whitespaces).isEmpty\n    }\n    \n    func isValidAge(_ age: Int) -> Bool {\n        age >= 0 && age <= 150\n    }\n    \n    func isValidEmail(_ email: String) -> Bool {\n        email.contains(\"@\") && email.contains(\".\")\n    }\n    \n    return isValidName(name) && isValidAge(age) && isValidEmail(email)\n}\n\nprint(validateUser(name: \"Alice\", age: 30, email: \"alice@example.com\"))  // true\nprint(validateUser(name: \"\", age: 200, email: \"invalid\"))               // false\n\n// Function factory with nested functions\nfunc createFormatter(_ prefix: String, _ suffix: String) -> (String) -> String {\n    func format(_ input: String) -> String {\n        \"\\(prefix)\\(input)\\(suffix)\"\n    }\n    return format\n}\n\nlet bracketed = createFormatter(\"[\", \"]\")\nprint(bracketed(\"Swift\"))  // [Swift]",
+  "quiz": [
+    {
+      "question": "Where can a nested function be called?",
+      "options": ["Anywhere in the program", "Only within its enclosing function", "Only at global scope", "From within the same file"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Can nested functions access variables from the enclosing scope?",
+      "options": ["Yes, they capture them", "No, they are isolated", "Only let constants", "Only if passed as parameters"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Kotlin Companion Object",
+  "language": "kotlin",
+  "topic": "companion_object",
+  "order": 34,
+  "nextTopic": "visibility_modifiers",
+  "prevTopic": "object_keyword",
+  "content": "### Companion Objects in Kotlin\n\nCompanion objects are special object declarations inside a class, allowing static-like members that are tied to the class rather than instances.\n\n---\n\n### Basic Companion Object\n\n```kotlin\nclass MyClass {\n    companion object {\n        val TAG = \"MyClass\"\n        fun create(): MyClass = MyClass()\n    }\n}\n\nfun main() {\n    println(MyClass.TAG)       // Access like static field\n    val obj = MyClass.create() // Access like static method\n}\n```\n\n---\n\n### Named Companion Objects\n\nCompanion objects can have names. If unnamed, the default name is `Companion`.\n\n```kotlin\nclass MyClass {\n    companion object Factory {\n        fun create(): MyClass = MyClass()\n    }\n}\n\n// Access via name or omit\nMyClass.Factory.create()\nMyClass.create()  // Also works\n```\n\n---\n\n### Implementing Interfaces\n\nCompanion objects can implement interfaces.\n\n```kotlin\ninterface JsonFactory<T> {\n    fun fromJson(json: String): T\n}\n\ndata class User(val name: String, val age: Int) {\n    companion object : JsonFactory<User> {\n        override fun fromJson(json: String): User {\n            // Parse JSON logic\n            return User(\"Alice\", 30)\n        }\n    }\n}\n```\n\n---\n\n### Extensions on Companion Objects\n\n```kotlin\nclass MyClass {\n    companion object {}\n}\n\nfun MyClass.Companion.hello() = \"Hello from companion!\"\n\nfun main() {\n    println(MyClass.hello())  // Hello from companion!\n}\n```\n\n---\n\n### Companion Object vs Java Static\n\n| Kotlin Companion Object | Java Static |\n|------------------------|-------------|\n| Can have a name | No name |\n| Can implement interfaces | Cannot implement interfaces |\n| Can be extended | Cannot be extended |\n| Is an actual object (singleton) | Not an object |\n\n---\n\n### Using @JvmStatic\n\nFor Java interop, use `@JvmStatic` to expose members as true static methods/fields.\n\n```kotlin\nclass MyClass {\n    companion object {\n        @JvmStatic\n        fun staticMethod() = println(\"Called as static\")\n        \n        @JvmField\n        val CONSTANT = 42\n    }\n}\n```\n\n> **Key Point:** Companion objects are true singleton objects inside a class. They provide a home for factory methods, constants, and static-like behavior.",
+  "codeExample": "class Database private constructor(val name: String) {\n    companion object {\n        private val instances = mutableMapOf<String, Database>()\n        \n        fun getInstance(name: String): Database {\n            return instances.getOrPut(name) { Database(name) }\n        }\n    }\n    \n    fun query(sql: String) {\n        println(\"$name: executing $sql\")\n    }\n}\n\nfun main() {\n    val db1 = Database.getInstance(\"mydb\")\n    val db2 = Database.getInstance(\"mydb\")\n    println(db1 === db2)  // true (same instance)\n    db1.query(\"SELECT * FROM users\")\n}",
+  "quiz": [
+    {
+      "question": "Can a companion object have a name?",
+      "options": ["No", "Yes", "Only if it implements an interface", "Only numeric names"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which annotation exposes companion object members as true Java statics?",
+      "options": ["@JvmField", "@JvmStatic", "@Static", "@JavaStatic"],
+      "correctIndex": 1
+    }
+  ]
+}

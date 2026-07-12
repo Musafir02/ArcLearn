@@ -1,0 +1,22 @@
+{
+  "title": "Swift Property Observers",
+  "language": "swift",
+  "topic": "property_observers",
+  "order": 49,
+  "nextTopic": "methods",
+  "prevTopic": "computed_properties",
+  "content": "### Swift Property Observers\n\nProperty observers observe and respond to changes in a property's value. They are called every time a property is set, even if the new value is the same as the current value.\n\n**Property Observer Syntax:**\n\n```swift\nvar propertyName: Type = defaultValue {\n    willSet(newValue) {\n        // Called before the value is stored\n    }\n    didSet(oldValue) {\n        // Called after the value is stored\n    }\n}\n```\n\n**Observer Types:**\n\n| Observer | Timing | Parameter |\n|----------|--------|-----------|\n| `willSet` | Before value is stored | `newValue` (new value) |\n| `didSet` | After value is stored | `oldValue` (previous value) |\n\n```swift\nstruct StepCounter {\n    var totalSteps: Int = 0 {\n        willSet {\n            print(\"About to set totalSteps to \\(newValue)\")\n        }\n        didSet {\n            if totalSteps > oldValue {\n                print(\"Added \\(totalSteps - oldValue) steps\")\n            } else if totalSteps < oldValue {\n                print(\"Steps decreased by \\(oldValue - totalSteps)\")\n            }\n        }\n    }\n}\n\nvar steps = StepCounter()\nsteps.totalSteps = 100\n// About to set totalSteps to 100\n// Added 100 steps\n```\n\n**Important Rules:**\n\n| Rule | Description |\n|------|-------------|\n| Cannot add to lazy properties | Lazy properties cannot have observers |\n| Computed properties | Use willSet/didSet in setter instead |\n| Initialization | Observers not called during init |\n| Inout parameters | Observers fire when inout modifies value |\n\n```swift\n// Observers not called during initialization\nstruct Player {\n    var score: Int = 0 {\n        willSet { print(\"Will set to \\(newValue)\") }\n        didSet { print(\"Did set from \\(oldValue) to \\(score)\") }\n    }\n    \n    init(score: Int) {\n        self.score = score  // Observers NOT called here\n    }\n}\n```\n\n> **Key Point:** Property observers are not called when a property is set during initialization. They only fire on subsequent changes.\n\nIn `willSet`, you can access the new value via `newValue`. In `didSet`, you can access the old value via `oldValue`. Parameter names can be customized.",
+  "codeExample": "import Foundation\n\nclass BankAccount {\n    var balance: Double = 0 {\n        willSet {\n            print(\"Transaction pending: $\\(newValue)\")\n        }\n        didSet {\n            let change = balance - oldValue\n            if change > 0 {\n                print(\"Deposited $\\(String(format: \"%.2f\", change))\")\n            } else if change < 0 {\n                print(\"Withdrew $\\(String(format: \"%.2f\", abs(change)))\")\n            }\n            print(\"Current balance: $\\(String(format: \"%.2f\", balance))\")\n        }\n    }\n}\n\nlet account = BankAccount()\naccount.balance = 1000.00\naccount.balance = 750.50\naccount.balance = 750.50  // Observers still fire (same value)\n\n// Observer for validation\nstruct Temperature {\n    var celsius: Double {\n        didSet {\n            if celsius < -273.15 {\n                print(\"Warning: below absolute zero!\")\n                celsius = -273.15\n            }\n        }\n    }\n}\n\nvar temp = Temperature(celsius: 25)\ntemp.celsius = -300  // Corrected to -273.15\nprint(\"Temperature: \\(temp.celsius)\")",
+  "quiz": [
+    {
+      "question": "When are property observers NOT called?",
+      "options": ["During initialization", "When setting to same value", "From within didSet", "All of the above fire"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the default parameter name in willSet?",
+      "options": ["newValue", "oldValue", "value", "current"],
+      "correctIndex": 0
+    }
+  ]
+}

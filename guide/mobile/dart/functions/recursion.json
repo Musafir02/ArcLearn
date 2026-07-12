@@ -1,0 +1,22 @@
+{
+  "title": "Recursion in Dart",
+  "language": "dart",
+  "topic": "recursion",
+  "order": 20,
+  "nextTopic": "classes",
+  "prevTopic": "closures",
+  "content": "### What is Recursion?\n\nRecursion occurs when a function calls itself. Every recursive function needs a base case to prevent infinite recursion.\n\n```dart\nint factorial(int n) {\n  // Base case\n  if (n <= 1) return 1;\n  // Recursive case\n  return n * factorial(n - 1);\n}\n\nvoid main() {\n  print(factorial(5)); // 120\n}\n```\n\n### Classic Examples\n\n#### Fibonacci Sequence\n\n```dart\nint fibonacci(int n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nvoid main() {\n  for (int i = 0; i < 10; i++) {\n    print('fib($i) = ${fibonacci(i)}');\n  }\n}\n```\n\n#### Sum of List\n\n```dart\nint sumList(List<int> numbers, int index) {\n  if (index >= numbers.length) return 0;\n  return numbers[index] + sumList(numbers, index + 1);\n}\n\nvoid main() {\n  var nums = [1, 2, 3, 4, 5];\n  print(sumList(nums, 0)); // 15\n}\n```\n\n### Recursion vs Iteration\n\n| Aspect | Recursion | Iteration |\n|--------|-----------|-----------|\n| Code | Often more concise | Usually longer |\n| Performance | More overhead (stack frames) | More efficient |\n| Stack limit | Limited by call stack | No stack limit |\n| Readability | Better for tree/graph problems | Better for simple loops |\n\n### Tail Recursion\n\nDart does not guarantee tail-call optimization, but you can structure recursion to be tail-recursive:\n\n```dart\nint factorialTail(int n, [int acc = 1]) {\n  if (n <= 1) return acc;\n  return factorialTail(n - 1, n * acc);\n}\n\nvoid main() {\n  print(factorialTail(5)); // 120\n}\n```\n\n### Recursion on Collections\n\n```dart\nvoid printReversed(List list, [int? index]) {\n  index ??= list.length - 1;\n  if (index < 0) return;\n  print(list[index]);\n  printReversed(list, index - 1);\n}\n\nvoid main() {\n  printReversed([1, 2, 3, 4, 5]);\n}\n```\n\n> **Key Point:** Recursion is ideal for problems with recursive structure (trees, graphs, divide-and-conquer). For simple loops, iteration is usually more efficient.",
+  "codeExample": "int factorial(int n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\n\nvoid countdown(int n) {\n  if (n <= 0) {\n    print('Done!');\n    return;\n  }\n  print(n);\n  countdown(n - 1);\n}\n\nvoid main() {\n  print('Factorial of 5: ${factorial(5)}');\n  countdown(5);\n}",
+  "quiz": [
+    {
+      "question": "What is required in every recursive function to prevent infinite recursion?",
+      "options": ["A loop", "A base case", "A global variable", "A return statement"],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the 6th Fibonacci number (fib(5))?",
+      "options": ["3", "5", "8", "13"],
+      "correctIndex": 1
+    }
+  ]
+}
