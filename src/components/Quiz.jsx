@@ -19,9 +19,20 @@ function Quiz({ quizData, onComplete }) {
   const isLastQuestion = currentIndex === quizData.length - 1;
   const total = quizData.length;
 
+  const getCorrectIndex = (qObj) => {
+    if (typeof qObj.correctIndex === 'number') {
+      return qObj.correctIndex;
+    }
+    if (qObj.answer !== undefined) {
+      return qObj.options.findIndex((opt) => opt === qObj.answer);
+    }
+    return -1;
+  };
+
   const handleOptionClick = (index) => {
     setSelectedOption(index);
-    const correct = index === questionObj.correctIndex;
+    const correctIndex = getCorrectIndex(questionObj);
+    const correct = index === correctIndex;
     setIsCorrect(correct);
 
     if (correct) {

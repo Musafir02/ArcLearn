@@ -12,8 +12,11 @@ function Learn() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (contentContainerRef.current) {
-      contentContainerRef.current.scrollTop = 0;
+    const container = contentContainerRef.current;
+    if (container) {
+      setTimeout(() => {
+        container.scrollTop = 0;
+      }, 0);
     }
     setIsSidebarOpen(false);
   }, [language, topic]);
