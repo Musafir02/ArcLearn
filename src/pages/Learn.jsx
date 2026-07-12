@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import LessonViewer from '../components/LessonViewer';
@@ -8,9 +8,13 @@ function Learn() {
   const { language, topic } = useParams();
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const contentContainerRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (contentContainerRef.current) {
+      contentContainerRef.current.scrollTop = 0;
+    }
     setIsSidebarOpen(false);
   }, [language, topic]);
 
@@ -21,7 +25,7 @@ function Learn() {
     <div className="app-container">
       <Sidebar activeLanguage={language} activeTopic={topic} />
       
-      <div className="learn-content-container">
+      <div className="learn-content-container" ref={contentContainerRef}>
         <div className="mobile-breadcrumb">
           <button className="mobile-menu-btn" onClick={() => setIsSidebarOpen(true)}>
             ☰
