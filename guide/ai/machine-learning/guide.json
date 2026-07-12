@@ -15,6 +15,10 @@
       "topics": ["kmeans", "pca", "dbscan"]
     },
     {
+      "type": "group", "title": "Semi-Supervised Learning", "folder": "semisupervised",
+      "topics": ["semi_supervised"]
+    },
+    {
       "type": "group", "title": "Advanced ML", "folder": "advanced",
       "topics": ["ensemble_methods", "hyperparameter_tuning", "ml_pipeline", "mlops", "model_deployment", "automl", "xai"]
     },
