@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 290" font-family="Inter, sans-serif">
+  <defs>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7A756A"/>
+    </marker>
+    <marker id="arrow3s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7A756A"/>
+    </marker>
+  </defs>
+
+  <rect width="440" height="290" rx="8" fill="#FAFAF8" stroke="#E8E6E0" stroke-width="1"/>
+
+  <text x="220" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="#2B2A26">Multi-Agent Architecture</text>
+
+  <rect x="175" y="42" width="90" height="32" rx="6" fill="#F1E0D6" stroke="#C96A45" stroke-width="1.2"/>
+  <text x="220" y="62" text-anchor="middle" font-size="10" font-weight="500" fill="#C96A45">User</text>
+
+  <line x1="220" y1="74" x2="220" y2="95" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow3)"/>
+
+  <rect x="145" y="95" width="150" height="45" rx="8" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1.5"/>
+  <text x="220" y="115" text-anchor="middle" font-size="11" font-weight="600" fill="#5A6A8A">Orchestrator</text>
+  <text x="220" y="130" text-anchor="middle" font-size="8" fill="#7A756A">Supervisor / Router</text>
+
+  <line x1="220" y1="140" x2="220" y2="155" stroke="#7A756A" stroke-width="1.2"/>
+  <line x1="70" y1="155" x2="370" y2="155" stroke="#7A756A" stroke-width="1.2"/>
+
+  <line x1="70" y1="155" x2="70" y2="175" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow3)"/>
+  <line x1="220" y1="155" x2="220" y2="175" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow3)"/>
+  <line x1="370" y1="155" x2="370" y2="175" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow3)"/>
+
+  <rect x="15" y="178" width="110" height="40" rx="6" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1.2"/>
+  <text x="70" y="196" text-anchor="middle" font-size="10" font-weight="600" fill="#4F7A5C">Research Agent</text>
+  <text x="70" y="210" text-anchor="middle" font-size="8" fill="#7A756A">Search, Read, Cite</text>
+
+  <rect x="165" y="178" width="110" height="40" rx="6" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="1.2"/>
+  <text x="220" y="196" text-anchor="middle" font-size="10" font-weight="600" fill="#8A5A8A">Coding Agent</text>
+  <text x="220" y="210" text-anchor="middle" font-size="8" fill="#7A756A">Edit, Run, Debug</text>
+
+  <rect x="315" y="178" width="110" height="40" rx="6" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.2"/>
+  <text x="370" y="196" text-anchor="middle" font-size="10" font-weight="600" fill="#8A7A5A">Writing Agent</text>
+  <text x="370" y="210" text-anchor="middle" font-size="8" fill="#7A756A">Draft, Edit, Format</text>
+
+  <path d="M 126 198 L 163 198" fill="none" stroke="#7A756A" stroke-width="0.8" stroke-dasharray="3,2" marker-end="url(#arrow3s)"/>
+  <path d="M 276 198 L 313 198" fill="none" stroke="#7A756A" stroke-width="0.8" stroke-dasharray="3,2" marker-end="url(#arrow3s)"/>
+
+  <rect x="20" y="232" width="100" height="24" rx="4" fill="#F5F5F0" stroke="#D4D2CC" stroke-width="0.8"/>
+  <text x="70" y="248" text-anchor="middle" font-size="8" fill="#7A756A">Web Search · DB · API</text>
+
+  <rect x="170" y="232" width="100" height="24" rx="4" fill="#F5F5F0" stroke="#D4D2CC" stroke-width="0.8"/>
+  <text x="220" y="248" text-anchor="middle" font-size="8" fill="#7A756A">Shell · Files · Test</text>
+
+  <rect x="320" y="232" width="100" height="24" rx="4" fill="#F5F5F0" stroke="#D4D2CC" stroke-width="0.8"/>
+  <text x="370" y="248" text-anchor="middle" font-size="8" fill="#7A756A">Templates · PDF · MD</text>
+</svg>

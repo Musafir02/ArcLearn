@@ -1,0 +1,42 @@
+{
+  "title": "Agent Architecture",
+  "language": "agentic-ai",
+  "topic": {
+    "id": "agent_architecture",
+    "title": "Agent Architecture"
+  },
+  "content": "### Core Components of an Agent\n\n![Agent Loop](/diagrams/agentic/agent-loop.svg)\n\nAn AI agent is built from four essential components working together:\n\n| Component | Purpose | Example |\n|-----------|---------|-------|\n| **LLM Brain** | Decision making & reasoning | GPT-5, Claude, Gemini |\n| **Tools** | External capabilities | APIs, code execution, search |\n| **Memory** | Context retention | Conversation history, vector store |\n| **Planning** | Goal decomposition | Task trees, action sequences |\n\n> **Architecture Principle:** The LLM is the brain, tools are the hands, memory is the past, and planning is the future.\n\n### The LLM Brain\n\nThe language model serves as the central reasoning engine:\n\n- **Understanding** - Parses user intent and context\n- **Reasoning** - Decides what actions to take\n- **Generation** - Produces responses and tool calls\n- **Evaluation** - Assesses results and adapts\n\n```\nUser Input → LLM Reasoning → Action Decision → Tool Call → Result\n```\n\n### Tool Definitions\n\nTools extend the agent's capabilities beyond text generation:\n\n```json\n{\n  \"type\": \"function\",\n  \"function\": {\n    \"name\": \"get_weather\",\n    \"description\": \"Get current weather for a location\",\n    \"parameters\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"location\": {\n          \"type\": \"string\",\n          \"description\": \"City name\"\n        }\n      },\n      \"required\": [\"location\"]\n    }\n  }\n}\n```\n\n### System Prompts for Agents\n\nSystem prompts define the agent's behavior and constraints:\n\n```\nYou are a research assistant agent.\n\nCapabilities:\n- Search the web for information\n- Read and analyze documents\n- Create summaries and reports\n\nRules:\n- Always verify information from multiple sources\n- Cite your sources\n- If uncertain, say so\n- Never make up information\n```\n\n### The ReAct Pattern\n\n**ReAct** (Reasoning + Acting) is the most common agent pattern:\n\n1. **Thought** - Reason about the current situation\n2. **Action** - Decide what tool to use\n3. **Observation** - Receive tool output\n4. **Repeat** until goal is achieved\n\n```\nThought: I need to find the weather in Paris\nAction: search_weather(location=\"Paris\")\nObservation: 22°C, sunny\nThought: Now I can answer the user's question\nAction: respond(\"The weather in Paris is 22°C and sunny\")\n```\n\n### State Management\n\nAgents must track their current state:\n\n| State Element | Description |\n|---------------|-------------|\n| **Messages** | Conversation history |\n| **Tools Used** | Actions already taken |\n| **Results** | Outcomes of tool calls |\n| **Goal** | What the agent is trying to achieve |\n| **Step Count** | Number of iterations |\n\n### Agent Types\n\n**1. ReAct Agent**\n- Simplest pattern\n- Reason → Act → Observe loop\n- Best for straightforward tasks\n\n**2. Plan-and-Execute Agent**\n- Creates full plan before acting\n- Executes steps sequentially\n- Best for well-defined tasks\n\n**3. LATS (Language Agent Tree Search)**\n- Explores multiple paths\n- Uses tree search algorithms\n- Best for complex decision spaces\n\n**4. Reflexion Agent**\n- Self-reflects on failures\n- Learns from mistakes\n- Best for iterative improvement\n\n### How Agents Decide Which Tool to Call\n\nThe decision process involves:\n\n1. **Context Analysis** - Understanding the current situation\n2. **Goal Alignment** - Matching available tools to objectives\n3. **Parameter Extraction** - Identifying required inputs\n4. **Selection** - Choosing the most appropriate tool\n5. **Execution** - Calling the tool with extracted parameters\n\n### Action Space vs Observation Space\n\n**Action Space**\n- All possible actions an agent can take\n- Defined by available tools\n- Constrained by permissions\n\n**Observation Space**\n- All possible feedback from actions\n- Tool return values\n- Error messages\n- Success confirmations\n\n### Agent as a Function\n\nAt its core, an agent can be modeled as a function:\n\n```\nagent(state) → action\n```\n\nWhere:\n- **state** = current context + history + observations\n- **action** = tool call or response\n\nThis functional view makes agents composable and testable.\n\n### Key Takeaways\n\n- Agents combine **LLM, tools, memory, and planning**\n- **ReAct** is the most common pattern (Reasoning + Acting)\n- **State management** tracks the agent's progress\n- Different agent types suit different task complexity levels\n- Agents are essentially **stateful functions** that decide actions",
+  "codeExample": "from openai import OpenAI\nfrom typing import Callable\n\nclass Agent:\n    \"\"\"A simple ReAct agent implementation.\"\"\"\n    \n    def __init__(self, system_prompt: str, tools: list[dict]):\n        self.client = OpenAI()\n        self.system_prompt = system_prompt\n        self.tools = tools\n        self.tool_registry: dict[str, Callable] = {}\n        self.messages = [{\"role\": \"system\", \"content\": system_prompt}]\n    \n    def register_tool(self, name: str, func: Callable):\n        \"\"\"Register a tool function.\"\"\"\n        self.tool_registry[name] = func\n    \n    def run(self, query: str, max_steps: int = 10) -> str:\n        \"\"\"Run the agent loop.\"\"\"\n        self.messages.append({\"role\": \"user\", \"content\": query})\n        \n        for step in range(max_steps):\n            response = self.client.chat.completions.create(\n                model=\"gpt-5\",\n                messages=self.messages,\n                tools=self.tools\n            )\n            \n            msg = response.choices[0].message\n            self.messages.append(msg)\n            \n            # No tool calls means we're done\n            if not msg.tool_calls:\n                return msg.content\n            \n            # Execute each tool call\n            for tool_call in msg.tool_calls:\n                func_name = tool_call.function.name\n                import json\n                args = json.loads(tool_call.function.arguments)\n                \n                # Call the registered tool\n                result = self.tool_registry[func_name](**args)\n                \n                self.messages.append({\n                    \"role\": \"tool\",\n                    \"tool_call_id\": tool_call.id,\n                    \"content\": str(result)\n                })\n        \n        return \"Max steps reached\"\n\n# Usage\nagent = Agent(\n    system_prompt=\"You are a helpful research assistant.\",\n    tools=[{\n        \"type\": \"function\",\n        \"function\": {\n            \"name\": \"search\",\n            \"description\": \"Search the web\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"query\": {\"type\": \"string\"}\n                },\n                \"required\": [\"query\"]\n            }\n        }\n    }]\n)\n\nagent.register_tool(\"search\", lambda query: f\"Results for: {query}\")\nresponse = agent.run(\"What is quantum computing?\")\nprint(response)",
+  "quiz": [
+    {
+      "question": "What are the four core components of an AI agent?",
+      "options": [
+        "CPU, GPU, RAM, Storage",
+        "LLM Brain, Tools, Memory, Planning",
+        "Input, Process, Output, Feedback",
+        "Data, Model, Training, Inference"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the ReAct pattern stand for?",
+      "options": [
+        "Read and Execute",
+        "Reasoning and Acting",
+        "React and Respond",
+        "Retrieve and Answer"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In the agent-as-a-function model, what does the agent function return?",
+      "options": [
+        "A string response",
+        "An action (tool call or response)",
+        "A boolean success flag",
+        "A list of observations"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 295" font-family="Inter, sans-serif">
+  <defs>
+    <marker id="arrow4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7A756A"/>
+    </marker>
+    <marker id="arrow4g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4F7A5C"/>
+    </marker>
+    <marker id="arrow4p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A5A8A"/>
+    </marker>
+    <marker id="arrow4o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#C96A45"/>
+    </marker>
+  </defs>
+
+  <rect width="440" height="295" rx="8" fill="#FAFAF8" stroke="#E8E6E0" stroke-width="1"/>
+
+  <text x="220" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="#2B2A26">RAG-Powered Agent</text>
+
+  <rect x="20" y="55" width="100" height="36" rx="6" fill="#F1E0D6" stroke="#C96A45" stroke-width="1.2"/>
+  <text x="70" y="72" text-anchor="middle" font-size="10" font-weight="600" fill="#C96A45">User Query</text>
+  <text x="70" y="84" text-anchor="middle" font-size="8" fill="#7A756A">"How do I...?"</text>
+
+  <rect x="155" y="48" width="100" height="50" rx="8" fill="#D6DCE8" stroke="#5A6A8A" stroke-width="1.5"/>
+  <text x="205" y="69" text-anchor="middle" font-size="11" font-weight="600" fill="#5A6A8A">Agent</text>
+  <text x="205" y="84" text-anchor="middle" font-size="8" fill="#7A756A">Reason + Decide</text>
+
+  <line x1="120" y1="73" x2="153" y2="73" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow4)"/>
+
+  <line x1="205" y1="98" x2="205" y2="108" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow4)"/>
+
+  <polygon points="205,110 230,133 205,156 180,133" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.2"/>
+  <text x="205" y="130" text-anchor="middle" font-size="8" font-weight="600" fill="#8A7A5A">Retrieve?</text>
+  <text x="205" y="142" text-anchor="middle" font-size="7" fill="#7A756A">needs docs</text>
+
+  <line x1="230" y1="133" x2="280" y2="133" stroke="#4F7A5C" stroke-width="1.2" marker-end="url(#arrow4g)"/>
+  <text x="252" y="126" font-size="8" font-weight="600" fill="#4F7A5C">Yes</text>
+
+  <rect x="282" y="115" width="80" height="38" rx="6" fill="#D4E8D4" stroke="#4F7A5C" stroke-width="1.2"/>
+  <text x="322" y="132" text-anchor="middle" font-size="10" font-weight="600" fill="#4F7A5C">Vector DB</text>
+  <text x="322" y="145" text-anchor="middle" font-size="8" fill="#7A756A">Semantic search</text>
+
+  <line x1="322" y1="153" x2="322" y2="170" stroke="#8A5A8A" stroke-width="1.2" marker-end="url(#arrow4p)"/>
+
+  <rect x="282" y="172" width="80" height="34" rx="6" fill="#E8D4E8" stroke="#8A5A8A" stroke-width="1.2"/>
+  <text x="322" y="188" text-anchor="middle" font-size="10" font-weight="600" fill="#8A5A8A">Retrieved Docs</text>
+  <text x="322" y="200" text-anchor="middle" font-size="8" fill="#7A756A">Top-k chunks</text>
+
+  <path d="M 282 189 Q 250 189 250 140 Q 250 90 205 90" fill="none" stroke="#8A5A8A" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow4p)"/>
+
+  <path d="M 205 156 L 205 210 L 148 210" fill="none" stroke="#C96A45" stroke-width="1.2" marker-end="url(#arrow4o)" stroke-dasharray="4,3"/>
+  <text x="192" y="170" font-size="8" font-weight="600" fill="#C96A45">No</text>
+
+  <rect x="90" y="195" width="130" height="40" rx="6" fill="#F5F5F0" stroke="#D4D2CC" stroke-width="1.2"/>
+  <text x="155" y="212" text-anchor="middle" font-size="10" font-weight="600" fill="#2B2A26">Agent + Docs</text>
+  <text x="155" y="225" text-anchor="middle" font-size="8" fill="#7A756A">Augmented context</text>
+
+  <line x1="155" y1="235" x2="175" y2="255" stroke="#7A756A" stroke-width="1.2" marker-end="url(#arrow4)"/>
+
+  <rect x="115" y="255" width="160" height="30" rx="6" fill="#E8E4D4" stroke="#8A7A5A" stroke-width="1.2"/>
+  <text x="195" y="274" text-anchor="middle" font-size="10" font-weight="600" fill="#8A7A5A">LLM → Response</text>
+</svg>

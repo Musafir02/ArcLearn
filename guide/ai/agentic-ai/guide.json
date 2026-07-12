@@ -1,0 +1,30 @@
+{
+  "title": "Agentic AI",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Agent Fundamentals", "folder": "fundamentals",
+      "topics": ["agent_architecture", "memory_systems", "planning_strategies"]
+    },
+    {
+      "type": "group", "title": "Tool Use & Action", "folder": "tools",
+      "topics": ["function_calling", "code_execution", "web_browsing"]
+    },
+    {
+      "type": "group", "title": "Agent Frameworks", "folder": "frameworks",
+      "topics": ["langchain_agents", "crewai_autogen", "openai_assistants"]
+    },
+    {
+      "type": "group", "title": "Multi-Agent Systems", "folder": "multi_agent",
+      "topics": ["multi_agent_architectures", "agent_communication"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["rag_agents", "agent_safety", "agent_evaluation"]
+    },
+    {
+      "type": "group", "title": "Production", "folder": "production",
+      "topics": ["deploying_agents", "agent_monitoring"]
+    }
+  ]
+}

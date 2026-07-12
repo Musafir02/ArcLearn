@@ -1,0 +1,42 @@
+{
+  "title": "Introduction to Agentic AI",
+  "language": "agentic-ai",
+  "topic": {
+    "id": "intro",
+    "title": "Introduction to Agentic AI"
+  },
+  "content": "### What Are AI Agents?\n\nAn **AI agent** is an autonomous system that can perceive its environment, make decisions, and take actions to achieve specific goals. Unlike traditional chatbots that simply respond to prompts, agents **actively work** toward objectives by using tools, memory, and reasoning.\n\n> **Key Insight:** A chatbot answers questions. An agent solves problems.\n\n### Chatbot vs Agent\n\n| Feature | Chatbot | Agent |\n|---------|---------|-------|\n| Goal | Respond to prompts | Achieve objectives |\n| Tools | None | API calls, code execution, web search |\n| Memory | Conversation only | Short-term + long-term |\n| Autonomy | Reactive | Proactive |\n| Loop | Single response | Perceive → Think → Act → Observe |\n| Complexity | Simple Q&A | Multi-step reasoning |\n\n### The Agent Loop\n\nAgents follow a continuous cycle:\n\n1. **Perceive** - Gather information from environment\n2. **Think** - Reason about what to do next\n3. **Act** - Execute an action using tools\n4. **Observe** - Evaluate the result\n5. **Repeat** until goal is achieved\n\n```\nPerceive → Think → Act → Observe → Perceive → ...\n```\n\nThis loop enables agents to handle complex, multi-step tasks that require iteration and adaptation.\n\n### Why Agents Matter in 2026\n\nIn 2026, AI agents have become essential because:\n\n- **Complexity handling** - Real-world tasks require multiple steps\n- **Tool integration** - Agents connect to APIs, databases, and services\n- **Autonomous execution** - Work continues without human intervention\n- **Adaptive behavior** - Agents adjust strategies based on results\n- **Cost reduction** - Automating workflows saves time and money\n\n### History: From Chatbots to Agents\n\n| Era | Type | Capability |\n|-----|------|------------|\n| 2020-2022 | Chatbots | Text generation, Q&A |\n| 2022-2023 | Assistants | Context awareness, instruction following |\n| 2023-2024 | Tool-using AI | Function calling, basic tools |\n| 2024-2025 | Early Agents | Multi-step reasoning, planning |\n| 2025-2026 | Autonomous Agents | Full autonomy, complex workflows |\n\n### Real-World Agents Today\n\n**Coding Agents**\n- GitHub Copilot Workspace\n- Cursor Agent\n- Devin by Cognition\n- OpenAI Codex\n\n**Research Agents**\n- Perplexity Pro Agent\n- ChatGPT Deep Research\n- Gemini Deep Research\n\n**Customer Service Agents**\n- Intercom Fin\n- Sierra AI\n- Custom enterprise agents\n\n**Workflow Agents**\n- LangChain agents\n- CrewAI multi-agent systems\n- AutoGen by Microsoft\n\n### Agent Capabilities\n\nAgents possess four core capabilities:\n\n**1. Reasoning**\nAgents use LLMs to analyze situations, draw conclusions, and make decisions.\n\n**2. Planning**\nAgents break complex goals into manageable sub-tasks and create execution plans.\n\n**3. Tool Use**\nAgents call external APIs, execute code, search the web, and interact with databases.\n\n**4. Memory**\nAgents maintain context across interactions using conversation history and vector stores.\n\n### Current Landscape (2026)\n\n**GPT-5 Agents**\n- Advanced reasoning with o3-mini backbone\n- Native tool use and code execution\n- Enterprise-grade reliability\n\n**Claude Agents**\n- Extended thinking for complex problems\n- Computer use capabilities\n- Strong safety alignment\n\n**Gemini Agents**\n- Multimodal understanding\n- Google ecosystem integration\n- Long context window support\n\n> **2026 Trend:** The line between agents and traditional software is blurring. Every SaaS product is becoming an agent platform.\n\n### Key Takeaways\n\n- Agents are **autonomous systems** that achieve goals through action\n- The agent loop: **Perceive → Think → Act → Observe**\n- Agents combine **reasoning, planning, tools, and memory**\n- The agent landscape is maturing rapidly in 2026\n- Understanding agents is essential for modern AI development",
+  "codeExample": "from openai import OpenAI\n\ndef simple_agent(query: str) -> str:\n    \"\"\"A minimal agent that reasons and acts.\"\"\"\n    client = OpenAI()\n    \n    messages = [\n        {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n        {\"role\": \"user\", \"content\": query}\n    ]\n    \n    tools = [\n        {\n            \"type\": \"function\",\n            \"function\": {\n                \"name\": \"search_web\",\n                \"description\": \"Search the internet for information\",\n                \"parameters\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"query\": {\"type\": \"string\", \"description\": \"Search query\"}\n                    },\n                    \"required\": [\"query\"]\n                }\n            }\n        }\n    ]\n    \n    # Agent loop\n    while True:\n        response = client.chat.completions.create(\n            model=\"gpt-5\",\n            messages=messages,\n            tools=tools\n        )\n        \n        msg = response.choices[0].message\n        \n        if not msg.tool_calls:\n            return msg.content\n        \n        # Execute tool calls and continue loop\n        for tool_call in msg.tool_calls:\n            result = execute_tool(tool_call)\n            messages.append({\"role\": \"tool\", \"content\": result})\n\nif __name__ == \"__main__\":\n    answer = simple_agent(\"What is the weather in Tokyo?\")\n    print(answer)",
+  "quiz": [
+    {
+      "question": "What is the core difference between a chatbot and an agent?",
+      "options": [
+        "Agents are faster than chatbots",
+        "Agents take autonomous actions to achieve goals, chatbots only respond",
+        "Agents use different programming languages",
+        "Chatbots have more memory than agents"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What are the four stages of the agent loop?",
+      "options": [
+        "Ask → Answer → Repeat",
+        "Input → Process → Output",
+        "Perceive → Think → Act → Observe",
+        "Read → Write → Execute → Save"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following is NOT a core capability of AI agents?",
+      "options": [
+        "Reasoning",
+        "Tool use",
+        "Static responses",
+        "Memory"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}
