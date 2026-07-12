@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" font-family="Inter, sans-serif">
+  <rect width="440" height="250" fill="#F8F7F4" rx="8"/>
+  <text x="220" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#333">Load Balancer Architecture</text>
+
+  <!-- Clients -->
+  <rect x="30" y="55" width="70" height="36" fill="#D6DCE8" stroke="#5A6A8A" rx="6"/>
+  <text x="65" y="77" text-anchor="middle" font-size="11" fill="#5A6A8A" font-weight="600">Client 1</text>
+
+  <rect x="30" y="105" width="70" height="36" fill="#D6DCE8" stroke="#5A6A8A" rx="6"/>
+  <text x="65" y="127" text-anchor="middle" font-size="11" fill="#5A6A8A" font-weight="600">Client 2</text>
+
+  <rect x="30" y="155" width="70" height="36" fill="#D6DCE8" stroke="#5A6A8A" rx="6"/>
+  <text x="65" y="177" text-anchor="middle" font-size="11" fill="#5A6A8A" font-weight="600">Client 3</text>
+
+  <!-- Arrows: Clients to LB -->
+  <line x1="100" y1="73" x2="155" y2="120" stroke="#5A6A8A" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="100" y1="123" x2="155" y2="123" stroke="#5A6A8A" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="100" y1="173" x2="155" y2="127" stroke="#5A6A8A" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- Load Balancer -->
+  <rect x="165" y="85" width="100" height="78" fill="#D4E8D4" stroke="#4F7A5C" rx="8" stroke-width="2"/>
+  <text x="215" y="118" text-anchor="middle" font-size="12" fill="#4F7A5C" font-weight="700">Load</text>
+  <text x="215" y="135" text-anchor="middle" font-size="12" fill="#4F7A5C" font-weight="700">Balancer</text>
+
+  <!-- Arrows: LB to Servers -->
+  <line x1="265" y1="100" x2="315" y2="70" stroke="#C96A45" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="265" y1="123" x2="315" y2="123" stroke="#C96A45" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="265" y1="147" x2="315" y2="178" stroke="#C96A45" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+  <!-- Servers -->
+  <rect x="325" y="48" width="80" height="40" fill="#F1E0D6" stroke="#C96A45" rx="6"/>
+  <text x="365" y="67" text-anchor="middle" font-size="10" fill="#C96A45" font-weight="600">Server 1</text>
+  <text x="365" y="80" text-anchor="middle" font-size="9" fill="#888">● Healthy</text>
+
+  <rect x="325" y="103" width="80" height="40" fill="#F1E0D6" stroke="#C96A45" rx="6"/>
+  <text x="365" y="122" text-anchor="middle" font-size="10" fill="#C96A45" font-weight="600">Server 2</text>
+  <text x="365" y="135" text-anchor="middle" font-size="9" fill="#888">● Healthy</text>
+
+  <rect x="325" y="158" width="80" height="40" fill="#F1E0D6" stroke="#C96A45" rx="6"/>
+  <text x="365" y="177" text-anchor="middle" font-size="10" fill="#C96A45" font-weight="600">Server 3</text>
+  <text x="365" y="190" text-anchor="middle" font-size="9" fill="#888">● Healthy</text>
+
+  <!-- Health check arrows (dashed, returning) -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5A6A8A"/></marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C96A45"/></marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#4F7A5C"/></marker>
+  </defs>
+
+  <!-- Health check label -->
+  <text x="215" y="210" text-anchor="middle" font-size="10" fill="#4F7A5C" font-style="italic">Health checks every 10s</text>
+  <path d="M145,200 Q130,195 120,205" fill="none" stroke="#4F7A5C" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M285,200 Q300,195 310,205" fill="none" stroke="#4F7A5C" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>

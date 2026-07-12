@@ -101,6 +101,10 @@ const displayName = (key) => {
     'computer-vision': 'Computer Vision',
     'agentic-ai': 'Agentic AI',
     'generative-ai': 'Generative AI',
+    'dsa': 'Data Structures & Algorithms',
+    'sysdesign': 'System Design',
+    'api': 'API Design',
+    'database': 'Database Design',
   };
   return map[key] || key;
 };

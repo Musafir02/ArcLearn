@@ -8,6 +8,7 @@ const frameworkKeys = ['nextjs', 'vue', 'angular', 'express', 'django', 'flask',
 const mobileKeys = ['kotlin', 'dart', 'swift'];
 const toolKeys = ['git', 'github', 'docker', 'linux', 'cicd'];
 const aiKeys = ['machine-learning', 'deep-learning', 'nlp', 'computer-vision', 'agentic-ai', 'generative-ai'];
+const sysdesignKeys = ['dsa', 'sysdesign', 'api', 'database'];
 
 const displayName = (key) => {
   const map = {
@@ -48,6 +49,10 @@ const displayName = (key) => {
     'computer-vision': 'Computer Vision',
     'agentic-ai': 'Agentic AI',
     'generative-ai': 'Generative AI',
+    'dsa': 'Data Structures & Algorithms',
+    'sysdesign': 'System Design',
+    'api': 'API Design',
+    'database': 'Database Design',
   };
   return map[key] || key;
 };
@@ -81,6 +86,7 @@ function Home() {
     if (activeTab === 'mobile') return mobileKeys;
     if (activeTab === 'tools') return toolKeys;
     if (activeTab === 'ai') return aiKeys;
+    if (activeTab === 'sysdesign') return sysdesignKeys;
     return [];
   };
 
@@ -114,6 +120,7 @@ function Home() {
         <button className={`home-tab ${activeTab === 'mobile' ? 'active' : ''}`} onClick={() => { setActiveTab('mobile'); setSearchQuery(''); }}>Mobile</button>
         <button className={`home-tab ${activeTab === 'tools' ? 'active' : ''}`} onClick={() => { setActiveTab('tools'); setSearchQuery(''); }}>Tools</button>
         <button className={`home-tab ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => { setActiveTab('ai'); setSearchQuery(''); }}>AI</button>
+        <button className={`home-tab ${activeTab === 'sysdesign' ? 'active' : ''}`} onClick={() => { setActiveTab('sysdesign'); setSearchQuery(''); }}>System Design</button>
       </div>
 
       <div className="languages-grid">

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" font-family="Inter, sans-serif">
+  <rect width="440" height="260" fill="#F8F7F4" rx="8"/>
+  <text x="220" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#333">Caching Flow (Read-Through)</text>
+
+  <defs>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5A6A8A"/></marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C96A45"/></marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#4F7A5C"/></marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8A5A8A"/></marker>
+  </defs>
+
+  <!-- Application -->
+  <rect x="30" y="100" width="90" height="50" fill="#D6DCE8" stroke="#5A6A8A" rx="8" stroke-width="2"/>
+  <text x="75" y="121" text-anchor="middle" font-size="12" fill="#5A6A8A" font-weight="700">Application</text>
+  <text x="75" y="137" text-anchor="middle" font-size="10" fill="#5A6A8A">Request</text>
+
+  <!-- Arrow: App to Cache -->
+  <line x1="120" y1="125" x2="175" y2="125" stroke="#5A6A8A" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <text x="148" y="118" text-anchor="middle" font-size="9" fill="#5A6A8A">Check</text>
+
+  <!-- Cache -->
+  <rect x="185" y="90" width="80" height="70" fill="#D4E8D4" stroke="#4F7A5C" rx="8" stroke-width="2"/>
+  <text x="225" y="118" text-anchor="middle" font-size="12" fill="#4F7A5C" font-weight="700">Cache</text>
+  <text x="225" y="133" text-anchor="middle" font-size="10" fill="#4F7A5C">Redis / Memcached</text>
+
+  <!-- Cache Hit arrow (back to app) -->
+  <line x1="225" y1="160" x2="225" y2="195" stroke="#4F7A5C" stroke-width="1.5"/>
+  <line x1="225" y1="195" x2="85" y2="195" stroke="#4F7A5C" stroke-width="1.5"/>
+  <line x1="85" y1="195" x2="85" y2="152" stroke="#4F7A5C" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <rect x="115" y="185" width="65" height="18" fill="#D4E8D4" rx="4"/>
+  <text x="147" y="198" text-anchor="middle" font-size="10" fill="#4F7A5C" font-weight="600">Cache Hit</text>
+
+  <!-- Cache Miss arrow (to DB) -->
+  <line x1="265" y1="125" x2="320" y2="125" stroke="#C96A45" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <rect x="273" y="113" width="50" height="16" fill="#F1E0D6" rx="3"/>
+  <text x="298" y="125" text-anchor="middle" font-size="9" fill="#C96A45" font-weight="600">Miss</text>
+
+  <!-- Database -->
+  <rect x="330" y="100" width="85" height="50" fill="#F1E0D6" stroke="#C96A45" rx="8" stroke-width="2"/>
+  <text x="372" y="121" text-anchor="middle" font-size="12" fill="#C96A45" font-weight="700">Database</text>
+  <text x="372" y="137" text-anchor="middle" font-size="10" fill="#C96A45">MySQL / PG</text>
+
+  <!-- Write-back to cache (dashed) -->
+  <path d="M372,150 L372,180 Q372,195 357,195 L233,195 Q218,195 218,180 L218,162" fill="none" stroke="#8A5A8A" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-purple)"/>
+  <rect x="270" y="185" width="90" height="16" fill="#E8D4E8" rx="3"/>
+  <text x="315" y="197" text-anchor="middle" font-size="9" fill="#8A5A8A" font-weight="600">Write Back</text>
+
+  <!-- Response back to app -->
+  <path d="M372,100 L372,75 Q372,60 357,60 L85,60 Q70,60 70,75 L70,100" fill="none" stroke="#5A6A8A" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-blue)"/>
+  <rect x="200" y="50" width="70" height="16" fill="#D6DCE8" rx="3"/>
+  <text x="235" y="62" text-anchor="middle" font-size="9" fill="#5A6A8A" font-weight="600">Response</text>
+
+  <!-- Legend -->
+  <rect x="30" y="225" width="16" height="12" fill="#D4E8D4" stroke="#4F7A5C" rx="2"/>
+  <text x="52" y="235" font-size="10" fill="#444">Cache Hit</text>
+  <rect x="120" y="225" width="16" height="12" fill="#F1E0D6" stroke="#C96A45" rx="2"/>
+  <text x="142" y="235" font-size="10" fill="#444">Cache Miss</text>
+  <rect x="220" y="225" width="16" height="12" fill="#E8D4E8" stroke="#8A5A8A" rx="2"/>
+  <text x="242" y="235" font-size="10" fill="#444">Write Back</text>
+</svg>

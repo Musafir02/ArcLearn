@@ -1,0 +1,18 @@
+{
+  "title": "Data Structures & Algorithms",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Arrays & Strings", "folder": "basics",
+      "topics": ["arrays_hashing", "two_pointers", "sliding_window", "stacks_queues"]
+    },
+    {
+      "type": "group", "title": "Trees & Graphs", "folder": "trees_graphs",
+      "topics": ["binary_trees", "graphs_bfs_dfs", "sorting_algorithms"]
+    },
+    {
+      "type": "group", "title": "Advanced DSA", "folder": "advanced",
+      "topics": ["dynamic_programming", "greedy_algorithms", "backtracking", "bit_manipulation"]
+    }
+  ]
+}

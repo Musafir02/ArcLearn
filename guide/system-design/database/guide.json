@@ -1,0 +1,14 @@
+{
+  "title": "Database Design",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Relational Databases", "folder": "basics",
+      "topics": ["sql_basics", "data_modeling", "normalization", "indexing"]
+    },
+    {
+      "type": "group", "title": "Advanced Topics", "folder": "advanced",
+      "topics": ["nosql_databases", "sharding", "replication", "query_optimization"]
+    }
+  ]
+}

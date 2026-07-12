@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 240" font-family="Inter, sans-serif">
+  <rect width="450" height="240" fill="#F8F7F4" rx="8"/>
+  <text x="225" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#333">REST API Request Lifecycle</text>
+
+  <defs>
+    <marker id="a1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5A6A8A"/></marker>
+    <marker id="a2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C96A45"/></marker>
+    <marker id="a3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#4F7A5C"/></marker>
+    <marker id="a4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#8A5A8A"/></marker>
+  </defs>
+
+  <!-- Client -->
+  <rect x="20" y="90" width="70" height="50" fill="#D6DCE8" stroke="#5A6A8A" rx="8" stroke-width="2"/>
+  <text x="55" y="112" text-anchor="middle" font-size="11" fill="#5A6A8A" font-weight="700">Client</text>
+  <text x="55" y="127" text-anchor="middle" font-size="9" fill="#5A6A8A">Browser/App</text>
+
+  <!-- Arrow 1 -->
+  <line x1="90" y1="115" x2="128" y2="115" stroke="#5A6A8A" stroke-width="1.5" marker-end="url(#a1)"/>
+  <text x="109" y="108" text-anchor="middle" font-size="8" fill="#5A6A8A">HTTP</text>
+
+  <!-- Router -->
+  <rect x="138" y="90" width="70" height="50" fill="#D4E8D4" stroke="#4F7A5C" rx="8" stroke-width="2"/>
+  <text x="173" y="112" text-anchor="middle" font-size="11" fill="#4F7A5C" font-weight="700">Router</text>
+  <text x="173" y="127" text-anchor="middle" font-size="9" fill="#4F7A5C">/api/v1/users</text>
+
+  <!-- Arrow 2 -->
+  <line x1="208" y1="115" x2="246" y2="115" stroke="#C96A45" stroke-width="1.5" marker-end="url(#a2)"/>
+  <text x="227" y="108" text-anchor="middle" font-size="8" fill="#C96A45">Match</text>
+
+  <!-- Controller -->
+  <rect x="256" y="90" width="80" height="50" fill="#F1E0D6" stroke="#C96A45" rx="8" stroke-width="2"/>
+  <text x="296" y="112" text-anchor="middle" font-size="11" fill="#C96A45" font-weight="700">Controller</text>
+  <text x="296" y="127" text-anchor="middle" font-size="9" fill="#C96A45">Logic + Validate</text>
+
+  <!-- Arrow 3 -->
+  <line x1="336" y1="115" x2="374" y2="115" stroke="#8A5A8A" stroke-width="1.5" marker-end="url(#a4)"/>
+  <text x="355" y="108" text-anchor="middle" font-size="8" fill="#8A5A8A">Query</text>
+
+  <!-- Database -->
+  <rect x="384" y="90" width="55" height="50" fill="#E8D4E8" stroke="#8A5A8A" rx="8" stroke-width="2"/>
+  <text x="411" y="112" text-anchor="middle" font-size="11" fill="#8A5A8A" font-weight="700">DB</text>
+  <text x="411" y="127" text-anchor="middle" font-size="9" fill="#8A5A8A">Read/Write</text>
+
+  <!-- Response path (bottom) -->
+  <path d="M411,142 L411,175 Q411,185 400,185 L55,185 Q45,185 45,175 L45,142" fill="none" stroke="#4F7A5C" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#a3)"/>
+  <rect x="185" y="175" width="90" height="16" fill="#D4E8D4" rx="3"/>
+  <text x="230" y="187" text-anchor="middle" font-size="9" fill="#4F7A5C" font-weight="600">JSON Response</text>
+
+  <!-- Status codes -->
+  <rect x="20" y="205" width="410" height="28" fill="white" stroke="#eee" rx="5"/>
+  <text x="35" y="223" font-size="9" fill="#4F7A5C" font-weight="600">200 OK</text>
+  <text x="105" y="223" font-size="9" fill="#C96A45" font-weight="600">404 Not Found</text>
+  <text x="220" y="223" font-size="9" fill="#8A5A8A" font-weight="600">500 Server Error</text>
+  <text x="340" y="223" font-size="9" fill="#5A6A8A" font-weight="600">201 Created</text>
+</svg>

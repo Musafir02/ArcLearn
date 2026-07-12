@@ -1,0 +1,14 @@
+{
+  "title": "API Design",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "API Fundamentals", "folder": "basics",
+      "topics": ["restful_api", "http_basics", "authentication"]
+    },
+    {
+      "type": "group", "title": "Advanced API", "folder": "advanced",
+      "topics": ["graphql", "websocket", "grpc", "api_versioning"]
+    }
+  ]
+}

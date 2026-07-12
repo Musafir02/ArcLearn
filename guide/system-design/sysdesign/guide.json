@@ -1,0 +1,18 @@
+{
+  "title": "System Design",
+  "outline": [
+    { "type": "flat", "topic": "intro" },
+    {
+      "type": "group", "title": "Fundamentals", "folder": "fundamentals",
+      "topics": ["scalability", "load_balancing", "caching", "database_design_sd"]
+    },
+    {
+      "type": "group", "title": "Distributed Systems", "folder": "distributed",
+      "topics": ["cap_theorem", "message_queues", "consistent_hashing"]
+    },
+    {
+      "type": "group", "title": "Design Problems", "folder": "design",
+      "topics": ["url_shortener", "chat_system", "notification_system", "rate_limiter"]
+    }
+  ]
+}

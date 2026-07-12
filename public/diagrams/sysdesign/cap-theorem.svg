@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 270" font-family="Inter, sans-serif">
+  <rect width="440" height="270" fill="#F8F7F4" rx="8"/>
+  <text x="220" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#333">CAP Theorem</text>
+
+  <!-- Triangle -->
+  <polygon points="220,55 110,215 330,215" fill="none" stroke="#bbb" stroke-width="2"/>
+
+  <!-- Vertex labels -->
+  <rect x="185" y="35" width="70" height="24" fill="#D4E8D4" stroke="#4F7A5C" rx="5"/>
+  <text x="220" y="52" text-anchor="middle" font-size="13" fill="#4F7A5C" font-weight="700">C</text>
+  <text x="220" y="30" text-anchor="middle" font-size="10" fill="#666">Consistency</text>
+
+  <rect x="45" y="218" width="70" height="24" fill="#D6DCE8" stroke="#5A6A8A" rx="5"/>
+  <text x="80" y="235" text-anchor="middle" font-size="13" fill="#5A6A8A" font-weight="700">A</text>
+  <text x="80" y="260" text-anchor="middle" font-size="10" fill="#666">Availability</text>
+
+  <rect x="325" y="218" width="70" height="24" fill="#E8D4E8" stroke="#8A5A8A" rx="5"/>
+  <text x="360" y="235" text-anchor="middle" font-size="13" fill="#8A5A8A" font-weight="700">P</text>
+  <text x="360" y="260" text-anchor="middle" font-size="10" fill="#666">Partition Tolerance</text>
+
+  <!-- Edge labels (midpoints of triangle edges) -->
+  <!-- CP: top to bottom-right -->
+  <rect x="270" y="125" width="50" height="34" fill="#D4E8D4" stroke="#4F7A5C" rx="6"/>
+  <text x="295" y="140" text-anchor="middle" font-size="12" fill="#4F7A5C" font-weight="700">CP</text>
+  <text x="295" y="154" text-anchor="middle" font-size="8" fill="#666">Choose C</text>
+
+  <!-- AP: top to bottom-left -->
+  <rect x="120" y="125" width="50" height="34" fill="#D6DCE8" stroke="#5A6A8A" rx="6"/>
+  <text x="145" y="140" text-anchor="middle" font-size="12" fill="#5A6A8A" font-weight="700">AP</text>
+  <text x="145" y="154" text-anchor="middle" font-size="8" fill="#666">Choose A</text>
+
+  <!-- CA: bottom edge -->
+  <rect x="195" y="195" width="50" height="34" fill="#E8D4E8" stroke="#8A5A8A" rx="6"/>
+  <text x="220" y="210" text-anchor="middle" font-size="12" fill="#8A5A8A" font-weight="700">CA</text>
+  <text x="220" y="224" text-anchor="middle" font-size="8" fill="#666">No partition</text>
+
+  <!-- Center note -->
+  <text x="220" y="175" text-anchor="middle" font-size="9" fill="#999" font-style="italic">Pick 2 of 3</text>
+
+  <!-- Examples on the right -->
+  <rect x="275" y="80" width="140" height="50" fill="white" stroke="#ddd" rx="6" opacity="0.9"/>
+  <text x="285" y="96" font-size="10" fill="#4F7A5C" font-weight="600">CP Examples:</text>
+  <text x="285" y="110" font-size="9" fill="#555">MongoDB (strict), HBase,</text>
+  <text x="285" y="122" font-size="9" fill="#555">Google Bigtable, Redis Cluster</text>
+
+  <rect x="15" y="80" width="130" height="50" fill="white" stroke="#ddd" rx="6" opacity="0.9"/>
+  <text x="25" y="96" font-size="10" fill="#5A6A8A" font-weight="600">AP Examples:</text>
+  <text x="25" y="110" font-size="9" fill="#555">Cassandra, DynamoDB,</text>
+  <text x="25" y="122" font-size="9" fill="#555">CouchDB, Riak</text>
+
+  <rect x="155" y="230" width="130" height="30" fill="white" stroke="#ddd" rx="6" opacity="0.9"/>
+  <text x="165" y="250" font-size="9" fill="#555">CA: Postgres, MySQL</text>
+</svg>
