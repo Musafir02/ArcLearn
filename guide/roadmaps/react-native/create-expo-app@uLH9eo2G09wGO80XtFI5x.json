@@ -1,0 +1,4 @@
+{
+  "title": "Create Expo App",
+  "content": "`create-expo-app` is a command line tool that generates a React Native project that works out of the box with Expo. It is the easiest way to get started building a new React Native application.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Create Expo App](https://docs.expo.dev/tutorial/create-your-first-app/)"
+}

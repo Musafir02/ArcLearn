@@ -1,0 +1,4 @@
+{
+  "title": "PagedAttention",
+  "content": "PagedAttention stores the KV cache in fixed-size pages rather than a single contiguous memory block, allowing it to be distributed across GPU memory without fragmentation. It uses a lookup table to access pages on demand, reducing memory waste from over-allocation and enabling more requests to share GPU memory. It is the memory management technique that made vLLM's high throughput possible.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180)\r\n- [@article@PagedAttention](https://handbook.modular.com/inference-optimization/pagedattention/)\r\n- [@video@PagedAttention: Behind vLLM's Insane Speed](https://www.youtube.com/watch?v=6uPnLkCiy5g)"
+}

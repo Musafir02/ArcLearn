@@ -1,0 +1,4 @@
+{
+  "title": "Maintenance",
+  "content": "dApps can be harder to maintain because the code and data published to the blockchain is harder to modify. It’s hard for developers to make updates to their dapps (or the underlying data stored by a dapp) once they are deployed, even if bugs or security risks are identified in an old version.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Blockchain Maintenance](https://imiblockchain.com/blockchain-coding/maintenance/)"
+}

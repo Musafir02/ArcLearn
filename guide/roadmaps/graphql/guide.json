@@ -1,0 +1,263 @@
+{
+  "title": "Graphql Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Apollo",
+      "name": "apollo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apollo-client@D5O7ky5eXwm_Ys1IcFNaq",
+            "apollo-server@o_VkyoN6DmUUkfl0u0cro"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defer",
+      "name": "defer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defer--stream-directives@t6XxFB_lx27kS4FE2_GMH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-based-subscriptions@kJMyRhasBKfBypent3GxK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aliases@B77yLU4SuRChSjEbmYwc-",
+            "arguments@A54vi3Ao7fBHyTuqoH_it",
+            "arguments@hrpb108R8Gyu3hhzkMYzL",
+            "asynchronous@tbDvQBtLRAcD-xYX9V7Va",
+            "authorization@G50ZMlmP7Ru5LcFne5Rhu",
+            "authorization@GzwPvLybxTJM96fUhQUOi",
+            "authorization@i-zcfN6RNXhA_sb7DcIon",
+            "batching@v9gVexHfDkpG9z3NL5S-9",
+            "caching@UYwuUVTeurwODV4_Kdt_W",
+            "directives@MnmwccPahqPCzOhqjfbsY",
+            "enums@wfOsfb0zSAIdNkwFHfBcw",
+            "execution@72wGg6yP8WnEdmkeKL9vh",
+            "fields@HPdntdgTar1T34CZX8Y6y",
+            "fields@Pc9H7AcoqJQkWnuhbytyD",
+            "fragments@CehwjrCG_wbUU-TFNCuJn",
+            "graphene@r3Yf5pxzgSGAckOPr3eSt",
+            "graphqljs@jCzrMElTo-c9xGcpPOOPl",
+            "interfaces@tc_rjJZrr2x3bp8mcoQ0F",
+            "introduction@JfXwzkN29UGz17FYHHE3A",
+            "lists@d2ikbo4sZq7PmaCi5znkd",
+            "lists@sJ1_c3e08aehiqNMbIEEP",
+            "mercurius@iTV2H8clmRTOksul4v38p",
+            "mutations@jy_91mhFWbpR6sYVbuX1x",
+            "objects@LX9vZpx7yKlf0iR6AtBWz",
+            "pagination@Uf8XxJPs7RzKVhlxiQdbB",
+            "realtime@2YLm_S1j_832pb1OGSNaM",
+            "relay@Ab_ngkf6bmejvcp9okuw6",
+            "resolvers@VDur5xYBC0LJtQgDrSEyj",
+            "scalars@U-tLelmNQtR-pUq-sxU_2",
+            "schema@lj1WEh4WbfBsoZFYsi1Yz",
+            "specification@A-PQ3_FVuCK3Eud75hsdj",
+            "specification@O8k-m6s9B_uXkLsXKVFnL",
+            "subscriptions@IbEqXlGjsyNLKE9dZrPPk",
+            "synchronous@uPpsj2kCdgKsJpmTaw86u",
+            "unions@59COH3rerJJzKr6vrj4bF",
+            "urql@WP0Oo_YMfLBlXqDQQtKes",
+            "validation@I4wNBXV4xEZ0LWBhv5FwF",
+            "validation@iYkHCKTsjtvo40f3eZoet",
+            "variables@YZaFEK547FYricfOuANvH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graphql",
+      "name": "graphql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graphql-go@9nVo95gRNGHGIbaJQPH1x",
+            "graphql-http@datKo3vPDwXoyVskcrdkc",
+            "graphql-http@N-vsu-wvOikuoTbzdgX3X",
+            "graphql-java@7szipojhVb2VoL3VcS619",
+            "graphql-on-backend@ODQ8zrHc2rsc8PN-APKvz",
+            "graphql-on-frontend@6r9XbwlBtHmJrhviG2cTD",
+            "graphql-over-http-spec@V3bgswBFr1xames3F8S_V",
+            "graphql-queries@W_Lg8086ZhrIqtck1sgnb",
+            "graphql-yoga@Gotb1xtxySCVC5MrnkPSs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Live",
+      "name": "live",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "live-queries@CHdzww8_TNfeM6Bp1oTPI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multiple",
+      "name": "multiple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multiple-fields-in-mutation@AySlY8AyI6jE-cy-qKKOU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operation",
+      "name": "operation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operation-name@q9TYEygvUyHourdZIvk8G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Problems",
+      "name": "problems",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "problems-graphql-solves@2rlmLn_yQQV-7DpX1qT98"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Producing",
+      "name": "producing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "producing-the-result@zQHifboRreE4OgJ7GnUlp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Root",
+      "name": "root",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "root-fields@AlJlHZD3_SPoLNaqdM-pB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scalar",
+      "name": "scalar",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scalar-coercion@QFUOmJlPkkjpcl1vJxg9h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serving",
+      "name": "serving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serving-over-internet@inhjhH-7xJyX8o4DQqErF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Thinking",
+      "name": "thinking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "thinking-in-graphs@J5mU0v491qrm-mr1W3Msd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-system@jpu0_FAlxtD-H80mPcod5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-mutations@9Q2pGidY-rfkltHq3vChp",
+            "what-are-queries@2SU4dcaz7zwGsF7g8FjmI",
+            "what-are-subscriptions@RlBc-hWEUOPaEQLTgJa-K",
+            "what-is-graphql@cMfsRtvzvDZZJ0TqeUOxm"
+          ]
+        }
+      ]
+    }
+  ]
+}

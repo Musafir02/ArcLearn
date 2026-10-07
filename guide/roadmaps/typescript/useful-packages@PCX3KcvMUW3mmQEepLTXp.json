@@ -1,0 +1,4 @@
+{
+  "title": "Useful Packages",
+  "content": "TypeScript has a large ecosystem of packages that can be used to extend the language or to add functionality to your project.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@zod](https://zod.dev/)\r\n- [@official@valibot](https://valibot.dev/)\r\n- [@official@ts-node](https://typestrong.org/ts-node)\r\n- [@opensource@ts-morph](https://github.com/dsherret/ts-morph)\r\n- [@opensource@ts-jest](https://github.com/kulshekhar/ts-jest)\r\n- [@opensource@typesync](https://github.com/jeffijoe/typesync)"
+}

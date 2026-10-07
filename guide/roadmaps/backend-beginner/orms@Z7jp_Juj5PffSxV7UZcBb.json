@@ -1,0 +1,4 @@
+{
+  "title": "ORMs",
+  "content": "ORM (Object-Relational Mapping) allows developers to interact with databases using object-oriented concepts. Maps database tables to classes and rows to objects, eliminating raw SQL queries. Simplifies data manipulation and improves maintainability. Popular ORMs: Hibernate (Java), Entity Framework (.NET), SQLAlchemy (Python).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is an ORM, how does it work, and how should I use one?](https://stackoverflow.com/a/1279678)\r\n- [@article@What is an ORM](https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/)\r\n- [@video@Why Use an ORM?](https://www.youtube.com/watch?v=vHt2LC1EM3Q)"
+}

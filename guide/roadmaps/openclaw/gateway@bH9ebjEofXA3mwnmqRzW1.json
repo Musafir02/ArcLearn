@@ -1,0 +1,4 @@
+{
+  "title": "openclaw gateway",
+  "content": "`openclaw gateway` is the main command for interacting with the gateway process. It is the entry point for all gateway-related operations from the command line.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Gateway Runbook](https://docs.openclaw.ai/gateway)\r\n- [@official@gateway](https://docs.openclaw.ai/cli/gateway#gateway)"
+}

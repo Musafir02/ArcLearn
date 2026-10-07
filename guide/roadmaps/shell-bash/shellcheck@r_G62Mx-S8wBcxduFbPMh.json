@@ -1,0 +1,4 @@
+{
+  "title": "Shellcheck",
+  "content": "Shellcheck is a static analysis tool for shell scripts. It helps identify and fix common syntax errors, semantic issues, and stylistic problems in your Bash/Shell scripts before you even run them. By analyzing your code, shellcheck can suggest improvements and help prevent potential bugs, resulting in more robust and maintainable scripts.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Shellcheck](https://www.shellcheck.net/)\r\n- [@opensource@Shellcheck](https://github.com/koalaman/shellcheck)\r\n- [@article@ShellCheck: Script Analysis Tool for Shell Scripts](https://trunk.io/linters/shell/shellcheck)\r\n- [@video@Fix Your Shell Scripts With Shellcheck](https://www.youtube.com/watch?v=X3BIc9EHBuk)"
+}

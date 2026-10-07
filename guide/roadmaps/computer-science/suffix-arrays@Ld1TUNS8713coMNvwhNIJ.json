@@ -1,0 +1,4 @@
+{
+  "title": "Suffix Arrays",
+  "content": "Suffix arrays are a data structure that allows us to quickly find all the suffixes of a string in lexicographical order. This is useful for many problems, such as finding the longest common substring between two strings, or finding the number of distinct substrings of a string.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Suffix Arrays - Coursera](https://www.coursera.org/learn/algorithms-part2/lecture/TH18W/suffix-arrays)\r\n- [@article@Suffix Arrays - Princeton University](https://algs4.cs.princeton.edu/63suffix/)\r\n- [@video@Suffix Array Introduction](https://www.youtube.com/watch?v=zqKlL3ZpTqs)\r\n- [@video@Advanced Data Structures: Suffix Arrays](https://www.youtube.com/watch?v=IzMxbboPcqQ)"
+}

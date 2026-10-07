@@ -1,0 +1,4 @@
+{
+  "title": "Attribute Inheritance",
+  "content": "Attribute inheritance aka \"fallthrough attributes\" is a feature of Vue.js that allows you to inherit attributes from a parent component.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Fallthrough Attributes](https://vuejs.org/guide/components/attrs.html)"
+}

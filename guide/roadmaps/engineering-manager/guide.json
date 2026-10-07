@@ -1,0 +1,1326 @@
+{
+  "title": "Engineering Manager Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Agile",
+      "name": "agile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agile-methodologies@n9gvPHn4c1U-l6v-W9v6r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-strategy@ukmMMWacekcejEiEKCLzh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Architectural",
+      "name": "architectural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "architectural-decision-making@FtWNnOE3zObmjS-Og26M3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Architecture",
+      "name": "architecture",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "architecture-documentation@gHhNi32MSBmqk-oKOy-uj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-practices@4-MCXFOkMGcN369OPG-vw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bias",
+      "name": "bias",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bias-recognition--mitigation@g9FvFKC715tZL2ZGlPl3N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blameless",
+      "name": "blameless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blameless-post-mortems@fYkKo8D35AHd8agr3YrIP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Board",
+      "name": "board",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "board-presentations@5MM1ccB1pmQcd3Uyjmbr7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Brown",
+      "name": "brown",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "brown-bags@S8-nwYKlG7YHL2dWwR303"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Budget",
+      "name": "budget",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "budget-planning@oqjr26B27SHSYVQ4IFnA1",
+            "budget-requests@pLUOU2AmAJ9aJAmIlVD7D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-vs-buy-evaluation@H0aav5qKDNiNegJOGP2rx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Burnout",
+      "name": "burnout",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "burnout-prevention@mIUx8zAHWyPWPGvxuTK4y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Business",
+      "name": "business",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "business-case-development@vhOHvfF_lfQrrOK6sGLTY",
+            "business-continuity@v6N7BH0B55gX0oNXb55D7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Career",
+      "name": "career",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "career-development-planning@fhFSR_N4ZDTHINEinubHG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Change",
+      "name": "change",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "change-management@tt02qGHSn4fPbpboZ1Ni_",
+            "change-strategy@1__zRE1iu1FDX9ynpWSBS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cicd",
+      "name": "cicd",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cicd-implementation@gAEmpSMvNyjmTa5q9oZSg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-review-best-practices@40yK6XzI8lSxdiAXxtF75"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Communication",
+      "name": "communication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "communication-planning@Mxi4g_PzT0oYc3NgR0UVg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Company",
+      "name": "company",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "company-culture@KA0y6KdVTjJFeX3frHUNo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competitive",
+      "name": "competitive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competitive-analysis@76GjwwEYaEX_kh02OSpdr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conflict",
+      "name": "conflict",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conflict-resolution@QA5CR5f0geC_RQc_SOK-N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contingency",
+      "name": "contingency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contingency-planning@2RwpGPegD2GyiiV6SVbbM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cost",
+      "name": "cost",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cost-optimization@rbhZJZtRV1ZZ5QaYW77ry"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Critical",
+      "name": "critical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "critical-situation-leadership@nnoVA8W70hrNDxN3XQCVL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cross",
+      "name": "cross",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cross-department-collaboration@Hb_rZe4k37Rr0enSh7woV",
+            "cross-functional-collaboration@ZyNbSBd8plAZ5lt5OEUYu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Culture",
+      "name": "culture",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "culture-evolution@y7YHIz7OI4sNfC_nhfLcu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Customer",
+      "name": "customer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "customer-feedback-integration@QEViLNgG4Uv9Q9PWig0u3",
+            "customer-success-alignment@A-Aa7VdDAYfaMUZD_cWwP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decision",
+      "name": "decision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decision-records@dTjp_rEl1ITZjvELqVtfv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defining",
+      "name": "defining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defining-and-enforcing-values@ZuZuzwy-Frsn_PFJZVuAQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-management@hH-UDVFlgKoMJcI1ssDFv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Development",
+      "name": "development",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "development--release-workflow@bpJPDbifPwS4ScOoATlEI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Disaster",
+      "name": "disaster",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "disaster-recovery@KOTzJ8e7mc0wmF46vrj3I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Em",
+      "name": "em",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "em-vs-tech-lead-vs-ic@oKbeLp4YB8rI1Q3vi0EnG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Emergency",
+      "name": "emergency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "emergency-protocols@Xaeb67Nqdi0kwvehQUYeJ",
+            "emergency-staffing@FwK-B7jRbBXVnuY9JxI1w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Emotional",
+      "name": "emotional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "emotional-intelligence@h7gEQNbGiabDA1q1Bk_IB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Executive",
+      "name": "executive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "executive-summaries@CHothgVl8ulFthwS7uKqK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-collaboration@Jctp5tPCK_vY35_bh7QFk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feature",
+      "name": "feature",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feature-prioritization@2QwMcO27H3ygtLlWVplxr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feedback",
+      "name": "feedback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feedback-delivery@Az9GgkLFoat2t_sYRUBv5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "delegation@bx2SMhR58ud45se5dK7qS",
+            "people@aSZ2uVCmpAdEPjJt6VKG4",
+            "process@iZFn0FaRdrGv_-_8zii_-",
+            "product@p9ecMvHCqjmvxf67di7pY",
+            "reorganizations@5_CE3p5jMA1uEqFNfp7Kh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hiring",
+      "name": "hiring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hiring-and-recruitment@3na5mBIPl5f6mjEzkgD_C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Impact",
+      "name": "impact",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "impact-assessment@oGmtkOGVgA4huGJqkBEfj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Incident",
+      "name": "incident",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "incident-management@o1xPrfg8iNWQpD12xsbQJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inclusive",
+      "name": "inclusive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inclusive-environment-creation@6iM0n4faMNhk4mezS9AcG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Innovation",
+      "name": "innovation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "innovation-fostering@njqjYPMQK3nGYtqHzUylo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-management@f3P0fF4UzgVQZuMVTVmP1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Knowledge",
+      "name": "knowledge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "knowledge-bases@7t9jmv3_lRCEG5y5DA8bF",
+            "knowledge-sharing-practices@74-7hDXaBVXYo6LJdgac_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kpi",
+      "name": "kpi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kpi-definition@Wd8FCEaGZBTvsD-k4t0r4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learning",
+      "name": "learning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learning-culture-development@aeD-kBZEr1NHFtAD8yHI_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Legacy",
+      "name": "legacy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "legacy-system-retirement@9mNLfntu1TPjcX3RoUeMq",
+            "legacy-system-retirement@QUxpEK8smXRBs2gMdDInB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lessons",
+      "name": "lessons",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lessons-learned@HUQ_-vU2pdBPyF0mBocHz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Market",
+      "name": "market",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "market-awareness@P2gIOt-i0sQEOMBo-XjZO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mentoring",
+      "name": "mentoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mentoring-and-coaching@0ULnfq0ZFJXgoLbKM1gxC",
+            "mentoring-programs@g6K9fxWdRQT5h_u4Y_bkq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Migration",
+      "name": "migration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "migration-planning@QMAIEkVFHrrP6lUWvd0S8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Milestone",
+      "name": "milestone",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "milestone-management@PXobPGPgCX3_55w4UtxT9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "One",
+      "name": "one",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "one-on-one-meetings@b3qoH_LuW-Gz4N8WdGnZs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Organization",
+      "name": "organization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "organization-structure@mjMRNhPkeb4lEZXBb8Iot"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-evaluations@eJzYnoB6sArLjXRm51cM4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Politics",
+      "name": "politics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "politics-navigation@Zoz01JcNU69gr95IcWhYM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Post",
+      "name": "post",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "post-incident-analysis@8zyK34SwHry2lrWchw0KZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-changes@ev9ZKygqETctLMSt1GAFU",
+            "process-documentation@Kwy9O1z2hpeE0Sb3qtxEg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Product",
+      "name": "product",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "product-strategy-alignment@nC5dfGlxbLoXUAp2u-6Gl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Production",
+      "name": "production",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "production-issues-management@kQG_wk66-51dA4Ly9ivjM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-postmortems@g9WWa50V8ZbhIJgBRx0Nd",
+            "project-tracking@SuT6q5lMMSyVkadlQp7iU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Quality",
+      "name": "quality",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "quality-metrics@ZWWsuFm_G4kvvl_cv8l_t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recognition",
+      "name": "recognition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recognition-programs@Vb3A4a-UpGTAEs-dVI66s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Release",
+      "name": "release",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "release-management@-Qc6E3gkUUonfzifYqeJJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resistance",
+      "name": "resistance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resistance-management@vfp6VmWnhpre_eDORg7ht"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-allocation@4v5yLKYVcMh0s7SQuf__C",
+            "resource-forecasting@iwwxnSVvCmZ57stXwzk8G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Responsibility",
+      "name": "responsibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "responsibility-shifts@eIlW4mZKNQfBsTDmZf7ex"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Risk",
+      "name": "risk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "risk-management@mgw6M8I9qy1EoJpJV-gy1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roi",
+      "name": "roi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roi-analysis@XinUWPahOdufmLYcEwMj_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-transitions@FayHWdUHHYFFBwnXx37Gk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-infrastructure@EyoVFmqOJbH1sAPHLISFt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scope",
+      "name": "scope",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scope-management@C-lJJSjT8Cxw_UT3ocFsO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security--best-practices@sQCLhk__jvbityuuLlxiW",
+            "security-incident-handling@FNp4-RgPvfC76pJKjX56a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-recovery@2fHcb1dAnf34APCAAlwnR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Social",
+      "name": "social",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "social-connections@LE3ykySYFL23KvuwxeBaR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Software",
+      "name": "software",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "software-engineering-background@fBENrXdMhoGYgL_d96tgo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sprint",
+      "name": "sprint",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sprint-planning@7BcToTqL78QmG4qb43X5Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stakeholder",
+      "name": "stakeholder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stakeholder-communication@irEwTIubCjORnlH27QpEo",
+            "stakeholder-management@34uOnta7dKOyZL0et_RC8",
+            "stakeholder-management@TVqVlJqegLZRSkwNoHbBf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Status",
+      "name": "status",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "status-reporting@gqKEgKjEu5sOf5Gl-HS-j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strategic",
+      "name": "strategic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strategic-proposals@uBrsV_EocAkRWEqJYjoZn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stress",
+      "name": "stress",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stress-management@QFhhOgwz_bgZgOfKFg5XA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-design-and-architecture@iX4HPgoiEbc_gze1A01n4",
+            "system-monitoring--performance@pduPcv2QPpVmVvDdK4CPi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Team",
+      "name": "team",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "team-health-metrics@KPDHk7tl_BnIj_obnq3Kl",
+            "team-meetings@e0ZuiCoS8sJ0XB1lNiz7_",
+            "team-mergers@ph0U4l2alVJ8lUJ96q7co",
+            "team-motivation@U_oOnDXkCE387r9olvMZB",
+            "team-structure-and-design@tPDmXXjvFI_8-MTo_dEUw",
+            "team-traditions-and-rituals@8Nro6PTkEkNugYBjQfJ6O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tech",
+      "name": "tech",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tech-talks@2LO0iWf-y3l4rA1n_oG1g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technical",
+      "name": "technical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technical-customer-support@V5s2i-L2tsZFNxMLN_e_U",
+            "technical-debt-and-management@EY6Hk5wPd9Y_VA1UROk44",
+            "technical-documentation@_2xnTKt5yi__jj_WgcLa7",
+            "technical-excellence-mindset@Cq0OFaWqSRathZO-bxBrP",
+            "technical-partnerships@tCT2syTMyEHCspDLXxk6R",
+            "technical-risk-assessment@d7zMBhMFgY9MwmKC9CVVh",
+            "technical-roadmapping@ikCJ8Ybu2AD1w5VuPNVAO",
+            "technical-standards-setting@C2YsaZ32An_UXV8lB7opm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technology",
+      "name": "technology",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technology-adoption@jerPoyfCcwZbNuE_cl1hq",
+            "technology-partnerships@xMN575nnnQJeHe2oJYw17"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-strategies@q5SJyM1d8cQzzAcR-kotB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Timeline",
+      "name": "timeline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "timeline-estimation@QWO5QFS7kXwfu3aa8IiRt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tool",
+      "name": "tool",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tool-transitions@f-52wRfPRrA9iniOMYQB7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Trust",
+      "name": "trust",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "trust--influence-building@7PBmYoSmIgZT21a2Ip3_S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Velocity",
+      "name": "velocity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "velocity-tracking@idd92ZTBVUzptBl5jRdc3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vendor",
+      "name": "vendor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vendor-management@Imgt669vbUT_Iec2o4Gvt",
+            "vendor-relationships@WYoqfmk5ejB2UOiYXh4Zi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vision",
+      "name": "vision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vision-alignment@QssXmeifoI3dtu-eXp8PK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "War",
+      "name": "war",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "war-room-management@LQ3YfAgJ4UaDgtnN-cMht"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-engineering-management@_hYN0gEi9BL24nptEtXWU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Work",
+      "name": "work",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "work-life-balance-during-crises@tmY4Ktu6luFg5wKylJW76"
+          ]
+        }
+      ]
+    }
+  ]
+}

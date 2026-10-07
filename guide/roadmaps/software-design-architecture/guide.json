@@ -1,0 +1,699 @@
+{
+  "title": "Software Design Architecture Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Abstract",
+      "name": "abstract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abstract-classes@RMkEE7c0jdVFqZ4fmjL6Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anemic",
+      "name": "anemic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anemic-models@nVaoI4IDPVEsdtFcjGNRw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Architectural",
+      "name": "architectural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "architectural-patterns@gJYff_qD6XS3dg3I-jJFK",
+            "architectural-patterns@jq916t7svaMw5sFOcqZSi",
+            "architectural-principles@dBq7ni-of5v1kxpdmh227",
+            "architectural-principles@XBCxWdpvQyK2iIG2eEA1K",
+            "architectural-styles@37xWxG2D9lVuDsHUgLfzP",
+            "architectural-styles@En_hvwRvY6k_itsNCQBYE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Avoid",
+      "name": "avoid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "avoid-passing-nulls-booleans@yyKvmutbxu3iVHTuqr5q4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Be",
+      "name": "be",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "be-consistent@2SOZvuEcy8Cy8ymN7x4L-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blackboard",
+      "name": "blackboard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blackboard-pattern@Kk7u2B67Fdg2sU8E_PGqr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Class",
+      "name": "class",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "class-variants@c6n-wOHylTbzpxqgoXtdw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clean",
+      "name": "clean",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clean-code-principles@08qKtgnhJ3tlb5JKfTDf5",
+            "clean-code@TJZgsxpfOmltUUChMzlEM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-server@ZGIMUaNfBwE5b6O1yexSz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Command",
+      "name": "command",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "command-query-separation@tLbckKmfVxgn59j_dlh8b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Commands",
+      "name": "commands",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "commands--queries@j_SUD3SxpKYZstN9LSP82"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Component",
+      "name": "component",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "component-based@a0geFJWl-vi3mYytTjYdb",
+            "component-principles@8Bm0sRhUg6wZtnvtTmpgY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Composition",
+      "name": "composition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "composition-over-inheritance@Izno7xX7wDvwPEg7f_d1Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Concrete",
+      "name": "concrete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "concrete-classes@hd6GJ-H4p9I4aaiRTni57"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Coupling",
+      "name": "coupling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "coupling-and-cohesion@TXus3R5vVQDBeBag6B5qs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-patterns@gyQw885dvupmkohzJPg3a",
+            "design-patterns@Jd79KXxZavpnp3mtE1q0n",
+            "design-principles@9dMbo4Q1_Sd9wW6-HSCA9",
+            "design-principles@p96fNXv0Z4rEEXJR9hAYX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Domain",
+      "name": "domain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "domain-driven-design@CD20zA6k9FxUpMgHnNYRJ",
+            "domain-language@kWNQd3paQrhMHMJzM35w8",
+            "domain-models@I25ghe8xYWpZ-9pRcHfOh",
+            "domain-models@NpSfbzYtGebmfrifkKsUf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Encapsulate",
+      "name": "encapsulate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "encapsulate-what-varies@DlefJ9JuJ1LdQYC4WSx6y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enterprise",
+      "name": "enterprise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enterprise-patterns@h0aeBhQRkDxNeFwDxT4Tf",
+            "enterprise-patterns@WrzsvLgo7cf2KjvJhtJEC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-driven@KtzcJBb6-EcIoXnwYvE7a",
+            "event-sourcing@K8X_-bsiy7gboInPzbiEb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-programming@YswaOqZNYcmDwly2IXrTT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abstraction@VA8FMrhF4non9x-J3urY8",
+            "boundaries@-Kw8hJhgQH2qInUFj2TUe",
+            "cqrs@IU86cGkLPMXUJKvTBywPu",
+            "distributed@3V74lLPlcOXFB-QRTUA5j",
+            "dry@ltBnVWZ3UMAuUvDkU6o4P",
+            "dtos@y_Qj7KITSB8aUWHwiZ2It",
+            "encapsulation@GJxfVjhiLuuc36hatx9dP",
+            "entities@VnW_7dl5G0IFL9W3YF_W3",
+            "inheritance@Dj36yLBShoazj7SAw6a_A",
+            "interfaces@SrcPhS4F7aT80qNjbv54f",
+            "layered@IELEJcKYdZ6VN-UIq-Wln",
+            "mappers@ndUTgl2YBzOdu1MQKJocu",
+            "messaging@j9j45Auf60kIskyEMUGE3",
+            "microkernel@r-Yeca-gpdFM8iq7f0lYQ",
+            "microservices@eJsCCURZAURCKnOK-XeQe",
+            "monolithic@xYPR_X1KhBwdpqYzNJiuT",
+            "orms@SYYulHfDceIyDkDT5fcqj",
+            "polymorphism@4DVW4teisMz8-58XttMGt",
+            "repositories@8y0ot5sbplUIUyXe9gvc8",
+            "soa@FysFru2FJN4d4gj11gv--",
+            "solid@3XckqZA--knUb8IYKOeVy",
+            "structural@86Jw9kMBD7YP5nTV5jTz-",
+            "usecases@gQ7Xj8tsl6IlCcyJgSz46",
+            "yagni@eEO-WeNIyjErBE53n8JsD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gof",
+      "name": "gof",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gof-design-patterns@hlHl00ELlK9YdnzHDGnEW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hollywood",
+      "name": "hollywood",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hollywood-principle@WzUhKlmFB9alTlAyV-MWJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Identity",
+      "name": "identity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "identity-maps@tb0X1HtuiGwz7YhQ5xPsV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Indentation",
+      "name": "indentation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "indentation-and-code-style@81WOL1nxb56ZbAOvxJ7NK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keep",
+      "name": "keep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keep-framework-code-distant@OoCCy-3W5y7bUcKz_iyBw",
+            "keep-it-simple-and-refactor-often@9naCfoHF1LW1OEsVZGi8v",
+            "keep-methods--classes--files-small@XEwC6Fyf2DNNHQsoGTrQj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Law",
+      "name": "law",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "law-of-demeter@vnLhItObDgp_XaDmplBsJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layered",
+      "name": "layered",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layered-architectures@HN160YgryBBtVGjnWxNie"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Meaningful",
+      "name": "meaningful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "meaningful-names-over-comments@6Cd1BbGsmPJs_5jKhumyV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-queues--streams@GAs6NHBkUgxan3hyPvVs7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Minimize",
+      "name": "minimize",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "minimize-cyclomatic-complexity@qZzl0hAD2LkShsPql1IlZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-driven-design@0VO_-1g-TS29y0Ji2yCjc",
+            "model-view-controller@-arChRC9zG2DBmuSTHW0J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-oriented-programming@HhYdURE4X-a9GVwJhAyE0",
+            "object-oriented-programming@qZQDOe2MHBh8wNcmvkLQm",
+            "object-oriented-programming@VZrERRRYhmqDx4slnZtdc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Organize",
+      "name": "organize",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "organize-code-by-actor-it-belongs-to@kp86Vc3uue3IxTN9B9p59"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Peer",
+      "name": "peer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "peer-to-peer@Cf9Z2wxBcbnNg_q9PA6xA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Policy",
+      "name": "policy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "policy-vs-detail@b_PvjjL2ZpEKETa5_bd0v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Posa",
+      "name": "posa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "posa-patterns@6VoDGFOPHj5p_gvaZ8kTt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Program",
+      "name": "program",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "program-against-abstractions@UZeY36dABmULhsHPhlzn_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-paradigms@RgYq3YOJhPGSf5in1Rcdp",
+            "programming-paradigms@TDhTYdEyBuOnDKcQJzTAk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Publish",
+      "name": "publish",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "publish-subscribe@SX4vOVJY9slOXGwX_q1au"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pure",
+      "name": "pure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pure-functions@5S5A5wCJUCNPLlHJ5fRjU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scope",
+      "name": "scope",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scope--visibility@b-YIbw-r-nESVt_PUFQeq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serverless",
+      "name": "serverless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serverless-architecture@5WSvAA3h3lmelL53UJSMy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-programming@VhSEH_RoWFt1z2lial7xZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tell",
+      "name": "tell",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tell-dont-ask@0rGdh72HjqPZa2bCbY9Gz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tests",
+      "name": "tests",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tests-should-be-fast-and-independent@mzt7fvx6ab3tmG1R1NcLO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transaction",
+      "name": "transaction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transaction-script@tyReIY4iO8kmyc_LPafp1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-correct-constructs@S1m7ty7Qrzu1rr4Jl-WgM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Value",
+      "name": "value",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "value-objects@Ks6njbfxOHiZ_TrJDnVtk"
+          ]
+        }
+      ]
+    }
+  ]
+}

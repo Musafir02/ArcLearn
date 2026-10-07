@@ -1,0 +1,4 @@
+{
+  "title": "Entities",
+  "content": "An entity is an object defined by a unique identity that persists over time, even as its attributes change. Two entities with identical attributes are still considered different if they have different identities, unlike value objects. Entities typically represent core business concepts, such as a customer or an order, and carry the identity needed to track and reference them throughout the system's lifecycle."
+}

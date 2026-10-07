@@ -1,0 +1,4 @@
+{
+  "title": "Tailwind CSS",
+  "content": "Tailwind CSS is a utility-first CSS framework. Instead of providing pre-designed components like buttons or navigation bars, it gives you a set of pre-defined CSS classes that you can use directly in your HTML to style your elements. This allows for highly customized designs without writing custom CSS from scratch, offering a faster and more flexible way to style your web pages.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Tailwind CSS Full Course for Beginners](https://www.youtube.com/watch?v=lCxcTsOHrjo)\r\n- [@official@Tailwind Website](https://tailwindcss.com)\r\n- [@official@Online Playground](https://play.tailwindcss.com)\r\n- [@video@Should You Use Tailwind CSS?](https://www.youtube.com/watch?v=hdGsFpZ0J2E)\r\n- [@video@Official Screencasts](https://www.youtube.com/c/TailwindLabs/videos)"
+}

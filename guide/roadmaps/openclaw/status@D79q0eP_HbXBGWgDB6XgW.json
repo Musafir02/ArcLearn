@@ -1,0 +1,4 @@
+{
+  "title": "/status",
+  "content": "`/status` asks the agent to report its current state, including active tasks, connected channels, and any pending operations. It also shows provider usage and quota for the current model provider when usage tracking is enabled.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Slash Commands](https://docs.openclaw.ai/tools/slash-commands)"
+}

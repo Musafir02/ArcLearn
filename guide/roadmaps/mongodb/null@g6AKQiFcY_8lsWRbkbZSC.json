@@ -1,0 +1,4 @@
+{
+  "title": "Null",
+  "content": "Null data type in MongoDB represents absent or undefined values, distinct from empty strings or zero values. Null fields can be queried, indexed, and participate in aggregation operations with special handling. MongoDB treats null values specifically in comparisons and provides the $exists operator to distinguish between null values and missing fields in document structures.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Query for Null or Missing Fields](https://www.mongodb.com/docs/manual/tutorial/query-for-null-fields/)\r\n- [@article@Master Null Handling in MongoDB](https://www.mydbops.com/blog/null-handling-in-mongodb)"
+}

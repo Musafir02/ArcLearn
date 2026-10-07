@@ -1,0 +1,4 @@
+{
+  "title": "Modules",
+  "content": "Modules encapsulate all sorts of code like functions and variables and expose all this to other files. Generally, we use it to break our code into separate files to make it more maintainable. They were introduced into JavaScript with ECMAScript 6.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Modules, introduction](https://javascript.info/modules-intro)\r\n- [@article@Export and Import](https://javascript.info/import-export)\r\n- [@article@Dynamic imports](https://javascript.info/modules-dynamic-imports)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Testing directives",
+  "content": "Directives are classes that add new behavior or modify the existing behavior to the elements in the template. Basically directives are used to manipulate the DOM, for example adding/removing the element from DOM or changing the appearance of the DOM elements.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Attribute Directives](https://angular.dev/guide/testing/attribute-directives)\r\n- [@article@Testing Directives](https://testing-angular.com/testing-directives/)"
+}

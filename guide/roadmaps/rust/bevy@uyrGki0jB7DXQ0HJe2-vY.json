@@ -1,0 +1,4 @@
+{
+  "title": "bevy",
+  "content": "Bevy is a modern, data-driven game engine built in Rust featuring an ECS (Entity Component System) architecture. It supports both 2D and 3D games with modular design, custom shaders, and high performance. Bevy emphasizes developer ergonomics and provides comprehensive tools for game development.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Bevy Engine](https://bevy.org/)\r\n- [@official@Bevy Documentation](https://docs.rs/bevy/latest/bevy/)\r\n- [@opensource@bevyengine/bevy](https://github.com/bevyengine/bevy)"
+}

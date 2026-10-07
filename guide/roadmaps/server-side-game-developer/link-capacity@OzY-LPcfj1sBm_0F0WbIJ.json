@@ -1,0 +1,4 @@
+{
+  "title": "Link Capacity",
+  "content": "Link capacity is the maximum data rate a network link can carry, measured in bits per second. IP routes packets over links with varying capacities, and congestion occurs when traffic demand exceeds a link's capacity, causing queuing delays and packet drops.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Bandwidth, Latency and Throughput - Network Academy](https://www.networkacademy.io/ccna/network-fundamentals/bandwidth-latency-throughput)\r\n- [@article@Latency vs Throughput vs Bandwidth - Kentik](https://www.kentik.com/kentipedia/latency-vs-throughput-vs-bandwidth/)\r\n- [@article@What is Network Bandwidth? - NetAlly](https://www.netally.com/network-performance/what-is-network-bandwidth/)"
+}

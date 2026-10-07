@@ -1,0 +1,4 @@
+{
+  "title": "TypeScript Types",
+  "content": "TypeScript Types define the kind of values a variable can hold. They essentially act as labels that specify the allowed data types, like numbers, strings, or more complex objects. By assigning types, TypeScript can perform static type checking, catching potential errors during development before the code is even run. This helps improve code reliability and makes it easier to understand how data flows through your application.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@TypeScript - Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)"
+}

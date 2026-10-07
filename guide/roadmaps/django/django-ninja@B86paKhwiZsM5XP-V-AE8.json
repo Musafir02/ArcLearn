@@ -1,0 +1,4 @@
+{
+  "title": "Django Ninja",
+  "content": "Django Ninja is a web framework for building APIs with Django and Python 3.7+ with type hints. It focuses on providing a fast and efficient way to create REST APIs using standard Python type annotations for request validation, serialization, and documentation generation. It simplifies API development by automating many of the common tasks, such as input validation and output serialization, while also providing automatic OpenAPI schema generation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@First Steps](https://django-ninja.dev/tutorial/)\r\n- [@opensource@django-ninja](https://github.com/vitalik/django-ninja)\r\n- [@video@Django-Ninja APIs - Modern API Development in Django](https://www.youtube.com/watch?v=XqkqbsdtoMI)\r\n- [@video@Django Ninja - The new DRF killer?! 🥷](https://www.youtube.com/watch?v=J44FpJ2CYnU)"
+}

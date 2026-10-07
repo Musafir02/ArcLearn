@@ -1,0 +1,4 @@
+{
+  "title": "Whitenoise",
+  "content": "Whitenoise is a library that allows your web application to serve static files directly from its own WSGI server. This means you don't need to rely on a separate web server like Nginx or Apache to serve static assets such as CSS, JavaScript, and images. It simplifies deployment, especially in environments where configuring a separate static file server is complex or undesirable.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@WhiteNoise Docs](https://whitenoise.readthedocs.io/en/stable/index.html)\r\n- [@official@whitenoise](https://pypi.org/project/whitenoise/)\r\n- [@article@Django - Installing WhiteNoise](https://www.w3schools.com/django/django_static_whitenoise.php)\r\n- [@video@Whitenoise for Django Static Assets - Overview!](https://www.youtube.com/watch?v=QZTk8txo6x0)"
+}

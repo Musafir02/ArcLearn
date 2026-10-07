@@ -1,0 +1,4 @@
+{
+  "title": "Axios",
+  "content": "Axios is a promise-based HTTP Client for node.js and the browser. Used for making requests to web servers. On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Axios Documentation](https://axios-http.com/docs/intro)\r\n- [@video@Axios Tutorial](https://www.youtube.com/watch?v=6LyagkoRWYA)"
+}

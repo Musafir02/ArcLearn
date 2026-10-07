@@ -1,0 +1,4 @@
+{
+  "title": "RAGFlow",
+  "content": "RAGFlow is a framework designed to streamline the creation, evaluation, and deployment of Retrieval-Augmented Generation (RAG) pipelines. It provides tools and abstractions for building modular RAG systems, allowing developers to easily experiment with different components like data loaders, retrievers, and generators, and then assess their performance.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@RagFlow](https://ragflow.io/)\r\n- [@opensource@ragflow](https://github.com/infiniflow/ragflow)\r\n- [@video@RagFlow: Ultimate RAG Engine](https://www.youtube.com/watch?v=ApA-7G7FGRc)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "const and iota",
+  "content": "Constants declared with `const` represent unchanging compile-time values. `iota` creates successive integer constants starting from zero, resetting per `const` block. Useful for enumerations, bit flags, and constant sequences without manual values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Iota](https://go.dev/wiki/Iota)\r\n- [@article@Constants](https://webreference.com/go/basics/constants/)"
+}

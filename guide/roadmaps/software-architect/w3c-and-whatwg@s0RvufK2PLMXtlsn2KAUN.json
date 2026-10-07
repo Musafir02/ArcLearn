@@ -1,0 +1,4 @@
+{
+  "title": "W3c and WHATWG Standards",
+  "content": "The W3C and WHATWG are the organizations responsible for defining and maintaining web standards like HTML, CSS, and related specifications. The W3C historically focused on formal standardization, while WHATWG, formed by browser vendors, drives the living standard for HTML used by modern browsers today. Understanding these standards bodies helps an architect know where to look for authoritative guidance on how web technologies should behave.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@W3C Standards](https://www.w3.org/standards/)\r\n- [@official@WHATWG Standards](https://spec.whatwg.org/)"
+}

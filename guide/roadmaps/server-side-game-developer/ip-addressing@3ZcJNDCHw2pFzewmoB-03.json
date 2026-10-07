@@ -1,0 +1,4 @@
+{
+  "title": "IP Addressing",
+  "content": "IP addressing assigns unique numerical labels to network interfaces, enabling packets to be delivered to the correct host. IPv4 uses 32-bit addresses written in dotted-decimal notation; IPv6 uses 128-bit addresses in hexadecimal, solving IPv4 exhaustion.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Fundamentals of Computer Networking - Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/network-fundamentals/)\r\n- [@article@TCP/IP Addressing and Subnetting - Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting)\r\n- [@article@What is an IP Address? - IBM](https://www.ibm.com/think/topics/ip-address)"
+}

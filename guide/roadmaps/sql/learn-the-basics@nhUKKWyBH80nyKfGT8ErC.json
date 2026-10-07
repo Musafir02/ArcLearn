@@ -1,0 +1,4 @@
+{
+  "title": "Learn the Basics",
+  "content": "SQL (Structured Query Language) is a programming language used to manage and manipulate data stored in relational database management systems (RDBMS). It allows you to retrieve, insert, update, and delete data, as well as define database schemas and control access to data. The basic understanding of SQL is foundational to interact with almost any database.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@SQL Tutorial - Mode](https://mode.com/sql-tutorial/)\r\n- [@article@SQL Tutorial](https://www.sqltutorial.org/)"
+}

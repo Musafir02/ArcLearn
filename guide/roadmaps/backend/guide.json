@@ -1,0 +1,808 @@
+{
+  "title": "Backend Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-assisted-coding@fA3yi9puMbTFmbPpo6OjN",
+            "ai-vs-traditional-coding@IZKl6PxbvgNkryAkdy3-p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Architectural",
+      "name": "architectural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "architectural-patterns@tHiUpG9LN35E5RaHddMv5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aws",
+      "name": "aws",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aws-neptune@5xy66yQrz1P1w7n6PcAFq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-authentication@yRiJgjjv2s1uV9vgo3n8m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Browsers",
+      "name": "browsers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "browsers-and-how-they-work@P82WFaTPgQEPNp5IIuZ1Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-for-scale@SHmbcMRsc3SygEDksJQBD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cap",
+      "name": "cap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cap-theorem@LAdKDJ4LcMaDWqslMvE8X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd@mGfD7HfuP184lFkXZzGjG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circuit",
+      "name": "circuit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circuit-breaker@spkiQTPvXY4qrhhVUkoPV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude-code@RcC1fVuePQZ59AsJfeTdR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-reviews@0TMdly8yiqnNR8sx36iqc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cookie",
+      "name": "cookie",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cookie-based-auth@ffzsh8_5yRq85trFt9Xhk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-replication@wrl7HHWXOaxoKVlNZxZ6d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-indexes@y-xkHFE9YzhNIX3EiWspL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dns",
+      "name": "dns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dns-and-how-it-works@hkxw9jPGYphmjhTjw8766"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Documentation",
+      "name": "documentation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "documentation-generation@q7NpwqQXUp4wt2to-yFiP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Failure",
+      "name": "failure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "failure-modes@GwApfL4Yx-b5Y8dB9Vy__"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frontend",
+      "name": "frontend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frontend-basics@oyg5g4-cY5EBEUgVkjnL3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-calling@Uve-UObgOBfrd-cLayVWe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-testing@NAGisfq2CgeK3SsuRjnMw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acid@qSAdfaGUfn8mtmDjHJi3z",
+            "agents@w1D3-bSg93ndKK9XJTu7z",
+            "anthropic@Lw2nR7x8PYgq1P5CxPAxi",
+            "antigravity@E7-LveK7jO2npxVTLUDfw",
+            "apache@jjjonHTHHo-NiAf6p9xPv",
+            "applications@Nx7mjvYgqLpmJ0_iSx5of",
+            "authentication@PY9G7KQy8bF6eIdr1ydHf",
+            "backpressure@JansCqGDyXecQkD1K7E7e",
+            "bcrypt@dlG1bVkDmjI3PEGpkm1xH",
+            "c@rImbMHLLfJwjf3l25vBkc",
+            "caching@uPjCrDGA2MHylWXbZvMBM",
+            "caddy@Op-PSPNoyj6Ss9CS09AXh",
+            "cassandra@zsiZLWJ2bMvrjuHch5fX_",
+            "clickhouse@ZyGLSvx17p7QmYDy1LFbM",
+            "copilot@HQrxxDxKN8gizvXRU5psW",
+            "cors@LU6WUbkWKbPM1rb2_gEqa",
+            "couchdb@qOlNzZ7U8LhIGukb67n7U",
+            "csp@HgQBde1zLUFtlwB66PR6_",
+            "css@utA1W2O6pzoV_LbtDE5DN",
+            "cursor@CKlkVK_7GZ7xzIUHJqZr8",
+            "dgraph@GKrcTsUi5XWj_pP1TOK0S",
+            "dynamodb@dwfEHInbX2eFiafM-nRMX",
+            "elasticsearch@NulaE1isWqn-feYHg4YQT",
+            "embeddings@Ofv__kXuBk-Vv2jVhaFss",
+            "firebase@RyJFLLGieJ8Xjt-DlIayM",
+            "gemini@Bic4PHhz-YqzPWRimJO83",
+            "git@_I1E__wCIVrhjMk6IMieE",
+            "github@ptD8EVqwFUYr4W5A_tABY",
+            "gitlab@Wcp-VDdFHipwa7hNAp1z_",
+            "go@BdXbcz4-ar3XOX0wIKzBp",
+            "graphql@zp3bq38tMnutT2N0tktOW",
+            "grpc@J-TOE2lT4At1mSdNoxPS1",
+            "html@9-pCsW650T1mfj5dmRB9L",
+            "https@x-WBJjBd8u93ym5gtxGsR",
+            "instrumentation@4X-sbqpP0NDhM99bKdqIa",
+            "introduction@SiYUdtYMDImRPmV2_XPkH",
+            "java@ANeSwxJDJyQ-49pO2-CCI",
+            "javascript@8-lO-v6jCYYoklEJXULxN",
+            "javascript@An2lMuJEkkpL0cfw4RrSl",
+            "jwt@UxS_mzVUjLigEwKrXnEeB",
+            "kafka@VoYSis1F1ZfTxMlQlXQKB",
+            "loadshifting@HoQdX7a4SnkFRU4RPQ-D5",
+            "lxc@31ZlpfIPr9-5vYZqvjUeL",
+            "mariadb@tD3i-8gBpMKCHB-ITyDiU",
+            "mcp@mHnI19RgZ57XDEIDaHxD0",
+            "md5@jWwA6yX4Zjx-r_KpDaD3c",
+            "memcached@xPvVwGQw28uMeLYIWn8yn",
+            "microservices@K55h3aqOGe6-hgVhiFisT",
+            "migrations@MOLAXgs0CMCT7o84L0EaK",
+            "mongodb@28U6q_X-NTYf7OSKHjoWH",
+            "monitoring@QvMEEsXh0-rzn5hDGcmEv",
+            "monolith@Ke522R-4k6TDeiDRyZbbU",
+            "mysql@VPxOdjJtKAqmM5V0LR5OC",
+            "neo4j@BTNJfWemFKEeNeTyENXui",
+            "nginx@z5AdThp9ByulmM9uekgm-",
+            "normalization@Ge2SnKBrQQrU-oGLz6TmT",
+            "oauth@vp-muizdICcmU0gN8zmkS",
+            "observability@Z01E67D6KjrShvQCHjGR7",
+            "openai@-ye5ZtYFDoYGpj-UJaBP8",
+            "openid@z3EJBpgGm0_Uj3ymhypbX",
+            "oracle@h1SAjQltHtztSt8QmRgab",
+            "orms@Z7jp_Juj5PffSxV7UZcBb",
+            "php@l9Wrq_Ad9-Ju4NIB0m5Ha",
+            "postgresql@FihTrMO56kj9jT8O_pO2T",
+            "python@J_sVHsD72Yzyqb9KCIvAY",
+            "rabbitmq@GPFRMcY1DEtRgnaZwJ3vW",
+            "rags@6PCOCzCbx7jo9wO2Hl2gy",
+            "redis@g8GjkJAhvnSxXTZks0V1g",
+            "redis@M0iaSSdVPWaCUpyTG50Vf",
+            "refactoring@EYT2rTLZ8tUW2u8DOnAWF",
+            "rest@lfNFDZZNdrB0lbEaMtU71",
+            "rethinkdb@5T0ljwlHL0545ICCeehcQ",
+            "ruby@SlH0Rl07yURDko2nDPfFy",
+            "rust@CWwh2abwqx4hAxpAGvhIx",
+            "saml@UCHtaePVxS-0kpqlYxbfC",
+            "scrypt@kGTALrvCpxyVCXHRmkI7s",
+            "scylladb@aArZ3gKwObzafCkTOd-Hj",
+            "serverless@nkmIv3dNwre4yrULMgTh3",
+            "sha@JVN38r5jENoteia3YeIQ3",
+            "skills@IWubGe3oquSj882QVnhLU",
+            "soa@tObmzWpjsJtK4GWhx6pwB",
+            "soap@sSNf93azjuyMzQqIHE0Rh",
+            "solr@iN_1EuIwCx_7lRBw1Io4U",
+            "sqlite@kdulE3Z_BdbtRmq6T2KmR",
+            "ssltls@0v3OsaghJEGHeXX0c5kqn",
+            "streaming@9f-aWi3_7USy4XpNzrTL6",
+            "telemetry@neVRtPjIHP_VG7lHwfah0",
+            "testing@STQQbPa7PE3gbjMdL6P-t",
+            "throttling@qAu-Y4KI2Z_y-EqiG86cR",
+            "timescaledb@WiAK70I0z-_bzbWNwiHUd",
+            "transactions@rq_y_OBMD9AH_4aoecvAi",
+            "vectors@yKNdBbahm_h81xdMDT-qx",
+            "websockets@sVuIdAe08IWJVqAt4z-ag"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graceful",
+      "name": "graceful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graceful-degradation@G9AI_i3MkUE1BsO3_-PH7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-does-the-internet-work@yCnn-NfSxIybUQ2iTuUGq",
+            "how-llms-work@tUNP5VRKvrPcufPDPPEo8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-caching@KWTbEVX_WxS8jmSaAX3Fe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Influx",
+      "name": "influx",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "influx-db@XbM4TDImSH-56NsITjyHK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-patterns@iatQ3RCxESHt1CwN3PSfx",
+            "integration-testing@381Kw1IMRv7CJp-Uf--qd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Json",
+      "name": "json",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "json-apis@sNceS4MpSIjRkWhNDmrFg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-about-apis@EwvLPSI6AlZ4TnNIJTZA4",
+            "learn-about-web-servers@fekyMpEnaGqjh1Cu4Nyc4",
+            "learn-the-basics@UTupdqjOyLh7-56_0SXJ8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Long",
+      "name": "long",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "long--short-polling@osvajAJlwGI3XnX0fE-kA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-brokers@nJ5FpFgGCRaALcWmAKBKT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "More",
+      "name": "more",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "more-about-databases@LJt27onEOeIBomiEMTyKd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ms",
+      "name": "ms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ms-iis@0NJDgfe6eMa7qPUOI6Eya",
+            "ms-sql@dEsTje8kfHwWjCI3zcgLC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "N1",
+      "name": "n1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "n1-problem@bQnOAu863hsHdyNMNyJop"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nosql",
+      "name": "nosql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nosql-databases@F8frGuv1dunOdcVJ_IiGs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Open",
+      "name": "open",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "open-api-specs@9cD5ag1L0GqHx4_zxc5JX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Owasp",
+      "name": "owasp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "owasp-risks@AAgciyxuDvS2B_c6FRMvT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-backend-language@2f0ZO6GJElfZ2Eis28Hzg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Profiling",
+      "name": "profiling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "profiling-performance@SYXJhanu0lFmGj2m2XXhS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompting",
+      "name": "prompting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompting-techniques@xL8d-uHMpJKwUvT8z-Jia"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Real",
+      "name": "real",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "real-time-data@5XGvep2qoti31bsyqNzrU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relational",
+      "name": "relational",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relational-databases@r45b461NxLN6wBODJ5CNP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repo",
+      "name": "repo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repo-hosting-services@NvUcSDWBhzJZ31nzT4UlE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-databases@95d9itpUZ4s9roZN8kG9x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-engines@gKTSe9yQFVbPVlLzWB0hC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-security@TZ0BWOENPv6pQm8qYB8Ow",
+            "server-sent-events@RUSdlokJUcEYbCvq5FJBJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-mesh@n14b7sfTOwsjKTpFC9EZ2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sharding",
+      "name": "sharding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sharding-strategies@zWstl08R4uzqve4BdYurp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-outputs@GMxPmyatxYmIPRFHfRAnr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Token",
+      "name": "token",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "token-authentication@0rGj7FThLJZouSQUhnqGW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Twelve",
+      "name": "twelve",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "twelve-factor-apps@8DmabQJXlrT__COZrDVTV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@3OYm6b9f6WOrKi4KTOZYK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control-systems@ezdqQW9wTUw93F6kjOzku"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-security@RBrIP5KbVQ2F0ly7kMfTo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-domain-name@ZhSuu2VArnzPDp6dPQQSC",
+            "what-is-hosting@aqMaEY8gkKMikiqleV5EP",
+            "what-is-http@R12sArWVpbIs_PHxBqVaR"
+          ]
+        }
+      ]
+    }
+  ]
+}

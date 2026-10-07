@@ -1,0 +1,4 @@
+{
+  "title": "BloC",
+  "content": "Bloc (Business Logic Component) is a state management pattern used in Flutter to separate presentation logic from business logic. It helps to manage and maintain the app state, making it easier to test, debug, and reuse code. It uses streams to emit new states and reacts to changes in the state.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@BLoC in Flutter](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#bloc--rx)\r\n- [@article@Get started with flutter_bloc](https://pub.dev/packages/flutter_bloc)\r\n- [@article@Flutter bloc for beginners](https://medium.com/flutter-community/flutter-bloc-for-beginners-839e22adb9f5)\r\n- [@video@Flutter Bloc - Tutorial](https://www.youtube.com/watch?v=Ep6R7U9wa0U)"
+}

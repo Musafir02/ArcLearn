@@ -1,0 +1,4 @@
+{
+  "title": "SQL",
+  "content": "SQL, or Structured Query Language, is a programming language used for managing and manipulating data held in a relational database management system (RDBMS). It allows you to create, read, update, and delete data. WordPress uses a MySQL database to store all of its content, including posts, pages, user information, and settings, making SQL essential for understanding how WordPress functions and for tasks like database optimization or troubleshooting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@roadmap.sh - Master SQL](https://roadmap.sh/courses/sql)\r\n- [@roadmap@Visit the Dedicated QSL Rodmap](https://roadmap.sh/sql)\r\n- [@article@SQL Tutorial](https://www.sqltutorial.org/)\r\n- [@video@SQL Course for Beginners \\[Full Course\\]](https://www.youtube.com/watch?v=7S_tz1z_5bA)"
+}

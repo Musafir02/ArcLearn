@@ -1,0 +1,4 @@
+{
+  "title": "govulncheck",
+  "content": "Go's official vulnerability scanner checking code and dependencies for known security vulnerabilities. Reports packages with vulnerabilities from Go database, provides severity info and remediation advice. Essential for maintaining secure applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@govulncheck](https://go.dev/doc/tutorial/govulncheck)\r\n- [@article@Using govulncheck to Detect Vulnerable Dependencies in Go](https://medium.com/@caring_smitten_gerbil_914/%EF%B8%8F-using-govulncheck-to-detect-vulnerable-dependencies-in-go-627a634f1edd)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Never Trust External Content to Prevent Prompt Injection",
+  "content": "Prompt injection is an attack where malicious text in an email, webpage, or file tricks the agent into taking unintended actions. Treating all external content as untrusted input is a core security principle in Open Claw.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Threat Model](https://docs.openclaw.ai/security/THREAT-MODEL-ATLAS)"
+}

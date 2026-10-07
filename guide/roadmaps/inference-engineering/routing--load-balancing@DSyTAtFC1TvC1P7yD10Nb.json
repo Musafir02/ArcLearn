@@ -1,0 +1,4 @@
+{
+  "title": "Routing and Load Balancing",
+  "content": "Routers make request-level decisions about which replica to send a request to, considering factors like KV cache prefix match and LoRA availability. Load balancers make system-level decisions to distribute traffic evenly across replicas. In systems with prefix caching, naive round-robin load balancing misses cache opportunities; intelligent routing increases cache hit rates and reduces TTFT.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@book@Designing Data-Intensive Applications](https://dataintensive.net/)\r\n- [@book@Site Reliability Engineering](https://sre.google/books/)\r\n- [@article@The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783)"
+}

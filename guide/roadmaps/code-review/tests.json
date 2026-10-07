@@ -1,0 +1,4 @@
+{
+  "title": "Questions to Ask",
+  "content": "- Are all tests passing?\r\n- Are new features reasonably tested?\r\n- Are corner cases tested?\r\n- Is it using unit tests where possible, integration tests where necessary?\r\n- Are there tests for NFRs, e.g. performance?\r\n\r\nLearn more from the following resources:\r\n\r\n- [@article@Unit Testing Best Practices - IBM](https://www.ibm.com/think/insights/unit-testing-best-practices)\r\n- [@article@Integration Testing - Microsoft Engineering Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/)\r\n- [@article@The Practical Test Pyramid - Martin Fowler](https://martinfowler.com/articles/practical-test-pyramid.html)"
+}

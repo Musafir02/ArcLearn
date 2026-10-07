@@ -1,0 +1,4 @@
+{
+  "title": "Security",
+  "content": "Web security refers to the protective measures taken by the developers to protect the web applications from threats that could affect the business.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@OWASP Web Application Security Testing Checklist](https://github.com/0xRadi/OWASP-Web-Checklist)\r\n- [@article@Why HTTPS Matters](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)\r\n- [@article@Wikipedia - OWASP](https://en.wikipedia.org/wiki/OWASP)\r\n- [@article@OWASP Top 10 Security Risks](https://sucuri.net/guides/owasp-top-10-security-vulnerabilities-2021/)"
+}

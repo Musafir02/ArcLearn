@@ -1,0 +1,4 @@
+{
+  "title": "Ruby",
+  "content": "Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. It features an elegant syntax that is natural to read and easy to write, making it a popular choice for web development, particularly through the Ruby on Rails framework. Its object-oriented design and powerful standard library allow developers to build robust applications efficiently by prioritizing human-friendly code over complex machine-level logic.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated Ruby Roadmap](https://roadmap.sh/ruby)\r\n- [@official@Ruby Website](https://www.ruby-lang.org/en/)\r\n- [@official@Learn Ruby in 20 minutes](https://www.ruby-lang.org/en/documentation/quickstart/)\r\n- [@video@Ruby Programming Crash Course](https://www.youtube.com/watch?v=w9yNsTAp-Mg)"
+}

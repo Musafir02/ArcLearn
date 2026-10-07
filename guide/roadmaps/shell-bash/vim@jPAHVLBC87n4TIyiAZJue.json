@@ -1,0 +1,4 @@
+{
+  "title": "Vim",
+  "content": "Vim is a highly configurable text editor built to enable efficient text editing. It's an improved version of the vi editor distributed with most UNIX systems. Vim is known for its modal editing, allowing users to switch between different modes for inserting, deleting, and navigating text, making it a powerful tool for developers and system administrators.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@OpenVim - Interactive Vim Tutorial](https://openvim.com/)\r\n- [@official@Vim](https://www.vim.org/)\r\n- [@article@Getting started with Vim: The basics](https://opensource.com/article/19/3/getting-started-vim)\r\n- [@video@Vim As Your Editor - Introduction](https://www.youtube.com/watch?v=X6AR2RMB5tE)\r\n- [@course@Vim Introduction: modes, motions and operators in a browser sandbox (Hands-on)](https://learn.webterm.app/en/courses/vim-introduction)"
+}

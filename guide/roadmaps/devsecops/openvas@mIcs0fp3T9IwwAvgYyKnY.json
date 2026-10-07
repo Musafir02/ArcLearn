@@ -1,0 +1,4 @@
+{
+  "title": "OpenVAS",
+  "content": "OpenVAS (Open Vulnerability Assessment System) is a comprehensive vulnerability scanner. It's a framework of several services and tools offering vulnerability management. OpenVAS helps identify security weaknesses in systems and networks by performing tests against known vulnerabilities. It's often used for vulnerability assessments and penetration testing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@OpenVAS](https://www.openvas.org/)\r\n- [@opensource@openvas](https://github.com/greenbone/openvas-scanner)\r\n- [@article@OpenVAS Tutorial and Tips](https://hackertarget.com/openvas-tutorial-tips/)\r\n- [@video@Complete Beginner OpenVAS Vulnerability Scanning Tutorial - Cyber Security // Kali Linux](https://www.youtube.com/watch?v=LGh2SetiKaY)"
+}

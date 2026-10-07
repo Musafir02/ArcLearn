@@ -1,0 +1,4 @@
+{
+  "title": "openclaw cron add",
+  "content": "`openclaw cron add` registers a new scheduled task, letting you define what the agent should do and when it should trigger automatically.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Scheduled Tasks](https://docs.openclaw.ai/automation/cron-jobs)\r\n- [@official@Cron](https://docs.openclaw.ai/cli)"
+}

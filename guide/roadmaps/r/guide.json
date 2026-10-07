@@ -1,0 +1,842 @@
+{
+  "title": "R Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Aesthetic",
+      "name": "aesthetic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aesthetic-mappings@HDWIMwjBFh4vKw_BYo0bF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apply",
+      "name": "apply",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apply-family@yqCapCzAFkWZvebvkuHNV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arguments",
+      "name": "arguments",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arguments--defaults@qSJI_xsSN3wPY3ud0bZdm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Base",
+      "name": "base",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "base-r-plotting@Ytwncvf4YOgLPNnczOpts"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-syntax@nDFlbYOe7U7mVJadKYy_W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-practices@OLOZSNHrOFD3claBXNKxP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Big",
+      "name": "big",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "big-data-tools@GkxSrpOJx-SWvnDkTPcJt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Casting",
+      "name": "casting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "casting-types@XI8bvhQ3ugezTu60USUG2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-plots@1uWW6PP2uWqKU4Ya5GzVO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-statements@bN3DAVH9lstsgwFhFMU_m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-variables@WBnsgWCiduh03uxGIN69c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-cleaning@dLatbMJKRRZKjQbKW291i",
+            "data-frames@kIXf6FI-z6dgUdTGCjHkt",
+            "data-manipulation@vP5oSvl3Z5inZEd3pmiMK",
+            "data-structures@JTDhohoC6Ew7uvPwuWr1v",
+            "data-tables@SCW3xD7wCf3_ruTtxBkAX",
+            "data-types@Iw6aTwdfOys4mzozQ_2Hz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Descriptive",
+      "name": "descriptive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "descriptive-statistics@epfsRqEvWDjgeSrku0emD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Distribution",
+      "name": "distribution",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "distribution-analysis@52p2OUjL11aRM4PyHrCt_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dropping",
+      "name": "dropping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dropping-vs-imputing@xIS0cJ8ui0siBoZJr3-B_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Encoding",
+      "name": "encoding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "encoding-categories@1bHv3_acNts_BeOn3l6DF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@bLZXJOMu6-NT2bqntOPfd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exploratory",
+      "name": "exploratory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exploratory-data-analysis@s2Wxtvjjz7bYK0sYeNhM4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Faceting",
+      "name": "faceting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "faceting--themes@P0NtCbzyGWz5B41feWsAy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filter",
+      "name": "filter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filter-query-arrange@6w_sSTw1R5MU2zj2RpO5Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forward",
+      "name": "forward",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forward--backward-fill@9mFT0z5yT446_-nGdG492"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apis@V_cnhs4qzp-SLnLaGXC1l",
+            "arrays@fy2pI0rjkw9d8THIHgDuN",
+            "character@ghrVl-VfVDvpyBIl6N4xM",
+            "comments@IahDxQfLvld-qCAeAuAo-",
+            "complex@SQh5uCFmpecdc-_PtyCEp",
+            "correlation@IeNMySumbyJdHhORMwmFr",
+            "cran@IL0fFEs4CgK_eBft-SYAl",
+            "csv@0cq7ItNudoIj48xoeA-q5",
+            "dashboards@ofS4vY5u64GP4mI8gG_WD",
+            "debugging@1shfOZKx1DfYAOtQb1CoK",
+            "dplyr@2EXfdeT4WoEg5ZNr9eCtK",
+            "excel@SOdl-8SpW1NsQoPtviJ8-",
+            "factors@GeyQm1ONhk_eLXME7OS4M",
+            "forcats@WVgYRRNpsNXBnz7V9JX29",
+            "functions@GrKgIYLzkSjtXdK5czN2x",
+            "ggplot2@4FPrICo0eUAONFvObktqU",
+            "ggplot2@vsqvOoq59aWgGexOSwlFG",
+            "igraph@WA-oBafJlw5OUphYrDm5u",
+            "integer@K1whVa9-2i8QMqDo_tNlZ",
+            "introduction@QUzLkB8iKfUBtyAfKc8LC",
+            "iqr@ucEFYVtXIvuYKjudK3pwB",
+            "joins@WdiPYzeuO8dKQsuP0xy4P",
+            "json@R_8vJSp2Zp0CBWMeI2gsd",
+            "leaflet@2uHsp_MQMF3WaOgcv0eDY",
+            "lists@lbYcKVjKw1mMU1DIGwA-s",
+            "logical@jQTOs0UfekeCV6sPWVOr2",
+            "loops@mCa0SGe_bHuU5P_FEsNYI",
+            "lubridate@aD3VCC-ltZVisOgC--gAd",
+            "matrices@29bAj72LyJQ62JbBl9vvG",
+            "nlp@BgwWbX4MgOPwMDPGX_HFs",
+            "numeric@dewpbYpun6Nho0ErI3rv-",
+            "operators@3d540CG_Ye7vvIFQKmiPb",
+            "pak@j1jq5_64lBuYQQjJWKIuI",
+            "pipe@0K17RO_EoOaT820WypQ7H",
+            "plotly@XPr7td4S8xpFxG5IkWvyz",
+            "positron@2m8uQRGaVZUd4mfm7bRou",
+            "purrr@KXvrYvFvyAqFbJeS1KHRi",
+            "quanteda@gUpA_YtWlToGs-OJZZDpV",
+            "quarto@SnLNFoVZhL6YuE9QOLpAl",
+            "readr@y0yMev6QSHjqd1YJ9Y05Z",
+            "recursion@VdtQNeFL8vnaHHzW6CWds",
+            "renv@6dJaQRj2zMz00sfTiTdww",
+            "reshaping@cRgcpjX7GlMB_l3ARU1z4",
+            "rstatix@-9C077yNLTXLbEo0TW1zU",
+            "rstudio@c8uLNJMr6UZfvjFwFhxvd",
+            "sampling@U6vkyRtFatEi8oCm0zoIK",
+            "scopes@JWRELdQozts-p0448ILYf",
+            "sf@XP4ngNk1Fqzb2nxtHs3Ot",
+            "shiny@pC_AC-yhn9qqL2HbIl8Yx",
+            "sparklyr@XTXm8aIDbRkTXoAck_m3I",
+            "stats@xgI4j0gkNkd3pqGmWkpmF",
+            "stringr@P_u3uSVm63KsmQRWdvBmr",
+            "terra@UphqgVEpeVfM8mCVKpE-s",
+            "text@1BCWaI0i01gzwo539I90D",
+            "tibble@3PBGqxsWI3K6vpB9PtteC",
+            "tibbles@4LSIcQnzj3V5mStHIYP-O",
+            "tidygraph@_VJmd1wv2UJcLpQKnmjjK",
+            "tidymodels@23bhr8zcXaTgjiAa7z_Pn",
+            "tidyr@axtup-_HtUjM2Ft3J1Sxb",
+            "tidytext@BM2ukkGQzjbWiPgExsN5z",
+            "tidyverse@qjHtL_erZg2F9HuDOSaKl",
+            "tmap@z9ZgXE5cDkLOlJNi6JIMJ",
+            "vectors@C19rHMygP6Uc1NDgzt3DG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Geospatial",
+      "name": "geospatial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "geospatial-analysis@f2NsSRl_UukuqHggghWSw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grammar",
+      "name": "grammar",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grammar-of-graphics@lEiv0DXeWD7w67GdZdy54"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Group",
+      "name": "group",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "group-by--summarize@fuAX0fNChwliVC_gJ7GV2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hypothesis",
+      "name": "hypothesis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hypothesis-testing@0xYk_O7rNoy7O116xVJvi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Importing",
+      "name": "importing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "importing-data@KrX28-WcpfMiuvPBtHAXw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-packages@_4619gNlgw_dDr_fVZ7Up",
+            "installing-r@8sLFw8BlwuE7tvMrDg9Pp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interactive",
+      "name": "interactive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interactive-plots@BMWA2CF4VkXEneErhJym-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Isnull",
+      "name": "isnull",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "isnull-isna@bcODvfBqCUwLVXa8HKOFB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linear",
+      "name": "linear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linear-regression@PMGbX81TpodkDVz8o1z-T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logistic",
+      "name": "logistic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logistic-regression@nfuMTLrkI-XSNDseEOkXD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Machine",
+      "name": "machine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "machine-learning@KWfYpJQwYeQzP4buGaA9y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Map",
+      "name": "map",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "map-functions@e4mVEXKmmQbz051wE1HPZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mutate",
+      "name": "mutate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mutate--transform@8vgTUVCNPb71lNHKycHce"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Network",
+      "name": "network",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "network-analysis@YBcSlradj7221NPcwWcFk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Overplotting",
+      "name": "overplotting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "overplotting-techniques@1b3AiO9i3pgkglwGeHiqd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parallel",
+      "name": "parallel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parallel-computing@ApowKoA3C1B8oUr4-sltZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parsing",
+      "name": "parsing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parsing-dates@L7btVRwvkEVX0K8LxnbqJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Power",
+      "name": "power",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "power-bi--tableau@EHVXO79NGpLC1i8x4Y7g1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Probability",
+      "name": "probability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "probability-distributions@wSKItU0lct_9CCs4G4JO_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "R",
+      "name": "r",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "r-dates--times@1X3RbJPY_GbIDarcO2UDL",
+            "r-markdown@PDZEvLgi94V5oLt3J5U9Z",
+            "r-vs-python@O3lbX70fDeKsv9fkJJtYv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-expressions@feXXBBD1J5TEllq2zbCUZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relationship",
+      "name": "relationship",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relationship-analysis@hS12KA72tBNmVvS921-H-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up@6br2AmC31MvGURDUgNtl2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Statistical",
+      "name": "statistical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "statistical-analysis@MhJaZyfzuHGROihT8U7cY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "String",
+      "name": "string",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "string-manipulation@swUTr8ZP72JnyP7UjfrHH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strings",
+      "name": "strings",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strings-and-dates@akoMThJHZLC3vFk_zB-S1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strip",
+      "name": "strip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strip-replace-split@S1EzGF-CLu7tWDb1V6RQc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Summary",
+      "name": "summary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "summary-statistics@AvzZ6SxNvGCuq9cX_O6op"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Time",
+      "name": "time",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "time-series-analysis@6u9a625hfddNmkjU0uiSK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-conversion@5pYoyNuVkRmQBqdrgcAcN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visual",
+      "name": "visual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visual-inspection@UIFNQ9g5fMK-KoZCrqv27"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vs",
+      "name": "vs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vs-code@ObA_xZDY7PxU54NGBwyVI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-scraping@2Es328m-FGfn7UQteQjdS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Window",
+      "name": "window",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "window-functions@w78MVXiI2V3XXajsEEZyk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-data-tables@GChLgXktEvXnOs9fiv77x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Your",
+      "name": "your",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "your-first-r-script@NkRfIHsHQnOHJSTuFQ9aj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Z",
+      "name": "z",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "z-score@2HIeG6ywOA9BkE9W3Gu9v"
+          ]
+        }
+      ]
+    }
+  ]
+}

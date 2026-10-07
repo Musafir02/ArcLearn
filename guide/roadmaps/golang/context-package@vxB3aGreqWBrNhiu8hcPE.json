@@ -1,0 +1,4 @@
+{
+  "title": "context package",
+  "content": "Carries deadlines, cancellation signals, and request-scoped values across API boundaries. Essential for robust concurrent applications, especially web services. Enables cancelling long-running operations, setting timeouts, passing request data. Typically first parameter passed down call stack.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Go Concurrency Patterns: Context](https://go.dev/blog/context)\r\n- [@article@The Complete Guide to Context in Golang](https://medium.com/@jamal.kaksouri/the-complete-guide-to-context-in-golang-efficient-concurrency-management-43d722f6eaea)"
+}

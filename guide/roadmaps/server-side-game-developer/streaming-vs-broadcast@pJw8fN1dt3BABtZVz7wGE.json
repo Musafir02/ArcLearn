@@ -1,0 +1,4 @@
+{
+  "title": "Streaming vs Broadcast",
+  "content": "Streaming sends data as a continuous flow from one endpoint to another, as TCP does. Broadcast sends a single packet to all devices on a network segment simultaneously, using a special address. Game servers may use multicast or broadcast for local network discovery but typically stream game state to each connected client individually.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@TCP vs UDP: What's the Difference for Video Streaming? - Ant Media](https://antmedia.io/tcp-vs-udp-video-streaming/)\r\n- [@article@UDP vs. TCP and Which One to Use for Video Streaming - Wowza](https://www.wowza.com/blog/udp-vs-tcp)\r\n- [@article@Broadcasting (Networking) - Wikipedia](https://en.wikipedia.org/wiki/Broadcasting_%28networking%29)"
+}

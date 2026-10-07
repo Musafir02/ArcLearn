@@ -1,0 +1,707 @@
+{
+  "title": "Data Analyst Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Analysis",
+      "name": "analysis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "analysis--reporting-with-excel@sgXIjVTbwdwdYoaxN3XBM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bar",
+      "name": "bar",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bar-charts@EVk1H-QLtTlpG7lVEenDt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Big",
+      "name": "big",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "big-data-concepts@m1IfG2sEedUxMXrv_B8GW",
+            "big-data-technologies@_aUQZWUhFRvNu0MZ8CPit"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Central",
+      "name": "central",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "central-tendency@BJTVa4ur_bJB7mMtD2-hQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Correlation",
+      "name": "correlation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "correlation-analysis@murioZ0NdrTix_lqSGz-8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Csv",
+      "name": "csv",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "csv-files@iWOK0mRY-hAGxMnHYJ0tt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-cleanup@E6cpb6kvluJM8OGuDcFBT",
+            "data-collection@_sjXCLHHTbZromJYn6fnu",
+            "data-manipulation-libraries@M1QtGTLyygIjePoCfvjve",
+            "data-storage-solutions@iTmtpXe7dR4XKslgpsk2q",
+            "data-transformation@t_BRtEharsrOZxoyX0OzV",
+            "data-visualisation-libraries@l1SnPc4EMqGdaIAhIQfrT",
+            "data-visualisation@2g19zjEASJw2ve57hxpr0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decision",
+      "name": "decision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decision-trees@vHDm_9Lh4EqvXNYSOBaqZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-learning-optional@SiYUdtYMDImRPmV2_XPkH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Descriptive",
+      "name": "descriptive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "descriptive-analysis@il6KQXVPGBza5libN38ib",
+            "descriptive-analytics@hWDh0ooidbqZb000ENVok"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Diagnostic",
+      "name": "diagnostic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "diagnostic-analytics@j7DA2J3speSaBsZAV4M0v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Distribution",
+      "name": "distribution",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "distribution-shape@Fyqg3MRcwY7g-Q3gjiqwK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Finding",
+      "name": "finding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "finding-outliers@-rQ8h_6NFxEOhxXgo7LHo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Funnel",
+      "name": "funnel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "funnel-charts@muFy-C2agCX9vR_NU7UZF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apis@4DFcXSSHxg5wv0uXLIRij",
+            "average@FDYunL9KJkR_tHEcUV2iC",
+            "charting@Vk3JErqxpnPY44iyfkLMl",
+            "cleanup@nC7tViln4UyQFYP_-fyjB",
+            "cnns@XlCv2OirEfuBFa4ranyyE",
+            "collection@mDUSpexdq3ITV6qokwSJl",
+            "concat@SIiIfcy-jeiRoDlxw385V",
+            "count@uAdxP1ZkgzcU8JcWjvw6d",
+            "databases@tYPeLCxbqvMFlTkCGjdHg",
+            "datedif@yBlJrNo9eO470dLp6OaQZ",
+            "dispersion@2ldO-_ZnIg364Eo8Jyfgr",
+            "dplyr@v8TfY-b4W5ygOv7r-syHq",
+            "exploration@XFnw4_dQYSzm96-srWa7X",
+            "ggplot2@n3M49lgNPn28hm7kzki-a",
+            "hadoop@wECWIRMlWNoTxz5eKwaSf",
+            "heatmap@G8resQXEVEHCaQfDlt3nj",
+            "histograms@FEyBFZLaGJqTC-IUEcOVS",
+            "if@wME4MSldOWlMB54ekpReS",
+            "introduction@3xp2fogAVmwXQhdzhZDWR",
+            "knn@SStzU_iXSvI_9QWbvGNou",
+            "kurtosis@PqGO8AU1zE2ZdtqrIrOkZ",
+            "mapreduce@eAM9orCNwzqh34uvGBVm8",
+            "matplotlib@tvDdXwaRPsUSTqJGaLS3P",
+            "mean@923KGEUG9ofBm7dYkkrxz",
+            "median@qdXoikVh2xkJkOQNKcyvb",
+            "mode@fY8zVG2tVbmtx5OhY7hj-",
+            "mpi@fqCAH4Enc4AAJHoSkk2Pe",
+            "pandas@TucngXKNptbeo3PtdJHX8",
+            "pytorch@LJSqfz6aYJbCe_bK8EWI1",
+            "r@g_EBQizZsIe-vn8ir6FTv",
+            "range@tSxtyJhL5wjU0XJcjsJmm",
+            "regression@lTycWscyFPi-BtkNg9cdm",
+            "rnn@Gocm98_tRg5BGxKcP-7zg",
+            "seaborn@-cJb8gEBvdVFf7FlgG3Ud",
+            "skewness@VfcCRRqwLxkYpIX0ZKNNX",
+            "spark@vaiigToDh4522rtWamuSM",
+            "sum@_FO80Cm2iAD_bThmnsEgp",
+            "tableau@Sz2Y8HLbSmDjSKAJztDql",
+            "tensorflow@FJ4Sx477FWxyDsQr0R8rl",
+            "trim@D5Q6o6ydr1j51kB0ASFPE",
+            "variance@ict4JkoVM-AzPbp9bDztg",
+            "visualisation@jowh4CFLQiFzKaaElyCuQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-missing-data@X9WmfHOks82BIAzs6abqO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hypothesis",
+      "name": "hypothesis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hypothesis-testing@Xygwu0m5TeYT6S_8FKKXh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image-recognition@bHPJ6yOHtUq5EjJBSrJUE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "K",
+      "name": "k",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "k-means-clustering@h2xF5bZeUByDgsAi4dga2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-concepts-of-data@R12sArWVpbIs_PHxBqVaR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-a-programming-lang@i2uEcaO4bJhcZ5ayRs2CQ",
+            "learn-common-functions@5GarFKYApjrhxHBLNPVnJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Line",
+      "name": "line",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "line-chart@v9T0DX56jFNhUz9nzubzS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logistic",
+      "name": "logistic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logistic-regression@ofOQKAIu4rezWmgZeE-KT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Machine",
+      "name": "machine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "machine-learning@f4GuzeokP9w_gwtOquP0g",
+            "machine-learning@U55hwR0HRCIz2cveVR8FZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Min",
+      "name": "min",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "min--max@F3-cr5onkWqKKPRdxu8lV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-evaluation-techniques@7ikA373qH88HBx5irCgIH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Naive",
+      "name": "naive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "naive-byes@zbUw5PyVsdccbgDTRHg7d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Natural",
+      "name": "natural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "natural-language-processing@DFv-eiYDicF4cA4jgVk9_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Neural",
+      "name": "neural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "neural-networks@gGHsKcS92StK5FolzmVvm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parallel",
+      "name": "parallel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parallel-processing@Fwwve0j-KDfc605IIgmil"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pie",
+      "name": "pie",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pie-charts@K9xwm_Vpdup9ujYqlD9F3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pivot",
+      "name": "pivot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pivot-tables@2DDJUFr0AJTVR2Whj8zub"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Power",
+      "name": "power",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "power-bi@SJLeose5vZU8w_18C8_t0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Predictive",
+      "name": "predictive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "predictive-analytics@3WZORRCwme3HsaKew23Z5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prescriptive",
+      "name": "prescriptive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prescriptive-analytics@DFMR-0MbmVCCrJu0I9JWG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reinforcement",
+      "name": "reinforcement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reinforcement-learning@XdBwqLoYYiLJNlWPBEDUj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Removing",
+      "name": "removing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "removing-duplicates@Xltm7B-8TZ1-igLjVJXoR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Replace",
+      "name": "replace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "replace--substitute@dke_pySrqYZZ7K3rprnIT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scatter",
+      "name": "scatter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scatter-plot@A5YQv7D4qRcskdZ64XldH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stacked",
+      "name": "stacked",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stacked-charts@329BrtmXjXNLfi1SFfdeo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Standard",
+      "name": "standard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "standard-deviation@MXIP8ekH4YtczODKM_G_l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Statistical",
+      "name": "statistical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "statistical-analysis@2pUq-7hu5EjGpowz98YoV",
+            "statistical-analysis@TeewVruErSsD4VLXcaDxp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Supervised",
+      "name": "supervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "supervised-learning@FIYCkGXofKMsXmsqHSMh9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-of-data-analytics@Lsapbmg-eMIYJAHpV97nO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unsupervised",
+      "name": "unsupervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unsupervised-learning@FntL9E2yVAYwIrlANDNKE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Upper",
+      "name": "upper",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "upper--lower--proper@YReKRRgE_2dWfGGdBQqbf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visualizing",
+      "name": "visualizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visualizing-distributions@mCUW07rx74_dUNi7OGVlj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vlookup",
+      "name": "vlookup",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vlookup--hlookup@9sIP-jpNjtA1JPCBjTf-H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-scraping@qQ64ZhSlbbWu9pP8KTE67"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-data-analytics@yCnn-NfSxIybUQ2iTuUGq"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "useRef",
+  "content": "`useRef` is a React hook that provides a way to create a mutable reference that persists across component re-renders. It stores a value that doesn't cause re-renders when it changes.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@useRef](https://react.dev/reference/react/useRef)\r\n- [@video@WebDevSimplified](https://www.youtube.com/watch?v=t2ypzz6gJm0)"
+}

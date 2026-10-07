@@ -1,0 +1,4 @@
+{
+  "title": "RedisInsight",
+  "content": "RedisInsight is a graphical management tool for Redis provided by Redis Ltd. It allows browsing keys, running commands, viewing memory usage, and analyzing slow logs through a web-based UI. It supports standalone instances, Sentinel, and Cluster and is available as a free download.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@RedisInsight](https://redis.io/insight/)\r\n- [@opensource@RedisInsight/RedisInsight - RedisInsight Module on GitHub](https://github.com/RedisInsight/RedisInsight)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Any Frontend Framework",
+  "content": "Cloudflare Workers can serve frontend applications built with any framework, including React, Vue, Svelte, and others. Workers handle static asset delivery and can run server-side rendering logic at the edge.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@React](https://react.dev/)\r\n- [@official@Vue.js](https://vuejs.org/)\r\n- [@official@Angular](https://angular.dev/)\r\n- [@official@Svelte](https://svelte.dev/)\r\n- [@official@Astro](https://astro.build/)\r\n- [@official@Framework Guide](https://developers.cloudflare.com/pages/framework-guides/)"
+}

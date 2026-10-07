@@ -1,0 +1,4 @@
+{
+  "title": "EKS",
+  "content": "EKS (Elastic Kubernetes Service) is a managed Kubernetes service that runs the Kubernetes control plane on AWS. It handles upgrades, patching, and high availability of the control plane, while you manage the worker nodes or use Fargate for serverless pods. EKS is compatible with standard Kubernetes tooling and APIs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/)\r\n- [@official@Concepts of Amazon EKS](https://docs.aws.amazon.com/eks/)"
+}

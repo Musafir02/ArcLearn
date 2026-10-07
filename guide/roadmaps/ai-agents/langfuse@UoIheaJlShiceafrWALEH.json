@@ -1,0 +1,4 @@
+{
+  "title": "LangFuse",
+  "content": "Langfuse is an open source observability and analytics platform for LLM applications, providing tracing, evaluation, and prompt management features. It captures detailed traces of agent runs, including nested tool calls, and lets teams analyze performance and quality over time. It can be self hosted, which appeals to teams with strict data privacy requirements.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@LangFuse](https://langfuse.com/)\r\n- [@official@LangFuse Documentation](https://langfuse.com/docs)\r\n- [@opensource@langfuse/langfuse](https://github.com/langfuse/langfuse)\r\n- [@article@Langfuse: Open Source LLM Engineering Platform](https://www.ycombinator.com/companies/langfuse)"
+}

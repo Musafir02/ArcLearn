@@ -1,0 +1,4 @@
+{
+  "title": "Reflection",
+  "content": "Reflection allows runtime inspection and manipulation of types and values using the `reflect` package. Enables dynamic method calls and type examination but has performance overhead. Used in JSON marshaling, ORMs, and frameworks.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@reflect package](https://pkg.go.dev/reflect)\r\n- [@official@The Laws of Reflection](https://go.dev/blog/laws-of-reflection)\r\n- [@article@Reflection in Go: Use cases and tutorial](https://blog.logrocket.com/reflection-go-use-cases-tutorial/)"
+}

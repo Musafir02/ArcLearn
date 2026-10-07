@@ -1,0 +1,4 @@
+{
+  "title": "openllmetry",
+  "content": "OpenLLMetry is an open source observability standard that extends OpenTelemetry, a widely used tracing framework, to cover LLM specific data like prompts, completions, and token usage. It lets teams instrument their LLM applications using familiar observability tooling rather than a separate, proprietary system. This makes it easier to integrate LLM monitoring into existing infrastructure that already uses OpenTelemetry.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@OpenTelemetry Documentation](https://www.traceloop.com/blog/openllmetry)\r\n- [@official@What is OpenLLMetry? - traceloop](https://www.traceloop.com/docs/openllmetry/introduction)\r\n- [@official@Use Traceloop with Python](https://www.traceloop.com/docs/openllmetry/getting-started-python)\r\n- [@opensource@traceloop/openllmetry](https://github.com/traceloop/openllmetry)"
+}

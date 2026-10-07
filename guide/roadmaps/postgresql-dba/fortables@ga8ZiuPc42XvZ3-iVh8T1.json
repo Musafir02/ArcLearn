@@ -1,0 +1,4 @@
+{
+  "title": "For Tables in PostgreSQL",
+  "content": "The primary DDL statements for creating and managing tables in PostgreSQL include `CREATE TABLE`, `ALTER TABLE`, and `DROP TABLE`, these DDL commands allow you to create, modify, and delete tables and their structures, providing a robust framework for database schema management in PostgreSQL.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@CREATE TABLE](https://www.postgresql.org/docs/current/sql-createtable.html)\r\n- [@official@DROP TABLE](https://www.postgresql.org/docs/current/sql-droptable.html)\r\n- [@official@ALTER TABLE](https://www.postgresql.org/docs/current/sql-altertable.html)"
+}

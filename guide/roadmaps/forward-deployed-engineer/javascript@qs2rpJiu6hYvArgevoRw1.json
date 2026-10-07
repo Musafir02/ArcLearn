@@ -1,0 +1,4 @@
+{
+  "title": "JavaScript",
+  "content": "JavaScript is the scripting language that runs in web browsers, giving web pages dynamic behavior. It handles user interactions, DOM manipulation, API requests, and more. On the server side, JavaScript runs via Node.js. Understanding JavaScript well means being able to work across the full web stack.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated JavaScript Roadmap](https://roadmap.sh/javascript)\r\n- [@official@JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)\r\n- [@course@JavaScript Tutorial Full Course - Beginner to Pro](https://www.youtube.com/watch?v=EerdGm-ehJQ)"
+}

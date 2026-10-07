@@ -1,0 +1,138 @@
+{
+  "title": "Full Stack Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-aws-services@cUOfvOlQ_0Uu1VX3i67kJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Checkpoint",
+      "name": "checkpoint",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "checkpoint---collaborative-work@zFGWxgLPcZoW7KIzlnSV9",
+            "checkpoint---external-packages@R4aeJNOrfWyVp3ea-qF4H",
+            "checkpoint---frontend-apps@7JU1cVggMDoZUV-adGsf-",
+            "checkpoint---interactivity@2DFzoIUjKdAKGjfu_SCfa",
+            "checkpoint---static-webpages@WsdUAEaI7FX6DKKhPXUHp",
+            "checkpoint--automation@sO_9-l4FECbaqiaFnyeXO",
+            "checkpoint--ci--cd@liaY1GnlOateB_ZKBjNpY",
+            "checkpoint--cli-apps@JGu0TKwAw-ieiG92BytYI",
+            "checkpoint--complete-app@v4NF25lJElAtkU0Rm6Fob",
+            "checkpoint--deployment@J2_IWAb1s9zZcxOY3NXm2",
+            "checkpoint--infrastructure@YVMyHFSCVF-GgXydq-SFJ",
+            "checkpoint--monitoring@NQmEl27eBPYhivcXdOEz3",
+            "checkpoint--simple-crud-apps@3EtGLO6cwkLc1-o9gwFNk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ansible@rFXupYpUFfp7vZO8zh614",
+            "css@dAJHWmGeiYdzZ1ZjrWz1S",
+            "ec2@6oBIxYj8WPcUHidQ99tus",
+            "git@We2APJpOPTr-VNfowG0kI",
+            "github@8sPXL8iClpPqje03ksses",
+            "html@B0kARTODvCBi0iOF8iiqI",
+            "javascript@T9PB6WQf-Fa9NXKKvVOy_",
+            "monit@y1SFX7uvWaCy4OYBnECLu",
+            "nodejs@_aA6Hp4KkgJeptqo8oKTg",
+            "npm@mGgx_QTEPmVKf6AijX9fi",
+            "postgresql@HGhnbMg6jh6cAmUH4DtOx",
+            "react@khoUtTUxdf8udAzN9_CAb",
+            "redis@Onfd7Sl8LG2sjh2aQY7gb",
+            "route53@5zyYpu9cyuTFwQCjTbHpS",
+            "s3@n2Xp_ijJ2OS8xhE7xMWxk",
+            "ses@B-cphY7Imnv6JBMujVIF7",
+            "terraform@2kKHuQZScu7hCDgQWxl5u",
+            "vpc@QtL-bLKtWIdH00K6k_PdC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@863KMXcFJzInvTp_-Ldmz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jwt",
+      "name": "jwt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jwt-auth@vHojhJYjiN0IwruEqi1Dv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linux",
+      "name": "linux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linux-basics@SHTSvMDqI7X1_ZT7-m--n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Restful",
+      "name": "restful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "restful-apis@vmHbWdmMHF53otXIrqzRV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tailwind",
+      "name": "tailwind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tailwind-css@CVCqdPkq_hGQfI8EEi5RC"
+          ]
+        }
+      ]
+    }
+  ]
+}

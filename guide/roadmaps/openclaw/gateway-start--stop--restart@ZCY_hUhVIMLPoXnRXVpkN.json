@@ -1,0 +1,4 @@
+{
+  "title": "openclaw gateway start | stop | restart",
+  "content": "`openclaw gateway start`, `openclaw gateway stop`, and `openclaw gateway restart` control the lifecycle of the Open Claw gateway process, starting it up, shutting it down, or restarting it after a configuration change.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Gateway Runbook](https://docs.openclaw.ai/gateway)\r\n- [@official@Manage the Gateway service](https://docs.openclaw.ai/cli/gateway#manage-the-gateway-service)"
+}

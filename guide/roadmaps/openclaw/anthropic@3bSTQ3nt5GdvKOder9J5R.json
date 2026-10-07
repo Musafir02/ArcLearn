@@ -1,0 +1,4 @@
+{
+  "title": "Anthropic",
+  "content": "Anthropic is the company behind the Claude family of models. Connecting Open Claw to Anthropic lets you use Claude as your agent's underlying model, which is well-suited for reasoning, writing, and tool use.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Anthropic Provider](https://docs.openclaw.ai/providers/anthropic)\r\n- [@video@Anthropic just blocked OpenClaw. Here’s what you need to do immediately](https://www.youtube.com/watch?v=cNALFf9R4t4)"
+}

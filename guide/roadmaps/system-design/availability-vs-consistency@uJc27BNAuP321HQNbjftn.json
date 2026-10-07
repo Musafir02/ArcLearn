@@ -1,0 +1,4 @@
+{
+  "title": "Availability vs Consistency",
+  "content": "In a distributed system, availability and consistency often pull in opposite directions when a network partition happens. A system can either keep serving requests using potentially stale data, favoring availability, or refuse to respond until all nodes agree, favoring consistency. Which one a system prioritizes depends on the use case.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@CAP FAQ](https://github.com/henryr/cap-faq)\r\n- [@article@CAP Theorem Revisited](https://robertgreiner.com/cap-theorem-revisited/)\r\n- [@article@A plain english introduction to CAP Theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem)\r\n- [@video@CAP Theorem](https://www.youtube.com/watch?v=_RbsFXWRZ10&t=1s)"
+}

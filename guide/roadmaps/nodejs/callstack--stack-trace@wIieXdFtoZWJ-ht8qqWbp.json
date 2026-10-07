@@ -1,0 +1,4 @@
+{
+  "title": "Stack Trace",
+  "content": "The stack trace is used to trace the active stack frames at a particular instance during the execution of a program. The stack trace is useful while debugging code as it shows the exact point that has caused an error.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Multiple Ways to Log The Stack Trace in Node.js](https://www.cloudhadoop.com/nodejs-print-stack-trace-error/)"
+}

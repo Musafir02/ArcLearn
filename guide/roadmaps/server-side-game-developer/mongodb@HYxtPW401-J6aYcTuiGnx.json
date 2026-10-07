@@ -1,0 +1,4 @@
+{
+  "title": "MongoDB",
+  "content": "MongoDB is a document-oriented NoSQL database that stores data as JSON-like BSON documents. Its flexible schema and horizontal scaling via sharding make it popular for game backends where player data structures vary and rapid iteration on schemas is needed.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Getting Started with MongoDB - MongoDB Docs](https://www.mongodb.com/docs/manual/tutorial/getting-started/)\r\n- [@official@MongoDB Basics - MongoDB](https://www.mongodb.com/resources/products/fundamentals/basics)\r\n- [@article@MongoDB Getting Started - W3Schools](https://www.w3schools.com/mongodb/mongodb_get_started.php)"
+}

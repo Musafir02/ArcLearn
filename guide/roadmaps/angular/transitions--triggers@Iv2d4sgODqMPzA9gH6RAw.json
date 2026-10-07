@@ -1,0 +1,4 @@
+{
+  "title": "Transitions & Triggers",
+  "content": "In Angular, transition states can be defined explicitly through the `state()` function, or using the predefined `*` wildcard and `void` states. An asterisk `*` or wildcard matches any animation state. This is useful for defining transitions that apply regardless of the HTML element's start or end state. Use the `void` state to configure transitions for an element that is entering or leaving a page.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Transition and Triggers](https://angular.dev/guide/legacy-animations/transition-and-triggers)\r\n- [@video@Angular Animations: Learn the basics](https://www.youtube.com/watch?v=CGBcIz1tYec)\r\n- [@video@How to use trigger function in Angular Animations](https://www.youtube.com/watch?v=3_B4OV5M_Ag)"
+}

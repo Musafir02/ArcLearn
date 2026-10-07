@@ -1,0 +1,4 @@
+{
+  "title": "Start in Read-Only Mode and Widen Permissions Deliberately",
+  "content": "Starting with minimal permissions and only expanding them as needed is a safer approach than granting broad access upfront. Open Claw supports tool allow and deny lists per agent to help enforce this.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Security](https://docs.openclaw.ai/gateway/security)\r\n- [@official@Sandboxing](https://docs.openclaw.ai/gateway/sandboxing)"
+}

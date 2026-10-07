@@ -1,0 +1,4 @@
+{
+  "title": "Autoencoders",
+  "content": "Autoencoders are a type of neural network used for unsupervised learning. They work by compressing the input data into a lower-dimensional representation (encoding) and then reconstructing the original input from this compressed representation (decoding). The network is trained to minimize the difference between the original input and the reconstructed output, forcing it to learn efficient and meaningful representations of the data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is an autoencoder? | IBM](https://www.ibm.com/think/topics/autoencoder)\r\n- [@article@Intro to Autoencoders | TensorFlow](https://www.tensorflow.org/tutorials/generative/autoencoder)\r\n- [@video@Autoencoders](https://www.youtube.com/watch?v=hZ4a4NgM3u0)"
+}

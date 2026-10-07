@@ -1,0 +1,4 @@
+{
+  "title": "New Feature Announcements",
+  "content": "Apple announces new platform features at WWDC each year that affect how iOS apps are built and what they can offer users. Recent examples include StoreKit 2, Live Activities, WidgetKit updates, and Vision framework additions. Staying aware of these announcements helps iOS developers evaluate which new capabilities are relevant to their apps and plan adoption accordingly.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Apple Developer What's New](https://developer.apple.com/whats-new/)\r\n- [@official@Apple WDDC Community](https://developer.apple.com/wwdc24/)"
+}

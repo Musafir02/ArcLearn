@@ -1,0 +1,4 @@
+{
+  "title": "Components",
+  "content": "Components are the fundamental building blocks of an application that define how a specific part of the user interface looks and behaves. Each one consists of a TypeScript class that manages data and logic, an HTML template that defines the structure, and CSS styles that control the visual appearance. They function as independent units that can be nested within one another to construct complex page layouts.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Anatomy of a Component](https://angular.dev/guide/components)\r\n- [@official@Composing with Components in Angular](https://angular.dev/essentials/components)\r\n- [@video@Standalone Components in Angular](https://www.youtube.com/watch?v=x5PZwb4XurU)"
+}

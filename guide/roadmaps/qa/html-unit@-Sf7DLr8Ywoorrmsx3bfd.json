@@ -1,0 +1,4 @@
+{
+  "title": "HTML Unit",
+  "content": "HtmlUnit is a headless, Java-based browser for testing web applications. It simulates a browser by processing HTML, JavaScript, and CSS without a graphical interface. HtmlUnit is commonly used in Java-based test suites as a lightweight headless browser option, particularly in projects using Selenium WebDriver with a Java stack.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@HtmlUnit](https://htmlunit.sourceforge.io/)\r\n- [@article@Introduction to HtmlUnit](https://www.baeldung.com/htmlunit)"
+}

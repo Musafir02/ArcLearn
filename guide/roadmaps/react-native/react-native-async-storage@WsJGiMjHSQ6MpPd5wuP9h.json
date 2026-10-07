@@ -1,0 +1,4 @@
+{
+  "title": "React Native Async Storage",
+  "content": "Async Storage is an unencrypted, asynchronous, persistent key-value storage system for React Native. It was removed from React Native core and now lives in the community package `@react-native-async-storage/async-storage`. It is primarily used for persisting small amounts of data offline, such as user preferences or session data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@Async Storage](https://github.com/react-native-async-storage/async-storage)"
+}

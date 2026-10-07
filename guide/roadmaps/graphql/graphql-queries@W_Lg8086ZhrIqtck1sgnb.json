@@ -1,0 +1,4 @@
+{
+  "title": "GraphQL Queries",
+  "content": "GraphQL queries are client requests to retrieve specific data from a server. They specify exactly which fields should be returned, using a hierarchical structure that matches the data requirements. Queries are written in GraphQL syntax and executed by the server to fetch the requested data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@What are GraphQL Queries?](https://graphql.org/learn/queries/)"
+}

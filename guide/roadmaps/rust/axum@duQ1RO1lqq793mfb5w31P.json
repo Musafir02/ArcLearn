@@ -1,0 +1,4 @@
+{
+  "title": "Axum",
+  "content": "Axum is a modern, ergonomic web framework built on hyper and designed for async Rust. It features excellent type safety, powerful extractors, middleware support, and seamless Tokio integration. Axum emphasizes developer experience while maintaining high performance for web services and APIs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Axum Documentation](https://docs.rs/axum/latest/axum/)\r\n- [@article@Getting Started with Axum - Rust's Most Popular Web Framework](https://www.shuttle.dev/blog/2023/12/06/using-axum-rust)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "JSON APIs",
+  "content": "JSON (JavaScript Object Notation) is an encoding scheme eliminating ad-hoc code for server communication. JSON API provides a standardized implementation for data stores and structures, including entity types, bundles, and fields with defined communication protocols.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@JSON API](https://jsonapi.org/)\r\n- [@official@JSON API Recommendations and Best Practices](https://jsonapi.org/recommendations/)\r\n- [@article@JSON.org - Introducing JSON](https://www.json.org/json-en.html)\r\n- [@article@What is JSON API?](https://medium.com/@niranjan.cs/what-is-json-api-3b824fba2788)\r\n- [@video@JSON API: Explained in 4 minutes](https://www.youtube.com/watch?v=N-4prIh7t38)"
+}

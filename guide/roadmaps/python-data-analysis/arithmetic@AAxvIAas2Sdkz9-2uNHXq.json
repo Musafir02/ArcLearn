@@ -1,0 +1,4 @@
+{
+  "title": "Arithmetic",
+  "content": "Arithmetic operators perform mathematical calculations: `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `//` (floor division), `%` (modulo), and `**` (exponentiation). They are used constantly for computing derived columns, normalizing values, and performing aggregations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Python Arithmetic Operators](https://www.w3schools.com/python/python_operators_arithmetic.asp)\r\n- [@article@Python Exponent: 5 Methods for Exponentiation + Applications](https://roadmap.sh/python/exponent)\r\n- [@article@Python Division: Operators, Floor Division, and Examples](https://roadmap.sh/python/division)\r\n- [@article@Python Modulo Operator (%): Complete Guide with Examples](https://roadmap.sh/python/modulo)"
+}

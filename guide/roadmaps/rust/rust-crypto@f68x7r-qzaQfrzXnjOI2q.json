@@ -1,0 +1,4 @@
+{
+  "title": "rust-crypto",
+  "content": "`rust-crypto` is a collection of cryptographic algorithms implemented in pure Rust including AES, DES ciphers, SHA, MD5 hash functions, and RSA digital signatures. Known for speed and low memory usage, making it suitable for resource-constrained systems requiring cryptographic functionality.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Awesome Rust Cryptography](https://cryptography.rs/)\r\n- [@article@rust-crypto](https://docs.rs/rust-crypto/latest/crypto/)\r\n- [@article@Rust | Sqlite Database](https://medium.com/@mikecode/rust-sqlite-database-rusqlite-162bad63fb5d)"
+}

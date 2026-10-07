@@ -1,0 +1,4 @@
+{
+  "title": "Methods in Kotlin Classes",
+  "content": "Methods in Kotlin classes are functions defined within the class that operate on the class's data (properties). They define the behavior of objects created from the class. Methods can perform actions, manipulate data, and return values. They are accessed using the dot notation on an object instance of the class.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Member functions](https://kotlinlang.org/docs/functions.html#member-functions)\r\n- [@article@Define class methods](https://developer.android.com/codelabs/basic-android-kotlin-compose-classes-and-objects#3)"
+}

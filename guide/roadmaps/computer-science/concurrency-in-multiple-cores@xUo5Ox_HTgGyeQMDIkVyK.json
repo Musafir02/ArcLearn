@@ -1,0 +1,4 @@
+{
+  "title": "Concurrency in Multiple Cores",
+  "content": "Concurrency or Parallelism is simultaneous execution of processes on a multiple cores per CPU or multiple CPUs (on a single motherboard). Concurrency is when Parallelism is achieved on a single core/CPU by using scheduling algorithms that divides the CPU's time (time-slice).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Difference between Multi-core and concurrent Programming?](https://stackoverflow.com/questions/5372861/what-is-the-difference-between-multicore-and-concurrent-programming)\r\n- [@article@Concurrency in Multicore systems](https://cs.stackexchange.com/questions/140793/concurrency-in-multiple-core)\r\n- [@article@Mastering Concurrency](https://www.harrisonclarke.com/blog/mastering-concurrency-a-guide-for-software-engineers)"
+}

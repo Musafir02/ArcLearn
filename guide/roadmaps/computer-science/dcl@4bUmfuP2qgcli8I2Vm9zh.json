@@ -1,0 +1,4 @@
+{
+  "title": "DCL (Data Control Language)",
+  "content": "DCL includes commands such as GRANT and REVOKE which mainly deal with the rights, permissions, and other controls of the database system.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@DCL](https://en.wikipedia.org/wiki/Data_Control_Language)"
+}

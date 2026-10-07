@@ -1,0 +1,4 @@
+{
+  "title": "GameKit",
+  "content": "GameKit is Apple's framework for adding social gaming features to iOS apps. It provides APIs for leaderboards, achievements, multiplayer matchmaking, and real-time game sessions through Game Center. GameKit handles authentication with the user's Apple ID and integrates with the native Game Center UI.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GameKit](https://developer.apple.com/documentation/gamekit)\r\n- [@article@How to integrate GameKit](https://medium.com/swlh/how-to-integrate-gamekit-ios-794061428197)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Little Endian",
+  "content": "Little Endian is a way of storing data in memory. It is the opposite of Big Endian. In Little Endian, the least significant byte is stored first. In Big Endian, the most significant byte is stored first.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@video@Big Endian vs Little Endian](https://www.youtube.com/watch?v=JrNF0KRAlyo)\r\n- [@video@Endianness Explained With an Egg - Computerphile](https://www.youtube.com/watch?v=NcaiHcBvDR4)"
+}

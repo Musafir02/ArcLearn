@@ -1,0 +1,4 @@
+{
+  "title": "Creating Files",
+  "content": "Linux file creation uses `touch` for empty files, `echo \"text\" > filename` for text files, or `cat > filename` for interactive input. Commands like `mkdir` create directories. File creation is immediate and permanent. Essential for organizing data, scripts, and configuration files in Linux systems.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is the Difference Between Cat and Touch Command](https://linuxways.net/centos/what-is-the-difference-between-cat-and-touch-command/)\r\n- [@article@Creating and Deleting Files / Directories in Linux](https://useful.codes/creating-and-deleting-files-directories-in-linux/)\r\n- [@article@Creating, Moving, and Deleting Files and Folders](https://dev.to/alkesh009/linux-basics-part-4-creating-moving-and-deleting-files-and-folders-5hip)"
+}

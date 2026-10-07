@@ -1,0 +1,4 @@
+{
+  "title": "HTML Table Tag",
+  "content": "The HTML `<table>` tag is used to create tables on web pages. It organizes data into rows and columns, similar to a spreadsheet. Within the `<table>` tag, you'll find tags like `<tr>` for table rows, `<th>` for table headers, and `<td>` for table data cells, which define the structure and content of the table.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@HTML table basics](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)\r\n- [@article@HTML Table (With Examples)](https://www.programiz.com/html/table)\r\n- [@video@How to Create Tables in HTML](https://www.youtube.com/watch?v=e23RA_Uo99o)"
+}

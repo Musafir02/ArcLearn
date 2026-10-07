@@ -1,0 +1,4 @@
+{
+  "title": "Dependency Management with Cargo.toml",
+  "content": "Cargo manages Rust projects and dependencies through `Cargo.toml` files. Dependencies are listed in `[dependencies]` sections with crate names and semantic version specifications. Cargo automatically downloads, builds, and manages external libraries (crates) from [crates.io](http://crates.io) or other sources.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Dependencies](https://doc.rust-lang.org/rust-by-example/cargo/deps.html)\r\n- [@official@Cargo](https://blog.rust-lang.org/2016/05/05/cargo-pillars.html)"
+}

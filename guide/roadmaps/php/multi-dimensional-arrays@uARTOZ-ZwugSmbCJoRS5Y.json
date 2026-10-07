@@ -1,0 +1,4 @@
+{
+  "title": "Multi-dimensional Arrays",
+  "content": "Multi-dimensional arrays contain other arrays as values, creating a nested structure. They are used to represent tables, grids, or grouped data. Access follows chained bracket notation: `$matrix[0][1]`. PHP does not limit nesting depth, though deep nesting can make code harder to read.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Multi-dimensional Arrays](https://www.php.net/manual/en/language.types.array.php)"
+}

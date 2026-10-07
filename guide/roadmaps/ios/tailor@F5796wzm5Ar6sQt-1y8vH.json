@@ -1,0 +1,4 @@
+{
+  "title": "Tailor",
+  "content": "Tailor is a static analysis tool for Swift that checks code style and detects common issues. It is configurable and integrates with Xcode and CI pipelines. Tailor is an alternative to SwiftLint for teams that prefer a different rule set or configuration model.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Tailor Website](https://sleekbyte.github.io/tailor/)\r\n- [@opensource@sleekbyte/tailor](https://github.com/sleekbyte/tailor)\r\n- [@article@Tailor](https://docs.codeclimate.com/docs/tailor)"
+}

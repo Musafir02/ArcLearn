@@ -1,0 +1,4 @@
+{
+  "title": "Accessibility",
+  "content": "The web is used by a wide variety of people, including those who have visual or motor impairments. A variety of assistive technologies are available that make it much easier for these groups to interact with web-based software applications. Also, designing an application to be more accessible generally improves the user experience for all users.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Accessibility](https://angular.dev/best-practices/a11y)\r\n- [@article@Learn Accessibility](https://web.dev/learn/accessibility/)\r\n- [@article@Angular a11y: 11 tips on how to make your apps more accessible](https://angularindepth.com/posts/1152/angular-a11y-11-tips-on-how-to-make-your-apps-more-accessible)"
+}

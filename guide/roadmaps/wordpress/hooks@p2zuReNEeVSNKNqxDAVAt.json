@@ -1,0 +1,4 @@
+{
+  "title": "Hooks",
+  "content": "Hooks are a way for WordPress developers to modify or extend the default behavior of WordPress without directly altering the core files. They essentially allow you to \"hook into\" specific points in the WordPress execution process and add your own code to be executed at those points. This makes WordPress highly customizable and extensible.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Hooks](https://developer.wordpress.org/plugins/hooks/)\r\n- [@article@The WordPress Hooks Bootcamp: How to Use Actions, Filters, and Custom Hooks](https://kinsta.com/blog/wordpress-hooks/)\r\n- [@article@WordPress Hooks Explained](https://crocoblock.com/blog/wordpress-hooks-explained/)\r\n- [@video@WordPress Hooks Actions and Filters Introduction Full Playlist Part -1](https://www.youtube.com/watch?v=7qiPMpi2xc0&list=PLD8nQCAhR3tTVcreVOlFteq0piaXq1jjk)"
+}

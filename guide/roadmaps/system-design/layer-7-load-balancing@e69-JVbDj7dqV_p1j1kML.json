@@ -1,0 +1,4 @@
+{
+  "title": "Layer 7 Load Balancing",
+  "content": "Layer 7 load balancing operates at the application layer of the network stack, meaning it can inspect the actual content of a request, such as the URL, headers, or cookies. This allows routing decisions based on the content of the request itself, like sending API traffic to one set of servers and image requests to another. It offers more flexibility than lower-layer balancing but requires more processing per request."
+}

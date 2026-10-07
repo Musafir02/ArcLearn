@@ -1,0 +1,4 @@
+{
+  "title": "GitLab",
+  "content": "GitLab is a web-based DevOps platform that provides a Git repository manager offering features like issue tracking, CI/CD pipelines, and more. It allows developers to collaboratively work on code, manage projects, and automate the software development lifecycle from planning to deployment. GitLab can be self-hosted or used as a SaaS solution.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GitLab Website](https://gitlab.com/)\r\n- [@official@GitLab Documentation](https://docs.gitlab.com/)"
+}

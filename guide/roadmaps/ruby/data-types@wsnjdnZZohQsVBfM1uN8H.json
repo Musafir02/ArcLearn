@@ -1,0 +1,4 @@
+{
+  "title": "Naming Conventions",
+  "content": "Naming conventions are a set of rules or guidelines for choosing names for variables, methods, classes, and other entities in a programming language. These conventions promote code readability, maintainability, and consistency across a project. Following a standard naming scheme helps developers understand the purpose and scope of different elements within the code, making it easier to collaborate and debug.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Ruby Naming Convention](https://namingconvention.org/ruby/)"
+}

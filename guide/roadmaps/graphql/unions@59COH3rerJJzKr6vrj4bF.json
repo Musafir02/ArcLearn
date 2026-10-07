@@ -1,0 +1,4 @@
+{
+  "title": "Unions",
+  "content": "Unions allow fields to return multiple types, enabling different handling for various types in clients. They provide schema flexibility by grouping types together, though they don't allow common field querying across types like interfaces do.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Get started with Union in GraphQL](https://graphql.org/learn/schema/#union-types)"
+}

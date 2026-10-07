@@ -1,0 +1,4 @@
+{
+  "title": "Pip",
+  "content": "The standard package manager for Python is pip. It allows you to install and manage packages that aren’t part of the Python standard library.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@pip Documentation](https://pip.pypa.io/en/stable/installation/)\r\n- [@article@Using Pythons pip to Manage Your Projects Dependencies](https://realpython.com/what-is-pip/)"
+}

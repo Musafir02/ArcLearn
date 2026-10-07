@@ -1,0 +1,4 @@
+{
+  "title": "Identity-Based",
+  "content": "Identity-based policies are attached to IAM identities: users, groups, or roles. They define what actions that identity is allowed to perform across AWS services and resources. These are the most common type of IAM policy.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Identity Based Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)"
+}

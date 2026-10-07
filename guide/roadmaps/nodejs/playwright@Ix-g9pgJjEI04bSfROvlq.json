@@ -1,0 +1,4 @@
+{
+  "title": "Playwright",
+  "content": "Playwright is a browser automation and end-to-end testing tool developed by Microsoft. It supports multiple browsers (Chromium, Firefox, WebKit) and allows you to write tests that simulate real user behavior. It can also be used for scraping and automating web-based workflows.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Playwright](https://playwright.dev/)\r\n- [@official@Playwright Docs](https://playwright.dev/docs/getting-started-vscode)\r\n- [@article@Getting Started with Playwright](https://learn.microsoft.com/en-us/shows/getting-started-with-end-to-end-testing-with-playwright/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Queue",
+  "content": "A queue is a fundamental data structure that follows the First-In, First-Out (FIFO) principle. Think of it like a line at a store: the first person to join the line is the first person to be served. Elements are added to the rear (enqueue) and removed from the front (dequeue) of the queue.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Java Queue](https://jenkov.com/tutorials/java-collections/queue.html)"
+}

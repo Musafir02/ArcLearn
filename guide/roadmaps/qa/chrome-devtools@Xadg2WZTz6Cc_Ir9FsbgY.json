@@ -1,0 +1,4 @@
+{
+  "title": "Chrome DevTools",
+  "content": "Chrome DevTools includes an accessibility panel, a color contrast checker, and Lighthouse accessibility audits for evaluating web page compliance. The accessibility tree view shows how assistive technologies interpret page elements. DevTools also simulates visual impairments like color blindness to help evaluate inclusive design.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Chrome Dev Tools](https://developer.chrome.com/docs/devtools/overview/)"
+}

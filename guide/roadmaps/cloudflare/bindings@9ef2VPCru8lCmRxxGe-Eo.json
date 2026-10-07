@@ -1,0 +1,4 @@
+{
+  "title": "Bindings",
+  "content": "Bindings connect a Worker to Cloudflare resources like KV namespaces, R2 buckets, Durable Objects, and queues. They are declared in the Worker's configuration and made available as variables in the Worker's execution context.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Bindings (env) · Cloudflare Workers](https://developers.cloudflare.com/workers/runtime-apis/bindings/)\r\n- [@official@Workers Bindings · Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai/configuration/bindings/)\r\n- [@official@Configuration - Wrangler · Cloudflare Workers](https://developers.cloudflare.com/workers/wrangler/configuration/)"
+}

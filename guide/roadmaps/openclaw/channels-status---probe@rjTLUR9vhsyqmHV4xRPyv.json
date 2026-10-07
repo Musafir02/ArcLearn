@@ -1,0 +1,4 @@
+{
+  "title": "openclaw channels status --probe",
+  "content": "`openclaw channels status --probe` actively checks the connection status of your channels by probing them, rather than just reporting cached status.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Status / capabilities / resolve / logs](https://docs.openclaw.ai/cli/channels#status-/-capabilities-/-resolve-/-logs)"
+}

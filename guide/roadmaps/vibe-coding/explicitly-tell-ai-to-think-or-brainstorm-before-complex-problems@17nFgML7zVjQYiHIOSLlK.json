@@ -1,0 +1,4 @@
+{
+  "title": "Explicitly tell AI to \"think\" or \"brainstorm\"",
+  "content": "For tricky problems, don't ask AI to jump straight to a solution. Tell it to think through the options first and explain its reasoning before writing any code. This simple instruction often leads to much better results on complex tasks.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Teaching AI to \"Think\" Before Answering](https://medium.com/@21joshishubham/teaching-ai-to-think-before-answering-1bf8c6bb16c4)\r\n- [@article@What is Chain of Thought (CoT) Prompting? - IBM](https://www.ibm.com/think/topics/chain-of-thoughts)\r\n- [@article@Chain-of-Thought (CoT) Prompting Guide](https://www.promptingguide.ai/techniques/cot)"
+}

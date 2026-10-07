@@ -1,0 +1,4 @@
+{
+  "title": "App Settings and Configurations",
+  "content": "App settings and configurations provide a way to manage environment-specific variables and application parameters outside of the compiled code. [ASP.NET](http://ASP.NET) Core uses a centralized configuration system that aggregates data from multiple sources such as JSON files, environment variables, command-line arguments, and user secrets. This approach allows developers to easily switch settings between development, staging, and production environments without modifying the source code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Azure App Configuration?](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview)\r\n- [@article@What are App Configurations and how do I work with them?](https://support.procore.com/faq/what-are-app-configurations)\r\n- [@article@Configuration & AppSettings](https://docs.servicestack.net/appsettings)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Networking",
+  "content": "Rust's `std::net` module provides networking primitives including `TcpStream`, `TcpListener`, `UdpSocket`, and address types. Built on BSD sockets, it offers low-level network operations for building networking applications. Higher-level crates like Tokio provide async networking capabilities.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@std::net](https://doc.rust-lang.org/std/net/)\r\n- [@official@TcpListener](https://doc.rust-lang.org/std/net/struct.TcpListener.html)\r\n- [@official@UdpSocket](https://doc.rust-lang.org/std/net/struct.UdpSocket.html)\r\n- [@official@TcpStream](https://doc.rust-lang.org/std/net/struct.TcpStream.html)\r\n- [@article@Networking Fundamentals in Rust](https://medium.com/@murataslan1/networking-fundamentals-in-rust-525dcfbd5058)"
+}

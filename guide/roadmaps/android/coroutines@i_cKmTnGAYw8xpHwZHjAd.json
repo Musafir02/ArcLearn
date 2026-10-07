@@ -1,0 +1,4 @@
+{
+  "title": "Coroutines",
+  "content": "Kotlin Coroutines are a concurrency framework that allows writing asynchronous code in a sequential, readable style. They are lightweight, support structured concurrency, and integrate with Android Jetpack through lifecycle-aware CoroutineScopes. Coroutines replaced older patterns like AsyncTask and are now the preferred approach for async work in Android.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)"
+}

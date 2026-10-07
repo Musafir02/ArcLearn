@@ -1,0 +1,416 @@
+{
+  "title": "Python Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Arrays",
+      "name": "arrays",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arrays-and-linked-lists@OPD4WdMO7q4gRZMcRCQh1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-syntax@6xRncUs3_vxVbDur567QA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binary",
+      "name": "binary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binary-search-tree@uJIqgsqUbE62Tyo3K75Qx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-formatting@0F0ppU_ClIUKZ23Q6BVZp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-packages@_94NrQ3quc4t_PPOsFSN0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Context",
+      "name": "context",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "context-manager@KAXF2kUAOvtBZhY8G9rkI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-structures--algorithms@VJSIbYJcy2MC6MOFBrqXi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@4XqSkc3Tuub-ZVXvGfMIT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fast",
+      "name": "fast",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fast-api@XeQSmvAsGSTi8dd7QVHxn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-handling@Nf3kRDSl_vas6QPXG7eVa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functions",
+      "name": "functions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functions-builtin-functions@-DJgS6l2qngfwurExlmmT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "@tbR_h9NpZ5tBTYuCfwkcY",
+            "aiohttp@IBVAvFtN4mnIPbIuyUvEb",
+            "asynchrony@Mow7RvropbC4ZGDpcGZmw",
+            "black@DS6nuAUhUYcqiJDmQisKM",
+            "builtin@08XifLQ20c4FKI_4AWNBQ",
+            "classes@AqwzR8dZKLQIoj_6KKZ3t",
+            "comments@__ndo1gcuUUtzmBnMIAbR",
+            "concurrency@u4nRzWQ4zhDFMOrZ2I_uJ",
+            "conda@uh67D1u-Iv5cZamRgFEJg",
+            "conditionals@NP1kjSk0ujU0Gx-ajNHlR",
+            "custom@l7k0qTYe42wYBTlT2-1cy",
+            "decorators@pIluLJkySqn_gI_GykV6G",
+            "dictionaries@bc9CL_HMT-R6nXO1eR-gP",
+            "django@x1V8GjdjANTnhP6YXMbgC",
+            "doctest@aVclygxoA9ePU5IxaORSH",
+            "encapsulation@3dC2o3WXdx4plFhDP2Vqk",
+            "exceptions@fNTb9y3zs1HPYclAmu_Wv",
+            "flask@HKsGyRzntjh1UbRZSWh_4",
+            "gevent@InUJIGmTnf0X4cSoLuCEQ",
+            "gil@bS7WeVKm2kEElu3sBKcIC",
+            "glob@bqnwMKY4R0rirup3q_hb_",
+            "hashmaps@DG4fi1e5ec2BVckPLsTJS",
+            "inheritance@S0FLE70szSVUPI0CDEQK7",
+            "iterators@aB1LSQjDEQb_BxueOcnxU",
+            "lambdas@aWHgAk959DPUZL46CeRiI",
+            "lists@UT_SR7G-LYtzqooWrEtF1",
+            "loops@Dvy7BnNzK55qbh_SgOk8m",
+            "methods@zAS4YiEJ6VPsyABrkIG8i",
+            "modules@274uk28wzxn6EKWQzLpHs",
+            "multiprocessing@HSY5OUc_M5S6OcFXPRtkx",
+            "mypy@gIcJ3bUVQXqO1Wx4gUKd5",
+            "operators@so95CO6Qw3I0S98ISENS-",
+            "paradigms@4GU5HNi3W8yFkImVY9ZpW",
+            "pdm@xDgXISgVUMRHh9hu4h6Hl",
+            "pip@iVhQnp6hpgVZDNJ0XoVra",
+            "pipenv@IWq-tfkz-pSC1ztZl60vM",
+            "poetry@uXd2B01GVBEQNXQE8RATT",
+            "pydantic@W3VALz5evFo1qqkQbMN1R",
+            "pyenv@N5VaKMbgQ0V_BC5tadV65",
+            "pypi@1dfOTOGsOk5XE3bnZs8Ht",
+            "pyprojecttoml@GHKAY9gOykEbxkEeR30wL",
+            "pyramid@DHtskqATeAVKgaazdhXKD",
+            "pyre@9mFR_ueXbIB2IrkqU2s85",
+            "pyright@1q9HWgu9jDTK757hTNOmE",
+            "pytest@3FDwJpesfelEyJrNWtm0V",
+            "recursion@kLBgy_nxxjE8SxdVi04bq",
+            "ruff@6cB0pvUO1-gvCtgqozP-Q",
+            "sanic@9RGpqsj9jHz0_-r7EvRcw",
+            "sets@soZFqivM3YBuljeX6PoaX",
+            "sphinx@maYNuTKYyZndxk1z29-UY",
+            "testing@WQOYjuwKIWB2meea4JnsV",
+            "threading@UIx0XYaOgXXlYbbQtjiPq",
+            "tornado@zey2C6BdzsHJAlb_K3qrP",
+            "tox@jPFOiwbqfaGshaGDBWb5x",
+            "tuples@i7xIGiXU-k5UIKHIhQPjE",
+            "typing@o1wi39VnjnFfWIC8XcuAK",
+            "uv@p3Frfs6oxpuciUzeCEsvb",
+            "virtualenv@_IXXTSwQOgYzYIUuKVWNE",
+            "yapf@tsh_vbhzKz1-H9Vh69tsK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generator",
+      "name": "generator",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generator-expressions@jnLIVRrWxcX3yq3Op91Vr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Heaps",
+      "name": "heaps",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "heaps-stacks-and-queues@0NlRczh6ZEaFLlT6LORWz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-a-framework@0-ShORjGnQlAdcwjtxdEB",
+            "learn-the-basics@GISOFMKvnBys0O0IMpz2J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "List",
+      "name": "list",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "list-comprehensions@4gtmtYWYRWqwLdZRL0XMg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-oriented-programming@P_Di-XPSDITmU3xKQew8G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-managers@qeCMw-sJ2FR4UxvU9DDzv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plotly",
+      "name": "plotly",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plotly-dash@7zcpXN3krnS3tMRWVNIVe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-expressions@7t6mJBsaFMWPi7o9fbhhq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sorting",
+      "name": "sorting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sorting-algorithms@vvTmjcWCVclOPY4f_5uB0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-typing@1PXApuUpPmJjgi12cmWo4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-annot@syV0DT_3ITgIFDbwPts8i",
+            "type-casting@R9DQNc0AyAQ2HLpP4HOk6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unittest",
+      "name": "unittest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unittest--pyunit@b4he_RO17C3ScNeUd6v2b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variable",
+      "name": "variable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variable-scope@3RNy7Sp28d-NMx0Yh4bdx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-and-data-types@dEFLBGpiH6nbSMeR7ecaT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-strings@Sg5w8zO2Ji-uDJKEoWey9"
+          ]
+        }
+      ]
+    }
+  ]
+}

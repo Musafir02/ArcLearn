@@ -1,0 +1,4 @@
+{
+  "title": "While and Do-While Loops",
+  "content": "In Kotlin, `while` and `do-while` loops are used to repeatedly execute a block of code based on a condition. The `while` loop checks the condition _before_ each execution of the block; if the condition is true, the block executes, and the process repeats. The `do-while` loop, on the other hand, executes the block _at least once_ and then checks the condition; the block continues to execute as long as the condition remains true.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@While Loops](https://kotlinlang.org/docs/control-flow.html#while-loops)"
+}

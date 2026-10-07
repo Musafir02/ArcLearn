@@ -1,0 +1,1046 @@
+{
+  "title": "Kotlin Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Abstract",
+      "name": "abstract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abstract-class@8jkUleKbxXSxPHbeFUTGK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aggregate",
+      "name": "aggregate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aggregate-operations@nRpmP5Nd2r4YKRNsmoscJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-development@RSufL2bzKXZhz9M98oGTA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Android",
+      "name": "android",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "android-jetpack@3bzq_ZWCVoe3KiKJPTLGR",
+            "android-sdk@xpALRb8KUT-i4Lj0EjI7o",
+            "android-studio@dBn3sAg2sey3zQNRwdMq2",
+            "android-studio@SzGLbXgW6Z6UHPoTjI-pB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anonymous",
+      "name": "anonymous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anonymous-functions@7BYTt5_wILzkbYmQW1Xny"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asynchronous",
+      "name": "asynchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asynchronous-flow@e6h0Xi4ReqLa6VJc1VJYG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Break",
+      "name": "break",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "break--continue@yi0SCKL2sgqKlDGwT7Fmo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buffered",
+      "name": "buffered",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buffered-streams@xCfSwvrdrSOYdEIdsxEuw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-tool-api@JP4S5PgiWS7_WF_JFWvas",
+            "build-tools@B1PAHsUITg5NtxllZ1OsR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "C",
+      "name": "c",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "c-interoperability@7ybzwy7g4HSQYPUGFTD4q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Catching",
+      "name": "catching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "catching-exceptions@VKDnV_Xlmj3lurkN_ZirD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cicd",
+      "name": "cicd",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cicd-tools@zlyP0oCA5I5x5fHphutmd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Class",
+      "name": "class",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "class-generics@yQx5zVNvsit5AnRlDJsZu",
+            "class-members@2DNh4oQet17AUQWvJ64fb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-organization@Obf1lA3vl0F6HVMMQDeNz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competitive",
+      "name": "competitive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competitive-programming@jzJNHdc4tamjjdRpj-tsH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compose",
+      "name": "compose",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compose-multiplatform@gwD16v8OnLvgfsn2zx780"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-expressions@-fp4xlFS4iAzRxXKIaiIO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Coroutines",
+      "name": "coroutines",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "coroutines-behavior@x5KaFoEEYNjR1a-4KlIcd",
+            "coroutines-best-practices@ftCSs-gbgOdzZ2QFbEpEF",
+            "coroutines-builders@hvApxzNV0ly2Ck7_UuX3J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-files@4xn_kz-HcOoXTFGNLTPgv",
+            "creating-instances@AW03C8g40fm5RUdVmAaZe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-analysis@nNGeY4qnJfuK5xmmiY6La",
+            "data-classes@aCOWSt8oeJD7jxnmHggiN",
+            "data-types@0K0aFQPi3CnB8BAAA2pIs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Date",
+      "name": "date",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "date--time@bohaQpYQH9kMssn4kVDxA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Default",
+      "name": "default",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "default-imports@cPiTsuFCkMZciOr9Wp9ID"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defining",
+      "name": "defining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defining-classes@uiK2GDDnLzVbhq5erNxFL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enum",
+      "name": "enum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enum-class@qsDphbFvDu7PEDKt7k0JC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Extension",
+      "name": "extension",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "extension-functions@0bQsJ-CAOo7srxjSocc6Y",
+            "extension-functions@jpijY-Wbe6yNXZeNodpNt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-types@WoPaR-IylckAixqAAwkeg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arrays@eoV8P756JUNC87FhsA2DG",
+            "booleans@Z0NaGuewAo9QO-T4BGBr4",
+            "characters@vTAV9gzVDTJdnQ-BNktT_",
+            "collections@x7Ok7RObQOQPTS3fBTHaF",
+            "comments@G3SKq-A6CBSzY7kMJIkHk",
+            "constructors@xkT2UmeP9c37giF169aWD",
+            "coroutines@lV108QhOIYF_6CW-UKybx",
+            "coroutines@y14epi1_XqCPHJBZecq_M",
+            "documentation@wDBRLUYhlnkPr-rIpnY8G",
+            "dokka@vlMxe68Xp-YrC3gUXfzwr",
+            "exceptions@zYmuAlJVJbDEU9qJo-n8p",
+            "filtering@kHebnqaFOWOPgycYJCdyL",
+            "floats@liEMxRi675sNpqf950GXS",
+            "for@-JmIDPedgVOw2RpIhYNv2",
+            "gradle@GC4hGG4v8F-8bHQTdlDWG",
+            "grouping@oVq4WYOC5U-uHMDeufN2L",
+            "ides@Ee6XleWvK-v9fCxbz9a1n",
+            "if@2oS2FhszadxPm9eg2VTUV",
+            "inheritance@aDgV966VKxzN0_vZ_oxRW",
+            "integers@uMTIONS6pAxrdh7zoDHIz",
+            "interfaces@UYOkP-AYKf8aw92pGSXl_",
+            "io@If4Lv0M03ALLpQ88Vwp6i",
+            "iterators@H1794CAM_XqNJVT1LkXRG",
+            "kandy@JIivSHQvSotmFIpqUc5rJ",
+            "kdoc@ipV1RoEkn9-yKD98nB4dC",
+            "koog@a5IDGzg8-FppJWCmhcq9q",
+            "kotlinjava@E0ooAe-E-RQ6WRjFLuYK7",
+            "kotlinjavascript@IiWY4HhtDRj3N9D-o4fAd",
+            "kotlinnative@nCaPm0PSeS5rztRWiBL2s",
+            "kotlinwasm@naVzP9xVnnVu47DieEfBU",
+            "ktor@q546Dq42Z3-WN-FOll4K1",
+            "lists@0iZ9qfst8yw08cTW8d-Nx",
+            "lists@PfXvx1jxcuR31Nm1Pia5M",
+            "loops@hRcMw3NHSOy2TVympIYaf",
+            "maps@KeZhyjPFuuBwWPLXgyGs2",
+            "maps@_4_NXfG-9jzLv9tNHP74E",
+            "maven@7j55MuqI7BqRtwvTAQU6D",
+            "methods@9tLiTYbNf9WnisvwBhObC",
+            "ordering@95fcqMEswDxcIcdFjr81M",
+            "parameters@9IIvovotEnTiNzVovWOiW",
+            "progressions@o-iGCtrwA3AVbrBJW_7u3",
+            "properties@2wbXYUOx1f4rmD5EHuzOw",
+            "quarkus@MzV6A_0Sa9LhgalNmhwq8",
+            "ranges@LZlkx9YYylodmjUXxnj7a",
+            "return@gVXXMYVlZZ5CHPBwGlGmZ",
+            "sequences@LLC--5n2K19hVvMuQ5nIO",
+            "serialization@TyuUD4479UXsbRY9nOGno",
+            "sets@GKRPXFLWsnLIXw8OS_DlK",
+            "sets@XbsKQ7192Kvze-6Un_W2q",
+            "spring@uIYjaX5WlKooyK-i1lGz5",
+            "strings@mY6B8kIe6dGjHes-qm0jp",
+            "teamcity@aIG_7-igm_LSR3ybAPz0j",
+            "transformations@gR2pyEoMFPg6ha3YULRAR",
+            "varargs@B2cxzgsEpeSzGATX4WNeO",
+            "variables@s7hNf7C-IO-EoEtzbg3qb",
+            "vertx@MCZaiTrPBrIMouBdyBD0y",
+            "when@zJT9KVWYIbDTsGp5tTJEh",
+            "while@qNupY4DnTFYZrGEQJPXcw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gradle",
+      "name": "gradle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gradle-pluggins@mkGY2gTa5_ykZnoRMEvnm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Higher",
+      "name": "higher",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "higher-order-functions@Q9MQRfJuvXL3YluwJ1CfF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "History",
+      "name": "history",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "history-of-kotlin@SLF_-a7Uwsl-fEqYiCIvF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Importing",
+      "name": "importing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "importing-packages@sCmAS0uEg2rZbNITYII5i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inline",
+      "name": "inline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inline-class@rCNP0MYQhLgYRMzu3JTxP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Intellij",
+      "name": "intellij",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "intellij-idea@2z9t6nLOZuiyGi6DAhNmI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-kotlin@Lod4cyZLuaCMmQ3-GkH8Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Io",
+      "name": "io",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "io-library@oTHsTW8zVcamI1DcqH2o9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Java",
+      "name": "java",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "java-from-kotlin@I_Ecet4Q1QQXHoIvt2OqK",
+            "java-interoperability@id1ai__oCcB32i2hsiesC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jvm",
+      "name": "jvm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jvm-metadata@rvPHK5Je3y4hPUKeaO00Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kotlin",
+      "name": "kotlin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kotlin-dataframe@AarV0h4U6Ol3auLGOW3iZ",
+            "kotlin-from-java@qBuo_kgC-0ugiRCvR5JwQ",
+            "kotlin-libraries@fln83FunYP4v_0jNfNtXx",
+            "kotlin-multiplatform@e24E1zTPdr6tNnlKitCys",
+            "kotlin-notebook@PHHviBSqhYDSNuHBFbw3l",
+            "kotlin-notebooks@n4AFoCcKqnGRRWuD0Ud-9",
+            "kotlin-scripting@_88wF-lAkqW41C6FRmCHO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Label",
+      "name": "label",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "label-loops@Lfdvpef2gXVdqr4e1dCHw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lambda",
+      "name": "lambda",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lambda-functions@cFExAjlc_ATE8V9EWE5on"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-functions@HrjELmsiLAyxK6ru3ifgb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Main",
+      "name": "main",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "main--function@oQaxtbqUb1jub9yfuyKTc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Member",
+      "name": "member",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "member-functions@EXFJKm3FLX3OehSX8mBFO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested--inner-classes@tjCG72uQt87-fIoBBzy0s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nullability",
+      "name": "nullability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nullability-check-operators@xId8W3jQNhGJJvXFCcXir"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nullable",
+      "name": "nullable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nullable-vs-non-nullable@7xmKy-sipKYv8k-WYTulA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-declarations@migCYrzhAQ4keUk1MHPpZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opt",
+      "name": "opt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opt-in-requirements@s900IAqx50Pg7ngDmGLLG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plus",
+      "name": "plus",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plus--minus-operators@A0wxD3ih-r8w2NAd2dOgS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Print",
+      "name": "print",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "print--println@vk146kvcjWYdweOeJIM9h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Printing",
+      "name": "printing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "printing-data@Yr7DSqmOAOe15574qBrIT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Property",
+      "name": "property",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "property-delegates@rOpgM--1Q1mBYmK5AlYAY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Read",
+      "name": "read",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "read-only-vs-mutable@D4G8DOX5b39Rxw2FtgnjQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retrieving",
+      "name": "retrieving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retrieving-collection-parts@l4-AiY4mfwstDzxIASESe",
+            "retrieving-single-elements@_L6O23eo-oYsxA3pNXhC-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Safe",
+      "name": "safe",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "safe-casts@QmfR2rJMP7o_meBR8wIpK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sealed",
+      "name": "sealed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sealed-class@HIy-sN0veS5atkJI2ffSu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-side-apps@aj_yIDgFpBOfoSs2kYBBT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-the-environment@KbmJGmWEr_kxFYoFb-JC9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spring",
+      "name": "spring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spring-boot@By2b4Ukz6QjAUPFvqBx6g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Standard",
+      "name": "standard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "standard-functions@0lUpMxlIXOuze0-cOgyHp",
+            "standard-library@FhBQsozNCYTaWwCsDDVyq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "String",
+      "name": "string",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "string-templates@oQe1JVwYnLDNfvi-s7BQX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Suspending",
+      "name": "suspending",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "suspending-functions@kVHtQQGhgIdJcQO0yynqG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swiftobjective",
+      "name": "swiftobjective",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swiftobjective-c-interop@aEvbW7AtLvvtol4qEQofe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tail",
+      "name": "tail",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tail-recursive-functions@Ikv5K8lKG0vlA7WheGQHY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Test",
+      "name": "test",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "test-library@2_jmtc-zIQ7SuPNccHyXw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Throwing",
+      "name": "throwing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "throwing-exceptions@8_u8eKhWHESek7pfpaOln"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-aliases@d2KZMmwOG29uLnTP3tU_o",
+            "type-checks--casts@3ihCc-dNSKb_32qj0EF5j",
+            "type-inference@YX5BhDgJ5NjASPc7kYySG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understanding",
+      "name": "understanding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understanding-packages@jcXt2Op2VDy6BbHzrqVyr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unsigned",
+      "name": "unsigned",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unsigned-integers@g0bGnHk9WoSF6GsHLSicv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Val",
+      "name": "val",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "val-vs-var@vDWwBv0KF_S88cQFtnDVB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visibility",
+      "name": "visibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visibility-modifiers@yAT8zsAb-iJLFzTTYVJ4v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-null-safety@Vh_rxz7BsX6ZB777fTkXz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-kotlin@4PrkkoZ5fY-oow0O-bVhu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing--reading-files@D56NrdWDFS-vQdALQOKXV"
+          ]
+        }
+      ]
+    }
+  ]
+}

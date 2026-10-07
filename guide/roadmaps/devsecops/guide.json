@@ -1,0 +1,735 @@
+{
+  "title": "Devsecops Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Alert",
+      "name": "alert",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "alert-types@-j1PH9_z-Eq3jxX6e8VmQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attack",
+      "name": "attack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attack-surface-mapping@JztcgG94qZ5trdhfDcRa6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Audit",
+      "name": "audit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "audit--compliance-mapping@04_UcLELHkqjBCwliCw7H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Automated",
+      "name": "automated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "automated-patching@HahTEhITEAGaoys1psZqV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-pipeline-hardening@nkPrYgpM5Mn6C_9u9yAyQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Burp",
+      "name": "burp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "burp-suite@uAUg6mDDDq7ZyR0IEDxg5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Certificate",
+      "name": "certificate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "certificate-lifecycle@quUzTCnBnmJoSmIPBGjxk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cia",
+      "name": "cia",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cia-triad@k7AtVkkVavHjCVo1hqCc0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-security@ou2-KKBNyOxH_IW9s3eE9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Container",
+      "name": "container",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "container-security@EnDqfr07RzNZmPIth6wSq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cryptographic",
+      "name": "cryptographic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cryptographic-hashing@EqfPoveYajk61VH-ii_uE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ddos",
+      "name": "ddos",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ddos-miligation-strategy@ltpquwL_YEvbgMZ2OyNS4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defense",
+      "name": "defense",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defense-in-depth-concepts@a4dYHrx1KzhKRtarZT1iy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-risk-management@AAd_X7gI-WA7Jh9FKsuE_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Devsecops",
+      "name": "devsecops",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "devsecops-vs-devops@SJa6UcRcgT08lF8Phnh0X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Edr",
+      "name": "edr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "edr-strategy@A67WShi92I-TX0iK7Fv0L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Endpoint",
+      "name": "endpoint",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "endpoint-detection@E2jGo4HeKaeuXYa9-f-vy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enterprise",
+      "name": "enterprise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enterprise-operations@68qVLExPlVrKJweTjd_S5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acls@lLWQhvzXn3EpeCf9Mhgyj",
+            "asymmetric@hz0WFG5ksaBFMpq7ypLgF",
+            "authentication@iiOWJ7KXyHp_ovVWNmDoc",
+            "authorization@DYmh1MkmAuXUJOFqnFzWc",
+            "bash@r3XBfcNtxSraF11YK_5d5",
+            "bcrypt@TqmbGC_Q_b3BkU7UkvE-S",
+            "containment@CUjGVwPvQytVYqy2zEPuw",
+            "cspm@eTOjfNSzlvbWsyX5an_5w",
+            "dns@TnDsOr1iJX3hY7vJRpp7S",
+            "docker@-OWtiqx4YbcOVhtYU0D69",
+            "encryption@0ey7Spq4DoZ-AfXOsMtag",
+            "firewalls@LV_uiNRdUi9OrmxQCdeGw",
+            "forensics@h_kjdN5uGNKLtJ3puQ9RH",
+            "go@UcBt4BsvLDlsnVy3KKJ1y",
+            "http@WamX-UieM8NxhK6P_bDCB",
+            "iam@-RORxEsNvIPSlnM2TWB3j",
+            "iam@JDglIowCyRjSoqCcNfkZr",
+            "ids@L3Mu6rCIu58VyhtxeyLXq",
+            "introduction@-X3GTFpg3kzm0cELAngjb",
+            "ips@PYH_nc4bktIJoCJA6OC5E",
+            "kubernetes@YveqgdX6eNRFC1zU_q7r1",
+            "monitoring@MMTCo21ap15MrPV64vKka",
+            "nessus@EqbzAy56Tu8asKNFzuti_",
+            "nist@yMb0-A55r1KEsLntOmp5F",
+            "nmap@0Tci_Ks8jXisin90VqB_D",
+            "openvas@mIcs0fp3T9IwwAvgYyKnY",
+            "pasta@6A_3p3CzwxFVjJaXahEVr",
+            "powershell@91lxZEOZ6KF3tY9id2Au8",
+            "python@txcfATz3k89CedFrSZMWj",
+            "qualys@Pkud7rAzdV5asF5aGAq7z",
+            "ruby@nKthK-OsFO0TGwptD-Dme",
+            "rust@V_-gY34XcyIqPcLKtDJZr",
+            "sboms@MF8AYjKun5SHtumTyuurJ",
+            "siem@hnroE_riXvw6BqYdirWBX",
+            "stride@EZZsZHxu7__yM2l9tr95-",
+            "symmetric@mT1cKWZcKXwvopW6BeX-A",
+            "tls@FvU310TuexCsp8QkvxJib",
+            "vlans@GPVN-nDitsY1bF_3huqnh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Identity",
+      "name": "identity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "identity-basics@iONpD135a4kd3zR5ufoTx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image-scanning@bPmjX9IPL9Da0XUApY5UF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Incident",
+      "name": "incident",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "incident-response@V5eQcby9FNcGv68KPj5rH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input-validation-patterns@lq4nTMBniaxxwPvH5M77Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ir",
+      "name": "ir",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ir-lifecycle@X-pvSQnfB2W4992_3eOEy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iso",
+      "name": "iso",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iso-27001@JBNiSzYD8DSnKfHoKRjMg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript--nodejs@BeUiBY18JHqCKVNtYAHH3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-management-service@l76yFl4lSXnxg5DBbnnID"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Large",
+      "name": "large",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "large-scale-identity-strategy@XRnxOPVChkGLQSXX-kUmi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-a-programming-language@v5FGKQc-_7NYEsWjmTEuq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Least",
+      "name": "least",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "least-privilege@rK-RToN5JRcclYl23TyYz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-analysis@_Kr2_N8021tsZfa0wZ3Vu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-region-security-planning@eALB73XbtnFF3-PYcLcZq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Network",
+      "name": "network",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "network-segmentation@Cr0VAtdu0ZYPOkUU_7vjR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking-basics@84HlHz8bHCDtAPGpq7LpX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nmap",
+      "name": "nmap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nmap-basics@JyXv5vPHCjSBc0J-PpUEV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Owasp",
+      "name": "owasp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "owasp-top-10@igGASa7AknApWtq57v2Qx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pki",
+      "name": "pki",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pki-design-and-failover@nEYMyTKfRDqA2Uc1tCwxv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Response",
+      "name": "response",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "response-strategy@6Q2VIdeSuBZzo7c1qnYLG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Risk",
+      "name": "risk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "risk-quantification@V97S_0PrVw3jjHnmcxDgJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-based-access@9Tea1ge_l1fls0fyPxMPG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Root",
+      "name": "root",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "root-cause-analysis@VyzLkdcLgxfSSFuUS0xO_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scripting",
+      "name": "scripting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scripting-knowledge@wjJPzrFJBNYOD3SJLzW2M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Secure",
+      "name": "secure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "secure-api-design@aMu0e6xQ3Rak44F_I7Ish",
+            "secure-coding@iHd6XNAUGXn3_d-I_YtTM",
+            "secure-network-zoning@ixiKWBp8m4tP55dBYFzRL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sha",
+      "name": "sha",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sha-256@LKMBv-M9k71yrR2WzN4bK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Soar",
+      "name": "soar",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "soar-automation@rXS1CIZHu7TA_o7L-vMtV",
+            "soar-concepts@O0aVW37VhZInw9Z9Mghcg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Soc",
+      "name": "soc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "soc-2@VmDslOmZANHpHmAInFa_j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-injection-prevention@VPBQh3CSsNA-esuvEHT3X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Supply",
+      "name": "supply",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "supply-chain-security@qKHb2e9g_Xuo-nHepICTR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Threat",
+      "name": "threat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "threat-modeling-workflows@qfhpMprVX562UuktYN9BZ",
+            "threat-modeling@XA7JUF00B1locP0xY3T95"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vim",
+      "name": "vim",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vim--nano--emacs@7MavDAydyrt0tOJ6a6xRQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wireshark",
+      "name": "wireshark",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wireshark-basics@iHhitN8zToXm4nK1m0OeR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Xss",
+      "name": "xss",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "xss-prevention@ph7rFQFJffi_di133vm3Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zero",
+      "name": "zero",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zero-trust-concepts@3UAH70FkQlv5_VbYon4U9"
+          ]
+        }
+      ]
+    }
+  ]
+}

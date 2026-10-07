@@ -1,0 +1,4 @@
+{
+  "title": "AI-powered Search",
+  "content": "AI-powered search combines vector embeddings and similarity search to return results based on intent and meaning. A Worker generates an embedding for the query, searches Vectorize for the nearest vectors, and returns the associated content.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Cloudflare + AI](https://ai.cloudflare.com/)\r\n- [@official@Cloudflare Agents](https://developers.cloudflare.com/agents/)\r\n- [@article@How to use Cloudflare Workers AI for building an AI-powered Search](https://dev.to/charlestehio/how-to-use-cloudflare-workers-ai-for-building-an-ai-powered-search-bar-51jn)"
+}

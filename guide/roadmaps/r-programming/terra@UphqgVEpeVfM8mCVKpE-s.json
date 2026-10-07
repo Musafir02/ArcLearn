@@ -1,0 +1,4 @@
+{
+  "title": "terra",
+  "content": "terra handles raster data in R, grids of values like satellite imagery or elevation data, and has replaced the older, now retired raster package. It provides functions for reading, manipulating, and analyzing raster layers, including operations like resampling and calculating values across a grid. It's the standard modern choice for raster work in R.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@terra](https://rspatial.github.io/terra/)\r\n- [@article@terra guide](https://rspatial.r-universe.dev/terra)\r\n- [@video@Using R in Terra](https://www.youtube.com/watch?v=MHkLwATIchk)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Wildcard Question Mark (?)",
+  "content": "The question mark (?) wildcard is a single-character wildcard. It matches exactly one occurrence of any character. This means that when used in a pattern, it will be replaced by any single character in a filename or string, allowing you to match files or strings with slight variations in their names or content.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@How To Use Unix Wildcards](https://www.warp.dev/terminus/linux-wildcards)\r\n- [@article@Wildcard characters in Shell Script Linux](https://nkugwamarkwilliam.medium.com/wildcard-characters-in-shell-script-linux-6e885b624565)\r\n- [@video@Bash Globbing Basics! How to use wildcards on the shell](https://www.youtube.com/watch?v=gsucx2W-9sg)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Maps",
+  "content": "Built-in associative data type mapping keys to values. Reference types created with `make(map[KeyType]ValueType)` or map literals. Keys must be comparable types. Support insertion, deletion, lookup operations. Check existence with comma ok idiom: `value, ok := map[key]`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Maps](https://go.dev/blog/maps)\r\n- [@article@Mastering Go Maps: Best Practices & Pro Tips](https://blog.stackademic.com/golang-use-maps-like-pro-the-proper-way-to-use-maps-in-golang-7a20c805540c)\r\n- [@article@Understanding HashMaps in DSA](https://medium.com/@nikhil.cse16/understanding-hashmaps-in-dsa-5450c6ec2e75)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Programming Languages",
+  "content": "Having proficiency in at least one programming language is essential before working with Docker, as containers are ultimately used to package and run applications. Whether you work with Python, JavaScript, Go, Java, or any other language, understanding how your application is built, its dependencies, and its runtime requirements directly informs how you write Dockerfiles and structure container images. Knowledge of your language's package management, build tools, and runtime environment helps you create efficient, minimal Docker images tailored to your application's needs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Python Roadmap](https://roadmap.sh/python)\r\n- [@roadmap@JavaScript Roadmap](https://roadmap.sh/javascript)\r\n- [@roadmap@Java Roadmap](https://roadmap.sh/java)\r\n- [@roadmap@Go Roadmap](https://roadmap.sh/golang)"
+}

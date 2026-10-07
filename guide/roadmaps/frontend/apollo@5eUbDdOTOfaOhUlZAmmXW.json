@@ -1,0 +1,4 @@
+{
+  "title": "Apollo",
+  "content": "Apollo GraphQL is a comprehensive platform for GraphQL applications. Apollo Client handles caching, data fetching, and state management. Apollo Server builds GraphQL APIs. Includes tools for schema management, performance monitoring, and developer tooling for faster, scalable apps.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated GraphQL Roadmap](https://roadmap.sh/graphql)\r\n- [@official@Apollo Website](https://www.apollographql.com)\r\n- [@official@Apollo Docs](https://www.apollographql.com/docs/)"
+}

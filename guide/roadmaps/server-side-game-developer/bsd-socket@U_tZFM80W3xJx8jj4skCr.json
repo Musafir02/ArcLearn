@@ -1,0 +1,4 @@
+{
+  "title": "BSD Socket",
+  "content": "The BSD socket API, originating from Berkeley Unix, is the standard interface for network programming on Unix-like systems including Linux and macOS. It defines the core socket calls that most other socket APIs are modeled after.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@BSD Socket Interface - Keil](https://www.keil.com/pack/doc/mw6/network/html/using_network_sockets_bsd.html)\r\n- [@article@Beej's Guide to Network Programming](https://beej.us/guide/bgnet/)\r\n- [@article@Berkeley Sockets - Wikipedia](https://en.wikipedia.org/wiki/Berkeley_sockets)"
+}

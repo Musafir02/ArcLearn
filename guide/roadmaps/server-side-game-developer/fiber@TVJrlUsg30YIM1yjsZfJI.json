@@ -1,0 +1,4 @@
+{
+  "title": "Fiber",
+  "content": "A fiber is a lightweight, cooperatively scheduled unit of execution managed by the application rather than the OS. Fibers yield control explicitly, avoiding the overhead of OS thread context switches and enabling high-concurrency server architectures with lower memory footprint per concurrent task.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Green Thread - Wikipedia](https://en.wikipedia.org/wiki/Green_thread)\r\n- [@article@Introduction to ZIO Fibers - ZIO](https://zio.dev/reference/fiber/)\r\n- [@article@Difference Between Fibers and Threads - Cbrix](https://www.cbrix.com/difference-between-fibers-and-threads-a-comprehensive-guide/)"
+}

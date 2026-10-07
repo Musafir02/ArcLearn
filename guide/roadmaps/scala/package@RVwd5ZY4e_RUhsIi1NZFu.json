@@ -1,0 +1,4 @@
+{
+  "title": "package",
+  "content": "The package keyword is used to create namespaces that can contain entities such as classes, objects, and other packages. In Scala 2, package objects allow defining functions, variables, and types that are accessible to all members of a package. In Scala 3, it's possible to define all those elements at the top-level, so there is no longer any need to declare package objects.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Top Level Definitions in Packages | Tour of Scala | Scala Documentation](https://docs.scala-lang.org/tour/package-objects.html)\r\n- [@article@Packaging, Importing and Package Objects in Scala | Baeldung on Scala](https://www.baeldung.com/scala/package-import)\r\n- [@article@Scala Package Objects](https://www.tutorialspoint.com/scala/scala_package_objects.htm)"
+}

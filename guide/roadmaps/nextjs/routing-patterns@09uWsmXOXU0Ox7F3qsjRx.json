@@ -1,0 +1,4 @@
+{
+  "title": "Routing Patterns",
+  "content": "The App Router provides a set of conventions to help you implement more advanced routing patterns. These include:\r\n\r\n*   Parallel Routes: Allow you to simultaneously show two or more pages in the same view that can be navigated independently.\r\n*   Intercepting Routes: Allow you to intercept a route and show it in the context of another route.\r\n\r\nThese patterns allow you to build richer and more complex UIs, democratizing features that were historically complex for small teams and individual developers to implement.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Advanced Routing Patterns](https://nextjs.org/docs/13/app/building-your-application/routing#advanced-routing-patterns)"
+}

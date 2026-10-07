@@ -1,0 +1,4 @@
+{
+  "title": "Service Mesh",
+  "content": "Service mesh enhances communication, security, and management between microservices using intelligent proxies. Provides load balancing, service discovery, observability, and traffic management. Uses sidecar pattern where each microservice pairs with a proxy for independent network functionality management.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is a Service Mesh (AWS blog)?](https://aws.amazon.com/what-is/service-mesh/)\r\n- [@article@What is a Service Mesh (RedHat blog)?](https://www.redhat.com/en/topics/microservices/what-is-a-service-mesh)\r\n- [@video@What is a Service Mesh?](https://www.youtube.com/watch?v=vh1YtWjfcyk)"
+}

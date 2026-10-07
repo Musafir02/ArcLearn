@@ -1,0 +1,4 @@
+{
+  "title": "__filename",
+  "content": "The `__filename` in Node.js returns the filename of the executed code. It gives the absolute path of the code file. The following approach covers implementing `__filename` in the Node.js project.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@__filename](https://nodejs.org/docs/latest/api/modules.html#__filename)"
+}

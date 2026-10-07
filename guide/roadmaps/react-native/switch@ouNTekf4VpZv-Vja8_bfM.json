@@ -1,0 +1,4 @@
+{
+  "title": "Switch",
+  "content": "A Switch is a visual component in React Native that provides a toggle interface for users to switch between two states, typically on and off. It functions as a controlled component, meaning it relies on a boolean value passed through properties to determine its current state and a callback function to handle changes when the user interacts with it. This component is commonly used in settings menus or forms where a binary selection is required.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Switch](https://reactnative.dev/docs/switch)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Built-in User Model",
+  "content": "Django provides a default user model that handles common authentication tasks like user registration, login, and permission management. This model includes fields like username, password, email, first name, and last name, and it offers methods for password hashing and user authorization. It serves as a foundation for managing users in your Django project, and can be customized or extended to fit specific application requirements.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@User model](https://docs.djangoproject.com/en/6.0/ref/contrib/auth/)\r\n- [@article@How to Get the User Model in Django – A Simple Guide With Examples](https://www.freecodecamp.org/news/how-to-get-user-model-in-django/)\r\n- [@article@User Models](https://d-libro.com/topic/user-models/)"
+}

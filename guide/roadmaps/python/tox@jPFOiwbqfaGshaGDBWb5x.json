@@ -1,0 +1,4 @@
+{
+  "title": "Tox",
+  "content": "Tox is a tool for automating test environment management and testing against multiple interpreter configurations. It is particularly useful for Python codebase that need to support multiple versions of Python.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Tox Documentation](https://tox.wiki/en/)"
+}

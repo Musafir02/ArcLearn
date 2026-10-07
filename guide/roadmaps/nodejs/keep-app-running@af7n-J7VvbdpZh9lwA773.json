@@ -1,0 +1,4 @@
+{
+  "title": "Keep your app running in Production",
+  "content": "PM2 lets you run your nodejs scripts forever. In the event that your application crashes, PM2 will also restart it for you.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Running Node.js Apps with PM2 (Complete Guide)](https://betterstack.com/community/guides/scaling-nodejs/pm2-guide/)"
+}

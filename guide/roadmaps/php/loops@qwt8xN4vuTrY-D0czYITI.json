@@ -1,0 +1,4 @@
+{
+  "title": "Loops",
+  "content": "Loops repeat a block of code multiple times. PHP supports four loop types: `while`, `do...while`, `for`, and `foreach`. The right choice depends on whether you know the iteration count in advance and whether you're iterating over a sequence or a condition. `break` exits a loop early; `continue` skips to the next iteration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Loops](https://www.php.net/manual/en/language.control-structures.php)"
+}

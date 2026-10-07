@@ -1,0 +1,4 @@
+{
+  "title": "reqwest",
+  "content": "`reqwest` is a popular HTTP client library for Rust that provides both sync and async APIs for making HTTP requests. Built on `hyper` and `tokio`, it supports JSON, forms, cookies, and various authentication methods with an ergonomic, easy-to-use interface for web API interactions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Making HTTP requests in Rust with Reqwest](https://blog.logrocket.com/making-http-requests-rust-reqwest/)\r\n- [@article@Exploring Reqwest in Rust](https://medium.com/@chetanreddyk394/exploring-reqwest-in-rust-b91c548e69af)\r\n- [@article@Reqwest Documentation](https://docs.rs/reqwest/latest/reqwest/)"
+}

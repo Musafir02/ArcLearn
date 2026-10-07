@@ -1,0 +1,4 @@
+{
+  "title": "Multithreading",
+  "content": "Multithreading allows a game server to execute multiple threads concurrently, parallelizing I/O, game logic, and background tasks across CPU cores. The threading model chosen (reactive, task-based, actor) significantly affects throughput, latency, and code complexity.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Multithreading Problems In Game Design - Erik McClure](https://erikmcclure.com/blog/multithreading-problems-in-game-design/)\r\n- [@article@Multi Threading in Game Development - Reddit](https://www.reddit.com/r/gamedev/comments/44fux4/multi_threading_in_game_development/)\r\n- [@article@Multi-Threaded Game Server Design - Spirited Snowcat](https://spirited.io/multi-threaded-game-server-design/)"
+}

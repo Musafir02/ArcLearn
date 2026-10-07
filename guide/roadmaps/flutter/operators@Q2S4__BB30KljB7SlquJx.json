@@ -1,0 +1,4 @@
+{
+  "title": "Operators",
+  "content": "Flutter, and Dart, utilize various operators to manipulate data: arithmetic operators for math, relational operators for comparisons, logical operators for boolean logic, assignment operators for value assignment, and the ternary operator for concise conditional expressions, enabling diverse operations on values and variables.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Operators](https://dart.dev/language/operators)"
+}

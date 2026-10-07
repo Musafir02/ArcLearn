@@ -1,0 +1,4 @@
+{
+  "title": "Linkerd",
+  "content": "Linkerd is a lightweight, open-source service mesh for Kubernetes focused on simplicity and low resource overhead. It automatically adds mutual TLS, observability, and traffic management to services without requiring complex configuration, making it one of the easier service meshes to adopt.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Linkerd Website](https://linkerd.io/)\r\n- [@article@What is Linkerd?](https://www.techtarget.com/searchitoperations/definition/Linkerd)\r\n- [@video@What is the Linkerd service mesh?](https://www.youtube.com/watch?v=up3fKwXdEgc)"
+}

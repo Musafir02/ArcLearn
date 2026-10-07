@@ -1,0 +1,4 @@
+{
+  "title": "Rich Data Structures",
+  "content": "Redis goes beyond simple strings by supporting Lists, Sets, Sorted Sets, Hashes, Bitmaps, HyperLogLog, and Streams. Each structure comes with commands optimized for common operations on that type. This variety allows developers to model data closer to the problem domain without relying on external serialization.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Data Structures](https://redis.io/redis-enterprise/data-structures/)\r\n- [@official@Understand Redis Data Types](https://redis.io/docs/latest/develop/data-types/)"
+}

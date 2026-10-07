@@ -1,0 +1,4 @@
+{
+  "title": "Functions",
+  "content": "First-class citizens in Go. Declared with `func` keyword, support parameters and return values. Can be assigned to variables, passed as arguments, returned from other functions. Support multiple return values, named returns, and variadic parameters. Building blocks of modular code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Functions](https://go.dev/tour/basics/4)\r\n- [@article@Functions in Golang: Complete Guide with Examples](https://medium.com/backend-forge/functions-in-golang-complete-guide-with-examples-2025-e07db0f98fd3)\r\n- [@article@Learn Go Functions](https://www.learn-golang.org/en/Functions)"
+}

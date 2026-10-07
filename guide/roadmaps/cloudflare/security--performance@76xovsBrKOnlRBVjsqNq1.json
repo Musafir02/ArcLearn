@@ -1,0 +1,4 @@
+{
+  "title": "Security & Performance",
+  "content": "Cloudflare provides a range of security and performance features that apply to traffic passing through its network. Workers can programmatically interact with these features, applying custom logic that complements or extends Cloudflare's built-in protections.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Application Security & Performance Solutions - Cloudflare](https://www.cloudflare.com/application-services/solutions/)\r\n- [@official@Cloudflare Security Architecture](https://developers.cloudflare.com/reference-architecture/architectures/security/)"
+}

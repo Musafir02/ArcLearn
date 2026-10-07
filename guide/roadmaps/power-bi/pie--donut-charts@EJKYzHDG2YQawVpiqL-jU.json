@@ -1,0 +1,4 @@
+{
+  "title": "Pie & Donut Charts",
+  "content": "Pie and donut charts show how a total is divided into parts, with each slice sized proportionally to its share of the whole. They are best used with only a handful of categories, since too many slices become hard to read and compare accurately. A donut chart is the same concept with a hole in the middle, often used to also display a total value.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Create and use pie and donut charts in Power BI](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-pie-donut-chart?tabs=powerbi-desktop)\r\n- [@video@How to make Pie Charts](https://www.youtube.com/watch?v=oxz4IRELtJ4)\r\n- [@video@Power BI Just Unlocked Donut Chart INSANITY](https://www.youtube.com/watch?v=2VJxYNIzjuM)"
+}

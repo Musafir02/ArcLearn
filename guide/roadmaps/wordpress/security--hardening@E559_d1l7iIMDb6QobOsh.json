@@ -1,0 +1,4 @@
+{
+  "title": "Security & Hardening",
+  "content": "Security & Hardening refers to the process of strengthening a system or application to reduce its vulnerability to attacks. This involves implementing various measures to protect against unauthorized access, data breaches, and other security threats by identifying and mitigating potential weaknesses in the system's configuration and code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/)\r\n- [@official@Keep your site safe and secure](https://wordpress.com/support/security/)\r\n- [@article@WordPress security & hardening, the definitive guide](https://melapress.com/wordpress-security/?utm_medium=referral&utm_source=roadmapsh&utm_campaign=wproadmap)\r\n- [@video@How to Secure Your WordPress Site in 2025](https://www.youtube.com/watch?v=D0Q6448Fpo8)"
+}

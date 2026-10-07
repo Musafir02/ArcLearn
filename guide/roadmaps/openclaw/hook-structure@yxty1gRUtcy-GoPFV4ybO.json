@@ -1,0 +1,4 @@
+{
+  "title": "Hook Structure",
+  "content": "Each hook is a directory containing a `HOOK.md` file with metadata and a `handler.ts` file with the logic to run. The metadata defines which events to listen for and what requirements the hook needs to be eligible.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Hook Structure](https://docs.openclaw.ai/automation/hooks#hook-structure)"
+}

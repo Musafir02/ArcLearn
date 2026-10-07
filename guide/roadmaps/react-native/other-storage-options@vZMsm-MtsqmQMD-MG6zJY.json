@@ -1,0 +1,4 @@
+{
+  "title": "Other Storage Options",
+  "content": "Beyond basic local storage solutions, React Native applications often require more specialized ways to manage data. These options include libraries like SQLite for relational database management, Realm for high-performance object-oriented storage, or WatermelonDB for reactive data synchronization. These tools are typically used when an application needs to handle complex data structures, perform advanced queries, or maintain large datasets locally on the device.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@Async Storage](https://github.com/react-native-async-storage/async-storage)\r\n- [@opensource@Realm - GitHub](https://github.com/realm/realm-js)\r\n- [@article@Firebase Realtime Database](https://firebase.google.com/docs/database)"
+}

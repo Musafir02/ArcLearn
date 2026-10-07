@@ -1,0 +1,4 @@
+{
+  "title": "Cobra",
+  "content": "Powerful library for modern CLI applications. Used by kubectl, Hugo, GitHub CLI. Provides nested subcommands, flags, intelligent suggestions, auto help generation, shell completion. Follows POSIX standards with clean API. Includes command generator for quick bootstrapping.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Cobra](https://cobra.dev/)\r\n- [@article@How To Use the Cobra Package in Go](https://www.digitalocean.com/community/tutorials/how-to-use-the-cobra-package-in-go)\r\n- [@article@Getting Started with Cobra](https://dev.to/frasnym/getting-started-with-cobra-creating-multi-level-command-line-interfaces-in-golang-2j3k)"
+}

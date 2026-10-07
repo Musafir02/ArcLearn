@@ -1,0 +1,4 @@
+{
+  "title": "memory/YYYY-MM-DD.md",
+  "content": "These are dated memory log files that store a record of what happened on a specific day. They give the agent a chronological history that it can reference when needed, and are created automatically by the session-memory hook.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Memory Overview](https://docs.openclaw.ai/concepts/memory)"
+}

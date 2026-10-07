@@ -1,0 +1,4 @@
+{
+  "title": "REPLACE",
+  "content": "The `REPLACE` function in SQL is used to substitute all occurrences of a specified substring within a string with a new substring. It takes three arguments: the original string, the substring to be replaced, and the substring to replace it with. If the specified substring is found in the original string, `REPLACE` returns the modified string with all instances of the old substring replaced by the new one. If the substring is not found, the original string is returned unchanged. This function is particularly useful for data cleaning tasks, such as correcting typos, standardizing formats, or replacing obsolete data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@SQL REPLACE Function: Syntax, Usage, and Examples](https://mimo.org/glossary/sql/replace-function)"
+}

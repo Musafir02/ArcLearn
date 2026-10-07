@@ -1,0 +1,4 @@
+{
+  "title": "Creating Modules",
+  "content": "Creating modules in Angular helps organize your application into manageable, cohesive units. Each module can encapsulate related components, directives, pipes, and services. Here's a detailed guide on how to create and use modules in Angular.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@NgModules](https://angular.dev/guide/ngmodules/overview)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Scheduling Algorithms",
+  "content": "Scheduling algorithms determine the order in which an operating system runs competing processes or threads on the available CPU cores. Different algorithms, like round robin, shortest job first, or priority scheduling, balance goals such as fairness, responsiveness, and overall throughput differently.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@CPU Scheduling in Operating System](https://www.scaler.com/topics/operating-system/cpu-scheduling/)"
+}

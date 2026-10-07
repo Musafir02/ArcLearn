@@ -1,0 +1,4 @@
+{
+  "title": "SvelteKit",
+  "content": "SvelteKit is a full-stack framework for building websites and applications with Svelte. Features file-based routing, code splitting, server-side rendering, and static site generation. Designed for simplicity and performance with excellent developer experience and easy deployment options.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Svelte Kit](https://kit.svelte.dev/)\r\n- [@official@Svelte Kit Docs](https://kit.svelte.dev/docs/introduction)\r\n- [@video@Sveltekit in 100 Seconds](https://www.youtube.com/watch?v=H1eEFfAkIik)"
+}

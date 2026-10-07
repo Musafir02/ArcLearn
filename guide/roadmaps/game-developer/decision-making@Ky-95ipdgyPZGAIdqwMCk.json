@@ -1,0 +1,4 @@
+{
+  "title": "Decision Making",
+  "content": "Decision making in game AI governs how an NPC chooses what action to take based on its current state and environment. The goal is to produce behavior that appears intelligent and responsive to the player without being predictable or computationally expensive. Architectures like behavior trees, state machines, and utility systems are the primary tools.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Decision Making in Game Development](https://www.cgspectrum.com/blog/game-design-decision-making-troy-dunniway)"
+}

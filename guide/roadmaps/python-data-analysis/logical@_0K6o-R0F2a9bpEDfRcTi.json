@@ -1,0 +1,4 @@
+{
+  "title": "Logical",
+  "content": "Logical operators combine boolean expressions. Python uses `and`, `or`, and `not` for this purpose. They are used heavily in data filtering conditions, such as selecting rows where multiple criteria are true simultaneously.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Python not Operator: The Complete Guide to Logical Negation](https://roadmap.sh/python/not-operator)\r\n- [@article@The or Operator in Python: Complete Guide with Examples](https://roadmap.sh/python/or)\r\n- [@article@Python Logical Operators](https://www.w3schools.com/python/python_if_logical.asp)\r\n- [@video@Logical operators in Python are easy 🔣](https://www.youtube.com/watch?v=W7luvtXeQTA)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "CircleCI",
+  "content": "CircleCI is a CI/CD service that can be integrated with GitHub, BitBucket and GitLab repositories. The service that can be used as a SaaS offering or self-managed using your own resources.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@CircleCI](https://circleci.com/)\r\n- [@official@CircleCI Documentation](https://circleci.com/docs)\r\n- [@official@Configuration Tutorial](https://circleci.com/docs/config-intro)"
+}

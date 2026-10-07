@@ -1,0 +1,4 @@
+{
+  "title": "TypeScript Modules",
+  "content": "Modules in TypeScript (and JavaScript) are a way to organize code into reusable and manageable blocks. Each module encapsulates its own variables, functions, classes, and interfaces, preventing naming collisions and promoting code modularity. Modules explicitly export parts that other code can use and import modules to gain access to their exported functionalities.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Modules](https://www.typescriptlang.org/docs/handbook/modules.html#handbook-content)\r\n- [@video@TypeScript - Modules](https://www.youtube.com/watch?v=EpOPR03z4Vw)"
+}

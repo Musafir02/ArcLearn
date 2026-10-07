@@ -1,0 +1,4 @@
+{
+  "title": "Indexing",
+  "content": "Indexing in MongoDB creates data structures that improve query performance by creating shortcuts to documents. Indexes are built on specific fields and allow the database to quickly locate data without scanning entire collections. MongoDB supports various index types including single field, compound, multikey, geospatial, text, and hashed indexes to optimize different query patterns and use cases.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Indexing Design Fundamentals Skill Badge](https://learn.mongodb.com/courses/indexing-design-fundamentals)\r\n- [@official@Indexing](https://www.mongodb.com/docs/manual/indexes/)\r\n- [@article@How To Use Indexes in MongoDB](https://www.digitalocean.com/community/tutorials/how-to-use-indexes-in-mongodb)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Weak Set",
+  "content": "A `WeakSet` is a collection of objects held with weak references. Unlike a regular Set, it only accepts objects (not primitives), and entries are automatically removed when the object is garbage collected. WeakSet is used when tracking object references without preventing them from being garbage collected.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@WeakSet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)\r\n- [@article@WeakMap and WeakSet](https://javascript.info/weakmap-weakset)"
+}

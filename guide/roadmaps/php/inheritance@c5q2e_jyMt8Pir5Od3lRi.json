@@ -1,0 +1,4 @@
+{
+  "title": "Inheritance",
+  "content": "Inheritance allows a class to extend another class, inheriting its properties and methods. The child class uses `extends` and can override parent methods or add new ones. PHP supports single inheritance only. The `parent::` keyword calls the parent class's method from the child class.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Inheritance](https://www.php.net/manual/en/language.oop5.inheritance.php)"
+}

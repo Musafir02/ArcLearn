@@ -1,0 +1,4 @@
+{
+  "title": "Composition vs Inheritance",
+  "content": "Composition means building complex components by combining smaller, simpler ones. Instead of relying on inheritance, React encourages passing components as props or nesting them as children to reuse logic and layout. This keeps components flexible and easier to reason about compared to sharing code through class hierarchies.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Passing JSX as children](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children)\r\n- [@article@Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)\r\n- [@article@How to perform component composition in React](https://www.robinwieruch.de/react-component-composition/)\r\n- [@article@Achieving Reusability With React Composition](https://formidable.com/blog/2021/react-composition/)"
+}

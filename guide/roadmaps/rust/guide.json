@@ -1,0 +1,835 @@
+{
+  "title": "Rust Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Async",
+      "name": "async",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "async-std@_2uQInXPdOY-DpYTO1Prt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asynchronous",
+      "name": "asynchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asynchronous-programming@yu0f5gALho0e8wzV10yow"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Atomic",
+      "name": "atomic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "atomic-operations--memory-barriers@n1Epl_nBuoXW2OE0IKYVR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binary",
+      "name": "binary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binary-heap@jdndHBzmdgI6uYql6bO4W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Borrowing",
+      "name": "borrowing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "borrowing-references-and-slices@-onH5vPffdcZFjjVcnEpk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cli",
+      "name": "cli",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cli-utilities@2Zyyf9q_CxmOW-z2pipL8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-organization--namespacing@c_SdccEXEJyh4ymWzvCeX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Concurrency",
+      "name": "concurrency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "concurrency--parallelism@pehYc_xLrs6BFUbcpPTiJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Control",
+      "name": "control",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "control-flow-and-constructs@u2wlnmE1uLaTqWw35UF0a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Covariant",
+      "name": "covariant",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "covariant--contravariant-lifetimes@7yVvMnvCvLbFa51pESx0j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-error-types-and-traits@LwqOxYY9E9MUDgz2M40uV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-and-orm@_n7emeqzf5UTxVB5-385G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Declarative",
+      "name": "declarative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "declarative-macros-with-macro_rules@AXWXXsww7Xkl3BYgtThNe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-dive-stack-vs-heap@UdXq0H8599cDTKXaIlPqt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-management-with-cargo@PkePVzV-b1pgFJP5xID5_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Documenting",
+      "name": "documenting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "documenting-with-rustdoc@65nbahPj9qAb9y8dF8Jnd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Domain",
+      "name": "domain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "domain-specific-languages-dsls@Kb7KF7JCMaWFz-GuaQmQV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embedded",
+      "name": "embedded",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embedded-and-systems@RKXljexmLAceMYwg4D_uP",
+            "embedded-hal@LzaO2cpDajXERqEYDjMl_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@X2gB0m-ZKSC4TJyIcwsMx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explicit",
+      "name": "explicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explicit-lifetime-annotations@R5HIVS-lyCp9b46aXqx2m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functions",
+      "name": "functions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functions-and-method-syntax@5hKJaMKpeFEUi3S1Hpiyk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Futures",
+      "name": "futures",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "futures-and-asyncawait-paradigm@kVfBbsOHoixvqb4dYTG3Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Game",
+      "name": "game",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "game-development@uG-EmZVZ-jc3mswOT4-7l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "actix@3Y90v2ysoMcyjDL24H7mC",
+            "arc@yYmV5qkldu0FkDhOhWOXs",
+            "array@2DbdHCjFzGHwCUETakaGh",
+            "axum@duQ1RO1lqq793mfb5w31P",
+            "bevy@uyrGki0jB7DXQ0HJe2-vY",
+            "boolean@bjwJCGMx5ZfrH7vz3eLS7",
+            "box@WjpkWH7f38y-bHUJ6ruGG",
+            "btreemap@LWgaZWTJVWLDes3HzflRh",
+            "btreeset@FsyLYRQP_rs4qL7IAj9Mo",
+            "channels@3nXJg5Y4SUug_dEAj0eQm",
+            "character@dXMJb2wDmmh2jie1AnPoK",
+            "clap@AId80IokM7NvGBVutmuGC",
+            "criterionrs@clQ26LFV_9AdQ4evnaxUK",
+            "cryptography@Rv_Z-rbtELPZ1Nv0PZQmV",
+            "debugging@7YKWYxogJq6X35IAUwcZF",
+            "diesel@UAXpBK3lfnq0Q4RcBehZ1",
+            "enums@FswpjWqqt8-BzUTsDDjel",
+            "floats@rNHHp1GgmRnKIYlZayi59",
+            "fyrox@x9bmK_cLYpX0ebwjZUn4R",
+            "ggez@qquYnrrzUlyd8738jzj1D",
+            "gpui@sK2pHK0iTvL3KdTTFCr0Y",
+            "hashmap@JAgjrf5WDXiorZ6gFRzTc",
+            "hashset@b1iYy4Hvkj47Q13V2HE4i",
+            "hyper@-MiN5ytI43EjgmWV55BhU",
+            "integers@FHZSxSiOZYNBEz6tu8wuF",
+            "introduction@4U-HZQGH7kaWCB94Xy8Mh",
+            "leptos@n5t3MUqmvrcr36VIIOw0u",
+            "linkedlist@iR0ewc2yURqS7bfMWfoBi",
+            "loco@GnSBtZoN9mAehRf5Eczng",
+            "macroquad@EtKhe3lgK3NoiBOjXRb2O",
+            "mutex@GbbeV3r27IBEKHyiyLqs6",
+            "networking@3pL0ARqk8uRNimopHSalW",
+            "queue@fq2NMV-QV9ayJl82ZWzov",
+            "quinn@qi1pmsY8bPk8nbHiBIGha",
+            "rc@U9Bd-GO0QwYVLvESR4PTb",
+            "relm@QbdGnUoTLgMHO1NCQINIi",
+            "reqwest@TtajUXZpyNx9AmdUawm-8",
+            "ring@w8nxQDxmfoUHkFV66TKiq",
+            "rocket@ApjwY_70OGG_dNIC85oBD",
+            "rppal@L01rVq2_H4rWzlKygW5kA",
+            "rusqlite@a2MLN7f-FvsgdmvP9ixlv",
+            "rwlock@WzGl4DkANjUu7VC1AIWI-",
+            "serde@EHErECEYws05oi59OsZpC",
+            "smol@3C9gCBAq3OQVb583S72D4",
+            "sodiumoxide@hzzRFb5cyXkgUdLZxaozB",
+            "sqlx@r2KembNZ2WIzLe87EB91K",
+            "stack@B-S1hE-ofNTutnkc2hJBf",
+            "string@Hu1jf46OpX44nam_UvYqc",
+            "structopt@_43912wPdXgLL8v-IMHX_",
+            "structs@Mi9mQ-8gyDPd8Mbu1zuHt",
+            "tauri@Q71MnFDQBkZF1c2hj13pU",
+            "termion@YS0igALDqSanGDWva_vls",
+            "testing@08qKtgnhJ3tlb5JKfTDf5",
+            "tokio@H0mctp3Bj2OYfIGFDWGfz",
+            "traits@SJMuIEuHp8X6nfLb0k0TU",
+            "tuple@81_J7CwtUUjYPvKV_prg3",
+            "vector@PskCueCc9pSxfnSzfdX-u",
+            "wasmer@iyFHvZj_ntr_dX6WlL4E1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generics",
+      "name": "generics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generics--type-level-programming@_hxwo_iAdOwlWBltv7i6i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gtk",
+      "name": "gtk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gtk-rs@2Zp3m3Y7j6R1hK3DIVdkH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gui",
+      "name": "gui",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gui-development@T1LlJz5m5wnwBvKAEuGnP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ides",
+      "name": "ides",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ides-and-rust-toolchains@oyP1ZyOgDC4nYEQXHwdVQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Impl",
+      "name": "impl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "impl-blocks@HzWHDQZjA9OgVZEWrmhKf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-rust-and-cargo@-IqA02ObYvXPW1ot6t_b9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Json",
+      "name": "json",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "json-rust@ZXMKY0f7mqqlsvyH9u-LM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Language",
+      "name": "language",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "language-basics@6E4pGifNfSAq6SbzfzFNT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lifetime",
+      "name": "lifetime",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lifetime-elision-rules@qJI8GObmsxyc_tTtUEOAd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lifetimes",
+      "name": "lifetimes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lifetimes--borrow-checker@UZ56NKloehcxUFNuSeO19"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Macros",
+      "name": "macros",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "macros--metaprogramming@eTpZXd8E2jVBmk_aSLZYV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mocking",
+      "name": "mocking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mocking--property-based-testing@HEqfA6An6ZeT3z4R610en"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modules",
+      "name": "modules",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modules--crates@Zpowr_NGd-E2DC3g-oW9h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nrf",
+      "name": "nrf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nrf-hal@ETYrk0s5Wn80XyntNG_t1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Option",
+      "name": "option",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "option-and-result-enumerations@wQHkBydWsiGEOZMdKmz40"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ownsership",
+      "name": "ownsership",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ownsership-rules--memory-safety@2UQ3AuGkDbT0-54l0rOGM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pattern",
+      "name": "pattern",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pattern-matching--destructuring@yqp3UePmSlGyOYpxITis4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-and-profiling@WduD9VIcYSs_JTnuMNyxk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Procedural",
+      "name": "procedural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "procedural-macros--custom-derive@bkVM1OIbv4XUpY6FQb8x_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Propagating",
+      "name": "propagating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "propagating-errors-and--operator@pTC1ucmErVnMbNFnYLJK7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Publishing",
+      "name": "publishing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "publishing-on-cratesio@Op0-bdMV3kE9Be6Ot1aC6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rust",
+      "name": "rust",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rust-crypto@f68x7r-qzaQfrzXnjOI2q",
+            "rust-gdb@UkHXsAolmbk-MsJFfqObC",
+            "rust-lldb@p1w1iljGABgHoJjIRJYLY",
+            "rust-repl-rust-playground@eYCNYtwXBjZwcPUe7QYZ-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serialization",
+      "name": "serialization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serialization--deserialization@gcmKSLWfBqx4aPZOmyQsg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Threads",
+      "name": "threads",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "threads-channels-and-message-passing@pJN260pWQVO0gHxi1-_3U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Toml",
+      "name": "toml",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "toml-rust@LmFog_qXrS9e5ARhV6OD_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Trait",
+      "name": "trait",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "trait-bounds-and-associated-types@pRDgDtRIVpNM2CdhSOS3Q",
+            "trait-definitions--implementations@_EicstELZcdesHiXFWJGu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Traits",
+      "name": "traits",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "traits--generics@zLKbYX0nnbfD5n3P_JRaS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit--integration-testing@w9coeW9-crDxu0KC-9gEU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-datatypes-and-constants@Gw5E21W5zis-RUIgNSEV2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wasm",
+      "name": "wasm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wasm-bindgen@SUtBBqqDeR_yAkr669ZvE",
+            "wasm-pack@TSlj7mMUB5CDTy8uMFzKV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-development@KomYBYxj0FTrJDYB3nU5B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Webassembly",
+      "name": "webassembly",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "webassembly-wasm@fusu4ZHH4-cjoouLr4F9U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wgpu",
+      "name": "wgpu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wgpu-rs@6wGShK9WEnXiby_Jm8sTO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-rust@cMfsRtvzvDZZJ0TqeUOxm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-rust@VhSEH_RoWFt1z2lial7xZ"
+          ]
+        }
+      ]
+    }
+  ]
+}

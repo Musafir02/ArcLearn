@@ -1,0 +1,4 @@
+{
+  "title": "Avoiding Nulls and Booleans as Arguments",
+  "content": "Passing null values or boolean flags into functions often leads to code that is difficult to understand and prone to errors. When a function accepts a boolean, it frequently signals that the function is doing too many things at once, violating the single responsibility principle. Similarly, passing null values forces developers to include repetitive conditional checks to prevent runtime crashes. Instead of using these markers, developers should decompose complex functions into smaller, specific methods or utilize specialized objects and patterns to handle different execution paths clearly."
+}

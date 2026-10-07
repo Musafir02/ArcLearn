@@ -1,0 +1,4 @@
+{
+  "title": "User Defaults",
+  "content": "User Defaults is a simple key-value store for persisting lightweight user preferences and settings across app launches. It stores basic types like strings, numbers, booleans, and dates in a plist file. User Defaults is not suitable for sensitive or large data and is intended only for small configuration values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)\r\n- [@article@Reading and Writing basics: UserDefaults](https://www.hackingwithswift.com/read/12/2/reading-and-writing-basics-userdefaults)\r\n- [@video@Reading and Writing basics: UserDefaults](https://www.youtube.com/watch?v=WHKLXI8baJk&t=1s)"
+}

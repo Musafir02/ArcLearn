@@ -1,0 +1,4 @@
+{
+  "title": "Run openclaw security audit --deep After Every Config Change",
+  "content": "Every configuration change is an opportunity to accidentally introduce a vulnerability. Running a deep security audit after changes catches problems before they become incidents.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Quick check: openclaw security audit](https://docs.openclaw.ai/gateway/security)\r\n- [@official@Formal Verification (Security Models)](https://docs.openclaw.ai/security/formal-verification)"
+}

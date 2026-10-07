@@ -1,0 +1,4 @@
+{
+  "title": "Transactions",
+  "content": "In IP networking, a transaction refers to a complete request-response exchange between a client and server. Understanding transaction semantics helps when designing protocols that need to ensure operations complete atomically over an unreliable network.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@ACID Transactions in DBMS Explained - MongoDB](https://www.mongodb.com/resources/basics/databases/acid-transactions)\r\n- [@article@A Guide to Database Transactions: From ACID to Concurrency Control - ByteByteGo](https://blog.bytebytego.com/p/a-guide-to-database-transactions)\r\n- [@article@A beginner's guide to ACID and database transactions - Vlad Mihalcea](https://vladmihalcea.com/a-beginners-guide-to-acid-and-database-transactions/)"
+}

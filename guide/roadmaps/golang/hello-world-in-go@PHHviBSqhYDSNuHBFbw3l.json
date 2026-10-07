@@ -1,0 +1,4 @@
+{
+  "title": "Hello World in Go",
+  "content": "Traditional first program demonstrating basic structure: `package main`, importing `fmt`, and `main()` function using `fmt.Println()`. Teaches Go syntax, compilation, execution, and verifies development environment setup. Entry point for learning Go.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Go Documentation](https://go.dev/doc/)\r\n- [@official@Get Started with Go](https://go.dev/doc/tutorial/getting-started)\r\n- [@article@Getting Started with Go and the Web](https://dev.to/markmunyaka/getting-started-with-go-and-the-web-hello-world-nal)\r\n- [@article@Understanding Golang: A Comprehensive Guide](https://www.learn-golang.org/en/Hello%2C_World%21)"
+}

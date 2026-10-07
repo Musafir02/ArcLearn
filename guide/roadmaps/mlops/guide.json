@@ -1,0 +1,319 @@
+{
+  "title": "Mlops Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Aws",
+      "name": "aws",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aws--azure--gcp@u3E7FGW4Iwdsu61KYFxCX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-computing@00GZcwe25QYi7rDzaOoMt",
+            "cloud-native-ml-services@kbfucfIO5KCsuv3jKbHTa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-engineering-fundamentals@VykbCu7LWIx8fQpqKzoA7",
+            "data-ingestion-architecture@Berd78HvnulNEGOsHCf8n",
+            "data-lakes--warehouses@wOogVDV4FIDLXVPwFqJ8C",
+            "data-lineage@6XgP_2NLuiw654zvTyueT",
+            "data-pipelines@cOg3ejZRYE-u-M0c89IjM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-learning@1kk8KDWH-LrPt8SjkpTcX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Edge",
+      "name": "edge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "edge-ai@w8z91Hlqm0sPligYD3VCk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Experiment",
+      "name": "experiment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "experiment-tracking@fGGWKmAJ50Ke6wWJBEgby"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explainable",
+      "name": "explainable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explainable-ai@qy37ppIWDT_we-duuHwgT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "airflow@AjZHJcxUY29WZbCvr3zrs",
+            "ansible@-_obgPIUaZ4BVpg29xG_9",
+            "bash@mMzqJF2KQ49TDEk5F3VAI",
+            "cicd@a6vawajw7BpL6plH_nuAz",
+            "cicd@oUhlUoWQQ1txx_sepD5ev",
+            "cml@MLob7b468ZgNX7-cURqmJ",
+            "containerization@tKeejLv8Q7QX40UtOjpav",
+            "docker@XIdCvT-4HyyglHJLRrHlz",
+            "dvc@qLKM1zGUhuyBwh_uXSyJJ",
+            "flink@o6GQ3-8DgDtHzdX6yeg1w",
+            "git@06T5CbZAGJU6fJhCmqCC8",
+            "github@7t7jSb3YgyWlhgCe8Se1I",
+            "gitlab@mu56TlVkhhgVzzESDRobc",
+            "go@vdVq3RQvQF3mF8PQc6DMg",
+            "grafana@YmRN43yAFF97c7MgNaiqs",
+            "jenkins@75mlW2JoUqSNFK2IDfqFP",
+            "jetson@Wpv_zRshtTFXNqp1S7m0F",
+            "kafka@fMNwzhgLgHlAZJ9NvKikR",
+            "kubeflow@QEayqA8zYsJn0rQYz-4zv",
+            "kubernetes@XQoK9l-xtN2J8ZV8dw53X",
+            "lime@pVSlVHXIap0unFxLGM-lQ",
+            "mlflow@93MPXEulKgPnuRlp7F-Nj",
+            "orchestration@fes7M--Y8i08_zeP98tVV",
+            "prometheus@EIjo6iFrU8iDm36_ZtaW5",
+            "python@Vh81GnOUOZvDOlOyI5PwT",
+            "pytorch@Zh7AfH6hJ6MMXiqSnQn7G",
+            "shap@JQKEWz0-vIJoLimLKvIzz",
+            "spark@UljuqA89_SlCSDWWMD_C_",
+            "sql@51x_5z0pHTE_yZoyvFUBy",
+            "tensorflow@so5IQDxKibaZlgoCh8tpQ",
+            "terraform@dA9AE-3lTB6lN-X-_Byd2",
+            "tflite@YFo3NnwVst5EBTtLR-cJ1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@SCn-6w1UEQwoLQ_dOPpL5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Infrastructure",
+      "name": "infrastructure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "infrastructure-as-code@sf67bSL7HAx6iN7S6MYKs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Machine",
+      "name": "machine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "machine-learning-fundamentals@ulka7VEVjz6ls5SnI6a6z",
+            "machine-learning@6uGYeXZn5fW2qPfSb8GJb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Maths",
+      "name": "maths",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "maths--statistics@C4KbkZ7c8TspXa3RBOCug"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mlops",
+      "name": "mlops",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mlops-components@l1xasxQy2vAY34NWaqKEe",
+            "mlops-principles@iTsEHVCo6KGq7H2HMgy5S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-evaluation@nS4igSghzVFwamhVOwCjm",
+            "model-training--serving@zsW1NRb0dMgS-KzWsI0QU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitoring",
+      "name": "monitoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitoring--observability@fR4Qr_ifoBLTpxdkJ50rB",
+            "monitoring--observability@r4fbUwD83uYumEO1X8f09"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Orchestration",
+      "name": "orchestration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "orchestration--deployment@5VuCUCfb4DEi0HKW11PIX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-fundamentals@_7uvOebQUI4xaSwtMjpEd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pytorch",
+      "name": "pytorch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pytorch-mobile@qyNOEqp7hW_P7-Isz_v4o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scikit",
+      "name": "scikit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scikit-learn@T-pybEZVvvXopCTbDykR-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control-systems@_NPGsGEjcLekjGisdDFWt",
+            "version-control@kHDSwlSq8WkLey4EJIQSR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-mlops@IghGpwAFVB067uOosmoDC"
+          ]
+        }
+      ]
+    }
+  ]
+}

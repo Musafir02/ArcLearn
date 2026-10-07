@@ -1,0 +1,4 @@
+{
+  "title": "Optimizing Flatlist Config",
+  "content": "Optimizing Flatlist configuration involves fine-tuning the properties of the Flatlist component to improve scrolling performance and memory usage in large data lists. By leveraging props such as `initialNumToRender`, `maxToRenderPerBatch`, `windowSize`, and `removeClippedSubviews`, developers can control how many items are rendered at once and how off-screen elements are handled. Adjusting these settings reduces the workload on the JavaScript bridge and helps maintain a smooth frame rate during complex list interactions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Optimizing Flatlist Configuration](https://reactnative.dev/docs/optimizing-flatlist-configuration)"
+}

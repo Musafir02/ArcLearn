@@ -1,0 +1,4 @@
+{
+  "title": "Support Vector Machines",
+  "content": "Support Vector Machines (SVMs) are a type of supervised learning algorithm used for classification and regression. They work by finding an optimal hyperplane that separates data points belonging to different classes with the largest possible margin. This hyperplane acts as a decision boundary, and new data points are classified based on which side of the hyperplane they fall on.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Support Vector Classification (SVC) - scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)\r\n- [@article@Support Vector Machines with Scikit-learn Tutorial](https://www.datacamp.com/tutorial/svm-classification-scikit-learn-python)\r\n- [@video@Mastering Support Vector Machines with Python and Scikit-Learn](https://www.youtube.com/watch?v=kPkwf1x7zpU)"
+}

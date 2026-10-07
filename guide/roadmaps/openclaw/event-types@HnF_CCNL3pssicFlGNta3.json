@@ -1,0 +1,4 @@
+{
+  "title": "Event Types",
+  "content": "Open Claw hooks support a range of event types, including command events like `/new` and `/reset`, session events like compaction, agent bootstrap events, gateway startup events, and message received and sent events.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Event Types](https://docs.openclaw.ai/automation/hooks#event-types)"
+}

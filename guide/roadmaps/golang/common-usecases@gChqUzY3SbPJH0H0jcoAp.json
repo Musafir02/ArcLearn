@@ -1,0 +1,4 @@
+{
+  "title": "Common Usecases",
+  "content": "Context package common uses: HTTP timeouts, database deadlines, goroutine cancellation coordination, and request-scoped values. Essential for web servers, microservices, circuit breakers, and building responsive APIs that handle cancellation gracefully.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Use Cases](https://go.dev/solutions/use-cases)\r\n- [@article@The Versatility of Go: Ideal Use Cases for the Golang Programming](https://dev.to/adityabhuyan/the-versatility-of-go-ideal-use-cases-for-the-golang-programming-language-7co)"
+}

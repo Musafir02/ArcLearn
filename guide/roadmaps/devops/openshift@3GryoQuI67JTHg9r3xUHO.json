@@ -1,0 +1,4 @@
+{
+  "title": "OpenShift",
+  "content": "OpenShift is a platform as a service (PaaS) built around Docker containers and the Kubernetes container orchestration system. It provides a comprehensive environment for developing, deploying, and managing containerized applications. OpenShift adds developer-centric tools and features on top of Kubernetes to streamline the application lifecycle, including automated builds, deployments, scaling, and health management.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Red Hat OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)\r\n- [@video@Getting Started with Red Hat OpenShift in 2025!](https://www.youtube.com/watch?v=hnYDrVl-Mzw)"
+}

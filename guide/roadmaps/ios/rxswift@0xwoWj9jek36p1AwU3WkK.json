@@ -1,0 +1,4 @@
+{
+  "title": "RxSwift",
+  "content": "RxSwift is the Swift implementation of the ReactiveX library, providing a comprehensive API for reactive programming. It introduces Observable sequences that emit items over time and a large set of operators for combining and transforming them. RxSwift was widely adopted in iOS development before Apple introduced Combine and remains in use in many codebases.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ReactiveX Documentation](https://reactivex.io/intro.html)\r\n- [@opensource@RxSwift Documentation](https://github.com/ReactiveX/RxSwift)\r\n- [@video@RxSwift Basics](https://www.youtube.com/watch?v=ES5RuLSv61g)"
+}

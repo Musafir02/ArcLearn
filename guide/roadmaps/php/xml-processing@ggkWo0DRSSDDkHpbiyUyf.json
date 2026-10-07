@@ -1,0 +1,4 @@
+{
+  "title": "XML Processing",
+  "content": "PHP processes XML using two main approaches: SimpleXML for straightforward access to XML data as objects, and the DOM extension for full programmatic control over the document tree. `XMLReader` handles large XML files efficiently by streaming rather than loading the entire document into memory.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@XML Processing](https://www.php.net/manual/en/book.xml.php)"
+}

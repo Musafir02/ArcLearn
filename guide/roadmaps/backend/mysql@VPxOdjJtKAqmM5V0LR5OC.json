@@ -1,0 +1,4 @@
+{
+  "title": "MySQL",
+  "content": "MySQL is an open-source RDBMS known for speed, reliability, and ease of use. Supports SQL, transactions, indexing, and stored procedures. Widely used for web applications, integrates with many languages, and is part of the LAMP stack. Maintained by Oracle with large community support.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@MySQL Docs](https://dev.mysql.com/doc/)\r\n- [@article@MySQL for Developers](https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction)\r\n- [@article@MySQL Tutorial](https://www.mysqltutorial.org/)\r\n- [@video@MySQL Complete Course](https://www.youtube.com/watch?v=5OdVJbNCSso)"
+}

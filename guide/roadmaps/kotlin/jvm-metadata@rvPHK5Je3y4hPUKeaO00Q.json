@@ -1,0 +1,4 @@
+{
+  "title": "JVM Metadata",
+  "content": "The `kotlin-metadata-jvm` library provides tools to read, modify, and generate metadata from Kotlin classes compiled for the JVM. This metadata, stored in the `@Metadata` annotation within `.class` files, is used by libraries and tools such as `kotlin-reflect` to inspect Kotlin-specific constructs such as properties, functions, and classes at runtime.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Kotlin Metadata JVM library](https://kotlinlang.org/docs/metadata-jvm.html)\r\n- [@official@kotlin-metadata-jvm](https://kotlinlang.org/api/kotlinx-metadata-jvm/)"
+}

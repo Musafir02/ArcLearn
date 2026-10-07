@@ -1,0 +1,799 @@
+{
+  "title": "Terraform Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "",
+      "name": "",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "-replace-option-in-apply@jvHtSRLuCXJrGIiesgbE-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-syntax@LaD0H7XhoEEaXbcwjxAbw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-practices-for-state@jas0XILqCUXjWRk3ZoSEO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cac",
+      "name": "cac",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cac-vs-iac@UsINvx84pBF1hp8XoLF4c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd-integration@O194eWh529jj4VDhKxNSj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circle",
+      "name": "circle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circle-ci@6OoAdvikyp0byMH2oZhyQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clean",
+      "name": "clean",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clean-up@inbTto9Qukdj6egRJ0Zh9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compliance",
+      "name": "compliance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compliance--sentinel@z0PcbgpHbR6Fm07-On4P8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Configuring",
+      "name": "configuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "configuring-providers@JJ-QhLWqT0luis_kVDVHW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contract",
+      "name": "contract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contract-testing@bjozhkpOI9UjjNfmT5HhY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-local-modules@wQN1QrK9VB_fHlXrBzDoU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creation",
+      "name": "creation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creation--destroy-time@CJfCpRN_oVf6n_EfLNJSV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-provisioners@HEr-BBxE3jRKTqRnguds1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-sources@huXZz55P7kVJwTn5BS_Wk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deployment",
+      "name": "deployment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deployment-workflow@wL3WWhjPEgFmumOmCPRDf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "End",
+      "name": "end",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "end-to-end-testing@QqwlAtz7VfrMtNEGpT5Sa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enterprise",
+      "name": "enterprise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enterprise-features@elW7IMBSF0ydmlb7rtI1o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environment",
+      "name": "environment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environment-variables@fm8oUyNvfdGWTgLsYANUr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-provisioner@Qch8k6e4pS8OlmG_sI0hH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Format",
+      "name": "format",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "format--validate@Xes24SqkwSaO844kLbClj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication@RPcsyhIG027uP7KF0hwaY",
+            "checkov@ljj7ngl1N4ezCXQ0o6Y8x",
+            "count@kyScfijEntX9H1mp7tmej",
+            "depends_on@EIsex6gNHDRYHn0o2spzi",
+            "deployment@pjmOK1MEMnIV_zAlaOF01",
+            "for_each@gcdg_GhAacIWzv19ITTE_",
+            "graph@vAFFgKSthyj_3Lxt-Z6pg",
+            "hcp@erxow5xNRj01WepdFOhVf",
+            "infracost@oANePqjkwtNMwvV-_W0B7",
+            "introduction@h6qRrUe-bn25s0UkxU600",
+            "jenkins@qFpaqOSoefTyKxmI-FRZt",
+            "kics@MUkbLTMzmaVWbAJj6G3aj",
+            "lifecycle@0A8zTuCXVmcruJdfH3cNu",
+            "list@Y-mgCkDpawt5NrMwDH9Ki",
+            "modules@R2AORYmc1NgGTqLZY5Fu-",
+            "mv@0xVXwjWPFXDGRw_3p6th6",
+            "output@kw32gb4HSeCEoBwkeziS_",
+            "outputs@7GK4fQf1FRKrZgZkxNahj",
+            "parallelism@RtwZy60ruRpskmgr1qYYf",
+            "preconditions@DB-p_S4Ce4tDWF4wDiGSt",
+            "provider@5FLOFTP_nCa3qi1wbV4qE",
+            "providers@ZRVv9onD7KGz1cJLcsnwy",
+            "provisioners@6vs1VvjeILgAPLL6g7dfy",
+            "resources@BYydmFc2e-YPCC4MCWmh2",
+            "rm@uR6Vjm8cek9JRzZV0iTXh",
+            "security@3MnZK2V5KhBhw67SyUVPk",
+            "show@7DZB2VeyuouFXOdFEfeZt",
+            "state@5xAE-9viD7DP_ugQ6NE_C",
+            "terragrunt@AEtW6j2GcfZz7IXk4sM6c",
+            "terrascan@NSWG79dEygyl6pb54wLrE",
+            "testing@QSftI21seX6I_xPonlfmU",
+            "tflint@YftsQYpcqJqBKPjy5tWOq",
+            "trivy@Vxo_gNdFl3CZXV7GLPqjD",
+            "variables@AY7_xUeCl6ilqZzg1YFoP",
+            "versioning@1T35eNO18qoyXcX7S-Jox",
+            "versions@bnQ2YLHd7E-vRxX3PnUEX",
+            "workspaces@JoUWF6AQoreELxFHNi9oo",
+            "workspaces@nFq-64JQoYAKjN9YkmOfO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@weIlGqGN15U8BH1yE9moA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gitlab",
+      "name": "gitlab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gitlab-ci@fH27mGrdnkDQCrGGDFU6p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hashicorp",
+      "name": "hashicorp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hashicorp-config-language-hcl@qhO7CY-1_vuh2BVJYQCzh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Import",
+      "name": "import",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "import-existing-resources@L7wAMGi_yU-Bbc9fXlmxZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input-variables@VxMse1VTZAUtVhpKv1OHS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inputs",
+      "name": "inputs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inputs--outputs@NsBJTYH9KXvjJuhPzjE_L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inspect",
+      "name": "inspect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inspect--modify-state@KXlLlaR0_S7gE_ZB1hNEd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-terraform@AYtBLFU1nowEq-EVlXrEZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing@ENkLj3z6hR2cKT7rBhYp5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-exec-provisioner@g2F5-nX4Aw-xWZiypNbnL",
+            "local-values@1mFih8uFs3Lc-1PLgwiAU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Meta",
+      "name": "meta",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "meta-arguments@TPd00dRndj1P8674KTTrm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modules",
+      "name": "modules",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modules-best-practices@gTMPK0tfs2JYgoL7SAGW6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Output",
+      "name": "output",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "output-syntax@31fa8kBzCEn-uCrTSoPM4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-initialization@GlIXmCuvR_C81RMeMM1Kz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Published",
+      "name": "published",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "published-modules-usage@AAg_iFggkEZNL12-6nkgK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remote",
+      "name": "remote",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remote-exec-provisioner@JQE3_KakBXZdMVP_pPFNS",
+            "remote-state@pDm08NBVwGf9rAIZC_ZIR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-behavior@BgZu7Xao5GjR8StVL7qhM",
+            "resource-lifecycle@76kp98rvph_8UOXZR-PBC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Root",
+      "name": "root",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "root-vs-child-modules@6W4_akHG9YtvN6dpbZnG-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Run",
+      "name": "run",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "run-tasks@nU1WoRtxRF9KeNhzuwNUB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-terraform@ECcHo0KTDN27MuVTC-Fwy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Secret",
+      "name": "secret",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "secret-management@uVz9WwVAgMu1ZU0qjqVnc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sensitive",
+      "name": "sensitive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sensitive-data@16vLOPP9lTCuBh0q-UVMk",
+            "sensitive-outputs@8giL6H5944M2L0rwxjPso"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Splitting",
+      "name": "splitting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "splitting-large-state@zCU02_5Pide5BZiuMuqEU",
+            "splitting-state-files@a0rUMnYluVUGhyhlDK5S8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-force-unlock@Trpi2ZlnXZVYJCibE2bQ8",
+            "state-locking@GseYuG9wT8H9R_enxWzuQ",
+            "state-pull--push@wSh7bbPswcFAzOicX8VPx",
+            "state-replace-provider@Os6AOXp1CVI_Bh3NYnX17"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-files@tB4zfwY4E3GmXo-XQwS-l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Terraform",
+      "name": "terraform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "terraform-apply@LDpj-LY_SOXzno04D-Y25",
+            "terraform-destroy@LPI13FILvkD55hWcWbPrV",
+            "terraform-fmt@78bGm8J5Y1I8H4qioOvWb",
+            "terraform-plan@LDxAXmTKyvogvgUpvN5pT",
+            "terraform-registry@iIjUG_N_mQtLHG25v4-xg",
+            "terraform-validate@wdYLjB-tKg76B7YcnhevQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-modules@H3_So6qX-s2131WHGR_GO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-constraints@HUiodBFIp_rsQDkf3WgbI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@V7_NnDIY1MefV_xjCCsnI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usecases",
+      "name": "usecases",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usecases-and-benefits@hRIDJHIxWc5Iav7tsu8l-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Validation",
+      "name": "validation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "validation-rules@U2n2BtyUrOFLnw9SZYV_w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variable",
+      "name": "variable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variable-definition-file@rdphcVd-Vq972y4H8CxIj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vcs",
+      "name": "vcs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vcs-integration@Z6dG92afC8SGwCFNTx4ac"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-management@6zFuSNOfbPaYIE_t--2nr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-and-when-to-use-hcp@K_7dB-5cCYzGbwYXXaoiY",
+            "what-is-hcl@Hma2IgatFME8STHPwpeMG",
+            "what-is-infrastructure-as-code@twR3k9D-qDr1CbyW6K0Fs",
+            "what-is-terraform@CU9V3iRdssamsG-xMouXT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "When",
+      "name": "when",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "when-to-use@CmmoshFC1dKE4y3SMN2bl"
+          ]
+        }
+      ]
+    }
+  ]
+}

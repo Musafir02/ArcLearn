@@ -1,0 +1,4 @@
+{
+  "title": "Fan-in",
+  "content": "Concurrency pattern merging multiple input channels into single output channel. Allows collecting results from multiple goroutines. Typically implemented with select statement or separate goroutines for each input. Useful for aggregating parallel processing results.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Fan Out Fan In Concurrency Pattern Explained](https://www.golinuxcloud.com/go-fan-out-fan-in/)\r\n- [@article@Golang Concurrency Patterns: Fan in, Fan out](https://medium.com/geekculture/golang-concurrency-patterns-fan-in-fan-out-1ee43c6830c4)"
+}

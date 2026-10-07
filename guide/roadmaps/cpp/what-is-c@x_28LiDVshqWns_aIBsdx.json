@@ -1,0 +1,4 @@
+{
+  "title": "What is C++?",
+  "content": "C++ is a powerful, general-purpose programming language. It is an extension of the C language, adding features like object-oriented programming, which allows you to structure code into reusable components. C++ is known for its high performance, efficiency, and control over system resources, making it suitable for a wide range of applications, including game development, operating systems, and high-performance computing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Learn C++](https://www.learncpp.com/)\r\n- [@video@C++ Tutorial for Beginners - Full Course](https://youtu.be/vLnPwxZdW4Y)"
+}

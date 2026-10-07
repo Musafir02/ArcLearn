@@ -1,0 +1,4 @@
+{
+  "title": "Retrieving single elements",
+  "content": "Kotlin collections provide a set of functions for retrieving single elements from list and sets. You can select single elements by position, by condition, with selectors, and even using random selection.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Retrieve single elements](https://kotlinlang.org/docs/collection-elements.html)\r\n- [@video@Collections | Retrieving Single element from Collection](https://www.youtube.com/watch?v=4BncuTvd3hc)"
+}

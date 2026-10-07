@@ -1,0 +1,4 @@
+{
+  "title": "Multi-Agents",
+  "content": "Multi-agent mode lets you run several specialized agents in the same Open Claw gateway, each with its own workspace, auth profiles, and session store. They can operate independently or be coordinated through routing rules and shared memory.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Multi-Agent Routing](https://docs.openclaw.ai/concepts/multi-agent)\r\n- [@official@Sub-Agents](https://docs.openclaw.ai/tools/subagents)"
+}

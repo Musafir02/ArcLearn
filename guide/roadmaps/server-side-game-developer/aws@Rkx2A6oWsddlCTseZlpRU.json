@@ -1,0 +1,4 @@
+{
+  "title": "Amazon Web Services",
+  "content": "Amazon Web Services (AWS) is the largest cloud platform, offering services like EC2 (virtual machines), EKS (managed Kubernetes), GameLift (game server hosting), DynamoDB, and CloudFront. Its breadth of services and global regions make it a common foundation for game backend infrastructure.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@What is Amazon GameLift Servers? - AWS Documentation](https://docs.aws.amazon.com/gameliftservers/latest/developerguide/gamelift-intro.html)\r\n- [@official@Amazon GameLift Family - AWS](https://aws.amazon.com/gamelift/)\r\n- [@official@Getting Started with Amazon GameLift Servers - AWS Documentation](https://docs.aws.amazon.com/gameliftservers/latest/developerguide/getting-started-intro.html)"
+}

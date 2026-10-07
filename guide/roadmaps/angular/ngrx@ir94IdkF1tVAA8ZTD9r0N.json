@@ -1,0 +1,4 @@
+{
+  "title": "NgRx",
+  "content": "NgRx is a framework for building reactive applications in Angular. NgRx simplifies managing application state by enforcing unidirectional data flow and providing tools like NgRx Store, NgRx Effects, NgRx Router Store, NgRx Signals, NgRx Entity, and NgRx Operators.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@What is NGRX?](https://ngrx.io/docs)\r\n- [@article@Angular NgRx Store and Effects Crash Course](https://blog.angular-university.io/angular-ngrx-store-and-effects-crash-course/)\r\n- [@video@Angular State Management with NgRx](https://www.youtube.com/watch?v=a3_GW3RBqn0)\r\n- [@video@Angular NgRx Signal Store Crash Course (For NgRx Beginners)](https://www.youtube.com/watch?v=HqxY0JPlh54)"
+}

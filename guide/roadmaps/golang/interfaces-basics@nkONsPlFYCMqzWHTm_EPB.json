@@ -1,0 +1,4 @@
+{
+  "title": "Interfaces Basics",
+  "content": "Define contracts through method signatures. Types automatically satisfy interfaces by implementing required methods. Declared with `type InterfaceName interface{}` syntax. Enable polymorphism and flexible, testable code depending on behavior rather than concrete types.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Understanding Interfaces in Go](https://golang.ntxm.org/docs/structs-and-interfaces/understanding-interfaces-in-go/)\r\n- [@article@Interfaces - Go by Example](https://gobyexample.com/interfaces)\r\n- [@article@Mastering Go Interfaces: From Basics to Best Practices](https://abubakardev0.medium.com/mastering-go-interfaces-from-basics-to-best-practices-36912b65aa3d)"
+}

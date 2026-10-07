@@ -1,0 +1,4 @@
+{
+  "title": "Extended Regular Expressions",
+  "content": "Extended regular expressions (EREs) are a more powerful and flexible version of basic regular expressions. They offer additional metacharacters and features that simplify pattern matching and make complex searches easier to express. EREs are commonly used with tools like `grep -E`, `awk`, and `sed -E` in shell scripting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Extended Regular Expressions](https://pressbooks.senecapolytechnic.ca/uli101/chapter/extended-regular-expressions/)"
+}

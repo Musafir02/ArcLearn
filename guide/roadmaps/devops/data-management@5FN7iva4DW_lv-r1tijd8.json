@@ -1,0 +1,4 @@
+{
+  "title": "Data Management",
+  "content": "Data management patterns address the challenges of storing, accessing, and maintaining data in distributed cloud systems. They cover strategies for handling data consistency, partitioning large datasets, separating read and write workloads, and keeping data synchronized across services that may each maintain their own data store.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Data management patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/data-management)\r\n- [@video@What is Master Data Management](https://www.youtube.com/watch?v=l83bkKJh1wM)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "ClickHouse",
+  "content": "ClickHouse is an open-source, column-oriented database management system designed for online analytical processing (OLAP). It excels at processing large volumes of data quickly, making it suitable for applications that require real-time analysis and reporting. Its column-oriented storage allows for efficient data compression and retrieval, as it only reads the columns needed for a specific query.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ClickHouse](https://clickhouse.com/)\r\n- [@official@What is ClickHouse?](https://clickhouse.com/docs/intro)\r\n- [@opensource@clickhouse](https://github.com/ClickHouse/ClickHouse)\r\n- [@video@How to Get Started with ClickHouse](https://www.youtube.com/watch?v=6mmQUOmA-T0&list=PL0Z2YDlm0b3gtIdcZI3B_8bMJclDOvY8s)"
+}

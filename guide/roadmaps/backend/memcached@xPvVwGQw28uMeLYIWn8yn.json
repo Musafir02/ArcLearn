@@ -1,0 +1,4 @@
+{
+  "title": "Memcached",
+  "content": "Memcached is a distributed memory-caching system that speeds up dynamic websites by caching data and objects in RAM. Provides large distributed hash table across multiple machines with LRU eviction. Applications layer requests in RAM before falling back to slower backing stores.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@memcached/memcached](https://github.com/memcached/memcached#readme)\r\n- [@article@Memcached Tutorial](https://www.tutorialspoint.com/memcached/index.htm)\r\n- [@video@Redis vs Memcached](https://www.youtube.com/watch?v=Gyy1SiE8avE)"
+}

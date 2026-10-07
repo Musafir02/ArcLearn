@@ -1,0 +1,4 @@
+{
+  "title": "Exception Handling",
+  "content": "In JavaScript, all exceptions are simply objects. While the majority of exceptions are implementations of the global Error class, any old object can be thrown. With this in mind, there are two ways to throw an exception: directly via an Error object, and through a custom object. (excerpt from Rollbar)\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Throwing Exceptions in JavaScript](https://rollbar.com/guides/javascript/how-to-throw-exceptions-in-javascript)\r\n- [@video@try, catch, finally, throw (video)](https://youtu.be/cFTFtuEQ-10)"
+}

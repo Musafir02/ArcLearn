@@ -1,0 +1,4 @@
+{
+  "title": "Basics of ASP.NET Core",
+  "content": "[ASP.NET](http://ASP.NET) Core is a open-source, cross-platform web framework for building modern web applications using .NET. Some of the basics of [ASP.NET](http://ASP.NET) Core are Cross-platform, Open-source, Modular, High performance, MVC pattern, Dependency Injection, Middleware, Razor Pages and Razor Components, EF Core.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@ASP.NET documentation](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0)\r\n- [@article@ASP.NET Core Tutorial](https://www.tutorialspoint.com/asp.net_core/index.htm)\r\n- [@article@Learn ASP.NET Core from Scratch](https://www.tutorialsteacher.com/core)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "OpenAI Models (GPT, o-series)",
+  "content": "OpenAI models, including the GPT and \"o-series\" (like Whisper), are pre-trained AI models offered by OpenAI, accessible via their API. GPT models excel at natural language tasks like text generation, translation, and question answering. The \"o-series\" refers to OpenAI's other specialized models; for example, Whisper is a speech-to-text transcription model.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@OpenAI Platform](https://openai.com/api/)\r\n- [@official@OpenAI Models](https://developers.openai.com/api/docs/models)\r\n- [@article@Your guide to the complete OpenAI models list](https://www.eesel.ai/blog/openai-models-list)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Authentication / Authorization",
+  "content": "Authentication testing verifies that the system correctly identifies users through login flows, session management, and token handling. Authorization testing verifies that authenticated users can only access the resources they are permitted to. Weak authentication or authorization is consistently among the most critical and exploited security vulnerabilities.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@OWASP Website](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)"
+}

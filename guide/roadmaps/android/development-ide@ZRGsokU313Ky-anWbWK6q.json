@@ -1,0 +1,4 @@
+{
+  "title": "Development IDE",
+  "content": "Android Studio is the official integrated development environment for Android development. It is built on IntelliJ IDEA and provides tools for code editing, debugging, performance profiling, and device emulation. It also integrates directly with the Gradle build system and the Android SDK.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Android Studio](https://developer.android.com/studio)\r\n- [@official@Android Studio Documentation](https://developer.android.com/studio/intro)\r\n- [@video@Android Studio Tutorial (2024 Edition) - Part 1](https://www.youtube.com/watch?v=saKrGCWlJDs)"
+}

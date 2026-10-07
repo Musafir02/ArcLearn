@@ -1,0 +1,525 @@
+{
+  "title": "Html Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "B",
+      "name": "b",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "b--strong@efddQv5AZqvGmIyuYuCr7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-tags@MjGfRzhVZRxu545TbJ1AJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-of-seo@yEl77JIN5-ixN5Ay247qp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Case",
+      "name": "case",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "case-insensitivity@qXcn_AGcGWjT8GgjaW5WN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-attributes@7iDMmYQ-2Q6hrrFnUgRuP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Definition",
+      "name": "definition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "definition-lists@pEcxDj3dSgAwxydwKWU7d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Domain",
+      "name": "domain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "domain-names@oRjacb1OqAlsP-YB16Nuy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embedding",
+      "name": "embedding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embedding-media@UevJNi2HHNzpCAx7Icd0k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-css@PhC4amuHcgxujOJisNsIr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-uploads@-UlDLjC8VsrKB9yexMtlr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Form",
+      "name": "form",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "form-validation@6NvYDlYYLZzf4IHXu0dWs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frontend",
+      "name": "frontend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frontend-development@Xy15NSxlS0QXYNzEvgocK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abbr@aeovzlUV4oWwZCMcAoRVC",
+            "accessibility@YHoag7UR40OeIVUjfhQg_",
+            "address@PGKWhfXEd3Iv0AIhL7y4_",
+            "article@99wo0cNHe0sU63_aDBrxY",
+            "aside@VahoGEC6I3jX1916MsmUY",
+            "audio@k8FZPxFcDPVnXBONWUhME",
+            "blockquote@B-Bv4aY_tGgWakyT8TgEe",
+            "body@93tSk4RwWfkfOyaA7I9Gn",
+            "br@cBKw3jiAvdXVwUryV1aJl",
+            "browsers@4gvPprSH7hRS4gtXNMcCF",
+            "cite@PE_WoH4nbGAJSJT14Qli0",
+            "class@R0mDuO5V5NJI8Yupc_i8i",
+            "csp@9FAlTHlRj_DVjbpuiGRzD",
+            "css@fX71CXA26cUxY5WX_zABi",
+            "del@v3Uf4LTfCbyasNJ-2Vfj9",
+            "dfn@jfC0Og9340AK7b3Fhp4WI",
+            "div@ihP3FIRMr8iQTdOja_CxV",
+            "dns@0Q41Bm_TZqsC7X-MH8uFe",
+            "doctype@VscH3rVqpX29vaKmdCMop",
+            "footer@rjE1yjFZ6KBWXgXDRIZc1",
+            "head@Ufgy4-kC2drCov4MqEhjy",
+            "header@0AF0Xs2nWVZav9t5Eh9NX",
+            "hosting@t9KmPbRh6pkfouPi1mBqJ",
+            "hr@Bdu0_AcAADs7YiCaHte1g",
+            "html@b83npHc-R9M03hEGzA9Ha",
+            "html@fP2cPskF9KzppZUhfyB8U",
+            "id@PikSDs0EZ93RauZc_GDEw",
+            "iframe@W0pWVr4cdxSan9Ceu5t7i",
+            "images@94HB2gvHgcEIeFQTlbVDu",
+            "ins@G_hZBbIGOLn1-sh1jROL3",
+            "introduction@JkLec2vSBMFAUc1Dzra-L",
+            "javascript@F-9uI39S9oYVGA8hi7aZI",
+            "limitations@HxgDw9gh1vHiMIMyZW8H2",
+            "links@wmAps9IeAvOxcqBqgUAXN",
+            "main@InNY2DPYlnZaeBG9X_sMI",
+            "mark@9S2IUUWVv_Q7ZfD7VqfhH",
+            "meta@ceAHMWQeaqURKWy628QBH",
+            "nav@4uKQubirOgXz9ZvfR9cWa",
+            "p@czmIvZYONFDxB2UNpT8U1",
+            "pre@-2BvwJsqa5K8Tb8oSDUC8",
+            "q@Xprekf2SY1fevcR2P5gRw",
+            "s@Hx8mfbfkvRrBqLypE_NL3",
+            "section@1WvHjkclwT-LUGdeuygzV",
+            "span@f7-umBvAzDZxHtHgJMCj6",
+            "style@GpaI2IDHDOZjyT3AZMbYD",
+            "sub@JU8Ff3DSCn_db0K7-P-Op",
+            "sup@o1rSXBsjhD-sN0FdOK_dm",
+            "title@SS7JmTrySRmRlzInvRJxw",
+            "video@mWc4HuNQACXGpJjEPa79j",
+            "whitespaces@IUsaaRxiuOn3y9uYbpsJ0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grouping",
+      "name": "grouping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grouping-text@Wu3oW_gnjKTYV8QJHdNxi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "H1",
+      "name": "h1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "h1-to-h6@AmIRWclu6IYViWHXnGA8U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-the-web-works@0CHn_ubTBRWgrYGy0moZh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Html",
+      "name": "html",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "html-comments@-ME4w8Bm5krSH14Yno4E5",
+            "html-entities@Ego3XwBDgqlXOj6jSNvpy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "I",
+      "name": "i",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "i--em@9EGwQalXfVGpVcMpTeD4V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Img",
+      "name": "img",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "img-vs-figure@f5O_U9dt0b73ZhLrWWz2L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Including",
+      "name": "including",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "including-javascript@5Ze6iqSnZLpQWnhUSGQOE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inline",
+      "name": "inline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inline-css@ievbuvgPKo261hM-9F117"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Internal",
+      "name": "internal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "internal-css@1uhThwxjHgXPu_i1__1eE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Labels",
+      "name": "labels",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "labels-and-inputs@9R5WYPxlChmz6bevJUwsT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lists",
+      "name": "lists",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lists-and-types@oHbzYpFInyr5aKCe-NWkC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested-lists@wDBnbKni0SamOqNhnp87B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ordered",
+      "name": "ordered",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ordered-lists@ePOzN3Sh5tCYlAbsweWU0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Priority",
+      "name": "priority",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "priority-hints@znqYy9Tgfpe-qakjRr7KU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Semantic",
+      "name": "semantic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "semantic-markup@aJTXstcrsINdov7yrH8cE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Standard",
+      "name": "standard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "standard-attributes@xgw2ux-2Poml1fjWxjFsu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Styling",
+      "name": "styling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "styling-basics@51NlCt5pvWNfa70WaE2M4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Table",
+      "name": "table",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "table-tag@3P9p18a9EjbjjMtzpoVRN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tags",
+      "name": "tags",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tags-and-attributes@nOIijMH-3TvcO1KL6qzwf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Textual",
+      "name": "textual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "textual-tags@ksKI4TDz4_9IcmNORczWo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unordered",
+      "name": "unordered",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unordered-lists@LKn40uz56vYrPnLG3I-CY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-forms@P_wR4dwto2NKrvTRbdBIX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-markup-languages@4gst44L8-ps9YFMHzucfN",
+            "what-is-http@nXRjahYSDqfEqY26yfLEt",
+            "what-is-seo@6vGbvRsmQgOpRh8JJ3RF_"
+          ]
+        }
+      ]
+    }
+  ]
+}

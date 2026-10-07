@@ -1,0 +1,4 @@
+{
+  "title": "For unrelated tasks, clean and start new sessions",
+  "content": "When switching to a different task, start a new chat. Carrying over context from an unrelated session confuses the AI, reduces the quality of responses, and wastes tokens on information that is no longer relevant.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Want Better AI Outputs? Try Context Engineering - GitHub Blog](https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/)\r\n- [@article@Context Engineering: Managing AI-Generated Code Complexity - INNOQ](https://www.innoq.com/en/blog/2025/10/ai-context-management/)\r\n- [@article@What Is the WHISK Framework? AI Coding Context Management](https://www.mindstudio.ai/blog/what-is-whisk-framework-ai-coding-context-management/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "touch",
+  "content": "The `touch` command is a fundamental utility used to update the access and modification times of files and directories. If a file doesn't exist, `touch` creates an empty file with the specified name. It's commonly used to create new, empty files or to quickly update the timestamps of existing files without modifying their content.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Bash touch Command - Change File Timestamps](https://www.w3schools.com/bash/bash_touch.php)\r\n- [@video@Touch Command Made Easy (Linux Crash Course)](https://www.youtube.com/watch?v=bP0dwXU8B64)"
+}

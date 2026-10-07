@@ -1,0 +1,4 @@
+{
+  "title": "Cloud SQL (Database)",
+  "content": "Google Cloud SQL is a fully-managed, cost-effective and scalable database service that makes it easy to set-up, maintain, manage and administer MySQL, PostgreSQL, and SQL Server databases in the cloud. Hosted on Google Cloud Platform, Cloud SQL provides a database infrastructure for applications running anywhere.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Cloud SQL](https://www.cloudskillsboost.google/course_templates/701)\r\n- [@official@Cloud SQL](https://cloud.google.com/sql)\r\n- [@official@Cloud SQL overview](https://cloud.google.com/sql/docs/introduction)"
+}

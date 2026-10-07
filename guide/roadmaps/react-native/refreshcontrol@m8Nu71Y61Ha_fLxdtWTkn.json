@@ -1,0 +1,4 @@
+{
+  "title": "Refresh Control",
+  "content": "`RefreshControl` is a component in React Native that is used to provide pull-to-refresh functionality for scrollable components like `ScrollView`, `ListView`, and `FlatList`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Refresh Control](https://reactnative.dev/docs/refreshcontrol)\r\n- [@official@ScrollView](https://reactnative.dev/docs/ScrollView)\r\n- [@official@FlatList](https://reactnative.dev/docs/FlatList)"
+}

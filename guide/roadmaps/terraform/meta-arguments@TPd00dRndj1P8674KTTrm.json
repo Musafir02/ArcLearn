@@ -1,0 +1,4 @@
+{
+  "title": "Meta Arguments",
+  "content": "Meta-arguments are special arguments available on any resource block that change how Terraform handles that resource. They are not specific to a provider and are built into Terraform itself. Meta-arguments include `depends_on`, `count`, `for_each`, `provider`, and `lifecycle`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Meta Arguments in Terraform](https://muditmathur121.medium.com/meta-arguments-in-terraform-aaaa6e3734e6)\r\n- [@article@Terraform Meta-Arguments](https://www.devopsschool.com/blog/terraform-tutorials-meta-arguments/)\r\n- [@video@Resource Meta Arguments](https://www.youtube.com/watch?v=7JraLCfroyE)"
+}

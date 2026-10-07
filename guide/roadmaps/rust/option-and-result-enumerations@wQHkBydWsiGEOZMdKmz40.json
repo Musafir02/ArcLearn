@@ -1,0 +1,4 @@
+{
+  "title": "Option & Result Enumerations",
+  "content": "`Option<T>` handles nullable values with `Some(T)` and `None` variants, replacing null pointers safely. `Result<T, E>` manages error handling with `Ok(T)` for success and `Err(E)` for failures. Both enums enable safe error handling through pattern matching and method chaining.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Option & unwrap](https://doc.rust-lang.org/rust-by-example/error/option_unwrap.html)\r\n- [@official@Result](https://doc.rust-lang.org/rust-by-example/error/result.html)\r\n- [@article@Error Handling in Rust - Andrew Gallant's Blog](https://burntsushi.net/rust-error-handling)\r\n- [@article@Using unwrap() in Rust is Okay - Andrew Gallant's Blog](https://burntsushi.net/unwrap/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Modules",
+  "content": "Modules are reusable packages of Terraform configuration that group related resources together. They allow you to abstract and share infrastructure patterns across projects and teams. Every Terraform configuration is technically a module; the directory you run Terraform from is called the root module.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Modules Overview - Configuration Language | Terraform](https://developer.hashicorp.com/terraform/language/modules)\r\n- [@official@Modules - Terraform Registry](https://registry.terraform.io/browse/modules)"
+}

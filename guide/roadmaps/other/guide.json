@@ -1,0 +1,18 @@
+{
+  "title": "Other Topics",
+  "outline": [
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "migrations@MOLAXgs0CMCT7o84L0EaK.md"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "MLOps Components",
+  "content": "MLOps components are the building blocks that together form a working ML pipeline. These usually include version control, CI/CD, orchestration, experiment tracking, data lineage, model training and serving, and monitoring. Each component handles a different part of the lifecycle, and combining them lets teams move a model from an idea to a stable production system.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@MLOps Workflow, Components, and Key Practices](https://mlops.tv/p/understanding-ml-pipelines-through)\r\n- [@article@MLOps Lifecycle](https://www.moontechnolabs.com/blog/mlops-lifecycle/)"
+}

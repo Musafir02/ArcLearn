@@ -1,0 +1,4 @@
+{
+  "title": "Questions to Ask",
+  "content": "- Are the new features reasonably documented?\r\n- Are all relevant types of documentation covered, such as README, API docs, user guide, reference docs, etc?\r\n- Is the documentation understandable and free of significant typos and grammar mistakes?\r\n\r\nLearn more from the following resources:\r\n\r\n- [@article@How to Write Software Documentation - Write the Docs](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)\r\n- [@article@8 Essential Code Documentation Best Practices - Heretto](https://www.heretto.com/blog/best-practices-for-writing-code-documentation)\r\n- [@article@Looking for Things in a Code Review - Google](https://google.github.io/eng-practices/review/reviewer/looking-for.html)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "HEARTBEAT.md",
+  "content": "[HEARTBEAT.md](http://HEARTBEAT.md) is a workspace configuration file where you define what the agent should do during each heartbeat cycle — essentially a set of instructions for proactive, time-based behavior.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@HEARTBEAT.md](https://docs.openclaw.ai/gateway/heartbeat#heartbeat-md-optional)\r\n- [@official@HEARTBEAT.md Template](https://docs.openclaw.ai/reference/templates/HEARTBEAT)"
+}

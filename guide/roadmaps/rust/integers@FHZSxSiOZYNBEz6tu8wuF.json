@@ -1,0 +1,4 @@
+{
+  "title": "Integers",
+  "content": "In Rust, integers are a primitive data type that hold whole number values, both positive and negative. Integer types in Rust can be divided into signed and unsigned ones:\r\n\r\n*   Signed integers, denoted by \"i\", are those that can hold negative, zero, and positive values.\r\n*   Unsigned integers, denoted by \"u\", only hold zero and positive values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Integer Data Type in Rust](https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-types)\r\n- [@official@Machine-dependent Integer Types](https://doc.rust-lang.org/reference/types/numeric.html#machine-dependent-integer-types)\r\n- [@article@Rust Data Types (With Examples)](https://www.programiz.com/rust/data-types#integer-type)\r\n- [@article@Integer Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#integer-types)"
+}

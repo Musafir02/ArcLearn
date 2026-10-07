@@ -1,0 +1,4 @@
+{
+  "title": "Memcached",
+  "content": "Memcached is a high-performance, distributed in-memory caching system. It is simpler than Redis, supporting only key-value string storage, but is very fast and horizontally scalable. Memcached is commonly used to cache database query results and reduce load on backend systems.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@memcached](https://github.com/memcached/memcached#readme)\r\n- [@article@Memcached Tutorial](https://www.tutorialspoint.com/memcached/index.htm)\r\n- [@video@Redis vs Memcached](https://www.youtube.com/watch?v=Gyy1SiE8avE)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "What is and how to use Gradle?",
+  "content": "Gradle is the build system used in Android projects to compile code, manage dependencies, and package applications. It uses Groovy or Kotlin DSL scripts to define project configuration. Android Studio generates Gradle files automatically, but understanding how to modify them is needed for adding libraries, setting build variants, and configuring app signing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Gradle Build Tool](https://docs.gradle.org/current/userguide/userguide.html)\r\n- [@official@Gradle Documentation](https://docs.gradle.org/current/userguide/getting_started_eng.html)\r\n- [@video@Gradle Course for Beginners - 55minutes](https://www.youtube.com/watch?v=R6Z-Sxb837I)\r\n- [@video@Introduction to Gradle for Complete Beginners - 25minutes](https://youtu.be/-dtcEMLNmn0?si=NuIP-3wNpUrxfTxA)"
+}

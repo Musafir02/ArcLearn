@@ -1,0 +1,4 @@
+{
+  "title": "Railway",
+  "content": "Railway is a deployment platform designed for speed and simplicity. It detects the type of project automatically and configures the deployment environment accordingly. It supports databases, back-end services, and front-end apps in the same project, which makes it convenient for full-stack deployments.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Railway](https://railway.com/)\r\n- [@official@Quick Start Tutorial](https://docs.railway.com/quick-start)\r\n- [@video@Fastest Way to Deploy a Full Stack Web App (Railway)](https://www.youtube.com/watch?v=JQIKobOcQ9k)"
+}

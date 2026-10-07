@@ -1,0 +1,4 @@
+{
+  "title": "Checkov",
+  "content": "Checkov is a static analysis tool for infrastructure as code that scans Terraform, CloudFormation, Kubernetes, and other formats for security and compliance issues. It includes hundreds of built-in checks covering major cloud providers and supports custom policies written in Python or YAML. Scan results can be output as JUnit XML for integration with CI systems.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Checkov](https://www.checkov.io/)\r\n- [@opensource@bridgecrewio/checkov](https://github.com/bridgecrewio/checkov)\r\n- [@article@Scanning Terraform Code with Checkov](https://devopscube.com/terraform-checkov-scan/)"
+}

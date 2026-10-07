@@ -1,0 +1,4 @@
+{
+  "title": "Authentication",
+  "content": "API authentication verifies client identity to ensure only authorized access to resources. Common methods include API keys, OAuth 2.0, JWT, and basic auth. It protects data, prevents unauthorized access, enables usage tracking, and provides granular control over API resources.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Basic Authentication](https://roadmap.sh/guides/basic-authentication)\r\n- [@article@Session Based Authentication](https://roadmap.sh/guides/session-based-authentication)\r\n- [@article@Token Based Authentication](https://roadmap.sh/guides/token-authentication)\r\n- [@article@JWT Authentication](https://roadmap.sh/guides/jwt-authentication)\r\n- [@article@OAuth - Open Authorization](https://roadmap.sh/guides/oauth)\r\n- [@article@SSO - Single Sign On](https://roadmap.sh/guides/sso)"
+}

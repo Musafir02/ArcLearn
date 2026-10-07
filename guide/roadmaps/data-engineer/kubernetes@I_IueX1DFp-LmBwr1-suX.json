@@ -1,0 +1,4 @@
+{
+  "title": "Kubernetes",
+  "content": "Kubernetes is an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications. In data engineering, it is used to run pipeline workers, schedule jobs, and manage microservices. Kubernetes has become the standard infrastructure layer for modern data platforms.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated Java Kubernetes](https://roadmap.sh/kubernetes)\r\n- [@official@Kubernetes Documentation](https://kubernetes.io/docs/home/)\r\n- [@article@Kubernetes: An Overview](https://thenewstack.io/kubernetes-an-overview/)\r\n- [@video@Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4)"
+}

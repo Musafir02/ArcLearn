@@ -1,0 +1,4 @@
+{
+  "title": "Resources",
+  "content": "Resources represent components of your infrastructure such as Virtual Machines, Storage Buckets, Databases or Virtual Private Clouds. Access to provider resources comes after successful project initialization after declaring your desired providers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Resource Blocks](https://developer.hashicorp.com/terraform/language/resources/syntax)\r\n- [@video@Define Infrastructure With Terraform Resources](https://developer.hashicorp.com/terraform/tutorials/configuration-language/resource)"
+}

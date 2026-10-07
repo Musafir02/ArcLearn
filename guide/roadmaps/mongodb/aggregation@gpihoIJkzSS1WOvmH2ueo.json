@@ -1,0 +1,4 @@
+{
+  "title": "Aggregation",
+  "content": "Aggregation in MongoDB is a powerful framework for data processing and transformation using a pipeline of stages. Each stage performs specific operations like filtering, grouping, sorting, or computing values, allowing complex data analytics and reporting. The aggregation pipeline offers operators for mathematical calculations, string manipulation, date operations, and advanced data transformations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Fundamentals of Data Transformation Skill Badge](https://learn.mongodb.com/courses/fundamentals-of-data-transformation)\r\n- [@official@Aggregation Operations](https://www.mongodb.com/docs/manual/aggregation/)\r\n- [@official@MongoDB Aggregation Operators](https://www.mongodb.com/docs/manual/reference/operator/aggregation/)\r\n- [@article@How To Use Aggregations in MongoDB](https://www.digitalocean.com/community/tutorials/how-to-use-aggregations-in-mongodb)"
+}

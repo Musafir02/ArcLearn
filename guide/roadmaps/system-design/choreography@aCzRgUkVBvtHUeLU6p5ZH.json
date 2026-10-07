@@ -1,0 +1,4 @@
+{
+  "title": "Choreography",
+  "content": "Choreography is an approach to coordinating a distributed workflow where each service reacts to events and decides its own next action, rather than a central controller directing the process. Services publish events when they complete a step, and other services listen and respond accordingly. This keeps services loosely coupled but can make the overall flow harder to trace.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Choreography pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography)"
+}

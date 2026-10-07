@@ -1,0 +1,4 @@
+{
+  "title": "@case",
+  "content": "The `@case` block is a control flow directive used within template expressions to match a specific value against an expression defined in a preceding `@switch` statement. When the value associated with a `@case` matches the switch expression, the content inside that block renders to the DOM. If no match is found among the defined cases, the template can optionally display a `@default` block as a fallback.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@@switch](https://angular.dev/guide/templates/control-flow#switch-block---selection)\r\n- [@article@Angular @switch: Complete Guide](https://blog.angular-university.io/angular-switch/)"
+}

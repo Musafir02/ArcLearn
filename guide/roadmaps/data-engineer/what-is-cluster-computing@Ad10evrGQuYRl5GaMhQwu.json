@@ -1,0 +1,4 @@
+{
+  "title": "What is Cluster Computing",
+  "content": "Cluster computing is a model where multiple computers are networked together to act as a unified processing system. Tasks are split across nodes in the cluster and executed in parallel. This approach is used in big data processing, scientific computing, and any workload that exceeds single-machine capacity.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is cluster computing? - IBM](https://www.ibm.com/think/topics/cluster-computing)\r\n- [@article@Computer cluster - Wikipedia](http://en.wikipedia.org/wiki/Computer_cluster)\r\n- [@video@WUnderstand the Basic Cluster Concepts](https://www.youtube.com/watch?v=8BBDxzJL6fY)"
+}

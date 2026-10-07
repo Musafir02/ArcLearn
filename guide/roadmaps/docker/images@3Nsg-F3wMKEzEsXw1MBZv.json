@@ -1,0 +1,4 @@
+{
+  "title": "Docker Images",
+  "content": "Docker images are lightweight, standalone packages containing everything needed to run software: application code, runtime, libraries, and system tools. Built in layers for efficient storage, they serve as blueprints for containers and can be shared through registries like Docker Hub for consistent deployment across environments.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What's the Difference Between Docker Images and Containers?](https://aws.amazon.com/compare/the-difference-between-docker-images-and-containers/)\r\n- [@video@What is an image?](https://www.youtube.com/watch?v=NyvT9REqLe4)"
+}

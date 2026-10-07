@@ -1,0 +1,4 @@
+{
+  "title": "Two-way Binding",
+  "content": "Two-way binding gives components in your application a way to share data. Use two-way binding to listen for events and update values simultaneously between parent and child components. Angular's two-way binding syntax is a combination of square brackets and parentheses, `[()]`, commonly known as `banana in a box`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Two-way binding](https://angular.dev/guide/templates/two-way-binding)\r\n- [@article@How to implement two-way data binding in Angular](https://www.angularminds.com/blog/how-to-implement-two-way-data-binding-in-angular)"
+}

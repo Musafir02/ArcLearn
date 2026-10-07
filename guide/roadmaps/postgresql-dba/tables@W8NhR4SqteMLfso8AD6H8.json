@@ -1,0 +1,4 @@
+{
+  "title": "Tables in PostgreSQL",
+  "content": "A table is one of the primary data storage objects in PostgreSQL. In simple terms, a table is a collection of rows or records, organized into columns. Each column has a unique name and contains data of a specific data type.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Table Basics](https://www.postgresql.org/docs/current/ddl-basics.html)"
+}

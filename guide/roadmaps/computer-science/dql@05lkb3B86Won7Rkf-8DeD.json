@@ -1,0 +1,4 @@
+{
+  "title": "DQL (Data Query Language)",
+  "content": "DQL (Data Query Language) is the subset of SQL used to retrieve data from a database, primarily through the SELECT statement. It is used to read and filter existing data without modifying it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Data Query Language](https://en.wikipedia.org/wiki/Data_query_language)"
+}

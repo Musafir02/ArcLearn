@@ -1,0 +1,1425 @@
+{
+  "title": "Product Manager Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ab",
+      "name": "ab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ab-testing@V3yGVN7z_ihLkScO0_92_",
+            "ab-testing@Ws7IFrHQNoBjLE2Td2xIZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Active",
+      "name": "active",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "active-listening@FwYc1942Z0_KYih0BQ1CL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-analysis@9y_I41kJhkmyBJjiTw8Xd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agile",
+      "name": "agile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agile-methodology@sAu4Gr1hg8S4jAV0bOSdY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-in-product-mgmt@H7sf23kwv73XjnFCdKHPi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Alignment",
+      "name": "alignment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "alignment--buy-in@D5GXDeApGwjmLG2-KF2pr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Analytics",
+      "name": "analytics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "analytics-tools@lJ_7-oYaFWST8aBd5lIgM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backlog",
+      "name": "backlog",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backlog-management@lq5Hl1ZXBQRRI_4ywn7yA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blue",
+      "name": "blue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blue-ocean-strategy@gjdCSm_jZmG_q6YjG_8Qu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Brainstorming",
+      "name": "brainstorming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "brainstorming-techniques@69IgqluiW9cVfezSIKInD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-and-leading-teams@MP-jZtofXCufnvtSldxqU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cac",
+      "name": "cac",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cac-customer-acquisition-cost@kVd36zDyjLvVG2Nw9gsXi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Case",
+      "name": "case",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "case-studies@JhhjMPTNb646aQKlS_cji"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Churn",
+      "name": "churn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "churn-rate@jRWVaNpTfBXVjpi4WNT7H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cohort",
+      "name": "cohort",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cohort-analysis@APdoU9kzHEqpUgKGKfyp9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Communicating",
+      "name": "communicating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "communicating-the-roadmap@NjLt_B_kV7FdnkOomqayx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Communication",
+      "name": "communication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "communication-skills@5-4MXlRjH-4PlF2giZpVL",
+            "communication-techniques@XGnJUxZu7_WnPkklvROon",
+            "communication-tools@IAta7OX7pAxUzkFdHibY9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competetive",
+      "name": "competetive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competetive-advantage@tTUp4GQHvjLZYkySasQFE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competitive",
+      "name": "competitive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competitive-analysis@PBDlYIyS8LAyPE6tV-kU7",
+            "competitive-strategy@qy_IXzenBOEVBMvVlXPaY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conflict",
+      "name": "conflict",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conflict-resolution@sQvkXvluZHgTIGS7W3Fj4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contingency",
+      "name": "contingency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contingency-planning@ybq-zRDLvtTTl8X8GnRNf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Continuous",
+      "name": "continuous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "continuous-roadmapping@qGvHqOSTPyVKll4mMVk7i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conversion",
+      "name": "conversion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conversion-rate@avkgeNNVQOCE7dvEKFVZv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-a-roadmap@eiqV86PWizZPWsyqoBU5k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Daily",
+      "name": "daily",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "daily-standups@BzgGJbXIwQb0yR2ZMCmul"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dark",
+      "name": "dark",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dark-launches@aCoVHIAZllwKckkkwExR7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-driven-decision-making@eO7glnL0HixQYnoF3uvSW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dau",
+      "name": "dau",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dau-daily-active-users@g2EgVtqwQxLfjBjomUqcU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defining",
+      "name": "defining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defining-goals@n2AYdM2dlJfuZ97jXY49U",
+            "defining-value-proposition@1j2ZSo7UGnBgoLpYzsA5t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-thinking@yPtxGBDEJkFBhF8ZgQUVH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Difficult",
+      "name": "difficult",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "difficult-conversations@iWCcvEEllfACoaXm5Ul5D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Emerging",
+      "name": "emerging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "emerging-market-trends@aDhSpLRZ6Sd8SnkcwtyLf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Emotional",
+      "name": "emotional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "emotional-intelligence@gyNOziqf1VsfI2j-FaNZ_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ethnographic",
+      "name": "ethnographic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ethnographic-research@VwI7plziVzwkp3KZd4466"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feature",
+      "name": "feature",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feature-creep@GbFbURxIRD76kyR9vKfdg",
+            "feature-toggles@7BCnM9A9PwYqsLmcNVfvt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feedback",
+      "name": "feedback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feedback-loops@kirIe5QsxruRUbWGfQtbD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Finding",
+      "name": "finding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "finding-balance@xu8A_QKs6lXzKPMiifNF_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Five",
+      "name": "five",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "five-forces-analysis@8CW_clQsc6SC4piQ3__0I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Future",
+      "name": "future",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "future-constraints@wuqZntn1ivkr9AV_09zYX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aha@dr5BLjsZXk50R7vp3cMsu",
+            "amplitude@Z5oorppEJ0ydvwMXSlk1J",
+            "baseline@GPRqshiha8Pi4a4ImW8-5",
+            "brainwriting@0emyqhl028_M6tdilfFC3",
+            "business@LPiCtvd00hWsCAefTIUxy",
+            "capabilities@8srsCEv55zh1y4gsp-rCO",
+            "decline@yOve7g_05UMpXHcGpdZcW",
+            "development@5okUFVMuG6mjRki4fyCcF",
+            "discord@e6gO1twjter9xWm14g9S9",
+            "discovery@vP4tfzP-hOiAsv4K4RsQy",
+            "execution@LhNgyNDeqCAD--dAzf6u8",
+            "growth@ke5vl9p3ouupjVmgU5IKw",
+            "heap@xas-t2sAKmJNfb0-Zcpwy",
+            "internationalization@lIdogd1DAzCo1ct7cdvYD",
+            "interpersonal@O5Ipa7PHeXUNEjQ6Mla7Y",
+            "introduction@9vy4uIoykk2zSSyIok4_S",
+            "introduction@GoYEAU_lZ186M3IJY48O6",
+            "jira@EPQ4-cKr-RqJ457XniP6w",
+            "linear@PIIGfDN6t8H6tXZuKuE04",
+            "looker@y8Ys_WfPXLVfJngOLryGR",
+            "maturity@aUJTPvO9Eb1UOD0MIY4Mf",
+            "narrative@zS_CjYSTOIkJZn-oUEvgh",
+            "notion@dk1YzX84UUe_es1x-dfp2",
+            "positioning@YPqdrZguH0ArEFSe-VwKS",
+            "proposition@ZCTSbMHAMSaOxlqaJImzr",
+            "retrospectives@AkKl7PrIPrIqXnss88v18",
+            "scamper@uLSPKcypF06AhzoeNVtDk",
+            "selection@toc34xxsB_tnHtekk1UmN",
+            "slack@UdOJDzkDP_R3E5f_IltYh",
+            "statement@DnKHDm0TZ7QQUyrhPdqkV",
+            "target@tmlFCmEuYpcUnt8VvVP9R",
+            "teams@z72akk5E5XjEuLraS9Gug",
+            "timeframe@E1yPzEhssJWMDLeSiL4cj",
+            "trello@SD98_s1ET_j2eIIKmcKRc",
+            "trend@s8mK1llA32B69_rzOwcwN",
+            "validation@fK3ZaX7Amna1oa_T5axVk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Go",
+      "name": "go",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "go-to-market-strategy@53XS2zKdK6IDdOP07yiT7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grooming",
+      "name": "grooming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grooming-sessions@sqxgqfxWMluhWtCWN8spG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Growth",
+      "name": "growth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "growth-hacking@wWWcIfPDGB92ed-1kV-uj",
+            "growth-strategies@4-w4BpDh4dpmnU9qfjqbU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Identify",
+      "name": "identify",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "identify-partners@1M6WpW1wbJcXMb3nf10U2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Identifying",
+      "name": "identifying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "identifying-market-needs@LkDLk6DsEvbFXZPGOhD0C",
+            "identifying-risks@oO-ujKApmpoQdkPEkOQG7",
+            "identifying-stakeholders@Cryuk9pCI3y78HDGv6TMK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Influencing",
+      "name": "influencing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "influencing-without-authority@CMge123Tm9DrZ31LvipLD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interaction",
+      "name": "interaction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interaction-design@S_-9msr3vGZgOQ36zErnf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iterative",
+      "name": "iterative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iterative-process@1HytzY1KRYIQWoQa5FMwY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Job",
+      "name": "job",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "job-stories@B9fgJmzVViaq7dvSuEglb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kanban",
+      "name": "kanban",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kanban-basics@kJ2HQFEsnc5yISU8d9Lla"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-product-metrics@RfllpwFxWBeHF29oUwGo_",
+            "key-skills@5W-3jh1-4qSU5kagrWv9z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Launch",
+      "name": "launch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "launch-planning@PbhuFKsVNO6xGJHqXCwFl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leadership",
+      "name": "leadership",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leadership-and-influence@WyKJxhfnbz6jx-Tvg40_j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ltv",
+      "name": "ltv",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ltv-lifetime-value@DB-dN0bfG29Xv_a8iV8Yg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-partnerships@vXnf1AcMidLww5EypChWk",
+            "managing-stakeholders@X-2mVBut_pn4o_fEGVrib"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Market",
+      "name": "market",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "market-analysis@Eusp5p6gNIxtU_yVvOkmu",
+            "market-segmentation@3MYjrnd6h2ZlcfaXjUbkC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Marketing",
+      "name": "marketing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "marketing-strategies@YYo_7lmTw7h74Y4J5pp-_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mau",
+      "name": "mau",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mau-monthly-active-users@Sbi5Y72nU_B1Jk6xNp17u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mind",
+      "name": "mind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mind-mapping@beca7sTxYY06RwNn5jpZM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Minimum",
+      "name": "minimum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "minimum-viable-product-mvp@mm5yvAaROsbwDgQUfnqyl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mitigation",
+      "name": "mitigation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mitigation-strategies@4gV80Qrd08_Y8oZB_hahV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ml",
+      "name": "ml",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ml-in-product-mgmt@rzrxYqFENQ3d0WpZv9-0Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitoring",
+      "name": "monitoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitoring-and-controlling-risks@zJGg20NPStLPkeL5LKoGm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "North",
+      "name": "north",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "north-star-metric@MYKZIDHSIXr-69BdtFcNR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Outcome",
+      "name": "outcome",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "outcome-based-roadmaps@1uAfy3ISLKGmLirvIfzfE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Phased",
+      "name": "phased",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "phased-rollouts@8_VCWpSZkRWmsD1_thMYS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Platform",
+      "name": "platform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "platform-thinking@EEi56Ww04QbuF2I7B7xW8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Portfolio",
+      "name": "portfolio",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "portfolio-management@BGtxI9CHtJfhRMdUEIfWa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Predictive",
+      "name": "predictive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "predictive-analytics@h5N51_YgjaTHhPUHxkqQR",
+            "predictive-analytics@YsDt5I0prvYeaFfn4_lpx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Principles",
+      "name": "principles",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "principles-of-ux-design@TwL-EqDorSgUpBYr4O4rf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prioritising",
+      "name": "prioritising",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prioritising-features@k7Zv7IS9y-jkI_zGrBQG3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prioritization",
+      "name": "prioritization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prioritization-techniques@Slb0P_LVdl7-GzUqbO33c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Problem",
+      "name": "problem",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "problem-framing@aBJUQvgXmvpLPOhpDTn7l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Product",
+      "name": "product",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "product-board@70yvt_oKcadnjZgg8FtAh",
+            "product-development-lifecycle@kB8e26BUm8BpTY1_O3N3_",
+            "product-identification@fmpJB_14CYn7PVuoGZdoz",
+            "product-requirements@0tJ7zlgOIaioCMmVavfqz",
+            "product-roadmap@gS3ofDrqDRKbecIskIyGi",
+            "product-vs-project-management@V-IeFB9S2tToxANHIzpMs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-management-tools@Yjxk2gUi5jQONeLzBaeJz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Qualitative",
+      "name": "qualitative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "qualitative-risk-assessment@KXadmIkKJM0XLV4Qz0Stj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Quantitative",
+      "name": "quantitative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "quantitative-risk-assessment@g0sBLcG8kEfeHHtsJSb4i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reference",
+      "name": "reference",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reference-materials@uXseNTJlteD6Fgi1bzQB4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Release",
+      "name": "release",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "release-strategies@VqNK1rNAnr_yvi_a0YZEs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remote",
+      "name": "remote",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remote-stakeholders@QGAb7dQM052XPA0Ll-R1P",
+            "remote-user-testing@5fze1aw1in3Gp3K31bvin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retention",
+      "name": "retention",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retention-rate@mfG1UheUwzO8dbS4oglgo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Risk",
+      "name": "risk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "risk-assessment@0uRTNYMwTU9JzvIWSvDSm",
+            "risk-audits@ao2uUq_UZWtB-LRKH1x40",
+            "risk-identification-techniques@0zRGIArMUe9xVDSKfnoHZ",
+            "risk-mitigation@A-srndVB0olGq0qkApnwi",
+            "risk-monitoring-tools@S2w72SRx-9QvRO7RNBlKZ",
+            "risk-register@WBnLicFo9p2zm57pyXciI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roadmapping",
+      "name": "roadmapping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roadmapping-tools@XG-QBb--HXL-1r-jInYDN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roles",
+      "name": "roles",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roles-and-responsibilities@Dx6ee8P_Agpw1MLKlAPGI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-products@4i_kX9oZunMBFYevu7lyi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scrum",
+      "name": "scrum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scrum-basics@WNCVmFrpHW7rMaIzlLaXl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-design@lxU25qxxgxnNF3c3kdZxz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Showing",
+      "name": "showing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "showing-impact@XxeB3t8MjTbUzZj2hdKF3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Solved",
+      "name": "solved",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "solved-constraints@eKJ2XfDxu0NAKA932tbzy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sprint",
+      "name": "sprint",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sprint-planning@bu-xm-L1XJgIPAFs2PieE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stakeholder",
+      "name": "stakeholder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stakeholder-engagement@rvqZRvbt73BY5X98dA3Sq",
+            "stakeholder-mapping@bHA-9gQhvjh40Cy8jbI9u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strategic",
+      "name": "strategic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strategic-partners@jWU_odHoQYk3GKCPoRV2n",
+            "strategic-thinking@m46lX4dUHik_BSHQwaU2l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Surveys",
+      "name": "surveys",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "surveys-and-questionnaires@a_5AyOKAgcg0rArZfapA_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Triz",
+      "name": "triz",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "triz-theory-of-inventive-problem-solving@DEwte-c-jxAFpiaBXAPSO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usability",
+      "name": "usability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usability-testing@1uXjKKvOKqpO50m1pM627"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-interviews@5kt8AkCsdAdlBmsKOkKFH",
+            "user-personas@0y8F9x6MhApQkS1VhS8Dx",
+            "user-research@8LAy6uBfrdtrjF8ygAGoo",
+            "user-stories@kN-UfAbQ8j7g0jDdqWK55",
+            "user-story-mapping@3JY85Tu40ABy9XfoliaqE",
+            "user-testing@v3hKowLMBVq9eCXkUhrDZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usp",
+      "name": "usp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usp-unique-selling-point@tKDlfVvNym_OIqkommiJ8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ux",
+      "name": "ux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ux--ui-design@-lFYy5W1YqWuTiM3QRF4k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Value",
+      "name": "value",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "value-proposition-canvas@kjKUrKdtCM95VinlluKDS",
+            "value-proposition@6OjKcLbUZVJdUDC7if0Uy",
+            "value-vs-features@0AQj2F1n8VKHBwuF4ywrp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vision",
+      "name": "vision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vision--mission@l-KrmCOKEfpLHq4j-9SoY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-product-management@luk1vnpy0duneVjen8WzO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wireframing",
+      "name": "wireframing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wireframing-and-prototyping@zwrmh-djneZ8HIqbaBOkN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-engineering-teams@2r-NPGcROFmw-pd4rvsAJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-prds@0FqpBfvnkGN_oE2KSC-_8"
+          ]
+        }
+      ]
+    }
+  ]
+}

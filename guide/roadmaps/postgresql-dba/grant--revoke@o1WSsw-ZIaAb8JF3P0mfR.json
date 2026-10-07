@@ -1,0 +1,4 @@
+{
+  "title": "Grant and Revoke Privileges in PostgreSQL",
+  "content": "One of the most important aspects of database management is providing appropriate access permissions to users. In PostgreSQL, this can be achieved with the `GRANT` and `REVOKE` commands, which allow you to manage the privileges of database objects such as tables, sequences, functions, and schemas.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GRANT](https://www.postgresql.org/docs/current/sql-grant.html)\r\n- [@official@REVOKE](https://www.postgresql.org/docs/current/sql-revoke.html)\r\n- [@article@PostgreSQL GRANT statement](https://www.postgresqltutorial.com/postgresql-administration/postgresql-grant/)\r\n- [@article@PostgreSQL REVOKE statement](https://www.postgresqltutorial.com/postgresql-administration/postgresql-revoke/)"
+}

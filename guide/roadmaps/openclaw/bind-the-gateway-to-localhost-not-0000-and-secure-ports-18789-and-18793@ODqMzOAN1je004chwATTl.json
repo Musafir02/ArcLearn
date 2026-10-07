@@ -1,0 +1,4 @@
+{
+  "title": "Bind the Gateway to Localhost",
+  "content": "Binding to localhost means the gateway only accepts connections from the same machine, not from the open internet. You can then use a reverse proxy or Tailscale to selectively expose it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Gateway Runbook](https://docs.openclaw.ai/gateway)\r\n- [@official@Tailscale](https://docs.openclaw.ai/gateway/tailscale)"
+}

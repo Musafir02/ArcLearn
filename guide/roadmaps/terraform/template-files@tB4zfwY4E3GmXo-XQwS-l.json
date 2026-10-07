@@ -1,0 +1,4 @@
+{
+  "title": "Template Files",
+  "content": "Template files use the `templatefile` function to render a file with variable substitutions at plan time. The function takes a file path and a map of values and returns the rendered string. Template files are commonly used to generate user data scripts, configuration files, or policy documents from dynamic values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@templatefile function](https://developer.hashicorp.com/terraform/language/functions/templatefile)\r\n- [@article@What are Terraform templates?](https://spacelift.io/blog/terraform-templates)\r\n- [@video@Using templatefile in Terraform](https://www.youtube.com/watch?v=cRYYFCekOIk)"
+}

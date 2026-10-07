@@ -1,0 +1,4 @@
+{
+  "title": "Columns in PostgreSQL",
+  "content": "Columns are a fundamental component of PostgreSQL's object model. They are used to store the actual data within a table and define their attributes such as data type, constraints, and other properties.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Columns](https://www.postgresql.org/docs/current/ddl-alter.html)\r\n- [@article@PostgreSQL ADD COLUMN](https://www.w3schools.com/postgresql/postgresql_add_column.php)"
+}

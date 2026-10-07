@@ -1,0 +1,947 @@
+{
+  "title": "Shell Bash Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "1",
+      "name": "1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "1-2-3@DiYuY3M3eD1WKO5w16Swa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arithmetic",
+      "name": "arithmetic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arithmetic-expansion@LHoR6krZTuJW5BGiKf_AT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Associative",
+      "name": "associative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "associative-arrays@YM7wA4MgeailSoXR_03Qx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bash",
+      "name": "bash",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bash--n@_UDEyH6hECoOoXcbcXTLy",
+            "bash-alias@LlxpR2LiAr9uKMXEXTk0H",
+            "bash-data-types@vM0Y4fao-pNjNjWYCJve3",
+            "bash-debug@6hXvAV0R7FlJ8UkQzRzMZ",
+            "bash-operators@Co0k7A7MyQoELnPwPU10m",
+            "bash-script-anatomy@nMFXyeZ8I5jAPfs16Jixn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-editor-ops@WbZu0zM2d56LiGauOp8ub",
+            "basic-regex-syntax@qNsNJrqwsGtumOM2STB8u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Break",
+      "name": "break",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "break-continue@Wl39zpLh6alsMkn0YZ9-N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bzip2",
+      "name": "bzip2",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bzip2-xz@qedrcO4QA2ZxV24l0Q6Or"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Case",
+      "name": "case",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "case-conversion@cBJbM6nl0Dy9Ru5hruzpK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cli",
+      "name": "cli",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cli-vs-gui@86QR-PVqgvvyvJvgTIer-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Command",
+      "name": "command",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "command-substitution@BuOM-A5110MPv8325EQnM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-print-modify@4leZS9_-GAbx5ycMQosOX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cron",
+      "name": "cron",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cron-crontab@QGDwieDblgpS6U0n_Ivt8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cut",
+      "name": "cut",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cut-paste@EU-UAaRVY2s_PLZHJWf9z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Df",
+      "name": "df",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "df-du@rmSSz2ka9e1nQwx18Ofy8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Direct",
+      "name": "direct",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "direct-execution@9xn7KfHZYPseAixtw_dtG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environment",
+      "name": "environment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environment-vs-shell-vars@1mBAGIrg4ohvJcJ-y8Kbl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@aNpvGNnV0q-7emxJVJow2",
+            "error-logging@Qs5jcx6d643cJDdhkPPxD",
+            "error-redirection@zu0hsOt8GVlARhbepjQ1A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exit",
+      "name": "exit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exit-codes@fG4D7iuiCDlV1PFwMfAdM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Extended",
+      "name": "extended",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "extended-regex@6IzuWNaMVjjyQV-KLqRlX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fg",
+      "name": "fg",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fg-bg@Ey38pCn0vlhZXLrJChtIW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-permissions@zxdwDMOVAoP8IgUqrggKq",
+            "file-test@PuV5XtaeKgb9vdFIKta5M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Files",
+      "name": "files",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "files--directories@DUUstDjzKKAXN1IXzbqjt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-scopes@lil5vo78g474F1yomar9y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "0@pgZIDDxAP9mOtEI0HL3l-",
+            "@2Fh0NFuNxuc-wU3VXv8Zj",
+            "@hoRtqMV7B23bBJFI-RWRB",
+            "@hxjqlxolS_ahtro4T0EKG",
+            "@mYg9d8e0_XjtXBqBYtaaL",
+            "@Pr8XdVGYBIuCyRW4w45sa",
+            "@qG71FX6DwRm1rdtjtN78u",
+            "@VLzMSaoVA46PTLHwZtDUx",
+            "@X6aVYPapBn-EC9Dw6LMDB",
+            "apt@nfyh2co43xfR9DJbNnM_Y",
+            "arithmetic@60ika3rjs42VIk-3AcOdq",
+            "arrays@4WFWrrcvLgU8Fz8RjQ4lf",
+            "at@Wny7lCxP2M1FaoUYDD7Gf",
+            "awk@GXF6SSkYtVyGYB_LFSIpe",
+            "awk@Jh1gVJvhe-H22VB4hnbuU",
+            "bash@EqgAG1t05RuiAO1TXRq4Y",
+            "bc@B2g_optsVEtw-5vRYIpgb",
+            "brew@d8jGE833q0Wf6gB3DZil4",
+            "case@SSSVVAve99X8FZX9vtHlo",
+            "cat@Zom0OpBLi153i8hkoYLj5",
+            "cd@9A6SE89by-1I2HmpGarLj",
+            "chgrp@zaXwK7xPsrULce1yJwhB_",
+            "chmod@qrqPo-pgzupCK0IxlGn7S",
+            "chown@w95b7f3-7Q8qtTpyJih6B",
+            "cmd@C7HE5jpaSIUqm6L8b9orY",
+            "comments@sYzelzBxQUcz5bK1HVWam",
+            "comparison@XUDkgfURAsI_A3v3EPZA_",
+            "conditionals@tEaYnBeI5tO8NT-a1PG3B",
+            "cp@gCPCTm96RrFeNM_Ok4TAY",
+            "curl@ZWMGvUxnohv6-dzsaSHuB",
+            "dash@BP7hfSSD13DM2np0zaGBB",
+            "debugging@fR3sok0EJTGHELbPO6MAW",
+            "disown@Qs07iAbFbJk97xHpo10dO",
+            "dnf@iE263510iTgm3OEeB9b77",
+            "echo@k45FWrNrRuIp6HEN3ysTd",
+            "emacs@AiDr7sOJkSN6p346jcDpJ",
+            "exit@JB_FThjpxO-7G01XrKDPi",
+            "expr@VOYYJUqKqkTRaxqUip8yr",
+            "find@pAb3O3Isca9u6yK5mqWQ2",
+            "find@ud8fTxgvvbhCyyAxJA6lc",
+            "fish@LjkmfTYWMrOKLSqtpyKGk",
+            "for@zE7sS5VNUbEbt1y2iSvEi",
+            "free@8Ll6sByPqMnjVms5J1ns5",
+            "functions@peZDR615PgGw7TQalyG_2",
+            "grep@ZqAwAme_yvasmYHEZID1G",
+            "if@fz9XJLGkMPpq6TRJn3Hsh",
+            "inputoutput@n0sesqABTmbGYmcqlpH4b",
+            "introduction@lzzQWCFqpOnN2J_3Jck_3",
+            "jobs@Sn7RlXc5dgD1gqDGikco-",
+            "ksh@BnblV98Tul3QlyA1nIB63",
+            "let@oI019HqH9UO_tQRe2xebi",
+            "logical@tRwO9DC_ZUD4g5iSVC40u",
+            "loops@1rIFm5ROQ8b1rsWeD9h4x",
+            "ls@Kn_EQciiD_Fjj308aF_j0",
+            "mkdir@pwP3U4zz9Jtpnp2ZRgajh",
+            "mv@zN32jR8SNm5P1txqQsyCv",
+            "nano@NtjrVcEHf8wuh771U2AMI",
+            "nl@TZEmlwTGBWAZ6w8jZ-p8U",
+            "nohup@7-4WglSAbhBZUpP8HS6xY",
+            "numeric@a5cz3ZGg-JQKzdJdihCtO",
+            "ping@D-sgMFB-IhNw41hNJsSF6",
+            "pipes@YyCvxYgFzobwF_vMQXunZ",
+            "powershell@y4mIT9yer85CrU_KlRxGk",
+            "ps@gOdW5k4fRu9P-3D3ze8aA",
+            "pwd@ng5ySgj1HQmD_gfQ4TSPI",
+            "rm@uS5HS_4a-lk3AtXaMyAlp",
+            "rmdir@cqZP-2xfil-1Zq3TD7qiN",
+            "rsync@mImvR0TfLjDqj_Td4G7Gy",
+            "rwx@M27BJ6fgVdaBxyWE-OdNl",
+            "scp@PzRwOkhukRE1cTHXOXUTu",
+            "sed@4XfvvrFQoV0X7dfaKYFlv",
+            "shellcheck@r_G62Mx-S8wBcxduFbPMh",
+            "shift@u_kpVb3V8Xp-0fex_5-yG",
+            "sort@P9pwqBvPDhcvVIj8fNhGX",
+            "ssh@eVbx1WsfeHcVaFs-vXpwF",
+            "strings@Sz2F519WqEhkKZE0NBveH",
+            "tar@ESjj2b8Hk0Irj4E2Gmj6w",
+            "tcsh@SHD2pc0D5QjDpEwzsFWz-",
+            "touch@fssn0pz6ooqG-EE8rZl-L",
+            "tr@YJblaz_GKC5sH7ntFe5ls",
+            "trap@c0F44DSG7eVcqwaOfk2Z-",
+            "uniq@4pygQshD_WdP0i6xq3Kc8",
+            "until@51xww3YG_O8O7y8CUum83",
+            "uptime@R57tdCBI0rLmzWEuJeBTW",
+            "vi@QZXUYcr1vvbvxRmPSsK53",
+            "vim@jPAHVLBC87n4TIyiAZJue",
+            "wc@mg5f-DAezgwmwflmncSsO",
+            "wget@F5w3pYH5Z58NAJ81p5q8n",
+            "while@yX-SskrRyFAUFpyIYG7BU",
+            "yum@_p6LP0uvp9QpBISr1t4KX",
+            "zsh@m-sOOaGyhQg3bgmWsXtOH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gzip",
+      "name": "gzip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gzip-gunzip@b8ph0RGUpVWrgEQ05Wvgy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Head",
+      "name": "head",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "head-tail@WSxairrSGlV0LEps2xeIC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Help",
+      "name": "help",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "help-commands@4yRwCKzvCctFpMD2mYiky"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Here",
+      "name": "here",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "here-documents@WOoTpi1vAZpktjtQgG9GK",
+            "here-strings@D0VV5UpW2X4mMghpp2fdo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ifconfig",
+      "name": "ifconfig",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ifconfig-ip@q-41zNMAJ-BYwrz_fZP60"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input-redirection@Chfv9Fyy-Mk2zpOrYNbjV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iostat",
+      "name": "iostat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iostat-vmstat@lwul2wUhhCnXxKO6-ysX2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Join",
+      "name": "join",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "join-split@rtzApgTlDTfC_rdCnU6xx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Less",
+      "name": "less",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "less-more@kW_sjWK-rtGokfL_OByhM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Navigate",
+      "name": "navigate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "navigate-between-dirs@QnC0gCoBj_559CgaTQgr4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Netstat",
+      "name": "netstat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "netstat-ss@bX48eoEWdUFeL2rYXuzG5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Output",
+      "name": "output",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "output-redirection@MpSnq-W8z4QA8-oU_tbRC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-management@Kwr37_gNDhkwSkg49bg35"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pattern",
+      "name": "pattern",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pattern-replacement@aYQlgbgFt250MW1nLYvFK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Popular",
+      "name": "popular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "popular-shells@IYlYUnQh2iZrdpyUsMxg0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Printf",
+      "name": "printf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "printf-formatting@XCCuDzGE-5LPhHEPGvVMj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-management@ZTJrnx12KSrcyUfd0RfPu",
+            "process-substitution@Oc80VSBDYTHkGOV4Jqo19",
+            "process-substitution@uk7TEHUqTIjmH4MJToxPe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Read",
+      "name": "read",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "read-user-input@o2vQXl9WDOO4NAsLjYv_4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recursive",
+      "name": "recursive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recursive-functions@X4-kdfaVimq5VP_gPTWR0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Redirects",
+      "name": "redirects",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "redirects--pipelines@reLvp_PnKqpyWWtnuICPj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-expressions@W7NlQoj0EDxvuMVj4MKXc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repeat",
+      "name": "repeat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repeat-commands@tu3NFc76-j6VVysFdk8Kd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-shell-scripts@dj3KiBtPjRK2DF5HeuoYZ",
+            "running-with-bash@aZ7WGLUZyejFRbfWtSyhB",
+            "running-with-source@ZBYzPltaUePoOldJ6zRj8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Script",
+      "name": "script",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "script-arguments@BCkD0b9unC1lfjUThU3hX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Set",
+      "name": "set",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "set--e@I-N9SM8ZVcOTVQs8_vtJm",
+            "set--o@OOskpOLWFe1rN0XMuabAS",
+            "set--u@HrzalKXWVmqD-8SfdQJVu",
+            "set--x@8Q1FCxKYYl-HnMGkwdK6h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-bash@6SR4c75dEKoFxZ88sDtfi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Special",
+      "name": "special",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "special-variables@_BzADQXji4lVY620U4cZa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stdin",
+      "name": "stdin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stdin-stdout-stderr@3VulHH-Y-VdMRM6VBVWar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stop",
+      "name": "stop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stop-execution@Ydqpp_YYujdHyYraNEt4h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "String",
+      "name": "string",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "string-length@sBI1aCY7XmXBwqTrokt9F",
+            "string-manipulation@PS9R8AX-_dgeqYL2Y67Ff",
+            "string-operators@ryZ2MI4blZCwfuNC_TeUe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Substring",
+      "name": "substring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "substring-extraction@6TonvFzr_nmoFsATwuZK7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Success",
+      "name": "success",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "success-vs-failure@wKMq5G8cmqo3JnHG4Z-c1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Systemd",
+      "name": "systemd",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "systemd-timers@ResodrV_p7zK1dJbqT0us"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tab",
+      "name": "tab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tab-completion@HESaq3OyuouEqjpZITYUd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-editors@it421LC-vLFNmTcWxrsX6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Top",
+      "name": "top",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "top-htop@M2afRR6yY8iq85_MnfGKV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variable",
+      "name": "variable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variable-scopes@ivcDgpa1kMPxcOt1OCjba"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-best-practices@9-PPCJDdGh5SWKT4jT6Zs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-bash@GdSViKr5r3uHxzihSjdYV",
+            "what-is-scripting@LloORF-pz-sbfuzNj1WjG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zip",
+      "name": "zip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zip-unzip@hOtzJ9tH4OcB2uI2T_si5"
+          ]
+        }
+      ]
+    }
+  ]
+}

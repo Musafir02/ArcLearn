@@ -1,0 +1,4 @@
+{
+  "title": "NoSQL databases",
+  "content": "NoSQL databases handle unstructured, semi-structured, or rapidly changing data with flexible schemas. Four types: Document stores (MongoDB, CouchDB), Key-value stores (Redis, Riak), Column-family (Cassandra, HBase), and Graph databases (Neo4j, Neptune). Used for high scalability, flexibility, and performance applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Types of NoSQL Databases: How to Choose the Right One](https://roadmap.sh/backend/types-of-nosql-databases)\r\n- [@article@NoSQL Explained](https://www.mongodb.com/nosql-explained)\r\n- [@video@How do NoSQL Databases work](https://www.youtube.com/watch?v=0buKQHokLK8)\r\n- [@video@SQL vs NoSQL Explained](https://www.youtube.com/watch?v=ruz-vK8IesE)"
+}

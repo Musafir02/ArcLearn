@@ -1,0 +1,4 @@
+{
+  "title": "if",
+  "content": "Basic conditional statement for executing code based on boolean conditions. Supports optional initialization statement before condition check. No parentheses required around condition but braces mandatory. Can be chained with else if for multiple conditions. Foundation of control flow.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@if else](https://go.dev/tour/flowcontrol/7)\r\n- [@article@If-else: Gobyexample](https://gobyexample.com/if-else)\r\n- [@article@Understanding the If Statement in Golang](https://www.zetcode.com/golang/if-else-keywords/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Automations",
+  "content": "To add automation to your GitHub project, use built-in workflows that can trigger actions such as setting fields on item changes or archiving items meeting specific criteria, and also configure automatic item addition from repositories based on matching criteria.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Automating your project](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project)\r\n- [@video@GitHub Project Management - Create GitHub Project Board & Automations](https://www.youtube.com/watch?v=oPQgFxHcjAw&t=600s)"
+}

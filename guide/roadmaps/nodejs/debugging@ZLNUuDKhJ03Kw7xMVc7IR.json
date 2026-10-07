@@ -1,0 +1,4 @@
+{
+  "title": "Debugging",
+  "content": "Debugging is the process of identifying and fixing issues in a Node.js application. Node.js provides built-in debugging capabilities via the `--inspect` flag, which connects to Chrome DevTools. Effective debugging involves using breakpoints, inspecting variables at runtime, and understanding the call stack.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Node.js - Getting Started](https://nodejs.org/en/learn/getting-started/debugging)\r\n- [@article@Wikipedia - What is Debugging?](https://en.wikipedia.org/wiki/Debugging)"
+}

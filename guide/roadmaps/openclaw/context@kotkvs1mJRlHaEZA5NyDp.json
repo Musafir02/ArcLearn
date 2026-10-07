@@ -1,0 +1,4 @@
+{
+  "title": "/context",
+  "content": "`/context` explains what context the agent is currently working with. You can use `/context list` for a summary, `/context detail` for a breakdown of per-file, per-tool, per-skill, and system prompt sizes, or `/context json` for machine-readable output.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Slash Commands](https://docs.openclaw.ai/tools/slash-commands#command-list)"
+}

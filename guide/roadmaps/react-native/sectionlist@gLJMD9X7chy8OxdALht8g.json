@@ -1,0 +1,4 @@
+{
+  "title": "SectionList",
+  "content": "`SectionList` is a component used to render sections and headers in a scroll view. It helps to manage and optimize a large list of items divided into categories. It is one of the List View components provided by React Native along with FlatList.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@SectionList](https://reactnative.dev/docs/sectionlist)"
+}

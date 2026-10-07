@@ -1,0 +1,4 @@
+{
+  "title": "Tags & Custom Tags",
+  "content": "Tags are control structures that Django's template engine uses to perform actions like looping, variable assignment, or conditional logic within templates. Custom tags allow developers to extend the template language by defining their own tags to perform specific tasks or render complex data in a reusable way.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Built-in template tags and filters](https://docs.djangoproject.com/en/6.0/ref/templates/builtins/)\r\n- [@official@How to create custom template tags and filters](https://docs.djangoproject.com/en/6.0/howto/custom-template-tags/)\r\n- [@article@Understanding and Implementing Custom Template Tags in Django](https://dev.to/3bdelrahman/understanding-and-implementing-custom-template-tags-in-django-5cao)\r\n- [@video@Django Tutorial #10 - Template Tags](https://www.youtube.com/watch?v=RCE3VUpzGw0)"
+}

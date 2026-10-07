@@ -1,0 +1,4 @@
+{
+  "title": "Metadata",
+  "content": "The Metadata APIs can be used to define your application metadata for improved SEO and web shareability and include:\r\n\r\n*   The static `metadata` object\r\n*   The dynamic `generateMetadata` function\r\n*   Special file conventions that can be used to add static or dynamically generated favicons and OG images.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Metadata and OG images](https://nextjs.org/docs/app/getting-started/metadata-and-og-images#static-open-graph-images)"
+}

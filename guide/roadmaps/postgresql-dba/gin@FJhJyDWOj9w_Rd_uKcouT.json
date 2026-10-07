@@ -1,0 +1,4 @@
+{
+  "title": "GIN (Generalized Inverted Index)",
+  "content": "Generalized Inverted Index (GIN) is a powerful indexing method in PostgreSQL that can be used for complex data types such as arrays, text search, and more. GIN provides better search capabilities for non-traditional data types, while also offering efficient and flexible querying.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GIN Introduction](https://www.postgresql.org/docs/current/gin-intro.html)\r\n- [@article@Generalized Inverted Indexes](https://www.cockroachlabs.com/docs/stable/inverted-indexes)"
+}

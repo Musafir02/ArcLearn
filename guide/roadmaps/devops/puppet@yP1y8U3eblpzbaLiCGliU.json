@@ -1,0 +1,4 @@
+{
+  "title": "Puppet",
+  "content": "Puppet is a configuration management tool that lets you define the desired state of your infrastructure using its own declarative language. It uses a client-server model where a Puppet agent runs on each managed node and periodically checks in with the Puppet master to apply any defined configurations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Puppet Full Course | Learn Puppet Training](https://www.youtube.com/watch?v=Ns_tRKD20c4)\r\n- [@official@Puppet Website](https://puppet.com/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Button",
+  "content": "A `Button` is a built-in React Native component used to create clickable buttons. It is a simple, customizable and easy-to-use component that captures touches and triggers an `onPress` event when pressed.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Button](https://reactnative.dev/docs/button)"
+}

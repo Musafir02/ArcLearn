@@ -1,0 +1,4 @@
+{
+  "title": "MongoDB",
+  "content": "MongoDB is a NoSQL document-oriented database storing data in BSON format without fixed schemas. Supports horizontal scaling via sharding and high availability through replica sets. Ideal for applications with evolving data structures, real-time analytics, and large-scale data handling.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated MongoDB Roadmap](https://roadmap.sh/mongodb)\r\n- [@official@Learning Path for MongoDB Developers](https://learn.mongodb.com/catalog)\r\n- [@article@MongoDB Online Sandbox](https://mongoplayground.net/)"
+}

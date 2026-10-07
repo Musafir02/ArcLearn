@@ -1,0 +1,4 @@
+{
+  "title": "DNS",
+  "content": "DNS, or Domain Name System, is essentially the phonebook of the internet. It translates human-readable domain names, like \"example.com,\" into IP addresses, like \"192.0.2.1,\" which computers use to identify each other on the network. Without DNS, we'd have to remember and type in these numerical IP addresses every time we wanted to visit a website.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is DNS?](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/)\r\n- [@article@Mess with DNS - DNS Playground](https://messwithdns.net/)\r\n- [@article@How DNS works (comic)](https://howdns.works/)\r\n- [@video@DNS and How does it Work?](https://www.youtube.com/watch?v=Wj0od2ag5sk)"
+}

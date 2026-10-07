@@ -1,0 +1,4 @@
+{
+  "title": "BASE Model",
+  "content": "BASE describes an alternative to the ACID model used by many distributed and NoSQL databases, standing for basically available, soft state, and eventually consistent. It favors availability and scalability over the strict consistency guarantees of ACID, accepting that data may be temporarily inconsistent across nodes before converging.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@ACID vs. BASE Database Model](https://phoenixnap.com/kb/acid-vs-base)\r\n- [@article@What Is BASE in Database Engineering?](https://www.lifewire.com/abandoning-acid-in-favor-of-base-1019674)"
+}

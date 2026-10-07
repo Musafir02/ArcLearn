@@ -1,0 +1,4 @@
+{
+  "title": "Package Managers",
+  "content": "Package managers automate software package installation, updates, and dependency management. Examples include npm (JavaScript), pip (Python), and yarn. Enable code sharing, reuse, and consistent project setups. Essential for modern development workflows and team collaboration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@PNPM: The Faster, More Performant NPM](https://pnpm.io/)\r\n- [@official@Yarn - Getting Started](https://yarnpkg.com/en/docs/getting-started)\r\n- [@article@An Absolute Beginners Guide to Using npm](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)\r\n- [@video@NPM Crash Course](https://www.youtube.com/watch?v=jHDhaSSKmB0)"
+}

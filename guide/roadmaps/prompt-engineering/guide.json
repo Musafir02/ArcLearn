@@ -1,0 +1,411 @@
+{
+  "title": "Prompt Engineering Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-red-teaming@Wvu9Q_kNhH1_JlOgxAjP6",
+            "ai-vs-agi@Sj1CMZzZp8kF-LuHcd_UU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Automatic",
+      "name": "automatic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "automatic-prompt-engineering@diHNCiuKHeMVgvJ4OMwVh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Calibrating",
+      "name": "calibrating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "calibrating-llms@P5nDyQbME53DOEfSkcY6I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chain",
+      "name": "chain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chain-of-thought-cot-prompting@weRaJxEplhKDyFWSMeoyI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Context",
+      "name": "context",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "context-window@b-Xtkv6rt8QgzJXSShOX-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contextual",
+      "name": "contextual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contextual-prompting@5TNK1KcSzh9GTKiEJnM-y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fine",
+      "name": "fine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fine-tuning-vs-prompt-engg@Ke5GT163k_ek9SzbcbBGE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frequency",
+      "name": "frequency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frequency-penalty@YIVNjkmTOY61VmL0md9Pj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agents@Pw5LWA9vNRY0N2M0FW16f",
+            "anthropic@V8pDOwrRKKcHBTd4qlSsH",
+            "google@o-6UKLZ6oCRbAKgRjH2uI",
+            "hallucination@SWDa3Su3VS815WQbvvNsa",
+            "introduction@jrH1qE6EnFXL4fTyYU8gR",
+            "llm@pamV5Z8DRKk2ioZbg6QVK",
+            "meta@Td2YzDFT4LPGDw8JMmQSQ",
+            "openai@Yb5cQiV2ETxPbBYCLOpt2",
+            "rag@gxydtFKmnXNY9I5kpTwjP",
+            "temperature@iMwg-I76-Tg5dhu8DGO6U",
+            "tokens@NPcaSEteeEA5g22wQ7nL_",
+            "xai@3wshuH7_DXgbhxsLzzI4D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-self-evaluation@CvV3GIvQhsTvE-TQjTpIQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llms",
+      "name": "llms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llms-and-how-they-work@74JxgfJ_1qmVNZ_QRp9Ne"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Max",
+      "name": "max",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "max-tokens@vK9Gf8dGu2UvvJJhhuHG9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-weights--parameters@yfsjW1eze8mWT0iHxv078"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "One",
+      "name": "one",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "one-shot--few-shot-prompting@Iufv_LsgUNls-Alx_Btlh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Output",
+      "name": "output",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "output-control@wSf7Zr8ZYBuKWX0GQX6J3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Presence",
+      "name": "presence",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "presence-penalty@WpO8V5caudySVehOcuDvK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-debiasing@0H2keZYD8iTNyBgmNVhto",
+            "prompt-ensembling@HOqWHqAkxLX8f2ImSmZE7",
+            "prompt-injection@6W_ONYREbXHwPigoDx1cW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-prompting@8Ks6txRSUfMK7VotSQ4sC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repetition",
+      "name": "repetition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repetition-penalties@g8ylIg4Zh567u-E3yVVY4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-prompting@XHWKGaSRBYT4MsCHwV-iR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sampling",
+      "name": "sampling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sampling-parameters@JgigM7HvmNOuKnp60v1Ce"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Self",
+      "name": "self",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "self-consistency-prompting@1EzqCoplXPiHjp9Z-vqn-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Step",
+      "name": "step",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "step-back-prompting@2MboHh8ugkoH8dSd9d4Mk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stop",
+      "name": "stop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stop-sequences@v3CylRlojeltcwnE76j8Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-outputs@j-PWO-ZmF9Oi9A5bwMRto"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-prompting@fWo39-hehRgwmx7CF36mM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Top",
+      "name": "top",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "top-k@FF8ai1v5GDzxXLQhpwuPj",
+            "top-p@-G1U1jDN5st1fTUtQmMl1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tree",
+      "name": "tree",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tree-of-thoughts-tot-prompting@ob9D0W9B9145Da64nbi1M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-a-prompt@i4ijY3T5gLgNz0XqRipXe",
+            "what-is-prompt-engineering@43drPbTwPqJQPyzwYUdBT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zero",
+      "name": "zero",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zero-shot-prompting@GRerL9UXN73TwpCW2eTIE"
+          ]
+        }
+      ]
+    }
+  ]
+}

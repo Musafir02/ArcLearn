@@ -1,0 +1,4 @@
+{
+  "title": "Batching",
+  "content": "Batching in GraphQL combines multiple queries into a single request to reduce network overhead and improve performance. DataLoader is a common pattern that batches and caches database requests, preventing N+1 query problems and optimizing data fetching efficiency.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@DataLoader](https://github.com/graphql/dataloader)\r\n- [@article@Solving the N+1 Problem](https://shopify.engineering/solving-the-n-1-problem-for-graphql-through-batching)"
+}

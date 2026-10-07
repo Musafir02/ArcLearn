@@ -1,0 +1,4 @@
+{
+  "title": "Filtering in Kotlin Collections",
+  "content": "Filtering in Kotlin collections involves selecting elements from a collection based on a specific condition. This process creates a new collection containing only the elements that satisfy the given predicate, leaving the original collection unchanged. Kotlin provides various built-in functions to perform filtering operations efficiently and concisely.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Collection Filtering](https://kotlinlang.org/docs/collection-filtering.html)\r\n- [@video@Kotlin For Beginners - Collection Filtering](https://www.youtube.com/watch?v=ZK9_qMxpqvk)"
+}

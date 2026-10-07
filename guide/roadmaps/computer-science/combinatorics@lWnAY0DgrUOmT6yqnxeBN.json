@@ -1,0 +1,4 @@
+{
+  "title": "Combinatorics",
+  "content": "Combinatorics is the branch of math concerned with counting, arranging, and combining objects according to given rules, covering concepts like permutations and combinations. It is used in algorithm analysis to count the number of possible states or configurations a problem can have, which often determines the feasibility of a brute-force approach.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Probability and Combinatorics - Khan Academy](https://www.khanacademy.org/math/probability/probability-and-combinatorics-topic)\r\n- [@video@Math Skills: How to find Factorial, Permutation and Combination](https://www.youtube.com/watch?v=8RRo6Ti9d0U)\r\n- [@video@Make School: Probability](https://www.youtube.com/watch?v=sZkAAk9Wwa4)\r\n- [@video@Make School: More Probability and Markov Chains](https://www.youtube.com/watch?v=dNaJg-mLobQ)"
+}

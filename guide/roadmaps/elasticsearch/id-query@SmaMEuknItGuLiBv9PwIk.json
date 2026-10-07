@@ -1,0 +1,4 @@
+{
+  "title": "ID Query",
+  "content": "An ID query retrieves documents from an index based on their unique identifier. It's a simple and efficient way to fetch specific documents when you already know their IDs. This query directly accesses the document using its `_id` field.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@IDs](https://www.elastic.co/docs/reference/query-languages/query-dsl/query-dsl-ids-query)\r\n- [@official@Get a document by its ID](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-get)\r\n- [@article@Elasticsearch ids query](http://opster.com/guides/elasticsearch/search-apis/elasticsearch-ids-query/)\r\n- [@article@Stop using the _id field in Elasticsearch](https://luis-sena.medium.com/stop-using-the-id-field-in-elasticsearch-6fb650d1fbae)"
+}

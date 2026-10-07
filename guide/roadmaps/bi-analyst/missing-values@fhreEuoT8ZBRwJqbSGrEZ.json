@@ -1,0 +1,4 @@
+{
+  "title": "Missing Values",
+  "content": "Missing values are data points that are absent from a dataset. These gaps can occur for various reasons, such as errors during data collection, incomplete surveys, or system malfunctions. Handling missing values is a crucial step in data cleaning to ensure the accuracy and reliability of subsequent analyses and reporting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Data Standardization: How It's Done & Why It's Important](https://www.scribbr.com/statistics/missing-data/)\r\n- [@article@Missing data](https://en.wikipedia.org/wiki/Missing_data)"
+}

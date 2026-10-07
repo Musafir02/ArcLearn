@@ -1,0 +1,4 @@
+{
+  "title": "Tauri",
+  "content": "Tauri is a framework for building lightweight, secure desktop applications using web technologies (HTML, CSS, JS) with a Rust backend. It offers smaller bundle sizes than Electron, enhanced security, and cross-platform support for Windows, macOS, and Linux with native system integration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Tauri](https://tauri.app)\r\n- [@official@Tauri Guides](https://v1.tauri.app/v1/guides/)\r\n- [@article@How to Build Cross-Platform GUI Applications with Rust & Tauri](https://codezup.com/cross-platform-gui-apps-rust-tauri-guide/)"
+}

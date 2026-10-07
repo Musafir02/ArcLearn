@@ -1,0 +1,4 @@
+{
+  "title": "Using Third Party Images",
+  "content": "Third-party images are pre-built Docker container images that are available on Docker Hub or other container registries. These images are created and maintained by individuals or organizations and can be used as a starting point for your containerized applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Docker Hub Registry](https://hub.docker.com/)\r\n- [@course@Malicious Base Images: Hands-on Exercise](https://ransomleak.com/exercises/malicious-base-images/)"
+}

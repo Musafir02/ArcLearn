@@ -1,0 +1,4 @@
+{
+  "title": "Boolean",
+  "content": "The `bool` type represents `true` or `false` values with default zero value of `false`. Essential for conditional logic, control flow, and binary states. Results from comparison (`==`, `!=`) and logical operations (`&&`, `||`, `!`).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Booleans in Golang](https://golangdocs.com/booleans-in-golang)\r\n- [@article@Understanding Boolean Logic in Go](https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-go)"
+}

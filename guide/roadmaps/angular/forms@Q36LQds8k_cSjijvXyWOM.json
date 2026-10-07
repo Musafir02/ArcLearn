@@ -1,0 +1,4 @@
+{
+  "title": "Forms",
+  "content": "Forms are structures used to collect, validate, and manage user input within a web application. They provide a way for users to interact with data by filling out fields, selecting options, or uploading files. In this framework, they offer tools to track changes, handle input validation, and synchronize data between the user interface and the underlying application model.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Forms in Angular](https://angular.dev/guide/forms)\r\n- [@video@Angular Forms Tutorial](https://www.youtube.com/watch?v=-bGgjgx3fGs)\r\n- [@video@Building Forms in Angular Apps](https://www.youtube.com/watch?v=hAaoPOx_oIw)"
+}

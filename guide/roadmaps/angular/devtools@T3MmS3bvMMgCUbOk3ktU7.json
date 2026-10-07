@@ -1,0 +1,4 @@
+{
+  "title": "DevTools",
+  "content": "Angular DevTools is a browser extension that provides debugging and profiling capabilities for Angular applications. You can view component trees and change detection cycles.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Angular Devtools](https://angular.dev/tools/devtools)\r\n- [@official@Chrome Web Store](https://chromewebstore.google.com/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh)\r\n- [@official@Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/angular-devtools/)\r\n- [@video@Did you try the LATEST Angular developer tools?](https://www.youtube.com/watch?v=tAfe33fVW4w)"
+}

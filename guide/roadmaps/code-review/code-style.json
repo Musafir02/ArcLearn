@@ -1,0 +1,4 @@
+{
+  "title": "Questions to Ask",
+  "content": "- Is the project's formatting style applied?\r\n- Does it adhere to the agreed-upon naming conventions?\r\n- Is it DRY?\r\n- Is the code sufficiently \"readable\" (method lengths, etc.)?\r\n\r\nLearn more from the following resources:\r\n\r\n- [@article@The Standard of Code Review - Google](https://google.github.io/eng-practices/review/reviewer/standard.html)\r\n- [@article@Creating a Coding Style Guide for Your Team - Graphite](https://graphite.com/guides/creating-coding-style-guide)\r\n- [@article@Code Smells - Refactoring Guru](https://refactoring.guru/refactoring/smells)"
+}

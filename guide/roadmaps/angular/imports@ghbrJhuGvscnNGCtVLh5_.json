@@ -1,0 +1,4 @@
+{
+  "title": "Imports",
+  "content": "The `imports` property specifies the `standalone` component's template dependencies — those directives, components, and pipes that can be used within its template.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Importing and Using Components](https://angular.dev/guide/components/importing)\r\n- [@official@Component - API](https://angular.dev/api/core/Component#imports)"
+}

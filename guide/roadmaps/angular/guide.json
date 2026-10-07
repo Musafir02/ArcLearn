@@ -1,0 +1,1028 @@
+{
+  "title": "Angular Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Angular",
+      "name": "angular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "angular-and-history@hpShWwL0M57ZAzqkB4I8t",
+            "angular-architecture@DE3cMpeRYuUPw2ADtfS-3",
+            "angular-cli@4YSk6I63Ew--zoXC3xmrC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aot",
+      "name": "aot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aot-compilation@MwtM1UAIfj4FJ-Y4CKDsP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attribute",
+      "name": "attribute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attribute-binding@FgsSyM6To7irpbivtOLEE",
+            "attribute-directives@xvwby0FTdIolRrV2j88fY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-environments@Ax-s_xw3FO3Ocv-AnLbQD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Change",
+      "name": "change",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "change-detection@_-mTs_FMeob-ZGK-bb3j-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cli",
+      "name": "cli",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cli-builders@TeWEy9I-hU6SH02Sy2S2S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-coverage@bqA2bxPcZrqQ-6QE-YDK1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-pipes@i2taHzQ5KLHjkkpbH4Ytd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Complex",
+      "name": "complex",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "complex-sequences@Unjknmb4b2LY-nUVvvF7_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Component",
+      "name": "component",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "component-anatomy@Mp056kNnwsRWeEXuhGPy-",
+            "component-bindings@cXVy1lx2XqY_j8gxz-y60",
+            "component-lifecycle@nCpfj_35ZvW-NTygg06XZ",
+            "component-templates@0dYWO_Zvh9J5_6cRjRjvI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Control",
+      "name": "control",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "control-flow@VzvB_bads057YtG4ST4a2",
+            "control-value-accessor@m5dgKgUR3ZqI9sBAzToev"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-components@ex8FOKrUlbu4MuEq2czyW",
+            "creating-libraries@A1mYMg7cbcj6p_VkDf-Tz",
+            "creating-modules@9YhTXybJw2gszlqFeBtW3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cross",
+      "name": "cross",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cross-site-request-forgery@Z1DZBbFI4oU6-KQg3wqMm",
+            "cross-site-script-inclusion@zd7YJGlcMFNFbsKUiW_XC",
+            "cross-site-scripting@umUX4Hxk7srHlFR_Un-u7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-directives@7GUvTMVzfdVEDBOz-tHUT",
+            "custom-pipes@BOYXGfULJRiP-XOo_lNX3",
+            "custom-validators@kxRtLsB3y_th8j-HjmJgK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-binding@5vZkiH7HDwONIABLfNJ06"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Debugging",
+      "name": "debugging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "debugging-tests@f5v74Uw54LsB4FgdN6eCd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deferrable",
+      "name": "deferrable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deferrable-views@CYjsXIOWtP5DJmYS-qR-s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@8u9uHCRt9RU57erBy79PP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Developer",
+      "name": "developer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "developer-tools@EbJib-XfZFF9bpCtL3aBs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamic",
+      "name": "dynamic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamic-components@tC5ETtOuuUcybj1jI4CuG",
+            "dynamic-forms@CpufN6DAOj5UNab9vnH0k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Else",
+      "name": "else",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "else-if@ys5untkSppGMFK-VsfuRt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "End",
+      "name": "end",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "end-to-end-testing@yhNGhduk__ow8VTLc6inZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enforce",
+      "name": "enforce",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enforce-trusted-types@5h7U0spwEUhB-hbjSlaeB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-binding@bKnpirSvex4oE4lAjiSSV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feature",
+      "name": "feature",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feature-modules@w_BazXvINFyxDCHmlznfy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@VNG9DdXlS6R1OJ6Lrn4Lt",
+            "analogjs@kauQofxCmpktXPcnzid17",
+            "animation@rYJq59Q0YdfK6n3x740Em",
+            "attributes@0FvH7KPs9ag02QkD1HEJ-",
+            "case@cHC2MH50CbUSMRZV4QGJI",
+            "changedetection@uYHy2yhtTm6fQkKpYx3lU",
+            "combination@IgUHqfVhiGpwxT9tY8O88",
+            "communication@19c7D-fWIJ3vYFT6h8ZfN",
+            "components@kGnKzCkQCNFEdgCBRtNuW",
+            "configuration@dbAS-hN1hoCsNJhkxXcGq",
+            "containers@0s-QhN5aZh2F3tLJFKEyR",
+            "contentchild@oQl9etjoHiU2JgxieUOEH",
+            "default@h4MMn0_qUN3YXEdMUJOyd",
+            "defer@ONy-0olujU_FGZM7Wvfr2",
+            "dependencies@5b590c7s-2XJ0rgdCYxLa",
+            "deployment@1fVi9AK6aLjt5QgAFbnGX",
+            "devtools@T3MmS3bvMMgCUbOk3ktU7",
+            "directives@kGzlumFdZFxTRZ3HnCGFO",
+            "elf@rgPUcSKxG9DvXicLfC2Ay",
+            "else@ORdPDad4HWJAfcZuS-7yM",
+            "encapsulation@ctigvSYeFa77y3v7m11gk",
+            "filtering@nxUbl0eu3LsSL-Z8X6nP5",
+            "for@2kYS9w1UzQFZ1zhf01m9L",
+            "forms@Q36LQds8k_cSjijvXyWOM",
+            "guards@PmC4zeaLpa5LoL4FhYXcG",
+            "hydration@NY_MfBNgNmloiRGcIvfJ1",
+            "if@U1Zy2T-2ki9pDkXn9hn-I",
+            "imports@ghbrJhuGvscnNGCtVLh5_",
+            "internationalization@Xxyx3uzy5TpNhgR1IysMN",
+            "interpolation@XHpfHRIlFh19FJIE07u7i",
+            "let@AwOM0ucg6W7TohdUd7KWT",
+            "libraries@cl89U8atD6gw5rMGUm4Ix",
+            "metadata@Szgr8dnZNi-z5i6raIJzW",
+            "modules@b_kdNS9PDupcUftslkf9i",
+            "ngrx@ir94IdkF1tVAA8ZTD9r0N",
+            "ngxs@N9ZCPgFnFIUv4jMv1w5qK",
+            "operators@ihsjIcF0tkhjs56458teE",
+            "performance@STEHxJpwBZxFdQl0zUKxo",
+            "pipes@j99WQxuTzGeBBVoReDp_y",
+            "provider@dOMvz__EQjO-3p-Nzm-7P",
+            "routing@8i_JD1P4gIhY1rdldwLC2",
+            "routing@a74v78SvGtWduZpXs7wSq",
+            "sanitization@cgI9oeUHufA-ky_W1zENe",
+            "schematics@Uvr0pRk_fOzwRwqn0dQ6N",
+            "security@mm6c7GLQEwoQdAHdAYzGh",
+            "selector@cDN0PGo-zkcLmttxCiAI-",
+            "signals@u1TG8i145o0RKhOR_5epf",
+            "ssg@b-0yQ74zHtAxI9aRLBohc",
+            "ssr@jfHaS8TqE4tcAo59K8Nkn",
+            "standalone@RcNHEh6kmbBK1PICbhAwr",
+            "styles@4XJKEmSrQfPxggHlAP30w",
+            "switch@nZuim4Fjq6jYOXcRTAEay",
+            "template@-gUpm3OLUJl9iAyx6fmHN",
+            "templates@6fhe9xAi_RSVfa-KKbcbV",
+            "testing@lLa-OnHV6GzkNFZu29BIT",
+            "transformation@kdMJHljMzGA3oRlh8Zvos",
+            "viewchild@v0XaLNZ-YrRqP-xv8wS43",
+            "viewprovider@doHDoAgp7T59KGSXPpQzZ",
+            "zones@m4WBnx_9h01Jl6Q1sxi4Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-client@8UY0HAvjY7bdbFpt-MM1u",
+            "http-vulnerabilities@xH3RHPhsaqD9zIMms5OmX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Httpclient",
+      "name": "httpclient",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "httpclient-csrf@m2aw8vb4rz4IjshpoMyNx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image-optimization@1WIKjn3nxYDMIhBL17aYQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input--output@VsU6713jeIjAOEZnF6gWx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inputs",
+      "name": "inputs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inputs-as-signals@LcJyAfv9hjyUNXUVyPRP4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-angular@KDd40JOAvZ8O1mfhTYB3K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Language",
+      "name": "language",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "language-service@ql7SyxrRmjpiXJ9hQeWPq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lazy",
+      "name": "lazy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lazy-loading-modules@bLERvEERmNI5AgxtEYokZ",
+            "lazy-loading@ewbDdPYv2SJl_jW3RVHQs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Link",
+      "name": "link",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "link-identification@5-RCB8AiDbkdIFYNXKWge"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-setup@FVH0lnbIZ2m5EfF2EJ2DW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Locales",
+      "name": "locales",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "locales-by-id@dVKl3Z2Rnf6IB064v19Mi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Localize",
+      "name": "localize",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "localize-package@W8OwpEw00xn0GxidlJjdc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Making",
+      "name": "making",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "making-requests@HjGAv3aV-p4ijYJ8XYIw3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-inputs@IeU6ClS_yp6BYKdkQOJVf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Module",
+      "name": "module",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "module-architecture@BCq5sgWQLiw0f7u7ZSAd2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multiple",
+      "name": "multiple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multiple-locales@9ISvaaJ815_cr_KW9vQhT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Observable",
+      "name": "observable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "observable-lifecycle@b06Y5YrqBbHhWkK6Ws_1c",
+            "observable-pattern@krXA6ua7E3m4IIpFkgQZe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parent",
+      "name": "parent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parent-child-interaction@TDyFjKrIZJnCjEZsojPNQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pipes",
+      "name": "pipes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pipes-precedence@nZxZnzbQg9dz-SI65UHq9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Property",
+      "name": "property",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "property-binding@TJOZfHtsLfwA0CZ2bd1b2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Queries",
+      "name": "queries",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "queries-as-signals@9HS9C3yq9EUcUy0ZUZk_H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rate",
+      "name": "rate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rate-limiting@bJbbayFQ9WSJT9-qy0H5l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reactive",
+      "name": "reactive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reactive-forms@1d3Y4HVnqom8UOok-7EEf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reusable",
+      "name": "reusable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reusable-animations@M1CU2Yq6dLp4yOuGV0fhF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Route",
+      "name": "route",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "route-transitions@x91jWP81oCTeVEwzX8FbK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Router",
+      "name": "router",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "router-events@YF_sG292HqawIX0siWhrv",
+            "router-links@8lFyuSx4MUcYRY2L8bZrq",
+            "router-outlets@1ZwdEL0Gx30Vv_Av3ZTGG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rxjs",
+      "name": "rxjs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rxjs-basics@lfp7PIjwITU5gBITQdirD",
+            "rxjs-interop@KAdtebWvgvMifIwd52yc4",
+            "rxjs-vs-promises@e1ZmmxPZuogCNgtbPPWmd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Services",
+      "name": "services",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "services---remote-data@CpsoIVoCKaZnM_-BbXbCh",
+            "services-with-dependencies@TGRZBizDy83JKg_MhnRdX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-a-new-project@EbFRcy4s6yzzIApBqU77Y",
+            "setting-up-the-client@AKPhbg10xXjccO7UBh5eJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Slow",
+      "name": "slow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "slow-computations@yxUtSBzJPRcS-IuPsyp-W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-management@Mqe_s-nwBqAL6X7OGRHEN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structural",
+      "name": "structural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structural-directives@xk3v8p6vf8ntGj5c-IU4U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-driven-forms@uDx4lPavwsJFBMzdQ70CS",
+            "template-ref-vars@nyDry6ZWyEUuTq4pw-lU3",
+            "template-statements@t2YOeMONlcnKBrVAo0JDc",
+            "template-syntax@VsC7UmE_AumsBP8fC6to1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-directives@SGqb5k6OmWit8PA6ZT3js",
+            "testing-pipes@rH13NBFG02hnn5eABSNCY",
+            "testing-requests@4xt0m5jkUqB4Z-krcFBuL",
+            "testing-services@HU1eTYB321C93qh_U7ioF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transitions",
+      "name": "transitions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transitions--triggers@Iv2d4sgODqMPzA9gH6RAw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Translation",
+      "name": "translation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "translation-files@jL5amGV1BAX_V5cyTIH7d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Trusting",
+      "name": "trusting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "trusting-safe-values@XoYSuv1salCCHoI1cJkxv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Two",
+      "name": "two",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "two-way-binding@2UH79nCjgtY1Qz1YjUJYL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typed",
+      "name": "typed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typed-forms@XC_K1Wahl2ySqOXoym4YU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ui",
+      "name": "ui",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ui-components@CZ1YRyai8Ds-ry4A8jVbr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-binding@WH5wlyOtrqFHBJx7RFJwS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-libraries@YHV5oFwLwphXf1wJTDZuG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-interceptors@xG7iSVOGcbxJbNv3xbNfc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Xsrf",
+      "name": "xsrf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "xsrf-protection@ni00edsphJd7uBLCn7-Vw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zone",
+      "name": "zone",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zone-pollution@pRSR5PEbkJXAJ1LPyK-EE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zoneless",
+      "name": "zoneless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zoneless-applications@1x5pT607aKE-S-NCWB810"
+          ]
+        }
+      ]
+    }
+  ]
+}

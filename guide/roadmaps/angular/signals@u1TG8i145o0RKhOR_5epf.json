@@ -1,0 +1,4 @@
+{
+  "title": "Signals",
+  "content": "Angular Signals is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize rendering updates.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Signals](https://angular.dev/guide/signals)\r\n- [@article@Angular Signals Complete Guide](https://blog.angular-university.io/angular-signals/)\r\n- [@video@Signals Unleashed: The Full Guide](https://www.youtube.com/watch?v=6W6gycuhiN0&t=169s)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Reverse Linked List",
+  "content": "Given the head of a linked list, reverse it in place and return the new head. You iterate through the list, keeping track of the previous node, current node, and next node, rewiring each pointer as you go. This is the first linked list problem most people learn and it teaches you the three-pointer technique that underlies almost every in-place list manipulation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)\r\n- [@article@Linked Lists vs Python Lists: When to Use Each](https://roadmap.sh/python/linked-list)\r\n- [@video@Reverse Linked List - Leetcode 206 - Linked Lists (Python)](https://www.youtube.com/watch?v=KRxeMng7fBU)\r\n- [@video@LeetCode - Reverse Linked List Solution](https://www.youtube.com/watch?v=NhapasNIKuQ)"
+}

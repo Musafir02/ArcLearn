@@ -1,0 +1,4 @@
+{
+  "title": "Command Line Utilities",
+  "content": "Docker images can include command line utilities or standalone applications that we can run inside containers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Docker Images](https://docs.docker.com/engine/reference/commandline/images/)\r\n- [@official@Docker Run](https://docs.docker.com/reference/cli/docker/container/run/)\r\n- [@official@Docker Pull](https://docs.docker.com/engine/reference/commandline/pull/)"
+}

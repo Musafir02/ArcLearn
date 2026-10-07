@@ -1,0 +1,4 @@
+{
+  "title": "Multi-threaded",
+  "content": "Multi-threaded algorithms divide work across multiple threads running concurrently, using parallelism to reduce total execution time. Designing them correctly requires managing shared state to avoid race conditions and deadlocks. Parallel merge sort and parallel BFS are examples where multi-threading provides meaningful speedups.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Python Multithreading: The Most Practical Intro](https://roadmap.sh/python/multithreading)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "PSR Standards",
+  "content": "PSR (PHP Standard Recommendations) are specifications published by PHP-FIG that define common interfaces and conventions for PHP projects. Key PSRs include PSR-4 (autoloading), PSR-7 (HTTP message interfaces), PSR-12 (coding style), and PSR-3 (logging interface). Adhering to PSR standards makes libraries easier to integrate and swap.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@PSR Standards](https://www.php-fig.org/psr/)"
+}

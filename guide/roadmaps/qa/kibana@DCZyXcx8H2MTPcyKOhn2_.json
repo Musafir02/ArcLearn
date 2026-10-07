@@ -1,0 +1,4 @@
+{
+  "title": "Kibana",
+  "content": "Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Elastic Kibana](https://www.elastic.co/kibana/)\r\n- [@article@Learn Kibana](https://www.elastic.co/training/free)"
+}

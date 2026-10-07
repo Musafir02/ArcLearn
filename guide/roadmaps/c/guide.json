@@ -1,0 +1,1028 @@
+{
+  "title": "C Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Asan",
+      "name": "asan",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asan--lsan@SOpS0quLuuiL0NlGPMtJg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-functions@I5qOTKJFzAYoLMBiReGdX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binary",
+      "name": "binary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binary-vs-text-mode@qxz-_BtYBnX8cz2VLAgUN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bit",
+      "name": "bit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bit-fields@fE1c9niOycVP6mb9VlVgS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Break",
+      "name": "break",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "break--continue@PB9wjYwkQI-ydITRr4nHD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buffer",
+      "name": "buffer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buffer-overflow@1KoVKffvv8bhaoq6LHqUC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build--compilation@ncyN2q1gmZcqCiTLJu9hn",
+            "build-systems@dhFsP1jJLVz7nsc5IfBrH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "C",
+      "name": "c",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "c-standards@2o1kK-ptkKNpCYZALmYTU",
+            "c-vs-assembly@iJnBnTdwAgSTPBDPaqqqA",
+            "c-vs-c@GBJVZLGm5dfAfba_7eJ79"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "C89",
+      "name": "c89",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "c89--c90@HL2hdpgQyxV4vK2xmF_zG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-editors--ides@TUpINnV49c-ioTGw6KSHM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Command",
+      "name": "command",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "command-line-arguments@Ss_Ga6RY_gAriphVtJ0wV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-data-structures@Iw6fn73v5n8Ru0zA-IJfP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-compilation@noUypqHxipILMic-CgaHC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Control",
+      "name": "control",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "control-flow@MsLtiJwb0DsHNBebN0GrH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-data-structures@Iw6fn73v5n8Ru0zA-IJfP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dangling",
+      "name": "dangling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dangling-pointers@nMzRriI7nNECvHOofg5wb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-types@OkN6Kgp_rYIfd7qivswlO",
+            "data-utilities@_W2NLBaInoPAi47R1a_7t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Declaration",
+      "name": "declaration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "declaration-vs-definition@z1GOLWQOK2TQotdjX9XI0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Diagnostics",
+      "name": "diagnostics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "diagnostics--limits@5aE4q0ZIm4_eWdcaBc2a8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamic",
+      "name": "dynamic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamic-arrays@buxZzmsp2R4LenE1IxPjo",
+            "dynamic-memory-allocation@Fdf3p_5PW_MWr_b_DXRRU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@IX-B5Dik_cpfi8zlaaVYH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exit",
+      "name": "exit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exit-codes@nk5RkhCSxdZL0RplXmp7-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Extended",
+      "name": "extended",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "extended-types@yV8aU6aWcfH2TRZX4lymc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-io@kb0Sbn0UfrdSzXBBNA4XQ",
+            "file-pointers@xa-U-kJDF6kHS2qSYE9s7",
+            "file-scope--storage-duration@Cby7X4MBWjNV1TkdV79o-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fixed",
+      "name": "fixed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fixed-width-integers@_3sjS_QVxUR48FEnb1t_d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "For",
+      "name": "for",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "for--while--do-while-loops@QIUhvd_EmL_eD1Fn03XWF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-pointers--callbacks@yAnN3Fk_S3Nx2USXSR-vq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gcc",
+      "name": "gcc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gcc--clang@Pz0ENibKam0gHfLiJIGF1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abi@YclFmrSZ3LcNxnXHU5zl-",
+            "applications@0jSjJfj-xvSsrmjrKscuq",
+            "arithmetic@TqVZuxNp423auXIPmolrX",
+            "arrays@ZKpnuEvqZFm4cyzF43jSb",
+            "asserth@oGePVWBoGQyGvNOqbW7qs",
+            "bitwise@cj4suITy4GRvo8cmiSb5S",
+            "booleans@Ut8jRmxC2SLELJd4oEgwQ",
+            "c11@ZX5viPXChcZavr8qk9pGu",
+            "c17@lA_D58yQWIOuo4lI4tuGH",
+            "c23@ap6BqMVNnikfmwyS0TCeS",
+            "c99@jU7wd6qvOc3EOErL3zx7I",
+            "calloc@HM1brkIQ483av1Mjs3bjz",
+            "char@5QfhF3454XaX8OwQuVHtm",
+            "check@Q5zOAY446IeU9HQnLCiyD",
+            "cmake@pOG9NvouqPEFHlz3Ekmla",
+            "cmocka@9g7mnYz1TVj2gyMXovmck",
+            "comparison@KG8ElQw797YppJNK4WhN-",
+            "compilers@HsGe9q5YMHPM8MP8XgGq-",
+            "conan@XM3WkMySETrqHKYp992je",
+            "concurrency@_MtErgneJKhjg8PD9sThs",
+            "const@a0KWMhzef64QvM8l0Cp1P",
+            "debugging@3X44ONbF3KDretxS6ZQO3",
+            "double@TBx0uWZ2T7RXLUC5EtU_j",
+            "enums@o6F1LPMXuGDt1LBa4TF3r",
+            "errno@5luB8FgdkP_LvW2d0HYuZ",
+            "extern@BUnTFPsFmmYsZMiOrX09V",
+            "float@5Wshi-NH3c_fm9muMr-Ye",
+            "free@N0wFaqozA3K6UUJbTEeWr",
+            "functions@Ap1G1kpE5IPNXhraizogH",
+            "gdb@5jGEjmELi7U68fPdKLbel",
+            "initialization@W7zr2sfw5Lb_H5IujvEq-",
+            "integers@wf30TwIenxNMA2eXe69Tu",
+            "introduction@P5PQ8Pw9hBv5oM-Trrgic",
+            "ipc@3HSmsfQga_i8bAaJwWYJB",
+            "linkage@BVM_NAKegerqPp1GqxymX",
+            "linking@SKmlpSWapjwnTGngx5qtI",
+            "lldb@GRW6VzOtJdVGA_ErIMwoN",
+            "logical@NTVnzG3gY5OTIlAJWG3Kr",
+            "macros@ixFrXXh8oKx2SYjHRzW-G",
+            "malloc@g-OyeBMZCusiE7nZ0UYrM",
+            "meson@0Dcu1ebOg1BSgZ-G4lhBv",
+            "mutexes@L3Zaj3-DcM5TSGI_Cx8X2",
+            "ninja@clX_lqAyprj2TRxavr68H",
+            "operators@vDGhrPekat-IYxgUI4NkG",
+            "preprocessors@H8LI-74sxAjukEbqhqvXZ",
+            "realloc@u_afM2pvFeKARfplmbjP0",
+            "restrict@Fmop70stlzRvvf7ozgohF",
+            "static@2XSFrsw3uSrAry5zJ3MV9",
+            "strace@VVJk4mqpurVbduRfeMh5Z",
+            "streams@GhgPLOX53uRMueGKnoAch",
+            "strings@-NvNwB58TkSdPfGg7OhqK",
+            "structs@CD-aDJ-oAjtf2RgxQDlZ2",
+            "ternary@Kz8gzwxvKQz5UuB3_EJLc",
+            "testing@cgYsOE6XhfnTYEgDQh3o-",
+            "tinycc@bULHRcaOth5MzdDmazlH4",
+            "typedef@fE1c9niOycVP6mb9VlVgS",
+            "unions@KOerKv8-2VV8WBziDHzv4",
+            "unity@Si0kEq0CN8hPsgIgsyO_q",
+            "valgrind@nFhLGsMaqv2fE2WadHwGK",
+            "variables@0pJTCnKRsjgkgrGkBR_m-",
+            "vcpkg@0uvuBpUaQjDvA5eTWRzHn",
+            "volatile@_KdE4w3OfOMt5EYWkCCVQ",
+            "vscode@g4Jne3Ok5KqLdRKcv000s",
+            "windbg@w1AYTM94VDO2YMQoKkXFq",
+            "_atomic@uDFazTncdICtqZyGIv3iZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gnu",
+      "name": "gnu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gnu-make@e-9jBLdJEEZkD7g6Ahr5g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hash",
+      "name": "hash",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hash-maps@Vz3EG6Ceht0jJQMWzRxnc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Header",
+      "name": "header",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "header-files@SwEkB8-m2yhdJVakktJFJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Idioms",
+      "name": "idioms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "idioms--design-patterns@svLpkz24gcGxwQ3L5b6SH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "If",
+      "name": "if",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "if-else--switch@xSnR4hOm243pyPl1S2xjr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input--output@MSWKzt42QsalPJaMBaYer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-c@e7SlvxdKrmuqdZPAmJ6Z6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Intrusive",
+      "name": "intrusive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "intrusive-data-structures@H3YWNa07EK30ZLOSDxUoW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lifetime",
+      "name": "lifetime",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lifetime-of-objects@hDe6JcTOGQBYfGLFJmacW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linked",
+      "name": "linked",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linked-lists@_gCygh71kFo_Xrja7_YlL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Main",
+      "name": "main",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "main-function@mjelrh_5unRJ3uWXd42zz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Math",
+      "name": "math",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "math--time@WUOL09d1l-Bxzn9g1sjlo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-leakage@6jqJf-byatxy5a0v4cSnF",
+            "memory-model@ICnlPkmGCZiIltmcTRQ6l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Null",
+      "name": "null",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "null-pointers@yaYJPKMxWX73mJzRjPCwR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-oriented-c@0IFzpiIz7WtNePY65W328"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opaque",
+      "name": "opaque",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opaque-pointers@J_nBnWB5avnvWhGw-_mAZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optimization",
+      "name": "optimization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optimization-levels@2DW9FR0WKWFLT7Hnf5Pyk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Os",
+      "name": "os",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "os--signal-interfaces@USjbDTmKlhwc6Wb0rOPgM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-managers@tZtEUp5L9F3He4ZEdN9ph"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pointer",
+      "name": "pointer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pointer-arithmetic@HhvKpGZIWo4WUUFIspC8G",
+            "pointer-basics--syntax@P0jVQ5M1zMN33pLu7gGb7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pointers",
+      "name": "pointers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pointers--memory@M6WIUp-bxgRRmpwcJ_doe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Posix",
+      "name": "posix",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "posix-threads@taWuoFSGTYRHcMRoaHz2U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Predefined",
+      "name": "predefined",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "predefined-macros@I7Bu9qv6H3znapVwxpZtK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Printing",
+      "name": "printing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "printing-variables@yciCL88miyxj5edEy2ZLH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-management@xr2VDNyz4LdRSnuUHa6SI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Raii",
+      "name": "raii",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "raii-simulated-cleanup@TnMlP8w8Fl8oF5Z-GI5Sv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reading",
+      "name": "reading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reading-and-writing-files@hLI_c5JJkkAaAK0f3eTa1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recursive",
+      "name": "recursive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recursive-functions@LfkNE6HzPxfeq9WP0TB0K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ring",
+      "name": "ring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ring-buffers--fifo-queues@a5vmstRQ2nH0-o3fn_vJP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-your-first-program@38JQAsASLIbzZ_lzsTesM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setjmp",
+      "name": "setjmp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setjmp--longjmp@uu93EX_9ZcYY8_3O7H_PI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up@UTX0BspDuWe4UXAjXWFxi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stack",
+      "name": "stack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stack-vs-heap@4RHp4jaQ24quGah_-GzKo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Standard",
+      "name": "standard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "standard-library@K0a40UVhxnybYUWPCpHYh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structuring",
+      "name": "structuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structuring-codebase@dlIC0Hb7fHPgNeFiyYk8V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Symbol",
+      "name": "symbol",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "symbol-tables@kKbEUfG7emh2a_t0W8iwa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-processing@-2pX0L0KsAsSOBne4_lOu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-conversion@u6JYFgz8uba4AGDzaM9KS",
+            "type-qualifiers@5XkKGcxVTnuI09XpY7ntD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Undefined",
+      "name": "undefined",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "undefined-behavior@qfLrVwFd85vUG9RMrGzrc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-defined-types@YQxkVgaNSJ4fNCqLFy9ap"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variable",
+      "name": "variable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variable-scopes@-Ea7jUSf6nHieVssBefno"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variadic",
+      "name": "variadic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variadic-functions@e20yctd9zyACyfHgM5vQy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vim",
+      "name": "vim",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vim--nvim@BJ0X8EEdTxh2POVpIOJQV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Void",
+      "name": "void",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "void-pointers@LWsaf-bUIAilXbobQCHv9"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Badge",
+  "content": "A badge is a small UI element used to display status indicators, notifications, or counts associated with a specific item. It typically appears as a compact label containing text or a number, often positioned near an icon, button, or navigation link to provide quick, at-a-glance information to the user. Design systems use badges to highlight states such as \"New,\" \"Active,\" or \"Offline\" while maintaining a clean and consistent visual hierarchy."
+}

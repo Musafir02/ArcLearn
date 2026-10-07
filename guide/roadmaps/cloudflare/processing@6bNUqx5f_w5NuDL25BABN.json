@@ -1,0 +1,4 @@
+{
+  "title": "Email Workers",
+  "content": "Email Workers process inbound email at Cloudflare's edge. An Email Worker is a script that receives a message before it is delivered, allowing custom routing, filtering, transformation, or forwarding logic to run on every incoming email.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Email Workers · Cloudflare Email Routing](https://developers.cloudflare.com/email-routing/email-workers/)\r\n- [@official@Email Workers Routing - Runtime API](https://developers.cloudflare.com/email-routing/email-workers/runtime-api/)"
+}

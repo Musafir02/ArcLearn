@@ -1,0 +1,821 @@
+{
+  "title": "Server Side Game Developer Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Actor",
+      "name": "actor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "actor-model@KUQEgHldZPOLwFoXqQ2vM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Address",
+      "name": "address",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "address-conversion@SBA7pa9o0AM0ZEBepd7UM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Akka",
+      "name": "akka",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "akka-java@eAEpEUVZcSKO9uCIlMN5y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Akknet",
+      "name": "akknet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "akknet-c@SsOz9Pj6Jc_55PgpmziL6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Amazon",
+      "name": "amazon",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "amazon-ml@U0RlO_puezQPZP0-iBXgW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apache",
+      "name": "apache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apache-kafka@gL7hubTh3qiMyUWeAZNwI",
+            "apache-spark@yrWiWJMSyTWxDakJbqacu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asnc",
+      "name": "asnc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asnc-await-c@mAXMpUDmhGOncnCRrENJv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-ml@vBqwmlzoT5XVEhV9IeGso"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bsd",
+      "name": "bsd",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bsd-socket@U_tZFM80W3xJx8jj4skCr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Byte",
+      "name": "byte",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "byte-manipulation@H21PanCggDfQt34-JzgfO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-ml@XvvlvDKfYRCcYtTdWohsd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Concurrency",
+      "name": "concurrency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "concurrency-java@RT9XvlxvIM_hHTtNmbva3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Condition",
+      "name": "condition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "condition-variable@xR6pERldq4wPl9GVLHAhT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Congestion",
+      "name": "congestion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "congestion-control@1GML0Jsfdb1Fn-0PNryiQ",
+            "congestion-control@jsNsyrGzegVnjIF2l52vI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connection",
+      "name": "connection",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connection-hijacking@ubRiY3jdh3iS3diN482IU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-clustering@XCJvgUSS7-oDR-XGdDY33",
+            "data-transfer@5bJUcx3v4dpdlIsx7bFvK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Datagram",
+      "name": "datagram",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "datagram-construction@jnQAzUUnwpJgoRuRIFtSe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-learning@jkWvfp4GqckYPQ48GtjlR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Denial",
+      "name": "denial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "denial-of-service@TbXJO__4xSnzK1fvvJK86"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@uTlxyDOtvt_Qp0gXLWO-j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-patterns@gB-TYpgUDV47bxznNJhYn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Docker",
+      "name": "docker",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "docker-compose@yAf7VDX7dyaT5AdlNnuKD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dump",
+      "name": "dump",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dump-analysis@1c6EqGv1g-d8M1i0vKImb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-detection@vFM311xSa5OqNVove2f6j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Flow",
+      "name": "flow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "flow-control@lDVD-3i64Mk7-KPJrXmFH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-programming@HXSWvhgT4L5w6xgOO-3kj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Future",
+      "name": "future",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "future--promises@zbIbPlqTNSbJUkqH9iLQv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai@dkCVwuy8GKeEi3VJar_Zo",
+            "api@a2pcxVTGdAPw8aLvdr19M",
+            "arp@JI_wUdT2hjsrvbIhLvHcT",
+            "asynchronous@ThBxS9xIMt9OrXfnto3rW",
+            "aws@Rkx2A6oWsddlCTseZlpRU",
+            "azure@73uoFNGcCALxIuRNbebav",
+            "barrier@6k25amPkU9lnZ7FMNn_T6",
+            "c@DuyUc9a-47Uz03yr4aeyg",
+            "capability@5kF1fqr-mn5-15e3aMa9k",
+            "cassandra@1jqSxk1nwByiQa1De81F3",
+            "category@NH2eQ1_nij1icTgoO027b",
+            "cc@E4H3hniIW6hKpH3Qr--N5",
+            "channel@SXOEMkcVYBsRza6BPmmwy",
+            "checksum@tBOvBpDi3SOKZjAmkxdM0",
+            "checksum@XxBl-zO7CF6DpOZ2bMDxJ",
+            "cipher@1788KFqsQBkYARqA0T5GX",
+            "cloud@hhtqvFfTCuVPT0OPu4Y1a",
+            "connection@5sI3RHaLudq4TfpjoYeOp",
+            "containerization@k3FJY26SVxdZx4MLLE25h",
+            "coroutine@o0Y_hM0KXUApfsXG4PvOY",
+            "couchbase@6KTj_giX2k9l2lPd_Fp-d",
+            "dal@dt_SmZuwklLimhupvjxC1",
+            "databases@FLFaGZDg2MSG6_YHnWETM",
+            "datagram@wD_HWc9YxPhlkilt585pg",
+            "descriptor@OAyMj6uLSv1yJ87YAjyZu",
+            "determinism@zFx1jjt1hKgCpYHFTzbZZ",
+            "dhcp@aTHJh-xw8soCxC1bIDdXm",
+            "dns@yNytLrQAMKBw4t73YRL3J",
+            "docker@zW_7VLeEHQp8fp_f5N__0",
+            "dynamodb@9vc7sFE_XakYXtKRMxLXi",
+            "epoll@qaWv4gxnnj3uX8lEm9KQ4",
+            "erlang@QGtGx5LBEWa1DD3Y7ztUy",
+            "fiber@TVJrlUsg30YIM1yjsZfJI",
+            "frp@xDYOvIbXc-iJ2zOKqe0YL",
+            "function@YPvm8XD_FaFYCQ-b7-KsH",
+            "gcp@wD6dUrS-tP2gpCHPghFp5",
+            "go@d5iQYn97vuoxJnCFGPdOa",
+            "grpc@_uqTTBUYAzDHbEUkDzmzg",
+            "iocp@7pgdOZomhGilBTwfJLMbm",
+            "io_uring@YH7u1FKh85wz78J0stuzS",
+            "ip@tg94V7K0mgYhpkUMp_Scv",
+            "ipv4@pHVB0K8Vtk3ToD6n_f1wv",
+            "ipv6@TqBlAMfhARhlJed6xD7eg",
+            "java@LG8JPL1po-gEs1V5JyC8F",
+            "javascript@ufufnULqsglE5VhEIAdSI",
+            "json@y0ZJQQfi8Qx6sB4WnZlP5",
+            "kqueue@caK32NMMrn-3BGAXZoPPr",
+            "kubernetes@lUBUUoETjfADmM4OPtwwX",
+            "memcached@ayeezKxQkXAPJMTShsOBU",
+            "mongodb@HYxtPW401-J6aYcTuiGnx",
+            "multithreading@3QSLUMKD0G08N3MIb1cG7",
+            "multithreading@_jd91rrAXGbJI9RhXlSx8",
+            "mutex@G_BEJKkJ1_Nc43aosy_iS",
+            "mysql@HsBqd08Ro0VJnx0FlumMQ",
+            "oorp@yWj70LpF4LKB8J6GbYvsq",
+            "orm@OyxWMFy8s7Lxko_K89fjo",
+            "postgresql@dAiEwN7phwMyaitvM5kRl",
+            "proactor@Tvxe2NemcH21y-eB4bosv",
+            "protobuf@w2zbab_6Gxw6AWS0N759U",
+            "pthread@HU0yUyl89WD8WnR9PJn7l",
+            "pytorch@LTSIfq10qDJMTCnIIyqvb",
+            "rabbitmq@UESjGrFyUbNf4pQamaBoy",
+            "reactor@7mYpgn2gr-5vAYW-UR7_x",
+            "redis@7YNaELVcoV7DV1Fa06USi",
+            "reliability@2jDV-ovvrkBbTTLk5VbR9",
+            "reliability@Vh81GnOUOZvDOlOyI5PwT",
+            "rest@Oq3GQ5gBUxIl1Qe8NB3LB",
+            "routing@bYb7nA-Vn9e6VtdbUT3tq",
+            "security@qkO0s9zR0sAnjTRWcrLQY",
+            "select@5-5toy2CblZPCV9d5QPEo",
+            "semaphore@DYvzGc_r0SlOArPPc1gNI",
+            "serialization@TS6dz61rUSxm-SqmK6JKe",
+            "serverless@DOmbRRK_RRPElOuTB7AAK",
+            "sharding@3use5vuLBJTk40wOg9S-X",
+            "spinlock@lVXfA_oZr82mFfBvLnnRK",
+            "ssl@PSvPjaVtko71BeIA-hYqf",
+            "synchronization@idmrgKgVWVLZYANbXiZnS",
+            "synchrony@l5QTk408Ubagw8XzRAfoZ",
+            "tcp@mUCidjOsVLMAVDf2jmV5F",
+            "tdd@FKOhe21PVlaKIoZI4hd49",
+            "tensorflow@iJE9RnKC8QjPnsFeZAbtl",
+            "timestamp@6KAYNPLEFMp6Jha8FLMAU",
+            "tls@FX8ASd-QzTUFDHzBB93WK",
+            "toml@l8iEC3g0ICSfmIE1MxcUl",
+            "transactions@r2OeI7YC1BLLfctC8q69W",
+            "udp@IMyHwnXxJK6oFxzOMLxjS",
+            "veto@ZLTfpRZ0rF-mtd7Z0R2WF",
+            "vulnerability@MwLWDlciJOq_0n5S3GoF-",
+            "windows@mW2L_9NckgPRH7g5W9NHq",
+            "winsock@GfTXffisLyQgp66zcQ7Py",
+            "xml@v43K6srds7m5SQFqNaY0T",
+            "yaml@uHcUSVLz_2-Usk6ckSvwr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Goroutine",
+      "name": "goroutine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "goroutine-go@f-L_eaZd0EjBW9-n9Pllt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Heavy",
+      "name": "heavy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "heavy-vs-lightweight@OYXKtl4A-vaK6yGO6hS6n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ip",
+      "name": "ip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ip-addressing@3ZcJNDCHw2pFzewmoB-03"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Link",
+      "name": "link",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "link-capacity@OzY-LPcfj1sBm_0F0WbIJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Max",
+      "name": "max",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "max-segment-scaling@1l5dhQWYPhUSg-cy5pSlK",
+            "max-segment-size@w6ysmcsBn9jJ8xMvg7hcD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-queues@cw7WdFfL5HpeZ_n8wYk2t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ms",
+      "name": "ms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ms-sql@QMNUAKAuRI9lyf2_jUPsj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ordered",
+      "name": "ordered",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ordered-vs-unordered@WMdCDmFsytsF2AWQXfzC8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Out",
+      "name": "out",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "out-of-band-data@3OMu3RM-6pMjqY1jAmC2-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Packet",
+      "name": "packet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "packet-structure@CCxVnrGDKa1EROXgF_OAm",
+            "packet-vs-datagram@JE3uZ5U6oe6dVzsmglTl2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-languages@6ilqzjvI4J1pUCmTJ33PA",
+            "programming-techniques@tGQu18PWDatW7HvkTP-uh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reactive",
+      "name": "reactive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reactive-approach@LVwGXmZhMewGQy61qwNyu",
+            "reactive-approach@Vl-WW0LThrQTOO_tFl51B",
+            "reactive-model@p0P3ZGq_QTCop0vMwe7P3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Registered",
+      "name": "registered",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "registered-io@94hJX1iGifDzIuaU3zU5j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reliable",
+      "name": "reliable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reliable-transmission@X2KHWgQZDHSVDsTRMUwSj",
+            "reliable-vs-unreliable@MoyBGT9bscUe8vMN4J0bG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-usage@LkGI0VpJ3WkpPHkJhJgWk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rpc",
+      "name": "rpc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rpc--rest@YxaroYL_Az0vKRCeu2jsp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Segment",
+      "name": "segment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "segment-structure@zTCmPUp9j5P1wpGgiboMa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Selective",
+      "name": "selective",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "selective-ack@SPpOO25b7wpajWDIrKi1u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-side-development@rQArtuVKGVgLn_fw9yO3b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Socket",
+      "name": "socket",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "socket-programming@HvpuFTCknHPhnFkhmhRc4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streaming",
+      "name": "streaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streaming-vs-broadcast@pJw8fN1dt3BABtZVz7wGE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Task",
+      "name": "task",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "task-based@LKPcEeqBOPhQOztD3cM3T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tcp",
+      "name": "tcp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tcp-vs-udp@RfTcTUjaXyp49FnUf44MK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Thread",
+      "name": "thread",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "thread-building-block-c@tiG0mZpLJ2zUr2IPYyhnv",
+            "thread-local-storage@IeD-oQ1bkwlKNC-R0lJjZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Update",
+      "name": "update",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "update-process@3Eat22rFjUl4eTtGz8u4N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Window",
+      "name": "window",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "window-scaling@zvBKjceXRSfEe_3MDCEL5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wsa",
+      "name": "wsa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wsa-poll@D9Yeyn8phDhB1ohMWccgr"
+          ]
+        }
+      ]
+    }
+  ]
+}

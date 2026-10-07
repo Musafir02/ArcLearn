@@ -1,0 +1,4 @@
+{
+  "title": "GORM",
+  "content": "Popular Object-Relational Mapping library for Go. Provides database abstraction with struct-based models, automatic migrations, associations, and query building. Supports multiple databases (MySQL, PostgreSQL, SQLite, SQL Server). Features hooks, transactions, and connection pooling.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GORM - The fantastic ORM library for Golang](https://gorm.io/)\r\n- [@official@gorm package](https://pkg.go.dev/gorm.io/gorm)\r\n- [@article@Getting Started on Golang Gorm](https://medium.com/@itskenzylimon/getting-started-on-golang-gorm-af49381caf3f)"
+}

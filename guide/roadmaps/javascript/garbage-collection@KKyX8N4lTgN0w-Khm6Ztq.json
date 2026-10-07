@@ -1,0 +1,4 @@
+{
+  "title": "Garbage Collection",
+  "content": "Memory management in JavaScript is performed automatically and invisibly to us. We create primitives, objects, functions… All that takes memory. The main concept of memory management in JavaScript is reachability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@JavaScript Garbage Collection](https://javascript.info/garbage-collection)\r\n- [@article@Memory Management in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management)"
+}

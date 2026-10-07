@@ -1,0 +1,62 @@
+{
+  "title": "Ai Data Scientist Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-learning@cjvVLN0XjrKPn6o20oMmc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exploratory",
+      "name": "exploratory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exploratory-data-analysis@l1027SBZxTHKzqWw98Ee-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "coding@XLDWuSt4tI4gnmqMFdpmy",
+            "econometrics@Gd2egqKZPnbPW1W2jw4j8",
+            "index",
+            "mathematics@aStaDENn5PhEa-cFvNzXa",
+            "mlops@Qa85hEVe2kz62k9Pj4QCA",
+            "statistics@4WZL_fzJ3cZdWLLDoWN8D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Machine",
+      "name": "machine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "machine-learning@kBdt_t2SvVsY3blfubWIz"
+          ]
+        }
+      ]
+    }
+  ]
+}

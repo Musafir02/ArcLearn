@@ -1,0 +1,4 @@
+{
+  "title": "Basic authentication",
+  "content": "Basic Authentication sends base64-encoded username:password in HTTP headers. Simple to implement but insecure since base64 is easily decoded. Should only be used over HTTPS for credential protection. Best for low-risk scenarios or fallback mechanisms.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@HTTP Basic Authentication](https://roadmap.sh/guides/http-basic-authentication)\r\n- [@video@Basic Authentication in 5 minutes](https://www.youtube.com/watch?v=rhi1eIjSbvk)\r\n- [@video@Illustrated HTTP Basic Authentication](https://www.youtube.com/watch?v=mwccHwUn7Gc)"
+}

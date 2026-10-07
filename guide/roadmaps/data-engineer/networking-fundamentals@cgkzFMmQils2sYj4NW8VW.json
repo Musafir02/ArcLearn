@@ -1,0 +1,4 @@
+{
+  "title": "undefined",
+  "content": "Networking Fundamentals\r\n\r\nNetworking fundamentals cover how data moves between systems: IP addressing, DNS, HTTP, TCP/UDP, and firewalls. Data engineers encounter networking when configuring cloud resources, troubleshooting pipeline failures, or setting up secure connections between services. A basic understanding of how networks operate helps diagnose connectivity issues and design reliable architectures.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated Network Engineer Roadmap](https://roadmap.sh/network-engineer)\r\n- [@article@Khan Academy - Networking](https://www.khanacademy.org/computing/code-org/computers-and-the-internet)\r\n- [@video@Computer Networking Course - Network Engineering](https://www.youtube.com/watch?v=qiQR5rTSshw)\r\n- [@video@Networking Video Series (21 videos)](https://www.youtube.com/playlist?list=PLEbnTDJUr_IegfoqO4iPnPYQui46QqT0j)"
+}

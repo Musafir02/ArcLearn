@@ -1,0 +1,4 @@
+{
+  "title": "What is PHP?",
+  "content": "PHP, an acronym for Hypertext Preprocessor, is a popular server-side scripting language favored for web development. It's versatile, dynamic, and can be embedded seamlessly into HTML code. PHP scripts are executed on the server, and the result is sent back to the browser as plain HTML.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@What is PHP?](https://www.php.net/manual/en/introduction.php)\r\n- [@article@Introduction to PHP](https://www.phptutorial.net/php-tutorial/what-is-php/)"
+}

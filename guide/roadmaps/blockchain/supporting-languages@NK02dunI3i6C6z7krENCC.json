@@ -1,0 +1,4 @@
+{
+  "title": "Supporting Languages",
+  "content": "While the bulk of the logic in blockchain applications is handled by smart contracts, all the surrounding services that support those smart contracts (frontend, monitoring, etc.) are often written in other languages.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Programming Languages for Smart Contracts](https://blog.logrocket.com/smart-contract-programming-languages/)\r\n- [@article@Top Programming Languages for Blockchains](https://www.codecademy.com/resources/blog/programming-languages-blockchain-development/)"
+}

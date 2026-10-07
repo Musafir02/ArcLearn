@@ -1,0 +1,4 @@
+{
+  "title": "Mocking and Property-based Testing",
+  "content": "Mocking creates fake functions/objects for testing different scenarios. Rust uses external libraries like `mockito`, `mockall`, and `mockall_double` for mocking capabilities. Property-based testing generates test cases automatically to verify code behavior across a wide range of inputs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Docs.rs: mockito](https://docs.rs/mockito/latest/mockito/)\r\n- [@article@Docs.rs: mockall](https://docs.rs/mockall/latest/mockall/)\r\n- [@article@Docs.rs: mockall_double](https://docs.rs/mockall_double/latest/mockall_double/)\r\n- [@article@Mocking in Rust: Mockall and alternatives](https://blog.logrocket.com/mocking-rust-mockall-alternatives/)"
+}

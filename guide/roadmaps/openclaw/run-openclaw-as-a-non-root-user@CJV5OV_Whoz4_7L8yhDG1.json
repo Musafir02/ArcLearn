@@ -1,0 +1,4 @@
+{
+  "title": "Run OpenClaw as a Non-Root User",
+  "content": "Running as a non-root user means that even if the agent is compromised, an attacker cannot gain full system access. It is a basic but important layer of defense for any production setup.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Security](https://docs.openclaw.ai/gateway/security)"
+}

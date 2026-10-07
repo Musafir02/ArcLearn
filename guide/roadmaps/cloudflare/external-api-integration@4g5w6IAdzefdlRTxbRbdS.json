@@ -1,0 +1,4 @@
+{
+  "title": "External API Integration",
+  "content": "Workers can make outbound requests to external APIs using the Fetch API. This includes calling third-party services, webhooks, or internal microservices, with Workers handling authentication, retries, and response transformation before returning data to the client.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@APIs · Cloudflare Workers](https://developers.cloudflare.com/workers/configuration/integrations/apis/)\r\n- [@official@External Services · Cloudflare Workers](https://developers.cloudflare.com/workers/configuration/integrations/external-services/)"
+}

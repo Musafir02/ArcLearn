@@ -1,0 +1,4 @@
+{
+  "title": "Unordered Lists",
+  "content": "Unordered lists present items in a bulleted format, where the order of the items is not significant. They are used to group related content together without implying any specific sequence or priority. Each item in the list is typically marked with a bullet point, making it easy to visually distinguish and scan the list's contents.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@ul: The Unordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul)\r\n- [@article@HTML Unordered Lists](https://www.w3schools.com/html/html_lists_unordered.asp)"
+}

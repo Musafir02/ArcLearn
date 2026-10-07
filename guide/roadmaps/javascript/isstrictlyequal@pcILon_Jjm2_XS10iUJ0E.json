@@ -1,0 +1,4 @@
+{
+  "title": "isStrictlyEqual",
+  "content": "The strict equality comparison is the algorithm behind the `===` operator. It returns `false` if the types differ, without any coercion. For the same type, it compares values directly, with the exception that `NaN === NaN` is `false`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Strictly Equality (===) Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)\r\n- [@article@Comparison - javascript.info](https://javascript.info/comparison)"
+}

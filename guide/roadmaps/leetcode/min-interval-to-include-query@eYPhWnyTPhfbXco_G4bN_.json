@@ -1,0 +1,4 @@
+{
+  "title": "Minimum Interval to Include Each Query",
+  "content": "Given a list of intervals and queries, for each query find the length of the smallest interval that contains it. You sort both intervals and queries, use a min-heap keyed by interval length, and process queries in order. This is the hardest interval problem in this stage and teaches you the offline query technique, processing queries in sorted order alongside a heap.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)\r\n- [@video@Minimum Interval to Include Each Query: 1851](https://www.youtube.com/watch?v=FZtDTYzVUhU)"
+}

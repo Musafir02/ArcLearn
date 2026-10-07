@@ -1,0 +1,4 @@
+{
+  "title": "Defining Classes",
+  "content": "In Kotlin, a class is a blueprint for creating objects (instances). You define a class using the `class` keyword, followed by the class name and curly braces. A class consists of three major parts:\r\n\r\n*   Properties. Variables that specify the attributes of the class's objects.\r\n*   Methods. Functions that contain the class's behaviors and actions.\r\n*   Constructors. A special member function that creates instances of the class throughout the program in which it's defined.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Classes](https://kotlinlang.org/docs/classes.html)\r\n- [@article@Define a class](https://developer.android.com/codelabs/basic-android-kotlin-compose-classes-and-objects#1)\r\n- [@video@Kotlin Classes & Objects Explained 🚀 | OOP in Kotlin | Kotlin Crash Course](https://www.youtube.com/watch?v=1WF2Q_UJgps)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Attributes and Methods",
+  "content": "Attributes are variables that hold data about an object, defining its state or characteristics. Methods are functions that define the behavior of an object, allowing it to perform actions or operations. Together, attributes and methods encapsulate the data and behavior of an object within a class.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Java Classes](https://jenkov.com/tutorials/java/classes.html)\r\n- [@article@Java Methods](https://jenkov.com/tutorials/java/methods.html)\r\n- [@article@Java Properties](https://jenkov.com/tutorials/java-collections/properties.html)"
+}

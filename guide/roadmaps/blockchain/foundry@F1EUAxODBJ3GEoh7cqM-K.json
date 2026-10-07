@@ -1,0 +1,4 @@
+{
+  "title": "Foundry",
+  "content": "Foundry is a fast, portable, and modular toolkit for Ethereum application development. It's primarily used for writing, testing, and deploying smart contracts. Foundry offers a command-line interface and a Solidity-based testing environment, making it a popular choice for developers who prefer a more streamlined and efficient workflow compared to other frameworks.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Cyfrin Updraft | Foundry Fundamentals](https://updraft.cyfrin.io/courses/foundry)\r\n- [@course@Cyfrin Updraft | Foundry Advanced](https://updraft.cyfrin.io/courses/advanced-foundry)\r\n- [@official@Foundry Overview](https://book.getfoundry.sh/)\r\n- [@video@Introduction to Foundry](https://youtu.be/fNMfMxGxeag)"
+}

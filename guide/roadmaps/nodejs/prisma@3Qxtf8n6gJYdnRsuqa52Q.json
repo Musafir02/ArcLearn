@@ -1,0 +1,4 @@
+{
+  "title": "Prisma",
+  "content": "Prisma provides an open source next-generation ORM in the TypeScript ecosystem. It offers a dedicated API for relation filters. It provides an abstraction layer that makes you more productive compared to writing SQL. Prisma currently supports `PostgreSQL`, `MySQL`, `SQL Server`, `SQLite`, `MongoDB` and `CockroachDB`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Prisma](https://www.prisma.io/)\r\n- [@video@Prisma & MongoDB Youtube Tutorial](https://www.youtube.com/watch?v=-7r4whMKt1s)"
+}

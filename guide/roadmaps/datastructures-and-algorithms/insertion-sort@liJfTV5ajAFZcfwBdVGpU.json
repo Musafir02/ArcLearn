@@ -1,0 +1,4 @@
+{
+  "title": "Insertion Sort",
+  "content": "Insertion sort builds a sorted list one element at a time by taking each new element and inserting it into its correct position among the already-sorted elements. It runs in O(n²) in the worst case but is efficient for small or nearly sorted lists, where it approaches O(n). It is also the basis for more advanced algorithms like Timsort.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Insertion Sort](https://youtu.be/JU767SDMDvA)\r\n- [@article@Insertion Sort Visualization](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)"
+}

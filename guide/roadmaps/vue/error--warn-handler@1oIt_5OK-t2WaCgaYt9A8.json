@@ -1,0 +1,4 @@
+{
+  "title": "Error / Warn Handler",
+  "content": "Debugging in Vue.js involves identifying and fixing issues in your Vue applications. It’s an essential part of the development process, and there are several tools and techniques you can use to effectively debug your Vue code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Debugging Documentation](https://vuejs.org/v2/cookbook/debugging-in-vscode.html)"
+}

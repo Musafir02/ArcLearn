@@ -1,0 +1,4 @@
+{
+  "title": "Zoneless Applications",
+  "content": "Angular 18 introduced an experimental feature called zoneless change detection. This technology removes the need for `Zone.js`, a library that was previously used for change detection in Angular from the beginning. By eliminating `Zone.js`, Angular applications can have faster initial renders, smaller bundle sizes, and simpler debugging.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Zoneless](https://angular.dev/guide/experimental/zoneless)\r\n- [@article@Zoneless Change Detection Angular 18](https://blog.logrocket.com/zoneless-change-detection-angular-18/)\r\n- [@article@From Zone JS to Zoneless Angular and back: How it all works](https://angularindepth.com/posts/1513/from-zone-js-to-zoneless-angular-and-back-how-it-all-works)\r\n- [@article@A New Era for Angular: Zoneless Change Detection](https://justangular.com/blog/a-new-era-for-angular-zoneless-change-detection)"
+}

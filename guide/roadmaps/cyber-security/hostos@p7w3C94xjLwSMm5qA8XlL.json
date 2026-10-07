@@ -1,0 +1,4 @@
+{
+  "title": "Host Operating System",
+  "content": "A Host Operating System (HostOS) is the operating system installed directly onto the physical hardware of a computer. It manages the hardware resources, such as the CPU, memory, storage, and network interfaces, and provides a platform for running other operating systems within virtual machines. Think of it as the foundation upon which virtualized environments are built.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Host Operating System Definition](https://nordvpn.com/cybersecurity/glossary/host-operating-system/)\r\n- [@article@Host vs Guest OS](https://www.datto.com/blog/whats-the-difference-host-vs-guest-os/)"
+}

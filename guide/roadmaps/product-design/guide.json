@@ -1,0 +1,1023 @@
+{
+  "title": "Product Design Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ab",
+      "name": "ab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ab-testing@tI31OEk2oI2CzTLZ3kCQl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Accessibility",
+      "name": "accessibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility-testing@QOvNo5vsPhIJCSDQu3-Ln"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agile",
+      "name": "agile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agile-ux-lean-ux@5vPrv890AGAMy3VPl9gwk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-assisted-design@WC7fqDlXZyONf11qzDpdJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aligning",
+      "name": "aligning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aligning-teams@jAhHs0Ba18emgZBdn77Gd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api--data-limitations@l6hgxqruST7xBBypypQFs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Assumption",
+      "name": "assumption",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "assumption-mapping@pWiKXyU5rUxvutXhpgcBD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Business",
+      "name": "business",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "business--user-needs@_FYOA_bNRxoNeoPs_rMuk",
+            "business-alignment@t8gOYcyit3111blHtJHOT",
+            "business-metrics--okrs@id54mKpAb7h62n1RyBfzT",
+            "business-understanding@l6NCN6tGAKFU48I_VRXAg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Collaboration",
+      "name": "collaboration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collaboration-by-design@lKVVP0ILn8Fywr-P3Lgno"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Consistency",
+      "name": "consistency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "consistency--coherence@fzInyQDV_9TqeQf1jLKLT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-design@v8g054KMIKVvtpWvOfTVW",
+            "content-organization@ttBrvqyUpCcnrT8ksRggd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contextual",
+      "name": "contextual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contextual-inquiry@BC_3TgAAehSUlM_oC3aEq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Continuous",
+      "name": "continuous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "continuous-improvement@dgBELpFRvRO_7ir0y0AtX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Critiques",
+      "name": "critiques",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "critiques--reviews@e6giaRpKxfvKXsfjhBj7G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defining",
+      "name": "defining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defining-success@X4NkbOfNGR89y5x1c3MFo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-handoff@2BHujRBCdcaJdIb23Fu6j",
+            "design-principles@9JlXWWRRXGm5tcFl5IDCq",
+            "design-systems@9_zOlYfK-YSWbXoBalPf3",
+            "design-tokens@rnt2fhRBVd4UI5ANC-YIh",
+            "design-workshops--sprints@PeC0uue9ZwvAxcN_4NOub"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Designing",
+      "name": "designing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "designing-responsibly@C0EkWS2SR3ZVi3-hPyNP_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Developer",
+      "name": "developer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "developer-collaboration@FzFKW32DLjvH6JyYVsfGx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Edge",
+      "name": "edge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "edge-cases--states@pAFqw5GHr1O38wEQh3UA4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Empathy",
+      "name": "empathy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "empathy-maps@jbuHRX0mjQRO_2h0U6Y2S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Engineering",
+      "name": "engineering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "engineering-collaboration@hIN-rnf-XhZr4LJCtMykg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ethical",
+      "name": "ethical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ethical-design@wFbCnmsVaZvR-1W04Y8NB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Expert",
+      "name": "expert",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "expert-review@xhMXqsbC0qeAkHdMDOxbH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feasibility",
+      "name": "feasibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feasibility-assessment@xocmzj_2tDkWjwBnTM3EN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feature",
+      "name": "feature",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feature-flags@VoV8iP-A028UvgutSQb9z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Figma",
+      "name": "figma",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "figma-dev-mode@A9QA_XQihVKTfVk-BEUil"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Framing",
+      "name": "framing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "framing-the-problem@mN3ZzOH3yo6mIGwA0hqdm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functionality",
+      "name": "functionality",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functionality-over-polish@KIQRg8ap5Z7IQuMUZc7yC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gathering",
+      "name": "gathering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gathering-information@J4yN0KLUPX2iqI64Hqfgz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "brainstorming@Ypy2m6Y_-kkqwpfanwbQ3",
+            "color@w_sr4EMZsyOWcWwiHMGCx",
+            "components@KrC2p39xUWJjnJh4yUC-6",
+            "designops@UdWsU4kOxSqcHacgTvd7E",
+            "experimentation@cs068IzvRiFrHtfbj3lxK",
+            "heatmaps@-3y4W63-ERcniQsmR4MIS",
+            "icons@cRabi0wAInx3kpLQQbOXx",
+            "ideation@ZcdXHB3b5f6b21fTDfYVm",
+            "interviews@Bairy2nTXWhX098bGJBU9",
+            "introduction@q4yfZZ0MTANpDfx3U7uPP",
+            "kano@IdDdkazWJoZqJLaOwuIN_",
+            "microcopy@zLjTzpEmP1AURO0KsSDgz",
+            "moscow@d0T6LSBz1Dxfvm9oWnb2V",
+            "navigation@55kM1GxUBxwM-WoRaDDyj",
+            "personas@qk_4nCoJeEvRE9q2yC18I",
+            "prototyping@Wy5D8nEdJf7KJcollezXw",
+            "rice@GtCXJjgEhL2wLSVatu1LX",
+            "sketching@l2CI9A_cn9aatKUp3lSfi",
+            "specs@hGIMl_hjYkbtTbYLi9Ijv",
+            "surveys@jIS-dqSKdsUZPovkgoEhX",
+            "typography@_7Lo7JUjJ1iJ0bHrwlz3f",
+            "wireframing@k2EyAc_Zs5VDUJ55taOy2",
+            "zeplin@ZUenBZJztKfzobLOj8BdV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Goal",
+      "name": "goal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "goal-setting@iDc14ni7C6YGpVeze3Cqo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Heart",
+      "name": "heart",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "heart-framework@NV0L45IsvUhMkfCFGVdqQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-might-we-questions@GGMcheQAGyAc8BgXi0oaI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Improving",
+      "name": "improving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "improving-designs@FX1Z0YNkxHNl0ozjCn03N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inclusive",
+      "name": "inclusive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inclusive-design@6J-GuW42O19Rx4o0Fyspm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Information",
+      "name": "information",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "information-architecture@V_AMJYmqBxC6YUT6SJf3J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interface",
+      "name": "interface",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interface-design@Ln8HKsHi-gUeLrrjH8s56",
+            "interface-states@OcYNyCYMKQqlsup8ghpZ7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iteration",
+      "name": "iteration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iteration-over-perfection@9F99swrvYC0zk2NLDw3T8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jobs",
+      "name": "jobs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jobs-to-be-done@JJLA3I1wQlE4iJTroTgSf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Journey",
+      "name": "journey",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "journey-mapping@Eb-UqSB5b19dgqL8zXixA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Launch",
+      "name": "launch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "launch-readiness@o5060NjFK7EYOGD2nF7Dp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layout",
+      "name": "layout",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layout--grid@Ss8-G_xPJnuTOjfumjQKc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-risk@YnOZYh0OgyyzhY_vKqo7f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mapping",
+      "name": "mapping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mapping-context@gx9iCEQ27s2cvFeEmZHck"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Measuring",
+      "name": "measuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "measuring-quality@-D0SRvKU8sSGd2GJ20ImB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Micro",
+      "name": "micro",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "micro-interactions@5mb-glqmSTgyd8VE0BFlH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mind",
+      "name": "mind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mind-maps@eG8L9zdZJ6WWKX5zoCU3F"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Motion",
+      "name": "motion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "motion--interaction@N0_SikPe2t7v1zrwkVNOh",
+            "motion-principles@wgISet-HBQkte12PUPX00"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-platform-design@b958AcoB4_V4t_vYJsN5A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operating",
+      "name": "operating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operating-at-scale@jqDcscSHTUizNmJHA2i-t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opportunity",
+      "name": "opportunity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opportunity-solution-trees@HxYpzimPltNch8qbPzfbp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Organizing",
+      "name": "organizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "organizing-research@DlHfLq7nNXqDbwouhPn3V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-constraints@MMl84Bimru37xW2Kjyd4x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prioritization",
+      "name": "prioritization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prioritization-frameworks@ugdFMO3Zy4Be_GjgMZ9_z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prioritizing",
+      "name": "prioritizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prioritizing-opportunities@qJbhaY7aU8PqVQlt2mV4z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Problem",
+      "name": "problem",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "problem-statements@S2P-SK6LXy82Z5VgBjx2N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Product",
+      "name": "product",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "product-analytics@03dZOKaQ2TvUC7BGqufQ8",
+            "product-design-vs-ui@q5OzV1_ao0xg66nYyeFjM",
+            "product-design-vs-ux@zhWj9lOOoxXciAvCeksxm",
+            "product-market-fit@PYX5MBioD6gNUeUdBIUOY",
+            "product-performance@OzzpfpDWCzK6GYyiljA5x",
+            "product-sense@j_pfvhH-5qquAJXjbu-p8",
+            "product-strategy@snUVcr1REPBMrRwuNzDf1",
+            "product-vision@2kzDNLEmYJdL0iy9JcRaR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Research",
+      "name": "research",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "research-repository@PU-d82UeSi3_MeE2mbcxo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Risk",
+      "name": "risk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "risk-identification@l__bw06NFolmlIMOylKJP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Session",
+      "name": "session",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "session-recordings@VWmJcie2YkJ6V6DvjSDy3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Site",
+      "name": "site",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "site-maps@CdWMdC25kExM4Sp59FY4U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stack",
+      "name": "stack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stack--platform-constraints@iYGkLplsUjuCEo6YaNk_L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stakeholder",
+      "name": "stakeholder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stakeholder-alignment@MjwUcq2Y2J_8gXyLSZvts"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Success",
+      "name": "success",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "success-metrics@US48-gcagvUHsvEgeahqD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Synthesizing",
+      "name": "synthesizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "synthesizing-research@q9NnyTHujmBii2oiXCNfT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Task",
+      "name": "task",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "task-analysis@wYHDGxaqMG8y2oDjKjkzB",
+            "task-flows@uhilOC2btRa61IoM5c3-C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technical",
+      "name": "technical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technical-constraints@UTIPCn26LOzF5HW7775sE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-designs@i2Tg7bH-0ny0RLVmZN5Iw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ui",
+      "name": "ui",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ui-patterns@8HR1zfU5WGMFtf2UrDvmJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usability",
+      "name": "usability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usability-testing@W5fsnYf-CKMNUrcZ1HAKh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-centered-design@3AMETPxIcRWbjGwkLoFxW",
+            "user-flows@Nl3xvCKE_4jozlAiweqBJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ux",
+      "name": "ux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ux-benchmarking@VMX5mUOBFKhnuPmKdh3zF",
+            "ux-writing@k864ijkOZFS1tPSwBXXHC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Value",
+      "name": "value",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "value-proposition@J_xpmcvqWbI7ZZGEHlc50"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visual",
+      "name": "visual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visual-foundations@bwj1QpmHeJth7Z5b1TpfU",
+            "visual-hierarchy@auEN54ontSqWBb-DDD_A9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Voice",
+      "name": "voice",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "voice--tone@iq1jmcWoLb2BodJBuk7v0"
+          ]
+        }
+      ]
+    }
+  ]
+}

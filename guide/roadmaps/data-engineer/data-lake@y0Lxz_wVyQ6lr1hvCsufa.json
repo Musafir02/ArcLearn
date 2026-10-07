@@ -1,0 +1,4 @@
+{
+  "title": "Data Lake",
+  "content": "A data lake is a centralized storage repository that holds large amounts of raw data in its native format, including structured, semi-structured, and unstructured data. Unlike a data warehouse, a data lake does not enforce a schema on ingestion. Data is stored cheaply at scale and processed when needed, which enables flexibility for future analysis.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Data Lake Definition](https://azure.microsoft.com/en-gb/resources/cloud-computing-dictionary/what-is-a-data-lake)\r\n- [@video@What is a Data Lake?](https://www.youtube.com/watch?v=LxcH6z8TFpI)"
+}

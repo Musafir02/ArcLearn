@@ -1,0 +1,4 @@
+{
+  "title": "Input output",
+  "content": "`@Input()` and `@Output()` give a child component a way to communicate with its parent component. `@Input()` lets a parent component update data in the child component. Conversely, `@Output()` lets the child send data to a parent component.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@inputs](https://angular.dev/guide/components/inputs)\r\n- [@official@outputs](https://angular.dev/guide/components/outputs)"
+}

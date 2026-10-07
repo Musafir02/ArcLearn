@@ -1,0 +1,4 @@
+{
+  "title": "String Operators",
+  "content": "In addition to the comparison operators, which can be used on string values, the concatenation operator (`+`) concatenates two string values together, returning another string that is the union of the two operand strings. The shorthand assignment operator `+=` can also be used to concatenate strings.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@JavaScript MDN Tutorials](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators)\r\n- [@article@String Concatenation - JavaScript.info](https://javascript.info/operators#string-concatenation-with-binary)"
+}

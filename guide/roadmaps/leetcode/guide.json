@@ -1,0 +1,1097 @@
+{
+  "title": "Leetcode Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "1",
+      "name": "1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "1-d-dynamic-programming@sRU06JyWqwCnRDYEAV53L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "2",
+      "name": "2",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "2-d-dynamic-programming@sXyW3ZAURJUze8_g9PvwW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-graphs@jNYQFvR3IafFXbAQHL4bF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arrays",
+      "name": "arrays",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arrays--hashing@C4M0XfOtB9_Q8srAJU__A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-time-to-buy-and-sell@K7qTp-hRmxxVLYvr4ftr7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binary",
+      "name": "binary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binary-search@kxvOWb6wyF8GWarP6jrqK",
+            "binary-search@OkNQABVymkpxvHE7gVids",
+            "binary-tree-level-order@7ac9oA-reXh7xFHj3LRX0",
+            "binary-tree-maximum-path-sum@5htwCuI4Dz_G2ar1enQZv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bit",
+      "name": "bit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bit-manipulation@VIXFdmkwl9vw6LyxxoT74"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Burst",
+      "name": "burst",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "burst-balloons@ImPbL26vNvxvPm4Kg5Vpl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Character",
+      "name": "character",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "character-replacement@aLQVocF91X1-IrTP7Vb_b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cheapest",
+      "name": "cheapest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cheapest-flights-within-k-stops@ijY7CmX7wD5uP_6WwO97H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Climbing",
+      "name": "climbing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "climbing-stairs@bXcvRnpO1aVN8XLLTSghB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clone",
+      "name": "clone",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clone-graph@WO238sUhvIiZHdLF6Kmfl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Coin",
+      "name": "coin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "coin-change@WtOHLWoHNkE9JdxtmBlwC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Combination",
+      "name": "combination",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "combination-sum@P0ODrjdYJGSHvn02sjWIe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Container",
+      "name": "container",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "container-with-most-water@YxfJQl5bHYnhryt9RooV0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contains",
+      "name": "contains",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contains-duplicate@_wCmBewDz7Qb21u8HSZtp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Counting",
+      "name": "counting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "counting-bits@jZscKonByp5QDMcXUA50W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Course",
+      "name": "course",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "course-schedule@CLOI_M9A3D1UFavCYKCSE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Daily",
+      "name": "daily",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "daily-temperatures@pMCIlFk-XfN91VNYtWjXq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-add-and-search-words@xRqfE6liWrkLOVqqkXtjy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Edit",
+      "name": "edit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "edit-distance@xemUw3R72U4hvgHSOcaMg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Find",
+      "name": "find",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "find-median-from-data-stream@CJ8Hk6XfXuLHmBO6xdUv6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gas",
+      "name": "gas",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gas-station@UWJLu3cfCGo487MOeu63T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "3sum@yis4-_D0GREukouiRcCwC",
+            "backtracking@gEZFGJPq0JFjpRwl3z3XK",
+            "c@acgRMEuL4ZGGRHpZ7kXSo",
+            "c@IWmq4UFB5j6O3UJfarh1u",
+            "go@OkdM_PJge70j5tsjT2Esl",
+            "graphs@ssT7KZITndEvfyqmjeclx",
+            "greedy@MU6i1n0KKiAU_FkBTB3hW",
+            "intervals@zHDAHN1gN5Ofx2eyQg5_7",
+            "java@gjZZOwmYkXQHPfg9Ynz80",
+            "javascript@HVD9G3JlLBsAg111vQILj",
+            "permutations@-9-5g5Qyb3JiSwEfabmRD",
+            "python@BZvNEZjCNuHPg5SkX90bt",
+            "ruby@XyRCXhZjQFcDNaUSNNQV-",
+            "rust@9h1mz0xAUvPrnRm9VndJF",
+            "scala@acgRMEuL4ZGGRHpZ7kXSo",
+            "stacks@Ovs61JkceGbWV3BfUo4Ra",
+            "subsets@2AfJtRru4gll77Vl-6IJM",
+            "trees@PQ31G4_7Y5K6D34hVRyRK",
+            "tries@dmY-zE1Lql_HfTnhMfKMV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generate",
+      "name": "generate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generate-parentheses@-dW4-xzasJY2CrwS2PyhN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Group",
+      "name": "group",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "group-anagrams@p7_B-NIBlqyKzR2PkrVWC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Happy",
+      "name": "happy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "happy-number@VVB6zLZG6IxB4LQg8jIYT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Heap",
+      "name": "heap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "heap--priority-queue@mvcSC0kFiD0AT5a2ffU5l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "House",
+      "name": "house",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "house-robber@GeLGoM3ocxZ-gjMUes4sE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implement",
+      "name": "implement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implement-trie@_zumaNoKiaD4zS3wntAsd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Insert",
+      "name": "insert",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "insert-interval@BhiAYH1ug08LnPH8DtR1D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jump",
+      "name": "jump",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jump-game-ii@gJ1O1H12KoNejTV_q0dsf",
+            "jump-game@so5popgQyB5vNRz_NYxo6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "K",
+      "name": "k",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "k-closest-points-to-origin@iou03PtccY58DXKHARz_P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Koko",
+      "name": "koko",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "koko-eating-bananas@wyU9wyyQ54KgMeRsbS9AM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kth",
+      "name": "kth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kth-largest-element-in-an-array@tMvbBpZDawi2RjSFgOaWc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Largest",
+      "name": "largest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "largest-rectangle-in-hist@zLM5eW7hZ7TrUzyNpvMyG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linked",
+      "name": "linked",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linked-list-cycle@qAWeeYfvFD8-LTZgZ2LVa",
+            "linked-list@lDT9PtNMP8lSdeH7EVBoH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Longest",
+      "name": "longest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "longest-common-prefix@8HrT_SZWMlscj13G0gIID",
+            "longest-common-subsequence@iodbhwYOWDM5JTaaqG4-m",
+            "longest-increasing-subsequ@h9yvrxDYEZ9mCqbeKoPEu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lowest",
+      "name": "lowest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lowest-common-ancestor@cHPRRjBTrznI6UBC-WQP6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Math",
+      "name": "math",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "math--geometry@Rx59jh-ynzC5wRGja3jvg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Maximum",
+      "name": "maximum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "maximum-depth-of-binary-tree@3ny1naGanScRUAOv2IiYz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Median",
+      "name": "median",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "median-of-two-arrays@kV9z7UQsYFMR6umo0fDM1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Meeting",
+      "name": "meeting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "meeting-rooms@9evXTNz1IVOnqWCQ7L5BW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Merge",
+      "name": "merge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "merge-intervals@JsjPXTe3Zp5E7vCWUMeSe",
+            "merge-k-sorted-lists@EC2dVHYWqGnu_1HmBeAPT",
+            "merge-k-sorted-lists@eHnN9thTtLPIUtz9Z28OL",
+            "merge-two-sorted-lists@qEYz2Dj1hqLDBFWYX7XmE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Min",
+      "name": "min",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "min-cost-to-connect-all-points@5NxA27PJ7_pN40xzd7Slp",
+            "min-interval-to-include-query@eYPhWnyTPhfbXco_G4bN_",
+            "min-stack@XjJhO0gX0Dw8yF09TnJwK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Minimum",
+      "name": "minimum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "minimum-in-rotated-array@XYTIX8oNH3qCmXjRbycDi",
+            "minimum-window-substring@P7scdQHmNUPA6UI36yBtL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "More",
+      "name": "more",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "more-excersises@0u8IQZvJV7ORHcBfUBQ7R",
+            "more-excersises@2r0q7Gic8orJx2w28OH_I",
+            "more-excersises@2vhZHAKoFeNoi1utHcPPw",
+            "more-excersises@AMT2zQPDlKUm-d2vT1Sae",
+            "more-excersises@awYK5VUD2HS9ywJQfFYU7",
+            "more-excersises@EBqzxy-2FWK4FwHyNKVHP",
+            "more-excersises@G1SqIZkN9dBKsv2LxqP8D",
+            "more-excersises@i4A57jKrkhlw-jW3i3HSi",
+            "more-excersises@JtV6pQzvcXFoNG01tx9pq",
+            "more-excersises@KHLCYCZqfXqVlHAs7YVHv",
+            "more-excersises@licG83FALxf4jPOV7v_an",
+            "more-excersises@NFOzXHoSHj1_2_isVifsY",
+            "more-excersises@Q-vNw7YUh-4U6im7nrHe8",
+            "more-excersises@Q0AxfKbRuyY5rY2pO5xcP",
+            "more-excersises@Ur6eSm0t-jQD2j710Vc89",
+            "more-excersises@VpquOgXr8OG_jLkeDSk3H",
+            "more-excersises@XjViEOLzyd_BK9dhgNtdK",
+            "more-excersises@y-quVGz8J5Rmz2ixUFwBI",
+            "more-exercises@0u8IQZvJV7ORHcBfUBQ7R",
+            "more-exercises@2r0q7Gic8orJx2w28OH_I",
+            "more-exercises@2vhZHAKoFeNoi1utHcPPw",
+            "more-exercises@AMT2zQPDlKUm-d2vT1Sae",
+            "more-exercises@awYK5VUD2HS9ywJQfFYU7",
+            "more-exercises@EBqzxy-2FWK4FwHyNKVHP",
+            "more-exercises@G1SqIZkN9dBKsv2LxqP8D",
+            "more-exercises@i4A57jKrkhlw-jW3i3HSi",
+            "more-exercises@JtV6pQzvcXFoNG01tx9pq",
+            "more-exercises@KHLCYCZqfXqVlHAs7YVHv",
+            "more-exercises@licG83FALxf4jPOV7v_an",
+            "more-exercises@NFOzXHoSHj1_2_isVifsY",
+            "more-exercises@Q-vNw7YUh-4U6im7nrHe8",
+            "more-exercises@Q0AxfKbRuyY5rY2pO5xcP",
+            "more-exercises@Ur6eSm0t-jQD2j710Vc89",
+            "more-exercises@VpquOgXr8OG_jLkeDSk3H",
+            "more-exercises@XjViEOLzyd_BK9dhgNtdK",
+            "more-exercises@y-quVGz8J5Rmz2ixUFwBI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "N",
+      "name": "n",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "n-queens@fBtsnKP5n3WBjMycwIfir"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Network",
+      "name": "network",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "network-delay-time@zSqCHDbPvWsDRtEURoVNK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Non",
+      "name": "non",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "non-overlapping-intervals@k0XOp6P-EIyRKrSbsgr0w",
+            "non-overlapping-intervals@Mc1jQ5_-trqgCckM23cjQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Number",
+      "name": "number",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "number-of-1-bits@XzQHEP8HYq_vYFWLon4rI",
+            "number-of-islands@LInRfygQmBDTFbezzM97o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pacific",
+      "name": "pacific",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pacific-atlantic-water-flow@mhSb4eQV970bLlOfFg84p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Partition",
+      "name": "partition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "partition-labels@V7pvMzno_woUHHSfLTv7q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-language@SKsKYHmpPBjG9tHHFbTLI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Powx",
+      "name": "powx",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "powx-n@ea7dib41v61Vz--ewLcF4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reconstruct",
+      "name": "reconstruct",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reconstruct-itinerary@Edk5ydpwut57XDc08QEgc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-expression-matching@XTDdSFywX863IErL0rmc6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reorder",
+      "name": "reorder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reorder-list@FYgKuhnZ20g6-v4UrQDJc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Replace",
+      "name": "replace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "replace-words@IINhLJ2evjsS_v2DH3AA1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reverse",
+      "name": "reverse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reverse-bits@KHR39YdCVeSGJtHrcLJyT",
+            "reverse-linked-list@0P0VTUhQxWj0BGygtuKYJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rotate",
+      "name": "rotate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rotate-image@P9U_DFbutAYwQGZjjf-oP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-in-rotated-array@aDKtHMczSpCIT-ST0irRa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serialize",
+      "name": "serialize",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serialize-and-deserialize@DH3ZU-8q765Kjm7SIu_qP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Set",
+      "name": "set",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "set-matrix-zeroes@ScROycnqOk2U2GW-Ghy2W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Single",
+      "name": "single",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "single-number@4UGevGjQBhbISeh_5bm_e"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sliding",
+      "name": "sliding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sliding-window-maximum@zIpM4hiGUSXwkokZFRzSB",
+            "sliding-window@1boDzMfojddbf1ZwzOvEV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spiral",
+      "name": "spiral",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spiral-matrix@H6lLJWRhjRVq5ZqKEJ8bL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Substring",
+      "name": "substring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "substring-without-repetition@wnHn7ooWZSUfk3HahuyG6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sum",
+      "name": "sum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sum-of-two-integers@cUgRS-8TyPT98LemGFBf3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swim",
+      "name": "swim",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swim-in-rising-water@0x9RwyrxbUZj30e-tMdWP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Task",
+      "name": "task",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "task-scheduler@HLTc2xupm-CNM9rgzrcwS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Top",
+      "name": "top",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "top-k-frequent-elements@-RjNtskTl7CZYWUpQ6YPh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Trapping",
+      "name": "trapping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "trapping-rain-water@GuWseHiGMKbBqkYKrZNuT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Two",
+      "name": "two",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "two-pointers@NHv86YI2-MSH8BkfUsaEx",
+            "two-sum-ii@vTpv8AliKFv0Sf13PmVCo",
+            "two-sum@XbfUbWaGtpcEGa31QyrXN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unique",
+      "name": "unique",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unique-paths@xhEBSwgHsrCQolM9UvJ-c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Valid",
+      "name": "valid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "valid-anagram@iqR33GoIxK-CJdbatQqg3",
+            "valid-palindrome@x6-LRp_zgv3WNE-gsS3Cw",
+            "valid-parentheses@YNt85B--HBS2IKDFVLJpx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-coding-patterns@ScTtg57POE0kxlZFxYUCs",
+            "what-is-leetcode@DUZWC157r-xhcJZ__p8wQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Word",
+      "name": "word",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "word-break@1i59D4ME10oOkxthILaNP",
+            "word-ladder@J8YZFOS2sVwILJWdUphIU",
+            "word-search-ii@46Y-wvaUJZwd32mRqrRix",
+            "word-search@boJmdiyIgbV61MDKsB-k-"
+          ]
+        }
+      ]
+    }
+  ]
+}

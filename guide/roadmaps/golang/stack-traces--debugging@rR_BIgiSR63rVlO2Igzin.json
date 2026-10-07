@@ -1,0 +1,4 @@
+{
+  "title": "Stack Traces & Debugging",
+  "content": "Go automatically prints stack traces on panic showing call chain. Tools include Delve debugger, pprof profiling, and race detection. Stack traces show function calls, file locations, and line numbers for effective troubleshooting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Diagnostics](https://go.dev/doc/diagnostics)\r\n- [@article@A Comprehensive Guide to Debugging Go Code for Developers](https://dev.to/adityabhuyan/a-comprehensive-guide-to-debugging-go-code-for-developers-h9d)\r\n- [@article@Reading Go Stack Traces - Go Debugging Example](https://go-cookbook.com/snippets/debugging/reading-go-stack-traces)"
+}

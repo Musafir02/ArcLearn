@@ -1,0 +1,4 @@
+{
+  "title": "Node.js",
+  "content": "Node.js is the runtime that allows JavaScript to run on a server. Most AI-generated back ends use Node.js. You will need a basic understanding of it when modifying API routes, adding middleware, or debugging server-side logic.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated Node.js Roadmap](https://roadmap.sh/nodejs)\r\n- [@official@Node.jsLearn Node.js Official WebsiteDocs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs)\r\n- [@video@Node.js and Express.js Full Course](https://www.youtube.com/watch?v=Oe421EPjeBE)"
+}

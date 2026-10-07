@@ -1,0 +1,4 @@
+{
+  "title": "Debugging Tests",
+  "content": "If your tests aren't working as you expect them to, you can inspect and debug them in the browser. Be sure to set breakpoints to track your application's execution.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Debugging Tests](https://angular.dev/guide/testing/debugging)\r\n- [@official@Devtools](https://angular.dev/tools/devtools)\r\n- [@video@Debug Like a Pro: Essential Breakpoint Techniques in Angular](https://www.youtube.com/watch?v=Be9Q1cchurQ)\r\n- [@video@Debug Angular 17 Code in VS Code with Break Points and Extensions](https://www.youtube.com/watch?v=r50UXhT9hc0)"
+}

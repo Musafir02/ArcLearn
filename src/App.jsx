@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-
 import Home from './pages/Home';
 import Learn from './pages/Learn';
 import Search from './pages/Search';
+import RoadmapView from './pages/RoadmapView';
 import { guides } from './lib/loadGuide';
 
 function NavigateToFirstTopic() {
@@ -13,12 +14,22 @@ function NavigateToFirstTopic() {
   return <Navigate to="/" replace />;
 }
 
+import { useEffect } from 'react';
+
 function App() {
+  useEffect(() => {
+    const savedMode = localStorage.getItem('theme');
+    if (savedMode === 'dark' || (!savedMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.classList.add('dark-mode');
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/roadmap/:language" element={<RoadmapView />} />
         <Route path="/learn/:language" element={<NavigateToFirstTopic />} />
         <Route path="/learn/:language/:topic" element={<Learn />} />
         <Route path="*" element={<Navigate to="/" replace />} />

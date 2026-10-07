@@ -1,0 +1,4 @@
+{
+  "title": "TeamCity",
+  "content": "TeamCity is a CI/CD server developed by JetBrains that automates building, testing, and deploying software. It offers a web-based interface, deep integration with version control systems, and strong support for a wide range of build tools and languages, making it popular in enterprise environments.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@TeamCity Documentation](https://www.jetbrains.com/help/teamcity/teamcity-documentation.html)\r\n- [@official@TeamCity Tutorials](https://www.jetbrains.com/teamcity/tutorials/)\r\n- [@video@CI/CD with JetBrains TeamCity](https://www.youtube.com/watch?v=zqi4fDF-S60)"
+}

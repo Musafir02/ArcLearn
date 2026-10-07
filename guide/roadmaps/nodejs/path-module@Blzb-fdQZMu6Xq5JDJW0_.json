@@ -1,0 +1,4 @@
+{
+  "title": "path module",
+  "content": "The `path` module provides utilities for working with file and directory paths. It's built-in to Node.js core and can simply be used by requiring it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Path Documentation](https://nodejs.org/api/path.html)\r\n- [@official@Learn Node.js File Paths](https://nodejs.org/en/learn/manipulating-files/nodejs-file-paths)\r\n- [@video@Path Module in Node.js](https://youtu.be/j95Lwxvi9JY)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "if/else",
+  "content": "The `if/else` structure executes a block of code when a condition is true and a different block when it is false. `elseif` adds additional conditions to check in sequence. PHP also supports a shorthand `if` using the ternary operator (`? :`).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@if-else](https://www.php.net/manual/en/control-structures.elseif.php)"
+}

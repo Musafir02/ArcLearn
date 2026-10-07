@@ -1,0 +1,4 @@
+{
+  "title": "Filtering",
+  "content": "RxJS provides a variety of filtering operators that you can use to filter and transform the data in a stream. You can use these operators in combination with other RxJS operators to create powerful and efficient data processing pipelines.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@RxJS Operators](https://www.learnrxjs.io/learn-rxjs/operators)\r\n- [@article@Understanding RxJS Operators](https://medium.com/@madhavi792002/understanding-rxjs-operators-a-friendly-guide-to-reactive-programming-part-1-305dbc0c6e72)"
+}

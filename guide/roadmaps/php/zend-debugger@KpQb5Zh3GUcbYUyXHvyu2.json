@@ -1,0 +1,4 @@
+{
+  "title": "Zend Debugger",
+  "content": "Zend Debugger is a PHP extension that enables remote debugging of PHP applications, typically within Zend-based development environments. It allows step-by-step execution, variable inspection, and breakpoints. It is less commonly used today compared to Xdebug but is found in enterprise setups using Zend Server.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Zend Debugger](https://www.zend.com/topics/Debugger-API)"
+}

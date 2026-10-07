@@ -1,0 +1,4 @@
+{
+  "title": "M Language Basics",
+  "content": "M is the functional language used by Power Query to define data transformations. Every query is a sequence of steps expressed as M expressions, with each step referencing the result of the one before it. Learning its syntax, such as let and in blocks, lets users write custom logic beyond what the graphical interface supports.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Quick tour of the Power Query M formula language](https://learn.microsoft.com/en-us/powerquery-m/quick-tour-of-the-power-query-m-formula-language)\r\n- [@official@Understanding Power Query M functions](https://learn.microsoft.com/en-us/powerquery-m/understanding-power-query-m-functions)\r\n- [@video@Power query M language](https://www.youtube.com/playlist?list=PL2Wq16IU3XbmLZrb68YTFTamQnaFzZu-d)\r\n- [@video@M Query Tutorial for Beginners](https://www.youtube.com/playlist?list=PL69uhGeC7jeMmekYE1K8eJ8JH_A4xI3HA)"
+}

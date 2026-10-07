@@ -1,0 +1,4 @@
+{
+  "title": "Policy vs Detail",
+  "content": "Policy and detail represent a fundamental separation between the core logic of an application and the specific implementation mechanisms that support it. Policies define the high-level business rules, domain entities, and operational requirements that dictate what an application should accomplish. In contrast, details encompass the low-level components like database drivers, user interface frameworks, external APIs, and hardware configurations that provide the environment for those policies to run. Keeping these concepts separate ensures that business logic remains independent of the specific tools used to execute it, allowing developers to change or upgrade technical infrastructure without altering the core functionality."
+}

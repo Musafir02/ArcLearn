@@ -1,0 +1,4 @@
+{
+  "title": "liquibase, sqitch, Bytebase, ora2pg etc",
+  "content": "Migrations are crucial in the lifecycle of database applications. As the application evolves, changes to the database schema and sometimes data itself become necessary.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Liquibase Website](https://www.liquibase.com/)\r\n- [@official@Sqitch Website](https://sqitch.org/)\r\n- [@official@Bytebase Website](https://www.bytebase.com/)"
+}

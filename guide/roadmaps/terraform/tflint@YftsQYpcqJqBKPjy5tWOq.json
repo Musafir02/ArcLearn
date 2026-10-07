@@ -1,0 +1,4 @@
+{
+  "title": "TFLint",
+  "content": "TFLint is a Terraform linter that goes beyond the checks provided by `terraform validate`. It detects errors specific to provider APIs, such as invalid instance types or unsupported regions, and can enforce custom coding rules through plugins. It is commonly run in CI pipelines alongside `terraform validate`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@TFLint Documentation](https://github.com/terraform-linters/tflint)\r\n- [@article@What is TFLint and How to Lint Your Terraform Code](https://spacelift.io/blog/what-is-tflint)\r\n- [@video@Quick Tech - TFLint](https://www.youtube.com/watch?v=-BKWpI4Olpw)"
+}

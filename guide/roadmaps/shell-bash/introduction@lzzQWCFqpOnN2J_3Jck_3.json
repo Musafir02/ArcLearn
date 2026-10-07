@@ -1,0 +1,4 @@
+{
+  "title": "Introduction",
+  "content": "Shell, often referred to as Bash (Bourne Again Shell), is a command-line interpreter. It acts as an interface between the user and the operating system, allowing users to execute commands, run scripts, and manage files. It interprets the commands entered by the user and instructs the operating system to perform the corresponding actions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Shell - Wikipedia](https://en.wikipedia.org/wiki/Shell_%28computing%29)\r\n- [@article@The Shell Scripting Tutorial](https://www.shellscript.sh/philosophy.html)\r\n- [@video@What Is a Shell ? | Learn How Shell Commands Work in the Terminal](https://www.youtube.com/watch?v=-qLrgCFynzE)\r\n- [@video@Shell Scripting Tutorial for Beginners 1 - Introduction](https://www.youtube.com/watch?v=cQepf9fY6cE&list=PLS1QulWo1RIYmaxcEqw5JhK3b-6rgdWO_)"
+}

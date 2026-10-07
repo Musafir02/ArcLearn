@@ -1,0 +1,4 @@
+{
+  "title": "Implicit Type Casting",
+  "content": "Implicit type conversion happens when the compiler or runtime automatically converts data types. JavaScript is loosely typed language and most of the time operators automatically convert a value to the right type.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@TutorialsPoint - JavaScript Tutorials](https://www.tutorialspoint.com/explain-typecasting-in-javascript)\r\n- [@article@What you need to know about JavaScript Implicit Coercion](https://dev.to/promisetochi/what-you-need-to-know-about-javascripts-implicit-coercion-e23)"
+}

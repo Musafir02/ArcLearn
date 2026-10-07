@@ -1,0 +1,4 @@
+{
+  "title": "Executing System Commands",
+  "content": "PHP can run shell commands using functions like `exec()`, `shell_exec()`, `system()`, and `passthru()`. Each differs in how it captures and returns output. User input must never be passed unsanitized to these functions, as it can lead to command injection. `escapeshellarg()` and `escapeshellcmd()` help sanitize arguments safely.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Exec Function](https://www.php.net/manual/en/ref.exec.php)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Multithreading",
+  "content": "Multithreading is the technique of running multiple threads within a single process to perform work concurrently. Game servers use multithreading to handle network I/O, game logic, physics, and database operations in parallel, improving throughput on multi-core hardware.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Concurrency - Oracle Java Tutorials](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html)\r\n- [@article@Modern Multithreading and Concurrency in C++ - Educative](https://www.educative.io/blog/modern-multithreading-and-concurrency-in-cpp)\r\n- [@article@Multithreaded design for a game server - Stack Exchange](https://gamedev.stackexchange.com/questions/181838/multithreaded-design-for-a-game-server)"
+}

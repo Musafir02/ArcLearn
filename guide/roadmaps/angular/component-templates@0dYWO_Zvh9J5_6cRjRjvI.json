@@ -1,0 +1,4 @@
+{
+  "title": "Testing component templates",
+  "content": "With a component template , you can save and reuse component processes and properties and create components from them; template-based components inherit the template's properties and process.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Component Testing Scenarios](https://angular.dev/guide/testing/components-scenarios)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Layers",
+  "content": "Lambda layers are archives containing libraries, dependencies, or custom runtimes that can be shared across multiple functions. Instead of bundling dependencies in each deployment package, you attach a layer and Lambda makes its contents available to the function at runtime. Each function can use up to five layers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@AWS Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/chapter-layers.html)\r\n- [@video@Create and Use Lambda Layers](https://www.youtube.com/watch?v=jyuZDkiHe2Q)"
+}

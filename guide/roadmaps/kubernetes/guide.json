@@ -1,0 +1,612 @@
+{
+  "title": "Kubernetes Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Adding",
+      "name": "adding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adding-and-managing-worker-nodes@2cQKTxln3dIk5IjX2UZdM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-topics@t8SJbGVXsUDECxePLDk_w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Assigning",
+      "name": "assigning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "assigning-quotas-to-namespaces@OHz4QMmA3lqL_C7aWL8Ga"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blue",
+      "name": "blue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blue-green-deployments@9-oaTlzKmcxTfaRycz1w3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Canary",
+      "name": "canary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "canary-deployments@88IGeC3dAopHLGtLozxdY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Choosing",
+      "name": "choosing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "choosing-a-managed-provider@qSatCdBTDXPu-IFWzUI99"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd-integration@Pymc9H-lRHVPy7M9eSaPD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cluster",
+      "name": "cluster",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cluster-autoscaling@RC5MoYtG2rom-d4FW5qD2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Configuration",
+      "name": "configuration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "configuration-management@dj7Tb2XTX4kxRUYiTjlhM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Container",
+      "name": "container",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "container-and-pod-security@i7qxaFhFHPfe3fGEgsbcE",
+            "container-and-pod-security@Nja7IFWcFTLsPcqbvRNm9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-custom-controllers@L9rVPEEXFwisQOwT_LQ4v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Csi",
+      "name": "csi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "csi-drivers@55RV9psPCmcg8G_P_zQo9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-resource-definitions-crds@9P7l-RBOkUxs3Z_UpKQO-",
+            "custom-schedulers-and-extenders@1-Nb8rCMJEZrYm20sEcRJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deploying",
+      "name": "deploying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deploying-your-first-application@zrbSJa3k7a3TE0aYbWi9c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deployment",
+      "name": "deployment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deployment-patterns@0l0xpsabglvs_t6oAP-XG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-access-to-services@jUOlITLqnIvSu97I_3nBz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "autoscaling@03mGA5AyL7mpF6y3EMW7A",
+            "basics@70lTSIVh0AD6M8fMMuWzY",
+            "containers@HGmeYvRf7_XusZl_K4x9k",
+            "deployments@TUGQX7y1gs-aKPge2F1NU",
+            "evictions@TRKzlDW2PQN9bWTyz3NWL",
+            "gitops@dATdEyNWlpDNKjedCXLyb",
+            "introduction@y7KjVfSI6CAduyHd4mBFT",
+            "jobs@r3fzAN5DzratAKnnT8hzb",
+            "logs@-XxQtiLDAkXs7IFM_Ddw6",
+            "metrics@nqUBHBFUYFdYqCKZvfXBR",
+            "pods@-d2PIXm0V_Iehe8cws8zK",
+            "replicasets@IF09l0-pryGpMbDt__ocr",
+            "scheduling@xZDXM_8qb4VL15tNGG0ws",
+            "security@SG3wtV2rt9nmLEkgrp_zP",
+            "statefulsets@AJiRBEaKU8qYEm0fqN389",
+            "traces@ldYTEPt_hI4PXxr3tgJi5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Helm",
+      "name": "helm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "helm-charts@FAEFOhLdp7xrmctHFxiOM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Horizontal",
+      "name": "horizontal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "horizontal-pod-autoscaler-hpa@044IUUCgZP4oQ9UxUG2iy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Injecting",
+      "name": "injecting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "injecting-pod-config-with-configmaps@u24UlZKI86vaguj_VpMv1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-a-local-cluster@YaIs8lquWIe1D7RCUBZmC",
+            "installing-the-control-plane@M-iTb_7EWZIJ3JpdViICx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-concepts-and-terminologies@9oo2fxTM2_p0VYPBroqxa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kubernetes",
+      "name": "kubernetes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kubernetes-alternatives@3fzuXKH7az_LVnmnoXB1p",
+            "kubernetes-extensions-and-apis@UeJcKv3jhenjNzHM-0R86"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load-balancing@Qelo1YvAcUoX5PA-RYbNp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitoring",
+      "name": "monitoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitoring--optimizing-resource-usage@PP4ld_vvjpY3QltBBsXKD",
+            "monitoring-and-logging@AgsQnQjyTLUFhFpRdcE13"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-cluster-management@auZgEQ6FC3nUjuyx0zANh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Network",
+      "name": "network",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "network-security@s0gHg8CqwrSylpSPu8arA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking--pod-to-pod-communication@44rhdieUCWsGFC_1__9kk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Observability",
+      "name": "observability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "observability-engines@FANswgUhUb5Iuah2fni3L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Overview",
+      "name": "overview",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "overview-of-kubernetes@qLeEEwBvlGt1fP5Qcreah"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pod",
+      "name": "pod",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pod-priorities@_Gva1eGcYqpmZNPyV03lt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-health@pDjNsK5vI9FmKZbQm0lDP",
+            "resource-management@eWKkdiBhD5x2sGYajmHEs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-based-access-control-rbac@jOq0WwLrq8tlmOgo64QDc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rolling",
+      "name": "rolling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rolling-updates--rollbacks@yMSXdwDO36CLtp2TBC7aB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-applications@1MdrzhktCWjpmxiYYBdz7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Services",
+      "name": "services",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "services-and-networking@aUJ_w2L8nxNq3DfAW97Gd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-resource-requests-and-limits@8RLR6gRjIyTn6GCugEfgk",
+            "setting-up-kubernetes@3OpGaQhyNtk1n1MLp-tlb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Should",
+      "name": "should",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "should-you-manage-your-own-cluster@ZrVhYTw63aVVIFAEJDG5r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stateful",
+      "name": "stateful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stateful-applications@LJUJ1NIUsajb1AUdvJjqW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Storage",
+      "name": "storage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "storage-and-volumes@URnYf9jMprFz-o26fbU2P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Taints",
+      "name": "taints",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "taints-and-tolerations@zXUsHAI1HFhcY2BFAcypv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Topology",
+      "name": "topology",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "topology-spread-constraints@CL0hKTcml40InmyVUXpY2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-secrets-for-sensitive-data@S0CwGC2gMG-SqnLNldqBD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vertical",
+      "name": "vertical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vertical-pod-autoscaler-vpa@c1KVczGRjh9bhMpbPP6sA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-kubernetes@q-Ky0ietZGpyUcBQfh-BJ"
+          ]
+        }
+      ]
+    }
+  ]
+}

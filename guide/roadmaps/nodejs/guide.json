@@ -1,0 +1,718 @@
+{
+  "title": "Nodejs Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "",
+      "name": "",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "--watch@812bVEzxwTsYzLG_PmLqN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Assertion",
+      "name": "assertion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "assertion-errors@do-tdCUfDtiZHBg4ZO3dC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Async",
+      "name": "async",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "async-programming@uE7fvHSTSdebMf5RsNyaY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building--consuming-apis@fFVCb6aZWRHdNDFt5C09R"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Callstack",
+      "name": "callstack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "callstack--stack-trace@wIieXdFtoZWJ-ht8qqWbp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chalk",
+      "name": "chalk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chalk-package@V4OWIC1cnw8EFyu26Y_dA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Child",
+      "name": "child",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "child-process@lzPrWD3pxQmpbqgYPL-zW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cli",
+      "name": "cli",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cli-progress@iW9je5Pq7bjxWZDERv_p5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Command",
+      "name": "command",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "command-line-apps@Ce-dP-OXu0mEm30rzp2hW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-built-in-modules@M62lAWBOrTe99TfpFOQ-Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating--importing@EEnmOcDKPZzY_O1NwP_5j",
+            "creating-packages@Uh9hmEy7o1EJLg4E--ku2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dotenv",
+      "name": "dotenv",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dotenv-package@fE9C7Resn4EcL-hYHbsaZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@t_kfKdNSKVBPYQ9zF9VqQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-emitter@bgEHTBYzRDJqZ6gLqLbsz",
+            "event-loop@b679H8gEBuvrHQ8ik7e96"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exiting",
+      "name": "exiting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exiting--exit-codes@XteNExIZN3_g95_dPCopY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Figlet",
+      "name": "figlet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "figlet-package@PHLdJylzNZDJBGi8FFsfO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fs",
+      "name": "fs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fs-extra@zDmWGRrgwq3Gjfkyk6crK",
+            "fs-module@b1r1X3XCoPSayQjDBcy54"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Garbage",
+      "name": "garbage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "garbage-collection@SJ01N7vMZkNiIuMYQhdpj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asyncawait@a26qNCyMcT5GsVzxeNCLk",
+            "axios@BOLiZg8YDKADMwP01U5ph",
+            "callbacks@GwInWcbQn18PnzKGXzmln",
+            "chokidar@een1zhvgN_33Cu6OiWtyX",
+            "cluster@PkQ_sQ0YFPCZGx4BRgG0t",
+            "commander@BxxLQUI7JcQgF6TK3L5uU",
+            "commonjs@mhjswf17nhq075NTYV5gE",
+            "cypress@3Fh3-V1kCZtlUTvEoloIO",
+            "debugging@ZLNUuDKhJ03Kw7xMVc7IR",
+            "drizzle@JXQF9H4_N0rM7ZDKcCZNn",
+            "ejs@L-_N7OxxuHCXsdWYBgZGu",
+            "esm@mKccfWOhC1Aj4VnaOqryA",
+            "expressjs@1vq_KcYR_pkfp1MtXaL75",
+            "fastify@WkU_rI4i-UmNSxb5F9TI-",
+            "fetch@B_3rTGQxJneMREXoi2gQn",
+            "glob@CWH0ZsxJ8beLvwMYJyH52",
+            "globby@HYTw74rrd7kkOemCxfT9I",
+            "hono@Xa-lA1wbZ9JZ_XpXfhhw5",
+            "jest@5xrbKv2stKPJRv7Vzf9nM",
+            "jsonwebtoken@7u2WMxjLx3mMtn0cha4M7",
+            "knex@HDDnt79_PCB5JU-KnHKUh",
+            "ky@-_2letLUta5Ymc5eEOKhn",
+            "logging@b7ZAEqo0ZU6TNf18Bo0mI",
+            "marko@f2DyjBIglAZ6NoHaRnlzt",
+            "modules@mbGFT6S7mL3bHHEZv0_s2",
+            "mongoose@NDf-o-WECK02mVnZ8IFxy",
+            "morgan@CTHFGgtXFpke4aPhh5vRY",
+            "nestjs@tGD8XLHnfspfv8CbguGwV",
+            "nodemon@2Ym2jMvov0lZ79aJFaw29",
+            "nodetest@oSLpy31XEcA2nRq9ks_LJ",
+            "npm@jQJ9aOKtg-O-GhWk5OgCK",
+            "npx@YdpJ-DUo8Q5ATRmF4s4YS",
+            "passportjs@mIyv6S9a5dCHkk-JhhjKV",
+            "playwright@Ix-g9pgJjEI04bSfROvlq",
+            "pm2@7WAuMMyelUbgwEHtnMmJv",
+            "prisma@3Qxtf8n6gJYdnRsuqa52Q",
+            "prisma@O7Cy2g_GPxKU6vPfEmNyi",
+            "processargv@lT2DDRtbFfEjb_cmsQx8i",
+            "processcwd@QT2QE2FLkyUDpwMKYkFQL",
+            "processenv@wthXp2YGg3eTMbxsek77C",
+            "processnexttick@ATu9-29yJWcDOik5FTOgf",
+            "processstdin@betuntelnEMSHdatO6VPl",
+            "promises@QcOqhuKWOUUUBSiu5Oelv",
+            "pug@O67e2qyhxP5joR5LGyZ2N",
+            "sequelize@fOm-ktIaLqrmA0zln0Bga",
+            "setimmediate@YvTPpoIiSqjDYi0Q10kWh",
+            "setinterval@T5I-mFKK6bKzXrzkECI0P",
+            "settimeout@W2Dbj4Y78Bgdx7og5xkrg",
+            "streams@WrnjjUDXQwwMXQjmgK72U",
+            "testing@90NIFfbWjTbyKZKwyJlfI",
+            "threads@KzUmXkwrmU_ssVBjSHAiY",
+            "typeorm@rk5FtAPDi1TpvWd0yBbtl",
+            "vitest@qjToBaMenW3SDtEfoCbQ6",
+            "winston@Oe9cQCz2lwSaot7miZOta",
+            "__dirname@1AaGG660rvZlNYMOA35qO",
+            "__filename@P2gdwx1qCxvg1Ppfw0aqQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Global",
+      "name": "global",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "global-installation@l24OMkPAEDnEDAVAMrMuG",
+            "global-keyword@PEGHvFT2Eg-1OyfhxYu22"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Got",
+      "name": "got",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "got-package@6stiDKubT6XVAOGiJ6wsx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-async-errors@3MpxV23lNpuKg0--e_9m7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "History",
+      "name": "history",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "history-of-nodejs@Vrcv5px-3fqmyJnQv3WBK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-module@Sjc1YDtbzXyLQH711_3nj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inquirer",
+      "name": "inquirer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inquirer-package@WFJJtIqVoBIhK10XY-d7l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-nodejs@KDd40JOAvZ8O1mfhTYB3K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript-errors@Wg7KSpAPxjeFMxC6PBnHO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keep",
+      "name": "keep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keep-app-running@af7n-J7VvbdpZh9lwA773"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-installation@oYeux7PbveYaVwXRzAg5x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-leaks@oU9I7KBZoTSXXFmYscEIq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitor",
+      "name": "monitor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitor-changes-dev@swp4wBgA7z-sd64VDkMrw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Native",
+      "name": "native",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "native-drivers@5WqLm53CHDT5uBoMH-iPl",
+            "native-drivers@KpC-QYKalUp7VUvnMKBoW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Node",
+      "name": "node",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "node---inspect@DcmGcVlEHL4IV7yPMDpVa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nodejs",
+      "name": "nodejs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nodejs-vs-browser@ebVb0anYmbD1Y9ZTFXKFp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Npm",
+      "name": "npm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "npm-workspaces@WvxCGVKLvTUVEHeOcUQPg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Path",
+      "name": "path",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "path-module@Blzb-fdQZMu6Xq5JDJW0_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompts",
+      "name": "prompts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompts-package@xgsKrUdfB0g0DMQCLK3aY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-nodejs-code@uPJqdMQQJRkTMMhNORDeH",
+            "running-scripts@64pgc7rcgboFcNYuOlX8e"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Semantic",
+      "name": "semantic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "semantic-versioning@dOlzIXBfAPmbY542lNOe6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stdout",
+      "name": "stdout",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stdout--stderr@N2vR1_NyDn4rYLXJzxWBZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-errors@05YY-AhLKzn4Ypr4eow5E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-engines@J0ErCAZT5B97ZMogU2JHd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Uncaught",
+      "name": "uncaught",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "uncaught-exceptions@uzOmaTZrHhBxx5plb345Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Updating",
+      "name": "updating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "updating-packages@bYBz12FUiJ1qLgdQSGyGK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-specified-errors@wQ4i6_a1EFk9HHc6Sll-3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-apm@CvkjlOpT34lOHgzQHL40s",
+            "using-debugger@XEGTeGWw05xWYOfUo3POE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-nodejs@Mp056kNnwsRWeEXuhGPy-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-nodejs@ex8FOKrUlbu4MuEq2czyW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Worker",
+      "name": "worker",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "worker-threads@bH2Iv3BX0ZiWD3lOmC_m_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-databases@5l-lZ8gwVLqqAF_n99vIO",
+            "working-with-files@wEK77A6MPQBCBUSJKMiaY"
+          ]
+        }
+      ]
+    }
+  ]
+}

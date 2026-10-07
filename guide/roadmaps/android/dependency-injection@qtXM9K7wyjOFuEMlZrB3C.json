@@ -1,0 +1,4 @@
+{
+  "title": "Dependency Injection",
+  "content": "Dependency Injection (DI) is a technique where objects receive their dependencies from an external source rather than creating them internally. In Android, DI frameworks manage the creation and lifecycle of dependencies across the app, improving testability and reducing coupling. Common solutions include Dagger, Hilt, and Koin.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Dependency Injection](https://developer.android.com/training/dependency-injection)"
+}

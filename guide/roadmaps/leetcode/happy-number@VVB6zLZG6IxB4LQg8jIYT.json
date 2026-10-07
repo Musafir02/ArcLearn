@@ -1,0 +1,4 @@
+{
+  "title": "Happy Number",
+  "content": "A happy number is one that eventually reaches 1 when you repeatedly replace it with the sum of the squares of its digits. Detect whether a number is happy. This is a cycle detection problem: if the process loops without reaching 1, the number is not happy. You can use Floyd's algorithm or a set to detect the cycle. This problem teaches you to recognize cycle detection in non-graph contexts.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Happy Number](https://leetcode.com/problems/happy-number/)\r\n- [@video@Happy Number - LeetCode 202 - Python](https://www.youtube.com/watch?v=8wDuRgQ2dvw)\r\n- [@video@Happy Number (LeetCode 202) | Full solution](https://www.youtube.com/watch?v=LkD0D0Xy-ro)"
+}

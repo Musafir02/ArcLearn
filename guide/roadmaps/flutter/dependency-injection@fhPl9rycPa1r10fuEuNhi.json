@@ -1,0 +1,4 @@
+{
+  "title": "Dependency Injection",
+  "content": "Dependency Injection is a design pattern that allows objects to receive their dependencies from external sources instead of creating them internally. In Flutter, this can be useful for managing complex state, reducing coupling between components, and making testing easier.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Dependency Injection](https://docs.flutter.dev/app-architecture/case-study/dependency-injection)\r\n- [@article@Dependency Injection In Flutter](https://medium.com/@rk0936626/dependency-injection-in-flutter-3e489ba1b988)\r\n- [@video@Flutter Dependency Injection For Beginners](https://www.youtube.com/watch?v=vBT-FhgMaWM)"
+}

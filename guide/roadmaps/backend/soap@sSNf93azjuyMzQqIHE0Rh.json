@@ -1,0 +1,4 @@
+{
+  "title": "SOAP",
+  "content": "SOAP (Simple Object Access Protocol) is a structured message protocol for exchanging information between systems and applications. SOAP APIs are developed in formal, structured ways. Messages can be carried over various protocols, including HTTP.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@SOAP Web Services Tutorial for Beginners](https://www.guru99.com/soap-simple-object-access-protocol.html)\r\n- [@video@REST vs SOAP](https://www.youtube.com/watch?v=_fq8Ye8kodA)\r\n- [@video@SOAP vs REST vs GraphQL vs gRPC](https://www.youtube.com/watch?v=4vLxWqE94l4)"
+}

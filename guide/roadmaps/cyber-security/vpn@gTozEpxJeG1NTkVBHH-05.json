@@ -1,0 +1,4 @@
+{
+  "title": "Virtual Private Networks (VPNs)",
+  "content": "A Virtual Private Network (VPN) creates a secure, encrypted connection over a less secure network, like the internet. It essentially extends a private network across a public one, allowing users to send and receive data as if their devices were directly connected to the private network. This is achieved by routing the user's internet traffic through a VPN server, masking their IP address, and encrypting their data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is a VPN?](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn)\r\n- [@video@VPN (Virtual Private Network) Explained](https://www.youtube.com/watch?v=R-JUOpCgTZc)\r\n- [@video@Virtual Private Networks - Professor Messer](https://www.youtube.com/watch?v=YFyt8aY8PfI)"
+}

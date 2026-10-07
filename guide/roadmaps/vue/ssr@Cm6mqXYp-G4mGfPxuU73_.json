@@ -1,0 +1,4 @@
+{
+  "title": "Server-side rendering",
+  "content": "Server-side rendering refers to the process that the service side completes the HTML structure splicing of the page, sends it to the browser, and then binds the status and events for it to become a fully interactive page.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Server Side Rendering (SSR)?](https://www.educative.io/answers/what-is-server-side-rendering)\r\n- [@article@When should I Server-Side Render?](https://medium.com/@mbleigh/when-should-i-server-side-render-c2a383ff2d0f)\r\n- [@article@Server-Side Rendering (SSR)](https://vuejs.org/guide/scaling-up/ssr.html)\r\n- [@video@What is Server Side Rendering (SSR) for Web Development?](https://www.youtube.com/watch?v=okvg3MRAPs0)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "delete() and Related Methods",
+  "content": "Delete operations remove documents from MongoDB collections using `deleteOne()` for single document removal and `deleteMany()` for multiple documents. These methods use query filters to specify which documents to delete and support write concerns for reliability. Additional methods include `findOneAndDelete()` for atomic read-and-delete operations and `drop()` for removing entire collections.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Delete Operations](https://www.mongodb.com/docs/manual/reference/command/delete/)\r\n- [@article@MongoDB Delete Documents](https://boxoflearn.com/mongodb-delete-documents/)"
+}

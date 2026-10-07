@@ -1,0 +1,4 @@
+{
+  "title": "Package Bundling",
+  "content": "Bundling external packages can significantly improve the performance of your application. By default, packages imported inside Server Components and Route Handlers are automatically bundled by Next.js for enhanced optimization.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@How to optimize package bundling](https://nextjs.org/docs/app/guides/package-bundling)"
+}

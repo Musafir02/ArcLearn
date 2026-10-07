@@ -1,0 +1,4 @@
+{
+  "title": "Iterators",
+  "content": "An iterator is a mechanism to access a collection's elements sequentially in a performant way. They are often used in loops. On the other hand, they are mutable, and careless use can lead to non-trivial bugs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Iterators | Collections (Scala 2.8 - 2.12) | Scala Documentation](https://docs.scala-lang.org/overviews/collections/iterators.html)\r\n- [@article@Scala - Iterators](https://www.tutorialspoint.com/scala/scala_iterators.htm)"
+}

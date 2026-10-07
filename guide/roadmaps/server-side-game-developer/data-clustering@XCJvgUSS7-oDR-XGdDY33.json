@@ -1,0 +1,4 @@
+{
+  "title": "Data Clustering",
+  "content": "Data clustering in game backends groups related data or workloads together for more efficient processing or storage. It can refer to database clustering for high availability or machine learning clustering algorithms applied to player behavior analytics.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Clustering - scikit-learn Documentation](https://scikit-learn.org/stable/modules/clustering.html)\r\n- [@article@DBSCAN - Wikipedia](https://en.wikipedia.org/wiki/DBSCAN)\r\n- [@article@DBSCAN vs K-Means: A Guide in Python - New Horizons](https://www.newhorizons.com/resources/blog/dbscan-vs-kmeans-a-guide-in-python)"
+}

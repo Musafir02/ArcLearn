@@ -1,0 +1,4 @@
+{
+  "title": "Git",
+  "content": "Git is a system that helps developers track changes to their code. It lets you save different versions of your files so you can see what changed, go back to earlier versions if something breaks, and work with other people on the same project without overwriting each other's work.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated Git & GitHub Roadmap](https://roadmap.sh/git-github)\r\n- [@article@Learn Git with Tutorials, News and Tips - Atlassian](https://www.atlassian.com/git)\r\n- [@article@Git Cheat Sheet](https://cs.fyi/guide/git-cheatsheet)\r\n- [@video@Git & GitHub Crash Course For Beginners](https://www.youtube.com/watch?v=SWYqp7iY_Tc)"
+}

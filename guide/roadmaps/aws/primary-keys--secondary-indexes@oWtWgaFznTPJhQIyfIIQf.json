@@ -1,0 +1,4 @@
+{
+  "title": "Primary Keys / Secondary Indexes",
+  "content": "Every DynamoDB table requires a primary key, which uniquely identifies each item. A simple primary key uses just a partition key; a composite primary key uses a partition key and a sort key together. Secondary indexes, both local and global, allow querying the table on attributes other than the primary key.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Primary Keys / Secondary Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "openclaw models list | set | status",
+  "content": "`openclaw models list`, `openclaw models set`, and `openclaw models status` let you view the AI models available in your setup, switch between them, and check which one is currently active.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@model list](https://docs.openclaw.ai/concepts/models#models-list)\r\n- [@official@models status](https://docs.openclaw.ai/concepts/models#models-status)\r\n- [@official@Common commands](https://docs.openclaw.ai/concepts/models?search=openclaw+models+set)"
+}

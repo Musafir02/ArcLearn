@@ -1,0 +1,895 @@
+{
+  "title": "Qa Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Accessibility",
+      "name": "accessibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility-testing@zGzpjxz3nvVH9Eu3NOPbk",
+            "accessibility-tests@mmDIqSD6MU3ZhWREGI5E2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agile",
+      "name": "agile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agile-model@47NXgbc1OTGE06qXxlQoh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attack",
+      "name": "attack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attack-vectors@x3HEti8-xF9Mxe5ELBM9T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authentication",
+      "name": "authentication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication--authorization@75-XdVA4BL6UrcvpC9grx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-devops-services@u0tKd7HZVN2gGv9Cz3jHz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backend",
+      "name": "backend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backend-automation@mPaMQ5h8ZcXKOfcuSwB2-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Black",
+      "name": "black",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "black-box-testing@2zfwE6uzGYc2qnvOZ47LB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Browser",
+      "name": "browser",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "browser--dev-tools@cHI05cf8fLh3XB1Bt6jNP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chrome",
+      "name": "chrome",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chrome-devtools@Xadg2WZTz6Cc_Ir9FsbgY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd@-n2yAprKdWg3YVi2vp25d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circle",
+      "name": "circle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circle-ci@z1kZkWTL_RRPZY59aWylU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Csr",
+      "name": "csr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "csr-vs-ssr@-2RU50LUPwCQ8XRaMslY-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Email",
+      "name": "email",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "email-testing@G-F6jQTOAZ2kQ36F-VrBB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exploratory",
+      "name": "exploratory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exploratory-testing@2h6mJeIFCU72J7aggTvnQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frontend",
+      "name": "frontend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frontend-automation@hU5OCnEe3tG206xuGsVFd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-testing@o4xmFhw_ilWdhpCiEotck"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ajax@jn02FD5hjhZFVWaJjjNN3",
+            "allure@jaHOo-vZGjTnABxQKMT3_",
+            "appium@UIKUiCfSw5MkrRJZ3Ah3x",
+            "artillery@j1DYOQbIUT1tw_9WIPBkE",
+            "assembla@xLPE9CqqiYz0miMFI3ThY",
+            "atdd@isNJ0To1bBJvn899DITei",
+            "atlassian@wVqbs8Rh0WjLQqJZ0XiF0",
+            "axe@_4jJ8YQeLcaT-z38kxRRR",
+            "bamboo@j4J5OhHEf7t-LVNkNVW3M",
+            "bdd@VQOrMKGC-dBJ7CzLclviT",
+            "bitbucket@4xlbvY7NS3cemSZsEQAkD",
+            "bugbug@wUq-qEIh-tazYhgQQUqGG",
+            "caching@qvlA7iIOvoWMXm5MCAysZ",
+            "compatibility@RD0vRC-OL2ReYLT1leJMs",
+            "cypress@5cMhZ-7YMQ6ccs-AaIi-0",
+            "cypress@D7zGshmgwqWluF-W7OTWe",
+            "cypress@iQ7xwiA6xmbLyRIkI7tXM",
+            "datadog@Y2I_dcVZb4xZremXoajjx",
+            "delphix@V54fh772XfHHIFQoyMCOo",
+            "detox@gZnNHDjFMI003Od7u2RNa",
+            "drone@3oDyxhhbCCqxuCh1sT9VC",
+            "espresso@stMeB1U3SfuefZ-yS8wGF",
+            "gatling@J1Yx1VcO20Lc3r3PdGpUW",
+            "git@WrqKdOTRUiOnc1aIhTZeB",
+            "github@v4gjV1qolrFXdESrY9bzG",
+            "gitlab@RfwyTgwfb_xu5H9N-8_s9",
+            "grafana@8CztIu0BOPZZRZsqR9asW",
+            "jasmine@HP55XWH18THmCNjCq-gBl",
+            "jenkins@3l2dkN1vBy9johFhAgZhT",
+            "jest@ZeJSeYs8fkZLQ-Pc3TqEM",
+            "jmeter@UeeDNUPZ61_HHgcaF9-__",
+            "junit@5bNdrymdzqL0VbTqWt8r2",
+            "k6@Jcp29_ASj9QZ_DjDBIapJ",
+            "kanban@cJyQx-LBcOL11nkK-P2JH",
+            "karateframework@8zXn8R9OGWTmreBpstj03",
+            "kibana@DCZyXcx8H2MTPcyKOhn2_",
+            "lighthouse@fkUxhrP3LhtIVgIP9Dxar",
+            "locust@QjAJIfSQe7WjbyYdGWSP8",
+            "mailinator@rFjtp3-cnaUmHiKfjPZBn",
+            "mocking@Rj7bQRZZ5CGVO_b1Wwy8X",
+            "nightwatch@Ta1leBdu-Y9LryB-0U-CT",
+            "playwright@0TUq4KRbWTLsLuYI9sgi0",
+            "playwright@CHqfXjRRdS_c6XMnfVVx-",
+            "playwright@ZKOU7dWcrkKzTdt0wxwuO",
+            "puppeteer@sHyFCf7XQKxGxchaYxp2B",
+            "puppeteer@YKHlLKIlL-Y4ZtHTLfApu",
+            "qtest@FE_Wp2RPWFDHNaQIBLqH6",
+            "rca@BnZDIWW4rl_N1BhWhhTpO",
+            "reporting@MyAAsHteSr4JCPEpqjsy9",
+            "robot@nf76o_NYm0-pSIVBFm7IH",
+            "runscope@iceaqeXRYXoGtagWn_B7b",
+            "safe@Tdj051ANlwwpo03X1hjbF",
+            "scrum@k3xPwDzA1WUEAwJ6-Q8PW",
+            "selenium@s3HMrqNEVogftCIOZYO61",
+            "sentry@H-2wWlKxD_Q1xVv99GlBj",
+            "spiral@IajllMZxKGa28EK88uAuh",
+            "swifttesting@Q6eNkuRI6dPa9X44pwrea",
+            "tdd@M78baCVYpsk7C6j-VPvPZ",
+            "teamcity@k3TBVtepeQEGzKGceDkPJ",
+            "testlink@leiCCxLJgXCpk1a--mE83",
+            "testrail@5Tn6Wtw8QE56LZ9BlRAmW",
+            "testrail@o4nkmhEDGwi8yE6DSwZi5",
+            "trello@dmfMp6ydjtHo6oKv97AzB",
+            "uat@Ls_pezva7_ZW2HHn7RvO4",
+            "vegeta@LGZlOPNYQp0O_vapnciEI",
+            "waterfall@7h-Xfp2Foiyn7-pI0w7ft",
+            "wave@Lb1ctvpMcKIvsC0WQ5q43",
+            "webdriverio@cFhOYHgq1_MUSXjDI_fFN",
+            "xp@4SLrNPD_No05CKeAVDFn5",
+            "youtrack@6bS1YjGJHARAUKTywYMU9",
+            "zephyr@aGvbxmZCHbbt9PgXL1ooJ",
+            "zombiejs@m0gT774b59xsSJKrrjTxq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ghost",
+      "name": "ghost",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ghost-inspector@mX7bNNP7WjFdlsRK6qIgy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gitlab",
+      "name": "gitlab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gitlab-ci@iW3oaTl7c3a1kNlCKy-13"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gmail",
+      "name": "gmail",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gmail-tester@mIM9ausl_tSUNPUerIfEr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gray",
+      "name": "gray",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gray-box-testing@ZmWEG7Wu-h7bZe6pGxqDg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Headless",
+      "name": "headless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "headless-chrome@JO--NVMs3saUNjh3mcd7z",
+            "headless-fox@ryoSezFNeiunCAZygCbaQ",
+            "headless-testing@Pm-Wx7Z3jCUFcafetsQYi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Html",
+      "name": "html",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "html-css-javascript@pYkfl-4gMHRj9wIeH8RTP",
+            "html-unit@-Sf7DLr8Ywoorrmsx3bfd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing@a_vwz-onn6QEoc27N6oBc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-fundamentals@m1wX27XBWKXZcTMH2U1xp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load--performance-testing@wTfvbS62eyitDT8pLsVhj",
+            "load-testing@wmMIL-0ytz7a3JygyB-wc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manage",
+      "name": "manage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manage-your-testing@pH9h2tjO6raO_g4W8EgKq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manual",
+      "name": "manual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manual-testing@daUEq4xlh4PIltSdiD4F2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-automation@ITtBvrJ8dsW-5LQV8tWgO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitoring",
+      "name": "monitoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitoring--logs@pJvijtG-a0vOq16EFu3Gr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "New",
+      "name": "new",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "new-relic@QnNUZQlQ2Jhv34daeIuW8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Non",
+      "name": "non",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "non-functional-testing@vYIEsjTKoO1ciypGIDlil"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Owasp",
+      "name": "owasp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "owasp-10@JR-MkszNvv96-S3DpyLeX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pager",
+      "name": "pager",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pager-duty@DJDegO78Elo83eHjq8IHN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-testing@bapKhjye4oWQxTEZ4fl_c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Postman",
+      "name": "postman",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "postman--newman@X_nLwzc1QmShivEjfy6v9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-management@ZqgeqqZTGA-y7jVNyPCt4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Qa",
+      "name": "qa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "qa-mindset@vZv4Ow5bg_PbKoF557G9S",
+            "qa-wolf@414xO4PX9rU0f39aC7awu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regression",
+      "name": "regression",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regression-testing@XCeXiKvBblmDArfbWjDvw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repo",
+      "name": "repo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repo-hosting-services@XoYsStVqfMeCHkGBlbRhD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Responsive",
+      "name": "responsive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "responsive-vs-adaptive@6cGPxfJ9ipij40hnmckxV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-assured@gECIgOii7C5MzilSbQP9t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sanity",
+      "name": "sanity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sanity-testing@Lve3xpC1FU91TQqoDOYv7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sdlc",
+      "name": "sdlc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sdlc-delivery-model@Pb3QkhSCgRByJHuPxVAlU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Secrets",
+      "name": "secrets",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "secrets-management@YV6ST78AH4J0i2Rw9zhZj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-testing@MahtxMJD3ETHfgk_PQabQ",
+            "security-testing@wsJXMvRbOTh_VXKhmhPmQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Selenium",
+      "name": "selenium",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "selenium-ide@_3HfVT8IDlcgvUM4h6A0_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Smoke",
+      "name": "smoke",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "smoke-testing@MVShii4LZiWW_gPTJzkty"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Soap",
+      "name": "soap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "soap-ui@eE9F3YviSpmgor6V5NMj5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stress",
+      "name": "stress",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stress-testing@skrOrieK1T0hHj_mJBNsW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swas",
+      "name": "swas",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swas-pwas-jamstack@_2IwBNhB5SqbPRxGhZyhq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Test",
+      "name": "test",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "test-cases-and-scenarios@ELnCFVRkO_s5qI_3Yzf5U",
+            "test-oracles@Zja25damM2vXMOYCyRZiq",
+            "test-planning@2U8WRKkuF-YCEWtpgTspF",
+            "test-prioritization@1976f2-opqLqV4ImPJlt0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-approaches@uFOVuenPyOKZGgoJXkwRZ",
+            "testing-data-management@3Ngw17hkW2HPs-OOaHzv-",
+            "testing-methodologies@7xGXlwgkcGV6BrDDDN71R",
+            "testing-techniques@gQLbDFP00itL260i1BiDe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Travis",
+      "name": "travis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "travis-ci@Rz1E97EQCxESu44dTQd5t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@PMO3M33U6RuvNdINvqIAA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "V",
+      "name": "v",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "v-model@zELjfWwfEYSc1YO8JLoJn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Verification",
+      "name": "verification",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "verification-and-validation@vP76hqx-8Pri7sxdJDGV5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control-system@s8o5fXu3XHrMduh8snLwu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vulnerability",
+      "name": "vulnerability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vulnerability-scanning@mKM27KrX1CEViOwz1EDtQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Webpage",
+      "name": "webpage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "webpage-test@igbQfUpmMSKYyAOVkSCLM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-quality-assurance@JInFH3JRvAxjvpIFKjUiP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "White",
+      "name": "white",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "white-box-testing@y4QnZ2xQyc4x6Kr-eGBer"
+          ]
+        }
+      ]
+    }
+  ]
+}

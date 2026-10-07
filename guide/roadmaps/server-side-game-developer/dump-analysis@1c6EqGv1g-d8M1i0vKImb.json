@@ -1,0 +1,4 @@
+{
+  "title": "Dump Analysis",
+  "content": "Dump analysis is the process of examining a core dump or crash dump file to diagnose what caused a server process to crash. Tools like GDB (for C/C++) or crash dump analyzers read the memory image and stack traces captured at the time of failure.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@WinDbg Installation and Overview - Microsoft Learn](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/)\r\n- [@official@LLDB Tutorial - LLVM](https://lldb.llvm.org/use/tutorial.html)\r\n- [@article@Basic Hang Dump Analysis Using WinDbg - Poppastring](https://www.poppastring.com/blog/basic-hang-dump-analysis-using-windbg)"
+}

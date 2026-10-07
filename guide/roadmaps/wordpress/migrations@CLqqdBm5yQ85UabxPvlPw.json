@@ -1,0 +1,4 @@
+{
+  "title": "Migrations",
+  "content": "Migrations involve moving a WordPress website from one environment to another. This could be from a local development server to a live production server, from one hosting provider to another, or even between different servers within the same provider. The process typically includes transferring the WordPress files (themes, plugins, uploads) and the database containing all the website's content and settings.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@How to manually migrate a WordPress Site](https://teamupdraft.com/blog/how-to-manually-migrate-a-wordpress-site/)\r\n- [@article@9 Powerful WordPress Migration Plugins (Move Your Site Safely)](https://kinsta.com/blog/wordpress-migration-plugins/)\r\n- [@video@How to MANUALLY Migrate Your Wordpress Site](https://www.youtube.com/watch?v=wROa37k_RQA)"
+}

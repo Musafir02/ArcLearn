@@ -1,0 +1,4 @@
+{
+  "title": "Performance",
+  "content": "Performance, in the context of web development, refers to how quickly and efficiently a website or web application loads and responds to user interactions. It encompasses various aspects like loading times, rendering speed, and overall responsiveness. Optimizing performance ensures a smooth and enjoyable user experience, leading to increased engagement and satisfaction.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Web performance](https://developer.mozilla.org/en-US/docs/Web/Performance)\r\n- [@article@9 Essential Strategies for Web Performance Optimization](https://www.shopify.com/enterprise/blog/web-performance-optimization)\r\n- [@video@The ultimate guide to web performance](https://www.youtube.com/watch?v=0fONene3OIA)\r\n- [@video@Frontend System Design: The 2025 Web Performance Roadmap](https://www.youtube.com/watch?v=KUdqbIHn8Ic)"
+}

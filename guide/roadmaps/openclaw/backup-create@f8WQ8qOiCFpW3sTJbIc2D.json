@@ -1,0 +1,4 @@
+{
+  "title": "openclaw backup create",
+  "content": "`openclaw backup create` generates a snapshot of your Open Claw configuration and memory files so you can restore your setup if something goes wrong.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@backup](https://docs.openclaw.ai/cli/backup#backup)"
+}

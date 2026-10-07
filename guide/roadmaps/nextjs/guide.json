@@ -1,0 +1,663 @@
+{
+  "title": "Nextjs Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-endpoints@4H8aOVYsZiPbTQUYcZjb_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-data@77i6HVsnX-uSDw8vz3afD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-rendered@HdSmD_nDV5BPO5JJqs1k8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-next-app@3tTTKj6PWsRoRRXH5tXxS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Css",
+      "name": "css",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "css-in-js@j5jIZvz_bMZqmr_gl0pQF",
+            "css-modules@tlg5XMVcAHmhey-efjf3M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-server@Hj01UZuHkQppXTq6XV9Pn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-fetching-patterns@GAHFfQ8CviNxV7ITpt--q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deployment",
+      "name": "deployment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deployment-options@BPStVqWV0660A-_fJSuM7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Docker",
+      "name": "docker",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "docker-container@y5_zX209AaHOf_wQibo12"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environment",
+      "name": "environment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environment-variables@iv6rWEqjh07d0n2kAQedO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-states@pxltXOWgpbo95V4u2ryX7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fetching",
+      "name": "fetching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fetching-locations@lkdBRzC8lAvRYKBt7E37V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adapters@fXXlJ6oN_YPWVr-fqEar3",
+            "analytics@a34ZmSk5VYVLq8wsEvOcI",
+            "app@3VXKRDxDmqJObkoW8ndrz",
+            "caching@0Rgs7jaFX1Gl5KDT6DKbX",
+            "client@jYSa7UMmjb51pGAyU4PoB",
+            "composition@6O9c3J-1JQtZTXXIDDXSM",
+            "csr@4CcK-BLP5NM3ZrCIEG4s8",
+            "cypress@KmOTgclnf-QYDYK0QwwVe",
+            "edge@SYUKB1Afciqz7hA1n5yIx",
+            "eslint@CvrHzkxg7ndCvd_tbYnK4",
+            "fonts@ZptECTASMX97m5yCZ-XO8",
+            "images@1t9iOcmrEmuwOxOZ0vlY7",
+            "instrumentation@DHqdXJFhVZWaNa5zSX8Wk",
+            "internationalization@bSsM7VLZcJKYL5XXSG0r-",
+            "introduction@tcDL4OEbZplbjNa8VTLpv",
+            "jest@sc5Pliyq6bfeFXp0ca5yH",
+            "metadata@45XMR5imHEDF_X8wcgjGW",
+            "middleware@gpZNwsh075wl5eH2gLKro",
+            "nextjs@uJrOHRLmEBZtHJzAAusUe",
+            "nodejs@0S37ka1K-TdYLnjCBrKSH",
+            "opentelemetry@mTh5PZNpzJNKPqpu5PVL6",
+            "pages@htuyzi5_N-fqnx_SsO_DS",
+            "playwright@qFDdfOBdOlGMjTEOiiuTe",
+            "prettier@efMytbUmw44M8dPL4ItsX",
+            "reditects@K1wGmAy9L0VE6cwYE2pA6",
+            "remix@G_33yo1MshQbiaGTPtTdK",
+            "sass@5H7toz-DxtnwjozCgLuk6",
+            "scripts@JFrpy3dGt-UP9Weo1VBvN",
+            "server@QDxYlIyFOuGUIy_ZovHs0",
+            "spa@NC7s-EOLWhjXR70JFZxcg",
+            "ssg@CqPZHOs1Iew6PCIjwiqUt",
+            "ssr@7EYQnX3cEAjSL-iJSprEI",
+            "streaming@lR7oPh0DCY_BhzXH31N36",
+            "typescript@ZFHkHmvjndPjDAB-MAtb7",
+            "videos@1SJX-nGuhIxGH0ukfluoQ",
+            "vitest@KTZRo1Y_Z-7eMYzZ9W0Vl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Global",
+      "name": "global",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "global-css@BfNON3Vp3zSWBurSS4ZHo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-sensitive-data@Ti_Bl5NnRIY9UTNTH15xA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Intercepting",
+      "name": "intercepting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "intercepting-routes@dP6cZkEZ6lxPsy5SjvuZA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript-basics@DlUQkDRPUcjC3pO4P5zCQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layouts",
+      "name": "layouts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layouts-and-templates@zJXCS7U9NUsn7cuEx3YMs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lazy",
+      "name": "lazy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lazy-loading@3_Mpvkxp9A7PMogxxMikQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Loading",
+      "name": "loading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "loading-and-streaming@b2LcPc5MfoyF0W9Y0aGpR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Markdown",
+      "name": "markdown",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "markdown-and-mdx@3GI0xHGG_qgpLfEjaLYxr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memoization",
+      "name": "memoization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memoization-in-fetch@UZCMVpg5YIDxu-AMah3S-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-usage@SI7KzNSLP0ccH_P94StGL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nextjs",
+      "name": "nextjs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nextjs-routing-basics@xRZqBd5-QO8zh7ksHlRjK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nodejs",
+      "name": "nodejs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nodejs-server@Okw_IjU2iRSvSQVdKeeCo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-bundling@qM_Za9NiCiCG5-kf5RCXF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parallel",
+      "name": "parallel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parallel-routes@2N_hm9Zx_Lp-RFEMP9HFb",
+            "parallel-vs-sequential@SjJQ7ceU6vBhlhrN8hcvy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Preloading",
+      "name": "preloading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "preloading-data@Ve1Pa7IhGHPZ_F-sCMcNb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Preparing",
+      "name": "preparing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "preparing-for-production@-yiJSBIoczJHOW8YMdWFI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-cache@crBlqiS78n7yz28cT2GGz",
+            "react-frameworks@FdvaN6BOxUEJt7TarSDmo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rendering",
+      "name": "rendering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rendering-pages@IlWFMh44HtHDnIr7nqwtI",
+            "rendering-strategies@1ch6ZXZP46FP8q3HeCqWM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Revalidating",
+      "name": "revalidating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "revalidating-cached-data@N5siOJO3dc9vJUTpbdm04"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Revalidation",
+      "name": "revalidation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "revalidation-errors@qMYuXOlr_c-6oQKVOdGci"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Route",
+      "name": "route",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "route-matcher@Sn-8ztsjjtUxD_SP6w3cS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Routing",
+      "name": "routing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "routing-patterns@09uWsmXOXU0Ox7F3qsjRx",
+            "routing-terminology@oFhmV5Xv0KJ-SjeYVZBpi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Runtimes",
+      "name": "runtimes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "runtimes-and-types@LN7SHgcQp9gX_jfEN84YP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-actions@IuBZY-ISP1Sy_5OQ99jLY",
+            "server-rendered@m7eKlykOZCA3BLuBHioDj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-headers@XwDF-Kt9K5smm3ruxlkR2",
+            "setting-things-up@ThrO72opK7xGWpy0GG63T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spa",
+      "name": "spa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spa-vs-ssr@ch5gUr8xeCIp-i48N5qew"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-assets@iabbuLHqAiRkgj03t64x7",
+            "static-export@evmzZ6F7TWgYhdaahnZHY",
+            "static-vs-dynamic@hQHvu7MzNwA2lL9ADm5YQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structuring",
+      "name": "structuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structuring-routes@9egFwmy-o7Fx-M7FcPXXy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tailwind",
+      "name": "tailwind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tailwind-css@3IKXvlA9P06GiOi34zv5H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Third",
+      "name": "third",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "third-party-libraries@-j38AhG6LUCH5GupGiqUM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-of-routers@km7dLVpl76c5EfWvhhbRh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-cases@54Cc_GdL327tzkdYBA305"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-cookies@8kUhcd2-BlqOKInEuSI95"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-frontend-frameworks@rJ3vuI58Z9u2SKTDgpTE2",
+            "why-nextjs@WxoMZRRiW9CGDZ9i80nbf",
+            "why-react@ey6z7Y4WtNtQJ50n-3j5P",
+            "why-use-app-router@e_rwwlKsvyv9OMDDBXo_N"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "purrr",
+  "content": "purrr applies a function to each element of a list or vector and collects the results, similar in spirit to base R's apply family but with more consistent, predictable behavior. Its `map()` function always returns a list, while variants like `map_dbl()` return a vector of a specific type, making the expected output explicit. It fits naturally with the pipe operator and tidyverse style, letting you iterate without writing explicit loops.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Get started with purrr](https://purrr.tidyverse.org/articles/purrr.html)\r\n- [@article@Learn to purrr](https://rebeccabarter.com/blog/2019-08-19_purrr)\r\n- [@video@How to purrr](https://www.youtube.com/watch?v=nd-Y8b22YaQ)\r\n- [@video@Hadley Wickham | {purrr}](https://www.youtube.com/watch?v=EGAs7zuRutY&t=11s)"
+}

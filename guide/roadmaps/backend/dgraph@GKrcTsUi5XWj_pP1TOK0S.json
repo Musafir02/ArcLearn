@@ -1,0 +1,4 @@
+{
+  "title": "DGraph",
+  "content": "DGraph is a distributed, fast, and scalable graph database. It's designed to handle large amounts of data and complex relationships between data points. DGraph uses GraphQL as its query language, allowing developers to retrieve and manipulate data in a graph structure easily. It's built for production environments, offering features like ACID transactions, high availability, and horizontal scalability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Dgraph](https://docs.dgraph.io/dgraph-overview)\r\n- [@opensource@dgraph](https://github.com/dgraph-io/dgraph)\r\n- [@article@Dgraph, what is a graph database anyway?](https://medium.com/@JalalOkbi/dgraph-what-is-a-graph-database-anyway-8b6c22fb1eeb)\r\n- [@video@Learn Dgraph in 20 minutes (Graph Database) quick tutorial](https://www.youtube.com/watch?v=roHj5G4vM9Q)"
+}

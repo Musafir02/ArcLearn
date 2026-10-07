@@ -1,0 +1,4 @@
+{
+  "title": "Video Delivery",
+  "content": "Stream delivers video to viewers through adaptive bitrate streaming. Workers can generate signed URLs, restrict access, or inject custom logic into the delivery flow to control who can watch a video and under what conditions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Delivering Videos with Cloudflare](https://developers.cloudflare.com/support/more-dashboard-apps/cloudflare-stream/delivering-videos-with-cloudflare/)\r\n- [@official@Stream Delivery - Cloudflare Stream](https://www.cloudflare.com/application-services/solutions/stream-delivery/)\r\n- [@official@Cloudflare Stream - Cloudflare](https://www.cloudflare.com/developer-platform/products/cloudflare-stream/)"
+}

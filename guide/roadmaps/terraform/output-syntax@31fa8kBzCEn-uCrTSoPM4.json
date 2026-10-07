@@ -1,0 +1,4 @@
+{
+  "title": "Output Syntax",
+  "content": "An output block requires a `value` argument that specifies what to expose. Optional arguments include `description` for documentation, `sensitive` to redact the value, and `depends_on` to declare explicit dependencies. Outputs can expose any value, including resource attributes, local values, and variable values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Hashicorp Output Tutorial](https://developer.hashicorp.com/terraform/tutorials/configuration-language/outputs)\r\n- [@official@Declaring an Output Value](https://developer.hashicorp.com/terraform/language/values/outputs#declaring-an-output-value)\r\n- [@article@Terraform Output Values : Complete Guide & Examples](https://spacelift.io/blog/terraform-output)\r\n- [@article@Terraform: Output a field from a module](https://stackoverflow.com/questions/47034515/terraform-output-a-field-from-a-module)"
+}

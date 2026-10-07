@@ -1,0 +1,4 @@
+{
+  "title": "Lab Environments",
+  "content": "AI Red Teamers need environments to practice attacking vulnerable systems safely. While traditional labs (HTB, THM, VulnHub) build general pentesting skills, platforms are emerging with labs specifically focused on AI/LLM vulnerabilities, prompt injection, or adversarial ML challenges.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@HackAPrompt Playground](https://learnprompting.org/hackaprompt-playground)\r\n- [@article@InjectPrompt Playground](https://playground.injectprompt.com/)\r\n- [@article@Gandalf AI Prompt Injection Lab](https://gandalf.lakera.ai/)\r\n- [@article@PromptTrace](https://prompttrace.airedlab.com/)"
+}

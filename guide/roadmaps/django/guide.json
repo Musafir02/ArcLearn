@@ -1,0 +1,682 @@
+{
+  "title": "Django Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Admin",
+      "name": "admin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "admin-customization@KHoau3Pz7o951L8Ivryk0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asynchronous",
+      "name": "asynchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asynchronous-django@8AuyffbXskd8jltqyJVer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Background",
+      "name": "background",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "background-tasks@x19j7d1jd_uFhy85w71i0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Built",
+      "name": "built",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "built-in-user-model@SEEiAOOxLGUaZi3wYncUm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Class",
+      "name": "class",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "class-based-views@49YSIjTsb6Lnv39AukGrD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-update-delete@_2hoRFibz8dYBPhHJX8NW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-fields@7dV6o6DnKkv6TX7KCbnzC",
+            "custom-user-model@F0OPk3bIoeXhIRthKg9MD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Customizing",
+      "name": "customizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "customizing-views@eQaN3y7cQgOcQ1BstNV-4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Django",
+      "name": "django",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "django--rest-framework@ultPpF8Lpqry-SdAbNCB1",
+            "django-admin@Voo8COgeTLD-607m793gh",
+            "django-allauth@YKyWtsxm1HcVsA56iyEOJ",
+            "django-forms@jhMYTiVacTLeatfAjAnPJ",
+            "django-ninja@B86paKhwiZsM5XP-V-AE8",
+            "django-orm@GQqNJQ3FkO-kBM8WYVBmn",
+            "django-shell@R4-oE2zFnwxvF05u5DYV4",
+            "django-test-framework@HD_-WR69-8f7uhiS0YwYP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dtl",
+      "name": "dtl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dtl-syntax@yla_7mhlkfxvI_YZ5Zikm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-pages@mxo_Wwx0To8CaOxBMSQyI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Field",
+      "name": "field",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "field-options@j4P7KBtfwdGSX0ga0BgpV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fields",
+      "name": "fields",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fields-types@CX-9Ii3e9rrokUTF0_hI5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filtering",
+      "name": "filtering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filtering--lookups@LDajzTC8AKD-13JVtL0Tk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filters",
+      "name": "filters",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filters--custom-filters@jhZsz4yMcYHgWsigQ4nzU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Form",
+      "name": "form",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "form-validation@-HGUhMNlPlbwuKMDX1e18"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-based-views@3k2Fo1-qldnE38HLtAtvv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adminpy@tffzsnhXGpN8-CPLgmdxn",
+            "aggregations@9PRY8NUilH2xITVyhpQSy",
+            "authentication@k2P3gilbLJ7tjbLhBym_m",
+            "authorization@8-LeguN1r6pLVGvBbwzPZ",
+            "caching@UDpTybashBHcy2S-oooww",
+            "celery@Jjj1dVybPHsdP-57yF7iX",
+            "comments@TXhI0IHDH6a4_vNyCDEYH",
+            "createview@osfekQvv2IjQir8xG7Jqn",
+            "csrf@_JaSWTa-VufNB0-6NH5KL",
+            "customization@oCxrIu2UfV6loYn8ncaLu",
+            "debugging@x45F-FdQOch35hZqNMfIn",
+            "debug_toolbar@OSkwgXDOhm6oyk_VlUbUc",
+            "deleteview@RpvuHOwFN03aeY3hvt1N0",
+            "deployment@jnR93iiFLqqpahhqq4w8-",
+            "detailview@D8vZfjzzt3gPda-6iF5Y4",
+            "django_silk@i8me37ZwzObjy1-JbrRjf",
+            "filters@jPhWe3MfOLbisxNCaivmz",
+            "fixtures@3CnuISrkDffQgys-x0AP4",
+            "for@Ta2kZmFI4sguQDb1gKJLh",
+            "formatters@rvnqGZxTu3YMH4HQwJ61i",
+            "handlers@IO9J54i7gSyunGRtIYJra",
+            "if@9sR_5U94v5qZdEiwngo67",
+            "introduction@m7fQLURtbiz4BM2UcZPeS",
+            "listview@mLMh30_UjacqqNRyKRCiP",
+            "localization@waLyhhzu4JkMnhnVdP9xf",
+            "loggers@zoFHTdr2iBTGdHbmv_9LI",
+            "logging@SxATl4QiM9iA1_qaUNJXx",
+            "managepy@wwKzZhC3xPQ-oymwjW5Yn",
+            "mariadb@udVG-R6R2UHnvTsXO80xQ",
+            "media@GA1Zn14Q2EvDmo452V8OO",
+            "middleware@IsZm5SZWJ0CTjxCOKZnn-",
+            "migrations@lUlJdqmd7YRpyRCfgT_EK",
+            "migrations@tCK6V3T4oGy9O8Wur2k9d",
+            "models@iY7yJ9NN77F6wvlgD4zKG",
+            "modelspy@WYPjCQcccmwcjnxM_5VkU",
+            "mysql@pnyNAPLViP4LBGvkVbZ5s",
+            "pagination@-ZFQ0QzqqBIuSQK9CwLg4",
+            "postgresql@ykgvgR6YE_-V1LAtr0DvU",
+            "pytest@K2dNQ69laFT853CFniJrZ",
+            "routers@1p5abgLJ31IRTUiFwbeSa",
+            "serializers@aJ0jM_zjUJkt0wVfJQYt7",
+            "settingspy@_RRCcJpO33XAgdsBzJdY9",
+            "signals@gPy4yi6smV4gcRj_WCqYR",
+            "sqlite@o6qNq8D_gwC5UrkKjz57o",
+            "static@k7aMrFNIY11_bD_XwVLv7",
+            "templates@v5skymtqU7PmMuBsl-1rX",
+            "templates@YLvdL6lwZk2vlMK7QaTk7",
+            "testspy@g-KGkdGeCJQe6NMe82gR8",
+            "transactions@OoboX9UxuQ0pgjwQZmjIV",
+            "updateview@vS0Y5DmrAEwoQ9gblM-8Q",
+            "urlspy@6y3ZnxclaV6JVGhUkQMtB",
+            "urlspy@b9VXaPBraxAakcwHkyRYu",
+            "variables@wxkaVWdZGcAZVxbfOJvZE",
+            "views@04iZjMANQFOjASGRz9Maw",
+            "viewspy@e-5mm0hv-sgG4lfDcISQ6",
+            "whitenoise@oUjfjCRymVJs4HzmMeks5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generic",
+      "name": "generic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generic-views@-JKD1SRtFWt3b99aPbfx7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-the-web-works@Xrcl09I9ZShOwhAWynsO6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing--django@GB1fgFjrGS-ZM8QTJinOr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-framework@AztOoGUtPW_6jP6NqJ5T-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-forms@HjcEX3u5iRSlq69U-pSEs",
+            "model-inheritance@SWNGsyrpP7XghRa_zKQbb",
+            "model-methods@NV1l8YU9CHw_I8NhhN0hO",
+            "model-relationships@D7wMA3PYw1RYMz9lXGsgW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Named",
+      "name": "named",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "named-urls@3qImaY9Hs3Cvatw1X96Ns"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Path",
+      "name": "path",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "path-converters@NB50RuNBT5Oja2Ry6p892"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pdb",
+      "name": "pdb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pdb-ipdb@WRHWs75DbhuiVZm1XMe7z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Production",
+      "name": "production",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "production-checklist@PsDSs7qC_M3l-Ang1wTZe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Projects",
+      "name": "projects",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "projects--apps@d0JBAP2Sot-u4diwqDYIq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-optimization@u2bq7WaT2aSbrSaa0yB86"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Querying",
+      "name": "querying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "querying-data@8ud6LNbixJEP1It9AUMB7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Raw",
+      "name": "raw",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "raw-sql@7rCNwoQW2lI7xxMUP_ESa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regex",
+      "name": "regex",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regex-paths@DbJ1BIOoerkCH4P95Z7wD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Request",
+      "name": "request",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "request-reponse-flow@ftFF3oFfqpKvjQhXk3bWw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reverse",
+      "name": "reverse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reverse-url@KlEgfzfkPu0O43tJIsU3H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Routing",
+      "name": "routing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "routing-middleware@kVhW3uJawiK1waW-2Gk7F"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-your-project@QJJh0Dl4IT_I3_eACrStj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-the-database@yRaVL7FoWcHb2A8uz5TV8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-files@MJIQZoLMiURPrhqMUddG7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tags",
+      "name": "tags",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tags--custom-tags@W2v9_4sn5aoZjxMKOQTcw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-inheritance@4j0fCRER1a_c7FY06Q68h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-mvc-model@CXrUh4hBN7fhXShUhtO5n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unittest",
+      "name": "unittest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unittest--testcase@iKzWEV8ymBEh_J2ppKZjF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Url",
+      "name": "url",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "url-patterns@ThYltfCyVKkKL_6jY2g-d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Users",
+      "name": "users",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "users--permissions@hxVeLMj_jQYPNqMPcT8FW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Views",
+      "name": "views",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "views--viewsets@MY9L0_kzjrbda43d-Ey-H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Virtual",
+      "name": "virtual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "virtual-envs@1JeM23O8r_WnIdmgrgZ_7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-web-frameworks@xdxitF1Foo6W9Pj6-2Be1"
+          ]
+        }
+      ]
+    }
+  ]
+}

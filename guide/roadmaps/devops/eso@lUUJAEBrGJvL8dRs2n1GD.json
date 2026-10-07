@@ -1,0 +1,4 @@
+{
+  "title": "ESO",
+  "content": "External Secrets Operator (ESO) is a Kubernetes operator that pulls secrets from external secret management systems, such as AWS Secrets Manager, Vault, or GCP Secret Manager, and automatically creates Kubernetes Secret objects from them. This allows teams to manage secrets in a central store while still making them available natively inside Kubernetes.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@External Secrets Operator](https://external-secrets.io/latest/)\r\n- [@opensource@External Secrets Operator](https://github.com/external-secrets/external-secrets)\r\n- [@video@External Secrets Operator Tutorial for Kubernetes Secret Management (2025)](https://www.youtube.com/watch?v=1mjgLcQgSCo)"
+}

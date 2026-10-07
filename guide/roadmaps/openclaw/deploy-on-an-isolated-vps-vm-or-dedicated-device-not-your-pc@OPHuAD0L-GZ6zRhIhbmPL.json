@@ -1,0 +1,4 @@
+{
+  "title": "Deploy on an Isolated VPS, VM, or Dedicated Device",
+  "content": "Running Open Claw on a dedicated, isolated machine rather than your personal computer limits the blast radius if something goes wrong and keeps your agent separate from your sensitive personal data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Security](https://docs.openclaw.ai/gateway/security)\r\n- [@official@Remote Access](https://docs.openclaw.ai/gateway/remote#macos-persistent-ssh-tunnel-via-launchagent)\r\n- [@video@How to Secure OpenClaw - Complete Security Guide with Private Models](https://www.youtube.com/watch?v=jPslceOAbv0)"
+}

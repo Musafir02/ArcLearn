@@ -1,0 +1,4 @@
+{
+  "title": "Drone",
+  "content": "Drone is a CI/CD service offering by Harness. Each build runs on an isolated Docker container, and Drone integrates with many popular source code management repositories like GitHub, BitBucket and GitLab\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Drone](https://www.drone.io/)\r\n- [@official@Drone Documentation](https://docs.drone.io/)\r\n- [@official@Drone Getting Started Guide](https://docs.drone.io/server/overview/)"
+}

@@ -1,0 +1,578 @@
+{
+  "title": "Typescript Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Abstract",
+      "name": "abstract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abstract-classes@tZFWeWHdOUJcCEtHfXH9p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Access",
+      "name": "access",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "access-modifiers@RJ7on8WoxrKcXrR3qY5Rs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-types@2F7vOL__v9dLBohA263aj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ambient",
+      "name": "ambient",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ambient-modules@k_5y77k8ZZ9_O2WpWXWTY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "As",
+      "name": "as",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "as-any@afTNr36VqeXoJpHxm2IoS",
+            "as-const@pGFnTqi0-RSj0YRmNA5iy",
+            "as-type@Ba0baUbomrW9td_K8U-5L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-tools@I5uwfej5XMwR2N2gpBILh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Combining",
+      "name": "combining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "combining-types@qefnsugcveizVq2TORRgn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compiler",
+      "name": "compiler",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compiler-options@RrExVb7l2gd0s_TlNdLeD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-types@ubGIhi-WLE0EopTYXzmPL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Constructor",
+      "name": "constructor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "constructor-overloading@oxzcYXxy2I7GI7nbvFYVa",
+            "constructor-params@3XrKbK5Od2eoM0BLaS4kU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Extending",
+      "name": "extending",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "extending-interfaces@O-9WQqidujLIEOTcOfy4n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-modules@egQWk1n3p8Pep83yIwCtI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-overloading@-0Zp6b8NjDyz9MAQE3HfS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "any@yXiLegSlL7SveU8rBGj8U",
+            "array@YbDuIo1BbZKEAZwmXlCdZ",
+            "awaited@aEhI_9mFWXRIZh1ZxTuzu",
+            "boolean@hfIHxa5i_5rEpjtzqEsic",
+            "class@tTSITP1W1ymS-njbFb8Ts",
+            "classes@ib0jfZzukYOZ42AdJqt_W",
+            "decorators@TRx3wvWnRdJJf5eL-GBG4",
+            "ecosystem@RqZaWGxxNRItBhVwWKysc",
+            "enum@bfZIXHceDKDGQl-24kQpT",
+            "equality@Wy2yIK5vgLjEcc9VjuQK5",
+            "exclude@0fvOXi9gJbEc7etqTggNE",
+            "extract@IIAbAzXiVQm1JEi2MTMZN",
+            "formatting@fU8Vnw1DobM4iXl1Tq6EK",
+            "generics@4gaKqNtGLFqpk9WVKZl0v",
+            "instanceof@EDOU5a7UK17yp3PdFBJMc",
+            "instancetype@izGAjNtrh3BzQt3KiZX0W",
+            "interface@mVKsM7R4Ivpdhnbwt1aRb",
+            "linting@8PcAPOrKisKRYPWamz4nV",
+            "namespaces@EtVwQ4lnWi3IIFHGb2Qib",
+            "never@0pi9VTbngcAIswuu5LIYg",
+            "nonnullable@_BAZlBEzE7ddr315OeHvl",
+            "null@cjAwawhZLo1qVQ93XIdm2",
+            "number@UH9d3cvGy_e67WFNFwCyf",
+            "object@vnqvm_WiaKqpdxrW4wRGa",
+            "omit@yjlxygHl8QONNUrdx-Q0A",
+            "parameters@a7hl0iMZ-jcUACxqIYVqv",
+            "partial@gBTem9Dp3IQLAkqGX4fOF",
+            "pick@E88tHQvARkHURZwGaO02l",
+            "readonly@IuO9-O_DQdDYuAbdGWdgb",
+            "record@DRdBmF5Dt_r09LoPOxOuq",
+            "returntype@On75JR_UkiIlha0_qaSeu",
+            "string@d8iV-IBZ6cSnH8Z5_HRmc",
+            "truthiness@Xonbxc7MvMEonKBvbkCAH",
+            "tsc@Iv_t13PSVzet5VPKFtAp1",
+            "tsconfigjson@DmqrX56d9KnBcOSwlJR2q",
+            "tuple@jq-GD0DLyzrEXQKUmt5kv",
+            "typeof@ZiOcFZy85p7tLzUkyKDei",
+            "undefined@Sa6IZtM4XJstultz-pbh0",
+            "unknown@O2TYbd9i_OQwQk2dKh-ly",
+            "void@yLlQg7BF--ZwRHbXBWfOi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generic",
+      "name": "generic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generic-constraints@0NXHAOUYGIwuPwlN7r_B3",
+            "generic-types@T2-VAVfntouJOoWHpHZ3n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Global",
+      "name": "global",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "global-augmentation@JQwWeB1gkANSYfQmH69Bs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hybrid",
+      "name": "hybrid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hybrid-types@lvtTSHH9yBTCiLng8btnI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inheritance",
+      "name": "inheritance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inheritance-vs-polymorphism@8P0-vb9nlnmz7iC4UvyJZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installation",
+      "name": "installation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installation-and-configuration@dA8CNQOgJRDa0T7rmyS7f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interface",
+      "name": "interface",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interface-declaration@fY40W8prpgiNqRL50w7ub"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Intersection",
+      "name": "intersection",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "intersection-types@RWYXEZMODUrqwRWf_Lqi9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-typescript@KDd40JOAvZ8O1mfhTYB3K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keyof",
+      "name": "keyof",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keyof-operator@t1Tcesfq7bV2TkHcfD6lU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Literal",
+      "name": "literal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "literal-types@CWzGwvl6NwYCaLYSLIjqQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mapped",
+      "name": "mapped",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mapped-types@VQ-V9qIdKgnpSJg2UnpuB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Method",
+      "name": "method",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "method-overriding@aknqutxN2WDQ4RFcT-szM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Namespace",
+      "name": "namespace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "namespace-augmentation@16TT8R4N-9tCfWmPetqMP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Non",
+      "name": "non",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "non-null-assertion@mjaL5ocLnM8VQlhUxW6KU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recursive",
+      "name": "recursive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recursive-types@N8xBTJ74xv1E5hSLYZtze"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-typescript@qdy4ZIY2EKgmPNdu_ndcg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Satisfies",
+      "name": "satisfies",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "satisfies-keyword@HD1UGOidp7JGKdW6CEdQ_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-literal-types@xP25nGw42VqdfZ_9pDMXd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ts",
+      "name": "ts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ts-and-js-interoperability@dcLaEU_lb0z_QypL1ZhpX",
+            "ts-node@ZCM2_X4BiKh5FTCizrr-E",
+            "ts-playground@_bZ71i36haWgHQTY0yMOx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-aliases@M_3O21zjppgWptIT5dtu8",
+            "type-compatibility@alMJCEyUZ90xz-2_g3YRj",
+            "type-guards--narrowing@cFZsxpYHDxm7IWwergb3r",
+            "type-inference@KUur-gfOBQodTS-irFet7",
+            "type-predicates@1DOSAieOmWUNNsQQrqf2m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-vs-interfaces@TxkEpoOiuUm-fXJuFVKcH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typescript",
+      "name": "typescript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typescript-functions@qOynVkDi1gFz0mxyJHjfJ",
+            "typescript-interfaces@aH1DxiG5xrdNlKutJ_gTz",
+            "typescript-modules@sE9lqkkqwnsVJxTJv37YZ",
+            "typescript-types@qcrGApxNzkGYxgcd7o45d",
+            "typescript-vs-javascript@MQWzN_kXxVJMOYbRXSGJc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typing",
+      "name": "typing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typing-functions@9FIhHwDNzyKpb42NmSv3K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Union",
+      "name": "union",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "union-types@5z5w3yv1HbOpMlzEd4Iot"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Useful",
+      "name": "useful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "useful-packages@PCX3KcvMUW3mmQEepLTXp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Utility",
+      "name": "utility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "utility-types@LSwUHfalnk5MgHt21PANb"
+          ]
+        }
+      ]
+    }
+  ]
+}

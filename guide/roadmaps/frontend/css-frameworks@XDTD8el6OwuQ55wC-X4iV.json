@@ -1,0 +1,4 @@
+{
+  "title": "Modern CSS",
+  "content": "Modern CSS creates responsive designs using media queries, flexible typography, CSS-in-JS, and frameworks like Tailwind. Features CSS Logical Properties for internationalization and CSS Houdini for custom styling. Goals: performance, maintainability, and accessible designs across all devices.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated CSS Roadmap](https://roadmap.sh/css)\r\n- [@article@Modern CSS: A Comprehensive Guide](https://moderncss.dev/)\r\n- [@article@CSS-Tricks: Modern CSS](https://css-tricks.com/modern-css/)"
+}

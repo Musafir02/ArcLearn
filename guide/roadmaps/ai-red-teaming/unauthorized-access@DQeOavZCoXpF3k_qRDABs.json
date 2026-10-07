@@ -1,0 +1,4 @@
+{
+  "title": "Unauthorized Access",
+  "content": "AI Red Teamers test if vulnerabilities in the AI system or its interfaces allow attackers to gain unauthorized access to data, functionalities, or underlying infrastructure. This includes attempting privilege escalation via prompts, exploiting insecure API endpoints connected to the AI, or manipulating the AI to access restricted system resources.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Defending Model Files from Unauthorized Access](https://developer.nvidia.com/blog/defending-ai-model-files-from-unauthorized-access-with-canaries/)\r\n- [@article@OWASP API Security Project](https://owasp.org/API-Security/)\r\n- [@article@Detecting Unauthorized Usage](https://www.unr.edu/digital-learning/instructional-strategies/understanding-and-integrating-generative-ai-in-teaching/how-can-i-detect-unauthorized-ai-usage)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "XREAD",
+  "content": "The XREAD command reads data from one or more streams, only returning entries with an ID greater than the last received ID.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@XREAD](https://redis.io/docs/latest/commands/xread/)"
+}

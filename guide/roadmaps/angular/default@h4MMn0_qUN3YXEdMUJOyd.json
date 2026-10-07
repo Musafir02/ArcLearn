@@ -1,0 +1,4 @@
+{
+  "title": "@default",
+  "content": "The `@default` clause is used to render a template when none of the `@case` blocks matches the value of the `@switch` conditional. `@default` is optional and can be omitted.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@@switch](https://angular.dev/api/core/@switch#description)\r\n- [@article@Angular @switch: Complete Guide](https://blog.angular-university.io/angular-switch/)"
+}

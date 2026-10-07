@@ -1,0 +1,4 @@
+{
+  "title": "wgpu-rs",
+  "content": "`wgpu-rs` provides safe, idiomatic Rust graphics programming by abstracting over wgpu-core. Offers high-level convenience with low-level control options. Provides unified access to graphics and compute functionality across Vulkan, Metal, DirectX, and WebGPU backends for cross-platform compatibility.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@wgpu: portable graphics library for Rust](https://wgpu.rs/)\r\n- [@opensource@gfx-rs/wgpu](https://github.com/gfx-rs/wgpu)\r\n- [@article@wgpu docs](https://docs.rs/wgpu/latest/wgpu/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Arrays",
+  "content": "Arrays in PHP are fundamental data structures that store multiple elements in a particular key-value pair collection. PHP offers extensive support for arrays, making them convenient for storing sets of data or complex collections.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Arrays](https://www.php.net/manual/en/language.types.array.php)"
+}

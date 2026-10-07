@@ -1,0 +1,4 @@
+{
+  "title": "Job Scheduling",
+  "content": "A scheduling system manages and distributes computational jobs across multiple interconnected computers (a cluster) to optimize resource utilization and job completion. The goal is to efficiently allocate cluster resources (like processors and memory) to incoming jobs based on factors such as user priority, job requirements, and deadlines.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Job scheduler](https://en.wikipedia.org/wiki/Job_scheduler)\r\n- [@article@Cluster Resources — Job Scheduling](https://supun-kamburugamuve.medium.com/cluster-resources-job-scheduling-bb63644476bc)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "DNS",
+  "content": "DNS (Domain Name System) translates human-readable domain names into IP addresses through a global, decentralized server network. Enables easy internet navigation by converting names like [www.example.com](http://www.example.com) to numeric addresses browsers can connect to.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is DNS?](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/)\r\n- [@article@Mess with DNS - DNS Playground](https://messwithdns.net/)\r\n- [@article@How DNS works (comic)](https://howdns.works/)\r\n- [@video@DNS and How does it Work?](https://www.youtube.com/watch?v=Wj0od2ag5sk)"
+}

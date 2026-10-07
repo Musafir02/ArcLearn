@@ -1,0 +1,859 @@
+{
+  "title": "Cloudflare Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-gateway@vu8yJsS1WccsdcEVUqwNd",
+            "ai-model-integration@QxPoNHsL-Pj_z3aU6qEP4",
+            "ai-powered-search@Ep9_oV_YnkbH1gHM-n3gO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Any",
+      "name": "any",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "any-frontend-framework@zSwio18XdBfqwSneAx_AP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asset",
+      "name": "asset",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asset-management@3jU5753Uza2aS-gZo7w4k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Background",
+      "name": "background",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "background-jobs@qgvDGyLjc6lMmVPjHozFM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-command-line-knowledge@q9oQTt_NqhdWvJfA5XH1V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bot",
+      "name": "bot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bot-management@So-cKAVfbgsw2zzFREu7Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Browser",
+      "name": "browser",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "browser-rendering@qkFRW_tJB8_1IYpYskQ5M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bucket",
+      "name": "bucket",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bucket-lifecycle@YvgmmF9sWfURgijFV7E31",
+            "bucket-operations@UNE6XK4su5r2jcxhY7hOG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bulk",
+      "name": "bulk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bulk-operations@i64-aCpZHygq76fBU6eXD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cache",
+      "name": "cache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cache-api@ui3pUfsGMxv4WRzHkgbF0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-patterns@OgW-iIrJZ5-sOWKnFpIZd",
+            "caching-strategies@uBjcQ9PJUfwzu5N_2CNjN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cicd",
+      "name": "cicd",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cicd-pipelines@8Y6TIYoWIXrxtmzDVdS0b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dead",
+      "name": "dead",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dead-letter-queues@Grl59SjY31Q3sgf9uX-xf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Debugging",
+      "name": "debugging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "debugging-techniques@TmQC7fTL6b9EsBDYibv4g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Development",
+      "name": "development",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "development-tools@gsCRhwwjXuyueaYHSPOVZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Devtools",
+      "name": "devtools",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "devtools-integration@uoaOrypiMkyoikXvTHeVS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Durable",
+      "name": "durable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "durable-objects@G-xBbtaniYFRE9Dgs18px"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Edge",
+      "name": "edge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "edge-computing-fundamentals@aGWLomYHGkIfn7GFc0_Yl",
+            "edge-ssltls@sXBxaQtwJ-luGVXdqVXk1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Email",
+      "name": "email",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "email-workers@z-1Ye5hcNdr9r6Gwdw7mv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-driven-architectures@Z9Yywlf7rXFBtxTq5B2Y5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-api-integration@4g5w6IAdzefdlRTxbRbdS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fetch",
+      "name": "fetch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fetch-api-and-runtime-apis@_2UnRlbUplHvs5-Stj4O4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bindings@9ef2VPCru8lCmRxxGe-Eo",
+            "calls@vHQdMgaL2EEr2o_eJmOuV",
+            "coordination@RYm0oBFCxm-S-aCwZ21p6",
+            "d1@mKN0Ta3zSk7PCm_uHYKFN",
+            "devtools@G6YQZUQh_x8Qxm1oBseLQ",
+            "drizzle@MpWO1sroeF106SEMU1V1a",
+            "filtering@kdIfqTCcOSvV4KDpjr7nu",
+            "hono@-8MsWNvuqwQCbLpOx_kov",
+            "images@8bOWuopxHtBWUSFaVT54P",
+            "migrations@M8rSSVFUHixgWZRfaBPHb",
+            "miniflare@o4sBgniPmLqwej6TlIPcl",
+            "miniflare@vZHBp4S6WaS5sa5rfUOk-",
+            "persistence@36w4Q73XkCwo5Cva0XsF8",
+            "prisma@h3MHLZZwkYqqb5PSfMhpB",
+            "processing@6bNUqx5f_w5NuDL25BABN",
+            "queues@zyRgTtlng6idboSgL9YTt",
+            "routing@-lsYPD6JueIV94RybGH_Y",
+            "stream@LoT3NtpNj9uAgQRV-MD_E",
+            "tunnels@8WZpSKBHCeYfTEL9tBNKr",
+            "vectorize@NWGVtH1vxQuO4lly0Omuy",
+            "workflows@rAl7zXcODiqIpS__3qf1A",
+            "wrangler@n0vIbHmUZHrF4WjEhYdb8",
+            "wrangler@Tzx93tvoGrc9_fKQqkorN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git-basics@C08pIguX1N45Iw0kh0Fvu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Html",
+      "name": "html",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "html-rewriting@INiqdtppBmCthOEXuHb-V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-and-web-protocols@9iSdASlRxyod9YwZ2IUry"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image-processing@S7laV14zsx31O0Tsj2SRL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration--workflows@wvurOKbemF4Tt2WZcmqDL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inter",
+      "name": "inter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inter-worker-communication@jYAUIKozuhsNK5LbkeAJ6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Isolates",
+      "name": "isolates",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "isolates-architecture@uNinrB9wm5ahjGXu5fc0g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Itty",
+      "name": "itty",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "itty-router@15jl6CSCkqnh_eFfysLDM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript-fundamentals@PcYnYAAkKMbzoiCnBfjqO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-value-operations@EBTHbXOOZiqrcYJvKhcWV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Large",
+      "name": "large",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "large-file-handling@BPahk1qH9Hk11tsE2hw3A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Live",
+      "name": "live",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "live-streaming@RiQSPAV9uRFgwQFJckTFV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logging",
+      "name": "logging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logging-and-monitoring@aKEH4ZxI6J1nwjp_AgH5r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-processing@EFA8m0EdhygxcBWzwmbnT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Metadata",
+      "name": "metadata",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "metadata-handling@sQlRIYLnZcugATgpogJmw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Middleware",
+      "name": "middleware",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "middleware-patterns@aStbAF4zraqhJ-N3RH4ha"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitoring",
+      "name": "monitoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitoring-tools@Cy2T8978yUAPGol-yzxv_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nodejs",
+      "name": "nodejs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nodejs-and-npm@dSBYTGGkol3MAXyg7G7_J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-storage@K9iW2H6riKwddWmpWJFJw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pages",
+      "name": "pages",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pages-functions@SaHqm7T4FFVrsgyfImo66"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-optimization@65xDESm6jbHWkVO4NgHqx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "R2",
+      "name": "r2",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "r2-storage@gxLUlXGuaY5Q-0xmBgQwz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rate",
+      "name": "rate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rate-limiting@JP5U6c2fZjtkU-Xzwtapx",
+            "rate-limiting@MInAsLLJtIq6WQDSj5yGH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Requestresponse",
+      "name": "requestresponse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "requestresponse-handling@HNEXPU6r_T7UYvwLv2wnt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Schema",
+      "name": "schema",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "schema-management@PnhP47woPJb_JnLpMMiTw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security--performance@76xovsBrKOnlRBVjsqNq1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-bindings@JfpVexcbuWCx_R3EjFmbo",
+            "service-bindings@WZSi9inWPhqZQvDN-C8BV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Similarity",
+      "name": "similarity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "similarity-search@pg3GtykCegK411DYDN8sN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Speech",
+      "name": "speech",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "speech-rcognition@HJbJ8OxjJzznYwLlIOSO2",
+            "speech-recognition@HJbJ8OxjJzznYwLlIOSO2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-management@EQjhRlM7zpANNWkypScIl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-frameworks@jyWxaMx7_nojt5HsyAv7K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-generation@zMwmoCUp9429_aXU-Bz4H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transactional",
+      "name": "transactional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transactional-operations@rxxibrJUo1rQ3XCuUIP59"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typescript",
+      "name": "typescript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typescript-fundamentals@zR84MFLL6y0dygz9hXXPA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-serverless-architecture@Isl5anwDvb1MacA-JH4ej"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vector",
+      "name": "vector",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vector-embeddings@UIWaR1ZdjSm0UAS69Kz_5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Video",
+      "name": "video",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "video-delivery@zQp7XfDKWJgMf2LexRJhN",
+            "video-processing@3B6Z7F0D3Sf8ZBlV3kkGx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-security-headers@KWix4jeNUKJ07Iu95Mqj_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Webhook",
+      "name": "webhook",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "webhook-handling@uOUjI6CPrhZIlz6mRCtOW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Workers",
+      "name": "workers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "workers-ai@a0S0_JLwLLNGLUAHrqG4P",
+            "workers-kv@1dGFfQauOgHP7T4ReMpCU",
+            "workers-lifecycle@i6L9FI6fBDXr0XtMrc_uR",
+            "workers-runtime-environment@TB6vGzDgGZ9yAd9MGR7vw",
+            "workers-security-model@8IF7jftushwZrn7JXpC_v"
+          ]
+        }
+      ]
+    }
+  ]
+}

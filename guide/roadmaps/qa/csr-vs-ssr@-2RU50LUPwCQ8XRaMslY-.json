@@ -1,0 +1,4 @@
+{
+  "title": "CSR vs SSR",
+  "content": "Client-Side Rendering (CSR) builds pages in the browser using JavaScript after load, while Server-Side Rendering (SSR) delivers fully rendered HTML from the server. The rendering approach affects when elements are available in the DOM, which directly impacts how and when automation tools can safely interact with the page.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@SSR vs CSR vs SSG](https://medium.com/@prashantramnyc/server-side-rendering-ssr-vs-client-side-rendering-csr-vs-pre-rendering-using-static-site-89f2d05182ef)\r\n- [@video@Server Side Rendering vs Client Side Rendering](https://www.youtube.com/watch?v=rNVcZklcmqU)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "HyperLogLog",
+  "content": "HyperLogLog is a probabilistic data structure that estimates the cardinality (count of unique items) of a set using a fixed amount of memory, regardless of how many items are added. Redis implements it using at most 12 KB per key. The estimate has a standard error of about 0.81%.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@HyperLogLog Documentation](https://redis.io/docs/latest/develop/data-types/probabilistic/hyperloglogs/)\r\n- [@video@Redis HyperLogLog Explained](https://www.youtube.com/watch?v=MunL8nnwscQ)"
+}

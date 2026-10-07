@@ -1,0 +1,4 @@
+{
+  "title": "Bitwise Operators",
+  "content": "Bitwise operators are used to perform operations on individual bits of a number. They are used in cryptography, image processing, and other applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@video@Bit Manipulation](https://www.youtube.com/watch?v=7jkIUgLC29I)\r\n- [@video@Binary: Plusses & Minuses (Why We Use Twos Complement) - Computerphile](https://www.youtube.com/watch?v=lKTsv6iVxV4)\r\n- [@video@Algorithms: Bit Manipulation](https://www.youtube.com/watch?v=NLKQEOgBAnw)"
+}

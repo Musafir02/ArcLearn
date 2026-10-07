@@ -1,0 +1,4 @@
+{
+  "title": "Installation Setup",
+  "content": "Docker provides Docker Desktop, a desktop application that simplifies installation and setup with GUI capabilities. Alternatively, you can install Docker Engine for command-line only functionality without graphical interface components.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Docker Desktop website](https://www.docker.com/products/docker-desktop)\r\n- [@official@Docker Engine](https://docs.docker.com/engine/install/)"
+}

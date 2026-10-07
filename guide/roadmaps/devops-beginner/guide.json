@@ -1,0 +1,78 @@
+{
+  "title": "Devops Beginner Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ansible@h9vVPOmdUSeEGVQQaSTH5",
+            "aws@1ieK6B_oqW8qOC6bdmiJe",
+            "docker@P0acFNZ413MSKElHqCxr3",
+            "git@uyDm1SpOQdpHjq9zBAdck",
+            "github@ot9I_IHdnq2yAMffrSrbN",
+            "go@npnMwSDEK2aLGgnuZZ4dO",
+            "nginx@ukOrSeyK1ElOt9tTjCkfO",
+            "python@TwVfCYMS9jSaJ6UyYmC-K",
+            "terraform@nUBGf1rp9GK_pbagWCP9g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@JnWVCS1HbAyfCJzGt-WOH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking--protocols@w5d24Sf8GDkLDLGUPxzS9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operating",
+      "name": "operating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operating-system@qe84v529VbCyydl0BKFk2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-language@v5FGKQc-_7NYEsWjmTEuq"
+          ]
+        }
+      ]
+    }
+  ]
+}

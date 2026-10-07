@@ -1,0 +1,661 @@
+{
+  "title": "Laravel Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-controllers@Xjt4YYR8zEzUfNY6D2JwU",
+            "basic-routes@LgHiEGflKuzsBEOMSX4i4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blade",
+      "name": "blade",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blade--livewire@rUKVDwwjP3pXswi-rWIj2",
+            "blade-directives@lG-7OBSjPCyxpYQsROA5C",
+            "blade-templating@L6uzrZ7z6ebnha3r-aHzb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Casts",
+      "name": "casts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "casts-accessors@lPuBSP-PNifc0jIWzn_Gd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-a-new-project@7NR5Dj24EFDsvea61_BTu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-responses@PWAlppGP7HNMD7y4I6LnJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Crud",
+      "name": "crud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "crud-operations@2VWPYrDyJSRy_SNysjK1P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Debugging",
+      "name": "debugging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "debugging-basics@nvxpeUXdFs1elkG4FS8PR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@1icfSs9qyM4RB_RG2N9l6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Displaying",
+      "name": "displaying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "displaying-data@SX0gVvrD0oNFUlhrfmPBV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Eloquent",
+      "name": "eloquent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "eloquent-orm@xqXQsC_2EX4rnGAiKML9o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Encryption",
+      "name": "encryption",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "encryption--hashing@BXiM7ROYLZ7_a6x6c_wyd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-messages@-H9JJ_DsGAjtwdki5LPo-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Events",
+      "name": "events",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "events--listeners@MRWdMXNwNyVgyNrx0qTdp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-storage@oB20h3_6U41cVvoACb63y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app@U9EVG_fIFy57WWPwJSXv6",
+            "artisan@mz4QuqdC_EXKuX3KLX8_S",
+            "authentication@SZY9d1QisyChz-Jmu82pC",
+            "authorization@PvSwwdBaYY32Sv5qfe9aB",
+            "bootstrap@BWl1EezIH8xHf0N4grruF",
+            "breeze@vI2qUCCDghYynHr2hUSkb",
+            "caching@eeWk2_ZYQUcYlITUzSly0",
+            "components@bDM7WPrs8fW_V4KkIfbru",
+            "config@RfSXcTBYSX4_9YhsOdSQc",
+            "configuration@Luq5PQpmDJDpf8DAkpiJt",
+            "configuration@y6rsw2UrgUR0tm2Zzqhxk",
+            "cors@l14wSdac211BUDxKkGk9J",
+            "database@QEapMmUt1VLeERQy8pOEn",
+            "debugbar@G_e9X1yp-SJ-pSOO1Knvq",
+            "facades@182iKn3FXLZEKI47S7GIk",
+            "files@PaAvakZ8NziU1mEAN6okm",
+            "forms@A07HwtMsmcaRB7gAruqOH",
+            "gates@YCDtdh7aZ7YPa_LFOZTLh",
+            "inertia@0B41E-UtzvCsXVDX5DUqY",
+            "jetstream@lBpyPXS2zHbJ49bHpOyi5",
+            "json@pb7eSi-UQ7KTcdi8_pzya",
+            "layouts@NkxalJLKZxQPvTzecBrJa",
+            "livewire@5A0DGzGXXBHQTRuzWEkuW",
+            "localization@_y5s3ZGwvWR_RiQ0VnWYv",
+            "loops@GTtgi4rShCn3AFwgBLuFc",
+            "middleware@SoHBSaHmds3C4uJ-vljhf",
+            "notifications@LZ8UiFvBT_rxirANh6XxZ",
+            "octane@h78y25Zlzoc2RrrCIGztf",
+            "optimization@jL-NldBPyDK_0SqvMBqVu",
+            "pagination@zJf_ZQYXSGob24p9rrVfr",
+            "passport@2QZCHTZMP72sVuf97A59N",
+            "pest@3hluy0wKpsbWHpI1AwTfB",
+            "phpunit@pUJVZ6oUKVSixtxshwhqi",
+            "pint@8XZ3g4gW34k1sThHvb2cH",
+            "policies@mOxPpW0Ic9_ZAYYNrZlb9",
+            "public@ciVFg7PpqdBtSt0XaXNZL",
+            "pulse@M-x3UwacbhtaGyPS6tzu3",
+            "redirects@j684EyDXKtd9QgcYQdtB4",
+            "relationships@NEbYfTpH0mnbPKPFI1x-B",
+            "resources@ieFd1B_Ntp1pK8ew47WyP",
+            "routes@eMVYQ1Q1o1IZmeHnrfBV7",
+            "sail@_hhgO69zAsDdtvIW0iM7a",
+            "sanctum@dGNOYhShoyT9ovSouI00l",
+            "storage@Q8IaWP-McT1x89_87fVUF",
+            "telescope@j5giyFLzIm2wsOqkbjc4-",
+            "tests@6iTp6YFyfzg_7uyIKwu37",
+            "vendor@-xOvjCCRwfkms2SRUvMaC",
+            "views@PipmRcDfvwRYNLe9VMbeU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Global",
+      "name": "global",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "global-vs-route@jBPpf2X6oNXwPH5FuWHvt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-exceptions@ZlD6g0djdDH6ozwMJ5WIr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Health",
+      "name": "health",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "health-route@JLMf5OE1ggRMOabf8KDwp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-exceptions@qetgYqhWAEHUfDIDkMGGX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "If",
+      "name": "if",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "if-else@m1mVsw_kF2GW50UM-6o3f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-laravel@cmczkTxiNFtfnr5Wgznef"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Laravel",
+      "name": "laravel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "laravel-cloud@UzhlPw7flQ9UHeia0o-uj",
+            "laravel-for-frontend@ns75IOfTHNmWsLm4q8sQx",
+            "laravel-for-full-stack@_Squ3npZfjfd_xYn__Qna",
+            "laravel-forge@teD9pAQ-dKKLg5kYOPN6c",
+            "laravel-herd@Kee5SXZbkwmoxAF8O6Y2f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-stacks--messages@JeJXr5g6pJY3za5E_ewEY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logging",
+      "name": "logging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logging-basics@Wt_QP7R4DRUNOMQZSnMeI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manual",
+      "name": "manual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manual-authentication@PBK-lqE3yWB2Mj1kHq4Rz",
+            "manual-validation@aY_sz_Nb-kX4NL0g_nXoA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-customization@VvSn3Zqxi6HPBkDqxoqEE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Migrations",
+      "name": "migrations",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "migrations-seeders@IxFi316xmxdP2ZZDVSE5f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Named",
+      "name": "named",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "named-routes@PAdXLppvU-X94gK5uCbf-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-management@t3iEtiCHghB4S9gAQOQJM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-builder@OpRkcv-Qom47TALqcEsRc",
+            "query-scopes@d35_8oQcSQUBnDMiwzNfU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Queues",
+      "name": "queues",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "queues--jobs@kn3-JVSd_C_KKx3SzGx84"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rate",
+      "name": "rate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rate-limiting@_0QY_h0802wBAKEo2Hq9f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Redirect",
+      "name": "redirect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "redirect-routes@LCCEkY9fZOUqNo1jIpy0D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Requestresponse",
+      "name": "requestresponse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "requestresponse-flow@jARVkKaEkVAYIe8WSO0aY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-controllers@AAURmpEyp78p31GY0q3rV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retrieving",
+      "name": "retrieving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retrieving-data--files@wR92EYaAPILQRmtBiaoCX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Route",
+      "name": "route",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "route-groups@Pmw0OdtrsMIaHB9Y8v3An",
+            "route-model-binding@hC0-JDJtpgh4ELcFuhch1",
+            "route-parameters@6TkDx8eXb9nMU_OE3ArhJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Single",
+      "name": "single",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "single-action-controllers@1hS7qJ218Ud3et0E1JsfH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Starter",
+      "name": "starter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "starter-kits@9YTtSeu4nY5A5AcFcZFto"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streamed",
+      "name": "streamed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streamed-responses@mpfzIVmulV3sJthKxP_PV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Task",
+      "name": "task",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "task-scheduling@aWC-GXotQYf5e43Hgfaa9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit--feature-tests@69IAYj71d4L6XxwX0M_j4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "View",
+      "name": "view",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "view-routes@5NMRzpig1p9SJaeA7Twmh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-laravel@QvWjQUrEYX9NRbzdm3Fvp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-web-frameworks@8wOQ-Kmz3dBlOKMg-ui5D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "With",
+      "name": "with",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "with-starter-kits@-yacHIWQ5Oylia9e0pJXT"
+          ]
+        }
+      ]
+    }
+  ]
+}

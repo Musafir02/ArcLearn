@@ -1,0 +1,621 @@
+{
+  "title": "Java Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Access",
+      "name": "access",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "access-specifiers@KYndNwfQcwRCf3zCXOwd_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Array",
+      "name": "array",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "array-vs-arraylist@a-EQiBUlSgdZba1mW36op"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attributes",
+      "name": "attributes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attributes-and-methods@xTwJYcA6ldgaw3yGmbDEd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-syntax@OlbQNB6YXZjO1J7D0lZU1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-of-oop@DZ4BX4NYeCQbjGSj56lng"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-tools@81N1cZLue_Ii0uD5CV6kZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Classes",
+      "name": "classes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "classes-and-objects@LenPrQwxFsE1UVbXO_dE7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cucumber",
+      "name": "cucumber",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cucumber-jvm@UFDy19TNkykRsKv4vRsVJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-types@5g9mmi01WeZ4aDqNzwx_V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-access@fV-gW51jhna2__Ln2HIIh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Date",
+      "name": "date",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "date-and-time@9h20XVRli7TDq0QIJwX2U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@zItXmuluDtl6HkTYQ7qMh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exception",
+      "name": "exception",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exception-handling@g9P3548F38tYGjevBc42w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-operations@NowpzyPVFcX082j5YS5i8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Final",
+      "name": "final",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "final-keyword@Ajuc_rHObqMQBXLqRIuxh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-composition@1Mk_zXxCCcUoX-gFxtlnf",
+            "functional-interfaces@SityDdjhhNZ9CO3Tg0VI9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abstraction@qdA6bK9ZkP8p0_NH_wMuj",
+            "annotations@c--y6GcKj9am0CBdu_Hnt",
+            "arrays@5khApwg1FZ-0qorsLyH-F",
+            "bazel@6FMj9tMAQPii_1kLtHJLk",
+            "concurrency@shqS9-hg__mkOtnnl_I4l",
+            "conditionals@sG_3ZQIE1-FQXQkk-OduQ",
+            "cryptography@_wV2VQq6MIY1rVHjK8pfu",
+            "dequeue@DWO2-EPIUeKK5aQGiTuKc",
+            "documentation@vRZAtylN3zfHIv3SidYkA",
+            "ebean@X2rJ3BY1ytFKsbJqJETFu",
+            "encapsulation@iH9wSsOK4a77pS7U0Yu5z",
+            "enums@ey1f8IsdAlDv1O3E_tNog",
+            "gradle@rmDIm5dqtdlNfPhvpqS7-",
+            "hibernate@UEiDzzodyEu5O1xFAFDly",
+            "inheritance@PXpPEmCEBUKRjwP3B5LzJ",
+            "interfaces@6wTRN2PYC6zM_Txkekx53",
+            "iterator@-17LFO72I8RKjJRMXct9k",
+            "javadoc@d3Tsc7KPhtjS0eC4Zbq8B",
+            "javalin@OrkJa48HIDmrLOgCBpimA",
+            "jdbc@9UbRG752qxJdUwmqEAjN3",
+            "jmeter@U2BqOY49HaII6mKQB3SVt",
+            "junit@hY1-sEpTmpaj1PregdkFf",
+            "log4j2@sFaNj_1MviaTc6UIfjXl6",
+            "logback@okC1uMdyfIJAhX_R9Npsw",
+            "loops@JHUhVEjWFXTn6-wKcKevg",
+            "map@eKtdDtiJygKQ4PuEylFQY",
+            "maven@VdL_fAHxmRbuF0J627beA",
+            "modules@kdxy8Zssnc5lJjdmjUyMc",
+            "networking@JeMG0gU8IVRBZgczjXmPi",
+            "optionals@l9fxK8K9fcUqR7hs5TkWU",
+            "packages@60POZOjwHSdKYL6rfkyEy",
+            "quarkus@w-kcKPh8U0P_jtT90_1Xy",
+            "queue@ThoWhXb4vUvNfE70_wMfa",
+            "record@VqLV7kolfRFnvOuJAvzlg",
+            "set@XjkNd5WJ9yxW48dwHQNkZ",
+            "slf4j@LGlZHKqyQ-aWtHnhklhgn",
+            "stack@DzfE_9WLAp-BrG3C1-MwU",
+            "testing@LgpsnXV0CTvTspjnsd0Rd",
+            "testng@XU2C8bF9ICej8LS7ZGTTv",
+            "threads@u_YysD7Bpnq-xkFX5yJGz",
+            "tinylog@Fn7aAaGbwYsAp4xLuuFud"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generic",
+      "name": "generic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generic-collections@eL4pc6SaNiKP48PzN7mNe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "High",
+      "name": "high",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "high-order-functions@dz6bCmB4dgA7VVZ448cN6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Initializer",
+      "name": "initializer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "initializer-block@dg_UpaO8TzIN7w_QZ1n-6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Io",
+      "name": "io",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "io-operations@M0ybgK1JCycXhZ1dEpCFo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Java",
+      "name": "java",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "java-memory-model@wEc7pSVU5G2c6Zqmtb_1k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lambda",
+      "name": "lambda",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lambda-expressions@00_q6I95eO-PUUrKpPFY8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-basics@2TGq1y2QthnxxN-FfToSe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lifecycle",
+      "name": "lifecycle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lifecycle-of-a-program@QgWalJLIb6Fw0HhN1wb02"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logging",
+      "name": "logging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logging-frameworks@d9F5Wt8onY125DLuzNULg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Math",
+      "name": "math",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "math-operations@ziD_XwzJSFQP_3iLjq9pA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Method",
+      "name": "method",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "method-chaining@Ax2ouIZgN1DpPzKDy4fwp",
+            "method-overloading--overriding@y-i56f1P_mMdvyBr7J4XE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mocking",
+      "name": "mocking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mocking--mockito@mLM1HJf6_pxrUDOmb45ew"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested-classes@zDBW20W2XMCtNTG3emJ_A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-lifecycle@3qowgj1pas1X7oRric9eU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pass",
+      "name": "pass",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pass-by-value--pass-by-reference@3r0Er9XZHovIZz3gNyj4A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Play",
+      "name": "play",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "play-framework@kN-mXxqUPNJNsJGQ0U_7J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-expressions@C7rB3jkshHFN7TkHRJPlz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-assured@gB4XUR9nCdF1-dOEwGcHi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spring",
+      "name": "spring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spring-data-jpa@WzWOxBUKKg6LeuBmVesc2",
+            "spring-spring-boot@xoryfi4SpJlkz-PV05ql6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-keyword@ZcNxO6qIXIg7RaWYnZj2e",
+            "static-vs-dynamic-binding@Kjdj862xnz8fqDYE3HKhC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stream",
+      "name": "stream",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stream-api@WHxAwfdKHQSOg0TLX05EG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strings",
+      "name": "strings",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strings-and-methods@aEaBobzFWv0mJHGAbgxKY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-casting@yNDbk6r5wFqBi25xmIRF_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-and-scopes@VBNcAO0STaZJ1iV9A7utv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Virtual",
+      "name": "virtual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "virtual-threads@vJSq1GJLIMQ6IIB8CMK8g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Volatile",
+      "name": "volatile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "volatile-keyword@U4Wx3MH3LgJLa0n9Ne0Br"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-frameworks@_W84u4UXMSY0zvy6RJvFi"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Netlify",
+  "content": "Netlify is a web development platform that simplifies building, deploying, and hosting websites and web applications. It automates the process of deploying static sites and single-page applications by directly connecting to your Git repository. When changes are pushed to the repository, Netlify automatically builds and deploys the updated version of your site. It also offers features like continuous deployment, serverless functions, and a global CDN for improved performance.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Netlify Docs](https://docs.netlify.com/)\r\n- [@official@Get Started with Netlify](https://docs.netlify.com/start/get-started-guide/)\r\n- [@video@Getting started with Netlify Edge Functions](https://www.youtube.com/watch?v=6pEVhH37xQE&list=PLzlG0L9jlhEPMR8haUPkxj2hJ_3jh5qa6)\r\n- [@video@Netlify Dev Crash Course | Easy Dev & Deploy](https://www.youtube.com/watch?v=FMhVXOA54x8)"
+}

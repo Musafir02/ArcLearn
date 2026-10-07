@@ -1,0 +1,4 @@
+{
+  "title": "useState Hook",
+  "content": "`useState` is a React Hook that lets you add state to functional components. When you call `useState`, you get back the current state value and a function to update it, allowing components to store and manage data that persists between renders.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@useState Documentation](https://react.dev/reference/react/useState)\r\n- [@official@State: A Component's Memory](https://react.dev/learn/state-a-components-memory)\r\n- [@official@Adding Interactivity](https://react.dev/learn/adding-interactivity)\r\n- [@article@eact Hooks: useState Explained](https://www.robinwieruch.de/react-usestate-hook/)"
+}

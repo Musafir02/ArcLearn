@@ -1,0 +1,4 @@
+{
+  "title": "IaaS vs PaaS vs SaaS",
+  "content": "These are the three main cloud service models. IaaS (Infrastructure as a Service) gives you raw compute, storage, and networking, and you manage everything above the OS. PaaS (Platform as a Service) provides a managed environment for deploying applications, abstracting away the underlying infrastructure. SaaS (Software as a Service) delivers fully managed applications accessed through a browser or API, with no infrastructure responsibility on the user's side.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/?nc1=h_ls)\r\n- [@video@IaaS vs PaaS vs SaaS cloud service models](https://youtu.be/9CVBohl6w0Q?si=cEDnXpd1sGkpf0K2)"
+}

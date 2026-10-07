@@ -1,0 +1,4 @@
+{
+  "title": "Game Physics",
+  "content": "Game physics simulates physical behavior in a game world, including rigid body dynamics, collision detection, constraints, and fluid or soft body effects. Physics engines abstract the mathematics of Newtonian mechanics into systems that update object positions and velocities each frame. Popular physics middleware includes Bullet, PhysX, Havok, and Box2D.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Game Physics](https://en.wikipedia.org/wiki/Game_physics)\r\n- [@article@Master Game Physics Today!](https://www.udemy.com/course/gamephysics/)"
+}

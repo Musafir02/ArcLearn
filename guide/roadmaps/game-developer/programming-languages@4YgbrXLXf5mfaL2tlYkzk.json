@@ -1,0 +1,4 @@
+{
+  "title": "Programming Languages",
+  "content": "Programming languages are the tools used to implement game logic, engine systems, and tooling. Different languages suit different parts of game development: C++ for performance-critical engine code, C# for scripting in Unity, Python for tools, and Rust for systems programming. Language choice affects performance, iteration speed, and the size of the available ecosystem.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated C++ Roadmap](https://roadmap.sh/cpp)\r\n- [@roadmap@Visit Dedicated Rust Roadmap](https://roadmap.sh/rust)\r\n- [@roadmap@Visit Dedicated Java Roadmap](https://roadmap.sh/java)\r\n- [@article@Learn Game Development with C++](https://learn.microsoft.com/en-us/cpp/overview/game-development-cpp?view=msvc-170)\r\n- [@article@Building Games with Rust](https://rustmeup.com/building-games-with-rust)"
+}

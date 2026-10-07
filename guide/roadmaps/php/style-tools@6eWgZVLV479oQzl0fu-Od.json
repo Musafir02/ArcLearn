@@ -1,0 +1,4 @@
+{
+  "title": "Style Tools",
+  "content": "Style Tools in PHP are primarily coding standard tools that help maintain a consistent coding style throughout your PHP project. PHP\\_CodeSniffer is a popular tool in this category. It tokenizes PHP, JavaScript, and CSS files and detects violations of a defined set of coding standards. A brief example of PHP\\_CodeSniffer usage would be to run it in the command line like this: `phpcs /path/to/code/myfile.php`. Other tools, such as PHP CS Fixer, can automatically correct coding standard violations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer/)\r\n- [@article@PHP code quality tools](https://www.jetbrains.com/help/phpstorm/php-code-quality-tools.html)"
+}

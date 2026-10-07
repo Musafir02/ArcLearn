@@ -1,0 +1,4 @@
+{
+  "title": "Spring security",
+  "content": "Spring Security is a framework for securing Java-based applications. It is a powerful and highly customizable authentication and access-control framework that can be easily integrated with a wide variety of applications, including web applications and RESTful web services. Spring Security provides a comprehensive security solution for both authentication and authorization, and it can be used to secure applications at both the web and method level.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Spring Security](https://spring.io/projects/spring-security)\r\n- [@article@Spring Security: Authentication and Authorization In-Depth](https://www.marcobehler.com/guides/spring-security)"
+}

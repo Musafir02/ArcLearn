@@ -1,0 +1,804 @@
+{
+  "title": "Wordpress Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Activity",
+      "name": "activity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "activity-logging@KBHvwgqRRRg-amfGTUAL3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Admin",
+      "name": "admin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "admin-menu@nTuHbvhf6OgM6ZekXqGSa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-php--architecture@aI9yJGnzztuVayUhgIxAw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ajax",
+      "name": "ajax",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ajax-in-wordpress@BS0poxbCfYfBvvnZzODH0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Automated",
+      "name": "automated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "automated-deployments@UDQ3VQCllviOq8wI806Wk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backend",
+      "name": "backend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backend-fundamentals@Xy15NSxlS0QXYNzEvgocK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backups",
+      "name": "backups",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backups--recovery@4fIWzIY2720UME6qjLdhS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-of-seo@CLQwjime3I2HKRzLLnSL3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Block",
+      "name": "block",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "block-editor@YbzkrzDYtja8rhYvzkQU8",
+            "block-patterns@lDuJRUjKyie7PbdU12d7r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Boost",
+      "name": "boost",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "boost-your-wordpress-career@dGHHlz26kn14_o7emPcFV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cdn",
+      "name": "cdn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cdn-integration@PREVV_dtO35j4Vi1FwQjk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Child",
+      "name": "child",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "child-themes@GG6uE_p44ybIxez--igF1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Classic",
+      "name": "classic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "classic-vs-block-themes@1rfPHsFNlnCCmk5gLPBoD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Coding",
+      "name": "coding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "coding-standards@yZ5sglhcY2--dT-JyPQFd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Composer",
+      "name": "composer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "composer--autoloading@DGUKyNG_gTUWqmPRZNOpz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contribute",
+      "name": "contribute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contribute-to-wordpress@IJ_aNI71Z0H5CMLIDRvqR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-web-vitals@ktqvYkk7d680p2eRteAvR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cron",
+      "name": "cron",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cron-jobs@tdJQiJJ47fdlyEk1Ze1P4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-fields@6rmwfUecLKrhxOXQIRszK",
+            "custom-post-types@zOQLL3hD8NzAb-287CifD",
+            "custom-tables@_ijMALSgk7NpDQnuo15sB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-tuning@5nd9YdT871IZF2Ry35bdh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-patterns@sXDr-m69q3b7HTEwAx4Oe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-api-integrations@TY_lQuXU5RkvnYxi-JsT6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-structure@BYoMY5a7j-X5tAUB9N3-y",
+            "file-structure@KmGbX5xFuap5EUUjQiJtK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Firewall",
+      "name": "firewall",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "firewall--malware-scanning@bDzltzHlI7p-0UqJg2N68"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frontend",
+      "name": "frontend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frontend-fundamentals@8ZMCYeqiy5fzoIWUk1XK5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Full",
+      "name": "full",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "full-site-editing-fse@r3hcgBKcIIuTuqqVIvpC9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@bfFSH7alQ8IZZJ5gUed-T",
+            "acf@JTWl8rqTwaD2YulcOnwu9",
+            "actions@zAV29-MTFNLLVPu3rlRFv",
+            "assets@TX8dzu0k2sgXUnUOldhmZ",
+            "bedrock@ND0sr6SbdQYcEHic8mOxL",
+            "block@65zlrIkArzxRwVU_fTzhi",
+            "caching@zEogtBBsOALQegh5QTy14",
+            "classic@sNJTLbzuzNIoezVmZt89M",
+            "classic@_X1752swPqlH51enlkg2u",
+            "composer@SG0_5ZaQcDdnu4Th75Pje",
+            "css@qNr6gKBcxYoUJSOc4O3nn",
+            "customizer@fh4oAQsCeAisrxUEqDbqu",
+            "docker@2W-s3ugsrRpkFj0WQFDKe",
+            "filters@k7JT0NaGrBd9OS3VhOsEM",
+            "functionsphp@28RlVJKJinaFBCjROCYu-",
+            "hooks@p2zuReNEeVSNKNqxDAVAt",
+            "html@oWXYF_l401eQLlkCT3rn6",
+            "hybrid@YcwvhxKuYYL8xd3Sx-fY_",
+            "images@_Z0jfQot6JP9o2WocoPyx",
+            "introduction@moyU0BmFtCW6IVq_wKKGo",
+            "javascript@soF98LgnxSW3o5y9PEY0t",
+            "localization@dyZC4MVm-TqclSnTVznPo",
+            "localwp@dDmT2tDd7_3SktXDqGMa1",
+            "managed@Y7a4TRYbgUOO2F_gO877f",
+            "menus@_pPBxAMteOviyqkrCi2TM",
+            "metabox@uozpsemLlAJWS-uQkdy6X",
+            "migrations@CLqqdBm5yQ85UabxPvlPw",
+            "multisite@yfkZv_REsq-ttyeiW9c8y",
+            "overrides@xAVlAoI_aSSfDxyW5fUkC",
+            "php@fX71CXA26cUxY5WX_zABi",
+            "phpunit@lW3g0UO-UeyjddzF0lpup",
+            "plugins@9vUEteBwtAyEFZsVXzKTl",
+            "sage@eshQkhtAGQZYR-4YRQoFC",
+            "shared@r-1Dz77W-afY3PARBR5LI",
+            "shortcodes@-YkWyPuFOn8n9l9UjJje9",
+            "sql@F-9uI39S9oYVGA8hi7aZI",
+            "stylecss@1BtXLjHOINLx9SJ1Y9gyd",
+            "styles@rl-8l8nhjNLtVglNM_Aaw",
+            "taxonomies@x4mnKW7I-du18ybY3Pb0r",
+            "themes@z7gh1lLCcgpwjK9Q9hJB0",
+            "universal@wlFxhJTD3VZBhRTWKHaT6",
+            "vps@7p44mAXvgrxoeJU1h0sP1",
+            "vvv@4z0UM3vkE2m01G5vfH2rv",
+            "widgets@DzXBl8O1uwq_DgyD88qRq",
+            "wp_debug@InInDsldD3V7MHYCV7c89",
+            "xampp@Giqhdf6bmqsgEkCZ-aa65"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Headless",
+      "name": "headless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "headless-wordpress@1FG5pAtfZjpQH6Mn-B1Nv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-the-web-works@r1_DTSDTbijMxtUEqpEm2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installation",
+      "name": "installation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installation--setup@0X6ry0jNhMwd9ksFSlFYx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Licensing",
+      "name": "licensing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "licensing--updates@oT5yJrNY2Q5IjqpFiTUW5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-files@N_M4ICk29TBAmDX-xokG4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Oop",
+      "name": "oop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "oop-in-php@Pg83mKnN_q2OPWZoSUeIw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Options",
+      "name": "options",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "options-api@bvmPbWarEJjJWYbIeuo50"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Page",
+      "name": "page",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "page-editors@WvQNMj6wTKVEDq9ro3NWp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-monitoring@sWgjddp7yGITFu_sYIVA7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plugin",
+      "name": "plugin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plugin-basics@CrD4HH8mht1KZ0_m1MUsm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-monitor@e5DY4WPJmaKzuj1KncBuY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-api@VVgrD8RFghqwZ9ISWKmus"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security--hardening@E559_d1l7iIMDb6QobOsh",
+            "security-best-practices@9jEQivDC8PpTGTJXMkD6t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Settings",
+      "name": "settings",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "settings-api@1dOm-BAhGXVxhRu-xin25",
+            "settings-page@PlWlAn7qFY5qxYXjQkFrw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Style",
+      "name": "style",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "style--script-enqueueing@5BNtWkac37Bydp6pFzHuP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-files@47mdVZFZl1CF-_mgG3qHF",
+            "template-hierarchy@dPgcKkbULFFdx3po8Ijgf",
+            "template-parts@SyKVTUomX-UB3zUnCfrdA",
+            "template-tags@Gr68jNPdHq19bLDpx17aU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-loop@d8QcGVn2NoHxJlDxH_n_R"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Theme",
+      "name": "theme",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "theme-structure@HGczCcVcLru6ac76YdcZW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Third",
+      "name": "third",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "third-party-page-builders@OAb9tYljyN-Xo1RRx4TED",
+            "third-party@bM7grwJzuauC3ap7MNwuN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transients",
+      "name": "transients",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transients-api@WXTnOWylTg4aLn8r1mdwS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Update",
+      "name": "update",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "update-strategies@AGQ9uXMYuYQ5d6w56gJBP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user--login-security@1737UjumNSgI4woESMn49",
+            "user-roles@KR9cp-nDEGTab4vmz0XBZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Virtual",
+      "name": "virtual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "virtual-patching@GkaZLnXVhHqn2sQfChor7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vulnerability",
+      "name": "vulnerability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vulnerability-monitoring@pdoRrBaVwVTGCaJH4kY60"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-a-cms@zc99eitvwwv7EmMRjhOSE",
+            "what-is-http@LmEWD_XxAfoGvFqvmcT7Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wordpress",
+      "name": "wordpress",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wordpress-credit-program@0FtAQxN7lVZcTOVjbffvW",
+            "wordpress-rest-api@gpO6iYnsepFTjbYzUEET0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wordpresscom",
+      "name": "wordpresscom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wordpresscom--wordpressorg@k9-YjpBsN8ID0haGR6ucq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Workflows",
+      "name": "workflows",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "workflows--automation@5IJERQdGXAGLi7GDDBBUP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-databases@GzR7xWWm3m1laoQrQmbDZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wp",
+      "name": "wp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wp-cli@CNWRqhsaWK6xrIDvN564O"
+          ]
+        }
+      ]
+    }
+  ]
+}

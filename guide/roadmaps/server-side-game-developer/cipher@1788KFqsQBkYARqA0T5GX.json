@@ -1,0 +1,4 @@
+{
+  "title": "Cipher",
+  "content": "A cipher is an algorithm for encrypting and decrypting data. Game servers use ciphers to protect data in transit (TLS) and at rest (database encryption), ensuring that player credentials and sensitive game state cannot be read if intercepted or leaked.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Cipher - Wikipedia](https://en.wikipedia.org/wiki/Cipher)\r\n- [@article@Block Cipher - Wikipedia](https://en.wikipedia.org/wiki/Block_cipher)\r\n- [@article@Stream Cipher - Wikipedia](https://en.wikipedia.org/wiki/Stream_cipher)"
+}

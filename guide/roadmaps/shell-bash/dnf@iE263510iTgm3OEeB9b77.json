@@ -1,0 +1,4 @@
+{
+  "title": "dnf",
+  "content": "dnf is a package manager for RPM-based Linux distributions, serving as the successor to YUM (Yellowdog Updater, Modified). It is used to install, update, and remove software packages, as well as manage dependencies. dnf aims to improve upon YUM by offering better performance, more features, and a more modern architecture.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Using the DNF software package manager](https://docs.fedoraproject.org/en-US/quick-docs/dnf/)\r\n- [@video@Linux Crash Course - The dnf Command](https://www.youtube.com/watch?v=mL1hMBYP1bQ&t=1529s)"
+}

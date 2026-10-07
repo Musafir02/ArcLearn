@@ -1,0 +1,4 @@
+{
+  "title": "var_dump",
+  "content": "`var_dump()` outputs the type and value of one or more variables. For arrays and objects, it recursively displays the structure and types of all nested values. It is primarily used during debugging to inspect what a variable actually contains.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@var_dump](https://www.php.net/manual/en/function.var-dump.php)"
+}

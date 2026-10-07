@@ -1,0 +1,4 @@
+{
+  "title": "Inferential Statistics",
+  "content": "Inferential statistics uses sample data to make inferences or predictions about a larger population. It involves techniques like hypothesis testing, confidence intervals, and regression analysis to draw conclusions beyond the immediate data set. The goal is to estimate population parameters and assess the likelihood of certain outcomes based on the observed sample.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Intro to Inferential Statistics](https://www.udacity.com/course/intro-to-inferential-statistics--ud201)\r\n- [@article@Inferential Statistics | An Easy Introduction & Examples](https://www.scribbr.com/statistics/inferential-statistics/)\r\n- [@article@Statistical inference](https://en.wikipedia.org/wiki/Statistical_inference)\r\n- [@video@Inferential Statistics FULL Tutorial](https://www.youtube.com/watch?v=6E6pB5JFLgM)"
+}

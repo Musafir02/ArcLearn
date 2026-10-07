@@ -1,0 +1,4 @@
+{
+  "title": "EMC and DMS",
+  "content": "EMC's document management systems provide enterprise level tools for storing, organizing, and controlling access to documents and records at scale. These systems focus on compliance, versioning, and retention policies important for regulated industries. Architects integrating with EMC DMS need to understand how document workflows and metadata fit into a broader enterprise system.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@DMS](https://www.opentext.com/products/documentum-content-management)\r\n- [@article@EMC Software](https://www.spiceworks.com/collaboration/content-collaboration/articles/top-10-enterprise-content-management-software-systems/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Debugging Techniques",
+  "content": "Debugging Workers involves combining local development with Miniflare, using `console.log` statements that appear in Wrangler's output, and attaching a DevTools debugger for stepping through code. In production, tail logs via `wrangler tail` provide real-time log streaming.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Chrome DevTools](https://developer.chrome.com/docs/devtools)\r\n- [@official@Debugging Cloudflare Workers](https://developers.cloudflare.com/workers/playground/#devtools)\r\n- [@article@Debugging Cloudflare Workers](https://blog.cloudflare.com/debugging-cloudflare-workers/)"
+}

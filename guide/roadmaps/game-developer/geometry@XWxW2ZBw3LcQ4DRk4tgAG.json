@@ -1,0 +1,4 @@
+{
+  "title": "Geometry",
+  "content": "Geometry in game development covers the mathematical description of shapes, surfaces, and spatial relationships. Topics include point-line-plane tests, polygon representations, mesh structures, and computational geometry algorithms. Geometry knowledge is applied in collision detection, physics, procedural generation, and rendering.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Game Geometry - Math is Fun](https://www.mathsisfun.com/geometry/index.html)\r\n- [@article@Geometry and Primitives for Games](https://dev.to/fkkarakurt/geometry-and-primitives-in-game-development-1og)"
+}

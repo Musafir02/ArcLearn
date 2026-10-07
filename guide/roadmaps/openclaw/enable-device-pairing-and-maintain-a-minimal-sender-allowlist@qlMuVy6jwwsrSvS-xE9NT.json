@@ -1,0 +1,4 @@
+{
+  "title": "Enable Device Pairing and Maintain a Minimal Sender Allowlist",
+  "content": "Device pairing ensures only verified devices can talk to your agent. Keeping the allowlist minimal means only the people or systems you explicitly trust can send it messages.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Pairing](https://docs.openclaw.ai/channels/pairing#pairing)\r\n- [@official@Allowlists (DM + groups) - terminology](https://docs.openclaw.ai/gateway/security)"
+}

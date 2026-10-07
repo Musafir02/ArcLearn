@@ -1,0 +1,4 @@
+{
+  "title": "Block Editor",
+  "content": "The Block Editor, also known as Gutenberg, is the default content editor in WordPress. It allows users to create and format content using individual blocks, each representing a specific element like paragraphs, images, headings, or galleries. These blocks can be easily arranged and customized to build visually appealing and structured pages and posts.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@WordPress Block Editor](https://wordpress.org/documentation/article/wordpress-block-editor/)\r\n- [@official@Block Editor Handbook](https://developer.wordpress.org/block-editor/)\r\n- [@article@How to Use the WordPress Block Editor (+ 10 Advanced Tips)](https://jetpack.com/resources/wordpress-block-editor/)\r\n- [@video@Creating posts and pages with the WordPress Block Editor](https://www.youtube.com/watch?v=DaaCThv_NNM)"
+}

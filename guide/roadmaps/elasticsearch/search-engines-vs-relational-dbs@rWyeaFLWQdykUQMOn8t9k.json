@@ -1,0 +1,4 @@
+{
+  "title": "Search Engines vs. Relational Databases",
+  "content": "Search engines are designed for quickly finding relevant information within large volumes of unstructured or semi-structured text, prioritizing speed and relevance scoring. Relational databases, on the other hand, are structured systems optimized for managing and querying structured data with strong consistency and transactional integrity, using predefined schemas and relationships between tables.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated SQL Roadmap](https://roadmap.sh/sql)\r\n- [@official@What is a search engine?](https://www.elastic.co/what-is/search-engine)\r\n- [@article@A Guide to Search Engine Databases](https://www.influxdata.com/search-engine-database/)\r\n- [@article@Full Text Search Engines vs. DBMS](https://lucidworks.com/blog/full-text-search-engines-vs-dbms)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Bash",
+  "content": "Bash, short for Bourne Again Shell, is a command-line interpreter and a shell scripting language. It's a program that allows users to interact with the operating system by typing commands. Bash interprets these commands and instructs the operating system to perform specific actions, making it a fundamental tool for system administration, automation, and software development.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@https://en.wikipedia.org/wiki/Bash_(Unix_shell)#:~:text=Bash (short for \"Bourne Again,Chet Ramey)](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29#:~:text=Bash%20%28short%20for%20%22Bourne%20Again,Chet%20Ramey%29)\r\n- [@article@Bash Tutorial](https://www.w3schools.com/bash/)\r\n- [@video@Bash Scripting Full Course 3 Hours](https://www.youtube.com/watch?v=e7BufAVwDiM)\r\n- [@video@Bash Scripting Tutorial for Beginners](https://www.youtube.com/watch?v=tK9Oc6AEnR4)"
+}

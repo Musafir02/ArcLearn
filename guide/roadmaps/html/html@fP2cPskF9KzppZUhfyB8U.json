@@ -1,0 +1,4 @@
+{
+  "title": "HTML Element",
+  "content": "The `<html>` element is the root element of an HTML page. It tells the browser that this is an HTML document. All other HTML elements (except for the `<!DOCTYPE>` declaration) must be descendants of the `<html>` element.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@The HTML Document / Root element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/html)\r\n- [@article@HTML Tag](https://www.w3schools.com/tags/tag_html.asp)"
+}

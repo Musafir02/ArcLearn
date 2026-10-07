@@ -1,0 +1,4 @@
+{
+  "title": "Vue Router",
+  "content": "Vue Router is the official router for Vue.js which allows creating static/dynamic routes, has support for navigation interception, allows for component based configuration and much more.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@The Vue Router](https://router.vuejs.org/)\r\n- [@video@The Vue Router](https://www.youtube.com/watch?v=juocv4AtrHo)"
+}

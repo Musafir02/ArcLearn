@@ -1,0 +1,4 @@
+{
+  "title": "Server Functions",
+  "content": "Server Functions are asynchronous functions that are executed on the server. They can be used in Server and Client Components to handle form submissions and data mutations in Next.js applications. In an `action` or mutation context, they are also called Server Actions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ServerActions](https://nextjs.org/docs/app/api-reference/config/next-config-js/serverActions)\r\n- [@video@Next.js Server Actions](https://www.youtube.com/watch?v=gQ2bVQPFS4U)"
+}

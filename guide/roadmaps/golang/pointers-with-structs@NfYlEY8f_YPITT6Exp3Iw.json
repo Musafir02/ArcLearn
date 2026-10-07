@@ -1,0 +1,4 @@
+{
+  "title": "Pointers with Structs",
+  "content": "Pointers to structs enable efficient passing of large structures and allow modification of struct fields. Access fields with `(*ptr).field` or shorthand `ptr.field`. Common for method receivers and when structs need to be modified by functions. Essential for memory efficiency.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Pointers to structs](https://go.dev/tour/moretypes/4)\r\n- [@article@When should I use pointer and struct in golang?](https://medium.com/@wasiualhasib/working-with-structs-and-pointers-in-go-32a00a460cea)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "state pull / push",
+  "content": "`terraform state pull` downloads the current remote state and prints it to stdout. `terraform state push` uploads a local state file to the configured backend, overwriting the remote state. These commands are used for manual state recovery or migration and should be used with caution.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Command - State pull](https://developer.hashicorp.com/terraform/cli/commands/state/pull)\r\n- [@official@Command - State push](https://developer.hashicorp.com/terraform/cli/commands/state/push)\r\n- [@article@Migrate Workspace State Using Terraform State Push / Pull](https://support.hashicorp.com/hc/en-us/articles/360001151948-Migrate-Workspace-State-Using-Terraform-State-Push-Pull)"
+}

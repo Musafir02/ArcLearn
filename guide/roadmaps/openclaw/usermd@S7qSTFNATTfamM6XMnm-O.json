@@ -1,0 +1,4 @@
+{
+  "title": "USER.md",
+  "content": "[USER.md](http://USER.md) contains information about you: your preferences, context, and anything you want the agent to know about you by default. The agent reads this to personalize its responses.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@USER Template](https://docs.openclaw.ai/reference/templates/USER#user-md-about-your-human)"
+}

@@ -1,0 +1,734 @@
+{
+  "title": "Scala Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Akka",
+      "name": "akka",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "akka--pekko@vsfwt3tvLDhJoRyA82bM1",
+            "akka--peko-streams@g1CpD832hLdZruCtNf7SX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anonymous",
+      "name": "anonymous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anonymous-func--lambda@jkV_FWlv79nxyNiT_WFOr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apply",
+      "name": "apply",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apply-method@v6KrScCfuNH8i1aTBGVI4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-tools@TYW3j_DfD6DsrHE6MjJ8N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "By",
+      "name": "by",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "by-name-parameters@_GMHFAt8BulTAb9msdUb9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Capture",
+      "name": "capture",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "capture-checking@kbO0eO3UhUzPGaPvZKc_N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Case",
+      "name": "case",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "case-classes@EnTEDC1dzHf6H7P73Tlv5",
+            "case-objects@0dptTJpHmNf_Nyo-ib20m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Category",
+      "name": "category",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "category-theory@1mSU2_4W0bAMAph5jf7KC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cats",
+      "name": "cats",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cats-effect@GJVtKkllXuiMqUb3K7mUc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Collect",
+      "name": "collect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collect--collectfirst@nCPJKbcDfc4w4c4TroBRe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Context",
+      "name": "context",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "context-bounds@96F_G2PY8VG_Et9g4DFX2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-handling@STbiR-fcScKwFwkGDoTh8",
+            "data-structures@ACR-ncVRUYN0LXm5x6NhS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Distributed",
+      "name": "distributed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "distributed-computing@QaJAFu-xHUAGK7fjncQJB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Early",
+      "name": "early",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "early-returns@votWwsha27Bt9i5GhHRvA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Effect",
+      "name": "effect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "effect-systems@JuFghXpaI3uHtTckgmYeb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@1T7yhzZMoFKUvgS4ZWiPc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "For",
+      "name": "for",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "for-comprehension@pk6KQObR5AhAXj0wf5a3p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Funcs",
+      "name": "funcs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "funcs-returning-funcs@eSzfUe1nYv7TA3Nl9h2aN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functions",
+      "name": "functions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functions--methods@e1dvY1Wd6ZYw2ULKETc49"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "akka@bXliqiEXUKvqlJ391hHE1",
+            "akkahttp@82TpZ2W8LJBEEEjTo8_kD",
+            "array@D_2hxCGaYnaQf1Tu0Y-ty",
+            "backend@RpAAmXmhMgIhuzgRBFcPj",
+            "books@kXP-YrnwQ1zPuBuTHA35l",
+            "booleans@bOSckrStDRgoLAGWi6QfZ",
+            "calico@tMM4YlW3c3e8HYW16SOqS",
+            "capabilities@kRM_HTRUvZ7xXjffu53Aw",
+            "cats@5A-62SFAXUd4OAEGd_RRz",
+            "chimney@ISX09NZJh4HhKb5_d42sQ",
+            "circe@J5RuMesa74X122XHVgnFY",
+            "class@UmX7kymkWSROjDZjnoEFg",
+            "concurrency@MAsfpdZSMpl9P3ulQbl4i",
+            "conditionals@PDoJZATYO9SmMfebmvORn",
+            "conversions@OdcjkyWs3s86CqtUnAdxx",
+            "cosplay@Rz9OCeWj0y2cwfLrGuXqR",
+            "courses@yzVo7NtvU5HdGqg7T7XAh",
+            "docs@I_Bs6mryYyEAnwT_oPQ5A",
+            "doobie@SYZPgKGQUqX729Yo54eZk",
+            "ecosystems@BIeOReaWlfP0SkFl1B44M",
+            "either@P0Vo-2ShpFVfBxIrupLll",
+            "emacs@JSzlu4UNQA016AtE5xxml",
+            "enums@bSZbsqY1yzq9uKbFlgwkF",
+            "filter@hK_E1meVZkK6ICUs5qmIP",
+            "find@qU8svc-H5L2-QeBSXgp_8",
+            "flatmap@zEJeNsQcCz4hk7t7fDuVL",
+            "float@3MO2hkUs5wh1Xkcs1Yr7s",
+            "foldleft@GUvy5sUdY32NJ_9aIzMr9",
+            "foreach@MEwfeQ3yolH5bLVtHocaA",
+            "fs2@ERnBDDZA1VjdRryqQ-iOy",
+            "gatling@55CbOuD2qX3oWzSIfBRlu",
+            "gears@0d5OXgNaqc1_iwcGYiYmw",
+            "gradle@tYMRMVFon8V--pXLeye0U",
+            "gui@Jf3fxng9tN6PCycXyy5PE",
+            "http4s@LATumtt9T5nfP6-jSoM6i",
+            "indigo@XUg4x7MQTvXzmDkgkET7S",
+            "integers@xNMXubCcKuaSkYIgz0YVk",
+            "introduction@ojvTMCBlgUf6ywgsgCQM1",
+            "iterators@jMqwWE2Aebd7wT4iogIIW",
+            "javafx@V0CMqxJh3IZ3Npvp2z7Af",
+            "jsoniter@kyYPX8_vvnjixMeZQTPqA",
+            "junit@qKy9u6fJoMfRAMlnTv816",
+            "jvm@Gy7AaiqSL_38yB73C5W5B",
+            "kyo@AhgoqMHyHn4lX6eMJuxZt",
+            "laminar@ZH55uB8H48i9mKBtCDciZ",
+            "laziness@YqAClVg7U1mb-Be_rnv-L",
+            "lazylist@zk07chk34XuM1mac4oe4-",
+            "list@HCXshB5qPYlYmyg3ufA4a",
+            "loops@VVO1Cmn0HwVKeMZNJiixa",
+            "macros@mq3uKXW57PdAkbuSBsznD",
+            "magnolia@YWog0o_t3XWQgGpjkzsnd",
+            "map@i4gSxrJSki5um_6dfLUYK",
+            "map@zhRrfAotX8wq6HjR3s13B",
+            "maven@6D5cj3ekHNkZPy1Z8ONaQ",
+            "mill@SY6uRGxuo_sXA_R0t8uLJ",
+            "monads@PEQNPOy-j2BdL_NQYoq7g",
+            "monocle@DHdpzJxOlUnRRx5WhhWHi",
+            "munit@Oel8HKCRp5AlaDrsVMRu4",
+            "nothing@MVNwvGwzYyse8YUc9fwnL",
+            "object@_Ggnf67Ye0kFvroqqSg_D",
+            "operators@9sYmBVtJhOegHWE8mgs5c",
+            "option@PPrcoA800FmTFT48H789J",
+            "ox@eHbMh_KO2ezvMm-LyhkCR",
+            "package@RVwd5ZY4e_RUhsIi1NZFu",
+            "pekko@dS2USmMlQb4EjY9hvG_by",
+            "platforms@pYZHgxBvh3Au3bCFuLWn2",
+            "play@VDbh6YkcPssmp2hcZdOt1",
+            "playjson@gT46TnxsNzWOIfBvxPb5n",
+            "quill@Fa8GRqxvzE5dq-nD4heEI",
+            "range@IN_mRFxfaDiW2_iNDdrHk",
+            "reactjs@A9CpbbZ_Q9zIkVX5Rgyp6",
+            "recursion@Hrl2L3vdhAub1jnQVuTRF",
+            "regex@P607jVa4002JaBDku4V4O",
+            "sbt@V0zIDfz8b2LBrNwz81xlR",
+            "scalacli@AleJKnVNfSoksZxhR-oXc",
+            "scalafx@pU1ELrp98okX5IOW8sNiX",
+            "scalajs@phv4IeRtLcWcLJuiradiv",
+            "scalameta@sJqixwq4_tCCRBE3XKNuw",
+            "scalatest@9JxLFMiWH7YAINTpoMhCA",
+            "scalatest@iD1fWHJi5mS38R5mQ7g3_",
+            "scalatra@mGxkqA78ZW3oV79RPWz5J",
+            "scalikejdbc@Qc8YYIBFQb2JzHRTPVn86",
+            "seq@IBkdiusI08JFfHDS6VKsO",
+            "set@4yYOxlOkQgkxZS6_94CT-",
+            "shapeless@TwS5Ms3BlAsR6E9aI81aF",
+            "slick@L8g7EogMi61pF7Rxv5Srn",
+            "slinky@rG1Xfa4gmO_U61MTW_QPd",
+            "spark@z6TGywyQRmvbZaHnF_-eQ",
+            "specs2@99N6zSHIiXLnSWroEpZZm",
+            "strings@cwhAAcKtzUKcXBSEUdIAQ",
+            "sttp@Igr2iwZBn3qO6X5ol3YMt",
+            "sublime@RXBh4SW__eVXjiTP8v07G",
+            "tapir@2esx4ofgIGIGmdwHyDQg2",
+            "testing@B-akazRqoFzc1EOuF7qQx",
+            "trait@vKPb5IZgfciKwUZismkHJ",
+            "trampolines@VV-Drj_JlIppItHq4PRFc",
+            "try@y4sElb6dWw0vpGNPgRrvC",
+            "trycatch@4NPM4TQawMx6-uD0E2blP",
+            "typeclasses@RNBawkn6jQsX4fAjMBfo2",
+            "unit@nvUwMAiZdkKbMsFzc2h3r",
+            "upickle@4GXTv2Rq2oyp5fZ5EqaMz",
+            "utest@Ja0keWOyCECHo-dXgwFK8",
+            "variance@upZK3qxWKokNL3tlFKhK6",
+            "vector@p3FdTk1pqQoBK3_NKmLDb",
+            "views@52RX2tDml7raPbQpZCbnx",
+            "vim@ZmrehlOEUkjVJXiejyWt7",
+            "youtube@ToGJzk3ZpvQsUwOFicxW2",
+            "zed@uvw1H2RybuU979G7yZWy6",
+            "zio@e7zcJd-SAYV_LGAZPCnSa",
+            "zio@y4ulspoL7KKUilPG98KWd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graalvm",
+      "name": "graalvm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graalvm-native-image@Mp7N98NLWQptk6w5totGR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implicit",
+      "name": "implicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implicit-parameter@9PiyO8DlNgas10ZjZJCkA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Intellij",
+      "name": "intellij",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "intellij-idea@zDXDdfzObrUlrIkgxCouq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lazy",
+      "name": "lazy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lazy-collections@kRdh-HUAWJi7d8gdynGUS",
+            "lazy-vals@iMe2czy5d7uNpB2Uv2KTK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Li",
+      "name": "li",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "li-haoyi@OYiz0dgiVjYilNRSjh9la"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Libgdx",
+      "name": "libgdx",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "libgdx-w-scala@yogv_RewIk12S8Rh_FEtJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Macros",
+      "name": "macros",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "macros--the-type-system@sWzy6blDheaOBOpwg5lou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Method",
+      "name": "method",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "method-calls@w_GDO8UjtaM-XTbyQOBsQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mutable",
+      "name": "mutable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mutable-collections@Dfrh1gTS7CiCSqXGW-APm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "No",
+      "name": "no",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "no-ecosystem@1pq3RFK0DokxqYAuwfdF8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pattern",
+      "name": "pattern",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pattern-matching@5BGQb1CZQwDwYxDA9bvn4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Private",
+      "name": "private",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "private--protected@mHdNAYbL4yCZZYv0Z_s1w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pure",
+      "name": "pure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pure-functions@glMo7kvwKxS3M6pBrGhNn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Referencial",
+      "name": "referencial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "referencial-transparency@Qm2AQa8AJtmMo_eidqCrz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scala",
+      "name": "scala",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scala-android-plugin@vsG9D5ZmCMvPaTRmVgYyn",
+            "scala-native@4_gOylCtzBT6n1_GBzZdD",
+            "scala-on-android@LWum40Gr36CMuCgoTCNHM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scope",
+      "name": "scope",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scope--visibility@w59GmNK0wHo6tADDTaaQS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sealed",
+      "name": "sealed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sealed-traits@-5hM5DFinTWjkzlubUclR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-scala@D5djqvuGs8v__c9DrfOIT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tail",
+      "name": "tail",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tail-recursion@qEdusMVJk68GRdH-vP6ts"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Totalpartial",
+      "name": "totalpartial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "totalpartial-funcs@eje4CLMuZobVwd0EBwwim"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-hierarchy@3zKEn33pENf2eNDGvjEAP",
+            "type-parameters@_6s7NV9qbJj_Y4z4_ge4f",
+            "type-system@pvYS9XusP0WPCMvrOtHgr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unapply",
+      "name": "unapply",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unapply-method@NcGlkEvp1t46EmX5GQRkD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables--constants@-qLeSRC44_V-c8hoHyMqA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Video",
+      "name": "video",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "video-game-engines@vwvykjlIYXiNi2yfWZcrq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vs",
+      "name": "vs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vs-code@kK2gLsPax0kj_cUlfwaYm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-strings@Z_cGu1NZ6wh7qkEw2Knyf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zio",
+      "name": "zio",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zio-streams@jkWYgSLimg3O7ddN_8rb-",
+            "zio-test@7ki2PYRU5cJqwqMbC4wOz"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "SWAs, PWAs, JAMStack",
+  "content": "Single Web Apps (SWAs), Progressive Web Apps (PWAs), and JAMStack are modern web application architectures with distinct rendering and caching behaviors. PWAs add offline support and installability, while JAMStack pre-renders content at build time for fast delivery. Testing these architectures requires understanding service worker interactions, offline behavior, and incremental static regeneration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Jamstack](https://jamstack.org/)\r\n- [@article@SWA](https://www.staticapps.org/)\r\n- [@article@PWA](https://web.dev/progressive-web-apps/)"
+}

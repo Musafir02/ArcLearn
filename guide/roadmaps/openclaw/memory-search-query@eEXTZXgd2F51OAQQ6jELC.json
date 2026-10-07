@@ -1,0 +1,4 @@
+{
+  "title": "openclaw memory search \"query\"",
+  "content": "`openclaw memory search \"query\"` lets you search through the agent's stored memories using a keyword or phrase, useful for checking what the agent has remembered about past conversations or preferences.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Memory](https://docs.openclaw.ai/cli)"
+}

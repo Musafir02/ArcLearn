@@ -1,0 +1,4 @@
+{
+  "title": "Monitoring",
+  "content": "Performance monitoring involves tracking metrics like command latency, memory usage, hit/miss ratios, and connection counts over time. Tools like `INFO`, `MONITOR`, and external metrics exporters (such as the Redis Prometheus exporter) are used to collect this data. Establishing baselines makes it easier to detect regressions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Monitoring with Metrics and Alerts](https://redis.io/docs/latest/operate/rs/clusters/monitoring/)\r\n- [@official@MONITOR](https://redis.io/docs/latest/commands/monitor/)"
+}

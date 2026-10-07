@@ -1,0 +1,4 @@
+{
+  "title": "File CRUD Operations in Operating Systems",
+  "content": "Creating, reading, updating, and deleting (CRUD) files are fundamental operations within any operating system. These actions allow users and programs to interact with data stored on a computer, enabling everything from saving documents to managing configuration settings. Understanding how these operations work at a lower level provides insights into data management and system security.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is CRUD?](https://www.crowdstrike.com/cybersecurity-101/observability/crud/)\r\n- [@article@CRUD Operations](https://www.freecodecamp.org/news/crud-operations-explained/)\r\n- [@video@What is CRUD?](https://www.youtube.com/watch?v=iNkspbIfcic)"
+}

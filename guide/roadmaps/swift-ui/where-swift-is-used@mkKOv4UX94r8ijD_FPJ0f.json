@@ -1,0 +1,4 @@
+{
+  "title": "Where Swift is Used",
+  "content": "Swift is a versatile programming language developed by Apple, primarily known for building applications across the Apple ecosystem. This includes creating apps for iPhones, iPads, Macs, Apple Watches, and Apple TVs. Beyond Apple platforms, Swift can also be used for server-side development, command-line tools, and even some embedded systems, making it a language with a growing range of applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Develop for iOS](https://developer.apple.com/ios/)\r\n- [@official@Develop for macOS](https://developer.apple.com/macos/)\r\n- [@official@Swift on the Server](https://www.swift.org/documentation/server/)\r\n- [@article@What You Can Do with Swift Outside the Apple Ecosystem](https://arc-sosangyo.medium.com/what-you-can-do-with-swift-outside-the-apple-ecosystem-a201778a7830)"
+}

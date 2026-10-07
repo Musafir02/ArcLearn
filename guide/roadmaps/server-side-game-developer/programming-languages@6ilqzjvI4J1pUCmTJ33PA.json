@@ -1,0 +1,4 @@
+{
+  "title": "Programming Languages",
+  "content": "Server-side game development is supported by several programming languages, each offering different trade-offs in performance, ecosystem, and concurrency model. The choice of language affects the networking stack, threading model, and available libraries for serialization and database access.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Choosing the Right Programming Language for Game Server Development - Getgud](https://www.getgud.io/blog/choosing-the-right-programming-language-for-game-server-development/)\r\n- [@article@7 Best Programming Languages for Game Development - Pixelfield](https://pixelfield.co.uk/blog/best-programming-language-for-game-development/)\r\n- [@article@What programming language does server development typically use? - Reddit](https://www.reddit.com/r/gamedev/comments/efxsm2/what_programming_language_does_server_development/)"
+}

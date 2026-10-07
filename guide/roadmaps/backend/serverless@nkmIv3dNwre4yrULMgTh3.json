@@ -1,0 +1,4 @@
+{
+  "title": "Serverless",
+  "content": "Serverless computing lets developers build applications without managing server infrastructure. Cloud providers handle scaling and maintenance while developers deploy event-triggered functions. Billing based on actual usage. Platforms: AWS Lambda, Google Cloud Functions, Azure Functions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Serverless](https://www.ibm.com/cloud/learn/serverless)\r\n- [@article@AWS Services](https://aws.amazon.com/serverless/)\r\n- [@video@Serverless Computing in 100 Seconds](https://www.youtube.com/watch?v=W_VV2Fx32_Y&ab_channel=Fireship)"
+}

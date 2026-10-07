@@ -1,0 +1,4 @@
+{
+  "title": "golangci-lint",
+  "content": "Fast, parallel runner for multiple Go linters including staticcheck, go vet, and revive. Provides unified configuration, output formatting, and performance optimization. Streamlines code quality workflows through a single comprehensive tool.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@golangci-lint](https://golangci-lint.run/)\r\n- [@official@golangci-linters](https://golangci-lint.run/usage/linters/)\r\n- [@opensource@golangci/golangci-lint](https://github.com/golangci/golangci-lint)"
+}

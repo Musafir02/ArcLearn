@@ -1,0 +1,4 @@
+{
+  "title": "PowerShell",
+  "content": "PowerShell is a cross-platform task automation and configuration management framework, consisting of a command-line shell and associated scripting language. It allows users to automate administrative tasks on both local and remote Windows, Linux, and macOS systems. PowerShell uses cmdlets (pronounced \"command-lets\") to perform specific actions, and these cmdlets can be combined into scripts to automate complex processes.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@What is PowerShell?](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.5)\r\n- [@official@PowerShell Docs](https://learn.microsoft.com/en-us/powershell/)\r\n- [@opensource@Powershell](https://github.com/PowerShell/PowerShell)\r\n- [@video@Learn PowerShell in Less Than 2 Hours](https://www.youtube.com/watch?v=ZOoCaWyifmI)\r\n- [@video@PowerShell Made Easy](https://www.youtube.com/watch?v=b7SGPchYRn0)"
+}

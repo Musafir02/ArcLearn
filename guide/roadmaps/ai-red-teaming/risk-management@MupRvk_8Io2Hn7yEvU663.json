@@ -1,0 +1,4 @@
+{
+  "title": "Risk Management",
+  "content": "AI Red Teamers contribute to the AI risk management process by identifying and demonstrating concrete vulnerabilities. Findings from red team exercises inform risk assessments, helping organizations understand the likelihood and potential impact of specific AI threats and prioritize resources for mitigation based on demonstrated exploitability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)\r\n- [@article@A Beginner's Guide to Cybersecurity Risks and Vulnerabilities](https://online.champlain.edu/blog/beginners-guide-cybersecurity-risk-management)\r\n- [@article@Cybersecurity Risk Management: Frameworks, Plans, and Best Practices](https://hyperproof.io/resource/cybersecurity-risk-management-process/)"
+}

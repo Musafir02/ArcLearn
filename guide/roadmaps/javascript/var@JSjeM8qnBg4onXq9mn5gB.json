@@ -1,0 +1,4 @@
+{
+  "title": "[var] keyword",
+  "content": "The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@var keyword - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)\r\n- [@article@JavaScript Variables](https://javascript.info/variables)\r\n- [@video@Declaring Variables without Var, Let, Const - What Would Happen?](https://www.youtube.com/watch?v=6UAKBYpUC-Y)"
+}

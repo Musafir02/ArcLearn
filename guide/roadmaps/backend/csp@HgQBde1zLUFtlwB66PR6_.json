@@ -1,0 +1,4 @@
+{
+  "title": "Content Security Policy",
+  "content": "CSP (Content Security Policy) prevents XSS and code injection attacks by specifying trusted content sources. Implemented via HTTP headers or meta tags, defining rules for scripts, stylesheets, images, and fonts. Reduces malicious code execution risk but requires careful configuration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@MDN — Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)\r\n- [@article@Google Devs — Content Security Policy (CSP)](https://developers.google.com/web/fundamentals/security/csp)\r\n- [@video@Content Security Policy Explained](https://www.youtube.com/watch?v=-LjPRzFR5f0)"
+}

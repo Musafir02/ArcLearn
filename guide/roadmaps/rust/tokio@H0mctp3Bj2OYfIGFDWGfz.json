@@ -1,0 +1,4 @@
+{
+  "title": "Tokio",
+  "content": "Tokio is Rust's most popular async runtime for building fast, reliable network applications. It provides an async/await runtime, I/O drivers, timers, and networking primitives. Tokio enables high-performance concurrent applications by efficiently managing thousands of tasks on a small number of threads.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Tokio](https://tokio.rs/)\r\n- [@article@Tokio Docs](https://docs.rs/tokio/latest/tokio/)"
+}

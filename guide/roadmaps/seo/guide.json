@@ -1,0 +1,1946 @@
+{
+  "title": "Seo Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "5xx",
+      "name": "5xx",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "5xx--server-errors@07Kx4mgyI26CbQnd0te-I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agentic",
+      "name": "agentic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agentic-search@uP6jREjhcYMgx-MTMaVt1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ahrefs",
+      "name": "ahrefs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ahrefs-brand-radar@T7rsATMjOf6aCoTFCHDJ1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-chat-prompts@cGpIPYcKler0FcLwWFzVy",
+            "ai-citation-referral-traffic@T7rsATMjOf6aCoTFCHDJ1",
+            "ai-overviews@edVzhSJjNZ42CmIGHfYs_",
+            "ai-tools-for-content@FJtTzHUx-Rdrn23Zu2aRn",
+            "ai-tools-for-content@uP6jREjhcYMgx-MTMaVt1",
+            "ai-visibility-measurement@M3BNI1m3kelrtO5UZuunv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Algorithm",
+      "name": "algorithm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "algorithm-updates@QH9MT5UQHPyqQqacAq_2P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Answer",
+      "name": "answer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "answer-engines@k8K7c-FNG-vcS_Zsh90nQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api--feed-access@EAqO19n_YXdOx0XMw0zw7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Article",
+      "name": "article",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "article-faq--howto@WX8UJ5DBPohLvkAID4C2d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attributes",
+      "name": "attributes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attributes--relationships@vKRnx5RpTIIa1h9mRyMvy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Author",
+      "name": "author",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "author--org-consistency@vM0xCx0N0EUAPj1_3Dqij"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authors",
+      "name": "authors",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authors--brands@BWDrPHuMTquQQEBG6hKkK",
+            "authors--brands@WX8UJ5DBPohLvkAID4C2d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backlinks",
+      "name": "backlinks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backlinks--anchor-text@UtEv5RGFwA2NSzG6YR401"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Beforeafter",
+      "name": "beforeafter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "beforeafter-prompt-tests@AYQYbILBtsg_qnTLClenK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Branded",
+      "name": "branded",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "branded-vs-non-branded@dzrlgIG5H_AQvYm8n8ZcZ",
+            "branded-vs-non-branded@QqdwMyZGFG9FMs38iAThJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Breadcrumb",
+      "name": "breadcrumb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "breadcrumb-rich-result@z2AmnS18sISZOz3Tio4Ek",
+            "breadcrumb-video--review@YQa3zt4Oib310DUo4IE2H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Case",
+      "name": "case",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "case-studies--benchmarks@S73E2bFxeHDSX3EUgyFpm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cctld",
+      "name": "cctld",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cctld-subfolder-subdomain@LY-W-QNZ7KYjQNY793t6K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chat",
+      "name": "chat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chat-based-search@ilvFr7TFoNjU28HifZjXP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chatgpt",
+      "name": "chatgpt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chatgpt-search@h9DqnyAY6xVRzXuEA6lPk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Citation",
+      "name": "citation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "citation-flow@k_3-hC4Wh4dih0AZRv4kJ",
+            "citation-flow@m3vqrPei9SRSAmulW--lt",
+            "citation-rate--position@l_ahLBx-CZfKJkSyoaKOs",
+            "citation-resources@f5D7eTVr15SKpQz7h6VKg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloaking",
+      "name": "cloaking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloaking--doorways@GF-rRWhJfFMiUxDYZcsLZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Community",
+      "name": "community",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "community-presence@Gki2ES-Dlt-1fnjLSeCTo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competitive",
+      "name": "competitive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competitive-answer-share@YnC3M0IOQtfTUp6CHbNOF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competitor",
+      "name": "competitor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competitor-benchmarking@9zeWrfAR_KvTwdmV6QCqd",
+            "competitor-gap-analysis@jeO2Xq-UVqxAXo-JYNd9X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content--schema-ab-tests@UTUQMeJf-hv9C_hBRFR3w",
+            "content-consolidation@FvPa3nXZnqaaDwzFkmt4i",
+            "content-consolidation@IIic3zZccZgk_DHliJZ1n",
+            "content-freshness--decay@HQHd1ll4hLHkuZaF4xdnL",
+            "content-lifecicle@SNuAwAEhzUY9HAHBiL84U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Controls",
+      "name": "controls",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "controls--pay-per-crawl@tpp7ms9jKv8eB2sSipr8u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Copilot",
+      "name": "copilot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "copilot--gemini@5dR-1rcdJXlmrejWTCKz8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-updates@tRvJ6JggIlq0ZxiUE-mug",
+            "core-web-vitals@CRKDP0FkX-yQO6JrzUKJe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Crawl",
+      "name": "crawl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "crawl-budget@HyHeVY2JLg9jGedL53baF",
+            "crawl-budget@oyuQGthzl0Ockg18I9dfs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Crawling",
+      "name": "crawling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "crawling--indexing@HyHeVY2JLg9jGedL53baF",
+            "crawling--indexing@xTU1zxxpefjIaU901IyP0",
+            "crawling-indexing-ranking@zoxmVRwdoKc0nIg0t_VXw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-charts--images@tue9sBd0pi0xXW5pgFCrL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-driven-pr@v-7GGDA_u-zX7cT2uLbtY",
+            "data-tables@kCn5wBncvJPRxWBkVzJpF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dense",
+      "name": "dense",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dense-retrieval@q45bD9nF_01Anr9ZFFzvz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Digital",
+      "name": "digital",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "digital-pr@CZETKyfPEaDwpaRgpwtHH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Direct",
+      "name": "direct",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "direct-answers@3TMxMYJWMtz8TGOYC-9hm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Directories",
+      "name": "directories",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "directories--databases@ByTSm8fByNX9GCddLiWmT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Disambiguation",
+      "name": "disambiguation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "disambiguation--salience@1rsxMv9Ts_ajZcptgxuif"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Domain",
+      "name": "domain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "domain--protocol-changes@pWZev6b_aJErtcZUqNW1t",
+            "domain-authority@yFEpZM1At0nDiae9Hrs6M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Duplicate",
+      "name": "duplicate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "duplicate-content@mTkbJ5hRGOP2cES4dXYdC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "E",
+      "name": "e",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "e-commerce-seo@e7b9VrhpTCKAh_KfdnSOm",
+            "e-e-a-t@jeO2Xq-UVqxAXo-JYNd9X",
+            "e-e-a-t@TiBwbnFqTs7elNG7aKquc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Entities",
+      "name": "entities",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "entities-vs-keywords@Qw2G2HO4e_f7JJxQl_ZYu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Entity",
+      "name": "entity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "entity--sentiment@sVtVGhxYk8MuQMmafrE8W",
+            "entity-consistency@J3s-xzTO5wSWCbnaJjUu2",
+            "entity-schema-markup@QnPVD19vPlOe2oDAPJBs0",
+            "entity-seo@zJ8O7yMGPBjcKSNafpsqy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Expired",
+      "name": "expired",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "expired-domain-abuse@QZU6uYsFE3eGqFJ3N1E__"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Faceted",
+      "name": "faceted",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "faceted-navigation@3jNWEYI-jBk2xIPFICP-5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Featured",
+      "name": "featured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "featured-snippets@FrhgWykWSI_vvIomt8FR4",
+            "featured-snippets@SNuAwAEhzUY9HAHBiL84U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Folders",
+      "name": "folders",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "folders--url-structure@Lw9Mkr55ST5P9kaw4dktV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Formatting",
+      "name": "formatting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "formatting--readibility@TZd2oPUXcE4YQ1TmuCsRJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forums",
+      "name": "forums",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forums--communities@f3Al3atzeQrMxUDlpR3cm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accuranker@8rYi-p6zBdQNk3Yy7GwbF",
+            "ahrefs@9s0rNSSUg7mR9-kY959GQ",
+            "ahrefs@QjR5TdmTfe-Mxu72Q8Pth",
+            "bingbot@9N11NVjIJAw6VcE1xV-L9",
+            "brightlocal@bV3Z8yx6aT9AOcMAlHxb1",
+            "buzzstream@qz9Ua1xx1fWSk1cNa0hz6",
+            "canonical@F7BXvp5JV35kyGyPerwNR",
+            "canonicalization@DajReU0-DBUgYY0pCQsDL",
+            "canonicalization@UI3c2c9k1-xkBzGXH8GvF",
+            "chunking@jJ-11e0sx1TMVmRoWGmwB",
+            "claudebot@HLZuEmTuaj5ocOQBgnAiV",
+            "clearscope@cuy0qni8CedAqJDj8B5fk",
+            "embeddings@2i-oswlxFVd3V0udqCoBG",
+            "frase@7MfjhPJvQQdrqIA_w0_h7",
+            "googlebot@MiFLQuMkiZRQpSPSxdVKw",
+            "gptbot@9RINuReXqv2nFIyJe4kNe",
+            "hreflang@C4S9r5qswLomo4rK438yH",
+            "introduction@ae1c-S4JTU3NdBhXLa3Dq",
+            "majestic@oJiYitF6E8Crk02oO8lpx",
+            "marketmuse@Ds_ta1eKe_8B9EQpWYJQj",
+            "otterlyai@2osiMJHPrm4zk_5rdLaGk",
+            "pagination@2l_5knaWysxinhMV1z6LK",
+            "peecai@WXVTvnH4sTTJOmhrX-0mO",
+            "perplexity@rnD7x5uSE0GPu8BB1DPeb",
+            "perplexitybot@u7LcT0Gbzc92r9H3MrkrE",
+            "pitchbox@J_Wwg2zo5m9JnlNILKlMi",
+            "profound@g45K_0aau7_T-yiUXjP-T",
+            "quora@oKEnhcC4CJhqUa-ewnsQ4",
+            "rag@nVLFIaDXF9XWNUPwIg5T2",
+            "reddit@Q9-I-jLSh9tp205SpiDgS",
+            "robotstxt@8iODKk23z1DGYWIAj8yWk",
+            "semrush@4tBuZz4ZPF7bjcYxRbB1E",
+            "semrush@Tzgf0ac-94aEw1tixeAd9",
+            "sitebulb@wP4LP-audfrqSm-nUcEA9",
+            "sitelinks@-WuXxefNUDilXkptnd4Zi",
+            "sitemaps@g0TlQo1a-Wk9-fi_te9yw",
+            "tldrs@eM_OYwGJafqCihcNWk3pO",
+            "whitespark@Uy88UTJwwI6dOiFZFa9KS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Geo",
+      "name": "geo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "geo--seo-testing@0TQQ6I0F1uqmBUbc0d1LB",
+            "geo--seo-testing@dXkUtFzVenPyT-mZqUhBl",
+            "geo-targeting--localization@QqdwMyZGFG9FMs38iAThJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Good",
+      "name": "good",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "good-links-vs-bad-links@ztv9uPqA0G-SFr1g-_jBm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-ai-mode@k8K7c-FNG-vcS_Zsh90nQ",
+            "google-analytics@Ioi9F4GkFlSUY0xC7uHc_",
+            "google-analytics@N1NojTD0D3dNlayucPYdz",
+            "google-business-profile@GOKco0LlQAX-R5-mVL8ez",
+            "google-data-studio@N1NojTD0D3dNlayucPYdz",
+            "google-discover@lQzpUYrz_KkOQ7YODiw0S",
+            "google-extended@TrD9JXQNgM-2EhjcshI03",
+            "google-extended@u7LcT0Gbzc92r9H3MrkrE",
+            "google-keyword-planner@8sGKm8N4zZr4hAR-IK7L6",
+            "google-keyword-planner@CIxeK5tsOKl-HP58X75cU",
+            "google-search-console@vw2CXBOc-1wSt7Ug3xggb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gsc",
+      "name": "gsc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gsc-api--bigquery-export@Rdo3yAz-HlbuROXuRhGag"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Heading",
+      "name": "heading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "heading-structure@ZU9aGr_7TSlblCIxO8sR4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Helpful",
+      "name": "helpful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "helpful-content-system@SgoAl-jaZuJtze6Jz3uPA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-agents-brows@-Rb6WSy_M2TWgqqqIYKlg",
+            "how-ai-is-changing-seo@3X0R92JbjN66pzS5T8s4o",
+            "how-ai-is-changing-seo@CBLoLYVTDjZCcnLWMJNH4",
+            "how-search-engines-work@3X0R92JbjN66pzS5T8s4o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http--status-codes@Ho5HGnILJCvSD_j1RRkJb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Https",
+      "name": "https",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "https--security@VWoW6gPHO0_x8Yu_vted1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hybrid",
+      "name": "hybrid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hybrid-search@sre_s0dvpOP0DTM66a3hu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image--video-packs@mGEBbOmi-hoX82wryjX_K",
+            "image-optimization@AwX5xoGq0LT_a0CVftIBE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Impressions",
+      "name": "impressions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "impressions-clicks--ctr@C4S9r5qswLomo4rK438yH",
+            "impressions-clicks--ctr@HCZYdrRDhVnGVPdEAu93Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Index",
+      "name": "index",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "index-coverage--bloat@9AzcmD1QtLdAMINwEVwe2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Influencer",
+      "name": "influencer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "influencer-outreach@om_Cux4LPSBKpYVFR5UoE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Information",
+      "name": "information",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "information-gain@FnpAlJME-POEfHUwVYoKm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Internal",
+      "name": "internal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "internal-anchor-text@wndHjXzBeqVn8C6NVUw4S",
+            "internal-linking@ED0d7WR_cHqRSxQlQGuzV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "International",
+      "name": "international",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "international-seo@G7WTJetPqB5z78l_J55Ex"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keyword",
+      "name": "keyword",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keyword-placement@drbtWMhO-3e8mj8_-MmtX",
+            "keyword-research@iDrvnpv1oyR3z03NS4vXs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Knowledge",
+      "name": "knowledge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "knowledge-graphs@MkqtUw8fNLyC_o9wQkNmU",
+            "knowledge-panels@-Iqdt27DI-BJ_rHXl2vUz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lexical",
+      "name": "lexical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lexical-vs-vector-search@xCgNhwbS_ELxEyRHD1enO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Link",
+      "name": "link",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "link-building@nWxHXguh1RL0u1pbkjmmO",
+            "link-schemes@kx_eVXmMdmdbIqXsFJcX1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-referral-traffic@8VCaIubOffkDKjua7rNT8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-citations@fRcmRMhFYfzjM_IGGihMX",
+            "local-landing-pages@xxAEhmPwcz9VuwW9B-Kuf",
+            "local-links@ydRGMTc1cAScUxMh05FEc",
+            "local-pack--maps@Spbaau8T4c-q32W8Udhse",
+            "local-search@JagmGhAgN1ec_VNNmZX2b",
+            "local-search@Y1Kj_YxvlUsmTgtCKyMLZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-file-analysis@_q1cEm2MWfa-cqHrY2lA4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Machine",
+      "name": "machine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "machine-readable-content@py4DdYxCQuZ50VxoCu5o6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-ai-crawlers@hziiFSixtMn90_pcE3Yll"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manual",
+      "name": "manual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manual-actions--recovery@hORMww8U7HjGJRzvLKenk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mcp",
+      "name": "mcp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mcp--structured-access@IIic3zZccZgk_DHliJZ1n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Meta",
+      "name": "meta",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "meta-descriptions@OR6UoSQTab3Fm7PMf3UwC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Microsoft",
+      "name": "microsoft",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "microsoft-clarity@8VCaIubOffkDKjua7rNT8",
+            "microsoft-clarity@HYW6nWPHF83gFn-m-voGy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-friendliness@gOmEWLX7u8vGGt_GN5Fkq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Moz",
+      "name": "moz",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "moz-keyword-explorer@wF4vQ6rSNLaKSlwzhLu8x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-location-seo@tUkUve7WFI2WdhurkluQ4",
+            "multi-step-ai-intent@_SCDSMXMaI8w1Fo-mgUjP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nap",
+      "name": "nap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nap-consistency@kgbcs19HRGumZrryRJoee"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "News",
+      "name": "news",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "news--discovery-seo@JagmGhAgN1ec_VNNmZX2b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Niche",
+      "name": "niche",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "niche-forums@AZz6CxDYzofJbB6c39vrt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nofollow",
+      "name": "nofollow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nofollow-noindex@4mauwocuV1IRSz83VMuTq",
+            "nofollow-sponsored-ugc@k_3-hC4Wh4dih0AZRv4kJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "On",
+      "name": "on",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "on-page-seo@xYkwvk6d1FHylhfJ6p1fF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Org",
+      "name": "org",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "org--person-schema@BJzSXBexJ4z3U7jjAddio"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Organic",
+      "name": "organic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "organic-vs-paid-vs-direct@vbolitnz-ciidYtkKLp3B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Original",
+      "name": "original",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "original-research--surveys@EOrD0tHg33UfosovD_YVo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Outsourcing",
+      "name": "outsourcing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "outsourcing-vs-diy@zoxmVRwdoKc0nIg0t_VXw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Page",
+      "name": "page",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "page-authority@ouEJFUJlZss_ScbsmiJ-X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pagespeed",
+      "name": "pagespeed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pagespeed-insights@5o806bMtqKVLdjQVFjnJz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "People",
+      "name": "people",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "people-also-ask@nyiOoaRP9kV6sJlS16MKy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Personalization",
+      "name": "personalization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "personalization-localization@p7VyhgqhmVfY9TA7DiXjD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Planning",
+      "name": "planning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "planning--checklists@S6Br87lFC2GKENqfQe6vL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Position",
+      "name": "position",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "position--share-of-search@-6_QtaXh83VTAl2pyOp8f",
+            "position--share-of-search@LY-W-QNZ7KYjQNY793t6K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Post",
+      "name": "post",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "post-migration-monitoring@Md94gEyK4XEPAVHpfcnXK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Preferred",
+      "name": "preferred",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "preferred-sources@MomZSADCVdYuKQToQtNnW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Primary",
+      "name": "primary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "primary-data--visuals@3Y_pytcQ00dghMkRngjVP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Product",
+      "name": "product",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "product--place-schema@hKRFdXC5UlbOIb1WIm9Ht"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-coverage--mention@cyqsRePa5SW0BioIcvCWC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Proprietary",
+      "name": "proprietary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "proprietary-datasets@QzVV0URU0R22FlMy0nK9j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pruning",
+      "name": "pruning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pruning--deindexing@OrxxJbPQi1aylotUUn4J0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query--topic-coverage@kqHyjxO7bBdFDLxdeMBJz",
+            "query--topic-coverage@S8AGCGP9rh-NvgfVhqP9z",
+            "query-fan-out@ujNGonXvVhH734HMGgFum"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Question",
+      "name": "question",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "question-mining@QbCABrmudmc7lib7-c1Hk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rank",
+      "name": "rank",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rank-tracking@hR1xBsfGsPJh--WG_01qp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Redirect",
+      "name": "redirect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "redirect-chains--loops@c5NiQ-rGyJZGj8iBWCV7Y",
+            "redirect-mapping@So5JL15BYlEeoYOt90dT_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rendering",
+      "name": "rendering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rendering--javascript-seo@pB_fkc0wStWZ4MxCWFtmO",
+            "rendering--javascript-seo@zKIAdANIV-wVCHLrGydBz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retrieval",
+      "name": "retrieval",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retrieval-vs-ranking@xTU1zxxpefjIaU901IyP0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reviews",
+      "name": "reviews",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reviews--velocity@Id95-XXYGUWTFKSeJ00Ce"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sameas",
+      "name": "sameas",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sameas--entity-linking@4VIEdEoCvyv_jiCHLv3pQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaled",
+      "name": "scaled",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaled-content-abuse@eSJRYXI5sTwHRerwByTy_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Screaming",
+      "name": "screaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "screaming-frog@vF-jde0y42JKX1jEPeSfl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-intent@fVUfQYb8BP_hFMmd1S2-J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Semantic",
+      "name": "semantic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "semantic-search@hwKZmfYFiIu6plbiXtJRI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Seo",
+      "name": "seo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "seo-audits@picU3n5cUGQj9tXGpNRNu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serp",
+      "name": "serp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serp-analysis@8sGKm8N4zZr4hAR-IK7L6",
+            "serp-features@otS3yfuDpmbuvda3WVDc4",
+            "serp-index-crawl@GYUiIQ38y7jaI7cBrNP9v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Site",
+      "name": "site",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "site-hierarchy--depth@sq0ScczfbtjP-50goDqJv",
+            "site-migrations@iD-7DzOmcrNvpEn7iBsXP",
+            "site-reputation-abuse@IdKr-YfBD7LYDInKFXgoS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Social",
+      "name": "social",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "social-profiles@Pe5Brb9kz4rtaiRzQd7Yb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spam",
+      "name": "spam",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spam-policies@A5iHuWB9iK7jENaejMn3o",
+            "spam-updates@SRj8TY7e1R2hp2szpWJWm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ssr",
+      "name": "ssr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ssr-vs-csr-vs-hydration@DajReU0-DBUgYY0pCQsDL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-data--schema@QnPVD19vPlOe2oDAPJBs0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structuring",
+      "name": "structuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structuring-for-ai-extraction@XKYyTdQI6u-FJi98NfVkZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Surfer",
+      "name": "surfer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "surfer-seo@qaCx0Gv5rwygp9S5yq2qy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Things",
+      "name": "things",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "things-to-do-listings@FlVQRYC2Hz1DS3ZaG3bC-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Title",
+      "name": "title",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "title-tags@u2SdSqMRk4rg5FyGjxxr3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Topic",
+      "name": "topic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "topic-clusters@aT2nu8jFoZlGzo2NyfbYT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tracking",
+      "name": "tracking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tracking-volatility@nKUO2T03h5hoMkmPK7S15"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Traffic",
+      "name": "traffic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "traffic-analysis@WCYl-zIKzpvkj7sPECTIe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Training",
+      "name": "training",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "training-data-vs-grounding@pov9Swqb9vqlrXG1SY0Mo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Trust",
+      "name": "trust",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "trust-flow@o2lp6Hy3spway32copi3B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unlinked",
+      "name": "unlinked",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unlinked-brand-mentions@J80XvDDyo5ABz_lqp_fca"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Url",
+      "name": "url",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "url-parameters@hBI0amu0oW8ysTlpPCaOm",
+            "url-slugs@amdcThrIxxlGPpEOQhpio"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Video",
+      "name": "video",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "video-seo@ZgEuJltdiYtS3cKhfbqG-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visibility",
+      "name": "visibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visibility-metrics@LGSCuqpHodPb7kBNdlJvh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Volume",
+      "name": "volume",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "volume-difficulty--potential@gN7DO-nppNh5SIH8HaC--"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Website",
+      "name": "website",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "website-architecture@Ho5HGnILJCvSD_j1RRkJb",
+            "website-architecture@OapKwz8bSH74O6NmP95Oc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-aeo@piJTqOMCBsHPCAq_FAxhy",
+            "what-is-geo@-LOrBTuP1uvdDyGAaYoMW",
+            "what-is-seo@pectMOVUWqkyoIF_xhdo0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "White",
+      "name": "white",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "white-black-grey-hat-seo@B0OXVuuvU1bcIDwaDXRe1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zero",
+      "name": "zero",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zero-click-attribution@0UrmD8ApQRXOzw7rtbPnp"
+          ]
+        }
+      ]
+    }
+  ]
+}

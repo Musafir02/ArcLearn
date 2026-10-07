@@ -1,0 +1,4 @@
+{
+  "title": "Apollo-Android",
+  "content": "Apollo Android is a GraphQL client for Android and Kotlin that generates type-safe Kotlin models from a GraphQL schema and query files. It handles query execution, caching, and subscriptions, and integrates with Kotlin coroutines. Apollo-Android allows working with GraphQL APIs in a structured, compile-time-safe way.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Apollo Android](https://www.apollographql.com/docs/kotlin/v2/)\r\n- [@official@Apollo Docs](https://www.apollographql.com/docs/kotlin/)\r\n- [@opensource@apollographql/apollo-kotlin - GraphQL for Android](https://github.com/apollographql/apollo-kotlin)"
+}

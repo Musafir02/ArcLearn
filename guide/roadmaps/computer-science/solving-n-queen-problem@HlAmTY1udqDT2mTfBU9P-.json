@@ -1,0 +1,4 @@
+{
+  "title": "Solving n Queen Problem",
+  "content": "N Queen Problem is a famous problem in Computer Science. It is a problem of placing n queens on an n x n chessboard such that no two queens attack each other. The problem is to find all possible solutions to the problem.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@N-Queens problem using backtracking in Java/C++](https://www.digitalocean.com/community/tutorials/n-queens-problem-java-c-plus-plus)\r\n- [@video@6.1 N Queens Problem using Backtracking](https://www.youtube.com/watch?v=xFv_Hl4B83A)"
+}

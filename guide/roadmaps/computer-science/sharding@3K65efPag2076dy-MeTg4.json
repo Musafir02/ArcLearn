@@ -1,0 +1,4 @@
+{
+  "title": "Sharding",
+  "content": "Database sharding is a method of distributing data across multiple machines. It is a horizontal scaling technique, as opposed to vertical scaling, which is scaling by adding more power to a single machine. Sharding is a common way to scale a database.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Sharding](https://dev.to/karanpratapsingh/system-design-the-complete-course-10fo#sharding)\r\n- [@video@Sharding & Database Partitioning | System Design Basics](https://www.youtube.com/watch?v=RynPj8C0BXA)\r\n- [@video@Database Sharding - Watch](https://www.youtube.com/watch?v=hdxdhCpgYo8)\r\n- [@video@Database Sharding in 5 minutes](https://www.youtube.com/watch?v=kSH4bt8ypOQ)"
+}

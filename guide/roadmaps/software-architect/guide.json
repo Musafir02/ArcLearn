@@ -1,0 +1,825 @@
+{
+  "title": "Software Architect Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Acid",
+      "name": "acid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acid-cap-theorem@bbKEEk7dvfFZBBJaIjm0j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apache",
+      "name": "apache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apache-spark@a0baFv7hVWZGvS5VLh5ig"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apis",
+      "name": "apis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apis--integrations@Ocn7-ctpnl71ZCZ_uV-uD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Application",
+      "name": "application",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "application-architecture@Lqe47l4j-C4OwkbkwPYry"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Atlassian",
+      "name": "atlassian",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "atlassian-tools@3bpd0iZTd3G-H8A7yrExY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Auth",
+      "name": "auth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "auth-strategies@KiwFXB6yd0go30zAFMTJt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bpm",
+      "name": "bpm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bpm-bpel@DwNda95-fE7LWnDA6u1LU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd@isavRe4ANVn77ZX6gNSLH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client--server@mka_DwiboH5sGFhXhk6ez"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-design-patterns@CxceVdaNCyKDhs0huDtcL",
+            "cloud-providers@C0rKd5Rr27Z1_GleoEZxF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Consult",
+      "name": "consult",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "consult--coach@LSWlk9A3b6hco9Il_elao"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cqrs",
+      "name": "cqrs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cqrs-eventual-consistency@RsnN5bt8OhSMjSFmVgw-X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Datawarehouse",
+      "name": "datawarehouse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "datawarehouse-principles@B5YtP8C1A0jB3MOdg0c_q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decision",
+      "name": "decision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decision-making@MSDo0nPk_ghRYkZS4MAQ_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design--architecture@fBd2m8tMJmhuNSaakrpg4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Distributed",
+      "name": "distributed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "distributed-systems@j7OP6RD_IAU6HsyiGaynx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Emc",
+      "name": "emc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "emc-dms@YfYviOXqGVp9C6DuhqBrn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enterprise",
+      "name": "enterprise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enterprise-architecture@vlW07sc-FQnxPMjDMn8_F",
+            "enterprise-software@8yALyPVUZPtd7LX3GrO1e"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Esb",
+      "name": "esb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "esb-soap@fELnBA0eOoE-d9rSmDJ8l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Estimate",
+      "name": "estimate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "estimate-and-evaluate@m0ZYdqPFDoHOPo18wKyvV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Etl",
+      "name": "etl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "etl-datawarehouses@JUFE4OQhnXOt1J_MG-Sjf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-programming@6FDGecsHbqY-cm32yTZJa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "actors@AoWO2BIKG5X4JWir6kh5r",
+            "architecture@OaLmlfkZid7hKqJ9G8oNV",
+            "babok@LQlzVxUxM3haWRwbhYHKY",
+            "balance@otHQ6ye1xgkI1qb4tEHVF",
+            "communication@Ac49sOlQKblYK4FZuFHDR",
+            "containers@l3oeo65FyV5HHvw5n_1wa",
+            "ddd@IIelzs8XYMPnXabFKRI51",
+            "documentation@5D-kbQ520k1D3fCtD01T7",
+            "firewalls@Hqk_GGsFi14SI5fgPSoGV",
+            "frameworks@hjlkxYZS7Zf9En3IUS-Wm",
+            "git@ZEzYb-i55hBe9kK3bla94",
+            "github@PyTuVs08_z4EhLwhTYzFu",
+            "go@nKlM9k4qAh4wBFXqM-2kC",
+            "graphql@Sp3FdPT4F9YnTGvlE_vyq",
+            "grpc@priDGksAvJ05YzakkTFtM",
+            "hadoop@I_VjjmMK52_tS8qjQUspN",
+            "iaf@wFu9VO48EYbIQrsM8YUCj",
+            "itil@Rq1Wi-cHjS54SYo-Btp-e",
+            "kanban@O7H6dt3Z7EKohxfJzwbPM",
+            "layered@05hLO2_A8Tr6cLJGFRhOh",
+            "less@qwpsGRFgzAYstM7bJA2ZJ",
+            "management@UyIwiIiKaa6LTQaqzbCam",
+            "microfrontends@vpko5Kyf6BZ5MHpxXOKaf",
+            "microservices@b6lCGw82qKpUmsxe1r1f5",
+            "networks@cBWJ6Duw99tSKr7U6OW3A",
+            "oop@AMDLJ_Bup-AY1chl_taV3",
+            "osi@Mt5W1IvuHevNXVRlh7z26",
+            "owasp@KhqUK-7jdClu9M2Pq7x--",
+            "pki@OpL2EqvHbUmFgnpuhtZPr",
+            "pmi@hRug9yJKYacB9X_2cUalR",
+            "prince2@SJ5lrlvyXgtAwOx4wvT2W",
+            "proxies@6_EOmU5GYGDGzmNoLY8cB",
+            "python@j2Ph2QcKwmKlbaMHz1l_i",
+            "responsibilities@rUxbG2S2nJuA1YVY6sjiX",
+            "rest@Ss43xwK1ydEToj6XmmCt7",
+            "ruby@U_Hmzfjjs1jVtu2CZ0TlG",
+            "rup@7rudOREGG-TTkCosU0hNw",
+            "safe@Bg7ru1q1j6pNB43HGxnHT",
+            "salesforce@mOXyzdNn8W-9R99ffcnor",
+            "scrum@PKqwKvoffm0unwcFwpojk",
+            "security@IzFTn5-tQuF_Z0cG_w6CW",
+            "serverless@FAXKxl3fWUFShYmoCsInZ",
+            "slack@CYnUg_okOcRrD7fSllxLW",
+            "solid@QNG-KP01WQnq8o1-In1-n",
+            "tdd@DnP66pjK3b8tCtYr05n2G",
+            "togaf@5TDTU22Fla2mRr6JeOcaY",
+            "tools@SuMhTyaBS9vwASxAt39DH",
+            "trello@a6joS9WXg-rbw29_KfBd9",
+            "uml@8FTKnAKNL9LnZBrw9YXqK",
+            "xp@7fL9lSu4BD1wRjnZy9tM9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hadoop",
+      "name": "hadoop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hadoop-spark-mapreduce@92GG4IRZ3FijumC94aL-T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hashing",
+      "name": "hashing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hashing-algorithms@7tBAD0ox9hTK4D483GTRo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-to-code@77KvWCA1oHSGgDKBTwjv7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-https@Nq6o6Ty8VyNRsvg-UWp7D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ibm",
+      "name": "ibm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ibm-bpm@5EVecZmvor09LjD7WR_Y9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Important",
+      "name": "important",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "important-skills-to-learn@lBtlDFPEQvQ_xtLtehU0S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Infrastructure",
+      "name": "infrastructure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "infrastructure-as-code@igf9yp1lRdAlN5gyQ8HHC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Java",
+      "name": "java",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "java--kotlin--scala--swift@a5DB_hsD4bAf8BtHNFNPo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript--typescript@bhP5gMpRVebSFpCeHVXBj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Levels",
+      "name": "levels",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "levels-of-architecture@2sR4KULvAUUoOtopvsEBs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linux",
+      "name": "linux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linux--unix@XnvlRrOhdoMsiGwGEhBro"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Marketing",
+      "name": "marketing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "marketing-skills@YW6j3Sg511dXToTcwSnOS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Messaging",
+      "name": "messaging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "messaging-queues@4NVdEbmpQVHpBc7582S6E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ms",
+      "name": "ms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ms-dynamics@gdtI0H_PzzTj_aFQn_NeA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mvc",
+      "name": "mvc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mvc-mvp-mvvm@jj5otph6mEYiR-oU5WVtT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Net",
+      "name": "net",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "net-framework-based@D1IXOBUrrXf5bXhVu9cmI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nosql",
+      "name": "nosql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nosql-databases@57liQPaPyVpE-mdLnsbi0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operations",
+      "name": "operations",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operations-knowledge@EdJhuNhMSWjeVxGW-RZtL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Patterns",
+      "name": "patterns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "patterns--design-principles@_U0VoTkqM1d6NR13p5azS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-languages@uoDtVFThaV6OMK2wXGfP5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-vue-angular@mCiYCbKIOVU34qil_q7Hg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reactive",
+      "name": "reactive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reactive-programming@C0g_kQFlte5siHMHwlHQb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sap",
+      "name": "sap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sap-erp-hana-business-objects@TxWAznp1tUtZ1MvThf9M1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serverless",
+      "name": "serverless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serverless-concepts@WoXoVwkSqXTP5U8HtyJOL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-mesh@OErbfM-H3laFm47GCHNPI",
+            "service-oriented@6uvmMgvOwGyuLC5TOhjFu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Simplifying",
+      "name": "simplifying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "simplifying-things@lrtgF1RTaS4TCKww0aY6C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Solution",
+      "name": "solution",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "solution-architecture@uGs-9xE3DMJxKhenltbFK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spa",
+      "name": "spa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spa-ssr-ssg@ulwgDCQi_BYx5lmll7pzU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-databases@n5AcBt_u8qtTe3PP9svPZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tcpip",
+      "name": "tcpip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tcpip-model@UCCT7-E_QUKPg3jAsjobx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technical",
+      "name": "technical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technical-skills@hFx3mLqh5omNxqI9lfaAQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-the-basics@4zicbh7Wg2lmKSRhb6E-L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "W3c",
+      "name": "w3c",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "w3c-and-whatwg@s0RvufK2PLMXtlsn2KAUN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-mobile@j9Y2YbBKi3clO_sZ2L_hQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-a-software-architect@eG38hT0rotYJ3G-t9df9R",
+            "what-is-software-architecture@EGG99VA-PEdWdVxNDLtG_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-data@YCJYRA3b-YSm8vKmGUFk5"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Enterprise Features",
+  "content": "HCP Terraform Enterprise features include audit logging, single sign-on, self-hosted deployment options, Sentinel policy enforcement, team and organization management, and private module registries. These features are aimed at large organizations that need governance controls and compliance capabilities beyond what the free tier provides.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@HashiCorp Cloud Platform](https://www.hashicorp.com/cloud)\r\n- [@official@HCP Terraform Plans and Features](https://developer.hashicorp.com/terraform/cloud-docs/overview)\r\n- [@video@How does The Infrastructure Cloud work?](https://www.youtube.com/watch?v=zWWGsJrWj5E)"
+}

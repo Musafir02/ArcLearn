@@ -1,0 +1,4 @@
+{
+  "title": "CSS Modules",
+  "content": "CSS Modules locally scope CSS by generating unique class names. This allows you to use the same class in different files without worrying about naming collisions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@CSS Modules](https://nextjs.org/docs/app/getting-started/css#css-modules)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Content Delivery Network (CDN)",
+  "content": "A CDN is a network of servers that are distributed geographically. The servers are connected to each other and to the internet. The servers are used to deliver content to users. The content is delivered to the user from the server that is closest to the user. This is done to reduce latency and improve the performance of the content delivery.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)\r\n- [@article@Content Delivery Network (CDN) - System Design](https://dev.to/karanpratapsingh/system-design-the-complete-course-10fo#content-delivery-network-cdn)\r\n- [@video@Content Delivery Networks](https://www.youtube.com/watch?v=6DXEPcXKQNY)"
+}

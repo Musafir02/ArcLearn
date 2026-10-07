@@ -1,0 +1,4 @@
+{
+  "title": "APIs and Integrations",
+  "content": "APIs and integrations define how different systems and services communicate with each other, whether within a company or across organizations. Choosing the right integration style, protocol, and data format affects performance, flexibility, and how easily new systems can be connected later. This is a core concern in almost every modern architecture, since few systems operate in isolation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is API Integration](https://www.ibm.com/topics/api-integration)\r\n- [@article@API Integration - Postman](https://www.postman.com/api-platform/api-integration/)\r\n- [@article@API First Integration](https://www.infoq.com/articles/api-first-integration/)"
+}

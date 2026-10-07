@@ -1,0 +1,4 @@
+{
+  "title": "free",
+  "content": "`free` is a standard library function used to deallocate a block of memory that was previously reserved on the heap. When you call this function, it releases the specified memory back to the system so that it can be used for other purposes in the program. Passing a pointer to the start of a previously allocated memory block to `free` effectively marks that space as available, though the pointer itself remains unchanged and should ideally be set to `NULL` immediately afterward to prevent accidental use of dangling references.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@C Deallocate Memory](https://www.w3schools.com/c/c_memory_deallocate.php)\r\n- [@article@C library - free() function](https://www.tutorialspoint.com/c_standard_library/c_function_free.htm)\r\n- [@video@Releasing the Dynamically Allocated Memory using free()](https://www.youtube.com/watch?v=qG0wUzuBI_A)"
+}

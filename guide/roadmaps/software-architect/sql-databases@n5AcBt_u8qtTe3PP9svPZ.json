@@ -1,0 +1,4 @@
+{
+  "title": "Sql databases",
+  "content": "SQL stands for Structured Query Language. It's used for relational databases. A SQL database is a collection of tables that stores a specific set of structured data. Examples of SQL Databases includes MariaDB, MySQL and PostgreSQL.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated SQL Roadmap](https://roadmap.sh/sql)\r\n- [@article@What is SQL? - AWS](https://aws.amazon.com/what-is/sql/)\r\n- [@article@SQL Databases](https://www.openlogic.com/blog/what-sql-database)"
+}

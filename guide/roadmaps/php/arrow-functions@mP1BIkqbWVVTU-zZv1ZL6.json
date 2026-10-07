@@ -1,0 +1,4 @@
+{
+  "title": "Arrow Functions",
+  "content": "Arrow functions provide a more concise syntax to create anonymous functions. The feature enthusiastically borrowed from modern Javascript significantly improves PHP's functional programming credibility. The primary difference between regular PHP closures and PHP Arrow functions is the automatic capturing of variables from the parent scope.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Arrow Functions](https://www.php.net/manual/en/functions.arrow.php)"
+}

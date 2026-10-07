@@ -1,0 +1,4 @@
+{
+  "title": "Trivy",
+  "content": "Trivy is a security scanner that can analyze Terraform configurations for misconfigurations in addition to scanning container images and filesystems. It checks infrastructure code against a set of built-in rules and reports issues by severity. Trivy is easy to integrate into CI workflows and supports multiple output formats.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Trivy Website](https://trivy.dev/)\r\n- [@opensource@aquasecurity/trivy](https://github.com/aquasecurity/trivy)\r\n- [@article@How to secure Terraform code with Trivy](https://verifa.io/blog/how-to-secure-terraform-trivy/)"
+}

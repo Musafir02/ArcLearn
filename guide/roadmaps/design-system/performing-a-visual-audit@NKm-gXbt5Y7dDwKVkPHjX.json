@@ -1,0 +1,4 @@
+{
+  "title": "Performing a Visual Audit",
+  "content": "A visual audit is the process of collecting and examining all existing user interface elements across a product to identify inconsistencies in styles, components, and patterns. This practice involves capturing screenshots of current screens and grouping similar items to reveal discrepancies in typography, color usage, spacing, and iconography. By documenting these variations, teams can establish a clear baseline of the current design state and prioritize the necessary cleanup or standardization required for the new design system."
+}

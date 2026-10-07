@@ -1,0 +1,781 @@
+{
+  "title": "Devops Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Alibaba",
+      "name": "alibaba",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "alibaba-cloud@YUJf-6ccHvYjL_RzufQ-G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Artifact",
+      "name": "artifact",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "artifact-management@zuBAjrqQPjj-0DHGjCaqT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aws",
+      "name": "aws",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aws-cdk@XA__697KgofsH28coQ-ma",
+            "aws-ecs--fargate@FE2h-uQy6qli3rKERci1j",
+            "aws-lambda@UfQrIJ-uMNJt9H_VM_Q5q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-functions@mlrlf2McMI7IBhyEdq0Nf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-server@R4XSY4TSjU1M7cW66zUqJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd-tools@aQJaouIaxIJChM-40M3HQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circle",
+      "name": "circle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circle-ci@1-JneOQeGhox-CKrdiquq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-design-patterns@Qc0MGR5bMG9eeM5Zb9PMk",
+            "cloud-providers@2Wd9SlWGg6QtxgiUVLyZL",
+            "cloud-smith@vsmE6EpCc2DFGk1YTbkHS",
+            "cloud-specific-tools@yQ4d2uiROZYr950cjYnQE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Configuration",
+      "name": "configuration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "configuration-management@V9sOxlNOyRp0Mghl7zudv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Container",
+      "name": "container",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "container-orchestration@Yq8kVoRf20aL_o4VZU5--"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-management@5FN7iva4DW_lv-r1tijd8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-and-implementation@1_NRXjckZ0F8EtEmgixqz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Digital",
+      "name": "digital",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "digital-ocean@-h-kNVDNzZYnQAR_4lfXc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Docker",
+      "name": "docker",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "docker-swarm@VD24HC9qJOC42lbpJ-swC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Domain",
+      "name": "domain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "domain-keys@RYCD78msIR2BPJoIP71aj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elastic",
+      "name": "elastic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elastic-stack@K_qLhK2kKN_uCq7iVjqph"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forward",
+      "name": "forward",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forward-proxy@F93XnRj0BLswJkzyRggLS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ftp",
+      "name": "ftp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ftp--sftp@RDLmML_HS2c8J4D_U_KYe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gcp",
+      "name": "gcp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gcp-functions@JXsctlXUUS1ie8nNEgIk9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ansible@h9vVPOmdUSeEGVQQaSTH5",
+            "apache@0_GMTcMeZv3A8dYkHRoW7",
+            "argocd@i-DLwNXdCUUug6lfjkPSy",
+            "artifactory@C_sFyIsIIpriZlovvcbSE",
+            "availability@JCe3fcOf-sokTJURyX1oI",
+            "aws@1ieK6B_oqW8qOC6bdmiJe",
+            "azure@ctor79Vd7EXDMdrLyUcu_",
+            "bash@syBIAL1mHbJLnTBoSxXI7",
+            "bitbucket@Z7SsBWgluZWr9iWb2e9XO",
+            "buildkite@1du8Q2pRZM82ri6jBy5T7",
+            "caddy@54UZNO2q8M5FiA_XbcU_D",
+            "chef@kv508kxzUj_CjZRb-TeRv",
+            "cloudflare@l8VAewSEXzoyqYFhoplJj",
+            "cloudformation@TgBb4aL_9UkyU36CN4qvS",
+            "consul@OXOTm3nz6o44p50qd0brN",
+            "contabo@eJZdjheptmiwKsVokt7Io",
+            "containers@CQhUflAcv1lhBnmDY0gaz",
+            "datadog@BHny2Emf96suhAlltiEro",
+            "datadog@bujq_C-ejtpmk-ICALByy",
+            "dmarc@5vUKHuItQfkarp7LtACvX",
+            "dns@Vu955vdsYerCG8G6suqml",
+            "docker@P0acFNZ413MSKElHqCxr3",
+            "dynatrace@4aJVaimsuvGIPXMZ_WjaA",
+            "envoy@epLLYArR16HlhAS4c33b4",
+            "eso@lUUJAEBrGJvL8dRs2n1GD",
+            "firewall@f3tM2uo6LLSOmyeFfLc7h",
+            "fluxcd@6gVV_JUgKgwJb4C8tHZn7",
+            "freebsd@PiPHFimToormOPl1EtEe8",
+            "git@uyDm1SpOQdpHjq9zBAdck",
+            "github@ot9I_IHdnq2yAMffrSrbN",
+            "gitlab@oQIB0KE0BibjIYmxrpPZS",
+            "gitops@-INN1qTMLimrZgaSPCcHj",
+            "go@npnMwSDEK2aLGgnuZZ4dO",
+            "grafana@niA_96yR7uQ0sc6S_OStf",
+            "graylog@s_kss4FJ2KyZRdcKNHK2v",
+            "heroku@FaPf567JGRAg1MBlFj9Tk",
+            "hetzner@I327qPYGMcdayRR5WT0Ek",
+            "http@ke-8MeuLx7AS2XjSsPhxe",
+            "https@AJO3jtHvIICj8YKaSXl0U",
+            "iis@5iJOE1QxMvf8BQ_8ssiI8",
+            "imap@WMuXqa4b5wyRuYAQKQJRj",
+            "istio@XsSnqW6k2IzvmrMmJeU6a",
+            "jaeger@8rd7T5ahK2I_zh5co-IF-",
+            "jenkins@dUapFp3f0Rum-rf_Vk_b-",
+            "kubernetes@hIBeTUiAI3zwUY6NgAO-A",
+            "linkerd@hhoSe4q1u850PgK62Ubau",
+            "loki@w2eCgBC-ydMHSxh7LMti8",
+            "lxc@qYRJYIZsmf-inMqKECRkI",
+            "netbsd@haiYSwNt3rjiiwCDszPk1",
+            "netlify@hCKODV2b_l2uPit0YeP1M",
+            "nexus@ootuLJfRXarVvm3J1Ir11",
+            "nginx@ukOrSeyK1ElOt9tTjCkfO",
+            "observability@wNguM6-YEznduz3MgBCYo",
+            "openbsd@97cJYKqv7CPPUXkKNwM4x",
+            "openshift@3GryoQuI67JTHg9r3xUHO",
+            "opentelemetry@K81bmtgnB1gfhYdi3TB5a",
+            "papertrail@cjjMZdyLgakyVkImVQTza",
+            "pop3s@fzO6xVTBxliu24f3W5zaU",
+            "prometheus@eOyu4wmKOrcMlhD8pUGGh",
+            "prometheus@NiVvRbCOCDpVvif48poCo",
+            "provisioning@1oYvpFG8LKT1JD6a_9J0m",
+            "pulumi@O0xZ3dy2zIDbOetVrgna6",
+            "puppet@yP1y8U3eblpzbaLiCGliU",
+            "python@TwVfCYMS9jSaJ6UyYmC-K",
+            "railway@e0CIteRMxc0DydKEJnMhp",
+            "render@DjDR8Yn5Q55NvoihElj7m",
+            "ruby@PuXAPYA0bsMgwcnlwJxQn",
+            "rust@eL62bKAoJCMsu7zPlgyhy",
+            "salt@Kumwd6XOlEMeDohDH0q9P",
+            "serverless@9p_ufPj6QH9gHbWBQUmGw",
+            "smtp@zJy9dOynWgLTDKI1iBluG",
+            "sops@GHQWHLxsO40kJ6z_YCinJ",
+            "spf@ewcJfnDFKXN8I5TLpXEaB",
+            "splunk@dZID_Y_uRTF8JlfDCqeqs",
+            "ssh@wcIRMLVm3SdEJWF9RPfn7",
+            "teamcity@L000AbzF3oLcn4B1eUIYX",
+            "terraform@nUBGf1rp9GK_pbagWCP9g",
+            "tomcat@dF3otkMMN09tgCzci8Jyv",
+            "vault@tZzvs80KzqT8aDvEyjack",
+            "vercel@LZDRgDxEZ3klp2PrrJFBX",
+            "windows@UOQimp7QkM3sxmFvk5d3i",
+            "zabbix@W9sKEoDlR8LzocQkqSv82"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@JnWVCS1HbAyfCJzGt-WOH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gitlab",
+      "name": "gitlab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gitlab-ci@2KjSLLVTvl2G2KValw7S7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gke",
+      "name": "gke",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gke--eks--aks@XbrWlTyH4z8crSHkki2lp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-cloud@zYrOxFQkl3KSe67fh3smD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Infrastructure",
+      "name": "infrastructure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "infrastructure-monitoring@qqRLeTpuoW64H9LvY0U_w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript--nodejs@QCdemtWa2mE78poNXeqzr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-a-programming-language@v5FGKQc-_7NYEsWjmTEuq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load-balancer@i8Sd9maB_BeFurULrHXNq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logs",
+      "name": "logs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logs-management@gaoZjOYmU0J5aM6vtLNvN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Management",
+      "name": "management",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "management-and-monitoring@8kby89epyullS9W7uKDrs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking--protocols@w5d24Sf8GDkLDLGUPxzS9",
+            "networking-tools@OaqKLZe-XnngcDhDzCtRt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "New",
+      "name": "new",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "new-relic@pk76Us6z8LoX3f0mhnCyR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Octopus",
+      "name": "octopus",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "octopus-deploy@TsXFx1wWikVBVoFUUDAMx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operating",
+      "name": "operating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operating-system@qe84v529VbCyydl0BKFk2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Osi",
+      "name": "osi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "osi-model@QZ7bkY-MaEgxYoPDP3nma"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-monitoring@gIEQDgKOsoEnSv8mpEzGH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Power",
+      "name": "power",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "power-shell@z6IBekR8Xl-6f8WEb05Nw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-monitoring@x-JWvG1iw86ULL9KrQmRu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reverse",
+      "name": "reverse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reverse-proxy@eGF7iyigl57myx2ejpmNC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rhel",
+      "name": "rhel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rhel--derivatives@7mS6Y_BOAHNgM3OjyFtZ9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sealed",
+      "name": "sealed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sealed-secrets@ZWq23Q9ZNxLNti68oltxA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Secret",
+      "name": "secret",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "secret-management@hcrPpjFxPi_iLiMdLKJrO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-mesh@EeWsihH9ehbFKebYoB5i9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ssl",
+      "name": "ssl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ssl--tls@0o6ejhfpmO4S8A6djVWva"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Suse",
+      "name": "suse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "suse-linux@zhNUK953p6tjREndk3yQZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Terminal",
+      "name": "terminal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "terminal-knowledge@wjJPzrFJBNYOD3SJLzW2M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-manipulation@cUifrP7v55psTb20IZndf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ubuntu",
+      "name": "ubuntu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ubuntu--debian@cTqVab0VbVcn3W7i0wBrX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vcs",
+      "name": "vcs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vcs-hosting@h10BH3OybHcIN2iDTSGkn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control-systems@LvhFmlxz5uIy7k_nzx2Bv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vim",
+      "name": "vim",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vim--nano---emacs@Jt8BmtLUH6fHT2pGKoJs3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-and-how-to-setup-x@jCWrnQNgjHKyhzd9dwOHz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "White",
+      "name": "white",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "white--grey-listing@E-lSLGzgOPrz-25ER2Hk7"
+          ]
+        }
+      ]
+    }
+  ]
+}

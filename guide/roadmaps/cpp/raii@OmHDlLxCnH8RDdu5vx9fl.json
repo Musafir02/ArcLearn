@@ -1,0 +1,4 @@
+{
+  "title": "RAII",
+  "content": "RAII (Resource Acquisition Is Initialization) is a C++ idiom that ties the management of resources to the lifetime of objects. Resources are acquired during object construction and automatically released when the object is destroyed, typically in the destructor. This ensures resources are properly managed, even in the face of exceptions, preventing leaks and simplifying code by automating resource cleanup.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@RAII](https://en.cppreference.com/w/cpp/language/raii.html)\r\n- [@video@What is RAII (Resource Acquisition Is Initialization)?](https://www.youtube.com/watch?v=q6dVKMgeEkk)"
+}

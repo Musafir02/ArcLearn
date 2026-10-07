@@ -1,0 +1,4 @@
+{
+  "title": "Logical Operators in Bash",
+  "content": "Logical operators in Bash are used to combine or modify conditional expressions. They allow you to create more complex tests within your scripts, enabling you to execute commands based on multiple conditions being true or false. The primary logical operators are `&&` (AND), `||` (OR), and `!` (NOT). These operators are essential for controlling the flow of your scripts based on the evaluation of different conditions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@How to program with Bash: Logical operators and shell expansions](https://opensource.com/article/19/10/programming-bash-logical-operators-shell-expansions)\r\n- [@video@Logical Operators - Bash Programming Tutorial 8](https://www.youtube.com/watch?v=sDRHmbRlNT8)"
+}

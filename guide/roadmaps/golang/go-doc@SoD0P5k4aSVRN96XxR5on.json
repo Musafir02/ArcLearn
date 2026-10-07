@@ -1,0 +1,4 @@
+{
+  "title": "go doc",
+  "content": "Prints documentation for Go packages, types, functions, and methods extracted from specially formatted comments. Use `go doc package` or `go doc package.Function` to view specific documentation. Essential for exploring APIs and verifying documentation formatting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@go doc](https://tip.golang.org/doc/comment)\r\n- [@official@go package](https://pkg.go.dev/cmd/go)\r\n- [@article@Documenting Your Go Code with go doc](https://go-cookbook.com/snippets/tools/go-doc)\r\n- [@official@Godoc: Documenting Go Code](https://go.dev/blog/godoc)"
+}

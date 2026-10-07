@@ -1,0 +1,4 @@
+{
+  "title": "Decorators",
+  "content": "Decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are usually called before the definition of a function you want to decorate.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Learn Decorators in Python](https://pythonbasics.org/decorators/)\r\n- [@video@Decorators in Python](https://www.youtube.com/watch?v=FXUUSfJO_J4)\r\n- [@video@Python Decorators in 1 Minute](https://www.youtube.com/watch?v=BE-L7xu8pO4)"
+}

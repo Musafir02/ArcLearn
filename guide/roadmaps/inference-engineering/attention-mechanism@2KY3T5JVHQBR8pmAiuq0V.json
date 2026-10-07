@@ -1,0 +1,4 @@
+{
+  "title": "Attention Mechanism",
+  "content": "Attention is the mechanism transformers use to relate each token to all previous tokens via query, key, and value projections. During decode, each new token attends to every prior token, and the KV cache stores precomputed keys and values to avoid recomputation. Attention is the most expensive and most heavily optimized operation in LLM inference.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Attention Is All You Need](https://arxiv.org/abs/1706.03762)\r\n- [@article@What is an attention mechanism?](https://www.ibm.com/think/topics/attention-mechanism)\r\n- [@video@Attention mechanism: Overview](https://www.youtube.com/watch?v=fjJOgb-E41w&t=1s)\r\n- [@video@Attention in transformers, step-by-step](https://www.youtube.com/watch?v=eMlx5fFNoYc)"
+}

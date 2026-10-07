@@ -1,0 +1,4 @@
+{
+  "title": "check_pgbackrest",
+  "content": "Monitoring `pgBackRest` helps ensure that your PostgreSQL backups are consistent, up-to-date, and free from any potential issues. By regularly checking your backups, you'll be able to maintain a reliable and efficient backup-restore process for your PostgreSQL database.\r\n\r\n`pgBackRest` provides a built-in command called `check` which performs various checks to validate your repository and configuration settings. The command is executed as follows:\r\n\r\n    pgbackrest --stanza=<stanza_name> check\r\n    \r\n\r\n`<stanza_name>` should be replaced with the name of the stanza for which you want to verify the repository and configuration settings.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@pgBackRest Website](https://pgbackrest.org/)"
+}

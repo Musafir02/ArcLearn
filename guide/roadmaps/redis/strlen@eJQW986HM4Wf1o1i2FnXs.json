@@ -1,0 +1,4 @@
+{
+  "title": "STRLEN",
+  "content": "`STRLEN` returns the length of the string stored at a key in bytes. It returns 0 if the key does not exist. This is useful for validating string size before processing or truncating values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@STRLEN](https://redis.io/docs/latest/commands/strlen/)"
+}

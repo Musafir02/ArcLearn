@@ -1,0 +1,4 @@
+{
+  "title": "Hoisting",
+  "content": "Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their containing scope before code execution. Variables declared with `var` are hoisted and initialized as `undefined`. Function declarations are fully hoisted, meaning they can be called before they appear in the source code. `let` and `const` are hoisted but not initialized, resulting in a temporal dead zone.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Hoisting - MDN Docs](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)\r\n- [@article@Understanding Hoisting](https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript)\r\n- [@video@Learn JavaScript Hoisting In 5 Minutes](https://www.youtube.com/watch?v=EvfRXyKa_GI)"
+}

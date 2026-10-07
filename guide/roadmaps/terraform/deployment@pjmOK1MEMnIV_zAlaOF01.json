@@ -1,0 +1,4 @@
+{
+  "title": "Deployment",
+  "content": "Deployment refers to the process of applying a configuration to create or update infrastructure. The typical workflow involves running `terraform plan` to preview changes and `terraform apply` to execute them. Understanding what happens during these steps is necessary for safe and predictable infrastructure management.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@The Core Terraform Workflow](https://developer.hashicorp.com/terraform/intro/core-workflow)"
+}

@@ -1,0 +1,836 @@
+{
+  "title": "Api Design Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-documentation-tools@5R9yKfN1vItuv__HgCwP7",
+            "api-gateways@MJeUD4fOHaJu1oxk4uQ-x",
+            "api-integration-patterns@R3aRhqCslwhegMfHtxg5z",
+            "api-keys--management@tzUJwXu_scwQHnPPT0oY-",
+            "api-lifecycle-management@At5exN7ZAx2IzY3cTCzHm",
+            "api-performance@d9ZXdU73jiCdeNHQv1_DH",
+            "api-security@qIJ6dUppjAjOTA8eQbp0n",
+            "api-testing@Wpk4TvxcZOJgAoXjrOsZF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authentication",
+      "name": "authentication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication-methods@cQnQ9v3mH27MGNwetz3JW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authorization",
+      "name": "authorization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authorization-methods@nHbn8_sMY7J8o6ckbD-ER"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-auth@0FzHERK5AeYL5wv1FBJbH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-of-dns@v4nJYD9yiIEUviLPhVTCD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Batch",
+      "name": "batch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "batch-processing@X68HXAAV-nKo-V4Fu1o72"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-practices@q1yaf-RbHIQsOqfzjn4k4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bff",
+      "name": "bff",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bff-pattern@v8iYctF_k40ES0_hHXS9N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-json--restful-apis@awdoiCHz7Yc3kYac_iy-a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-strategies@PrvRCR4HCdGar0vcUbG_a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-vulnerabilities@G70wvcOM1Isrx5ZBvS2xP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-negotiation@TX_hg7EobNJhmWKsMCaT1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contract",
+      "name": "contract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contract-testing@NqeBglhzukVMMEF9p2CXc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Crud",
+      "name": "crud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "crud-operations@zXxEiM5HeOn7W-Vue0tQf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Different",
+      "name": "different",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "different-api-styles@o8i093VQv-T5Qf1yGqU0R"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling--retries@XD1vDtrRQFbLyKJaD1AlA",
+            "error-handling@8tELdagrOaGCf3nMVs8t3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-driven-architecture@oMfOBkVsgiLvFLicOUdx6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filtering",
+      "name": "filtering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filtering-sorting--search@dL3YellfAszBeJnm8KEYE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-testing@6lm3wy9WTAERTqXCn6pFt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abac@dZTe_kxIUQsc9N3w920aR",
+            "ccpa@a-_iIE7UdoXzD00fD9MxN",
+            "cookies@UFuX8wcxZQ7dvaQF_2Yp8",
+            "cors@GRlsBogOlOwuqhMMPyHN3",
+            "dac@_BXgYUlaYfpYrryXTw5n2",
+            "gdpr@vZxdswGLHCPi5GSuXEcHJ",
+            "hateoas@LByD1vhzunhY1uY1YGZHP",
+            "hipaa@W4WwTmgZGnWmiYsB0ezml",
+            "http@2HdKzAIQi15pr3YHHrbPp",
+            "idempotency@20KEgZH6cu_UokqWpV-9I",
+            "jwt@tWg68AHLIr1gIZA1za3jp",
+            "kafka@boYX1QcJullypfX4sevdy",
+            "mac@tl1wXmOaj_zHL2o38VygO",
+            "observability@oIZimEuBHCBGsK6b-s57f",
+            "oidc@jWekRGRa1131w92oS1HeW",
+            "pagination@pgJDzP3pJjhjr5wTRtPJO",
+            "pbac@nJWtUyn9bljh3T-q_adJK",
+            "pii@mXCKtLUvwVJkHrpHzOecq",
+            "postman@KQAus72RGqx5f-3-YeJby",
+            "rbac@wFsbmMi5Ey9UyDADdbdPW",
+            "readmecom@LxWHkhlikUaMT2G8YmVDQ",
+            "rebac@CCcY8UsGdd2pdBYHt9L4o",
+            "stoplight@OpS2NX1lPTOtfjV1wKtC4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graphql",
+      "name": "graphql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graphql-apis@MKVcPM2EzAr2_Ieyp9Fu3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grpc",
+      "name": "grpc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grpc-apis@1DrqtOwxCuFtWQXQ6ZALp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-crud-operations@zXxEiM5HeOn7W-Vue0tQf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-caching@qAolZHf_jp8hCdtqHZwC8",
+            "http-headers@rE-0yibRH6B2UBKp351cf",
+            "http-methods@rADHM-6NAxEjzmgiHefDX",
+            "http-status-codes@7szYyzLifKsepNU0c2KnN",
+            "http-versions@ACALE93mL4gnX5ThRIdRp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing@qZELS5vw2feS7QfyD7spX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-generation--rotation@0fSfFtskcJ0HNUZPf998l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-basics@duKkpzPjUU_-8kyJGHqRX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load-balancing@p5wsniYnOS7cbHd92RxGk",
+            "load-testing@7JNEx_cbqnAx3esvwZMOd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Messaging",
+      "name": "messaging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "messaging-queues@IkPZel5zxXWIx90Qx7fZI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Microservices",
+      "name": "microservices",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "microservices-architecture@PPeBbooE121zrgNwpVTiA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mocking",
+      "name": "mocking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mocking-apis@bEVCT5QGY3uw0kIfAELKh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Naming",
+      "name": "naming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "naming-conventions@0yY_lWzWVOC_WmPoyHw8W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Oauth",
+      "name": "oauth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "oauth-20@TLuNtQ6HKYQXmglyVk8-t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pci",
+      "name": "pci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pci-dss@J0enF8UTVzY3H4n3pbPIF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-metrics@nQpczZUcn-TvrfT80dv0Q",
+            "performance-testing@DQcAV59vr1-ZRnMfbLXpu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Profiling",
+      "name": "profiling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "profiling-and-monitoring@-qdwBg7HvwlbLy3IKCRij"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rabbit",
+      "name": "rabbit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rabbit-mq@H22jAI2W5QLL-b1rq-c56"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rate",
+      "name": "rate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rate-limiting--throttling@tPVtRV818D8zAAuNbqPNa",
+            "rate-limiting@O7wjldZ3yTA2s_F-UnJw_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Real",
+      "name": "real",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "real-time-apis@JE12g5cqnwmgeTle14Vxw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-modeling@8IDks2DNFZ5nER7wK2Bu4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-principles@9WI_z34jIFXwoUQuChyRU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Restful",
+      "name": "restful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "restful-apis@BvwdASMvuNQ9DNgzdSZ4o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rfc",
+      "name": "rfc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rfc-7807----problem-details-for-apis@5CxU3inGcSHp-TDg3BQiY",
+            "rfc-7807----problem-details@5CxU3inGcSHp-TDg3BQiY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scopes",
+      "name": "scopes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scopes--permissions@qjawwRcMl2-IDwk8ExpPL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-sent-events@iNsXTtcIHsI_i-mCfjGYn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Session",
+      "name": "session",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "session-based-auth@eQWoy4CpYP3TJL2bbhPB_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Simple",
+      "name": "simple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "simple-json-apis@TVR-SkErlOHbDKLBGfxep"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Soap",
+      "name": "soap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "soap-apis@Wwd-0PjrtViMFWxRGaQey"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Standards",
+      "name": "standards",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "standards-and-compliance@yvdfoly5WHHTq2Puss355"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streaming",
+      "name": "streaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streaming-responses@zeYJPEduAmLQHqq4kNBdx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swagger",
+      "name": "swagger",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swagger--open-api@5RY7AlfRQydjxWK65Z4cv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Synchronous",
+      "name": "synchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "synchronous-vs-asynchronous-apis@--mmTKhG58_elbUqyn90G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Token",
+      "name": "token",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "token-based-auth@QTH7sy9uQZWl6ieBz7erY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-tcp--ip@KG3wO86F8Of27fU7QRcsn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@JvmW78cDm84GNhq8VEYZp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Uri",
+      "name": "uri",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "uri-design@b3qRTLwCC_9uDoPGrd9Bu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Url",
+      "name": "url",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "url-query--path-parameters@P-rGIk50Bg7nFmWieAW07"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Versioning",
+      "name": "versioning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "versioning-strategies@itILK2SXvLvAjk1Kul7EK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-sockets@UQ8N7gcVpRLAYXgUNHBt5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Webhooks",
+      "name": "webhooks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "webhooks-vs-polling@75NVxS0iwoQXxOHCkWQxH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-apis@r8M3quACGO2piu0u_R4hO"
+          ]
+        }
+      ]
+    }
+  ]
+}

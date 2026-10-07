@@ -1,0 +1,4 @@
+{
+  "title": "Tensor Flow",
+  "content": "TensorFlow is Google's open-source deep learning framework for building and training neural networks. Game backends use TensorFlow to train models offline and serve predictions via TensorFlow Serving, enabling features like matchmaking quality prediction and real-time player analytics.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Tutorials | TensorFlow Core - TensorFlow](https://www.tensorflow.org/tutorials)\r\n- [@article@TensorFlow – What Is It and Why Does It Matter? - NVIDIA](https://www.nvidia.com/en-au/glossary/tensorflow/)\r\n- [@article@Ultimate Guide to the TensorFlow Library in Python - Deepnote](https://deepnote.com/blog/ultimate-guide-to-the-tensorflow-library-in-python)"
+}

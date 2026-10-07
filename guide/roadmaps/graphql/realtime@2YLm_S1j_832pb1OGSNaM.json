@@ -1,0 +1,4 @@
+{
+  "title": "Realtime",
+  "content": "Realtime GraphQL enables live data updates through subscriptions, allowing clients to receive instant notifications when data changes. Implemented using WebSockets, Server-Sent Events, or polling, it's essential for chat applications, live feeds, and collaborative tools requiring immediate data synchronization.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Get Started with Real Time with GraphQL](https://the-guild.dev/blog/subscriptions-and-live-queries-real-time-with-graphql)"
+}

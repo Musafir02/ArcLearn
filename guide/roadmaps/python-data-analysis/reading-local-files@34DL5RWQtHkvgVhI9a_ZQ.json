@@ -1,0 +1,4 @@
+{
+  "title": "Reading Local Files",
+  "content": "Reading local files loads data stored on disk into Python for analysis. Pandas supports the most common file formats used in data work. The right function to use depends on the file format, and parameters like delimiter, encoding, and header row often need to be specified.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@pandas: How to Read and Write Files](https://realpython.com/pandas-read-write-files/)\r\n- [@video@How to Navigate File Paths: Reading Data With Pandas](https://www.youtube.com/watch?v=39pwKSJ7T1Y)"
+}

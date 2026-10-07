@@ -1,0 +1,4 @@
+{
+  "title": "quanteda",
+  "content": "quanteda is a faster, more powerful text analysis package built for working with large corpora of documents, offering more advanced features than tidytext for tasks like document-feature matrices and topic modeling. It trades some of tidytext's tidyverse-native simplicity for more performance and specialized functionality. It's typically reached for once text analysis needs outgrow what tidytext comfortably handles.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@quanteda: Quantitative Analysis of Textual Data](https://quanteda.io/)\r\n- [@opensource@quanteda](https://github.com/quanteda/quanteda)\r\n- [@video@Quanteda-1. Introduction to R-package Quanteda](https://www.youtube.com/watch?v=ypMODS_onn0)"
+}

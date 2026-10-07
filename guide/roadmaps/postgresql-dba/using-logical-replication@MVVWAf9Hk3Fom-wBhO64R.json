@@ -1,0 +1,4 @@
+{
+  "title": "4.2 Using Logical Replication",
+  "content": "Logical replication is an asynchronous feature that allows data modification to be transferred from a source (publisher) to a target system (subscriber) across different PostgreSQL database versions. It provides more granular control over the data copied and is useful during an upgrade.\r\n\r\n**Advantages of Logical Replication**\r\n\r\n*   It allows you to replicate only specific tables, rather than the entire database.\r\n*   You can create replicas with different database schemas by using a transformation layer between publisher and subscriber.\r\n*   It allows you to perform a live upgrade, avoiding the downtime of your database.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Logical Replication](https://www.postgresql.org/docs/current/logical-replication.html)\r\n- [@article@PostgreSQL Logical Replication Guide](https://www.youtube.com/watch?v=OvSzLjkMmQo)"
+}

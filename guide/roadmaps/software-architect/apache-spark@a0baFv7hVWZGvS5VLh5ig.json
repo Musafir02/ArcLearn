@@ -1,0 +1,4 @@
+{
+  "title": "Apache spark",
+  "content": "Apache Spark is a distributed data processing engine that performs computations in memory, making it significantly faster than earlier tools like MapReduce for many workloads. It supports batch processing, streaming, machine learning, and graph processing through a single unified framework. Architects often choose Spark for large scale analytics pipelines that need both speed and flexibility.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Apache Spark](https://spark.apache.org/)"
+}

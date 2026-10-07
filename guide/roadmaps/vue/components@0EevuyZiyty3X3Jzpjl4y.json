@@ -1,0 +1,4 @@
+{
+  "title": "Components",
+  "content": "Components allow us to split the UI into independent and reusable pieces, and think about each piece in isolation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Components Basics](https://vuejs.org/guide/essentials/component-basics.html)\r\n- [@official@Components in Depth](https://vuejs.org/guide/components/registration.html)"
+}

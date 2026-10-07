@@ -1,0 +1,4 @@
+{
+  "title": "Occluder",
+  "content": "An occluder is a piece of geometry that blocks the view of objects behind it. In occlusion culling systems, occluders are used to test whether other objects are hidden and can therefore be skipped during rendering. Occluders are often simplified versions of scene geometry to keep the occlusion queries fast.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Occluder and How to Use Them](https://80.lv/articles/occluders-and-how-to-use-them-for-level-design/)\r\n- [@article@Occlusion Culling Tutorial](https://thegamedev.guru/unity-performance/occlusion-culling-tutorial/)"
+}

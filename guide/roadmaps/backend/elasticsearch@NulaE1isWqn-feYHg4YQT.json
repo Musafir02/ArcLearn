@@ -1,0 +1,4 @@
+{
+  "title": "Elasticsearch",
+  "content": "Elasticsearch is a document-oriented search engine and database supporting INSERT, DELETE, RETRIEVE operations and analytics. Unlike general databases, it's optimized for search with powerful features for fast data retrieval based on search criteria.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated Elasticsearch Roadmap](https://roadmap.sh/elasticsearch)\r\n- [@official@Elasticsearch Website](https://www.elastic.co/elasticsearch/)\r\n- [@official@Elasticsearch Documentation](https://www.elastic.co/guide/index.html)\r\n- [@video@What is Elasticsearch](https://www.youtube.com/watch?v=ZP0NmfyfsoM)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Model Deployment",
+  "content": "Model deployment is the process of making a trained machine learning model available to serve predictions in a production environment. This involves packaging the model, setting up an inference server, exposing an API, and ensuring the system can handle required throughput and latency.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Machine Learning Engineering for Production (MLOps) Specialization](https://imp.i384100.net/nLA5mx)\r\n- [@article@What Is Model Deployment?](https://www.ibm.com/think/topics/model-deployment)\r\n- [@video@Top 5 Most-Used Deployment Strategies](https://www.youtube.com/watch?v=AWVTKBUnoIg)"
+}

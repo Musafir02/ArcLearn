@@ -1,0 +1,4 @@
+{
+  "title": "Control Flow",
+  "content": "Control flow refers to the order in which statements are executed in a program. JavaScript provides conditional statements (`if...else`, `switch`) to branch logic, and exception handling (`try/catch/finally`, `throw`) to manage errors. Writing clear control flow makes code easier to follow and debug.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Control Flow - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Control_flow)"
+}

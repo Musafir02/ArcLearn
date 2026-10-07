@@ -1,0 +1,4 @@
+{
+  "title": "Relational Databases",
+  "content": "Relational databases organize data into structured tables with rows and columns, using SQL for querying. Enforce data integrity through keys and constraints, handle complex queries and transactions efficiently. Examples: MySQL, PostgreSQL, Oracle. Used for structured data storage and strong consistency.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated SQL Roadmap](https://roadmap.sh/sql)\r\n- [@course@Visit the Dedicated SQL Master Course](https://roadmap.sh/courses/sql)\r\n- [@course@Databases and SQL](https://www.edx.org/course/databases-5-sql)\r\n- [@article@Relational Databases](https://www.ibm.com/cloud/learn/relational-databases)\r\n- [@article@Intro To Relational Databases](https://www.udacity.com/course/intro-to-relational-databases--ud197)\r\n- [@video@What is Relational Database](https://youtu.be/OqjJjpjDRLc)"
+}

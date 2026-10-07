@@ -1,0 +1,4 @@
+{
+  "title": "HBase",
+  "content": "HBase is a column-oriented No-SQL database management system that runs on top of Hadoop Distributed File System (HDFS), a main component of Apache Hadoop. HBase provides a fault-tolerant way of storing sparse data sets, which are common in many big data use cases. It is well-suited for real-time data processing or random read/write access to large volumes of data. HBase applications are written in Java™ much like a typical Apache MapReduce application.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Apacha HBase?](https://hbase.apache.org/)\r\n- [@article@What is HBase?](https://www.ibm.com/think/topics/hbase)\r\n- [@article@Apache HBase](https://en.wikipedia.org/wiki/Apache_HBase)"
+}

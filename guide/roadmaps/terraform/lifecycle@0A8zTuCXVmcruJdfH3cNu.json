@@ -1,0 +1,4 @@
+{
+  "title": "lifecycle",
+  "content": "The `lifecycle` block inside a resource configures how Terraform handles creation, updates, and deletion of that resource. It supports arguments like `create_before_destroy`, `prevent_destroy`, `ignore_changes`, and `replace_triggered_by`. These settings give you fine-grained control over resource replacement behavior.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Terraform Docs - lifecycle](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)\r\n- [@article@Terraform Resource Lifecycle](https://spacelift.io/blog/terraform-resource-lifecycle)\r\n- [@article@Understanding the Lifecycle Block](https://dev.to/pwd9000/terraform-understanding-the-lifecycle-block-4f6e)"
+}

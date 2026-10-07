@@ -1,0 +1,4 @@
+{
+  "title": "Goroutines",
+  "content": "Lightweight threads managed by Go runtime enabling concurrent function execution. Created with `go` keyword prefix. Minimal memory overhead, can run thousands/millions concurrently. Runtime handles scheduling across CPU cores. Communicate through channels, fundamental to Go's concurrency.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Goroutines](https://go.dev/tour/concurrency/1)\r\n- [@article@Goroutines - Concurrency in Golang](https://golangbot.com/goroutines/)\r\n- [@article@Goroutines in Golang: Understanding and Implementing](https://medium.com/@jamal.kaksouri/goroutines-in-golang-understanding-and-implementing-concurrent-programming-in-go-600187bcfaa2)"
+}

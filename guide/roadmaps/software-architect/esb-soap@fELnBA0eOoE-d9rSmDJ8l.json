@@ -1,0 +1,4 @@
+{
+  "title": "ESB and SOAP",
+  "content": "ESB (Enterprise Service Bus) and SOAP (Simple Object Access Protocol) are two technologies that enable communication between different systems. ESB is a software architecture that allows for the integration of various systems, such as databases, web services, and mobile applications. SOAP is a messaging protocol that enables the exchange of structured data between systems over the internet.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Understanding SOAP: The Old Guard of Web Services](https://mariomthree.medium.com/understanding-soap-the-old-guard-of-web-services-6ca89d8ec312)\r\n- [@article@Enterprise Service Bus](https://en.wikipedia.org/wiki/Enterprise_service_bus)\r\n- [@article@ESB - IBM](https://www.ibm.com/topics/esb)"
+}

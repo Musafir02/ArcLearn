@@ -1,0 +1,4 @@
+{
+  "title": "A/B Testing",
+  "content": "A/B testing is a way to compare two versions of something to see which one works better. You split your audience into two groups, one sees version A, the other sees version B — and then you measure which version gets better results, like more clicks, sales, or sign-ups. This helps you make decisions based on real data instead of guesses.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@A software engineer's guide to A/B testing](https://posthog.com/product-engineers/ab-testing-guide-for-engineers)\r\n- [@video@A/B Testing for Beginners](https://www.youtube.com/watch?v=VpTlNRUcIDo)"
+}

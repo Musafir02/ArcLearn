@@ -1,0 +1,4 @@
+{
+  "title": "Hashing Algorithms",
+  "content": "Hashing algorithms are used to generate a unique value for a given input. This value is called a hash. Hashing algorithms are used to verify the integrity of data, to store passwords, and to generate unique identifiers for data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Hashing?](https://www.codecademy.com/resources/blog/what-is-hashing/)\r\n- [@video@Hashing Algorithms and Security - Computerphile](https://www.youtube.com/watch?v=b4b8ktEV4Bg)\r\n- [@video@Top Hashing Algorithms In Cryptography | MD5 and SHA 256 Algorithms Explained | Simplilearn](https://www.youtube.com/watch?v=Plp4F3ZfC7A)\r\n- [@video@SHA: Secure Hashing Algorithm - Computerphile](https://www.youtube.com/watch?v=DMtFhACPnTY)"
+}

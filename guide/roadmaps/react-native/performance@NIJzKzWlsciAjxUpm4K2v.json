@@ -1,0 +1,4 @@
+{
+  "title": "Performance",
+  "content": "Performance is a crucial aspect of any application, and React Native is no exception. Optimizing performance in your React Native apps will not only lead to a better user experience but also lessen the load on device resources.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Performance](https://reactnative.dev/docs/performance)"
+}

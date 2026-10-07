@@ -1,0 +1,4 @@
+{
+  "title": "Resource Usage",
+  "content": "TCP connections consume memory and file descriptors on both client and server. Game servers handling thousands of simultaneous players need to manage connection pools carefully, tune kernel parameters, and close idle connections promptly to avoid resource exhaustion.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Server Monitoring Guide - Splunk](https://www.splunk.com/en_us/blog/learn/server-monitoring.html)\r\n- [@article@Server Monitoring Guidebook - ManageEngine](https://www.manageengine.com/network-monitoring/what-is-server-monitoring.html)\r\n- [@article@Ultimate Guide to Server Monitoring - UptimeRobot](https://uptimerobot.com/knowledge-hub/monitoring/ultimate-guide-to-server-monitoring-metrics-tools-and-best-practices/)"
+}

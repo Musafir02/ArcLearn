@@ -1,0 +1,4 @@
+{
+  "title": "Selenium IDE",
+  "content": "Selenium IDE is a browser extension for Chrome and Firefox that records user interactions and generates Selenium-compatible test scripts. It is designed for rapid test creation without programming, making it accessible to manual testers. Recorded scripts can be exported in multiple languages and integrated into existing Selenium-based automation suites.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Selenium IDE](https://www.selenium.dev/selenium-ide/)\r\n- [@article@Selenium IDE Tutorial](https://www.softwaretestinghelp.com/selenium-ide-script-selenium-tutorial-3/)"
+}

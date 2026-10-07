@@ -1,0 +1,4 @@
+{
+  "title": "apply",
+  "content": "The apply() method of Function instances calls this function with a given this value, and arguments provided as an array (or an array-like object).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@apply() - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)"
+}

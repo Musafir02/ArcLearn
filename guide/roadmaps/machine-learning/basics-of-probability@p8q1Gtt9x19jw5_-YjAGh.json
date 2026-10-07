@@ -1,0 +1,4 @@
+{
+  "title": "Basics of Probability",
+  "content": "Probability is a way to quantify the likelihood of an event occurring. It provides a numerical measure, ranging from 0 to 1, representing the chance that a specific outcome will happen. A probability of 0 indicates impossibility, while a probability of 1 signifies certainty. Understanding probability involves concepts like random variables, probability distributions, and events, which are essential for making predictions and decisions under uncertainty.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@book@Probability and Statistics: The Science of Uncertainty](https://utstat.utoronto.ca/mikevans/jeffrosenthal/book.pdf)\r\n- [@article@Probability](https://en.wikipedia.org/wiki/Probability)\r\n- [@article@Probability](https://www.mathsisfun.com/data/probability.html)\r\n- [@video@Probability Bootcamp](https://www.youtube.com/playlist?list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V)"
+}

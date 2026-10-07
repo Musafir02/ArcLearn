@@ -1,0 +1,4 @@
+{
+  "title": "HTML Rewriting",
+  "content": "The HTMLRewriter API allows Workers to parse and modify HTML responses in a streaming fashion. It uses a CSS-selector-based interface to attach handlers to elements, enabling modifications like injecting scripts, replacing content, or removing nodes without buffering the full response.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@HTMLRewriter · Cloudflare Workers](https://developers.cloudflare.com/workers/runtime-apis/html-rewriter/)\r\n- [@official@Introducing the HTMLRewriter API to Cloudflare Workers](https://blog.cloudflare.com/introducing-htmlrewriter/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Zero Values",
+  "content": "Default values for uninitialized variables: `0` for numbers, `false` for booleans, `\"\"` for strings, `nil` for pointers/slices/maps. Ensures predictable initial state and reduces initialization errors. Fundamental for reliable Go code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Zero Values](https://go.dev/tour/basics/12)\r\n- [@article@Golang Zero Values (0 and Beyond)](https://golangprojectstructure.com/default-zero-values-in-go-code/)\r\n- [@article@Zero Values in Golang](https://www.scaler.com/topics/golang/golang-zero-values/)"
+}

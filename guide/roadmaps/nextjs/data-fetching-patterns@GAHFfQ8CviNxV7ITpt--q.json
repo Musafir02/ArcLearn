@@ -1,0 +1,4 @@
+{
+  "title": "Data Fetching Patterns in Next.js",
+  "content": "There are a few recommended patterns and best practices for fetching data in React and Next.js, including:\r\n\r\n*   Fetching data on the server.\r\n*   Fetching data only where it's necessary.\r\n*   Using React's streaming and Suspense features to progressively render and incrementally stream rendered units of the UI to the client.\r\n*   Using parallel or sequential fetching depending on your particular use case.\r\n*   Using preload data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Patterns and Best Practices](https://nextjs.org/docs/14/app/building-your-application/data-fetching/patterns#fetching-data-on-the-server)"
+}

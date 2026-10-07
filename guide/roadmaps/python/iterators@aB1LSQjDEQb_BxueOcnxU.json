@@ -1,0 +1,4 @@
+{
+  "title": "Iterators",
+  "content": "An iterator is an object that contains a countable number of values. An iterator is an object that can be iterated upon, meaning that you can traverse through all the values. Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods **iter**() and **next**() .\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Python Official Documentation on Iterators](https://docs.python.org/3/tutorial/classes.html#iterators)\r\n- [@article@Python Iterators](https://www.programiz.com/python-programming/iterator)\r\n- [@article@Iterators and Iterables in Python](https://realpython.com/python-iterators-iterables/)\r\n- [@article@Master Python Filter: Syntax, Examples, and Best Practices](https://roadmap.sh/python/filter)"
+}

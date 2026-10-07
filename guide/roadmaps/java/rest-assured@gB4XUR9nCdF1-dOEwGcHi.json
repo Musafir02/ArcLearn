@@ -1,0 +1,4 @@
+{
+  "title": "Rest assured",
+  "content": "Testing and validating REST services in Java is harder than in dynamic languages such as Ruby and Groovy. REST Assured brings the simplicity of using these languages into the Java domain.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Rest-assured](https://rest-assured.io/)\r\n- [@opensource@Rest-assured Documentation](https://github.com/rest-assured/rest-assured/wiki)\r\n- [@article@A Guide to REST-assured](https://www.baeldung.com/rest-assured-tutorial)"
+}

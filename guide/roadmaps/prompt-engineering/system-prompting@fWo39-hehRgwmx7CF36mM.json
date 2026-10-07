@@ -1,0 +1,4 @@
+{
+  "title": "System Prompting",
+  "content": "System prompting sets the overall context, purpose, and operational guidelines for LLMs. It defines the model's role, behavioral constraints, output format requirements, and safety guardrails. System prompts provide foundational parameters that influence all subsequent interactions, ensuring consistent, controlled, and structured AI responses throughout the session.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Prompt Engineering Overview - Anthropic](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)\r\n- [@article@Instructions - LearnPrompting](https://learnprompting.org/docs/basics/instructions)"
+}

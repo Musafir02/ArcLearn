@@ -1,0 +1,4 @@
+{
+  "title": "Existing Design Analysis",
+  "content": "Existing design analysis is the process of auditing and evaluating an established product’s visual elements, components, and patterns to identify inconsistencies and redundancies. This practice involves gathering current UI assets, documenting usage across the application, and mapping them against modern requirements to determine what should be kept, refactored, or discarded. Through this systematic review, teams gain a clear understanding of the current state of their product to inform the foundation of a scalable design system."
+}

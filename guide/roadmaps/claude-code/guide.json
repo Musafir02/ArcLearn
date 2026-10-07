@@ -1,0 +1,614 @@
+{
+  "title": "Claude Code Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Add",
+      "name": "add",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "add-dir@FgQXBQ6oJ5sfW_ar0u6ez"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agent",
+      "name": "agent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agent-team@fI90DtG5CoZbDyJUqLGoy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-usage@N6dDyEXIUJUA3-o1J9K_n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Be",
+      "name": "be",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "be-mindful-of-extensions@__3S2Z00hK_g_GQJxv_21"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude---add-dir@FgQXBQ6oJ5sfW_ar0u6ez",
+            "claude--c@XlCA3rx2C7wx_EcTYtr9_",
+            "claude--p@2PKH3Ru9XgCz1MO75pDVr",
+            "claude--r@zUxO8udwPhYK6J_3wAs2Z",
+            "claude-cli@3r-vFlVAEirxD1gaFOO4H",
+            "claude-code-security@KgXvbrUuYyiBn52QCRoLl",
+            "claude-query@zSpldCAVxYoRpHDIR2oVa",
+            "claude-workflow@_iAIq8mwW0cIGbvrfmSJ5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-intelligence@qg6ZTF0LCz5zo5G1a3BEf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-usecases@rGtz0Nw4BgOrdm3WUmjwZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Community",
+      "name": "community",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "community-tools@e12uqC2SEzaMfmBbz7VZf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connecting",
+      "name": "connecting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connecting-tools-with-mcp@OBtJvLaEV3giUhvGFofKv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-skills@6WsAQV_e_2XJKl2KlN2dl",
+            "creating-subagents@HnrD1-Wc39ZRH5R6bptqX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Customize",
+      "name": "customize",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "customize-status-line@xEu9-kBz5SbM3Mrrwu446"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Desktop",
+      "name": "desktop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "desktop-app@rIG8F-Rc-fMeXZ5n0UTwi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Editor",
+      "name": "editor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "editor-extensions@ONhEanq8I2RE-Jc_YY3Wa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Esc",
+      "name": "esc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "esc--esc@8xqKBvdDfTLeZXeGeqQZr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "@La3uarrUxC5oTszf4oaWr",
+            "@N6z45nuFeUqRB2f-8b_Ku",
+            "@PYjuzInrTOWebl-OyYfMa",
+            "agents@sx2GRmZbQEYxeb05HpHQH",
+            "channels@GhJI9_4w3RM0_BfWNXbim",
+            "claude@lcnfnGocMZIWDQqrmdCWL",
+            "claudemd@T6PklJYVOrmcAgNcCFhKt",
+            "claudemd@TCWd5vobMAhP7I97Q1rTq",
+            "clear@N4YM2lqDcic5AiYgv0eRZ",
+            "compact@65s0P7d39fFR2yhy4JKEZ",
+            "config@UOSXh1o8bRY8Wcm6uYIgR",
+            "context@6UHAXR4praMqGiEUgWAt8",
+            "context@C5tCsAJQxq2d-fOrjjloB",
+            "cost@vw9cc6_33nHnNPNyhLo_d",
+            "ctrlc@dD0TlpfC4GzYWINplekKw",
+            "ctrlr@R7YJyNd0taUVJvXDPHBn5",
+            "doctor@IzHlnmGAqG1lpwuX1Oh4p",
+            "esc@2pu6b0Z5BQAz44Hx69Pzk",
+            "exit@MjZUaSJLSU5nDMgDJaWUh",
+            "export@eLlCNxa6bqQW0JsHxIdOa",
+            "haiku@y_euG-Rzj-OmCZhvMXegc",
+            "help@I4i_fKzuBy5pTC0JXyEl-",
+            "hooks@801KNtjf61FTiLS1yrDSB",
+            "hooks@OTpU2G6mnbkFhthKAkxlM",
+            "hooks@qPH0w52-8MvzZdFdsNMap",
+            "init@oucDNnTIc8gv3dlEibDB2",
+            "introduction@RqfeqVMhTSdC4w4GcsETP",
+            "locations@Ho_DTKqMZnx_nlxjWfrW2",
+            "loops@pIJ4J0QpqrnXxAX-ceZlJ",
+            "mcp@8Nd9CdGb1_Jl4YLBvew4z",
+            "mcp@Lyl4h5cvdY1YVpzBo_LEB",
+            "memory@l7ECu0Q5bW9_OgVH7Ih4S",
+            "model@NMBBRdBWwCphjwQuFAp9W",
+            "models@RHWW3QOFWRMqlaovGOLEO",
+            "modes@gcZCpCWHvIo5Ox0vVkdgV",
+            "opus@TWN08Vx7aBK-mvOSQuFfu",
+            "opusplan@aHi-EWuBbn1xvK5osHOUM",
+            "permissions@8rKpgtmO92EUFAKlWVuO5",
+            "plan@3ZYaw7kTiErPiLVwMf3J8",
+            "plugins@oV7YG_TnJ4ZyVVjqRwPkR",
+            "plugins@wd9T37TIM_1JU4o_2Fb0h",
+            "posttooluse@TBrr5EscwLZu7cOJoWbPy",
+            "pretooluse@FWf5hyCRo9UQ2QPalLVYn",
+            "resume@0HKJlqhoSCMNKf1lRIEy1",
+            "rewind@-K5K7yT97VRC7u0IOzJyT",
+            "rewind@cW0a112UVj2M3wBDA8UDj",
+            "sessionend@x5U0F5WWAqnNCC8f-qjr7",
+            "sessionstart@cMGYb_X1UK8sWI6brFj9S",
+            "shifttab@gpg2cfEUUKI5J9FMxn5QD",
+            "skills@iVa6piQwdPHIDkSRX8OSy",
+            "skills@OJIfG7DRO4jgQEcberkNx",
+            "sonnet@nDodLa7_UEeOmx6iM0Xp5",
+            "status@PS0GH8e9sW9N4s3UeHhjH",
+            "stop@v-gjhrW3oVZTe3EpUCjhY",
+            "subagents@EsbasCHDQOBZcBfHIrTbE",
+            "subagents@wFxYfNu7LtzV72a224WTZ",
+            "subscription@_Un0jTJaFs5Pdn1DFGl61",
+            "tools@vB1d1mbiPJK3a1LbYZkH9",
+            "tunnels@q26hZANRABWXI8bzE0ai2",
+            "usage@CPJulmusiWq3JQ6MmEJ0I",
+            "userpromptsubmit@Zrqdx4Z8uAS5yhI65Xh6z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git-worktrees@wxkAkdKFTwbNJEfwA9tGl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Headless",
+      "name": "headless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "headless-mode@FP6Lc-zqmP8yzBytuSsUc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hook",
+      "name": "hook",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hook-events--matchers@nq8aLrgh7qNQnwZbS7d9Z",
+            "hook-inputs--outputs@Gwsh4g1SxI2hJcS84p9it",
+            "hook-types@uC2PkMsCK-vaBo5Ygha2P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-to-structure@7ZD0nOke-7vqaibxBx24Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manage",
+      "name": "manage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manage-context@8fXu3OX3xfwr3NTAIHU0z",
+            "manage-sessions@rlj-GMcqgdKM5_7rs7yz9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-channels@wLaM_NHs7-ANFhtjYiY-F"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-configuration@Tq83zphFUA1J8spMEyN8H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Output",
+      "name": "output",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "output-styles@i3K2_8VcOGGSPdj1Jb4Im"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Permission",
+      "name": "permission",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "permission-modes@y8VCGx-h97udP-dRzsSAI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plan",
+      "name": "plan",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plan-mode@Dutj1C19nrbonQ7OpqBnv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-caching@Dam_IG339RrYZXjXq3T8_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reduce",
+      "name": "reduce",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reduce-token-usage@Dam_IG339RrYZXjXq3T8_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-claude@ip2bq52qRah-7db6dORO8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scheduling",
+      "name": "scheduling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scheduling-jobs@DDEgVgkdu8PR4x8pHfD5Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-best-practices@WVrC8-nf8xn1jckCHO3h4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-claude@XApGUujmnvp2VYUyEj1Kc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Skill",
+      "name": "skill",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "skill-best-practices@5uIBv9rk7Wzc_bXny0B27",
+            "skill-scope@5uIBv9rk7Wzc_bXny0B27"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Skills",
+      "name": "skills",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "skills-for-mcp@U22jPxfQWbu7-54OcsqkV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Slash",
+      "name": "slash",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "slash-commands@JeotqE91kV1n-YRoXN9gX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Thinking",
+      "name": "thinking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "thinking-modes--effort@cdO7pKphZq1qvCeynxGKo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-claude-pricing@SCbZprU9r8BIX4BoyjYPE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usage",
+      "name": "usage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usage-best-practices@svhWAC463Y9CUkFb524Fd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-compact-and-clear@YjRDJcSK_h82DooDWY2k4",
+            "use-compact-regularly@YjRDJcSK_h82DooDWY2k4",
+            "use-subagents-and-hooks@-P9o-aiDM7CDtLimppkjM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-claude-code@29xiIXYlB0bjXKA794qap"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ways",
+      "name": "ways",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ways-to-use-claude@thR8GUbuAkEL4sb4m3llJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-a-coding-agent@LGxnQkrbwVu9z1PFB12P3",
+            "what-is-agentic-loop@uOowDiCXVKyMFrZO1pnXv",
+            "what-is-vibe-coding@SKkeuO_5B18AbxlNGeazN"
+          ]
+        }
+      ]
+    }
+  ]
+}

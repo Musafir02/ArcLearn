@@ -1,0 +1,669 @@
+{
+  "title": "Sql Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-functions@vTMd0bqz4eTgLnhfgY61h",
+            "advanced-sql@UDqbT1y-YzBrljfKSz_RG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aggregate",
+      "name": "aggregate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aggregate-queries@LX9nzJ4uqznHN4SksoDvr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Alter",
+      "name": "alter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "alter-table@WjXlO42WL9saDS7RIGapt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-sql-syntax@JDDG4KfhtIlw1rkNCzUli"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-table-expressions@tedQynR0xicVKhuR1oahw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Correlated",
+      "name": "correlated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "correlated-subqueries@JZqS3Xapw6mfSPVgFW7av"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-table@epEpBxRosLhuAuKwp823r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-views@PcsGK4VBh0zNQIPZvNES4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cross",
+      "name": "cross",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cross-join@7ow6tiSSCnTpv_GYQU017"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-constraints@qBios3sZVhcJMpXmj9f7B",
+            "data-definition-language-ddl@xPOeXK1EPBNG56vgfG-VV",
+            "data-integrity--security@R1ktDJpXOz0PTllAcBrdu",
+            "data-integrity-constraints@mBQ3Z8GlFcpIena3IB7D_",
+            "data-manipulation-language-dml@WMSXi-eez_hHGDM8kUdWz",
+            "data-types@tBzMDfCMh6MIagNaxCzin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Db",
+      "name": "db",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "db-security-best-practices@vhBZqqmUcEon6-Vwvla4q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Drop",
+      "name": "drop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "drop-table@YzJ6QmY2arMfRzMAPaI0T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dropping",
+      "name": "dropping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dropping-views@MIOuWWcCjLAmgzog2DBC3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamic",
+      "name": "dynamic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamic-sql@z5Sf0VU14ZCQ80kL1qOqc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Foreign",
+      "name": "foreign",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "foreign-key@DHz6sRLYhFeCbAcNJS8hm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Full",
+      "name": "full",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "full-outer-join@aS5zCyJRA779yHF0G2pje"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abs@6vYFb_D1N_-tLWZftL-Az",
+            "acid@igg34gLPl3HYVAmRNFGcV",
+            "avg@Wou6YXLYUgomvcELh851L",
+            "begin@7sTW1vwUhCFOMXYjScVEt",
+            "case@W2ePJHdfEiEJ3ZKoRQKt_",
+            "ceiling@BAqJQvcguhIhzyII5LRH6",
+            "check@Q0h9Wfnl_W9ThOkv7Q17A",
+            "coalesce@k7lZe4QRt9q4InUImFmvx",
+            "column@wmtt-3auWLdQWuVdwZLPd",
+            "commit@3cMECz5QPVDOFrk5duObs",
+            "concat@5inpEqafeVCfqsURHzQQg",
+            "count@9aHYrOQDkA84tlxcVK5aD",
+            "date@Ivqo2wa-_NhGU3vGd0pUI",
+            "dateadd@1E1WdWOyqxbbdiIbw26dZ",
+            "datepart@BJ4fQvagTO0B5UtXblyx8",
+            "delete@ddtVaA4Ls6qRj-7OtTSIH",
+            "delete@zWnvuHJLHr03PWkrW1wZZ",
+            "dense_rank@QM0ltgPu8lLLYc2MsTLj-",
+            "floor@o2SH4iQn1Ap2yDZ7cVYLO",
+            "from@N1Racr3ZpU320gS545We8",
+            "having@HhICJpCK5__b-itUoEBES",
+            "having@ytwCkSMTiTuemE0KVfAfy",
+            "indexes@LcljR70T-OnzSrJJDqOWf",
+            "insert@-Hew0y53ziZK3epQnGA0O",
+            "insert@mPj6BiK5FKKkIQ9WsWEo6",
+            "joins@4UQQYbjzwVxZOAxBuXKQS",
+            "lag@BcXdxY6bld5c0YNFSKkh-",
+            "lead@aJJjaGunRrwyh9MjQfJt-",
+            "length@RH8DLiQpDUWqw3U1522q5",
+            "lower@knTG6pAq2mYP24WMa29xI",
+            "max@YqDJq3fPxUZlwsdq0kJg7",
+            "min@bFEYMlqPZtTUYtDQxqHzT",
+            "mod@OUw--8zEq6lk5-6oySVHe",
+            "nullif@KI6vngoYcHsnpIk8ErhhS",
+            "operators@ffwniprGJHZzJ7t3lQcXz",
+            "rank@cucCPw3KfetAP2OMFUs0X",
+            "replace@VNbb3YPc0FtrROylRns8h",
+            "rollback@xbD67KVlt3UhHpKh8HLx8",
+            "round@9DntFiZV1AyaRPhYP5q6u",
+            "row@aLDl75i8gtLRA2Ud-fMmQ",
+            "row_number@zW27ZHdLwQY-85iqbBKQZ",
+            "savepoint@pJtYvXUo81aZfPuRjIbMq",
+            "scalar@eXQ-TrTlqL5p2AdGnozkL",
+            "select@i8u8E_sne6XiKJo2FXDog",
+            "select@rmqXH29n1oXtZ8tvmcRFn",
+            "subqueries@86iZ8s8EdhSuYwgwAM_EO",
+            "substring@PnG_5D6q66NAKxXVOwA6N",
+            "sum@w4T3jFb0ilf1KNw-AvRXG",
+            "table@R9WDMRd-3wxsKH97-sT3n",
+            "time@88KlrMqSza9_YaD7Dv61p",
+            "timestamp@7hEqkoxkdAWmakGZsMJx-",
+            "transactions@OdaBXz2XBAVLsQ-m7xtAM",
+            "unique@5yGo8i7eplxtXOD_qfzOs",
+            "update@eu9dJFi6gBPMBdy08Y5Bb",
+            "update@KJJ6PYjTnr_3yU2mNPL9v",
+            "upper@Othfo7NvTVzfyL906PLM1",
+            "views@2tyezwOIxV6O84N-Q3Awh",
+            "where@WhYAy6f7Euk3E49-ot644"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grant",
+      "name": "grant",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grant-and-revoke@03qMopxzjx_-dZbYw9b7J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Group",
+      "name": "group",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "group-by@14TKE6KhrH1yFtHcSZSXq",
+            "group-by@Zw8IHfCCMSxmVjx5Ho5ff"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inner",
+      "name": "inner",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inner-join@aaua13CkTxLOYXr8cAgPm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Join",
+      "name": "join",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "join-queries@8V6yw7kLaow-VVcv_K_pL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-basics@nhUKKWyBH80nyKfGT8ErC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Left",
+      "name": "left",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "left-join@X9cJJ8zLZCF2cOoqxwFfY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-indexes@NtxGd6Vx-REBclry7lZuE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modifying",
+      "name": "modifying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modifying-views@3eE-l-P93nOXoWfLr8PSW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested-subqueries@xkPJ2MYiXmzC4yqQWyB_7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Not",
+      "name": "not",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "not-null@M4M_-vjM9GNy0NmXZneDA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optimizing",
+      "name": "optimizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optimizing-joins@C0dhS6uLf4TUSfvcWyXhv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Order",
+      "name": "order",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "order-by@NfCiSPrL4upMssukcw3Kh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-optimization@4rqCPpTb0dAgpheBKshRG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pivot",
+      "name": "pivot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pivot--unpivot-operations@nwFaz9i-1s0WVrVaFsoqb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Primary",
+      "name": "primary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "primary-key@Jlwmyq6CUQeDAlL4dazOP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-analysis-techniques@C6P69YiFdS-ioPXMNfX07",
+            "query-optimization@Ps9Yv2s-bKvEegGAbPsiA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rdbms",
+      "name": "rdbms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rdbms-benefits-and-limitations@fNTb9y3zs1HPYclAmu_Wv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recursive",
+      "name": "recursive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recursive-queries@TjgwabhEtaSoYMLNr6q9l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reducing",
+      "name": "reducing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reducing-subqueries@UVTgbZrqpbYl1bQvQejcF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Right",
+      "name": "right",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "right-join@shpgZkh1CLqUwjOaRtAFy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Selective",
+      "name": "selective",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "selective-projection@w53CSY53nAAN0ux-XeJ4c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Self",
+      "name": "self",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "self-join@6qG0AVYd6Y1B8LOSDoMX9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-keywords@6yoo7qC6X2jYDIjd3HIm7",
+            "sql-vs-nosql-databases@gx4KaFqKgJX9n9_ZGMqlZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stored",
+      "name": "stored",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stored-procedures--functions@w7FNjdwqjY7X69aJqqBy4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transaction",
+      "name": "transaction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transaction-isolation-levels@ujeq8EIFcrqkBjoFizsJM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Truncate",
+      "name": "truncate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "truncate-table@K5vhqTJrdPK08Txv8zaEj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-indexes@9wOgP0i9G4HSeZGn2Gm7r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-relational-databases@R9DQNc0AyAQ2HLpP4HOk6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Window",
+      "name": "window",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "window-functions@tBvXLLp5FKeSSN35Kj1X4"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Google",
+  "content": "Google develops Gemini, a family of multimodal AI models. The latest flagship, Gemini 3, supports text, image, video, and audio through the Gemini API and Google AI Studio. Google also offers specialized models including Imagen for image generation, Veo for video, and Lyria 3 for music. Their research has advanced many prompt engineering techniques, including Chain of Thought reasoning.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Google AI Studio](https://ai.google.dev/)\r\n- [@official@Gemini API Documentation](https://ai.google.dev/gemini-api/docs)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Import and Export using COPY",
+  "content": "In PostgreSQL, one of the fastest and most efficient ways to import and export data is by using the `COPY` command. The `COPY` command allows you to import data from a file, or to export data to a file from a table or a query result.\r\n\r\nIf you can't use the `COPY` command due to lack of privileges, consider using the `\\copy` command in the `psql` client instead, which works similarly, but runs as the current user rather than the PostgreSQL server.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@COPY](https://www.postgresql.org/docs/current/sql-copy.html)\r\n- [@article@Copying Data Between Tables in PostgreSQL](https://www.atlassian.com/data/sql/copying-data-between-tables)"
+}

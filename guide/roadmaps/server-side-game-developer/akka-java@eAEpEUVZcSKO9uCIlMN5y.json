@@ -1,0 +1,4 @@
+{
+  "title": "Akka (Java)",
+  "content": "Akka is a Scala/Java toolkit for building concurrent and distributed systems using the Actor Model. Its actor hierarchy enables fault isolation through supervision, and Akka Cluster supports building distributed game server infrastructure that can span multiple machines.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Akka Documentation](https://doc.akka.io/index.html)\r\n- [@official@Introduction to Actors - Akka Docs](https://doc.akka.io/libraries/akka-core/current/typed/actors.html)\r\n- [@official@Java Akka - Play Framework Documentation](https://www.playframework.com/documentation/2.9.x/JavaAkka)"
+}

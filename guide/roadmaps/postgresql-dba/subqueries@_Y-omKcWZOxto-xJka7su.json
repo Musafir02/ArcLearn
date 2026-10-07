@@ -1,0 +1,4 @@
+{
+  "title": "Subqueries",
+  "content": "A subquery is a query nested inside another query, often referred to as the outer query. Subqueries are invaluable tools for retrieving information from multiple tables, performing complex calculations, or applying filter criteria based on the results of other queries. They can be found in various parts of SQL statements, such as `SELECT`, `FROM`, `WHERE`, and `HAVING` clauses.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@PostgreSQL Subquery](https://www.postgresql.org/docs/current/functions-subquery.html)\r\n- [@article@PostgreSQL Subquery](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-subquery/)\r\n- [@article@PostgreSQL Subqueries](https://www.w3resource.com/PostgreSQL/postgresql-subqueries.php)"
+}

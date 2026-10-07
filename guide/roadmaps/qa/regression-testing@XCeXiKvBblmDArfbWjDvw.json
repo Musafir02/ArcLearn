@@ -1,0 +1,4 @@
+{
+  "title": "Regression Testing",
+  "content": "Regression Testing is a type of software testing to confirm that a recent program or code change has not adversely affected existing features. Regression testing is a black box testing technique. Test cases are re-executed to check the previous functionality of the application is working fine and that the new changes have not produced any bugs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Automated Regression Testing: The Complete 2026 Guide](https://roadmap.sh/ai-engineer/automated-regression-testing)\r\n- [@article@Performance Regression Testing as a CI/CD Gate](https://www.evaluat.com/blog/performance-regression-testing)\r\n- [@article@What is Regression Testing? Definition, Tools and Examples](https://katalon.com/resources-center/blog/regression-testing)\r\n- [@video@What is Regression Testing? A Software Testing FAQ - Why? How? When?](https://www.youtube.com/watch?v=xmQuLTarGI4)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "FVM (Flutter Version Manager)",
+  "content": "Flutter version manager is a tool used to manage different versions of Flutter SDK on a developer's machine. Flutter is a popular open-source mobile application development framework, and its SDK is updated frequently with new features, bug fixes, and improvements. However, sometimes developers need to work with older versions of Flutter due to various reasons like compatibility issues or project requirements.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Flutter Version Manager](https://fvm.app/)\r\n- [@official@Flutter Version Manager - Documentation](https://fvm.app/documentation/getting-started)"
+}

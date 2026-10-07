@@ -1,0 +1,4 @@
+{
+  "title": "Reverse Bits",
+  "content": "Given a 32-bit unsigned integer, reverse its bits. You build the result bit by bit by extracting the last bit from the input and shifting it into the result. This problem teaches you how to construct a new number bit by bit using shifts and masks, which is useful in many low-level and embedded contexts.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Reverse Bits](https://leetcode.com/problems/reverse-bits/)\r\n- [@video@Reverse Bits - LeetCode 190 - Python](https://www.youtube.com/watch?v=PywybHkTtPo)\r\n- [@video@Reverse Bits | Leetcode 190 | Easy](https://www.youtube.com/watch?v=-5z9dimxxmI)"
+}

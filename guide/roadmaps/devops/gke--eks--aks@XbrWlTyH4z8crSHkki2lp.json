@@ -1,0 +1,4 @@
+{
+  "title": "GKE / EKS / AKS",
+  "content": "GKE (Google Kubernetes Engine), EKS (Amazon Elastic Kubernetes Service), and AKS (Azure Kubernetes Service) are managed Kubernetes offerings from the three major cloud providers. They handle the provisioning and maintenance of the Kubernetes control plane, letting teams focus on deploying and managing their workloads without operating the underlying cluster infrastructure.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GKE](https://cloud.google.com/kubernetes-engine)\r\n- [@official@EKS](https://aws.amazon.com/eks/)\r\n- [@official@AKS](https://azure.microsoft.com/en-us/products/kubernetes-service/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Vectors",
+  "content": "Vectors are mathematical objects that have both magnitude (length) and direction. They are often represented as ordered lists of numbers, called components. In computer science, and particularly within AI and machine learning, vectors are used to represent data points in a multi-dimensional space, allowing for calculations of similarity, distance, and direction between data points.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is vector embedding?](https://www.ibm.com/think/topics/vector-embedding)\r\n- [@article@A Gentle Introduction to Vectors for Machine Learning](https://machinelearningmastery.com/gentle-introduction-vectors-machine-learning/)\r\n- [@article@Vector Databases](https://developers.cloudflare.com/vectorize/reference/what-is-a-vector-database/)\r\n- [@video@AI Foundations - What are Vectors?](https://www.youtube.com/watch?v=dvDmXTKFtgQ)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Dynamic Type",
+  "content": "The Dynamic Type feature allows users to choose the size of textual content displayed on the screen. It helps users who need larger text for better readability. It also accommodates those who can read smaller text, allowing more information to appear on the screen. Apps that support Dynamic Type also provide a more consistent reading experience.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Dynamic Type](https://web.archive.org/web/20241219200814/https://developer.apple.com/documentation/uikit/uifont/scaling_fonts_automatically/)\r\n- [@official@WWDC24: Get started with Dynamic Type](https://www.youtube.com/watch?v=ZqDZjW9TpFw)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Wrangler",
+  "content": "Wrangler is Cloudflare's official CLI for developing and deploying Workers. It handles local development with a simulated edge environment, manages configuration via `wrangler.toml`, and deploys Workers to Cloudflare's network.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Wrangler Documentation](https://developers.cloudflare.com/workers/wrangler/)\r\n- [@official@Wrangler Commands](https://developers.cloudflare.com/workers/wrangler/commands//)"
+}

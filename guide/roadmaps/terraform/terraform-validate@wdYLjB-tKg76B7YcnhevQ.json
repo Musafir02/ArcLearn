@@ -1,0 +1,4 @@
+{
+  "title": "terraform validate",
+  "content": "The validate command helps you make sure your Terraform code is syntactically correct before you deploy. This helps you to prevent misconfiguration due to missing attributes or incorrect dependencies, saving time, improving efficiency, and reducing cost.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Terraform Validate Examples](https://www.env0.com/blog/terraform-validate-command-practical-examples-and-best-practices)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "AWS",
+  "content": "AWS is the largest cloud provider in the world. It offers infrastructure for computing, storage, databases, networking, and dozens of other services. It requires more configuration than PaaS options but gives you complete control over how your application runs and scales.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated AWS Roadmap](https://roadmap.sh/aws)\r\n- [@official@AWS Cloud Essentials](https://aws.amazon.com/getting-started/cloud-essentials/)\r\n- [@official@Overview of Amazon Web Services](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html)"
+}

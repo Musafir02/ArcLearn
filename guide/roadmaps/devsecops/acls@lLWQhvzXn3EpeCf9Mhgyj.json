@@ -1,0 +1,4 @@
+{
+  "title": "Access Control Lists (ACLs)",
+  "content": "Access Control Lists (ACLs) are sets of rules that determine whether network traffic is allowed or denied to pass through a network interface. They act as a security filter, examining packets based on source and destination IP addresses, ports, and protocols. ACLs are configured on network devices like routers and firewalls to control network access and enforce security policies.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Access Control List: Definition, Types & Usages](https://www.okta.com/uk/identity-101/access-control-list/)\r\n- [@video@Access Control Lists](https://www.youtube.com/watch?v=IwLyr0mKK1w)"
+}

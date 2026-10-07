@@ -1,0 +1,4 @@
+{
+  "title": "Small Omega",
+  "content": "Small omega notation describes a lower bound that is strictly less than the actual growth rate, the counterpart to small o. It states that an algorithm's growth rate is strictly greater than a given function, used mainly in theoretical analysis rather than everyday complexity comparisons.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Asymptotic Notations](https://learnxinyminutes.com/asymptotic-notation/)\r\n- [@video@The Little o Notation](https://www.youtube.com/watch?v=XkkZaWikZHU)"
+}

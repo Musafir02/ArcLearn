@@ -1,0 +1,4 @@
+{
+  "title": "For Android",
+  "content": "Native modules in React Native provide a powerful way to access device-specific features and capabilities that are not available through the standard React Native APIs. For example, a Bluetooth module can be created using the Android Bluetooth API, allowing applications to scan for nearby Bluetooth devices, connect to them, and transfer data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Android Native Modules](https://reactnative.dev/docs/legacy/native-modules-android)"
+}

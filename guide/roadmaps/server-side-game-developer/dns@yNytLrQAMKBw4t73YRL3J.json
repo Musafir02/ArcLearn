@@ -1,0 +1,4 @@
+{
+  "title": "DNS",
+  "content": "DNS (Domain Name System) resolves human-readable hostnames into IP addresses. It uses a hierarchical distributed database of nameservers; resolvers query root, TLD, and authoritative servers in sequence to find the address for a given domain.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What Is the DNS Protocol? - IBM](https://www.ibm.com/think/topics/dns-protocol)\r\n- [@article@Domain Name System - Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System)\r\n- [@article@How DNS Works - freeCodeCamp](https://www.freecodecamp.org/news/how-dns-works-the-internets-address-book/)"
+}

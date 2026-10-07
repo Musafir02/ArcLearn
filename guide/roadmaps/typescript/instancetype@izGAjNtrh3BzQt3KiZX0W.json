@@ -1,0 +1,4 @@
+{
+  "title": "InstanceType",
+  "content": "InstanceType is a built-in utility type that constructs a type consisting of the instance type of a constructor function. It extracts the type returned by a class constructor when it is instantiated with the `new` keyword. This is useful for capturing the specific shape of an object that is created from a class, allowing developers to ensure that variables or function parameters match the structure of that class instance."
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Claude Code",
+  "content": "Claude Code is a terminal-based AI tool built by Anthropic. It is designed to reason through complex code problems, explain unfamiliar codebases, and help with debugging. It works best when you need to understand what the generated code is doing before modifying it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated Claude Code Roadmap](https://roadmap.sh/claude-code)\r\n- [@official@Claude Code Overview](https://code.claude.com/docs/en/overview)\r\n- [@article@Claude Code: From Zero to Hero](https://medium.com/@dan.avila7/claude-code-from-zero-to-hero-bebe2436ac32)\r\n- [@video@Claude Code Tutorial for Beginners](https://www.youtube.com/watch?v=eMZmDH3T2bY)"
+}

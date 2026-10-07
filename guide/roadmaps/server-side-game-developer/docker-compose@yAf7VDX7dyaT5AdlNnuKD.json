@@ -1,0 +1,4 @@
+{
+  "title": "Docker Compose",
+  "content": "Docker Compose is a tool for defining and running multi-container applications using a YAML file. Game server developers use it to spin up local environments with the game server, database, cache, and message queue running together with a single command.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Docker Compose Quickstart - Docker Docs](https://docs.docker.com/compose/gettingstarted/)\r\n- [@official@Docker Compose Overview - Docker Docs](https://docs.docker.com/compose/)\r\n- [@article@A Beginners Guide to Docker Compose - Better Stack](https://betterstack.com/community/guides/scaling-docker/docker-compose-getting-started/)"
+}

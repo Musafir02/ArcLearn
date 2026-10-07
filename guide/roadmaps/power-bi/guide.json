@@ -1,0 +1,1282 @@
+{
+  "title": "Power Bi Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Access",
+      "name": "access",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "access-control@TB7tcRXwbvJ16fV6BHXPt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-dax@4j2CBBcLxNnE060LMnDTc",
+            "advanced-editor@U8ZpXzVc0xFZ-A74a_yuZ",
+            "advanced-visuals@js9MnMCVPoWWb9wLf_csS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aggregation",
+      "name": "aggregation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aggregation-functions@LCVPHuTjQ4zTi0tT77h9y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Appending",
+      "name": "appending",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "appending-tables@w0p5SoSn4_YGeARz7Ll0O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Applied",
+      "name": "applied",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "applied-steps@Jys8-vqPreAJwjDUWqqNF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Audit",
+      "name": "audit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "audit-logs@JnFJK_sqz710ANX_gwzjZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bar",
+      "name": "bar",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bar--column-charts@WXIP35S-K0YPPrArosikv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buttons",
+      "name": "buttons",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buttons--navigation@bBLfNjB3IC2oNgQN4SSoE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Calculate",
+      "name": "calculate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "calculate-function@BAeCGnhY7PBsazIY5ywf4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Calculated",
+      "name": "calculated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "calculated-tables--columns@wZlFN13uuS1MxAoLVoDZU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Calculation",
+      "name": "calculation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "calculation-groups@6oh5sxYqEqm-jSBNmCnmF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Certified",
+      "name": "certified",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "certified-datasets@dWu0GbXzXaYYgmWTOL1di"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Changing",
+      "name": "changing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "changing-dates@vZQjiMqgSc2HtWCPYHvnb",
+            "changing-numbers@jji5jm1oT6SImHaBXwOJI",
+            "changing-text@OpTzX9_MCnMIf3nwDrCO9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Columns",
+      "name": "columns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "columns-vs-measures@dKb9XtExyQqapcR9ccafy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Combination",
+      "name": "combination",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "combination-charts@_3_v4fesS5FZTj-KAeSDq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Composite",
+      "name": "composite",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "composite-keys@v0_8BKYjUiEmQyb71ntr3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-columns@X3j-XFMXKLjwvEMgDGbPQ",
+            "conditional-formatting@Q39QDWBQlZ0CXJby4-nBw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connection",
+      "name": "connection",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connection-modes@4gaa2THeYhi2Z45kSX42t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Context",
+      "name": "context",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "context--filtering@l-vk3xwURU8AOHoGlu0iT",
+            "context-and-filtering@l-vk3xwURU8AOHoGlu0iT",
+            "context-transition@62ecBOZmKPo56zRGd6GIQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cross",
+      "name": "cross",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cross-filter-direction@bLEolh1ucu3NzdYcB8gei",
+            "cross-filtering@vTsD-oWa4vwEhfC5-Ax5Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-columns@UPQ6Y-jT39MkrM1Rg3Dip",
+            "custom-tooltips@SIMaqZRxACO-f25KPPbFl",
+            "custom-visuals@CJnGG-Q_I_pfS7YsoCR0a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dashboards",
+      "name": "dashboards",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dashboards-vs-reports@u1-WPMNoMpouC5EuKDgk6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data--infrastructure@uX7eakwKpWUhQwV8j8JaT",
+            "data-categorization@UfdiQrzMT5uQ7AGEa1gMH",
+            "data-loss-prevention@AAIDmBDueCTKYnuJugDEf",
+            "data-profiling@_tWAz0_PV6Pr5Ey2ZXYL1",
+            "data-source-types@M5B4mq5vv5PcGaBdQmNdf",
+            "data-types--casting@y-FeyeZ6tqZmF_8wzrTuX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Datasets",
+      "name": "datasets",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "datasets--dataflows@hEx3FLGHzXOmGcZ-js24r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dax",
+      "name": "dax",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dax-performance@mNUrtl-18tZnFSaMSnJm3",
+            "dax-syntax@Qu-C8yEqb30gZ0Po8Vmbt",
+            "dax-vs-m-language@5p5jlratghZBaZUe0zfgi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decomposition",
+      "name": "decomposition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decomposition-tree@Ru7LLosG6dqriZjqf_eIs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deployment",
+      "name": "deployment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deployment-pipelines@gWj5LnHcNZBNu-nMnzi5Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-principles@8-t2HOH7KFWV79gpfhjXn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Direct",
+      "name": "direct",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "direct-lake@80ujylMVAMN9Tn0qPR7uf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Drill",
+      "name": "drill",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "drill-through--drill-down@o65MsjBczUD_m7DYBFr_y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dual",
+      "name": "dual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dual-storage-mode@8DKQH0CbRmtuAW3tE_ke6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explore",
+      "name": "explore",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explore-feature@M8o5vABTrb0yRSctPX7oG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Facts",
+      "name": "facts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "facts--dimensions@UsiTXTUkAS5w6IeJ0nBJ-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Field",
+      "name": "field",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "field-parameters@-dhGA5wUkvycHl30ZZELE",
+            "field-visibility@2tXtiVyl0LiUDldc-dYOL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Formatting",
+      "name": "formatting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "formatting--filtering@OSDmzLdt4rdVU2TFKazh1",
+            "formatting--themes@PzH_pS8MZsfWNia-6LHYv",
+            "formatting-and-filtering@OSDmzLdt4rdVU2TFKazh1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gauges",
+      "name": "gauges",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gauges-cards--kpis@P0XqGgwc6zKGRyXwnvMwD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@Qido2kFzf3UoW3LLu3QT-",
+            "aggregations@KeyKztPuGQrZpG4WR3VOX",
+            "apis@HWj-k3pc5_80dk793CVnX",
+            "apps@Y2k8hmM3HVhNx-_UB9fOz",
+            "bookmarks@Tu0lUGB1a-b89x1qnM7Qc",
+            "clouds@FdE4ix0XyZq_yhv8HRELs",
+            "collaboration@oeN3BijT2OCGbv4hk7tz_",
+            "databases@0a0caDbMmm71t9h9l1boP",
+            "desktop@aItdGZ817gzRevj1bZnQz",
+            "directquery@GHE4CuN9ajm08_RZ1Fy7p",
+            "files@fMGZRXVaryZ25kjE-4e5x",
+            "fundamentals@cGLTxw45dWZbKwJ_L7v2z",
+            "governance@d3-VRo0ZX_inzVEnUtFDl",
+            "granularity@hGinFciFMdIiFv7VQle_e",
+            "hierarchies@teGp4rdsa8O-Au8mHbrkH",
+            "hierarchies@wbhSoBY2VjAUcnAYT8wm4",
+            "integrations@Tg7TuqzUQrGpWm2LJej2-",
+            "interactivity@Ts5wEmq3U761ObsaLVCsE",
+            "introduction@2QB2qNbr8IHv4YbB-hYqf",
+            "joins@OUo1KyRG-Qc5I6GWZR2pp",
+            "maps@VWVF938IZeNS2E1SrS29l",
+            "mobile@H8vRATlg1hX8iPwLJdeOR",
+            "relationships@m5Kh5qQtFZ7Xh-3BXeBY6",
+            "service@-i6X0KZW6CZfgzgQ2QMvH",
+            "workspaces@wmtOYjTkzKhIRlh9n__PZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-errors@cqLk4gpK_Ex7SvpcR-EyX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-data-flows@Hk1qf_oY4SxVsjuoOd9nL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Import",
+      "name": "import",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "import-mode@4UXIwHGpILCTfs7lLoxou"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Incremental",
+      "name": "incremental",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "incremental-refresh@qABASsA3GLMJITuKqH0Te"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-power-bi@4S5zKmpa29_re_rOZD9mt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iterator",
+      "name": "iterator",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iterator-functions@GdcUdMG8C62PeVe0hJaJZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-influencers@uoFvTcMDDIkYHz_d7ZeX-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Language",
+      "name": "language",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "language-layer@v6n_uRreDYk3NnwD4GLKN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layout",
+      "name": "layout",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layout-frameworks@UEO1KVLCqK4NbhnYa7mS6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Licensing",
+      "name": "licensing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "licensing-tiers@y9CTbobwkPNDUDDkJLdQX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Line",
+      "name": "line",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "line--area-charts@JEudXkog9r0szwd6RMw1L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logical",
+      "name": "logical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logical-functions@KVOe7N9mpfqbAvF_bQxYB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "M",
+      "name": "m",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "m-language-basics@7JeXBAYhv_3ZZr3niaIhd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Matrix",
+      "name": "matrix",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "matrix--table-visuals@fwUzkj_cd8tQWM_du19i1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Microsoft",
+      "name": "microsoft",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "microsoft-fabric@ls626i2TukzHY0Q_LnlVs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-app@6Evp-E8U-n3EutKt2cqnX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-objects@vBimOM-ayzWiwGFPRZqW4",
+            "model-optimization@jAkxBHWrRTFnhs9deON6b",
+            "model-organization@vMqaPgnbF_ouOvBBgrRpk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Naming",
+      "name": "naming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "naming-conventions@xeJEDCBsv3XyfOC_SClR7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-level-security@l7_l2lM0A0Z6jNt-ypRR-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "On",
+      "name": "on",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "on-premises-data-gateway@7CyF7zG9yRiJWq2XmEKVG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Paginated",
+      "name": "paginated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "paginated-reports-rdl@ryiwhhGAviD-QFlD-c5If"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parameters",
+      "name": "parameters",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parameters--functions@_vIHVUkhy9Cu-WGdg59fi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-analyzer@c4Ca3HejJsCRvu2BgHzlP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pie",
+      "name": "pie",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pie--donut-charts@EJKYzHDG2YQawVpiqL-jU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pivot",
+      "name": "pivot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pivot--transpose@zRLfg-lJsWkNsZoY-Lqid"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Power",
+      "name": "power",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "power-automate@X5zgzF1ld5zGUnf4fMHLF",
+            "power-bi-ecosystem@n2m-xo1wfcluM5iF54tmu",
+            "power-bi-embedded@AX-mV_fge1qcDOjeREIvJ",
+            "power-bi-with-excel@CkG-llpmpyF9jIe5G6zrq",
+            "power-query-vs-data-model@8OG0BC-13asJ6Faxej27_",
+            "power-query@P1t4cTjmCHILyc6jkAHWH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Publishing",
+      "name": "publishing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "publishing--sharing@rVwlH4DTClyXbTewOdmn3",
+            "publishing-and-sharing@rVwlH4DTClyXbTewOdmn3",
+            "publishing-reports@rNxp8buIqSZNd6_FDKWmf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Python",
+      "name": "python",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "python--r@NCo_m2VAuWFxyMgscH5TN",
+            "python-in-power-query@KPv8ilVsBsxnyLzhu3yxy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Qa",
+      "name": "qa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "qa-visual@y4hjUDSyg1ewVtU9_IsU4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-folding@hsM7w-le7b_JXnAMB419W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Quick",
+      "name": "quick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "quick-measures@GXZhNdoiWoKZW9RstuxW1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Refresh",
+      "name": "refresh",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "refresh--change-detection@SdJi9eYWA9khpKam53Qgk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relationships",
+      "name": "relationships",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relationships-and-cardinality@hcCWf3YQqD6YeF_aBa2zI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Removing",
+      "name": "removing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "removing-duplicates@jY6JPvP0QPjmnPL2tBUus"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-api@rc3kmU1DvTbkqFW39BkpT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-playing-dimensions@_pT_-I07MtFVEN3uvkl2w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Row",
+      "name": "row",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "row-level-security@hbnBEikjm_fsQjhjZDJJm",
+            "row-vs-filter-context@-d1bS8y-wYnVO8z-Ogb4M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scatter",
+      "name": "scatter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scatter--bubble-charts@urDcAE6II1QzHBydBQ0o9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Schema",
+      "name": "schema",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "schema-design@oYreeOD0hUcg-P_edX7CX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sensitivity",
+      "name": "sensitivity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sensitivity-labels@MYHrkcRDnawWI7aK33GlF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sharing",
+      "name": "sharing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sharing--permissions@-EIV_JN7sgNvZ0ycoEq-q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Slicers",
+      "name": "slicers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "slicers-and-filters@YyJm9VI23xGcYgICxkoO0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Small",
+      "name": "small",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "small-multiples@7EqmxQwupr7b3Op_tovNz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sorting",
+      "name": "sorting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sorting-data@a30f0oSq96dKAjTSQChcC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Splitting",
+      "name": "splitting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "splitting-columns@kKbKZ1sMBNaQUoX4Vf95j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Star",
+      "name": "star",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "star-vs-snowflake-schema@DZuLutU2cYCJZwR39xD8c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Subscriptions",
+      "name": "subscriptions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "subscriptions-and-alerts@PSmaLgRiqwFKnQ3pUuZrm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Table",
+      "name": "table",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "table-manipulation@D-LFpO99i1MttUa1MTmCa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tenant",
+      "name": "tenant",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tenant-settings@A899eeb9R_z5uLgkJpHr1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Time",
+      "name": "time",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "time-intelligence@AAob1TBlOoIoEELilx3Mc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-in-dax@_wnNd9mVmSFRgeODlkwX0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visual",
+      "name": "visual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visual-calculations@Dh8pL5URdr-Fv6sVW3HfB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visualization",
+      "name": "visualization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visualization-basics@HUB5LvEuE_qxOjfxu-_mE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web--open-data@COxqpY6LmJI6S6saCFZEw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Window",
+      "name": "window",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "window-functions@M8BbSZ4EqJSHN_2CMUIlG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Workflow",
+      "name": "workflow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "workflow--lifecycle@vdUmB0z9O3ucYpvaHIAno"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Workspace",
+      "name": "workspace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "workspace-roles@vYaqmbNLFmP-CNRs6rGav"
+          ]
+        }
+      ]
+    }
+  ]
+}

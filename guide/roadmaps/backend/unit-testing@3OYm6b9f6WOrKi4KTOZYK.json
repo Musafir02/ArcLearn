@@ -1,0 +1,4 @@
+{
+  "title": "Unit Testing",
+  "content": "Unit testing tests individual components or units in isolation to ensure correct functionality. Focuses on the smallest testable parts like functions with predefined inputs and expected outcomes. Automated tests written by developers during coding to catch bugs early and improve reliability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)\r\n- [@article@What is Unit Testing?](https://www.guru99.com/unit-testing-guide.html)\r\n- [@video@What is Unit Testing?](https://youtu.be/x95ez7_V7rA?si=JhCVhcEN7zZOkxdp)"
+}

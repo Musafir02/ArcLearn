@@ -1,0 +1,4 @@
+{
+  "title": "go version",
+  "content": "Displays the currently installed Go version, target OS, and architecture. Essential for verifying installation, troubleshooting environment issues, and ensuring compatibility across different development environments and teams.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Go Versions](https://go.dev/dl/)\r\n- [@article@Updating Go Version](https://www.golang101.com/questions/how-to-update-golang-version/)\r\n- [@article@How to Check My Golang Version (Win, MacOS, Linux)](https://blog.finxter.com/how-to-check-my-golang-version-win-macos-linux/)"
+}

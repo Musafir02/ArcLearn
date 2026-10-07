@@ -1,0 +1,4 @@
+{
+  "title": "Databases in PostgreSQL",
+  "content": "In PostgreSQL, a database is a named collection of tables, indexes, views, stored procedures, and other database objects. Each PostgreSQL server can manage multiple databases, enabling the separation and organization of data sets for various applications, projects, or users.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Managing Databases](https://www.postgresql.org/docs/current/managing-databases.html)"
+}

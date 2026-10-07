@@ -1,0 +1,4 @@
+{
+  "title": "Module Bundlers",
+  "content": "Module bundlers combine multiple JavaScript files into optimized bundles for browsers. Handle dependencies, code transformation, and splitting for performance. Examples: Webpack, Rollup, Parcel. Enable modern JavaScript features, improve load times, and streamline development workflows.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Rollup Bundler](https://rollupjs.org/)\r\n- [@official@Webpack Website](https://webpack.js.org/)\r\n- [@article@The Complete JavaScript Module Bundlers Guide](https://snipcart.com/blog/javascript-module-bundler)\r\n- [@video@Module Bundlers Explained](https://www.youtube.com/watch?v=5IG4UmULyoA)"
+}

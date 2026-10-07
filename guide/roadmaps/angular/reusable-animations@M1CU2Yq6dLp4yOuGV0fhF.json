@@ -1,0 +1,4 @@
+{
+  "title": "Reusable Animations",
+  "content": "To create a reusable animation, use the `animation()` function to define an animation in a separate .ts file and declare this animation definition as a const export variable. You can then import and reuse this animation in any of your application components using the `useAnimation()` function.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Reusable Animations](https://angular.dev/guide/animations/reusable-animations)\r\n- [@article@Reusable Animations with Angular](https://catalincodes.com/posts/reusable-animations-with-angular)\r\n- [@video@Angular Animations: Creating reusable animations!](https://www.youtube.com/watch?v=ObYCutiBOTo)"
+}

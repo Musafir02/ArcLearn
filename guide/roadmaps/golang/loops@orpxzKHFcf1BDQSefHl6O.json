@@ -1,0 +1,4 @@
+{
+  "title": "Loops",
+  "content": "Go has only one looping construct: the flexible `for` loop. Basic form has initialization, condition, post statement. Supports `for range` for arrays, slices, maps, strings, channels. Can create infinite loops or while-style loops. Control with `break` and `continue`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Loops](https://go.dev/tour/flowcontrol/1)\r\n- [@article@Loops in GoLang. GoLang Loops, For Loop, While loop](https://nitish08.medium.com/loops-in-golang-d44fb39b08e)\r\n- [@article@Everything You Need to Know About for Loops in Go](https://www.bytesizego.com/blog/golang-for-loop)"
+}

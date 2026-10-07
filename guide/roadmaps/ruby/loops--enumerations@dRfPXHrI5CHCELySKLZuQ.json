@@ -1,0 +1,4 @@
+{
+  "title": "Loops & Enumerations",
+  "content": "Loops in Ruby allow you to execute a block of code repeatedly. Enumerations, on the other hand, are methods that iterate over collections like arrays and hashes, applying a block of code to each element. Both loops and enumerations provide ways to process data and perform actions multiple times, but enumerations are often preferred for their conciseness and readability when working with collections.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Loops and Iterators](https://launchschool.com/books/ruby/read/loops_iterators#simpleloop)\r\n- [@article@Loops](https://www.theodinproject.com/lessons/ruby-loops)\r\n- [@article@Ruby Loops: Repeating Something Many Times](https://www.rubyguides.com/ruby-tutorial/loops/)\r\n- [@article@Ruby - Loops](https://www.tutorialspoint.com/ruby/ruby_loops.htm)"
+}

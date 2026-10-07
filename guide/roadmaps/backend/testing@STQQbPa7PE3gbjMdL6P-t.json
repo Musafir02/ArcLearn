@@ -1,0 +1,4 @@
+{
+  "title": "Testing",
+  "content": "Testing systematically evaluates software functionality, performance, and quality against requirements. Includes unit, integration, system, and acceptance testing levels. Can be manual or automated to identify defects, validate features, and ensure reliable performance before deployment.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Software Testing?](https://www.guru99.com/software-testing-introduction-importance.html)\r\n- [@article@Testing Pyramid](https://www.browserstack.com/guide/testing-pyramid-for-test-automation)"
+}

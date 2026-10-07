@@ -1,0 +1,582 @@
+{
+  "title": "Ruby On Rails Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Action",
+      "name": "action",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "action-views@NyByCB4J4hk7rN7nrp1dv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Active",
+      "name": "active",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "active-record@ig8gCcieQF923NKhNyaNA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-asset-management@8Jbs2XpIL-Nd-tr2f0AJ8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Assets",
+      "name": "assets",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "assets-pipeline@EcGyLolDRJJra4PDWlQjJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Background",
+      "name": "background",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "background-jobs@Mj4SxEsrQZz6zIKos1hyk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-queries@Ddikj7KylZSoqsdAsd380"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Better",
+      "name": "better",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "better-errors@yUwMPqnV5ZqV7eCL0bkfs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Controller",
+      "name": "controller",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "controller-actions@Cm0tEnjeqQzQORowsdEjk",
+            "controller-callbacks-filters@oHdgQvPSEs-l3EzNRd8q2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-an-app@4SiV-sW-zg_HtL2tPc90-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-controllers@tSdMmh2SG1Qul5PWCaCKa",
+            "creating-models@oxEooPuoRqxLreJSA4QIh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Csrf",
+      "name": "csrf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "csrf-protection@VlQis-Wkahd1E1aM1ZP2E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Customizing",
+      "name": "customizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "customizing-routes@3NTsftFbqkG5s4xoU_q6E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-types@6aukVg4KBYPW0FVtdAvS5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamic",
+      "name": "dynamic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamic-finders@p8bkCtZkgdkh3G_d7fvmt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Erb",
+      "name": "erb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "erb-templates@CX-9Ii3e9rrokUTF0_hI5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Factory",
+      "name": "factory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "factory-bot@OLdWSGSwYnggN14BdH9nN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Form",
+      "name": "form",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "form-elements@GGR8jAQNggJc92FcvtL4O",
+            "form-validation@rg-48lLxIaKdjIb9icB72"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@dvL7HRXMqs2NOuTtfHeXM",
+            "aggregations@C8A-30h1xJBFLhD182H89",
+            "app@BiVYxjVr2OhmnglHz_kVZ",
+            "authentication@WqjcBTzbU4iFpYVp1-ptv",
+            "authorization@xz-xEwqyvJgTKvjpmXeOH",
+            "bin@6HV1KoHTSeEE1-f6IeWB4",
+            "byebug@SFGRkOuEMFxOJ4UU_Ti8L",
+            "caching@fjROKLDD5h6Vp0zXgJ5Y0",
+            "callbacks@xgJCbwDNWPbYV2bCILRo0",
+            "cancancan@0dPBO4cZFWvE3rSHEW1OJ",
+            "cancancan@3fA4RoDm2NFUK0EWFy-eP",
+            "capybara@JCQT_3B9hu8QkJaoDQK_V",
+            "conditions@NgMAdAtdJFd3Pha4nwiLE",
+            "config@Vr0UKX1C3DSVxZjj-Ls6L",
+            "constraints@H2lhyWJ2aErIC6UsIag_p",
+            "controllers@HDt5AAg9H4n8wh3uACudP",
+            "cookies@JAfp4HnSEfxZ33qhVrNvk",
+            "databases@QdWCXUAfVXiP6RQ6VyDkX",
+            "db@N2pXb4eqXrBdR495zMqGY",
+            "debug@SFGRkOuEMFxOJ4UU_Ti8L",
+            "debugging@ELvMdjJZGl_k_0Qsi_vtm",
+            "deployment@Ia5mN1j_lMCg0vt2z1_jI",
+            "devise@deKkp0TGU3Dj0zxUn9VI4",
+            "engines@D_LyvlDwKSzvnSWCpR00D",
+            "form_for@EctqfKE5AAqByipGIv0Wa",
+            "form_with@EWMC98NdSnblHBD0U3Ty2",
+            "gemfile@t8yTDpN4kNuW6ZhHnum2X",
+            "helpers@lnr8HfS8mIcE4Ef-bXQbO",
+            "hotwire@2IEdP3YjzCf150UpGao42",
+            "introduction@0MKuq69yhj8q6suTQ7fY7",
+            "joins@Uz5WseVkPoDJfnKw1FH9a",
+            "kamal@ih8oOhO49tg1wUUiusIA-",
+            "kaminari@6P7GM12isuv5A_SA3tqNA",
+            "logging@Un4rFrxtto4WLG9YNaAMK",
+            "mariadb@Jf7W0Sw5azZZ6VGb9oaYq",
+            "migrations@gJYuVgBvJeXL72NsRubLm",
+            "minitest@9evL0EqA6aBGczrfsRkV7",
+            "models@NtiePD28NjaDtsC3oEbYf",
+            "mysql@vIOmb6qGA0ZbPyqEQ9Bb4",
+            "omniauth@mRdKPWMxzEacPOA8j-SoH",
+            "ordering@NwzKYGKVyLF_hiHSZ01Yq",
+            "pagination@jTrvSb4eN9Hna0YooHapb",
+            "pagination@txrWW1OlBZP-uiUKSMupo",
+            "pagy@BFmYL2UyuCXdFCeMKtDZk",
+            "partials@9qNdqb_Y95_Hjm-7GYA-o",
+            "phlex@G3HHrElODg0Js0WY-VYkL",
+            "plugins@nh6d9XbtvwBUtVDmEk0i_",
+            "postgresql@TRTR2JyyfqICTm3kbyIgu",
+            "pry@eyeSECF8-wu8EMr5gD7VJ",
+            "public@rHzhzrwsguJx3Hg5szucY",
+            "pundit@dTU2RPkJcZaPRuSHPod71",
+            "redirects@pSdqdRPlLfmIl5X9XF76r",
+            "rspec@Xs9gIVdO9TuZabUapgubJ",
+            "scopes@x4MkSkbLK7aHWUoKuq1j4",
+            "security@YyBmT5CzL-lspStC8aZ_t",
+            "sessions@mJ5wZPg770fDlJ-V9x75t",
+            "sqlite@J7eIUewbviWck-lVJ1hre",
+            "storage@JyARA-iMMw2uEuB_ljFrs",
+            "testing@qtzX0ZzmWjs-CkHQDhsD1",
+            "transactions@yrW99MwJNCBMinYUXm1B_",
+            "validations@UD5BpSz2CRK1_Sl2z67AL",
+            "viewcomponent@e7tcUrtjEcFvQNL6PCYE1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-the-web-works@3YcOhdk9w24f5x0WattyB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inspecting",
+      "name": "inspecting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inspecting-routes@lLYISr_j0NsE7wkBVvnbM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layouts",
+      "name": "layouts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layouts--yield@-bX4iPTO1dt3wLAcFI7nL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-levels@1KGuLLxZ-2ghim7ge2ACN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mailbox",
+      "name": "mailbox",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mailbox--mailer@rhs6_Zg9PuY2Oost0vc_o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-methods@ca3Ik5pl-XmecZ3Ztx0YV",
+            "model-relationships@lWsJL135U-N5xIBnXqTYx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mvc",
+      "name": "mvc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mvc-architecture@wHKlT_wCIrpSvULvXCufr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Named",
+      "name": "named",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "named-routes@KlEgfzfkPu0O43tJIsU3H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested-forms@p0JHL8iAcV5tRLX9DPhx6",
+            "nested-routes@DbJ1BIOoerkCH4P95Z7wD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Non",
+      "name": "non",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "non-restful-routes@3qImaY9Hs3Cvatw1X96Ns"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plugins",
+      "name": "plugins",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plugins--engines@nh6d9XbtvwBUtVDmEk0i_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-optimization@8EwNQFoZbzf5WtvP4OA4G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rails",
+      "name": "rails",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rails--frontend@jKADWbGXSL5yGzsLqSJG9",
+            "rails-command-line@DyrNnHUm4Ws5Ku7AlVnWg",
+            "rails-generators@okQl2NFVACbZJPgh3sD5I",
+            "rails-internationalization@IjEF4T0vuFNUlA9O0wOFw",
+            "rails-logger@PDxKuQbWhbg0_AewOw9Mm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Raw",
+      "name": "raw",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "raw-sql@wszshSvhqtfN829f5InuL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rendering",
+      "name": "rendering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rendering-views@WJmDAayQ6SMNuUWsMzhnJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Request",
+      "name": "request",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "request-reponse-flow@eYaayU92hNbri3YTdSAbG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Restful",
+      "name": "restful",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "restful-routes@NB50RuNBT5Oja2Ry6p892"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Routing",
+      "name": "routing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "routing-fundamentals@ftFF3oFfqpKvjQhXk3bWw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-ruby-on-rails@4nyrB8-xmd35S6ZNjPX8d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strong",
+      "name": "strong",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strong-parameters@cUYKqkqvg2u3Z4KOtAE9m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-web-frameworks@VCufea-9vs4DfzB815IT5"
+          ]
+        }
+      ]
+    }
+  ]
+}

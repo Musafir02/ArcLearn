@@ -1,0 +1,4 @@
+{
+  "title": "AutoFixture",
+  "content": "AutoFixture is an open-source .NET library designed to minimize the 'Arrange' phase of your unit tests by creating object instances automatically with dummy data. It helps reduce boilerplate code and makes tests easier to maintain.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Quick start to AutoFixture](https://autofixture.github.io/docs/quick-start/)"
+}

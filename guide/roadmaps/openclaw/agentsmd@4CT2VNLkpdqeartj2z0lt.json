@@ -1,0 +1,4 @@
+{
+  "title": "AGENTS.md",
+  "content": "[AGENTS.md](http://AGENTS.md) describes the agents available in your workspace, their roles, and how they relate to each other. It is used when running multiple agents to clarify who does what.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Default AGENTS.md](https://docs.openclaw.ai/reference/AGENTS.default#default-agents-md)\r\n- [@official@AGENTS.md Template](https://docs.openclaw.ai/reference/templates/AGENTS)"
+}

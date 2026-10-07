@@ -1,0 +1,4 @@
+{
+  "title": "Use Correct Constructs",
+  "content": "Using correct constructs involves selecting the most appropriate programming language features, data structures, and syntax to express a specific logic clearly and efficiently. This practice focuses on avoiding the misuse of language capabilities, such as using a loop when a built-in functional method is available or picking an inefficient data type for a simple task. By adhering to idiomatic patterns, developers create code that is predictable, easier to debug, and more readable for other team members."
+}

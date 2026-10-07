@@ -1,0 +1,4 @@
+{
+  "title": "Collections",
+  "content": "Dart provides built-in collections like Lists (ordered, indexed), Sets (unordered, unique), Maps (key-value pairs), Queues (FIFO), and Stacks (LIFO) for efficient data storage and manipulation, useful in various scenarios like data storage, state management, and algorithm implementation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Generic Collections in Flutter](https://dart.dev/guides/language/language-tour#generic-collections-and-the-types-they-contain)\r\n- [@official@Iterable Collections](https://dart.dev/codelabs/iterables)"
+}

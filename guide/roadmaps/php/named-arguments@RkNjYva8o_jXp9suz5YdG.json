@@ -1,0 +1,4 @@
+{
+  "title": "Named Arguments",
+  "content": "Named arguments let you pass values to a function by specifying the parameter name explicitly, like `str_pad(string: 'hello', length: 10)`. This removes the need to follow positional order and makes call sites easier to read. Named arguments can be combined with positional ones in the same call.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Named Arguments](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments)"
+}

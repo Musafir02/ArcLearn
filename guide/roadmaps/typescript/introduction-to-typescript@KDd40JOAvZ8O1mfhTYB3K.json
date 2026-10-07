@@ -1,0 +1,4 @@
+{
+  "title": "Introduction to TypeScript",
+  "content": "TypeScript is a programming language that builds on JavaScript by adding static types. It essentially acts as a superset of JavaScript, meaning that all valid JavaScript code is also valid TypeScript code. The key addition of static typing allows developers to define the expected data types of variables, function parameters, and return values, which helps catch errors during development and improves code maintainability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Overview of TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)\r\n- [@official@TypeScript Official Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)\r\n- [@article@What Is TypeScript?](https://thenewstack.io/what-is-typescript/)\r\n- [@video@Video: Where TypeScript Excels](https://youtu.be/BUo7B6UuoJ4)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Framer Motion",
+  "content": "Framer Motion is an animation library for React that lets you animate components with simple props, such as defining an initial state, an animate state, and a transition. It supports gestures, layout animations, and page transitions, and integrates naturally with React's component model.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Framer Motion Website](https://www.framer.com/motion/introduction/)\r\n- [@video@Framer Motion Crash Course with React & TS](https://www.youtube.com/watch?v=hjbxaYTMhy0&list=PLA4qBVt61k3Phpwt7uqaptIg9NYZ5aNu_)"
+}

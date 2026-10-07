@@ -1,0 +1,4 @@
+{
+  "title": "LLM Security Testing",
+  "content": "The core application area for many AI Red Teamers today involves specifically testing Large Language Models for vulnerabilities like prompt injection, jailbreaking, harmful content generation, bias, and data privacy issues using specialized prompts and evaluation frameworks.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@AI Red Teaming Courses - Learn Prompting](https://learnprompting.org/blog/ai-red-teaming-courses)\r\n- [@article@SecBench: A Comprehensive Multi-Dimensional Benchmarking Dataset for LLMs in Cybersecurity](https://arxiv.org/abs/2412.20787)\r\n- [@article@The Ultimate Guide to Red Teaming LLMs and Adversarial Prompts (Kili Technology)](https://kili-technology.com/large-language-models-llms/red-teaming-llms-and-adversarial-prompts)\r\n- [@course@OWASP LLM, Agentic and MCP Top 10: Exploit-then-Fix Labs](https://ransomleak.com/catalogue/ai-security/)"
+}

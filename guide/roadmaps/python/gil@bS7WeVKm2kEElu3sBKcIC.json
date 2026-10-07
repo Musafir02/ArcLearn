@@ -1,0 +1,4 @@
+{
+  "title": "GIL",
+  "content": "GIL is a mechanism that allows only one thread to execute Python code at a time. This limitation is related to memory management in CPython and can reduce the efficiency of multithreaded applications on multi-core systems.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is GIL?](https://realpython.com/python-gil/)\r\n- [@article@Python Multithreading: The Most Practical Intro](https://roadmap.sh/python/multithreading)"
+}

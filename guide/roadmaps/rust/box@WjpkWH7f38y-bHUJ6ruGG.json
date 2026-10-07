@@ -1,0 +1,4 @@
+{
+  "title": "Box",
+  "content": "A `Box` in Rust is a smart pointer that allocates memory on the heap. It's primarily used to store data that has a size that's not known at compile time, or when you want to transfer ownership of data without copying it. Think of it as a way to put data on the heap and access it through a pointer, ensuring that the data is automatically deallocated when the `Box` goes out of scope.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Smart Pointers](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html#smart-pointers)\r\n- [@video@The Box Smart Pointer in Rust](https://www.youtube.com/watch?v=m76sRj2VgGo)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "ifconfig and ip Commands",
+  "content": "`ifconfig` and `ip` are command-line utilities used to configure and manage network interfaces on Unix-like operating systems. They allow you to view, configure, and control network interfaces, including assigning IP addresses, setting network masks, and enabling or disabling interfaces. While `ifconfig` is an older tool, `ip` is the modern replacement offering more features and flexibility.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Linux ifconfig Command With Examples](https://phoenixnap.com/kb/linux-ifconfig)\r\n- [@article@Linux ip Command with Examples](https://phoenixnap.com/kb/linux-ip-command-examples)\r\n- [@video@How to Use the ip Command in Linux: A Beginner’s Guide](https://www.youtube.com/watch?v=wHfIFZlDxtU)\r\n- [@video@Using IPCONFIG for Network Troubleshooting](https://www.youtube.com/watch?v=k1qgpqQ0Mo4)"
+}

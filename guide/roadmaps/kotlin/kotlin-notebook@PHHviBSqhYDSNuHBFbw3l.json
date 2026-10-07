@@ -1,0 +1,4 @@
+{
+  "title": "Kotlin Notebook",
+  "content": "Kotlin Notebook is an interactive environment for writing and executing Kotlin code, similar to Jupyter Notebook for Python. It allows you to combine code, text, and visualizations in a single document, making it ideal for data exploration, prototyping, and creating interactive tutorials. You can execute code snippets (cells) individually and see the results immediately, facilitating experimentation and rapid development.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Kotlin Notebook](https://kotlinlang.org/docs/kotlin-notebook-overview.html)\r\n- [@official@Create your first Kotlin Notebook](https://kotlinlang.org/docs/kotlin-notebook-create.html)\r\n- [@video@Kotlin Notebook: Visual, Interactive, Fun | Kotlin Notebook Tutorial](https://www.youtube.com/watch?v=m4Cqz2_P9rI)"
+}

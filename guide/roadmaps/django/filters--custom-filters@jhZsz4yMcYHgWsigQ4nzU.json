@@ -1,0 +1,4 @@
+{
+  "title": "Filters & Custom Filters",
+  "content": "Filters in Django Template Language (DTL) are used to modify the output of variables. They are applied using a pipe `|` symbol and can perform various transformations like changing case, formatting dates, or truncating text. Custom filters allow developers to define their own reusable template tags to perform specific data manipulations not covered by the built-in filters.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Filters](https://docs.djangoproject.com/en/6.0/ref/templates/language/#filters)\r\n- [@official@Built-in template tags and filters](https://docs.djangoproject.com/en/6.0/ref/templates/builtins/)\r\n- [@article@filter Template Tag](https://www.w3schools.com/django/ref_tags_filter.php)\r\n- [@video@Creating Custom Template Filters in Django!](https://www.youtube.com/watch?v=g2WkvFSVce8)"
+}

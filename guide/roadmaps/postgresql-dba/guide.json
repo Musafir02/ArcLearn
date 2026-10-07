@@ -1,0 +1,1063 @@
+{
+  "title": "Postgresql Dba Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Adding",
+      "name": "adding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adding-extra-extensions@VAf9VzPx70hUf4H6i3Z2t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-topics@09QX_zjCUajxUqcNZKy0x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aggregate",
+      "name": "aggregate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aggregate-and-window-functions@iQqEC1CnVAoM7x455jO_S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Any",
+      "name": "any",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "any-programming-language@j5YeixkCKRv0sfq_gFVr9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authentication",
+      "name": "authentication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication-models@gb75xOcAr-q8TcA6_l1GZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "B",
+      "name": "b",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "b-tree@jihXOJq9zYlDOpvJvpFO-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backup",
+      "name": "backup",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backup-validation-procedures@te4PZaqt6-5Qu8rU0w6a1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-rdbms-concepts@-M9EFgiDSSAzj9ISk-aeh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buffer",
+      "name": "buffer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buffer-management@KeBUzfrkorgFWpR8A-xmJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bulk",
+      "name": "bulk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bulk-loading--processing-data@cc4S7ugIphyBZr-f6X0qi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Checkpoints",
+      "name": "checkpoints",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "checkpoints--background-writer@3pLn1mhRnekG537ejHUYA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connect",
+      "name": "connect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connect-using-psql@mMf2Mq9atIKk37IMWuoJs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-dumps@-CIezYPHTcXJF_p4T55-c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-partitioning@OiGRtLsc28Tv35vIut6B6",
+            "data-types@4Pw7udOMIsiaKr7w9CRxc",
+            "data-types@fvEgtFP7xvkq_D4hYw3gz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Default",
+      "name": "default",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "default-privileges@t18XjeHP4uRyERdqhHpl5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deployment",
+      "name": "deployment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deployment-in-cloud@6SCcxpkpLmmRe0rS8WAPZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filtering",
+      "name": "filtering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filtering-data@dd2lTNsNzYdfB7rRFMNmC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "For",
+      "name": "for",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "for-schemas@KMdF9efNGULualk5o1W0_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acid@9u7DPbfybqmldisiePq0m",
+            "ansible@RqSfBR_RuvHrwHfPn1jwZ",
+            "attributes@XvZMSveMWqmAlXOxwWzdk",
+            "awk@HJCRntic0aGVvdmCN45aP",
+            "barman@-XhONB0FBA6UslbDWoTDv",
+            "brin@43oFhZuXjJd4QHbUoLtft",
+            "check_pgactivity@WiOgUt5teG9UVRa6zo4h3",
+            "check_pgbackrest@DDPuDDUFxubWZmWXCmF7L",
+            "chef@7EHZ9YsNjCyTAN-LDWYMS",
+            "columns@cty2IjgS1BWltbYmuxxuV",
+            "configuring@T819BZ-CZgUX_BY7Gna0J",
+            "constraints@j9ikSpCD3yM5pTRFuJjZs",
+            "consul@IkB28gO0LK1q1-KjdI9Oz",
+            "cte@fsZvmH210bC_3dBD_X8-z",
+            "databases@DU-D3-j9h6i9Nj5ci8hlX",
+            "depesz@rVlncpLO20WK6mjyqLerL",
+            "domains@-LuxJvI5IaOx6NqzK0d8S",
+            "ebpf@QarPFu_wU6-F9P5YHo6CO",
+            "etcd@kCw6oEVGdKokCz4wYizIT",
+            "explain@n2OjwxzIHnATraRWi5Ddl",
+            "explaindalibocom@UZ1vRFRjiQAVu6BygqwEL",
+            "fortables@ga8ZiuPc42XvZ3-iVh8T1",
+            "gdb@yIdUhfE2ZTQhDAdQsXrnH",
+            "gin@FJhJyDWOj9w_Rd_uKcouT",
+            "gist@2chGkn5Y_WTjYllpgL0LJ",
+            "grep@cFtrSgboZRJ3Q63eaqEBf",
+            "grouping@uwd_CaeHQQ3ZWojbmtbPh",
+            "haproxy@V8_zJRwOX9664bUvAGgff",
+            "hash@2yWYyXt1uLOdQg4YsgdVq",
+            "helm@QHbdwiMQ8otxnVIUVV2NT",
+            "htap@rHDlm78yroRrrAAcabEAl",
+            "introduction@lDIy56RyC1XM7IfORsSLD",
+            "iotop@n8oHT7YwhHhFdU5_7DZ_F",
+            "keepalived@xk2G-HUS-dviNW3BAMmJv",
+            "mvcc@-_ADJsTVGAgXq7_-8bdIO",
+            "null@91eOGK8mtJulWRlhKyv0F",
+            "olap@WI3-7hFAnJw5f7GIn-5kp",
+            "oltp@VekAMpcrugHGuvSbyPZVv",
+            "operators@nRJKfjW2UrmKmVUrGIfCC",
+            "patroni@mm0K_8TFicrYdZQvWFkH4",
+            "pev2@9RyMU36KEP__-RzTTz_eo",
+            "pgbackrest@5LLYxCj22RE6Nf0fVm8GO",
+            "pgbadger@V2iW8tJQXwsRknnZXoHGd",
+            "pgbouncer@aKQI7aX4bT_39bZgjmfoW",
+            "pgcenter@TytU0IpWgwhr4w4W4H3Vx",
+            "pgcluu@ISuU1lWH_zVDlCHnWXbf9",
+            "pgq@WCBWPubUS84r3tOXpnZT3",
+            "pg_basebackup@XYaVsj5_48CSnoTSGXBbN",
+            "pg_dump@XZ922juBJ8Om0WyGtSYT5",
+            "pg_dumpall@QmV-J6fPYQ5CcdGUkBs7y",
+            "pg_hbaconf@Y2W29M4piaQsTn2cpyR7Q",
+            "pg_probackup@Id_17Ya-NUvoXxijAZvmW",
+            "pg_restore@YSprRhPHkzV8SzDYpIVmp",
+            "pg_stat_activity@_NL5pGGTLNxCFx4axOqfu",
+            "pg_stat_statements@wLMGOUaULW7ZALRr-shTz",
+            "plpgsql@Ur23UVs_nXaltytF1WJD8",
+            "prometheus@XmBeM01NAy-_nfyNdk9ZV",
+            "puppet@e39bceamU-lq3F2pmLz6v",
+            "queries@xVocG4LuFdtphwoOxiJTa",
+            "red@qBkpTmfbyCv2L-OJW9pPI",
+            "relations@2hM2IPAnNYq-LlEbcFp2Z",
+            "replication@A3YTrZSUxNBq77iIrNdZ4",
+            "roles@l0lpaPy12JFCJ-RRYVSqz",
+            "rows@Rd3RLpyLMGQZzrxQrxDGo",
+            "salt@Q_B9dlXNMXZIRYQC74uIf",
+            "schemas@mF6qAlo2ULJ3lECG2m0h7",
+            "security@2Zg8R5gs9LMQOcOMZtoPk",
+            "sed@hVL6OtsXrE8BvjKpRjB-9",
+            "selinux@GvpIJF-eaGELwcpWq5_3r",
+            "strace@C_cUfEufYeUlAdVfdUvsK",
+            "subqueries@_Y-omKcWZOxto-xJka7su",
+            "sysstat@0hRQtRsteGDnKO5XgLF1R",
+            "tables@W8NhR4SqteMLfso8AD6H8",
+            "temboard@aXG68inOu3trBWOmg9Yqx",
+            "tensor@xEu5n6U9-WKVxjlT5YUgx",
+            "top@pvj33qDiG3sSjtiW6sUra",
+            "transactions@ghgyAXJ72dZmF2JpDvu9U",
+            "transactions@yFG_hVD3dB_qK8yphrRY5",
+            "triggers@ps2KK88QA1n5udn2ochIn",
+            "tuples@vJhvgGwNV3JB-wWn_0gMb",
+            "use@QWi84EjdHw5ChYsuwUhPC",
+            "vacuums@zoaqBP0Jbf0HpTH8Q3LkJ",
+            "zabbix@z3VD68R2uyu1s-3giRxKr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Get",
+      "name": "get",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "get-involved-in-development@NhodBD8myUTljNdn3y40I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Golden",
+      "name": "golden",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "golden-signals@oX-bdPPjaHJnQKgUhDSF2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grant",
+      "name": "grant",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grant--revoke@o1WSsw-ZIaAb8JF3P0mfR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "High",
+      "name": "high",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "high-level-database-concepts@_BSR2mo1lyXEFXbKYb1ZG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Import",
+      "name": "import",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "import--export-using-copy@umNNMpJh4Al1dEpT6YkrA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Indexes",
+      "name": "indexes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "indexes-and-their-usecases@Dhhyg23dBMyAKCFwZmu71"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Infrastructure",
+      "name": "infrastructure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "infrastructure-skills@zlqSX0tl7HD9C1yEGkvoM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installation",
+      "name": "installation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installation-and-setup@FtPiBWMFhjakyXsmSL_CI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Joining",
+      "name": "joining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "joining-tables@Hura0LImG9pyPxaEIDo3X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lateral",
+      "name": "lateral",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lateral-join@fTsoMSLcXU1mgd5-vekbT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-sql@ANUgfkADLI_du7iRvnUdi",
+            "learn-to-automate@e5s7-JRqNy-OhfnjTScZI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lock",
+      "name": "lock",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lock-management@pOkafV7nDHme4jk-hA8Cn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logical",
+      "name": "logical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logical-replication@rmsIw9CQa1qcQ_REw76NK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mailing",
+      "name": "mailing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mailing-lists@8H7hJhGKxr1nrjkHv9Xao"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Migration",
+      "name": "migration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "migration-related-tools@3Lcy7kBKeV6hx9Ctp_20M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modifying",
+      "name": "modifying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modifying-data@G2NKhjlZqAY9l32H0LPNQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Normalization",
+      "name": "normalization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "normalization--normal-forms@Fcl7AD2M6WrMbxdvnl-ub"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-model@RoYP1tYw5dvhmkVTo1HS-",
+            "object-privileges@S20aJB-VuSpXYyd0-0S8c"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-managers@pEtQy1nuW98YUwrbfs7Np"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Patroni",
+      "name": "patroni",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "patroni-alternatives@TZvZ_jNjWnM535ZktyhQN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Patterns",
+      "name": "patterns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "patterns--antipatterns@rnXcM62rgq3p6FQ9AWW1R"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Per",
+      "name": "per",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "per-user-per-database-setting@msm4QCAA-MRVI1psf6tt3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Perf",
+      "name": "perf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "perf-tools@wH447bS-csqmGbk-jaGqp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pgbouncer",
+      "name": "pgbouncer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pgbouncer-alternatives@3V1PPIeB0i9qNUsT8-4O-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Physical",
+      "name": "physical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "physical-storage-and-file-layout@gweDHAB58gKswdwfpnRQT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Postgresql",
+      "name": "postgresql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "postgresql-anonymizer@Z2PuOmgOqScGFbhvrvrA1",
+            "postgresql-vs-nosql-databases@D0doJTtLu-1MmFOfavCXN",
+            "postgresql-vs-other-rdbms@IAKERTzTpTds5kZLMCapM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Practical",
+      "name": "practical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "practical-patterns--antipatterns@AtZcMhy2Idmgonp5O8RSQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Procedures",
+      "name": "procedures",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "procedures-and-functions@LiF2Yh818D-zEF58v5Fgr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Processes",
+      "name": "processes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "processes--memory-architecture@v2J6PZT0fHvqA7GwlqBU7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-planner@hOPwVdIzesselbsI_rRxt",
+            "query-processing@Qk14b9WyeCp9RV9WAwojt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Querying",
+      "name": "querying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "querying-data@BEJyz0ohCglDucxfyuAy4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rdbms",
+      "name": "rdbms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rdbms-benefits-and-limitations@p3AmRr_y_ZBKzAU5eh7OU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recursive",
+      "name": "recursive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recursive-cte@A1LGOqqaka0ILcYwybclP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relational",
+      "name": "relational",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relational-model@mDVbjdVN0spY7dI_8k1YW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reporting",
+      "name": "reporting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reporting-logging--statistics@507TY35b8iExakbBMrHgZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-usage--provisioning--capacity-planning@SNnc8CIKuHUAEZaJ_qEar",
+            "resource-usage@yl3gxfQs4nOE0N7uGqR0d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reviewing",
+      "name": "reviewing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reviewing-patches@Jy0G0ZnHPOM8hba_PbwuA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Row",
+      "name": "row",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "row-level-security@bokFf6VNrLcilI9Hid386"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Schema",
+      "name": "schema",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "schema-design-patterns--anti-patterns@FDuiJyU1yWUQ9IsfS3CeZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Set",
+      "name": "set",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "set-operations@kOwhnSZBwIhIbIsoAXQ50"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sharding",
+      "name": "sharding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sharding-patterns@r6Blr7Q4wOnvJ-m6NvPyP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shell",
+      "name": "shell",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shell-scripts@-clI2RmfhK8F8beHULaIB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Simple",
+      "name": "simple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "simple-stateful-setup@rNp3ZC6axkcKtAWYCPvdR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sp",
+      "name": "sp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sp-gist@LT5qRETR3pAI8Tk6k5idg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-query-patterns--anti-patterns@G9DB1ZQjgXaHxJ4Lm6xGx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ssl",
+      "name": "ssl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ssl-settings@EKwO6edtFnUw8cPCcVwKJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Storage",
+      "name": "storage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "storage-parameters@4VrT_K9cZZ0qE1EheSQy0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streaming",
+      "name": "streaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streaming-replication@MwLlVbqceQ-GTgPJlgoQY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-catalog@lDuBFA7cEMnd7Cl9MDgnf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-docker@5MjJIAcn5zABCK6JsFf4k",
+            "using-logical-replication@MVVWAf9Hk3Fom-wBhO64R",
+            "using-pg_ctl@a4j0Rs8Tl6-k9WP5zjaep",
+            "using-pg_ctlcluster@v3SoKmeCh6uxKW5GAAMje",
+            "using-pg_upgrade@cJYlZJ9f3kdptNrTlpMNU",
+            "using-systemd@P1Hm6ZlrhCRxbxOJkBHlL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vacuum",
+      "name": "vacuum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vacuum-processing@dJzJP1uo4kVFThWgglPfk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wal",
+      "name": "wal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wal-g@4gQSzH-WKFAvmkwlX_oyR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-relational-databases@soar-NBWCr4xVKj7ttfnc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Write",
+      "name": "write",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "write-ahead-log@9sadNsbHLqejbRPHWhx-w",
+            "write-ahead-log@9VmQ-vN3nPyf1pTFIcj40"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-patches@eQzMU_KyQmHJQ6gzyk0-1"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,785 @@
+{
+  "title": "Swift Ui Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Access",
+      "name": "access",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "access-control@SRZfkrqxU2UxFif4v4t3o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Animatable",
+      "name": "animatable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "animatable-protocol@gktNK5eNvTJ3vqmPdHYCC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "App",
+      "name": "app",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app-architecture@UCv-FDzB1O-zRH700Im8i",
+            "app-lifecycle@FfREh4vs6KqWEUQ44pDmA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asynchronous",
+      "name": "asynchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asynchronous-functions@60_LHnRY7FVwLziq7VBkz",
+            "asynchronous-sequences@xu2GOHaW721Gi0b1ua3Kh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-functions@MXlCVXs2fEyV_UmV-w8hB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clean",
+      "name": "clean",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clean-architecture@jmr8IaAd2391FlqyOuFP8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Constants",
+      "name": "constants",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "constants--variables@fdMCoxX_YjtgUReIGh1nn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Continue",
+      "name": "continue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "continue--break@z84nzijt2F7zR4prl1Juh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-data@J8Aq24_1yHj4UowvK0AkH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-packages@03OPOqR5K4H-oy2KBx744"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-flow@nkXaoMWBSSYxELuA9lJD8",
+            "data-persistence@R7ILNzMmAKQXwTyrvFaul"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@7XjAReXi1WWOFRVfBVoN0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Drag",
+      "name": "drag",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "drag--drop@iZlsMU1NtEPkosxNxNZWq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@62FM5cEvtDZwHvL9uOjhz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explicit",
+      "name": "explicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explicit-animations@jYpugTP_5rF26pn0kUKhG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Floats",
+      "name": "floats",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "floats--doubles@2fA97do5FFkT6ggC0ThZa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-types@1j6Lz3AjJeNulzsSN0fsu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@-u5-uN2x0uuvkLieoq7Nr",
+            "actors@sZeSwx_Rb0H81oA7KUw9m",
+            "alamofire@47Sc0VzbRMKYb-3ivhNG3",
+            "animations@Ui6hCqvVwf61wXBOxYG6Q",
+            "arc@HBd_J1jUMW-a0Z_Hk9BSL",
+            "arithmetic@Q44dJaEA7aHG_ClMwO9Wv",
+            "background@QK0trIIACmUHEuoLEBKs4",
+            "binding@k7mMeSXQjY0fygLJj7Gr-",
+            "booleans@xn2iNnrxx-jhIMLpfU5Mi",
+            "button@BceTgMv9rsRu4j5M7JQRk",
+            "catching@AWAf49r8RNMkYPOayx2LC",
+            "clipshape@GZN34c2OGkMFO_fM-XQou",
+            "closures@gD9JTNSkjxcwnpyzmxrZM",
+            "cloudkit@t2S_cttRJLpC__YTf1nAa",
+            "cocoalumberjack@XgF8ecga95g7wapmPrk0w",
+            "comments@pNyGRFQbPH2tLc-mrsGLU",
+            "comparison@03HZvlAne_Uq7uyuP4kdc",
+            "computed@aZVvq-jhpvsQxZvhuB9xf",
+            "databases@tB8bNFuB0NetMLQVDd2hj",
+            "docc@MMdjsS4ltdP7E4ih7URdd",
+            "emacs@1EsTqJ17eoz-zznnrNwvW",
+            "enumerations@BURfkXkKdPf1yMTB9neh9",
+            "environmentobject@-u2enh8vI9ynjTv1H8nVL",
+            "extensions@WcxA4zrP084D0x-NtfHgP",
+            "filemanager@IUKUp_QQ2BcESvVS8VhVh",
+            "firabase@wwVfkhkibsFvIP_amh2Y9",
+            "font@61lcF5utl8qO-MxpWPMnU",
+            "for@PVSWiOw5jJf5GFqFA-ld9",
+            "form@hZswz-G-20SU__1b0s6eq",
+            "generics@_uO1_qHfBkN6YQ02zEFdW",
+            "geometryreader@9y9HLynnw9d0349CbByvF",
+            "gestures@xSl3mD95BbIhpf41d3QVV",
+            "grdb@ie_fUA2ZuqmtY7gX14rjo",
+            "grid@elOwuO5ktRapvuX2UTmPK",
+            "hstack@8oJVx9Y-NAW2fXtnHfMXB",
+            "hummingbird@5nwb4xOiJ4odx1NXXRflI",
+            "ides@ofDokn4mAgUSL-pOy-MVb",
+            "image@-COipcnjNA-BV5PnYj_o-",
+            "inheritance@P1IUtZi9_41zPn4nar6Ov",
+            "initialization@DsGqB_mLppVESbQeczWh4",
+            "integers@Kih96pA1xsogmvrmbIFX6",
+            "introduction@vnbgQBHdyv0tE-y7ngAOV",
+            "list@ZR0b32xTb0WbqZeoojyIg",
+            "localization@yRVNTN2eJEtT5uX4jrRS6",
+            "logical@ND7oiPW66fhJVZuhNqAnj",
+            "loops@N_9K-sVmpCMD_Ug_3qX7h",
+            "macros@GlLHFLypw3eTMs7h43Lys",
+            "methods@8fpk7cpMluKMGOiOLGxLW",
+            "mongokitten@htRKwjBD1NkKZZG5Cd9bx",
+            "moya@gKW619QYNxtSoeld_jNs7",
+            "mvvm@l-E5ZN3xarJ69o26-yvAn",
+            "navigationlink@6EpvayoacyBX8wXPJ_CZ5",
+            "navigationpath@W5HvjGbPFFmrIdzwg_WvM",
+            "navigationstack@kh8PovQUi61HDBeHD2G4x",
+            "neovim@IuQG4c_0KpNlTds7W7Gzn",
+            "observedobject@eZI02ZYjGUACbpM0T7_LR",
+            "observers@n1n7-fTnzS2QaEM0L7IZL",
+            "operators@4EBdMshXiAylkgoG9FqlB",
+            "padding@TQQ8b8y3KYNeASrki0YMy",
+            "parameters@FaWFpl-nZlU7Qo_824-NE",
+            "plugins@ygVGffnYXG6j6JzM5q9mO",
+            "propagating@09Ue-KMoTFypYKThhJMw9",
+            "properties@lYQNVpMqaVOSMI18uEnJZ",
+            "protocols@ZXmYD2gwgdkve12GpdP7Y",
+            "realm@RvR35apiPT5L4xD2PUKAO",
+            "repeatwhile@RCpClnQ3bwce4vLpG9zCa",
+            "semicolons@rGThKnBd0EXyx8Fh6QoX6",
+            "state@UJEyJwuTiLeea6q0H9tIW",
+            "stateobject@pKVxtzPgA_88wyGF3dK-7",
+            "stored@r-jFJSdOVbCVLosImofac",
+            "strings@llXPXjYS801GhnNPdsApZ",
+            "subscripts@ABT037yTlXpAenBK9Mknt",
+            "swiftdata@QPBuLcgz4GNd94bJsv6LU",
+            "tabview@AE6CX6Gp7GtK0YAfdI_gb",
+            "testing@H3-EwjQukBJJL1agH-giQ",
+            "text@RI0iYd7ZI7L3yk4Wf2JES",
+            "throwing@E0nBPRzPkzx9BKaCfweSb",
+            "transitions@hZYzZntkSsx89c4jesxEo",
+            "tuples@s7sdqYwqbXaF6Wli79l8e",
+            "vapor@4CN0ACAfdHtFjL_arnQvi",
+            "viewbuilder@KHtizt-en2bWHDNmBmIqp",
+            "views@0kwf3brDiHhnsQ45708M0",
+            "vscode@50KaK9mRCVf8zOwHPiW4w",
+            "vstack@_iTFfnpZBy3GLVsidUAzk",
+            "while@FdHaF5ZM3WjRD_yCOZCXx",
+            "wrappers@5cHzfAOmFxR_gB9LvwLYj",
+            "xcode@48dieYUTz5fSXipndwKce",
+            "xctest@moORQvblmG3x7kaAXHPat",
+            "zstack@_suK9choLayT05wAZ3UCz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "If",
+      "name": "if",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "if--else@7XtwAhFQH7uNlvvtE9-qX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implicit",
+      "name": "implicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implicit-animations@3-3r9psIaF-dQSjIFCsKS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-swift@l8BWjmxhHaO0uDmFFFBoI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logging",
+      "name": "logging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logging--debugging@O5libf2fha4pyKxQDCQka"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-safety@B1mbKaKaxvT82PPKQoMm5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested-functions@tSBt4WCd-v96Ux-INWdj1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking-libraries@NCwJq7Rv2H4m5_oxIWinV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nil",
+      "name": "nil",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nil-coalescing@cCi3MutPRV-L1rrW5McQH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optional",
+      "name": "optional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optional-chaining@3CcmKsX4Yuej9MrAXh-4P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optionals",
+      "name": "optionals",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optionals--nil@pPXG2vtWu_vgGymawe5-u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Print",
+      "name": "print",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "print--string-interpolation@2RkpY7Oq_Z-6YY4hZuc7q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Result",
+      "name": "result",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "result-builders@f0Nvu2IcZsCJXkK1kMfwa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Return",
+      "name": "return",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "return-types@AWhYlhCzP0V3rvYVDeb6A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sdks",
+      "name": "sdks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sdks-for-wasm@M3ctRye03DqCwivmdnQ4u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-frameworks@gYcrVzB740nrRn3Tan6Gt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-linux-sdk@vVcCHY2iq2f-qdIDBWJ5O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strict",
+      "name": "strict",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strict-concurrency-checking@GWh98EbRBe2xGEAYrCA30"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structures",
+      "name": "structures",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structures--classes@thS85PP8famziViKq49Tq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swift",
+      "name": "swift",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swift-charts@VT6nRTnNsEKLWrKsghKFR",
+            "swift-for-server-apps@CYnuCu6jRa6ExrSBwQF_a",
+            "swift-log@v6FKxFW0SMaH_hXCIAnyA",
+            "swift-nio@vpV45shc5onmenUP_tIpb",
+            "swift-package-index@dajwi7gUyB3Jyyl2QbazS",
+            "swift-package-manager@YNfVAMdAK9vI0bUkvdVyc",
+            "swift-playgrounds@ewhk18ChvKJM9U_ziZ8Iq",
+            "swift-testing@EBvuWsdwRLiMe5feESXgZ",
+            "swift-vs-objective-c@oPz8e_X_LaiowAZYavVgY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swiftui",
+      "name": "swiftui",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swiftui-inspector@ORk-aG_KxdVcyRwFyZFp1",
+            "swiftui-with-asyncawait@gaQqVwxVK7_sYTHCCRBvc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Switch",
+      "name": "switch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "switch--case@hODKmqbFLKIulHgXqhh6B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tasks",
+      "name": "tasks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tasks--task-groups@D9muzTnim2h7VSWmLeCFW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Trailing",
+      "name": "trailing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "trailing-closures@0onr5oXzArGN5Oqc4K2rp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-annotations@E-kALuBRAX3C06SfcD1Sk",
+            "type-casting@Yvc5PFi1CZQcf8qVnaF7q",
+            "type-inference@8nk8GhZH3t-rq6g47rspD",
+            "type-safety@FndEtBUVfWAYs01gFLKG_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ui",
+      "name": "ui",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ui-controls@MEe088TqkeHxF7q0hiAUM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Uikit",
+      "name": "uikit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "uikit-vs-swiftui@rx9ZSMBFErvFfZgSZo_u2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unstructured",
+      "name": "unstructured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unstructured-concurrency@jEWHNFLdcrvLQEOXr3ll6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-interaction@3g4AN-pIHAMJ5PKwE4SlY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Userdefaults",
+      "name": "userdefaults",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "userdefaults-appstorage@OC5GZ2fy4FaV0Nq7dykRh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-packages@NGyvq-w9rGEqjkxoWYoqA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-swift@zvELiSGcoLpRyphJuFME9",
+            "what-is-swiftui@jRbmmPKkJ2xHbUL18A8oe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Where",
+      "name": "where",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "where-swift-is-used@mkKOv4UX94r8ijD_FPJ0f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-swift@25OMS3jP0rtZXc697FENP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Xcode",
+      "name": "xcode",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "xcode-debugging@LrMTrEV-oQVFUro2k6mpT"
+          ]
+        }
+      ]
+    }
+  ]
+}

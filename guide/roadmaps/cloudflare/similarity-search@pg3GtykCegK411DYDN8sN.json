@@ -1,0 +1,4 @@
+{
+  "title": "Similarity Search",
+  "content": "Cloudflare offers Vectorize, a vector database, which enables similarity search. You can embed data (text, images, audio) as vectors and then use Vectorize to find the most similar vectors based on a query vector. This is used for recommendation systems, content discovery, and other applications where finding similar items is important.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Cloudflare Vectorize - Cloudflare](https://developers.cloudflare.com/vectorize/)\r\n- [@opensource@seemueller-io/hyphalbase](https://github.com/seemueller-io/hyphalbase)"
+}

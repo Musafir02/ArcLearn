@@ -1,0 +1,406 @@
+{
+  "title": "Ai Product Builder Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "1",
+      "name": "1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "1-prototyping@ZGqeasMGuEiZvrdyjSNuM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "2",
+      "name": "2",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "2-generation@DCcj2_9a7aYi6qCnI4TMV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "3",
+      "name": "3",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "3-refinement@S9fE9eG1YWSfVRi8h13U1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "4",
+      "name": "4",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "4-collaboration@rcR8DMzELUnmJ7I_pwWpI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "5",
+      "name": "5",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "5-deployment@t03SkyX28SacfP_DpmHUf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-product-creation-cycle@COeXWV8fCTHXPZnErXcGZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "App",
+      "name": "app",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app-anatomy@ncU03bZztHwt9VrQbEZ15"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-devops@DAEMRai6FpPrmRkmKTOhV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bit",
+      "name": "bit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bit-cloud@AlE1rcdp-5RVihRMpshnh",
+            "bit-cloud@NCO0PyktX4UzVCsyqZpAO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Browsers",
+      "name": "browsers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "browsers--devtools@iRey4hwJCIraoNsIZELZv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Choose",
+      "name": "choose",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "choose-a-prototype-tool@mQzAgHoM3DS_zn2zr2FXg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude-code@Fa06GTSwYb9x0QuGsp8et",
+            "claude-code@G86QePmTB5LX4_dMkVgoK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Definition",
+      "name": "definition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "definition--scope@4dxljr8BtYkJDXbLeE0gW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "E2e",
+      "name": "e2e",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "e2e-testing@MB_6yVmgPZugbjxGzoq09"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feature",
+      "name": "feature",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feature-scoping@5qljkbrUWUAn-5Ng2AiaJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feedback",
+      "name": "feedback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feedback--validation@ZQ-kWlp5v9fimgHmG5hlR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gemini",
+      "name": "gemini",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gemini-cli@vGtnZaa5vH02cTgkVG6A-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aws@-MWVEd4dEfGcwBTxKh9WM",
+            "azure@UoZoN-nN8eTnI-J5ma-oq",
+            "base44@kufoDIjMsRnb93I6Y_hN7",
+            "bolt@YZi89ogkfzKIivbdFmcP_",
+            "cloudflare@Q6PzFpT_4kElowvvB2u_v",
+            "codex@S7uHXLcxvtegkI1kirVS9",
+            "codex@xCoG801UzwsRaK0xmI9_B",
+            "copilot@6HLxaflojoF0-cuIuPDeG",
+            "cursor@BEw1Iowb0KMiChtDGvKep",
+            "digitalocean@ZxLukZLdGXGvV4MRHmoGh",
+            "gcp@6hl4_ft8onzq80v_nD8Q4",
+            "github@OFscURhjqJfh8qA3SKSfh",
+            "gitlab@f_d4JlYSbP9BHuCR0kBpP",
+            "hope@8ePFxmPv_Vm7SKoleM1tT",
+            "lovable@T-NUiQvT8dKmg6UDGVSt_",
+            "nodejs@d_2Uq2_Befe1tqM8_Y8lq",
+            "railway@Sv7QfwPKaTsviScn2axhk",
+            "react@aHQ8f3ulEeUxTYCifzcPq",
+            "render@OBGQ-1bjYBdYi-_oFpmj8",
+            "replit@Gf1egAjfyQyAJ4I-aT_Ip",
+            "supabase@p4Ku5RT5uOVYPuduqz80M",
+            "v0@xKBoLYQgpLDmOtDweVHei",
+            "vercel@wUg8ypt4aWXgMYGiaIdgy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hope",
+      "name": "hope",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hope-ai@8ePFxmPv_Vm7SKoleM1tT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Html",
+      "name": "html",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "html--css--javascript@Cem2u4lHoA8KW-0GqVzcw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing@MXPA6I8K1_aKKQpgk2EcW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mongodb",
+      "name": "mongodb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mongodb--atlas@gwHXA4WBrZN0VeAx5NKz7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "New",
+      "name": "new",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "new-feature--structural-change@HZHzCLbK-oQh7gSokxHWq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Postgresql",
+      "name": "postgresql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "postgresql--mysql@kfl0oJKi1OusryrSqO2jn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Problem",
+      "name": "problem",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "problem-definition@kxDCkO0aZLY4_hd4_ykH6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Targeted",
+      "name": "targeted",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "targeted-change@ydzaN2EHBVAavHS3iPQ40"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tech",
+      "name": "tech",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tech-stack--constraints@tN2X9NW0PhcP21OptheoD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@VxqhYHA9YpWx70GIhKghY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-testing@aRA5S0Mmmhx9F0nhD3Wcp"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "LogBox",
+  "content": "LogBox is React Native's in-app display for logs, warnings, and errors during development. It groups and formats them, with stack traces for errors, so problems are easier to spot and address in your code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Debugging LogBox](https://reactnative.dev/docs/debugging#logbox)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "DevTools Integration",
+  "content": "Cloudflare Workers can be debugged using standard browser DevTools. When running Workers in a local environment (e.g., with Miniflare), you can use Chrome DevTools or similar tools to inspect code, set breakpoints, and step through execution. You can also use `console.log` statements to output information to the DevTools console. This integration makes debugging Workers more intuitive and efficient.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Debugging Cloudflare Workers](https://developers.cloudflare.com/workers/playground/#devtools)\r\n- [@official@Chrome DevTools](https://developer.chrome.com/docs/devtools)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Checkpoint",
+  "content": "**CRUD** stands for **Create, Read, Update, and Delete**. These are the four basic operations you can perform on any data when working with web applications, databases, and APIs.\r\n\r\nNow that you know about programming language and the databases, you should be able to build a simple CLI application that interacts with database. We haven't talked about the APIs yet but you don't need an API to practice CRUD operations. Here are some of the CLI applications you can build to practice CRUD operations:\r\n\r\n*   A simple todo list application for the CLI with the following options:\r\n    *   `--new` to add a new todo item\r\n    *   `--list [all|pending|done]` to list the todo items\r\n    *   `--done [id]` to update a todo item\r\n    *   `--delete [id]` to delete a todo item\r\n    *   `--help` to list all the available options\r\n    *   `--version` to print the version of the application"
+}

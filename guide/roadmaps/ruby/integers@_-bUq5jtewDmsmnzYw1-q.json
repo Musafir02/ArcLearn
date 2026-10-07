@@ -1,0 +1,4 @@
+{
+  "title": "Integers",
+  "content": "Integers are whole numbers, meaning they don't have any fractional or decimal parts. They can be positive, negative, or zero. In programming, integers are used to represent countable quantities, indices, and other discrete values.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@class Integer](https://docs.ruby-lang.org/en/master/Integer.html)\r\n- [@article@Numbers](https://ruby-for-beginners.rubymonstas.org/built_in_classes/numbers.html)\r\n- [@article@Numbers - Odin Project](https://www.theodinproject.com/lessons/ruby-basic-data-types#numbers)"
+}

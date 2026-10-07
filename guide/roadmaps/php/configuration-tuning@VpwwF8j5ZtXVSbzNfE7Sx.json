@@ -1,0 +1,4 @@
+{
+  "title": "Configuration Tuning",
+  "content": "PHP's behavior is controlled through `php.ini` settings covering memory limits, execution timeouts, error reporting, upload sizes, and more. Tuning these settings for production involves balancing resource usage with application needs. Runtime configuration can also be overridden per-file using `ini_set()` for non-security-sensitive settings.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Configuration Tuning](https://www.php.net/manual/en/ini.core.php)"
+}

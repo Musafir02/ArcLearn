@@ -1,0 +1,4 @@
+{
+  "title": "Melody",
+  "content": "Melody is a minimalist WebSocket framework for Go providing simple session management, message broadcasting, and connection handling. Features include rooms, automatic ping/pong, message limits, and clean integration with existing web frameworks for real-time apps.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Melody Package](https://pkg.go.dev/github.com/olahol/melody)\r\n- [@opensource@olahol/melody: Minimalist websocket framework](https://github.com/olahol/melody)\r\n- [@article@Build a Realtime Chat Server With Go and WebSockets](https://gabrieltanner.org/blog/realtime-chat-go-websockets/)"
+}

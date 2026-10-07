@@ -1,0 +1,4 @@
+{
+  "title": "Suspending Functions",
+  "content": "Suspending functions are the foundation of Kotlin's coroutine-based concurrency. They represent a computation that can be paused and resumed later, potentially without blocking the thread. This allows you to write asynchronous, non-blocking code in a sequential, easy-to-read style, improving responsiveness and resource utilization.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Coroutines basics](https://kotlinlang.org/docs/coroutines-basics.html)\r\n- [@official@Composing suspending functions](https://kotlinlang.org/docs/composing-suspending-functions.html)\r\n- [@video@Suspend Functions - Kotlin Coroutines](https://www.youtube.com/watch?v=yc_WfBp-PdE)"
+}

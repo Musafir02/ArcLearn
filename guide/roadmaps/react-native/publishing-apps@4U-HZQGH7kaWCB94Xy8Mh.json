@@ -1,0 +1,4 @@
+{
+  "title": "Publishing Apps",
+  "content": "Publishing React Native apps is the process of deploying your application on various app stores so that users can download and use your app. The two most popular app stores for publishing are the Apple App Store (iOS) and the Google Play Store (Android).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Publishing to Apple App Store](https://reactnative.dev/docs/publishing-to-app-store)\r\n- [@official@Publishing to Google Play Store](https://reactnative.dev/docs/signed-apk-android)"
+}

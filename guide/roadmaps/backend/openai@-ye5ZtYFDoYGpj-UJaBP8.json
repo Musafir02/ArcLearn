@@ -1,0 +1,4 @@
+{
+  "title": "OpenAI",
+  "content": "OpenAI provides a suite of artificial intelligence models and tools accessible through an API. These models can perform tasks like generating text, translating languages, writing different kinds of creative content, and answering your questions in an informative way. Developers can integrate these powerful AI capabilities into their applications by sending requests to OpenAI's API endpoints and receiving responses.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@OpenAI](https://platform.openai.com/docs/overview)\r\n- [@official@OpenAI Models](https://platform.openai.com/docs/models)\r\n- [@official@OpenAI Academy](https://academy.openai.com/)"
+}

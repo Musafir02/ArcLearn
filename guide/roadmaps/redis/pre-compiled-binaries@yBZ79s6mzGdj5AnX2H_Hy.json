@@ -1,0 +1,4 @@
+{
+  "title": "Pre-compiled Binaries",
+  "content": "Redis provides pre-compiled binaries for systems where a package manager is not available or where a specific version is needed. Binaries are downloaded from the official Redis website and run directly without compilation. This approach gives control over the exact version while skipping the build process.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Installing Redis from Source](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-from-source/)"
+}

@@ -1,0 +1,767 @@
+{
+  "title": "Redis Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Active",
+      "name": "active",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "active-active-geo-distribution@cybF72wlJyJbHLUjitLvn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aof",
+      "name": "aof",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aof-rewrite--compaction@ibaZ34-laQtUyxAsERi7o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Atomicity",
+      "name": "atomicity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "atomicity-in-redis@jrgaoDnt_RxTu79hk4hCD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backup",
+      "name": "backup",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backup-and-recovery@wXRDsNGFckXV_CSiit5sN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-commands--set-get@NhcZM4nUQoSBBf_1qXi6l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Batch",
+      "name": "batch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "batch-operations@7JzeyTrkZ_1_yxMVrqvZU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Configuring",
+      "name": "configuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "configuring-save-interval@_pb2DPrFUUZabKxWsuFUo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connecting",
+      "name": "connecting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connecting-using-redis-cli@BOGXTjmCLo6WI6mYDsqRu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-persistence-options@8uRpPJ0iD4XnQPKruQc8P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Disaster",
+      "name": "disaster",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "disaster-recovery@nUIfTkgm3PlSiqgun1BS7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "append@cPWd53BO6tm-uy4gqLdtZ",
+            "authentication@Qy42paiTUsO8HIwbWTMui",
+            "bitcount@jpcyXSSib7q4WBPmpgnXA",
+            "bitmaps@0Q3AkE8leWAyYsww3-BHX",
+            "bitop@tkrxArg_oYH0aQfM8NkD2",
+            "bitpos@Df1Eu7CuA-ARYii9JVvnm",
+            "cache@eHuBz_zSZK3rubn7nkd7g",
+            "caching@-TjnSOY8txYrhhxRV1OIl",
+            "clustering@AQiCcHS6dBAAAPloxiXub",
+            "decr@t4BXPofF8OCqH5KHwdYVh",
+            "del@lV_MnUNTB2h925idX0YWk",
+            "eval@rjeq3i9oX8IGyQzo--L3c",
+            "evalsha@3X0x_PcJGWBVPL-LSVAln",
+            "exec@Ljy-Mc0EBBX4_vXfYZ5-4",
+            "expiration@OSIYDYPGz8Vgo9SU9GGH9",
+            "expire@nS0DHhfy4wxHItgOFhulA",
+            "geoadd@U3N1EgHFs1-YUaB_VrJfw",
+            "geosearch@OWWDLuGTbdNwME7v2jxVP",
+            "get@mQc4H2ZMMSVjh33LJY8mK",
+            "getbit@0HFLJfcrcSnAVTecG3P8W",
+            "hashes@wY46Qj5Inw_ClBNI9PB_2",
+            "hdel@E7xFZkqqbzokD5KGTn9zJ",
+            "hexists@adhLMuSmfYMRyWTwIgnyE",
+            "hget@MsKg9m5jFwHM2Bzjf-vdu",
+            "hgetall@TpR33sJ-tAjeG3jpGTvYR",
+            "hset@BOJzn9SWad9oRRdY_ub01",
+            "hyperloglog@cszjT3YK8oyhGpqLTQzwX",
+            "incr@5K9qyC4mrhXYWOC8WSq8C",
+            "info@q2Jw49QUWCUGIfcEC1bZI",
+            "lindex@hBFEUXtuzUTzWZKp2qWaZ",
+            "lists@4-C4XqACUp4nvcMIj6djF",
+            "llen@4oCcP9FxDJSDMHCEVBCNa",
+            "lmove@9KvHcS5F4Jj5ZXgIAdOQY",
+            "lpop@voa61RTWMJD3Sk8DNJoVQ",
+            "lpush@Kq7G89KaZZMFkrH-9WZoS",
+            "lrange@8JTtBy6oD2wFYDizVkcVa",
+            "monitor@jBtEiylcedtaE6E20Uk4V",
+            "monitoring@2p5RF4lVYfRvYTo1Ofm-a",
+            "multi@U6hST1MkS16T2CHV3-Ise",
+            "pfadd@8a4DmPZrX2xGZ7zdWxS63",
+            "pfcount@JWT30KIJQHVw0MXI5sGR6",
+            "pfmerge@s50jr_XOUcxh65-tGCKf5",
+            "pipelining@LHlwjN3WHYUBUafzzwsWQ",
+            "publish@gIPo-2CNqE1BsOaDzmkCU",
+            "pubsub@9W_jaK1DSEZHRKdPcUM7h",
+            "redisbloom@GwVL5CvbnHsiWb1hVh7lK",
+            "rediscommander@y5FPSAi6T-5X9SUfR58_-",
+            "redisconf@giyKPtQ-pziA064P8OQD-",
+            "redisinsight@XBPwHgIsXupMsyoOFkJZ0",
+            "redisjson@jicsfYw56VrbRUt7M8c85",
+            "redistimeseries@RBr8opWSh2TKXC8Fmdg0j",
+            "rpop@brUGqWZ287EWtvl9uUbNt",
+            "rpush@jC8G1o7yFj7D_PGmOIgcD",
+            "sadd@xUKoQps69FFQrJeuhD1pz",
+            "scard@2gZL4a9aWGKWLa89iyHTc",
+            "sdiff@JX5ajmcUmkshTO-mLF8lH",
+            "search@_GdTXcJO8uJlhPdfrmeXG",
+            "set@ltF4vCT9ZA2XuUuHnuGnN",
+            "setbit@B-YUFhPQNdr1KZNupmR5N",
+            "sets@Qgkpr9vf9d6-vUg1o8XFj",
+            "sinter@5aLfNBewK4Dx017qVNO3T",
+            "sismember@Ji5ghlcGJtlmErHFqVf3d",
+            "smembers@mQ0ILns53n1By0Tq6xSZI",
+            "srem@WQWVL5GT_scHdgfCtI7WT",
+            "streams@zXs_9n2yEb_eVi0WuOQKH",
+            "strings@Wl23Jh-ASJOQ850yjaTIU",
+            "strlen@eJQW986HM4Wf1o1i2FnXs",
+            "subscribe@55BCntuWlaQiLPqNtb-2i",
+            "sunion@6QoYa-N2BKNBaRtvNeVNm",
+            "transactions@YHbWlKrQqptUDbaQVy0_A",
+            "ttl@Vll7VMmGWSI5XGZ9JpHyl",
+            "unsubscribe@5gkZzm2F4vu6IxUoJLYbK",
+            "usecases@2_E2VwbjTgk4xxTFWfHuV",
+            "usecases@3hayYoSZepw7pppBubotg",
+            "usecases@GNMjrLPkpTphneoQ0GoZF",
+            "usecases@jtVnUD-na-WffMaS8qYfu",
+            "usecases@kF_nGo845XDwLkwcQt008",
+            "usecases@lxevY15ZyP43s_JrEqMX7",
+            "usecases@MvyE_JUJej0UB9xe8Anfj",
+            "usecases@s7PEr-5TAm5EGJm0RSjPJ",
+            "usecases@VvOQUO22ZF8VvDSqHENNU",
+            "usecases@XPeCvikPuu6EJ8UcOLGPh",
+            "usecases@XTwNCCtzXvZMdaex4gZEh",
+            "usecases@zXlSBfa-Gi9_GhSYEzre3",
+            "watch@c-y5Eck8VtSyIf8RAW9p7",
+            "xadd@7isWhgrUA6M5IGM2U2tm4",
+            "xlen@DQJCMEw13lELcw_AwLfrT",
+            "xrange@CiYFuYE8XudZkR6AW2NQ7",
+            "xread@4sKiAtX5aIL4NDsQkilNC",
+            "zadd@0swsBD0sOY-o5lzibT999",
+            "zcount@O-fZM_U-tW0pYtNzN_8Ax",
+            "zincrby@W4v7FIQr2k-Vbm-HdfKog",
+            "zrange@3pFChX6YIItrBz9lxu4XM",
+            "zrangebyscore@OlbixGa5RmdqEt7snY04j",
+            "zrank@AF_kWM4V8n5Ux06IgEVTl",
+            "zrem@m0FZDPwNE71zcwM_gUwz0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Geospatial",
+      "name": "geospatial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "geospatial-indexes@_NiUdVQ85qnvryI38k_vQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "High",
+      "name": "high",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "high-performance-and-scalability@5-3pd4rLDqRzMzSRVLdXh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-aof-works@PTj6oxvpw8vP295WvAI80",
+            "how-rdb-works@D3pZdAjwPFMRxX1-iyu5-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hybrid",
+      "name": "hybrid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hybrid-persistence@S5Y26m1oHCQpB-oLCdtac"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "In",
+      "name": "in",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "in-memory-data-structure-store@M-EXrTDeAEMz_IkEi-ab4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-value-database@l2aXyO3STnhbFjvUXPpm2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leaderboards",
+      "name": "leaderboards",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leaderboards-and-counters@Fv1iGX22sApIEifM2IpJz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lua",
+      "name": "lua",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lua-scripting@Veb30QrPYNjUn13dtGbUr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Max",
+      "name": "max",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "max-memory-policy@Sd1ENOXSFCz1YqccXjr2A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-management@xF0wQYmtwXYkrzvWg5gOO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-broker@mgGJTBU8ofvOzl9gYWhnG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "More",
+      "name": "more",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "more-commands@0v8uLWRCbAqEmKKdYaRQW",
+            "more-commands@2SG4Hr9Tuv6cxmGkrKjYZ",
+            "more-commands@4-z4hDKm86qQatYnmE21R",
+            "more-commands@b48EUyFGUeSjtT5fOa_m6",
+            "more-commands@eBeEUYY-IL_CMkcm31lUL",
+            "more-commands@FCbdKnkI1ZHGekT6yiGua",
+            "more-commands@o6e_CwxfPoU6qkfWkwKwj",
+            "more-commands@P6TDUCroLlEI7qePBFHIH",
+            "more-commands@V-d6q-3Sf0dl5v8xiCQwl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Naming",
+      "name": "naming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "naming-conventions@jCaVx5wvsvuyqtwh6m8si"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Network",
+      "name": "network",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "network-security@wsuKH7YwGDV6GYQbdhA4o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "No",
+      "name": "no",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "no-persistence-option@80035BzcB-fKCvD_3N8zE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optimistic",
+      "name": "optimistic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optimistic-locking@msW0Wd2H-6FFNDnjC64t-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Overview",
+      "name": "overview",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "overview-of-data-types@U84XgBFPyIbY0W5afH4cx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Persistence",
+      "name": "persistence",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "persistence-options@bQaek7f3dAaZfSUhwovm1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pre",
+      "name": "pre",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pre-compiled-binaries@yBZ79s6mzGdj5AnX2H_Hy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pubsub",
+      "name": "pubsub",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pubsub-messaging@ZCyId3aIoLv3duxoJdk2P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rdb",
+      "name": "rdb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rdb-vs-aof-tradeoffs@3S-qqOlfr60HR4VvDr4He"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Real",
+      "name": "real",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "real-time-analytics@bVJASI7bfSYqYnNhX83ng"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Redis",
+      "name": "redis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "redis-benchmark@kgHwK4N-sfh6dHjd_D_me",
+            "redis-enterprise@8lyXDuZJ-KHl4v2_8Ew1h",
+            "redis-modules@hLIT00Iz7rV56ZBIUhWYn",
+            "redis-on-flash@sWOFnbh2EyaHRzquz1UeF",
+            "redis-sentinel@nci3OB1NE1zJHUPfZCOpT",
+            "redis-vs-sqlnosql-dbs@EvWiEx_AoxAht6sKxzW2l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Replication",
+      "name": "replication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "replication-basics@rSD8nJ-uNpHJVe5Hn66h7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retrieval",
+      "name": "retrieval",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retrieval-by-pattern@UlQHqw1dbxZnAKbsWsOgU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rich",
+      "name": "rich",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rich-data-structures@uVewcyaFi1Pt2Gs0KrkfA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-and-compliance@ujs77bV8g8-FOm5hBtZFd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Session",
+      "name": "session",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "session-management@URxGmhZHr0Y8nyrYj0gJl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-and-getting-keys@DOdNkTY1yIMipWA2CD9xH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Slow",
+      "name": "slow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "slow-log-analysis@yaCWw2KjX58SaPajUAb0d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sorted",
+      "name": "sorted",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sorted-sets@QTbkWZ7BpqYmBhUivccPu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ssltls",
+      "name": "ssltls",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ssltls-encryption@gdiWwTQg6A-BFHdQBmgmH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Starting",
+      "name": "starting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "starting-the-server@43LvShQhmoWQ8Nye7fLkz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Truncation",
+      "name": "truncation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "truncation--corruption@9ToKTUqbi-NV5Wcwb21PT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Upgrading",
+      "name": "upgrading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "upgrading-redis@Cb-KazR4PuR86VX5oT0zi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usecases",
+      "name": "usecases",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usecases--best-practices@vzp7DUpjklzIA0E9WxJQA",
+            "usecases--best-practices@Z6yJwUkcDX08HoMyf1LwX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-docker@TDxv0q7jlZ26uZYYlneem",
+            "using-package-managers@Bf_kLfmy7_uflqC9N0-jt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-redis@-3pADOHMDQ0H6ZKNjURyn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "When",
+      "name": "when",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "when-to-choose-redis@1Af5H0BgdAsRdBCNdHz5v",
+            "when-to-consider-enterprise@JlLwy69eQ1bPHAOOJNqjo"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Named Return Values",
+  "content": "Function return parameters can be named and treated as variables within function. Initialized to zero values. `return` statement without arguments returns current values of named parameters. Improves readability and enables easier refactoring but use judiciously.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Named Return Values](https://yourbasic.org/golang/named-return-values-parameters/)\r\n- [@article@Named Return Values in Go](https://golang.ntxm.org/docs/functions-in-go/named-return-values/)\r\n- [@article@Named Parameters in Go: Use Cases and Cautions](https://medium.com/@adamszpilewicz/named-parameters-in-go-use-cases-and-cautions-e0e462cafdaa)"
+}

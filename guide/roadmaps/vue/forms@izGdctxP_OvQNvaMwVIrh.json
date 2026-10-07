@@ -1,0 +1,4 @@
+{
+  "title": "Forms",
+  "content": "Apart from the built-in form-binding support, there are several options available that allow for handling forms and data in much convenient manner.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Form Input Bindings](https://vuejs.org/guide/essentials/forms.html)\r\n- [@article@User Inputs in Vue 3](https://vueschool.io/lessons/user-inputs-vue-devtools-in-vue-3?friend=vuejs)"
+}

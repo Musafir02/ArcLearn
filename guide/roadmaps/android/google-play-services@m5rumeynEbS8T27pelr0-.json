@@ -1,0 +1,4 @@
+{
+  "title": "Google Play Services",
+  "content": "Google Play Services is a background service that provides core Google APIs to Android apps, including authentication, location, maps, and in-app payments. It is automatically updated on compatible devices and required for many Android platform features. Most apps that use Google APIs depend on Play Services being installed on the device.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Google Play Services](https://developer.android.com/google/play-services)\r\n- [@official@Google Play Services Documentation](https://developers.google.com/android/guides/overview)"
+}

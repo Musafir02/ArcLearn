@@ -1,0 +1,4 @@
+{
+  "title": "Classes and Objects",
+  "content": "Classes are blueprints for creating objects, which are instances of those classes. A class defines the characteristics (attributes) and behaviors (methods) that objects of that class will possess. Think of a class as a template and an object as a specific instance created from that template.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Java Class and Objects](https://www.programiz.com/java-programming/class-objects)\r\n- [@video@Java Classes and Objects](https://www.youtube.com/watch?v=IUqKuGNasdM)"
+}

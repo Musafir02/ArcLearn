@@ -1,0 +1,4 @@
+{
+  "title": "SSL",
+  "content": "SSL (Secure Sockets Layer) is the predecessor to TLS, providing encrypted communication over networks. The term \"SSL\" is still commonly used to refer to TLS-based certificates and connections, though SSLv3 and earlier are deprecated due to known vulnerabilities.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is SSL/TLS: An In-Depth Guide - SSL.com](https://www.ssl.com/article/what-is-ssl-tls-an-in-depth-guide/)\r\n- [@article@What is SSL, TLS and HTTPS? - DigiCert](https://www.digicert.com/what-is-ssl-tls-and-https)\r\n- [@article@What Certificate Do I Need for My Client-Server Game? - GameDev StackExchange](https://gamedev.stackexchange.com/questions/165270/what-certificate-do-i-need-for-my-client-server-game)"
+}

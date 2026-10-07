@@ -1,0 +1,4 @@
+{
+  "title": "Instances and Interconnects",
+  "content": "Within a node, NVLink connects GPUs one-to-one at up to 1800 GB/s on Blackwell, and NVSwitch creates an all-to-all fabric across all eight GPUs. Between nodes, InfiniBand provides inter-node connectivity at substantially lower bandwidth than NVLink. Multi-Instance GPU (MIG) partitions a single GPU into up to seven isolated slices, each with dedicated compute and memory, allowing small models to run on fractions of a high-end GPU without resource contention.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@NVLink and NVSwitch](https://www.nvidia.com/en-us/data-center/nvlink/)\r\n- [@official@NVIDIA InfiniBand](https://www.nvidia.com/en-us/networking/products/infiniband/)\r\n- [@article@Instances](https://www.baseten.co/inference-engineering/book/03-hardware/instances/)\r\n- [@video@GPUs: Explained](https://www.youtube.com/watch?v=LfdK-v0SbGI)"
+}

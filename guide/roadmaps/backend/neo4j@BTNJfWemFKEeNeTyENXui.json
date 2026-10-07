@@ -1,0 +1,4 @@
+{
+  "title": "NEO4J",
+  "content": "Neo4j is an open-source graph database storing data as interconnected nodes and relationships rather than tables. Uses Cypher query language for efficient graph traversal and pattern matching. Ideal for complex relationship applications like social networks, recommendations, and fraud detection.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Neo4j Website](https://neo4j.com)\r\n- [@video@Neo4j in 100 Seconds](https://www.youtube.com/watch?v=T6L9EoBy8Zk)\r\n- [@video@Neo4j Course for Beginners](https://www.youtube.com/watch?v=_IgbB24scLI)"
+}

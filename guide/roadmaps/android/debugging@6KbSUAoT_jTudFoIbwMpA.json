@@ -1,0 +1,4 @@
+{
+  "title": "Debugging",
+  "content": "Debugging in Android involves identifying and fixing issues in app behavior, performance, and memory usage. Android Studio provides a built-in debugger, and specialized tools like Jetpack Benchmark, Chucker, LeakCanary, and Timber address specific categories of issues.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Debugging](https://developer.android.com/studio/debug)"
+}

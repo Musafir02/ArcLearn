@@ -1,0 +1,4 @@
+{
+  "title": "SISMEMBER",
+  "content": "The SISMEMBER command will simply return a boolean value is the members is a part of the set stored at key.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@SISMEMBER](https://redis.io/docs/latest/commands/sismember/)"
+}

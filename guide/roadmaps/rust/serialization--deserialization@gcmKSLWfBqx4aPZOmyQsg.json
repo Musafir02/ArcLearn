@@ -1,0 +1,4 @@
+{
+  "title": "Serialization/Deserialization",
+  "content": "Serialization converts Rust data structures into bytes for storage or transmission, while deserialization reverses the process. _Serde_ is the standard framework with support for JSON, YAML, TOML, Binary, and more formats. Provides efficient, type-safe data conversion.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Serde Documentation](https://docs.rs/serde/latest/serde/)\r\n- [@article@Serialization and Deserialization in Rust: A Comprehensive Guide](https://rustmeup.com/serialization-in-rust-with-serde)\r\n- [@article@Rust Serialization: Easy Beginner's Guide with Examples](https://boxoflearn.com/rust-serialization-guide/)"
+}

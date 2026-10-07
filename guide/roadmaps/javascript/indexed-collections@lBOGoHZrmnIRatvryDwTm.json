@@ -1,0 +1,4 @@
+{
+  "title": "Indexed collections",
+  "content": "Indexed Collections are collections that have numeric indices i.e. the collections of data that are ordered by an index value. In JavaScript, an array is an indexed collection. An array is an ordered set of values that has a numeric index.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Indexed collections?](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections)\r\n- [@article@Indexed collections in JavaScript](https://www.tutorialspoint.com/indexed-collections-in-javascript)\r\n- [@video@Javascript Arrays](https://youtu.be/XYq9QpgAx8g)"
+}

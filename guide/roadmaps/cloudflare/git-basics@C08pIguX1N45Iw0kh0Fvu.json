@@ -1,0 +1,4 @@
+{
+  "title": "git-basics@C08pIguX1N45Iw0kh0Fvu",
+  "content": "Git is a version control system for tracking changes in code. Knowing how to commit, branch, and push code is necessary for integrating Workers projects into CI/CD pipelines and collaborating with teams.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated Git & GitHub Roadmap](https://roadmap.sh/git-github)\r\n- [@official@Git Integration - Cloudflare Pages](https://developers.cloudflare.com/pages/configuration/git-integration/)\r\n- [@official@Git Documentation](https://git-scm.com/doc)\r\n- [@article@Git Cheat Sheet](https://cs.fyi/guide/git-cheatsheet)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Computed Properties",
+  "content": "In-template expressions are very convenient, but they are meant for simple operations. Putting too much logic in your templates can make them bloated and hard to maintain. Computed properties allow us to simplify the complex logic that includes reactive data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Computed Properties](https://vuejs.org/guide/essentials/computed.html#computed-properties)"
+}

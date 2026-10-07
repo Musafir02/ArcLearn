@@ -1,0 +1,4 @@
+{
+  "title": "Leaderboards and Counters",
+  "content": "Sorted Sets in Redis are commonly used to implement leaderboards, where members are ranked by score and rankings update in real time. Atomic increment commands like INCR make counters accurate under concurrent writes without requiring locks. These capabilities make Redis practical for gaming scoreboards, voting systems, and rate limiting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ZADD](https://redis.io/docs/latest/commands/zadd/)\r\n- [@official@ZRANGE](https://redis.io/docs/latest/commands/zrange/)"
+}

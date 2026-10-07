@@ -1,0 +1,521 @@
+{
+  "title": "Vue Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-calls@ZLlz0Azfze-8k3z8HnVvE",
+            "api-styles@OpJ2NMKCGXQezpzURE45R"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "App",
+      "name": "app",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app-configurations@qRm08uDZW-D8QDc-9sPX8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Async",
+      "name": "async",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "async-components@Re7tv1U0LxYqE5ShFxQSf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attribute",
+      "name": "attribute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attribute-inheritance@4S5fVFsFDMbq05ld7n0sF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binding",
+      "name": "binding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binding-events@b7iXwtUnELg_ShbCyTrNA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Component",
+      "name": "component",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "component-registration@2HhKifjuDcP3eKpanRMEQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Composition",
+      "name": "composition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "composition-api@a0qwdQTunxEjQ9A5wpF-q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Computed",
+      "name": "computed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "computed-properties@Bx1Atxcf15AEaA1BiSIc6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-rendering@tU4Umtnfu01t9gLlnlK6b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-vue@y9ToYDix-koRbR6FLydFw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-directives@br1r8KIf5KInY5mk2xhA6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Element",
+      "name": "element",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "element-ui@NMIh8rqLM5P-Uk65uHATn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error--warn-handler@1oIt_5OK-t2WaCgaYt9A8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-handling@4p6Gh2fMPA8hls_mWa5HR",
+            "event-modifiers@Aaf7eA-5sbAD5Cs1MbdTQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forms",
+      "name": "forms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forms-handling@PQu4TyJOfCEaafW5th0e4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apollo@l2Rl6OQbL7kYvPlpYCZ0Z",
+            "axios@n5IlN-wv4k0r16CvhoSpD",
+            "capacitor@IsNzCdS05tbAK0D1zz0Sf",
+            "components@0EevuyZiyty3X3Jzpjl4y",
+            "cypress@JbMKUVDMUygjXXmhndHVs",
+            "debugging@dxwKfBxd5KYVkfEPMdHp-",
+            "directives@CGdw3PqLRb9OqFU5SqmE1",
+            "events@X0J3ogH3W8EQe68tLfcGL",
+            "fetch@ufnt87swK61kxShLuVc1-",
+            "formkit@BXz1utB_2eYzFvzSbFKx0",
+            "forms@izGdctxP_OvQNvaMwVIrh",
+            "modifiers@dSfrFLr8wKkLAOMJwtCTr",
+            "nuxtjs@8xZxTLYq5m5_nkGh2lfUt",
+            "performance@f7N4pAp_jBlT8_8owAcbG",
+            "pinia@NIvjyhtTFC1gomtGQT_2t",
+            "playwright@zqcE3bTnymdepV-Yc8qBl",
+            "plugins@_Nc8ivQrdpKuf8MwaV-K7",
+            "props@raEfI4GLMW2fOucka07VE",
+            "quasar@f2udJnT2q5eDmBZ_OKtmi",
+            "routing@ixRG0xfEp4BmyvCR0mtoR",
+            "slots@jkX66izOHVWqtyd6KZ0K6",
+            "ssg@822tGnM9jOkYh9aNlosPr",
+            "ssr@Cm6mqXYp-G4mGfPxuU73_",
+            "templates@VlcYnTHW5d4J_zLYupvu5",
+            "transition@SWpWg5J5N9ZfY_DaIigA5",
+            "vitepress@_46COO0FGaFuCYwqaRRWy",
+            "vitest@LjEAviRMtPLwUUlfcof1h",
+            "vuelidate@6U_CAhAY_jyj_4Mzj_HL_",
+            "vuetify@VNclt_QQthWb2u4xWI_uY",
+            "vueuse@Z9szBPFXfqK_KsvzkR-rf",
+            "watchers@kdlXhbw_a81xdZtyK-pVa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Global",
+      "name": "global",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "global-properties@gihxGgt177BK_EYsAfpx9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inline",
+      "name": "inline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inline--method-handlers@gVahaZNPktQuqdukFEbQH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input-bindings@NfB3HlZ3uwYK5xszvV50b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-modifiers@BXw36wqhmi3gExXwFCIBd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lifecycle",
+      "name": "lifecycle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lifecycle-hooks@WiGG9_4G5y-AVA9byw6_g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-apps@3RwIO-S8-xOYKNmfwk0pf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mouse",
+      "name": "mouse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mouse-button-modifiers@x0wl2Qz2LTP4Q2tThKAt3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optimizing",
+      "name": "optimizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optimizing-renders@RRPhAxIqvAcjZIcLe_N8-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Options",
+      "name": "options",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "options-api@PPUU3Rb73aCpT4zcyvlJE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Provide",
+      "name": "provide",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "provide--inject@xwVbhOpQMPPB4G-lhro0B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rendering",
+      "name": "rendering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rendering-lists@ftqDoGpwqqWQnu4NQSsMk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Single",
+      "name": "single",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "single-file-components@VNBRlJkdH6NOOzGXUrbZK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-management@9AwVtwIv6TfP9F4ulz2F0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tailwind",
+      "name": "tailwind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tailwind-css@TkzlmJ85O-e-KfMhTBwry"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tanstack",
+      "name": "tanstack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tanstack-query@WSq_cDKQPZa_qmQlIdGXg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Teleport",
+      "name": "teleport",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "teleport-components@SGsd08ZTu4H76s8cfbCKe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transition",
+      "name": "transition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transition-group@HjzOYjS-7ZEBvElRJ8uN2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "V",
+      "name": "v",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "v-bind@cuM9q9vYy8JpZPGeBffd1",
+            "v-cloak@RrSekP8Ub01coegMwLP6a",
+            "v-else-if@a9caVhderJaVo0v14w8WB",
+            "v-else@0CtAZQcFJexMiJfZ-mofv",
+            "v-for@3ftwRjQ9e1-qDT9BV53zr",
+            "v-html@bZxtIBeIfeUcR32LZWrPW",
+            "v-if@xHj3W9Ig3MVuVlGyXchaP",
+            "v-model@cxu2Wbt306SxM4JKQQqnL",
+            "v-model@gMFndBcrTC6FtGryqN6dX",
+            "v-model@swpyZFUO4UO3mW8Bvf1Te",
+            "v-on@hVuRmhXVP65IPtuHTORjJ",
+            "v-once@5k9CrbzhNy9iiS6ez2UE6",
+            "v-pre@mlsrhioiEkqnRIL6O3hNa",
+            "v-show@_TlbGTKFCMO0wdLbC6xHX",
+            "v-slot@m9pQ3daR3KiwRATcQysHA",
+            "v-text@NCIzs3jbQTv1xXhAaGfZN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vee",
+      "name": "vee",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vee-validate@_Fmp8_z4SKWfKUE80_fqb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vue",
+      "name": "vue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vue-router@COxkmvqe9jFtV9WtGjfbh",
+            "vue-testing-library@p5bUvgr_3H-A55ZnEExk8"
+          ]
+        }
+      ]
+    }
+  ]
+}

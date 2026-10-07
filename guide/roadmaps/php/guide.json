@@ -1,0 +1,882 @@
+{
+  "title": "Php Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Abstract",
+      "name": "abstract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "abstract-classes@ub79EkMiOmPBwXLRuYFL8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Access",
+      "name": "access",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "access-specifiers@RD2RaBmA2XWkEa13PTCTX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anonymous",
+      "name": "anonymous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anonymous-functions@Nr5m6wQLp7VyG3AucrSc8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arrow",
+      "name": "arrow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arrow-functions@mP1BIkqbWVVTU-zZv1ZL6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Associative",
+      "name": "associative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "associative-arrays@i_NRsOJNNp7AOqMgu5Jg8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Auth",
+      "name": "auth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "auth-mechanisms@HJJzKYXdK4BWITLP4APLZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-php-syntax@hzBUHSuFwLYNooF_vEmrs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-strategies@Av-BMa57RvrLlAXLffOH0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Callback",
+      "name": "callback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "callback-functions@x7hA2KAzJIjc-prgCEw6V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Casting",
+      "name": "casting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "casting-data-types@pzReF4C0mcCWAnpfIJbwl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Classes",
+      "name": "classes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "classes-and-objects@PIuplWreo7PFG3Mdn2t6W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Configuration",
+      "name": "configuration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "configuration-files@DTaAZaU1CwzW7esoDhj85",
+            "configuration-tuning@VpwwF8j5ZtXVSbzNfE7Sx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connection",
+      "name": "connection",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connection-pooling@txUyPR_tdC8iTJV3RtvBz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Constructor",
+      "name": "constructor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "constructor--destructor@oNUt1oT8pYBVvH0S2P6cb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Csrf",
+      "name": "csrf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "csrf-protection@J9yIXZTtwbFzH2u4dI1ep"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Csv",
+      "name": "csv",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "csv-processing@MRDjEjbkMpk7shcWAoPOF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-types@srIHPZabaCGdB5VvUXaMa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-migrations@meplwvmHMtI3Sb_fyodzZ",
+            "database-transactions@FY-F6n9j29hQrnFry3VGb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Default",
+      "name": "default",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "default--optional-params@RgVP99rJJ8FVecIA45w20"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@KEE50C6lOS4eX8sAbfhYe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environment",
+      "name": "environment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environment-variables@fitjnLYKLHJ2P5G7JAvzm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Evolution",
+      "name": "evolution",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "evolution-and-history@b2CuLrhsUNnb4OxI6RRAS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Executing",
+      "name": "executing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "executing-system-commands@VhyYNGhOdKKrz_-uTkrjD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-permissions@tgIyG6vHWpe9sz6lHmj5a",
+            "file-uploads@HNo8QO4aPbvgePiA4l6tq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Form",
+      "name": "form",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "form-processing@sYI7f1PYP7G30_Uj2mZRv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-declaration@1nODJchgSuWbcvSlxnWeE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apache@KMQqePqAjQ-ReDwHqeofx",
+            "arrays@IhKjvT6CjRz4dsSU7SNQo",
+            "autoloading@qFiTsf6Es-gwqe6J6bdL1",
+            "composer@yVFDu2aTiEZ4PWMdKdW2P",
+            "conditionals@38YksjvhXCbgnHqkl57Cz",
+            "constants@VLRLymQmLfscrBfzXKvHi",
+            "cookies@so03-fK7E2WvTm6XsPq4i",
+            "curl@KC6D81-T-FwQc7Osw1rlY",
+            "echo@2ykzBBdYhWuM-neGf0AWP",
+            "functions@WiGv7vi7Mtw-YqPMcnnyw",
+            "guzzle@_Al4NXKVQAnk8OikwvXCL",
+            "ifelse@-McOv-ZPTGayX7Mx2Thw1",
+            "include@hKfv7V6bl2LXssq9Ffi7C",
+            "include_once@SwtLDgyPmDry20qS4FBfH",
+            "inheritance@c5q2e_jyMt8Pir5Od3lRi",
+            "interfaces@vu0H-TsD7hkJgOQbSRj92",
+            "lamp@7LjxtrmgJtTJc0_kP83Tr",
+            "laravel@zsscRQZIq5o0JZir9hlz-",
+            "loops@qwt8xN4vuTrY-D0czYITI",
+            "mamp@t7p7TU2khaxsZPYAdwFAA",
+            "match@3gNzX-bw2iqur7U7-_W38",
+            "mysqli@YLuo0oZJzTCoiZoOSG57z",
+            "namespaces@9raJ06lKRZITbjWeLil-F",
+            "nginx@aspZpACHEKOsi_Er5FYPY",
+            "packagist@xZf2jjnCVHwYfDH2hs9kR",
+            "pdo@cJtPz1RMN1qDE4eRdv4N_",
+            "pest@d6MydchA52HIxfAUjmZui",
+            "phan@B45YVzov8X_iOtneiFEqa",
+            "phpcodesniffer@fSpvZ_4kGFMbFVCWhA8vn",
+            "phpstan@12k71gNfwAcT9K5aLWgbZ",
+            "phpunit@NfBKKwG2GGBPppOjoLLBg",
+            "polymorphism@gtq5KrghF28f5G8nuDcYQ",
+            "print@NQUmO90sqe7fnzod3Ia8H",
+            "print_r@wsC7OGXOyfCY4pLLNrR2v",
+            "psalm@T1XD93j6Lkpl88JSmys9b",
+            "recursion@D9ybK5INH5zSOcYMb5ZPi",
+            "require@Kaaqu-mN7xvHN6CbIn616",
+            "require_once@-CyJbsg2ho3RvfzKnJj5C",
+            "sessions@qobzzgzArNHLLn9Oiqc6G",
+            "switch@bgJ9-m6Fiu3VCc-NZlbpn",
+            "symfony@57VSMVePOr9qUD5x_LNdf",
+            "traits@GR09ns9B-0cONQaQ_uj-7",
+            "var_dump@JCCeVC0hOrvIeyfg1ScKA",
+            "wamp@36Y1HkHxhuxh2qVQB8NVE",
+            "xampp@-wniKEBwbF0Fi1fHpF-Gc",
+            "xdebug@lFoHoMRywCWa056ii5cKQ",
+            "yii@zsscRQZIq5o0JZir9hlz-",
+            "_get@GFYGFVfxkOoPI5mI4zSt1",
+            "_post@qNG-a4iIO-puZsMwAMzYC",
+            "_request@A6rfW4uJhyfAX2b18_EEC",
+            "_server@7Ja2at_N9tRTlvSGahrqn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http-methods@tn_iIfaJZVtPK6vFds7FH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Indexed",
+      "name": "indexed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "indexed-arrays@j2S8dP3HlAOOoZdpj-7Dx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input-validation@93oEIZttb85S23C1fLraP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-php@3_TuxOSzBuktBlBF05r_z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-php@_hYN0gEi9BL24nptEtXWU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Json",
+      "name": "json",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "json-processing@DB2cxZE58WCCavW2PNwmf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Magic",
+      "name": "magic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "magic-methods@rSXsPWto7Jeyw3Szl9pvf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-management@bt7dK2PcOZ72B9HXPyMwL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-dimensional-arrays@uARTOZ-ZwugSmbCJoRS5Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Named",
+      "name": "named",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "named-arguments@RkNjYva8o_jXp9suz5YdG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Null",
+      "name": "null",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "null-coalescing-operator@w0ntgFBhgGd5RUFd-qlPK",
+            "null-safe-operator@1NXSk8VZDr89jQTTkOL7x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-relational-mapping-orm@SeqGIfcLuveZ2z5ZSXcOd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Oop",
+      "name": "oop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "oop-fundamentals@yTviiPFR5b_dr3WyxdxxQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opcode",
+      "name": "opcode",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opcode-caching@NieqZd1juaNYoZOrB7e31"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Parameters",
+      "name": "parameters",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "parameters--return-values@mpQKoBzsOa-5iWo08sOhQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Password",
+      "name": "password",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "password-hashing@JbWFfJiCRrXDhnuIx_lqx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-optimization@M1nVsh_sCSFJRf6-7Ttsj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Php",
+      "name": "php",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "php-cs-fixer@r07k_hT2z2EiIBH4q3F7-",
+            "php-fig@SD9k16UlVve9WtNMDA5Za",
+            "php-fpm@AoGS-5MSkp8gtJFQVPSBE",
+            "php-versions-and-features@6sHRQTcoKL3TlgNJlwyx8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-control@NTKUMgsKGYISIyhgOJPQn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Profiling",
+      "name": "profiling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "profiling-techniques@_Dh78x_tPLqZweg--qZFQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Properties",
+      "name": "properties",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "properties-and-methods@MRAPXshy9RoYdReY6grf_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Psr",
+      "name": "psr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "psr-standards@3tONibbRgK7HCwGTE2Gqw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reading",
+      "name": "reading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reading-files@S9wTlkbv9-R6dohhZ47hs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sanitization",
+      "name": "sanitization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sanitization-techniques@tfC1tCrbvH5J43WUpG9Yb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-injection@801vB_JMas4ucriUmfrLg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-management@CGehmZjcgTWC7fQAvxmNW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-analysis@PrG_5dyBblXsWYYRcOJMa",
+            "static-methods-and-properties@qlkpwXfOc1p7j37hrzffI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Style",
+      "name": "style",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "style-tools@6eWgZVLV479oQzl0fu-Od"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-declarations@sPW-Ti2VyNYzxq6EYkbn7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-and-scope@D0BtyxyjIBcpfn5wP23WC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variadic",
+      "name": "variadic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variadic-functions@rtmytETfyyLdcXUC0QyzL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-php@_LhLDVZjLt1DoAP1NuUES"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-files@two4UycJaCfSp6jQqtTAb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Xml",
+      "name": "xml",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "xml-processing@ggkWo0DRSSDDkHpbiyUyf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Xss",
+      "name": "xss",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "xss-prevention@DxqQrToZSayWplKdCkTgT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zend",
+      "name": "zend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zend-debugger@KpQb5Zh3GUcbYUyXHvyu2"
+          ]
+        }
+      ]
+    }
+  ]
+}

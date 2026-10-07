@@ -1,0 +1,4 @@
+{
+  "title": "Robot",
+  "content": "Robot Framework is an open-source, keyword-driven test automation framework with a human-readable tabular test syntax. It is extensible through Python or Java libraries and supports web, API, desktop, and mobile testing. Robot Framework is widely used for acceptance testing and integrates with SeleniumLibrary and the Browser Library.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Robot Framework Official Website](https://robotframework.org/)\r\n- [@official@Robot Framework Official User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)\r\n- [@article@Basic Step-by-step Robot Framework tutorial](https://medium.com/swlh/robot-framework-the-basics-dfeadc025bea)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Apollo Server",
+  "content": "Apollo Server is a popular open-source library for building GraphQL servers in JavaScript. It provides tools for parsing, validating, executing resolvers, and formatting responses with built-in features for authentication, authorization, data validation, and real-time subscriptions.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Apollo Tutorial - Introduction](https://www.howtographql.com/react-apollo/0-introduction/)"
+}

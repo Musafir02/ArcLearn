@@ -1,0 +1,4 @@
+{
+  "title": "Playwright",
+  "content": "Playwright is an end-to-end testing tool built by Microsoft that can run tests across multiple browsers, including Chromium, Firefox, and WebKit. It supports features like automatic waiting for elements and parallel test execution, which helps keep test suites fast and reliable as they grow.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Official Website: Playwright](https://playwright.dev/)\r\n- [@article@Playwright Tutorial: Learn Basics and Setup](https://www.browserstack.com/guide/playwright-tutorial)\r\n- [@video@Get started with end-to-end testing: Playwright](https://www.youtube.com/playlist?list=PLQ6Buerc008ed-F9OksF7ek37wR3y916p)"
+}

@@ -1,0 +1,728 @@
+{
+  "title": "Aspnet Core Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-clients-and-communication@GLkDH0X0uy8_1DIdCzbUD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "App",
+      "name": "app",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app-settings-and-configs@EJxliq-HPVp00CVsFc6kf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aspnet",
+      "name": "aspnet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aspnet-core-basics@v2ZTCQQFQPoJNhOVGMG2g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-pipelines@_-GQNpsb7KZw76hNNOq3h",
+            "azure-service-bus@gBuaVZfqJ0-g21sKohQtx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Change",
+      "name": "change",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "change-tracker-api@wfEOvAkGXkTZGdGX341D4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd@KIFmahcNiSo2NGoLtAyRR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circle",
+      "name": "circle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circle-ci@KyGjXgG6JFo42qOV0wqfB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-first--migrations@ZPeebwJ3OBuywEgLLgQTG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cosmos",
+      "name": "cosmos",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cosmos-db@KrkV1w9b_Nwm6pe9diDRS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-structures-and-algorithms@RAX2xN37taw9cqA3pnORh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-design-basics@zlAcgLKxGF_TyrcJIk4X7",
+            "database-fundamentals@tnKUdsgp6bnFtQTexEmfy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@IejHMMVKwA0sIInla4FjX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Di",
+      "name": "di",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "di-containers@iM760f8Ys66-VSkMiZfIX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Distributed",
+      "name": "distributed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "distributed-cache@SiG0FWWznjDg-2mIWlchy",
+            "distributed-lock@T2FsSndxzSuKTFdjoyPi-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamo",
+      "name": "dynamo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamo-db@1Om9aQDZmnj_DN10ogwDL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elastic",
+      "name": "elastic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elastic-search@mK9OAwjReZoQZr1WSLRKJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Entity",
+      "name": "entity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "entity-framework-2nd-level-cache@FV4GsPjUyAc99DnIwkkCC",
+            "entity-framework-core@ET74_7ieahNaGdPT11_NI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filters",
+      "name": "filters",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filters-and-attributes@U3HXmNq6x2YA3BwZsOTbe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Framework",
+      "name": "framework",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "framework-basics@eGVaAz3VhGu3cXBNxTAWd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "activemq@sNYYEBMHV_NO_NToP51VY",
+            "autofac@gbpSbjF12dBE1Tb3PX8Bz",
+            "autofixture@K49M_7gSpfJuZaE6WaHxQ",
+            "automapper@GPmlueMnuLCUW_t4jvGhc",
+            "benchmarknet@9LEVN-uVEwxJooEiB9ApK",
+            "blazor@4iD_hDtgJ15IlJGxiO-E8",
+            "bogus@QERTjawqCCCkHfR44Ca0s",
+            "c@fxANnSiTb2VzA9u-YeBL1",
+            "caching@7Nth4LOrM_KirhvjDGkgS",
+            "cassandra@U_-Gt5csu_hihl7ybFY-B",
+            "cloud@LrjmJs6_rXUkc2A7fEq24",
+            "constraints@1-XdtrGPbUoxpu9ZcQlBA",
+            "coravel@p3bZnKIyRgLmB764Kkhju",
+            "couchdb@vHcwt6ARi5YR3v-eDDjfl",
+            "cypress@f2UP2jDnDr7XEFIdAtBhH",
+            "dapper@UkWc41r0bZ1lptjse3As6",
+            "dapr@IHY9uL3dzYmf2D2wWgIh-",
+            "databases@Ujzn_dILCA7xoupnz398l",
+            "docker@rmRESzLiZNWdBFXLrwQFJ",
+            "easynetq@X6iSHoHnFFMaGb6YPQFhl",
+            "fakeiteasy@diRJ_F6kx42Ucs0fxidtZ",
+            "fluentvalidation@sa0zXd8lpNs_SFQ2y-PY4",
+            "fluid@ZaOhWWDgVxrn0hbesJ7xT",
+            "frameworks@1YL7aXluINOO15W3waaiD",
+            "general-development-skills@NEnna_8DstfYH4T9qrP3-",
+            "graphql@BdTQ5ZMNDNZvkAUoCfL5H",
+            "gridlify@w5RnrhsP4p-AdSOLYVAY9",
+            "grpc@x3SJlLc19DNJ-PyDOOj_G",
+            "hangfire@QiQsx1udyKcPJ-lZjRQVy",
+            "hotchocolate@XMrQx9JH0eSQJpMzhvy0F",
+            "kafka@L8RkeMYm0WGNeLLcHKF1R",
+            "kubernetes@02rtFStTeIm8prNskxaUN",
+            "litedb@3gcXaOnHL4v5OoStrTWNV",
+            "mapperly@x0OopRTwIvoWgT8qi0CE9",
+            "mariadb@Gs8XcsTo11MeCsiSGpjkU",
+            "marten@ipb6proIZKG-_vCOMAiBu",
+            "mediatr@cc0UNQwbDlySue-CvpChR",
+            "memcached@u2pc3ZkL0EumAsbM12D5y",
+            "microservices@37c2eCvRdebztkbc5AjYp",
+            "microsoftextensions@J9XdYLo7qJiBoL8p3c68P",
+            "middlewares@dG--AAcZZdltYCeg6zCz2",
+            "mongodb@-wYRa8qSuKVKo_yOTKV67",
+            "moq@eyOXWb1kL80Wqiwc2WHd_",
+            "mstest@236VJJjMvqHfSj-MHSDPV",
+            "mvc@D3aQw0-pk3ycO-n10HBaA",
+            "mysql@WsGwg4qdlu_vBsFEpmBvU",
+            "net@3GGvuxdfuDwLpNX_gtjCK",
+            "netmq@8d4f7_3VO03vy7YDWwPI9",
+            "nhibernate@z24IJndpQYTl1PhiUI2mx",
+            "nlog@ykF2bB_68AhCOzeQ_QSW1",
+            "nosql@WUis4K9vduriYdVkKvM9r",
+            "nservicebus@vf8W1FLhcb3awx4JBaY5r",
+            "nsubstitute@iZCxinqlVefBk5-ICqt4v",
+            "nuke@EsC1JwFOMOlQVelpmxISh",
+            "nunit@qHYBlBCvCGUZGh6gyEI63",
+            "ocelot@2k-rGuhYTTAR9XN3aDAnW",
+            "odata@YojZ5fpzw-5WgoqqkO6wl",
+            "orleans@XKsLqDDco5OXKURCcWAmv",
+            "playwright@AtyL0ij8FeJCBmqG2YvTO",
+            "polly@gQhiEpvx__70N1WbEHGYJ",
+            "postgresql@An9TLvo-I6NtC8wFU3bh4",
+            "puppeteer@UCpoLiQJ4LeniI9x3uGcY",
+            "quartz@zOWlPXIl4XPs_0pA8-yi5",
+            "rabbitmq@KqvBn2_wvYhFdv0dBZMC9",
+            "razor@nUE2-egUMNFQoPVrVRFPl",
+            "recnroll@9WZmjiFowydYrkHQ2xeNm",
+            "redis@Ts0gJ4DdwFp48LGr4YSvM",
+            "relational@FnRxRY3uDZdTve1w-nBfc",
+            "repodb@tYDVcnG0oUF3R8DwASvAh",
+            "respawn@TCswZHviRiu6SIOwUisu8",
+            "rest@dZ9fYWMBa1OemTmLOI8_q",
+            "rest@KJCtxH3mYsZq3hfBZ6cJF",
+            "scalar@Zb4Gugxf7d6MoeEcfngrV",
+            "scoped@M3BW_63MFQyD8NE68dazD",
+            "scriban@dWB5OCvWVYkD30Op_dMwy",
+            "scrutor@f212ztDU_kb7gO71Nn76L",
+            "serilog@xL0s4-HfRxNy2ru0jiIWR",
+            "shouldly@zhn-VLGPfV6FZT2OMl6zf",
+            "singleton@y9bDrCjkDbxSIrEEtu_Mi",
+            "solr@2sY_p_8cOOBmZtDHO2Cmy",
+            "specflow@9WZmjiFowydYrkHQ2xeNm",
+            "sphinx@Ye9WHfwZa-Fc2YDaTCmU1",
+            "steeltoe@s8evqe2MireS1UhxoXrd1",
+            "testing@XofWWhlU_vWCG5oXVMZze",
+            "transient@-N0XM0-VtCZ6QMo2YyMD-",
+            "triggers@2f_CJMnXwPxjMEwm5P_QJ",
+            "webapplicationfactory@Xx5G09n4WWnnydCgxnL0A",
+            "xunit@R8C6s53RYjkRVma0nCJpy",
+            "yarp@2axfolu26P8XwxMxgMaS3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git---version-control@OtdCmkj0SvrGwCUSfm96C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@0-PLMXGlRyRzTk-EjXMs2",
+            "github-gitlab-bitbucket@KAZF-mIg-FlfMonfdOLhb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gitlab",
+      "name": "gitlab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gitlab-cicd@8Y73Ae32eo6_ye7dw5QRQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graphql",
+      "name": "graphql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graphql-net@Efxu9gDodODMTKJbWcXzB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http--https-protocol@YI3cAezupWNntFw4B6elY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lazy",
+      "name": "lazy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lazy-eager-explicit-loading@9AMotSwdEbB8uOg80SykE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-basics-of-c@NvODRFR0DLINB0RlPSsvt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Life",
+      "name": "life",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "life-cycles@Tjaczp2E-cCn0qSv89xgo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Light",
+      "name": "light",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "light-bdd@aWRv5sU9dksgcpE9RGJb1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-frameworks@fQ3w8REYWzQfeJ0nPyq6W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manual",
+      "name": "manual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manual-mapping@oMMBzRrHkUymxAR4oqr75"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mass",
+      "name": "mass",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mass-transit@SQKIUa_UsJ4cls-Vs9yHU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-cache@8CRsr7UZszjc_fZ-4ZmIx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Minimal",
+      "name": "minimal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "minimal-apis@ipABerBcM9zCte9pYaIse"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Native",
+      "name": "native",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "native-background-service@uP1nqbmFmZL_wA2DoqP8C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Net",
+      "name": "net",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "net-aspire@HqhqqiA5X00Xl1RnZgrNJ",
+            "net-aspire@Ohc0xzI6qX4hOFVNfRj1F",
+            "net-cli@6HJQ1Evgah0Pki04Z2hQt",
+            "net-maui@olqSPUU3RoxhQ6exfMzeN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-mapping@9ECykIIvXlDblbFbRVcJS",
+            "object-relational-mapping@POQPoN98eqOH2873ZI6Hm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Razor",
+      "name": "razor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "razor-components@vePinRjDfSGULKw0LE9K-",
+            "razor-pages@qpVxwuyA2oE06MZLtEdP1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Real",
+      "name": "real",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "real-time-communication@9Vv3OxafB6BlHhi1ZkeVO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-engines@6p5atMYw3b3bXkQuXZsDV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Signalr",
+      "name": "signalr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "signalr-core@8dvd4M0TKNyQR8dEolGNT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-basics@aOJMVrTcA_I2y_QHzj7aM",
+            "sql-server@HQHSzsqBGSVYNLQ9o5EI-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stored",
+      "name": "stored",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stored-procedures@ZiK-c9zNbi5RZkKUi44wP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stylecop",
+      "name": "stylecop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stylecop-rules@R7Qk5hsEIl9dspQXdaJAJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Task",
+      "name": "task",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "task-scheduling@s57tKy1rajlJbKFDVXLqs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Template",
+      "name": "template",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "template-engines@C85aJvrzj6rP2Hmfj9uPB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Test",
+      "name": "test",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "test-containers@8eW5BaOjJbnQ7uk4zMOiU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-sockets@tBl8neu3tJd5GPwGfJbjZ"
+          ]
+        }
+      ]
+    }
+  ]
+}

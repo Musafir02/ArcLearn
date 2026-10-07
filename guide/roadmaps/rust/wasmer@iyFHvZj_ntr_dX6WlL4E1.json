@@ -1,0 +1,4 @@
+{
+  "title": "Wasmer",
+  "content": "Wasmer is a standalone WebAssembly runtime designed to run WASM files on any platform quickly and efficiently. Features a pluggable system with different compiling strategies, friendly CLI, and embedding APIs for calling WASM functions directly from various programming languages. Lightweight and modular.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Embedding WebAssembly in your Rust Application](https://blog.wasmer.io/executing-webassembly-in-your-rust-application-d5cd32e8ce46)\r\n- [@opensource@wasmerio/wasmer](https://github.com/wasmerio/wasmer)\r\n- [@article@Wasmer — WebAssembly in Rust](https://lib.rs/crates/wasmer)\r\n- [@article@Writing & Compiling WASM in Rust](https://www.shuttle.dev/blog/2024/03/06/writing-wasm-rust)\r\n- [@article@Compiling from Rust to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Rust_to_Wasm)"
+}

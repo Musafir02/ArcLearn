@@ -1,0 +1,4 @@
+{
+  "title": "Boolean",
+  "content": "Boolean data type in MongoDB stores true or false values, representing logical states in documents. Booleans are commonly used for flags, status indicators, and conditional logic in queries and applications. They support direct comparison, logical operations with $and, $or, $not operators, and can be efficiently indexed for fast querying of true/false conditions in large datasets.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@$type](https://www.mongodb.com/docs/manual/reference/operator/query/type/)\r\n- [@official@How to Index Boolean Values](https://www.mongodb.com/docs/atlas/atlas-search/field-types/boolean-type/)"
+}

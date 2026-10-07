@@ -1,0 +1,4 @@
+{
+  "title": "yapf",
+  "content": "yapf is a formatter for Python files. It is a tool that automatically formats Python code to conform to the PEP 8 style guide. It is similar to black but has more configuration options.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@google/yapf](https://github.com/google/yapf)"
+}

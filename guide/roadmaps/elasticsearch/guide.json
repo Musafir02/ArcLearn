@@ -1,0 +1,874 @@
+{
+  "title": "Elasticsearch Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-keys@6LJ8UCBA9jj4ENk1iLwC6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Avg",
+      "name": "avg",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "avg--sum--min--max@Avit-NGMkIA9JwJ7OUiNZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bm25",
+      "name": "bm25",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bm25-algorithm@MqoJJv_aZCdCLHLpebrPA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Boosting",
+      "name": "boosting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "boosting-queries@ebU65cyHH2TVGrQOHjILk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bulk",
+      "name": "bulk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bulk-index@3VH_cfXDDZbYma-DL14Fe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cat",
+      "name": "cat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cat-api@IbkvRfpVm1iNSU9jH0MLO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cluster",
+      "name": "cluster",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cluster-monitoring@TqamknoJp5OQnvqpQpJHx",
+            "cluster-system@UVFo66FzwLOPFjafCMQg2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Controlling",
+      "name": "controlling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "controlling-search-results@QzkAFCH4nGZbVudp_bSh_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Coordinating",
+      "name": "coordinating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "coordinating-nodes@eIGt2YQdHRssD_7TncWdf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-index@raYmik0mnI2_gu2dpWKzF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cross",
+      "name": "cross",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cross-cluster-replication@NFUpYASxryl5ne1jHfj-E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-analyzers@Y-4FlvsZPCP1WISOvcPMW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-nodes@0t2kxHBbL6kXn3C1sgGEE",
+            "data-tiers@e7jEDWLZ6q6S0csClOD27",
+            "data-types@OfsRHpwJClzwPPRe9hai2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Delete",
+      "name": "delete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "delete-by-query@FYdnnc9kgkWYQAtJjBgTC",
+            "delete-documents@d5KjotJsfYrE5YH7a48XI",
+            "delete-index@FGz2puNUy_cGRwE3Jfylq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Doc",
+      "name": "doc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "doc-values@rkL_k2nxymtgPW8xf_04k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Document",
+      "name": "document",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "document-row@tX_HGYnsoeipj4xu04wnX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elastic",
+      "name": "elastic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elastic-cloud@TACmPj5o4tdyTkLXqSQFb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elasticsearch",
+      "name": "elasticsearch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elasticsearch-usecases@0-SJLGkO8Ek7hyC6wWHKv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exists",
+      "name": "exists",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exists-query@Eu76k_9GC5DNqWMKTogV4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Filter",
+      "name": "filter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "filter-aggregations@BzIj7Cc9oC4WsUeU9b4Ae"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-score-query@pzRBfcevVXXWf6QfvGIvs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication@b4PSjo2xVnkih7e9XlnQs",
+            "autoscaling@pBQsOfU5JlCMTSdKVU0C2",
+            "boolean@8bNqL02B9VFraXaRDaxDq",
+            "cardinality@vrj87U2jNHEQhUlUKvm0z",
+            "dates@YHLYayCH8beVSkDF_U5_F",
+            "dynamic@_SuYA1C-g5XOmhCAjXhXi",
+            "eql@R2G2jlvGl6rJkqphwHYGP",
+            "esql@bw5Rt_AxLRVB6KnetVWU9",
+            "explicit@4f09QKfGI-GaxYw0ngdiS",
+            "fielddata@bNnGloEN5OED8M-WyChK6",
+            "filter@irtX2t6kTUp5lDHd0AVUF",
+            "filter@Kzuy0BM4Dme2nFanEdWGC",
+            "flattened@MSHYpBQEgv-ukJvvuHE1B",
+            "highlighting@vaah2ESUA7oJW4-hHaWrm",
+            "histogram@RDygFr1w9yR6mU3hSG8Vj",
+            "ilm@DMXH8GoYf2qVDbLg7b2hm",
+            "introduction@rWriosjh7LzGZbj8k_wih",
+            "json@ppgShbqhYsD6maDw3Dgcx",
+            "keyword@DZ_FX0ansCsXDN7J6u7_m",
+            "kql@Ad5Ck2ZdLN3iphqRmFMIF",
+            "latest@aX6S8p760HI7U9POwTJ1e",
+            "lucene@jWST5oXpmJVhjXKucbUu5",
+            "mappings@2ZJCuKPy1VnJzTI0CkgeI",
+            "must@f63E0rn-Ayz_AAUQM-o-N",
+            "must_not@gYMl1QixMYQ6-6zCNhyEG",
+            "nested@vgXst45dhcu2w29Wm8Xwp",
+            "numeric@_L1JMJIEJQ3VzQc0LfhfF",
+            "object@RHUajAEJqQy9lnKUv-yiF",
+            "pagination@-GcXnJzacIDHkoZFzmoq0",
+            "pivot@MSPIbD2eaqpgjbdXRh3Tg",
+            "query@GUxc44CiMH8DAaHEB8H1I",
+            "should@QukRBV4aCfUtUE7L-qriv",
+            "slm@ghPkYADvzyvPZbzt5Fnmz",
+            "sorting@lSYyRKgtY7PEk4ESy3uRK",
+            "sql@Hg5LjcPxxBJyFcfhbrE_o",
+            "terms@yx5BiPNalUkKBH7bhwbEi",
+            "text@Fmxstc6ZjXnMLpnWkZGOA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Geo",
+      "name": "geo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "geo-points@d_VHRn6rWUEFfI6KVrcoS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Get",
+      "name": "get",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "get-document@raSeqTXjH4aCFHuoqmrcJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-search-works@fuQ4okG1z02lMx8Gkw43M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hybrid",
+      "name": "hybrid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hybrid-search@cWzmbSIsiw7809rmFA4DV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Id",
+      "name": "id",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "id-primary-key@1Qps2Z_Cp5ZrYkq5FXwDO",
+            "id-query@SmaMEuknItGuLiBv9PwIk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Index",
+      "name": "index",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "index-database@ECrKSI6rUU_N5fd3NFgch",
+            "index-document@amdn_KmQmPJgBf-kDzC3E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kibana",
+      "name": "kibana",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kibana-console@ST0yxc527eb2vRrSvTWAd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leaf",
+      "name": "leaf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leaf-vs-compound-queries@xpxl2b_9DUXCT4bpyGete"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mapping",
+      "name": "mapping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mapping-explosion@X_6Cyj7QIls5FK1gmvi4e"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Master",
+      "name": "master",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "master-elegible-nodes@Mc96iYA5dzWQJ0Kz8mgZC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Match",
+      "name": "match",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "match-phrase-query@OBSm1fxTj1HhuqN2FACQb",
+            "match-query@hwZQg4HXZeQRX5ty47U9h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nested",
+      "name": "nested",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nested-aggregations@NRMC5M3ZFHwHZLpPPPo5v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Node",
+      "name": "node",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "node-instance@XjeQ-O1XA9q2wCIyzXLHg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optimizing",
+      "name": "optimizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optimizing-bulk-indexing@Vv7YmE4OqTsn2WWHS6bQW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pipeline",
+      "name": "pipeline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pipeline-aggregations@ngYPDkTwj1e4HTFYJZ8ru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prefix",
+      "name": "prefix",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prefix-query@dFKT1qTnnJwAreg9E0GsF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Primary",
+      "name": "primary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "primary-shards@nkqoh4_V4VRyETqN0ci1R"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-dsl@4-hkqr1z0p56K0HzbifEs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Range",
+      "name": "range",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "range--date-range@yVjpNuTx5StM7g0Jojmc2",
+            "range-query@h0u093c6Ccx9SllBehnYt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reindex",
+      "name": "reindex",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reindex-api@s1Finic6tTeSbgXt1nz30"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Replica",
+      "name": "replica",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "replica-shards@ANeRCig1fihD5-4a7l9lz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-api-basics@ciLSkWlj0_WzCUydb9Cdz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roles",
+      "name": "roles",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roles--users@xv_a_A4QJuM3Af_My0VXj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rollover",
+      "name": "rollover",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rollover-policies@-jlIcMsKptM9AoST6mCOh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-with-docker@hMmoVhZnoE0CdY-C135DW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-analyzer@txSx-r5A7erBVXOI18R4f",
+            "search-engines-vs-relational-dbs@rWyeaFLWQdykUQMOn8t9k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Segment",
+      "name": "segment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "segment-merging@v2h-DzgtEFgE5Bu4dpOTE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Semantic",
+      "name": "semantic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "semantic-search@ZEM809HNlJtNQCfFmoFdi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Snapshots",
+      "name": "snapshots",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "snapshots--restore@mw08QuJPgFHssk5Ur8PRY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Source",
+      "name": "source",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "source-filtering@b9XUvx-4qAMwghgy-LVat"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Standard",
+      "name": "standard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "standard-analyzer@XDzjBGYxgiGOiNB_JBTRd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stats",
+      "name": "stats",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stats--extended-stats@qCdD7orsutXfMeLSbyyWd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Synonyms",
+      "name": "synonyms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "synonyms-graph@8FtfvlvLXXlOX-D6EDvFj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Term",
+      "name": "term",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "term-query@TIOwE5LY6D4y6DwYEsZXC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-analyze-api@59-tr4ff4QmFFJCN_Vcfh",
+            "the-elk-stack@lmc1Eu4oacxPT778aGya5",
+            "the-inverted-index@jx0CS3mRr5MB95cTRQMtv",
+            "the-split-brain-problem@Q6djSLPsTlIBfXFOsael7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transform",
+      "name": "transform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transform-api@C3JSN-6jRikQjxifLu9Vk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understanding",
+      "name": "understanding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understanding-similarity@c9rILhjxosufXg4-_ffVi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Update",
+      "name": "update",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "update-by-query@q-u0rz7mc0ohFUYkXjeD6",
+            "update-document@5HcPuuPpsNudiuzpAFU8z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Value",
+      "name": "value",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "value-count@q8SWm-tJ9c7uIY6wxzQdI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vector",
+      "name": "vector",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vector-search@MH1AKsuv654fdXX6hVhtv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wildcard",
+      "name": "wildcard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wildcard-query@KtRZM5xTa4rHE7JnTAwAD"
+          ]
+        }
+      ]
+    }
+  ]
+}

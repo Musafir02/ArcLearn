@@ -1,0 +1,4 @@
+{
+  "title": "LlamaIndex",
+  "content": "LlamaIndex is a framework focused on connecting language models to external data, providing tools for ingesting, indexing, and querying documents for retrieval augmented generation. It handles tasks like chunking documents, generating embeddings, and building indexes that support efficient retrieval. It is commonly used as the data layer underneath a RAG based agent.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@LlamaIndex Documentation](https://docs.smith.langchain.com/)\r\n- [@opensource@run-llama/llama_index](https://github.com/run-llama/llama_index)\r\n- [@article@What is LlamaIndex? - IBM](https://www.ibm.com/think/topics/llamaindex)\r\n- [@article@LlamaIndex - Hugging Face](https://huggingface.co/llamaindex)"
+}

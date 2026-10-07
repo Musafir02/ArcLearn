@@ -1,0 +1,4 @@
+{
+  "title": "Message Queues",
+  "content": "A message queue is a component that receives, holds, and delivers messages between different parts of a system, allowing producers and consumers to operate independently of each other's speed or availability. Producers add messages to the queue, and consumers process them at their own pace. This decoupling improves reliability and lets each side scale independently.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is Redis?](https://redis.io/)\r\n- [@article@RabbitMQ in Message Queues](https://www.rabbitmq.com/)\r\n- [@article@Overview of Amazon SQS](https://aws.amazon.com/sqs/)\r\n- [@article@Apache Kafka](https://kafka.apache.org/)"
+}

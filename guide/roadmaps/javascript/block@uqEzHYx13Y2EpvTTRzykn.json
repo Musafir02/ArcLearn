@@ -1,0 +1,4 @@
+{
+  "title": "Block",
+  "content": "Block scope limits a variable's visibility to the block of code enclosed in curly braces `{}` where it is declared. Variables declared with `let` and `const` are block-scoped. A variable inside an `if` statement or `for` loop with block scope is not accessible outside that block.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@JavaScript Scope](https://www.w3schools.com/js/js_scope.asp)"
+}

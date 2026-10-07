@@ -1,0 +1,4 @@
+{
+  "title": "Database Connectivity > MySQLi",
+  "content": "MySQLi is a MySQL-specific database extension that offers both procedural and object-oriented APIs. Like PDO, it supports prepared statements and bound parameters. MySQLi provides access to MySQL-specific features and is faster than PDO for MySQL-only applications in some benchmarks.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@MySQLi](https://www.php.net/manual/en/book.mysqli.php)"
+}

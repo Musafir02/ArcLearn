@@ -1,0 +1,4 @@
+{
+  "title": "Users / User Groups",
+  "content": "IAM users represent individual people or applications that need programmatic or console access to AWS. User groups let you apply the same set of policies to multiple users at once, simplifying access management. For most real-world deployments, roles are preferred over long-lived IAM user credentials.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@IAM - AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)"
+}

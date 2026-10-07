@@ -1,0 +1,4 @@
+{
+  "title": "Monitoring Solutions",
+  "content": "AI Red Teamers interact with monitoring tools primarily to test their effectiveness (evasion) or potentially exploit vulnerabilities within them. Understanding tools like IDS (Snort, Suricata), network analyzers (Wireshark), and SIEMs helps red teamers simulate attacks that might bypass or target these defensive systems.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Open Source IDS Tools: Comparing Suricata, Snort, Bro (Zeek), Linux](https://levelblue.com/blogs/security-essentials/open-source-intrusion-detection-tools-a-quick-overview)\r\n- [@article@Snort](https://www.snort.org/)\r\n- [@article@Suricata](https://suricata.io/)\r\n- [@article@Wireshark](https://www.wireshark.org/)\r\n- [@article@Zeek (formerly Bro)](https://zeek.org/)"
+}

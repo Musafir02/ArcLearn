@@ -1,0 +1,4 @@
+{
+  "title": "GraphQL",
+  "content": "GraphQL is Facebook's query language for APIs, allowing clients to request exactly the data they need. Uses a single endpoint with schema-defined data structure, reducing over-fetching and under-fetching. More flexible than REST for complex applications with diverse platform needs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated GraphQL Roadmap](https://roadmap.sh/graphql)\r\n- [@official@GraphQL](https://graphql.org/)\r\n- [@video@Tutorial - GraphQL Explained in 100 Seconds](https://www.youtube.com/watch?v=eIQh02xuVw4)"
+}

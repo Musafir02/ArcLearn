@@ -1,0 +1,4 @@
+{
+  "title": "Cypress",
+  "content": "Cypress is an end-to-end testing framework designed for web applications. It runs tests directly in the browser and provides a visual test runner for debugging. It is primarily used for testing user interactions in the browser rather than pure Node.js code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Cypress](https://www.cypress.io/)\r\n- [@article@Cypress Documentation](https://docs.cypress.io/)"
+}

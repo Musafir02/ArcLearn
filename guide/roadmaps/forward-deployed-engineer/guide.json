@@ -1,0 +1,716 @@
+{
+  "title": "Forward Deployed Engineer Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Agent",
+      "name": "agent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agent-architectures@RqfaQpg0ZK8-GMUPrU9EX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-agents@ZS84Fe33y6DCQYWPjSgZs",
+            "ai-engineering-skills@tTTDizQfuACFUoAAsTCt1",
+            "ai-engineering@buA5I4rQkiDB_EDG-6kju",
+            "ai-governance@NaNmI6f-LLdb-ITMaPD6w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-design@_nL7Wf1MG3mofKY9XwGDX",
+            "api-security@OkdMIcPrbRmTCvViMHL58"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apis",
+      "name": "apis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apis-design@_nL7Wf1MG3mofKY9XwGDX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backend",
+      "name": "backend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backend-skills@kK16boEALRDQdRmFRphso"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Build",
+      "name": "build",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "build-your-agent@exOxhFap719ArAhvgsCDx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-eval-pipelines@bgZE7NSpze22A5BBq1azG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Business",
+      "name": "business",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "business-acumen@bE7j2U28V8Vf9OKHBqLwW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Choosing",
+      "name": "choosing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "choosing-your-model-provider@XpkCJoUTbi1oqksEZ1v6O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude-code@wr5ddjutC-fX_ixysTHaT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-platforms@mj6Hlgcu1ABoRgJ4E3Nl8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Complete",
+      "name": "complete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "complete-app-with-observability@lWOtIplGjXg139CAr2HaC",
+            "complete-apps@YyPk_MygYb40ALZ2cynmN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Computer",
+      "name": "computer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "computer-science@dWklJpF9hcjJSxb4Q4xIO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-engineering@LUL5YJYOjQtE8mGHhXxt1",
+            "data-pipelines@oqvpmxz-G2wAYZBsvYI-l",
+            "data-privacy--compliance@xvTYuzxuOJ0gsmQEkNS5x",
+            "data-structures--algorithms@aqrK4e6B8LFvFimKoqCNF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Devops",
+      "name": "devops",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "devops--cicd@2e6r7o6wjknJDInucHPx-",
+            "devops-skills@LRBwP7EQj4byox7yKdPAj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Discovery",
+      "name": "discovery",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "discovery--scoping@hO7BCDFmbvQVcgM7W2t9S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dsa",
+      "name": "dsa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dsa--system-design@aqrK4e6B8LFvFimKoqCNF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enterprise",
+      "name": "enterprise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enterprise-workflow@c8dBwWaKLiW6X2HWfmVJt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "From",
+      "name": "from",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "from-x-to-fde@414WIX6TuK2h1jEtzRG2H",
+            "from-x-to-fde@XjxnVjO0fR2XNzBUSzA4L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frontend",
+      "name": "frontend",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frontend-apps@7JU1cVggMDoZUV-adGsf-",
+            "frontend-skills@CNTtsgHntKdMsM7FgrrB8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Full",
+      "name": "full",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "full-stack@8kWwBNYkgnesTcSt2MKcU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "airflow@T_I3hVabg_-juEb7_Rz0v",
+            "authentication@jHqnzz31kPThHr2Evq9rl",
+            "aws@sb6WyqJdxrUI9CRKSo0r0",
+            "azrue@4tQhE4qGiC_PcgD1gFeQi",
+            "backend@CEj01gIsqo9cnfBQAu4Oq",
+            "c@s7xfJo04F2DGaKWBlUOwh",
+            "codex@hzeEo8COf2l07iu5EdlFo",
+            "communication@iaNbLDFrEDYEKwpkGFWts",
+            "containers@jSNp7CyvfjYWjzTmVO8oP",
+            "css@0llUuL5wNY111LDMfgTfn",
+            "cursor@MWhoqhNnBaoeCdN_8i15k",
+            "docker@_JBeNCBgiucjYlcX871eU",
+            "frontend@wY07cSW1nGj3JHJDNDrxq",
+            "gcp@yS5n-Z4mJ6oI4_uPJgwpo",
+            "gemini@XY2l96sry3WyLzzo3KUeU",
+            "go@iH_24AecJgB2txeia9DzG",
+            "graphql@A07PWN8ILr286zxGGkS2Q",
+            "html@uY8VYGM8lKY82haZlr00i",
+            "introduction@PBtnaTE_5AMOa5mxbhoT2",
+            "javascript@qs2rpJiu6hYvArgevoRw1",
+            "kubernetes@SpVJnrinTt1uUWNuYikDK",
+            "linux@mhyaSwOETwgFl4zsCJjkp",
+            "mcp@9I0e9Qr0LLO_wtRZSaxcg",
+            "mlops@DNwdb0vzfmG0XNYB_A4XJ",
+            "nodejs@Rdm1H7sq1MSAH_Gj9wKlH",
+            "observability@8fojVRR98MiJQEA_dec8n",
+            "postgresql@YJ3cNcQGBifxTLY_X7Rsb",
+            "python@3CR52IR7RUOGUP7pLJlCE",
+            "rags@7YOfKFFLI78GabP760sy8",
+            "react@2jjQRP6B7ACFWU1lG56In",
+            "security@fxWu8J2166baYEoCti_hr",
+            "spark@0NVAhnjHZ2-oo6TBcbs9X",
+            "sql@EWIf51kO_21ZK2ep0vWIJ",
+            "terraform@OB_e7DYScbT05uKYWlIG_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git--github@Kl1nNBwVfne778x81AlXj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@__EIrpa-JCYb_Mwtg6fz6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inference",
+      "name": "inference",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inference-optimization@hRTwO-qsk58UpfTKmsTvo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Java",
+      "name": "java",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "java--scala@6ODdQmQGtTnNDwuXPIvxG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript--typescript@rBaErvrSvzB3slZfsZPCT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Latency",
+      "name": "latency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "latency-and-cost-optimization@WQRS3xCIeSSJbE6ighp-q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linux",
+      "name": "linux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linux-skills@CruESa0Ir9fSbxyX3ny13"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-fundamentals@UP2OJo5oN7AUxrBDcNsD-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manage",
+      "name": "manage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manage-ml-services@e_jwUga36fZWaE57bXVZa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory--state-management@trgV5OI77V92kX-Zgbqpy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-deployment@I1XhZ_DojZAC8_vxFHjAX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-agents@W0M32nEoOSRDCLGFquoct"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nosql",
+      "name": "nosql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nosql-databases@QNScC6Pvz2OG3WJAIWkND"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Product",
+      "name": "product",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "product-feedback-loop@U2mQX5_XwmW74HFEM1Uzw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-engineering@wc3AT6lpGUDr-KM95XjgI",
+            "prompt-management@ThPsnGBFU3KZwsTf2U2ws",
+            "prompt-versioning@DKWrSQDE7nFZFGVEUH1od"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regression",
+      "name": "regression",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regression-testing@9TV0wGo6BMD_TuMAx-sAw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Requirements",
+      "name": "requirements",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "requirements-gathering@s4Kooj99igkE02P-D-dAU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roi",
+      "name": "roi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roi--ai-impact@kyHwTMFBQxbHrGBcv3q0O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roles",
+      "name": "roles",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roles--responsabilities@E7o6LDxng5zNFg_mgltg6",
+            "roles--responsabilities@YNaf7swqsvYaXRK6uevdv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shell",
+      "name": "shell",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shell--bash@TQA4APeviRM-CFi8y9_iJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Software",
+      "name": "software",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "software-architecture@nWA_ZKriQWQV6vS6eoQkS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stakeholder",
+      "name": "stakeholder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stakeholder-management@L76T2X7AFpVtpMF9CjBJo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-design@nkkCScukl9AVpLNQkTUoA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technical",
+      "name": "technical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technical-scoping--sequencing@KqQHfy1Z8w-v8p73QkvG5",
+            "technical-writing@ir0uv9E3flgBz_cHntOf4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tools",
+      "name": "tools",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tools--functions@V7d0lWrX8g3z2D9L99mdl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tradeoffs",
+      "name": "tradeoffs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tradeoffs-scope-speed-quality@eKUy2q5cGskmcg-sAAtYW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vector",
+      "name": "vector",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vector-dbs@N5MPa9HqtdcZeF0wtLMVu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vibe",
+      "name": "vibe",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vibe-coding@BHpm4kOU6e1dOlWW104QB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-an-fde@414WIX6TuK2h1jEtzRG2H"
+          ]
+        }
+      ]
+    }
+  ]
+}

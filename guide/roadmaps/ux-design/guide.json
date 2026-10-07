@@ -1,0 +1,831 @@
+{
+  "title": "Ux Design Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Adobe",
+      "name": "adobe",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adobe-xd@HI_urBhPqT0m3AeBQJIej"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Automate",
+      "name": "automate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "automate-the-act-of-repetition@ZufrLRNkMoJ4e2T-vWxCR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Avoid",
+      "name": "avoid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "avoid-choice-overload@8wxlu4KA2iu9CJa1UAUll",
+            "avoid-cognitive-overhead@4AzPOKXUN32CkgchRMrRY",
+            "avoid-direct-payments@iQNvKhwhvbis4Yn1ZxQua"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Be",
+      "name": "be",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "be-authentic-and-personal@m30ePaw_qa36m9Rv9NSFf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Behavior",
+      "name": "behavior",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "behavior-change-games@JSBiw0C6aq1LhA33y79PM",
+            "behavior-change-strategies@w_QWN80zCf1tsVROeyuvo",
+            "behavior-design@zYCBEUqZVlvjlAKnh5cPQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Behavioral",
+      "name": "behavioral",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "behavioral-economics@_lv6GJ0wlMfhJ7PHRGQ_V",
+            "behavioral-science@D553-nVELaB5gdxtoKSVc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bj",
+      "name": "bj",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bj-foggs-behavior-grid@lRBC8VYJPsR65LHDuuIsL",
+            "bj-foggs-behavior-model@2NlgbLeLBYwZX2u2rKkIO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Business",
+      "name": "business",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "business-model-canvas@SGO9hHju49_py0n0ASGBe",
+            "business-model-inspirator@GI06-DbGyJlQXq5Tyi-aH",
+            "business-process-model--notation-bpmn@jy5jtSEyNE8iJpad27rPX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Call",
+      "name": "call",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "call-to-action@U4ZEFUcghr9XjSyf-0Np7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clear",
+      "name": "clear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clear-the-page-of-distractions@IjqH_Ev2fDWG0QDQ9c9eN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competitor",
+      "name": "competitor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competitor-analysis@HUZ5n2MRHzQPyjwX2h6Q4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conceptual",
+      "name": "conceptual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conceptual-design@r6D07cN0Mg4YXsiRSrl1_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-action-funnel@kcG4IpneJzA6di0uqTiwb",
+            "create-user-personas@s2KJ5kNv9UcnsP0QKIKQ7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Crowd",
+      "name": "crowd",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "crowd-out-old-habit-with-new-behavior@B0gg7Z5JL9m9Srb89KcN5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cue",
+      "name": "cue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cue-routine-reward-model@X1AroUI8Fge_lRpKab4A9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Customer",
+      "name": "customer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "customer-experience-map-by-mel-edwards@0KEqAjHFBjfmGA1bKzXuD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decision",
+      "name": "decision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decision-making-support@9vA3ZWMiKG6NiEqGDvcFR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Default",
+      "name": "default",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "default-everything@wE5gt1vMgbF3csA61VO2-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deploy",
+      "name": "deploy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deploy-peer-comparisons@gqOnzmiLQHmIXuEe4jG2e",
+            "deploy-social-proof@C1NwA0Pivoo73GANoOaPi",
+            "deploy-strong-authority-on-subject@C5dKHIIgBzxtBpFgDs-hB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dual",
+      "name": "dual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dual-process-theory@kWA8CvocP1pkom2N7O4gb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Educate",
+      "name": "educate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "educate--encourage-user@SLXjoYL-lhPef8s9V3jpf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elicit",
+      "name": "elicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elicit-implementation-intentions@EmDgiwaknBz5lXr1rwalE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-driven-process-chain-model-epc@nccToz_0FUvHMJytpDpM0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Five",
+      "name": "five",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "five-forces-model@F9gpGTRwXq08jNo5pPKm6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frame",
+      "name": "frame",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frame-text-to-avoid-temporal-myopia@S9rJr8pc-Ln8BxG0suBWa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gather",
+      "name": "gather",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gather-lessons-prioritize--integrate@Emby09Nsm_j6uNreT58r6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "balsamiq@fZkARg6kPXPemYW1vDMTe",
+            "cheating@zVXJPpqZvUFIxTGVrr0rN",
+            "defaulting@IpKCXqf_PkxIllwmiIZsq",
+            "figma@t46s6Piyd8MoJYzdDTsjr",
+            "gamification@fbIur1tEIdNDE6gls4Bru",
+            "planners@eYZf67rnhOksfh44hnzHg",
+            "prototyping@6yCBFwntQ_KxFmmGTJ8iR",
+            "reminders@esWGzYUJwv7_xGjq6kpVE",
+            "sketch@nb7Ql1gvxqEucsGnIWTyY",
+            "tutorials@f0n2JKxpcuP0JW-h4CvwN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Goal",
+      "name": "goal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "goal-trackers@g-bcan_JnjJfg0_fMOb64"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Good",
+      "name": "good",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "good-layout-rules@90_M5qABC1vZ1nsXVyqFJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Help",
+      "name": "help",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "help-user-avoiding-the-cue@S2TgqNDjvmcJTaXncM09u",
+            "help-user-think-about-their-action@e9n9an1PGxDPGkLCOHIwz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-to-tips@mzWd-xSr7sO2RgfPbKy4T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Human",
+      "name": "human",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "human-decision-making@liUKYf7UghuPk25xMPPYj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "In",
+      "name": "in",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "in-general-keep-it-short-and-simple@QNJ-LxfYtR8lbnmuy2Qm9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Incremental",
+      "name": "incremental",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "incremental-ab-testing@Q4xBz9f3yyZi2F_aZ5ixL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lean",
+      "name": "lean",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lean-canvas@sc8jJ_77CrkQuxIJYk28Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lessen",
+      "name": "lessen",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lessen-the-burden-of-action--info@gf7et64xCqkYBrP9HwWs_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leverage",
+      "name": "leverage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leverage-loss-aversion@zXinWCEH4LlYvXekLK0Ju"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Make",
+      "name": "make",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "make-commitment-to-friends@dOL2z6ULpmzRD5N3MrYCy",
+            "make-it-clear-where-to-act@hDj3HaYAM7K1UJmP_T52n",
+            "make-it-easy-to-understand-and-complete@vAu2c45c7DgoRydHR2tvD",
+            "make-or-change-habits@y6CqgqTvOt-LrvTnPJkQQ",
+            "make-progress-meaningful-to-reward-user@D3LVYuCDHD6-kU8GhXokf",
+            "make-progress-visible-to-user@8YePym3cQtoVY0DJQLllK",
+            "make-reward-scarce@1pzONoWafLAeX8eWbH-Dz",
+            "make-successful-completion-clearly-visible@94V3wUtZ0NMm_0Vb1pBju",
+            "make-ui-professional-and-beautiful@ahhffBkmd-feroleBrhJm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Making",
+      "name": "making",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "making-it-incidental@Ix5Fll_dAINWLxVF2DXFI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Measuring",
+      "name": "measuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "measuring-the-impact@GgBazWfF2OvOqkuo3DO2L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mindfulness",
+      "name": "mindfulness",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mindfulness-to-avoid-acting-on-the-cue@d1dXGCHmMF2EFpL5yKVJA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multivariate",
+      "name": "multivariate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multivariate-testing@-_T2nzp1vV1jUcpsC5DI3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nir",
+      "name": "nir",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nir-eyals-hook-model@PLLTcrHkhd1KYaMSRKALp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nudge",
+      "name": "nudge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nudge-theory@6ffY5wO-XhkiDJJ5YcI0x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Persuasive",
+      "name": "persuasive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "persuasive-technology@K22gvF9DLt0Ikc80yZLCb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prime",
+      "name": "prime",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prime-user-relevant-associations@jBQtuiHGl3eyCTZG85Vz5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remind",
+      "name": "remind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remind-of-prior-commitment-to-act@kR-UbUFdELVeiPJqT0GlZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reminders",
+      "name": "reminders",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reminders--planning-prompts@wFWidrOZ5EHPgo9uuUclK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Replace",
+      "name": "replace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "replace-the-routine@_C-55tciBzc6_Kyk6272k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Simple",
+      "name": "simple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "simple-flowchart@JCP5_jyvh9u7hxp379iW2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Social",
+      "name": "social",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "social-sharing@FoKtBRuTuMD2SZDHLWS-5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spectrum",
+      "name": "spectrum",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spectrum-of-thinking-interventions@0Df110GZcDw5wbAe1eKoA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Status",
+      "name": "status",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "status-reports@G4Ap91NgZfkV-54EuWe-Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Support",
+      "name": "support",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "support-conscious-action@PTZROvpPtEvu06szwmt4K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swot",
+      "name": "swot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swot-analysis@XiEn1OGFY1bMCoB0Pk8N_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Target",
+      "name": "target",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "target-action@AXn-N15U_z4OagClNoXrW",
+            "target-actor@FRn2MaR0-ehSD3zmwXcCI",
+            "target-outcome@7J8F9dn1jGaVlhLVVRPrG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tell",
+      "name": "tell",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tell-user-what-the-action-is-and-ask-for-it@FXJpJDIp-JBc0-0z4PIRo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understanding",
+      "name": "understanding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understanding-the-product@q1WX2Cp4k4-o1T1vgL8FH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-competition@6Mvm8SrISyTT99AJ-VFaW",
+            "use-consciousness-to-interfere@0MbrHG-VDrdZqQ0jWtiDo",
+            "use-peer-comparisons@iKHU0O0z6gCunCgv_aZye"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-stories@tkbkpvHlWQeOnReanR8J7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ux",
+      "name": "ux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ux-best-practices@VUf72i5hYaLR_8ul9EzmM"
+          ]
+        }
+      ]
+    }
+  ]
+}

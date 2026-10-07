@@ -1,0 +1,4 @@
+{
+  "title": "API Calls",
+  "content": "There are several options available to make API calls from your Vue.js applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@How To Make API calls in Vue.JS Applications](https://medium.com/bb-tutorials-and-thoughts/how-to-make-api-calls-in-vue-js-applications-43e017d4dc86)\r\n- [@article@How to Use RapidAPI Client with Vue.js](https://rapidapi.com/guides/fetch-api-with-vue)"
+}

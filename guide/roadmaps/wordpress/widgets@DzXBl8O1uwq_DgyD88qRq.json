@@ -1,0 +1,4 @@
+{
+  "title": "Widgets",
+  "content": "Widgets are small blocks of content that you can add to various areas of your WordPress website, typically in sidebars, footers, or other widget-ready areas defined by your theme. They allow you to easily add features and content without needing to write code, such as displaying recent posts, categories, search bars, or custom text.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Widgets](https://wordpress.com/support/widgets/)\r\n- [@official@Manage WordPress widgets](https://wordpress.org/documentation/article/manage-wordpress-widgets/)\r\n- [@article@The Complete Guide to WordPress Widgets: How to Use, Add, and Implement Them to Customize Your Site](https://kinsta.com/blog/wordpress-widgets/)\r\n- [@video@WordPress Widgets: The Complete Guide](https://www.youtube.com/watch?v=JZcCR8BGjIA)"
+}

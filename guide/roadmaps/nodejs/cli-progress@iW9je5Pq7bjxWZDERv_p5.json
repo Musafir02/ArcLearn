@@ -1,0 +1,4 @@
+{
+  "title": "cli-progress",
+  "content": "`cli-progress` is an npm package for displaying progress bars in the terminal. It is useful for long-running operations like file downloads, database migrations, or batch processing where you want to show completion percentage. It supports multiple bars and customizable styles.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@CLI-Progress Documentation](https://www.npmjs.com/package/cli-progress)"
+}

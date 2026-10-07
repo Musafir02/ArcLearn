@@ -1,0 +1,4 @@
+{
+  "title": "openclaw cron list",
+  "content": "`openclaw cron list` shows all the scheduled tasks currently registered in Open Claw along with their schedules and status.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Scheduled Tasks](https://docs.openclaw.ai/automation/cron-jobs)\r\n- [@official@Cron](https://docs.openclaw.ai/cli)"
+}

@@ -1,0 +1,1039 @@
+{
+  "title": "Ios Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Accessibility",
+      "name": "accessibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility-inspector@h34LaYQ3JYN2AZPMDqpmO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "App",
+      "name": "app",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app-store-distribution@iZAXQKLe2LaIIifVFtFOL",
+            "app-store-optimization-aso@jZpH-T2hW-XBdprVqemGi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Architectural",
+      "name": "architectural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "architectural-patterns@ajPGMwoaFb1UFWTtpi5kd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Async",
+      "name": "async",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "async--await@ysaBCl_TtWqelirptQp7P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Auto",
+      "name": "auto",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "auto-layout@j2BL0sf3WjnJZZWa7cCjy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-devops@r3fNx1Hk_TGlQSDtRnXqF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-interfaces@0o3V_zveN1xCIt7rayrCF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics--creating-animations@w0i5Dxp40XS2HnF5nXeZI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Benefits",
+      "name": "benefits",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "benefits-over-objective-c@ZkNulHQAqhiFTO3CRC_mW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-interfaces@YvuYJceeNNfLBpq2-3iiL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Callback",
+      "name": "callback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "callback-hell@WhOpzFvv21QQV3aS6XbXr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Capturing",
+      "name": "capturing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "capturing-values--memory-mgmt@S-D-PnHA7COd2Dp6U2XO4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ci",
+      "name": "ci",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ci--cd@U4xE1enkZxUME0j0gutae"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cocoa",
+      "name": "cocoa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cocoa-touch@leozxW-5fAOfkKbQM4FD1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-quality-tools@DVe8S6TjKcQ8LT5G-aMVa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Combine",
+      "name": "combine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "combine-and-mvvm@pY_zaMcFpeFDLgVk2W0Vy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Concurrency",
+      "name": "concurrency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "concurrency-and-multithreading@fbloF-u4XwdHLmBS9flZm",
+            "concurrency-gcd-asyncawait@aALIiAxKz4f7B_EYyhBCi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-animation@KpcmuLWX0xAjz6ty4ebtB",
+            "core-animation@_mRs6ctH0IsSSi-cwV2b8",
+            "core-audio@4bAABCfTvxchS5C5NlAro",
+            "core-data@H4-Dp2WTA6HAZiFRQdLjx",
+            "core-graphics@kRE9xT3mT9Si4NwJr9yGi",
+            "core-image@6zE_M0_oVpwW0B9qFSRgP",
+            "core-ml@7s9Elv80TbZX_-NZpyutj",
+            "core-os@IdGdLNgJI3WmONEFsMq-d",
+            "core-programming-concepts@mk02yV7_XHkgp2xdNIxaU",
+            "core-services@LHM7gNgTtfn_QDW-oQskD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-binding@yR94uHs0SiSScU4gPBzfr",
+            "data-persistence@6gfqFy3H6SLt06oJ1kt5A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Debug",
+      "name": "debug",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "debug-navigator@VuWUsg05WmOoP_RJ5AXJO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Debugging",
+      "name": "debugging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "debugging-techniques@OZZ3UnWN2gFflbM_WaJ8H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Declarative",
+      "name": "declarative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "declarative-syntax@QVg4_8EXeQBJbleryy8c1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Delegate",
+      "name": "delegate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "delegate-pattern@BtPYKd7RedHOLRATDKkpg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-manager@Tv8-WUcKiZMLHuunQwise"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamic",
+      "name": "dynamic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamic-library@Lrb4HZYrZU7SJlbedZp7U",
+            "dynamic-type@0nei6iwP4Pgi_j4vVi_Qt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-handling@N5ojp6bqgH074MPKYjCHV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-system@_bkRbqVXKNCnRvEFCM6mN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frameworks",
+      "name": "frameworks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frameworks--library@pZVPsgvCpP3zUgBM4i0CF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-programming@Pj-hqRZUmwx1WhmTbLoFD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@1DZYPqvgY6GtwMCS7N2y-",
+            "alamofire@nJeBisdKtN43ntkXnPCVF",
+            "arkit@k3uHcF0CsyHr6PK95UwR1",
+            "avfoundation@UKgiSQvR9cryQT50t7riZ",
+            "breakpoints@X0QavvwPVJU6sulafPVUK",
+            "callbacks@qJEd7KU52xL_GRG3IQqhM",
+            "carthage@tIHjjNTXJWcNgkO6TB9ea",
+            "circleci@tWxuFh0xDugdplnHt_G0e",
+            "closures@M9UlalPL47GoqhcyGsAPV",
+            "cocoapods@epr1sOEZIAOwlgb8bre7r",
+            "combine@UzpdLLPs226N00c6weWRv",
+            "components@A1TFKVjGU5RbeTF_zxJlu",
+            "components@xkH7Llut6uP2-8iTMw76F",
+            "concurrency@-aLGB3cDXZHIhVU3t-Ve4",
+            "editors@-4q7MFXaTmpR_39PTeWD8",
+            "fastlane@_W3vb0b14FrWB2fH7DHC7",
+            "frameworks@PdzCQXZIivw3zCYPtokJV",
+            "gamekit@H5F9P5xeQiHhWhS6jEzp5",
+            "gcd@aROcI1RucAyu-gHn-tVnj",
+            "git@QifWR7WSJJTcTK2IfczxG",
+            "github@U_xXGSFF5iibQ4VkzPAWf",
+            "gitlab@VylaBSDAVFzveVfytI1Fz",
+            "graphql@9o7d3aN0YFfNNUeVoJrhs",
+            "groups@42sfiLKrVCcnMMjR7TFn1",
+            "healthkit@Jsu5f6QASpuvpky_W5q-O",
+            "hig@1I5eFKqFVBxWLAXfpgNXO",
+            "ibactions@FspN4yiBF9aEN7_SlXUe1",
+            "iboutlets@tuUuLInq0p-nhehe2AqPg",
+            "installing@R8LdFpfyS0MFYJuMLk8RG",
+            "jenkins@TrblGyy81Oep2CBxoZkaf",
+            "keychain@8v_eP0j85TnB33XyYAzrT",
+            "lottie@i-T6GTqS0FZ_Llt5v4SvR",
+            "mapkit@XOXsjaQ-YyuAMpVCqH8KG",
+            "media@nGCG74_Xp_Ngt0u7PZnZl",
+            "metal@5VguZoP4h40rTWkxWxaxU",
+            "mvc@a-QDI7Ei-B5BRHbicFcfG",
+            "mvp@lVNrnUK6p4eifKRVSnOje",
+            "mvvm@taTxZw2c3xS18JOwgkNHM",
+            "navigation@02VAK4GMkN6nDHf1zqwPA",
+            "navigation@FXUrfyvuIIOH7VDnT_E0z",
+            "navigationlink@my77jLU2qxU7bQ7_Fx2iH",
+            "navigators@odKZx4SUULF1y4gmiJZdu",
+            "networking@JoNoM-utp8MaL1H0oXDta",
+            "oop@FoqlB7xBIrV4yUp4ReBkw",
+            "operators@t7IYTY8tVjC_xzM1n8wts",
+            "parsing@UTVh1RHRWb5eA-S7ayLp8",
+            "preferences@SeGfULWFR7ufdv4U9Db3F",
+            "rest@3Qw-qmy5iAE61mPbIY4Q2",
+            "rxswift@0xwoWj9jek36p1AwU3WkK",
+            "schedulers@UqA01PT86_w_JzN6KZBku",
+            "serializing@8rYjSCgRiJMHTNxOU6vgG",
+            "sqlite@3qjQbrCUchJn1bJTBWrQF",
+            "stepping@hUHxlNa6iJJbDGdFNhynB",
+            "storyboards@a2CqrCJSxGfHq6_Y9f_re",
+            "subjects@1xYZdnlI6JSJzNvmz4-0v",
+            "swiftformat@TMFvfwG45Z00PzrzZIVhT",
+            "swiftlint@NnTC3R8goZQTXHmfHKHbM",
+            "swiftui@kAIKsDcDzwI1E0wSnC_uo",
+            "swiftui@PvFp6aY7EUrYHn87RZAGj",
+            "tailor@F5796wzm5Ar6sQt-1y8vH",
+            "tca@NhC0SBZgUFGjMLNICvbTI",
+            "testflight@KCJgCjMJGxIcf13XSEclO",
+            "toolbar@AxQ5gCjk136kXsbBFTUNp",
+            "uikit@-7OW2IgiMk1eot1PaYd7m",
+            "uikit@pNEE5C1E1wAjH_nTlzH6N",
+            "urlsession@WPJACNeI6jX9GGB1roeTp",
+            "views@se9w7mT1XJLGlmWUhH4Uv",
+            "viper@mTdnDPGYSDupM9VBNdXRg",
+            "xcframework@MaHtZSIPxDzrnB33_9OdV",
+            "xcode@la5M4VoH79bhnN8qj5Izp",
+            "xctest@xZmBJVq5FHNdm1BDuZbbS",
+            "xcuitest@ZQSUKPbXZl5yKra2ap8JR",
+            "xibs@RwvC4Pi18_1phcrJL-9iu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@LltERZaHsI-R_3O_3twpk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "History",
+      "name": "history",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "history-and-why-swift@z4-1Gc95JKYAn2RPFc7hw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http--https@GjY5qCU1rjB0D58qHQtAR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implementing",
+      "name": "implementing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implementing-delegates@z3AUN9u7EEqeKOqvLxf7D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interface",
+      "name": "interface",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interface-builder@iMzYd8KUFnk6zqr4KecgX",
+            "interface-overview@FwwqAchMC6qdnXbqg45he"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interoperability",
+      "name": "interoperability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interoperability-with-swift@IAPzuN51xvrZJ5TFB23Q9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ios",
+      "name": "ios",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ios-architecture@IduGSdUa2Fi7VFMLKgmsS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Json",
+      "name": "json",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "json--xml@WYV4YG_sLvC4S5ptFFdrF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keeping",
+      "name": "keeping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keeping-updated-with-wwdc@fOOQurIL1w3PwH5Mep9x1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Latest",
+      "name": "latest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "latest-ios-sdk@SBlLNfyWzzhdFNtNtkLet",
+            "latest-swift-version@e7qVpQeu2iQL0c9MOMCVe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-management@tqbg8mBJfjuXacdMlIB_L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modals",
+      "name": "modals",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modals-and-navigation@jb89kQxDhZND3vQo0EH7r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mvvm",
+      "name": "mvvm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mvvm-c@iLT2jAkQg-Ex0zSLquNfl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Navigation",
+      "name": "navigation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "navigation-controllers-segues@tUbMr1pGlw4JwMuW311JJ",
+            "navigation-stacks@mUMDZsgzCB6cs_K6pfUY1",
+            "navigation-stacks@TLm70PlTI0K3Odn1iYxWX",
+            "navigation-view@IBr2P7dknWTnZ2a-fFCqN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "New",
+      "name": "new",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "new-feature-announcements@0dbdUmWvTIJ0fkUuLp9gR",
+            "new-project@BJgoAgH85U6S3RtXq7hHV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Objective",
+      "name": "objective",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "objective-c-basics@0BSX80W1TJ_Ia_Zh2zKyK",
+            "objective-c@oOaMz9A5DZvrjxovMztXz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Observables",
+      "name": "observables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "observables--observers@k232wKg7XCb_ngjZ5Mwsy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operation",
+      "name": "operation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operation-queues@mdAV4JlF08q-ZQpb5C3q6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operators",
+      "name": "operators",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operators--pipelines@GAn12SsVR_mPxOaOVckdz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-language@MrdIb9F-wSEbUz7KRnH3t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Presenting",
+      "name": "presenting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "presenting--dismissing-views@4pmjLa7WvwV7D3RZlM6Hp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Profiling",
+      "name": "profiling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "profiling-instruments@Y24WWPej0C7-FiBeXpvl3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-files@YytdlQl41yrHSwlV-G3Pd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Publishers",
+      "name": "publishers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "publishers--subscribers@noBaDV_PvCTzqPyw9eO4H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pushing",
+      "name": "pushing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pushing-presenting@gqd6zjxP_qFj4Ru-6LARo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reactive",
+      "name": "reactive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reactive-programming@28HMXXBJWd3n-ZPgeQRDa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rxswift",
+      "name": "rxswift",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rxswift-with-mvvm@g_1f5a6tIB5V_36NjgtL5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Simple",
+      "name": "simple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "simple-ui-building@INYUFVZ-_4htveLZ6EvRu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-management@RvyOkQelc-GChQGJyEx72"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-library@RuXuHQhMt2nywk43LgGeJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Swift",
+      "name": "swift",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "swift-basics@fboebSmquyJyozsMRJDtK",
+            "swift-package-manager@KFkX8_Hv9SCFeCtZMZIQM",
+            "swift-recommended@KJ7fM-V0_azY_lzmhjJAN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Test",
+      "name": "test",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "test-plan--coverage@uczkyc30K_qqcarZCGTdF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ui",
+      "name": "ui",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ui-design@4fPgpGwNXmVoZoruBRb_B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understanding",
+      "name": "understanding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understanding-and-using-closures@5V7nxQKmmHWSMSBCRxkaF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit--ui-testing@5589B1DKaCd-9l9DfKH3o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-defaults@ImS1FqVicQImMw-y1ze7y",
+            "user-interactions@GKuxilB0AwjcTgCSk3FeU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control@sGnDm2xuJxqfU3pwmlY7H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "View",
+      "name": "view",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "view-controllers@mfWdkUm1RhjygtMyInXiD",
+            "view-transitions@2tmR1yE5daz2HB4IV5qwI",
+            "view-transitions@cwVcNDTBBulBY2m4Wzn4G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Viewcontroller",
+      "name": "viewcontroller",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "viewcontroller-lifecycle@DZaY060-5D6PbfryOZH9H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Views",
+      "name": "views",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "views-and-modifiers@mgUCYztUpKINqIZikT4Bh",
+            "views-view-controllers@XX5rCd_yTHvOfYif4Kpbl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Voice",
+      "name": "voice",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "voice-over@trAMZVA4tDB7b_qAgiWNW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Xcode",
+      "name": "xcode",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "xcode-debugger@WxshXCloVDkVkQV0JvI1w"
+          ]
+        }
+      ]
+    }
+  ]
+}

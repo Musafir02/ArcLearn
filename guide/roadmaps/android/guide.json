@@ -1,0 +1,635 @@
+{
+  "title": "Android Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Activity",
+      "name": "activity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "activity-lifecycle@FVg438cVBBzqJFkGWVbQM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apollo",
+      "name": "apollo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apollo-android@ww0fTbdXwVr-QIOClU7ng"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "App",
+      "name": "app",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "app-components@5Li8J5iR_ZuyIlxX0LYei",
+            "app-shortcuts@xV475jHTlLuHtpHZeXb7P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-of-kotlin@jl1FsQ5-WGKeFyaILNt_p",
+            "basics-of-oop@j69erqfosSZMDlmKcnnn0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Broadcast",
+      "name": "broadcast",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "broadcast-receiver@tFuAToid1Fkmu96BDtW7K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Builder",
+      "name": "builder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "builder-pattern@784fiIdKrQDlIm3VIiJQN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-messaging@e3vHFaFFMV7kI9q6yf5e9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Column",
+      "name": "column",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "column--row@yE0qAQZiEC9R8WvCdskpr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-services@ZEdn2yy-IwHN3kOYr2ZbC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-provider@nkcdjrswv0WCzUs48BAt9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-a-basic-hello-world-app@5m_7DvInF8C_4Ml1xVI6L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-structures-and-algorithms@cNeT1dJDfgn0ndPzSxhSL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@qtXM9K7wyjOFuEMlZrB3C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design--architecture@jePGzTejFe4ryA5qFFmjl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Development",
+      "name": "development",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "development-ide@ZRGsokU313Ky-anWbWK6q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explicit",
+      "name": "explicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explicit-intents@TmIeCF3xVCe5Sy3ITmM31"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Factory",
+      "name": "factory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "factory-pattern@DeOxj6RzQBYfEWV-M1Ybm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-system@A4kdaj6AFueUgPI7hwKi5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Firebase",
+      "name": "firebase",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "firebase-distribution@T7q_quNaIAuGi96OdnDT1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "activity@nwuVlPmzwJ17mtVQ8Hi9w",
+            "animations@pHxtpvd7U8CbIW6yebcVX",
+            "asynchronism@cFYZ2C7yNnY6NHKUNP2Z4",
+            "authentication@Xv0es_z64vh-QzivMeAT3",
+            "bitbucket@5LFZdUiFYYU_1sYsouyan",
+            "bottomsheet@Z4Tbd5ClnqCXGPGG09F-G",
+            "box@Dp2DOX10u2xJUjB8Okhzh",
+            "button@WhfzFOUpm0DFEj7Oeq21R",
+            "card@EzLjX4iRT7AxkAOsJYnSU",
+            "chucker@7RKN1FNtRE_BE6QeAQrKb",
+            "constraint@3fFNMhQIuuh-NRzSXYpXO",
+            "constraintlayout@qNzC8sQqQaDnG1oy1jiO0",
+            "coroutines@i_cKmTnGAYw8xpHwZHjAd",
+            "crashlytics@xB4evbD07n1VrHOIpowV4",
+            "dagger@CK7Ce632fdTgxeFsRUVvd",
+            "datastore@GWq3s1iTxQOp1BstHscJ9",
+            "debugging@6KbSUAoT_jTudFoIbwMpA",
+            "detekt@RUvuCp_JK5MQQT13SSHUV",
+            "dialog@Xn1VQ-xOT67ZfJJTM4r1p",
+            "distribution@kc6buUsLAeZeUb4Tk0apM",
+            "drawer@mhxUDPHI-6NHwOxsdVn65",
+            "espresso@-ONSC-ImGSELbamKmjIlH",
+            "firestore@3EEfKAd-ppIQpdQSEhbA1",
+            "flow@W-WTIiQml8dLK6i_V69JK",
+            "fragments@2iDJrxjXOt7o2fPp2HfRl",
+            "git@rqSZ2ATeHbOdIQE9Jlb0B",
+            "github@H-2eb8fLwz8IKYXbeSVKK",
+            "gitlab@Q47BtQphp59NkkZoeNXmP",
+            "hilt@ooo_k2k_vUBR_jQ7Ke6Et",
+            "icon@pEBpXv3Jf1AzBNHlvVrG8",
+            "image@Mtx0bY0drmaTw8sCM5YTl",
+            "imageview@A4rtNULX_MoV93IH1Lgqw",
+            "intent@hv_9imIQpthxEaMLXEUHI",
+            "java@RBABbkzD_uNFwEO-hssZO",
+            "junit@gvGAwjk_nhEgxzZ_c3f6b",
+            "kodein@dc7k50PjCYZcElHhCk66p",
+            "koin@UMqZ-jmXKDXKuu8bzqDH_",
+            "kotlin@qIzUv8-GgQnkqChEdgD50",
+            "ktlint@zMbXQH17Q52opdbitPzj7",
+            "linting@77F9F3oI5CPgwgM_hxWfa",
+            "livedata@TiokceMGU9caqiR0lbFYL",
+            "mvc@w1A6wPKSd3Yh2luuHV-aE",
+            "mvi@Bz-BkfzsDHAbAw3HD7WCd",
+            "mvp@aF_xFIqTjQbENtC7pkXvJ",
+            "mvvm@pSU-NZtjBh-u0WKTYfjk_",
+            "navhost@UAerxLQ1ZB6N6LS1IhfNk",
+            "network@Yb6aKJMMCxU1QVltWg3Dr",
+            "okhttp@5pVuwOItAhUxxJX8ysAsn",
+            "recycleview@xIvplWfe-uDr9iHjPT1Mx",
+            "retro@dDMRYiqrKyOBnRRQc8zsp",
+            "rxjava@xk0vnWr7uESdzYRxwFjoK",
+            "rxjava@zXsNEyRbb8UpEOAUv6FpY",
+            "rxkotlin@4h37WBpYxRRyw9oH8ge7o",
+            "rxkotlin@7rbsp1o5bzIJP11BRIoeG",
+            "scaffold@U8iMGGOd2EgPxSuwSG39Z",
+            "security@j5qmSMOdhpGZo1XOUVx1k",
+            "services@PcHmU1c9hqKyzSjwlRPHk",
+            "storage@0fNQWRxst8xRstIfPaPO6",
+            "tabrow@amTxz7mS98lkhOrNMJXG_",
+            "testing@ZOQm5OlzCA-h_yxywwDrW",
+            "text@BVgO9n7tGlVdiS72-hFSd",
+            "textfield@boMz0HZlMAsLdCZlpUo-H",
+            "textview@znvZp24L-PcQwkSObtixs",
+            "threads@BeGrA5BDBMZP1Jy7n-wl-",
+            "timber@VFOD4JrV8kZ2583G3oT95",
+            "workmanager@OAb_JD64uGm2tPoue7w6t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-admob@D4ZXQOKJkyFYNZIy-MJ9Y",
+            "google-maps@S5FVF9rMgVSSDKXJW2GYb",
+            "google-play-services@m5rumeynEbS8T27pelr0-",
+            "google-playstore@HgRdgi2Hu4C8YLG5PXfoo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implicit",
+      "name": "implicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implicit-intents@gGdz3j33x0gfrFDp_rw8Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Intent",
+      "name": "intent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "intent-filters@b-sfh6NoS-APqaNKm5L5S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interface",
+      "name": "interface",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interface--navigation@4_e76QafrB419S2INOeKd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jetpack",
+      "name": "jetpack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jetpack-benchmark@ACUJlDDR0jqEohsFzWEoQ",
+            "jetpack-compose@60Vm-77rseUqpMiFvp-dA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lazy",
+      "name": "lazy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lazy-column--row@mMKN4a8lqo38M0iL1Qwhy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leak",
+      "name": "leak",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leak-canary@3i4g9ZWgLxKb2UMgRJi4Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Navigation",
+      "name": "navigation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "navigation-components@o5rzmnaQeiSh9ocvfJPpK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Observer",
+      "name": "observer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "observer-pattern@N_auRfGKkeIIc-qiHLkR_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-language@Suws-7f_6Z1ChpfcnxX2M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remember",
+      "name": "remember",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remember--state@8axL6Fa5fm1xWPP07MUbD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remote",
+      "name": "remote",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remote-config@1Tz-Shj_Tuz2U8llEAcLr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repository",
+      "name": "repository",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repository-pattern@ZF5XgO7I_J9928bD3CVXo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Room",
+      "name": "room",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "room-database@Bfg4So5RlI09zFNcburJd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shared",
+      "name": "shared",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shared-preferences@PKql1HY0PLMfp50FRELXL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Side",
+      "name": "side",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "side-effects@XTMhA-rYiXP7aVFk2nDLY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Signed",
+      "name": "signed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "signed-apk@_FSlD_qTz5Xo0x3pB6sZI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-changes@oUjetA2eduvQIeLcQlLcu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tasks",
+      "name": "tasks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tasks--backstack@-O-G9bg36ut8NnZcdOaop"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-fundamentals@HlUUGj3dOZ68t4gIjerXh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control@5s1CqsYCOXjNroDHaGKGa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Viewmodel",
+      "name": "viewmodel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "viewmodel-state@lEdmnJhs-WN-A6glX2DeA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-and-how-to-use-gradle@FVxNjbDBxgf6vkZWw1Awt"
+          ]
+        }
+      ]
+    }
+  ]
+}

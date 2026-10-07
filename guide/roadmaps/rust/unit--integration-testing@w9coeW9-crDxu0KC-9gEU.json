@@ -1,0 +1,4 @@
+{
+  "title": "Unit and Integration Testing",
+  "content": "Unit tests verify individual functions using `#[test]` and live alongside code. Integration tests are in separate files/directories and test component interactions. Rust provides `cargo test` to run both types, supporting test organization for comprehensive code verification and quality assurance.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Unit Testing](https://doc.rust-lang.org/rust-by-example/testing/unit_testing.html)\r\n- [@official@How to Write Tests](https://doc.rust-lang.org/book/ch11-01-writing-tests.html)\r\n- [@article@Testing in Rust: A Quick Guide to Unit Tests](https://dev.to/tramposo/testing-in-rust-a-quick-guide-to-unit-tests-integration-tests-and-benchmarks-2bah)\r\n- [@video@Mocking and Testing Rust](https://www.youtube.com/watch?v=8XaVlL3lObQ)"
+}

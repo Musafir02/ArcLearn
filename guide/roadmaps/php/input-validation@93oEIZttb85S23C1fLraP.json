@@ -1,0 +1,4 @@
+{
+  "title": "Input Validation",
+  "content": "Input validation checks that user-supplied data conforms to expected formats and constraints before processing it. PHP's `filter_var()` function supports filters for emails, URLs, integers, floats, and IP addresses. Custom validation logic handles domain-specific rules like password strength or username format.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Input Validation](https://www.php.net/manual/en/book.filter.php)"
+}

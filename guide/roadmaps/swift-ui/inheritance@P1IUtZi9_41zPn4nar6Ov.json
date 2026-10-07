@@ -1,0 +1,4 @@
+{
+  "title": "Inheritance",
+  "content": "Inheritance is a fundamental concept in object-oriented programming where a new class (called a subclass or derived class) can inherit properties and methods from an existing class (called a superclass or base class). This allows you to create a hierarchy of classes, where subclasses inherit and extend the functionality of their superclasses, promoting code reuse and establishing relationships between different types of objects.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Inheritance](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/inheritance/)\r\n- [@article@Swift Inheritance](https://www.programiz.com/swift-programming/inheritance)\r\n- [@video@Swift For Beginners - Class & Inheritance Explained](https://www.youtube.com/watch?v=EhDML-fAqTM)"
+}

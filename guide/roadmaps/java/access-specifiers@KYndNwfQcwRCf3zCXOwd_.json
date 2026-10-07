@@ -1,0 +1,4 @@
+{
+  "title": "Access Specifiers",
+  "content": "Access specifiers (or access modifiers) in Java are keywords that control the visibility or accessibility of classes, methods, constructors, and other members. They determine from where these members can be accessed. Java provides four access specifiers: `private`, `default` (no keyword), `protected`, and `public`, each offering a different level of access control.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Java Access Modifiers](https://jenkov.com/tutorials/java/access-modifiers.html)"
+}

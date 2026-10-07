@@ -1,0 +1,4 @@
+{
+  "title": "Spark, Hadoop MapReduce",
+  "content": "Hadoop, Spark, and MapReduce are frameworks for processing large datasets across clusters of machines. MapReduce, the original model, splits processing into map and reduce steps distributed across nodes, while Spark improves on this with in memory processing for much faster performance. Architects consider these tools when a system needs to process data at a scale that a single machine cannot handle.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Apache Spark](https://spark.apache.org/)\r\n- [@article@Spark vs Hadoop MapReduce](https://www.integrate.io/blog/apache-spark-vs-hadoop-mapreduce)\r\n- [@video@Hadoop explained in 5 minutes](https://www.youtube.com/watch?v=aReuLtY0YMI)"
+}

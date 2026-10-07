@@ -1,0 +1,4 @@
+{
+  "title": "Linear Algebra Basics",
+  "content": "NumPy provides linear algebra operations, including matrix multiplication (`np.dot`, `@`), matrix inversion, determinants, and eigenvalues. These are used in statistics (covariance matrices), machine learning (feature transformations), and scientific computing. Understanding the basics of matrix operations is useful for reading ML algorithm implementations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Numpy Linear Algebra](https://www.programiz.com/python-programming/numpy/linear-algebra)\r\n- [@article@Matrix Multiplication in Python: The Complete Decision Guide](https://roadmap.sh/python-data-analysis/matrix-multiplication)\r\n- [@video@Learn NumPy in 1 hour! 🔢](https://www.youtube.com/watch?v=VXU4LSAQDSc)"
+}

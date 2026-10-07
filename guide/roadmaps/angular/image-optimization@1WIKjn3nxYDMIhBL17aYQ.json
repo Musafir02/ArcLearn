@@ -1,0 +1,4 @@
+{
+  "title": "Image Optimization",
+  "content": "The NgOptimizedImage directive makes it easy to adopt performance best practices for loading images.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Image Optimization](https://angular.dev/guide/image-optimization)\r\n- [@article@Automatic Adjustments in Angular's optimized images](https://medium.com/ngconf/automatic-adjustments-in-angulars-optimized-images-0034335e0374)\r\n- [@article@Boost your application's performance with NgOptimizedImage](https://angular.love/en/boost-your-applications-performance-with-ngoptimizedimage)"
+}

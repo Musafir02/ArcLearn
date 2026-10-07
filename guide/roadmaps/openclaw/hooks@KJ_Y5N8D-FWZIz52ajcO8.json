@@ -1,0 +1,4 @@
+{
+  "title": "Hooks",
+  "content": "Hooks are small scripts that run inside the Gateway when specific agent events fire, like `/new`, `/reset`, `/stop`, or lifecycle events. They are automatically discovered from directories and can be inspected with `openclaw hooks`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Hooks](https://docs.openclaw.ai/automation/hooks)"
+}

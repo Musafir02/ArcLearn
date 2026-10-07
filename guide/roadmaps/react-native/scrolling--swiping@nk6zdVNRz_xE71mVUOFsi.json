@@ -1,0 +1,4 @@
+{
+  "title": "Scrolling and Swiping",
+  "content": "In React Native, scrolling and swiping interactions can be defined and customized with a set of built-in components. These components are efficient and provide fluid navigation through the elements inside them.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Handling Touches](https://reactnative.dev/docs/handling-touches)\r\n- [@official@Using a ScrollView](https://reactnative.dev/docs/using-a-scrollview)\r\n- [@article@React Native Gesture Handler: Swipe, long-press, and more](https://blog.logrocket.com/react-native-gesture-handler-tutorial-examples/)"
+}

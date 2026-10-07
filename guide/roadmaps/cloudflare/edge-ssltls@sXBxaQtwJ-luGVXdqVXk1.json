@@ -1,0 +1,4 @@
+{
+  "title": "Edge SSL/TLS",
+  "content": "Cloudflare terminates SSL/TLS connections at the edge, handling certificate management and protocol negotiation before traffic reaches the origin. Workers run after TLS termination, meaning they always receive decrypted requests over HTTPS.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Get Started with SSL/TLS - Cloudflare Docs](https://developers.cloudflare.com/ssl/get-started/)\r\n- [@official@Edge Certificates · Cloudflare SSL/TLS](https://developers.cloudflare.com/ssl/edge-certificates/)"
+}

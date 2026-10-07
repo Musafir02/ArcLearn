@@ -1,0 +1,4 @@
+{
+  "title": "Third-Party Scripts",
+  "content": "Third-party scripts are code snippets from external sources that add functionality to your website, such as analytics, advertising, or social media widgets. Next.js allows you to load a third-party script for multiple routes through the `next/script` component, optimizing performance and enhancing control over when and how scripts are executed within your application.\r\n\r\nThese scripts can impact your website's performance because they often require downloading and executing code from external servers. Managing these scripts effectively is crucial for maintaining a fast and responsive user experience.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@How to load and optimize scripts](https://nextjs.org/docs/app/guides/scripts)"
+}

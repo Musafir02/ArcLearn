@@ -1,0 +1,4 @@
+{
+  "title": "Serializers",
+  "content": "Serializers in Django REST Framework transform complex data, like querysets and model instances, into Python datatypes that can be easily rendered into JSON, XML, or other content types. They also handle the reverse process, allowing parsed data to be converted back into model instances after validation. This makes them essential for building RESTful APIs that can both receive and send data in a structured and manageable way.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Serializers](https://www.django-rest-framework.org/api-guide/serializers/)\r\n- [@official@Tutorial 1: Serialization](https://www.django-rest-framework.org/tutorial/1-serialization/)\r\n- [@official@Serializer relations](https://www.django-rest-framework.org/api-guide/relations/)\r\n- [@video@Django REST Framework- Nested Serializers, SerializerMethodField and Serializer Relations](https://www.youtube.com/watch?v=KfSYadIFHgY)"
+}

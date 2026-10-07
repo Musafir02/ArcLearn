@@ -1,0 +1,4 @@
+{
+  "title": "Plugins",
+  "content": "Plugins are self-contained code that usually add app-level functionality to Vue.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Plugins in Vue.js](https://vuejs.org/guide/reusability/plugins.html)\r\n- [@article@How to Write Your Own Vue.js Plugin](https://www.linode.com/docs/guides/how-to-write-vue-js-plugins/)"
+}

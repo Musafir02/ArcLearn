@@ -1,0 +1,4 @@
+{
+  "title": "Checkpoint",
+  "content": "If you remember, earlier in the roadmap, you manually logged into the AWS console and had to setup the services. Now that you know terraform, go ahead and automate the process of creating the infrastructure for your application using terraform and with that your deployments will be fully automated i.e., you should have:\r\n\r\n*   Infrastructure setup using terraform\r\n*   Provisioning using Ansible\r\n*   CI/CD using GitHub Actions\r\n*   Monitoring using Monit\r\n\r\nAnd that is it! You have successfully completed the roadmap and are now a full-stack developer. Congratulations! 🎉\r\n\r\nWhat's next?\r\n------------\r\n\r\nGo ahead and build something cool! Share your learnings with the community and help others learn as well. If you have any questions, feel free to join our [discord server](https://roadmap.sh/discord) and ask away!"
+}

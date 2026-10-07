@@ -1,0 +1,4 @@
+{
+  "title": "Generics",
+  "content": "Java Generic methods and generic classes enable programmers to specify, with a single method declaration, a set of related methods, or with a single class declaration, a set of related types, respectively.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Java - Generics](https://www.tutorialspoint.com/java/java_generics.htm)\r\n- [@video@Generics in Java](https://www.youtube.com/watch?v=XMvznsY02Mk)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "iMessage",
+  "content": "iMessage is Apple's built-in messaging system. The recommended way to connect it to Open Claw is via BlueBubbles, a macOS server that provides a full-featured REST API for iMessage integration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@BlueBubbles Channel](https://docs.openclaw.ai/channels/bluebubbles)\r\n- [@article@OpenClaw SMS and iMessage setup guide (Twilio, BlueBubbles, imsg)](https://lumadock.com/tutorials/openclaw-sms-imessage-setup-guide)"
+}

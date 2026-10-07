@@ -1,0 +1,4 @@
+{
+  "title": "Security and Compliance",
+  "content": "Redis Enterprise provides role-based access control, audit logging, and encryption at rest to meet enterprise compliance requirements. It integrates with LDAP and SAML for centralized identity management. These features support deployments in regulated industries that require detailed access records and data protection controls.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Redis Security Documentation](https://redis.io/docs/latest/operate/rs/security/)\r\n- [@article@How to Secure Redis](https://goteleport.com/blog/secure-redis/)\r\n- [@video@Rediscover Redis Security](https://www.youtube.com/watch?v=oD8k3ymbfkY)"
+}

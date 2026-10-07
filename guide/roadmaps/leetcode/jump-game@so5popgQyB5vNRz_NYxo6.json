@@ -1,0 +1,4 @@
+{
+  "title": "Jump Game",
+  "content": "Given an array where each element is the maximum jump length from that position, determine if you can reach the last index. You track the furthest position reachable so far and update it at each step. This problem teaches you the core greedy insight: you never need to track which specific jumps you take, only how far you can reach.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Jump Game](https://leetcode.com/problems/jump-game/)\r\n- [@video@LeetCode 55. Jump Game (Algorithm Explained)](https://www.youtube.com/watch?v=Zb4eRjuPHbM)\r\n- [@video@Jump Game (LeetCode 55) | Full solution](https://www.youtube.com/watch?v=Gtugy3mRV-A)"
+}

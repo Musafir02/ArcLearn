@@ -1,0 +1,4 @@
+{
+  "title": "LXC",
+  "content": "LXC (Linux Containers) runs multiple Linux systems virtually on a single Linux kernel. Provides userspace interface for kernel containment features with powerful API and simple tools for creating and managing system or application containers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@LXC Documentation](https://linuxcontainers.org/lxc/documentation/)\r\n- [@article@What is LXC?](https://linuxcontainers.org/lxc/introduction/)\r\n- [@video@Getting Started with LXD Containerization](https://www.youtube.com/watch?v=aIwgPKkVj8s)\r\n- [@video@Getting Started with LXC containers](https://youtu.be/CWmkSj_B-wo)"
+}

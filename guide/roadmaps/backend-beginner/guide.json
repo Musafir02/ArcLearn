@@ -1,0 +1,176 @@
+{
+  "title": "Backend Beginner Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-testing@NAGisfq2CgeK3SsuRjnMw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acid@qSAdfaGUfn8mtmDjHJi3z",
+            "authentication@PY9G7KQy8bF6eIdr1ydHf",
+            "caching@ELj8af7Mi38kUbaPJfCUR",
+            "git@_I1E__wCIVrhjMk6IMieE",
+            "github@ptD8EVqwFUYr4W5A_tABY",
+            "go@BdXbcz4-ar3XOX0wIKzBp",
+            "index",
+            "javascript@8-lO-v6jCYYoklEJXULxN",
+            "jwt@UxS_mzVUjLigEwKrXnEeB",
+            "orms@Z7jp_Juj5PffSxV7UZcBb",
+            "postgresql@FihTrMO56kj9jT8O_pO2T",
+            "python@J_sVHsD72Yzyqb9KCIvAY",
+            "redis@g8GjkJAhvnSxXTZks0V1g",
+            "rest@lfNFDZZNdrB0lbEaMtU71",
+            "testing@STQQbPa7PE3gbjMdL6P-t",
+            "transactions@rq_y_OBMD9AH_4aoecvAi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing@381Kw1IMRv7CJp-Uf--qd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Json",
+      "name": "json",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "json-apis@sNceS4MpSIjRkWhNDmrFg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-about-apis@EwvLPSI6AlZ4TnNIJTZA4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "More",
+      "name": "more",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "more-about-databases@LJt27onEOeIBomiEMTyKd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "N1",
+      "name": "n1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "n1-problem@bQnOAu863hsHdyNMNyJop"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-language@2f0ZO6GJElfZ2Eis28Hzg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relational",
+      "name": "relational",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relational-databases@r45b461NxLN6wBODJ5CNP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repo",
+      "name": "repo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repo-hosting-services@NvUcSDWBhzJZ31nzT4UlE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@3OYm6b9f6WOrKi4KTOZYK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control-systems@ezdqQW9wTUw93F6kjOzku"
+          ]
+        }
+      ]
+    }
+  ]
+}

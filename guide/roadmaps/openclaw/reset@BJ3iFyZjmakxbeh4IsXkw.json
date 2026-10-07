@@ -1,0 +1,4 @@
+{
+  "title": "/reset",
+  "content": "`/reset` resets the agent's current state, clearing any ongoing task or context and returning it to its idle state. Like `/new`, it triggers the session-memory hook before resetting.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Slash Commands](https://docs.openclaw.ai/tools/slash-commands)"
+}

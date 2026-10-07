@@ -1,0 +1,4 @@
+{
+  "title": "Taxonomies",
+  "content": "Taxonomies are ways to group content. Think of them as organizational tools that help you classify and structure your website's information. They allow you to create relationships between different pieces of content, making it easier for users to navigate and find what they're looking for. Common examples include categories and tags, but you can also create custom taxonomies to suit your specific needs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Taxonomies](http://wordpress.org/documentation/article/taxonomies/)\r\n- [@article@Categories, Tags, & Custom Taxonomies](https://developer.wordpress.org/themes/classic-themes/basics/categories-tags-custom-taxonomies/)\r\n- [@article@What is a Taxonomy? WordPress Taxonomies Explained](https://kinsta.com/blog/what-is-taxonomy/)\r\n- [@video@WordPress taxonomies](https://www.youtube.com/watch?v=TPbMiwuoMtU)"
+}

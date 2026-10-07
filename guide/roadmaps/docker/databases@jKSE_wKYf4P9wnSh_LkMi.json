@@ -1,0 +1,4 @@
+{
+  "title": "Using Databases",
+  "content": "Running your database in a Docker container can help streamline your development process and ease deployment. Docker Hub provides numerous pre-made images for popular databases such as MySQL, PostgreSQL, and MongoDB.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Containerized Databases](https://docs.docker.com/guides/use-case/databases/)\r\n- [@video@How to Setup MySQL Database with Docker](https://www.youtube.com/watch?v=igc2zsOKPJs)"
+}

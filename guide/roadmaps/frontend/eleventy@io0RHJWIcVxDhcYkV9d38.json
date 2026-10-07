@@ -1,0 +1,4 @@
+{
+  "title": "Eleventy",
+  "content": "Eleventy (11ty) is a flexible static site generator supporting multiple template languages (HTML, Markdown, JavaScript). Creates pages from data sources, adds no client-side JavaScript for fast loading. Highly customizable with useful plugins for navigation and image processing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Eleventy](https://www.11ty.dev/)\r\n- [@official@A collection of 11ty starters, projects, plugins, and resources](https://11ty.rocks/)\r\n- [@video@Introduction to Eleventy](https://www.youtube.com/watch?v=-dM6AmNmMFA)"
+}

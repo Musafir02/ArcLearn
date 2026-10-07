@@ -1,0 +1,4 @@
+{
+  "title": "Sharding strategies",
+  "content": "Sharding splits large datasets into smaller chunks (logical shards) distributed across different machines/database nodes to distribute traffic load. Improves application scalability. Supported by many but not all databases.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Wikipedia - Sharding in Database Architectures](https://en.wikipedia.org/wiki/Shard_%28database_architecture%29)\r\n- [@article@How sharding a database can make it faster](https://stackoverflow.blog/2022/03/14/how-sharding-a-database-can-make-it-faster/)\r\n- [@video@What is Database Sharding?](https://www.youtube.com/watch?v=XP98YCr-iXQ)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "graphql-http",
+  "content": "GraphQL over HTTP is a specification that defines how GraphQL queries and mutations should be transported over HTTP. It standardizes request/response formats, HTTP methods, status codes, and headers, ensuring consistent GraphQL API communication across different implementations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GraphQL over HTTP Specification](https://graphql.github.io/graphql-over-http/)\r\n- [@opensource@graphql-http Library](https://github.com/graphql/graphql-http)"
+}

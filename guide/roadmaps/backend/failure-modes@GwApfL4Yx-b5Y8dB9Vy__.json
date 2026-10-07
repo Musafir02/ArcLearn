@@ -1,0 +1,4 @@
+{
+  "title": "Failure Modes",
+  "content": "Database failure modes include hardware failures, software bugs, data corruption, performance degradation, and distributed system inconsistencies. Common issues: data loss, unavailability, replication lag, deadlocks. Mitigated through redundancy, backups, transaction logging, and failover mechanisms.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Database Failure Modes](https://roadmap.sh/ai/course/database-failure-modes-prevention-and-recovery)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Reliability",
+  "content": "IP itself provides no delivery guarantees; packets can be lost, duplicated, or reordered without notification to the sender. Applications requiring reliability must use TCP or implement their own acknowledgment and retransmission logic over UDP.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Reliability at the Transport Layer - Williams College](https://www.cs.williams.edu/~tom/courses/336/outlines/lect28_2.html)\r\n- [@article@Reliable Bytes: How TCP Ensures Trustworthy Data Transfer - ITU Online](https://www.ituonline.com/blogs/reliable-bytes-how-tcp-ensures-trustworthy-data-transfer-across-the-internet/)\r\n- [@article@Game Networking - Gaffer On Games](https://gafferongames.com/categories/game-networking/)"
+}

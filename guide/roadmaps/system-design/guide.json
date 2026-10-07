@@ -1,0 +1,1160 @@
+{
+  "title": "System Design Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Anti",
+      "name": "anti",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anti-corruption-layer@4hi7LvjLcv8eR6m-uk8XQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Application",
+      "name": "application",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "application-caching@5Ux_JBDOkflCaIm4tVBgO",
+            "application-layer@XXuzTrP5UNVwSpAk-tAGr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Async",
+      "name": "async",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "async-request-reply@eNFNXPsFiryVxFe4unVxk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Availability",
+      "name": "availability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "availability-in-numbers@uHdrZllrZFAnVkwIB3y5-",
+            "availability-monitoring@rVrwaioGURvrqNBufF2dj",
+            "availability-patterns@ezptoTqeaepByegxS5kHL",
+            "availability-vs-consistency@uJc27BNAuP321HQNbjftn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Back",
+      "name": "back",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "back-pressure@YiYRZFE_zwPMiCZxz9FnP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backends",
+      "name": "backends",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backends-for-frontend@n4It-lr7FFtSY83DcGydX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Background",
+      "name": "background",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "background-jobs@DOESIlBThd_wp2uOSd_CS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Busy",
+      "name": "busy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "busy-database@hxiV2uF7tvhZKe4K-4fTn",
+            "busy-frontend@i_2M3VloG-xTgWDWp4ngt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cache",
+      "name": "cache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cache-aside@bffJlvoLHFldS0CluWifP",
+            "cache-aside@PK4V9OWNVi8StdA2N13X2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cap",
+      "name": "cap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cap-theorem@tcGdVQsCEobdV9hgOq3eG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cdn",
+      "name": "cdn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cdn-caching@Kisvxlrjb7XnKFCOdxRtb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chatty",
+      "name": "chatty",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chatty-io@0IzQwuYi_E00bJwxDuw2B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circuit",
+      "name": "circuit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circuit-breaker@D1OmCoqvd3-_af3u0ciHr",
+            "circuit-breaker@O4zYDqvVWD7sMI27k_0Nl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claim",
+      "name": "claim",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claim-check@kl4upCnnZvJSf2uII1Pa0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-caching@RHNRb6QWiGvCK3KQOPK3u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-design-patterns@THlzcZTNnPGLRiHPWT-Jv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compensating",
+      "name": "compensating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compensating-transaction@MNlWNjrG8eh5OzPVlbb9t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Competing",
+      "name": "competing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "competing-consumers@9Ld07KLOqP0ICtXEjngYM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compute",
+      "name": "compute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compute-resource-consolidation@ODjVoXnvJasPvCS2A5iMO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Consistency",
+      "name": "consistency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "consistency-patterns@GHe8V-REu1loRpDnHbyUn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-delivery-networks@O730v5Ww3ByAiBSs6fwyM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-management@W0cUCrhiwH_Nrzxw50x3L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-caching@BeIg4jzbij2cwc_a_VpYG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deployment",
+      "name": "deployment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deployment-stamps@FPPJw-I1cw8OxKwmDh0dT",
+            "deployment-stamps@Ze471tPbAwlwZyU4oIzH9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design--implementation@PtJ7-v1VCLsyaWWYHYujV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Document",
+      "name": "document",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "document-store@didEznSlVHqqlijtyOSr3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Domain",
+      "name": "domain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "domain-name-system@Uk6J8JRcKVEFz4_8rLfnQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-driven@NEsPjQifNDlZJE-2YLVl1",
+            "event-sourcing@7OgRKlwFqrk3XO2z49EI1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Eventual",
+      "name": "eventual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "eventual-consistency@rRDGVynX43inSeQ9lR_FS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-config-store@BrgXwf7g2F-6Rqfjryvpj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Extraneous",
+      "name": "extraneous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "extraneous-fetching@6u3XmtJFWyJnyZUnJcGYb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fail",
+      "name": "fail",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fail-over@L_jRfjvMGjFbHEbozeVQl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Federated",
+      "name": "federated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "federated-identity@lHPl-kr1ArblR7bJeQEB9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gateway",
+      "name": "gateway",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gateway-aggregation@bANGLm_5zR9mqMd6Oox8s",
+            "gateway-offloading@0SOWAA8hrLM-WsG5k66fd",
+            "gateway-routing@LXH_mDlILqcyIKtMYTWqy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ambassador@Hja4YF3JcgM6CPwB1mxmo",
+            "asynchronism@84N4XY31PwXRntXX1sdCU",
+            "availability@Xzkvf4naveszLGV9b-8ih",
+            "bulkhead@IR2_kgs2U9rnAJiDBmpqK",
+            "bulkhead@PLn9TF9GYnPcbpTdDMQbG",
+            "caching@-X4g8kljgVBOBcf1DDzgi",
+            "choreography@aCzRgUkVBvtHUeLU6p5ZH",
+            "communication@uQFzD_ryd-8Dr1ppjorYJ",
+            "cqrs@ivr3mh0OES5n86FI1PN4N",
+            "cqrs@LTD3dn05c0ruUJW0IQO7z",
+            "databases@5FXwwRMNBhG7LT5ub6t2L",
+            "denormalization@Zp9D4--DgtlAjE2nIfaO_",
+            "federation@DGmVRI7oWdSOeIUn_g0rI",
+            "gatekeeper@DTQJu0AvgWOhMFcOYqzTD",
+            "geodes@6hOSEZJZ7yezVN67h5gmS",
+            "geodes@Ml9lPDGjRAJTHkBnX51Un",
+            "graphql@jwv2g2Yeq-6Xv5zSd746R",
+            "grpc@Hw2v1rCYn24qxBhhmdc28",
+            "http@I_nR6EwjNXSG7_hw-_VhX",
+            "instrumentation@Q0fKphqmPwjTD0dhqiP6K",
+            "introduction@_hYN0gEi9BL24nptEtXWU",
+            "messaging@dsWpta3WIBvv2K9pNVPo0",
+            "microservices@UKTiaHCzYXnrNw31lHriv",
+            "monitoring@hDFYlGFYwcwWXLmrxodFX",
+            "publishersubscriber@2ryzJhRDTo98gGgn9mAxR",
+            "replication@0RQ5jzZKdadYY0h_QZ0Bb",
+            "replication@dc-aIbBwUdlwgwQKGrq49",
+            "resiliency@wlAWMjxZF6yav3ZXOScxH",
+            "rest@6-bgmfDTAQ9zABhpmVoHV",
+            "retry@xX_9VGUaOkBYFH3jPjnww",
+            "rpc@ixqucoAkgnphWYAFnsMe-",
+            "security@ZvYpE6-N5dAtRDIwqcAu6",
+            "sharding@FX6dcV_93zOfbZMdM_-li",
+            "sharding@R6YehzA3X6DDo6oGBoBAx",
+            "sidecar@AAgOGrra5Yz3_eG6tD2Fx",
+            "tcp@2nF5uC6fYKbf0RFgGNHiP",
+            "throttling@6YVkguDOtwveyeP4Z1NL3",
+            "udp@LC5aTmUKNiw9RuSUt3fSE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graph",
+      "name": "graph",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graph-databases@6RLgnL8qLBzYkllHeaI-Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Health",
+      "name": "health",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "health-endpoint-monitoring@CKCNk3obx4u43rBqUj2Yf",
+            "health-endpoint-monitoring@cNJQoMNZmxNygWAJIA8HI",
+            "health-endpoint-monitoring@uK5o7NgDvr2pV0ulF0Fh9",
+            "health-monitoring@hkjYvLoVt9xKDzubm0Jy3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "High",
+      "name": "high",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "high-availability@wPe7Xlwqws7tEpTAVvYjr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Horizontal",
+      "name": "horizontal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "horizontal-scaling@IkUCfSWNY-02wg2WCo1c6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-to-approach-system-design@os3Pa6W9SSNEzgmlBbglQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Idempotent",
+      "name": "idempotent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "idempotent-operations@3pRi8M4xQXsehkdfUNtYL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Improper",
+      "name": "improper",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "improper-instantiation@lwMs4yiUHF3nQwcvauers"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Index",
+      "name": "index",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "index-table@AH0nVeVsfYOjcI3vZvcdz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-value-store@KFtdmmce4bRkDyvFXZzLN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Latency",
+      "name": "latency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "latency-vs-throughput@O3wAHLnzrkvLWr4afHDdr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layer",
+      "name": "layer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layer-4-load-balancing@MpM9rT1-_LGD7YbnBjqOk",
+            "layer-7-load-balancing@e69-JVbDj7dqV_p1j1kML"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lb",
+      "name": "lb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lb-vs-reverse-proxy@ocdcbhHrwjJX0KWgmsOL6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leader",
+      "name": "leader",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leader-election@AJLBFyAsEdQYF6ygO0MmQ",
+            "leader-election@beWKUIB6Za27yhxQwEYe3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load-balancers@14KqLKgh090Rb3MDwelWY",
+            "load-balancing-algorithms@urSjLyLTE5IIz0TFxMBWL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Materialized",
+      "name": "materialized",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "materialized-view@WB7vQ4IJ0TPh2MbZvxP6V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Message",
+      "name": "message",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "message-queues@37X1_9eCmkZkz5RDudE5N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monolithic",
+      "name": "monolithic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monolithic-persistence@p1QhCptnwzTGUXVMnz_Oz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "No",
+      "name": "no",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "no-caching@klvHk1_e03Jarn5T46QNi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Noisy",
+      "name": "noisy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "noisy-neighbor@r7uQxmurvfsYtTCieHqly"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-antipatterns@p--uEm6klLx_hKxKJiXE5",
+            "performance-monitoring@x1i3qWFtNNjd00-kAvFHw",
+            "performance-vs-scalability@e_15lymUjFc6VWqzPnKxG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pipes",
+      "name": "pipes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pipes--filters@WkoFezOXLf1H2XI9AtBtv",
+            "pipes-and-filters@siXdR3TB9-4wx_qWieJ5w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Priority",
+      "name": "priority",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "priority-queue@DZcZEOi7h3u0744YhASet"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pull",
+      "name": "pull",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pull-cdns@HkXiEMLqxJoQyAHav3ccL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Push",
+      "name": "push",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "push-cdns@uIerrf_oziiLg-KEyz8WM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Queue",
+      "name": "queue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "queue-based-load-leveling@-M3Zd8w79sKBAY6_aJRE8",
+            "queue-based-load-leveling@LncTxPg-wx8loy55r5NmV",
+            "queue-based-load-leveling@NybkOwl1lgaglZPRJQJ_Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Refresh",
+      "name": "refresh",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "refresh-ahead@Bgqgl67FK56ioLNFivIsc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reliability",
+      "name": "reliability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reliability-patterns@DYkdM_L7T2GcTPAoZNnUR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retry",
+      "name": "retry",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retry-storm@LNmAJmh2ndFtOQIpvX_ga"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Returning",
+      "name": "returning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "returning-results@2gRIstNT-fTkv5GZ692gx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Schedule",
+      "name": "schedule",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "schedule-driven@zoViI4kzpKIxpU20T89K_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scheduler",
+      "name": "scheduler",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scheduler-agent-supervisor@RTEJHZ26znfBLrpQPtNvn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scheduling",
+      "name": "scheduling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scheduling-agent-supervisor@uR1fU6pm7zTtdBcNgSRi4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-monitoring@I_NfmDcBph8-oyFVFTknL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sequential",
+      "name": "sequential",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sequential-convoy@VgvUWAC6JYFyPZKBRoEqf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-discovery@Nt0HUWLOl4O77elF8Is1S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-tuning@fY8zgbB13wxZ1CFtMSdZZ",
+            "sql-vs-nosql@KLnpMR2FxlQkCHZP6-tZm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-content-hosting@-lKq-LT7EPK7r3xbXLgwS",
+            "static-content-hosting@izPT8NfJy1JC6h3i7GJYl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strangler",
+      "name": "strangler",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strangler-fig@VIbXf7Jh9PbQ9L-g6pHUG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strong",
+      "name": "strong",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strong-consistency@JjB7eB8gdRCAYf5M0RcT7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Synchronous",
+      "name": "synchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "synchronous-io@Ihnmxo_bVgZABDwg1QGGk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Task",
+      "name": "task",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "task-queues@a9wGW_H1HpvvdYCXoS-Rf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usage",
+      "name": "usage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usage-monitoring@eSZq74lROh5lllLyTBK5a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Valet",
+      "name": "valet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "valet-key@stZOcr8EUBOK_ZB48uToj",
+            "valet-key@VltZgIrApHOwZ8YHvdmHB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visualization",
+      "name": "visualization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visualization--alerts@IwMOTpsYHApdvHZOhXtIw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Weak",
+      "name": "weak",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "weak-consistency@EKD5AikZtwjtsEYRPJhQ2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-server-caching@o532nPnL-d2vXJn9k6vMl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-system-design@idLHBxhvcIqZTqmh_E8Az"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wide",
+      "name": "wide",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wide-column-store@WHq1AdISkcgthaugE9uY7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Write",
+      "name": "write",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "write-behind@vNndJ-MWetcbaF2d-3-JP",
+            "write-through@RNITLR1FUQWkRbSBXTD_z"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Linear Velocity",
+  "content": "Linear velocity is the rate of change of an object's position over time, represented as a vector indicating speed and direction of movement. In rigid body simulation, linear velocity is updated each frame by integrating applied forces and is used to advance the object's position. It is distinct from angular velocity, which describes rotation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Linear Velocity](https://byjus.com/physics/linear-velocity/)"
+}

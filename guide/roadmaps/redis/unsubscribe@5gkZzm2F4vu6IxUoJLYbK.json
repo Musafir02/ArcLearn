@@ -1,0 +1,4 @@
+{
+  "title": "UNSUBSCRIBE",
+  "content": "The UNSUBSCRIBE command unsubscribes the client for the given channels, or all channels if none are specifically stated.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@UNSUBSCRIBE](https://redis.io/docs/latest/commands/unsubscribe/)"
+}

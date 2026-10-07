@@ -1,0 +1,4 @@
+{
+  "title": "Core Libraries",
+  "content": "Dart has a rich set of core libraries that provide essentials for many everyday programming tasks such as working on collections of objects (dart:collection), making calculations (dart:math), and encoding/decoding data (dart:convert).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Core Libraries](https://dart.dev/guides/libraries)\r\n- [@official@Libraries - Flutter API](https://api.flutter.dev/)"
+}

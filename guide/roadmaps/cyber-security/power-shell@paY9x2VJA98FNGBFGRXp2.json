@@ -1,0 +1,4 @@
+{
+  "title": "PowerShell",
+  "content": "PowerShell is a command-line shell and scripting language developed by Microsoft. It's designed for system administrators to automate tasks and manage operating systems. Built on the .NET framework, PowerShell uses cmdlets (pronounced \"command-lets\") to perform specific actions and can interact with various system components and applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@PowerShell.org](https://powershell.org/)\r\n- [@opensource@PowerShell for beginners](https://gist.github.com/devops-school/43dfcd57c0c807e83d01fc6a9639d3d9)\r\n- [@article@Microsoft's PowerShell Documentation](https://docs.microsoft.com/en-us/powershell/)\r\n- [@video@PowerShell Course](https://www.youtube.com/watch?v=ZOoCaWyifmI)"
+}

@@ -1,0 +1,851 @@
+{
+  "title": "Javascript Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "All",
+      "name": "all",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "all-about-variables@kvActjpU4FUJdrmuFoFEe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arguments",
+      "name": "arguments",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arguments-object@QLC7bW-qHskLH2HOA-Sko"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arithmetic",
+      "name": "arithmetic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arithmetic-operators@0PK1NwlgkNe2Vf-We4uLH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arrow",
+      "name": "arrow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arrow-functions@fr0NChxMXLpJizyMhXcXS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Assignment",
+      "name": "assignment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "assignment-operators@IvBtUzIGnkgGXrJjqmjf4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asynchronous",
+      "name": "asynchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asynchronous-javascript@sFOqx6_7poVIVuXhJVY0E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bigint",
+      "name": "bigint",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bigint-operators@udoz0DZi7f-vm30dSnYKu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bitwise",
+      "name": "bitwise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bitwise-operators@ghjNJW67Wj5L5QK46xwL-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Break",
+      "name": "break",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "break--continue@4oHFzn7R7xLxfuLpsJjr-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Built",
+      "name": "built",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "built-in-functions@s8wUJivWmetysJ8bt9FBC",
+            "built-in-objects@D95ndkkwmT5X_HqboEn6E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Callback",
+      "name": "callback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "callback-hell@PJSdqvh5OBwPCNpn3q_S5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Comma",
+      "name": "comma",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "comma-operators@6_8EwyZY2jBkZr7xnfRY3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Comparison",
+      "name": "comparison",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "comparison-operators@-v4_V4UuoZSgUk2sqOCim"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-operators@640mk-m5mB90Mme-7jcXV",
+            "conditional-statements@ttCsd2_H2SuRivCjGv1OX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Control",
+      "name": "control",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "control-flow@3tckJ2Sci7z-sNx9jx9eF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-structures@ADarwihuI2nBq1C3U7-Zr",
+            "data-types@-jbPPuEXacBR0d0CWPHgd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Debugging",
+      "name": "debugging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "debugging-issues@dhEtcgv7G9fNV-AUNJdWk",
+            "debugging-memory-leaks@BA_ArmZMnVMaL_zl3W3Pt",
+            "debugging-performance@ECxISKUAU7js_JsfSHzud"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Default",
+      "name": "default",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "default-params@8X8mRl-puL0Lp43dO5mha"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dom",
+      "name": "dom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dom-apis@bhuGtcyqPFKu-900aESYz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Equality",
+      "name": "equality",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "equality-comparisons@23Xa6q5VvRVlzc6Dx8vST"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Error",
+      "name": "error",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "error-objects@-z-4VTaC3tOThqChgyoMs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-loop@_bs5NNHVdHLWGBmpYwHMi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exceptional",
+      "name": "exceptional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exceptional-handling@34TKGxV9YziOWMh9rT_KE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explicit",
+      "name": "explicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explicit-binding@p2NhSwPYMtRiPRHjPaqmX",
+            "explicit-type-casting@1xhjrRN-Rfekei2JwwU7Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Expressions",
+      "name": "expressions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "expressions--operators@_6vZa43gWjxO2OcD1iCCQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forin",
+      "name": "forin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forin-loop@cq3vvFZoNnAAZJ6oEBUwb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forof",
+      "name": "forof",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forof-loop@FBz6h_AmTJBXoBN-a38a5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-borrowing@EAN6DCiCfSq04R4vKgZ0q",
+            "function-parameters@R1D4fsZliHv7wIo8Tj-kp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Garbage",
+      "name": "garbage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "garbage-collection@KKyX8N4lTgN0w-Khm6Ztq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "@lJwcc6JoUIQoiQ6FkV2KW",
+            "@RonBj1htt6jnBt3W7zoTA",
+            "apply@-BtF34cEzI6J8sZCDRlRE",
+            "arrays@NZedBxG9B9TRVOf2QE2yL",
+            "asyncawait@Dn872mgexmxoLtbkIgIgz",
+            "bigint@6lUF0neW1piiP1RsaVxEX",
+            "bind@dbercnxXVTJXMpYSDNGb2",
+            "block@uqEzHYx13Y2EpvTTRzykn",
+            "boolean@b1HvkoWA2t4kt8mS6FySm",
+            "call@gsyY3Oa3Jf0W5K_lyqBYO",
+            "callbacks@D8oGY7pdviRByaz6c9sU6",
+            "classes@F_Lrj0F7UXriqJ0mhwxCy",
+            "closures@itS6B12I8I1KNCPvc0KCQ",
+            "commonjs@4EXeGkOpfAViB9Uo4zL6O",
+            "const@q85z6x1Lc-yLWepwtIT2_",
+            "dowhile@57lO_3uxJaWsFXS-0J1AK",
+            "esm@jLNmYeo20Mbu4WRvVgvwU",
+            "fetch@kL5rfWxXe4J44ENru1uJS",
+            "for@2M211rcaPSWbZ-sPoSEVR",
+            "function@YMT7O6lrMSMtNo0EnmsnQ",
+            "functions@k8bJH9qydZm8I9rhH7rXw",
+            "global@oC4o6GLEES_nUgCJu9Q6I",
+            "hoisting@Lb5jLF91WO5V5CWpifciW",
+            "ifelse@ndbDXAx6bL4lZmpXv16Y_",
+            "iifes@YZlCoPvZuX5MmpLOTj5d4",
+            "islooselyequal@PLallt_T33W6bUEn0Hc3W",
+            "isstrictlyequal@pcILon_Jjm2_XS10iUJ0E",
+            "json@bFNvtHp97OzKnPJgr7WaH",
+            "let@kDRa9G3pMp0Cb0mqYUawM",
+            "map@Xc0jL4rafpI-ixIaAxo9O",
+            "null@CxyNyFMuTLS3owtRMgClD",
+            "number@GZ_SXsWmP7AsXRTc4WUMw",
+            "object@xe8HZ8Mt1fK8yJMcDPYHJ",
+            "objectis@ATma3bLKdmWY_WTsPIKxh",
+            "promises@yXSF5gGST7l2X-4z1g0d_",
+            "recursion@YJGhhFuWmFvhRKOg6nwON",
+            "rest@-_6q0bIjQrvAaCWrVkASO",
+            "samevalue@nfMrC0eoXZl72H4o3VFEP",
+            "samevaluezero@fL3B2hkTgMb0oEwMiWJtK",
+            "set@sciU68E13mcfL577y6Vim",
+            "setinterval@jaC3XXudd7OBKwwCpoPFf",
+            "settimeout@wXypuqEmFLIubx-QQvDIr",
+            "string@1RcwBHU3jzx0YxxUGZic4",
+            "switch@H_QlcUlavKKfcNK8CYAvb",
+            "symbol@R6ICrk6vjoBxx5nRGo4Jg",
+            "trycatchfinally@rbjEZe5vxCJ8reI1oZ-jf",
+            "undefined@ZLs0NKM0lrnOy5ATDhlk0",
+            "var@JSjeM8qnBg4onXq9mn5gB",
+            "while@9-MpHmzK_IiCi6IcvAlGM",
+            "xmlhttprequest@LiuhBE7dIlkoWkthSoCsa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "History",
+      "name": "history",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "history-of-javascript@l-GKzcsBNA0r6Jax8hwnP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-to-run-javascript@uXsWIUUxtc4H_iRx3uZv0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implicit",
+      "name": "implicit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implicit-type-casting@pP42K_eH4RCdUdUS8BJlP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "In",
+      "name": "in",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "in-a-function@azsXq6Y5iCvQDgTWZpWQ3",
+            "in-a-method@3E5MuxPvEJU-dwgTrbQAR",
+            "in-arrow-functions@P0190rTm2wLQmCzWOKour",
+            "in-event-handlers@JVbEBtVrTTFnTF3_yUIAC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Indexed",
+      "name": "indexed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "indexed-collections@lBOGoHZrmnIRatvryDwTm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-javascript@6khAD6mzZ9S96JJuC5_j6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iterators",
+      "name": "iterators",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iterators-and-generators@TZ8XGdykSJjKBjX6Nivwo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript-versions@SFPsWnVpZBAw3_re7op4h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keyed",
+      "name": "keyed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keyed-collections@rhJrrqkRqy2Qw_he4SPGz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lexical",
+      "name": "lexical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lexical-scoping@q7b5iMJ1Lfka5A-K-YcaN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logical",
+      "name": "logical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logical-operators@bo4SvzU4BrPl3c99zW7Y5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Loops",
+      "name": "loops",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "loops-and-iterations@YD-2l_amfqqqCdtc_Zdzo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-lifecycle@ZR2WfH1cerA-V_kaPwRvm",
+            "memory-management@MatU4SthAAhByJ40XdZQn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modules",
+      "name": "modules",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modules-in-javascript@hLnJlwnECFbVMeFpH0M5Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-prototype@0I6dJE0ygXPGjeRAe8AtT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prototypal",
+      "name": "prototypal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prototypal-inheritance@Xge6eru1hRGobnOEHLZqv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scope",
+      "name": "scope",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scope--function-stack@ISNzEYtrWe2v0R7Xfl5k-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strict",
+      "name": "strict",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strict-mode@Xw8lb0xCWKmNs4KZfhBUy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "String",
+      "name": "string",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "string-operators@c38b6t5f17Zg2O2yg3eFP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-data@JwLGAuSOTyZ5BHSqeBDU6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Throw",
+      "name": "throw",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "throw-statement@ReGIniyLYl5hGExchrJd2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-casting@XPmBieVCXvL3WbWkYRoKr",
+            "type-conversion-vs-coercion@_Bo2YZqZ_gY35SLPML4T6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typed",
+      "name": "typed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typed-arrays@8X1mdQ3NDBVOZZWBbAFRE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typeof",
+      "name": "typeof",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typeof-operator@RRACLQ6-aopkxImIp3Toc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unary",
+      "name": "unary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unary-operators@k9rSR-YQ8B_iRcXNm2btP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-browser-devtools@rc5WzBBOm2cus-rQl8EOE",
+            "using-it-alone@qps2Mdm-lwa4Wr0IxKm0C",
+            "using-this-keyword@fm2CuL1IZp3hnrLrPUX7U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variable",
+      "name": "variable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variable-declarations@BqbAWt--Guqex-rrb4ZUv",
+            "variable-naming-rules@HfieG3v3wnmpZDfNwEJvZ",
+            "variable-scopes@7iMJuaB7yKlSIbT4dBe5L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Weak",
+      "name": "weak",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "weak-map@6icsjC4aisDgPWasVuCOt",
+            "weak-set@DSFzj61N9ojz29mjExhVa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-javascript@UBB-8hUcwo4Mfd0cmEcdA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-apis@q6vciQb_Jk-Up16Pk5NeE"
+          ]
+        }
+      ]
+    }
+  ]
+}

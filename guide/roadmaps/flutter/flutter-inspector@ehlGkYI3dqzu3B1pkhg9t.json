@@ -1,0 +1,4 @@
+{
+  "title": "Flutter Inspector",
+  "content": "It is a tool in the Flutter SDK that provides a visual representation of the widget tree in a Flutter app. It allows developers to inspect the widgets in their app, see the properties and styles applied to each widget, and interact with the app in real-time.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Using the Flutter Inspector](https://docs.flutter.dev/development/tools/devtools/inspector)\r\n- [@video@How to Use the Flutter Inspector](https://www.youtube.com/watch?v=CcLfGJZS8ns)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Working with Data Tables",
+  "content": "Working with data tables means using the data.table package's syntax and conventions for fast, memory-efficient data manipulation on large datasets. It uses a distinctive bracket-based syntax, `dt[i, j, by]`, differing from both base R indexing and dplyr's verb-based approach. It's typically reached for once dataset size makes dplyr noticeably slower.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Introduction to data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)\r\n- [@article@data.table in R – The Complete Beginners Guide](https://machinelearningplus.com/data-manipulation/datatable-in-r-complete-guide/)\r\n- [@article@Data cleaning and exploration with data.table](https://www.meganstodel.com/posts/using-data-table/)\r\n- [@video@data.table Package in R](https://www.youtube.com/playlist?list=PLu6UwBFCnlEcb47DE-yWPjoEeZp10PDJz)"
+}

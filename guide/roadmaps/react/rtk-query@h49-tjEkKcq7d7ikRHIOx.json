@@ -1,0 +1,4 @@
+{
+  "title": "rtk-query",
+  "content": "[RTK Query](https://redux-toolkit.js.org/rtk-query/overview) is a data fetching and caching tool that is included in the Redux Toolkit package. It is designed to simplify common use cases for fetching data, including caching, polling, and invalidation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@RTK Query - Official Website](https://redux-toolkit.js.org/rtk-query/overview)"
+}

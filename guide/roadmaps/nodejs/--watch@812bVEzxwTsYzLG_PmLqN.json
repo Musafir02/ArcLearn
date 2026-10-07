@@ -1,0 +1,4 @@
+{
+  "title": "--watch",
+  "content": "The `--watch` flag in Node.js is a powerful feature introduced in Node.js version 19 that enables automatic reloading of your Node.js application whenever changes are detected in the specified files.\r\n\r\nHere's How it works:\r\n\r\n*   You run your Node.js script with the `--watch` flag: `$ node --watch your_script.js`\r\n*   Node.js starts watching the specified file (or directory) for changes.\r\n*   Whenever a change is detected, Node.js automatically restarts the script\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Node.js CLI](https://nodejs.org/api/cli.html)\r\n- [@official@Node.js --watch Docs](https://nodejs.org/api/cli.html#--watch)\r\n- [@article@Medium - Watch Mode](https://medium.com/@khaled.smq/built-in-nodejs-watch-mode-52ffadaec8a8)"
+}

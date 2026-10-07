@@ -1,0 +1,4 @@
+{
+  "title": "Typed Forms",
+  "content": "Since Angular 14, reactive forms are strictly typed by default. You don't have to define extra custom types or add a ton of type annotations to your form declarations to benefit from this extra type safety, as Angular will infer types from the default value of a form control. Non-typed forms are still supported. To use them, you must import the `Untyped` symbols from `@angular/forms`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Typed Forms](https://angular.dev/guide/forms/typed-forms)\r\n- [@article@Angular Strictly Typed Forms (Complete Guide)](https://blog.angular-university.io/angular-typed-forms/)\r\n- [@video@Getting started with Typed Reactive Forms in Angular](https://www.youtube.com/watch?v=mT3UR0TdDnU)\r\n- [@video@Angular TYPED Forms: Are You Using Them Correctly?](https://www.youtube.com/watch?v=it2BZoIvBPc)"
+}

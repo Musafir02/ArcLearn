@@ -1,0 +1,4 @@
+{
+  "title": "Channel",
+  "content": "A channel is a typed conduit for passing data between concurrent goroutines or threads. In Go, channels are the primary synchronization and communication mechanism; in other languages, similar constructs exist as queues or pipes between concurrent workers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Go Channel Documentation](https://golang.org/doc/effective_go.html#channels)\r\n- [@official@Rust Channels for Concurrency](https://doc.rust-lang.org/book/ch16-02-message-passing.html)\r\n- [@article@Comprehensive Guide to Channel](https://hexdocs.pm/elixir/processes.html)"
+}

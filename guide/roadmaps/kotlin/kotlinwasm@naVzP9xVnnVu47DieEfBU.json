@@ -1,0 +1,4 @@
+{
+  "title": "Kotlin/WASM",
+  "content": "Kotlin/WASM allows you to compile Kotlin code to WebAssembly (WASM), a binary instruction format designed for efficient execution in web browsers and other environments. This enables Kotlin developers to build high-performance applications that can run directly in the browser, leveraging Kotlin's features and tooling for web development. It provides an alternative to JavaScript for client-side web development, and also opens up possibilities for using Kotlin in other WASM-compatible environments.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Kotlin/Wasm](https://kotlinlang.org/docs/wasm-overview.html)\r\n- [@official@Get started with Kotlin/Wasm and Compose Multiplatform](https://kotlinlang.org/docs/wasm-get-started.html)\r\n- [@video@Kotlin and WebAssembly: Unleashing Cross-Platform Power](https://www.youtube.com/watch?v=t3FUWfJWrjU)"
+}

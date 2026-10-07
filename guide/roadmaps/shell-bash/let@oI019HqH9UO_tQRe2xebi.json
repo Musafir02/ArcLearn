@@ -1,0 +1,4 @@
+{
+  "title": "Let Command",
+  "content": "The `let` command in Bash is used to perform arithmetic operations. It allows you to evaluate arithmetic expressions and assign the result to a variable. It's a way to do integer calculations directly within your shell scripts without needing external commands like `expr`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@How to Use the Bash let Command {with Examples}](https://phoenixnap.com/kb/bash-let)\r\n- [@article@Arithmetic](https://ryanstutorials.net/bash-scripting-tutorial/bash-arithmetic.php)\r\n- [@video@Bash: The \"let\" builtin command](https://www.youtube.com/watch?v=OmZVThsrdp0)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Content Security Policy",
+  "content": "Content Security Policy (CSP) prevents XSS and clickjacking attacks by specifying trusted content sources through HTTP headers. Website creators define safe sources for scripts, styles, images, and other resources. Limits malicious code execution and provides violation reporting for security monitoring.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@MDN Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)\r\n- [@article@Web.dev - Content Security Policy (CSP)](https://web.dev/csp/)"
+}

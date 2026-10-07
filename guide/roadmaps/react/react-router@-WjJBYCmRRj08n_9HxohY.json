@@ -1,0 +1,4 @@
+{
+  "title": "react-router",
+  "content": "As a framework, react-router extends beyond simple client-side navigation to include features like data loading, actions, and nested layouts, similar to what full frameworks like Next.js offer. It grew out of the original React Router library into a more complete solution for building routed applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Official Website](https://reactrouter.com/)\r\n- [@opensource@remix-run react-router](https://github.com/remix-run/react-router)"
+}

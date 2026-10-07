@@ -1,0 +1,4 @@
+{
+  "title": "Never Hardcode API Keys",
+  "content": "API keys stored directly in code or config files can be accidentally exposed through logs, version control, or error messages. Always use environment variables or a secrets manager instead.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Security](https://docs.openclaw.ai/gateway/security)"
+}

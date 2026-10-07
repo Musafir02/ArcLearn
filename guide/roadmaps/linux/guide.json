@@ -1,0 +1,671 @@
+{
+  "title": "Linux Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Adding",
+      "name": "adding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adding-disks@4xBaZPk0eSsWG1vK3e2yW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Archiving",
+      "name": "archiving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "archiving-and-compressing@iD073xTmpzvQFfXwcwXcY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authentication",
+      "name": "authentication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication-logs@WwybfdKuP9ogCGpT7d3NU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Available",
+      "name": "available",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "available-memory--disk@tx0nh6cbBjVxwNlyrBNYm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Background",
+      "name": "background",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "background--foreground-processes@mUKoiGUTpIaUgQNF3BND_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-commands@qLeEEwBvlGt1fP5Qcreah"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Boot",
+      "name": "boot",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "boot-loaders@o5lSQFW-V_PqndGqo1mp3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Booting",
+      "name": "booting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "booting-linux@DQEa8LrJ9TVW4ULBE4aHJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Checking",
+      "name": "checking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "checking-service-logs@FStz-bftQBK0M6zz2Bxl4",
+            "checking-service-status@xk5Xgi797HlVjdZJRfwX1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Command",
+      "name": "command",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "command-help@KaMSsQnJzNqGHg0Oia4uy",
+            "command-path@moGMHNR58wFlzhS7je1wc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Container",
+      "name": "container",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "container-runtime@bVCwRoFsYb3HD8X4xuKOo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Copying",
+      "name": "copying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "copying-and-renaming@abKO6KuuIfl9ruVxBw6t_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create--delete--update@R9TZfkgVUQNLnMpDhovJa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating--deleting-files--dirs@9oo2fxTM2_p0VYPBroqxa",
+            "creating-new-services@34UUrc8Yjc_8lvTL8itc3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Directory",
+      "name": "directory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "directory-hierarchy-overview@3fzuXKH7az_LVnmnoXB1p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Disks",
+      "name": "disks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "disks-and-filesystems@Fn_uYKigJRgb7r_iYGVBr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dns",
+      "name": "dns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dns-resolution@f5oQYhmjNM2_FD7Qe1zGK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Editing",
+      "name": "editing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "editing-files@HGmeYvRf7_XusZl_K4x9k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environment",
+      "name": "environment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environment-variables@zwXEmpPYjA7_msS43z7I0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ethernet",
+      "name": "ethernet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ethernet--arprarp@4ees23q281J1DPVAc7iXd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-permissions@TnrT-cqMA8urew9nLv0Ns",
+            "file-transfer@tVrbVcNEfc11FbEUoO2Dk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Finding",
+      "name": "finding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "finding--installing-packages@Z23eJZjmWoeXQuezR9AhG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "awk@QTmECqpRVMjNgQU70uCF8",
+            "cgroups@23lsrUw8ux6ZP9JlDNNu2",
+            "conditionals@rQxfp7UWqN72iqewZhOdc",
+            "containerization@3OpGaQhyNtk1n1MLp-tlb",
+            "cut@Z5Mf_e5G24IkmxEHgYBe2",
+            "debugging@rOGnHbGIr3xPCFdpkqoeK",
+            "dhcp@X6Jw95kbyPgsDNRhvkQP9",
+            "docker@MfengY3ouz6sSOx3PXYf8",
+            "expand@TZuDVFS7DZFBgaSYYXoGe",
+            "filesystems@LFPhSHOhUqM98fUxMjQUw",
+            "grep@umlhxidsvtZG9k40Ca0Ac",
+            "head@6xdkFk_GT93MigeTSSGCp",
+            "icmp@Ymf3u_sG1dyt8ZR_LbwqJ",
+            "inodes@AwQJYL60NNbA5_z7iLcM7",
+            "join@vfcCS1GoyKpU1rQaE8I5r",
+            "literals@-pW7R76yNIeGf7TQoX4QL",
+            "logs@ru7mpLQZKE1QxAdiA1sS3",
+            "loops@WJT-yrMq8cEI87RHWA2jY",
+            "lvm@I3LNa1cM_zRkBy8wKdz3g",
+            "mounts@zmb5lK_EGMAChPoPvP9E0",
+            "nano@yqRwmcZThjQuqh2ao0dWK",
+            "netfilter@bZ8Yj6QfBeDdh8hRM_aZs",
+            "netstat@yrxNYMluJ9OAQCKuM5W1u",
+            "networking@Mb42VFjCzMZn_PovKIfKx",
+            "nl@YSfGrmT795miIeIZrtC3D",
+            "paste@5658kdqJw-pIOyyhll80a",
+            "ping@Uc36t92UAlILgM3_XxcMG",
+            "pipe@v32PJl4fzIFTOirOm6G44",
+            "redirects@JgoZzx4BfK7tmosgpZOsf",
+            "snap@eKyMZn30UxQeBZQ7FxFbF",
+            "sort@1WRIy3xHtQfiQFZrprobP",
+            "split@Pl9s2ti25hsSEljXJvBTj",
+            "ssh@uk6UMuI8Uhf02TBAGVeLS",
+            "subnetting@Xszo9vXuwwXZo26seHehD",
+            "swap@AWosNs2nvDGV8r6WvgBI1",
+            "tail@Yyk28H6TiteZEGv6Aps1h",
+            "tee@Bo9CdrGJej-QcNmw46k9t",
+            "tr@O9Vci_WpUY-79AkA4HDx3",
+            "traceroute@BnB3Rirh4R7a7LW7-k-95",
+            "troubleshooting@bdQNcr1sj94aX_gjwf2Fa",
+            "ulimits@QgfenmhMc18cU_JngQ1n0",
+            "unexpand@sKduFaX6xZaUUBdXRMKCL",
+            "uniq@qnBbzphImflQbEbtFub9x",
+            "variables@JyxvZOb7iusOSUYSlniGl",
+            "vim@XiZz7EFIey1XKS292GN4t",
+            "wc@LIGOJwrXexnIcPyHVlhQ8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Install",
+      "name": "install",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "install--remove--upgrade-packages@xEHiB-egkkcBuZmgMoqHT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ip",
+      "name": "ip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ip-routing@D0yUzzaJsfhtdBWMtquAj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Killing",
+      "name": "killing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "killing-processes@0FLUI9r7znMqi6YKReLzD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Listing",
+      "name": "listing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "listing--finding-processes@lf3_CRyOI2ZXGzz5ff451",
+            "listing-installed-packages@48wAoAAlCNt3j5mBpKTWC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-permissions@L6RMExeqi9501y-eCHDt1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Moving",
+      "name": "moving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "moving-files--directories@q-Ky0ietZGpyUcBQfh-BJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Navigation",
+      "name": "navigation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "navigation-basics@y7KjVfSI6CAduyHd4mBFT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-management@4eINX8jYMJxfYh7ZV47YI",
+            "package-repositories@2oQiuQ2j02SCt9t5eV6hg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Packet",
+      "name": "packet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "packet-analysis@7seneb4TWts4v1_x8xlcZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-forking@Rib7h9lh_ndiXkwNbftz_",
+            "process-management@h01Y6dW09ChidlM2HYoav",
+            "process-priorities@5anSYRhaKIs3dCLWlvZfT",
+            "process-signals@VkLWTvKnRXzvLGWza2v45"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Server",
+      "name": "server",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "server-review@jSzfQf0MlnXtWHCc-HYvr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-management-systemd@F1sU3O1ouxTOvpidDfN3k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Services",
+      "name": "services",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "services-running@ewUuI_x-YhOQIYd3MTgJJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shell",
+      "name": "shell",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shell-and-other-basics@8QBMyL8D5jPovxN8jyZW9",
+            "shell-programming@4tFZ1PLpz50bddf7zSFrW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Soft",
+      "name": "soft",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "soft-links--hard-links@KaXHG_EKxI5PUXmcvlJt6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Starting",
+      "name": "starting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "starting--stopping-services@DuEfJNrm4Jfmp8-8Pggrf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stdout",
+      "name": "stdout",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stdout--stdin--stderr@t3fxSgCgtxuMtHjclPHA6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Super",
+      "name": "super",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "super-user@NIBSZGE9PskVrluJpdom0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tcpip",
+      "name": "tcpip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tcpip-stack@0pciSsiQqIGJh3x8465_s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-processing@-B2Dvz7160Er0OBHzS6ro"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Uptime",
+      "name": "uptime",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "uptime-and-load@19lTWqAvZFT2CDlhLlPSq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-management@g6n7f1Qi0BPr_BGvisWuz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Users",
+      "name": "users",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "users-and-groups@h8wc8XEwWYHErna68w7Mg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-with-files@RsOTPZPZGTEIt1Lk41bQV"
+          ]
+        }
+      ]
+    }
+  ]
+}

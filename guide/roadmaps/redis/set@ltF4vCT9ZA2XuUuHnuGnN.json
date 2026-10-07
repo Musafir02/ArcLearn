@@ -1,0 +1,4 @@
+{
+  "title": "SET",
+  "content": "`SET` stores a string value at a key, replacing any existing value. It accepts options for setting expiration (`EX`, `PX`), and conditional flags (`NX` to set only if the key does not exist, `XX` to set only if it does). This makes `SET` versatile enough to handle both simple assignments and atomic conditional writes.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@SET](https://redis.io/docs/latest/commands/set/)"
+}

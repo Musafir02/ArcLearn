@@ -1,0 +1,4 @@
+{
+  "title": "React Native CLI",
+  "content": "The React Native Community CLI (`@react-native-community/cli`) is the command-line tool for creating and running React Native apps without a framework such as Expo. This method requires you to manually set up the native development environment and tools needed for iOS and Android app development.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Get Started Without a Framework](https://reactnative.dev/docs/getting-started-without-a-framework)\r\n- [@opensource@React Native Community CLI](https://github.com/react-native-community/cli)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "PHPUnit in Laravel Testing",
+  "content": "PHPUnit is a popular testing framework for PHP that allows developers to write and run automated tests for their code. It provides a structured way to define test cases, assertions, and test suites, ensuring that code behaves as expected. In Laravel, PHPUnit is the default testing framework, offering a robust environment for both unit and feature testing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@PHPUnit](https://phpunit.de/)\r\n- [@opensource@phpunit](https://github.com/sebastianbergmann/phpunit)\r\n- [@article@A Beginner’s Guide to PHPUnit](https://www.browserstack.com/guide/unit-testing-php)\r\n- [@video@PHPUnit in Laravel: Simple Example of Why/How to Test](https://www.youtube.com/watch?v=DRhhfy2sG1E)"
+}

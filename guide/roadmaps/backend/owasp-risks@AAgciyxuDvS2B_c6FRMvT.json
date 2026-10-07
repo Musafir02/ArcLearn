@@ -1,0 +1,4 @@
+{
+  "title": "OWASP Security Risks",
+  "content": "OWASP (Open Web Application Security Project) is an online community producing freely-available articles, methodologies, documentation, tools, and technologies for web application security.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@OWASP Website](https://owasp.org/)\r\n- [@opensource@OWASP Application Security Verification Standard](https://github.com/OWASP/ASVS)\r\n- [@article@OWASP Top 10 Security Risks](https://cheatsheetseries.owasp.org/IndexTopTen.html)\r\n- [@article@OWASP Cheatsheets](https://cheatsheetseries.owasp.org/cheatsheets/AJAX_Security_Cheat_Sheet.html)\r\n- [@course@OWASP Top 10: Exploit-then-Fix Labs](https://ransomleak.com/catalogue/application-security/)"
+}

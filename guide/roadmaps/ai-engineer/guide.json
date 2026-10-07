@@ -1,0 +1,1339 @@
+{
+  "title": "Ai Engineer Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Adding",
+      "name": "adding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adding-end-user-ids-in-prompts@4Q5x2VCXedAWISBXUIyin"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agents",
+      "name": "agents",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agents-usecases@778HsQzTuJ_3c9OSn5DmH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-agents@4_ap0rD9Gl6Ep_4jMfPpG",
+            "ai-agents@Uffu609uQbIzDl88Ddccv",
+            "ai-engineer-vs-ml-engineer@jSZ1LhPdhlkW-9QJhIvFs",
+            "ai-safety-and-ethics@8ndKHDJgL_gYwaXC7XMer",
+            "ai-vs-agi@5QdihE1lLpMc3DFrGy46M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anomaly",
+      "name": "anomaly",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anomaly-detection@AglWJ7gb9rTT2rMkstxtk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anthropic",
+      "name": "anthropic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anthropic-claude@hy6EyKiNxk1x84J63dhez"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arize",
+      "name": "arize",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arize-ai@jx57heeBnacrlCyQPhlEi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Audio",
+      "name": "audio",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "audio-processing@mxQYB820447DC6kogyZIL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bias",
+      "name": "bias",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bias-and-fairness@lhIU0ulpvDAn1Xc3ooYz_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-an-mcp-client@0Rk0rCbmRFJT2GKwUibQS",
+            "building-an-mcp-server@oLGfKjcqBzJ3vd6Cg-T1B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Choosing",
+      "name": "choosing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "choosing-the-right-model@zeWoTtAFEpVXDQzWNsha4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude-agent-sdk@xXLyuUNrKEc32XLQxMjgT",
+            "claude-code@wr5ddjutC-fX_ixysTHaT",
+            "claude-messages-api@nxwMVla0-PNG8nlocKK5v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Closed",
+      "name": "closed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "closed-vs-open-source-models@RBwGsq9DngUsl8PrrCbqx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conducting",
+      "name": "conducting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conducting-adversarial-testing@Pt-AJmSJrOxKvolb5_HEv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connect",
+      "name": "connect",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connect-to-local-server@H-G93SsEgsA_NGL_v4hPv",
+            "connect-to-remote-server@2t4uINxmzfx8FUF-_i_2B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Constraining",
+      "name": "constraining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "constraining-outputs-and-inputs@ONLDyczNacGVZGojYyJrU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-moderation-apis@ljZLa3yjQpegiZWwtnn_q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Context",
+      "name": "context",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "context-compaction@9XCxilAQ7FRet7lHQr1gE",
+            "context-engineering@kCiHNaZ9CgnS9uksIQ_SY",
+            "context-engineering@ySIOjFFU4GZbP0gqyWwLL",
+            "context-evaluation@SzW-BtzGsSfGGa5DbSlr4",
+            "context-failure-modes@mfiiWDVZEeUGFa6KKUGLB",
+            "context-isolation@9JwWIK0Z2MK8-6EQQJsCO",
+            "context-security@wel7a_gpXqpuDAdmF_4Rp",
+            "context-sources@x0G0WD8MUflucdBqf2j5k",
+            "context-vs-prompt-eng@s2YrrjXbvNIyW5WSFj2po",
+            "context-window@SF07y6d-JcE1-pzXeBOU7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Costlatency",
+      "name": "costlatency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "costlatency-monitoring@CG3XTMPug98s-EP0_rn1Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dall",
+      "name": "dall",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dall-e-api@LKFwwjtcawJ4Z12X102Cb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-classification@06Xta-OqSci05nV2QMFdF",
+            "data-layer@Z0920V57_ziDhXbQJMN9O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deterministic",
+      "name": "deterministic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deterministic-evals@kSDTJK74Tq0KHBfIawJuT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Development",
+      "name": "development",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "development-tools@NYge7PNtfI-y6QWefXJ4d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embedding",
+      "name": "embedding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embedding-models@fr0UOXlVVctkk1K84Z8Of"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Evaluation",
+      "name": "evaluation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "evaluation-metrics@Z8MBleL51wJuV9BkS1djI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "External",
+      "name": "external",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "external-memory@KWjD4xEPhOOYS51dvRLd2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Few",
+      "name": "few",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "few-shot@DZPM9zjCbYYWBPLmQImxQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fine",
+      "name": "fine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fine-tuning@zTvsCNS3ucsZmvy1tHyeI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Function",
+      "name": "function",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "function-calling@wFfjHkGLrcCyLyXV4BiFM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gemini",
+      "name": "gemini",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gemini-embedding@4GArjDYipit4SLqKZAWDf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "atlan@e_Mgd4pxKPdxL5DNxlxQ_",
+            "chroma@dSd2C9lNl-ymmCRT9_ZC3",
+            "chunking@mX987wiZF7p3V_gExrPeX",
+            "codex@XY2l96sry3WyLzzo3KUeU",
+            "cohere@a7qsvoauFe5u953I699ps",
+            "cohere@y0qD5Kb4Pf-ymIwW-tvhX",
+            "constrains@PT3uDiUjiKhO8laOkCmgP",
+            "constraints@PT3uDiUjiKhO8laOkCmgP",
+            "context@9oUpeEnaMWctQLTobbmY7",
+            "context@vvpYkmycH0_W030E-L12f",
+            "cot@nyBgEHvUhwF-NANMwkRJW",
+            "cursor@MWhoqhNnBaoeCdN_8i15k",
+            "datahub@sFYcBgG9I0n1iKpwlp_7B",
+            "deepeval@hyN5v8dg1lHJLpdZZdtJE",
+            "deepseek@UGYYh2W1XnnbgYNY8L8Hb",
+            "embedding@grTcbzT7jKk_sIUwOTZTD",
+            "embeddings@XyEp6jnBSpCxMGwALnYfT",
+            "faiss@JurLbOO1Z8r6C3yUqRNwf",
+            "gemini@hzeEo8COf2l07iu5EdlFo",
+            "gemma@MNtaY1_kOJHeoWuM-abb4",
+            "generation@2jJnS9vRYhaS69d6OxrMh",
+            "haystack@ebXXEhNRROjbbof-Gym4p",
+            "helicone@82LE-qxw1H_FYfVUdgkN9",
+            "inference@4NtUD9V64gkp8SFudj_ai",
+            "introduction@_hYN0gEi9BL24nptEtXWU",
+            "jina@apVYIV4EyejPft25oAvdI",
+            "lancedb@rjaCNT3Li45kwu2gXckke",
+            "langchain@jM-Jbo0wUilhVY830hetJ",
+            "langfuse@Xw6-crHimGrVC1u1xujc6",
+            "langsmith@bN_ReFUQgkJmWOAFMLXMg",
+            "mcp@jpSel6gPj1d0EhH73Knm7",
+            "mistral@n-Ud2dXkqIzK37jlKItN4",
+            "modus@xTqTaiKLo6EE_4JVFdjEt",
+            "ollama@rTT2UnvqFO3GH6ThPLEjO",
+            "openrouter@1GlpMjmdAWor0X_BnISGg",
+            "pinecone@_Cf7S1DCvX7p1_3-tP3C3",
+            "posthog@31UjRzoh7wQKk6uAZ7aVM",
+            "qdrant@DwOAL5mOBgBiw-EQpAzQl",
+            "qwen@c0RPhpD00VIUgF4HJgN2T",
+            "rag@IX1BJWGwGmB4L063g0Frf",
+            "ragas@CZ_-PSDzzSrSon5XdzLen",
+            "ragflow@d0ontCII8KI8wfP-8Y45R",
+            "rags@IX1BJWGwGmB4L063g0Frf",
+            "react@Waox7xR_yUeSnOtQFzU4c",
+            "replit@Ubk4GN0Z4XlDJ3EbRXdxg",
+            "supabase@9kT7EEQsbeD2WDdN9ADx7",
+            "temperature@_bPTciEA1GT1JwfXim19z",
+            "tokens@2WbVpRLqwi3Oeqk1JPui4",
+            "training@xostGgoaYkqMO28iN2gx8",
+            "transformersjs@bGLrbpxKgENe2xS1eQtdh",
+            "weaviate@VgUnrZGKVjAAO4n_llq5-",
+            "windsurf@Xsl8mx6J182TxPPtNP471"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-adk@mbp2NoL-VZ5hZIIblNBXt",
+            "google-gemini-api@TsG_I7FL-cOCSw8gvZH3r",
+            "google-gemini@oe8E6ZIQWuYvHVbYJHUc1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-llms-work@zdeuA4GbdBl2DwKgiOA4G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hugging",
+      "name": "hugging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hugging-face-hub@YLOdOvLXa5Fa7_mmuvKEi",
+            "hugging-face-inference-sdk@3kRTzlLNBnXdTsAEXVu_M",
+            "hugging-face-models@EIDbwbdolR_qsNKVDla6V",
+            "hugging-face-tasks@YKIPOiSj_FNtg0h8uaSMq",
+            "hugging-face@v99C5Bml2a6148LCJ9gy9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Human",
+      "name": "human",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "human-evals@QIx5nT75l2Cn2q75-TxfD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image-generation@49BWxYVFpIgZCCqsikH7l",
+            "image-understanding@fzVq4hGoa2gdbIzoyY1Zp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Impact",
+      "name": "impact",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "impact-on-product-development@qJVgKe9uBvXc-YPfvX_Y7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Indexing",
+      "name": "indexing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "indexing-embeddings@5TQnO9B4_LTHwqjI7iHB1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Input",
+      "name": "input",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "input-format@LCHse57rXf3sl8ml1ow0T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Know",
+      "name": "know",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "know-your-customers--usecases@t1SObMWkDZ1cKqNNlcd9L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Langchain",
+      "name": "langchain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "langchain-for-multimodal-apps@j9zD3pHysB1CBhLfLjhpD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Large",
+      "name": "large",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "large-language-model-llm@wf2BSyUekr1S1q6l8kyq6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llama",
+      "name": "llama",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llama-index@JT4mBXOjvvrUnynA7yrqt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llamaindex",
+      "name": "llamaindex",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llamaindex-for-multimodal-apps@akQTCKuPRRelj2GORqvsh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-evaluations@FJ3ZwbTdiFyebrFi96tnz",
+            "llm-observability@1bBgMVISENC-XBwuZFlUk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lm",
+      "name": "lm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lm-studio@a_3SabylVqzzOyw3tZN5f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Long",
+      "name": "long",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "long-context-processing@BfmhnGPe1UdnThdpr7m1i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manual",
+      "name": "manual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manual-implementation@6xaRB34_g0HGt-y1dGYXR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mcp",
+      "name": "mcp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mcp-client@po0fIZYaFhRbNlza7sB37",
+            "mcp-host@MabZ9jOrSj539C5qZrVBd",
+            "mcp-server@8Xkd88EjX3GE_9DWQhr7G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-systems@4HkJJigCBBO4eOef8qvhz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Meta",
+      "name": "meta",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "meta-llama@OkYO-aSPiuVYuLXHswBCn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-based-evals@LJ6_U5lOdc0uRngutj7Ro",
+            "model-context-protocol-mcp@AeHkNU-uJ_gBdo5-xdpEu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Models",
+      "name": "models",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "models-on-hugging-face@dLEg4IA3F5jgc44Bst9if"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mongodb",
+      "name": "mongodb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mongodb-atlas@j6bkm0VUgLkHdMDDJFiMC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-agent-context-sharing@wQfU09yhZ5sd-UPHkq2n0",
+            "multi-agents@kG1bkF2oY21CJOm9zhdpn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multimodal",
+      "name": "multimodal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multimodal-ai-usecases@sGR9qcro68KrzM8qWxcH8",
+            "multimodal-ai@W7cKPt_UxcUgwp8J6hS4p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nanobanana",
+      "name": "nanobanana",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nanobanana-api@6y73FLjshnqxV8BTGUeiu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Open",
+      "name": "open",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "open-ai-embeddings-api@l6priWeJhbdUD5tJ7uHyG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Openai",
+      "name": "openai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "openai-agentkit--agent-sdk@Sm0Ne5Nx72hcZCdAcC0C2",
+            "openai-compatible-apis@vnXtUupJUlyU_uCbZBbnk",
+            "openai-gpt-o-series@3PQVZbcr4neNMRr6CuNzS",
+            "openai-response-api@ro3vY_sp6xMQ-hfzO-rc1",
+            "openai-vision-api@CRrqa-dBw1LlOwVbrZhjK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performing",
+      "name": "performing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performing-similarity-search@ZcbRPtgaptqKqWBgRrEBU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pre",
+      "name": "pre",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pre-trained-models@d7fzv_ft12EopsQdmEsel"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Production",
+      "name": "production",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "production-monitoring@3gwVG4XaO83z3Yzdd84Z-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-caching@bqqY0gsZkBpcHMZw1hcZ5",
+            "prompt-engineering@ozrR8IvjNFbHd44kZrExX",
+            "prompt-engineering@VjXmSCdzi2ACv-W85Sy9D",
+            "prompt-injection-attacks@cUyLT6ctYQ1pgmodCKREq",
+            "prompt-vs-context-engineering@ozrR8IvjNFbHd44kZrExX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Purpose",
+      "name": "purpose",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "purpose-and-functionality@WcjX6p-V-Rdd77EL8Ega9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rag",
+      "name": "rag",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rag--dynamic-filters@LnQ2AatMWpExUHcZhDIPd",
+            "rag-and-dynamic-filters@LnQ2AatMWpExUHcZhDIPd",
+            "rag-usecases@GCn4LGNEtPI0NWYAZCRE-",
+            "rag-vs-fine-tuning@qlBEXrbV88e_wAGRwO9hW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-prompting@voDKcKvXtyLzeZdx2g3Qn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recommendation",
+      "name": "recommendation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recommendation-systems@HQe9GKy3p0kTUPxojIfSF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regression",
+      "name": "regression",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regression-testing@Bkzi3QyzKyHxcHE7sodRZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repetition",
+      "name": "repetition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repetition-penalties@0_pa739kMPWHfuSQV-VO7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retrieval",
+      "name": "retrieval",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retrieval-process@OCGCzHQM2LQyUWmiqe6E0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Robust",
+      "name": "robust",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "robust-prompt-engineering@qmx6OHqx4_0JXVIv8dASp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role--behavior@N3TzWYxU0jgv1l99Ts58n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roles",
+      "name": "roles",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roles-and-responsiblities@K9EiuFgPBFgeRxY4wxAmb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sampling",
+      "name": "sampling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sampling-parameters@LbB2PeytxRSuU07Bk0KlJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-and-privacy-concerns@sWBT-j2cRuFqRFYtV_5TK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Self",
+      "name": "self",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "self-hosted-models@_qqITQ8O0Q0RWUeZsUXnY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Semantic",
+      "name": "semantic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "semantic-search@eMfcyBxnMY_l_5-8eg6sD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sentence",
+      "name": "sentence",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sentence-transformers@ZV_V6sqOnRodgaw4mzokC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Speech",
+      "name": "speech",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "speech-to-text@jQX10XKd_QM5wdQweEkVJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state--historical-context@unoZLoE2oJbKPOCBYUnMZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streaming",
+      "name": "streaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streaming-responses@MUDBYjR7uCUZQ-kQxi2K_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-output@zqhmLzHsmDlrTFVHzhq6-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-prompting@S46Vaq8hYq6Ee1Id_-fSQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-to-speech@GCERpLz5BcRtWPpv-asUz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tools",
+      "name": "tools",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tools--function-calling@eOqCBgBTKM8CmY3nsWjre"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Top",
+      "name": "top",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "top-k@qzvp6YxWDiGakA2mtspfh",
+            "top-p@FjV3oD7G2Ocq5HhUC17iH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tracing",
+      "name": "tracing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tracing--logging@cdapQf0Owxdx6olAHTrbq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transport",
+      "name": "transport",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transport-layer@o4gHDZ5p9lyeHuCAPvAKz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-of-models@2X0NDcq2ojBJ0RxY_U6bl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-sdks-directly@WZVW8FQu6LyspSKm1C_sl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vector",
+      "name": "vector",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vector-database@zZA1FBhf1y4kCoUZ-hM4H",
+            "vector-databases@tt9u3oFlsjEMfPyojuqpc",
+            "vector-dbs@dzPKW_fn82lY1OOVrggk3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vertex",
+      "name": "vertex",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vertex-ai-agent-builder@AxzTGDCC2Ftp4G66U4Uqr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Video",
+      "name": "video",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "video-understanding@TxaZCtTCTUfwCxAJ2pmND"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-embeddings@--ig0Ume_BnXb9K2U7HJN",
+            "what-are-rags@lVhWhZGR558O-ljHobxIi",
+            "what-is-a-context-layer@5b2-GXozMVOqZF1Ga-HE8",
+            "what-is-an-ai-engineer@GN6SnI7RXIeW8JeD-qORW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Whisper",
+      "name": "whisper",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "whisper-api@OTBd6cPUayKaAM-fLWdSt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zero",
+      "name": "zero",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zero-shot@15XOFdVp0IC-kLYPXUJWh"
+          ]
+        }
+      ]
+    }
+  ]
+}

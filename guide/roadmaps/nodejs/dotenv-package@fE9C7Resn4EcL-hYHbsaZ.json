@@ -1,0 +1,4 @@
+{
+  "title": "dotenv-package@fE9C7Resn4EcL-hYHbsaZ",
+  "content": "dotenv package\r\n \r\n`dotenv` is an npm package that loads environment variables from a `.env` file into `process.env`. It is commonly used in development to manage configuration like API keys and database URLs without hardcoding them in source code. The `.env` file should not be committed to version control.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@process.env Documentation](https://nodejs.org/docs/latest/api/process.html#process_process_env)\r\n- [@official@Dotenv package](https://www.npmjs.com/package/dotenv)\r\n- [@opensource@dotenv Docs](https://github.com/motdotla/dotenv#readme)\r\n- [@article@The Twelve-Factor App Methodology](https://12factor.net/config)\r\n- [@article@Dotenv tutorial](https://zetcode.com/javascript/dotenv/)"
+}

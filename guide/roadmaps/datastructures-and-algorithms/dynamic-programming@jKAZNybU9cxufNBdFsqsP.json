@@ -1,0 +1,4 @@
+{
+  "title": "Dynamic Programming",
+  "content": "Dynamic programming solves problems by breaking them into overlapping subproblems and storing the results to avoid redundant computation. It applies when a problem has optimal substructure and overlapping subproblems. Classic examples include the Fibonacci sequence, knapsack problem, and longest common subsequence.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Getting Started with Dynamic Programming in Data Structures and Algorithms](https://medium.com/@PythonicPioneer/getting-started-with-dynamic-programming-in-data-structures-and-algorithms-126c7a16775c)\r\n- [@video@What Is Dynamic Programming and How To Use It](https://www.youtube.com/watch?v=vYquumk4nWw&t=4s)\r\n- [@video@5 Simple Steps for Solving Dynamic Programming Problems](https://www.youtube.com/watch?v=aPQY__2H3tE)"
+}

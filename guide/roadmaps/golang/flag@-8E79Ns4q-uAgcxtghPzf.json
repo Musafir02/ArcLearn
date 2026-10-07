@@ -1,0 +1,4 @@
+{
+  "title": "flag",
+  "content": "Standard library package for parsing command-line flags. Supports string, int, bool, duration flags with default values and descriptions. Automatically generates help text. Simple API for basic CLI argument parsing before using frameworks like Cobra.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Flag](https://go-language.org/go-docs/flag/)\r\n- [@article@How To Use the Flag Package](https://www.digitalocean.com/community/tutorials/how-to-use-the-flag-package-in-go)\r\n- [@article@Advanced Golang Flag Techniques](https://www.golinuxcloud.com/golang-flags-examples/)"
+}

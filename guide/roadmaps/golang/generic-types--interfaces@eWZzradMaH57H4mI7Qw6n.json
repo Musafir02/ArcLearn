@@ -1,0 +1,4 @@
+{
+  "title": "Generic Types / Interfaces",
+  "content": "Create reusable data structures and interface definitions working with multiple types. Define with type parameters like `type Container[T any] struct { value T }`. Enable type-safe containers, generic slices, maps, and custom structures while maintaining Go's strong typing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Generic Functions](https://go.dev/doc/tutorial/generics)\r\n- [@article@Interfaces](https://golangdocs.com/interfaces-in-golang)\r\n- [@article@Understanding the Power of Go Interfaces](https://medium.com/@jamal.kaksouri/understanding-the-power-of-go-interfaces-a-comprehensive-guide-835954101b7e)"
+}

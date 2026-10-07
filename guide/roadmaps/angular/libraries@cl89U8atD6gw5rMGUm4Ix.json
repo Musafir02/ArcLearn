@@ -1,0 +1,4 @@
+{
+  "title": "Library",
+  "content": "Use the Angular CLI and the npm package manager to build and publish your library as an npm package.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Libraries](https://angular.dev/tools/libraries/creating-libraries)\r\n- [@official@Angular CLI](https://angular.dev/tools/cli)"
+}

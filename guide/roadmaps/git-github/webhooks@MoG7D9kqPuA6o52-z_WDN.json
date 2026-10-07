@@ -1,0 +1,4 @@
+{
+  "title": "Webhooks",
+  "content": "GitHub Webhooks allow developers to receive real-time notifications about events happening within their repository, such as commits, pull requests, and issues. These webhooks enable users to automate tasks, integrate with other services, and build custom workflows.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@About webhooks](https://docs.github.com/en/webhooks/about-webhooks)\r\n- [@official@Webhooks documentation](https://docs.github.com/en/webhooks)\r\n- [@video@How to use GitHub Webhooks with Discord](https://www.youtube.com/watch?v=-gyEHj0CVx0&)"
+}

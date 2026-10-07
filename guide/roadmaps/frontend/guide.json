@@ -1,0 +1,582 @@
+{
+  "title": "Frontend Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-assisted-coding@ipcNHz8KbfpE57kNP15hP",
+            "ai-vs-traditional-coding@IZKl6PxbvgNkryAkdy3-p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Auth",
+      "name": "auth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "auth-strategies@U5mD5FmVx7VWeKxDpQxB5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Browsers",
+      "name": "browsers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "browsers-and-how-they-work@P82WFaTPgQEPNp5IIuZ1Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cache",
+      "name": "cache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cache-control@tWDmeXItfQDxB8Jij_V4L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude-code@RcC1fVuePQZ59AsJfeTdR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-reviews@0TMdly8yiqnNR8sx36iqc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Css",
+      "name": "css",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "css-frameworks@XDTD8el6OwuQ55wC-X4iV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-elements@VxiQPgcYDFAT6WgSRWpIA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-systems@ap4h4v5Sr4jBH3GwWSH8x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Desktop",
+      "name": "desktop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "desktop-apps@KMA7NkxFbPoUDtFnGBFnj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Devtools",
+      "name": "devtools",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "devtools-usage@JWU9jc12_ewaIKt3qWLcp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dns",
+      "name": "dns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dns-and-how-it-works@hkxw9jPGYphmjhTjw8766"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Docs",
+      "name": "docs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "docs-generation@q7NpwqQXUp4wt2to-yFiP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@e-k6EhoxYG9h0x6vWOrDh",
+            "agents@e4j6u0e_WqK1vfrUwJJ4M",
+            "angular@-bHFIiXnoUQSov64WI9yo",
+            "angular@k6rp6Ua9qUEW_DA_fOg5u",
+            "anthropic@Lw2nR7x8PYgq1P5CxPAxi",
+            "antigravity@E7-LveK7jO2npxVTLUDfw",
+            "apollo@5eUbDdOTOfaOhUlZAmmXW",
+            "applications@Nx7mjvYgqLpmJ0_iSx5of",
+            "astro@iUxXq7beg55y76dkwhM13",
+            "astro@wA2fSYsbBYU02VJXAvUz8",
+            "biome@UvCVChB6NZ_yUg0RdIJ2o",
+            "bun@j2H1qGosbveayviOCVkUs",
+            "cloudflare@_Uh-UFNe2wP2TV0x2lKY_",
+            "copilot@HQrxxDxKN8gizvXRU5psW",
+            "cors@AfH2zCbqzw0Nisg1yyISS",
+            "csp@rmcm0CZbtNVC9LZ14-H6h",
+            "css@ZhJhf1M2OphYbEmduFq-9",
+            "cursor@CKlkVK_7GZ7xzIUHJqZr8",
+            "cypress@DaynCz5RR26gjT6N6gTDL",
+            "deployment@A1ZUy16cVRYqmHxoCtUb0",
+            "electron@mQHpSyMR4Rra4mqAslgiS",
+            "eleventy@io0RHJWIcVxDhcYkV9d38",
+            "esbuild@4W7UXfdKIUsm1bUrjdTVT",
+            "eslint@NFjsI712_qP0IOmjuqXar",
+            "flutter@2MRvAK9G9RGM_auWytcKh",
+            "flutter@dIQXjFEUAJAGxxfAYceHU",
+            "gemini@Bic4PHhz-YqzPWRimJO83",
+            "git@R_I4SGYqLk5zze5I1zS_E",
+            "github@qmTVMJDsEhNIkiwE_UTYu",
+            "gitlab@zIoSJMX3cuzCgDYHjgbEh",
+            "graphql@L7AllJfKvClaam3y-u6DP",
+            "html@yWG2VUkaF5IJVVut6AiSy",
+            "https@uum7vOhOUR38vLuGZy8Oa",
+            "internet@VlNNwIEDWqQXtqkHWJYzC",
+            "ionic@Pxyk3nBlWbgmMjsA93E70",
+            "javascript@ODcfFEorkfJNupoQygM53",
+            "jest@g5itUjgRXd9vs9ujHezFl",
+            "lighthouse@dz7_QXoO7X0WmS5xuAhhJ",
+            "mcp@XFy2gj7DmXeaCoc6MZo_j",
+            "netlify@o8GstE5gxcGByh-D7lwqT",
+            "nextjs@V70884VcuXkfrfHyLGtUg",
+            "nextjs@zNFYAJaSq0YZXL5Rpx1NX",
+            "npm@ib_FHinhrw8VuSet-xMF7",
+            "nuxtjs@BBsXxkbbEG-gnbM1xXKrj",
+            "nuxtjs@XWJxV42Dpu2D3xDK10Pn3",
+            "openai@-ye5ZtYFDoYGpj-UJaBP8",
+            "parcel@NS-hwaWa5ebSmNNRoxFDp",
+            "performance@6d8cjWZ4BuUjwT0seiuzJ",
+            "playwright@jramLk8FGuaEH4YpHIyZT",
+            "pnpm@SLxA5qJFp_28TRzr1BjxZ",
+            "prettier@zbkpu_gvQ4mgCiZKzS1xv",
+            "pwas@PoM77O2OtxPELxfrW1wtl",
+            "railway@PJRsqg5Vx9gQTodxaeZfz",
+            "react@SGDf_rbfmFSHlxI-Czzlz",
+            "react@tG5v3O4lNIFc2uCnacPak",
+            "refactoring@EYT2rTLZ8tUW2u8DOnAWF",
+            "render@wfGz8pshGQARZ7qStGoSD",
+            "rolldown@hE-DbpBpYrfB8tmBEjTnG",
+            "rollup@sCjErk7rfWAUvhl8Kfm3n",
+            "skills@xL8d-uHMpJKwUvT8z-Jia",
+            "ssg@n0q32YhWEIAUwbGXexoqV",
+            "ssr@Cxspmb14_0i1tfw-ZLxEu",
+            "svelte@OL8I6nOZ8hGGWmtxg_Mv8",
+            "svelte@ZR-qZ2Lcbu3FtqaMd3wM4",
+            "sveltekit@P4st_telfCwKLSAU2WsQP",
+            "swc@h26uS3muFCabe6ekElZcI",
+            "tailwind@eghnfG4p7i-EDWfp3CQXC",
+            "tauri@GJctl0tVXe4B70s35RkLT",
+            "testing@igg4_hb3XE3vuvY8ufV-4",
+            "vercel@kPJ0jZo5AbOzvZgv0zwp0",
+            "vite@0Awx3zEI5_gYEIrD7IVX6",
+            "vitest@hVQ89f6G0LXEgHIOKHDYq",
+            "vuejs@3TE_iYvbklXK0be-5f2M7",
+            "vuejs@ERAdwL1G9M1bnx-fOm5ZA",
+            "vuepress@CMrss8E2W0eA6DVEqtPjT",
+            "yarn@yrq3nOwFREzl-9EKnpU-e"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-pages@vpzh9bNXCxgdDFQLsot2_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-does-the-internet-work@yCnn-NfSxIybUQ2iTuUGq",
+            "how-llms-work@yKNdBbahm_h81xdMDT-qx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Html",
+      "name": "html",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "html-templates@Hk8AVonOd693_y1sykPqd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implementing",
+      "name": "implementing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implementing-ai@MdYPIf_9ezbIp6Dm5Fyme"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-a-framework@eXezX7CVNyC1RuyU_I4yP",
+            "learn-the-basics@UTupdqjOyLh7-56_0SXJ8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linters",
+      "name": "linters",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linters--formatters@9VcGfDBBD8YcKatj4VcH1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-apps@VOGKiG2EZVfCBAaa7Df0W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Module",
+      "name": "module",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "module-bundlers@hkSc_1x09m7-7BO7WzlDT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Owasp",
+      "name": "owasp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "owasp-risks@JanR7I_lNnUCXhCMGLdn-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-managers@IqvS1V-98cxko3e9sBQgP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompting",
+      "name": "prompting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompting-techniques@Gv_g4gK6pZK6l_0xAn34X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-native@dsTegXTyupjS8iU6I7Xiv",
+            "react-router@KJRkrFZIihCUBrOf579EU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relay",
+      "name": "relay",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relay-modern@0moPO23ol33WsjVXSpTGf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Service",
+      "name": "service",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "service-workers@66ya3WdtlkjQyBTc3Lein"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shadow",
+      "name": "shadow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shadow-dom@-SpsNeOZBkQfDA-rwzgPg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Solid",
+      "name": "solid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "solid-js@DxOSKnqAjZOPP-dq_U7oP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streamed",
+      "name": "streamed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streamed-responses@FyNXhHq1VIASNq-LI7JIu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Svelte",
+      "name": "svelte",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "svelte-kit@P4st_telfCwKLSAU2WsQP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tanstack",
+      "name": "tanstack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tanstack-start@f9zlP6lGhfe6HBHVYiySu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-checkers@NQ95TJCe3E1IwEuBa__D6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vcs",
+      "name": "vcs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vcs-hosting@MXnFhZlNB1zTsBFDyni9H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control@NIY7c4TQEEHx0hATu-k5C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-apis@3HgiMfqihjWceSxd6ei8s",
+            "web-components@ruoFa3M4bUE3Dg6GXSiUI",
+            "web-security@RDWbG3Iui6IPgp0shvXtg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-domain-name@ZhSuu2VArnzPDp6dPQQSC",
+            "what-is-hosting@aqMaEY8gkKMikiqleV5EP",
+            "what-is-http@R12sArWVpbIs_PHxBqVaR"
+          ]
+        }
+      ]
+    }
+  ]
+}

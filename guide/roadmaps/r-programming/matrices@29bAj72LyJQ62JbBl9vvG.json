@@ -1,0 +1,4 @@
+{
+  "title": "Matrices",
+  "content": "A matrix is a two-dimensional grid of values, all of the same type, arranged in rows and columns. Matrices support standard linear algebra operations like multiplication, transposition, and inversion, making them the natural structure for mathematical computation in R. Unlike a data frame, every cell in a matrix must share the same underlying data type.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@R Matrices](https://www.w3schools.com/r/r_matrices.asp)\r\n- [@article@Understanding Matrices in R Programming](https://www.r-bloggers.com/2023/11/understanding-matrices-in-r-programming/)\r\n- [@video@Matrices in R](https://www.youtube.com/watch?v=3fHRSAYgRKY)\r\n- [@video@How to Create Matrices and Perform matrix Operations in R](https://www.youtube.com/watch?v=SYYUBytX1ng)"
+}

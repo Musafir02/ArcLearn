@@ -1,0 +1,4 @@
+{
+  "title": "go build",
+  "content": "Compiles Go packages and dependencies into executable binaries. Supports cross-compilation for different OS/architectures via GOOS/GOARCH. Includes build constraints, custom flags, optimization levels. Produces statically linked binaries by default. Essential for deployment and distribution.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Compile and Install the Application](https://go.dev/doc/tutorial/compile-install)\r\n- [@article@How to Build and Run Go Programs](https://go-tutorial.com/build-and-run)\r\n- [@article@How To Build and Install Go Programs](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs)"
+}

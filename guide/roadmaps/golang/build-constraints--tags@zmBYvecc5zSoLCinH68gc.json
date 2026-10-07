@@ -1,0 +1,4 @@
+{
+  "title": "Build Constraints & Tags",
+  "content": "Special comments controlling which files are included when building. Use `//go:build` directive for platform-specific code, environment builds, or feature toggles. Common for different OS/architectures or debug vs production builds. Essential for portable Go applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Build Package](https://pkg.go.dev/go/build)\r\n- [@article@Advanced Go Build Techniques](https://dev.to/jacktt/go-build-in-advance-4o8n)\r\n- [@article@Customizing Go Binaries with Build Tags](https://www.digitalocean.com/community/tutorials/customizing-go-binaries-with-build-tags)"
+}

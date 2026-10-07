@@ -1,0 +1,4 @@
+{
+  "title": "Android Studio",
+  "content": "Android Studio is the official Integrated Development Environment (IDE) for Android app development, and it fully supports Kotlin. It provides tools for coding, debugging, testing, and designing user interfaces for Android applications. With features like code completion, refactoring, and a visual layout editor, Android Studio streamlines the process of building Kotlin-based Android apps.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Introduction to programming in Kotlin](https://developer.android.com/courses/pathways/android-basics-compose-unit-1-pathway-1)\r\n- [@official@Kotlin for Android](https://kotlinlang.org/docs/android-overview.html)\r\n- [@article@Develop Android apps with Kotlin](https://developer.android.com/kotlin)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Rust",
+  "content": "Rust is a systems programming language focused on memory safety and performance without a garbage collector. In game development, Rust is used for engine components, tools, and increasingly for full game projects through frameworks like Bevy. Its ownership model eliminates whole classes of bugs common in C++ codebases.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated Rust Roadmap](https://roadmap.sh/rust)\r\n- [@article@Building Games with Rust](https://rustmeup.com/building-games-with-rust)\r\n- [@video@Learn Rust](https://youtu.be/BpPEoZW5IiY?si=lyBbBPLXQ0HWdJNr)"
+}

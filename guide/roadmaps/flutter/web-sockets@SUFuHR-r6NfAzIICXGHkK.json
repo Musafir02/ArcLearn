@@ -1,0 +1,4 @@
+{
+  "title": "Web Sockets",
+  "content": "In addition to normal HTTP requests, you can connect to servers using WebSockets. Web sockets allows for bidirectional communication between a client (such as a web browser) and a server over a single, long-lived connection. They are a more efficient alternative to HTTP for providing real-time data, as they allow for the server to push data to the client as soon as it becomes available, rather than requiring the client to continuously poll the server for updates.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Work with WebSockets](https://docs.flutter.dev/cookbook/networking/web-sockets)\r\n- [@article@WebSocket vs HTTP: Which Protocol Should You Use?](https://roadmap.sh/network-engineer/websocket-vs-http)\r\n- [@article@What is WebSocket and How It Works?](https://www.wallarm.com/what/a-simple-explanation-of-what-a-websocket-is)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Go",
+  "content": "Go is an open source programming language supported by Google. Go can be used to write cloud services, CLI tools, used for API development, and much more.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated Go Roadmap](https://roadmap.sh/golang)\r\n- [@official@A Tour of Go – Go Basics](https://go.dev/tour/welcome/1)\r\n- [@official@Go Reference Documentation](https://go.dev/doc/)\r\n- [@article@Go by Example - annotated example programs](https://gobyexample.com/)"
+}

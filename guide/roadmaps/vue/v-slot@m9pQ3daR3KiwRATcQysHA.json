@@ -1,0 +1,4 @@
+{
+  "title": "v-slot",
+  "content": "The v-slot directive to define slots in components, allowing you to pass and render content dynamically inside a component. For named slots, you use v-slot with a specific slot name. This lets you pass different content to different parts of a component.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@v-slot documentation](https://vuejs.org/api/built-in-directives.html#v-slot)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Adapter",
+  "content": "Next.js can be adapted to run on different platforms to support their infrastructure capabilities, including AWS Amplify Hosting, Cloudflare, Deno Deploy, Netlify, and Vercel.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Deployment with Adapters](https://nextjs.org/docs/app/getting-started/deploying#adapters)"
+}

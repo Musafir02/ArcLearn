@@ -1,0 +1,657 @@
+{
+  "title": "Ai Red Teaming Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-techniques@soC-kcem1ISbnCQMa6BIB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Adversarial",
+      "name": "adversarial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adversarial-examples@xjlttOti-_laPRn8a2fVy",
+            "adversarial-training@2Y0ZO-etpv3XIvunDLu-W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agentic",
+      "name": "agentic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agentic-ai-security@FVsKivsJrIb82B0lpPmgw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-security-fundamentals@R9DQNc0AyAQ2HLpP4HOk6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-protection@Tszl26iNBnQBdBEWOueDA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Automated",
+      "name": "automated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "automated-vs-manual@LVdYN9hyCyNPYn2Lz1y9b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Benchmark",
+      "name": "benchmark",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "benchmark-datasets@et1Xrr8ez-fmB0mAq8W_a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Black",
+      "name": "black",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "black-box-testing@0bApnJTt-Z2IUf0X3OCYf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-injection@vhBu5x8INTtqvx6vcYAhE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Confidentiality",
+      "name": "confidentiality",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "confidentiality-integrity-availability@WZkIHZkV2qDYbYF9KBBRi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Continuous",
+      "name": "continuous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "continuous-monitoring@7Km0mFpHguHYPs5UhHTsM",
+            "continuous-testing@65Lo60JQS5YlvvQ6KevXt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ctf",
+      "name": "ctf",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ctf-challenges@2Imb64Px3ZQcBpSQjdc_G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-testing-scripts@C1zO2xC0AqyV53p2YEPWg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-poisoning@nD0_64ELEeJSN-0aZiR7i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Emerging",
+      "name": "emerging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "emerging-threats@-G8v_CNa8wO_g-46_RFQo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ethical",
+      "name": "ethical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ethical-considerations@1gyuEV519LjN-KpROoVwv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication@J7gjlt2MBx7lOkOnfGvPF",
+            "authorization@JQ3bR8odXJfd-1RCEf3-Q",
+            "conferences@LuKnmd9nSz9yLbTU_5Yp2",
+            "countermeasures@G1u_Kq4NeUsGX2qnUTuJU",
+            "direct@5zHow4KZVpfhch5Aabeft",
+            "forums@Smncq-n1OlnLAY27AFQOO",
+            "indirect@3_gJRtJSdm2iAfkwmcv0e",
+            "introduction@HFJIYcI16OMyM77fAw9af"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generative",
+      "name": "generative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generative-models@3XJ-g0KvHP75U18mxCqgw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grey",
+      "name": "grey",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grey-box-testing@ZVNAMCP68XKRXVxF2-hBc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Industry",
+      "name": "industry",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "industry-credentials@HHjsFR6wRDqUd66PMDE_7",
+            "industry-standards@WePO66_4-gNcSdE00WKmw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Infrastructure",
+      "name": "infrastructure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "infrastructure-security@nhUKKWyBH80nyKfGT8ErC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Insecure",
+      "name": "insecure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "insecure-deserialization@aKzai0A8J55-OBXTnQih1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jailbreak",
+      "name": "jailbreak",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jailbreak-techniques@Ds8pqn4y9Npo7z6ubunvc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lab",
+      "name": "lab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lab-environments@MmwwRK4I9aRH_ha7duPqf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Large",
+      "name": "large",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "large-language-models@8K-wCn2cLc7Vs_V4sC3sE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-security-testing@xJYTRbPxMn0Xs5ea0Ygn6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-inversion@iE5PcswBHnu_EBFIacib0",
+            "model-vulnerabilities@uBXrri2bXVsNiM8fIHHOv",
+            "model-weight-stealing@QFzLx5nc4rCCD8WVc20mo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monitoring",
+      "name": "monitoring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monitoring-solutions@59lkLcoqV4gq7f8Zm0X2p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Neural",
+      "name": "neural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "neural-networks@RuKzVhd1nZphCrlW1wZGL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-engineering@gx4KaFqKgJX9n9_ZGMqlZ",
+            "prompt-hacking@1Xr7mxVekeAHzTL7G4eAZ",
+            "prompt-injection@XOrAPDRhBvde9R-znEipH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Red",
+      "name": "red",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "red-team-simulations@DpYsL0du37n40toH33fIr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reinforcement",
+      "name": "reinforcement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reinforcement-learning@Xqzc4mOKsVzwaUxLGjHya"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remote",
+      "name": "remote",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remote-code-execution@kgDsDlBk8W2aM6LyWpFY8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reporting",
+      "name": "reporting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reporting-tools@BLnfNlA0C4yzy1dvifjwx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Research",
+      "name": "research",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "research-groups@ZlR03pM-sqVFZNhD1gMSJ",
+            "research-opportunities@VmaIHVsCpq2um_0cA33V3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Responsible",
+      "name": "responsible",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "responsible-disclosure@KAcCZ3zcv25R6HwzAsfUG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Risk",
+      "name": "risk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "risk-management@MupRvk_8Io2Hn7yEvU663"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Robust",
+      "name": "robust",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "robust-model-design@6gEHMhh6BGJI-ZYN27YPW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-of-red-teams@Irkc9DgBfqSn72WaJqXEt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Safety",
+      "name": "safety",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "safety-filter-bypasses@j7uLLpt8MkZ1rqM7UBPW4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Specialized",
+      "name": "specialized",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "specialized-courses@s1xKK8HL5-QGZpcutiuvj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Supervised",
+      "name": "supervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "supervised-learning@NvOJIv36Utpm7_kOZyr79"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing-platforms@c8n8FcYKDOgPLQvV9xF5J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Threat",
+      "name": "threat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "threat-modeling@RDOaTBWP3aIJPUp_kcafm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unauthorized",
+      "name": "unauthorized",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unauthorized-access@DQeOavZCoXpF3k_qRDABs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unsupervised",
+      "name": "unsupervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unsupervised-learning@ZC0yKsu-CJC-LZKKo2pLD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vulnerability",
+      "name": "vulnerability",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vulnerability-assessment@887lc3tWCRH-sOHSxWgWJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "White",
+      "name": "white",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "white-box-testing@Mrk_js5UVn4dRDw-Yco3Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-red-team-ai-systems@fNTb9y3zs1HPYclAmu_Wv"
+          ]
+        }
+      ]
+    }
+  ]
+}

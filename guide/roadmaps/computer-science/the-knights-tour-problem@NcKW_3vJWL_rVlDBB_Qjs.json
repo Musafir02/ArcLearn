@@ -1,0 +1,4 @@
+{
+  "title": "Knight's Tour Problem",
+  "content": "Knight's Tour Problem is a problem where we have to find a path for a knight to visit all the cells of a chessboard without visiting any cell twice.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Knights Tour](https://bradfieldcs.com/algos/graphs/knights-tour/)\r\n- [@article@Knights Tour Problem](https://www.codesdope.com/course/algorithms-knights-tour-problem/)\r\n- [@article@Backtracking: The Knight’s Tour Problem](https://www.codingninjas.com/codestudio/library/backtracking-the-knights-tour-problem)"
+}

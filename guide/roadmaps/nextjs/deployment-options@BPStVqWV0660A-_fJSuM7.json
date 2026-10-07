@@ -1,0 +1,4 @@
+{
+  "title": "Deployment Options",
+  "content": "Next.js can be deployed in multiple ways, including as a :\r\n\r\n*   Node.js server,\r\n*   Docker container,\r\n*   static export,\r\n*   adapted to run on different platforms.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Deploying in Next.js](https://nextjs.org/docs/app/getting-started/deploying)"
+}

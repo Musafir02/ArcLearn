@@ -1,0 +1,4 @@
+{
+  "title": "ElastiCache",
+  "content": "ElastiCache is a managed in-memory caching service that supports Redis and Memcached. It is used to reduce database load and improve response times by storing frequently accessed data in memory. ElastiCache handles provisioning, patching, and failure detection.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/WhatIs.html)"
+}

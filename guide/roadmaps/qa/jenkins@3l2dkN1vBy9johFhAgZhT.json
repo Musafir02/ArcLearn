@@ -1,0 +1,4 @@
+{
+  "title": "Jenkins",
+  "content": "Jenkins is an open-source CI/CD automation server. Jenkins is primarily used for building projects, running tests, static code analysis and deployments.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Jenkins](https://www.jenkins.io/)\r\n- [@official@Official Jenkins Handbook](https://www.jenkins.io/doc/book/)\r\n- [@official@Jenkins Getting Started Guide](https://www.jenkins.io/doc/pipeline/tour/getting-started/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "dApp Architecture",
+  "content": "Traditional web applications typically rely on a centralized server to handle data storage, logic, and user authentication. In contrast, decentralized applications (dApps) shift these responsibilities to a decentralized network, often a blockchain. Instead of a single server, dApps use smart contracts deployed on the blockchain to manage data and logic. The frontend of a dApp, which users interact with, can still be hosted on traditional servers or decentralized storage solutions, but the core functionality is executed and verified on the blockchain, making it more transparent and resistant to censorship.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application)\r\n- [@video@Blockchain Development: Dapp Architecture](https://youtu.be/KBSq8-LnUDI?t=286)"
+}

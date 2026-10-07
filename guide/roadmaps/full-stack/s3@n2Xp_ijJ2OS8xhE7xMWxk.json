@@ -1,0 +1,4 @@
+{
+  "title": "S3",
+  "content": "S3 is a service that allows you to store files in the cloud. It's a simple service that you can use to store files and serve them to your users.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Amazon AWS S3](https://aws.amazon.com/s3/)\r\n- [@video@Upload Images to S3 from Node Back End](https://www.youtube.com/watch?v=NZElg91l_ms)\r\n- [@video@S3 Bucket Hosting a Static Website](https://www.youtube.com/watch?v=RoY3ekCCxKc&list=PL0X6fGhFFNTcU-_MCPe9dkH6sqmgfhy_M)"
+}

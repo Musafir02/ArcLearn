@@ -1,0 +1,4 @@
+{
+  "title": "Message Broker",
+  "content": "Redis can act as a lightweight message broker using its Pub/Sub system or Streams. Producers publish messages to channels or streams, and consumers receive them either in real time or by reading from a persistent log. This makes Redis useful for decoupling services in event-driven architectures.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@PUBLISH Command](https://redis.io/docs/latest/commands/publish/)\r\n- [@official@SUBSCRIBE Command](https://redis.io/docs/latest/commands/subscribe/)\r\n- [@article@Redis As a Message Broker](https://medium.com/shoutloudz/redis-as-a-message-broker-d1a1aeac23c3)"
+}

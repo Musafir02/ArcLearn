@@ -1,0 +1,4 @@
+{
+  "title": "Besu",
+  "content": "Besu is an open-source Ethereum client designed for both public and private blockchain networks. It allows users to connect to and interact with Ethereum-based blockchains, executing smart contracts and participating in network consensus. Besu is written in Java and offers features suitable for enterprise use, including privacy, permissioning, and monitoring tools.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Besu Homepage](https://www.lfdecentralizedtrust.org/projects/besu)\r\n- [@opensource@Besu Ethereum Client](https://github.com/hyperledger/besu)\r\n- [@video@Hyperledger Besu](https://youtu.be/gF__bwiG66g)"
+}

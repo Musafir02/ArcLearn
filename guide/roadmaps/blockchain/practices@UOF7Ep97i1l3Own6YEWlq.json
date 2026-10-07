@@ -1,0 +1,4 @@
+{
+  "title": "Security Practices",
+  "content": "Security practices are the established methods, procedures, and guidelines implemented to protect systems, data, and assets from unauthorized access, use, disclosure, disruption, modification, or destruction. These practices encompass a wide range of measures, including access controls, encryption, vulnerability management, incident response, and security awareness training, all designed to minimize risks and maintain confidentiality, integrity, and availability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Cyfrin Updraft | Smart Contract Security](https://updraft.cyfrin.io/courses/security)\r\n- [@article@Ethereum Smart Contract Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)\r\n- [@video@Smart Contract Security and Auditing 101](https://youtu.be/0aJfCug1zTM)"
+}

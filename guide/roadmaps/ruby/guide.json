@@ -1,0 +1,525 @@
+{
+  "title": "Ruby Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Attributes",
+      "name": "attributes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attributes-accessors@I9dIFxsUrysgrcqUSBNsW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Begin",
+      "name": "begin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "begin-rescue-ensure@-2BSGoXGMMP50en_NnQ97"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chaining",
+      "name": "chaining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chaining-methods@CIV4Ph1B-kUcYv_EqVw2I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Concurrent",
+      "name": "concurrent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "concurrent-ruby@toevE0eM7c5f_zeSaVjdr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conditional",
+      "name": "conditional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conditional-statements@FIALdP3ZhOlzW-OIlJoT2",
+            "conditional-statements@jw218cE_PQDRnOTzCXpXr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Constants",
+      "name": "constants",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "constants--variables@FfM3pPbyP1VsvWousb3YK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-types@wsnjdnZZohQsVBfM1uN8H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Date",
+      "name": "date",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "date--time@RGo3VGXftLx877w0Cxhwb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Defining",
+      "name": "defining",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "defining-classes@lPPdaW7EEyUCxV41ljvPY",
+            "defining-methods@CkYLHSGH8dmfS5fK2JLfH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Everything",
+      "name": "everything",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "everything-is-an-object@vnDB786JPJGLIEbaQuXn2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-io@UQeCaogH4IJg4_Inxsjg1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arithmetic@I708SVAEVSpdHzwxoHhgD",
+            "arrays@2QHXNKV0tETI5FroFNylt",
+            "assignment@NpHLz4I9wwwXX-KBrjdgU",
+            "blocks@DzolktV1UUCdSWqmqWgV3",
+            "booleans@Ze02ApxTvyQqtB3VYv3d4",
+            "break@0gjDinuRDgPV9iTm39ZnS",
+            "bundler@Y6yFuFfcdlcupQUFHV3cg",
+            "byebug@2y9U11vXpTXHwkIGogzaf",
+            "case@BiUeOOd9E7V4Gpmu3PWj7",
+            "closures@yaC-XKRT0dWDFmDqpCvUw",
+            "comments@PqSnJOOQm3lRoBUs9Fan6",
+            "comparison@HiDx1OWbSDJJb7APHwG34",
+            "concurrency@oM4ezZoguNFOALXH3Sl6E",
+            "debug@JSauSDvDotwrWZiyLuWks",
+            "define_method@iwLZktEcLmnahj4o-IgWB",
+            "dowhile@OwRukUn8ypko_hPUHkxv_",
+            "each@iJ7e3-VJV6l-Qe-b5yAgC",
+            "enumerable@7lMZv3oRfC1UWAOfRvvwC",
+            "enumerable@jw218cE_PQDRnOTzCXpXr",
+            "fetching@PQX6c9h1O_p-ExDvC88zl",
+            "fibers@ZSBRUhjgQNJNbCuLYEiJJ",
+            "fibers@_ruCDzzaSuoE_8tRacTeK",
+            "floats@aLIXcqB258WNrdASuN_7G",
+            "for@VlhY73X3c0PnA1uYjbfZH",
+            "hashes@mpsx0lr9ljlMEzuU5cZD6",
+            "inheritance@7HSJh15ice_CG3FtfQ5x6",
+            "installers@zY4gsqXOOT3yp9ad9-T5a",
+            "integers@_-bUq5jtewDmsmnzYw1-q",
+            "introduction@A_ftl-42mIGBk-9S5LgCv",
+            "irb@_TyiwnXJ7kQI8Z02ooAIy",
+            "iterating@frFY2AeO2BQF6I0CmTLkV",
+            "lambdas@Tb5DcDuAZNyuIPepJ_yy4",
+            "logical@vLgIRI5GD9ANBjYJoZmid",
+            "managers@RnKFjcscp8nqwesQ06YWU",
+            "metaprogramming@ufLdyKM3iya8zuMD1_sIj",
+            "method_missing@pBbtuN36wqgXz4Oua0ukX",
+            "minitest@C7Dy0rqAo-HotIVlCBa1G",
+            "mutex@toevE0eM7c5f_zeSaVjdr",
+            "next@ueQ4bgcEXEgEDGhfVPjH8",
+            "nil@WMa8k6sbhow-TXNibFj0a",
+            "operators@5ThpsSMnFZUxWV1Y2Z75A",
+            "procs@DD3TQAEl2JD0TIPDNZXXl",
+            "pry@Voz_H9SBIeOndzl3gmuS7",
+            "querying@ZQuUDWqbNUxOYc-Fkk2pI",
+            "rack@qvg65UaeythwvO38wn8Gc",
+            "ractors@H4Cz_4xcMJmU0UwvEhNIn",
+            "ranges@OHq_172eTWaVlxES7Ccfc",
+            "rbenv@VaRe4VrB7hjGp2UUFxtGf",
+            "rdoc@QFkREObmZZebsCwXM3ML0",
+            "recursion@yqsXD8ugaAHPnLJsd5XDQ",
+            "redo@gUa4S-_xZhClyiit_MSkQ",
+            "refinements@aNf0-Yhwl98L_oNfipvj3",
+            "regex@B5T4d3FYTvydh4DOcTFFR",
+            "rspec@E6k00oTuohQOBkPNyuKAA",
+            "rubocop@gHn3q_539Ia31Kviem8lK",
+            "rubygems@iwXBPrnuwPvNRbOIDxWvq",
+            "rubymine@WQQuaLnCCzy48uDPJ-sDb",
+            "rvm@0c_0zyh1LQA80gmriWOT3",
+            "scope@SB_IzxfilaHBVL1fe5aYG",
+            "send@5uayAWgKAYW_mJiMxuXmK",
+            "sinatra@XI-1114QVFgALBF9VAb99",
+            "sorting@knmTmlDbyRwZKxuIIVbwn",
+            "standard@Wf6AYAz8gTpaj6ZfOxoZM",
+            "strings@F-0Rxwu_RcNF_NOoFHoo7",
+            "symbols@U-V-MNSnIL17Imug_iFvE",
+            "testunit@Tzf1uJDIeIjPAVleVe_yx",
+            "threads@H4Cz_4xcMJmU0UwvEhNIn",
+            "threads@xJ_F95dKmaRKE42yQ2R-r",
+            "times@1NIxWfLiaXKNZJSmrudPv",
+            "unless@MrPUYjPaz2F7c77GoPmue",
+            "until@OVPm4SgT7wvapUNWKQOdH",
+            "while@xO2RCVIxZprDgEW4-O9n9",
+            "yard@EDfqLvVxq-PIqb1eGYL20"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-exceptions@aZYZcRlB1Azm4N_jox0Ow"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "If",
+      "name": "if",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "if-elsif-else@cVSN9992bpxZwZ9JC1HHg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-ruby@Av5hlCtE-ZoeKpS0k3kLA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Instance",
+      "name": "instance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "instance-variables@dbdllih50mNFBrP9huQz9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interactive",
+      "name": "interactive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interactive-ruby-irb@uvPvcmhaO6WbkE9Xs5hsJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Loops",
+      "name": "loops",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "loops--enumerations@dRfPXHrI5CHCELySKLZuQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Method",
+      "name": "method",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "method-lookup@ihUJHaZ1gu3Fb7MiybXCj",
+            "method-parameters@m4QhKH7mVhxRqnJOF5Xc2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Modules",
+      "name": "modules",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "modules--mixins@8OF85n6CRQ3u3GFxlJlc8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Monkey",
+      "name": "monkey",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "monkey-patching@6mCtbDW5pkFQdLSjsr_Ad"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Naming",
+      "name": "naming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "naming-conventions@tRGKIfQG9IiPJGuO8DUX4",
+            "naming-conventions@wsnjdnZZohQsVBfM1uN8H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Package",
+      "name": "package",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "package-managers@cRQjwGKIG7CmbDOwj7dfU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Puts",
+      "name": "puts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "puts-print-p@DKA6AJR1kz6Ox90MmN5Tl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ruby",
+      "name": "ruby",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ruby-dsl@aU4XniRWyGKQxGnrxYKyE",
+            "ruby-on-rails@AE7YB3XH70HJWCf51i5YH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-ruby@cfT4N5gu00Gz1ST9c3o8-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-algorithms@EPNxjJqcP10c1__q1KKea"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Searching",
+      "name": "searching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "searching--filtering@Zil-9cf_-g1H5VUF52bxo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-things-up@Av5hlCtE-ZoeKpS0k3kLA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Singleton",
+      "name": "singleton",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "singleton-classes@WNiD4Tllt2uDncEVPg8Pm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sorting",
+      "name": "sorting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sorting-algorithms@hD6uldPLaedTvUwAWKFYY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stacks",
+      "name": "stacks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stacks---queues@wcw4QurFUczUKnyBPpnr5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-casting@5ThpsSMnFZUxWV1Y2Z75A",
+            "type-casting@NjCor7ePiZapd4f6bMZlV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vs",
+      "name": "vs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vs-code@9_KhHCWRDTNl1nroot_Ri"
+          ]
+        }
+      ]
+    }
+  ]
+}

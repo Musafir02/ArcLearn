@@ -1,0 +1,4 @@
+{
+  "title": "openclaw channels list",
+  "content": "`openclaw channels list` displays all the communication channels currently connected to your Open Claw gateway, along with their status.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Common Commands](https://docs.openclaw.ai/cli/channels#add-/-remove-accounts)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Jenkins",
+  "content": "Jenkins is an open-source automation server widely used to build, test, and deploy software. It has a large ecosystem of plugins that integrate with virtually every tool in the development lifecycle, and supports both simple pipelines and complex distributed build configurations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Jenkins Website](https://www.jenkins.io/)\r\n- [@official@Jenkins Getting Started Guide](https://www.jenkins.io/doc/pipeline/tour/getting-started/)\r\n- [@article@Jenkins Tutorial](https://octopus.com/devops/jenkins/jenkins-tutorial/?utm_source=roadmap&utm_medium=link&utm_campaign=devops-ci-cd-gitlab-ci)\r\n- [@video@Learn Jenkins! Complete Jenkins Course - Zero to Hero](https://www.youtube.com/watch?v=6YZvp2GwT0A)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Replication Basics",
+  "content": "Redis replication allows one primary instance to replicate its data to one or more replica instances in real time. Replicas receive a stream of write commands from the primary and apply them to maintain an identical dataset. Replication is asynchronous by default and is the foundation for high availability setups.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Redis Replication](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/)"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Git Github Beginner Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-git-usage@PtU5Qwfzn3N1i3oRlCGoR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collaboration@bXfCUG3h1TIFPgD4WUDph"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-basics@HlUUGj3dOZ68t4gIjerXh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "More",
+      "name": "more",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "more-git@aZMVz6kc52vLGcZFD9Dgh",
+            "more-github@sti_TAgZvSpuFWtygAsKc"
+          ]
+        }
+      ]
+    }
+  ]
+}

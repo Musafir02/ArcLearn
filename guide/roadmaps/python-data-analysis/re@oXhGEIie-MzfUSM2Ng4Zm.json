@@ -1,0 +1,4 @@
+{
+  "title": "re",
+  "content": "The `re` module provides regular expression support for pattern matching and text manipulation. It is used for extracting structured data from unstructured text, validating formats, and performing complex find-and-replace operations. Key functions include `re.match()`, `re.search()`, `re.findall()`, and `re.sub()`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@re — Regular expression operations](https://docs.python.org/3/library/re.html)\r\n- [@official@Regular expression HOWTO](https://docs.python.org/3/howto/regex.html)\r\n- [@article@Python RegEx](https://www.w3schools.com/python/python_regex.asp)\r\n- [@video@Python Tutorial: re Module - How to Write and Match Regular Expressions (Regex)](https://www.youtube.com/watch?v=K8L6KVGG-7o)"
+}

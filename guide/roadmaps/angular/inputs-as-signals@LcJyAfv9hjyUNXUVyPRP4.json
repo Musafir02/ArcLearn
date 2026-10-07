@@ -1,0 +1,4 @@
+{
+  "title": "Inputs as Signals",
+  "content": "Signal inputs allow values to be bound from parent components. Those values are exposed using a Signal and can change during the lifecycle of your component. Angular supports two variants of inputs: `Optional` and `Required`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Inputs as Signals](https://angular.dev/guide/signals/inputs)\r\n- [@article@Angular Signal Inputs: Complete Guide to input()](https://blog.angular-university.io/angular-signal-inputs/)\r\n- [@video@Angular's New Signal Inputs](https://www.youtube.com/watch?v=yjCeaiWXC0U)"
+}

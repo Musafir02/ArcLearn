@@ -1,0 +1,4 @@
+{
+  "title": "Dependency Injection",
+  "content": "Dependency Injection is one of the fundamental concepts in Angular. DI is wired into the Angular framework and allows classes with Angular decorators, such as Components, Directives, Pipes, and Injectables, to configure dependencies that they need.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Understanding Dependency Injection](https://angular.dev/guide/di/dependency-injection)\r\n- [@official@DI in Action](https://angular.dev/guide/di/di-in-action)"
+}

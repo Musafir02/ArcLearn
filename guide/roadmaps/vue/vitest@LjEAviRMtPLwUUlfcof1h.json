@@ -1,0 +1,4 @@
+{
+  "title": "Vitest",
+  "content": "Vitest is a fast Vite-native unit test framework with out-of-box ESM and TypeScript support. It Works on React, Vue, Svelte and more projects created with Vite.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Vitest Website](https://vitest.dev/)\r\n- [@video@Testing with Vitest](https://www.youtube.com/watch?v=cM_AeQHzlGg)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Spring Boot Starters",
+  "content": "Spring Boot starters are a set of convenient dependency descriptors that you can include in your application. They provide a variety of functionality, such as security, data access, and web services, and help to minimize the amount of boilerplate code and configuration you need to write.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Intro to Spring Boot Starters](https://www.baeldung.com/spring-boot-starters)"
+}

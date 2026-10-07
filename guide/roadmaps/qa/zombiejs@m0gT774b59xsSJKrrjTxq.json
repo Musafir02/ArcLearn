@@ -1,0 +1,4 @@
+{
+  "title": "Zombie.js",
+  "content": "Zombie.js allows you to run Unit or Integration tests without a real web browser. Instead, it uses a simulated browser where it stores the HTML code and runs the JavaScript you may have in your HTML page. This means that an HTML page doesn’t need to be displayed, saving precious time that would otherwise be occupied rendering it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Zombie.js](http://zombie.js.org/)\r\n- [@article@Getting Started with Zombie.js](https://www.packt.com/getting-started-zombiejs/)"
+}

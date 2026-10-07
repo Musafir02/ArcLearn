@@ -1,0 +1,4 @@
+{
+  "title": "Questions to Ask",
+  "content": "- API as small as possible, as large as needed?\r\n- Is there one way of doing one thing, not multiple ones?\r\n- Is it consistent, does it follow the principle of least surprise?\r\n- Clean split of API/internals without internals leaking into the API?\r\n- Are there no breaking changes to user-facing parts (API classes, configuration, metrics, log formats, etc)?\r\n- Is a new API generally useful and not overly specific to a single use case?\r\n\r\nLearn more from the following resources:\r\n\r\n- [@article@API Design Best Practices Guide - Fern](https://buildwithfern.com/post/api-design-best-practices-guide)\r\n- [@article@RESTful API Resource Naming](https://restfulapi.net/resource-naming/)\r\n- [@article@Web API Design Best Practices - Microsoft Azure](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design)"
+}

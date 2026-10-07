@@ -1,0 +1,4 @@
+{
+  "title": "Custom Elements",
+  "content": "Custom Elements enable creating your own HTML tags as part of Web Components. Build reusable webpage components with custom behavior instead of nested standard HTML. Keeps HTML cleaner and components more manageable with encapsulated functionality.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Using Custom Elements - MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)\r\n- [@video@Web Components | Custom Elements](https://www.youtube.com/watch?v=1GT35DSdZbI)"
+}

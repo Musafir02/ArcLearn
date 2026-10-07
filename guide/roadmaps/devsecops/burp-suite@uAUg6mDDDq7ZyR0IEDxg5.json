@@ -1,0 +1,4 @@
+{
+  "title": "Burp Suite",
+  "content": "Burp Suite is a platform used for performing security testing of web applications. It acts as a proxy, intercepting and analyzing traffic between a browser and a web server. This allows security professionals to identify vulnerabilities such as SQL injection, cross-site scripting (XSS), and other common web application flaws.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Burp](https://portswigger.net/burp)\r\n- [@official@Getting started with Burp Suite](https://portswigger.net/burp/documentation/desktop/getting-started)\r\n- [@article@What is Burp Suite?](https://www.scaler.com/topics/cyber-security/burp-suite/)\r\n- [@video@How to use Burp Suite for Beginners](https://www.youtube.com/watch?v=GxvFqgCBW-8)\r\n- [@video@Master Burp Suite Like A Pro In Just 1 Hour](https://www.youtube.com/watch?v=QiNLNDSLuJY)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Python",
+  "content": "Python is a well known programming language which is both a strongly typed and a dynamically typed language. Being an interpreted language, code is executed as soon as it is written and the Python syntax allows for writing code in functional, procedural or object-oriented programmatic ways.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated Python Roadmap](https://roadmap.sh/python)\r\n- [@official@Getting Started with Python](https://www.python.org/about/gettingstarted/)\r\n- [@article@Python Crash Course](https://ehmatthes.github.io/pcc/)\r\n- [@article@Getting Started with Python and InfluxDB](https://thenewstack.io/getting-started-with-python-and-influxdb/)"
+}

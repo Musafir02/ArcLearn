@@ -1,0 +1,4 @@
+{
+  "title": "Git",
+  "content": "Git is a distributed version control system **(VCS)** used to track changes in source code during software development. It allows multiple developers to collaborate on a project by managing different versions of the code, enabling them to work on separate branches, merge changes, and keep a complete history of modifications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated Git & GitHub Roadmap](https://roadmap.sh/git-github)\r\n- [@course@Why use Git? (Interactive Lesson)](https://inter-git.com/lessons/introduction)\r\n- [@article@Git by Example - Learn Version Control with Bite-sized Lessons](https://antonz.org/git-by-example/)\r\n- [@video@Git & GitHub Crash Course For Beginners](https://www.youtube.com/watch?v=vA5TTz6BXhY)"
+}

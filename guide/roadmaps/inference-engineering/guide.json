@@ -1,0 +1,1238 @@
+{
+  "title": "Inference Engineering Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ai",
+      "name": "ai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ai-native-applications@ZqFQmNizkU6ykTMCrmTWf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Arithmetic",
+      "name": "arithmetic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "arithmetic-intensity@bPO6uwod30-ewwbo8i1eU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asynchronous",
+      "name": "asynchronous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asynchronous-inference@59mMKSva9vkoMxHErNXOd",
+            "asynchronous-inference@LAD5cttwzdbMuWIv3XjG1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attention",
+      "name": "attention",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attention-mechanism@2KY3T5JVHQBR8pmAiuq0V",
+            "attention-optimization@KWM3V7_15_Aur0He9j2Va",
+            "attention-variants@6oTnNEsX_6Cu6lowEz9vg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Auto",
+      "name": "auto",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "auto-speech-recognition@6PRICRK6aRQCoThxnevB0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Benchmarking",
+      "name": "benchmarking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "benchmarking--profiling@TxK7B_FF38ms3eKPGug2w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bert",
+      "name": "bert",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bert-style-models@ef3EneMibOaDQkKcpipGY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bottleneck",
+      "name": "bottleneck",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bottleneck-analysis@Gtd4g4MtB9zFfahRpbE2K"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cache",
+      "name": "cache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cache-aware-routing@3DR0Qvqu2qUTi9niU_63n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-approaches@2nGv7_8PTWYr7uqbudCcX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Capacity",
+      "name": "capacity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "capacity-management@xrr5Y1sbN2eyQyuA5LlAW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-integration@3RkQpvRGWh1Hp_qHlTiXX",
+            "client-latency-overhead@gOWGIllIIxhic1NNRfugq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cold",
+      "name": "cold",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cold-starts@Q3zM9MN5lmHRAUWjdLdXR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Consumer",
+      "name": "consumer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "consumer-vs-b2b@SFMvVdgTZv_POWFGWWM_s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Continuous",
+      "name": "continuous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "continuous-batching@h_PDOMA-V-n7Pab3epuP3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cost",
+      "name": "cost",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cost-estimation@Gof4kW2LbkNCtH68c7Xvq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-management@wEaM8VyAo6MFsc3RXQ7Ar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Desktop",
+      "name": "desktop",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "desktop-inference@fQDl7_3nRGa8NFivOIgTP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Diffusion",
+      "name": "diffusion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "diffusion-models@aagMwPPmi6ngfkIqZL-Mg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Draft",
+      "name": "draft",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "draft-target-decoding@m0EIHovHWGkWULN0a3C3v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embedding",
+      "name": "embedding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embedding-model-inference@GmCkfSeVDJ8T8WLZ7DoOp",
+            "embedding-models@Tvt-vX1gWuJZJBHh5vfKu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Encoder",
+      "name": "encoder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "encoder-decoder-arch@nORbxBOAtl9sNU4sIJgP3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "End",
+      "name": "end",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "end-to-end-metrics@tENGACXKSKVPmZy9a3D2z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Expert",
+      "name": "expert",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "expert-parallelism@62y78y-RXZT_QCUfd-YFE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Few",
+      "name": "few",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "few-step-image-generation@biVjpCA3bsKI7sa_aBIUE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fine",
+      "name": "fine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fine-tuning@fWJplrAuUStEMNNLQc75G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frameworks",
+      "name": "frameworks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frameworks--libraries@D4uNOZgG0w-nFL3a89pDM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aiperf@zffK61pNUJDwkX7Ukql8y",
+            "autoscaling@o_gotSHKIPtV5SgGN3Vja",
+            "blackwell@LihLABERuKBw30G_j48Fj",
+            "caching@PzEj5yq1lDQ324RWYpDdQ",
+            "compute@o_tknzA4tqcpbU6t5HO-T",
+            "containerization@--ohScNmF5LR04P8e95AP",
+            "cuda@DwJJLFLPHGn9zdccTlLY2",
+            "disaggregation@f6PWIqf4LubR7lQztaoB5",
+            "distillation@IdNkeL9pzy4lFv17ak1Vy",
+            "eagle@0FZTg3_ZnTpMOQ078OOxE",
+            "flashattention@mQcj-H3R789o6nDh8tG9k",
+            "hopper@XQMbaW1tFdO8Os6mxcR2M",
+            "introduction@GL-9aJKTJT9s4maeT37Uf",
+            "locust@IQuJFfMP1dW0ELlip6LOd",
+            "memory@5829d5dvXq9qlMSD1CG0N",
+            "modelopt@zhiKpdZm8zOg4e3bm1OgN",
+            "nims@KB7ExU9X49omOuk9D_Qal",
+            "nvidia@Uq3mE-0WIASHfcBDEnbLj",
+            "observability@w-dVv5dFNxD7Rqy16m4uL",
+            "pagedattention@VcIRY4vSi7JkcV6g13vkN",
+            "pytorch@AHVfxQRXmRoiTxC1eeMme",
+            "quantization@DaSqcLHfnJ4_n9utVVTSk",
+            "safetensors@jkbrf0_JDljWmVq_o9XE-",
+            "sglang@YtlAf6qloKMmaSr9Bkkl_",
+            "speech@Lk8906Mpi3yxiSt8EC_BC",
+            "tensorrt@M4qjJSEAnsjrmP3A_O8HC",
+            "vllm@wcAtbab81IJdpFh6L-heP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Geo",
+      "name": "geo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "geo-aware-load-balancing@mzF2mHSj8cvr9mvr16R0N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gpu",
+      "name": "gpu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gpu-architecture@00JLMvn8DUJBCw6-BxO0y",
+            "gpu-models@umz3jScWQViO9-lACUU4f",
+            "gpu-procurement@4mbGBgTu8AtrFHVYiffkB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Grace",
+      "name": "grace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "grace--vera@kPT86kA0WwE_fWUAAKCTT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image--video-bottlenecks@0lRP9cmoS-_wxQSsIcRQg",
+            "image--video-generation@U0l_xCUiizbJfjfrlBaJ0",
+            "image--video-models@Mebx7HS-I-eNP5i3f6Clf",
+            "image-generation-arch@xsV4WevPzhfydyvxVzGcw",
+            "image-generation-inference@lnIHjq4nvCs3zvUln-jHR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Indep",
+      "name": "indep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "indep-component-scaling@SKs0yuBEAyeTPQxLll3EM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inference",
+      "name": "inference",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inference-engines@01j1KkEB-nIXxP-rENcJ3",
+            "inference-vs-training@fVUfQYb8BP_hFMmd1S2-J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Instances",
+      "name": "instances",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "instances--interconnects@dAo4PMB_VnRFMSjyDrLj0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inter",
+      "name": "inter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inter-token-latency@sre_s0dvpOP0DTM66a3hu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kernel",
+      "name": "kernel",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kernel-selection--fusion@iKW1wqzd5EfRKvNIRshNN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kv",
+      "name": "kv",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kv-cache-storage@gkt2Gr34RJJf1NZgbmtXf",
+            "kv-cache@V678kX8FPChTZCe7Nqwhv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Large",
+      "name": "large",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "large-language-models@irgGvEnY1_WW1EPtuMKgC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Latency",
+      "name": "latency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "latency-percentiles@8y280d5BPXrDZwtsHZCaX",
+            "latency-vs-throughput@kvNIi3aY5rn69_hYkDyUK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-based-models@M7K6d-Qw4BpM724LfM1u6",
+            "llm-bottlenecks@QVadKzBfLdegat-4wgOMX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local--edge-inference@FilQGz3geyyvHZGyKPW3G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Long",
+      "name": "long",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "long-context-handling@uL3Fn8XfS1Yv_PJd9R8wi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lora",
+      "name": "lora",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lora-aware-routing@KdceJEDBdy3TbzG5suE38"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Measuring",
+      "name": "measuring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "measuring-quality-impact@mK_4R8liXtl64iG7ONvgz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mixture",
+      "name": "mixture",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mixture-of-experts-moe@7BddTfOkWmlL4HAkFBXtq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-inference@kqzHHoiZ9y4tCS6MMlLHQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-evaluation@lVf5GoJF_PVTkTiQFTNVg",
+            "model-formats--runtimes@lTjWXB8YRwx11e8lxSgNm",
+            "model-parallelism@CiXsdHHL0e2DN4ICI5jeX",
+            "model-selection@jQAWZ1plw4_wPE1UvE_Ux"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-cloud@d78UiI_FZyLsU6O52btXg",
+            "multi-node-inference@FZx2xsqw_cmYLFS3GMAl-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "N",
+      "name": "n",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "n-gram@ZOclQMd7JASGXTRyctfW2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Neural",
+      "name": "neural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "neural-networks@p2S0W3EDn768jbqzc7CE7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nvidia",
+      "name": "nvidia",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nvidia-dynamo@ctdMz6rHa4Cwl1x19V_5k",
+            "nvidia-dynamo@KhTFecXEkHR4WX-_TYY3g",
+            "nvidia-genai-perf@zffK61pNUJDwkX7Ukql8y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Omni",
+      "name": "omni",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "omni-modal-models@plw2WiOoGxg64P-Kv-Xm7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Online",
+      "name": "online",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "online-vs-offline-inf@SkvPauxjmqok4TyNWSACL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Onnx",
+      "name": "onnx",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "onnx-runtime@Vmtbdre3SZzwq3FxOO-Bc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Open",
+      "name": "open",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "open-vs-closed-models@KAt5FzglOUtH7jLlzDn-I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opsbyte",
+      "name": "opsbyte",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opsbyte-ratio@uc2enkdtRqA5K7kbgrYJF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Other",
+      "name": "other",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "other-accelerators@am4Hh-14g6Awk0WcFmVN7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-benchmarking@XXfjlqd0CYHwBR5-Kdmmi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pipeline",
+      "name": "pipeline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pipeline-parallelism@9KLS3gWArBofLEULu3sQc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Post",
+      "name": "post",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "post-training-quantization@Zvvs8cB98IRee1okBILsS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prefill",
+      "name": "prefill",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prefill--decode-phases@hwKZmfYFiIu6plbiXtJRI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Profiling",
+      "name": "profiling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "profiling-performance@S2GZw9etrrvEJzV9V-1C_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Quantization",
+      "name": "quantization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "quantization-aware-training@QCXV4Utq0Ajs1krLM3fhg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Real",
+      "name": "real",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "real-time-factor@0-BRllrMiShLlytidGkST"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reasoning",
+      "name": "reasoning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reasoning-models@Y9YkcfblXHEvS-gdEWwaE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Request",
+      "name": "request",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "request-queueing@k-zXOGynI0B0yyT-n3raa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roofline",
+      "name": "roofline",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roofline-model@XF-wMQCqPZiWv1XmryPBP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Routing",
+      "name": "routing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "routing--load-balancing@DSyTAtFC1TvC1P7yD10Nb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scale",
+      "name": "scale",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scale-to-zero@Pi87dWgu5NTIJRQUc169s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-and-compliance@4x-4BFZH7bfNteD5ZAwTI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sglang",
+      "name": "sglang",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sglang-genai-bench@KHDnY7byKgmaPtC_0uDBM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shared",
+      "name": "shared",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shared-vs-dedicated-inf@2DsjfW9r4dOI3LDQU80qt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sizing",
+      "name": "sizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sizing--procurement@da0HGfSDr6_DV4ZJcrcIB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Speculative",
+      "name": "speculative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "speculative-decoding@gMWgd10cxcQG_RG2oSAEH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Speech",
+      "name": "speech",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "speech-to-speech-models@moyS740HQoUUovilx1Yyt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streaming",
+      "name": "streaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streaming--protocol-support@SGQCvuHAkg4TcJa_e2f-y",
+            "streaming-tts@3VbPNaSnzWZ-pC-lGFMrh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tensor",
+      "name": "tensor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tensor-parallelism@csghcNLDywO8oTIZNXeyP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tensorrt",
+      "name": "tensorrt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tensorrt-llm@n2_zIGkQgyYCMYPypz3vb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Testing",
+      "name": "testing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "testing--deployment@ZlOtQtxJST10nuHjhbUx6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-to-speech-tts@XnhhN1QVWzlp9DUwkii9-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-inference-stack@uIhVVlMsykuxJCa02f-i-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Time",
+      "name": "time",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "time-to-first-token@xCgNhwbS_ELxEyRHD1enO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tokens",
+      "name": "tokens",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tokens-per-second@uxm_BIAyhfFmcE94k9i9J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transformer",
+      "name": "transformer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transformer-blocks@xHM7qjigMmXEwxeMEeMWl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transformers",
+      "name": "transformers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transformers--diffusers@H_e3KZ7p7enUCYE5M5Lr7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Video",
+      "name": "video",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "video-generation-inference@PqEH1ez5dg5tEsspgfAK1",
+            "video-generation-models@yTSrQfJsE-Mf4ZU_hJwYT",
+            "video-processing-for-vlms@7pRZu7xa2_43HVwKty9px"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vision",
+      "name": "vision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vision-language-models@JsjmQrN1V_dM1Kw6UnYLc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Voice",
+      "name": "voice",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "voice-activity-detection@P0BA_p3xqpxkQsFHqM0AZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-custom-kernels@1dWPVaSQ4TfVU3Obx3m19"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zero",
+      "name": "zero",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zero-downtime-deplo@le4sPQ0h9l-vlmCB4G8ZY"
+          ]
+        }
+      ]
+    }
+  ]
+}

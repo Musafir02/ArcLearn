@@ -1,0 +1,4 @@
+{
+  "title": "Scope and Visibility",
+  "content": "Scope and visibility define the accessibility of variables, methods, and classes within a codebase. Scope refers to the specific region of the program where a particular identifier is valid and can be referenced. Visibility, often managed through access modifiers like public, private, or protected, determines whether these members can be accessed from other parts of the application or restricted to specific classes and subclasses. Controlling these boundaries helps developers hide internal implementation details and prevent accidental modification of sensitive data."
+}

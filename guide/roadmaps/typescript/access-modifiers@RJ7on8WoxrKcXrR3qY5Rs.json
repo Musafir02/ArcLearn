@@ -1,0 +1,4 @@
+{
+  "title": "Access Modifiers",
+  "content": "Access modifiers in object-oriented programming control the visibility of class members (properties and methods). They determine which parts of your code, or even external code, can access and modify those members. Common access modifiers include `public`, `private`, and `protected`, each offering different levels of accessibility and encapsulation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@TypeScript Access Modifiers](https://www.typescripttutorial.net/typescript-tutorial/typescript-access-modifiers/)"
+}

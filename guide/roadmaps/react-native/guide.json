@@ -1,0 +1,544 @@
+{
+  "title": "React Native Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Apple",
+      "name": "apple",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apple-app-store@1s9Y1dUtjpW9pu74ipX99"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-problem-sources@afwB90L-q2hIwrA0LtWbG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connectivity",
+      "name": "connectivity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connectivity-status@k7uVPyhbPgvO6HxAfxxYZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-components@fnujIq6QAFB6bmTisuZ3T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Create",
+      "name": "create",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "create-expo-app@uLH9eo2G09wGO80XtFI5x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Css",
+      "name": "css",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "css-basics@SnF3xtzBh-x4Z_qUQUg7H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Development",
+      "name": "development",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "development-workflow@T4AhL9Zls2iNZMituGdtl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Enabling",
+      "name": "enabling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "enabling-fast-refresh@wWwaEdnvBsvj6jD9LJ4Jj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environment",
+      "name": "environment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environment-setup@lNmddXrT8IHVtWobh3-oq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Expo",
+      "name": "expo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "expo-file-system@9pvrXH5Drdsa1cr93UBdc",
+            "expo-secure-store@JgBfwmOgcVi_a96L5NGwr",
+            "expo-snack@9eOwhh2k59nvH-ztuDNjg",
+            "expo-sqlite@oK8z23a_CjcDjBJ843_Jn",
+            "expo-tradeoffs@zzOyoDcAQYkNNv07TIKeZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-extensions@LLANnVosxOUCPTtuBfNgu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "For",
+      "name": "for",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "for-android@wMxTB8WgU6e-oYMtQFCDY",
+            "for-ios@b-1-JcwLSGMyH3gXS59lY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accessibility@KoXTwQUqPt_ZhOFuaelny",
+            "activityindicator@hHFR59RrdMIWxcQe72qCs",
+            "animations@3NLcPO-hqQV1EacoPLVrv",
+            "appium@spTzJMS7cE0cNa7tVQhVQ",
+            "authentication@LRBHwYiT0Yyi18PwR49rc",
+            "button@kkH9H9Qh1FD7sLItoWw69",
+            "components@k9_hVOBd9ZmC4HLuAf46v",
+            "deeplinking@dckRzKDKj-mLB3-OxwjPh",
+            "detox@3m7ANLJvtx3zie4y86MNU",
+            "devtools@HHx3VSfV7xf6RqACrxjBf",
+            "expo@yW7nDDJbjmm8XKJI0hq3Q",
+            "fetch@f7KFPFS2-EA90pumYHM9T",
+            "flatlist@CYqLNGyOe9f9hVhbyUnTX",
+            "image@E7N8tSg2amZW-vc-X46JU",
+            "imagebackground@GFGhnx5xUer2DdRI-SO4D",
+            "interactions@GYdz9a1yLiewAeMRSyfLr",
+            "introduction@JfXwzkN29UGz17FYHHE3A",
+            "jest@06gsRokwjxVa2xyLY4qAb",
+            "jsx@s5YKenJY2Xv_PZBSxegEm",
+            "keyboardavoidingview@8bn1PFd9h0ek6_T-cl1cS",
+            "listings@x-OZCZcX6uhN3Yr5BAATn",
+            "listviews@h3ypxGxeHDCTxURHg6D2d",
+            "logbox@Tz-bRjQVkZedphelhAlWM",
+            "modal@V34mZCkpoT49o-74XoATS",
+            "networking@7GBV5sfOaGxHwpkNUvFWE",
+            "networking@ee4QqFTosXNcTgoQIok8i",
+            "performance@NIJzKzWlsciAjxUpm4K2v",
+            "permissions@sPITeu8bS7n04NdEiBibY",
+            "pressable@4BgVq-cZYEXgqktvlNnet",
+            "profiling@apXv-E6LvOuOMj3EpzwuA",
+            "props@0gH7vI_Hy7s9hO2TF6hR3",
+            "refreshcontrol@m8Nu71Y61Ha_fLxdtWTkn",
+            "safeareaview@UqCpoPzYio3ng3RFlbvZ7",
+            "scrollview@yN283SRWoALOEZh9iTn-L",
+            "sectionlist@gLJMD9X7chy8OxdALht8g",
+            "security@CGtVwhVGc8Vea5RfzJvQG",
+            "sourcemaps@Dq490IqEJXoFZRnBFJI8N",
+            "state@V7r1Hqk9IXTfjkjAg7-BT",
+            "statusbar@QOOZs9qtz49agfZwi6k1B",
+            "storage@NdjmP1bZNYriV08vb-iRw",
+            "storage@w0WW1kg_0BEMeLa1l2gb5",
+            "stylesheets@wB0D9koC6jpt1rzX8F07F",
+            "styling@ervpuL89myBW3oR9r-4lH",
+            "switch@ouNTekf4VpZv-Vja8_bfM",
+            "testing@G15Aey-Spax_iUHpm1v38",
+            "text@OFhyYyxtrCBy_UUb5YBv5",
+            "touchables@A7ZIe8nlQnHU5g3LM3Eif",
+            "view@GrFL32pZ_eOmdJRzSlH8b",
+            "websockets@aSCgax1M4wlmzkJSZV_fv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gesture",
+      "name": "gesture",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gesture-handling@xf7L5J42yQq3LE7lG2plp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-play-store@D8T9cZ5zKi_KZDr9tDpCf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "In",
+      "name": "in",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "in-app-developer-menu@tOt_vvmnBtOUbgokmVa5P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Javascript",
+      "name": "javascript",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "javascript-basics@1oUJXtHGQ29ZZU9sxwGo2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Layouts",
+      "name": "layouts",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "layouts--flexbox@e-r3tuRZ3PzhFegES0oOm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-pre-requisites@cSXsu17F1Oy34Wp6J-N3C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Metro",
+      "name": "metro",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "metro-bundler@VhSEH_RoWFt1z2lial7xZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Optimizing",
+      "name": "optimizing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "optimizing-flatlist-config@PyPjHnKIWpnFHal8RuSmX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Other",
+      "name": "other",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "other-storage-options@vZMsm-MtsqmQMD-MG6zJY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Platform",
+      "name": "platform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "platform-module@KZIrRSYq_I-YzpFaYLuWi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Publishing",
+      "name": "publishing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "publishing-apps@4U-HZQGH7kaWCB94Xy8Mh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Push",
+      "name": "push",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "push-notifications@CAQJaGs24wx1SqKOU44aB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ram",
+      "name": "ram",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ram-bundles--inline-requires@u5I-EOnA_yt6AQsRX-qr0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-native-alternatives@ODQ8zrHc2rsc8PN-APKvz",
+            "react-native-async-storage@WsJGiMjHSQ6MpPd5wuP9h",
+            "react-native-cli@bxWLf0RDAl9Zaczkon9Rl",
+            "react-native-testing-library@-b4LfjCjkSZ6ZsSv3eFm6",
+            "react-native-web@UQpyXrC2cs_jDXxVTlQOu",
+            "react-test-renderer@81tmis0km2h1zsjS2HsP5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Running",
+      "name": "running",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "running-on-device@KyKMZ8Aa5XUAIWelGTiSt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Screen",
+      "name": "screen",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "screen-navigation@Jr2iuQqyCbx6CyTJj4Qz2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scrolling",
+      "name": "scrolling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scrolling--swiping@nk6zdVNRz_xE71mVUOFsi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Speeding",
+      "name": "speeding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "speeding-up-builds@LL2ZkB7BuELyY2mPQhkAj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Text",
+      "name": "text",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "text-input@Frz1RYp3y9OwRb-3t2e85"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-frame-rates@1U3AiCDWEVEKsofWtqavi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Using",
+      "name": "using",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "using-native-modules@0BMpZDc-1rSvETwX82zON"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-react-native@cMfsRtvzvDZZJ0TqeUOxm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-react-native@2rlmLn_yQQV-7DpX1qT98"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-platform-specific-code@HiUbRfOv8OttFd85pDUHN"
+          ]
+        }
+      ]
+    }
+  ]
+}

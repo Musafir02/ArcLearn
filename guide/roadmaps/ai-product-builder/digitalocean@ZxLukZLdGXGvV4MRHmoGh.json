@@ -1,0 +1,4 @@
+{
+  "title": "DigitalOcean",
+  "content": "DigitalOcean is a cloud provider focused on simplicity and developer experience. Its App Platform lets you deploy a full-stack application from a GitHub repository with minimal configuration. It is a practical middle ground between the simplicity of serverless platforms and the complexity of AWS or GCP.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@DigitalOcean](https://www.digitalocean.com/)\r\n- [@official@DigitalOcean Tutorials](https://www.digitalocean.com/community/tutorials)\r\n- [@video@Getting Started With Kubernetes on DigitalOcean](https://www.youtube.com/watch?v=cJKdo-glRD0)"
+}

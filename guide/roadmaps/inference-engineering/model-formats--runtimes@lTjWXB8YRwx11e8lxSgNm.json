@@ -1,0 +1,4 @@
+{
+  "title": "Model Formats and Runtimes",
+  "content": "Before a model can serve requests, its weights must be stored, loaded, and compiled into an executable form. This group covers the file formats used to distribute weights and the runtimes that compile them into optimized inference engines for specific hardware targets.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Common AI Model Formats](https://huggingface.co/blog/ngxson/common-ai-model-formats)\r\n- [@article@Model Weights File Formats in Machine Learning](https://learnopencv.com/model-weights-file-formats-in-machine-learning/)"
+}

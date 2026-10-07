@@ -1,0 +1,4 @@
+{
+  "title": "Modules Best Practices",
+  "content": "Modules should be focused on a single concern and avoid hardcoding values that callers need to control. Always declare types for input variables and provide descriptions. Version-pin external modules and keep local modules small and composable. Avoid deeply nested module hierarchies, as they are harder to debug and maintain.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Module Best Practices](https://developer.hashicorp.com/terraform/tutorials/modules/module#module-best-practices)\r\n- [@article@Terraform Modules Guide: Best Practices & Examples](https://www.env0.com/blog/terraform-modules)\r\n- [@video@Best practices for modularizing a Terraform project | PlatformCon 2023](https://www.youtube.com/watch?v=byzwaTng3ac)"
+}

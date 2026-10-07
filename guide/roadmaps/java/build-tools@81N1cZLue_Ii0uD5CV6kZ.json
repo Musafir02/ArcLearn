@@ -1,0 +1,4 @@
+{
+  "title": "Build Tools",
+  "content": "Build tools are software programs that automate the process of compiling source code into binary code, packaging the result into distributable formats like JAR or WAR files, and managing project dependencies. They streamline development workflows by handling tasks such as running tests, generating documentation, and ensuring that all required external libraries are downloaded and correctly linked to the project. Common examples in the Java ecosystem include Apache Maven and Gradle, which provide standardized structures for organizing project files and configurations."
+}

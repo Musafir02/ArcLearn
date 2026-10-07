@@ -1,0 +1,4 @@
+{
+  "title": "OORP",
+  "content": "ODRP (One-Data-Renderer-Per-...) or similar reactive decomposition patterns organize server logic into stages where each stage reacts to data from the previous one. This keeps data flow explicit and avoids shared mutable state between components.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@ReactiveX Overview](https://rxjs.dev/guide/overview)\r\n- [@article@Introduction to Reactive Programming - Project Reactor](https://projectreactor.io/docs/core/release/reference/reactiveProgramming.html)\r\n- [@article@Reactive Programming - Wikipedia](https://en.wikipedia.org/wiki/Reactive_programming)"
+}

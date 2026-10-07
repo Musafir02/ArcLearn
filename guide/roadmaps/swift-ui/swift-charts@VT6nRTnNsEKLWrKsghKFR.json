@@ -1,0 +1,4 @@
+{
+  "title": "Swift Charts",
+  "content": "Swift Charts is a framework within Swift that allows you to create a variety of visually appealing and informative charts directly in your applications. It provides a declarative syntax for defining chart types, data sources, and visual customizations, making it easier to represent data clearly and understandably. With Swift Charts, you can build charts like bar charts, line charts, scatter plots, and more, all while leveraging the power and flexibility of the Swift language and SwiftUI.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Swift Charts](https://developer.apple.com/documentation/charts)\r\n- [@official@Creating a chart using Swift Charts](https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts)\r\n- [@video@Hello Swift Charts](https://developer.apple.com/videos/play/wwdc2022/10136/)"
+}

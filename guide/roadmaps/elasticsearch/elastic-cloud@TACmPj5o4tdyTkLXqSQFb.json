@@ -1,0 +1,4 @@
+{
+  "title": "Elastic Cloud",
+  "content": "Elastic Cloud is a suite of Elasticsearch-based services offered by Elastic, the company behind Elasticsearch. It provides a managed platform for deploying, managing, and scaling Elasticsearch clusters in the cloud, eliminating the need for users to handle the underlying infrastructure. This includes tasks like provisioning servers, configuring networking, and managing backups, allowing users to focus on analyzing and visualizing their data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Accelerate results in Elastic Cloud](https://www.elastic.co/cloud)\r\n- [@official@Elastic Cloud Serverless](https://www.elastic.co/cloud/serverless)\r\n- [@video@Getting Started with Elasticsearch Service and Elastic Cloud](https://www.youtube.com/watch?v=mIHYcxe70fc)"
+}

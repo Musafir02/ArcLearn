@@ -1,0 +1,4 @@
+{
+  "title": "openclaw channels login",
+  "content": "`openclaw channels login` initiates the authentication flow for a specific channel, allowing Open Claw to connect to it on your behalf.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Login / logout (interactive)](https://docs.openclaw.ai/cli/channels#add-/-remove-accounts)"
+}

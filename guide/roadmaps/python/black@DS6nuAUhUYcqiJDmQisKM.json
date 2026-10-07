@@ -1,0 +1,4 @@
+{
+  "title": "black",
+  "content": "Black is a python code formatter that automatically formats code according to a consistent style. By removing formatting decisions from developers, Black helps maintain uniform codebases, improves readability, and reduces time spent on style discussions during code reviews.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Getting Started with Black](https://black.readthedocs.io/en/stable/getting_started.html)\r\n- [@official@Black Documentation](https://black.readthedocs.io/en/stable/)"
+}

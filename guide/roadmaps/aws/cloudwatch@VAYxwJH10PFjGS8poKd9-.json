@@ -1,0 +1,4 @@
+{
+  "title": "Cloudwatch",
+  "content": "CloudWatch is AWS's monitoring and observability service. It collects metrics, logs, and events from AWS services and custom applications. You use it to set alarms, visualize performance data, and trigger automated responses to operational issues.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Amazon Cloudwatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "go install",
+  "content": "Compiles and installs packages and dependencies. Creates executables in `$GOPATH/bin` for main packages. Use `go install package@version` to install specific versions of tools. Commonly used for installing CLI tools system-wide.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@go install](https://go.dev/doc/install)\r\n- [@official@Managing Go Installations](https://go.dev/doc/manage-install)\r\n- [@article@Golang: How To Use the Go Install Command](https://thenewstack.io/golang-how-to-use-the-go-install-command/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Parameters / Return Values",
+  "content": "Parameters are variables listed in the function signature that receive values when the function is called. PHP passes arguments by value by default, meaning changes inside the function don't affect the original variable. Prefixing a parameter with `&` passes it by reference. The `return` statement sends a value back to the caller.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Parameters / Return Values](https://www.php.net/manual/en/functions.arguments.php)"
+}

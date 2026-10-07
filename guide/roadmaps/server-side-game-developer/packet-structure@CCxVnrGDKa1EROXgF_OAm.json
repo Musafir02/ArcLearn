@@ -1,0 +1,4 @@
+{
+  "title": "Packet Structure",
+  "content": "Packet structure defines how data is laid out inside a network packet, including header fields and payload organization. Designing a compact, well-defined packet structure reduces bandwidth usage and makes serialization and parsing predictable across clients and servers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@UDP Packet Format - Huawei Support](https://support.huawei.com/enterprise/en/doc/EDOC1100174721/23023485/udp-packet-format)\r\n- [@article@User Datagram Protocol (UDP) - Imperva](https://www.imperva.com/learn/ddos/udp-user-datagram-protocol/)\r\n- [@article@User Datagram Protocol - RFC 768](https://datatracker.ietf.org/doc/html/rfc768)"
+}

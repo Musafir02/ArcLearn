@@ -1,0 +1,4 @@
+{
+  "title": "State Locking",
+  "content": "State locking prevents two Terraform operations from modifying state at the same time. When supported by the backend, Terraform acquires a lock before writing to state and releases it when the operation completes. If a lock is not released due to a crash or error, it can be manually removed with the `force-unlock` command.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@State - Locking](https://developer.hashicorp.com/terraform/language/state/locking)\r\n- [@official@State Storage and Locking](https://developer.hashicorp.com/terraform/language/state/backends)\r\n- [@video@Terraform - State locking](https://www.youtube.com/watch?v=QdDCUpggmrw)"
+}

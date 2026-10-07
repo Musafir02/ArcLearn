@@ -1,0 +1,4 @@
+{
+  "title": "NSubstitute",
+  "content": "NSubstitute is a friendly library for .NET used to create and work with mock objects in unit tests. It provides a simple, concise syntax that allows developers to substitute dependencies, define return values for methods, and verify that specific actions were performed during a test execution.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@Overview of NSubstitute](https://github.com/nsubstitute/NSubstitute)\r\n- [@article@Getting started NSubstitute](https://nsubstitute.github.io/help/getting-started/)"
+}

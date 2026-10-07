@@ -1,0 +1,4 @@
+{
+  "title": "Creating Skills",
+  "content": "You can write your own skills by creating a `SKILL.md` file with instructions and placing it in your workspace's `skills/` folder. This lets you teach the agent new behaviors tailored to your specific needs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Creating Skills](https://docs.openclaw.ai/tools/creating-skills)\r\n- [@video@Create Unlimited OpenClaw Skills | Full Tutorial (Upstage Studio Skill)](https://www.youtube.com/watch?v=aYsPTu7VzEs)"
+}

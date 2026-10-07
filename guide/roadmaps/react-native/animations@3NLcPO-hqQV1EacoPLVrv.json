@@ -1,0 +1,4 @@
+{
+  "title": "Animations",
+  "content": "Animations in React Native allow developers to create smooth, fluid, and dynamic user interfaces by changing the properties of components over time. The framework provides the Animated API to handle simple, high-performance transitions, as well as the LayoutAnimation API for animating global layout changes. These tools enable the transformation of elements through movements, scaling, opacity changes, and rotations to provide visual feedback and enhance the overall user experience within a mobile application.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Animations](https://reactnative.dev/docs/animations)\r\n- [@official@LayoutAnimations](https://reactnative.dev/docs/layoutanimation)\r\n- [@official@Animated](https://reactnative.dev/docs/animated)"
+}

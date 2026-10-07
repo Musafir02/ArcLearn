@@ -1,0 +1,4 @@
+{
+  "title": "Configuration",
+  "content": "The configuration of routes in an Angular application involves defining route mappings in an array and providing these routes to the Angular router.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Router Reference - Configuration](https://angular.dev/guide/routing/router-reference#configuration)\r\n- [@official@Routing Overview](https://angular.dev/guide/routing)"
+}

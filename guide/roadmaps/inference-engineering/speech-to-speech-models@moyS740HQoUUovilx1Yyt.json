@@ -1,0 +1,4 @@
+{
+  "title": "Speech-to-Speech Models",
+  "content": "Speech-to-speech models unify ASR, reasoning, and TTS into a single model by expanding the LLM vocabulary with audio input and output tokens, eliminating the latency of cascading three separate models in sequence. Current closed models like OpenAI's gpt-4o-realtime exist but remain more expensive and less capable than well-tuned cascading pipelines of dedicated ASR, LLM, and TTS models. Open speech-to-speech models are an active research area without commercially viable options at the time of writing."
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Cron Jobs",
+  "content": "Cron jobs are scheduled tasks that run at specific times or intervals. They allow you to automate recurring actions like summaries, cleanups, or reports without any human prompt.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Scheduled Tasks](https://docs.openclaw.ai/automation/cron-jobs)\r\n- [@video@OpenClaw Cron Jobs vs Heartbeat Explained](https://www.youtube.com/watch?v=KtNZ1twkc7o)"
+}

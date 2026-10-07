@@ -1,0 +1,4 @@
+{
+  "title": "Coroutines",
+  "content": "Kotlin Coroutines provide a way to write asynchronous, non-blocking code in a sequential style. They allow you to perform long-running tasks, like network requests or database operations, without blocking the main thread, thus preventing your application from becoming unresponsive. Coroutines are lightweight threads that can be suspended and resumed, making it easier to manage concurrency and improve application performance.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)\r\n- [@opensource@kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines)\r\n- [@article@Kotlin coroutines on Android](https://developer.android.com/kotlin/coroutines)\r\n- [@video@Kotlin Coroutine (High-quality Course)](https://www.youtube.com/watch?v=lmRzRKIsn1g)"
+}

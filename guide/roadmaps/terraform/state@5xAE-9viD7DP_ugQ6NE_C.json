@@ -1,0 +1,4 @@
+{
+  "title": "State",
+  "content": "Terraform state is a file that records the current status of managed infrastructure. It maps resources in the configuration to real-world objects and stores attribute values returned by the provider after creation. State is used to compute diffs during planning and to track resource identity across operations.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@State](https://developer.hashicorp.com/terraform/language/state)\r\n- [@article@Purpose of Terraform state](https://developer.hashicorp.com/terraform/language/state/purpose)\r\n- [@video@Managing Terraform state files](https://www.youtube.com/watch?v=UDBVCzg2IRo)"
+}

@@ -1,0 +1,1384 @@
+{
+  "title": "Bi Analyst Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ab",
+      "name": "ab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ab-testing@qKlo90-Cy8t_off5Qv8-6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-queries@-gbb16Wl--Rjx5aoM0krL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Algorithmic",
+      "name": "algorithmic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "algorithmic-bias@_uLtsnyNNNRcz5A29Zpjl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Analog",
+      "name": "analog",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "analog-vs-digital-data@kb216tShKrRPWv7mE9sVa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-machine-learning@ZGazuCNruu09bd7C-aSFC",
+            "basic-queries@TuBJ2yUz1c5KMRGVHdvU5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Beyond",
+      "name": "beyond",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "beyond-linear-regression@_QyIZ2_vH3e3yic5NTuak"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bi",
+      "name": "bi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bi-analyst-vs-other-roles@JFNCITtE1YtcYmLfGfF5T",
+            "bi-communities@X8U-NQD0rYqFr_xgDWL2s",
+            "bi-competitions@aTGsJj7Ntv5BWIzjaqvu_",
+            "bi-platforms@kpRqKLtAd3IO3nbs8Yxrh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bias",
+      "name": "bias",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bias-recognition@9aNVqEyygNGeicdce5X8b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-your-portfolio@UIdwl_KLELI8xL2VxYJmX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Business",
+      "name": "business",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "business-acumen@OmhvVSTtzH5sxOIZRVYfQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Calculated",
+      "name": "calculated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "calculated-fields--measures@fFzCnLfZ_vSbhQjdAKLlJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Categorical",
+      "name": "categorical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "categorical-vs-numerical@yXz6MkU3-HnlkmRmYh-Ev"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Central",
+      "name": "central",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "central-tendency@F-fC2JWOuEeDbOHH1O6EB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Change",
+      "name": "change",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "change-management@vDQF2oaybSewNu3EMs6zG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chart",
+      "name": "chart",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chart-categories@GVgfPajmSqIgFZ6u2I1tK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-bi-ecosystem@zGU6DyEm6xEYf1_73cbjL",
+            "cloud-computing-basics@_KYKLd-RNhVy-Sn1A-G5j",
+            "cloud-data-warehouses@D94743lQ1fAerVSpJWXfP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cohort",
+      "name": "cohort",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cohort-analysis@R2zg0Ql-RsnIkV5Gmc1vN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Color",
+      "name": "color",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "color-theory@SJGEkoTSPK2ck4IvaK6Gz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Communication",
+      "name": "communication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "communication--storytelling@TBcLXYtKs7_j_h_m2pAyh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compliance",
+      "name": "compliance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compliance-reporting@j-GXKpMnsVuUUUdRxAXLe",
+            "compliance-reporting@omvGuhou7_63k-Fwcc7Mu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conferences",
+      "name": "conferences",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conferences--webinars@UDF8wyYT8127wfFHcq37P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Confidence",
+      "name": "confidence",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "confidence-intervals@xgP3zIiSEr9dtYcCQikPb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Correlation",
+      "name": "correlation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "correlation-analysis@ASHk2LOjlhwpwpWSRs_Bi",
+            "correlation-vs-causation@JXYmXAYuA-zxrkl4PRLQd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Critical",
+      "name": "critical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "critical-thinking@NFKiPXrkjRre1yUZc27gl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dashboard",
+      "name": "dashboard",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dashboard-design@KXhNou5nlekbSTfLYPs_8",
+            "dashboard-design@qvPTiDbsY5ol_K-BNLmzk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-architectures@Zxuvc9F3bINLTdfbsx_S_",
+            "data-cleaning@Vo7LJ_W-DBvxvVrnz33BM",
+            "data-formats@GsZWvJPNzN6XLDp2G1db4",
+            "data-lake@iqpVtvoebAaoB_Dj9-gdw",
+            "data-lineage@F21ypKzpziLCXkiKG1S5Z",
+            "data-mart@5x4NfuP6dAgjISlB-esIW",
+            "data-modeling-for-bi@Dk31XtS7wWRzO31sdsEDo",
+            "data-pipeline-design@yvSf7sGEd7QiaVoetalHc",
+            "data-quality@bGCMAgaenZ0t3WeO5joyP",
+            "data-sources@VUgxDDkoxkOcLxqpTDXzt",
+            "data-transformation-techniques@hrkMVMYWCedRxhNd2N9wE",
+            "data-warehouse@wJiKBbTMLhIzelUtKn7jl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Descriptive",
+      "name": "descriptive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "descriptive-analysis@vTW3jSZ1bvc0OrP_bl22t",
+            "descriptive-statistics@xc1hm_XTyiMUVtWiTKXWG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-principles@EDQjtoTd01ftwXxYkV9it"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Diagnostic",
+      "name": "diagnostic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "diagnostic-analysis@m5aC9aNy9mwLXz0xXBp40"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Discrete",
+      "name": "discrete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "discrete-vs-continuous@YSxvg2HrfGoGtpkwY0kGc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "End",
+      "name": "end",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "end-to-end-analytics-project@3xDVJwdl3uu5EcjlZ1ytA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ethical",
+      "name": "ethical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ethical-data-use@Vb06K0D2vWAlSe95QJrth"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Etl",
+      "name": "etl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "etl-basics@Du4GD-6pxbWYl4uSJRnOE",
+            "etl-tools@lAK9QVs97hL3ysjz2blp8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Exploratory",
+      "name": "exploratory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "exploratory-data-analysis-eda@ETT9eATuyLHQe2jPqaF5I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fact",
+      "name": "fact",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fact-vs-dimension-tables@hcbS18cpVxd55hVlUeLLT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Financial",
+      "name": "financial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "financial-performance@1T2PyytlmndHreWgueD55"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fraud",
+      "name": "fraud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fraud-detection@aJLGan5dkMefvkspFlcYo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accesibility@BiyrAHB34evej_0cnDzOa",
+            "accessibility@wtEzdO_ZNu9jHJrFS3CrG",
+            "accuracy@M1H3Fh09v8udCJIPSJPic",
+            "airflow@qnUHw2f2VmTPU3-NMnoLl",
+            "apis@xQDGmVwUkrmGdviOdG8Hu",
+            "barplot@BUizLtQ7vpdyBRjS8KyIl",
+            "ccpa@IwnXDA-f3FHK4EEeFuToC",
+            "certifications@hqpFbDhAvyT9_4hcoSLhC",
+            "cloud@WXk0-vebMUQC25he2lmbh",
+            "clv@OqHNW0PzIRsw7IBgh5U5Q",
+            "coherence@4U66ZrBZqg7-ckOTmxAQj",
+            "csv@LcLfC6BiOxJAkk2p424wL",
+            "databases@g44bQY90HOeI_dZ8gK2Uj",
+            "dbt@-KzusmyDQ1NgqOADpqmEX",
+            "dispersion@1D98k1HNCaaiaI20euVwA",
+            "distribution@JSqwWsfojjZTe8ynmA7fc",
+            "dplyr@ZAhjB_ghHukD4RPAtNDxh",
+            "duplicates@xjgqmJmetKpWXSWZHPwaL",
+            "excel@9BWyA0b4WrmQetSMph_mY",
+            "excel@Dh62zxyyUHh0galD472p8",
+            "excel@LLK3_hudKDX5d-fd98vlx",
+            "finance@cxTriSZvrmXP4axKynIZW",
+            "finance@xftv5BiyoVrFjpSN0tjsw",
+            "forecasting@ExHCSUDxDBwsJtTelvxjP",
+            "gdpr@CWf_vL78f8-mSUQbPnU8e",
+            "healthcare@VpGVezYr9O6puhAF12PN2",
+            "heatmap@SNkYi2VZsCRG31v63v8_x",
+            "histogram@wqLcUFVsLa_l9yQIee9MG",
+            "hr@KeGCHoJRHp-mBX-P5to4Y",
+            "interpretability@uP8MWZqM9Z0i3eDF4Ldxv",
+            "introduction@PxOEfMSQYA2jy3zrMZXjZ",
+            "iot@GrwdQldCWu2zWAaNj6LFk",
+            "iqr@LEHK7ohKIzKhlGebd0k_j",
+            "json@p21d2mEUnTQgWhKFTGS9F",
+            "kurtosis@jvU1iu2M_y1IH62oUpAeU",
+            "lineplot@BVDaFmDat48nN3hj5NE71",
+            "looker@f4MDT1RUfaICAWzyG2E6T",
+            "manufacturing@zEGmDHaFa-F81tWqa3i9E",
+            "map@7_5PBCrsukv81mm7yTpDf",
+            "marketing@s-wUPMaagyRupT2RdfHks",
+            "mean@S4XEOd2-PHIHOiiGgKVLJ",
+            "median@mfLRVcxvAjqmSG-KBpJ4J",
+            "mode@DQtznxvW5x4s-zGLpUpNY",
+            "mysql@eqnAEp2VT7FD2VDy5WVDP",
+            "networking@Q98GaitxocEha4zZ9d254",
+            "operations@dJZqe47kzRqYIG-4AZTlz",
+            "oracle@uoQS4g-c6QndacUeiaWrq",
+            "outliers@OqolfBQRQvwg6PI_t8Mrt",
+            "pandas@25f76eB9-vy3Usta-Pbsi",
+            "performance@y9Fnjnbiqt7WkrhjPITpW",
+            "postgresql@nhl9FM79femgqENNR0HbE",
+            "privacy@fuxGZx3WGjP2TzzVV29ux",
+            "python@vQQSYPpcGO7ri0RFSWi0h",
+            "qlik@GoMIAQwusbT7fqJ-VnCrq",
+            "r@0OTmTRHlR3ImNU0zyLt8G",
+            "range@jll2iRbjdx7iiNwY13KYD",
+            "relevance@UhcniUDKmi7KNuXlolf5O",
+            "responsibilities@Q-GmBJiRdBS_xLeOjef2R",
+            "scatterplot@hCSZo7jT9arBLUbtCVFfD",
+            "seasonality@moWrEfuKE06QwbznsH3V-",
+            "semistructured@qHcRrxenhogymMQ6EPiMa",
+            "skewness@X0DBG0mEWk25PEbLHhs7v",
+            "skills@iRgtog5A13CTNDxnbGN9x",
+            "sql@_iV_5O5Rq07P9qRGrraTM",
+            "sqlite@lrksz861rE5m2XzOQPwgh",
+            "standardisation@TCYG6vmFqq1zAPNQWoOH8",
+            "std@vqtzg9bydAqHMwZhPHo1a",
+            "structured@jnIn3_2fI2k97oALPZkt7",
+            "tableau@WzPj94lYxQCjFx5YW4X9x",
+            "timeliness@5USjYdAVJs0gSXxE1j8Xu",
+            "trends@On6kznZxLTCpBPskdZtgT",
+            "unstructured@DJKXgelIxuahxJiqvwP6I",
+            "variance@ZmSwDn0sP7HvLKYVzRwPJ",
+            "web@xQLsuJ3uohVzOxGfFLyFw",
+            "xml@ytgK7van84j5DsfD0JyZ3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hospital",
+      "name": "hospital",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hospital-efficiency@ku3m0ZmNg23F0Z5CEb4JI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hypothesis",
+      "name": "hypothesis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hypothesis-testing@6xfQic8dMwUsMQa7VtS8_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inferential",
+      "name": "inferential",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inferential-statistics@7DNtRMBZ_F0K1FQk-UCM4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Interview",
+      "name": "interview",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "interview-preparation@4XM5ikPiHVehEtT4AB-Ea"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inventory",
+      "name": "inventory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inventory-optimization@LkbB0rpS3Du2K7_ogoc34"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Job",
+      "name": "job",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "job-preparation@TojDB4o0i2rs7Qcb10k1r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-business-functions@PkzUqwT21Owk_TfepFPDm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linear",
+      "name": "linear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linear-regression@4-fpZx8p5iSNI3n4Qtacl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Marketing",
+      "name": "marketing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "marketing-campaigns@0qRm81lJX_Eb6aJkJMjeL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Metrics",
+      "name": "metrics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "metrics-and-kpis@c0ywBrs9u7MciWAXSgVVg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Misleading",
+      "name": "misleading",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "misleading-charts@qGVDuU9RA9Y5g5vlPd-xq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Missing",
+      "name": "missing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "missing-values@fhreEuoT8ZBRwJqbSGrEZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mitigation",
+      "name": "mitigation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mitigation-strategies@5MUwKGfSTKlam8KCG0A1U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-apps@1cC6LKxcncaKg4Jm53pUy",
+            "mobile-responsiveness@7t0WfLLqrD5VJQwIAmXMo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Normalization",
+      "name": "normalization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "normalization-vs-denormalization@Prfa0LUmgxcp52IEObFom"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Open",
+      "name": "open",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "open-source-projects@YovS5Dbcr6g_8PMr8jp5t"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operational",
+      "name": "operational",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operational-bi@GN6SnI7RXIeW8JeD-qORW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Other",
+      "name": "other",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "other-formats@k80q5FPNiIUdxn5A8R3Hu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "P",
+      "name": "p",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "p-value@rkEdx_mZBoDjMhiluJl7O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Patient",
+      "name": "patient",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "patient-management@LI09SvvUUCQxLZZee_j0n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Popular",
+      "name": "popular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "popular-databases@gJBaVERU3prru-qRksxN4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Population",
+      "name": "population",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "population--sample@7VDxA9bQ1P1fym4eQVKkN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Portfolio",
+      "name": "portfolio",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "portfolio-presentation@qsCWo1CmR4mvy7E7qlPv5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Power",
+      "name": "power",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "power-bi@eqGsO6ZGk2jdG0z9-cHzz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Predictive",
+      "name": "predictive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "predictive-analysis@4zpVE3R0lLyWpHePdBVpl",
+            "predictive-maintenance@yimCxOdNtyGcbd6ZxHsBQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prescriptive",
+      "name": "prescriptive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prescriptive-analysis@NnbtaO2MiqsHeJ-ds0Q5m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Presentation",
+      "name": "presentation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "presentation-design@9G-pI5NsRCq4p0FLfaMR_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Production",
+      "name": "production",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "production-efficiency@L50rpcgGjsQU3S0zRn6xh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Professional",
+      "name": "professional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "professional-development@tUxwKTml2Go8zR9tR3cjn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-languages@KSxjcWV6C325kZITzAhWs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-management@r8NoX426-ngu6ZQZe06oK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Providers",
+      "name": "providers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "providers-aws-gcp-azure@Z4pAe4FpnCkUJt8RuOhC6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Public",
+      "name": "public",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "public-health@Cydlrtg_FClBUkjezqGie"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Quality",
+      "name": "quality",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "quality-control@Xe9zK8xhkkr4fsh3HOzAY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regression",
+      "name": "regression",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regression-analysis@m9ejACzRBJza0v-fpdfkn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reinforcement",
+      "name": "reinforcement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reinforcement-learning@KFONHuJNnCuSOH7-8Ndvm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resume",
+      "name": "resume",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resume-optimization@m9EwcekZ_l0XHiKeQ8emr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retail",
+      "name": "retail",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retail--e-commerce@7LbhfkmS7oFoSF1k5ZR1U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Risk",
+      "name": "risk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "risk-analytics@JHGV0V78GXubiSY9P3nTw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Salary",
+      "name": "salary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "salary-negotiation-strategies@k3F9Tdqo3XYgMLOKGjpxA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sales",
+      "name": "sales",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sales-performance@VPu8vn7-baZQ5ORJ6ViW0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Soft",
+      "name": "soft",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "soft-skills@mi88uLdJBXaxJ2yVOSqqo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-fundamentals@s8LZgRwrlm1V4meGM7gj0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stakeholder",
+      "name": "stakeholder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stakeholder-identification@e3SdmNpVcvy3k_-JIO6OK",
+            "stakeholder-management@r-m88g8xrUnuEpV2lHJfN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Star",
+      "name": "star",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "star-vs-snowflake-schema@iYe42G31fhkAO0MBaHutF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Statistical",
+      "name": "statistical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "statistical-tests@01k_mfsp0eW6TX9yp8PDE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Storytelling",
+      "name": "storytelling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "storytelling-framework@t_J0MZTMWMnrImGHjXYov"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Strategic",
+      "name": "strategic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "strategic-bi@3BxbkrBp8veZj38zdwN8s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Supervised",
+      "name": "supervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "supervised-learning@eZN_ty8VDX9mi5KtCWTFL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Supply",
+      "name": "supply",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "supply-chain-analytics@7jrzQogTOc6lHXfpYLCsx",
+            "supply-chain-optimization@-hNguvT6SQCqAgVpoQByr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tactical",
+      "name": "tactical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tactical-bi@jJukG4XxfFcID_VlQKqe-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Time",
+      "name": "time",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "time-series-analysis@yseEaLsEzIcqJ0YIoGujl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-of-bi-operations@LjeipkY01Hlkp22kmlAMh",
+            "types-of-data-analysis@3DVF8zo-_WM_9GTuzQFO8",
+            "types-of-data@H1s1PQj8CHQ_VBQIy1VtJ",
+            "types-of-errors@SosOXxErMn0t2KCoHoxvS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unsupervised",
+      "name": "unsupervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unsupervised-learning@6l_tHC1R5zgABHMc_G6RD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-and-data-types@HM1w6JJquaV6Vq4mjxM7p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visualization",
+      "name": "visualization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visualization-best-practices@eKBORkRU6HCH-D4GWHyKR",
+            "visualization-fundamentals@sltVKaKKjmzu17jDv9OFF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-bi@jVXwlHRGgVpcoWCYzSB5W",
+            "what-is-data@g5j_mbjx2yZUIK5lfN3eT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-bi-matters@NX-YaB_FVjoHYsR6z9QIL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Window",
+      "name": "window",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "window-functions@1toMuRZResgse1AtwEck6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-executive-summaries@Slg3fXGPTa-Z4sdZY86XK"
+          ]
+        }
+      ]
+    }
+  ]
+}

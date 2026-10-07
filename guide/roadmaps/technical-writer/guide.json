@@ -1,0 +1,785 @@
+{
+  "title": "Technical Writer Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-definitions@co-35BsWMrD6PXohpFqba",
+            "api-reference@z5_73Q7dWbBd4m_OrdZlH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Awareness",
+      "name": "awareness",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "awareness-blog-posts@7S2lymeBZSMBZSsmei7us"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-practices@yYLsG2LuPaNUuhXSVev_0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blogging",
+      "name": "blogging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blogging-platforms@sdoFe4A3y_-Zp3mlrJ5r8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bottom",
+      "name": "bottom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bottom-funnel-content@vo1udIIRpxNZCpA3g32F3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buyer",
+      "name": "buyer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buyer-journey--content-funnel@EhhKxYPtoLztZXBXl3ZGl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Call",
+      "name": "call",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "call-to-actions@a1ChwDwztjZBi79y38AGa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Canonical",
+      "name": "canonical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "canonical-link@NIxIhMEOxrUR8nbjbF_Fp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Communities",
+      "name": "communities",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "communities--forums@QMehC1tmWPVWaTsiV9sFC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Comparative",
+      "name": "comparative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "comparative-posts@2wjRA_pQ9cCG9Ww994FEM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-aging--timelines@JgdrXG7MX1gGuNG9uyubA",
+            "content-analysis@TbSBCITdLswhVB82fErTP",
+            "content-distribution-amplification-strategies@_cAGbAswDhOqpoiiikPbD",
+            "content-distribution-channels@m9-DqsQfeukmhjhIfCph-",
+            "content-distribution@mrqBxsNRl1CQEKtuYSy9F",
+            "content-objectives--intent@7FGMPztd6ouvqemcGhIol",
+            "content-optimization@XyFEYDJvJpGZ7qSdoSZeI",
+            "content-research@O-dZEkmU0tP3dUIUPM6YJ",
+            "content-seo@-IBL9S4DelIi07w_fmrX3",
+            "content-structure@Ezz2e4lYLD_bdNNwvsV_y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conversion",
+      "name": "conversion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conversion-tracking@UiXn-CnPcLWAflKJzaJ2a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Crafting",
+      "name": "crafting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "crafting-great-titles@WmOvQYlnedX0QgC5Adeen"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Customer",
+      "name": "customer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "customer-case-studies@W44q1iEj7RKM55-9jabMJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Developer",
+      "name": "developer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "developer-docs@e8oNoXw1KLY4jDzojIXyk",
+            "developer-journey@2pNW7wDGih_m73lhGZRg6",
+            "developer-support@7w1SjK-LV9SBZJ673eAUd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Docs",
+      "name": "docs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "docs-generation-tools@iBBeZopD8SNo7sWTohMim",
+            "docs-structure@jYhfx6RETFgDulyNqdTBy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Editing",
+      "name": "editing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "editing-tools@Am_ocP3r0HM45LYfMcQxM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forms",
+      "name": "forms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forms-of-technical-writing@cNeT1dJDfgn0ndPzSxhSL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frequently",
+      "name": "frequently",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frequently-asked-questions@pgrKfp1trcIxhDdvLk95g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backlinking@UphVii3y4T_PkRMqFJ4r_",
+            "ebook@5zQpravkqwafvwXVOuNPX",
+            "general-product-prose@UFuMiHtWq1M8dS8547lOp",
+            "introduction@HlUUGj3dOZ68t4gIjerXh",
+            "markdown@TJ1iuzQ9u_WbrllRQkgm_",
+            "references@8qSL2esjsA3YYuB4d7B9z",
+            "tooling@_5xFbl2BHx0f2u9HmSVS8",
+            "troubleshooting@8fJcJi96Ige6z2PBuTquC",
+            "tutorials@K459CcDrcPMJCimIcCzM6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generic",
+      "name": "generic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generic-gated-content@XDX2QxMUkUok2fcS3tFki"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git--version-control@ffJyulu9GPB_TDqjeJYyV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Growth",
+      "name": "growth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "growth-as-a-technical-writer@FVxNjbDBxgf6vkZWw1Awt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Help",
+      "name": "help",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "help-content@e_bsYrZ0eQqduURg2ybX4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-to-guides@C-eVVtF6Yabp2a6XvMeh_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Icp",
+      "name": "icp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "icp--buyer-persona@O1apL6I_g9DQl8VbL3X4W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Keyword",
+      "name": "keyword",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "keyword-volume@JtFLW5WwH5Ixmnb0qikia"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Language",
+      "name": "language",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "language-proficiency@kNIiAJrvrNoOAllUbRtUB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Link",
+      "name": "link",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "link-shorteners--tracking@qpOfqbgLy5TzlNQEyt6DG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Long",
+      "name": "long",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "long-tail-keywords@2LAvq7W11WMIubSprlK_l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mid",
+      "name": "mid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mid-funnel-content@Q2KD70IKwBXAH3UQgeZpp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opengraph",
+      "name": "opengraph",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opengraph-data@AarJ887P-SFRnKaOOv9yw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pillar",
+      "name": "pillar",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pillar-content@wBDjGa2PgdmeXxHnILFjY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plagiarism",
+      "name": "plagiarism",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plagiarism-checker@cSZbTOB0FPPOlGzy-MkSi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Platform",
+      "name": "platform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "platform-support@How-4Re1NhxPLDoshUM-G",
+            "platform-tracking-and-metrics@hlhBgI3SvU3tMtNaHtu8k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Product",
+      "name": "product",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "product-content@d9mTdwqx6QWKYO5PA_rDH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Publishing",
+      "name": "publishing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "publishing-tools@jC3ZrpskBqzxiV6SKf4Uf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Release",
+      "name": "release",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "release-notes--product-announcements@-GZXLc9RjY6eWkKC1K_Rg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Required",
+      "name": "required",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "required-skills@8rjUZ9NZPGwVRGmk6Dlyb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Research",
+      "name": "research",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "research-reports@HoNQSWy82ybT0YmejCzRb",
+            "research-tools@0XWiraeoicNBbaGYQnNZr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-of-technical-writers-inorganizations@j69erqfosSZMDlmKcnnn0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-trends@IZqyEqkrBoEfLBwIQwJl6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Seo",
+      "name": "seo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "seo-keywords@IA6TuXmOZr_-Y3HLHqxp0",
+            "seo-tools@FD-8LQ_g2_O_i2Qwp-Gpv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Short",
+      "name": "short",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "short-tail-keywords@eAioe6b7w8pV2Dvawl_fw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Story",
+      "name": "story",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "story-telling@27muFD1Ld1gF6hhIh22sG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Subtle",
+      "name": "subtle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "subtle-selling@lxSSjgtqJk-PtRp4hARDw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Support",
+      "name": "support",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "support-request-evaluation@xFMsHYYxC0hLueY9xxART"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technical",
+      "name": "technical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technical-content-marketing@mJ1s5-SGd_tj8y0LLZxYg",
+            "technical-website-copy@tAFenZA0MFhMPE5cevNuD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technology",
+      "name": "technology",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technology-expertise@DubLTESNn3wvEH_bKQZbP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Top",
+      "name": "top",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "top-funnel-content@5dnZe0oCIzb5qGwgI6pwH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Topic",
+      "name": "topic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "topic-score@SX4vL_JEHrwqHdThyqKKO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-of-technical-content@xV8mox1WnSbl2jAGqQpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-goals@FgyBWRtE34VNqBt_5QhAf",
+            "user-persona@UuV51vM2JT_LFFXORSwru"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-technical-writing@jl1FsQ5-WGKeFyaILNt_p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "White",
+      "name": "white",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "white-papers@Xa7yBWcbP2aPs4u0C4cLJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Who",
+      "name": "who",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "who-is-a-technical-writer@ZRGsokU313Ky-anWbWK6q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-style-guides@cnEVPsqZqs9ZdyqmOuLGA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Written",
+      "name": "written",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "written-communication-proficiency@7-3tqRUpntoQP4nK_nul5"
+          ]
+        }
+      ]
+    }
+  ]
+}

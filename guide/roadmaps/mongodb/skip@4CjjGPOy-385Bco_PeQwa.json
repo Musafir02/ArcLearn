@@ -1,0 +1,4 @@
+{
+  "title": "$skip",
+  "content": "The `$skip` aggregation stage skips a specified number of documents before passing the remaining documents to the next pipeline stage. It's commonly used with $limit for pagination implementation, allowing applications to skip previous pages and retrieve specific result sets. `$skip` should be used carefully with large skip values as it can impact performance.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@$skip](https://www.mongodb.com/docs/manual/reference/operator/aggregation/skip/)\r\n- [@article@MongoDB Skip Documents - Syntax & Examples ](https://www.tutorialkart.com/mongodb/mongodb-skip-documents/)"
+}

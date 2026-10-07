@@ -1,0 +1,4 @@
+{
+  "title": "pub.dev",
+  "content": "`pub.dev` is the official package repository for Dart and Flutter packages. It is a platform for hosting, managing, and distributing Dart packages and Flutter plugins. Developers can use `pub.dev` to search for packages, find information about packages, and install packages in their Flutter projects.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@pub.dev](https://pub.dev/)\r\n- [@official@Using packages](https://docs.flutter.dev/development/packages-and-plugins/using-packages)"
+}

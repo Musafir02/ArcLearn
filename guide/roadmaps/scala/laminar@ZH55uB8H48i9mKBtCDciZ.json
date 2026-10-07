@@ -1,0 +1,4 @@
+{
+  "title": "Laminar",
+  "content": "Laminar is a UI library for Scala.js that focuses on simplicity, expressiveness, and safety. It allows developers to build web application interfaces while keeping the UI state in sync with the underlying application state.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Official Laminar Website](https://laminar.dev/)\r\n- [@official@Laminar Documentation](https://laminar.dev/documentation)\r\n- [@article@Build UIs with Laminar - Scala.js Tutorial](https://www.scala-js.org/doc/tutorial/laminar.html)"
+}

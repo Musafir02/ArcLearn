@@ -1,0 +1,4 @@
+{
+  "title": "Modifying Data in PostgreSQL",
+  "content": "Modifying data in PostgreSQL is an essential skill when working with databases. The primary DML queries used to modify data are `INSERT`, `UPDATE`, and `DELETE`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@INSERT](https://www.postgresql.org/docs/current/sql-insert.html)\r\n- [@official@UPDATE](https://www.postgresql.org/docs/current/sql-update.html)\r\n- [@official@DELETE](https://www.postgresql.org/docs/current/sql-delete.html)"
+}

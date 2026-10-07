@@ -1,0 +1,4 @@
+{
+  "title": "JavaScript",
+  "content": "JavaScript is a programming language primarily used to create interactive and dynamic content on websites. It allows developers to add features like animations, form validation, and real-time updates without needing to reload the page. It works alongside HTML and CSS to define the behavior of web pages.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated JavaScript Roadmap](https://roadmap.sh/javascript)\r\n- [@book@JavaScript from Beginner to Professional](https://www.gurukultti.org/admin/notice/javascript.pdf)\r\n- [@article@The Modern JavaScript Tutorial](https://javascript.info/)\r\n- [@article@Build 30 Javascript projects in 30 days](https://javascript30.com/)\r\n- [@video@JavaScript Crash Course For Beginners](https://www.youtube.com/watch?v=hdI2bqOjy3c&t=4s)"
+}

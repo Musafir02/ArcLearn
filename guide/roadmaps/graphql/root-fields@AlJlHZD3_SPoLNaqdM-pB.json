@@ -1,0 +1,4 @@
+{
+  "title": "Root Fields",
+  "content": "Root fields are the top-level fields available to clients in GraphQL queries and mutations. They serve as entry points for client requests, with Query fields for retrieving data and Mutation fields for modifying data on the server.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Get Started with Root Fields](https://graphql.org/learn/execution/#root-fields-resolvers)"
+}

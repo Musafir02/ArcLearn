@@ -1,0 +1,4 @@
+{
+  "title": "embedded-hal",
+  "content": "`embedded-hal` (Hardware Abstraction Layer) provides generic traits for creating portable embedded drivers in Rust. Enables hardware-agnostic code by abstracting digital I/O, UART, I2C, SPI, and other communication protocols into a uniform API, promoting code reuse across different hardware platforms.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@HALs - The Embedded Rust Book](https://doc.rust-lang.org/stable/embedded-book/design-patterns/hal/index.html)\r\n- [@opensource@A Hardware Abstraction Layer (HAL) for Embedded Systems](https://github.com/rust-embedded/embedded-hal)"
+}

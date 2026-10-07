@@ -1,0 +1,435 @@
+{
+  "title": "Vibe Coding Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ask",
+      "name": "ask",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ask-ai-to-handle-your-git-and-github-cli-tasks@vDSSzh5TwZ8zzY0rWRXu4",
+            "ask-ai-to-keep-the-code-modular-and-aim-for-smaller-modulesfiles@FoQ15wo0cV2Tntru6jV-1",
+            "ask-ai-to-use-subagents-if-possible@n5JxUpashrHKai2XESdd-",
+            "ask-ai-to-write-tests-e2e-tests-can-help-build-a-stable-product@WLOx62vbIhIlv73jcT8zM",
+            "ask-for-one-task-at-a-time-rather-than-five-different-items@HpbG5bcOEIZxYlVl9pwod"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Based",
+      "name": "based",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "based-on-your-previous-coding-sessions-tell-ai-what-not-to-do@3lHMW2Uje5tQawetE4I21"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Be",
+      "name": "be",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "be-specific-about-what-you-want-rather-than-high-level-vague-instructions@JXtLbQ1JUQOPZorFy1ctF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Claude",
+      "name": "claude",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "claude-code@wr5ddjutC-fX_ixysTHaT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Consider",
+      "name": "consider",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "consider-test-driven-development-tdd@Gr9WJ0tNmSsVHSA0Cx3xY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explicitly",
+      "name": "explicitly",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explicitly-ask-ai-to-perform-a-security-audit-of-the-application@8VL5XHFrQUjin1pdAi7WZ",
+            "explicitly-tell-ai-to-think-or-brainstorm-before-complex-problems@17nFgML7zVjQYiHIOSLlK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "For",
+      "name": "for",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "for-unrelated-tasks-proactively-clean-and-start-new-sessions@phtVEKzIUv9E1abazort0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chatgpt@XY2l96sry3WyLzzo3KUeU",
+            "codex@eMMFaVwsxY2tVE9uWz5qT",
+            "codex@XY2l96sry3WyLzzo3KUeU",
+            "context@0ZJrFxKo5HyD9OgzG5LWp",
+            "copilot@Ubk4GN0Z4XlDJ3EbRXdxg",
+            "cursor@MWhoqhNnBaoeCdN_8i15k",
+            "debugging@mHChjJd39ofwPBS-v_sQY",
+            "devin@Xsl8mx6J182TxPPtNP471",
+            "gemini@hzeEo8COf2l07iu5EdlFo",
+            "lovable@5WogJrcXhNXewsXzSAME7",
+            "replit@Ubk4GN0Z4XlDJ3EbRXdxg",
+            "testing@4bJRhuZzVc32x2Y0gGGrh",
+            "v0@eX9-1I_hC2zwJNiBYXFu6",
+            "windsurf@Xsl8mx6J182TxPPtNP471"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Give",
+      "name": "give",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "give-ai-mockups-reference-files-and-material-that-can-help-it@6kVVt2lihBW8tPGV-ll3_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "If",
+      "name": "if",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "if-ai-fails-after-3-prompts-stop-and-start-a-fresh-chat@ikp1O_sss_6hDGl6p8LNJ",
+            "if-errors-persist-ask-al-to-create-a-list-of-possible-causes@cz--AlEn0cc2-keXeuk9g",
+            "if-you-have-stylecoding-preferences-document-them-for-ai@QBeh16mppfb2s4OGt4aPy",
+            "if-you-need-to-revert-use-git-rather-than-ai-native-revert-functionality@upZAMDEtzq1VklqTKG5mV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Illustrate",
+      "name": "illustrate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "illustrate-ai-with-examples-mockups-code-samples-images@ODqMzOAN1je004chwATTl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Implement",
+      "name": "implement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "implement-spec-driven-development-sdd@O9W3d1q1yJmfRJHnfognN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Install",
+      "name": "install",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "install-and-ask-ai-to-use-mcp-eg-playwright-for-browser-when-possible@KVb_TAsSD8Kgafij4iEXc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Leverage",
+      "name": "leverage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "leverage-long-context-window-when-available-and-necessary@CMnz6UFUGbxIGSH06ZdgH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Master",
+      "name": "master",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "master-version-control@q5lkCO_uGmkcJopjltg8j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Never",
+      "name": "never",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "never-hardcode-or-credentials-use-env-variables-instead@aRnpJbSUg_rr9Z00RafYt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Once",
+      "name": "once",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "once-tests-are-in-place-refactor-regularly@9BSermDg6ODL2MSRQiDZo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-popular-tech-stack-rather-than-newniche-ones@7mAZMKyiuZiEpKhrydp8J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Plan",
+      "name": "plan",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "plan-before-you-code@pfgsxuQ-D7dTMPNWKG9OY",
+            "plan-what-you-need-to-develop-mvp-different-phases@OPHuAD0L-GZ6zRhIhbmPL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-error-messages-and-let-ai-do-the-rest@GW5I1z7D1945AxqYHbW6F",
+            "prompt-the-error-message-and-let-ai-do-the-rest@GW5I1z7D1945AxqYHbW6F"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompting",
+      "name": "prompting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompting-best-practices@6GvIXEzWbSD8q6Qt-BsHP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regularly",
+      "name": "regularly",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regularly-ask-the-ai-to-review-and-refactor-the-codebase@NtQDPno95SYo5E88ls4v1",
+            "regularly-update-your-context-document-eg-claudemd@WypEm84Rr0t-IzCZiU92q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-best-practices@2omItZjkVFW9kMiNXdt-h"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Start",
+      "name": "start",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "start-each-new-feature-with-a-clean-git-slate@ScizaxaDFQ_OBiFZ540Xs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tech",
+      "name": "tech",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tech-stack-and-coding@GC4vVcOcFWE1RByD-sd4G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tell",
+      "name": "tell",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tell-ai-to-add-logs-to-find-the-bug-faster@vnm51qAe2C1cszHfh-o6P",
+            "tell-ai-to-add-logs-to-find-the-error-faster@vnm51qAe2C1cszHfh-o6P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-vibe-coder-mindset@LkLQ8GjBXDuw1XsrE4Cjj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-act-as-framing-when-helpful-eg-act-as-a-ux-researcher@h2oehkZSKfMqlVBAgt46P",
+            "use-git-commit-regularly-eg-after-every-successful-ai-task@wWs2PxN7T2-gDZNJJ1vTq",
+            "use-skills-created-by-others@bnpY9GX1BGjDPJXwTFWTX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-vibe-coding@lzHnwx_3gftRZbstk6INB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "When",
+      "name": "when",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "when-you-find-a-bug-ask-ai-to-write-a-breaking-test-and-then-fix@r-LrA1cGR1XMu1p2xIsN0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Work",
+      "name": "work",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "work-step-by-step-rather-than-trying-to-build-everything-at-once@CJV5OV_Whoz4_7L8yhDG1"
+          ]
+        }
+      ]
+    }
+  ]
+}

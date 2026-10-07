@@ -1,0 +1,4 @@
+{
+  "title": "Closed Weight Models",
+  "content": "Closed weight models are language models accessed only through an API, with the underlying weights kept private by the provider, examples include GPT-4 and Claude. Developers send requests and receive outputs without ever handling the model itself. This approach removes the need to manage infrastructure but ties usage to the provider's pricing, rate limits, and terms of service.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Open AI's GPT-4](https://openai.com/gpt-4)\r\n- [@official@Claude](https://www.anthropic.com/claude)\r\n- [@official@Gemini](https://deepmind.google/technologies/gemini/)\r\n- [@article@Open-Source LLMs vs Closed LLMs](https://hatchworks.com/blog/gen-ai/open-source-vs-closed-llms-guide/)"
+}

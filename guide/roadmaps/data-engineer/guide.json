@@ -1,0 +1,1011 @@
+{
+  "title": "Data Engineer Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ab",
+      "name": "ab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ab-testing@5qe0q_llTzzNVudbONMYo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Amazon",
+      "name": "amazon",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "amazon-ec2--compute@AHLsBfPfBJOhLlJ-64GcK",
+            "amazon-rds-database@GtFk7phYGfXUhxanicYNQ",
+            "amazon-rds-database@nD36-PXHzOXePM7j9u_O_",
+            "amazon-redshift@omrg8QcYmTdQLBKV47b7o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apache",
+      "name": "apache",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apache-airflow@vfO5Dz6ppsNtbGiQwpUs7",
+            "apache-hadoop-yarn@pjm_qShAiFk3JsX4Z2d8G",
+            "apache-kafka@fTpx6m8U0506ZLCdDU5OG",
+            "apache-spark@qHMtJFYcGmESiz_VwRwiI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Async",
+      "name": "async",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "async-vs-sync-communication@VefHaP7rIOcZVFzglyn66"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aurora",
+      "name": "aurora",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aurora-db@YZ4G1-6VJ7VdsphdcBTf9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Authentication",
+      "name": "authentication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication-vs-authorization@HDVhttLNMLmIAVEOBCOQ3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aws",
+      "name": "aws",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aws-cdk@OKJ3HTfreitk2JdrfeLIK",
+            "aws-eks@eVqcYI2Sy2Dldl3SfxB2C",
+            "aws-sns@uFeiTRobSymkvCinhwmZV",
+            "aws-sqs@uIU5Yncp6hGDcNO1fpjUS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Azure",
+      "name": "azure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "azure-blob-storage@gzbEGCUwMsD1gL4nW668g",
+            "azure-sql-database@iIZ3g70KRwEJCBNaONd2d",
+            "azure-virtual-machines@-yi-xk-kv0njW9GdytiAQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Best",
+      "name": "best",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "best-practices@yyJJGinOv3M21MFuqJs0j"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Big",
+      "name": "big",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "big-data-tools@03BHmPhYkZrJwRvQdmxxr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Business",
+      "name": "business",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "business-intelligence@zA5QqqBMsqymdiPGFdUnt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cap",
+      "name": "cap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cap-theorem@AslPFjoakcC44CmPB5nuw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Choosing",
+      "name": "choosing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "choosing-the-right-technologies@_MpdVlvvkrsgzigYMZ_P8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Circle",
+      "name": "circle",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "circle-ci@CewITBPtfVs32LD5Acb2E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-architectures@YLfyb_ycgz1hu0yW8SPNE",
+            "cloud-computing@lDeSL9qvgQgyAMcWXF7Fr",
+            "cloud-sql-database@9-wQWQIdAxQmMaJC9ojPg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cluster",
+      "name": "cluster",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cluster-computing-basics@hB0y8A2U3owpAbTUb7LN5",
+            "cluster-management-tools@wpZfbIFtfiUSLMASk4t7f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Compute",
+      "name": "compute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "compute-engine-compute@-cU86vJWJmlmPHXDCo31o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Containers",
+      "name": "containers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "containers--orchestration@eTHitN2erd6z8-MZiXE9s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-analytics@V30v5RLQrWSMBUIsZQG1o",
+            "data-collection-considerations@wDDWQgMVBYK4WcmHq_d6l",
+            "data-engineering-lifecycle@Ouph2bHeLQsrHl45ar4Cs",
+            "data-engineering-lifecycle@w3cfuNC-IdUKA7CEXs0fT",
+            "data-engineering-vs-data-science@jJukG4XxfFcID_VlQKqe-",
+            "data-fabric@-x3QLMYhC67VJQ6EW6BrJ",
+            "data-factory-etl@BNGdJSmrNE90rwPa4JoWj",
+            "data-generation@AWf1y87pd1JFW71cZ_iE1",
+            "data-hub@OiWleAdMbPtisrJpk2eSJ",
+            "data-ingestion@CvCOkyWcgzaUJec_v5F4L",
+            "data-interoperability@ghAbtfB5KtbboNjijL1Zf",
+            "data-lake@y0Lxz_wVyQ6lr1hvCsufa",
+            "data-lineage@pKewO7Ef3GBXL4MDK62QG",
+            "data-mart@c6Pf3kFcC4iV4a7mPc-WH",
+            "data-masking@2Wu1Ufm2l1nrytz1mAxmJ",
+            "data-mesh@D7qtosIbsQuIY3OWl_Hwc",
+            "data-modelling-techniques@SlQHO8n97F7-_fc6EUXlj",
+            "data-normalization@kVPEoUX-ZAGwstieD20Qa",
+            "data-obfuscation@rUiYUV4ps6NYYYRwUnjuM",
+            "data-pipelines@fqTPu70MJyXBmqYUgCJ_r",
+            "data-quality@cStrYgFZA2NuYq8TdWWP_",
+            "data-quality@iuNP6W0A2GLTE2PK5y68u",
+            "data-serving@RspQLpkICyHUmthLlxQ84",
+            "data-storage@wydtifF3ZhMWCbVt8Hd2t",
+            "data-structures-and-algorithms@fqmn6DPOA5MH7UWYv6ayn",
+            "data-warehouse@ArOoKuf9scAURs8NRjAru",
+            "data-warehousing-architectures@J854xPM1X0BWlhtJw7Hs_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-fundamentals@g4UC0go7OPCJYJlac9w-i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Databricks",
+      "name": "databricks",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "databricks-delta-lake@fhfyoWekmYvEs-jdP2mJo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Declarative",
+      "name": "declarative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "declarative-vs-imperative@GyC2JctG-Gi0R_qx1lTeg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Distributed",
+      "name": "distributed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "distributed-file-systems@1LLF4466grFDlT9p_WLsi",
+            "distributed-systems-basics@c1dadtQgbqXwcsQhI6de0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "End",
+      "name": "end",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "end-to-end-testing@mC9sWeC_wYHeJJHJAvxpI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Environmental",
+      "name": "environmental",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "environmental-management@WUfJCLTajyLNK19gAAvoW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Etl",
+      "name": "etl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "etl-vs-reverse-etl@LMFREK9dH_7qzx_s2xCjI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Eu",
+      "name": "eu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "eu-ai-act@tdqhFFvQ2dQVeQh1qTHjV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Extract",
+      "name": "extract",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "extract-data@nShDMih1HmubBczxu4cfU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functional",
+      "name": "functional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functional-testing@E4ND5XaMDGDLtlV7wTzi6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apis@cxTriSZvrmXP4axKynIZW",
+            "argocd@PUzHbjwntTSj1REL_dAov",
+            "batch@f-a3Hy1ldnvSv8W2mFiJK",
+            "bigtable@ltZftFsiOo12AkQ-04N3B",
+            "cassandra@QYR8ESN7xhi4ZxcoiZbgn",
+            "census@vZGDtlyt_yj4szcPTw3cv",
+            "cicd@k2SJ4ELGa4B2ZERDAk1uj",
+            "column@fBD6ZQoMac8w4kMJw_Jrd",
+            "cosmosdb@goL_GqVVTVxXQMGBw992b",
+            "couchdb@-IesOBWPSIlbgvTjBqHcb",
+            "database@qRHeaD2udDaItAxmiIiUg",
+            "datadog@Zoa4JEGrSKjVwUNer4Go1",
+            "dataflow@YWgVUyIvBRW8eTVR5y73P",
+            "dbt@SgYLIkMtLVPlw8Qo5j0Fb",
+            "docker@OQ3RqVgWEMxpAtrrjOG5U",
+            "document@sGkAOVl3C-xIIAdtDH9jq",
+            "dynamodb@BDfpCDOxXZ-Tp0Abj_CVW",
+            "ecpa@g1VwuSupohuDAT2O4hTXx",
+            "elasticsearch@_F53cV3ln2yu0ics5BFfx",
+            "encryption@2PqRgrYuJi_pPhOS0AkoP",
+            "gdpr@MuPHohc7mJzcH5QdJ-K46",
+            "go@4z2i5NXTo9h3YY0kJvRrz",
+            "graph@W6RnhoD7fW2xzVwnyJEDr",
+            "hbase@Uho9OOWSG0bUpyH4P6hKk",
+            "hdfs@0pH2U4GOj8zK3lgkh_r5M",
+            "hdfs@9lSjQBM2hWrkujxZjhQHE",
+            "hightouch@8NTe5-XQ5tKAWUyg1rnzb",
+            "hybrid@4fugNG5sEDl0kgmN3Mezk",
+            "idempotency@9xoBZgKT9uAGsjc1soelY",
+            "indexing@ilbFKqhfYyykjJ7cOngwx",
+            "introduction@WSYIFni7G2C9Jr0pwuami",
+            "iot@KeGCHoJRHp-mBX-P5to4Y",
+            "java@LZ4t8CoCjGWMzE0hScTGZ",
+            "kubernetes@I_IueX1DFp-LmBwr1-suX",
+            "kubernetes@kcgDW6AFW7WXzXMTPE6J-",
+            "logs@s-wUPMaagyRupT2RdfHks",
+            "looker@fY0eZzz0aTXm2lelk8l3g",
+            "luigi@_IiKTZDF_b57l79X6lsq6",
+            "mapreduce@__tWu5uZYnmnuR-qO9SOR",
+            "mariadb@p7S_6O9Qq722r-F4bl6G3",
+            "memcached@KYUh29Ok1aeOviboGDS_i",
+            "mlops@VQv-c7buU2l-IDzRZBMRo",
+            "mongodb@04V0Bcgjusfqdw0b-Aw4W",
+            "monitoring@dk5FQl7Pk3-O5eF7dKwmp",
+            "mysql@_bFj6rbLuqeQB5MjJZpd6",
+            "neo4j@TG63YRbSKL1F9vlUVF1VY",
+            "neptune@atAK4zGXIbxZvfBTzFEIe",
+            "onehouse@senZEYC9k-C_C4EAYDNeU",
+            "opentofu@WdlC0HhJ5YESfjXmdMnLU",
+            "oracle@PJcxM60h85Po0AAkSj7nr",
+            "perfect@TAh4__7U58J7fduU9a1Ol",
+            "postgresql@__JFgwxeDLvz8p7DAJnsc",
+            "prefect@TAh4__7U58J7fduU9a1Ol",
+            "prometheus@3QsgoKKxAoyj2LWJ8ad-7",
+            "python@ILs5azr4L_uLK0CDFKVaz",
+            "rabbitmq@ERcgPTACqYo9BXoRdLjbd",
+            "realtime@oqxNr0Lj34mgRi5Z5wJt_",
+            "redis@dW_eC4vR8BrvKG9wxmEBc",
+            "reusability@Rzk6HlMosx3FN_JD5kELZ",
+            "scala@WHJXJ5ukJd-tK_3LFLJBg",
+            "segment@8vqjI-uFwJIr_TBEVyM_3",
+            "sentry@i54fx-NV6nWzQVCdi0aKL",
+            "snowflake@Pf0_CBGkmSEfWDQ2_iFXr",
+            "snowflake@W3l1_66fsIqR3MqgBJUmU",
+            "streaming@wwPO5Uc6qnwYgibrbPn7y",
+            "streamlit@FfU6Vwf0PXva91FoqxFgp",
+            "tableu@gqEAOwHFrQiYSejNUdV7-",
+            "terraform@N-xRhdOTHijAymcTWPXPJ",
+            "testing@DZoxLu-j1vq5leoXLRZqt",
+            "tokenization@ZAKo9Svb8TQ6KkmOnfB5x",
+            "transactions@1BJGXWax6CONuFkaYR4Jm",
+            "yarn@KcW4z48pk2x6IjQhZs_Ub"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git-and-github@02TADW_PPVtTU_rWV3jf1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@N8vpCfSdZCADwO_qceWBK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gitlab",
+      "name": "gitlab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gitlab-ci@IYIO4S3DO5xkLD__XT5Dp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Glue",
+      "name": "glue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "glue-etl@nD36-PXHzOXePM7j9u_O_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-bigquery@Je2in1n8bMaknyeH79Zbv",
+            "google-cloud-gke@8qEgXYZEbDWC73SQSflDY",
+            "google-cloud-storage@2lqvArZdwRX0t3P3yovEH",
+            "google-deployment--mgr@1A98uTo8l_GQSrFxu5N2X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Horizontal",
+      "name": "horizontal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "horizontal-vs-vertical-scaling@k_XSLLwb0Jk0Dd1sw-MpR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Infrastructure",
+      "name": "infrastructure",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "infrastructure-as-code---iac@jgz7L8OSuqRNcf9buuMTj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing@NIG53tyoEiLtwf6LvBZId"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Job",
+      "name": "job",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "job-scheduling@ccc6_SzDwXpCL1WbFuPNA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-value@fSlBjoNVKstJjWO7rS69V"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-sql@2rRVWPON-o3MvpgZmrU_A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linux",
+      "name": "linux",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linux-basics@FXQ_QsljK59zDULLgTqCB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load-data@y5Aaxe-P68HC5kNsIi88q",
+            "load-testing@qoMRpAITA7R_KOrwGDPAb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Machine",
+      "name": "machine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "machine-learning@S8XMtFKWlnUqADElFp0Zw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Messages",
+      "name": "messages",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "messages-vs-streams@IZvL-1Xi0R9IuwJ30FDm4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Messaging",
+      "name": "messaging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "messaging-systems@dAvizeYvv92KMeAvSDmey"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Metadata",
+      "name": "metadata",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "metadata-first-architecture@14CycunRC1p2qTRn-ncoy",
+            "metadata-management@a5gzM8msXibxD58eVDkM-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Microsoft",
+      "name": "microsoft",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "microsoft-power-bi@6Nr5FAGT_oOPZwZWdv7hl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-apps@dJZqe47kzRqYIG-4AZTlz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ms",
+      "name": "ms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ms-sql@YxnIQh6Y5ic795-YsajB8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking-fundamentals@cgkzFMmQils2sYj4NW8VW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "New",
+      "name": "new",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "new-relic@r1KmASWAa_MOqQOC9gvvF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nosql",
+      "name": "nosql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nosql-databases@uZYQ8tqTriXt_JIOjcM9_",
+            "nosql-databsases@uZYQ8tqTriXt_JIOjcM9_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Oltp",
+      "name": "oltp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "oltp-vs-olap@-VQQmIUGesnrT1N6kH5et"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-skills@_2Ofq3Df-VRXDgKyveZ0U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Relational",
+      "name": "relational",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "relational-databases@cslVSSKBMO7I6CpO7vG1H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reverse",
+      "name": "reverse",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reverse-etl-usecases@mBOGrJIUaatBe2PnJM2NK",
+            "reverse-etl@JpuiYsipNWBcrjmn2ji6b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "S3",
+      "name": "s3",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "s3-storage@tbut25IZI2aU7TkI9fFYV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Serverless",
+      "name": "serverless",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "serverless-options@ZnGX8pg4GagdSalg_P0oq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Skills",
+      "name": "skills",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "skills-and-responsibilities@3BxbkrBp8veZj38zdwN8s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Slowly",
+      "name": "slowly",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "slowly-changing-dimension---scd@5KgPfywItqLFQRnIZldZH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Smoke",
+      "name": "smoke",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "smoke-testing@woa5K4Dt9L6aBzlJMNS31"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sources",
+      "name": "sources",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sources-of-data@zGKTlMUzhrbVbqpLZBsMZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Star",
+      "name": "star",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "star-vs-snowflake-schema@OfH_UXnxvGQgwlNQwOEfS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transform",
+      "name": "transform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transform-data@TjsxMNyWO3YGwg6zEIid4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-of-data-ingestion@GN1Xh3kA25ge-wTbdiSio"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing@8dXD4ddR_USEbAJhUMcB6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-and-why-use-them@1qju7UlcMo2Ebp4a3BGxH",
+            "what-is-cluster-computing@Ad10evrGQuYRl5GaMhQwu",
+            "what-is-data-engineering@WB2PRVI9C6RIbJ6l9zdbd",
+            "what-is-data-warehouse@dc3lJI27hJ3zZ45UCVqM1"
+          ]
+        }
+      ]
+    }
+  ]
+}

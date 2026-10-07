@@ -1,0 +1,4 @@
+{
+  "title": "Webhooks",
+  "content": "Webhooks allow external services to send HTTP requests to Open Claw to trigger agent actions. This is how you can connect third-party tools like GitHub or custom apps to your agent.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Webhooks](https://docs.openclaw.ai/automation/cron-jobs#webhooks)\r\n- [@article@OpenClaw webhooks explained: A complete guide](https://lumadock.com/tutorials/openclaw-webhooks-explained)"
+}

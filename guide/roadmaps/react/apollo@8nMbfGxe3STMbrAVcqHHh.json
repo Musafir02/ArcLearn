@@ -1,0 +1,4 @@
+{
+  "title": "Apollo",
+  "content": "Apollo Client is a library for working with GraphQL APIs in React. It handles sending queries and mutations, caching the results, and keeping the UI in sync as data changes. It is one of the most established tools for GraphQL in the React ecosystem, with hooks like useQuery and useMutation built in.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Apollo Website](https://www.apollographql.com)\r\n- [@article@Official Docs](https://www.apollographql.com/docs/)\r\n- [@video@Official YouTube Channel](https://www.youtube.com/c/ApolloGraphQL/)\r\n- [@video@GraphQL With React Tutorial - Apollo Client](https://www.youtube.com/watch?v=YyUWW04HwKY)"
+}

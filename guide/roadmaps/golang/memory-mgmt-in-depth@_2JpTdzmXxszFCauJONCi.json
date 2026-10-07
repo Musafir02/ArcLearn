@@ -1,0 +1,4 @@
+{
+  "title": "Memory Management in Depth",
+  "content": "Deep memory management involves understanding garbage collection, escape analysis, allocation patterns, and optimization techniques. Covers stack vs heap allocation, memory pooling, reducing allocations, and GC interaction for high-performance applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@The Go Memory Model](https://go.dev/ref/mem)\r\n- [@article@A Deep Dive into Golang Memory](https://mtardy.com/posts/memory-golang/)\r\n- [@article@How Go Manages Memory and Why It's So Efficient](https://medium.com/@siddharthnarayan/how-go-manages-memory-and-why-its-so-efficient-68c13133ba1c)"
+}

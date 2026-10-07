@@ -1,0 +1,4 @@
+{
+  "title": "Code Intelligence Plugin",
+  "content": "Code Intelligence plugins extend the CLI's native search capabilities by integrating with the Language Server Protocol (LSP), granting Claude the same \"IDE-level\" awareness found in modern editors.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Code intelligence](https://code.claude.com/docs/en/discover-plugins#code-intelligence)\r\n- [@official@LSP server](https://code.claude.com/docs/en/plugins-reference#lsp-servers)\r\n- [@article@Language Server Protocol](https://microsoft.github.io/language-server-protocol/)"
+}

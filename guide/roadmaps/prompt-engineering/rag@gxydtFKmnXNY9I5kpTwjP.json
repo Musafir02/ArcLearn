@@ -1,0 +1,4 @@
+{
+  "title": "RAG",
+  "content": "Retrieval-Augmented Generation (RAG) combines LLMs with external knowledge retrieval to ground responses in verified, current information. RAG retrieves relevant documents before generating responses, reducing hallucinations and enabling access to information beyond the model's training cutoff. This approach improves accuracy and provides source attribution.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@Introduction to RAG - LlamaIndex](https://developers.llamaindex.ai/python/framework/understanding/rag/)\r\n- [@article@Retrieval Augmented Generation (RAG) - DAIR.AI](https://www.promptingguide.ai/techniques/rag)"
+}

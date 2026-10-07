@@ -1,0 +1,4 @@
+{
+  "title": "Apache Spark",
+  "content": "Apache Spark is a distributed data processing framework designed for large-scale analytics and machine learning. Game studios use Spark to process telemetry data, compute player behavior metrics, run A/B test analyses, and build recommendation systems over large datasets.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ApacheSpark](https://spark.apache.org/documentation.html)\r\n- [@article@Spark By Examples](https://sparkbyexamples.com)\r\n- [@article@Explore top posts about Apache Spark](https://app.daily.dev/tags/spark?ref=roadmapsh)"
+}

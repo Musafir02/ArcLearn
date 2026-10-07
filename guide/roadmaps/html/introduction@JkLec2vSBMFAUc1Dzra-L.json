@@ -1,0 +1,4 @@
+{
+  "title": "Introduction to HTML",
+  "content": "HTML, or HyperText Markup Language, is the standard language for creating web pages. It uses a system of tags to structure content, such as headings, paragraphs, images, and links, so that web browsers can display them correctly. These tags tell the browser how to present the text, images, and other forms of multimedia on a webpage.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@HTML MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)\r\n- [@article@What is HTML – Definition and Meaning of Hypertext Markup Language](https://www.freecodecamp.org/news/what-is-html-definition-and-meaning/)\r\n- [@video@HTML Tutorial for Beginners: HTML Crash Course](https://www.youtube.com/watch?v=qz0aGYrrlhU)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "RedisTimeSeries",
+  "content": "RedisTimeSeries is a module for storing and querying time-series data. It supports automatic downsampling, retention policies, and aggregation functions like average, min, and max over time windows. It is used for IoT data, metrics pipelines, and financial tick data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@RedisTimeSeries](https://redis.io/timeseries/)\r\n- [@official@Time Series Documentation](https://redis.io/docs/latest/develop/data-types/timeseries/)"
+}

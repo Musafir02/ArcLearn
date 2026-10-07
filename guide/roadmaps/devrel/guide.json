@@ -1,0 +1,1047 @@
+{
+  "title": "Devrel Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Active",
+      "name": "active",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "active-listening@UdUDngq425NYSvIuOd7St"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Analytics",
+      "name": "analytics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "analytics-and-optimization@lG1FH7Q-YX5pG-7mMtbSR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Animations",
+      "name": "animations",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "animations--graphics@D7_iNPEKxFv0gw-fsNNrZ",
+            "animations--graphics@OUWVqJImrmsZpAtRrUYNH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anticipate",
+      "name": "anticipate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anticipate-questions@jyScVS-sYMcZcH3hOwbMK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-references@7IJO_jDpZUdlr_n5rBJ6O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Apis",
+      "name": "apis",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "apis--sdks@sUEZHmKxtjO9gXKJoOdbF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-programming-skills@aSYXa25_0O2qQl1O-N3xl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Be",
+      "name": "be",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "be-concise@rhs6QwxZ7PZthLfi38FJn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blog",
+      "name": "blog",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blog-posts@c0w241EL0Kh4ek76IgsEs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Building",
+      "name": "building",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "building-a-community@GvmXdWiwITgWzx_f5_ick",
+            "building-a-personal-brand@HN2gNsYYRLVOOdy_r8FKJ",
+            "building-sdks@h6R3Vyq0U8t8WL3G5xC2l"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-of-conduct@er9ukuBvY-F4F8S1qbbjU",
+            "code-samples@pGJrCyYhLLGUnv6LxpYUe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Community",
+      "name": "community",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "community-engagement@yJygbi8cnp3oz2EFl2MR0",
+            "community-growth@afR1VviBs2w0k8UmP38vn",
+            "community-guidelines@4ZvzY_xGO5BZOmfqj0TTq",
+            "community-management@-6cf3RT4-cbwvLYIkCosF",
+            "community-support@1NFcpGzCJylRPbFYdD9bB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conference",
+      "name": "conference",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conference-speaking@ue0NaNnNpF7UhvJ8j0Yuo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conflict",
+      "name": "conflict",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conflict-resolution@8ls5kQvDgvwLbIrwYg1OL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Consistent",
+      "name": "consistent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "consistent-posting@l2P44pL9eF8xarBwC_CVO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Content",
+      "name": "content",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "content-creation@_3ZnPUl4kzzuM0bKQ8IAq",
+            "content-performance@yhDBZfUAjumFHpUZtmLg3",
+            "content-strategy@TGXPxTFv9EhsfS5uWR5gS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Continuous",
+      "name": "continuous",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "continuous-learning@bwwk6ESNyEJa3fCAIKPwh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contrast",
+      "name": "contrast",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contrast-principle@LixiZj3-QcmQgGAqaaDr6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-brand-voice@ZWkpgvXIzjN3_fOyhVEv0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cross",
+      "name": "cross",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cross-promotion@nlzI2fG3SwC5Q42qXcXPX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-driven-strategy-shift@46iMfYgC7fCZLCy-qzl1B",
+            "data-visualization@0dRnUlgze87eq2FVU_mWp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Developer",
+      "name": "developer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "developer-experience@No-UnhdGmtLW9uFGLy-ca",
+            "developer-journey@BooGiYTMoS0N5eobwjPHY",
+            "developer-marketing@UhMk8g5MMhvi3kWLLI6B1",
+            "developer-satisfaction@AwMwMU9hg_gCKPP4tykHb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Encouraging",
+      "name": "encouraging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "encouraging-participation@6yLt4Ia52Jke9i5kJQvAC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Engagement",
+      "name": "engagement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "engagement-rates@RXj0yB7KsIOM5whwtyBBU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Engaging",
+      "name": "engaging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "engaging-audience@iKYmUvWFT_C0wnO0iB6gM",
+            "engaging-content@WIH216mHg2OiSebzQYI-f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-management@usorG1GkkvGAZ0h_AGHVk",
+            "event-participation@C2w8R4tNy2lOhhWU9l32s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Example",
+      "name": "example",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "example-apps@mWcMSKnUQamUykBxND-Ju"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feedback",
+      "name": "feedback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feedback-collection@oWXfov-mOF47d7Vffyp3t",
+            "feedback-loop@IxRvVvX9Fax08YUbVob4s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advocacy@7MCmY1bABGPfmzjErADvg",
+            "audio@7y4vHk_jgNTW6Q1WoqYDc",
+            "blogging@B1IdobUaGeBLI2CgsFg8H",
+            "collaborations@w1ZooDCDOkbL1EAa5Hx3d",
+            "documentation@g3M6nfLr0DMcn-NCFF7nZ",
+            "editing@6zK9EJDKBC89UArY7sfgs",
+            "education@EjqJkyojhO7f1uFHIoyGY",
+            "execution@1m1keusP-PTjEwy0dCJJL",
+            "facebook@ZMManUnO-9EQqi-xmLt5r",
+            "faqs@4GCQ3stXxW1HrlAVC0qDl",
+            "forums@oGTIvAY3zYgoiC63FQRSd",
+            "git@a-i1mgF3VAxbbpA1gMWyK",
+            "github@8O1AgUKXe35kdiYD02dyt",
+            "handouts@tbIAEStaoVWnEWbdk7EGc",
+            "ides@KdFYmj36M2jrGfsYkukpo",
+            "instagram@UAkGV9_I6qiKZMr1aqQCm",
+            "linkedin@6UR59TigEZ0NaixbaUIqn",
+            "meetups@HIIqlnZ4Vad_1o4F0lkv-",
+            "moderation@d_dKF87OnRWoWj3Bf1uFf",
+            "networking@SJf9e7SQnzYVHoRWl0i6P",
+            "pechakucha@_FZNqUKgPkzbgOPoiSLSU",
+            "planning@RQk3uOikjQYRyTu7vuAG7",
+            "promotion@C9--J8gGZENQKn-QcZK4M",
+            "publishing@I7RBMfoD30OstVLeTrMs9",
+            "recording@_QHUpFW4kZ5SBaP7stXY2",
+            "reporting@N1uh7dVKfSPT7w0MlKzWO",
+            "scripting@rLDRkUht9K1m4noMAIgKU",
+            "storytelling@Y0GUZynSXjITDOA-TP6LH",
+            "streamyard@meZDgDJMy4aH5VqS-NJL4",
+            "support@LwNa3u9Lf88ju5w7CvSN5",
+            "surveys@_Qe_0RksYpX7Spzgc6Fw3",
+            "tools@psk3bo-nSskboAoVTjlpz",
+            "tutorials@6ubk20TBIL3_VrrRMe8tO",
+            "twitch@QlWam-kHv8G_-yx3ClP9s",
+            "video@tRywPj_2VyjSLjxYJtYZd",
+            "visualization@SNhrYZsmyDHN_JWh0eZy2",
+            "webinars@1fc0iWwOkheUJ7d0np86L",
+            "x@6BqkO4XOspJg0-9GNLtUp",
+            "x@Mdp4bBlhVbGohJkVlsDar",
+            "youtube@OY5rn3XTbmz4LzSLRcNmw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-analytics@8xrhjG9qmbsoBC3F8zS-b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Guest",
+      "name": "guest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "guest-blogging@2QiQW9tygpeaES8Wp1Kw6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-qa@Xf-Lxi1cKReo4yDLylBbL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "History",
+      "name": "history",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "history-and-evolution@KP28dl1I9hxM130gIPxSZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Identifying",
+      "name": "identifying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "identifying-audience@UKi3waPx2pozvZf2aQ52s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Importance",
+      "name": "importance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "importance-of-devrel@N9HXTCQq2wfC-QurSofE_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Initial",
+      "name": "initial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "initial-outreach@hPJM4QXxeqTxPlvJ2_D3_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Insights",
+      "name": "insights",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "insights--recommendations@mh1BZDVkc-VwA8aQAmDhO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Issue",
+      "name": "issue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "issue-tracking@j6tr3mAaKqTuEFTRSCsrK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Issues",
+      "name": "issues",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "issues--pull-requests@vCoEJyS4qMWTTiL17PmWr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jetbrains",
+      "name": "jetbrains",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jetbrains-ides@NCnKS435DCl-8vilr1_XE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-metrics@DCj1teu8Hp82EKnakFRPn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Labelling",
+      "name": "labelling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "labelling-and-cleanup@x3qTqhR1uA5CXqULIJqL8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Live",
+      "name": "live",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "live-streaming@iPaFjacZ7hSWriSEqUmHc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-difficult-questions@VSOdD9KKF_Qz8nbRdHNo3",
+            "managing-discussions@J2WunUJBzYw_D5cQH_pnH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Media",
+      "name": "media",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "media-appearances@QrDqUGWC2t9r6p4aR8I5g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Milestones",
+      "name": "milestones",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "milestones--releases@v_lDqjtxjRK67GsbtxXgT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mind",
+      "name": "mind",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mind-mapping@uwvvWmcZnFqLoHRDFXFyW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking-strategies@4ygpqUK70hI5r1AmmfMZq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Office",
+      "name": "office",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "office-hours@weyCcboaekqf5NuVAOxfU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Online",
+      "name": "online",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "online-communities@gvMbo22eRxqOzszc_w4Gz",
+            "online-communities@lMbj0WdoEia_tdpO5rXph"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Open",
+      "name": "open",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "open-source@NhQUDVA9q1hnV44EKapbU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Platform",
+      "name": "platform",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "platform-selection@WItTQ1QboHoRkqeHJzCM9",
+            "platform-specific-analytics@AL3-UzREwTpsADTU0YtRW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Post",
+      "name": "post",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "post-event-followup@kmcOYDvu1vq7AQPllZvv0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Presentation",
+      "name": "presentation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "presentation-techniques@PFjF2PnYpSbvd24jb_D2G"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Public",
+      "name": "public",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "public-backlog@7ZFTmlQHYQKNjKprwV8zk",
+            "public-speaking@LRZ8yxTfEGCXsYp4N1_uD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recognition",
+      "name": "recognition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recognition-programs@Nta8pUncwNQxJlqF6h1AT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-reports@U2QKCu6TvDuxSNRfdM74n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repetition",
+      "name": "repetition",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repetition--reinforcement@2iRt9E42i_ej4woKCW_s2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rules",
+      "name": "rules",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rules-and-policies@8I59U-nnkhQv8ldRuqQlb",
+            "rules-of-three@vH_ECVYSQ3Fg-DASO1EgK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sample",
+      "name": "sample",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sample-projects@xy9Kqtwrh5IhYHaqEhvl_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Seo",
+      "name": "seo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "seo-basics@zVBy8o66FdZueg-2v3gaw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Social",
+      "name": "social",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "social-media-analytics@x8RIrK2VB-LBFbt6hAcQb",
+            "social-media@71BBFjaON1NJi4rOHKW6K",
+            "social-media@urbtoZtuJryK-6TJ3lmRN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Technical",
+      "name": "technical",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "technical-documentation@X0xUzEP0S6SyspvqyoDDk",
+            "technical-setup@8aiLVG4clveX1Luiehvxr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-hook@VTGsmk3p4RVXiNhDmx2l8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Thought",
+      "name": "thought",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "thought-leadership@wcfrXA9zWZ4Taey7mR2yG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Topic",
+      "name": "topic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "topic-selection@uzMfR6Yd9Jvjn8i5RpC1Q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tracking",
+      "name": "tracking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tracking-engagement@NWxAxiDgvlGpvqdkzqnOH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understanding",
+      "name": "understanding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understanding-apis@7Q6_tdRaeb8BgreG8Mw-a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-case-based@omnUSgUHZg2DmnOUJ0Xo1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-guides@RLf08xKMjlt6S9-MFiTo-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Version",
+      "name": "version",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "version-control@x6KFf4akYuUYkNhrUwj1r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Video",
+      "name": "video",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "video-production@bRzzc137OlmivEGdhv5Ew",
+            "video-production@pEMNcm_wJNmOkWm57L1pA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vs",
+      "name": "vs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vs-code@j5nNSYI8s-cH8EA6G1EWY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-devrel@SiYUdtYMDImRPmV2_XPkH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Writing",
+      "name": "writing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "writing-documentation@pqp9FLRJRDDEnni72KHmv",
+            "writing-process@l6-mzgDTXg2EPkyZyZ6TC",
+            "writing-skills@0ntOE6PSdMl_EXB9gdgIv"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Query Analysis: EXPLAIN in PostgreSQL",
+  "content": "Understanding the performance and efficiency of your queries is crucial when working with databases. In PostgreSQL, the `EXPLAIN` command helps to analyze and optimize your queries by providing insights into the query execution plan. This command allows you to discover bottlenecks, inefficient table scans, improper indexing, and other issues that may impact your query performance.\r\n\r\n`EXPLAIN` generates a query execution plan without actually executing the query. It shows the nodes in the plan tree, the order in which they will be executed, and the estimated cost of each operation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html)\r\n- [@article@PostgreSQL EXPLAIN](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-explain/)"
+}

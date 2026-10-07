@@ -1,0 +1,4 @@
+{
+  "title": "Test Prioritization",
+  "content": "Test prioritization is ordering the test cases to be conducted eventually. Prioritizing test cases aids to meet two important constraints, namely time and budget in software testing to enhance the fault detection rate as early as possible.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@A Tour of what is Test Prioritization?](https://www.browserstack.com/guide/test-case-prioritization)\r\n- [@article@Test Prioritization](https://www.professionalqa.com/test-prioritization)\r\n- [@article@Test Prioritization fundamentals!](https://testomat.io/features/test-case-priorities/)"
+}

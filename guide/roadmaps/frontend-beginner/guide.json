@@ -1,0 +1,26 @@
+{
+  "title": "Frontend Beginner Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "css@ZhJhf1M2OphYbEmduFq-9",
+            "git@R_I4SGYqLk5zze5I1zS_E",
+            "github@qmTVMJDsEhNIkiwE_UTYu",
+            "html@yWG2VUkaF5IJVVut6AiSy",
+            "javascript@ODcfFEorkfJNupoQygM53",
+            "npm@ib_FHinhrw8VuSet-xMF7",
+            "react@tG5v3O4lNIFc2uCnacPak",
+            "tailwind@eghnfG4p7i-EDWfp3CQXC",
+            "vitest@hVQ89f6G0LXEgHIOKHDYq"
+          ]
+        }
+      ]
+    }
+  ]
+}

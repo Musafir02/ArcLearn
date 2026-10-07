@@ -1,0 +1,4 @@
+{
+  "title": "CouchDB",
+  "content": "Apache CouchDB is a document-oriented NoSQL database using JSON for data storage, JavaScript MapReduce for queries, and HTTP for API access. Stores independent documents with self-contained schemas instead of relational tables.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@CouchDB](https://couchdb.apache.org/)\r\n- [@official@CouchDB Documentation](https://docs.couchdb.org/en/stable/)\r\n- [@video@What is CouchDB?](https://www.youtube.com/watch?v=Mru4sHzIfSA)"
+}

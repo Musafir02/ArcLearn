@@ -1,0 +1,994 @@
+{
+  "title": "Ai Agents Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Acting",
+      "name": "acting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acting--tool-invocation@sHYd4KsKlmw5Im3nQ19W8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Agent",
+      "name": "agent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agent-loop@Eih4eybuYB3C2So8K0AT3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Anthropic",
+      "name": "anthropic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "anthropic-tool-use@1EZFbDHA5J5_5BPMLMxXb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-requests@52qxjZILV-X1isup6dazC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-backend-development@VPI89s-m885r2YrXjYxdd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Be",
+      "name": "be",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "be-specific-in-what-you-want@qFKFM2qNPEN7EoD0V-1SM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bias",
+      "name": "bias",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bias--toxicity-guardrails@EyLo2j8IQsIK91SKaXkmK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chain",
+      "name": "chain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chain-of-thought-cot@qwdh5pkBbrF8LKPxbZp4F"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Closed",
+      "name": "closed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "closed-weight-models@tJYmEDDwK0LtEux-kwp9B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-execution--repl@mS0EVCkWuPN_GkVPng4A2",
+            "code-generation@PK8w31GlvtmAuU92sHaqr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Context",
+      "name": "context",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "context-windows@dyn1LSioema-Bf9lLTgUZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-mcp-servers@1NXIN-Hbjl5rPy_mqxQYW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dag",
+      "name": "dag",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dag-agents@Ep8RoZSy_Iq_zWXlGQLZo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-analysis@wKYEaPWNsR30TIpHaxSsq",
+            "data-privacy--pii-redaction@rdlYBJNNyZUshzsJawME4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-queries@sV1BnA2-qBnXoKpUn-8Ub"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Email",
+      "name": "email",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "email--slack--sms@qaNr5I-NQPnfrRH7ynGTl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embeddings",
+      "name": "embeddings",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embeddings-and-vector-search@UIm54UmICKgep6s8Itcyv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Episodic",
+      "name": "episodic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "episodic-vs-semantic-memory@EfCCNqLMJpWKKtamUa5gK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "File",
+      "name": "file",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "file-system-access@BoJqZvdGam4cd6G6yK2IV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fine",
+      "name": "fine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fine-tuning-vs-prompt-engineering@5OW_6o286mj470ElFyJ_5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forgetting",
+      "name": "forgetting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forgetting--aging-strategies@m-97m7SI0XpBnhEE8-_1S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Frequency",
+      "name": "frequency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "frequency-penalty@z_N-Y0zGkv8_qHPuVtimL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gemini",
+      "name": "gemini",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gemini-function-calling@_iIsBJTVS6OBf_dsdmbVO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "agno@PY5WTJgRnXiYeOM6BBUvn",
+            "autogen@7YtnQ9-KIvGPSpDzEDexl",
+            "crewai@uFPJqgU4qGvZyxTv-osZA",
+            "deepeval@0924QUH1wV7Mp-Xu0FAhF",
+            "haystack@XS-FsvtrXGZ8DPrwOsnlI",
+            "helicone@MLxP5N0Vrmwh-kyvNeGXn",
+            "langchain@Ka6VpCEnqABvwiF9vba7t",
+            "langfuse@UoIheaJlShiceafrWALEH",
+            "langgraph@O53AvUSRB5SI6hhwKxniL",
+            "langsmith@SS8mGqf9wfrNqenIWvN8Z",
+            "langsmith@xp7TCTRE9HP60_rGzTUF6",
+            "llamaindex@iEHF-Jm3ck-Iu85EbCoDi",
+            "openllmetry@7UqPXUzqKYXklnB3x-tsv",
+            "ragas@YzEDtGEaMaMWVt0W03HRt",
+            "temperature@L1zL1GzqjSAjF06pIIXhy",
+            "tokenization@GAjuWyJl9CI1nqXBp6XCf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git-and-terminal-usage@McREk2zHOlIrqbGSKbX-J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Human",
+      "name": "human",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "human-in-the-loop-evaluation@rHxdxN97ZcU7MPl8L1jzN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Integration",
+      "name": "integration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "integration-testing-for-flows@P9-SiIda3TSjHsfkI5OUV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iterate",
+      "name": "iterate",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iterate-and-test-your-prompts@noTuUFnHSBzn7GKG9UZEi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Llm",
+      "name": "llm",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "llm-native-function-calling@aafZxtjxiwzJH1lwHBODi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-desktop@iBtJp24F_kJE3YlBsW60s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Long",
+      "name": "long",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "long-term-memory@Ue633fz6Xu2wa2-KOAtdP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Manual",
+      "name": "manual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "manual-from-scratch@US6T5dXM8IY9V2qZnTOFW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Max",
+      "name": "max",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "max-length@Bn_BkthrVX_vOuwQzvPZa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mcp",
+      "name": "mcp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mcp-client@CGVstUxVXLJcYZrwk3iNQ",
+            "mcp-hosts@9FryAIrWRHh8YlzKX3et5",
+            "mcp-servers@yv_-87FVM7WKn5iv6LW9q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Metrics",
+      "name": "metrics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "metrics-to-track@v8qLnyFRnEumodBYxQSXQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-context-protocol-mcp@1B0IqRNYdtbHDi1jHSXuI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-agents@FjAYD6ZhAuPcS6gbvBBtE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Npc",
+      "name": "npc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "npc--game-ai@ok8vN7VtCgyef5x6aoQaL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Observation",
+      "name": "observation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "observation--reflection@ZJTrun3jK3zBGOTm1jdMI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Open",
+      "name": "open",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "open-weight-models@DSJAhQhc1dQmBHQ8ZkTau"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Openai",
+      "name": "openai",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "openai-assistant-api@37GBFVZ2J2d5r8bd1ViHq",
+            "openai-functions-calling@AQtxTTxmBpfl8BMgJbGzc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Perception",
+      "name": "perception",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "perception--user-input@LU76AhCYDjxdBhpMQ4eMU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Personal",
+      "name": "personal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "personal-assistant@PPdAutqJF5G60Eg9lYBND"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Planner",
+      "name": "planner",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "planner-executor@6YLCMWzystao6byCYCTPO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Presence",
+      "name": "presence",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "presence-penalty@Vd8ycw8pW-ZKvg5WYFtoh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pricing",
+      "name": "pricing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pricing-of-common-models@B8dzg61TGaknuruBgkEJd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prompt",
+      "name": "prompt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prompt-injection--jailbreaks@SU2RuicMUo8tiAsQtDI1k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Provide",
+      "name": "provide",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "provide-additional-context@6I42CoeWX-kkFXTKAY7rw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rag",
+      "name": "rag",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rag-agent@cW8O4vLLKEG-Q0dE8E5Zp",
+            "rag-and-vector-databases@wkS4yOJ3JdZQE_yBID8K7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "React",
+      "name": "react",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "react-reason--act@53xDks6JQ33fHMa3XcuCd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reason",
+      "name": "reason",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reason-and-plan@ycPRgRYR4lEBQr_xxHKnM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reasoning",
+      "name": "reasoning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reasoning-vs-standard-models@N3yZfUxphxjiupqGpyaS9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Remote",
+      "name": "remote",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "remote--cloud@dHNMX3_t1KSDdAWqgdJXv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-api-knowledge@QtTwecLdvQa8pgELJ6i80"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Safety",
+      "name": "safety",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "safety--red-team-testing@63nsfJFO1BwjLX_ZVaPFC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Self",
+      "name": "self",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "self-critique-agents@hBW8-z72NcETDn_cearYc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Short",
+      "name": "short",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "short-term--memory@M3U6RfIqaiut2nuOibY8W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Smol",
+      "name": "smol",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "smol-depot@eWxQiBrxIUG2JNcrdfIHS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Specify",
+      "name": "specify",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "specify-length-format-etc@wwHHlEoPAx0TLxbtY6nMA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stopping",
+      "name": "stopping",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stopping-criteria@K0G-Lw069jXUJwZqHtybd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Streamed",
+      "name": "streamed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "streamed-vs-unstreamed-responses@i2NE6haX9-7mdoV5LQ3Ah"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Structured",
+      "name": "structured",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "structured-logging--tracing@zs6LM8WEnb0ERWpiaQCgc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Summarization",
+      "name": "summarization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "summarization--compression@jTDC19BTWCqxqMizrIJHr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Token",
+      "name": "token",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "token-based-pricing@1fiWPBV99E2YncqdCgUw2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tool",
+      "name": "tool",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tool-definition@qakbxB8xe7Y8gejC5cZnK",
+            "tool-sandboxing--permissioning@UVzLGXG6K7HQVHmw8ZAv2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Top",
+      "name": "top",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "top-p@icbp1NjurQfdM0dHnz6v2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Transformer",
+      "name": "transformer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "transformer-models-and-llms@ZF5_5Y5zqa75Ov22JACX6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tree",
+      "name": "tree",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tree-of-thought@Nmy1PoB32DcWZnPM8l8jT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-the-basics-of-rag@qwVQOwBTLA2yUgRISzC8k"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unit",
+      "name": "unit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unit-testing-for-individual-tools@qo_O4YAe4-MTP_ZJoXJHR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-examples-in-your-prompt@yulzE4ZNLhXOgHhG7BtZQ",
+            "use-relevant-technical-terms@sUwdtOX550tSdceaeFPmF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-profile-storage@QJqXHV8VHPTnfYfmKPzW7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-scraping--crawling@5oLc-235bvKhApxzYFkEc",
+            "web-search@kBtqT8AduLoYDWopj-V9_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-are-ai-agents@aFZAm44nP5NefX_9TpT0A",
+            "what-are-tools@2zsOUWJQ8e7wnoHmq1icG",
+            "what-is-agent-memory@TBH_DZTAfR8Daoh-njNFC",
+            "what-is-prompt-engineering@Y8EqzFx3qxtrSh7bWbbV8"
+          ]
+        }
+      ]
+    }
+  ]
+}

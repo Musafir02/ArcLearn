@@ -1,0 +1,4 @@
+{
+  "title": "Min Stack",
+  "content": "Design a stack that supports push, pop, top, and retrieving the minimum element, all in O(1) time. The trick is to maintain a second stack that tracks the current minimum at each level. This problem teaches you that stacks can be augmented to carry extra state without breaking their core behavior.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Min Stack - LeetCode](https://leetcode.com/problems/min-stack/description/)\r\n- [@video@Min Stack (LeetCode 155)](https://www.youtube.com/watch?v=lkYzexIVlOY)\r\n- [@video@Min Stack - Leetcode 155 - Stacks (Python)](https://www.youtube.com/watch?v=RfMroCV17-4)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "chokidar",
+  "content": "Chokidar is an npm package for watching file system changes. It wraps Node.js's native `fs.watch` and `fs.watchFile` with a more reliable and consistent API. It is widely used in development tools like Webpack and Vite to trigger rebuilds when files change.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@chokidar](https://www.npmjs.com/package/chokidar)"
+}

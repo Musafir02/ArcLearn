@@ -1,0 +1,4 @@
+{
+  "title": "PostgreSQL / MySQL",
+  "content": "PostgreSQL and MySQL are relational databases that store data in structured tables with defined relationships. They are the most widely used databases for web applications and are well supported by every major cloud provider. Use them when your data has a clear, stable structure and relationships between entities matter.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated PostgreSQL DBA Roadmap](https://roadmap.sh/postgresql-dba)\r\n- [@official@PostgreSQL Docs](https://www.postgresql.org/docs/)\r\n- [@official@MySQL Docs](https://dev.mysql.com/doc/)\r\n- [@article@Learn PostgreSQL - Full Tutorial for Beginners](https://www.postgresqltutorial.com/)\r\n- [@article@MySQL Tutorial](https://www.mysqltutorial.org/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "What are Containers?",
+  "content": "Containers are lightweight, portable, and isolated software environments that package applications with their dependencies for consistent execution across different platforms. They streamline development, deployment, and management while ensuring applications run reliably regardless of underlying infrastructure.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@course@Introduction to Containers - AWS Skill Builder](https://explore.skillbuilder.aws/learn/course/106/introduction-to-containers)\r\n- [@official@What is a Container?](https://www.docker.com/resources/what-container/)"
+}

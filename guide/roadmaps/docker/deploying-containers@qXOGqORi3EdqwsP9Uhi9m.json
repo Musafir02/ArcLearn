@@ -1,0 +1,4 @@
+{
+  "title": "Deploying Containers",
+  "content": "Deploying containers is a crucial step in using Docker and containerization to manage applications more efficiently, easily scale, and ensure consistent performance across environments. This topic will give you an overview of how to deploy Docker containers to create and run your applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Docker Deployment](https://docs.docker.com/guides/orchestration/)\r\n- [@official@Docker Compose](https://docs.docker.com/compose/)\r\n- [@official@Docker Swarm](https://docs.docker.com/engine/swarm/)"
+}

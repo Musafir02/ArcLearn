@@ -1,0 +1,4 @@
+{
+  "title": "Ethereum",
+  "content": "Ethereum is an open-source, decentralized blockchain platform that establishes a peer-to-peer network for securely executing and verifying application code, referred to as smart contracts. It enables participants to transact with each other without a trusted central authority. Transactions on Ethereum are grouped into blocks, which are then cryptographically linked together to form a chain, ensuring data integrity and immutability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Introduction to Ethereum](https://ethereum.org/en/developers/docs/intro-to-ethereum/)\r\n- [@official@Ethereum Whitepaper](https://ethereum.org/en/whitepaper/)\r\n- [@article@A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/)"
+}

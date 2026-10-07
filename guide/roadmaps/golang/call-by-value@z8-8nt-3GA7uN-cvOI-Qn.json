@@ -1,0 +1,4 @@
+{
+  "title": "Call by Value",
+  "content": "Go creates copies of values when passing to functions, not references to originals. Applies to all types including structs and arrays. Provides safety but can be expensive for large data. Use pointers, slices, maps for references. Critical for performance optimization.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Golang Call by Reference and Call by Value](https://www.scaler.com/topics/golang/golang-call-by-reference-and-call-by-value)\r\n- [@article@Go Call by Value](https://www.includehelp.com/golang/go-call-by-value.aspx)\r\n- [@article@Parameter Passing in Golang: The Ultimate Truth](https://dev.to/mahdifardi/parameter-passing-in-golang-the-ultimate-truth-1h0o)"
+}

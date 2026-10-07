@@ -1,0 +1,4 @@
+{
+  "title": "Auth & Model Providers",
+  "content": "This section covers how to connect Open Claw to AI model providers like Anthropic, OpenAI, Gemini, or Ollama by entering your API credentials. The model provider is what powers the agent's intelligence.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Provider Directory](https://docs.openclaw.ai/providers)\r\n- [@official@Provider Quickstart](https://docs.openclaw.ai/providers/models)\r\n- [@article@OpenClaw Model Selection & API Providers](https://www.meta-intelligence.tech/en/insight-openclaw-model-guide)"
+}

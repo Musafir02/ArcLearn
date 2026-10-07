@@ -1,0 +1,4 @@
+{
+  "title": "Salting",
+  "content": "Salting is a crucial concept within the realm of cryptography. It is a technique employed to enhance the security of passwords or equivalent sensitive data by adding an extra layer of protection to safeguard them against hacking attempts, such as brute-force attacks or dictionary attacks.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)\r\n- [@article@Salt (Cryptography)](https://en.wikipedia.org/wiki/Salt_%28cryptography%29)"
+}

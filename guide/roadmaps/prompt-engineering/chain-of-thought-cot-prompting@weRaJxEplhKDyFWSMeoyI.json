@@ -1,0 +1,4 @@
+{
+  "title": "Chain of Thought (CoT) Prompting",
+  "content": "Chain of Thought prompting improves LLM reasoning by generating intermediate reasoning steps before providing the final answer. Instead of jumping to conclusions, the model \"thinks through\" problems step by step. Simply adding \"Let's think step by step\" to prompts often dramatically improves accuracy on complex reasoning tasks and mathematical problems.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Chain-of-Thought Prompting - DAIR.AI](https://www.promptingguide.ai/techniques/cot)\r\n- [@article@Chain-of-Thought Prompting - LearnPrompting](https://learnprompting.org/docs/intermediate/chain_of_thought)\r\n- [@article@Reasoning LLMs Guide - DAIR.AI](https://www.promptingguide.ai/guides/reasoning-llms)\r\n- [@video@Context Engineering vs. Prompt Engineering: Smarter AI with RAG & Agents](https://youtu.be/vD0E3EUb8-8?si=Y6MCLPzjmhMB4jSu&t=203)"
+}

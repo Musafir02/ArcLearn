@@ -1,0 +1,4 @@
+{
+  "title": "Large File Handling",
+  "content": "R2 supports multipart uploads for large files, splitting them into chunks that are uploaded in parallel and assembled on completion. Workers can initiate, manage, and complete multipart uploads using the R2 API.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Resumable and Large Files · Cloudflare Stream](https://developers.cloudflare.com/stream/uploading-videos/resumable-uploads/)\r\n- [@official@Cloudflare R2 Limits](https://developers.cloudflare.com/r2/platform/limits/)"
+}

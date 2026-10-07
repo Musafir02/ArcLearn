@@ -1,0 +1,4 @@
+{
+  "title": "RxKotlin",
+  "content": "RxKotlin is a lightweight Kotlin extension library for RxJava. It adds idiomatic Kotlin extension functions and DSL-style utilities for working with RxJava observables. Developers use RxKotlin to write more natural Kotlin code when building reactive streams in Android.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@opensource@ReactiveX/RxKotlin - RxKotlin on GitHub](https://github.com/ReactiveX/RxKotlin)"
+}

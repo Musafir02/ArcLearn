@@ -74,6 +74,32 @@ for (const lang in schemas) {
         title: entry.title,
         items: groupItems
       });
+    } else if (entry.type === 'section') {
+      const subsections = [];
+      entry.subsections.forEach(sub => {
+        const groupItems = [];
+        sub.topics.forEach(topicName => {
+          const topicDetails = rawTopics[lang][topicName];
+          if (topicDetails) {
+            flatGuides.push(topicDetails);
+            groupItems.push(topicDetails);
+          }
+        });
+        if (groupItems.length > 0) {
+          subsections.push({
+            title: sub.title,
+            items: groupItems
+          });
+        }
+      });
+      if (subsections.length > 0) {
+        outlineList.push({
+          type: 'section',
+          name: entry.title.toLowerCase(),
+          title: entry.title,
+          subsections: subsections
+        });
+      }
     }
   });
 

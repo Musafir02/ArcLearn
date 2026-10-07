@@ -1,0 +1,4 @@
+{
+  "title": "Floats",
+  "content": "Floats represent real numbers with fractional parts in Ruby. They are used to store numerical values that require more precision than integers can provide. Floats are typically represented using a decimal point or in scientific notation.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@class Floar](https://docs.ruby-lang.org/en/master/Float.html)\r\n- [@article@Numbers](https://ruby-for-beginners.rubymonstas.org/built_in_classes/numbers.html)\r\n- [@article@Numbers - Odin Project](https://www.theodinproject.com/lessons/ruby-basic-data-types#numbers)\r\n- [@video@03 Ruby Learning Path Integers and Floats](https://www.youtube.com/watch?v=FScOX-TavfA)"
+}

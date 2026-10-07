@@ -1,0 +1,4 @@
+{
+  "title": "Hugging Face Transformers and Diffusers",
+  "content": "The transformers and diffusers libraries provide reference implementations of popular LLM and image/video generation architectures. They are not designed for production serving but are essential for understanding model configurations, downloading weights, and prototyping inference. Model cards on Hugging Face use transformers or diffusers sample code as the canonical usage examples.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Hugging Face Diffusers](https://huggingface.co/docs/diffusers/index)\r\n- [@official@Hugging Face Transformers](https://huggingface.co/docs/transformers/index)\r\n- [@course@Hugging Face Course](https://www.youtube.com/playlist?list=PLo2EIpI_JMQvWfQndUesu0nPBAtZ9gP1o)\r\n- [@video@Getting Started With Hugging Face in 15 Minutes](https://www.youtube.com/watch?v=QEaBAZQCtwE)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "OSI Model",
+  "content": "The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven distinct layers. Each layer performs a specific set of network functions, and communicates with the layers above and below it. This model provides a structured way to understand how information travels from one application to another over a network.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is OSI Model? - AWS](https://aws.amazon.com/what-is/osi-model/)\r\n- [@video@What is OSI Model?](https://www.youtube.com/watch?v=Ilk7UXzV_Qc)"
+}

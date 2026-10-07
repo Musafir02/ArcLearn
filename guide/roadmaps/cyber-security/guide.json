@@ -1,0 +1,1339 @@
+{
+  "title": "Cyber Security Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Authentication",
+      "name": "authentication",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "authentication-vs-authorization@WG7DdsxESm31VcLFfkVTz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-and-concepts-of-threat-hunting@_x3BgX93N-Pt1_JK7wk0p",
+            "basics-of-computer-networking@T0aU8ZQGShmF9uXhWY4sD",
+            "basics-of-ids-and-ips@FJsEBOFexbDyAj86XWBCc",
+            "basics-of-nas-and-san@umbMBQ0yYmB5PgWfY6zfO",
+            "basics-of-reverse-engineering@uoGA4T_-c-2ip_zfEUcJJ",
+            "basics-of-subnetting@E8Z7qFFW-I9ivr0HzoXCq",
+            "basics-of-threat-intel-osint@wN5x5pY53B8d0yopa1z8F",
+            "basics-of-vulnerability-management@lcxAXtO6LoGd85nOFnLo8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Blue",
+      "name": "blue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "blue--red--purple-teams@7tDxTcKJNAUxbHLPCnPFO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Brute",
+      "name": "brute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "brute-force-vs-password-spray@Q0i-plPQkb_NIvOQBVaDd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buffer",
+      "name": "buffer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buffer-overflow@n8ZOZxNhlnw7DpzoXe_f_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-skills-and-knowledge@vVaBQ5VtsE_ZeXbCOF8ux"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-commands@WDrSO7wBNn-2jB8mcyT7j",
+            "common-ports-and-their-uses@0tx2QYDYXhm85iYrCWd9U",
+            "common-protocols-and-their-uses@ViF-mpR17MB3_KJ1rV8mS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Comptia",
+      "name": "comptia",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "comptia-a@lbAgU5lR1O7L_5mCbNz_D",
+            "comptia-linux@p34Qwlj2sjwEPR2ay1WOK",
+            "comptia-network@4RGbNOfMPDbBcvUFWTTCV",
+            "comptia-security@AxeDcKK3cUtEojtHQPBw7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Computer",
+      "name": "computer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "computer-hardware-components@Ih0YZt8u9vDwYo8y1t41n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Connection",
+      "name": "connection",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "connection-types-and-their-function@F1QVCEmGkgvz-_H5lTxY2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Core",
+      "name": "core",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "core-concepts-of-zero-trust@HavEL0u65ZxHt92TfbLzk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cyber",
+      "name": "cyber",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cyber-kill-chain@H38Vb7xvuBJXVzgPBdRdT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deauth",
+      "name": "deauth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deauth-attack@LfWJJaT3fv0p6fUeS8b84"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Default",
+      "name": "default",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "default-gateway@5rKaFtjYx0n2iF8uTLs8X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Diamond",
+      "name": "diamond",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "diamond-model@AY-hoPGnAZSd1ExaYX8LR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Different",
+      "name": "different",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "different-versions-and-differences@yXOGqlufAZ69uiBzKFfh6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Directory",
+      "name": "directory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "directory-traversal@L0ROYh2DNlkybNDO2ezJY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dns",
+      "name": "dns",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dns-poisoning@urtsyYWViEzbqYLoNfQAh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dos",
+      "name": "dos",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dos-vs-ddos@IF5H0ZJ72XnqXti3jRWYF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Drive",
+      "name": "drive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "drive-by-attack@cO70zHvHgBAH29khF-hBW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dumpster",
+      "name": "dumpster",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dumpster-diving@Iu0Qtk13RjrhHpSlm0uyh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Eap",
+      "name": "eap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "eap-vs-peap@1jwtExZzR9ABKvD_S9zFG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Endpoint",
+      "name": "endpoint",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "endpoint-security@LEgJtu1GZKOtoAXyOGWLE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-logs@KbFwL--xF-eYjGy8PZdrM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Evil",
+      "name": "evil",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "evil-twin@O1fY2n40yjZtJUEeoItKr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "False",
+      "name": "false",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "false-negative--false-positive@XwRCZf-yHJsXVjaRfb3R4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Firewall",
+      "name": "firewall",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "firewall--nextgen-firewall@tWDo5R3KU5KOjDdtv801x",
+            "firewall-logs@np0PwKy-EvIa_f_LC6Eem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ftk",
+      "name": "ftk",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ftk-imager@_jJhL1RtaqHJmlcWrd-Ak"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ftp",
+      "name": "ftp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ftp-vs-sftp@9Z6HPHPj4escSVDWftFEx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fundamental",
+      "name": "fundamental",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fundamental-it-skills@oimYzZYFXKjgvc7D4c-2u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acl@35oCRzhzpVfitQPL4K9KC",
+            "acls@8JM95sonFUhZCdaynUA_M",
+            "antimalware@9QtY1hMJ7NKLFztYK-mHY",
+            "antivirus@3140n5prZYySsuBHjqGOJ",
+            "anyrun@GZHFR43UzN0WIIxGKZOdX",
+            "apt@l0BvDtwWoRSEjm6O0WDPy",
+            "arp@fzdZF-nzIL69kaA7kwOCn",
+            "arp@hkO3Ga6KctKODr4gos6qX",
+            "arp@M52V7hmG4ORf4TIVw3W3J",
+            "attck@auR7fNyd77W2UA-PjXeJS",
+            "autopsy@bIwpjIoxSUZloxDuQNpMu",
+            "aws@0LztOTc3NG3OujCVwlcVU",
+            "azure@GklBi7Qx1akN_cS9UMrha",
+            "bash@tao0Bb_JR0Ubl62HO8plp",
+            "bluetooth@DbWf5LdqiByPiJa4xHtl_",
+            "box@4Man3Bd-ySLFlAdxbLOHw",
+            "bus@0DWh4WmLK_ENDuqQmQcu4",
+            "c@8jj9hpe9jQIgCc8Txyw3O",
+            "cat@D2ptX6ja_HvFEafMIzWOy",
+            "ccna@4RD22UZATfL8dc71YkJwQ",
+            "ceh@AAo7DXB7hyBzO6p05gx1i",
+            "certificates@WXRaVCYwuGQsjJ5wyvbea",
+            "cidr@PPIH1oHW4_ZDyD3U3shDg",
+            "cis@sSihnptkoEqUsHjDpckhG",
+            "cisa@lqFp4VLY_S-5tAbhNQTew",
+            "cism@s86x24SHPEbbOB9lYNU-w",
+            "cissp@BqvijNoRzSGYLCMP-6hhr",
+            "compliance@05Gbgy6aawYlYIx38u8DE",
+            "containment@l7WnKuR2HTD4Vf9U2TxkK",
+            "crest@rA1skdztev3-8VmAtIlmr",
+            "csf@HjfgaSEZjW9BOXy_Ixzkk",
+            "csrf@pK2iRArULlK-B3iSVo4-n",
+            "curl@W7iQUCjODGYgE4PjC5TZI",
+            "dd@9xbU_hrEOUtMm-Q09Fe6t",
+            "dhcp@R5HEeh6jwpQDo27rz1KSH",
+            "dhcp@T4312p70FqRBkzVfWKMaR",
+            "dig@D2YYv1iTRGken75sHO0Gt",
+            "dig@XyaWZZ45axJMKXoWwsyFj",
+            "dlp@iolsTC-63d_1wzKGul-cT",
+            "dmz@gfpvDQz61I3zTB7tGu7vp",
+            "dns@ORIdKG8H97VkBUYpiDtXf",
+            "dns@r1IKvhpwg2umazLGlQZL1",
+            "dnssec@LLGXONul7JfZGUahnK0AZ",
+            "dropbox@9OastXVfiG1YRMm68ecnn",
+            "edr@QvHWrmMzO8IvNQ234E_wf",
+            "eradication@N17xAIo7sgbB0nrIDMWju",
+            "esxi@BisNooct1vJDKaBKsGR7_",
+            "ftp@ftYYMxRpVer-jgSswHLNa",
+            "gcp@tOLA5QPKi6LHl1ljsOMwX",
+            "giac@ZiUT-lyIBfHTzG-dwSy96",
+            "go@jehVvdz8BnruKjqHMKu5v",
+            "gpen@t4h9rEKWz5Us0qJKXhxlX",
+            "grep@Dfz-6aug0juUpMmOJLCJ9",
+            "gsec@nlmATCTgHoIoMcEOW8bUW",
+            "gtfobins@Jd9t8e9r29dHRsN40dDOk",
+            "guestos@LocGETHz6ANYinNd5ZLsS",
+            "gwapt@rwniCTWfYpKP5gi02Pa9f",
+            "hackthebox@wkuE_cChPZT2MHyGjUuU4",
+            "hashing@0UZmAECMnfioi-VeXcvg8",
+            "head@VNmrb5Dm4UKUgL8JBfhnE",
+            "hips@l5EnhOCnkN-RKvgrS9ylH",
+            "honeypots@bj5YX8zhlam0yoNckL8e4",
+            "hostos@p7w3C94xjLwSMm5qA8XlL",
+            "hping@Cclbt4bNfkHwFwZOvJuLK",
+            "hr@05tH6WhToC615JTFN-TPc",
+            "hybrid@ywRlTuTfh5-NHnv4ZyW1t",
+            "hypervisor@CIoLaRv5I3sCr9tBnZHEi",
+            "iaas@1nPifNUm-udLChIqLC_uK",
+            "icloud@E7yfALgu9E2auOYDOTmex",
+            "icloud@Wqy6ki13hP5c0VhGYEhHj",
+            "identification@XsRoldaBXUSiGbvY1TjQd",
+            "impersonation@ZEgxmvjWPp5NofLFz_FTJ",
+            "infrared@KsZ63c3KQLLn373c5CZnp",
+            "ip@FdoqB2---uDAyz6xZjk_u",
+            "ipam@hN8p5YBcSaPm-byQUIz8L",
+            "ipconfig@IXNGFF4sOFbQ_aND-ELK0",
+            "ipconfig@u-6xuZUyOrogh1bU4cwER",
+            "ipsec@gNFVtBxSYP5Uw3o3tlJ0M",
+            "iptables@jr8JlyqmN3p7Ol3_kD9AH",
+            "iso@oRssaVG-K-JwlL6TAHhXw",
+            "javascript@2SThr6mHpX6rpW-gmsqxG",
+            "kerberos@lG6afUOx3jSQFxbH92otL",
+            "lan@xWxusBtMEWnd-6n7oqjHz",
+            "ldap@lV3swvD6QGLmD9iVfbKIF",
+            "ldaps@z_fDvTgKw51Uepo6eMQd9",
+            "legal@C5bCIdPi0gGkY_r4qqoXZ",
+            "linux@4frVcjYI1VlVU9hQgpwcT",
+            "localhost@0TWwox-4pSwuXojI8ixFO",
+            "lolbas@10qbxX8DCrfyH7tgYexxQ",
+            "loopback@W_oloLu2Euz5zRSy7v_T8",
+            "macos@dztwr-DSckggQbcNIi4_2",
+            "man@LrwTMH_1fTd8iB9wJg-0t",
+            "management@s9tHpzYRj2HCImwQhnjFM",
+            "memdump@wspNQPmqWRjKoFm6x_bVw",
+            "mesh@PYeF15e7iVB9seFrrO7W6",
+            "mitm@ODlVT6MhV-RVUbRMG0mHi",
+            "nat@Kkd3f_0OYNCdpDgrJ-_Ju",
+            "netflow@xXz-SwvXA2cLfdCd-hLtW",
+            "netstat@2M3PRbGzo14agbEPe32ww",
+            "nfc@hwAUFLYpc_ftCfXq95dey",
+            "nids@LIPtxl_oKZRcbvXT4EdNf",
+            "nips@7w9qj16OD4pUzq-ItdxeK",
+            "nist@SOkJUTd1NUKSwYMIprv4m",
+            "nmap@Hoou7kWyfB2wx_yFHug_H",
+            "nmap@xqwIEyGfdZFxk6QqbPswe",
+            "nslookup@OUarb1oS1-PX_3OXNR0rV",
+            "nslookup@tk4iG5i1Ml9w9KRO1tGJU",
+            "ntp@tf0TymdPHbplDHvuVIIh4",
+            "obfuscation@kxlg6rpfqqoBfmMMg3EkJ",
+            "onedrive@MWqnhDKm9jXvDDjkeVNxm",
+            "oscp@SwVGVP2bbCFs2uNg9Qtxb",
+            "paas@PQ_np6O-4PK2V-r5lywQg",
+            "parrotos@zR6djXnfTSFVEfvJonQjf",
+            "patching@e-MDyUR3GEv-e4Qsx_5vV",
+            "phishing@7obusm5UtHwWMcMMEB3lt",
+            "picoctf@pou5xHwnz9Zsy5J6lNlKq",
+            "ping@GuuY-Q6FZzfspB3wrH64r",
+            "ping@yfTpp-ePuDB931FnvNB-Y",
+            "pki@fxyJxrf3mnFTa3wXk1MCW",
+            "preparation@w6V4JOtXKCMPAkKIQxvMg",
+            "private@ecpMKP1cQXXsfKETDUrSf",
+            "proxmox@jqX1A5hFF3Qznqup4lfiF",
+            "public@ZDj7KBuyZsKyEMZViMoXW",
+            "pwncollege@WCeJrvWl837m1BIjuA1Mu",
+            "python@XiHvGy--OkPFfJeKA6-LP",
+            "radius@tH3RLnJseqOzRIbZMklHD",
+            "rdp@Ia6M1FKPNpqLDiWx7CwDh",
+            "reconnaissance@UU_inxa8Y2lLP2BRhdLDT",
+            "recovery@vFjbZAJq8OfLb3_tsc7oT",
+            "ring@9vEUVJ8NTh0wKyIE6-diY",
+            "rmf@fjEdufrZAfW4Rl6yDU8Hk",
+            "route@xFuWk7M-Vctk_xb7bHbWs",
+            "router@lwSFIbIX-xOZ0QK2sGFb1",
+            "s3@2jsTgT7k8MeaDtx6RJhOP",
+            "saas@sVw5KVNxPEatBRKb2ZbS_",
+            "salting@jqWhR6oTyX6yolUBv71VC",
+            "sandboxing@SLKwuLHHpC7D1FqrpPRAe",
+            "sftp@YEy6o-clTBKZp1yOkLwNb",
+            "siem@c2kY3wZVFKZYxMARhLIwO",
+            "sinkholes@oFgyQYL3Ws-l7B5AF-bTR",
+            "smime@9rmDvycXFcsGOq3v-_ziD",
+            "smishing@d4U6Jq-CUB1nNN2OCFoum",
+            "soar@i0ulrA-GJrNhIVmzdWDrn",
+            "spoofing@LteSouUtAj3JWWOzcjQPl",
+            "srtp@_9lQSG6fn69Yd9rs1pQdL",
+            "ssh@8Mog890Lj-gVBpWa05EzT",
+            "sso@xL32OqDKm6O043TYgVV1r",
+            "stakeholders@lv6fI3WeJawuCbwKtMRIh",
+            "star@P0ZhAXd_H-mTOMr13Ag31",
+            "switch@r9byGV8XuBPzoqj5ZPf2W",
+            "syslogs@7oFwRkmoZom8exMDtMslX",
+            "tail@762Wf_Eh-3zq69CZZiIjR",
+            "tailgating@o-keJgF9hmifQ_hUD91iN",
+            "tcpdump@y8GaUNpaCT1Ai88wPOk6d",
+            "tracert@cSz9Qx3PGwmhq3SSKYKfg",
+            "tracert@jJtS0mgCYc0wbjuXssDRO",
+            "troubleshooting@xeRWOX1fWQDLNLWMAFTEe",
+            "tryhackme@kht-L7_v-DbglMYUHuchp",
+            "urlscan@lMiW2q-b72KUl-2S7M6Vb",
+            "urlvoid@lFt1k1Q-NlWWqyDA3gWD1",
+            "virtualbox@vGVFhZXYOZOy4qFpLLbxp",
+            "virustotal@rxzcAzHjzIc9lkWSw0fef",
+            "vlan@d5Cv3EXf6OXW19yPJ4x6e",
+            "vm@251sxqoHggQ4sZ676iX5w",
+            "vm@ZTC5bLWEIQcdmowc7sk_E",
+            "vmware@AjywuCZdBi9atGUbetlUL",
+            "vpn@gTozEpxJeG1NTkVBHH-05",
+            "vulnhub@W94wY_otBuvVW_-EFlKA6",
+            "wadcoms@Rnpx7VkhrBkSQTni6UuTR",
+            "wan@vCkTJMkDXcQmwsmeNUAX5",
+            "whaling@KSwl6sX2W47vUmytpm8LH",
+            "whishing@M65fCl72qlF0VTbGNT6du",
+            "whois@-RnlvUltJ9IDtH0HEnMbN",
+            "wifi@fUBNKHNPXbemRYrnzH3VT",
+            "windows@BNUKEQ4YpZmIhSPQdkHgU",
+            "winhex@gNan93Mg9Ym2AF3Q2gqoi",
+            "wireshark@Sm9bxKUElINHND8FdZ5f2",
+            "wlan@QCVYF1rmPsMVtklBNDNaB",
+            "wps@HSCGbM2-aTnJWUX6jGaDP",
+            "xss@2jo1r9O_rCnDwRv1_4Wo-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Google",
+      "name": "google",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "google-drive@fTZ4PqH-AMhYA_65w4wFO",
+            "google-suite@IOK_FluAv34j3Tj_NvwdO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Group",
+      "name": "group",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "group-policy@FxuMJmDoDkIsPFp2iocFg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Host",
+      "name": "host",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "host-based-firewall@jWl1VWkZn3n1G2eHq6EnX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Http",
+      "name": "http",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "http--https@3Awm221OJHxXNLiL9yxfd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installation",
+      "name": "installation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installation-and-configuration@02aaEP9E5tlefeGBxf_Rj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-software-and-applications@Ot3LGpM-CT_nKsNqIKIye"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Joe",
+      "name": "joe",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "joe-sandbox@h__KxKa0Q74_egY7GOe-L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jump",
+      "name": "jump",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jump-server@UF3BV1sEEOrqh5ilnfM1B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kali",
+      "name": "kali",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kali-linux@w6wXkoLrv0_d-Ah0txUHd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Key",
+      "name": "key",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "key-exchange@rmR6HJqEhHDgX55Xy5BAW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kill",
+      "name": "kill",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kill-chain@7Bmp4x6gbvWMuVDdGRUGj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Known",
+      "name": "known",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "known-vs-unknown@HPlPGKs7NLqmBidHJkOZg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-how-malware-works-and-types@v7CD_sHqLWbm9ibXXESIK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lessons",
+      "name": "lessons",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lessons-learned@ErRol7AT02HTn3umsPD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-auth@vYvFuz7lAJXZ1vK_4999a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mac",
+      "name": "mac",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mac-based@OAukNfV5T0KTnIF9jKYRF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-leak@nOND14t7ISgSH3zNpV3F8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mfa",
+      "name": "mfa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mfa--2fa@pnfVrOjDeG1uYAeqHxhJP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ms",
+      "name": "ms",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ms-office-suite@-5haJATqlmj0SFSFAqN6A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nac",
+      "name": "nac",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nac-based@6oAzYfwsHQYNVbi7c2Tly"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Navigating",
+      "name": "navigating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "navigating-using-gui-and-cli@MGitS_eJBoY99zOR-W3F4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Networking",
+      "name": "networking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "networking-knowledge@gSLr-Lc119eX9Ig-kDzJ2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Operating",
+      "name": "operating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "operating-system-hardening@_S25EOGS3P8647zLM5i-g",
+            "operating-systems@UY6xdt_V3YMkZxZ1hZLvW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Os",
+      "name": "os",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "os-independent-troubleshooting@pJUhQin--BGMuXHPwx3JJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Packet",
+      "name": "packet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "packet-captures@TIxEkfBrN6EXQ3IKP1B7u",
+            "packet-sniffers@k6UX0BJho5arjGD2RWPgH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pass",
+      "name": "pass",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pass-the-hash@sMuKqf27y4iG0GrCdF5DN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Penetration",
+      "name": "penetration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "penetration-testing-rules-of-engagement@NkAAQikwH-A6vrF8fWpuB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performing",
+      "name": "performing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performing-crud-on-files@zRXyoJMap9irOYo3AdHE8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Perimiter",
+      "name": "perimiter",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "perimiter-vs-dmz-vs-segmentation@PUgPgpKio4Npzs86qEXa7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Port",
+      "name": "port",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "port-blocking@W7bcydXdwlubXF2PHKOuq",
+            "port-scanners@iJRQHzh5HXADuWpCouwxv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Power",
+      "name": "power",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "power-shell@paY9x2VJA98FNGBFGRXp2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Private",
+      "name": "private",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "private-vs-public-keys@7svh9qaaPp0Hz23yinIye"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Privilege",
+      "name": "privilege",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "privilege-escalation@cvI8-sxY5i8lpelW9iY_5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-skills@_RnuQ7952N8GWZfPD60sJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Protocol",
+      "name": "protocol",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "protocol-analyzers@K05mEAsjImyPge0hDtsU0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Public",
+      "name": "public",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "public-vs-private-ip-addresses@2nQfhnvBjJg1uDZ28aE4v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Replay",
+      "name": "replay",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "replay-attack@mIX8PsIGuwgPCGQZ6ok2H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rogue",
+      "name": "rogue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rogue-access-point@Ee7LfbhwJbiWjJ3b_bbni"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roles",
+      "name": "roles",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roles-of-compliance-and-auditors@kqT0FRLt9Ak9P8PhHldO-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sans",
+      "name": "sans",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sans-holiday-hack-challenge@WCeJrvWl837m1BIjuA1Mu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-skills-and-knowledge@_hYN0gEi9BL24nptEtXWU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shoulder",
+      "name": "shoulder",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shoulder-surfing@FD0bkmxNpPXiUB_NevEUf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Social",
+      "name": "social",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "social-engineering@O1VceThdxRlgQ6DcGyY7Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spam",
+      "name": "spam",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spam-vs-spim@cbEMUyg_btIPjdx-XqIM5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-injection@P-Am25WJV8cFd_KsX7cdj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ssl",
+      "name": "ssl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ssl--tls@LKK1A5-xawA7yCIAWHS8P",
+            "ssl-and-tls-basics@dJ0NUsODFhk52W2zZxoPh",
+            "ssl-vs-tls@6ILPXeUDDmmYRiA_gNTSr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Subnet",
+      "name": "subnet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "subnet-mask@f-v8qtweWXFY_Ryo3oYUF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "True",
+      "name": "true",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "true-negative--true-positive@M6uwyD4ibguxytf1od-og"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Typo",
+      "name": "typo",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "typo-squatting@0LeDwj_tMaXjQBBOUJ5CL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Understand",
+      "name": "understand",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "understand-backups-and-resiliency@9asy3STW4oTYYHcUazaRj",
+            "understand-basics-of-forensics@7KLGFfco-hw7a62kXtS3d",
+            "understand-basics-of-popular-suites@_7RjH4Goi0x6Noy6za0rP",
+            "understand-cia-triad@uz6ELaLEu9U4fHVfnQiOa",
+            "understand-common-exploit-frameworks@Lg7mz4zeCToEzZBFxYuaU",
+            "understand-common-hacking-tools@rzY_QsvnC1shDTPQ-til0",
+            "understand-concept-of-defense-in-depth@Rae-f9DHDZuwIwW6eRtKF",
+            "understand-concept-of-isolation@aDF7ZcOX9uR8l0W4aqhYn",
+            "understand-concept-of-runbooks@Ec6EairjFJLCHc7b-1xxe",
+            "understand-handshakes@zQx_VUS1zRmF4zCGjJD5-",
+            "understand-permissions@bTfL7cPOmBBFl-eHxUJI6",
+            "understand-the-basics-and-general-flow-of-deploying-in-the-cloud@XL3FVeGFDhAl_gSol6Tjt",
+            "understand-the-concept-of-infrastructure-as-code@RJctUpvlUJGAdwBNtDSXw",
+            "understand-the-concept-of-security-in-the-cloud@ThLsXkqLw--uddHz0spCH",
+            "understand-the-concept-of-serverless@-83ltMEl3le3yD68OFnTM",
+            "understand-the-definition-of-risk@ggAja18sBUUdCfVsT0vCv",
+            "understand-the-differences-between-cloud-and-on-premises@KGjYM4Onr5GQf1Yv9IabI",
+            "understand-the-osi-model@OXUd1UPPsBhNoUGLKZJGV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vlan",
+      "name": "vlan",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vlan-hopping@u4hySof6if5hiONSaW-Uf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Watering",
+      "name": "watering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "watering-hole-attack@dcvuKHq0nHgHLcLwtl4IJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-based-attacks-and-owasp10@fyOYVqiBqyKC4aqc6-y0q"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Wpa",
+      "name": "wpa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "wpa-vs-wpa2-vs-wpa3-vs-wep@MBnDE0VyVh2u2p-r90jVk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Zero",
+      "name": "zero",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "zero-day@v9njgIxZyabJZ5iND3JGc",
+            "zero-day@zqRaMmqcLfx400kJ-h0LO"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Code Editors / IDEs",
+  "content": "Choosing the right code editor or IDE is a crucial first step for any C++ developer. These tools provide a platform for writing, editing, and managing your code, often including features like syntax highlighting, code completion, debugging tools, and build automation. Popular options range from lightweight and customizable editors like Visual Studio Code and Sublime Text, to more comprehensive IDEs like Visual Studio and CLion, each with its own strengths and features. Selecting the best one for you often comes down to personal preference and your specific development needs.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Using C++ on Linux in VSCode](https://code.visualstudio.com/docs/cpp/config-linux)"
+}

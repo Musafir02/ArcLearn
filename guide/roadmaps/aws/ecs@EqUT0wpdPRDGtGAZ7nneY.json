@@ -1,0 +1,4 @@
+{
+  "title": "ECS",
+  "content": "ECS (Elastic Container Service) is AWS's container orchestration service. It runs Docker containers on a cluster of EC2 instances or on Fargate without managing servers. ECS handles scheduling, scaling, and integrating containers with other AWS services.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Amazon Elastic Container Service (ECS)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)"
+}

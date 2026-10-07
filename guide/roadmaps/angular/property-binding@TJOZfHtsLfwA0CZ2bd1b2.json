@@ -1,0 +1,4 @@
+{
+  "title": "Property binding",
+  "content": "Property binding helps you set values for properties of HTML elements or directives. To bind to an element's property, enclose it in square brackets `[]` which causes Angular to evaluate the right-hand side of the assignment as a dynamic expression.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Property Binding](https://angular.dev/guide/templates/property-binding)"
+}

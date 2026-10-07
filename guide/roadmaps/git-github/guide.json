@@ -1,0 +1,1072 @@
+{
+  "title": "Git Github Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "",
+      "name": "",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "--hard@V_joZNpQsS9G9PI-o-GmC",
+            "--mixed@qis7Z5VRxMcOmbesQlegZ",
+            "--soft@Uc7FyfAKpDFRGRNHwztFo"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Adding",
+      "name": "adding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adding--updating@x4bnsPVTiX2xOCSyrgWpF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Between",
+      "name": "between",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "between-branches@O-zoAWkDvyn7B8_TmY257",
+            "between-commits@Rwpeltygwzcf6hnuZNURE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Branch",
+      "name": "branch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "branch-naming@ks1Pip-RM-UWD6zuF2j4n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Branching",
+      "name": "branching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "branching-basics@bXfCUG3h1TIFPgD4WUDph"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Caching",
+      "name": "caching",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "caching-dependencies@HMNhzzV6ApTKj4I_FOmUB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Campus",
+      "name": "campus",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "campus-program@B1KiSOt2b8t8FYD7Jxw2A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Checkout",
+      "name": "checkout",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "checkout-branch@PtRo-wGiNAagZ6CykfvMr",
+            "checkout-tags@62E1tDMXB6K74OEN0WsS0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cherry",
+      "name": "cherry",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cherry-picking-commits@eFf2fesrs-1aVM5tH3ORQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Citation",
+      "name": "citation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "citation-files@Ddkss13_qDJTquDHbVTVs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clean",
+      "name": "clean",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clean-git-history@i3AbARgzQtxtlB-1AS8zv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-vs-server-hooks@zsU6R2zvJKnYNU2ac4o4p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloning",
+      "name": "cloning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloning-repositories@1Koej79yTv-OAswVZwgGq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Code",
+      "name": "code",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "code-reviews@xLB2fhsOm0Vu3xg_PusJB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Collaboration",
+      "name": "collaboration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collaboration-on-github@d_GNnB6PBINz1jxGNWAE-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Collaborators",
+      "name": "collaborators",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collaborators--members@_ft-uvXt6s_xrcMT3fbSF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Commit",
+      "name": "commit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "commit-messages@7lRUYWNSpHvJ-QyIE8RMa",
+            "commit-msg@jzYjHx-gIKSP8dQUTqWVw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Committing",
+      "name": "committing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "committing-changes@2_z3R7seCvQVj-Na4H1SV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Contribution",
+      "name": "contribution",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "contribution-guidelines@pJ-najh7dXhhYA_0bDiR5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-account@i7fIIHcBEk473te8bniJ5",
+            "creating-apps@5Oax1p7zIZ9HD2hmENPof",
+            "creating-branch@OegitQ5Ngjvd3ZfMpfrkM",
+            "creating-repositories@c_FO6xMixrrMo6iisfsvl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-domains@VdoxEWaU56-QCbHFRw649"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deleting",
+      "name": "deleting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deleting-branch@1uDenoQ6zu7CT69FR2iQB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deploying",
+      "name": "deploying",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deploying-static-websites@ZHplGidvhxEIC3HN8KqRa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Detached",
+      "name": "detached",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "detached-head@0cLf7FiI9CX--UX45sm2f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fast",
+      "name": "fast",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fast-forward-vs-non-ff@agtPWS8j6i6wQPk10cy8E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fetch",
+      "name": "fetch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fetch-without-merge@Gybnekbd1rJKTOf4hJ4Sh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forking",
+      "name": "forking",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forking-vs-cloning@l1Wf7Pe_ah8ycCgslfSK4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "automations@TNBz5755PhI6iKxTQTqcS",
+            "collaborators@r-u1vTpUyuvsB0revOU0C",
+            "documentation@D2WIExwfSnkAPIa5O-Hp5",
+            "gitignore@oz2oRAhaEQb0Fm3aRJQG8",
+            "head@V8nLIvddyOKTzEjOJX5GW",
+            "history@zen3RRdK9_nPAYgicRoHk",
+            "issues@crdllx5cH_seIpgVPvHg_",
+            "markdown@1Ulxl4VUvRSfyCPpi-iv8",
+            "mentions@oWMaOWU06juoIuzXNe-wt",
+            "reactions@XstmIysIi_lWo6RzszLBt",
+            "rebase@99FVJ3Zs8n6lr8L95mG6g",
+            "roadmaps@sxvT2hGko2PDRBoBrCGWD",
+            "squash@Z-srOhYFGVEKDexlJ6cjt",
+            "submodules@fjAFNjNNbPOzme9Uk_fDV",
+            "tagging@iFJBF-EEnLjQVsFSXjo_i",
+            "usecases@PUnYNBrAZWoZiopjtNgnA",
+            "webhooks@MoG7D9kqPuA6o52-z_WDN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Git",
+      "name": "git",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "git-attributes@CGj_UX5JMOOCKinedsNRc",
+            "git-bisect@ExXuwTQSI_lg4SRGW3Iu1",
+            "git-commit---amend@NjPnEXLf1Lt9qzgxccogv",
+            "git-config@NMCWgzhhfUvFOMO5GbF_u",
+            "git-filter-branch@BKVA6Q7DXemAYjyQOA0nh",
+            "git-hooks@pqBV7BMAs0z6qpfZeW2XP",
+            "git-init@1iOkbO5juk2LO-WZHx_W6",
+            "git-lfs@zdunaucVe8J1tKf_z-NQo",
+            "git-log-options@qFEonbCMLri8iA0yONwuf",
+            "git-patch@sFf1PdFfmEdQxsEntfeFq",
+            "git-push---force@OQOmxg9mCfcjt80hpvXkA",
+            "git-rebase@HMEfUFNu_Wp_Pac7VWHr-",
+            "git-reflog@hru0sL1-D4bJSQI1efEyU",
+            "git-remotes@aWx9WHUrgofcTr8B-fQYe",
+            "git-reset@igrR7LguU1jemg_mf_AD6",
+            "git-revert@dLr55Om7IOvI53c1DgTKc",
+            "git-stash-basics@X9K3PBpGsMoXkJsKdJPI7",
+            "git-vs-other-vcs@_jSTrYN9G8EsGHkbusKPU",
+            "git-worktree@4dxVN81rXWn6VZqK99yq0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Github",
+      "name": "github",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "github-actions@AmetdCURXXob5TUsikAab",
+            "github-api@NV2HAXLEN7tskfgyFrbaf",
+            "github-apps@560GJXFTt7DPdJjKtSDOo",
+            "github-classroom@Pg6G4fzYb_RUhANeRKlRX",
+            "github-cli@h9cf_dh_pwjialOXOlNW-",
+            "github-codespaces@NdfwgwMOewiyEAFyC2l7U",
+            "github-copilot@iWn3zDMOfLLjSp6f1jQoE",
+            "github-discussions@snWQHCQECZyUXHdn6ppIk",
+            "github-education@pFyMiyNQ16-kP7jKaKKEU",
+            "github-essentials@NeSvgS2yA5x8qbcJHrV__",
+            "github-gists@M2_hBvXou7cCNqsMnexCt",
+            "github-interface@qZFtRABvlBbVvsy6T00J2",
+            "github-marketplace@R20LXLLEzNn-SpyFDMRXj",
+            "github-models@4slyjdk2Eeg5VYY6gCDG6",
+            "github-organizations@RMrxQLhrINO5g4Mhxh5qS",
+            "github-packages@rqPCHh25xX_ROMr-ULpaw",
+            "github-pages@bnai6R6pOq_L5CPdbVwMW",
+            "github-projects@DzFJDdqnSy5GeGHWOpcVo",
+            "github-releases@YmnTrjJtqHPXbEVrP8vd7",
+            "github-security@f2PG4t6iVtfIH8BVe5H7f",
+            "github-sponsors@vhdGUhMAyre_Xya6IxZ-t",
+            "github-wikis@lONqOqD-4slxa9B5i9ADX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graphql",
+      "name": "graphql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graphql-api@KlXPt-K6br8PtpLgELaCj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Handling",
+      "name": "handling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "handling-conflicts@9Dt4Gyiiq5jteWSKxsRMK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installation",
+      "name": "installation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installation-and-setup@vHfpoVbOW0DHNtiy0VN4X"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Installing",
+      "name": "installing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "installing-git-locally@v7hCNbgPByi3YiLSs46BK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Issue",
+      "name": "issue",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "issue-management@kGnZifvXbHBf5zXIsfAQw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kanban",
+      "name": "kanban",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kanban-boards@RFJgfuxoVxt22QlwLI5mW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Labelling",
+      "name": "labelling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "labelling-issues--prs@y4DkB5NvTh41IeT0G2gr-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Learn",
+      "name": "learn",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "learn-the-basics@HlUUGj3dOZ68t4gIjerXh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linear",
+      "name": "linear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linear-vs-non-linear@lXC07j6dOa3rQixY1P-Ob"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Local",
+      "name": "local",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "local-vs-global-config@tVvxC5JQgUb_B8kOqYpD8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Managing",
+      "name": "managing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "managing-remotes@sBQOInoFBU9XfkPZ-JlyT",
+            "managing-tags@NeU38WPbEphJuJ_AMkH82"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Marketplace",
+      "name": "marketplace",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "marketplace-actions@SsogoCgJIbeTD6tk8UhTe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Merge",
+      "name": "merge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "merge-strategies@0rHDUbAdXqH9zQW2VfJ8v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Merging",
+      "name": "merging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "merging-basics@sNuy6NMjLOEkJlqdEjFPq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Oauth",
+      "name": "oauth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "oauth-apps@qrdOARfqGPF9xhF6snbAn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Post",
+      "name": "post",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "post-checkout@SANEQI2rgOtsMQyn4qUCq",
+            "post-update@buxb5TpzQ-xxn0vqtGdS3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pr",
+      "name": "pr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pr-from-a-fork@8lXXVFkgK6n5IHaYkYe3l",
+            "pr-guidelines@GwDNk2HBjASr_NWIL4G3-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pre",
+      "name": "pre",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pre-commit@HhpAIzYMlMiQ9msrYZyDB",
+            "pre-push@j5kWEUKwBFg5EMm8-61K9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Private",
+      "name": "private",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "private-vs-public@HEqBbw_A4ZbJI5zEy8ViN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Profile",
+      "name": "profile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "profile-readme@KbVvFVQ4k77R2_ddsc7WT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Project",
+      "name": "project",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "project-planning@q0zy_hXav5iXw8LpGVJVd",
+            "project-readme@WIVr7JxO1AJTNObW8mtY3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pull",
+      "name": "pull",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pull-requests@s3MzDYFPMASqiS8UnvWzW",
+            "pull-requests@x6eILrLCQrVpz4j8uOuy6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pushing",
+      "name": "pushing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pushing--pulling-changes@ZVMCh9om37ee1qsecFa-N",
+            "pushing-tags@E3HAGNM-kXLL4Oci5JzpQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Renaming",
+      "name": "renaming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "renaming-branch@_dPOVUbxApx0pfKPH8fgr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Repository",
+      "name": "repository",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "repository-management@lw4zHuhtxIO4kDvbyiVfq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rest",
+      "name": "rest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rest-api@lSCnKhmRr6xrKVYxO8idD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rewriting",
+      "name": "rewriting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rewriting-history@sOoC-XxEoIvwKct00oKlX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Saved",
+      "name": "saved",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "saved-replies@dQS1V0zZxeKhHhUo3STBK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scheduled",
+      "name": "scheduled",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scheduled-worfklows@uS1H9KoKGNONvETCuFBbz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Secrets",
+      "name": "secrets",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "secrets-and-env-vars@aflP7oWsQzAr4YPo2LLiQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Setting",
+      "name": "setting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "setting-up-profile@GS3f1FKFVKT0-GJQrgCm8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Staged",
+      "name": "staged",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "staged-changes@mzjtCdpke1ayHcEuS-YUS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Staging",
+      "name": "staging",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "staging-area@h71Tx3nkfUrnhaqcHlDkQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Static",
+      "name": "static",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "static-site-generators@iwfNYDlAgbA_rpWYcoHCC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Storing",
+      "name": "storing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "storing-artifacts@alysXC4b1hGi9ZdQ5-40y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Student",
+      "name": "student",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "student-developer-pack@XRSVRl6iHncMmgSXoB7Lq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Teams",
+      "name": "teams",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "teams-within-organization@wydgCxR5VnieBpRolXt8i"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Undoing",
+      "name": "undoing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "undoing-changes@0Yi4cryT2v2SGBjouOas3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unstaged",
+      "name": "unstaged",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unstaged-changes@uxqJzQFRcALqatNRIWR0w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Use",
+      "name": "use",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "use-in-automation@Y0EWgPsS4kZxH3y53jNxY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Viewing",
+      "name": "viewing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "viewing-commit-history@IfUm5D_zNaUKMd4HX4Fi4",
+            "viewing-diffs@-0zQvCHG8jS_ghSjmTeIx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-and-why-use@d0-u_-_vtPK8tnUpnj_NB",
+            "what-and-why@v7uabKuMQPOD_hBIaHOVT",
+            "what-are-these@Ni3HKVLanFvSrJ3u8i5I1",
+            "what-is-a-repository@PtU5Qwfzn3N1i3oRlCGoR",
+            "what-is-version-control@bY6b1GV2XQQ52NOx8gWFj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-version-control@dhIx1GnynvbSUriqYLUt0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Workflow",
+      "name": "workflow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "workflow-context@BnPiTu1Jw2kIW560a2A5T",
+            "workflow-runners@6QwlY3dEvjfAOPALcWKXQ",
+            "workflow-status@jc4R1zhd1YeCEbVuxwJWy",
+            "workflow-triggers@55uHPFNwYPVZx8Cy3c985"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Working",
+      "name": "working",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "working-directory@Sv36oxTZwlUv-i1K28NeP",
+            "working-in-a-team@yMx3LdadPz4g25CL3N8da"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Yaml",
+      "name": "yaml",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "yaml-syntax@p6rq3lQ9YRrTqwcc31O23"
+          ]
+        }
+      ]
+    }
+  ]
+}

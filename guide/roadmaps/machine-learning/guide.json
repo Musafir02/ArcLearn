@@ -1,0 +1,1055 @@
+{
+  "title": "Machine Learning Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Activation",
+      "name": "activation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "activation-functions@RXTci1N6i6D9HqTbsLYIy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Actor",
+      "name": "actor",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "actor-critic-methods@4Vy6lW9vF_SWwbKLU0qno"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Applications",
+      "name": "applications",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "applications-of-cnns@gCGHtxqD4V_Ite_AXMspf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Attention",
+      "name": "attention",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "attention-mechanisms@-tzeA13f2jYDm4aO5JciT",
+            "attention-models@sChxcuQ2OruKVx8P4wAK_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Back",
+      "name": "back",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "back-propagation@0meihv22e11GwqnRdSJ9g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-concepts@P32Rmnln5NCFWz4LP0k05",
+            "basic-syntax@hWA7RtuqltMTmHdcCnmES"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basics",
+      "name": "basics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basics-of-probability@p8q1Gtt9x19jw5_-YjAGh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bayes",
+      "name": "bayes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bayes-theorem@7o6g0wQxHH9i9MMCoDq2C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Chain",
+      "name": "chain",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "chain-rule-of-derivation@jJukG4XxfFcID_VlQKqe-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Confusion",
+      "name": "confusion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "confusion-matrix@oyL0M2OP4NTNbIO3zq-Hz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Convolutional",
+      "name": "convolutional",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "convolutional-neural-network@BtO2wH7YYqE25HShI6sd9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-cleaning@5v0jRBYrRuVXQC90IseRG",
+            "data-formats@U4LGIEE3igeE5Ed3EWzsu",
+            "data-loading@bIhGv4886V4RWJD3tX0a0",
+            "data-preparation@-W2uAccH7Y2XIwhfl9mDF",
+            "data-sources@-oRH7LgigHcfBkNF1xwxh",
+            "data-structures@R9DQNc0AyAQ2HLpP4HOk6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Databases",
+      "name": "databases",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "databases-sql-no-sql@VdMhrAi48V-JXw544YTKI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decision",
+      "name": "decision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decision-trees-random-forest@arlmRF5pYglsbHb-HR-2x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-learning-architectures@_Z2miSW4PwILMRtBFajBn",
+            "deep-learning-libraries@A_Kx3pEj0jpnLJzdOpcQ9",
+            "deep-q-networks@9o-ZT9oZIE3hCXD6eWZI0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Derivatives",
+      "name": "derivatives",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "derivatives-partial-derivatives@GN6SnI7RXIeW8JeD-qORW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Descriptive",
+      "name": "descriptive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "descriptive-statistics@ZaoZ2XxicKuTDn4uxe52L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Determinants",
+      "name": "determinants",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "determinants-inverse-of-matrix@XmnWnPE1sVXheuc-M_Ew7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dimensionality",
+      "name": "dimensionality",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dimensionality-reduction@vQI-4uFQJ6694nm1SCpDR",
+            "dimensionality-reduction@y3-nWiDjlY6ZwqmxBUvhd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Discrete",
+      "name": "discrete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "discrete-mathematics@N_vLjBVdsGsoePtqlqh2w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Eigenvalues",
+      "name": "eigenvalues",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "eigenvalues-diagonalization@3p98Uwf8gyALDr-89lBEZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elasticnet",
+      "name": "elasticnet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elasticnet-regularization@0-6BV-MggAyD7g3JH45B7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Essential",
+      "name": "essential",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "essential-libraries@ybqwtlHG4HMm5lyUKW2SO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Explainable",
+      "name": "explainable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "explainable-ai@Tv3sZvus76dmu0X9AqCIU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "F1",
+      "name": "f1",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "f1-score@FdNY8QUbPPpeHFgD8TTaD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feature",
+      "name": "feature",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feature-engineering@UmGdV94afOIbAL8MaxOWv",
+            "feature-scaling--normalization@iBkTNbk8Xz626F_a3Bo5J",
+            "feature-selection@cigwKoltemM0q-M5O50Is"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Forward",
+      "name": "forward",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "forward-propagation@LWLqa61GK5ukYzHpjinYi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Functions",
+      "name": "functions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "functions-builtin-functions@-DJgS6l2qngfwurExlmmT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "accuracy@3wib9UH0_OLhKjqKoZEMv",
+            "apis@s-wUPMaagyRupT2RdfHks",
+            "autoencoders@kvf2CUKBe4qSbZla4Brh3",
+            "autoencoders@owSUO9Ut9sggd1OiWr3O7",
+            "calculus@wHlEinHuRARp5OfSulpA-",
+            "classification@cffITx6oAcnvJlK1VLdi8",
+            "clustering@CBSGvGPoI53p7BezXNm6M",
+            "conditionals@NP1kjSk0ujU0Gx-ajNHlR",
+            "convolution@MtoYStcZBduLSbjRuPjq0",
+            "csv@MWfdLCb_w06A0jqwUJUxl",
+            "embeddings@CaHbAXDIJQXcQ9DZqziod",
+            "excel@K9Si7kJe946CcGWBGmDsZ",
+            "exceptions@fNTb9y3zs1HPYclAmu_Wv",
+            "exclusive@eErzKbR8sRNlrYcwNSRSh",
+            "gru@ZWDSLqxmfg3aPBZFH479q",
+            "hierarchical@jJ8cXfHV2LG5PJGZRTHxB",
+            "internet@cxTriSZvrmXP4axKynIZW",
+            "introduction@MEL6y3vwiqwAV6FQihF34",
+            "iot@KeGCHoJRHp-mBX-P5to4Y",
+            "json@kagKVPUyLtx8UPAFjRvbN",
+            "keras@zoXnXI4Wf5sxddHqYwQjP",
+            "lasso@EXogp25SPW1bBfb1gRDAe",
+            "lemmatization@pP0VeUSK9CDodgz-BQmrP",
+            "loocv@GKMhIXEuSKdW75-24Zopb",
+            "loops@Dvy7BnNzK55qbh_SgOk8m",
+            "lstm@LdUwTWfCIcowwC-e6q3ac",
+            "matplotlib@OXbATvlhBXTQ1iRGwPUfb",
+            "numpy@nKE9sO-f2fdMiuLu2xby1",
+            "overlapping@BzUunjJrUMlh6K1NOOD87",
+            "padding@a2PGTDnXKp759vFZzkjSF",
+            "pandas@PnOoShqB3z4LuUvp0Gh2e",
+            "parquet@tq6WRwUpaCok9fX-0bY7m",
+            "pooling@I-GEE7PvpQmhQSfZmxqwA",
+            "precision@mja35tndhAT5z_ysv-hDe",
+            "prediction@vBnqnIh_xSn0OuY9oQ5e-",
+            "probabilistic@VrLaUipVKWvwnFF0ZbIlo",
+            "probability@tP0oBkjvJC9hrtARkgLon",
+            "python@qDn1elMoPIBgQSCWiYkLI",
+            "pytorch@7RSW-Pypf3QpZp4O21AGl",
+            "recall@DH33Na9zz_WGmbD-Dxvq1",
+            "regression@gKu6tnpTO2PhDDMYp2u7F",
+            "ridge@1aX_vO5zxfTV8_kUIFHkR",
+            "rnn@LpggrF1MMvAxtO9EJe3wY",
+            "seaborn@VYVLUxhp3XxxknNr5V966",
+            "statistics@5DiaZkljhHAGPi9DkaH3b",
+            "stemming@UO1GEUe8e22uRB6DAxfpe",
+            "strides@YWxSI45e5K_4YOrvmh6LV",
+            "tensorflow@Ru8_xMyFxye1hyzCUYvnj",
+            "tokenization@QbftToskhtBlTz1jyiRkb",
+            "transformers@rDIg16eb6B6um1P8uMy51",
+            "tuning@m4vmnxRMBf7zwNnwrMEnk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Generative",
+      "name": "generative",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "generative-adversarial-networks@IR0wVIcu1MxOOBiLBnn8S"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gradient",
+      "name": "gradient",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gradient-boosting-machines@JuTTbL_pm1ltGvhUsIzQd",
+            "gradient-jacobian-hessian@3BxbkrBp8veZj38zdwN8s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graphs",
+      "name": "graphs",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graphs--charts@MYZUJ1uHIaRd1Gb4ORzwG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Image",
+      "name": "image",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "image--video-recognition@jPvZdgye7cBf0bPMVGf7a",
+            "image-classification@E4k6WgNXdnNoApR675VKb",
+            "image-segmentation@iSX9YExs1gS4L2CBQux5w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Inferential",
+      "name": "inferential",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "inferential-statistics@DUIrJwuYHlhJvZJT2acaY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "K",
+      "name": "k",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "k-fold-cross-validation@vRS7DW2WUaXiHk9oJgg3z",
+            "k-nearest-neighbors-knn@x7vlCNAxfJzobj9HcTaJy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linear",
+      "name": "linear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linear-algebra@83UDoO1vC0LjL-qpI0Jh-",
+            "linear-regression@xGO1X9aZRgKcgzi6r1xq8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Log",
+      "name": "log",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "log-loss@7fOp3t283GeOn6Tf4kEuN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Logistic",
+      "name": "logistic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "logistic-regression@aHOjajXwkDMOssqW1VGrm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Loss",
+      "name": "loss",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "loss-functions@KcfFjpxFTFxI6HR6hBPrl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Matrix",
+      "name": "matrix",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "matrix--matrix-operations@1IhaXJxNREq2HA1nT-lMM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Metrics",
+      "name": "metrics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "metrics-to-evaluate@5dKl6SUQhOsZfUtVR5hzw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ml",
+      "name": "ml",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ml-engineer-vs-ai-engineer@GHO6lN3GTiIRH1P70IRaZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mobile",
+      "name": "mobile",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mobile-apps@dJZqe47kzRqYIG-4AZTlz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Model",
+      "name": "model",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "model-selection@Ddhph9saFgfMi-uUFGK75"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Multi",
+      "name": "multi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "multi-head-attention@J1aGPkZqDZfUwpVmC88AL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Natural",
+      "name": "natural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "natural-language-processing@JVXe2QDQaqiJYPupIMhWe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Neural",
+      "name": "neural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "neural-network-nn-basics@4dxZmLg0UEaaVEORupOOC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-oriented-programming@nN9BumBHi-c9HKFlgL2GH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Other",
+      "name": "other",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "other-data-formats@qRHeaD2udDaItAxmiIiUg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Perceptron",
+      "name": "perceptron",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "perceptron-multi-layer-perceptrons@8425N_E43Dv5mcmEcXRIa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Policy",
+      "name": "policy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "policy-gradient@PZ-WxKGTcWTrXmYI_inD_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Polynomial",
+      "name": "polynomial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "polynomial-regression@hfr2MU8QkVt9KhVi1Okpv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Preprocessing",
+      "name": "preprocessing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "preprocessing-techniques@MdhfkuKWTDCE73hczzG3D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Principal",
+      "name": "principal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "principal-component-analysis@K-x_L3z8JTSHwtTeHm4EG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Q",
+      "name": "q",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "q-learning@wxq5dkrpgvs3axmLmeHCk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Random",
+      "name": "random",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "random-variances-pdfs@P576TdYcbE6v3RpJntiKw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recommendation",
+      "name": "recommendation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recommendation-systems@_eKuBhCCwUHnEGwHNQY-g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Recurrent",
+      "name": "recurrent",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "recurrent-neural-networks@H0cscBaExZPNZuFubBUv7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reinforcement",
+      "name": "reinforcement",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reinforcement-learning@NC1A2SQVyc1n-KEf6yl-4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Roc",
+      "name": "roc",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "roc-auc@anEGWHVpcp75e3jQrj_LZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scalars",
+      "name": "scalars",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scalars-vectors-tensors@d7J8GEkut61NDGRzROJoP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scikit",
+      "name": "scikit",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scikit-learn@yKtRmgwrJ75VVz7_txZ-S",
+            "scikit-learn@ZVbnAF9I1r8qWFFYG6nXv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Self",
+      "name": "self",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "self-attention@oTKC1o1OOnPiTh60a8yVc",
+            "self-supervised-learning@lgO7luG7-R_FY5nwFjRE0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Semi",
+      "name": "semi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "semi-supervised-learning@Yho0zf9F-ROhEnTxRMq_M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Singular",
+      "name": "singular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "singular-value-decomposition@yGs2h10gZcO4GMaWfI3uW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Skills",
+      "name": "skills",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "skills-and-responsibilities@BzZd-d5t63dY97SRSIb0J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Supervised",
+      "name": "supervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "supervised-learning@5MUwKGfSTKlam8KCG0A1U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Support",
+      "name": "support",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "support-vector-machines@_jS66rGAWecXH3zVF-5ds"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Train",
+      "name": "train",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "train---test-data@5xxAg18h74pDAUPy6P8NQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Types",
+      "name": "types",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "types-of-distribution@WLlZE_vto-CYY5GLV_w7o",
+            "types-of-machine-learning@Ns2zKn8BL_kTEI6O65pCp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unsupervised",
+      "name": "unsupervised",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unsupervised-learning@36ryjK5isV1MD4MgZP2Jn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Validation",
+      "name": "validation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "validation-techniques@0hi0LdCtj9Paimgfc-l1O"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Variables",
+      "name": "variables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "variables-and-data-types@dEFLBGpiH6nbSMeR7ecaT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-an-ml-engineer@FgzPlLUfGdlZPvPku0-Xl",
+            "what-is-machine-learning@rzhVFzl5H5MWtcvr8ayRk",
+            "what-is-model-evaluation@99TI95HVGrXIYr-PIDxhC",
+            "what-is-reinforcement-learning@EtU_9MOklVBvnvyg30Yfx",
+            "what-is-supervised-learning@ajKU5CPlbn7BbWHEhUNaB",
+            "what-is-unsupervised-learning@9oWdnQd-vwVJi62JQLgJ5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-is-it-important@vmERbhRIevLLNc7Ny2pWp"
+          ]
+        }
+      ]
+    }
+  ]
+}

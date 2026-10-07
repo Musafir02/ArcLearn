@@ -1,0 +1,4 @@
+{
+  "title": "openclaw channels remove --channel",
+  "content": "`openclaw channels remove --channel` disconnects and removes a channel from your Open Claw configuration.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Add / remove accounts](https://docs.openclaw.ai/cli/channels#add-/-remove-accounts)"
+}

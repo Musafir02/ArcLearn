@@ -1,0 +1,4 @@
+{
+  "title": "Implicit Animations",
+  "content": "Implicit animations in Swift UI provide a simple way to animate changes to a view's properties. When a property that affects the view's appearance changes, and an animation modifier is attached to the view, Swift UI automatically animates the transition between the old and new values. This creates smooth and visually appealing effects without requiring explicit animation blocks or complex code.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Animation](https://developer.apple.com/documentation/swiftui/animation)\r\n- [@article@Difference Between Implicit and Explicit Animations in SwiftUI](https://holyswift.app/difference-between-implicit-and-explicit-animations-in-swiftui/)\r\n- [@video@Creating implicit animations](https://www.youtube.com/watch?v=D3N-GA_J73g)"
+}

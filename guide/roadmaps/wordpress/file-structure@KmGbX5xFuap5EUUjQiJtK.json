@@ -1,0 +1,4 @@
+{
+  "title": "Plugin File Structure",
+  "content": "A plugin's file structure is the way its files and folders are organized within the WordPress plugins directory. This structure determines how WordPress loads and executes the plugin's code, assets, and other resources. A well-organized file structure makes the plugin easier to understand, maintain, and update.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Getting Started with Plugins](https://developer.wordpress.org/plugins/plugin-basics/#getting-started)\r\n- [@article@Introduction to Plugin Development](https://developer.wordpress.org/plugins/intro/)\r\n- [@video@WordPress Plugin Tutorial: Folder Structure and the Plugin Header](https://www.youtube.com/watch?v=GNaJygOfgnk)"
+}

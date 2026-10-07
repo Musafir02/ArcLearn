@@ -1,0 +1,4 @@
+{
+  "title": "Routing Rules",
+  "content": "Routing rules determine which agent handles which incoming messages. Open Claw uses a deterministic, most-specific-wins system: peer matches beat channel-wide rules, which beat the fallback default agent.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Multi-Agent Routing](https://docs.openclaw.ai/concepts/multi-agent)\r\n- [@official@Channel Routing](https://docs.openclaw.ai/channels/channel-routing)"
+}

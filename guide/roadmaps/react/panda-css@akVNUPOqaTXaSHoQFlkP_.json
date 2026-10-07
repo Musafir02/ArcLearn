@@ -1,0 +1,4 @@
+{
+  "title": "Panda CSS",
+  "content": "Panda CSS is a CSS-in-JS tool that generates static CSS at build time instead of at runtime. You write styles using a type-safe API in your components, and Panda extracts and compiles them into optimized CSS files. This gives some of the developer experience of CSS-in-JS without the runtime performance cost.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Official Website](https://panda-css.com)\r\n- [@official@Tutorials and videos to get started with Panda!](https://panda-css.com/learn)\r\n- [@article@Panda CSS – CSS-in-JS without Runtime Overhead](https://infinum.com/blog/panda-css-css-in-js-without-runtime-overhead/)\r\n- [@video@Panda CSS First Impressions | Theo Reacts](https://www.youtube.com/watch?v=UlY-Ixddjm0)"
+}

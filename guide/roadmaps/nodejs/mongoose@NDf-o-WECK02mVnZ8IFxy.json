@@ -1,0 +1,4 @@
+{
+  "title": "Mongoose",
+  "content": "Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Mongoose](https://mongoosejs.com)\r\n- [@official@Mongoose Documentation](https://mongoosejs.com/docs/guide.html)\r\n- [@article@Getting Started with MongoDB and Mongoose](https://www.mongodb.com/developer/languages/javascript/getting-started-with-mongodb-and-mongoose/)"
+}

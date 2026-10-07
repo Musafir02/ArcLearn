@@ -1,0 +1,207 @@
+{
+  "title": "Spring Boot Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-config@9hG3CB8r41bUb_s8-0u73"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@C2EQ5J1aJYF9e9Rr2KysT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embedded",
+      "name": "embedded",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embedded-server@ONb0VnSUMY8JBeW3G2mTp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Entity",
+      "name": "entity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "entity-lifecycle@Ijmy0J3VyaeTGXtu2VkkQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "actuators@N7hd3d_XQtvOgnCqdCFt3",
+            "annotations@HdCpfGMrMaXxk5QrtYn3X",
+            "architecture@yuXN-rD4AyyPYUYOR50L_",
+            "architecture@_vS_zdJZegZS6MIKAFyg8",
+            "authentication@ssdk2iAt4avhc8B5tnIzQ",
+            "authorization@c7w7Z3Coa81FKa_yAKTse",
+            "autoconfiguration@88-h3d7kb-VmUBsnUUXW_",
+            "components@sgA06Tu9Y4cEHtfI8CyLL",
+            "configuration@OB--nMudscm0p6RqqfA7T",
+            "eureka@6sLE6gb5Y477SmO2GhQIG",
+            "hibernate@h5-HnycxfbJgwalSdXTAz",
+            "introduction@jy2heDVZuM6ASCXlI1TDn",
+            "micrometer@GsmBGRohWbJ6XOaALFZ8o",
+            "microservices@jU_KHoPUSU_HoIKk0ZpRF",
+            "oauth2@p7t3RlIIm9U08GFC6azff",
+            "relationships@D4ybyh0ydvl9W2_xUcvZ_",
+            "servlet@35NTx2eO1j02sjy4m6DPq",
+            "terminology@WrUCyVfFNUpHB8jyjjKna",
+            "testing@7Qqrh_Rz_7uAD49g9sDzi",
+            "transactions@H9Z0EvKT_148vD0mR-dUf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jpa",
+      "name": "jpa",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jpa-test@Nhx2QiSD_4pVWD17lsCbu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jsp",
+      "name": "jsp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jsp-files@Lz0GPMiYzb30iFJdv1dL6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Jwt",
+      "name": "jwt",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "jwt-authentication@1My7mbdwAbRcJoiA50pWW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mock",
+      "name": "mock",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mock-mvc@5d1BERqTKNJMKiBcqa8Ie"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mockbean",
+      "name": "mockbean",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mockbean-annotation@i77NTa0hpGGBjmql9u_CT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spring",
+      "name": "spring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spring-aop@wV1_I_4czMIxpBionvLs4",
+            "spring-bean-scope@KdN62IpNgPFMndXfLaYa1",
+            "spring-boot-starters@JrH2hiu27PhIO1VtrArMa",
+            "spring-cloud-circuit-breaker@kqpSlO--X9-xYxfq1KFVe",
+            "spring-cloud-gateway@f-i0NX2KOzCh3JwkaSPFo",
+            "spring-cloud-open-feign@EKSXTMSN2xdaleJ4wOV1A",
+            "spring-cloud@VWNDYSw83Vzi2UPQprJ5z",
+            "spring-data-jdbc@dd1A-MyzBs_kNOtVG7f1D",
+            "spring-data-jpa@6u08QN-pUeFm3o0h5Scfm",
+            "spring-data-mongodb@fy-TphbqkLpR1zvFcr7dg",
+            "spring-data@pvVLbFQoT50vz_VRK4VbJ",
+            "spring-ioc@PlUU_vzFQ3Xx6Z5XREIYP",
+            "spring-mvc@QiNWE4sMTao3cVzjt3yPp",
+            "spring-mvc@S-BbOoRD7anvoJrprjoKF",
+            "spring-security@KaUdyVWEiZa6lUDRBlOKt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Springboottest",
+      "name": "springboottest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "springboottest-annotation@p91CaVPh5GMzFU0yEU_hl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Why",
+      "name": "why",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "why-use-spring@WGf3W6bdWL0rK0o6O28G2"
+          ]
+        }
+      ]
+    }
+  ]
+}

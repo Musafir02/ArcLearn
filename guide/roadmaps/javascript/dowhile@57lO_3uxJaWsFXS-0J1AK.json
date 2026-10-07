@@ -1,0 +1,4 @@
+{
+  "title": "do...while statement",
+  "content": "The `do...while` statement creates a loop that executes a specified statement until the test condition evaluates to `false`. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@do...while - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)"
+}

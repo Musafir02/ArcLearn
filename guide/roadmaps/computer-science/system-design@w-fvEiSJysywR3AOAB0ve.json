@@ -1,0 +1,4 @@
+{
+  "title": "System Design",
+  "content": "System design is the process of defining the architecture, modules, interfaces, and data for a system to satisfy specified requirements. It is a very broad topic, and there are many ways to approach it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated System Design Roadmap](https://roadmap.sh/system-design)\r\n- [@article@System Design: The Complete Course](https://dev.to/karanpratapsingh/system-design-the-complete-course-10fo)\r\n- [@video@System Design 101](https://www.youtube.com/watch?v=Y-Gl4HEyeUQ)\r\n- [@video@Scaling the Unscalable](https://www.youtube.com/watch?v=a2rcgzludDU)"
+}

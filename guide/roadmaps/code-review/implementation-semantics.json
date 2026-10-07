@@ -1,0 +1,4 @@
+{
+  "title": "Questions to Ask",
+  "content": "- Does it satisfy the original requirements?\r\n- Is it logically correct?\r\n- Is there no unnecessary complexity?\r\n- Is it robust (i.e., no concurrency issues, proper error handling, etc.)?\r\n- Is it performant?\r\n- Is it secure (i.e., no SQL injections, etc.)?\r\n- Is it observable (i.e., metrics, logging, tracing, etc.)?\r\n- Do newly added dependencies pull their weight? Is their license acceptable?\r\n\r\nLearn more from the following resources:\r\n\r\n- [@article@Three Pillars of Observability: Logs, Metrics and Traces - IBM](https://www.ibm.com/think/insights/observability-pillars)\r\n- [@article@Security Code Review Checklist - Redwerk](https://redwerk.com/blog/security-code-review-checklist/)\r\n- [@article@What Is Clean Code? - Codacy](https://blog.codacy.com/what-is-clean-code)"
+}

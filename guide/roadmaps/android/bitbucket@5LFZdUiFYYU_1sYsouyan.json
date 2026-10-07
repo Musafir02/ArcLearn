@@ -1,0 +1,4 @@
+{
+  "title": "Bitbucket",
+  "content": "Bitbucket is a Git repository hosting service by Atlassian. It integrates with other Atlassian tools like Jira and Confluence, making it a common choice for teams already using Atlassian products. Bitbucket supports pull requests, branch permissions, and CI/CD pipelines through Bitbucket Pipelines.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Bitbucket](https://bitbucket.org/)\r\n- [@article@Bitbucket for Developers](https://www.atlassian.com/software/bitbucket)"
+}

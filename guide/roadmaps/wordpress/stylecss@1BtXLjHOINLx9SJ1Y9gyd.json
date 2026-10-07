@@ -1,0 +1,4 @@
+{
+  "title": "style.css in Classic WordPress Themes",
+  "content": "The `style.css` file is the main stylesheet in a classic WordPress theme. It controls the visual appearance of your website, defining elements like colors, fonts, layout, and responsiveness. This file is also required for WordPress to recognize the theme and display its name and other metadata in the WordPress admin panel.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Main Stylesheet (style.css)](https://developer.wordpress.org/themes/classic-themes/basics/main-stylesheet-style-css/)\r\n- [@official@Add custom CSS](https://wordpress.com/support/editing-css/)\r\n- [@article@How to Edit CSS in WordPress (Edit, Add, and Customize How Your Site Looks)](https://kinsta.com/blog/wordpress-css/)\r\n- [@video@How to Edit CSS in WordPress](https://www.youtube.com/watch?v=1DUH_85wxVI)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "C++",
+  "content": "C++ extends the C language with object-oriented features like classes, inheritance, and templates, while keeping low-level memory control. It compiles to native machine code and gives direct access to hardware resources, making it a common choice for game engines, operating systems, and performance-critical software. Manual memory management gives more control but also more room for bugs like leaks or dangling pointers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit Dedicated C++ Roadmap](https://roadmap.sh/cpp)\r\n- [@article@Learn C++](https://learncpp.com/)\r\n- [@article@CPlusPlus](https://cplusplus.com/)\r\n- [@article@C++ TutorialsPoint](https://www.tutorialspoint.com/cplusplus/index.htm)"
+}

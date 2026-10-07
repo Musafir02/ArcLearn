@@ -1,0 +1,4 @@
+{
+  "title": "Finding Hamiltonian Paths",
+  "content": "Hamiltonian paths are paths that visit every node in a graph exactly once. They are named after the famous mathematician Hamilton. Hamiltonian paths are a special case of Hamiltonian cycles, which are cycles that visit every node in a graph exactly once.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Hamiltonian Cycles](https://en.wikipedia.org/wiki/Hamiltonian_cycle)\r\n- [@article@Hamiltonian Path](https://www.hackerearth.com/practice/algorithms/graphs/hamiltonian-path/tutorial/)\r\n- [@article@Hamiltonian Paths and Cycles](https://medium.com/stamatics-iit-kanpur/hamiltonian-paths-and-cycles-4f233bfbc53a)\r\n- [@article@Hamiltonian Paths - Lecture 7](https://people.csail.mit.edu/virgi/6.s078/lecture17.pdf)"
+}

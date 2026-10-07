@@ -1,0 +1,4 @@
+{
+  "title": "Testing Modules",
+  "content": "Testing modules involves validating their logic, variable handling, and output values in isolation before they are used in a larger configuration. The `terraform test` command can apply a module with test-specific variable values and assert expected output values. Keeping modules testable means writing them with clear inputs and outputs and minimal side effects.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Write Terraform Tests](https://developer.hashicorp.com/terraform/tutorials/configuration-language/test)\r\n- [@official@Terraform Test](https://developer.hashicorp.com/terraform/language/tests)\r\n- [@video@Terraform Module Testing](https://www.youtube.com/watch?v=1LInIWM_2UQ)"
+}

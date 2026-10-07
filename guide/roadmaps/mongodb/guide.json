@@ -1,0 +1,639 @@
+{
+  "title": "Mongodb Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Atlas",
+      "name": "atlas",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "atlas-search-indexes@YidhAuVk_VGukx_FfJSz2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binary",
+      "name": "binary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binary-data@UM6jH6bAijYS0Hmw87UQ-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bson",
+      "name": "bson",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bson-vs-json@F4W9XBSbkpzWIrAhRBSRS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bulkwrite",
+      "name": "bulkwrite",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bulkwrite-and-relevant@yc2HqhjhIV6UU_2P-ykKB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-side-field-level@YJiWemHO1l5q9WhgoHyYd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Collections",
+      "name": "collections",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collections--methods@7SGYNo3oHlgm_1cwhWfw7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Counting",
+      "name": "counting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "counting-documents@hC83jKoO_XFI83WpsdN_Z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating-indexes@haA1ltV6VzgJVJcJNMK0W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-model--data-types@_UIfRdlj6BeEESw1FW9RH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Delete",
+      "name": "delete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "delete-and-relevant@qjoLxSkfKbzG1sZUXnyw9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Developer",
+      "name": "developer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "developer-tools@6H2MMnEfS6uHGS-6pFo8u"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elastic",
+      "name": "elastic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elastic-search@kJJ-W6BV1ofIvuFT_PCcz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Embedded",
+      "name": "embedded",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "embedded-objects--arrays@6MqhN-PTf1PRzYCTxC8pn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Encryption",
+      "name": "encryption",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "encryption-at-rest@iJjqlTgXxHWC-8bh6uCGQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Find",
+      "name": "find",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "find-and-relevant@iMpCEXRDXg0Kq9OFNywbI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aggregation@gpihoIJkzSS1WOvmH2ueo",
+            "all@hPPoO8ysGeEGEQhdveiDO",
+            "and@-62S4wRxHpIM2I59xjGun",
+            "array@q6ZKxFcSAQ8bgUdGaDpuu",
+            "boolean@hmo7zCZ1jKgobS5R0eBSD",
+            "compound@eSb4WAfWxJu6R95pPX6wm",
+            "cursors@K9x7yQP59cB764Q5PqAs_",
+            "date@T6cq--pute6-8aG7z6QKN",
+            "decimal128@OGtR5D_DUCSci1lFBT83z",
+            "double@4Cf_wcoByPqpOOpdbAJuq",
+            "elemmatch@TJHVY8DRWbDKeT_pIPJay",
+            "eq@2h8z2mrgRKSLKI-eBc3zM",
+            "exclude@nk0V3o3oKuIb8A0gDECFJ",
+            "exists@12kfpSapv2uNxpHzLkFSL",
+            "expiring@butGgZXGPTZI-sWx24bOr",
+            "group@nz048lC4Q4S7fMVbxLGEk",
+            "gt@wbZb0RwmANH4ssF07cAar",
+            "gte@kV5Tmu9ocDnuPQvkx2W0u",
+            "in@Wd20OKQYYuW_bT6U-yRxT",
+            "include@sxDyp3bP-YhgmDMVUFTaA",
+            "indexing@XjB0uOnsYl4edzZWpQ-nm",
+            "int32int@xKFZSKG2GPD-phY2HLMsx",
+            "javascript@UXO5i6nPa5CRW1z7FAn_S",
+            "kafka@JAosQ9tFj7y70lGQ0vHzC",
+            "limit@AzUVaGnGv9uypJ31alR9r",
+            "lookup@strw_oGTkZEH-o8zA4IRP",
+            "lt@5-MLEEigFPRloN7wLa05T",
+            "lte@eOfsrmOQI0dJW6HV_myVH",
+            "match@_c7itVw1R1_UB-NPtL-WI",
+            "mongodump@xaWDHCkcGm4oovPPxVMB9",
+            "mongorestore@TKngxMNGMgrdO26D7eeSg",
+            "ne@Q8dr1JPEnLX0z4DiQwnAz",
+            "nin@ZKHUCskdKQf4IaMUTN_e7",
+            "nor@7xq_mdQOlUTuhfnogOl8h",
+            "not@qaUj9916Fh4BtiLz_pwQs",
+            "null@g6AKQiFcY_8lsWRbkbZSC",
+            "object@QcdZKNcCtKls6P4YNXR2W",
+            "or@43BfjlUju-yJaGv-FaJty",
+            "project@dO2mJejkWBH903LG0dWgN",
+            "project@gakF5Zfgk7QIgg_UwqG_Y",
+            "regex@PmfjHFz-DW69pNh_t13Nm",
+            "replicasets@QrHT-H12AV4-V-y_nzmNk",
+            "size@-VMIkV6S6H1blngxLXk7Y",
+            "skip@4CjjGPOy-385Bco_PeQwa",
+            "slice@9mmxYBtvPYZlvFjQvE-2N",
+            "sort@BCWS8uV2pSWe7CX-VlnTg",
+            "spark@K09-nD6xF5YJUQBBpFXMz",
+            "string@eU4XCnrf27FO3KCda8QYw",
+            "sum@CfM0iyd2bNRIiDWTUkspd",
+            "symbol@XAS4jQlsHkttLDuSSsD2o",
+            "text@PV_3TEYdtVZ2VCDZEOsu_",
+            "timestamp@zbFH2NRHZEOv5eKLL_HR0",
+            "transactions@aHcmsaqAfG5fC90VV-EHP",
+            "type@BxzMbF7cdvGPuy1EcRvWd",
+            "undefined@kx_GOr51UMpdUAnS5u9qZ",
+            "unwind@AY-8KJGA9ZA6ay3rbURt3",
+            "validate@4h8NdcdXmNqJxLkVJqPtX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Geospatial",
+      "name": "geospatial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "geospatial-indexes@bqXlDnPuMQIKulD9cTvPf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Insert",
+      "name": "insert",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "insert-and-relevant@mXdn4u5CiQRDE83qMiWZX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Int64",
+      "name": "int64",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "int64--long@iJFDFdIN_N4-DlJwrFIiB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kerberos",
+      "name": "kerberos",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kerberos-authentication@YuzMOO7kf2tO6V6WehqF_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Language",
+      "name": "language",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "language-drivers@73REfcB_T0yBP-KQ0EYmF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ldap",
+      "name": "ldap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ldap-proxy-auth@NoDNdno9UOlMrOC0Wga9E"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Max",
+      "name": "max",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "max-key@QF7SL237FyBQdqvKUzop6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Min",
+      "name": "min",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "min-key@jQSMLd6gG158tJDzo1k_1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mongodb",
+      "name": "mongodb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mongodb-audit@w1L-yFBM2AyeNBFyH5skW",
+            "mongodb-basics@z50iixpcCMe9sTh-gwTI3",
+            "mongodb-security@LC923iJhfiUDIs_0-9rc7",
+            "mongodb-terminology@1pCWjSvjvbox5OpyWJ8Kv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Object",
+      "name": "object",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "object-id@mxd3-l3-NtPw53dEvhqm4"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Performance",
+      "name": "performance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "performance-optimization@A9W2LsivDc0ialLp83fYP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pipelines",
+      "name": "pipelines",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pipelines-stages-and-operators@eDks8Jmsbq3_nHgLydyxP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Query",
+      "name": "query",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "query-operators@B8SFhoVV8ei1Yz6vl57l_",
+            "query-optimization@4L9UQ4oaaK3wZwOLIMa6T",
+            "query-optimization@kG0ZeGatgvC1azZKMQiA_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Queryable",
+      "name": "queryable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "queryable-encryption@LpfuM6SuhlNNjBcHM68ee"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Read",
+      "name": "read",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "read--write-concerns@thOckmrCJ45NVNPNxm4eg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Regular",
+      "name": "regular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "regular-expression@z6I9XgIGQYWUd5l9DIZRX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Retryable",
+      "name": "retryable",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "retryable-reads--writes@s8El0Q22GD_rOZGlDtkgH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Role",
+      "name": "role",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "role-based-access-control@yRJ6jeysFXBpwLEqvrdKk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-mongodb@cOKQQ7SaiawWF49MdCGTh"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sharded",
+      "name": "sharded",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sharded-clusters@CijW3HCjVRZHQIBsQ9_0H"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Single",
+      "name": "single",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "single-field@SjPzR6JjdBeiqFsrRJPfW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-vs-nosql@cMfsRtvzvDZZJ0TqeUOxm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tls",
+      "name": "tls",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tls--ssl-encryption@5F7zAAnvnVTTnBzOB7TSu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tuning",
+      "name": "tuning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tuning-configuration@iVDxuERBjKMBHueEfqP0x"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Update",
+      "name": "update",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "update-and-relevant@liGbnGyQaG-Vqt6cuB91N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-mongodb-atlas@1UXfFROvcunyhkx0zB_1S",
+            "what-is-mongodb@tJljSlb5S_tZLZhZHHd_I"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "When",
+      "name": "when",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "when-to-use-mongodb@qh8MEbXKPVt8mqlarhUj0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "X509",
+      "name": "x509",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "x509-certificate-auth@NV39oWwr7iB_dnlnD_Q6Y"
+          ]
+        }
+      ]
+    }
+  ]
+}

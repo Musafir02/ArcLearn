@@ -1,0 +1,785 @@
+{
+  "title": "Game Developer Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Ab",
+      "name": "ab",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ab-pruning@KYCi4d475zZfNwlj6HZVD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Advanced",
+      "name": "advanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "advanced-rendering@CDYszS1U4v95GozB_drbt"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Affine",
+      "name": "affine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "affine-space@r5TcXQsU9s4NlAQIPvZ3U",
+            "affine-transformation@SkCreb6g4i-OFtJWhRYqO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Angular",
+      "name": "angular",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "angular-velocity@Y7HYY5eq7OG42V9yQz0Q1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Artificial",
+      "name": "artificial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "artificial-neural-network@AoH2r4EOHyZd8YaV24rBk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Behavior",
+      "name": "behavior",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "behavior-tree@ztoW8fBY73Es624A_tjd7"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Board",
+      "name": "board",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "board-game@eoK70YRCz73GmzbNhh5kg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bounding",
+      "name": "bounding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bounding-volume@PLR_4yoRifoTzkOR4c7ym"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Broad",
+      "name": "broad",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "broad-phase@AKd2UpITqBZV7cZszSRps"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Catmull",
+      "name": "catmull",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "catmull-rom@N9GoA3YvOaKwYjljj6NZv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Center",
+      "name": "center",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "center-of-mass@HWtU4q-YPXxSi64t43VNF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Client",
+      "name": "client",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "client-side-development@rQArtuVKGVgLn_fw9yO3b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Collision",
+      "name": "collision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "collision-detection@AdOfOJtLtNgDwuABb6orE"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Computer",
+      "name": "computer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "computer-animation@1RdyzTI_TXqmct2bIbNh9",
+            "computer-graphics@lIb5MeDoqVj6HycveOgTS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Conservation",
+      "name": "conservation",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "conservation-of-energy@H3hkafXO9zqEnWuwHa38P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Convex",
+      "name": "convex",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "convex-decomposition@bgP9NpD0DJGqN4VCt65xP",
+            "convex-hull@jixffcPBELkhoG0e7Te8g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Decision",
+      "name": "decision",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "decision-learning@ul5XnVwQCwr4ZaL4kBNpd",
+            "decision-making@Ky-95ipdgyPZGAIdqwMCk",
+            "decision-tree-learning@sz1047M8_kScjth84yPwU",
+            "decision-tree@rwGivalwv2ozdSlVMSc4U"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Deep",
+      "name": "deep",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "deep-learning@ltkEyfuDxExs7knqs79ya"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Directx",
+      "name": "directx",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "directx-ray-tracing@qoIkw9o8iMx7MzUyVYoR2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Euler",
+      "name": "euler",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "euler-angle@L0J2kvveJNsmN9ueXhqKf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Fuzzy",
+      "name": "fuzzy",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "fuzzy-logic@4ZCVUpYrCT14d_JULulLe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Game",
+      "name": "game",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "game-ai@Hpf_CPmLpCSP8Qo07Kq1X",
+            "game-ai@Hpk8eOaOepERMmOvUgkxa",
+            "game-engine@fv5tivGad2P9GRZOodfn2",
+            "game-mathematics@m1wX27XBWKXZcTMH2U1xp",
+            "game-physics@UTBnrQiZ6Bf96yJYIUf3b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "2d@Wq8siopWTD7sylNi0575X",
+            "aabb@aTeYGd4JlPr5txNPyBezn",
+            "acceleration@ejZMnxZ0QrN-jBqo9Vrj8",
+            "bezier@DUEEm9sAaZqSI-W-PFZ8f",
+            "bump@r4UkMd5QURbvJ3Jlr_H9H",
+            "buoyancy@WzcmdW_fKHv3gwdBnvI0_",
+            "bvh@FCc5xwb_G3VsDRXOcg3hV",
+            "c@Ph3ZqmSnwwzUBUC-6dgf-",
+            "cascaded@Lu38SfZ38y89BffLRMmGk",
+            "cc@jsq0UXnIIC0Z_nbK2w48f",
+            "ccd@1yK8TH4Pn7Ag8VQoug54i",
+            "clipping@xP_VDMu1z9jiVnZaBFKJQ",
+            "color@WK6fLWJq9Vh2ySVrSqd-U",
+            "concave@jslk7Gy58VspO1uXGDgBp",
+            "convex@pG_V12qhS4HevoP_KHTvh",
+            "convexity@YLusnwCba7BIdKOYUoY6F",
+            "cube@cv1-AwewuqJsZDBI3h84G",
+            "culling@1gdDeUPBRco10LpOxug4k",
+            "curve@YTkOF_33oL1ZkA-loc_DP",
+            "dbvt@XHFV4d6Ab4kWQ3-XcZTyT",
+            "diffuse@0g1z5G2dsF4PTIfFAG984",
+            "directional@foD8K7V0yIxgeXwl687Bv",
+            "directx@bgWFV09AtDv1yJS5t0EaB",
+            "dynamics@0D7KQlF-9ylmILTBBVxot",
+            "epa@vWLKYK2KUzV1fO-vQunzW",
+            "fog@2ocwC0P1-ZFmjA9EmA1lV",
+            "force@qduFRhmrzJ2sn0g7L-tza",
+            "friction@Hz9R4YGYtD0jAur8rYist",
+            "frustum@UcLGWYu41Ok2NYdLNIY5C",
+            "gdscript@AaRZiItRcn8fYb5R62vfT",
+            "geometry@XWxW2ZBw3LcQ4DRk4tgAG",
+            "gjk@lwd3Gz9bJEKCIwhXD6m-v",
+            "glsl@j8mWMFMQCEIPUzegDDsm1",
+            "godot@7OffO2mBmfBKqPBTZ9ngI",
+            "hermite@m4AuHjEBnHS0wyATG-I1Z",
+            "hlsl@wYUDJb-q1rtM4w2QV3Wr1",
+            "horizon@9cBOfj58I4hBlxlQIyV9g",
+            "infinite@sC3omOmL2DOyTSvET5cDa",
+            "intersection@vmRYaXNVCe0N73xG8bsEK",
+            "joints@m2_wUW2VHMCXHnn5B91qr",
+            "learning@9_OcZ9rzedDFfwEYxAghh",
+            "light@_1LkU258hzizSIgXipE0b",
+            "mapping@THMmnx8p_P0X-dSPoHvst",
+            "matrix@Kg6Mg9ieUUGXWX9Lai7B0",
+            "mcts@QD9TfZn3yhGPVwiyJ6d0V",
+            "metal@oEznLciLxZJaulMlBGgg4",
+            "metallicity@olY1ibR7kw1yJ58TfU-37",
+            "minimax@oOjGqicW3eqRwWyIwJdBA",
+            "movement@mUyzX-DXnIKDl-r9o8d38",
+            "native@CeAUEN233L4IoFSZtIvvl",
+            "obb@7nGtvbxoEAheiF4IPMfPf",
+            "occluder@MlLYqO_8JDNOwKRvaM-bf",
+            "opengl@ffa5-YxRhE3zhWg7KXQ4r",
+            "optix@GDLysy3__cbYidEaOmFze",
+            "orientation@iIWEjpkNFBj4R5wQ0mcWY",
+            "orthogonal@d6C1qFv-Tad3AtMBDLI6r",
+            "parallax@YGeGleEN203nokiZIYJN8",
+            "perspective@LEJymJ2EaAW5FM5LgKW38",
+            "point@aNhyXWW2b7yKTv8y14zk9",
+            "polygon@-r15srXTBLnUGokpXKclH",
+            "polyhedron@GHfLMtgmc36OCvjQvW_Su",
+            "projection@5qfoD77wU4ETI7rUSy4Nc",
+            "python@AJp_QRLgSG5ETXDIjUjmm",
+            "quaternion@zPs_LlDvkfxvvCrk5fXB2",
+            "rasterization@vYNj9nzu90e9xlrzHULnP",
+            "reflection@eI2jym4AAz3ani-lreSKE",
+            "restitution@egOcxFTQP7vPIGrxcieuk",
+            "rust@ts9pWxUimvFqfNJYCmNNw",
+            "sampling@rmtxybcavWV6A53R4ZWgc",
+            "sat@kSMz7mZ243qMKtT_YD3AD",
+            "shader@qIrePusMuvcUva9LMDmDx",
+            "shadow@lqfW8hkuN3vWtacrqBBtI",
+            "specular@odfZWKtPbb-lC35oeTCNV",
+            "spline@nTiHZXRh2j3_FsBotmlGf",
+            "spot@FetbhcK1RDt4izZ6NEUEP",
+            "texture@iBZ1JsEWI0xuLgUvfWfl-",
+            "vector@yLEyh5XJ3sl8eHD-PoSvJ",
+            "vulkan@yPfhJSTFS7a72UcqF1ROK",
+            "webgl@CeydBMwckqKll-2AgOlyd"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Goal",
+      "name": "goal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "goal-oriented-behavior@Cuc0xvCAkVyUtwOxO_Uua"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Graphics",
+      "name": "graphics",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "graphics-api@Kx7O7RLp7aPGtOvK8e314",
+            "graphics-pipeline@shSRnMf4NONuZ3TGPAoQc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Light",
+      "name": "light",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "light-source@VLrcBE1vb6N5fw5YESCge"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lighting",
+      "name": "lighting",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lighting-and-shadow@DDN3mn0LTueBhjRzXFcbU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linear",
+      "name": "linear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linear-algebra@grRf-MmaXimDB4iODOV47",
+            "linear-transformation@XABzEU9owCx9-zw1id9xU",
+            "linear-velocity@Z_U6abGV_wVkTGZ2LVkFK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Markov",
+      "name": "markov",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "markov-system@c6j-30p84vk3MZEF1R2hN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Microsurface",
+      "name": "microsurface",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "microsurface-scattering@YrQgfjsdLCIUxrwflpEHO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Moment",
+      "name": "moment",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "moment-of-inertia@6E2mkXuAzoYnrT1SEIA16"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Naive",
+      "name": "naive",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "naive-bayes-classifier@aw1BAGqrdBBmUwB6vMF_A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Narrow",
+      "name": "narrow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "narrow-phase@SuemqQuiePab0Qpm2EGy9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Opengl",
+      "name": "opengl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "opengl-es@EVOiWAeZsIvjLTt3EYu-6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Physically",
+      "name": "physically",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "physically-based-rendering@XvFtMHrYsBREmuerE7CGc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Programming",
+      "name": "programming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "programming-languages@4YgbrXLXf5mfaL2tlYkzk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ray",
+      "name": "ray",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ray-tracing@JW5c_0JEtO-OiBoXUia6A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Real",
+      "name": "real",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "real-time-ray-tracing@_i7BXZq-iLxQc3QZRMees"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reinforcements",
+      "name": "reinforcements",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "reinforcements-learning@rGEHTfdNeBAX3_XqC-vvI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rendering",
+      "name": "rendering",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rendering-equation@WVgozaQPFbYthZLWMbNUg"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shadow",
+      "name": "shadow",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shadow-map@ygtru6fqQ3gpFZRN_I8rP"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sort",
+      "name": "sort",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sort--sweep@STdvFYM9V0a36IkPXjvrB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spatial",
+      "name": "spatial",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spatial-partitioning@9Fk3XSINBr2NNdbMtwsIK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spir",
+      "name": "spir",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spir-v@DvV32n3NoXNEej8Fsqqs2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "State",
+      "name": "state",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "state-machine@aJa_2xkZuSjQ5bt6Kj5oe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stencil",
+      "name": "stencil",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stencil-shadow@AEAVc8Ih4fctSGGVJG0Np"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tone",
+      "name": "tone",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tone-reproduction@RgC9TOc0wbr2QSuvrpIDV"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Translucency",
+      "name": "translucency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "translucency--transparency@PuhXaRZ-Ql5PCqzMyz3en"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unity",
+      "name": "unity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unity-3d@rNeOti8DDyWTMP9FB9kJ_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unreal",
+      "name": "unreal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unreal-engine@a6H-cZtp3A_fB8jnfMxBR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visibility",
+      "name": "visibility",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visibility-and-occlusion@OcxesFnB5wO6VXrHYnhz-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Visual",
+      "name": "visual",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "visual-perception@1S1qPogijW2SQCiF7KLZe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Vulkan",
+      "name": "vulkan",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "vulkan-ray-tracing@tDGnV8dGIFr_diz4HcEjr"
+          ]
+        }
+      ]
+    }
+  ]
+}

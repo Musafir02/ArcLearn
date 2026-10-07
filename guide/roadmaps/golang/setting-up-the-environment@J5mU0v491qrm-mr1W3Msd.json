@@ -1,0 +1,4 @@
+{
+  "title": "Setting up the Environment",
+  "content": "Install Go from official website, configure PATH, and set up workspace. Configure editor with Go support (VS Code, GoLand, Vim/Emacs). Use modules for dependency management. Verify installation with `go version` and test with simple program.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Golang](https://go.dev/)\r\n- [@official@Setting up the Environment](https://go.dev/doc/install)\r\n- [@article@How to Set Up a Go Development Environment?](https://medium.com/codex/how-to-set-up-a-go-development-environment-67b4b002182e)"
+}

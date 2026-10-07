@@ -1,0 +1,4 @@
+{
+  "title": "DKIM Setup",
+  "content": "DKIM (DomainKeys Identified Mail) adds a cryptographic signature to outgoing emails that recipients can verify. Setting up DKIM in SES involves publishing DNS records with a public key that SES uses to sign your messages. Proper DKIM configuration improves deliverability and is required for compliance with modern email authentication standards.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@DKIM](https://dkim.org/)\r\n- [@article@DKIM - Cloudflare](https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/)"
+}

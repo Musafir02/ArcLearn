@@ -1,0 +1,4 @@
+{
+  "title": "Network Segmentation",
+  "content": "Network segmentation divides a network into smaller, isolated segments or subnetworks. This is done to improve security, performance, and manageability. By isolating sensitive data and systems, segmentation limits the impact of security breaches, reduces the attack surface, and simplifies compliance efforts.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What Is Network Segmentation? - Cisco](https://www.cisco.com/site/us/en/learn/topics/security/what-is-network-segmentation.html)\r\n- [@article@What Is Network Segmentation?](https://www.paloaltonetworks.com/cyberpedia/what-is-network-segmentation)\r\n- [@video@What is Network Segmentation?](https://www.youtube.com/watch?v=ouvqTP3RajU)"
+}

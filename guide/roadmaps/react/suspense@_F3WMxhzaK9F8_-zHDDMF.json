@@ -1,0 +1,4 @@
+{
+  "title": "Suspense",
+  "content": "Suspense is a React feature that lets a component \"wait\" for something, such as data or code, before rendering, showing a fallback UI in the meantime. It was originally built for code splitting with lazy loading, and has since been extended to support data fetching in some frameworks and libraries.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@React Suspense](https://react.dev/reference/react/Suspense)\r\n- [@article@React Suspense - A complete guide](https://hygraph.com/blog/react-suspense)"
+}

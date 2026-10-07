@@ -1,0 +1,4 @@
+{
+  "title": "Layouts in Blade",
+  "content": "Layouts provide a consistent structure for your application's pages. They define the common elements like headers, footers, sidebars, and overall page structure, allowing you to avoid repeating the same HTML code across multiple views. By using layouts, you can create a template that child views can then extend and populate with their specific content, promoting code reusability and maintainability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Building Layouts](https://laravel.com/docs/blade#building-layouts)\r\n- [@article@Create Layouts Using Laravel Blade Templating Engine (Step-by-Step for Beginners)](https://www.cloudways.com/blog/create-laravel-blade-layout/)\r\n- [@video@https://www.youtube.com/watch?v=3UhgEsLxmG8](https://www.youtube.com/watch?v=mI7GW7xuO-I)\r\n- [@video@Blade templates & Layouts | Laravel 10 Tutorial #7](https://www.youtube.com/watch?v=3UhgEsLxmG8)"
+}

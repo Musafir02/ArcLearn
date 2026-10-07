@@ -1,0 +1,4 @@
+{
+  "title": "Build Tools",
+  "content": "Task runners automatically execute commands and carry out processes behind the scenes. This helps automate your workflow by performing mundane, repetitive tasks that you would otherwise waste an egregious amount of time repeating. Common usages of task runners include numerous development tasks such as: spinning up development servers, compiling code (ex. SCSS to CSS), running linters, serving files up from a local port on your computer, and many more!\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@webpack is a static module bundler for modern JavaScript applications](https://webpack.js.org/)\r\n- [@official@Vite Next Generation Frontend Tooling](https://vitejs.dev)\r\n- [@official@Parcel is a zero configuration build tool for the web](https://parceljs.org/)\r\n- [@official@esbuild is an extremely fast JavaScript bundler and minifier](https://esbuild.github.io/)"
+}

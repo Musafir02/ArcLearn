@@ -1,0 +1,4 @@
+{
+  "title": "Stakeholders Involved in Building",
+  "content": "Building a design system requires input from several roles, not just designers. Product designers define visual language and interaction patterns, frontend developers implement and maintain components in code, product managers align the system with business priorities, and accessibility specialists ensure components meet usability standards. Leadership buy-in and cross-team communication are also needed, since a design system only works if multiple product teams agree to adopt it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Designing the Design System](https://www.designbetter.co/design-systems-handbook/designing-design-system)"
+}

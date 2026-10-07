@@ -1,0 +1,4 @@
+{
+  "title": "Amazon ML",
+  "content": "Amazon ML (and its successor Amazon SageMaker) provides managed services for building, training, and deploying machine learning models on AWS. Game studios use it for player behavior prediction, fraud detection, and real-time recommendation systems integrated with other AWS backend services.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Amazon SageMaker AI Documentation](https://docs.aws.amazon.com/sagemaker/)\r\n- [@official@Getting Started with Machine Learning on Amazon SageMaker AI](https://aws.amazon.com/sagemaker/ai/getting-started/)\r\n- [@article@Training AI Models for Skill-Based Matchmaking Using Amazon SageMaker - AWS Games Blog](https://aws.amazon.com/blogs/gametech/training-ai-models-for-skill-based-matchmaking-using-amazon-sagemaker-ai/)"
+}

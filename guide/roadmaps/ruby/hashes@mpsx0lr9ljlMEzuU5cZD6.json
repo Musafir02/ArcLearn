@@ -1,0 +1,4 @@
+{
+  "title": "Ruby Hashes",
+  "content": "Hashes are collections of key-value pairs. Think of them like dictionaries, where each word (the key) has a definition (the value). Keys are unique within a hash, and they are used to quickly access their corresponding values. Hashes can store any type of data as keys and values, making them a versatile way to organize and retrieve information.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@class Hash](https://docs.ruby-lang.org/en/master/Hash.html)\r\n- [@article@What is a Hash](https://launchschool.com/books/ruby/read/hashes#whatisahash)\r\n- [@article@Hashes - Odin Project](https://www.theodinproject.com/lessons/ruby-hashes)\r\n- [@video@Hashes | Ruby | Tutorial 14](https://www.youtube.com/watch?v=BtHKhsDUPwQ)\r\n- [@video@Ruby Programming Tutorial - 31 - Hashes](https://www.youtube.com/watch?v=imns9_XncQU)"
+}

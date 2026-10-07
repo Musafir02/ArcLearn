@@ -1,0 +1,4 @@
+{
+  "title": "ZADD",
+  "content": "The ZADD command adds all of the specified members with the specified scores to the sorted set defined at `key`.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ZADD](https://redis.io/docs/latest/commands/zadd/)"
+}

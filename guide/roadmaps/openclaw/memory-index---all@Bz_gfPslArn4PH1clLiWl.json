@@ -1,0 +1,4 @@
+{
+  "title": "openclaw memory index",
+  "content": "`openclaw memory index` rebuilds the search index for all memory files, ensuring the agent can efficiently retrieve relevant information from its stored memories.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Memory overview](https://docs.openclaw.ai/concepts/memory#memory-overview)\r\n- [@official@memory](https://docs.openclaw.ai/cli)"
+}

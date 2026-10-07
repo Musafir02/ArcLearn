@@ -1,0 +1,4 @@
+{
+  "title": "APIs",
+  "content": "API (Application Programming Interface) defines rules and protocols for software applications to communicate. Provides standardized access to functionalities without understanding internal workings. Includes endpoints, request methods (GET, POST, PUT), and data formats (JSON, XML).\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@roadmap@Visit the Dedicated API Design Roadmap](https://roadmap.sh/api-design)\r\n- [@roadmap@Visit the Dedicated API Security Best Practices](https://roadmap.sh/api-security-best-practices)\r\n- [@article@What is an API?](https://aws.amazon.com/what-is/api/)\r\n- [@video@What is an API (in 5 minutes)](https://www.youtube.com/watch?v=ByGJQzlzxQg)"
+}

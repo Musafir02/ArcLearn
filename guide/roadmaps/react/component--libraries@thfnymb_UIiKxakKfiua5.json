@@ -1,0 +1,4 @@
+{
+  "title": "Component / Libraries",
+  "content": "React component libraries are collections of pre-built, reusable components that can be used to speed up the development process. They can be styled using CSS in various ways, including traditional CSS files, CSS modules, and CSS-in-JS solutions like styled-components.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@MUI: React Component Library](https://mui.com/)\r\n- [@article@NextUI.org](https://nextui.org/)"
+}

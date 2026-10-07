@@ -1,0 +1,754 @@
+{
+  "title": "Aws Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "Api",
+      "name": "api",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "api-gateway@T0dvezPWX6rAiKweT0TkG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Assuming",
+      "name": "assuming",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "assuming-roles@0IMdO7g_5El1elvDXJJ_0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Auto",
+      "name": "auto",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "auto-scaling-groups@gBKHVG7FvlCEgINKmw00s",
+            "auto-scaling@dOAZG-NbjWiVdPKYEhWxj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Aws",
+      "name": "aws",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "aws-global-infrastructure@z9R1BWUGalmnw0E7QqiW6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Backup",
+      "name": "backup",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "backup--restore@NWvasq-AcwxmOKZPDv3ue",
+            "backup--restore@tBKc7tHOiJaTmwEl3q--Y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bucket",
+      "name": "bucket",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bucket--object-lifecycle@8i6zpjkMC_Pg-tDNmrx4n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Buckets",
+      "name": "buckets",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "buckets--objects@rTgjDj5HqbjRpcJ7PR-EC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Capacity",
+      "name": "capacity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "capacity-settings@KtXww9J0znwzTwL7GKfaY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cidr",
+      "name": "cidr",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cidr-blocks@2hFBv2fhKDYBN-9ITs82J"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Clusters",
+      "name": "clusters",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "clusters--ecs-container-agents@PphzNicIJawVElmY5rn8f"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cold",
+      "name": "cold",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cold-start-and-limitations@EuOv19jDSj56Cy7PqvtNv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Configuration",
+      "name": "configuration",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "configuration-sets@4svXYQYmqjUZU39z8OyhD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cpu",
+      "name": "cpu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cpu-credits@_U2bKjxIrAAk7TMrPttpb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Creating",
+      "name": "creating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "creating--invoking-functions@SdCNevKjyhFcreMSWY6BT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Custom",
+      "name": "custom",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "custom-runtimes@KWjIAakMIlxn_jso22h0M"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-modeling@aU1lv80xXNkQTD41Qfln5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Db",
+      "name": "db",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "db-instances@l9oq3LiEd8ZrPtupPk-Fn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dedicated",
+      "name": "dedicated",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dedicated-ip@pnX1dfkjS8woWc4KGXlh_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dkim",
+      "name": "dkim",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dkim-setup@zwVd1vNm1ks6MdHZoi-5W"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dynamodb",
+      "name": "dynamodb",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dynamodb-local@yauCWo1VoG-X483-4mfdn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Elastic",
+      "name": "elastic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "elastic-ip@DCvkZSp25pjaimG0THLTu",
+            "elastic-load-balancers@YAZPKMbmrxYNqF6alXMyL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Event",
+      "name": "event",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "event-bridge--scheduled-execution@0CUfDEMwCwSHVdqkP8lOG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Feedback",
+      "name": "feedback",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "feedback-handling@0NWTFssjg9SbDXQRkN5kF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "amis@AfagmWcllSi81D2XIQz0V",
+            "cloudfront@zFgnu2fL0EUKIMz9tVH1j",
+            "cloudwatch@VAYxwJH10PFjGS8poKd9-",
+            "distributions@fAK7GRKunmoidlD32OBma",
+            "dynamodb@wGb0TEDnSe_bmv9Krx4qB",
+            "ec2@cL7vis8H5L2vv6LqJ5wvC",
+            "ecr@_c_Wq84yIu4ac7e0RzDtC",
+            "ecs@EqUT0wpdPRDGtGAZ7nneY",
+            "eks@kvHzEDZQV72AUjqisg8PB",
+            "elasticache@9TcYdsdmvKWWHoyE6uNbC",
+            "events@tHQ6NRVDPCPEOmzgjQDLX",
+            "fargate@OI8y54RhFpfS_l1L9VTZe",
+            "general-purpose@uo5HIyePegnJooortvWLu",
+            "glacier@IikKYP58sT2H1lM8glm-g",
+            "iam@xmKeB4hEi2DunmhAsvS1X",
+            "introduction@Py9nst2FDJ1_hoXeX_qSF",
+            "invalidations@hRXbAADgRTXEFwbBXeNu7",
+            "keypairs@wFT-fddGn__DRoqG0joFk",
+            "lambda@741vsAPTXJLVUlazFg0q4",
+            "lambdaedge@5SF5nO94NFDkHY8UJoeAY",
+            "layers@CL93C0NGFQmScVnftnRtO",
+            "limits@0ctJa-V6aenimSr5h303J",
+            "logs@oC6KIjWAXw0hLl4FwkB9F",
+            "magnetic@y0CoNcEFHyz350f7pNddt",
+            "metrics@2vQPmVNk1QpMM-15RKG8b",
+            "policies@dO9ZfUyNia7L_fCh4d0n7",
+            "policies@eQAn3e-k9WNufPqOnwY_K",
+            "quotas@PYgs4niQRlLKCBMfM4qf9",
+            "rds@fkMF-2PQZ00UdwxhQt1ds",
+            "roles@7nI202hX41mI5ms9LZonh",
+            "route53@f89qL7Cg9R_LTxBEG4jUK",
+            "s3@PN3xAYfQ-_QgZCRCnsEca",
+            "services@zSiSbIdBgFLBBAnp4I9vX",
+            "ses@-bwXo6xvF1yzyWEm5oZhJ",
+            "standard@Ll5FPCtkpYq_niJd7WoTC",
+            "streams@0C3GCGdSXozJK2MNeWerg",
+            "subnets@Y64TE0U20kllmykjdfhHp",
+            "tasks@1lHXxpoF11yE3rfoQCbTG",
+            "vpc@Sv2aT8eI1RvJhvoKVYQEX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Health",
+      "name": "health",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "health-checks@LXG_znJ3XzPAlDxUH2-Xp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hosted",
+      "name": "hosted",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hosted-zones@z-o-2cGYSM6KW_CNJyw3p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Iaas",
+      "name": "iaas",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "iaas-vs-paas-vs-saas@i4ijY3T5gLgNz0XqRipXe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Identity",
+      "name": "identity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "identity-based@cwGuOrmbSTcSoH80skLTk",
+            "identity-verification@bTCVHXPG-LtaaFmgiB2SL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Instance",
+      "name": "instance",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "instance-profiles@i7X1GfOx5AZYFskepW4Zr",
+            "instance-types@VHD2ISW9WoSWjp8Hh6Zft"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Internet",
+      "name": "internet",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "internet-gateway@Le8yOJzpzxH1xgd7XEU2B"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Introduction",
+      "name": "introduction",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "introduction-to-aws@Dg1v9TV-wGSNLPfAals_y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Launch",
+      "name": "launch",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "launch-config--autoscaling-groups@1r2FL3OEOh0S9ee0OVnrN",
+            "launch-templates@K0GCk5_HDvP0_ZqsUc3tG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Nat",
+      "name": "nat",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "nat-gateway@6D-gs32jrCyvMVhr9PSAY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Primary",
+      "name": "primary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "primary-keys--secondary-indexes@oWtWgaFznTPJhQIyfIIQf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Private",
+      "name": "private",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "private-subnet@ymuURDwW8JG3NSIXcl0FL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Provisioned",
+      "name": "provisioned",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "provisioned-iops@3l1ji4JToj277vpgONmLw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Public",
+      "name": "public",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "public-subnet@ABCH1rATHmecyWHyK3n-m",
+            "public-vs-private-vs-hybrid-cloud@3hatcMVLDbMuz73uTx-9P"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Purchasing",
+      "name": "purchasing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "purchasing-options@8v9T6Y6JC7qaqIgkbT-nr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Resource",
+      "name": "resource",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "resource-based@v_YmmlOk-DkzJ8mI5Ftgr"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Route",
+      "name": "route",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "route-tables@FCdOnwQubhOnCFFnF8uJN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Routing",
+      "name": "routing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "routing-policies@IQhPG1La7dZeSXnX23D1n"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "S3",
+      "name": "s3",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "s3-ia@JlkLNQ8wRzGkjaootNKOD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sandbox",
+      "name": "sandbox",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sandbox--sending-limits@kG7tlZjv_hJbHGooBkxS0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scaling",
+      "name": "scaling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scaling-policies@fRBaiw8Qx8kapzCphmM4v"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Security",
+      "name": "security",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "security-groups@Cd9gdbkCFdrTLrnJMy5F3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sender",
+      "name": "sender",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sender-reputation@Vo_PBfB7LxYL27nBBVoVp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Shared",
+      "name": "shared",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "shared-responsibility-model@0flGtxZmxQKxO3c3sguwp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Storage",
+      "name": "storage",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "storage--volumes@A0u7CJwj5ULAMiAm12vZI",
+            "storage-types@PJaAqax4fABnkObY5UwNp",
+            "storage-types@Xs057ESpvxXg2r_rDQnOa"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tables",
+      "name": "tables",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tables--items--attributes@DN_iuLo9gYDqU8JleE1WJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "User",
+      "name": "user",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "user-data-scripts@ZKjjgXZ89zV2atWcSal-s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Users",
+      "name": "users",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "users--user-groups@Nn2zawk6A31NwZa40jOhX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Versioning",
+      "name": "versioning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "versioning--aliases@75ZjuGozDfoZPLj32P2t2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Well",
+      "name": "well",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "well-architected-framework@eKuC7VmkGVYFnbC2Rvn8D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "What",
+      "name": "what",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "what-is-cloud-computing@74JxgfJ_1qmVNZ_QRp9Ne"
+          ]
+        }
+      ]
+    }
+  ]
+}

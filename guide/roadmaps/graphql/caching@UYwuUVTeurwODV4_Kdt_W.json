@@ -1,0 +1,4 @@
+{
+  "title": "Caching",
+  "content": "Caching in GraphQL improves performance by storing query results for reuse. Strategies include HTTP caching, response caching, dataloader for batching requests, and normalized caching at the client level to reduce redundant API calls and improve user experience.\r\n\r\nThere are several types of caching that can be used in GraphQL:\r\n\r\n*   Client-side caching\r\n*   Server-side caching\r\n*   CDN caching\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Get started with Caching](https://graphql.org/learn/caching/)"
+}

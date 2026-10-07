@@ -1,0 +1,4 @@
+{
+  "title": "App Configurations",
+  "content": "Every application instance exposes a `config` object that contains the configuration settings for that application. You can modify its properties before mounting your application.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Vue.js Documentation](https://vuejs.org/api/application.html#app-config)"
+}

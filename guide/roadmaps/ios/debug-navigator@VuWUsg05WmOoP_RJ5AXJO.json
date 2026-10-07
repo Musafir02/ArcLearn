@@ -1,0 +1,4 @@
+{
+  "title": "Debug Navigator",
+  "content": "The Debug Navigator appears during a debugging session and shows real-time data about the running app, including CPU, memory, disk, and network usage, as well as active threads and their states. It helps identify performance issues and excessive resource consumption without switching to a separate profiling tool.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Debugging](https://developer.apple.com/documentation/xcode/debugging)\r\n- [@article@Exploring Xcode's Debugging Tools](https://cocoacasts.com/debugging-applications-with-xcode-exploring-xcode-debugging-tools)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Wrangler",
+  "content": "Wrangler is the command-line interface (CLI) tool for building, deploying, and managing Cloudflare Workers. It simplifies the development workflow by providing commands for creating new projects, testing Workers locally, deploying code to Cloudflare's edge network, and managing secrets. Wrangler automates many tasks, making it easier to develop and deploy serverless applications on Cloudflare.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Wrangler Documentation](https://developers.cloudflare.com/workers/wrangler/)\r\n- [@official@Wrangler Commands](https://developers.cloudflare.com/workers/wrangler/commands//)"
+}

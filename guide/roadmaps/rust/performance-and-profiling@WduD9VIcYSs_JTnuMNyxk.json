@@ -1,0 +1,4 @@
+{
+  "title": "Performance and Profiling",
+  "content": "Performance profiling in Rust identifies bottlenecks using tools like `perf`, `cargo bench`, `criterion`, and `flamegraph`. These tools collect statistical data about runtime performance, helping developers optimize code efficiently by targeting actual problem areas rather than guessing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Profiling - The Rust Performance Book](https://nnethercote.github.io/perf-book/profiling.html)\r\n- [@article@How to benchmark Rust code with Criterion](https://bencher.dev/learn/benchmarking/rust/criterion/)\r\n- [@article@Optimizing Rust Application Performance with Profiling](https://hemaks.org/posts/optimizing-rust-application-performance-with-profiling/)"
+}

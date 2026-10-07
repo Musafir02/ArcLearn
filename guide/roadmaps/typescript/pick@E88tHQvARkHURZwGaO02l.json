@@ -1,0 +1,4 @@
+{
+  "title": "Pick",
+  "content": "`Pick` is a utility type that constructs a new type by selecting a set of properties from an existing type. You specify which properties you want to include in the new type using their keys. This is useful when you need a subset of properties from a larger type definition.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Pick\\<Type, Keys\\>](https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys)"
+}

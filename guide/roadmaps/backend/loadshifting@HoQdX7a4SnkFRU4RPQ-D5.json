@@ -1,0 +1,4 @@
+{
+  "title": "Load Shifting",
+  "content": "Load shifting manages computing workloads by redistributing load from peak to off-peak periods. Helps balance resource demand, optimize performance, and reduce costs through job rescheduling, region switching, and dynamic resource allocation. Enhances system reliability and infrastructure utilization.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Load Shifting](https://en.wikipedia.org/wiki/Load_shifting)\r\n- [@video@Load Shifting 101](https://www.youtube.com/watch?v=DOyMJEdk5aE)"
+}

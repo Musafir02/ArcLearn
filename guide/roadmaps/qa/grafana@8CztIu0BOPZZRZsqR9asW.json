@@ -1,0 +1,4 @@
+{
+  "title": "Grafana",
+  "content": "Grafana is an open-source analytics and visualization platform for creating dashboards from metrics stored in data sources like Prometheus, InfluxDB, and Datadog. QA teams use Grafana to visualize load test results, track performance metrics over time, and build custom dashboards for monitoring test environment health.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Grafana](https://grafana.com/)\r\n- [@official@Grafana Documentation](https://grafana.com/docs/)\r\n- [@official@Grafana Webinars and Videos](https://grafana.com/videos/)"
+}

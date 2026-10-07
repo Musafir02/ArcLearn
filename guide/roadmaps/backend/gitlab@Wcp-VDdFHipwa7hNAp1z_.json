@@ -1,0 +1,4 @@
+{
+  "title": "GitLab",
+  "content": "GitLab is a comprehensive DevOps platform providing source code management, CI/CD, issue tracking, and more in one application. Features merge requests, built-in pipelines, container registry, and Kubernetes integration. Offers cloud-hosted and self-hosted options for complete development lifecycle management.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@GitLab](https://gitlab.com/)\r\n- [@official@GitLab Documentation](https://docs.gitlab.com/)\r\n- [@video@What is GitLab and Why Use It?](https://www.youtube.com/watch?v=bnF7f1zGpo4)"
+}

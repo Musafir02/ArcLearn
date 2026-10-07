@@ -1,0 +1,4 @@
+{
+  "title": "Markdown",
+  "content": "Markdown is a lightweight markup language used to format text with plain, readable syntax, like using asterisks for bold or a hash symbol for headings. GitHub renders Markdown automatically in README files, issues, pull requests, and comments, converting the plain text syntax into styled output. Its simplicity makes it a common choice for documentation across many platforms beyond just GitHub.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)\r\n- [@article@Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)"
+}

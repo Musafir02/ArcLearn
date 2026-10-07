@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { guides } from '../lib/loadGuide';
 import { useProgressStore } from '../store/progress';
@@ -9,6 +9,25 @@ function Home() {
   const completedTopics = useProgressStore((state) => state.completedTopics);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('languages');
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem('theme');
+    if (savedMode === 'dark' || (!savedMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setIsDarkMode(true);
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    if (!isDarkMode) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   const getStats = (lang) => {
     const topics = guides[lang] || [];
@@ -19,12 +38,7 @@ function Home() {
   };
 
   const handleStart = (lang) => {
-    const topics = guides[lang] || [];
-    if (topics.length > 0) {
-      const incomplete = topics.find((t) => !completedTopics[`${lang}/${t.topic}`]);
-      const targetTopic = incomplete ? incomplete.topic : topics[0].topic;
-      navigate(`/learn/${lang}/${targetTopic}`);
-    }
+    navigate(`/roadmap/${lang}`);
   };
 
   const tabKeys = useMemo(() => {
@@ -39,7 +53,15 @@ function Home() {
 
   return (
     <div className="home-container">
-      <div className="hero">
+      <div className="hero" style={{ position: 'relative' }}>
+        <button 
+          className="theme-toggle" 
+          onClick={toggleDarkMode} 
+          style={{ position: 'absolute', right: 0, top: 0, background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '1.5rem' }}
+          title="Toggle Dark Mode"
+        >
+          {isDarkMode ? '☀️' : '🌙'}
+        </button>
         <h1>Arc<span>Learn</span></h1>
         <p>Learn programming languages step-by-step with interactive coding sandboxes and instant checkpoints.</p>
       </div>

@@ -1,0 +1,1561 @@
+{
+  "title": "Computer Science Roadmap",
+  "outline": [
+    {
+      "type": "section",
+      "title": "2",
+      "name": "2",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "2-3-4-trees@IaPd_zuLbiOCwoSHQLoIG",
+            "2-3-search-trees@3jiV9R82qxpqIGfpEq_wK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "A",
+      "name": "a",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "a-algorithm@Yrk2PLUa-_FAPlhCkMl3e"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Acid",
+      "name": "acid",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "acid-model@W5B-v-BFcCRmuN0L1m6PI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Activity",
+      "name": "activity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "activity-diagrams@ptfRNiU0mC0Q5SLA_FWZu"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Adjacency",
+      "name": "adjacency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "adjacency-list@rTnKJcPniUtqvfOyC88N0",
+            "adjacency-matrix@HZ1kk0TQ13FLC9t13BZl5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Architectural",
+      "name": "architectural",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "architectural-patterns@BGhJNtszbYJtKyhqr2jax",
+            "architectural-styles@X1wv7xV69IEzepg8bF8oZ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Asymptotic",
+      "name": "asymptotic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "asymptotic-notation@UpBrpmrUwYUB9eesNxCq5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Avl",
+      "name": "avl",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "avl-trees@OUistS7H7hQQxVV-lOg39"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "B",
+      "name": "b",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "b-tree@s0Pi6CemUUsmZSEu2j2gH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Balanced",
+      "name": "balanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "balanced-search-trees@7DF3UhefOSqqTuccH8c8X",
+            "balanced-tree@ZaWGLvZyu4sIPn-zwVISN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Basic",
+      "name": "basic",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "basic-math-skills@cdNi0EYrQ5nsgNxFVnXL8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bellman",
+      "name": "bellman",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bellman-fords-algorithm@eY4nK2lPYsrR-a_8y2sao"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Big",
+      "name": "big",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "big-endian@U8AgY6I-62mN5Ohg9MsG6",
+            "big-o@c-NrTtJuNihbHzyPEOKTW",
+            "big-omega@X33735aeAVSlJ6yv9GS-h",
+            "big-theta@ThLpVZQIJ4diY5m0dik8m"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Binary",
+      "name": "binary",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "binary-search-tree@et7l85gnxjvzD2tDyHT_T",
+            "binary-search@8kTg4O9MrTHRUrp6U-ctA",
+            "binary-tree@G9dnegZ6zNvxrCZ3O_b_z"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bitwise",
+      "name": "bitwise",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bitwise-operators@hTPLcuOW7eEE5oYhNfmOG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Boyer",
+      "name": "boyer",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "boyer-moore@p6qub32jcaGloHXUDUrlG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Breadth",
+      "name": "breadth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "breadth-first-search@Ke_ch4fnuKIiGAXUM_LPP",
+            "breadth-first-search@vcV6TEM_PqXxtThdfMKGw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Brute",
+      "name": "brute",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "brute-force-search@g3b0kt1fCAjjYyS2WelWi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Bubble",
+      "name": "bubble",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "bubble-sort@4wGBYFZpcdTt97WTbSazx"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cap",
+      "name": "cap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cap-theorem@uqfeiQ9K--QkGNwks4kjk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Character",
+      "name": "character",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "character-encodings@DtG9EJonWi4_2oQ4fWOKY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Class",
+      "name": "class",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "class-diagrams@FZ8znJSz8PvQlnEyRLXmQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cloud",
+      "name": "cloud",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cloud-design-patterns@YMO9oD_sbzyDZPNU2xZwe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Co",
+      "name": "co",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "co-np@pLBfkzi0qfgVRqi_4AmMI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Common",
+      "name": "common",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "common-algorithms@7a6-AnBI-3tAU1dkOvPkx",
+            "common-uml-diagrams@DMuMsEowpevTCALtziwTB"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Complete",
+      "name": "complete",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "complete-binary-tree@Jx1WWCjm8jkfAGtHv15n1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Complexity",
+      "name": "complexity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "complexity-classes@YLCmZvoLkhOk9wlgYW2Ms"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Concurrency",
+      "name": "concurrency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "concurrency-in-multiple-cores@xUo5Ox_HTgGyeQMDIkVyK"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Cpu",
+      "name": "cpu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "cpu-cache@DjTQjMbika4_yTzrBpcmB",
+            "cpu-interrupts@cpQvB0qMDL3-NWret7oeA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Data",
+      "name": "data",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "data-structures@NM7q5REW1sJgMhxJhPpLT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Database",
+      "name": "database",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "database-federation@3r21avMlo0xFB9i7PHccX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dependency",
+      "name": "dependency",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dependency-injection@J7DKRklMtJ94Y-18Jo50r"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Depth",
+      "name": "depth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "depth-first-search@chzP5_t2gMi6MstxEzCi5",
+            "depth-first-search@Yf5gOIe7oiL19MjEVcpdw"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Design",
+      "name": "design",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "design-patterns@-De1hU2ONGwhQmUpsyrCO"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Dijkstras",
+      "name": "dijkstras",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "dijkstras-algorithm@l3X9UrEYTWs5kBXI1NNCf",
+            "dijkstras-algorithm@oJstm-8c-4seWbIWcNgDv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Directed",
+      "name": "directed",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "directed-graph@6Jy8SXHuYA08h9iLjKFWR"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Entity",
+      "name": "entity",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "entity-relationship-model@XnxxEmr2TyW2kOpB4gtR5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Finding",
+      "name": "finding",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "finding-hamiltonian-paths@aBjBHpq_OajgQjxdCobXD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Floating",
+      "name": "floating",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "floating-point-math@-bawIWfrYuAxy8cP-AGFS"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Ford",
+      "name": "ford",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "ford-fulkerson-algorithm@Hqw2eGtgfbVggqXBnIOdI"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Full",
+      "name": "full",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "full-binary-tree@Q8ZJNeTbc22Q08Mra-McY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "General",
+      "name": "general",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "array@TwW6SO2IXqkxJXVjLzdwU",
+            "ascii@hmwsNp60alS43kJg4A_Og",
+            "base@q3nRhTYS5wg9tYnQe2sCF",
+            "c@1kQJs-3Aw8Bi7d_Xh67zS",
+            "c@jHKCLfLml8oZyj4829gx0",
+            "c@n4IsklfYJXFIyF1rGWuEa",
+            "caching@4u5w9QCptLWuY9O7_UU8V",
+            "cdn@r8V9bZpc98SrLvXc070bZ",
+            "clustering@wAsZ-M5N9ERufQnBaXbAE",
+            "combinatorics@lWnAY0DgrUOmT6yqnxeBN",
+            "constant@3F_QBv_sU39ehOxpurF88",
+            "databases@zvlTQ0A-My4QDrslp_lru",
+            "dcl@4bUmfuP2qgcli8I2Vm9zh",
+            "ddl@ii1vF74u3yrFNlw_21b3B",
+            "dml@tcQSH-eAvJUZuePTDjAIb",
+            "dns@fYjoXB4rnkM5gg46sqVz5",
+            "dql@05lkb3B86Won7Rkf-8DeD",
+            "endianess@vjMqqFsTxSjaiYxmliwLi",
+            "exponential@5mMLr6tWbiSZuox1lx0_B",
+            "factorial@m0umGQNdvg95UiNpQZsQN",
+            "go@mWW88VnkqWgDz02qw5zU-",
+            "graph@vQm046o6ozcvLoqg9L6eL",
+            "graphql@DeE_dZecLmKCjePovTfFS",
+            "grpc@M4vdwAbjLPrLjWUsG_P1I",
+            "heap@pw3ZCC3HKU7D5SQwte4vE",
+            "http@2tUwl-br-SRuwADSzmQag",
+            "indexes@BEbsUA39kZ5itqCwD585f",
+            "java@1lQSUFrrIGq19nUnM92-I",
+            "linear@jymhjv8GiFALQpox6aZeu",
+            "locking@_sm63rZNKoibVndeNgOpW",
+            "logarithmic@nnlMNkQn1HU4U9yPbV9kQ",
+            "networking@zG5t3HqbZnh9CGRqp1Sb-",
+            "np@ewXUHpOnjm8YrLhce1dAQ",
+            "p@3aM17dPKNi8tRJsW8lesI",
+            "pacelc@g6HeyLptaAYx9QBKuHQyM",
+            "polynomial@sVFvpsAO1_ZH9aliEj9aF",
+            "probability@HZ3_xyphbjhBPwwQo_rHH",
+            "proxy@qLLJ_ehC8tSRfXsorYMQz",
+            "python@RlKZzs44biQPgxD0tK1qx",
+            "queue@JI990pDX2jjNe6IH_Y_t0",
+            "queues@LCPEzpyAuHY3ggN3nYrNN",
+            "replication@WUEmEtlszbISSIWDKpvg6",
+            "rest@Kvz3Sn7L8CxP5ZXO1hlcU",
+            "rust@1bDjg-KBDKRmE6f1MWY8l",
+            "security@JnJbJtsqKbVETY2vdLqCO",
+            "sharding@3K65efPag2076dy-MeTg4",
+            "sockets@u-c-UFegRb7xqsmvj9gVb",
+            "sse@JckRqZA8C6IqQLPpTCgf4",
+            "stack@hJB5gO9tosRlC4UmdSNzl",
+            "transactions@KhvYJtSCUBOpEZXjHpQde",
+            "tree@_eWqiWUmOj0zUo_Ix3j1O",
+            "tries@4qUVacMEz3XFiL_dMre6P",
+            "unicode@04hpfxI2x958tQI-0clsp",
+            "views@lOj_ReWI1kQ3WajJZYOWU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Gof",
+      "name": "gof",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "gof-design-patterns@iPN9mSyFwYZER5HSkj6oL"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hash",
+      "name": "hash",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hash-table@G2dN2FO0SN_I-5AhO_EUk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Hashing",
+      "name": "hashing",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "hashing--encryption--encoding@7r7o8pYhFHVAJIv0wNT6X",
+            "hashing-algorithms@EX_e4B6G07zTb4JjJ7482"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Heap",
+      "name": "heap",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "heap-sort@CovrRsBY-sYW_xSegcN6N"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Horizontal",
+      "name": "horizontal",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "horizontal-vs-vertical-scaling@-34WGppX6QC5fkCvfCghp"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "How",
+      "name": "how",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "how-computers-calculate@GDLKJkKgB-i7n0YcV2NDa",
+            "how-computers-work@-emdKpD5uRNuvem5rbFXJ",
+            "how-cpu-executes-programs@1eglba39q426Nh0E0qcdj"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Huffman",
+      "name": "huffman",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "huffman-coding@QrcijPiVT3bgqfkF-6ssi"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "In",
+      "name": "in",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "in-order-traversal@KTrgf14Q6rg2f0v4dqq2s"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Insertion",
+      "name": "insertion",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "insertion-sort@ujDCW6zZE8dV_fpNf-oIl"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Instructions",
+      "name": "instructions",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "instructions-and-programs@AxiGqbteK7ZSXEUt_zckH"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "K",
+      "name": "k",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "k-ary--m-ary-tree@UOYeM-hqIKCrB9hGez4Q_",
+            "k-d-trees@C1eNsPjiQo8INbvL2Lt7L"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Knapsack",
+      "name": "knapsack",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "knapsack-problem@yHeCRPhfAOWiggZeUHPU9"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Knuth",
+      "name": "knuth",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "knuth-morris-pratt@8abFKMfaV9H8F38I0DcMT"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Kruskals",
+      "name": "kruskals",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "kruskals-algorithm@Wqhg7E-lOz1oNcRXjUej8"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lfu",
+      "name": "lfu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lfu-cache@n11ujPI3of-52l2KW2CDQ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linear",
+      "name": "linear",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linear-search@XwyqBK9rgP1MMcJrdIzm5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Linked",
+      "name": "linked",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "linked-list@gr8BK6vq4AVwp_aUozZmf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Little",
+      "name": "little",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "little-endian@rD_5n5bjiNMVC0cPhEVyG"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Load",
+      "name": "load",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "load-balancing@xDiS0HmrEoPjkQg9x2O3o"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lock",
+      "name": "lock",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lock--mutex--semaphore@O6-vG3FuoYet4D0hbiyrv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Long",
+      "name": "long",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "long-polling@XeJi6TwpI5Uaszj00Uv_2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Longest",
+      "name": "longest",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "longest-path-problem@4QVVYjDODMWsjnrE-4UBs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Lru",
+      "name": "lru",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "lru-cache@cEsboPT8nLvo0Zt0_oBq6"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Maze",
+      "name": "maze",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "maze-solving-problem@nODFT-i2YsxUVsgwWkIWn"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Memory",
+      "name": "memory",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "memory-management@jVsZFTzyrYEDyR8LiBQL0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Merge",
+      "name": "merge",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "merge-sort@Bh-whDbcCjl3m6mRm9w02"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Mfu",
+      "name": "mfu",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "mfu-cache@hna0HLu0l4NTNNpyGqlW5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Non",
+      "name": "non",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "non-tail-recursion@iLEOuQgUgU5Jc38iXDpp5"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Normalization",
+      "name": "normalization",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "normalization--denormalization@Rw7QjLC8hLtXSwmU_9kHC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Np",
+      "name": "np",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "np-complete@Lwkz7qozXRlVNA20zJbSw",
+            "np-hard@mJJ8DGUpBuHEJ7I6UTy1T"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Null",
+      "name": "null",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "null-object-pattern@PpFQ0zmObZLvmBvqhTEMz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Osi",
+      "name": "osi",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "osi-model@pZ5x_zDYGzW9VxYycyXtN"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Owasp",
+      "name": "owasp",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "owasp-top-10@3rPSp135TdSCyvXzEzn4p"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "P",
+      "name": "p",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "p--np@0btHNkzWL1w_-pUgU_k2y"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pick",
+      "name": "pick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pick-a-language@tU4Umtnfu01t9gLlnlK6b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Post",
+      "name": "post",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "post-order-traversal@4_oGXwjzSY5cX9n7L4iAA"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Pre",
+      "name": "pre",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "pre-order-traversal@psTN5N66xoFHFopgd5faW"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Prims",
+      "name": "prims",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "prims-algorithm@znpFIKwMJlepKJ8dH3kvC"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Process",
+      "name": "process",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "process-forking@RbdT5MOE4L-E7PPWKRITX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Processes",
+      "name": "processes",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "processes-and-threads@ETEUA7jaEGyOEX8tAVNWs",
+            "processes-vs-threads@IEX6v_MYpE5Ylk_28K2ZU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Public",
+      "name": "public",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "public-key-cryptography@bDZ34BPm3lX06ERSE10cY"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Quick",
+      "name": "quick",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "quick-sort@be0Q8GW9ZX1JbPrBvbMji"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Rabin",
+      "name": "rabin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "rabin-karp-algorithm@l5--4opvZoc_seVn__5R3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Red",
+      "name": "red",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "red--black-trees@eOL0_SzxBn7_xhNcBDi2D"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Registers",
+      "name": "registers",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "registers-and-ram@U3379F4AO1KSmGtVmPr27"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Robin",
+      "name": "robin",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "robin-karp@Km5LvcJpyntrW2iA8h5e3"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Scheduling",
+      "name": "scheduling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "scheduling-algorithms@Ge2nagN86ofa2y-yYR1lv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Search",
+      "name": "search",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "search-pattern-in-text@L4M5yFRKKR2axKXGcIA7d"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Selection",
+      "name": "selection",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "selection-sort@rOsHFXQm5jNz0RyZQ5ZGs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sequence",
+      "name": "sequence",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sequence-diagrams@gaUT5K2xS-WQMrIA0Bkb_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Short",
+      "name": "short",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "short-polling@gGmNJ8dK28iqrlQHPz6md"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Skip",
+      "name": "skip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "skip-lists@K96ggeWqd5OwoNnkL04pc"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Small",
+      "name": "small",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "small-o@2cg5PogENPhiYFXQnV9xC",
+            "small-omega@dUBRG_5aUYlICsjPbRlTf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Solving",
+      "name": "solving",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "solving-n-queen-problem@HlAmTY1udqDT2mTfBU9P-"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Spanning",
+      "name": "spanning",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "spanning-tree@L4xtWOdqGUf4SbJkoOsNM"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Sql",
+      "name": "sql",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "sql-vs-nosql-databases@nprZscHdC_RdRIcGeGyVk"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Statemachine",
+      "name": "statemachine",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "statemachine-diagrams@X0CKM9LaJUrgI5gIdqFvU"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Stored",
+      "name": "stored",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "stored-procedures@FjhZGhzJjYyDn0PShKmpX"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "String",
+      "name": "string",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "string-search--manipulations@NUWk-7IXmMU-4TT-oS8fF"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Substring",
+      "name": "substring",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "substring-search@E9hf1ux1KKGHvvAShm67w"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Suffix",
+      "name": "suffix",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "suffix-arrays@Ld1TUNS8713coMNvwhNIJ"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "System",
+      "name": "system",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "system-design@w-fvEiSJysywR3AOAB0ve"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tail",
+      "name": "tail",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tail-recursion@0_qNhprnXU3i8koW3XTdD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tcpip",
+      "name": "tcpip",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tcpip-model@Fed5y1D95WPpqoVg7kmob"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "The",
+      "name": "the",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "the-knights-tour-problem@NcKW_3vJWL_rVlDBB_Qjs"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Tls",
+      "name": "tls",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "tls--https@3pu2bGhoCLFIs6kNanwtz"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Travelling",
+      "name": "travelling",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "travelling-salesman-problem@ZG-hWjVoS3p9XfrtBL0sD"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Type",
+      "name": "type",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "type-object-pattern@_2Jddpz_cdwyeIgrg5qt_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Unbalanced",
+      "name": "unbalanced",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "unbalanced-tree@w4sxmZR1BjX6wlrZmuOlf"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Undirected",
+      "name": "undirected",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "undirected-graph@QGx8it2N_85PiPVjpTGK_"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Usecase",
+      "name": "usecase",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "usecase-diagrams@dVvYbrcaxHLpvtX6HbS7g"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Web",
+      "name": "web",
+      "subsections": [
+        {
+          "title": "Topics",
+          "topics": [
+            "web-sockets@bVjI14VismTHNCyA0mEBP"
+          ]
+        }
+      ]
+    }
+  ]
+}

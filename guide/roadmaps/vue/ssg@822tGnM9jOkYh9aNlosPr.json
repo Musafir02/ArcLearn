@@ -1,0 +1,4 @@
+{
+  "title": "Static Site Generators",
+  "content": "A static site generator is a tool that generates a full static HTML website based on raw data and a set of templates. Essentially, a static site generator automates the task of coding individual HTML pages and gets those pages ready to serve to users ahead of time. Because these HTML pages are pre-built, they can load very quickly in users' browsers.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is a Static Site Generator?](https://www.cloudflare.com/learning/performance/static-site-generator/)\r\n- [@article@Next.js SSG](https://nextjs.org/docs/advanced-features/static-html-export)\r\n- [@article@Gatsby SSG](https://www.gatsbyjs.com/docs/glossary/static-site-generator/)\r\n- [@article@SSG — An 11ty, Vite And JAM Sandwich](https://www.smashingmagazine.com/2021/10/building-ssg-11ty-vite-jam-sandwich/)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "RAG Agent",
+  "content": "A RAG agent combines retrieval augmented generation with the ability to take actions, retrieving relevant documents as part of its reasoning process rather than just as a one time context lookup before generating text. This lets it decide when retrieval is needed and query external knowledge sources multiple times during a task. It is commonly used for question answering over private or specialized document collections.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@What is RAG? - Retrieval-Augmented Generation AI Explained](https://aws.amazon.com/what-is/retrieval-augmented-generation/)\r\n- [@article@What Is Retrieval-Augmented Generation, aka RAG?](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)"
+}

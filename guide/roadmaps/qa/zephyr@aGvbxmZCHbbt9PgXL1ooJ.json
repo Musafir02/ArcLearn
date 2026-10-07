@@ -1,0 +1,4 @@
+{
+  "title": "Zephyr",
+  "content": "Zephyr is a test management solution available as a Jira plugin (Zephyr Scale, Zephyr Squad) and as a standalone product. It allows teams to create test cases, organize them into cycles, execute tests, and view reports without leaving the Jira interface. Zephyr is widely used in teams that rely on Jira as their primary project tracking tool.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Zephyr for JIRA Tutorial: Test Management Tool](https://www.guru99.com/zephyr-agile-jira.html)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Services",
+  "content": "Services let you define code or functionalities that are then accessible and reusable in many other components in the Angular project. It also helps you with the abstraction of logic and data that is hosted independently but can be shared across other components.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Creating an Injectable Service](https://angular.dev/guide/di/creating-injectable-service)\r\n- [@article@Service for API Calls](https://www.knowledgehut.com/blog/web-development/make-api-calls-angular)"
+}

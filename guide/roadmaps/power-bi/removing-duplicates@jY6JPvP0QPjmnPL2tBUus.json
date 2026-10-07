@@ -1,0 +1,4 @@
+{
+  "title": "Removing Duplicates",
+  "content": "Removing duplicates in Power Query eliminates rows that repeat identical values across selected columns, keeping the dataset clean for accurate counts and aggregations. This is done through a built-in step that compares rows and drops repeats, based on the columns chosen for comparison. It matters especially when combining data from multiple sources that might overlap.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Working with duplicate values](https://learn.microsoft.com/en-us/power-query/working-with-duplicates)\r\n- [@video@Removing Duplicate Records in the Microsoft Power BI Query Editor](https://www.youtube.com/watch?v=u3RT7Ib_2YM)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "state replace-provider",
+  "content": "`terraform state replace-provider` updates all resource entries in the state that reference one provider to reference a different provider. This is used when migrating resources to a forked or renamed provider without destroying and recreating them.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Command - state replace-provider](https://developer.hashicorp.com/terraform/cli/commands/state/replace-provider)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Plugins",
+  "content": "Plugins are packages that can register any combination of capabilities: channels, model providers, tools, skills, speech, image generation, and more. Some are bundled with Open Claw, and others are published by the community on npm.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Tools and Plugins](https://docs.openclaw.ai/tools)\r\n- [@official@Plugins](https://docs.openclaw.ai/tools/plugin)\r\n- [@video@Create OpenClaw AI Plugin for Extra Features and Skills | Step-by-Step Guide for Beginners](https://www.youtube.com/watch?v=baHEUzqatK4)"
+}

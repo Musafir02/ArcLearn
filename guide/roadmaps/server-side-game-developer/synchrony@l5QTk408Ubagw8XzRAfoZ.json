@@ -1,0 +1,4 @@
+{
+  "title": "Synchrony",
+  "content": "In a synchronous reactive model, event handlers are called and complete before the next event is processed. This simplifies reasoning about order but can bottleneck throughput if any handler is slow.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Synchronous vs Asynchronous Programming: A Developer Guide - Augment Code](https://www.augmentcode.com/learn/synchronous-vs-asynchronous-programming-a-developer-guide)\r\n- [@article@Synchronous Vs Asynchronous Gameplay in Online Games - Game Developer](https://www.gamedeveloper.com/design/synchronous-vs-asynchronous-gameplay-in-online-games)\r\n- [@article@Asynchronous vs. Synchronous Programming: Which Approach is Best - Sunscrapers](https://sunscrapers.com/blog/programming-async-vs-sync-best-approach/)"
+}

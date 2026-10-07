@@ -1,0 +1,4 @@
+{
+  "title": "Apache Spark",
+  "content": "Apache Spark is a distributed data processing engine for large-scale batch and streaming workloads. It processes data in memory across a cluster, making it significantly faster than MapReduce for many workloads. Spark supports Python, Scala, Java, and R, and provides APIs for SQL, streaming, machine learning, and graph processing.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@ApacheSpark](https://spark.apache.org/documentation.html)\r\n- [@article@Spark By Examples](https://sparkbyexamples.com)"
+}

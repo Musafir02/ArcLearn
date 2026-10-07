@@ -1,0 +1,4 @@
+{
+  "title": "Regularly ask the AI to review and refactor the codebase",
+  "content": "Every few sessions, pause new feature work and ask AI to clean up the existing code. Over time, code gets messy, and a regular cleanup keeps the project healthy and makes it easier to keep building without things breaking unexpectedly.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Code Refactoring: Principles, Techniques, and AI Automation - Tabnine](https://www.tabnine.com/blog/code-refactoring-with-generative-ai/)\r\n- [@article@Refactoring to Understand and Vibe Coding - Sean Goedecke](https://www.seangoedecke.com/vibe-coding/)\r\n- [@article@AI Code Refactoring: Tools, Tactics and Best Practices - Augment Code](https://www.augmentcode.com/tools/ai-code-refactoring-tools-tactics-and-best-practices)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Depth First Search",
+  "content": "Depth first search is a graph traversal algorithm that starts at a root node and explores as far as possible along each branch before backtracking.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Depth-first Search](https://en.wikipedia.org/wiki/Depth-first_search)"
+}

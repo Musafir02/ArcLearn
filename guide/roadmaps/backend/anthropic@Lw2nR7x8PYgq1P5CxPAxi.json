@@ -1,0 +1,4 @@
+{
+  "title": "Anthropic",
+  "content": "Anthropic is an AI safety and research company focused on developing reliable, interpretable, and steerable AI systems. They create AI models, like Claude, that are designed to be helpful, harmless, and honest, prioritizing safety through techniques like Constitutional AI, where the AI is guided by a set of principles during its training and operation. They can be integrated via APIs to add functionality to applications.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Anthropic](https://www.anthropic.com/)\r\n- [@official@Anthropic Academy](https://www.anthropic.com/learn)\r\n- [@official@Anthropic Tutorials](https://claude.com/resources/tutorials)\r\n- [@article@Anthropic: What We Know About the Company Behind Claude AI](https://builtin.com/articles/anthropic)"
+}

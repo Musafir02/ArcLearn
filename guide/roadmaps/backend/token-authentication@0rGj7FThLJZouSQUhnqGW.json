@@ -1,0 +1,4 @@
+{
+  "title": "Token authentication",
+  "content": "Token-based authentication verifies user identity and provides unique access tokens. Users access protected resources without re-entering credentials while token remains valid. Works like stamped tickets, invalidated on logout. Offers second security layer with detailed administrative control.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Token Based Authentication](https://roadmap.sh/guides/token-authentication)\r\n- [@article@What Is Token-Based Authentication?](https://www.okta.com/identity-101/what-is-token-based-authentication/)\r\n- [@video@Why is JWT popular?](https://www.youtube.com/watch?v=P2CPd9ynFLg)"
+}

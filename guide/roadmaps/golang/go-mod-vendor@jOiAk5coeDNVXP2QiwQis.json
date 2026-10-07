@@ -1,0 +1,4 @@
+{
+  "title": "go mod vendor",
+  "content": "Creates `vendor` directory with dependency copies for bundling with source code. Ensures builds work without internet access. Useful for deployment, air-gapped environments, and complete control over dependency availability.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Vendoring, or go mod vendor: What Is It?](https://victoriametrics.com/blog/vendoring-go-mod-vendor/)\r\n- [@article@go mod commands](https://blog.devtrovert.com/p/go-get-go-mod-tidy-commands)\r\n- [@article@Go Modules and Vendors: Simplify Dependency Management](https://mahmoudaljadan.medium.com/go-modules-and-vendors-simplify-dependency-management-in-your-golang-project-a29689eb26b1)"
+}

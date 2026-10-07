@@ -1,0 +1,4 @@
+{
+  "title": "Context",
+  "content": "Context is a built-in React feature that lets you share data across the component tree without passing it through props at every level. You create a context, provide a value at some point in the tree, and any component below can read that value with useContext. It works well for data that does not change often, like theme or authentication status, but is not designed to replace a full state management library for frequently changing data.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Passing Data Deeply with Context](https://react.dev/learn/passing-data-deeply-with-context)\r\n- [@article@State with useContext and useState/useReducer](https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/)\r\n- [@video@React Context API Crash Course](https://www.youtube.com/watch?v=t9WmZFnE6Hg)"
+}

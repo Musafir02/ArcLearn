@@ -1,0 +1,4 @@
+{
+  "title": "Chaining Methods",
+  "content": "Chaining methods in Ruby lets you call multiple methods on an object in a single line of code. This works because most methods in Ruby return an object (often `self`, the object the method was called on). By returning an object, the next method in the chain can be immediately called on the result of the previous method. This creates a fluent and readable way to perform a series of operations on a single object.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Chaining Methods](https://launchschool.com/books/ruby/read/methods#chainingmethods)\r\n- [@article@Chaining methods - Odin Project](https://www.theodinproject.com/lessons/ruby-methods#chaining-methods)\r\n- [@article@A Guide to Method Chaining](https://www.sitepoint.com/a-guide-to-method-chaining/)\r\n- [@video@How to Read, Analyze & Understand Ruby Method Chains](https://www.youtube.com/watch?v=toeX_3cHqYg)"
+}

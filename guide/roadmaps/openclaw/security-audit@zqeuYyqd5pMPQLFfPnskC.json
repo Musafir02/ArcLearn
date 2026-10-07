@@ -1,0 +1,4 @@
+{
+  "title": "openclaw security audit",
+  "content": "`openclaw security audit` scans your Open Claw setup for potential security vulnerabilities such as exposed ports, weak tokens, or insecure configurations. You can also run `openclaw security audit --deep` for a live Gateway probe, or openclaw `security audit --fix` to automatically tighten safe defaults.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Quick check: openclaw security audit](https://docs.openclaw.ai/gateway/security#quick-check-openclaw-security-audit)\r\n- [@official@security](https://docs.openclaw.ai/cli/security)\r\n- [@article@OpenClaw Security: 12 Best Practices Our Experts Recommend](https://roadmap.sh/openclaw/security-best-practices)"
+}

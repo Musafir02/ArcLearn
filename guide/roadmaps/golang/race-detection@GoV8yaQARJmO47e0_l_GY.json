@@ -1,0 +1,4 @@
+{
+  "title": "Race Detection",
+  "content": "Built-in tool for detecting race conditions in concurrent programs. Enabled with `-race` flag during build/test/run. Detects unsynchronized access to shared variables from multiple goroutines. Performance overhead in race mode. Essential for debugging concurrent code safety.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Race Detection](https://go.dev/doc/articles/race_detector)\r\n- [@article@Go: Race Detector with ThreadSanitizer](https://medium.com/a-journey-with-go/go-race-detector-with-threadsanitizer-8e497f9e42db)\r\n- [@article@Data Race Detection and Data Race Patterns in Golang](https://www.sobyte.net/post/2022-06/go-data-race/)"
+}

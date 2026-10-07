@@ -1,0 +1,4 @@
+{
+  "title": "Queues",
+  "content": "A queue is a linear data structure that follows the first-in, first-out (FIFO) principle. Elements are added at the back and removed from the front. Queues are used in scheduling, breadth-first search, and any scenario where order of arrival matters.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@video@Queue](https://www.youtube.com/watch?v=M6GnoUDpqEE)\r\n- [@video@Python Queue](https://www.youtube.com/watch?v=rUUrmGKYwHw)"
+}

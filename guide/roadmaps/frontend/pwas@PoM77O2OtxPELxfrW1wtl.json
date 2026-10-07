@@ -1,0 +1,4 @@
+{
+  "title": "Progressive Web Apps",
+  "content": "Progressive Web Apps (PWAs) are web applications behaving like native apps using HTML, CSS, JavaScript. Feature offline functionality, push notifications, home screen installation, and service workers for caching. Cross-platform, discoverable, and cost-effective alternative to native apps.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Learn PWA](https://web.dev/learn/pwa/)\r\n- [@article@MDN - Progressive Web Apps](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/)\r\n- [@video@Progressive Web Apps in 2024](https://www.youtube.com/watch?v=3ODP6tTpjqA)"
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Awk for Numeric Operations",
+  "content": "Awk is a powerful text processing tool that can also perform numeric calculations. It reads input line by line and executes a set of instructions for each line. These instructions can include arithmetic operations, comparisons, and variable assignments, making awk useful for tasks like calculating sums, averages, and performing other data manipulations directly within the shell.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@How To Use awk In Bash Scripting](https://www.cyberciti.biz/faq/bash-scripting-using-awk/)\r\n- [@article@Bash awk - Pattern Scanning and Processing Language](https://www.w3schools.com/bash/bash_awk.php)\r\n- [@video@Learning Awk Is Essential For Linux Users](https://www.youtube.com/watch?v=9YOZmI-zWok)"
+}

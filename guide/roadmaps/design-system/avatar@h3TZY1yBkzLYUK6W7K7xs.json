@@ -1,0 +1,4 @@
+{
+  "title": "Avatar",
+  "content": "An avatar is a graphical representation of a user or entity, typically displayed as a circular or square image, an icon, or a set of initials. It serves as a visual identifier within an interface to provide context about a person, group, or account status. These components often include fallback mechanisms to display placeholder content when a profile image is unavailable, ensuring consistent presentation across different parts of an application."
+}

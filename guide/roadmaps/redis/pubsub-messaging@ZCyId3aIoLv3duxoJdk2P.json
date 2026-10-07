@@ -1,0 +1,4 @@
+{
+  "title": "Pub/Sub Messaging",
+  "content": "Redis Pub/Sub allows publishers to send messages to named channels and subscribers to receive them in real time. It follows a fire-and-forget model: messages are delivered to active subscribers but are not stored if no subscriber is listening. This pattern works well for live notifications, chat systems, and broadcasting events.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Redis Pub/Sub](https://redis.io/docs/latest/develop/interact/pubsub/)\r\n- [@official@PUBLISH Command](https://redis.io/docs/latest/commands/publish/)\r\n- [@official@SUBSCRIBE Command](https://redis.io/docs/latest/commands/subscribe/)\r\n- [@official@UNSUBSCRIBE Command](https://redis.io/docs/latest/commands/unsubscribe/)"
+}

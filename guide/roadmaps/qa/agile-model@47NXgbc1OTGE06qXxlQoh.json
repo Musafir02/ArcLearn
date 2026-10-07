@@ -1,0 +1,4 @@
+{
+  "title": "Agile Model",
+  "content": "The Agile model is an iterative, incremental approach to software development that delivers working software in short cycles called sprints or iterations. Testing is integrated throughout each iteration rather than as a separate phase. Agile teams collaborate closely between developers and QA, with continuous feedback and adaptation to change.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Agile Methodology: What is Agile Methodology in Software Testing?](https://www.geeksforgeeks.org/software-testing/what-is-agile-methodology/)\r\n- [@article@Agile Methodology: What is Agile Model in Software Testing?](https://www.guru99.com/agile-scrum-extreme-testing.html)\r\n- [@article@Manifesto for Agile Software Development](https://agilemanifesto.org/)"
+}

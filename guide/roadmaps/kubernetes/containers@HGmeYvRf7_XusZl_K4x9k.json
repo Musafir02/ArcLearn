@@ -1,0 +1,4 @@
+{
+  "title": "Containers",
+  "content": "Kubernetes is built on containers, so before learning Kubernetes you should be comfortable running and building containers from scratch.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@article@Official Docker Tutorial](https://www.docker.com/101-tutorial/)\r\n- [@article@Docker Curriculum](https://docker-curriculum.com/)\r\n- [@video@Docker in 100 Seconds (video)](https://www.youtube.com/watch?v=Gjnup-PuquQ)\r\n- [@video@Free 3 Hour Video Course on Docker for Beginners](https://www.youtube.com/watch?v=3c-iBn73dDE)"
+}

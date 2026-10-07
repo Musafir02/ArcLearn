@@ -1,0 +1,4 @@
+{
+  "title": "Debugging",
+  "content": "Debugging in Django involves identifying and fixing errors in your code. When your Django application isn't working as expected, debugging helps you understand why. This process typically involves using tools and techniques to inspect your code's behavior, examine variables, and trace the flow of execution to pinpoint the source of the problem and resolve it.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@DEBUG Mode](https://docs.djangoproject.com/en/6.0/ref/settings/#std-setting-DEBUG)\r\n- [@article@Writing your first Django app, part 8¶](https://docs.djangoproject.com/en/6.0/intro/tutorial08/)\r\n- [@article@Mastering Django debugging: a complete guide](https://www.aubergine.co/insights/mastering-django-debugging-a-complete-guide)\r\n- [@video@How To Debug a Django Application in VS CODE (Visual Studio Code)](https://www.youtube.com/watch?v=spmFjhQIKOo)"
+}

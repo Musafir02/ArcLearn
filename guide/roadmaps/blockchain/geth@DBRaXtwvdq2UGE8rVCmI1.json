@@ -1,0 +1,4 @@
+{
+  "title": "Geth",
+  "content": "Geth, short for Go Ethereum, is a command-line interface for running a full Ethereum node implemented in the Go programming language. It allows you to interact with the Ethereum blockchain, mine Ether, create and deploy smart contracts, and inspect block and transaction data. Essentially, Geth provides the core infrastructure needed to participate in the Ethereum network.\r\n\r\nVisit the following resources to learn more:\r\n\r\n- [@official@Geth](https://geth.ethereum.org/)\r\n- [@official@Geth Documentation](https://geth.ethereum.org/docs/)"
+}
